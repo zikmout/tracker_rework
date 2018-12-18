@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    {% extends '../layout.html' %}
+    {% block content %}
+    <div class="starter-template">
+        <h1>Login page</h1>
+    </div>
+    <form action="" method=post class="form-horizontal">
+        <h2>Signin to Tornado Login Application </h2>
+        <div class="control-group">
+            <div class="controls">
+                <input type="text" id="email" name="email" class="input-xlarge" placeholder="Enter Email" required>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <input type="password" id="password" name="password" class="input-xlarge" placeholder="Enter Password" required>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn btn-success">Signin</button>
+            </div>
+        </div>
+    </form>
+    {% end %}
+</html>

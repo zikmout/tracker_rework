@@ -173,6 +173,7 @@ class UserProjectListView(BaseView):
 
         user_projects_json = list()
         user_projects = user[0].projects.all()
+        #print('As dict : {}'.format(user_projects[0].as_dict()))
         if user_projects:
             for project in user_projects:
                 user_project_json = {
@@ -201,6 +202,7 @@ class UserListView(BaseView):
         username = self.get_current_user()
         users_json = list()
         users = self.request_db.query(User).all()
+        print('As dict users: {}'.format(users[0].as_dict()))
         if users:
             for user in users:
                 user_json = {

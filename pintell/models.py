@@ -106,6 +106,9 @@ class User(Base):
 
     def get_id(self):
         return str(self.id)
+        
+    def as_dict(self):
+       return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
     def __repr__(self):
         return '<user {}>'.format(self.username)
@@ -125,6 +128,9 @@ class Project(Base):
         self.data_path = data_path
         self.config_file = config_file
         self.creation_date = datetime.now()
+    
+    def as_dict(self):
+       return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
     def __repr__(self):
         return '<id {}>'.format(self.id)

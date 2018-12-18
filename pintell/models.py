@@ -5,18 +5,20 @@ from pintell.base import Base
 from pintell.utils import make_session_factory
 from werkzeug.security import generate_password_hash
 
-class Results(Base):
-    __tablename__ = 'results'
+class Projects(Base):
+    __tablename__ = 'projects'
     __table_args__ = {'extend_existing': True}
-    updated_time = Column(DateTime, primary_key=True)
-    query_time = Column(Integer)
-    current_price = Column(Float)
+    id = Column(Integer, primary_key=True)
+    project_name = Column('project_name', String(64), unique=True, index=True)
+    data_path = Column('data_path', String(500))
+    config_file = Column('config_file', String(500))
+    creation_date = Column('creation_date', DateTime)
 
-    def __init__(self, updated_time, query_time, current_price):
-        print('constructor of results....')
-        self.updated_time = updated_time
-        self.query_time = query_time
-        self.current_price = current_price
+    def __init__(self, project_name, data_path, config_file, creation_date):
+        self.project_name = project_name
+        self.data_path = data_path
+        self.config_file = config_file
+        self.creation_date = creation_date
 
     def __repr__(self):
         return '<id {}>'.format(self.id)

@@ -3,7 +3,7 @@ import datetime
 import time
 from tornado.web import RequestHandler
 from werkzeug import check_password_hash
-from pintell.models import Results, Permission, Role, User
+from pintell.models import Permission, Role, User
 from pintell.utils import make_session_factory
 from pintell.models import User
 import pintell.session as session
@@ -137,6 +137,12 @@ class AuthRegisterView(BaseView):
         self.session.save()
         self.redirect('/')
         
+class ProjectsCreateView(BaseView):
+    SUPPORTED_METHODS = ['GET', 'POST']
+    @login_required
+    def get(self, username):
+        #print('params ======== {}'.format(selg.get_argument('username')))
+        self.render('projects/create.html')
 
 class AuthLogoutView(BaseView):
     SUPPORTED_METHODS = ['GET']

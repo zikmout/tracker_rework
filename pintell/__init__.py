@@ -4,7 +4,8 @@ from tornado.ioloop import IOLoop
 from tornado.options import define, options
 import tornado.web
 from tornado.web import url
-from pintell.views import InfoView, HomePage, UserListView, AuthLoginView, AuthRegisterView, AuthLogoutView, UserDelete
+from pintell.views import InfoView, HomePage, UserListView, AuthLoginView, \
+AuthRegisterView, AuthLogoutView, UserDelete, ProjectsCreateView
 from pintell.utils import make_session_factory
 import pintell.session as session
 
@@ -25,7 +26,8 @@ def main():
             url(r'/api/v1/auth/login', AuthLoginView, name='login'),
             url(r'/api/v1/auth/logout', AuthLogoutView, name='logout'),
             url(r'/api/v1/auth/register', AuthRegisterView, name='register'),
-            url(r'/api/v1/users/', UserDelete, name='user_delete')
+            url(r'/api/v1/users/', UserDelete, name='user_delete'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects', ProjectsCreateView, name='users_projects_create_view')
             ]
             # todo : activate xsrf_cookies = True
             settings = {

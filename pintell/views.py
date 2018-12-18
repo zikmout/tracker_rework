@@ -3,7 +3,7 @@ import datetime
 import time
 from tornado.web import RequestHandler
 from werkzeug import check_password_hash
-from pintell.models import Permission, Role, User
+from pintell.models import Permission, Role, Project, User
 from pintell.utils import make_session_factory
 from pintell.models import User
 import pintell.session as session
@@ -130,12 +130,15 @@ class AuthRegisterView(BaseView):
         password = self.get_argument('password')
         email = self.get_argument('email')
         user = User(username, password, email, self.request_db, self.meta)
-        self.request_db.add(user)
-        self.request_db.commit()
-        self.session['username'] = username
-        self.session['role_id'] = user.role_id
-        self.session.save()
-        self.redirect('/')
+        try:
+            self.request_db.add(user)
+            self.request_db.commit()
+            self.session['username'] = username
+            self.session['role_id'] = user.role_id
+            self.session.save()
+            self.redirect('/')
+        except:
+            self.redirect('/api/v1/auth/register')
         
 class ProjectsCreateView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
@@ -143,6 +146,43 @@ class ProjectsCreateView(BaseView):
     def get(self, username):
         #print('params ======== {}'.format(selg.get_argument('username')))
         self.render('projects/create.html')
+
+    @login_required
+    def post(self, username):
+        name = self.get_argument('ProjectName')
+        data_path = self.get_argument('ProjectLocation')
+        try:
+            config_df = self.get_argument('ConfigLocation')
+        except Exception as e:
+            config_df = None
+            print('-> No config location provided.')
+        print('name = {}, data_path = {}, config_df = {}'.format(name, data_path, config_df))
+        self.write('project succesfully created !')
+        user = self.request_db.query(User).filter_by(username=self.session['username']).first()
+        new_project = Project(name, data_path, config_df)
+        user.projects.append(new_project)
+        self.request_db.add(user)
+        self.request_db.commit()
+        print(new_project)
+
+class UserProjectListView(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    @login_required
+    def get(self):
+        user = self.request_db.query(User).filter_by(username=self.session['username'])
+
+        user_projects_json = list()
+        user_projects = user[0].projects.all()
+        if user_projects:
+            for project in user_projects:
+                user_project_json = {
+                    'project_name': str(project.project_name),
+                    'data_path': str(project.data_path),
+                    'config_file': str(project.config_file),
+                    'creation_date': str(project.creation_date)
+                }
+                user_projects_json.append(user_project_json)
+        self.render('projects/manage.html', projects=user_projects_json)
 
 class AuthLogoutView(BaseView):
     SUPPORTED_METHODS = ['GET']

@@ -1,27 +1,9 @@
 from datetime import datetime
-from sqlalchemy import Column, ForeignKey, Integer, String, DateTime, Float, Boolean
+from sqlalchemy import Column, ForeignKey, Integer, String, DateTime, Float, Boolean, ARRAY
 from sqlalchemy.orm import relationship
 from pintell.base import Base
 from pintell.utils import make_session_factory
 from werkzeug.security import generate_password_hash
-
-class Projects(Base):
-    __tablename__ = 'projects'
-    __table_args__ = {'extend_existing': True}
-    id = Column(Integer, primary_key=True)
-    project_name = Column('project_name', String(64), unique=True, index=True)
-    data_path = Column('data_path', String(500))
-    config_file = Column('config_file', String(500))
-    creation_date = Column('creation_date', DateTime)
-
-    def __init__(self, project_name, data_path, config_file, creation_date):
-        self.project_name = project_name
-        self.data_path = data_path
-        self.config_file = config_file
-        self.creation_date = creation_date
-
-    def __repr__(self):
-        return '<id {}>'.format(self.id)
 
 class Permission:
     FOLLOW = 1
@@ -87,6 +69,7 @@ class User(Base):
     email = Column('email', String(50), unique=True, index=True)
     registration_date = Column('registration_date', DateTime)
     role_id = Column(Integer, ForeignKey('roles.id'))
+    projects = relationship('Project', backref='users', lazy='dynamic')
 
     def __init__(self, username, password, email, session, meta):
         self.username = username
@@ -126,6 +109,25 @@ class User(Base):
 
     def __repr__(self):
         return '<user {}>'.format(self.username)
+
+class Project(Base):
+    __tablename__ = 'project'
+    __table_args__ = {'extend_existing': True}
+    id = Column(Integer, primary_key=True)
+    project_name = Column('project_name', String(64), unique=True, index=True)
+    data_path = Column('data_path', String(500))
+    config_file = Column('config_file', String(500))
+    creation_date = Column('creation_date', DateTime)
+    user_id = Column(Integer, ForeignKey('users.user_id'))
+
+    def __init__(self, project_name, data_path, config_file):
+        self.project_name = project_name
+        self.data_path = data_path
+        self.config_file = config_file
+        self.creation_date = datetime.now()
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
 
 class AnonymousUser(Base):
     __tablename__ = 'users_anonymous'

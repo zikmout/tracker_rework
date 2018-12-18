@@ -7,10 +7,23 @@
         <div class="starter-template">
             <h1>Project creation</h1>
             <p class="lead">Use this page as a way to quickly start any new project.</p>
-            <h3>To create a new project you must :</h3><br>
-            <h5>1. Give it a name.</h5><br>
-            <h5>2. Specify the location of project data.</h5><br>
-            <h5>3. Specify the location of the configuration file (optional).</h5>
         </div>
+        <form action="/api/v1/users/{{ handler.session['username'] }}/projects" method=post>
+          <div class="form-group">
+            <label for="ProjectName" id="ProjectName">Project Name</label>
+            <input type="text" class="form-control" name="ProjectName" placeholder="Enter project name">
+          </div>
+          <div class="form-group">
+            <label for="ProjectLocation">Location of project</label>
+            <input type="text" class="form-control" name="ProjectLocation" aria-describedby="ProjectLocation" placeholder="ex: /home/user/documents/project">
+            <small id="ProjectLocation" class="form-text text-muted">The location must correspond to an empty folder previously created.</small>
+          </div>
+          <div class="form-group">
+            <label for="ConfigLocation">Location of configuration file (optional)</label>
+            <input type="text" class="form-control" name="ConfigLocation" aria-describedby="ConfigLocation" placeholder="ex: /home/user/documents/config.xlsx">
+            <small id="ConfigLocation" class="form-text text-muted">The configuration file must be .xlsx format</small>
+          </div>
+          <button type="submit" class="btn btn-outline-dark" class="btn btn-primary">Create Project</button>
+        </form>
         {% end %}
 </html>

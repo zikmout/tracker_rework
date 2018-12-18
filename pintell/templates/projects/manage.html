@@ -5,27 +5,25 @@
     {% extends '../layout.html' %}
     {% block content %}
     <div class="starter-template">
-        <h1>Login page</h1>
+          <h1>List of project of user : {{ handler.session['username'] }}</h1><br>
+            <table class="table table-responsive-sm table-striped">
+                  <tr>
+                    <th>Project Name</th>
+                    <th>Data Path</th>
+                    <th>Config Path</th>
+                    <th>Creation Date</th>
+                  <th>Action</th>
+                  </tr>
+                  {% for project in projects %}
+                  <tr>
+                    <th>{{ escape(project['project_name']) }}</th>
+                    <th>{{ escape(project['data_path']) }}</th>
+                    <th>{{ escape(project['config_file']) }}</th>
+                    <th>{{ escape(project['creation_date']) }}</th>
+                <th><form action="" method=get class="form-horizontal"><button type="submit" class="btn btn-outline-dark" name="project_name" value="{{ escape(project['project_name']) }}">Button</button></form></th>
+                  </tr>
+                  {% end %}
+            </table>
     </div>
-    <form action="" method=post class="form-horizontal">
-        <h2>Signin to Tornado Login Application </h2>
-        <div class="control-group">
-            <div class="controls">
-                <input type="text" id="email" name="email" class="input-xlarge" placeholder="Enter Email" required>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <div class="controls">
-                <input type="password" id="password" name="password" class="input-xlarge" placeholder="Enter Password" required>
-            </div>
-        </div>
-
-        <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn btn-success">Signin</button>
-            </div>
-        </div>
-    </form>
     {% end %}
 </html>

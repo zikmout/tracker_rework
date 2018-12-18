@@ -96,7 +96,7 @@ class User(Base):
             print('self.role is none')
             #print('current_app.config[\'FLASK_ADMIN\'] = {}'.format(current_app.config['FLASK_ADMIN']))
             print('self.email = {}'.format(self.email))
-            if self.email == 'toto@gmail.com':#current_app.config['FLASK_ADMIN']:
+            if self.email == 'admin@gmail.com':#current_app.config['FLASK_ADMIN']:
                 self.role = session.query(Role).filter_by(name='Administrator').first()
                 print('<OK Admin registration detected>')
                 print('self.role 1 = {}'.format(self.role))

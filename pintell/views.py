@@ -6,19 +6,10 @@ import pickle
 from tornado.web import RequestHandler
 from werkzeug import check_password_hash
 from pintell.models import Permission, Role, Project, User
-from pintell.utils import make_session_factory, flash_message
+from pintell.utils import make_session_factory, flash_message, login_required
 from pintell.models import User
 import pintell.session as session
 import json
-
-def login_required(f):
-    def _wrapper(self, *args, **kwargs):
-        logged = self.get_current_user()
-        if logged is None:
-            self.redirect('/api/v1/auth/login')
-        else:
-            ret = f(self, *args, **kwargs)
-    return _wrapper
 
 class InfoView(RequestHandler):
     """Only allow GET requests."""
@@ -149,42 +140,6 @@ class AuthRegisterView(BaseView):
             print('Exception : {}'.format(e))
             flash_message(self, 'danger', 'Username {} already exists or email {} already taken.'.format(username, email))
             self.redirect('/api/v1/auth/register')
-        
-class ProjectsCreateView(BaseView):
-    SUPPORTED_METHODS = ['GET', 'POST']
-    @login_required
-    def get(self, username):
-        #print('params ======== {}'.format(selg.get_argument('username')))
-        self.render('projects/create.html')
-
-    @login_required
-    def post(self, username):
-        name = self.get_argument('ProjectName')
-        data_path = self.get_argument('ProjectLocation')
-        try:
-            config_df = self.get_argument('ConfigLocation')
-        except Exception as e:
-            config_df = None
-            print('-> No config location provided.')
-        print('name = {}, data_path = {}, config_df = {}'.format(name, data_path, config_df))
-        user = self.request_db.query(User).filter_by(username=self.session['username']).first()
-        new_project = Project(name, data_path, config_df)
-        user.projects.append(new_project)
-        self.request_db.add(user)
-        self.request_db.commit()
-        flash_message(self, 'success', 'Project {} succesfully created.'.format(name))
-        self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-
-class UserProjectListView(BaseView):
-    SUPPORTED_METHODS = ['GET']
-    @login_required
-    def get(self, username):
-        user = self.request_db.query(User).filter_by(username=username)
-        user_projects_json = list()
-        user_projects = user[0].projects.all()
-        if user_projects:
-            [user_projects_json.append(project.as_dict()) for project in user_projects]
-        self.render('projects/manage.html', projects=user_projects_json)
 
 class AuthLogoutView(BaseView):
     SUPPORTED_METHODS = ['GET']

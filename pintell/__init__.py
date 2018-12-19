@@ -5,7 +5,9 @@ from tornado.options import define, options
 import tornado.web
 from tornado.web import url
 from pintell.views import InfoView, HomePage, UserListView, AuthLoginView, \
-AuthRegisterView, AuthLogoutView, UserDelete, ProjectsCreateView, UserProjectListView
+AuthRegisterView, AuthLogoutView, UserDelete
+from pintell.project_views import ProjectsCreateView, UserProjectListView, \
+UserProjectView, UserProjectDelete
 from pintell.utils import make_session_factory
 import pintell.session as session
 
@@ -28,7 +30,9 @@ def main():
             url(r'/api/v1/auth/register', AuthRegisterView, name='register'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?', UserDelete, name='user_delete'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/project_create', ProjectsCreateView, name='users_projects_create_view'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects_manage', UserProjectListView, name='user_project_manage_view')
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects_manage', UserProjectListView, name='user_project_manage_view'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView, name='user_project_index'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete, name='user_project_delete')
             ]
             # todo : activate xsrf_cookies = True
             settings = {

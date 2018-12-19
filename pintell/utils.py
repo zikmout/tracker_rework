@@ -24,3 +24,12 @@ def flash_message(self, type, message):
     """
     message = dict(type=type, message=message)
     self.set_secure_cookie("flash", tornado.escape.json_encode(message))
+
+def login_required(f):
+    def _wrapper(self, *args, **kwargs):
+        logged = self.get_current_user()
+        if logged is None:
+            self.redirect('/api/v1/auth/login')
+        else:
+            ret = f(self, *args, **kwargs)
+    return _wrapper

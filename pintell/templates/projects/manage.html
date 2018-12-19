@@ -12,17 +12,17 @@
                     <th>Data Path</th>
                     <th>Config Path</th>
                     <th>Creation Date</th>
-                  <th>Action</th>
+                    <th>Action</th>
                   </tr>
                   {% for project in projects %}
                   <tr>
-                    <th>{{ escape(project['project_name']) }}</th>
-                    <th>{{ escape(project['data_path']) }}</th>
-                    <th>{{ escape(project['config_file']) }}</th>
-                    <th>{{ escape(project['creation_date']) }}</th>
-                <th><form action="" method=get class="form-horizontal"><button type="submit" class="btn btn-outline-dark" name="project_name" value="{{ escape(project['project_name']) }}">Button</button></form></th>
-                  </tr>
-                  {% end %}
+                  <th>{{ escape(project['project_name']) }}</th>
+                  <th>{{ escape(project['data_path']) }}</th>
+                  <th>{{ escape(project['config_file']) }}</th>
+                  <th>{{ escape(project['creation_date']) }}</th>
+                  <th><form action="" method=get class="form-horizontal"><button type="submit" class="btn btn-outline-dark" name="project_name" value="{{ escape(project['project_name']) }}">Button</button></form></th>
+                </tr>
+              {% end %}
             </table>
     </div>
     {% end %}

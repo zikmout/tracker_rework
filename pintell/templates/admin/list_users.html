@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+    <head>
     </head>
-    {% extends '../layout.html'%}
+    {% extends '../layout.html' %}
     {% block content %}
     <div class="starter-template">
-      <h1>List of user registered in the DB: </h1><br>
-      	<table class="table table-responsive-sm table-striped">
-      		  <tr>
-      		  	<th>Username</th>
-      		  	<th>Password</th>
-      		  	<th>Email</th>
-      		  	<th>Role</th>
-      		  	<th>Registration date</th>
-              <th>Action</th>
-      		  </tr>
-      		  {% for user in users_json %}
-	      	  <tr>
-	      		<th>{{ escape(user['username']) }}</th>
-		      	<th>{{ escape(user['password']) }}</th>
-		      	<th>{{ escape(user['email']) }}</th>
-		      	<th>{{ escape(user['role']) }}</th>
-		      	<th>{{ escape(user['registration_date']) }}</th>
-            <th><form action="{{ reverse_url('user_delete') }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" name="email" value="{{ escape(user['email']) }}">Delete</button></form></th>
-		      </tr>
-		      {% end %}
-	    </table>
-	</div>
+          <h1>List of user registered in the DB: </h1><br>
+          	<table class="table table-responsive-sm table-striped">
+            		  <tr>
+            		  	<th>Username</th>
+            		  	<th>Password</th>
+            		  	<th>Email</th>
+            		  	<th>Role</th>
+            		  	<th>Registration date</th>
+                    <th>Action</th>
+            		  </tr>
+            		  {% for user in users_json %}
+      	      	  <tr>
+      	      		<th>{{ escape(user['username']) }}</th>
+      		      	<th>{{ escape(user['password']) }}</th>
+      		      	<th>{{ escape(user['email']) }}</th>
+      		      	<th>{{ escape(user['role']) }}</th>
+      		      	<th>{{ escape(user['registration_date']) }}</th>
+                  <th><form action="{{ reverse_url('user_delete') }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" name="email" value="{{ escape(user['email']) }}">Delete</button></form></th>
+      		      </tr>
+    		      {% end %}
+    	     </table>
+    </div>
     {% end %}
 </html>

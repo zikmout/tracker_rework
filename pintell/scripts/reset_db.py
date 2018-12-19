@@ -9,5 +9,5 @@ def main():
     engine = engine_from_config(settings, prefix='sqlalchemy.')
     Base.metadata.drop_all(engine)
     Base.metadata.create_all(engine)
-    #Role.insert_roles()
+    Role.insert_roles()
     print('[X] DB successfully deleted.')

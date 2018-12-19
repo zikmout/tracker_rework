@@ -21,7 +21,7 @@ setup(
     install_requires=requires,
     entry_points={
         'console_scripts': [
-            'pintell = pintell:main',
+            'serve_app = pintell:main',
             'initdb = pintell.scripts.initialize_db:main',
             'reset_db = pintell.scripts.reset_db:main'
         ],

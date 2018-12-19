@@ -96,6 +96,11 @@
             {% end %}
 
         {% end %}
+        {% if hasattr(handler, 'flash') %}
+        <div class="alert alert-{{ handler.flash['type'] }}" role="alert">
+            {{ handler.flash['message'] }}
+        </div>
+        {% end %}
         <font color='green'>->{{ handler.session }}<-</font>
         <!-- end of administrator panel -->
         <!-- session messages -->

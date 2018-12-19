@@ -1,10 +1,12 @@
 import json
 import datetime
 import time
+import tornado
+import pickle
 from tornado.web import RequestHandler
 from werkzeug import check_password_hash
 from pintell.models import Permission, Role, Project, User
-from pintell.utils import make_session_factory
+from pintell.utils import make_session_factory, flash_message
 from pintell.models import User
 import pintell.session as session
 import json
@@ -74,6 +76,13 @@ class BaseView(RequestHandler):
             return None
 
     def prepare(self):
+        cookie = self.get_secure_cookie("flash")
+        if cookie:
+            cookie = tornado.escape.json_decode(cookie)
+            self.flash = cookie
+            #tornado.escape.url_unescape(pickle.loads(cookie))#cookie.decode('utf-8')
+            print('read cookie = {}'.format(self.flash))
+            self.clear_cookie("flash")
         # create session factory for each request
         db, meta = make_session_factory()
         self.request_db = db
@@ -97,7 +106,6 @@ class BaseView(RequestHandler):
 
 class HomePage(BaseView):
     SUPPORTED_METHODS = ['GET']
-    @login_required
     def get(self):
         #username = self.get_current_user()
         #self.write('Session username is {}'.format(username))
@@ -113,11 +121,13 @@ class AuthLoginView(BaseView):
         password = self.get_argument('password')
         registered_user = self.app_db.query(User).filter_by(email=email).first()
         if registered_user is None or not check_password_hash(registered_user.password, password):
-            self.write('Oups :/ Wrong pasword or email !')
+            flash_message(self, 'danger', 'User does not exist or password is incorrect.')
             self.redirect('/api/v1/auth/login')
+            return
         self.session['username'] = registered_user.username
         self.session['role_id'] = registered_user.role_id
         self.session.save()
+        flash_message(self, 'success', 'User {} succesfully logged in.'.format(registered_user.username))
         self.redirect('/')
 
 class AuthRegisterView(BaseView):
@@ -136,8 +146,11 @@ class AuthRegisterView(BaseView):
             self.session['username'] = username
             self.session['role_id'] = user.role_id
             self.session.save()
+            flash_message(self, 'success', 'User {} succesfully registered.'.format(username))
             self.redirect('/')
-        except:
+        except Exception as e:
+            print('Exception : {}'.format(e))
+            flash_message(self, 'danger', 'Username {} already exists or email {} already taken.'.format(username, email))
             self.redirect('/api/v1/auth/register')
         
 class ProjectsCreateView(BaseView):
@@ -190,7 +203,8 @@ class AuthLogoutView(BaseView):
     @login_required
     def get(self):
         self.session.delete()
-        self.redirect('/api/v1/auth/logout')
+        flash_message(self, 'success', 'You succesfully logged out.')
+        self.redirect('/')
 
 # the BaseView is above here
 class UserListView(BaseView):
@@ -202,7 +216,7 @@ class UserListView(BaseView):
         username = self.get_current_user()
         users_json = list()
         users = self.request_db.query(User).all()
-        print('As dict users: {}'.format(users[0].as_dict()))
+        #print('As dict users: {}'.format(users[0].as_dict()))
         if users:
             for user in users:
                 user_json = {

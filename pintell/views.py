@@ -211,9 +211,11 @@ class UserDelete(BaseView):
     SUPPORTED_METHODS = ['POST']
     def post(self, username):
         print('User to be deleted : {}'.format(username))
-        if self.request_db.query(User).filter_by(username=username).delete():
+        user = self.request_db.query(User).filter_by(username=username).first()
+        if user:
             print('User found. Deleting it now....')
             try:
+                self.request_db.delete(user)
                 self.request_db.commit()
                 self.redirect('/api/v1/users_list')
             except Exception as e:

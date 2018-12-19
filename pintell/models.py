@@ -63,7 +63,7 @@ class Role(Base):
 class User(Base):
     __tablename__ = 'users'
     __table_args__ = {'extend_existing': True}
-    id = Column('user_id', Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     username = Column('username', String(20), unique=True, index=True)
     password = Column('password', String(500))
     email = Column('email', String(50), unique=True, index=True)
@@ -108,7 +108,7 @@ class User(Base):
         return str(self.id)
         
     def as_dict(self):
-       return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+       return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
 
     def __repr__(self):
         return '<user {}>'.format(self.username)
@@ -121,7 +121,7 @@ class Project(Base):
     data_path = Column('data_path', String(500))
     config_file = Column('config_file', String(500))
     creation_date = Column('creation_date', DateTime)
-    user_id = Column(Integer, ForeignKey('users.user_id'))
+    user_id = Column(Integer, ForeignKey('users.id'))
 
     def __init__(self, project_name, data_path, config_file):
         self.project_name = project_name
@@ -130,7 +130,7 @@ class Project(Base):
         self.creation_date = datetime.now()
     
     def as_dict(self):
-       return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+       return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
 
     def __repr__(self):
         return '<id {}>'.format(self.id)

@@ -76,12 +76,11 @@ class BaseView(RequestHandler):
             return None
 
     def prepare(self):
+        # capture flash messages cookies
         cookie = self.get_secure_cookie("flash")
         if cookie:
             cookie = tornado.escape.json_decode(cookie)
             self.flash = cookie
-            #tornado.escape.url_unescape(pickle.loads(cookie))#cookie.decode('utf-8')
-            print('read cookie = {}'.format(self.flash))
             self.clear_cookie("flash")
         # create session factory for each request
         db, meta = make_session_factory()
@@ -107,8 +106,6 @@ class BaseView(RequestHandler):
 class HomePage(BaseView):
     SUPPORTED_METHODS = ['GET']
     def get(self):
-        #username = self.get_current_user()
-        #self.write('Session username is {}'.format(username))
         self.render('index.html')
 
 class AuthLoginView(BaseView):
@@ -183,19 +180,10 @@ class UserProjectListView(BaseView):
     @login_required
     def get(self):
         user = self.request_db.query(User).filter_by(username=self.session['username'])
-
         user_projects_json = list()
         user_projects = user[0].projects.all()
-        #print('As dict : {}'.format(user_projects[0].as_dict()))
         if user_projects:
-            for project in user_projects:
-                user_project_json = {
-                    'project_name': str(project.project_name),
-                    'data_path': str(project.data_path),
-                    'config_file': str(project.config_file),
-                    'creation_date': str(project.creation_date)
-                }
-                user_projects_json.append(user_project_json)
+            [user_projects_json.append(project.as_dict()) for project in user_projects]
         self.render('projects/manage.html', projects=user_projects_json)
 
 class AuthLogoutView(BaseView):
@@ -206,7 +194,6 @@ class AuthLogoutView(BaseView):
         flash_message(self, 'success', 'You succesfully logged out.')
         self.redirect('/')
 
-# the BaseView is above here
 class UserListView(BaseView):
     """View for reading and adding new roles."""
     SUPPORTED_METHODS = ['GET']
@@ -216,17 +203,8 @@ class UserListView(BaseView):
         username = self.get_current_user()
         users_json = list()
         users = self.request_db.query(User).all()
-        #print('As dict users: {}'.format(users[0].as_dict()))
         if users:
-            for user in users:
-                user_json = {
-                    'username': str(user.username),
-                    'password': str(user.password),
-                    'email': str(user.email),
-                    'role': str(user.role_id),
-                    'registration_date': str(user.registration_date)
-                }
-                users_json.append(user_json)
+            [users_json.append(user.as_dict()) for user in users]
         self.render('admin/list_users.html', users_json=users_json)
 
 class UserDelete(BaseView):

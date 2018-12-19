@@ -8,7 +8,7 @@
             <h1>Project creation</h1>
             <p class="lead">Use this page as a way to quickly start any new project.</p>
         </div>
-        <form action="/api/v1/users/{{ handler.session['username'] }}/projects" method=post>
+        <form action="/api/v1/users/{{ handler.session['username'] }}/project_create" method=post>
           <div class="form-group">
             <label for="ProjectName" id="ProjectName">Project Name</label>
             <input type="text" class="form-control" name="ProjectName" placeholder="Enter project name">

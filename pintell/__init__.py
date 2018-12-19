@@ -22,13 +22,13 @@ def main():
             handlers = [
             url(r'/', HomePage, name='home'),
             url(r'/api/v1', InfoView),
-            url(r'/api/v1/users/list', UserListView, name='users_list'), #?(?P<username>[A-Za-z0-9-]+)?/', RoleListView)
+            url(r'/api/v1/users_list', UserListView, name='users_list'), #?(?P<username>[A-Za-z0-9-]+)?/', RoleListView)
             url(r'/api/v1/auth/login', AuthLoginView, name='login'),
             url(r'/api/v1/auth/logout', AuthLogoutView, name='logout'),
             url(r'/api/v1/auth/register', AuthRegisterView, name='register'),
-            url(r'/api/v1/users/', UserDelete, name='user_delete'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects', ProjectsCreateView, name='users_projects_create_view'),
-            url(r'/api/v1/users/project/list', UserProjectListView, name='user_project_list_view')
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?', UserDelete, name='user_delete'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/project_create', ProjectsCreateView, name='users_projects_create_view'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects_manage', UserProjectListView, name='user_project_manage_view')
             ]
             # todo : activate xsrf_cookies = True
             settings = {

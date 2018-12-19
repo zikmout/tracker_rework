@@ -32,11 +32,11 @@ class InfoView(RequestHandler):
         """List of routes for this API."""
         routes = {
             'API infos': 'GET /api/v1',
-            'list users': 'GET /api/v1/users/list',
+            'list users': 'GET /api/v1/users_list',
             'login': 'POST /api/v1/auth/login',
             'logout': 'GET /api/v1/auth/logout',
             'register': 'POST /api/v1/auth/register',
-            'delete user': 'POST /api/v1/users/<email>',
+            'delete user': 'POST /api/v1/users/<username>',
 
             'register': 'POST /api/v1/accounts',
             'single profile detail': 'GET /api/v1/accounts/<username>',
@@ -167,19 +167,19 @@ class ProjectsCreateView(BaseView):
             config_df = None
             print('-> No config location provided.')
         print('name = {}, data_path = {}, config_df = {}'.format(name, data_path, config_df))
-        self.write('project succesfully created !')
         user = self.request_db.query(User).filter_by(username=self.session['username']).first()
         new_project = Project(name, data_path, config_df)
         user.projects.append(new_project)
         self.request_db.add(user)
         self.request_db.commit()
-        print(new_project)
+        flash_message(self, 'success', 'Project {} succesfully created.'.format(name))
+        self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
 
 class UserProjectListView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
-    def get(self):
-        user = self.request_db.query(User).filter_by(username=self.session['username'])
+    def get(self, username):
+        user = self.request_db.query(User).filter_by(username=username)
         user_projects_json = list()
         user_projects = user[0].projects.all()
         if user_projects:
@@ -209,16 +209,15 @@ class UserListView(BaseView):
 
 class UserDelete(BaseView):
     SUPPORTED_METHODS = ['POST']
-    def post(self):
-        email = self.get_argument('email')
-        print('User to be deleted : {}'.format(email))
-        if self.request_db.query(User).filter_by(email=email).delete():
+    def post(self, username):
+        print('User to be deleted : {}'.format(username))
+        if self.request_db.query(User).filter_by(username=username).delete():
             print('User found. Deleting it now....')
             try:
                 self.request_db.commit()
-                self.redirect('/api/v1/users/list')
+                self.redirect('/api/v1/users_list')
             except Exception as e:
-                print('EXCEPTION :::::::::: {}'.format(e))
+                print('Exception : Impossible to delete user because : {}'.format(e))
         else:
-            print('User email {} not found. Delete aborded.'.format(email))
-            self.redirect('/api/v1/users/list')
+            print('Username {} not found. Delete aborded.'.format(username))
+            self.redirect('/api/v1/users_list')

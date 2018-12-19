@@ -22,7 +22,7 @@
       		      	<th>{{ escape(user['email']) }}</th>
       		      	<th>{{ escape(user['role_id']) }}</th>
       		      	<th>{{ escape(user['registration_date']) }}</th>
-                  <th><form action="{{ reverse_url('user_delete') }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" name="email" value="{{ escape(user['email']) }}">Delete</button></form></th>
+                  <th><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" name="email" value="">Delete</button></form></th>
       		      </tr>
     		      {% end %}
     	     </table>

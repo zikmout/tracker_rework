@@ -10,6 +10,17 @@ def make_session_factory():
     return session, meta
 
 def flash_message(self, type, message):
+    """ Flash messages to user:
+        type correspond to twitter bootstrap alerts type:
+        see : https://getbootstrap.com/docs/4.0/components/alerts/
+        primary -> blue
+        secondary -> grey
+        success -> green
+        danger -> red
+        warning -> yellow
+        info -> light blue
+        light -> white      
+        dark -> black
+    """
     message = dict(type=type, message=message)
-    #print('set cookie, message = {}'.format(message))
     self.set_secure_cookie("flash", tornado.escape.json_encode(message))

@@ -5,27 +5,27 @@
     {% extends '../layout.html' %}
     {% block content %}
     <div class="starter-template">
-          <h1>List of user registered in the DB: </h1><br>
-          	<table class="table table-responsive-sm table-striped">
-            		  <tr>
-            		  	<th>Username</th>
-            		  	<th>Password</th>
-            		  	<th>Email</th>
-            		  	<th>Role</th>
-            		  	<th>Registration date</th>
+          <h1>List of project of user : {{ handler.session['username'] }}</h1><br>
+            <table class="table table-responsive-sm table-striped">
+                  <tr>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Registration date</th>
                     <th>Action</th>
-            		  </tr>
-            		  {% for user in users_json %}
-      	      	  <tr>
-      	      		<th>{{ escape(user['username']) }}</th>
-      		      	<th>{{ escape(user['password']) }}</th>
-      		      	<th>{{ escape(user['email']) }}</th>
-      		      	<th>{{ escape(user['role_id']) }}</th>
-      		      	<th>{{ escape(user['registration_date']) }}</th>
-                  <th><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" name="email" value="">Delete</button></form></th>
-      		      </tr>
-    		      {% end %}
-    	     </table>
+                  </tr>
+                  {% for user in users_json %}
+                  <tr>
+                  <th>{{ escape(user['username']) }}</th>
+                  <th>{{ escape(user['password'][:10]) }} ... {{ escape(user['password'][-10:]) }}</th>
+                  <th>{{ escape(user['email']) }}</th>
+                  <th>{{ escape(user['role_id']) }}</th>
+                  <th>{{ escape(user['registration_date']) }}</th>
+                  <th><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Button</button></form></th>
+                </tr>
+              {% end %}
+            </table>
     </div>
     {% end %}
 </html>

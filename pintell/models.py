@@ -69,7 +69,7 @@ class User(Base):
     email = Column('email', String(50), unique=True, index=True)
     registration_date = Column('registration_date', DateTime)
     role_id = Column(Integer, ForeignKey('roles.id'))
-    projects = relationship('Project', cascade='delete', backref='users', lazy='dynamic')
+    projects = relationship('Project', cascade='save-update, delete', backref='users', lazy='dynamic')
 
     def __init__(self, username, password, email, session, meta):
         self.username = username

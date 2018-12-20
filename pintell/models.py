@@ -117,14 +117,14 @@ class Project(Base):
     __tablename__ = 'project'
     __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True)
-    project_name = Column('project_name', String(64), unique=True, index=True)
+    name = Column('name', String(64), unique=True, index=True)
     data_path = Column('data_path', String(500))
     config_file = Column('config_file', String(500))
     creation_date = Column('creation_date', DateTime)
     user_id = Column(Integer, ForeignKey('users.id'))
 
-    def __init__(self, project_name, data_path, config_file):
-        self.project_name = project_name
+    def __init__(self, name, data_path, config_file):
+        self.name = name
         self.data_path = data_path
         self.config_file = config_file
         self.creation_date = datetime.now()

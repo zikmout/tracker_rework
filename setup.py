@@ -7,7 +7,13 @@ requires = [
     'werkzeug',
     'redis',
     'ujson',
-    'uuid'
+    'uuid',
+    'pandas',
+    'lxml',
+    'bs4',
+    'requests',
+    'pdfminer.six',
+    'xlrd'
 ]
 
 setup(

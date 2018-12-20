@@ -4,7 +4,7 @@
     </head>
     {% extends '../layout.html' %}
     {% block content %}
-    <div class="starter-template">
+    <div class="starter-template-fluid">
           <h1>List of project of user : {{ handler.session['username'] }}</h1><br>
             <table class="table table-responsive-sm table-striped">
                   <tr>
@@ -17,12 +17,12 @@
                   </tr>
                   {% for project in projects %}
                   <tr>
-                  <th>{{ escape(project['project_name']) }}</th>
+                  <th>{{ escape(project['name']) }}</th>
                   <th>{{ escape(project['data_path']) }}</th>
                   <th>{{ escape(project['config_file']) }}</th>
                   <th>{{ escape(project['creation_date']) }}</th>
-                  <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['project_name']) }}" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Load</button></form></th>
-                  <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['project_name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete</button></form></th>
+                  <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Load</button></form></th>
+                  <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete</button></form></th>
                 </tr>
               {% end %}
             </table>

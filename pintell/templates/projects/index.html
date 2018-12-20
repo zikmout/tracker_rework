@@ -4,9 +4,32 @@
     </head>
     {% extends '../layout.html' %}
     {% block content %}
-    <div class="starter-template">
-          <h1>Project : {{ projectname }}</h1><br>
-
+    <div class="starter-template-fluid">
+          <center><h3>Project {{ project['name'] }}</h3></center>
+          <center><p class="lead">Below are shown all the websites referenced in the project</p><br></center>
+            <table class="table table-responsive-sm table-striped">
+                  <tr>
+                    <th>Base URL</th>
+                    <th>Total</th>
+                    <th>Pages</th>
+                    <th>Pdfs</th>
+                    <th>Excels</th>
+                    <th>Errors</th>
+                    <th>Downloaded files</th>
+                    <th>Crawling date</th>
+                    <th>Duration</th>
+                    <th>Action</th>
+                  </tr>
+                  {% for unit_name, details in handler.session['units_stats'].items() %}
+                  <tr>
+                  <th>{{ escape(unit_name) }}</th>
+                  	{% for k, v in details.items() %}
+	                  <th>{{ escape(str(v)) }}</th>
+	                {% end %}
+                  <th><form action="#" method="" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Button</button></form></th>
+                  </tr>
+                  {% end %}
+            </table>          
     </div>
     {% end %}
 </html>

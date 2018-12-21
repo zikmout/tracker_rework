@@ -4,7 +4,7 @@ import datetime
 import time
 from pintell.views import BaseView
 from pintell.models import Permission, Role, Project, User
-from pintell.utils import flash_message, login_required
+from pintell.utils import flash_message, login_required, get_url_from_id
 import pintell.session as session
 from pintell.core.rproject import RProject
 from pintell.workers.download_worker import download
@@ -60,22 +60,24 @@ class UserProjectView(BaseView):
         # Loading project
         sbb_project = RProject(project.name, project.data_path, project.config_file)
         sbb_project._load_units_from_data_path()
-        units_stats = sbb_project.units_stats(units=sbb_project.filter_units())
-        if units_stats is None:
+        units = sbb_project.units_stats(units=sbb_project.filter_units())
+        #sbb_project.download_units(['http://www.viscofan.com'])
+        if units is None:
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
         else:
-            self.session['units_stats'] = units_stats
-            # session not saved here, but works ???
-            self.render('projects/index.html', project=json_project, units_stats=units_stats)
+            self.session['units'] = units
+            self.session.save()
+            self.render('projects/index.html', project=json_project, units=units)
+
+class UserUnitView(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    def get(self, username, projectname, uid):
+        url = get_url_from_id(self.session['units'], uid)
+        self.render('unit/index.html', url=url)
 
 class UserTaskCreate(BaseView):
     SUPPORTED_METHODS = ['POST']
-    def set_default_headers(self):
-        """Set the default response header to be JSON."""
-        #self.set_header("Content-Type", 'application/json; charset="utf-8"')
-        pass
-
     def post(self, username):
         # Load celery background task
         task = download.apply_async()#username, 1, 1000)
@@ -89,8 +91,7 @@ class UserTaskStatus(BaseView):
     SUPPORTED_METHODS = ['GET']
     def set_default_headers(self):
         """Set the default response header to be JSON."""
-        #self.set_header("Content-Type", 'application/json; charset="utf-8"')
-        pass
+        self.set_header("Content-Type", 'application/json; charset="utf-8"')
 
     def get(self, username, task_id):
         task = download.AsyncResult(task_id)
@@ -119,7 +120,6 @@ class UserTaskStatus(BaseView):
                 'total': 1,
                 'status': str(task.info)
             }
-        self.set_header('Content-Type', 'application/json')
         print('response : {}'.format(response))
         self.write(response)
 

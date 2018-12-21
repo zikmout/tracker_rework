@@ -89,7 +89,7 @@ class Unit:
             print('All downloaded content from website \'{}\' has been deleted.'.format(self.url))
 
     def _remote_tree(self):
-        first_line, middle, last_line = self._load_urls()
+        first_line, middle, last_line = self.load_urls(self.logfile)
         # get rid of <PDF> and <EXCEL> tags in list of links
         r = utils.find_internal_links(middle)
         return sorted(r, reverse=True)

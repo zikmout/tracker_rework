@@ -126,6 +126,7 @@ class RProject:
             all_units = self.units
         # for every unit, get first line and last line of logfile to read it
         # also count number of downloaded files from local_tree
+        uid = 1
         units_dict = dict()
         for unit in all_units:
             first_line, middle, last_line = unit.load_urls(unit.logfile)
@@ -147,7 +148,8 @@ class RProject:
             excels += unit.excels
             errors += unit.errors
             unit_dict = { 
-                unit.url : {
+                uid : {
+                    'url': unit.url,
                     'total': unit.total,
                     'pages': unit.pages,
                     'pdfs': unit.pdfs,
@@ -159,6 +161,7 @@ class RProject:
                 }
             }
             units_dict.update(unit_dict)
+            uid += 1
         nb_items = len(all_units)
         if verbose:
             print('-> Statistics on {}/{} available unit(s).\n'.format(nb_items, len(self.units)))

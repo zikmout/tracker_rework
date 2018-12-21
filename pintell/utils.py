@@ -33,3 +33,9 @@ def login_required(f):
         else:
             ret = f(self, *args, **kwargs)
     return _wrapper
+
+def get_url_from_id(units, uid):
+    for _, details in units.items():
+        if _ == uid:
+            return details['url']
+    return None

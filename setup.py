@@ -13,7 +13,8 @@ requires = [
     'bs4',
     'requests',
     'pdfminer.six',
-    'xlrd'
+    'xlrd',
+    'celery'
 ]
 
 setup(

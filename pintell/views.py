@@ -82,7 +82,8 @@ class BaseView(RequestHandler):
         }
 
     def on_finish(self):
-        self.request_db.close()
+        if hasattr(self, 'request_db'):
+            self.request_db.close()
 
     def set_default_headers(self):
         """Set the default response header to be JSON."""

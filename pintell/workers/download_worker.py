@@ -14,15 +14,14 @@ import tornado.ioloop
 
 @app.task(bind=True)
 def download(self):
-	i = 0
 	sender = 'simsim'
 	start = 1
-	stop = 1000
+	stop = 100
 	total = stop - start
-	for i in range(0, total):
+	for i in range(total):
 		print('-> SENDER : {}, counter = {}'.format(sender, i))
 		self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': 'sender{}'.format(i)})
-		time.sleep(2)
+		time.sleep(1)
 	return {'current': 100, 'total': 100, 'status': 'Taks Completed for sender{}'.format(sender), 'result': 42}
 
 '''

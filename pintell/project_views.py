@@ -83,8 +83,8 @@ class UserTaskCreate(BaseView):
         # Load celery background task
         task = download.apply_async()#username, 1, 1000)
         #if not hasattr(self.session, 'tasks'):
-        self.session['tasks'] = dict()
-        self.session['tasks'] = { task.id : 'download' }
+        #self.session['tasks'] = dict()
+        self.session['tasks'] = task.id
         self.session.save()
         print('SELF SESSION AFTER: {}'.format(self.session))
         self.set_header('Location', '/api/v1/users/{}/tasks/status/{}'.format(self.session['username'], task.id))

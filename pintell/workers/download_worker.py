@@ -13,8 +13,8 @@ import tornado.httpserver
 import tornado.ioloop
 
 @app.task(bind=True)
-def download(self):
-	sender = 'simsim'
+def download(self, sender):
+	#sender = 'simsim'
 	start = 1
 	stop = 500
 	total = stop - start

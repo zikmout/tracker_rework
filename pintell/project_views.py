@@ -81,10 +81,10 @@ class UserTaskCreate(BaseView):
     def post(self, username):
         print('SELF SESSION BEFORE: {}'.format(self.session))
         # Load celery background task
-        task = download.apply_async()#username, 1, 1000)
-        #if not hasattr(self.session, 'tasks'):
-        #self.session['tasks'] = dict()
-        self.session['tasks'] = task.id
+        task = download.apply_async((username,))#username, 1, 1000)
+        if not hasattr(self.session['tasks'], 'download'):
+            self.session['tasks']['download'] = dict()
+        self.session['tasks']['download'].update({task.id : username})
         self.session.save()
         print('SELF SESSION AFTER: {}'.format(self.session))
         self.set_header('Location', '/api/v1/users/{}/tasks/status/{}'.format(self.session['username'], task.id))

@@ -5,20 +5,21 @@
     {% extends '../layout.html' %}
     {% block content %}
     <div class="starter-template-fluid">
+        <!-- [key for key, value in handler.session['tasks']['download'].items() if value == 'admin'][0] //-->
           <script src="{{ static_url('jquery.min.js') }}"></script>
           <center><h3>Unit: {{ escape(url) }}</h3></center>
           <center><p class="lead">Use this page to view changes on unit</p><br></center>
-          {% if handler.session['tasks'] == {} %}
+          {% if 'download' not in handler.session['tasks'] %}
           <center><button class="btn btn-outline-dark" onclick="start_download_task()">Background Task</button></center>
           {% else %}
-          <center><b> Downlodaing task already in progress </b></center>
+          <center><b> Downloading task already in progress </b></center>
           {% end %}    
     </div><br>
     <!-- script inspired and modified from https://blog.miguelgrinberg.com/post/using-celery-with-flask //-->
     <div id="progress"></div>
     <div id="infos"></div>
 
-        {% if handler.session['tasks'] == {} %}
+        {% if 'download' not in handler.session['tasks'] %}
         <script>
             function update_progress(status_url, div_bar, div_info) {
                 // send GET request to status URL
@@ -74,7 +75,7 @@
         </script>
         {% else %}
         <script>
-        start_download_task2("/api/v1/users/{{ handler.session['username'] }}/tasks/status/{{ handler.session['tasks'] }}")
+        load_download_task("/api/v1/users/{{ handler.session['username'] }}/tasks/status/{{ [key for key, value in handler.session['tasks']['download'].items() if value == 'admin'][0] }}")
         //update_progress("/api/v1/users/{{ handler.session['username'] }}/tasks/status/{{ handler.session['tasks'] }}", div_bar, div_info)
         function update_progress(status_url, div_bar, div_info) {
                 // send GET request to status URL
@@ -107,7 +108,7 @@
                 });
             }
 
-            function start_download_task2(status_url) {
+            function load_download_task(status_url) {
                 // add task status elements
                 
                 div_bar = $('<div class="progress"><div class="progress-bar" id="pct" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><hr>');

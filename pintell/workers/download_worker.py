@@ -12,17 +12,18 @@ import tornado.websocket
 import tornado.httpserver
 import tornado.ioloop
 
-@app.task(bind=True)
+@app.task(bind=True, ignore_result=False)
 def download(self, sender):
-	#sender = 'simsim'
-	start = 1
-	stop = 500
-	total = stop - start
-	for i in range(total):
-		print('-> SENDER : {}, counter = {}'.format(sender, i))
-		self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': 'sender{}'.format(i)})
-		time.sleep(1)
-	return {'current': 100, 'total': 100, 'status': 'Taks Completed for sender{}'.format(sender), 'result': 42}
+    ignore_result = False
+    #sender = 'simsim'
+    start = 1
+    stop = 500
+    total = stop - start
+    for i in range(total):
+        print('-> SENDER : {}, counter = {}'.format(sender, i))
+        self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': 'sender{}'.format(i)})
+        time.sleep(1)
+    return {'current': 100, 'total': 100, 'status': 'Taks Completed for sender{}'.format(sender), 'result': 42}
 
 '''
 class WebSocketHandler(tornado.websocket.WebSocketHandler):

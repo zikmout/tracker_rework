@@ -81,8 +81,9 @@ class UserTaskCreate(BaseView):
     def post(self, username):
         print('SELF SESSION BEFORE: {}'.format(self.session))
         # Load celery background task
-        task = download.apply_async((username,))#username, 1, 1000)
-        if not hasattr(self.session['tasks'], 'download'):
+        task = download.apply_async((username,))
+        #print('Task backend = {}'.format(task.backend))
+        if 'download' not in self.session['tasks']:
             self.session['tasks']['download'] = dict()
         self.session['tasks']['download'].update({task.id : username})
         self.session.save()
@@ -97,6 +98,8 @@ class UserTaskStatus(BaseView):
 
     def get(self, username, task_id):
         task = download.AsyncResult(task_id)
+        print('Task backend = {}'.format(task.backend))
+        #task = task.get()
         print('task_id: {}'.format(task_id))
         if task.state == 'PENDING':
             response = {
@@ -105,7 +108,7 @@ class UserTaskStatus(BaseView):
                 'total': 1,
                 'status': 'Pending ...'
             }
-        elif task.state != 'FAILURE':
+        elif task.info is not None and task.state != 'FAILURE':
             response = {
                 'state': task.state,
                 'current': task.info.get('current', 0),

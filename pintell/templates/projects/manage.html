@@ -23,8 +23,8 @@
                   <th>{{ escape(project['creation_date']) }}</th>
                   <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Load</button></form></th>
                   <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete</button></form></th>
-                </tr>
-              {% end %}
+                  </tr>
+                  {% end %}
             </table>
     </div>
     {% end %}

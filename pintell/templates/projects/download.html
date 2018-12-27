@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    {% extends '../layout.html' %}
+    {% block content %}
+    <div class="starter-template-fluid">
+          <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
+          <center><p class="lead">Managing project download</p><br></center>
+            <table class="table table-responsive-sm table-striped">
+                  <tr>
+                    <th>Base URL</th>
+                    <th>Pages</th>
+                    <th>Downloaded</th>
+                    <th>Crawling date</th>
+                    <th>Action</th>
+                  </tr>
+                  {% for uid, details in handler.session['units'].items() %}
+                  <tr>
+                  	{% for k, v in details.items() %}
+                    {% if k not in ['total', 'pdfs', 'excels', 'errors', 'duration'] %}
+	                  <th>{{ escape(str(v)) }}</th>
+                    {% end %}
+	                {% end %}
+                  <th><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Download</button></input></form></th>
+                  </tr>
+                  {% end %}
+            </table>          
+    </div>
+    {% end %}
+</html>

@@ -8,7 +8,7 @@ from tornado.web import url
 from pintell.views import InfoView, HomePage, UserListView, AuthLoginView, \
 AuthRegisterView, AuthLogoutView, UserDelete
 from pintell.project_views import ProjectsCreateView, UserProjectListView, \
-UserProjectView, UserProjectDelete, UserTaskStatus, UserTaskCreate, UserUnitView
+UserProjectView, UserProjectDelete, UserTaskStatus, UserTaskCreate, UserUnitView, UserProjectDownloadView
 from pintell.utils import make_session_factory
 import pintell.session as session
 
@@ -33,6 +33,7 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/project_create', ProjectsCreateView, name='users_projects_create_view'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects_manage', UserProjectListView, name='user_project_manage_view'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView, name='user_project_index'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView, name='user_project_download'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete, name='user_project_delete'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/status/?(?P<task_id>[A-Za-z0-9-]+)?', UserTaskStatus, name='user_task_status'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/create', UserTaskCreate, name='user_task_create'),

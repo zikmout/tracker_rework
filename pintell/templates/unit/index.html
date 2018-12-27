@@ -17,11 +17,9 @@
     </div><br>
     <!-- script inspired and modified from https://blog.miguelgrinberg.com/post/using-celery-with-flask //-->
     <div id="progress"></div>
-    <div id="infos"></div>
-
         
         <script>
-            function update_progress(status_url, div_bar, div_info, task_id) {
+            function update_progress(status_url, div_bar, task_id) {
                 // send GET request to status URL
                 $.getJSON(status_url, function(data) {
                     // update UI
@@ -46,7 +44,7 @@
                     else {
                         // rerun in 1 seconds
                         setTimeout(function() {
-                            update_progress(status_url, div_bar, div_info, task_id);
+                            update_progress(status_url, div_bar, task_id);
                         }, 1000);
                     }
                 });
@@ -62,16 +60,12 @@
                         var regex = /[^/]+$/g
                         // get task id
                         task_id = regex.exec(status_url)
-                        console.log('TASK_ID ? -> ' + task_id)
-
                         // add task status elements
-                        div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><hr>');
-
-                        div_info = $('<div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div>');
+                        div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>');
 
                         $('#progress').append(div_bar);
-                        $('#infos').append(div_info);
-                        update_progress(status_url, div_bar[0], div_info[0], task_id);
+
+                        update_progress(status_url, div_bar[0], task_id);
                     },
                     error: function() {
                         alert('Unexpected error');
@@ -82,41 +76,8 @@
         {% if 'download' in handler.session['tasks'] %}
         <script>
         {% for task in handler.session['tasks']['download'].items() %}
-        console.log('LOAD DOWNLOAD TASK URL : ' + '{{ handler.session['username'] }}/tasks/status/{{ escape(task[0]) }}')
         load_download_task("/api/v1/users/{{ handler.session['username'] }}/tasks/status/{{ escape(task[0]) }}")
         {% end %}
-        //update_progress("/api/v1/users/{{ handler.session['username'] }}/tasks/status/{{ handler.session['tasks'] }}", div_bar, div_info)
-        function update_progress2(status_url, div_bar, div_info, task_id) {
-                // send GET request to status URL
-                $.getJSON(status_url, function(data) {
-                    // update UI
-                    percent = parseInt(data['current'] * 100 / data['total']);
-                    // writing percentages
-                    $(div_bar.childNodes[0]).text(percent + '%');
-                    // making loading bar moving
-                    document.getElementById("pct" + task_id).style.width = percent + '%';
-                    document.getElementById("state" + task_id).innerHTML = data['state'];
-                    document.getElementById("current" + task_id).innerHTML = data['current'];
-                    document.getElementById("total" + task_id).innerHTML = data['total'];
-                    if (data['state'] != 'PENDING' && data['state'] != 'PROGRESS') {
-                        if ('result' in data) {
-                            // show result
-                            document.getElementById("status" + task_id).innerHTML = data['result'];
-                        }
-                        else {
-                            // something unexpected happened
-                            document.getElementById("status" + task_id).innerHTML = data['result'];
-                        }
-                    }
-                    else {
-                        // rerun in 1 seconds
-                        setTimeout(function() {
-                            update_progress2(status_url, div_bar, div_info, task_id);
-                        }, 1000);
-                    }
-                });
-            }
-
             function load_download_task(status_url) {
                 // send ajax POST request to start background job
                 $.ajax({
@@ -127,15 +88,11 @@
                         // get task id
                         task_id = regex.exec(status_url)
                         // add task status elements
-                        
-                        div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><hr>');
-
-                        div_info = $('<div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div>');
+                        div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>');
 
                         $('#progress').append(div_bar);
-                        $('#infos').append(div_info);
                 
-                        update_progress2(status_url, div_bar[0], div_info[0], task_id);
+                        update_progress(status_url, div_bar[0], task_id);
                     },
                     error: function() {
                         alert('Unexpected error');

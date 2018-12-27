@@ -67,8 +67,21 @@ class UserProjectView(BaseView):
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
         else:
             self.session['units'] = units
+            self.session['current_project'] = project.name
             self.session.save()
             self.render('projects/index.html', project=json_project, units=units)
+
+class UserProjectDownloadView(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    @login_required
+    def get(self, username, projectname):
+        if 'units' in self.session:
+            units = self.session['units']
+        if units is None or units == {}:
+            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
+            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+        else:
+            self.render('projects/download.html', units=units)
 
 class UserUnitView(BaseView):
     SUPPORTED_METHODS = ['GET']

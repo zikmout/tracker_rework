@@ -13,22 +13,23 @@ class UserDownloadTaskCreate(BaseView):
         # Loading project
         rproject = RProject(project.name, project.data_path, project.config_file)
         rproject._load_units_from_data_path()
-        url = list()
-        url.append(get_url_from_id(self.session['units'], uid))
-        print('URL = {}'.format(url))
-        tasks = rproject.download_units(url)
+        url = get_url_from_id(self.session['units'], uid)
+        list_url = list()
+        list_url.append(url)
+        print('URL = {}'.format(list_url))
+        tasks = rproject.download_units(list_url)
         task = tasks[0]
-        #task = download.apply_async((username, projectname, uid, url, rproject))
 
         if 'download' not in self.session['tasks']:
-            self.session['tasks']['download'] = dict()
+            self.session['tasks']['download'] = list()
 
         task_object = {
             'username': username,
             'projectname': projectname,
             'uid': uid,
-            'url': url
+            'url': url,
+            'id': task.id
         }
-        self.session['tasks']['download'].update(task_object)
+        self.session['tasks']['download'].append(task_object)
         self.session.save()
         self.set_header('Location', '/api/v1/users/{}/tasks/status/{}'.format(self.session['username'], task.id))

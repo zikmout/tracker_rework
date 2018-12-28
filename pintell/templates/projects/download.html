@@ -4,41 +4,6 @@
     </head>
     {% extends '../layout.html' %}
     {% block content %}
-
-    <div class="starter-template-fluid">
-          <script src="{{ static_url('jquery.min.js') }}"></script>
-          <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
-          <center><p class="lead">Managing project download</p><br></center>
-            <table class="table table-responsive-sm table-striped">
-              <thead>
-                  <tr>
-                    <th scope="col">Base URL</th>
-                    <th scope="col">Pages</th>
-                    <th scope="col">Downloaded</th>
-                    <th scope="col">Crawling date</th>
-                    <th scope="col">Progress</th>
-                    <th scope="col">Action</th>
-                  </tr>
-              </thead>
-              <tbody>
-            
-                  {% for uid, details in handler.session['units'].items() %}
-
-                  <tr>
-                  	{% for k, v in details.items() %}
-                      {% if k not in ['total', 'pdfs', 'excels', 'errors', 'duration'] %}
-  	                     <th scope="col">{{ escape(str(v)) }}</th>
-                      {% end %}
-                    {% end %}
-                    <th scope="col"><div id="progress{{ escape(uid) }}">-</div></th>
-                    <th scope="col"><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" onclick="start_download_task({{ escape(uid) }})">Download</button></input></form></th>
-                    </tr>
-                    <td colspan="6">Larry the Bird</td>
-                    </body>
-                    
-	                {% end %}
-            
-    </div>
     <script>
             function update_progress(status_url, div_bar, task_id) {
                 // send GET request to status URL
@@ -50,7 +15,7 @@
                     // making loading bar moving
                     document.getElementById("pct" + task_id).style.width = percent + '%';
                     document.getElementById("state" + task_id).innerHTML = data['state'];
-                    document.getElementById("current" + task_id).innerHTML = data['statusc'];
+                    document.getElementById("current" + task_id).innerHTML = data['status'];
                     document.getElementById("total" + task_id).innerHTML = data['total'];
                     if (data['state'] != 'PENDING' && data['state'] != 'PROGRESS') {
                         if ('result' in data) {
@@ -83,7 +48,6 @@
                         task_id = regex.exec(status_url)
                         // add task status elements
                         div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>');
-
                         $('#progress' + uid).append(div_bar);
 
                         update_progress(status_url, div_bar[0], task_id);
@@ -93,6 +57,65 @@
                     }
                 });
             }
+            function load_download_task(status_url, uid) {
+                // send ajax POST request to start background job
+                $.ajax({
+                    type: 'GET',
+                    url: status_url,
+                    success: function(data, status, request) {
+                        var regex = /[^/]+$/g
+                        // get task id
+                        task_id = regex.exec(status_url)
+                        // add task status elements
+                        div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>');
+
+                        $('#progress' + uid).append(div_bar);
+                        update_progress(status_url, div_bar[0], task_id);
+                    },
+                    error: function() {
+                        alert('Unexpected error');
+                    }
+                });
+            }
         </script>
+    <div class="starter-template-fluid">
+          <script src="{{ static_url('jquery.min.js') }}"></script>
+          <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
+          <center><p class="lead">Managing project download</p><br></center>
+            <table class="table table-responsive-sm table-striped">
+              <thead>
+                  <tr>
+                    <th>Base URL</th>
+                    <th>Pages</th>
+                    <th>Downloaded</th>
+                    <th>Crawling date</th>
+                    <th>Progress</th>
+                    <th>Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+            
+                  {% for uid, details in handler.session['units'].items() %}
+
+                  <tr>
+                  	{% for k, v in details.items() %}
+                      {% if k not in ['total', 'pdfs', 'excels', 'errors', 'duration'] %}
+  	                     <th>{{ escape(str(v)) }}</th>
+                      {% end %}
+                    {% end %}
+                    <th>-*-</th>
+                    <th><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" onclick="start_download_task({{ escape(uid) }})">Download</button></input></form></th>
+                    </tr>
+                    <td colspan="6">
+                    <div id="progress{{ escape(uid) }}"></div>
+                      {% if 'download' in handler.session['tasks'] %}
+                        {% if uid in [_['uid'] for _ in handler.session['tasks']['download']] %}
+                          <script>load_download_task("/api/v1/users/{{ handler.session['username'] }}/tasks/status/{{ [_ for _ in handler.session['tasks']['download'] if _['uid'] == uid][0]['id'] }}", "{{ escape(uid) }}")</script>
+                        {% end %}
+                      {% end %}
+                    </td>
+	                {% end %}
+              </tbody>            
+    </div>
     {% end %}
 </html>

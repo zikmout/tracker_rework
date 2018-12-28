@@ -6,6 +6,7 @@ import shutil
 import pintell.core.crawler as crawler
 import pintell.core.downloader as downloader
 import pintell.core.utils as utils
+from pintell.workers.download_worker import download_website
 
 class Unit:
     """ A Unit is all parameters associated with one website monitoring,
@@ -53,6 +54,8 @@ class Unit:
         """ Download all content from given links
             kwarg:
                 provided_links (list): List of websites to download (str)
+            return:
+                celery task created
         """
         # if nothing downloaded before, create directory to put content
         if not os.path.isdir(self.download_path):
@@ -64,7 +67,7 @@ class Unit:
                 links = provided_links
             print('***** Downloading website {} ({} links) *****\n'.format(self.url, len(links)))
             # download loaded links
-            downloader.download_website(links, self.download_path, self.url, random_header=True)
+            task = download_website.apply_async([links, self.download_path, self.url])
         else:
             # if some of the links are already downloaded, download only the remainder
             print('A directory named {} already exists !\n'.format(self.download_path))
@@ -74,10 +77,11 @@ class Unit:
                 links = self._tree_diff(links=provided_links)
             if len(links) != 0:
                 print('***** Downloading website {} ({} links) *****\n'.format(self.url, len(links)))
-                downloader.download_website(links, self.download_path, self.url, random_header=True)
+                task = download_website.apply_async([links, self.download_path, self.url])
             else:
                 # no remaining links to download
                 print('Website links have already been downloaded.\n')
+        return task
 
     def delete_downloaded(self):
         """ Deletes all website content that has been downloaded

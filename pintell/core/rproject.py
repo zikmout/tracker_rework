@@ -264,16 +264,22 @@ class RProject:
             is only the one matching regex.
             arg:
                 units_urls (list or dict): if dict(), content is downloaded according to regex
+            return:
+                tasks (list): list of downloading task created
         """
+        tasks = list()
         if isinstance(units_urls, dict) and bool(units_urls):
             for key, val in units_urls.items():
                 unit = self.get_unit_from_url(key)
                 if unit:
                     for _ in val:
-                        unit.download(provided_links=unit.get_regex_remote_tree(_))
+                        task = unit.download(provided_links=unit.get_regex_remote_tree(_))
+                        tasks.append(task)
         else:
             if units_urls == [] or units_urls is None:
                 print('[ERROR] _download_units : No urls specified.\n')
             else:
                 for unit_url in units_urls:
-                    self.get_unit_from_url(unit_url).download()
+                    task = self.get_unit_from_url(unit_url).download()
+                    tasks.append(task)
+        return tasks

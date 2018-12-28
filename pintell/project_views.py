@@ -7,7 +7,7 @@ from pintell.models import Permission, Role, Project, User
 from pintell.utils import flash_message, login_required, get_url_from_id
 import pintell.session as session
 from pintell.core.rproject import RProject
-from pintell.workers.download_worker import download
+from pintell.workers.download_worker import download_website
 
 class ProjectsCreateView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
@@ -94,7 +94,10 @@ class UserTaskCreate(BaseView):
     def post(self, username):
         print('SELF SESSION BEFORE: {}'.format(self.session))
         # Load celery background task
-        task = download.apply_async((username,))
+
+        print('View DESACTIVATED')
+        exit(0)
+        #task = download.apply_async((username,))
         #print('Task backend = {}'.format(task.backend))
         if 'download' not in self.session['tasks']:
             self.session['tasks']['download'] = dict()
@@ -110,7 +113,7 @@ class UserTaskStatus(BaseView):
         self.set_header("Content-Type", 'application/json; charset="utf-8"')
 
     def get(self, username, task_id):
-        task = download.AsyncResult(task_id)
+        task = download_website.AsyncResult(task_id)
         print('Task backend = {}'.format(task.backend))
         #task = task.get()
         print('task_id: {}'.format(task_id))

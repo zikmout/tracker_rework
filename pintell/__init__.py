@@ -9,6 +9,7 @@ from pintell.views import InfoView, HomePage, UserListView, AuthLoginView, \
 AuthRegisterView, AuthLogoutView, UserDelete
 from pintell.project_views import ProjectsCreateView, UserProjectListView, \
 UserProjectView, UserProjectDelete, UserTaskStatus, UserTaskCreate, UserUnitView, UserProjectDownloadView
+from pintell.task_views import UserDownloadTaskCreate
 from pintell.utils import make_session_factory
 import pintell.session as session
 
@@ -37,6 +38,7 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete, name='user_project_delete'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/status/?(?P<task_id>[A-Za-z0-9-]+)?', UserTaskStatus, name='user_task_status'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/create', UserTaskCreate, name='user_task_create'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?/tasks/download/create', UserDownloadTaskCreate, name='user_download_task_create'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?', UserUnitView, name='user_unit_view'),
             ]
             # todo : activate xsrf_cookies = True

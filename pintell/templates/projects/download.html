@@ -99,7 +99,7 @@
 
                   <tr>
                   	{% for k, v in details.items() %}
-                      {% if k not in ['total', 'pdfs', 'excels', 'errors', 'duration'] %}
+                      {% if k not in ['total', 'pdfs', 'excels', 'errors', 'duration', 'arborescence'] %}
   	                     <th>{{ escape(str(v)) }}</th>
                       {% end %}
                     {% end %}

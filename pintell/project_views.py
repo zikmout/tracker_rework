@@ -119,9 +119,11 @@ class UserProjectDiffSchedule(BaseView):
             project.alerts.append(new_alert)
             self.request_db.add(project)
             self.request_db.commit()
+            flash_message(self, 'success', 'Content classification {} successfully created.'.format(data['name']))
             self.write(json_response('success', None, 'Alert succesfully created.'))
         except Exception as e:
             print('Error recording alert in DB : {}'.format(e))
+            flash_message(self, 'danger', 'Content classification {} failed. Check DB.'.format(data['name']))
             self.write(json_response('error', None, '{}'.format(e)))
 
 class UserProjectDiffObserveView(BaseView):

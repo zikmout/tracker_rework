@@ -24,10 +24,18 @@
      });    
     $(document).ready(function(){
         $("#get_checked").click(function () {
+            if (document.getElementById('contentname').value == '') {
+              alert('Please type in a name !')
+              return
+            }
             var List = {"id" : [], "dataid" : [], "text" : []};
             {% for uid in handler.session['units'] %}
             $("#treeview{{ escape(uid) }}").hummingbird("getChecked",{list:List,onlyEndNodes:true});
             {% end %}
+            if (List['dataid'] == '') {
+              alert('Please select links to monitor !')
+              return
+            }
             console.log(JSON.stringify(List['dataid']))
             console.log('Id of project : ' + document.getElementById('contentname').value)
             $.ajax({ 
@@ -84,15 +92,13 @@
                 </div>
                 <!-- corpus //-->
                 <div id="collapse{{ escape(uid) }}" class="collapse" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
-                  <div class="card-body">
+                  <div class="card-body" id="treeview{{ escape(uid) }}">
 
-                    <ul id="treeview{{ escape(uid) }}">
-                    <div class="hummingbird-treeview-converter" data-height="400px" data-scroll="true">
+                    <div class="hummingbird-treeview-converter" data-height="600px" data-scroll="true">
                         {% for _ in formated_units[escape(str(v))] %}
                             <li id="item" data-id="{{ escape(str(v)) }}{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
                         {% end %}
                     </div>
-                    </ul>
 
                   </div>
                 </div>

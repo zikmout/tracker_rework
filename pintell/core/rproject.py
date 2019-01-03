@@ -157,8 +157,8 @@ class RProject:
                     'errors': unit.errors,
                     'downloaded_files': downloaded_files,#,
                     'date': date,
-                    'duration': duration,
-                    'arborescence': unit.remote_arborescence(unit.logfile)
+                    'duration': duration
+                    #'arborescence': unit.remote_arborescence(unit.logfile)
                 }
             }
             units_dict.update(unit_dict)

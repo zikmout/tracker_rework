@@ -71,34 +71,18 @@
                     </button>
                   </h5>
                 </div>
-                {% elif k == 'arborescence' %}
                 <!-- corpus //-->
                 <div id="collapse{{ escape(uid) }}" class="collapse show" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
                   <div class="card-body">
 
                     <ul id="treeview{{ escape(uid) }}">
-                    <div class="hummingbird-treeview-converter" data-height="230px" data-scroll="true">
-                        <li id="item_1" data-id="Studio_1">Warner Bros.</li>
-                        <li id="item_2" data-id="Movie_1">-Goodfellas</li>
-                        <li id="item_3" data-id="Actor_1">--Robert De Niro</li>
-                        <li id="item_4" data-id="Actor_2">--Joe Pesci</li>
-                        <li id="item_5" data-id="Movie_2">-The Shawshank Redemption</li>
-                        <li id="item_6" data-id="Actor_3">--Tim Robbins</li>
-                        <li id="item_7" data-id="Actor_4">--Morgan Freeman</li>
-                        <li id="item_8" data-id="Studio_2">Paramount</li>
-                        <li id="item_9" data-id="Movie_3">-The Untouchables</li>
-                        <li id="item_10" data-id="Actor_1">--Robert De Niro</li>
-                        <li id="item_11" data-id="Actor_5">--Kevin Costner</li>
-                        <li id="item_12" data-id="Movie_4">-Forrest Gump</li>
-                        <li id="item_13" data-id="Actor_6">--Tom Hanks</li>
-                        <li id="item_14" data-id="Actor_7">--Robin Wright</li>
+                    <div class="hummingbird-treeview-converter" data-height="400px" data-scroll="true">
+                        {% for _ in formated_units[escape(str(v))] %}
+                            <li id="item" data-id="{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
+                        {% end %}
                     </div>
                     </ul>
-
-                    {% for _ in v %}
-                        {{ escape(str(_)) }}
-                        <br>
-                    {% end %}
+                    
                   </div>
                 </div>
                 {% end %}

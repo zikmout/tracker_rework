@@ -120,3 +120,60 @@ def get_directories_list(path):
     dirs = os.listdir(path)
     dirs = [file for file in dirs if os.path.isdir(os.path.join(path, file))]
     return dirs
+
+def get_formated_units(units):
+    """ Formats the remote_tree structure so that it can be used by hummingbird 
+        see : https://github.com/hummingbird-dev/hummingbird-treeview
+        args:
+            units (Unit object): List of units to be formated
+        return:
+            d (dict): key = url, value = [formated_link, real_link]
+    """
+    d = {}
+    for unit in units:
+        links = unit._remote_tree()
+        formated_links = _format_output_hummingbird(links)
+        formated_unit = { unit.url : formated_links }
+        d.update(formated_unit)
+    return d
+
+def _format_output_hummingbird(links):
+    """ Function used by get_formated_units only
+        Meant to format output for hummingbird treeview 
+    """
+    depth = 0
+    full_link = []
+    final_links = []
+    def get_obj(d1, key):
+        dd = d1
+        keys = key.split('/')
+        latest = keys.pop()
+        for k in keys:
+            dd = dd.setdefault(k, {})
+
+    root_nodes = {}
+    for _ in links:
+        get_obj(root_nodes, _[1:])
+
+    def go_depth_recursive(depth, full_link, final_links, d):
+        for k, v in d.items():
+            full_link.append(k)
+            final_links.append(['-' * depth + k, '/'+'/'.join(full_link)])
+            if '/'+'/'.join(full_link) in links:
+                links.remove('/'+'/'.join(full_link))
+            if isinstance(v, dict):
+                depth += 1
+                go_depth_recursive(depth, full_link, final_links, v)
+            lst = [x for x in links if '/'+'/'.join(full_link) in x]
+            if lst != []:
+                for l in lst:
+                    if l.count('/') > 1:
+                        name = l.rpartition('/')[2]
+                        if name != '':
+                            final_links.append(['-' * depth + name, '/'+'/'.join(full_link) + '/' + name])
+                    links.remove(l)
+            depth -= 1
+            full_link.pop()
+            
+    go_depth_recursive(depth, full_link, final_links, root_nodes)
+    return final_links

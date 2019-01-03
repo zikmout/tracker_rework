@@ -138,41 +138,6 @@ class Unit:
         first_line, middle, last_line = self.load_urls(logfile)
         return last_line
 
-    def remote_arborescence(self, logfile):
-        all_links = self._remote_tree()
-
-        unique_paths = set()
-        for link in all_links:
-            #print(link)
-            #print('->{}'.format(link.rpartition('/')[0]))
-            #if '?' in link:
-            #    link = link.split('?')[0]
-            unique_paths.add(link.rpartition('/')[0])
-            #arb = link.split('/')
-            #print(arb[1:-1])
-            #unique_dirs.add(tuple(arb[1:-1]))
-        #utils.print_links(sorted(unique_paths))
-        unique_paths = list(sorted(unique_paths, key=len, reverse=True))
-        return unique_paths
-        #print(unique_dirs)
-        '''
-        #for directories in unique_dirs:
-            #print(directories)
-
-        idx_max = max(map(len, [x for x in unique_dirs]))
-        dim = dict()
-        for x in range(0, idx_max):
-            dim[x] = set()
-
-        for directories in unique_dirs:
-            for idx in range(0, len(directories)):
-                if directories[idx]:
-                    dim[idx].add(directories[idx])
-        #print(unique_dirs)
-        print(dim)
-        '''
-        #create_directories(all_links, domain_name, creation_dir_path)
-
     def crawl(self, max_depth=1):
         """ Crawl website links and store them in logfile
             kwarg:

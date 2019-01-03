@@ -5,6 +5,7 @@ import time
 from pintell.views import BaseView
 from pintell.models import Permission, Role, Project, User
 from pintell.utils import flash_message, login_required, get_url_from_id
+from pintell.core.utils import get_formated_units
 import pintell.session as session
 from pintell.core.rproject import RProject
 from pintell.workers.download_worker import download_website
@@ -87,13 +88,20 @@ class UserProjectDiffCreateView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
     def get(self, username, projectname):
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        rproject._load_units_from_data_path()
+        formated_units = get_formated_units(rproject.units)
+
         if 'units' in self.session:
             units = self.session['units']
+
         if units is None or units == {}:
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
         else:
-            self.render('projects/diff_create.html', units=units)        
+            self.render('projects/diff_create.html', formated_units=formated_units)        
 
 class UserUnitView(BaseView):
     SUPPORTED_METHODS = ['GET']

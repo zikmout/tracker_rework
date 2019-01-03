@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    {% extends '../layout.html' %}
+    {% block content %}
+    <div class="starter-template-fluid">
+          <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
+          <center><p class="lead">What have been programmed is :</p><br></center>
+          {% for _ in handler.session['links'] %}
+            {{ escape(str(_)) }}
+          {% end %}
+        
+          
+    </div>
+    {% end %}
+</html>

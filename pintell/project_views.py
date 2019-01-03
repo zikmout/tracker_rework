@@ -93,15 +93,32 @@ class UserProjectDiffCreateView(BaseView):
         rproject = RProject(project.name, project.data_path, project.config_file)
         rproject._load_units_from_data_path()
         formated_units = get_formated_units(rproject.units)
-
         if 'units' in self.session:
             units = self.session['units']
-
         if units is None or units == {}:
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
         else:
-            self.render('projects/diff_create.html', formated_units=formated_units)        
+            self.render('projects/diff_create.html', formated_units=formated_units)
+
+class UserProjectDiffSchedule(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    def set_default_headers(self):
+        """Set the default response header to be JSON."""
+        self.set_header("Content-Type", 'application/json; charset="utf-8"')
+    @login_required
+    def post(self, username, projectname):
+        data = tornado.escape.json_decode(self.request.body)
+        print('POST received, links are = {}'.format(data))
+        self.session['links'] = data
+        self.session.save()
+        self.write(json.dumps('success'))
+
+class UserProjectDiffObserveView(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    @login_required
+    def get(self, username, projectname):
+        self.render('projects/diff_observe.html')
 
 class UserUnitView(BaseView):
     SUPPORTED_METHODS = ['GET']

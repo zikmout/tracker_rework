@@ -9,7 +9,8 @@ from pintell.views import InfoView, HomePage, UserListView, AuthLoginView, \
 AuthRegisterView, AuthLogoutView, UserDelete
 from pintell.project_views import ProjectsCreateView, UserProjectListView, \
 UserProjectView, UserProjectDelete, UserTaskStatus, UserTaskCreate, UserUnitView, \
-UserProjectDownloadView, UserProjectDiffCreateView
+UserProjectDownloadView, UserProjectDiffCreateView, UserProjectDiffObserveView, \
+UserProjectDiffSchedule
 from pintell.task_views import UserDownloadTaskCreate
 from pintell.utils import make_session_factory
 import pintell.session as session
@@ -37,6 +38,8 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView, name='user_project_index'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView, name='user_project_download'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/diff_create', UserProjectDiffCreateView, name='user_project_diff_create'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/diff_observe', UserProjectDiffObserveView, name='user_project_diff_observe'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/diff/schedule', UserProjectDiffSchedule, name='user_project_diff_schedule'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete, name='user_project_delete'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/status/?(?P<task_id>[A-Za-z0-9-]+)?', UserTaskStatus, name='user_task_status'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/create', UserTaskCreate, name='user_task_create'),

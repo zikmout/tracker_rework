@@ -50,7 +50,7 @@ class Role(Base):
         default_role = 'User'
         session, meta = make_session_factory()
         for r in roles:
-            role = session.query(Role).filter_by(name=r).first()#Role.query.filter_by(name=r).first()
+            role = session.query(Role).filter_by(name=r).first()
             if role is None:
                 role = Role(name=r)
             role.reset_permissions()
@@ -76,12 +76,10 @@ class User(Base):
         self.password = generate_password_hash(password)
         self.email = email
         self.registration_date = datetime.now()
-        #session, meta = make_session_factory()
         if self.role is None:
             print('self.role is none')
-            #print('current_app.config[\'FLASK_ADMIN\'] = {}'.format(current_app.config['FLASK_ADMIN']))
             print('self.email = {}'.format(self.email))
-            if self.email == 'admin@gmail.com':#current_app.config['FLASK_ADMIN']:
+            if self.email == 'admin@gmail.com':
                 self.role = session.query(Role).filter_by(name='Administrator').first()
                 print('<OK Admin registration detected>')
                 print('self.role 1 = {}'.format(self.role))
@@ -122,6 +120,7 @@ class Project(Base):
     config_file = Column('config_file', String(500))
     creation_date = Column('creation_date', DateTime)
     user_id = Column(Integer, ForeignKey('users.id'))
+    alerts = relationship('Alert', cascade='save-update, delete', backref='project', lazy='dynamic')
 
     def __init__(self, name, data_path, config_file):
         self.name = name
@@ -134,6 +133,24 @@ class Project(Base):
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
+
+class Alert(Base):
+    __tablename__ = 'alert'
+    __table_args__ = {'extend_existing': True}
+    id = Column(Integer, primary_key=True)
+    name = Column(String(64), unique=True)
+    links = Column(ARRAY(String))
+    project_id = Column(Integer, ForeignKey('project.id'))
+
+    def __init__(self, name, links):
+        self.name = name
+        self.links = links
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
+    def as_dict(self):
+       return {c.name: getattr(self, c.name) for c in self.__table__.columns}
 
 class AnonymousUser(Base):
     __tablename__ = 'users_anonymous'

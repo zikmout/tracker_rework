@@ -29,28 +29,44 @@
             $("#treeview{{ escape(uid) }}").hummingbird("getChecked",{list:List,onlyEndNodes:true});
             {% end %}
             console.log(JSON.stringify(List['dataid']))
+            console.log('Id of project : ' + document.getElementById('contentname').value)
             $.ajax({ 
                 url: "/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/diff/schedule",
-                data: JSON.stringify((List['dataid'])),
+                data: JSON.stringify({
+                    'name': document.getElementById('contentname').value,
+                    'links': (List['dataid'])
+                }),
                 type: 'POST',
                 success: function() {
-                    console.log('Succcccceessssss storyy')
                     window.location.replace("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/diff_observe");
                 },
                 error: function() {
-                    console.log('There has been an EROOR !!')
+                    console.log('Error occured when making POST request to api.')
                 }
             });
         });
     });
     </script>
 
-    <input type="button" value="get checked" id="get_checked">
-
     <div class="starter-template-fluid">
           <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
-          <center><p class="lead">Checking diffs in webpages</p><br></center>
+          <center><p class="lead">Selecting content that matters in order to create future alerts</p></center>
         
+          <div class="form-group">
+            <label for="contentname">Label Name</label>
+            <input type="email" class="form-control" id="contentname" aria-describedby="emailHelp" placeholder="Enter name for content">
+            <small id="emailHelp" class="form-text text-muted">Use a label that easily identifies the content you selected.</small>
+          </div>
+          <!--
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="detectnewfile">
+            <label class="form-check-label">Check if new file detected</label>
+          </div>
+          //-->
+          <input type="button" value="Classify Content" id="get_checked" class="btn btn-primary">
+          <br>
+          <br>
+
           <div id="accordion">
 
           {% for uid, details in handler.session['units'].items() %}

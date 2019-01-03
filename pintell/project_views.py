@@ -3,8 +3,8 @@ import json
 import datetime
 import time
 from pintell.views import BaseView
-from pintell.models import Permission, Role, Project, User
-from pintell.utils import flash_message, login_required, get_url_from_id
+from pintell.models import Permission, Role, Project, User, Alert
+from pintell.utils import flash_message, login_required, get_url_from_id, json_response
 from pintell.core.utils import get_formated_units
 import pintell.session as session
 from pintell.core.rproject import RProject
@@ -43,9 +43,9 @@ class UserProjectListView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
     def get(self, username):
-        user = self.request_db.query(User).filter_by(username=username)
+        user = self.request_db.query(User).filter_by(username=username).first()
         user_projects_json = list()
-        user_projects = user[0].projects.all()
+        user_projects = user.projects.all()
         if user_projects:
             [user_projects_json.append(project.as_dict()) for project in user_projects]
         self.render('projects/manage.html', projects=user_projects_json)
@@ -110,15 +110,34 @@ class UserProjectDiffSchedule(BaseView):
     def post(self, username, projectname):
         data = tornado.escape.json_decode(self.request.body)
         print('POST received, links are = {}'.format(data))
-        self.session['links'] = data
-        self.session.save()
-        self.write(json.dumps('success'))
+        try:
+            user = self.request_db.query(User).filter_by(username=username).first()
+            project = user.projects.filter_by(name=projectname).first()
+            print('recording alert in DB')
+            print('name = ->{}<-, links = ->{}<-'.format(data['name'], data['links']))
+            new_alert = Alert(data['name'], data['links'])
+            project.alerts.append(new_alert)
+            self.request_db.add(project)
+            self.request_db.commit()
+            self.write(json_response('success', None, 'Alert succesfully created.'))
+        except Exception as e:
+            print('Error recording alert in DB : {}'.format(e))
+            self.write(json_response('error', None, '{}'.format(e)))
 
 class UserProjectDiffObserveView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
     def get(self, username, projectname):
-        self.render('projects/diff_observe.html')
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        print('poject = {}'.format(project.name))
+        alerts = project.alerts.all()
+        print('ALERTS == {}'.format(alerts))
+        json_alerts = []
+        if alerts:
+            [json_alerts.append(alert.as_dict()) for alert in alerts]
+        print('jsonalerts --> {}'.format(json_alerts))
+        self.render('projects/diff_observe.html', alerts=json_alerts)
 
 class UserUnitView(BaseView):
     SUPPORTED_METHODS = ['GET']

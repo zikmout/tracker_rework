@@ -1,4 +1,5 @@
 import tornado
+import json
 from pintell.base import Session, Base, engine, meta
 
 def make_session_factory():
@@ -39,3 +40,12 @@ def get_url_from_id(units, uid):
         if _ == uid:
             return details['url']
     return None
+
+def json_response(status, data, message):
+    """ return a well formated json object for JSON API responses """
+    response = {
+        "status": status,
+        "data": data,
+        "message": message
+    }
+    return json.dumps(response)

@@ -7,6 +7,28 @@
     <div class="starter-template-fluid">
           <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
           <center><p class="lead">Live alert viewer : {{ escape(alertuid) }} </p><br></center>
+          <center><p class="lead">Task id = {{ escape(task_id) }} </p><br></center>
     </div>
+    <script>
+    var ws = new WebSocket("ws://localhost:5567/websocket");
+    function timeout() {
+        setTimeout(function () {
+            ws.onopen()
+            timeout();
+        }, 1000);
+    }
+    ws.onopen = function() {
+       ws.send("{{ str(escape(task_id)) }}");
+    };
+    ws.onmessage = function (evt) {
+       if (evt != null) {
+       console.log(evt.data);
+     }
+     else {
+      console.log('[ERROR] Nothing to consume from websocket.');
+     }
+    };
+    timeout()
+    </script>
     {% end %}
 </html>

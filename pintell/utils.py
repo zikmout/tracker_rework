@@ -49,3 +49,31 @@ def json_response(status, data, message):
         "message": message
     }
     return json.dumps(response)
+
+def get_celery_task_state(task):
+    if task.state == 'PENDING':
+        response = {
+            'state': task.state,
+            'current': 0,
+            'total': 1,
+            'status': 'Pending ...'
+        }
+    elif task.info is not None and task.state != 'FAILURE':
+        response = {
+            'state': task.state,
+            'current': task.info.get('current', 0),
+            'total': task.info.get('total', 1),
+            'status': task.info.get('status', '')
+        }
+        if 'result' in task.info:
+            response['result'] = task.info['result']
+    else:
+        # something went wrong in background job
+        response = {
+            'state': task.state,
+            'current': 1,
+            'total': 1,
+            'status': str(task.info)
+        }
+    print('response : {}'.format(response))
+    return response

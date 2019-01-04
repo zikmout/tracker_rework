@@ -10,7 +10,7 @@ AuthRegisterView, AuthLogoutView, UserDelete
 from pintell.project_views import ProjectsCreateView, UserProjectListView, \
 UserProjectView, UserProjectDelete, UserTaskStatus, UserTaskCreate, UserUnitView, \
 UserProjectDownloadView, UserProjectDiffCreateView, UserProjectDiffSchedule
-from pintell.alert_views import AlertCreateView, AlertCreate, AlertLiveView
+from pintell.alert_views import AlertCreateView, AlertCreate, AlertLiveView, EchoWebSocket
 from pintell.task_views import UserDownloadTaskCreate
 from pintell.utils import make_session_factory
 import pintell.session as session
@@ -27,6 +27,7 @@ def main():
         def __init__(self):
             handlers = [
             url(r'/', HomePage, name='home'),
+            url(r'/websocket', EchoWebSocket, name='websocket'),
             url(r'/api/v1', InfoView),
             url(r'/api/v1/users_list', UserListView, name='users_list'), #?(?P<username>[A-Za-z0-9-]+)?/', RoleListView)
             url(r'/api/v1/auth/login', AuthLoginView, name='login'),

@@ -4,7 +4,8 @@ import datetime
 import time
 from pintell.views import BaseView
 from pintell.models import Permission, Role, Project, User, Content
-from pintell.utils import flash_message, login_required, get_url_from_id, json_response
+from pintell.utils import flash_message, login_required, get_url_from_id, json_response, \
+get_celery_task_state
 from pintell.core.utils import get_formated_units
 import pintell.session as session
 from pintell.core.rproject import RProject
@@ -158,31 +159,7 @@ class UserTaskStatus(BaseView):
         print('Task backend = {}'.format(task.backend))
         #task = task.get()
         print('task_id: {}'.format(task_id))
-        if task.state == 'PENDING':
-            response = {
-                'state': task.state,
-                'current': 0,
-                'total': 1,
-                'status': 'Pending ...'
-            }
-        elif task.info is not None and task.state != 'FAILURE':
-            response = {
-                'state': task.state,
-                'current': task.info.get('current', 0),
-                'total': task.info.get('total', 1),
-                'status': task.info.get('status', '')
-            }
-            if 'result' in task.info:
-                response['result'] = task.info['result']
-        else:
-            # something went wrong in background job
-            response = {
-                'state': task.state,
-                'current': 1,
-                'total': 1,
-                'status': str(task.info)
-            }
-        print('response : {}'.format(response))
+        response = get_celery_task_state(task)
         self.write(response)
 
 class UserProjectDelete(BaseView):

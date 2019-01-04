@@ -6,6 +6,9 @@ from pintell.views import BaseView
 from pintell.models import Permission, Role, Project, User, Content, Alert
 from pintell.utils import flash_message, login_required, get_url_from_id, json_response
 import pintell.session as session
+from tornado.websocket import WebSocketHandler
+from pintell.workers.live_view_worker import live_view
+from pintell.utils import get_celery_task_state
 
 class AlertCreateView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -62,24 +65,25 @@ class AlertLiveView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
     def get(self, username, projectname, uid):
-        self.render('projects/alerts/live-view.html', alertuid=uid)
+        task = live_view.apply_async()
+        self.render('projects/alerts/live-view.html', alertuid=uid, task_id=task.id)
 
+class EchoWebSocket(WebSocketHandler):
+    def check_origin(self, origin):
+        return True
 
+    def open(self):
+        print("WebSocket opened")
 
+    def on_message(self, message):
+        #self.write_message(u"You said: " + message)
+        task_id = message
+        task = live_view.AsyncResult(task_id)
+        print('Task backend = {}'.format(task.backend))
+        #task = task.get()
+        print('task_id: {}'.format(task_id))
+        response = get_celery_task_state(task)
+        self.write_message(response)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+    def on_close(self):
+        print("WebSocket closed") 

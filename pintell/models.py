@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlalchemy import Column, ForeignKey, Integer, String, DateTime, Float, Boolean, ARRAY
+from sqlalchemy import Column, ForeignKey, Integer, String, DateTime, Float, Boolean, ARRAY, Time
 from sqlalchemy.orm import relationship
 from pintell.base import Base
 from pintell.utils import make_session_factory
@@ -120,7 +120,7 @@ class Project(Base):
     config_file = Column('config_file', String(500))
     creation_date = Column('creation_date', DateTime)
     user_id = Column(Integer, ForeignKey('users.id'))
-    alerts = relationship('Alert', cascade='save-update, delete', backref='project', lazy='dynamic')
+    contents = relationship('Content', cascade='save-update, delete', backref='project', lazy='dynamic')
 
     def __init__(self, name, data_path, config_file):
         self.name = name
@@ -134,13 +134,14 @@ class Project(Base):
     def __repr__(self):
         return '<id {}>'.format(self.id)
 
-class Alert(Base):
-    __tablename__ = 'alert'
+class Content(Base):
+    __tablename__ = 'content'
     __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True)
     name = Column(String(64), unique=True)
     links = Column(ARRAY(String))
     project_id = Column(Integer, ForeignKey('project.id'))
+    alerts = relationship('Alert', cascade='save-update, delete', backref='content', lazy='dynamic')
 
     def __init__(self, name, links):
         self.name = name
@@ -151,6 +152,32 @@ class Alert(Base):
 
     def as_dict(self):
        return {c.name: getattr(self, c.name) for c in self.__table__.columns}
+
+class Alert(Base):
+    __tablename__ = 'alert'
+    __table_args__ = {'extend_existing': True}
+    id = Column(Integer, primary_key = True)
+    name = Column(String(64), unique=True)
+    alert_type = Column(String(64))
+    creation_date = Column(DateTime)
+    start_time = Column(String(64))
+    repeat = Column(Time)
+    notify = Column(Boolean)
+    content_id = Column(Integer, ForeignKey('content.id'))
+
+    def __init__(self, name, alert_type, start_time, repeat=None, notify=False):
+        self.name = name
+        self.alert_type = alert_type
+        self.creation_date = datetime.now().replace(microsecond=0)
+        self.start_time = start_time
+        self.repeat = repeat
+        self.notify = notify
+
+    def __repr__(self):
+        return '<id {}>'.format(self.id)
+
+    def as_dict(self):
+       return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}
 
 class AnonymousUser(Base):
     __tablename__ = 'users_anonymous'

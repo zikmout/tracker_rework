@@ -3,7 +3,7 @@ import json
 import datetime
 import time
 from pintell.views import BaseView
-from pintell.models import Permission, Role, Project, User, Alert
+from pintell.models import Permission, Role, Project, User, Content
 from pintell.utils import flash_message, login_required, get_url_from_id, json_response
 from pintell.core.utils import get_formated_units
 import pintell.session as session
@@ -113,33 +113,16 @@ class UserProjectDiffSchedule(BaseView):
         try:
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
-            print('recording alert in DB')
-            print('name = ->{}<-, links = ->{}<-'.format(data['name'], data['links']))
-            new_alert = Alert(data['name'], data['links'])
-            project.alerts.append(new_alert)
+            new_content = Content(data['name'], data['links'])
+            project.contents.append(new_content)
             self.request_db.add(project)
             self.request_db.commit()
-            flash_message(self, 'success', 'Content classification {} successfully created.'.format(data['name']))
-            self.write(json_response('success', None, 'Alert succesfully created.'))
+            flash_message(self, 'success', 'Content {} successfully created.'.format(data['name']))
+            self.write(json_response('success', None, 'Content succesfully created.'))
         except Exception as e:
-            print('Error recording alert in DB : {}'.format(e))
-            flash_message(self, 'danger', 'Content classification {} failed. Check DB.'.format(data['name']))
+            print('Error recording content in DB : {}'.format(e))
+            flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(data['name']))
             self.write(json_response('error', None, '{}'.format(e)))
-
-class UserProjectDiffObserveView(BaseView):
-    SUPPORTED_METHODS = ['GET']
-    @login_required
-    def get(self, username, projectname):
-        user = self.request_db.query(User).filter_by(username=username).first()
-        project = user.projects.filter_by(name=projectname).first()
-        print('poject = {}'.format(project.name))
-        alerts = project.alerts.all()
-        print('ALERTS == {}'.format(alerts))
-        json_alerts = []
-        if alerts:
-            [json_alerts.append(alert.as_dict()) for alert in alerts]
-        print('jsonalerts --> {}'.format(json_alerts))
-        self.render('projects/diff_observe.html', alerts=json_alerts)
 
 class UserUnitView(BaseView):
     SUPPORTED_METHODS = ['GET']

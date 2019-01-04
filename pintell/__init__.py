@@ -9,8 +9,8 @@ from pintell.views import InfoView, HomePage, UserListView, AuthLoginView, \
 AuthRegisterView, AuthLogoutView, UserDelete
 from pintell.project_views import ProjectsCreateView, UserProjectListView, \
 UserProjectView, UserProjectDelete, UserTaskStatus, UserTaskCreate, UserUnitView, \
-UserProjectDownloadView, UserProjectDiffCreateView, UserProjectDiffObserveView, \
-UserProjectDiffSchedule
+UserProjectDownloadView, UserProjectDiffCreateView, UserProjectDiffSchedule
+from pintell.alert_views import AlertCreateView, AlertCreate
 from pintell.task_views import UserDownloadTaskCreate
 from pintell.utils import make_session_factory
 import pintell.session as session
@@ -38,13 +38,14 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView, name='user_project_index'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView, name='user_project_download'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/diff_create', UserProjectDiffCreateView, name='user_project_diff_create'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/diff_observe', UserProjectDiffObserveView, name='user_project_diff_observe'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/diff/schedule', UserProjectDiffSchedule, name='user_project_diff_schedule'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete, name='user_project_delete'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/status/?(?P<task_id>[A-Za-z0-9-]+)?', UserTaskStatus, name='user_task_status'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/create', UserTaskCreate, name='user_task_create'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?/tasks/download/create', UserDownloadTaskCreate, name='user_download_task_create'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?', UserUnitView, name='user_unit_view'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create', AlertCreateView, name='alert_create_view'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create/new', AlertCreate, name='alert_create'),
             ]
             # todo : activate xsrf_cookies = True
             settings = {

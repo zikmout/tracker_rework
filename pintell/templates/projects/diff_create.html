@@ -46,7 +46,7 @@
                 }),
                 type: 'POST',
                 success: function() {
-                    window.location.replace("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/diff_observe");
+                    window.location.replace("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create");
                 },
                 error: function() {
                     console.log('Error occured when making POST request to api.')
@@ -71,7 +71,7 @@
             <label class="form-check-label">Check if new file detected</label>
           </div>
           //-->
-          <input type="button" value="Classify Content" id="get_checked" class="btn btn-outline-dark" class="btn btn-primary">
+          <input type="button" value="Classify Content" id="get_checked" class="btn btn-outline-dark">
           <br>
           <br>
 

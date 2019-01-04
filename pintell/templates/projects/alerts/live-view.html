@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    {% extends '../../layout.html' %}
+    {% block content %}
+    <div class="starter-template-fluid">
+          <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
+          <center><p class="lead">Live alert viewer : {{ escape(alertuid) }} </p><br></center>
+    </div>
+    {% end %}
+</html>

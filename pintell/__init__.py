@@ -10,7 +10,7 @@ AuthRegisterView, AuthLogoutView, UserDelete
 from pintell.project_views import ProjectsCreateView, UserProjectListView, \
 UserProjectView, UserProjectDelete, UserTaskStatus, UserTaskCreate, UserUnitView, \
 UserProjectDownloadView, UserProjectDiffCreateView, UserProjectDiffSchedule
-from pintell.alert_views import AlertCreateView, AlertCreate
+from pintell.alert_views import AlertCreateView, AlertCreate, AlertLiveView
 from pintell.task_views import UserDownloadTaskCreate
 from pintell.utils import make_session_factory
 import pintell.session as session
@@ -46,6 +46,8 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?', UserUnitView, name='user_unit_view'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create', AlertCreateView, name='alert_create_view'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create/new', AlertCreate, name='alert_create'),
+            # possible collision if alert created under the name 'create' here
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/?(?P<uid>[0-9]+)?/live', AlertLiveView, name='alert_live_viez')
             ]
             # todo : activate xsrf_cookies = True
             settings = {

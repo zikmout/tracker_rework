@@ -99,7 +99,7 @@
                         {% end %}
                       {% end %}
                       {% if alert['alert_type'] == 'Live' %}
-                        <th><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-dark" value="">Start</button></input></form></th>
+                        <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/{{ escape(alert['id']) }}/live" method="get" class="form-horizontal"><button type="submit" class="btn btn-dark" value="">Start</button></input></form></th>
                         </tr>
                       {% else %}
                         <th><form class="form-horizontal"><a class="btn btn-outline-dark disabled" value="">Start</a></input></form></th>

@@ -57,4 +57,29 @@ class AlertCreate(BaseView):
             flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(args['inputName']))
             # to be change to redirect to alerts/monitor_all view
             self.redirect('/api/v1/users/{}/projects/{}/alerts/create'.format(username, projectname))
+
+class AlertLiveView(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    @login_required
+    def get(self, username, projectname, uid):
+        self.render('projects/alerts/live-view.html', alertuid=uid)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         

@@ -75,7 +75,7 @@ class User(Base):
         self.username = username
         self.password = generate_password_hash(password)
         self.email = email
-        self.registration_date = datetime.now()
+        self.registration_date = datetime.now().replace(microsecond=0)
         if self.role is None:
             print('self.role is none')
             print('self.email = {}'.format(self.email))
@@ -126,7 +126,7 @@ class Project(Base):
         self.name = name
         self.data_path = data_path
         self.config_file = config_file
-        self.creation_date = datetime.now()
+        self.creation_date = datetime.now().replace(microsecond=0)
     
     def as_dict(self):
        return {c.name: str(getattr(self, c.name)) for c in self.__table__.columns}

@@ -1,0 +1,16 @@
+# start redis cache for sessions
+$redis-server
+
+# start rabbit-mq for celery task brokerage
+rabbitmq-server
+
+# start download worker
+$celery worker -A download_worker --loglevel=info --hostname w2@%%h
+
+# start live-view worker
+$celery worker -A live_view_worker --loglevel=info --autoscale 30 --hostname w1@%%h
+
+# start the app
+$python setup.py install; python setup.py build; serve_app
+
+# Please note that all these tasks will be soon automatically launched with supervisor as deamons

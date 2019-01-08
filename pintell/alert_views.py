@@ -80,7 +80,7 @@ class AlertLiveCreate(BaseView):
         tasks = rproject.download_units_diff(content.links)
 
         if tasks == None:
-            flash_message(self, 'danger', 'Problem creating LIVE ARLERT {}.'.format())
+            flash_message(self, 'danger', 'Problem creating LIVE ARLERT.')
             self.redirect('/api/v1/users/{}/projects/{}/alerts/create'.format(username, projectname))
         else:
             for task in tasks:

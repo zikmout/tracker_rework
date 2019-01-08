@@ -5,8 +5,8 @@
         {% extends '../layout.html' %}
         {% block content %}
         <div class="starter-template-fluid">
-            <h1>Project creation</h1>
-            <p class="lead">Use this page as a way to quickly start any new project.</p>
+            <h3>Project creation</h3>
+            <p>A project consist of a basic list of websites to monitor, selected by the user.<br>At the moment, projects can only be loaded directly from data path, but user will be soon able to load project from an excel file or directly through the user interface.</p>
         </div>
         <form action="/api/v1/users/{{ handler.session['username'] }}/project_create" method=post>
           <div class="form-group">

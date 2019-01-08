@@ -32,11 +32,9 @@ def download_website(self, links, base_path, url, random_header=False):
         full_url = url + utils.find_internal_link(link)
         print('URL + LINK : {}'.format(full_url))
         if link.startswith('/'):
-            pass
-            #download_and_save_content(full_url, filename, dir_path, header, check_duplicates=True)
+            download_and_save_content(full_url, filename, dir_path, header, check_duplicates=True)
         if link.startswith('<PDF>'):
-            pass
-            #download_and_save_content(full_url, filename, dir_path, header)
+            download_and_save_content(full_url, filename, dir_path, header)
         elif link.startswith('<EXCEL>'):
             # need to put function to download content for excel. Not called yet.
             print('EXCEL -> {}'.format(link))

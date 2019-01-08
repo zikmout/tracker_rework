@@ -80,8 +80,8 @@
         </script>
     <div class="starter-template-fluid">
           <script src="{{ static_url('jquery.min.js') }}"></script>
-          <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
-          <center><p class="lead">Managing project download</p><br></center>
+          <center><h3>Project {{ handler.session['current_project'] }} - Download</h3></center>
+          <center><p>User can here download websites in order to later determine what content has changed.</p><br></center>
             <table class="table table-responsive-sm table-striped">
               <thead>
                   <tr>
@@ -99,7 +99,7 @@
 
                   <tr>
                   	{% for k, v in details.items() %}
-                      {% if k not in ['total', 'pdfs', 'excels', 'errors', 'duration', 'arborescence'] %}
+                      {% if k not in ['pages', 'pdfs', 'excels', 'errors', 'duration', 'arborescence'] %}
   	                     <th>{{ escape(str(v)) }}</th>
                       {% end %}
                     {% end %}

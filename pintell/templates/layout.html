@@ -33,9 +33,6 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ reverse_url('users_list') }}">User list</a>
-                    </li>
                     <!--
                     <li class="nav-item">
                         <a class="nav-link" href="/charts2">Chart II</a>
@@ -89,16 +86,16 @@
                 <div class="collapse navbar-collapse" id="navbar2">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Data<span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="{{ reverse_url('users_list') }}">Users<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Users</a>
+                            <a class="nav-link disabled" href="#">Data</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Network</a>
+                            <a class="nav-link disabled" href="#">Network</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="#">Disabled</a>
+                            <a class="nav-link disabled" href="#">Tasks</a>
                         </li>
                     </ul>
                 </div>

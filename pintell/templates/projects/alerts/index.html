@@ -5,8 +5,10 @@
     {% extends '../../layout.html' %}
     {% block content %}
     <div class="starter-template-fluid">
-          <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
-          <center><p class="lead">Start an alert to see if content has changed on a given content.</p><br></center>
+          <center><h3>Project {{ handler.session['current_project'] }} - Setup and launch alerts on content changes</h3></center>
+          <center><p>Below is a list of alerts you already configured. At the moment, only live alerts are available<br>
+          Click on Create Alert to configure a new alert. Use Content Lookup to remember what the content name refers to.<br>
+          Push Start button in order to launch live alert.</p><br></center>
 
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create/new" method="post">
           <p>
@@ -90,7 +92,6 @@
                     <th>Content Name</th>
                     <th>Action</th>
                   </tr>
-                  {% for uid, details in handler.session['units'].items() %}
                   <tr>
                     {% for alert in alerts %}
                       {% for k, v in alert.items() %}
@@ -106,7 +107,6 @@
                         </tr>
                       {% end %}
                     {% end %}
-                  {% end %}
             </table>
     </div>
     {% end %}

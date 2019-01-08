@@ -6,7 +6,7 @@
     {% block content %}
     <div class="starter-template-fluid">
           <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
-          <center><p class="lead">What have been programmed is :</p><br></center>
+          <center><p class="lead">Start an alert to see if content has changed on a given content.</p><br></center>
 
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create/new" method="post">
           <p>
@@ -99,7 +99,7 @@
                         {% end %}
                       {% end %}
                       {% if alert['alert_type'] == 'Live' %}
-                        <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/{{ escape(alert['id']) }}/live" method="get" class="form-horizontal"><button type="submit" class="btn btn-dark" value="">Start</button></input></form></th>
+                        <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal"><button type="submit" class="btn btn-dark" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
                         </tr>
                       {% else %}
                         <th><form class="form-horizontal"><a class="btn btn-outline-dark disabled" value="">Start</a></input></form></th>

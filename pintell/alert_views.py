@@ -9,6 +9,7 @@ import pintell.session as session
 from tornado.websocket import WebSocketHandler
 from pintell.workers.live_view_worker import live_view
 from pintell.utils import get_celery_task_state
+from pintell.core.rproject import RProject
 
 class AlertCreateView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -61,14 +62,52 @@ class AlertCreate(BaseView):
             # to be change to redirect to alerts/monitor_all view
             self.redirect('/api/v1/users/{}/projects/{}/alerts/create'.format(username, projectname))
 
+class AlertLiveCreate(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @login_required
+    def post(self, username, projectname, alertid):
+        content_name = self.get_argument('contentName')
+        print('content_name = {}'.format(content_name))
+        print('alertid = {}'.format(alertid))
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        content = project.contents.filter_by(name=content_name).first()
+        print('content --> {}'.format(content))
+        # Loading project
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        rproject._load_units_from_data_path()
+
+        tasks = rproject.download_units_diff(content.links)
+
+        if tasks == None:
+            flash_message(self, 'danger', 'Problem creating LIVE ARLERT {}.'.format())
+            self.redirect('/api/v1/users/{}/projects/{}/alerts/create'.format(username, projectname))
+        else:
+            for task in tasks:
+
+                if 'live_view' not in self.session['tasks']:
+                    self.session['tasks']['live_view'] = list()
+
+                task_object = {
+                    'username': username,
+                    'projectname': projectname,
+                    'uid': None, # reverse function get_id_from_url
+                    'url': None,#url, # to change with link list
+                    'id': task.id
+                }
+                self.session['tasks']['live_view'].append(task_object)
+                self.session.save()
+            self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
+
 class AlertLiveView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
-    def get(self, username, projectname, uid):
-        task = live_view.apply_async()
-        self.render('projects/alerts/live-view.html', alertuid=uid, task_id=task.id)
+    def get(self, username, projectname):
+        tasks  = self.session['tasks']['live_view'].copy()
+        #task = live_view.apply_async()
+        self.render('projects/alerts/live-view.html', tasks=tasks)#, alertuid=uid)
 
-class EchoWebSocket(WebSocketHandler):
+class EchoWebSocket(BaseView, WebSocketHandler):
     def check_origin(self, origin):
         return True
 
@@ -76,6 +115,7 @@ class EchoWebSocket(WebSocketHandler):
         print("WebSocket opened")
 
     def on_message(self, message):
+        print('message = {}'.format(message))
         #self.write_message(u"You said: " + message)
         task_id = message
         task = live_view.AsyncResult(task_id)

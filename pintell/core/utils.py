@@ -177,3 +177,22 @@ def _format_output_hummingbird(links):
             
     go_depth_recursive(depth, full_link, final_links, root_nodes)
     return final_links
+
+def from_links_to_dict(links):
+    domains = set()
+    for link in links:
+        splited = link.split('/', 3)
+        first_part = re.search('((.*?\/.*?)){3}', link).group(0)
+        domains.add(first_part[:-1])
+
+    first_parts = dict()
+    for domain in domains:
+        first_parts[domain] = list()
+
+    for link in links:
+        first = re.search('((.*?\/.*?)){3}', link).group(0)
+        splited = link.split('/', 3)
+        second = splited[3]
+        first_parts[first[:-1]].append('/' + second)
+        
+    return first_parts

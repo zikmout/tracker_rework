@@ -33,10 +33,15 @@ def get_local_content(path, mode):
         return:
             local_content: Binary content decoded
     """
-    fd = open(path, mode)
-    local_content = fd.read().decode('utf-8')
-    fd.close()
-    return local_content
+    try:
+        fd = open(path, mode)
+        local_content = fd.read().decode('utf-8')
+        fd.close()
+        return local_content
+    except Exception as e:
+        print('Problem reading local content : {}'.format(e))
+        return None
+
 
 def get_robots_parser(robots_url):
     response = get_url_robots(robots_url)

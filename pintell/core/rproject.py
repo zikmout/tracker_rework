@@ -284,3 +284,27 @@ class RProject:
                     task = self.get_unit_from_url(unit_url).download()
                     tasks.append(task)
         return tasks
+
+    def download_units_diff(self, links):
+        if links == [] or links is None:
+            print('[ERROR] delete_download_units : No urls specified.\n')
+            return None
+        dict_links = utils.from_links_to_dict(links)
+        tasks = list()
+        if isinstance(dict_links, dict) and bool(dict_links):
+            for key, val in dict_links.items():
+                unit = self.get_unit_from_url(key)
+                task = unit.download_changed_files_from_links(val)
+                tasks.append(task)
+            return tasks
+        else:
+            print('Dict() of units url is not OK.')
+            return None
+
+
+
+
+
+
+
+

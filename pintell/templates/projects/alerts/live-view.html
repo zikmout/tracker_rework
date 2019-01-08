@@ -6,8 +6,10 @@
     {% block content %}
     <div class="starter-template-fluid">
           <center><h3>Project {{ handler.session['current_project'] }}</h3></center>
-          <center><p class="lead">Live alert viewer : {{ escape(alertuid) }} </p><br></center>
-          <center><p class="lead">Task id = {{ escape(task_id) }} </p><br></center>
+          <center><p class="lead">Task ids = {{ handler.session['tasks']['live_view'] }} </p></center>
+          <center><p class="lead" id="currentState"></p></center>
+          <center><p class="lead" id="currentCheck"></p></center>
+          <div id="changedContent"></div>
     </div>
     <script>
     var ws = new WebSocket("ws://localhost:5567/websocket");
@@ -18,12 +20,50 @@
         }, 1000);
     }
     ws.onopen = function() {
-       ws.send("{{ str(escape(task_id)) }}");
+      
+      {% for tasks in handler.session['tasks']['live_view'] %}
+          ws.send('{{ escape(str(tasks['id'])) }}');
+      {% end %}
+
+
     };
+    function updateTitleState (data) {
+      document.getElementById('currentState').innerHTML = "<mark>" + data.state + "</mark>";
+      if (data.state != 'SUCCESS') {
+        document.getElementById('currentCheck').innerHTML = data.status.url;
+      }
+      else {
+        document.getElementById('currentCheck').innerHTML = "<font color='red'>Differences found : " + data.result + "</font>";
+      }
+    }
+
     ws.onmessage = function (evt) {
        if (evt != null) {
-       console.log(evt.data);
-     }
+           var data = JSON.parse(evt.data);
+           updateTitleState(data);
+           if (typeof data !== "undefined" && (data.status.diff_minus.length > 0 || data.status.diff_plus.length > 0)) {
+              if (!document.getElementById(data.status.div)) {
+                var title = document.createElement("H5");
+                title.innerHTML = data.status.div;
+                document.getElementById('changedContent').append(title);
+                var title = document.createElement("DIV");
+                title.setAttribute("id", data.status.div);
+                document.getElementById('changedContent').appendChild(title);
+              }
+              if (document.getElementById(data.status.div) && !document.getElementById(data.current.toString())) {
+                document.getElementById(data.status.div).insertAdjacentHTML('beforeend', "<h6><a href=" + data.status.url + " target='_blank'/>" + data.status.url + "</a></h6>");
+                var ulTitle = document.createElement("UL");
+                ulTitle.setAttribute("id", data.current.toString());
+                document.getElementById(data.status.div).append(ulTitle);
+                document.getElementById(data.current.toString()).insertAdjacentHTML('beforeend', "<li>+++ : " + data.status.diff_plus + "</li>");
+                document.getElementById(data.current.toString()).insertAdjacentHTML('beforeend', "<li>--- : " + data.status.diff_minus + "</li>");
+              }
+           }
+           else {
+            console.log(data);
+            updateTitleState(data);
+           }
+        }
      else {
       console.log('[ERROR] Nothing to consume from websocket.');
      }
@@ -31,4 +71,5 @@
     timeout()
     </script>
     {% end %}
+    <!-- ws.send("{{ str(escape(task_id)) }}"); //-->
 </html>

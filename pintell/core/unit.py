@@ -7,6 +7,7 @@ import pintell.core.crawler as crawler
 import pintell.core.downloader as downloader
 import pintell.core.utils as utils
 from pintell.workers.download_worker import download_website
+from pintell.workers.live_view_worker import live_view
 
 class Unit:
     """ A Unit is all parameters associated with one website monitoring,
@@ -177,6 +178,11 @@ class Unit:
         '''
         downloader.download_website_diff(partial_remote_tree, self.download_path, self.download_path + filename_time, self.url)
 
+    def download_changed_files_from_links(self, links):
+        filename_time = datetime.datetime.now().strftime("%Y%m%d")
+        print('filename_time = {}'.format(filename_time))
+        task = live_view.apply_async([links, self.download_path, self.download_path + filename_time, self.url])
+        return task
 
     def _save_urls(self, pages, files, log_debut, log_fin):
         """ Saves freshly crawled links in the logfile

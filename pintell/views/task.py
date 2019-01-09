@@ -54,3 +54,15 @@ class UserDownloadTaskStatus(BaseView):
         print('task_id: {}'.format(task_id))
         response = get_celery_task_state(task)
         self.write(response)
+
+class UserProjectDownloadView(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    @login_required
+    def get(self, username, projectname):
+        if 'units' in self.session:
+            units = self.session['units']
+        if units is None or units == {}:
+            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
+            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+        else:
+            self.render('projects/download.html', units=units)

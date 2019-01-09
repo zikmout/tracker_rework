@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
     </head>
-    {% extends '../layout.html' %}
+    {% extends '../../layout.html' %}
     {% block content %}
 
     <link href="{{ static_url('hummingbird-treeview.css') }}" rel="stylesheet">
@@ -39,7 +39,7 @@
             console.log(JSON.stringify(List['dataid']))
             console.log('Id of project : ' + document.getElementById('contentname').value)
             $.ajax({ 
-                url: "/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/diff/schedule",
+                url: "/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content",
                 data: JSON.stringify({
                     'name': document.getElementById('contentname').value,
                     'links': (List['dataid'])

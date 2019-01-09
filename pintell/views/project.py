@@ -5,7 +5,6 @@ import time
 from pintell.views.base import BaseView
 from pintell.models import Permission, Role, Project, User, Content
 from pintell.utils import flash_message, login_required, get_url_from_id, json_response
-from pintell.core.utils import get_formated_units
 import pintell.session as session
 from pintell.core.rproject import RProject
 
@@ -70,58 +69,6 @@ class UserProjectView(BaseView):
             self.session['current_project'] = project.name
             self.session.save()
             self.render('projects/index.html', project=json_project, units=units)
-
-class UserProjectDownloadView(BaseView):
-    SUPPORTED_METHODS = ['GET']
-    @login_required
-    def get(self, username, projectname):
-        if 'units' in self.session:
-            units = self.session['units']
-        if units is None or units == {}:
-            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-        else:
-            self.render('projects/download.html', units=units)
-
-class UserProjectDiffCreateView(BaseView):
-    SUPPORTED_METHODS = ['GET']
-    @login_required
-    def get(self, username, projectname):
-        user = self.request_db.query(User).filter_by(username=username).first()
-        project = user.projects.filter_by(name=projectname).first()
-        rproject = RProject(project.name, project.data_path, project.config_file)
-        rproject._load_units_from_data_path()
-        formated_units = get_formated_units(rproject.units)
-        if 'units' in self.session:
-            units = self.session['units']
-        if units is None or units == {}:
-            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-        else:
-            self.render('projects/diff_create.html', formated_units=formated_units)
-
-class UserProjectDiffSchedule(BaseView):
-    SUPPORTED_METHODS = ['POST']
-    def set_default_headers(self):
-        """Set the default response header to be JSON."""
-        self.set_header("Content-Type", 'application/json; charset="utf-8"')
-    @login_required
-    def post(self, username, projectname):
-        data = tornado.escape.json_decode(self.request.body)
-        print('POST received, links are = {}'.format(data))
-        try:
-            user = self.request_db.query(User).filter_by(username=username).first()
-            project = user.projects.filter_by(name=projectname).first()
-            new_content = Content(data['name'], data['links'])
-            project.contents.append(new_content)
-            self.request_db.add(project)
-            self.request_db.commit()
-            flash_message(self, 'success', 'Content {} successfully created.'.format(data['name']))
-            self.write(json_response('success', None, 'Content succesfully created.'))
-        except Exception as e:
-            print('Error recording content in DB : {}'.format(e))
-            flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(data['name']))
-            self.write(json_response('error', None, '{}'.format(e)))
 
 class UserProjectDelete(BaseView):
     SUPPORTED_METHODS = ['POST']

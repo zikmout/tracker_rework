@@ -12,12 +12,13 @@ from pintell.views.user import UserListView, UserDelete, UserUnitView
 
 from pintell.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 
-from pintell.views.project import ProjectsCreateView, UserProjectListView, \
-UserProjectView, UserProjectDelete, UserProjectDownloadView, UserProjectDiffCreateView, UserProjectDiffSchedule
+from pintell.views.content import UserProjectContent
+
+from pintell.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
 
 from pintell.views.alert import AlertCreateView, AlertCreate, AlertLiveView, EchoWebSocket, AlertLiveCreate
 
-from pintell.views.task import UserDownloadTaskCreate, UserDownloadTaskStatus
+from pintell.views.task import UserDownloadTaskCreate, UserDownloadTaskStatus, UserProjectDownloadView
 
 from pintell.utils import make_session_factory
 import pintell.session as session
@@ -49,14 +50,15 @@ def main():
             # pintell.views.tasks.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?/tasks/download/create', UserDownloadTaskCreate, name='user_download_task_create'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/status/?(?P<task_id>[A-Za-z0-9-]+)?', UserDownloadTaskStatus, name='user_task_status'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView, name='user_project_download'),
 
+            # pintell.views.content.py
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent, name='user_project_diff_schedule'),
+            
             # pintell.views.project.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/project_create', ProjectsCreateView, name='users_projects_create_view'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects_manage', UserProjectListView, name='user_project_manage_view'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView, name='user_project_index'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView, name='user_project_download'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/diff_create', UserProjectDiffCreateView, name='user_project_diff_create'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/diff/schedule', UserProjectDiffSchedule, name='user_project_diff_schedule'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete, name='user_project_delete'),
 
             # pintell.views.alert.py

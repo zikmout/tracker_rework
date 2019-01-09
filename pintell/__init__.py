@@ -18,7 +18,7 @@ from pintell.views.project import ProjectsCreateView, UserProjectListView, UserP
 
 from pintell.views.alert import AlertCreateView, AlertCreate, AlertLiveView, EchoWebSocket, AlertLiveCreate
 
-from pintell.views.task import UserDownloadTaskCreate, UserDownloadTaskStatus, UserProjectDownloadView
+from pintell.views.download import UserDownloadCreate, UserDownloadStatus, UserProjectDownloadView
 
 from pintell.utils import make_session_factory
 import pintell.session as session
@@ -47,13 +47,13 @@ def main():
             url(r'/api/v1/auth/logout', AuthLogoutView, name='logout'),
             url(r'/api/v1/auth/register', AuthRegisterView, name='register'),
 
-            # pintell.views.tasks.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?/tasks/download/create', UserDownloadTaskCreate, name='user_download_task_create'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/tasks/status/?(?P<task_id>[A-Za-z0-9-]+)?', UserDownloadTaskStatus, name='user_task_status'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView, name='user_project_download'),
-
             # pintell.views.content.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent, name='user_project_diff_schedule'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),
+
+            # pintell.views.tasks.py
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/unit/?(?P<uid>[0-9]+)?', UserDownloadCreate),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/?(?P<task_id>[A-Za-z0-9-]+)?', UserDownloadStatus),
             
             # pintell.views.project.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/project_create', ProjectsCreateView, name='users_projects_create_view'),

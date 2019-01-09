@@ -39,7 +39,7 @@
                 // send ajax POST request to start background job
                 $.ajax({
                     type: 'POST',
-                    url: '/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/unit/' + uid + '/tasks/download/create',
+                    url: '/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/unit/' + uid,
                     success: function(data, status, request) {
                         // create task
                         status_url = request.getResponseHeader('Location');
@@ -110,7 +110,7 @@
                     <div id="progress{{ escape(uid) }}"></div>
                       {% if 'download' in handler.session['tasks'] %}
                         {% if uid in [_['uid'] for _ in handler.session['tasks']['download']] %}
-                          <script>load_download_task("/api/v1/users/{{ handler.session['username'] }}/tasks/status/{{ [_ for _ in handler.session['tasks']['download'] if _['uid'] == uid][0]['id'] }}", "{{ escape(uid) }}")</script>
+                          <script>load_download_task("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/{{ [_ for _ in handler.session['tasks']['download'] if _['uid'] == uid][0]['id'] }}", "{{ escape(uid) }}")</script>
                         {% end %}
                       {% end %}
                     </td>

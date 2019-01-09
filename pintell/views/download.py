@@ -5,7 +5,7 @@ from pintell.models import User
 from pintell.core.rproject import RProject
 from pintell.workers.download_worker import download_website
 
-class UserDownloadTaskCreate(BaseView):
+class UserDownloadCreate(BaseView):
     SUPPORTED_METHOD = ['POST']
     def post(self, username, projectname, uid):
         #load user
@@ -35,19 +35,19 @@ class UserDownloadTaskCreate(BaseView):
         }
         self.session['tasks']['download'].append(task_object)
         self.session.save()
-        self.set_header('Location', '/api/v1/users/{}/tasks/status/{}'.format(self.session['username'], task.id))
+        self.set_header('Location', '/api/v1/users/{}/projects/{}/download/{}'.format(self.session['username'], projectname, task.id))
 
     def delete(self, username, projectname, uid):
         print('Task to be deleted : {}'.format(uid))
         pass
 
-class UserDownloadTaskStatus(BaseView):
+class UserDownloadStatus(BaseView):
     SUPPORTED_METHODS = ['GET']
     def set_default_headers(self):
         """Set the default response header to be JSON."""
         self.set_header("Content-Type", 'application/json; charset="utf-8"')
 
-    def get(self, username, task_id):
+    def get(self, username, projectname, task_id):
         task = download_website.AsyncResult(task_id)
         print('Task backend = {}'.format(task.backend))
         #task = task.get()

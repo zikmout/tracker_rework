@@ -12,7 +12,6 @@ class ProjectsCreateView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
     @login_required
     def get(self, username):
-        #print('params ======== {}'.format(selg.get_argument('username')))
         self.render('projects/create.html')
 
     @login_required
@@ -60,7 +59,6 @@ class UserProjectView(BaseView):
         sbb_project = RProject(project.name, project.data_path, project.config_file)
         sbb_project._load_units_from_data_path()
         units = sbb_project.units_stats(units=sbb_project.filter_units())
-        #sbb_project.download_units(['http://www.viscofan.com'])
         if units is None:
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))

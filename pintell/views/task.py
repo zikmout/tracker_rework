@@ -1,8 +1,9 @@
 import tornado
-from pintell.views import BaseView
-from pintell.utils import flash_message, login_required, get_url_from_id
+from pintell.views.base import BaseView
+from pintell.utils import flash_message, login_required, get_url_from_id, get_celery_task_state
 from pintell.models import User
 from pintell.core.rproject import RProject
+from pintell.workers.download_worker import download_website
 
 class UserDownloadTaskCreate(BaseView):
     SUPPORTED_METHOD = ['POST']
@@ -18,6 +19,8 @@ class UserDownloadTaskCreate(BaseView):
         list_url.append(url)
         print('URL = {}'.format(list_url))
         tasks = rproject.download_units(list_url)
+        # in case of more scalability, download_units function is
+        # ready to take more tasks at once, so it returns an array 
         task = tasks[0]
 
         if 'download' not in self.session['tasks']:
@@ -33,3 +36,21 @@ class UserDownloadTaskCreate(BaseView):
         self.session['tasks']['download'].append(task_object)
         self.session.save()
         self.set_header('Location', '/api/v1/users/{}/tasks/status/{}'.format(self.session['username'], task.id))
+
+    def delete(self, username, projectname, uid):
+        print('Task to be deleted : {}'.format(uid))
+        pass
+
+class UserDownloadTaskStatus(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    def set_default_headers(self):
+        """Set the default response header to be JSON."""
+        self.set_header("Content-Type", 'application/json; charset="utf-8"')
+
+    def get(self, username, task_id):
+        task = download_website.AsyncResult(task_id)
+        print('Task backend = {}'.format(task.backend))
+        #task = task.get()
+        print('task_id: {}'.format(task_id))
+        response = get_celery_task_state(task)
+        self.write(response)

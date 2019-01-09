@@ -2,7 +2,7 @@ import tornado
 import json
 import datetime
 import time
-from pintell.views import BaseView
+from pintell.views.base import BaseView
 from pintell.models import Permission, Role, Project, User, Content, Alert
 from pintell.utils import flash_message, login_required, get_url_from_id, json_response
 import pintell.session as session

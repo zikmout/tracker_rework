@@ -2,14 +2,12 @@ import tornado
 import json
 import datetime
 import time
-from pintell.views import BaseView
+from pintell.views.base import BaseView
 from pintell.models import Permission, Role, Project, User, Content
-from pintell.utils import flash_message, login_required, get_url_from_id, json_response, \
-get_celery_task_state
+from pintell.utils import flash_message, login_required, get_url_from_id, json_response
 from pintell.core.utils import get_formated_units
 import pintell.session as session
 from pintell.core.rproject import RProject
-from pintell.workers.download_worker import download_website
 
 class ProjectsCreateView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
@@ -124,43 +122,6 @@ class UserProjectDiffSchedule(BaseView):
             print('Error recording content in DB : {}'.format(e))
             flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(data['name']))
             self.write(json_response('error', None, '{}'.format(e)))
-
-class UserUnitView(BaseView):
-    SUPPORTED_METHODS = ['GET']
-    def get(self, username, projectname, uid):
-        url = get_url_from_id(self.session['units'], uid)
-        self.render('unit/index.html', url=url)
-
-class UserTaskCreate(BaseView):
-    SUPPORTED_METHODS = ['POST']
-    def post(self, username):
-        print('SELF SESSION BEFORE: {}'.format(self.session))
-        # Load celery background task
-
-        print('View DESACTIVATED')
-        exit(0)
-        #task = download.apply_async((username,))
-        #print('Task backend = {}'.format(task.backend))
-        if 'download' not in self.session['tasks']:
-            self.session['tasks']['download'] = dict()
-        self.session['tasks']['download'].update({task.id : username})
-        self.session.save()
-        print('SELF SESSION AFTER: {}'.format(self.session))
-        self.set_header('Location', '/api/v1/users/{}/tasks/status/{}'.format(self.session['username'], task.id))
-
-class UserTaskStatus(BaseView):
-    SUPPORTED_METHODS = ['GET']
-    def set_default_headers(self):
-        """Set the default response header to be JSON."""
-        self.set_header("Content-Type", 'application/json; charset="utf-8"')
-
-    def get(self, username, task_id):
-        task = download_website.AsyncResult(task_id)
-        print('Task backend = {}'.format(task.backend))
-        #task = task.get()
-        print('task_id: {}'.format(task_id))
-        response = get_celery_task_state(task)
-        self.write(response)
 
 class UserProjectDelete(BaseView):
     SUPPORTED_METHODS = ['POST']

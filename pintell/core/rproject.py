@@ -215,6 +215,18 @@ class RProject:
                 self.units.append(Unit(self.data_path, url))
         print('\n {} units successfuly loaded.\n'.format(len(self.units)))
 
+    def update_unit(self, url):
+        idx = 0
+        for unit in self.units:
+            if unit.url == url:
+                self.units.pop(idx)
+                updated_unit = Unit(self.data_path, url)
+                self.units.append(updated_unit)
+                break;
+            idx += 1
+        print('Unit successfully updated')
+        return updated_unit
+
     def _load_units_from_excel(self):
         """ Load project units from excel file.
             Excel file must contain a column named 'Website' with the url of wesite to monitor

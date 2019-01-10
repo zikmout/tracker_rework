@@ -5,25 +5,19 @@ from tornado.ioloop import IOLoop
 from tornado.options import define, options
 import tornado.web
 from tornado.web import url
-
-from pintell.views.base import HomePage
-
-from pintell.views.user import UserListView, UserDelete, UserUnitView
-
-from pintell.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
-
-from pintell.views.content import UserProjectContent
-
-from pintell.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
-
-from pintell.views.alert import AlertCreateView, AlertCreate, AlertLiveView, EchoWebSocket, AlertLiveCreate
-
-from pintell.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus, UserProjectDownloadView
-
 from pintell.utils import make_session_factory
 import pintell.session as session
 
-define('port', default=5567, help='port to listen on')
+from pintell.views.base import HomePage
+from pintell.views.user import UserListView, UserDelete, UserUnitView
+from pintell.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
+from pintell.views.content import UserProjectContent
+from pintell.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
+from pintell.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate
+from pintell.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus, UserProjectDownloadView
+from pintell.views.socket import EchoWebSocket
+
+define('port', default=5567, help='Port to listen on.')
 
 app_db, meta = make_session_factory()
 
@@ -63,10 +57,12 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete),
 
             # pintell.views.alert.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create', AlertCreateView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create/new', AlertCreate),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts', AlertView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create', AlertCreate),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/view', AlertLiveView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/create/?(?P<alertid>[A-Za-z0-9-_]+)?', AlertLiveCreate),
+
+            # pintell.views.socket.py
             url(r'/websocket', EchoWebSocket, name='websocket')
             ]
             # todo : activate xsrf_cookies = True
@@ -80,7 +76,9 @@ def main():
                     'redis_host': 'localhost',
                     'redis_port': 6379,
                     'redis_pass': None
-                }
+                },
+                'debug': True,
+                'autoreload': True
             }
             tornado.web.Application.__init__(self, handlers, **settings)
             try:

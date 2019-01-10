@@ -9,6 +9,7 @@ from pintell.models import Permission, Role, Project, User
 from pintell.utils import make_session_factory, flash_message, login_required
 from pintell.models import User
 import pintell.session as session
+from pintell.workers.live_view_worker import live_view
 
 class BaseView(RequestHandler):
     """Base view for this application."""
@@ -35,6 +36,12 @@ class BaseView(RequestHandler):
 
     def prepare(self):
         # capture flash messages cookies
+        if hasattr(self.session, 'tasks') and hasattr(self.session['tasks'], 'live_view') and self.session['tasks']['live_view'][0]['id']:
+            task_id_to_stop = self.session['tasks']['live_view'][0]['id']
+            live_view.AsyncResult(task_id_to_stop).revoke(terminate=True)
+            del self.session['tasks']['live_view'][:]
+            self.session.save()
+            flash_message(self, 'info', 'Live view task on url {} stopped because you quited the page.'.format(task_id_to_stop))
         cookie = self.get_secure_cookie("flash")
         if cookie:
             cookie = tornado.escape.json_decode(cookie)

@@ -98,9 +98,7 @@
                   </tr>
               </thead>
               <tbody>
-            
                   {% for uid, details in handler.session['units'].items() %}
-
                   <tr>
                   	{% for k, v in details.items() %}
                       {% if k not in ['pages', 'pdfs', 'excels', 'errors', 'duration', 'arborescence'] %}

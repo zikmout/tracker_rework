@@ -46,7 +46,7 @@
                 }),
                 type: 'POST',
                 success: function() {
-                    window.location.replace("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create");
+                    window.location.replace("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts");
                 },
                 error: function() {
                     console.log('Error occured when making POST request to api.')

@@ -56,9 +56,14 @@ class UserProjectView(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         json_project = project.as_dict()
         # Loading project
-        sbb_project = RProject(project.name, project.data_path, project.config_file)
-        sbb_project._load_units_from_data_path()
-        units = sbb_project.units_stats(units=sbb_project.filter_units())
+        try:
+            sbb_project = RProject(project.name, project.data_path, project.config_file)
+            sbb_project._load_units_from_data_path()
+            units = sbb_project.units_stats(units=sbb_project.filter_units())
+        except Exception as e:
+            print('[ERROR] - {}'.format(e))
+            flash_message(self, 'danger', 'Problem while loading project {}. Check if data path exist.'.format(project.name))
+            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
         if units is None:
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))

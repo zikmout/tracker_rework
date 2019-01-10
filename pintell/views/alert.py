@@ -4,14 +4,12 @@ import datetime
 import time
 from pintell.views.base import BaseView
 from pintell.models import Permission, Role, Project, User, Content, Alert
-from pintell.utils import flash_message, login_required, get_url_from_id, json_response
-import pintell.session as session
+from pintell.utils import flash_message, login_required, get_url_from_id, \
+json_response, make_session_factory
 from tornado.websocket import WebSocketHandler
-from pintell.workers.live_view_worker import live_view
-from pintell.utils import get_celery_task_state
 from pintell.core.rproject import RProject
 
-class AlertCreateView(BaseView):
+class AlertView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
     def get(self, username, projectname):
@@ -55,12 +53,12 @@ class AlertCreate(BaseView):
             # need to put the code for crontab here now !! 
             flash_message(self, 'success', 'Alert {} successfully created.'.format(args['inputName']))
             # to be change to redirect to alerts/monitor_all view
-            self.redirect('/api/v1/users/{}/projects/{}/alerts/create'.format(username, projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
         except Exception as e:
             print('Error recording alert in DB : {}'.format(e))
             flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(args['inputName']))
             # to be change to redirect to alerts/monitor_all view
-            self.redirect('/api/v1/users/{}/projects/{}/alerts/create'.format(username, projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
 
 class AlertLiveCreate(BaseView):
     SUPPORTED_METHODS = ['POST']
@@ -81,11 +79,14 @@ class AlertLiveCreate(BaseView):
 
         if tasks == None:
             flash_message(self, 'danger', 'Problem creating LIVE ARLERT.')
-            self.redirect('/api/v1/users/{}/projects/{}/alerts/create'.format(username, projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
         else:
             for task in tasks:
 
                 if 'live_view' not in self.session['tasks']:
+                    self.session['tasks']['live_view'] = list()
+                else:
+                    del self.session['tasks']['live_view']
                     self.session['tasks']['live_view'] = list()
 
                 task_object = {
@@ -104,26 +105,4 @@ class AlertLiveView(BaseView):
     @login_required
     def get(self, username, projectname):
         tasks  = self.session['tasks']['live_view'].copy()
-        #task = live_view.apply_async()
-        self.render('projects/alerts/live-view.html', tasks=tasks)#, alertuid=uid)
-
-class EchoWebSocket(BaseView, WebSocketHandler):
-    def check_origin(self, origin):
-        return True
-
-    def open(self):
-        print("WebSocket opened")
-
-    def on_message(self, message):
-        print('message = {}'.format(message))
-        #self.write_message(u"You said: " + message)
-        task_id = message
-        task = live_view.AsyncResult(task_id)
-        print('Task backend = {}'.format(task.backend))
-        #task = task.get()
-        print('task_id: {}'.format(task_id))
-        response = get_celery_task_state(task)
-        self.write_message(response)
-
-    def on_close(self):
-        print("WebSocket closed") 
+        self.render('projects/alerts/live-view.html', tasks=tasks)

@@ -23,7 +23,7 @@ setup(
     description='Data miner crawling bot',
     author='simon sicard',
     author_email='simon.sicard@gmail.com',
-    keywords='crawling scrapping data mining',
+    keywords='crawling scrapping data mining ai content extracting',
     packages=find_packages(),
     install_requires=requires,
     entry_points={

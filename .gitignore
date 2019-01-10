@@ -1,19 +1,31 @@
+# virtual environment
 ENV/
+
+# jupyter-notebook checkpoints
 .ipynb_checkpoints/
+
+# python cache
 *.pyc
 __pycache__/
+
+# mac useless
 .DS_Store
+
+# database cache
 *.db
 *.rdb
-db/
-.installed.cfg
-bin
+
+# rabbit-mq
+MnesiaCore*
+
+# setup.py cache
 develop-eggs/
-downloads
 eggs
 parts
 *.egg-info
 lib
 lib64
-logfile
 dist/
+
+# logs folder
+logs/

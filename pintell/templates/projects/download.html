@@ -5,7 +5,7 @@
     {% extends '../layout.html' %}
     {% block content %}
     <script>
-            function update_progress(status_url, div_bar, task_id) {
+            function update_progress(status_url, div_bar, task_id, uid) {
                 // send GET request to status URL
                 $.getJSON(status_url, function(data) {
                     // update UI
@@ -14,23 +14,26 @@
                     $(div_bar.childNodes[0]).text(percent + '%');
                     // making loading bar moving
                     document.getElementById("pct" + task_id).style.width = percent + '%';
-                    document.getElementById("state" + task_id).innerHTML = data['state'];
+                    //document.getElementById("state" + task_id).innerHTML = data['state'];
+                    document.getElementById("status" + uid).innerHTML = data['state'] + " (" + data['current'] + "/" + data['total'] + ")";
                     document.getElementById("current" + task_id).innerHTML = data['status'];
-                    document.getElementById("total" + task_id).innerHTML = data['total'];
+                    //document.getElementById("total" + task_id).innerHTML = data['total'];
                     if (data['state'] != 'PENDING' && data['state'] != 'PROGRESS') {
                         if ('result' in data) {
                             // show result
-                            document.getElementById("status" + task_id).innerHTML = data['result'];
+                            //document.getElementById("status" + task_id).innerHTML = data['result'];
+                            document.getElementById("status" + uid).innerHTML = 'TERMINATED';
                         }
                         else {
                             // something unexpected happened
-                            document.getElementById("status" + task_id).innerHTML = data['result'];
+                            //document.getElementById("status" + task_id).innerHTML = data['result'];
+                            document.getElementById("status" + uid).innerHTML = 'TERMINATED';
                         }
                     }
                     else {
                         // rerun in 1 seconds
                         setTimeout(function() {
-                            update_progress(status_url, div_bar, task_id);
+                            update_progress(status_url, div_bar, task_id, uid);
                         }, 1000);
                     }
                 });
@@ -49,10 +52,12 @@
                             // get task id
                             task_id = regex.exec(status_url)
                             // add task status elements
-                            div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>');
+                            /* div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>'); */
+                            div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div class="font-weight-lighter" id="current' + task_id + '"></div><div id="status' + task_id + '"></div>');
+
                             $('#progress' + uid).append(div_bar);
 
-                            update_progress(status_url, div_bar[0], task_id);
+                            update_progress(status_url, div_bar[0], task_id, uid);
                         }
                     },
                     error: function() {
@@ -70,10 +75,10 @@
                         // get task id
                         task_id = regex.exec(status_url)
                         // add task status elements
-                        div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>');
+                        div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><div class="font-weight-lighter" id="current' + task_id + '"></div><div id="status' + task_id + '"></div>');
 
                         $('#progress' + uid).append(div_bar);
-                        update_progress(status_url, div_bar[0], task_id);
+                        update_progress(status_url, div_bar[0], task_id, uid);
                     },
                     error: function() {
                         alert('Unexpected error');

@@ -92,7 +92,7 @@
                     <th>Pages</th>
                     <th>Downloaded</th>
                     <th>Crawling date</th>
-                    <th>Progress</th>
+                    <th>Status</th>
                     <th>Action</th>
                     <th></th>
                   </tr>
@@ -105,7 +105,7 @@
   	                     <th>{{ escape(str(v)) }}</th>
                       {% end %}
                     {% end %}
-                    <th>-</th>
+                    <th id="status{{ escape(uid) }}">-</th>
                     <th><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" onclick="start_download_task({{ escape(uid) }})">Download</button></input></form>
                     </th>
                     <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/unit/{{ escape(uid) }}/stop" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Stop</button></input></form>

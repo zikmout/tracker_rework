@@ -78,7 +78,9 @@ def main():
                     'redis_pass': None
                 },
                 'debug': True,
-                'autoreload': True
+                'autoreload': True,
+                'serve_traceback':True,
+                'compiled_template_cache':False
             }
             tornado.web.Application.__init__(self, handlers, **settings)
             try:

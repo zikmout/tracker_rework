@@ -6,7 +6,6 @@
     {% block content %}
     <div class="starter-template-fluid">
           <center><h3>Project {{ handler.session['current_project'] }} : Live alerts on content change</h3></center>
-          <center><p class="lead">Task ids = {{ handler.session['tasks']['live_view'] }}</p></center>
           <center><p class="lead" id="currentState"></p></center>
           <center><p class="lead" id="currentCheck"></p></center>
           <div id="changedContent"></div>

@@ -1,0 +1,1 @@
+This folder is for storing logs from supervisor or other program that needs space to store logs locally.

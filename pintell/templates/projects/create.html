@@ -11,11 +11,11 @@
         <form action="/api/v1/users/{{ handler.session['username'] }}/project_create" method=post>
           <div class="form-group">
             <label for="ProjectName" id="ProjectName">Project Name</label>
-            <input type="text" class="form-control" name="ProjectName" placeholder="Enter project name">
+            <input type="text" class="form-control" name="ProjectName" placeholder="Enter project name" required>
           </div>
           <div class="form-group">
             <label for="ProjectLocation">Location of project</label>
-            <input type="text" class="form-control" name="ProjectLocation" aria-describedby="ProjectLocation" placeholder="ex: /home/user/documents/project">
+            <input type="text" class="form-control" name="ProjectLocation" aria-describedby="ProjectLocation" placeholder="ex: /home/user/documents/project" required>
             <small id="ProjectLocation" class="form-text text-muted">The location must correspond to an empty folder previously created.</small>
           </div>
           <div class="form-group">

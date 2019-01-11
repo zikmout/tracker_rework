@@ -11,7 +11,7 @@ import pintell.session as session
 from pintell.views.base import HomePage
 from pintell.views.user import UserListView, UserDelete, UserUnitView
 from pintell.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
-from pintell.views.content import UserProjectContent
+from pintell.views.content import UserProjectContent, TestingView
 from pintell.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
 from pintell.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate
 from pintell.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus, UserProjectDownloadView
@@ -43,6 +43,7 @@ def main():
 
             # pintell.views.content.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/testview', TestingView),
 
             # pintell.views.tasks.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/unit/?(?P<uid>[0-9]+)?', UserDownloadCreate),
@@ -71,7 +72,7 @@ def main():
                 'static_path': os.path.join(dirname, 'pintell/static'),
                 'cookie_secret': 'd5006258ba9aaa1d86a8014e767c6d8cf3d2ad69a4021901e6c47af740b15ad5',#os.urandom(32).hex(),
                 'session_secret': '28bd17bdb79af5032d2dd03dd549d60e14ef83e5c7902bed0ed4497c5e0fc011',#os.urandom(32).hex(),
-                'session_timeout': 600,
+                'session_timeout': 6000,
                 'store_options': {
                     'redis_host': 'localhost',
                     'redis_port': 6379,

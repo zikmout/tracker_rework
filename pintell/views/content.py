@@ -3,6 +3,7 @@ from pintell.views.base import BaseView
 from pintell.models import User, Content
 from pintell.utils import flash_message, login_required, json_response
 from pintell.core.rproject import RProject
+from pintell.core.unit import Unit
 from pintell.core.utils import get_formated_units
 
 class UserProjectContent(BaseView):
@@ -40,3 +41,17 @@ class UserProjectContent(BaseView):
             print('Error recording content in DB : {}'.format(e))
             flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(data['name']))
             self.write(json_response('error', None, '{}'.format(e)))
+
+class TestingView(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    def get(self, username, projectname):
+        self.write(username)
+        self.write(projectname)
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        rproject._load_units_from_data_path()
+        print('begin crawling')
+        #unit = Unit(rproject.data_path, 'https://www.rsagroup.com')
+        #unit.crawl(max_depth=8)
+        print('-> DONE CRAWLING')

@@ -251,6 +251,7 @@ class RProject:
                 unit (Unit): Unit of the asked website, or None if not found
         """
         for unit in self.units:
+            print('unit -> {}'.format(unit.url))
             if unit.url == url:
                 return unit
         return None

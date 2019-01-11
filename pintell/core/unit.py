@@ -144,7 +144,7 @@ class Unit:
             kwarg:
                 max_depth (int): Max depth of the crawl bot (default: 1)
         """
-        if os.path.isfile(self.logfile, max_depth):
+        if os.path.isfile(self.logfile):
             print('A logfile named {} already exists !\n'.format(self.logfile))
             return
         try :

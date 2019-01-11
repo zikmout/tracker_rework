@@ -39,7 +39,8 @@ def is_valid_content_type(url, content_type):
     return True
 
 def is_valid_link(link):
-    exclude_contains = ['.jpg', '.jpeg', '.png', '.wmv', '.ics', '.mp3', '.zip', '.rtf', '.mov', '.mp4', '.mpg', '@', '.doc']
+    exclude_contains = ['.jpg', '.jpeg', '.png', '.wmv', '.ics', '.mp3', '.zip',\
+     '.rtf', '.mov', '.mp4', '.mpg', '@', '.doc', '#', ';', 'amp%3B']
     for _ in exclude_contains:
         if _ in link:
             return False
@@ -62,6 +63,7 @@ def download(start_url, url, num_retries=2, user_agent='wswp', charset='utf-8', 
             proxy (str): proxy url, ex 'http://IP' (default: None)
             num_retries (int): number of retries if a 5xx error is seen (default: 2)
     """
+    print('\ndownload : url = {}'.format(url))
     err = 0
     subfiles = None
     subpages = None
@@ -69,10 +71,12 @@ def download(start_url, url, num_retries=2, user_agent='wswp', charset='utf-8', 
     request.add_header('User-agent', user_agent)
     try:
         end_url = url.replace(start_url, '')
+        '''
         if proxy:
             proxy_support = urllib.request.ProxyHandler({'http': proxy})
             opener = urllib.request.build_opener(proxy_support)
             urllib.request.install_opener(opener)
+        '''
         resp = urllib.request.urlopen(request)
         cs = resp.headers.get_content_charset()
         #cs = resp.headers.get_content_charset()
@@ -121,12 +125,27 @@ def get_robots_parser(robots_url):
     return rp
 
 
-def get_links(html):
+def get_links(start_url, html):
     " Return a list of links (using simple regex matching) from the html content "
     # a regular expression to extract all links from the webpage
     webpage_regex = re.compile("""<a[^>]+href=["'](.*?)["']""", re.IGNORECASE)
     # list of all links from the webpage
-    return webpage_regex.findall(html)
+    #return webpage_regex.findall(html)
+    links = webpage_regex.findall(html)
+    #print('len links1 = {}\n'.format(links))
+    
+    links2 = list()
+    for link in links:
+        if link.startswith(start_url):
+            #print('link before -> {}'.format(link))
+            link = link.replace(start_url, '')
+            #print('link after  -> {}'.format(link))
+        links2.append(link)
+    #print('len links2 = {}'.format(links2))
+    #print('links before = {}\n'.format(webpage_regex.findall(html)))
+    #links = [x.replace(start_url, '') for x in webpage_regex.findall(html) if x.startswith(start_url)]
+    #print('links = {}'.format(links))
+    return links2
 
 def is_full_link_valid(link):
     to_exclude = ['https://twitter.com', 'https://plus.google.com', 'https://www.facebook.com',
@@ -173,7 +192,7 @@ def link_crawler(start_url, link_regex, robots_url=None, user_agent='wswp',
         #if rp.can_fetch(user_agent, url):
         depth = seen.get(url, 0)
         if depth == max_depth:
-            #print('Skipping %s due to depth' % url)
+            print('*** Skipping {} due to depth ***'.format(url))
             continue
         html, subpages, subfiles, err = download(start_url, url, user_agent=user_agent, proxy=proxy)
         pages.add(subpages)
@@ -183,13 +202,14 @@ def link_crawler(start_url, link_regex, robots_url=None, user_agent='wswp',
             continue
         # TODO: add actual data scraping here
         # filter for links matching our regular expression
-        for link in get_links(html):
-            if is_full_link_valid(link) and link not in full_links:
+        for link in get_links(start_url, html):
+            #print('sublink ------> {}'.format(link))
+            #if is_full_link_valid(link) and link not in full_links:
                 #print('LINK => {}'.format(link))
                 #full_links.add(link)
                 #print('new link => {}'.format(link))
-                pass
-            elif re.match(link_regex, link):
+                #pass
+            if re.match(link_regex, link):
                 abs_link = urljoin(start_url, link)
                 if abs_link not in seen:
                     seen[abs_link] = depth + 1

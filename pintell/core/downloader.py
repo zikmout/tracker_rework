@@ -42,7 +42,7 @@ def download_and_save_content(url, name, path, header, check_duplicates=False):
             check_duplicates (bool): Make sure no duplicate in names (default:False)
     """
     if not os.path.isdir(path):
-        print('path: {} is not a directory'.format(path))
+        print('path: {} is not a directory, changing name to unknown___'.format(path))
         # if there is a file with same name as folder, change its name
         if check_duplicates and os.path.isfile(path):
             os.rename(path, path + '___')

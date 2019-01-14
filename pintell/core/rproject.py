@@ -331,6 +331,18 @@ class RProject:
                 else:
                     print('There is no Unit found for url : {}'.format(unit_url))
 
+    def crawl_units(self, units_urls):
+        tasks = dict()
+        for url, details in units_urls.items():
+            print('url -> {}'.format(url))
+            unit  = self.get_unit_from_url(url)
+            starting_path = details['starting_path']
+            depth = details['depth']
+            print('received: unit = {}, starting_path = {}, depth = {}'.format(unit, starting_path, depth))
+            task = unit.crawl(starting_path=starting_path, max_depth=depth)
+            tasks.update({ url : task })
+        return tasks
+
     def download_units(self, units_urls):
         """ If units_urls is a list, download all content form websites provided in list
             according to what crawled links have been found.

@@ -8,6 +8,7 @@ import pintell.core.downloader as downloader
 import pintell.core.utils as utils
 from pintell.workers.download_worker import download_website
 from pintell.workers.live_view_worker import live_view
+from pintell.workers.crawl_multiple_worker import link_crawler
 
 class Unit:
     """ A Unit is all parameters associated with one website monitoring,
@@ -150,11 +151,11 @@ class Unit:
             print('A logfile named {} already exists !\n'.format(self.logfile))
             return
         try :
-            log_debut = '[{}] {}\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), self.url)
-            pages, files, log_fin = crawler.link_crawler(self.url, starting_path, user_agent='wsgt', max_depth=max_depth)
-            self._save_urls(pages, files, log_debut, log_fin)
+            task = link_crawler.apply_async([self.url, starting_path, self.logfile, 'wsgt', max_depth])
+            return task
         except Exception as e:
             print('Error with website : {}. Error = {}\n'.format(self.url, traceback.format_exc()))
+            return None
 
     def download_changed_files(self, regex, force=False):
         local_tree = utils.clean_local_tree(self._local_tree())
@@ -185,34 +186,6 @@ class Unit:
         print('filename_time = {}'.format(filename_time))
         task = live_view.apply_async([links, self.download_path, self.download_path + filename_time, self.url])
         return task
-
-    def _save_urls(self, pages, files, log_debut, log_fin):
-        """ Saves freshly crawled links in the logfile
-            args:
-                pages (list): List of crawled html pages
-                files (list): List of crawled Excel and pdf files
-                log_debut (str): First line of logfile (e.g. '[2018-12-07 15:09] https://www.airliquide.com')
-                log_fin (str): Last line of logfile
-        """
-        # check if urls have been already crawled and logfile exists
-        if os.path.isfile(self.logfile):
-            print('A file named {} already exists !\n'.format(self.logfile))
-            return
-        # Creates new logfile with all informations above
-        fd = open(self.logfile, 'w+')
-        fd.write(log_debut)
-        pages_len = len(pages)
-        idx = 0
-        for page in pages:
-            idx += 1
-            fd.write(page)
-            if idx != len(pages):
-                fd.write('\n')
-        for file in files:
-            fd.write(file)
-            fd.write('\n')
-        fd.write(log_fin)
-        fd.close()
 
     def load_urls(self, logfile):
         """ Loads urls stored in logfile and return them.

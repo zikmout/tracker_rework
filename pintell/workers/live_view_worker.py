@@ -55,7 +55,6 @@ def live_view(self, links, base_path, diff_path, url):
                 'diff_plus': extracted_diff_plus
             }
             self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
-            time.sleep(1)
 
             print('\n\n DIFF +++ :\n{}'.format(extracted_diff_plus))
             print('\n\n DIFF --- :\n{}'.format(extracted_diff_minus))

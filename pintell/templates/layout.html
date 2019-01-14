@@ -110,7 +110,7 @@
         </div>
         {% end %}
         {% if hasattr(handler, 'session') and handler.session != {} %}
-        <font color='red'>SESSION : {{ handler.session }}</font>
+
         <font color='green'>Logged user : {{ handler.session['username'] }}</font>
         {% end %}
         <!-- end of administrator panel -->

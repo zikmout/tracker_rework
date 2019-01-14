@@ -6,6 +6,35 @@ import pandas as pd
 import re
 import pintell.core.scrapper as scrapper
 
+def save_urls(logfile, pages, files, log_debut, log_fin):
+    """ Saves freshly crawled links in the logfile
+        args:
+            logfile (str): Full path of logfile where to record logs
+            pages (list): List of crawled html pages
+            files (list): List of crawled Excel and pdf files
+            log_debut (str): First line of logfile (e.g. '[2018-12-07 15:09] https://www.airliquide.com')
+            log_fin (str): Last line of logfile
+    """
+    # check if urls have been already crawled and logfile exists
+    if os.path.isfile(logfile):
+        print('A file named {} already exists !\n'.format(logfile))
+        return
+    # Creates new logfile with all informations above
+    fd = open(logfile, 'w+')
+    fd.write(log_debut)
+    pages_len = len(pages)
+    idx = 0
+    for page in pages:
+        idx += 1
+        fd.write(page)
+        if idx != len(pages):
+            fd.write('\n')
+    for file in files:
+        fd.write(file)
+        fd.write('\n')
+    fd.write(log_fin)
+    fd.close()
+
 def get_logfilename_dirname_path(filename):
     logfilename = filename + '_logs.txt'
     dirname_path = os.getcwd() + '/data/' + filename + '/'

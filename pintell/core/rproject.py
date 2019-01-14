@@ -102,6 +102,66 @@ class RProject:
         print(self.config_df)
         print('\n')
 
+    def units_stats_from_excel(self, units=None, verbose=False):
+        total = pages = pdfs = excels = errors = total_downloaded_files = 0
+        all_units = self.units
+        uid = 1
+        units_dict = dict()
+        for unit in all_units:
+            try:
+                first_line, middle, last_line = unit.load_urls(unit.logfile)
+                downloaded_files = len(unit._local_tree())
+                if verbose:
+                    print('{}:'.format(first_line.split(' ')[2].replace('\n', '')))
+                    print('{}'.format(last_line))
+            except Exception as e:
+                first_line = middle = last_line = None
+                downloaded_files = 0
+            if verbose:
+                print('{} downloaded file(s)\n'.format(downloaded_files))
+            if first_line is not None:
+                numbers = [int(n) for n in last_line.split() if n.isdigit()]
+                regex_date = r"(?<=\[)(.*?)(?=\])"
+                date = re.findall(regex_date, last_line)[0]
+                regex_duration = r"(?<=Duration.).[0-9:]*"
+                duration = re.findall(regex_duration, last_line)[0]
+                duration = duration.strip()
+            else:
+                date = 0
+                duration = 0
+
+            total_downloaded_files += downloaded_files
+            total += unit.total
+            pages += unit.pages
+            pdfs += unit.pdfs
+            excels += unit.excels
+            errors += unit.errors
+
+            unit_dict = { 
+                uid : {
+                    'url': unit.url,
+                    'total': unit.total,
+                    'pages': unit.pages,
+                    'pdfs': unit.pdfs,
+                    'excels': unit.excels,
+                    'errors': unit.errors,
+                    'downloaded_files': downloaded_files,#,
+                    'date': date,
+                    'duration': duration
+                    #'arborescence': unit.remote_arborescence(unit.logfile)
+                }
+            }
+            units_dict.update(unit_dict)
+            uid += 1
+        nb_items = len(all_units)
+        if verbose:
+            print('-> Statistics on {}/{} available unit(s).\n'.format(nb_items, len(self.units)))
+            print('-> SUM     : Total: {}, Pages: {}, PDFS : {}, EXCEL(s) : {}, Errors : {}\n'.format(total, pages, pdfs, excels, errors))
+            print('-> AVERAGE : Total: {}, Pages: {}, PDFS : {}, EXCEL(s) : {}, Errors : {}\n'.format(int(total / nb_items), int(pages / nb_items), int(pdfs / nb_items), int(excels / nb_items), int(errors / nb_items)))
+            print('-> TOTAL FILES DOWNLOADED: {}'.format(total_downloaded_files))
+            print('-------------------------------------------\n')
+        return units_dict
+
     def units_stats(self, units=None, verbose=False):
         """ Print Project statistics (sum, average, total) of all websites.
             And websites list statistics (Total Links scrapped, total pages, total

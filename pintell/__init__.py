@@ -15,6 +15,7 @@ from pintell.views.content import UserProjectContent, TestingView
 from pintell.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
 from pintell.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate
 from pintell.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus, UserProjectDownloadView
+from pintell.views.crawl import UserProjectCrawlView
 from pintell.views.socket import EchoWebSocket
 
 define('port', default=5567, help='Port to listen on.')
@@ -45,7 +46,10 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/testview', TestingView),
 
-            # pintell.views.tasks.py
+            # pintell.views.crawl.py
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl', UserProjectCrawlView),
+            
+            # pintell.views.download.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/unit/?(?P<uid>[0-9]+)?', UserDownloadCreate),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/unit/?(?P<uid>[0-9]+)?/stop', UserDownloadStop),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView),

@@ -48,24 +48,41 @@ class UserProjectListView(BaseView):
         self.render('projects/manage.html', projects=user_projects_json)
 
 class UserProjectView(BaseView):
-    SUPPORTED_METHODS = ['GET']
+    SUPPORTED_METHODS = ['POST']
     @login_required
-    def get(self, username, projectname):
-        print('arrived project name = {}'.format(projectname))
+    def post(self, username, projectname):
+        args = { k: self.get_argument(k) for k in self.request.arguments }
+        print('post args = {}'.format(args))
+        # if box is checked, variable comes in like { "fromExcel": "on" }
+        checked = False
+        if 'fromExcel' in args:
+            checked = True
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         json_project = project.as_dict()
         units = None
         # Loading project
-        try:
-            sbb_project = RProject(project.name, project.data_path, project.config_file)
-            sbb_project._load_units_from_data_path()
-            units = sbb_project.units_stats(units=sbb_project.filter_units())
-        except Exception as e:
-            print('[ERROR] - {}'.format(e))
-            flash_message(self, 'danger', 'Problem while loading project {}. Check if data path exist.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-            return
+        if checked is False:
+            try:
+                sbb_project = RProject(project.name, project.data_path, project.config_file)
+                sbb_project._load_units_from_data_path()
+                units = sbb_project.units_stats(units=sbb_project.filter_units())
+            except Exception as e:
+                print('[ERROR] - {}'.format(e))
+                flash_message(self, 'danger', 'Problem while loading project {}. Check if data path exist.'.format(project.name))
+                self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+                return
+        else:
+            try:
+                sbb_project = RProject(project.name, project.data_path, project.config_file)
+                sbb_project._load_units_from_excel()
+                units = sbb_project.units_stats_from_excel(units=sbb_project.filter_units())
+            except Exception as e:
+                print('[ERROR] - {}'.format(e))
+                flash_message(self, 'danger', 'Problem while loading project {}. Check if config path exist.'.format(project.name))
+                self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+                return
+
         if units is None:
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
@@ -74,7 +91,8 @@ class UserProjectView(BaseView):
             self.session['units'] = units
             self.session['current_project'] = project.name
             self.session.save()
-            self.render('projects/index.html', project=json_project, units=units)
+            self.render('projects/index.html', project=json_project, units=units)    
+            return
 
 class UserProjectDelete(BaseView):
     SUPPORTED_METHODS = ['POST']

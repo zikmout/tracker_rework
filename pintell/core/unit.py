@@ -50,7 +50,8 @@ class Unit:
             self.pdfs = numbers[2]
             self.excels = numbers[3]
             self.errors = numbers[4]
-
+        else:
+            self.total = self.pages = self.pdfs = self.excels = self.errors = 0
     def download(self, provided_links=None):
         """ Download all content from given links
             kwarg:
@@ -139,9 +140,10 @@ class Unit:
         first_line, middle, last_line = self.load_urls(logfile)
         return last_line
 
-    def crawl(self, max_depth=1):
+    def crawl(self, starting_path='/', max_depth=1):
         """ Crawl website links and store them in logfile
             kwarg:
+                starting_path (str): Path from which to begin crawling with
                 max_depth (int): Max depth of the crawl bot (default: 1)
         """
         if os.path.isfile(self.logfile):
@@ -149,7 +151,7 @@ class Unit:
             return
         try :
             log_debut = '[{}] {}\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), self.url)
-            pages, files, log_fin = crawler.link_crawler(self.url, '/', user_agent='wsgt', max_depth=max_depth)
+            pages, files, log_fin = crawler.link_crawler(self.url, starting_path, user_agent='wsgt', max_depth=max_depth)
             self._save_urls(pages, files, log_debut, log_fin)
         except Exception as e:
             print('Error with website : {}. Error = {}\n'.format(self.url, traceback.format_exc()))

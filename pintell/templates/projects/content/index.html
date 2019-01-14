@@ -74,41 +74,44 @@
           <input type="button" value="Classify Content" id="get_checked" class="btn btn-outline-dark">
           <br>
           <br>
+          {% if formated_units == {} %}
+            <center><p><font color="red">There are no unit crawled yet !</font></p></center>
+          {% else %}
+            <div id="accordion">
+            {% for uid, details in handler.session['units'].items() %}
+            <div class="card">
+              {% for k, v in details.items() %}
 
-          <div id="accordion">
-
-          {% for uid, details in handler.session['units'].items() %}
-          <div class="card">
-            {% for k, v in details.items() %}
-
-                {% if k == 'url' %}
-                <!-- title //-->
-                <div class="card-header" id="heading{{ escape(uid) }}">
-                  <h5 class="mb-0">
-                    <button class="btn btn-link collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ escape(uid) }}" aria-expanded="false" aria-controls="collapse{{ escape(uid) }}"><a class="text-secondary">
-                      {{ escape(str(v)) }}</a>
-                    </button>
-                  </h5>
-                </div>
-                <!-- corpus //-->
-                <div id="collapse{{ escape(uid) }}" class="collapse" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
-                  <div class="card-body" id="treeview{{ escape(uid) }}">
-
-                    <div class="hummingbird-treeview-converter" data-height="600px" data-scroll="true">
-                        {% for _ in formated_units[escape(str(v))] %}
-                            <li id="item" data-id="{{ escape(str(v)) }}{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
-                        {% end %}
-                    </div>
-
+                  {% if k == 'url' %}
+                  <!-- title //-->
+                  <div class="card-header" id="heading{{ escape(uid) }}">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ escape(uid) }}" aria-expanded="false" aria-controls="collapse{{ escape(uid) }}"><a class="text-secondary">
+                        {{ escape(str(v)) }}</a>
+                      </button>
+                    </h5>
                   </div>
-                </div>
-                {% end %}
+                  <!-- corpus //-->
+                  <div id="collapse{{ escape(uid) }}" class="collapse" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
+                    <div class="card-body" id="treeview{{ escape(uid) }}">
 
+                      <div class="hummingbird-treeview-converter" data-height="600px" data-scroll="true">
+                        
+                          {% for _ in formated_units[escape(str(v))] %}
+                              <li id="item" data-id="{{ escape(str(v)) }}{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
+                          {% end %}
+                        
+                      </div>
+
+                    </div>
+                  </div>
+                  {% end %}
+
+              {% end %}
+            </div>
             {% end %}
-          </div>
+            </div>
           {% end %}
-          </div>
-
 
     </div>
     {% end %}

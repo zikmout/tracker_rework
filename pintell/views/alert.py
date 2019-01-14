@@ -38,7 +38,7 @@ class AlertCreate(BaseView):
         print('post args = {}'.format(args))
         # if box is checked, variable comes in like { "gridCheck": "on" }
         checked = False
-        if hasattr(args, 'gridCheck'):
+        if 'gridCheck' in args:
             checked = True
         content_name = args['inputContent'].split('(')[0]
         print('content -> {}'.format(content_name))

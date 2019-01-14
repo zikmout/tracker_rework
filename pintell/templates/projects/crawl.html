@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    {% extends '../layout.html' %}
+    {% block content %}
+    <div class="starter-template-fluid">
+          <script src="{{ static_url('jquery.min.js') }}"></script>
+          <center><h3>Project {{ handler.session['current_project'] }} - Crawl</h3></center>
+          <center><p>User can here crawl websites in order to map websites.</p><br></center>
+            <table class="table table-responsive-sm table-striped">
+              <thead>
+                  <tr>
+                    <th>Base URL</th>
+                    <th>Pages</th>
+                    <th>Downloaded</th>
+                    <th>Duration</th>
+                    <th>Starting Path</th><
+                    <th>Depth</th>
+                    <th>Select</th>
+                    <th>Action</th>
+                    <th></th>
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for uid, details in handler.session['units'].items() %}
+                  <tr>
+                    <th>{{ escape(str(details['url'])) }}</th>
+                    <th>{{ escape(str(details['total'])) }}</th>
+                    <th>{{ escape(str(details['downloaded_files'])) }}</th>
+                    <th>{{ escape(str(details['duration'])) }}</th>
+                    <th>
+                        <div class="form-group">
+                        <input type="text" class="form-control" id="startPath{{ escape(str(uid)) }}" placeholder="/" name="startPath{{ escape(str(uid)) }}">
+                        </div>
+                    </th>
+                    <th>
+                        <select class="form-control">
+                          <option>2</option>
+                          <option>4</option>
+                          <option>6</option>
+                          <option selected="selected">8</option>
+                          <option>10</option>
+                          <option>12</option>
+                          <option>14</option>
+                        </select>
+                    </th>
+                    <th>
+                      <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="selectedCheck{{ escape(uid) }}" name="selectedCheck{{ escape(uid) }}">
+                        </div>
+                      </div>
+                    </th>
+                    <th><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Crawl</button></input></form>
+                    </th>
+                    <th><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Stop</button></input></form>
+                    </th>
+                  </tr>
+	               {% end %}
+              </tbody>            
+    </div>
+    {% end %}
+</html>

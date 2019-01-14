@@ -13,6 +13,7 @@
                     <th>Data Path</th>
                     <th>Config Path</th>
                     <th>Creation Date</th>
+                    <th>From Config</th>
                     <th></th>
                     <th></th>
                   </tr>
@@ -22,7 +23,19 @@
                   <th>{{ escape(project['data_path']) }}</th>
                   <th>{{ escape(project['config_file']) }}</th>
                   <th>{{ escape(project['creation_date']) }}</th>
-                  <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Load</button></form></th>
+                  <th>
+                      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="post" class="form-horizontal">
+                      <div class="form-group">
+                        <div class="form-check">
+                          
+                          <label class="form-check-label" for="gridCheck">
+                            <input class="form-check-input" type="checkbox" id="gridCheck" name="fromExcel">
+                            Excel
+                          </label>
+                        </div>
+                      </div>
+                  </th>
+                  <th><button type="submit" class="btn btn-outline-dark" value="">Load</button></form></th>
                   <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete</button></form></th>
                   </tr>
                   {% end %}

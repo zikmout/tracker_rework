@@ -8,7 +8,7 @@ import pintell.core.downloader as downloader
 import pintell.core.utils as utils
 from pintell.workers.download_worker import download_website
 from pintell.workers.live_view_worker import live_view
-from pintell.workers.crawl_multiple_worker import link_crawler
+from pintell.workers.crawl_worker import link_crawler
 
 class Unit:
     """ A Unit is all parameters associated with one website monitoring,

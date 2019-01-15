@@ -22,7 +22,7 @@ class RProject:
         print('\nCreating new project : name = {}\n'.format(name))
         self.name = name
         self.data_path = os.path.join(data_path, name)
-        print('Poject input path ->{}<-'.format(len(inputs_path)))
+        print('Poject input path ->{}<-'.format(inputs_path))
         if inputs_path != '' and inputs_path is not None and len(inputs_path) != 0:
             self.config_df = loader.get_df_from_excel(inputs_path)
         else:
@@ -71,9 +71,10 @@ class RProject:
                         else:
                             idx += 1
             else:
+                pass
                 #print('Removing {} because {} does not exist'.format(subdirname, subdirname + '.txt'))
                 #print('Trying to remove {} for {}'.format(os.path.join(self.data_path, subdirname), subdirname))
-                shutil.rmtree(os.path.join(self.data_path, subdirname))
+                #shutil.rmtree(os.path.join(self.data_path, subdirname))
         print('\n->{} units has been loaded successfuly.\n'.format(idx))
         return False
 

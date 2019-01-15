@@ -41,6 +41,12 @@ def get_url_from_id(units, uid):
             return details['url']
     return None
 
+def get_id_from_url(units, url):
+    for uid, details in units.items():
+        if details['url'] == url:
+            return uid
+    return None
+
 def json_response(status, data, message):
     """ return a well formated json object for JSON API responses """
     response = {

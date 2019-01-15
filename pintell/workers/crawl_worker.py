@@ -70,9 +70,12 @@ def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, ro
                 if abs_link not in seen:
                     seen[abs_link] = depth + 1
                     crawl_queue.append(abs_link)
+                lnk = abs_link
+            else:
+                lnk = link
             status = {
                 'link': link,
-                'div': start_url.split('//')[-1].split('/')[0],
+                'div': start_url.split('//')[-1].split('/')[0]
             }
             self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
     # ideally None(s) had to be removed from above !
@@ -87,4 +90,4 @@ def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, ro
          total_pages, len(pages), len(pdfs), len(excels), nb_errors)
     # save logs into logfile
     logger.save_urls(logfile, pages, files, log_debut, log_fin)
-    return {'current': 100, 'total': 100, 'status': 'Crawling task Completed for website {}.'.format(start_url), 'result': len(total_pages)}
+    return {'current': 100, 'total': 100, 'status': 'Crawling task Completed for website {}.'.format(start_url), 'result': total_pages}

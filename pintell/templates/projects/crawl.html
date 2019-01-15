@@ -4,32 +4,54 @@
     </head>
     {% extends '../layout.html' %}
     {% block content %}
+    
     <div class="starter-template-fluid">
           <script src="{{ static_url('jquery.min.js') }}"></script>
           <center><h3>Project {{ handler.session['current_project'] }} - Crawl</h3></center>
           <center><p>User can here crawl websites in order to map websites.</p><br></center>
-           <div class="card card-body">
-              <div class="form-row">
-                <div class="form-group col-md-4">
+
+          <script>
+          var ws = new WebSocket("ws://localhost:5567/websocket");
+
+          function timeout() {
+              setTimeout(function () {
+                  ws.onopen()
+                  timeout();
+              }, 3000);
+          }
+
+          ws.onopen = function() {
+            {% for uid, details in handler.session['units'].items() %}
+              {% if 'task' in details %}
+                ws.send('{{ escape(str(uid)) }}#{{ escape(details['task']) }}');
+              {% end %}
+            {% end %}
+          };
+
+          function updateTitleState (data) {
+            document.getElementById('current' + data.status.uid).innerHTML = data.status.link;
+            /*
+            if (data.state != 'SUCCESS') {
+              document.getElementById('currentCheck').innerHTML = data.status.url;
+            }
+            else {
+              document.getElementById('currentCheck').innerHTML = "<font color='red'>Differences found : " + data.result + "</font>";
+            */
+          }
+
+          ws.onmessage = function (evt) {
+            if (evt != null) {
+                var data = JSON.parse(evt.data);
+                updateTitleState(data);
+            }
+            else {
+                console.log('[ERROR] Nothing to consume from websocket.');
+            }
+          };
+          timeout()
+          </script>
                     <button type="submit" class="btn btn-dark" form="allTable">Crawl Selected</button>
                     <form method="post" id="allTable" action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/create_task">
-                </div>
-              </div>
-           <div class="form-check">
-                  
-                  <label class="form-check-label" for="gridCheck">
-                    <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" checked disabled>
-                    One by one
-                  </label>
-           </div>
-           <div class="form-check">
-                  
-                  <label class="form-check-label" for="gridCheck">
-                    <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" disabled>
-                    Mixed
-                  </label>
-           </div>
-           </div>
            <br>
             <table class="table table-responsive-sm table-striped">
               <thead>
@@ -76,9 +98,11 @@
                       </div>
                     </th>
                     <th>
-                      <!--
-                      <form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Crawl</button></input></form>
-                      //-->
+                      <td colspan="9">
+                      {% if 'task' in details %}
+                      <a href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/stop_task/{{ escape(str(details['task'])) }}" class="btn btn-outline-dark">Stop</a></input>
+                      {% end %}
+                      </td>
                     </th>
                     <th>
                       <!--
@@ -86,6 +110,11 @@
                       //-->
                     </th>
                   </tr>
+                  {% if 'task' in details %}
+                  <td colspan="9">
+                    <div id="current{{ escape(uid) }}"></div>
+                  </td>
+                  {% end %}
 	               {% end %}
               </tbody>
             </table>

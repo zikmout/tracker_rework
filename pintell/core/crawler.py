@@ -129,34 +129,14 @@ def get_links(start_url, html):
     " Return a list of links (using simple regex matching) from the html content "
     # a regular expression to extract all links from the webpage
     webpage_regex = re.compile("""<a[^>]+href=["'](.*?)["']""", re.IGNORECASE)
-    # list of all links from the webpage
-    #return webpage_regex.findall(html)
     links = webpage_regex.findall(html)
-    #print('len links1 = {}\n'.format(links))
     
     links2 = list()
     for link in links:
         if link.startswith(start_url):
-            #print('link before -> {}'.format(link))
             link = link.replace(start_url, '')
-            #print('link after  -> {}'.format(link))
         links2.append(link)
-    #print('len links2 = {}'.format(links2))
-    #print('links before = {}\n'.format(webpage_regex.findall(html)))
-    #links = [x.replace(start_url, '') for x in webpage_regex.findall(html) if x.startswith(start_url)]
-    #print('links = {}'.format(links))
     return links2
-
-def is_full_link_valid(link):
-    to_exclude = ['https://twitter.com', 'https://plus.google.com', 'https://www.facebook.com',
-    'https://www.linkedin.com', 'mailto']
-    to_include = 'airliquide.com'
-    if to_include not in link:
-        return False
-    for _ in to_exclude:
-        if _ in link:
-            return False
-    return True    
 
 def link_crawler(start_url, link_regex, robots_url=None, user_agent='wswp',
                  proxy=None, delay=3, max_depth=1):

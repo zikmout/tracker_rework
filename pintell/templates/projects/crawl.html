@@ -6,6 +6,7 @@
     {% block content %}
     <div class="starter-template-fluid">
           <script src="{{ static_url('jquery.min.js') }}"></script>
+          <link href="{{ static_url('font-awesome-4.7.0/css/font-awesome.css') }}" rel="stylesheet">
           <center><h3>Project {{ handler.session['current_project'] }} - Crawl</h3></center>
           <center><p>User can here crawl websites in order to map websites.</p><br></center>
                       
@@ -114,6 +115,10 @@
                       {% end %}
                     </th>
                     <th>
+                      {% if 'task' in details %}
+                      <!-- <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> //-->
+                      <i class="fa fa-refresh fa-spin fa-3x fa-fw" style="font-size:35px"></i>
+                      {% end %}
                       <!--
                       <form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Stop</button></input></form>
                       //-->

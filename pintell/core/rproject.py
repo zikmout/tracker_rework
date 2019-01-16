@@ -219,7 +219,8 @@ class RProject:
                     'errors': unit.errors,
                     'downloaded_files': downloaded_files,#,
                     'date': date,
-                    'duration': duration
+                    'duration': duration,
+                    'is_base_crawled': unit.is_base_crawled
                     #'arborescence': unit.remote_arborescence(unit.logfile)
                 }
             }

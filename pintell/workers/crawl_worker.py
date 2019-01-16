@@ -10,6 +10,10 @@ from pintell.celery import app_socket
 import pintell.core.crawler as crawler
 import pintell.core.logger as logger
 
+#import celery.bin.amqp
+#amqp = celery.bin.amqp.amqp(app = app_socket)
+#amqp.run('queue.purge', '2')
+
 nb_errors = 0
 pages = set()
 links = set()
@@ -18,6 +22,7 @@ full_links = set()
 
 @app_socket.task(bind=True, ignore_result=False)
 def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, robots_url=None, proxy=None, delay=3):
+    print('MAX DEPTH RECEIVED === {}'.format(max_depth))
     """ Crawl from the given start URL following links matched by link_regex. In the current
         implementation, we do not actually scrapy any information.
 
@@ -53,7 +58,8 @@ def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, ro
         # check url passes robots.txt restrictions
         #if rp.can_fetch(user_agent, url):
         depth = seen.get(url, 0)
-        if depth == max_depth:
+        print('seen depth (max = {})----> {}'.format(max_depth, depth))
+        if depth >= int(max_depth):
             print('*** Skipping {} due to depth ***'.format(url))
             continue
         html, subpages, subfiles, err = crawler.download(start_url, url, user_agent=user_agent, proxy=proxy)

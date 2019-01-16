@@ -95,6 +95,7 @@ class UserProjectView(BaseView):
         else:
             self.session['units'] = units
             self.session['current_project'] = project.name
+            self.session['project_data_path'] = project.data_path
             self.session.save()
             self.render('projects/index.html', project=json_project, units=units)    
             return

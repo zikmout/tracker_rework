@@ -12,6 +12,13 @@ def rh():
     header = {'User-Agent': USER_AGENTS[random_nb]}
     return header
 
+def ua():
+    """ Return a random User-Agent """
+    random.seed(time.time())
+    random_nb = random.randint(0, len(USER_AGENTS) - 1)
+    user_agent = USER_AGENTS[random_nb]
+    return user_agent
+
 def print_links(links):
     """ Print a list """
     for link in links:

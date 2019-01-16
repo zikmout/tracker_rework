@@ -1,3 +1,4 @@
+import os
 import tornado
 import time
 from pintell.views.base import BaseView
@@ -35,6 +36,7 @@ class UserCrawlsCreate(BaseView):
                 if args['depth' + uid] == '':
                     depth = 8
                 else:
+                    print('DEPTH FOUND == {}'.format(args['depth' + uid]))
                     depth = args['depth' + uid]
                 unit_dict = { 
                     url : {
@@ -93,8 +95,21 @@ class UserCrawlStop(BaseView):
                     self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
 
 
-
-
+class UserCrawlDeleteLogfile(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    @login_required
+    def get(self, username, projectname, uid):
+        units = self.session['units'].copy()
+        url = get_url_from_id(units, uid)
+        user = self.request_db.query(User).filter_by(username=username).first()
+        logfile = os.path.join(self.session['project_data_path'], self.session['current_project'],\
+            url.split('//')[-1].split('/')[0], url.split('//')[-1].split('/')[0] + '.txt')
+        os.remove(logfile)
+        self.session['units'][str(uid)]['is_base_crawled'] = False
+        self.session['units'][str(uid)]['duration'] = 0
+        self.session.save()
+        flash_message(self, 'success', 'Logfile {} was found and has been successfuly deleted.'.format(logfile))
+        self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
 
 
 

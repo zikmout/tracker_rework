@@ -29,11 +29,12 @@
           };
 
           function updateTitleState (data) {
-            document.getElementById('current' + data.status.uid).innerHTML = data.status.link;
-            /*
+            document.getElementById('current' + data.status.uid).innerHTML = '<mark>' + data.status.link + '</mark>';
+            
             if (data.state != 'SUCCESS') {
               document.getElementById('currentCheck').innerHTML = data.status.url;
             }
+            /*
             else {
               document.getElementById('currentCheck').innerHTML = "<font color='red'>Differences found : " + data.result + "</font>";
             */
@@ -48,16 +49,13 @@
                 console.log('[ERROR] Nothing to consume from websocket.');
             }
           };
-          timeout()
+          #timeout()
           $(window).on('load',function(){
             console.log('page loaded')
             //$('#myModal').modal('show');
             //$().status('toggle');
           });
           </script>
-                      <div class="spinner-border text-warning active" role="status" id="spiin" display="inline">
-                        <span class="sr-only active">Loading...</span>
-                      </div>
             <a href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/stop_task/all" class="btn btn-secondary">Stop All</a></input>
 
             <button type="submit" class="btn btn-secondary" form="allTable">Crawl Selected
@@ -93,7 +91,9 @@
                     </th>
                     <th>
                         <select class="form-control" name="depth{{ escape(uid) }}">
+                          <option value="1">1</option>
                           <option value="2">2</option>
+                          <option value="3">3</option>
                           <option value="4">4</option>
                           <option value="6">6</option>
                           <option selected="selected" value="8">8</option>
@@ -115,6 +115,11 @@
                       {% end %}
                     </th>
                     <th>
+                      {% if 'is_base_crawled' in details and details['is_base_crawled'] == True %}
+                        <a href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/delete/{{ escape(str(uid)) }}" class="btn btn-secondary">Delete Crawled</a></input>
+                      {% end %}
+                    </th>
+                    <th>
                       {% if 'task' in details %}
                       <!-- <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i> //-->
                       <i class="fa fa-refresh fa-spin fa-3x fa-fw" style="font-size:35px"></i>
@@ -124,7 +129,7 @@
                       //-->
                     </th>
                     </tr>
-                    <td colspan="9">
+                    <td colspan="10">
                       <div id="current{{ escape(uid) }}"></div>
                     </td>
 	               {% end %}

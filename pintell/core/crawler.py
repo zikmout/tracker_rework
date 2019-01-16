@@ -5,6 +5,7 @@ import urllib.request
 from urllib import robotparser
 from urllib.parse import urljoin
 from urllib.error import URLError, HTTPError, ContentTooShortError
+import pintell.core.utils as utils
 
 nb_errors = 0
 pages = set()
@@ -68,7 +69,7 @@ def download(start_url, url, num_retries=2, user_agent='wswp', charset='utf-8', 
     subfiles = None
     subpages = None
     request = urllib.request.Request(url)
-    request.add_header('User-agent', user_agent)
+    request.add_header('User-agent', utils.ua())
     try:
         end_url = url.replace(start_url, '')
         '''
@@ -184,11 +185,6 @@ def link_crawler(start_url, link_regex, robots_url=None, user_agent='wswp',
         # filter for links matching our regular expression
         for link in get_links(start_url, html):
             #print('sublink ------> {}'.format(link))
-            #if is_full_link_valid(link) and link not in full_links:
-                #print('LINK => {}'.format(link))
-                #full_links.add(link)
-                #print('new link => {}'.format(link))
-                #pass
             if re.match(link_regex, link):
                 abs_link = urljoin(start_url, link)
                 if abs_link not in seen:

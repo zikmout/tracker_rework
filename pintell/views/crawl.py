@@ -50,7 +50,11 @@ class UserCrawlsCreate(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         rproject = RProject(project.name, project.data_path, project.config_file)
         # crawl selected units form selected path
-        # maybe check here if session units is consistent with rproject units
+        if self.session['loading_method'] == 'file':
+            rproject._load_units_from_excel()
+        else:
+            rproject._load_units_from_data_path()
+
         tasks = rproject.crawl_units(units_url_to_crawl)
         print('tasks =** : {}'.format(tasks))
         print('LAUNCHED TASKS !!! => {}'.format(tasks))
@@ -69,17 +73,24 @@ class UserCrawlStop(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
     def get(self, username, projectname, task_id):
-        print('DEMAND STOP TASQ : {}'.format(task_id))
-
-        task = link_crawler.AsyncResult(task_id)
-        link_crawler.AsyncResult(task_id).revoke(terminate=True)
-        copy_session = self.session.copy()
-        for uid, details in self.session['units'].items():
-            if 'task' in details and details['task'] == task_id:
-                del self.session['units'][str(uid)]['task']
-                self.session.save()
-                flash_message(self, 'success', 'Task_id {} was found and has been successfuly stopped.'.format(task_id))
-                self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
+        if task_id == 'all':
+            print('STOPPING ALL TASKS')
+            for uid, details in self.session['units'].items():
+                if 'task' in details:
+                    link_crawler.AsyncResult(details['task']).revoke(terminate=True)
+                    del self.session['units'][str(uid)]['task']
+            self.session.save()
+            flash_message(self, 'success', 'All tasks have been successfuly stopped.')
+            self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
+        else:
+            print('STOPPING ONE TASK')
+            link_crawler.AsyncResult(task_id).revoke(terminate=True)
+            for uid, details in self.session['units'].items():
+                if 'task' in details and details['task'] == task_id:
+                    del self.session['units'][str(uid)]['task']
+                    self.session.save()
+                    flash_message(self, 'success', 'Task_id {} was found and has been successfuly stopped.'.format(task_id))
+                    self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
 
 
 

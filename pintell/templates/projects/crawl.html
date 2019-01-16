@@ -4,12 +4,14 @@
     </head>
     {% extends '../layout.html' %}
     {% block content %}
-    
     <div class="starter-template-fluid">
           <script src="{{ static_url('jquery.min.js') }}"></script>
           <center><h3>Project {{ handler.session['current_project'] }} - Crawl</h3></center>
           <center><p>User can here crawl websites in order to map websites.</p><br></center>
-
+                      
+                      <div class="spinner-border text-warning" role="status">
+                        <span class="sr-only">Loading...</span>
+                      </div>
           <script>
           var ws = new WebSocket("ws://localhost:5567/websocket");
 
@@ -50,8 +52,13 @@
           };
           timeout()
           </script>
-                    <button type="submit" class="btn btn-dark" form="allTable">Crawl Selected</button>
-                    <form method="post" id="allTable" action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/create_task">
+
+            <a href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/stop_task/all" class="btn btn-secondary">Stop All</a></input>
+
+            <button type="submit" class="btn btn-secondary" form="allTable">Crawl Selected
+            <form method="post" id="allTable" action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/create_task"></button>
+
+           <br>
            <br>
             <table class="table table-responsive-sm table-striped">
               <thead>
@@ -109,12 +116,12 @@
                       <form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Stop</button></input></form>
                       //-->
                     </th>
+                    {% if 'task' in details %}
+                    <td colspan="9">
+                      <div id="current{{ escape(uid) }}"></div>
+                    </td>
+                    {% end %}
                   </tr>
-                  {% if 'task' in details %}
-                  <td colspan="9">
-                    <div id="current{{ escape(uid) }}"></div>
-                  </td>
-                  {% end %}
 	               {% end %}
               </tbody>
             </table>

@@ -270,10 +270,13 @@ class RProject:
             del self.units[:]
         # loop on all unit directory and instanciate Units with their url
         for subdirname in project_directories:
-            with open(os.path.join(self.data_path, subdirname, subdirname + '.txt')) as fd:
-                file_content = fd.readlines()
-                url = file_content[0].split(' ')[2].replace('\n', '')
-                self.units.append(Unit(self.data_path, url))
+            try:
+                with open(os.path.join(self.data_path, subdirname, subdirname + '.txt')) as fd:
+                    file_content = fd.readlines()
+                    url = file_content[0].split(' ')[2].replace('\n', '')
+                    self.units.append(Unit(self.data_path, url))
+            except Exception as e:
+                print('No crawler logfile for dirname : {}'.format(subdirname))
         print('\n {} units successfuly loaded.\n'.format(len(self.units)))
 
     def update_unit(self, url):
@@ -293,15 +296,17 @@ class RProject:
             Excel file must contain a column named 'Website' with the url of wesite to monitor
         """
         print('Loading websites list from file \'{}\' ....\n'.format(self.data_path))
+        if self.units != []:
+            del self.units[:]
         for index, rows in self.config_df.iterrows():
             if not pd.isnull(rows['Website']):
                 url = rows['Website']
                 regex = r"^https?://[^/]+"
                 url = re.findall(regex, url)[0]
-                print('-------------------------------------------------------------------------------------------')
-                print('\n-> New Unit loaded : {} \n'.format(url))
+                #print('-------------------------------------------------------------------------------------------')
+                #print('\n-> New Unit loaded : {} \n'.format(url))
                 self.units.append(Unit(self.data_path, url))
-        print('-------------------------------------------------------------------------------------------')
+        #print('-------------------------------------------------------------------------------------------')
         print('\n {} units successfuly loaded.\n'.format(len(self.units)))
 
     def get_unit_from_url(self, url):

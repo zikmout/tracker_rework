@@ -13,6 +13,7 @@ class EchoWebSocket(WebSocketHandler):
         print('WebSocket opened')
 
     def on_message(self, message):
+        # '#' means it is a crawl task, otherwise it is live-view task
         if '#' in message:
             print(' *** Crawl view ...')
             self.message = message
@@ -32,7 +33,6 @@ class EchoWebSocket(WebSocketHandler):
                 print('still pending....')
         else:
             print(' *** Live view ...')
-            '''
             self.message = message
             print('message = {}'.format(message))
             #self.write_message(u"You said: " + message)
@@ -43,11 +43,13 @@ class EchoWebSocket(WebSocketHandler):
             print('task_id: {}'.format(task_id))
             response = get_celery_task_state(task)
             self.write_message(response)
-            '''
 
     def on_close(self):
         print('WebSocket closed')
-        '''
-        live_view.AsyncResult(self.message).revoke(terminate=True)
-        print('Task ID {} stopped.'.format(self.message))
-        '''
+        # if socket is used for a live view task, quit task on page close
+        try:
+            if '#' not in message:
+                live_view.AsyncResult(self.message).revoke(terminate=True)
+                print('Task ID {} stopped.'.format(self.message))
+        except:
+            pass

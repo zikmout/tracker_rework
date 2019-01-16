@@ -64,9 +64,12 @@ class UserProjectView(BaseView):
         # Loading project
         if checked is False:
             try:
-                sbb_project = RProject(project.name, project.data_path, project.config_file)
-                sbb_project._load_units_from_data_path()
-                units = sbb_project.units_stats(units=sbb_project.filter_units())
+                print('Loading project from data path ...')
+                rproject = RProject(project.name, project.data_path, project.config_file)
+                rproject._load_units_from_data_path()
+                self.session['loading_method'] = 'data'
+                self.session.save()
+                units = rproject.units_stats(units=rproject.filter_units())
             except Exception as e:
                 print('[ERROR] - {}'.format(e))
                 flash_message(self, 'danger', 'Problem while loading project {}. Check if data path exist.'.format(project.name))
@@ -74,9 +77,11 @@ class UserProjectView(BaseView):
                 return
         else:
             try:
-                sbb_project = RProject(project.name, project.data_path, project.config_file)
-                sbb_project._load_units_from_excel()
-                units = sbb_project.units_stats_from_excel(units=sbb_project.filter_units())
+                rproject = RProject(project.name, project.data_path, project.config_file)
+                rproject._load_units_from_excel()
+                self.session['loading_method'] = 'file'
+                self.session.save()
+                units = rproject.units_stats_from_excel(units=rproject.filter_units())
             except Exception as e:
                 print('[ERROR] - {}'.format(e))
                 flash_message(self, 'danger', 'Problem while loading project {}. Check if config path exist.'.format(project.name))

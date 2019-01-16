@@ -5,10 +5,13 @@ $redis-server
 rabbitmq-server
 
 # start download worker
-$celery worker -A download_worker --loglevel=info --hostname w2@%%h
+$celery worker -A download_worker --loglevel=info --autoscale 30 --hostname w2@%%h
 
 # start live-view worker
-$celery worker -A live_view_worker --loglevel=info --autoscale 30 --hostname w1@%%h
+$celery worker -A live_view_worker --loglevel=info --hostname w1@%%h
+
+# start crawl worker
+$celery worker -A crawl_worker --loglevel=info --autoscale 400 --hostname w3@%%h
 
 # start the app
 $python setup.py install; python setup.py build; serve_app

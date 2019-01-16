@@ -19,11 +19,11 @@ Futur features:
 SBB requires [Python 3.5](https://www.python.org/downloads/release/python-350/) and [Virtualenv](https://virtualenv.pypa.io/en/latest/) to run.
 Clone the git repo.
 ```sh
-$ git clone https://gitlab.com/electricity.ai/pintell.git
+$ git clone https://gitlab.com/electricity.ai/pintell.git pintell
 ```
 Create a new fresh virtualenv inside git repo.
 ```sh
-$ cd SBB
+$ cd pintell
 $ virtualenv ENV
 $ source ENV/bin/activate
 ```
@@ -38,7 +38,7 @@ Please find more information here: https://www.rabbitmq.com/download.html
 $ export APP_DIR=`cwd`
 $ python setup.py install; python setup.py build; supervisord -n -c $APP_DIR/pintell/config/supervisord.conf
 ```
-2. Launch the program with all the commands in different windows (using tmux or screen:
+2. Launch the program with all the commands in different windows (using tmux or screen):
 ```sh
 $ rabbitmq-server
 $ redis-server

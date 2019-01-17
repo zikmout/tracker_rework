@@ -1,4 +1,5 @@
 import re
+import ssl
 import time
 import datetime
 import urllib.request
@@ -12,6 +13,7 @@ pages = set()
 links = set()
 files = set()
 full_links = set()
+gcontext = ssl._create_unverified_context()
 
 def get_pdf_excel_links(files):
     pdfs = list()
@@ -78,7 +80,7 @@ def download(start_url, url, num_retries=2, user_agent='wswp', charset='utf-8', 
             opener = urllib.request.build_opener(proxy_support)
             urllib.request.install_opener(opener)
         '''
-        resp = urllib.request.urlopen(request)
+        resp = urllib.request.urlopen(request, context=gcontext)
         cs = resp.headers.get_content_charset()
         #cs = resp.headers.get_content_charset()
         if not cs:

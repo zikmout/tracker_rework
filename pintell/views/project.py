@@ -60,7 +60,6 @@ class UserProjectView(BaseView):
             rproject = RProject(project.name, project.data_path, project.config_file)
             if 'fromExcel' in args:
                 rproject._load_units_from_excel()
-                #units = rproject.units_stats_from_excel(units=rproject.filter_units())
             else:
                 rproject._load_units_from_data_path()
             units = rproject.units_stats(units=rproject.filter_units())

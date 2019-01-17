@@ -121,17 +121,10 @@ class DeleteCrawlTaskFromSession(BaseView):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         rproject = RProject(project.name, project.data_path, project.config_file)
-        # load only needed units
-        print('unit_session = {}'.format(rproject.units_stats()))
+        # load only needed units and update session
         rproject.load_units_from_list([self.session['units'][str(uid)]['url']])
         unit_session = rproject.units_stats()[1]
         self.session['units'][str(uid)] = unit_session
-        print('unit_session[1] = {}'.format(rproject.units_stats()[1]))
-        # delete task from session
-        #del self.session['units'][str(uid)]['task']
-        #self.session['units'][str(uid)]['is_base_crawled'] = True
         self.session.save()
-        flash_message(self, 'warning', 'Crawling of website {} successffuly terminated.'.format(self.session['units'][str(uid)]['url']))
-        self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
 
 

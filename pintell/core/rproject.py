@@ -330,11 +330,3 @@ class RProject:
         else:
             print('Dict() of units url is not OK.')
             return None
-
-
-
-
-
-
-
-

@@ -39,7 +39,6 @@
               document.getElementById('currentCheck').innerHTML = "<font color='red'>Differences found : " + data.result + "</font>";
             */
           }
-
           ws.onmessage = function (evt) {
             if (evt != null) {
                 var raw_data = evt.data
@@ -90,6 +89,7 @@
                     <th>Depth</th>
                     <th>Select</th>
                     <th>Action</th>
+                    <th></th>
                     <th></th>
                   </tr>
               </thead>

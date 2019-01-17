@@ -51,21 +51,14 @@ class UserCrawlsCreate(BaseView):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         rproject = RProject(project.name, project.data_path, project.config_file)
+        # load only needed units
+        rproject.load_units_from_list(list(units_url_to_crawl))
         # crawl selected units form selected path
-        if self.session['loading_method'] == 'file':
-            rproject._load_units_from_excel()
-        else:
-            rproject._load_units_from_data_path()
-
         tasks = rproject.crawl_units(units_url_to_crawl)
-        print('tasks =** : {}'.format(tasks))
-        print('LAUNCHED TASKS !!! => {}'.format(tasks))
+        print('Launched task = {}'.format(tasks))
         # save tasks in session
-        units = self.session['units'].copy()
         for url, task in tasks.items():
-            print('task_url = {}'.format(url))
-            print('uid = {}'.format(uid))
-            uid = get_id_from_url(units, url)
+            uid = get_id_from_url(self.session['units'].copy(), url)
             if task is not None:
                 self.session['units'][uid]['task'] = task.id
         self.session.save()
@@ -124,22 +117,21 @@ class DeleteCrawlTaskFromSession(BaseView):
         # because task should be already terminated
         task_id = self.session['units'][str(uid)]['task']
         link_crawler.AsyncResult(task_id).revoke(terminate=True)
+
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        # load only needed units
+        print('unit_session = {}'.format(rproject.units_stats()))
+        rproject.load_units_from_list([self.session['units'][str(uid)]['url']])
+        unit_session = rproject.units_stats()[1]
+        self.session['units'][str(uid)] = unit_session
+        print('unit_session[1] = {}'.format(rproject.units_stats()[1]))
         # delete task from session
-        del self.session['units'][str(uid)]['task']
-        self.session['units'][str(uid)]['is_base_crawled'] = True
+        #del self.session['units'][str(uid)]['task']
+        #self.session['units'][str(uid)]['is_base_crawled'] = True
         self.session.save()
         flash_message(self, 'warning', 'Crawling of website {} successffuly terminated.'.format(self.session['units'][str(uid)]['url']))
         self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
-
-
-
-
-
-
-
-
-
-
-
 
 

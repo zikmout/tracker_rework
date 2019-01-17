@@ -24,9 +24,7 @@
                   {% for uid, details in handler.session['units'].items() %}
                   <tr>
                   	{% for k, v in details.items() %}
-                      {% if k != 'arborescence' %}
 	                    <th>{{ escape(str(v)) }}</th>
-                      {% end %}
 	                  {% end %}
                   <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit/{{ escape(str(uid)) }}" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">View</button></input></form></th>
                   </tr>

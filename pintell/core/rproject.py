@@ -103,67 +103,6 @@ class RProject:
         print(self.config_df)
         print('\n')
 
-    def units_stats_from_excel(self, units=None, verbose=False):
-        total = pages = pdfs = excels = errors = total_downloaded_files = 0
-        all_units = self.units
-        uid = 1
-        units_dict = dict()
-        for unit in all_units:
-            try:
-                first_line, middle, last_line = unit.load_urls(unit.logfile)
-                downloaded_files = len(unit._local_tree())
-                if verbose:
-                    print('{}:'.format(first_line.split(' ')[2].replace('\n', '')))
-                    print('{}'.format(last_line))
-            except Exception as e:
-                first_line = middle = last_line = None
-                downloaded_files = 0
-            if verbose:
-                print('{} downloaded file(s)\n'.format(downloaded_files))
-            if first_line is not None:
-                numbers = [int(n) for n in last_line.split() if n.isdigit()]
-                regex_date = r"(?<=\[)(.*?)(?=\])"
-                date = re.findall(regex_date, last_line)[0]
-                regex_duration = r"(?<=Duration.).[0-9:]*"
-                duration = re.findall(regex_duration, last_line)[0]
-                duration = duration.strip()
-            else:
-                date = 0
-                duration = 0
-
-            total_downloaded_files += downloaded_files
-            total += unit.total
-            pages += unit.pages
-            pdfs += unit.pdfs
-            excels += unit.excels
-            errors += unit.errors
-
-            unit_dict = { 
-                uid : {
-                    'url': unit.url,
-                    'total': unit.total,
-                    'pages': unit.pages,
-                    'pdfs': unit.pdfs,
-                    'excels': unit.excels,
-                    'errors': unit.errors,
-                    'downloaded_files': downloaded_files,#,
-                    'date': date,
-                    'duration': duration,
-                    'is_base_crawled': unit.is_base_crawled
-                    #'arborescence': unit.remote_arborescence(unit.logfile)
-                }
-            }
-            units_dict.update(unit_dict)
-            uid += 1
-        nb_items = len(all_units)
-        if verbose:
-            print('-> Statistics on {}/{} available unit(s).\n'.format(nb_items, len(self.units)))
-            print('-> SUM     : Total: {}, Pages: {}, PDFS : {}, EXCEL(s) : {}, Errors : {}\n'.format(total, pages, pdfs, excels, errors))
-            print('-> AVERAGE : Total: {}, Pages: {}, PDFS : {}, EXCEL(s) : {}, Errors : {}\n'.format(int(total / nb_items), int(pages / nb_items), int(pdfs / nb_items), int(excels / nb_items), int(errors / nb_items)))
-            print('-> TOTAL FILES DOWNLOADED: {}'.format(total_downloaded_files))
-            print('-------------------------------------------\n')
-        return units_dict
-
     def units_stats(self, units=None, verbose=False):
         """ Print Project statistics (sum, average, total) of all websites.
             And websites list statistics (Total Links scrapped, total pages, total
@@ -191,19 +130,7 @@ class RProject:
         uid = 1
         units_dict = dict()
         for unit in all_units:
-            first_line, middle, last_line = unit.load_urls(unit.logfile)
-            downloaded_files = len(unit._local_tree())
-            if verbose:
-                print('{}:'.format(first_line.split(' ')[2].replace('\n', '')))
-                print('{}'.format(last_line))
-                print('{} downloaded file(s)\n'.format(downloaded_files))
-            numbers = [int(n) for n in last_line.split() if n.isdigit()]
-            regex_date = r"(?<=\[)(.*?)(?=\])"
-            date = re.findall(regex_date, last_line)[0]
-            regex_duration = r"(?<=Duration.).[0-9:]*"
-            duration = re.findall(regex_duration, last_line)[0]
-            duration = duration.strip()
-            total_downloaded_files += downloaded_files
+            total_downloaded_files += unit.downloaded_files
             total += unit.total
             pages += unit.pages
             pdfs += unit.pdfs
@@ -217,11 +144,10 @@ class RProject:
                     'pdfs': unit.pdfs,
                     'excels': unit.excels,
                     'errors': unit.errors,
-                    'downloaded_files': downloaded_files,#,
-                    'date': date,
-                    'duration': duration,
+                    'downloaded_files': unit.downloaded_files,
+                    'date': unit.date,
+                    'duration': unit.duration,
                     'is_base_crawled': unit.is_base_crawled
-                    #'arborescence': unit.remote_arborescence(unit.logfile)
                 }
             }
             units_dict.update(unit_dict)
@@ -263,6 +189,17 @@ class RProject:
                 filtered.append(unit)
         return filtered
 
+    def load_units_from_list(self, units_url):
+        """ Load project units from project self.data_path (full path where project data is stored)
+        """
+        print('Loading websites list from list \'{}\' ....\n'.format(units_url))
+        project_directories = utils.get_directories_list(self.data_path)
+        if self.units != []:
+            del self.units[:]
+        for url in units_url:
+            self.units.append(Unit(self.data_path, url))
+        print('\n {} units successfuly loaded from list.\n'.format(len(self.units)))
+
     def _load_units_from_data_path(self):
         """ Load project units from project self.data_path (full path where project data is stored)
         """
@@ -279,19 +216,7 @@ class RProject:
                     self.units.append(Unit(self.data_path, url))
             except Exception as e:
                 print('No crawler logfile for dirname : {}'.format(subdirname))
-        print('\n {} units successfuly loaded.\n'.format(len(self.units)))
-
-    def update_unit(self, url):
-        idx = 0
-        for unit in self.units:
-            if unit.url == url:
-                self.units.pop(idx)
-                updated_unit = Unit(self.data_path, url)
-                self.units.append(updated_unit)
-                break;
-            idx += 1
-        print('Unit successfully updated')
-        return updated_unit
+        print('\n {} units successfuly loaded from data_path.\n'.format(len(self.units)))
 
     def _load_units_from_excel(self):
         """ Load project units from excel file.
@@ -309,7 +234,19 @@ class RProject:
                 #print('\n-> New Unit loaded : {} \n'.format(url))
                 self.units.append(Unit(self.data_path, url))
         #print('-------------------------------------------------------------------------------------------')
-        print('\n {} units successfuly loaded.\n'.format(len(self.units)))
+        print('\n {} units successfuly loaded from excel.\n'.format(len(self.units)))
+
+    def update_unit(self, url):
+        idx = 0
+        for unit in self.units:
+            if unit.url == url:
+                self.units.pop(idx)
+                updated_unit = Unit(self.data_path, url)
+                self.units.append(updated_unit)
+                break;
+            idx += 1
+        print('Unit successfully updated')
+        return updated_unit
 
     def get_unit_from_url(self, url):
         """ Get Unit object from its url which is unique

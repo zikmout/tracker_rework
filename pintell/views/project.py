@@ -22,7 +22,6 @@ class ProjectsCreateView(BaseView):
             config_df = self.get_argument('ConfigLocation')
         except Exception as e:
             config_df = None
-            print('-> No config location provided.')
         print('name = {}, data_path = {}, config_df = {}'.format(name, data_path, config_df))
         user = self.request_db.query(User).filter_by(username=self.session['username']).first()
         new_project = Project(name, data_path, config_df)
@@ -52,42 +51,24 @@ class UserProjectView(BaseView):
     @login_required
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('post args = {}'.format(args))
         # if box is checked, variable comes in like { "fromExcel": "on" }
-        checked = False
-        if 'fromExcel' in args:
-            checked = True
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         json_project = project.as_dict()
         units = None
-        # Loading project
-        if checked is False:
-            try:
-                print('Loading project from data path ...')
-                rproject = RProject(project.name, project.data_path, project.config_file)
-                rproject._load_units_from_data_path()
-                self.session['loading_method'] = 'data'
-                self.session.save()
-                units = rproject.units_stats(units=rproject.filter_units())
-            except Exception as e:
-                print('[ERROR] - {}'.format(e))
-                flash_message(self, 'danger', 'Problem while loading project {}. Check if data path exist.'.format(project.name))
-                self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-                return
-        else:
-            try:
-                rproject = RProject(project.name, project.data_path, project.config_file)
+        try:
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            if 'fromExcel' in args:
                 rproject._load_units_from_excel()
-                self.session['loading_method'] = 'file'
-                self.session.save()
-                units = rproject.units_stats_from_excel(units=rproject.filter_units())
-            except Exception as e:
-                print('[ERROR] - {}'.format(e))
-                flash_message(self, 'danger', 'Problem while loading project {}. Check if config path exist.'.format(project.name))
-                self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-                return
-
+                #units = rproject.units_stats_from_excel(units=rproject.filter_units())
+            else:
+                rproject._load_units_from_data_path()
+            units = rproject.units_stats(units=rproject.filter_units())
+        except Exception as e:
+            print('[ERROR] - {}'.format(e))
+            flash_message(self, 'danger', 'Problem while loading project {}. Please check paths.'.format(project.name))
+            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            return 
         if units is None:
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))

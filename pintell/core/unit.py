@@ -31,11 +31,13 @@ class Unit:
     def _load_units_parameters(self):
         # this function has to be called after integrity is checked in project
         self.is_downloaded = False
+        self.downloaded_files = 0
         self.is_base_crawled = False
         self.total = self.pages = self.pdfs = self.excels = self.errors = 0
         # check if website has been downloaded
         if os.path.isdir(self.download_path):
             self.is_downloaded = True
+            self.downloaded_files = len(self._local_tree())
         # check if website has been crawled
         if os.path.isfile(self.logfile):
             self.is_base_crawled = True
@@ -44,15 +46,21 @@ class Unit:
             os.mkdir(self.path)
         # if website has been crawled, get statistics
         if self.is_base_crawled:
-            last_line = self.crawling_stats(self.logfile)
+            first_line, middle, last_line = self.load_urls(self.logfile)
             numbers = [int(n) for n in last_line.split() if n.isdigit()]
             self.total = numbers[0]
             self.pages = numbers[1]
             self.pdfs = numbers[2]
             self.excels = numbers[3]
             self.errors = numbers[4]
+            regex_date = r"(?<=\[)(.*?)(?=\])"
+            self.date = re.findall(regex_date, last_line)[0]
+            regex_duration = r"(?<=Duration.).[0-9:]*"
+            duration = re.findall(regex_duration, last_line)[0]
+            self.duration = duration.strip()
         else:
-            self.total = self.pages = self.pdfs = self.excels = self.errors = 0
+            self.total = self.pages = self.pdfs = self.excels = self.errors = self.date = self.duration = 0     
+
     def download(self, provided_links=None):
         """ Download all content from given links
             kwarg:
@@ -187,6 +195,21 @@ class Unit:
         print('filename_time = {}'.format(filename_time))
         task = live_view.apply_async([links, self.download_path, self.download_path + filename_time, self.url])
         return task
+
+    def get_unit_json(self):
+        json_unit = {
+            'url': self.url,
+            'total': self.total,
+            'pages': self.pages,
+            'pdfs': self.pdfs,
+            'excels': self.excels,
+            'errors': self.errors,
+            'downloaded_files': 0,
+            'date': '2019-01-17 10:47',
+            'duration': self.duration,
+            'is_base_crawled': self.is_base_crawled
+        }
+        return json_unit    
 
     def load_urls(self, logfile):
         """ Loads urls stored in logfile and return them.

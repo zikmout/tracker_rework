@@ -18,7 +18,17 @@ class UserProjectCrawlView(BaseView):
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
         else:
-            self.render('projects/crawl.html', units=units)
+            nb_crawled = 0
+            nb_units = 0
+            total_crawled = 0
+            for k, v in self.session['units'].items():
+                nb_units += 1
+                if 'task' in v and self.session['units'][k]['task'] != '':
+                    nb_crawled += 1
+                if self.session['units'][k]['is_base_crawled'] == True:
+                    total_crawled += 1
+            self.render('projects/crawl.html', units=units, nb_crawled=nb_crawled, 
+                nb_units=nb_units, total_crawled=total_crawled)
 
 class UserCrawlsCreate(BaseView):
     @login_required
@@ -115,16 +125,19 @@ class DeleteCrawlTaskFromSession(BaseView):
     def get(self, username, projectname, uid):
         # maybe change the command here to delete task from queue
         # because task should be already terminated
-        task_id = self.session['units'][str(uid)]['task']
-        link_crawler.AsyncResult(task_id).revoke(terminate=True)
+        try:
+            task_id = self.session['units'][str(uid)]['task']
+            link_crawler.AsyncResult(task_id).revoke(terminate=True)
 
-        user = self.request_db.query(User).filter_by(username=username).first()
-        project = user.projects.filter_by(name=projectname).first()
-        rproject = RProject(project.name, project.data_path, project.config_file)
-        # load only needed units and update session
-        rproject.load_units_from_list([self.session['units'][str(uid)]['url']])
-        unit_session = rproject.units_stats()[1]
-        self.session['units'][str(uid)] = unit_session
-        self.session.save()
+            user = self.request_db.query(User).filter_by(username=username).first()
+            project = user.projects.filter_by(name=projectname).first()
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            # load only needed units and update session
+            rproject.load_units_from_list([self.session['units'][str(uid)]['url']])
+            unit_session = rproject.units_stats()[1]
+            self.session['units'][str(uid)] = unit_session
+            self.session.save()
+        except Exception:
+            pass
 
 

@@ -28,6 +28,9 @@ class EchoWebSocket(WebSocketHandler):
             if response['state'] == 'SUCCESS':
                 print('Task {} completed, sending socket order to close.'.format(task_id))
                 self.write_message('<STOP>{}#{}'.format(uid, task_id))
+            elif response['state'] == 'FAILURE':
+                print('Task {} FAILED, sending socket order to close.'.format(task_id))
+                self.write_message('<STOP>{}#{}'.format(uid, task_id))
             else:
                 try:
                     response['status']['uid'] = uid

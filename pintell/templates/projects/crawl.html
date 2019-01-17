@@ -75,9 +75,11 @@
 
             <button type="submit" class="btn btn-secondary" form="allTable">Crawl Selected
             <form method="post" id="allTable" action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/create_task"></button>
-
-           <br>
-           <br>
+            <br><br>
+            <h4>Number of units currently crawled : <font color="red">{{ escape(str(nb_crawled)) }}</font>
+              ({{ escape(str(total_crawled)) }}/{{ escape(str(nb_units)) }})
+            </h4>
+            
             <table class="table table-responsive-sm table-striped">
               <thead>
                   <tr>

@@ -13,8 +13,8 @@
                     <th>Data Path</th>
                     <th>Config Path</th>
                     <th>Creation Date</th>
-                    <th>From Config</th>
-                    <th></th>
+                    <th>From Excel</th>
+                    <th>Action</th>
                     <th></th>
                   </tr>
                   {% for project in projects %}
@@ -27,11 +27,7 @@
                       <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="post" class="form-horizontal">
                       <div class="form-group">
                         <div class="form-check">
-                          
-                          <label class="form-check-label" for="gridCheck">
-                            <input class="form-check-input" type="checkbox" id="gridCheck" name="fromExcel">
-                            Excel
-                          </label>
+                          <input class="form-check-input" type="checkbox" id="gridCheck" name="fromExcel" style="transform: scale(1.5);">
                         </div>
                       </div>
                   </th>

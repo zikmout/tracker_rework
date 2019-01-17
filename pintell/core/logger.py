@@ -23,26 +23,9 @@ def save_urls(logfile, pages, files, log_debut, log_fin):
     fd = open(logfile, 'w+')
     fd.write(log_debut)
     fd.write('\n')
-
     for link in (pages + files):
         fd.write(link)
         fd.write('\n')
-    '''
-    pages_len = len(pages)
-    idx = 0
-    for page in pages:
-        idx += 1
-        fd.write(page)
-        if idx != len(pages):
-            fd.write('\n')
-    idx = 0
-    for file in files:
-        idx += 1
-        fd.write(file)
-        if idx != len(files):
-            fd.write('\n')
-    fd.write('\n')
-    '''
     fd.write(log_fin)
     fd.close()
 

@@ -17,7 +17,7 @@
               setTimeout(function () {
                   ws.onopen()
                   timeout();
-              }, 1000);
+              }, 2000);
           }
 
           ws.onopen = function() {
@@ -121,7 +121,7 @@
                     <th>
                       <div class="form-group">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="selectedCheck{{ escape(uid) }}" name="selectedCheck{{ escape(uid) }}">
+                            <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="selectedCheck{{ escape(uid) }}" name="selectedCheck{{ escape(uid) }}">
                         </div>
                       </div>
                     </th>

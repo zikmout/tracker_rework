@@ -57,7 +57,7 @@ def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, ro
         # check url passes robots.txt restrictions
         #if rp.can_fetch(user_agent, url):
         depth = seen.get(url, 0)
-        if i % 10 == 0:
+        if i % 30 == 0:
             print('---------------->>>>>>>>>>>>>>> UPDATE STATUS <<<<<<<<<<<<<<<<<-------------------')
             status = { 'link': url }
             self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})

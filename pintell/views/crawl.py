@@ -101,15 +101,45 @@ class UserCrawlDeleteLogfile(BaseView):
     def get(self, username, projectname, uid):
         units = self.session['units'].copy()
         url = get_url_from_id(units, uid)
-        user = self.request_db.query(User).filter_by(username=username).first()
+        domain = url.split('//')[-1].split('/')[0]
         logfile = os.path.join(self.session['project_data_path'], self.session['current_project'],\
-            url.split('//')[-1].split('/')[0], url.split('//')[-1].split('/')[0] + '.txt')
+            domain, domain + '.txt')
         os.remove(logfile)
         self.session['units'][str(uid)]['is_base_crawled'] = False
         self.session['units'][str(uid)]['duration'] = 0
+        self.session['units'][str(uid)]['total'] = 0
+        self.session['units'][str(uid)]['pages'] = 0
+        self.session['units'][str(uid)]['pdfs'] = 0
+        self.session['units'][str(uid)]['excels'] = 0
+        self.session['units'][str(uid)]['errors'] = 0
         self.session.save()
         flash_message(self, 'success', 'Logfile {} was found and has been successfuly deleted.'.format(logfile))
         self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
+
+class DeleteCrawlTaskFromSession(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    @login_required
+    def get(self, username, projectname, uid):
+        # maybe change the command here to delete task from queue
+        # because task should be already terminated
+        task_id = self.session['units'][str(uid)]['task']
+        link_crawler.AsyncResult(task_id).revoke(terminate=True)
+        # delete task from session
+        del self.session['units'][str(uid)]['task']
+        self.session['units'][str(uid)]['is_base_crawled'] = True
+        self.session.save()
+        flash_message(self, 'warning', 'Crawling of website {} successffuly terminated.'.format(self.session['units'][str(uid)]['url']))
+        self.redirect('/api/v1/users/{}/projects/{}/crawl'.format(username, projectname))
+
+
+
+
+
+
+
+
+
+
 
 
 

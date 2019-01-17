@@ -25,12 +25,16 @@ class EchoWebSocket(WebSocketHandler):
             task = link_crawler.AsyncResult(task_id)
             response = get_celery_task_state(task)
             print('-> task response : {}'.format(response))
-            try:
-                response['status']['uid'] = uid
-                print('-> task response with uid : {}'.format(response))
-                self.write_message(response)
-            except Exception as e:
-                print('still pending....')
+            if response['state'] == 'SUCCESS':
+                print('Task {} completed, sending socket order to close.'.format(task_id))
+                self.write_message('<STOP>{}#{}'.format(uid, task_id))
+            else:
+                try:
+                    response['status']['uid'] = uid
+                    print('-> task response with uid : {}'.format(response))
+                    self.write_message(response)
+                except Exception as e:
+                    print('still pending....')
         else:
             print(' *** Live view ...')
             self.message = message

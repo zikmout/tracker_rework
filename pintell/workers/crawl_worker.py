@@ -22,7 +22,6 @@ full_links = set()
 
 @app_socket.task(bind=True, ignore_result=False)
 def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, robots_url=None, proxy=None, delay=3):
-    print('MAX DEPTH RECEIVED === {}'.format(max_depth))
     """ Crawl from the given start URL following links matched by link_regex. In the current
         implementation, we do not actually scrapy any information.
 
@@ -58,7 +57,10 @@ def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, ro
         # check url passes robots.txt restrictions
         #if rp.can_fetch(user_agent, url):
         depth = seen.get(url, 0)
-        print('seen depth (max = {})----> {}'.format(max_depth, depth))
+        if i % 10 == 0:
+            print('---------------->>>>>>>>>>>>>>> UPDATE STATUS <<<<<<<<<<<<<<<<<-------------------')
+            status = { 'link': url }
+            self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
         if depth >= int(max_depth):
             print('*** Skipping {} due to depth ***'.format(url))
             continue
@@ -79,11 +81,6 @@ def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, ro
                 lnk = abs_link
             else:
                 lnk = link
-            status = {
-                'link': link,
-                'div': start_url.split('//')[-1].split('/')[0]
-            }
-            self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
     # ideally None(s) had to be removed from above !
     files = list(filter(None, files))
     pages = list(filter(None, pages))

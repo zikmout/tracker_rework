@@ -17,7 +17,7 @@
               setTimeout(function () {
                   ws.onopen()
                   timeout();
-              }, 3000);
+              }, 1000);
           }
 
           ws.onopen = function() {
@@ -29,7 +29,7 @@
           };
 
           function updateTitleState (data) {
-            document.getElementById('current' + data.status.uid).innerHTML = '<mark>' + data.status.link + '</mark>';
+            document.getElementById('current' + data.status.uid).innerHTML = '<mark>(' + data.current + ') ' + data.status.link + '</mark>';
             /*            
             if (data.state != 'SUCCESS') {
               document.getElementById('currentCheck').innerHTML = data.status.url;

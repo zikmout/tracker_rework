@@ -60,57 +60,99 @@
           <center><h3>Project {{ handler.session['current_project'] }} - Content labelizer</h3></center>
           <center><p>Pinpoint here content you are interested in and give it a name to later launch alerts on it and monitor what has changed.</p></center>
         
-          <div class="form-group">
-            <label for="contentname">Label Name</label>
-            <input type="email" class="form-control" id="contentname" aria-describedby="emailHelp" placeholder="Enter name for content">
-            <small id="emailHelp" class="form-text text-muted">Use a label that easily identifies the content you selected.</small>
-          </div>
-          <!--
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="detectnewfile">
-            <label class="form-check-label">Check if new file detected</label>
-          </div>
-          //-->
-          <input type="button" value="Classify Content" id="get_checked" class="btn btn-outline-dark">
-          <br>
-          <br>
-          {% if formated_units == {} %}
-            <center><p><font color="red">There are no unit crawled yet !</font></p></center>
-          {% else %}
-            <div id="accordion">
-            {% for uid, details in handler.session['units'].items() %}
-              {% if details['is_base_crawled'] == True %}
-                  <div class="card">
-                    {% for k, v in details.items() %}
-                          {% if k == 'url' %}
-                          <!-- title //-->
-                          <div class="card-header" id="heading{{ escape(uid) }}">
-                            <h5 class="mb-0">
-                              <button class="btn btn-link collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ escape(uid) }}" aria-expanded="false" aria-controls="collapse{{ escape(uid) }}"><a class="text-secondary">
-                                {{ escape(str(v)) }}</a>
-                              </button>
-                            </h5>
-                          </div>
-                          <!-- corpus //-->
-                          <div id="collapse{{ escape(uid) }}" class="collapse" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
-                            <div class="card-body" id="treeview{{ escape(uid) }}">
+          <center>
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
+              Create content from file
+            </button>&nbsp;&nbsp;
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#treelookup" aria-expanded="false" aria-controls="treelookup">
+              Create content from tree
+            </button>
+          </center>
+          <p>
 
-                              <div class="hummingbird-treeview-converter" data-height="600px" data-scroll="true">
-                                    {% for _ in formated_units[escape(str(v))] %}
-                                        <li id="item" data-id="{{ escape(str(v)) }}{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
-                                    {% end %}
-                              </div>
+          <div class="collapse" id="createalert">
+            <div class="card card-body">
+              <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" name="inputName">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label for="inputContent">File</label>
+                    <select id="inputContent" class="form-control" name="inputContent">
+                      <option>test</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  
+                  <label class="form-check-label" for="gridCheck">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
+                    mix key words
+                  </label>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-outline-dark">Create</button>
+            </div>
+          </div>
 
-                            </div>
-                          </div>
+          <div class="collapse" id="treelookup">
+            <div class="card card-body">
+                <div class="form-group">
+                  <label for="contentname">Label Name</label>
+                  <input type="email" class="form-control" id="contentname" aria-describedby="emailHelp" placeholder="Enter name for content">
+                  <small id="emailHelp" class="form-text text-muted">Use a label that easily identifies the content you selected.</small>
+                </div>
+                <!--
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="detectnewfile">
+                  <label class="form-check-label">Check if new file detected</label>
+                </div>
+                //-->
+                <input type="button" value="Classify Content from tree" id="get_checked" class="btn btn-outline-dark">
+                <br>
+                <br>
+                {% if formated_units == {} %}
+                  <center><p><font color="red">There are no unit crawled yet ! Or tree section has been desactivated ... :/</font></p></center>
+                {% else %}
+                  <div id="accordion">
+                  {% for uid, details in handler.session['units'].items() %}
+                    {% if details['is_base_crawled'] == True %}
+                        <div class="card">
+                          {% for k, v in details.items() %}
+                                {% if k == 'url' %}
+                                <!-- title //-->
+                                <div class="card-header" id="heading{{ escape(uid) }}">
+                                  <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ escape(uid) }}" aria-expanded="false" aria-controls="collapse{{ escape(uid) }}"><a class="text-secondary">
+                                      {{ escape(str(v)) }}</a>
+                                    </button>
+                                  </h5>
+                                </div>
+                                <!-- corpus //-->
+                                <div id="collapse{{ escape(uid) }}" class="collapse" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
+                                  <div class="card-body" id="treeview{{ escape(uid) }}">
+
+                                    <div class="hummingbird-treeview-converter" data-height="600px" data-scroll="true">
+                                          {% for _ in formated_units[escape(str(v))] %}
+                                              <li id="item" data-id="{{ escape(str(v)) }}{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
+                                          {% end %}
+                                    </div>
+
+                                  </div>
+                                </div>
+                                {% end %}
                           {% end %}
-                    {% end %}
+                        </div>
+                      {% end %}
+                  {% end %}
                   </div>
                 {% end %}
-            {% end %}
-            </div>
-          {% end %}
 
-    </div>
-    {% end %}
+              </div>
+              {% end %}
+
+            </div>
+          </div>
 </html>

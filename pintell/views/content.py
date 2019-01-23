@@ -12,9 +12,11 @@ class UserProjectContent(BaseView):
     def get(self, username, projectname):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
-        rproject = RProject(project.name, project.data_path, project.config_file)
-        rproject._load_units_from_data_path()
-        formated_units = get_formated_units(rproject.units)
+        # rproject = RProject(project.name, project.data_path, project.config_file)
+        # rproject._load_units_from_data_path()
+        # formated_units = get_formated_units(rproject.units)
+        # for now, formated_units is desactivated because loading is too big
+        formated_units = {}
         if 'units' in self.session:
             units = self.session['units']
         if units is None or units == {}:

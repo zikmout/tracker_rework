@@ -116,7 +116,7 @@
                     <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/unit/{{ escape(uid) }}/stop" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Stop</button></input></form>
                     </th>
                     </tr>
-                    <td colspan="8">
+                    <td colspan="7">
                     <div id="progress{{ escape(uid) }}"></div>
                       {% if 'download' in handler.session['tasks'] %}
                         {% if uid in [_['uid'] for _ in handler.session['tasks']['download']] %}

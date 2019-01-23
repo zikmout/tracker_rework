@@ -80,7 +80,7 @@ def main():
                 'static_path': os.path.join(dirname, 'pintell/static'),
                 'cookie_secret': 'd5006258ba9aaa1d86a8014e767c6d8cf3d2ad69a4021901e6c47af740b15ad5',#os.urandom(32).hex(),
                 'session_secret': '28bd17bdb79af5032d2dd03dd549d60e14ef83e5c7902bed0ed4497c5e0fc011',#os.urandom(32).hex(),
-                'session_timeout': 6000,
+                'session_timeout': 60000,
                 'store_options': {
                     'redis_host': 'localhost',
                     'redis_port': 6379,

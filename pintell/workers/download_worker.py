@@ -22,7 +22,6 @@ def download_website(self, links, base_path, url, random_header=False):
     for link in links:
         counter += 1
         self.update_state(state='PROGRESS', meta={'current': counter, 'total': total, 'status': '{}'.format(link)})
-        time.sleep(2)
         if random_header:
             header = utils.rh()
         dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
@@ -37,6 +36,7 @@ def download_website(self, links, base_path, url, random_header=False):
             download_and_save_content(full_url, filename, dir_path, header)
         elif link.startswith('<EXCEL>'):
             # need to put function to download content for excel. Not called yet.
+            download_and_save_content(full_url, filename, dir_path, header)
             print('EXCEL -> {}'.format(link))
         elif link.startswith('<ERROR>'):
             print('ERROR -> {}'.format(link))

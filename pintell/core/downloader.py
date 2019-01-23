@@ -13,6 +13,7 @@ import pintell.core.scrapper as scrapper
 import pintell.core.logger as logger
 import pintell.core.utils as utils
 import pintell.core.extractor as extractor
+import http.client
 
 def clean_content(input_list):
     """ Method that clean every element of a list
@@ -71,7 +72,11 @@ def download_and_save_content(url, name, path, header, check_duplicates=False):
         return None
     # Save content in the provided path with binary format
     with open (full_path, 'wb+') as content:
-        content.write(response.read())
+        try:
+            content.write(response.read())
+        except (http.client.IncompleteRead) as e:
+            print('[ERROR] - Incomplete Read. Skipping download for this file. Details = {}'.format(e))
+            return None
 
 def download_website(links, base_path, url, random_header=False):
     """ Loop through all links and download the content if not already downloaded

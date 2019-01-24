@@ -12,11 +12,20 @@ from pintell.core.downloader import clean_content
 @app_socket.task(bind=True, ignore_result=False)
 def live_view(self, links, base_path, diff_path, url):
     """ Try to download website parts that have changed """
-    random.shuffle(links)
+    # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
+    #random.shuffle(links)
     nb_of_diff = 0
     total = len(links)
     i = 0
     for link in links:
+        keywords = link[1]
+        link = link[0]
+        status = {
+            'url': url + link,
+            'div': url.split('//')[-1].split('/')[0],
+            'diff_minus': None,
+            'diff_plus': None
+        }
         i += 1
         #time.sleep(random.randint(0, 10))
         base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
@@ -47,15 +56,27 @@ def live_view(self, links, base_path, diff_path, url):
 
             extracted_diff_minus = [x for x in extracted_local_content if x not in extracted_remote_content]
             extracted_diff_plus = [x for x in extracted_remote_content if x not in extracted_local_content]
+            
+            if keywords != []:
+                print('keywords = {}'.format(keywords))
+                print('Filtering ....')
+                filtered_diff_minus = list()
+                filtered_diff_plus = list()
+                for keyword in keywords:
+                    for minus in extracted_diff_minus:
+                        if keyword in minus:
+                            filtered_diff_minus.append(minus)
+                    for plus in extracted_diff_plus:
+                        if keyword in plus:
+                            filtered_diff_plus.append(plus)
+                status['diff_plus'] = filtered_diff_plus
+                status['diff_minus'] = filtered_diff_minus
+            else:
+                status['diff_plus'] = extracted_diff_plus
+                status['diff_minus'] = extracted_diff_minus
 
-            status = {
-                'url': url + link,
-                'div': url.split('//')[-1].split('/')[0],
-                'diff_minus': extracted_diff_minus,
-                'diff_plus': extracted_diff_plus
-            }
             self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
-
+            time.sleep(1)
             print('\n\n DIFF +++ :\n{}'.format(extracted_diff_plus))
             print('\n\n DIFF --- :\n{}'.format(extracted_diff_minus))
             #exit(0)

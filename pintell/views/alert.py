@@ -83,6 +83,7 @@ class AlertLiveCreate(BaseView):
             flash_message(self, 'danger', 'Problem creating LIVE ARLERT.')
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
         else:
+            updated_tasks = list()
             for task in tasks:
 
                 if 'live_view' not in self.session['tasks']:
@@ -98,8 +99,9 @@ class AlertLiveCreate(BaseView):
                     'url': None,#url, # to change with link list
                     'id': task.id
                 }
-                self.session['tasks']['live_view'].append(task_object)
-                self.session.save()
+                updated_tasks.append(task_object)
+            self.session['tasks']['live_view'] = updated_tasks
+            self.session.save()
             self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
 
 class AlertLiveView(BaseView):

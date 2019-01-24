@@ -316,14 +316,19 @@ class RProject:
         return tasks
 
     def download_units_diff(self, links):
-        if links == [] or links is None:
+        if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
+        print('links before = {}'.format(links))
         dict_links = utils.from_links_to_dict(links)
+        print('links after = {}'.format(dict_links))
+        #exit(0)
         tasks = list()
         if isinstance(dict_links, dict) and bool(dict_links):
             for key, val in dict_links.items():
                 unit = self.get_unit_from_url(key)
+                print('VAL = {}'.format(val))
+                # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
                 task = unit.download_changed_files_from_links(val)
                 tasks.append(task)
             return tasks

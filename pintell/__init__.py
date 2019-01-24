@@ -11,7 +11,7 @@ import pintell.session as session
 from pintell.views.base import HomePage
 from pintell.views.user import UserListView, UserDelete, UserUnitView
 from pintell.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
-from pintell.views.content import UserProjectContent, TestingView
+from pintell.views.content import UserProjectContent, TestingView, UserProjectContentFromFile
 from pintell.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
 from pintell.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate
 from pintell.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus, UserProjectDownloadView
@@ -44,6 +44,7 @@ def main():
 
             # pintell.views.content.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-from-file', UserProjectContentFromFile),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/testview', TestingView),
 
             # pintell.views.crawl.py

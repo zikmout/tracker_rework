@@ -72,8 +72,13 @@
               {% for content in contents %}
                 <details>
                 <summary>{{ escape(str(content['name'])) }}</summary>
-                {% for link in content['links'] %}
-                  &nbsp;&nbsp;&nbsp;&nbsp;{{ escape(link) }}</br>
+                {% for link, keywords in content['links'].items() %}
+                  {% if len(keywords) > 1 %}
+                    {{ escape(str(link)) }} : <font color='red'>{{ escape(str(keywords[0])) }} ... {{ escape(str(keywords[-1])) }}</font>
+                  {% else %}
+                    {{ escape(str(link)) }} : <font color='red'>{{ escape(str(keywords[0])) }}</font>
+                  {% end %}
+                  </br>
                 {% end %}
                 </details>
               {% end %}

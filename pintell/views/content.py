@@ -5,6 +5,7 @@ from pintell.utils import flash_message, login_required, json_response
 from pintell.core.rproject import RProject
 from pintell.core.unit import Unit
 from pintell.core.utils import get_formated_units
+from pintell.core.loader import get_df_from_excel
 
 class UserProjectContent(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
@@ -33,6 +34,12 @@ class UserProjectContent(BaseView):
         try:
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
+            # need to change following line too according to PickleType
+            # Try with this new_dict
+            #new_dict = dict()
+            #for link in data['links']:
+            #    new_dict.append(link : [])
+            #new_content = Content(data['name'], new_dict)
             new_content = Content(data['name'], data['links'])
             project.contents.append(new_content)
             self.request_db.add(project)
@@ -43,6 +50,46 @@ class UserProjectContent(BaseView):
             print('Error recording content in DB : {}'.format(e))
             flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(data['name']))
             self.write(json_response('error', None, '{}'.format(e)))
+
+class UserProjectContentFromFile(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    def post(self, username, projectname):
+        args = { k: self.get_argument(k) for k in self.request.arguments }
+        print('Received args = {}'.format(args))
+        mix = False
+        if 'mixChecked' in args:
+            mix = True
+        if args['fileNamePath'] == '':
+            file_path = self.session['project_config_file']
+        else:
+            file_path = args['fileNamePath']
+        
+        df_links = get_df_from_excel(file_path)
+        links = dict(zip(df_links[args['columnLinkName']], df_links[args['columnKeyWordName']]))
+        # if mixed set to True, links with label '<MIX>' are taking all tags of the list
+        # temporary solution, does not really make sense yet
+        if ['<MIX>'] in links.values():
+            all_words = set()
+            for key_word in links.values():
+                if key_word != ['<MIX>']:
+                    [all_words.add(x) for x in key_word]
+            for k, v in links.copy().items():
+                if v == ['<MIX>']:
+                    links[k] = list(all_words)
+        links = {k:[v] for k, v in links.items()}
+        try:
+            user = self.request_db.query(User).filter_by(username=username).first()
+            project = user.projects.filter_by(name=projectname).first()
+            new_content = Content(args['inputName'], links)
+            project.contents.append(new_content)
+            self.request_db.add(project)
+            self.request_db.commit()
+            flash_message(self, 'success', 'Content {} successfully created.'.format(args['inputName']))
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+        except Exception as e:
+            print('ERROR -> {}'.format(e))
+            flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(args['inputName']))
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
 
 class TestingView(BaseView):
     SUPPORTED_METHODS = ['GET']

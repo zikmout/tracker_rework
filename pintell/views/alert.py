@@ -20,6 +20,7 @@ class AlertView(BaseView):
         json_contents = []
         if contents:
             [json_contents.append(content.as_dict()) for content in contents]
+        print('JSON CONTENTS ==== {}'.format(json_contents))
         # get recorded alerts for alert list
         all_alerts = []
         for content in contents:
@@ -75,6 +76,7 @@ class AlertLiveCreate(BaseView):
         rproject = RProject(project.name, project.data_path, project.config_file)
         rproject._load_units_from_data_path()
 
+        # need to change following line with PickleType
         tasks = rproject.download_units_diff(content.links)
 
         if tasks == None:

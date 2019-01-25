@@ -28,6 +28,18 @@ def clean_content(input_list):
     #output = [x.strip() for x in output]
     return output
 
+def allow_create_folder(current_path):
+    if os.path.isfile(current_path):
+        try:
+            os.rename(current_path, current_path + '___')
+            print('[REC]: Filename {} changed into {}'.format(current_path, current_path + '___'))
+            return
+        except Exception as e:
+            print('[RECURSION]: Not possible to rename {} into {}, file already exists !'.format(current_path, current_path + '___'))
+            return
+    else:
+        allow_create_folder(current_path.rpartition('/')[0])
+
 def download_and_save_content(url, name, path, header, check_duplicates=False):
     """ For each website link, download the content found on link.
         Checks whether there are no duplicates. If name of file is '',
@@ -45,8 +57,11 @@ def download_and_save_content(url, name, path, header, check_duplicates=False):
     if not os.path.isdir(path):
         print('path: {} is not a directory, changing name to unknown___'.format(path))
         # if there is a file with same name as folder, change its name
-        if check_duplicates and os.path.isfile(path):
-            os.rename(path, path + '___')
+        if check_duplicates:
+            if os.path.isfile(path):
+                os.rename(path, path + '___')
+            else:
+                allow_create_folder(path)
         # and now can create directory
         os.makedirs(path)
     if check_duplicates and name == '':

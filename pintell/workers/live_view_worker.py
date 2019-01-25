@@ -57,6 +57,7 @@ def live_view(self, links, base_path, diff_path, url):
         filename = link.rpartition('/')[2]
         full_url = url + utils.find_internal_link(link)
         base_dir_path_file = os.path.join(base_dir_path, filename)
+        # check whether adding 'unknown' is right ...
         if os.path.isdir(base_dir_path_file) and os.path.isfile(base_dir_path_file + 'unknown___'):
             base_dir_path_file = base_dir_path_file + 'unknown___'
 

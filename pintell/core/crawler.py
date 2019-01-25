@@ -97,7 +97,7 @@ def download(start_url, url, num_retries=2, user_agent='wswp', charset='utf-8', 
             subfiles = '<EXCEL> ' + end_url
             print('<EXCEL> {}'.format(end_url))
             check += 1
-        elif is_valid:
+        elif is_valid and not end_url.startswith('http'):
             print(end_url)
             subpages = end_url
         if is_valid_content_type(url, cs2) and is_valid and not check:

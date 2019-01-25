@@ -30,6 +30,7 @@ def download_website(self, links, base_path, url, random_header=False):
         print('Filename : {}\n\n'.format(filename))
         full_url = url + utils.find_internal_link(link)
         print('URL + LINK : {}'.format(full_url))
+        assert dir_path.startswith(base_path)
         if link.startswith('/'):
             download_and_save_content(full_url, filename, dir_path, header, check_duplicates=True)
         if link.startswith('<PDF>'):

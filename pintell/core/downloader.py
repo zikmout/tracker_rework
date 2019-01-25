@@ -54,16 +54,21 @@ def download_and_save_content(url, name, path, header, check_duplicates=False):
         kwarg:
             check_duplicates (bool): Make sure no duplicate in names (default:False)
     """
+    print('FULL URL ARRIVED -------> {}'.format(url))
     if not os.path.isdir(path):
         print('path: {} is not a directory, changing name to unknown___'.format(path))
         # if there is a file with same name as folder, change its name
         if check_duplicates:
             if os.path.isfile(path):
                 os.rename(path, path + '___')
-            else:
-                allow_create_folder(path)
+        try:
+            os.makedirs(path)
+        except Exception as e:
+            print('Not possible to create directory {}, coming up in depth to fix it..'.format(path))
+            allow_create_folder(path)
+            os.makedirs(path)
         # and now can create directory
-        os.makedirs(path)
+        
     if check_duplicates and name == '':
         name = 'unknown___'
     full_path = os.path.join(path, name)

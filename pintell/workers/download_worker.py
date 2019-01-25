@@ -24,76 +24,30 @@ def download_website(self, links, base_path, url, random_header=False):
         self.update_state(state='PROGRESS', meta={'current': counter, 'total': total, 'status': '{}'.format(link)})
         if random_header:
             header = utils.rh()
-        dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
-        print('Saving file in {}'.format(dir_path))
         filename = link.rpartition('/')[2]
         print('Filename : {}\n\n'.format(filename))
+        ''''
+        print('#LINK = {}'.format(link))
+        if link.startswith('<PDF> http'):
+            dir_path = os.path.join(base_path, '__external_files__' )
+            full_url = link.replace('<PDF> ', '')
+        elif link.startswith('<EXCEL> http'):
+            dir_path = os.path.join(base_path, '__external_files__' )
+            full_url = link.replace('<EXCEL> ', '')
+        else:
+        '''
+        dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
+        print('Saving file in {}'.format(dir_path))
         full_url = url + utils.find_internal_link(link)
         print('URL + LINK : {}'.format(full_url))
         assert dir_path.startswith(base_path)
         if link.startswith('/'):
             download_and_save_content(full_url, filename, dir_path, header, check_duplicates=True)
-        if link.startswith('<PDF>'):
-            download_and_save_content(full_url, filename, dir_path, header)
-        elif link.startswith('<EXCEL>'):
-            # need to put function to download content for excel. Not called yet.
+        '''
+        elif link.startswith('<PDF>') or link.startswith('<EXCEL>'):
             download_and_save_content(full_url, filename, dir_path, header)
             print('EXCEL -> {}'.format(link))
         elif link.startswith('<ERROR>'):
             print('ERROR -> {}'.format(link))
+        '''
     return {'current': 100, 'total': 100, 'status': 'Download task completed for website {}'.format(url), 'result': total}
-'''
-@app.task(bind=True, ignore_result=False)
-def download(self, sender):
-    ignore_result = False
-    #sender = 'simsim'
-    start = 1
-    stop = 500
-    total = stop - start
-    for i in range(total):
-        print('-> SENDER : {}, counter = {}'.format(sender, i))
-        self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': 'sender{}'.format(i)})
-        time.sleep(1)
-    return {'current': 100, 'total': 100, 'status': 'Taks Completed for sender{}'.format(sender), 'result': 42}
-
-class WebSocketHandler(tornado.websocket.WebSocketHandler):
-    def open(self):
-        print ('Session Opened. IP:' + self.request.remote_ip)
-        self.ioloop = tornado.ioloop.IOLoop.instance()
-        self.send_websocket()
-
-    def on_close(self):
-        print("Session closed")
-
-    def check_origin(self, origin):
-        return True
-
-    def send_websocket(self):
-        self.ioloop.add_timeout(time.time() + 0.1, self.send_websocket)
-        if self.ws_connection:
-            message = json.dumps({
-                'data1': random.randint(0, 100),
-                'data2': random.randint(0, 100),
-                })
-            self.write_message(message)
-
-
-class Application(tornado.web.Application):
-    def __init__(self):
-        handlers = [
-            (r'/websocket', WebSocketHandler)
-        ]
-  
-        settings = {
-            'template_path': 'templates'
-        }
-        tornado.web.Application.__init__(self, handlers, **settings)
-  
-if __name__ == '__main__':
-    ws_app = Application()
-    server = tornado.httpserver.HTTPServer(ws_app)
-    port = 8888
-    server.listen(port)
-    tornado.ioloop.IOLoop.instance().start()
-    print ('[INFO] Tornado server for download_worker starts listening on port {}.!'.format(port))
-'''

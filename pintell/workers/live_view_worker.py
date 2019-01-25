@@ -57,8 +57,8 @@ def live_view(self, links, base_path, diff_path, url):
         filename = link.rpartition('/')[2]
         full_url = url + utils.find_internal_link(link)
         base_dir_path_file = os.path.join(base_dir_path, filename)
-        if os.path.isdir(base_dir_path_file) and os.path.isfile(base_dir_path_file + '___'):
-            base_dir_path_file = base_dir_path_file + '___'
+        if os.path.isdir(base_dir_path_file) and os.path.isfile(base_dir_path_file + 'unknown___'):
+            base_dir_path_file = base_dir_path_file + 'unknown___'
 
         # getting local file content
         print('\n-> Opening base_dir_path_file = {}'.format(base_dir_path_file))
@@ -94,14 +94,17 @@ def live_view(self, links, base_path, diff_path, url):
                             filtered_diff_minus.append(minus)
                     for plus in extracted_diff_plus:
                         if keyword in plus:
+                            print('********** KEYWORD {} FOUND on url {}'.format(keyword, full_url))
                             filtered_diff_plus.append(plus)
                             doc = LH.fromstring(remote_content)
                             for x in doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword)):
                                 check = find_nearest(x)
                                 print('Nearsest found = {}'.format(check))
 
-                status['diff_plus'] = filtered_diff_plus + [check]
+                status['diff_plus'] = filtered_diff_plus
                 status['diff_minus'] = filtered_diff_minus
+                if check != []:
+                    status['diff_plus'] += [check]
             else:
                 status['diff_plus'] = extracted_diff_plus
                 status['diff_minus'] = extracted_diff_minus

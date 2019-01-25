@@ -43,11 +43,9 @@ class EchoWebSocket(WebSocketHandler):
                 print(' *** Live view ...')
                 self.message = message
                 print('message = {}'.format(message))
-                #self.write_message(u"You said: " + message)
                 task_id = message
                 task = live_view.AsyncResult(task_id)
                 print('Task backend = {}'.format(task.backend))
-                #task = task.get()
                 print('task_id: {}'.format(task_id))
                 response = get_celery_task_state(task)
                 response['task_id'] = task_id

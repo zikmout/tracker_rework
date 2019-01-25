@@ -8,6 +8,31 @@ import pintell.core.utils as utils
 import pintell.core.scrapper as scrapper
 import pintell.core.extractor as extractor
 from pintell.core.downloader import clean_content
+import lxml.html as LH
+import itertools
+
+def roundrobin(*iterables):
+    # took from here https://docs.python.org/3/library/itertools.html#itertools-recipes
+
+    """roundrobin('ABC', 'D', 'EF') --> A D E B F C"""
+    # Recipe credited to George Sakkis
+
+    pending = len(iterables)
+    nexts = itertools.cycle(iter(it).__next__ for it in iterables)
+    while pending:
+        try:
+            for next in nexts:
+                yield next()
+        except StopIteration:
+            pending -= 1
+            nexts = itertools.cycle(itertools.islice(nexts, pending))
+
+def find_nearest(elt):
+    preceding = elt.xpath('preceding::*/@href')[::-1]
+    following = elt.xpath('following::*/@href')
+    parent = elt.xpath('parent::*/@href')
+    for href in roundrobin(parent, preceding, following):
+        return href
 
 @app_socket.task(bind=True, ignore_result=False)
 def live_view(self, links, base_path, diff_path, url):
@@ -57,6 +82,7 @@ def live_view(self, links, base_path, diff_path, url):
             extracted_diff_minus = [x for x in extracted_local_content if x not in extracted_remote_content]
             extracted_diff_plus = [x for x in extracted_remote_content if x not in extracted_local_content]
             
+            check = []
             if keywords != []:
                 print('keywords = {}'.format(keywords))
                 print('Filtering ....')
@@ -69,7 +95,12 @@ def live_view(self, links, base_path, diff_path, url):
                     for plus in extracted_diff_plus:
                         if keyword in plus:
                             filtered_diff_plus.append(plus)
-                status['diff_plus'] = filtered_diff_plus
+                            doc = LH.fromstring(remote_content)
+                            for x in doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword)):
+                                check = find_nearest(x)
+                                print('Nearsest found = {}'.format(check))
+
+                status['diff_plus'] = filtered_diff_plus + [check]
                 status['diff_minus'] = filtered_diff_minus
             else:
                 status['diff_plus'] = extracted_diff_plus

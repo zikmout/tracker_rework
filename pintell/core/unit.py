@@ -204,8 +204,8 @@ class Unit:
             'pdfs': self.pdfs,
             'excels': self.excels,
             'errors': self.errors,
-            'downloaded_files': 0,
-            'date': '2019-01-17 10:47',
+            'downloaded_files': self.downloaded_files,
+            'date': self.date,
             'duration': self.duration,
             'is_base_crawled': self.is_base_crawled
         }
@@ -226,3 +226,24 @@ class Unit:
         middle = [x for x in middle if x != '']
         middle = sorted(middle)
         return first_line, middle, last_line
+
+    def add_crawler_link(self, link):
+        if link in self._remote_tree():
+            return False
+        if os.path.isfile(self.logfile):
+            with open(self.logfile, 'r') as fd:
+                contents = fd.readlines()
+            fd = open(self.logfile, 'w+')
+            idx = 0
+            for line in contents:
+                fd.write(line)
+                idx += 1
+                if idx == 2:
+                    fd.write(link.replace(self.url, ''))
+                    fd.write('\n')
+            fd.close()
+            # need to change stats of logfile here
+            return True
+        else:
+            print('No logfile for url = {}'.format(self.url))
+            return False

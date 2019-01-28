@@ -4,6 +4,7 @@ import re
 import pandas as pd
 import pintell.core.utils as utils
 import pintell.core.loader as loader
+import pintell.core.downloader as downloader
 from pintell.core.unit import Unit
 
 class RProject:
@@ -75,7 +76,7 @@ class RProject:
                 #print('Removing {} because {} does not exist'.format(subdirname, subdirname + '.txt'))
                 #print('Trying to remove {} for {}'.format(os.path.join(self.data_path, subdirname), subdirname))
                 #shutil.rmtree(os.path.join(self.data_path, subdirname))
-        print('\n->{} units has been loaded successfuly.\n'.format(idx))
+        print('\n->Checking integrity of {} units, DONE.\n'.format(idx))
         return False
 
     def _exist(self, inputs_path):
@@ -200,6 +201,30 @@ class RProject:
             self.units.append(Unit(self.data_path, url))
         print('\n {} units successfuly loaded from list.\n'.format(len(self.units)))
 
+    def add_links_to_crawler_logfile(self, links_list):
+        print('Loading websites list to add crawled links in data_path \'{}\' ....\n'.format(self.data_path))
+        project_directories = utils.get_directories_list(self.data_path)
+        if self.units == []:
+            print('No Units loaded !')
+            return
+        idx = 0
+        for link in links_list:
+            regex = r"^https?://[^/]+"
+            unit_url = re.findall(regex, link)[0]
+            unit = self.get_unit_from_url(unit_url)
+            if unit is None or unit.is_base_crawled is False:
+                print('Unit url : {} does not exist.'.format(unit_url))
+            else:
+                internal_link = link.replace(unit_url, '')
+                print('len remote tree before = {}'.format(len(unit._remote_tree())))
+                if unit.add_crawler_link(internal_link) is True:
+                    idx += 1
+                    if downloader.download_website([internal_link], unit.download_path, unit.url, random_header=True):
+                        print('->Page {} successfuly downloaded'.format(unit_url + internal_link))
+                    else:
+                        print('->Unable to download page {}'.format(unit_url + internal_link))
+        return idx
+
     def _load_units_from_data_path(self):
         """ Load project units from project self.data_path (full path where project data is stored)
         """
@@ -256,7 +281,6 @@ class RProject:
                 unit (Unit): Unit of the asked website, or None if not found
         """
         for unit in self.units:
-            print('unit -> {}'.format(unit.url))
             if unit.url == url:
                 return unit
         return None
@@ -327,10 +351,13 @@ class RProject:
         if isinstance(dict_links, dict) and bool(dict_links):
             for key, val in dict_links.items():
                 unit = self.get_unit_from_url(key)
-                print('VAL = {}'.format(val))
-                # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-                task = unit.download_changed_files_from_links(val)
-                tasks.append(task)
+                if unit is not None:
+                    #print('VAL = {}'.format(val))
+                    # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
+                    task = unit.download_changed_files_from_links(val)
+                    tasks.append(task)
+                else:
+                    print('Unit {} not found'.format(key))
             return tasks
         else:
             print('Dict() of units url is not OK.')

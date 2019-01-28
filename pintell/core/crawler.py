@@ -43,7 +43,7 @@ def is_valid_content_type(url, content_type):
 
 def is_valid_link(link):
     exclude_contains = ['.jpg', '.jpeg', '.png', '.wmv', '.ics', '.mp3', '.zip',\
-     '.rtf', '.mov', '.mp4', '.mpg', '@', '.doc', '#', ';', 'amp%3B', '.gif', '.vcf']
+     '.rtf', '.mov', '.mp4', '.mpg', '@', '.doc', '#', ';', 'amp%3B', '.gif', '.vcf', '.exe', '.xml']
      #'=http%3A%2F%2F', '=http://', '=https%3A%2F%2F', '=https://']
     for _ in exclude_contains:
         if _ in link:

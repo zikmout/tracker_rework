@@ -20,7 +20,7 @@ class AlertView(BaseView):
         json_contents = []
         if contents:
             [json_contents.append(content.as_dict()) for content in contents]
-        print('JSON CONTENTS ==== {}'.format(json_contents))
+        #print('JSON CONTENTS -1 ==== {}'.format(json_contents[:-1]))
         # get recorded alerts for alert list
         all_alerts = []
         for content in contents:

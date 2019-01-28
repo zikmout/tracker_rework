@@ -98,9 +98,16 @@ def live_view(self, links, base_path, diff_path, url):
                             print('********** KEYWORD {} FOUND on url {}'.format(keyword, full_url))
                             filtered_diff_plus.append(plus)
                             doc = LH.fromstring(remote_content)
-                            for x in doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword)):
+                            xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword))
+                            len_xpaths = len(xpaths)
+                            for x in xpaths:
                                 check = find_nearest(x)
+                                if check.startswith(url) is False:
+                                    check = url + check
                                 print('Nearsest found = {}'.format(check))
+                                if len_xpaths > 1:
+                                    print('Nearest founds are numerous for website : {}. Exit.'.format(full_url))
+                                    break ;
 
                 status['diff_plus'] = filtered_diff_plus
                 status['diff_minus'] = filtered_diff_minus

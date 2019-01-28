@@ -108,24 +108,39 @@ def download_website(links, base_path, url, random_header=False):
             random_header (bool): If True, use a different header for each request (default: False)
     """
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
+    counter = 0
+    total = len(links)
     for link in links:
+        counter += 1
         if random_header:
             header = utils.rh()
-        dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
-        print('Saving file in {}'.format(dir_path))
         filename = link.rpartition('/')[2]
         print('Filename : {}\n\n'.format(filename))
+        ''''
+        print('#LINK = {}'.format(link))
+        if link.startswith('<PDF> http'):
+            dir_path = os.path.join(base_path, '__external_files__' )
+            full_url = link.replace('<PDF> ', '')
+        elif link.startswith('<EXCEL> http'):
+            dir_path = os.path.join(base_path, '__external_files__' )
+            full_url = link.replace('<EXCEL> ', '')
+        else:
+        '''
+        dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
+        print('Saving file in {}'.format(dir_path))
         full_url = url + utils.find_internal_link(link)
         print('URL + LINK : {}'.format(full_url))
+        assert dir_path.startswith(base_path)
         if link.startswith('/'):
             download_and_save_content(full_url, filename, dir_path, header, check_duplicates=True)
-        if link.startswith('<PDF>'):
+        '''
+        elif link.startswith('<PDF>') or link.startswith('<EXCEL>'):
             download_and_save_content(full_url, filename, dir_path, header)
-        elif link.startswith('<EXCEL>'):
-            # need to put function to download content for excel. Not called yet.
             print('EXCEL -> {}'.format(link))
         elif link.startswith('<ERROR>'):
             print('ERROR -> {}'.format(link))
+        '''
+    return True
 
 def download_website_diff(links, base_path, diff_path, url):
     """ Try to download website parts that have changed """

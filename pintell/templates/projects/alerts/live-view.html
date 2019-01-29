@@ -44,7 +44,7 @@
            updateTitleState(data);
            console.log(' - >>> ON MESSAGE')
            console.log('data.status = ' + data.status)
-           if (typeof data !== "undefined" && (data.status.diff_minus.length > 0 || data.status.diff_plus.length > 0)) {
+           if (typeof data !== "undefined" && (data.status.diff_neg.length > 0 || data.status.diff_pos.length > 0)) {
               console.log('PASS updating task_id = ' + data.task_id)
               if (!document.getElementById(data.status.div)) {
                 var title = document.createElement("H5");
@@ -54,13 +54,13 @@
                 title.setAttribute("id", data.status.div);
                 document.getElementById('changedContent' + data.task_id).appendChild(title);
               }
-              if (document.getElementById(data.status.div) && !document.getElementById(data.current.toString() + data.task_id)) {
+              if (data.state == 'PROGRESS' && document.getElementById(data.status.div) && !document.getElementById(data.current.toString() + data.task_id)) {
                 document.getElementById(data.status.div).insertAdjacentHTML('beforeend', "<h6><a href=" + data.status.url + " target='_blank'/>" + data.status.url + "</a></h6>");
                 var ulTitle = document.createElement("UL");
                 ulTitle.setAttribute("id", data.current.toString() + data.task_id);
                 document.getElementById(data.status.div).append(ulTitle);
-                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li>+++ : " + data.status.diff_plus + "</li>");
-                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li>--- : " + data.status.diff_minus + "</li>");
+                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li>+++ : " + data.status.diff_pos + "</li>");
+                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li>--- : " + data.status.diff_neg + "</li>");
               }
            }
            else {

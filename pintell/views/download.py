@@ -20,7 +20,10 @@ class UserDownloadCreate(BaseView):
             project = user.projects.filter_by(name=projectname).first()
             # Loading project
             rproject = RProject(project.name, project.data_path, project.config_file)
-            rproject._load_units_from_data_path()
+            if len(self.session['project_config_file']) == 0:
+                rproject._load_units_from_data_path()
+            else:
+                rproject._load_units_from_excel()
             url = get_url_from_id(self.session['units'], uid)
             list_url = list()
             list_url.append(url)

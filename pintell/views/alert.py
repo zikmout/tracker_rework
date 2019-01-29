@@ -65,33 +65,33 @@ class AlertLiveCreate(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
     def post(self, username, projectname, alertid):
-        content_name = self.get_argument('contentName')
-        print('content_name = {}'.format(content_name))
-        print('alertid = {}'.format(alertid))
+        args = { k: self.get_argument(k) for k in self.request.arguments }
+        print('args AlertLiveCreate => {}'.format(args))
+        save_log_checked = False
+        if 'saveLogChecked' + alertid in args:
+            save_log_checked = True
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
-        content = project.contents.filter_by(name=content_name).first()
+        content = project.contents.filter_by(name=args['contentName']).first()
         print('content --> {}'.format(content))
         # Loading project
         rproject = RProject(project.name, project.data_path, project.config_file)
-        rproject._load_units_from_data_path()
-
+        if len(self.session['project_config_file']) == 0:
+            rproject._load_units_from_data_path()
+        else:
+            rproject._load_units_from_excel()
         # need to change following line with PickleType
-        tasks = rproject.download_units_diff(content.links)
+        tasks = rproject.download_units_diff(content.links, save=True)
 
         if tasks == None:
             flash_message(self, 'danger', 'Problem creating LIVE ARLERT.')
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
         else:
+            # if session live view task present in session, delete them
+            if 'live_view' in self.session['tasks']:
+                del self.session['tasks']['live_view']
             updated_tasks = list()
             for task in tasks:
-
-                if 'live_view' not in self.session['tasks']:
-                    self.session['tasks']['live_view'] = list()
-                else:
-                    del self.session['tasks']['live_view']
-                    self.session['tasks']['live_view'] = list()
-
                 task_object = {
                     'username': username,
                     'projectname': projectname,

@@ -15,19 +15,6 @@ import pintell.core.utils as utils
 import pintell.core.extractor as extractor
 import http.client
 
-def clean_content(input_list):
-    """ Method that clean every element of a list
-        arg:
-            input_list(list): List of elements to be cleaned
-        return:
-            ouput (list): List of cleaned elements
-    """
-    output = [x for x in input_list if x != '\n']
-    #t = str.maketrans("\n\t\r", "   ")
-    #output = [x.translate(t) for x in output]
-    #output = [x.strip() for x in output]
-    return output
-
 def allow_create_folder(current_path):
     if os.path.isfile(current_path):
         try:
@@ -54,7 +41,7 @@ def download_and_save_content(url, name, path, header, check_duplicates=False):
         kwarg:
             check_duplicates (bool): Make sure no duplicate in names (default:False)
     """
-    print('FULL URL ARRIVED -------> {}'.format(url))
+    #print('FULL URL ARRIVED -------> {}'.format(url))
     if not os.path.isdir(path):
         print('path: {} is not a directory, changing name to unknown___'.format(path))
         # if there is a file with same name as folder, change its name
@@ -165,9 +152,9 @@ def download_website_diff(links, base_path, diff_path, url):
         remote_content = scrapper.get_url_content(full_url, header=utils.rh())
 
         extracted_local_content = extractor.extract_text_from_html(local_content)
-        extracted_local_content = clean_content(extracted_local_content)
+        extracted_local_content = extractor.clean_content(extracted_local_content)
         extracted_remote_content = extractor.extract_text_from_html(remote_content)
-        extracted_remote_content = clean_content(extracted_remote_content)
+        extracted_remote_content = extractor.clean_content(extracted_remote_content)
 
         #print('REMOTE CONTENT = {}\n'.format(remote_content))
 

@@ -9,7 +9,70 @@ from pdfminer.converter import TextConverter
 from pdfminer.layout import LAParams
 from io import StringIO
 from io import open
+import lxml.html as LH
+import itertools
 import pintell.core.scrapper as scrapper
+
+def roundrobin(*iterables):
+    # took from here https://docs.python.org/3/library/itertools.html#itertools-recipes
+
+    """roundrobin('ABC', 'D', 'EF') --> A D E B F C"""
+    # Recipe credited to George Sakkis
+
+    pending = len(iterables)
+    nexts = itertools.cycle(iter(it).__next__ for it in iterables)
+    while pending:
+        try:
+            for next in nexts:
+                yield next()
+        except StopIteration:
+            pending -= 1
+            nexts = itertools.cycle(itertools.islice(nexts, pending))
+
+def find_nearest(elt):
+    preceding = elt.xpath('preceding::*/@href')[::-1]
+    following = elt.xpath('following::*/@href')
+    parent = elt.xpath('parent::*/@href')
+    for href in roundrobin(parent, preceding, following):
+        return href
+
+def keyword_match(keywords, diff_neg, diff_pos, remote_content, full_url, url):
+    match_neg = list()
+    match_pos = list()
+    nearest_link_pos = []
+    for keyword in keywords:
+        for neg in diff_neg:
+            if keyword in neg:
+                match_neg.append(neg)
+        for pos in diff_pos:
+            if keyword in pos:
+                print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, full_url))
+                match_pos.append(pos)
+                doc = LH.fromstring(remote_content)
+                xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword))
+                len_xpaths = len(xpaths)
+                for x in xpaths:
+                    nearest_link_pos = find_nearest(x)
+                    if nearest_link_pos.startswith(url) is False:
+                        nearest_link_pos = url + nearest_link_pos
+                    print('Nearsest link found = {}'.format(nearest_link_pos))
+                    if len_xpaths > 1:
+                        print('Nearest founds are numerous for website : {}. Exit.'.format(full_url))
+                        break ;
+    return match_neg, match_pos, nearest_link_pos
+
+def clean_content(input_list):
+    """ Method that clean every element of a list
+        arg:
+            input_list(list): List of elements to be cleaned
+        return:
+            ouput (list): List of cleaned elements
+    """
+    output = [x for x in input_list if x != '\n']
+    #t = str.maketrans("\n\t\r", "   ")
+    #output = [x.translate(t) for x in output]
+    #output = [x.strip() for x in output]
+    return output
 
 def tag_visible(element):
     if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
@@ -23,6 +86,18 @@ def extract_text_from_html(content):
     texts = bs.findAll(text=True)
     content = list(filter(tag_visible, texts))
     return content
+
+def get_text_diff(local_content, remote_content):
+    # extract content
+    extracted_local_content = extract_text_from_html(local_content)
+    extracted_remote_content = extract_text_from_html(remote_content)
+    # clean content ('\n' here)
+    extracted_local_content = clean_content(extracted_local_content)
+    extracted_remote_content = clean_content(extracted_remote_content)
+    # get all diffs
+    diff_pos = [x for x in extracted_local_content if x not in extracted_remote_content]
+    diff_neg = [x for x in extracted_remote_content if x not in extracted_local_content]
+    return diff_pos, diff_neg
 
 '''
 def extract_html(full_url, link):

@@ -339,7 +339,7 @@ class RProject:
                     tasks.append(task)
         return tasks
 
-    def download_units_diff(self, links):
+    def download_units_diff(self, links, save=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None

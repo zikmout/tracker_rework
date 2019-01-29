@@ -95,6 +95,7 @@
                     <th>Repeat</th>
                     <th>Notify</th>
                     <th>Content Name</th>
+                    <th>Save in Log</th>
                     <th>Action</th>
                   </tr>
                   <tr>
@@ -105,9 +106,24 @@
                         {% end %}
                       {% end %}
                       {% if alert['alert_type'] == 'Live' %}
-                        <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal"><button type="submit" class="btn btn-dark" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
+                        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
+                        <th>
+                        <div class="form-group">
+                          <div class="form-check">
+                              <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
+                          </div>
+                        </div>
+                        </th>
+                        <th><button type="submit" class="btn btn-dark" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
                         </tr>
                       {% else %}
+                        <th>
+                        <div class="form-group">
+                          <div class="form-check">
+                              <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
+                          </div>
+                        </div>
+                        </th>
                         <th><form class="form-horizontal"><a class="btn btn-outline-dark disabled" value="">Start</a></input></form></th>
                         </tr>
                       {% end %}

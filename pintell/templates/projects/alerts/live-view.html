@@ -42,10 +42,9 @@
        if (evt != null) {
            var data = JSON.parse(evt.data);
            updateTitleState(data);
-           console.log(' - >>> ON MESSAGE')
-           console.log('data.status = ' + data.status)
-           if (typeof data !== "undefined" && (data.status.diff_neg.length > 0 || data.status.diff_pos.length > 0)) {
-              console.log('PASS updating task_id = ' + data.task_id)
+           console.log('data.status = ' + data.state)
+           if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
+              // console.log('PASS updating task_id = ' + data.task_id)
               if (!document.getElementById(data.status.div)) {
                 var title = document.createElement("H5");
                 title.innerHTML = data.status.div;
@@ -59,8 +58,8 @@
                 var ulTitle = document.createElement("UL");
                 ulTitle.setAttribute("id", data.current.toString() + data.task_id);
                 document.getElementById(data.status.div).append(ulTitle);
-                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li>+++ : " + data.status.diff_pos + "</li>");
-                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li>--- : " + data.status.diff_neg + "</li>");
+                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li>+++ : " + data.status.diff_pos + " (" + data.status.nearest_link_pos + ")" + "</li>");
+                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li>--- : " + data.status.diff_neg + " (" + data.status.nearest_link_neg + ")" + "</li>");
               }
            }
            else {

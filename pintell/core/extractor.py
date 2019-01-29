@@ -36,30 +36,38 @@ def find_nearest(elt):
     for href in roundrobin(parent, preceding, following):
         return href
 
+def get_nearest_link(remote_content, keyword, url, full_url):
+    nearest_link = []
+    doc = LH.fromstring(remote_content)
+    xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword))
+    len_xpaths = len(xpaths)
+    for x in xpaths:
+        nearest_link = find_nearest(x)
+        if nearest_link.startswith(url) is False:
+            nearest_link = url + nearest_link
+        print('Nearsest link found = {}'.format(nearest_link))
+        if len_xpaths > 1:
+            print('Nearest founds are numerous for website : {}. Exit.'.format(full_url))
+            break ;
+    return nearest_link
+
 def keyword_match(keywords, diff_neg, diff_pos, remote_content, full_url, url):
     match_neg = list()
     match_pos = list()
-    nearest_link_pos = []
+    nearest_link_pos = list()
+    nearest_link_neg = list()
     for keyword in keywords:
         for neg in diff_neg:
             if keyword in neg:
                 match_neg.append(neg)
+                nearest_link_neg = get_nearest_link(remote_content, keyword, url, full_url)
         for pos in diff_pos:
             if keyword in pos:
                 print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, full_url))
                 match_pos.append(pos)
-                doc = LH.fromstring(remote_content)
-                xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword))
-                len_xpaths = len(xpaths)
-                for x in xpaths:
-                    nearest_link_pos = find_nearest(x)
-                    if nearest_link_pos.startswith(url) is False:
-                        nearest_link_pos = url + nearest_link_pos
-                    print('Nearsest link found = {}'.format(nearest_link_pos))
-                    if len_xpaths > 1:
-                        print('Nearest founds are numerous for website : {}. Exit.'.format(full_url))
-                        break ;
-    return match_neg, match_pos, nearest_link_pos
+                nearest_link_pos = get_nearest_link(remote_content, keyword, url, full_url)
+                
+    return match_neg, match_pos, nearest_link_pos, nearest_link_neg
 
 def clean_content(input_list):
     """ Method that clean every element of a list
@@ -95,8 +103,8 @@ def get_text_diff(local_content, remote_content):
     extracted_local_content = clean_content(extracted_local_content)
     extracted_remote_content = clean_content(extracted_remote_content)
     # get all diffs
-    diff_pos = [x for x in extracted_local_content if x not in extracted_remote_content]
-    diff_neg = [x for x in extracted_remote_content if x not in extracted_local_content]
+    diff_neg = [x for x in extracted_local_content if x not in extracted_remote_content]
+    diff_pos = [x for x in extracted_remote_content if x not in extracted_local_content]
     return diff_pos, diff_neg
 
 '''

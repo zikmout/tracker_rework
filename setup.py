@@ -18,7 +18,7 @@ requires = [
 ]
 
 setup(
-    name='pintell',
+    name='tracker',
     version='0.0',
     description='Data miner crawling bot',
     author='simon sicard',
@@ -28,9 +28,9 @@ setup(
     install_requires=requires,
     entry_points={
         'console_scripts': [
-            'serve_app = pintell:main',
-            'initdb = pintell.scripts.initialize_db:main',
-            'reset_db = pintell.scripts.reset_db:main'
+            'serve_app = tracker:main',
+            'initdb = tracker.scripts.initialize_db:main',
+            'reset_db = tracker.scripts.reset_db:main'
         ],
     },
 )

@@ -1,7 +1,6 @@
 # Tracker Project
 
-tracker is a website monitoring tool capable of crawling, downloading, and alerting on website content modification.
-tracker name has been chosen arbitrarily, feel free to come up with a new name you think of ! 
+Tracker is a website monitoring tool capable of crawling, downloading, and alerting on website content modification.
 
 Actual features:
   - Website crawling
@@ -16,7 +15,7 @@ Futur features:
 
 ### Installation
 
-SBB requires [Python 3.5](https://www.python.org/downloads/release/python-350/) and [Virtualenv](https://virtualenv.pypa.io/en/latest/) to run.
+Tracker requires [Python 3.5](https://www.python.org/downloads/release/python-350/) and [Virtualenv](https://virtualenv.pypa.io/en/latest/) to run.
 Clone the git repo.
 ```sh
 $ git clone https://gitlab.com/electricity.ai/tracker.git tracker
@@ -50,7 +49,7 @@ $ python setup.py install; python setup.py build; serve_app
 
 ### Main used frameworks
 
-SBB uses python framework to complete its operations. 
+Tracker uses python framework to complete its operations. 
 
 | Framework | README |
 | ------ | ------ |
@@ -66,7 +65,7 @@ SBB uses python framework to complete its operations.
 | pdfminer | https://pypi.org/project/pdfminer.six/ |
 
 ### How it works
-SBB allow you to create `Project` objects. So far, each project essentially consists of a list of websites to monitor (`Unit` objects). Projects can be loaded by the program either with a .xlsx file containing website list or directly with the appropriate architecture of data storage.
+Tracker allow you to create `Project` objects. So far, each project essentially consists of a list of websites to monitor (`Unit` objects). Projects can be loaded by the program either with a .xlsx file containing website list or directly with the appropriate architecture of data storage.
 
 ### Project data architecture
 Since all data is stored in binary format, the architecture of data storage needs to stricly respect the following rules, as illustrated below:

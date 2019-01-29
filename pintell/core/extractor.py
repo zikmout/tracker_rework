@@ -1,6 +1,7 @@
 import os
 from urllib.request import urlopen
 import ssl
+import re
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 from pdfminer.pdfinterp import PDFResourceManager
@@ -36,38 +37,39 @@ def find_nearest(elt):
     for href in roundrobin(parent, preceding, following):
         return href
 
-def get_nearest_link(remote_content, keyword, url, full_url):
+def get_nearest_link(keyword, remote_content, url):
     nearest_link = []
     doc = LH.fromstring(remote_content)
     xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword))
     len_xpaths = len(xpaths)
     for x in xpaths:
-        nearest_link = find_nearest(x)
-        if nearest_link.startswith(url) is False:
-            nearest_link = url + nearest_link
+        nearest_link = [find_nearest(x)]
         print('Nearsest link found = {}'.format(nearest_link))
         if len_xpaths > 1:
-            print('Nearest founds are numerous for website : {}. Exit.'.format(full_url))
+            print('Nearest founds are numerous for website : {}. Exit.'.format(url))
             break ;
     return nearest_link
 
-def keyword_match(keywords, diff_neg, diff_pos, remote_content, full_url, url):
+def keyword_match(keywords, status, remote_content, url):
     match_neg = list()
     match_pos = list()
-    nearest_link_pos = list()
-    nearest_link_neg = list()
     for keyword in keywords:
-        for neg in diff_neg:
+        for neg in status['diff_neg']:
             if keyword in neg:
                 match_neg.append(neg)
-                nearest_link_neg = get_nearest_link(remote_content, keyword, url, full_url)
-        for pos in diff_pos:
+                status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
+        for pos in status['diff_pos']:
             if keyword in pos:
-                print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, full_url))
+                print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
                 match_pos.append(pos)
-                nearest_link_pos = get_nearest_link(remote_content, keyword, url, full_url)
-                
-    return match_neg, match_pos, nearest_link_pos, nearest_link_neg
+                status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
+    status['diff_neg'] = match_neg
+    status['diff_pos'] = match_pos
+    if status['diff_pos'] == []:
+        status['all_links_pos'] = []
+    if status['diff_neg'] == []:
+        status['all_links_neg'] = []
+    return status
 
 def clean_content(input_list):
     """ Method that clean every element of a list
@@ -95,17 +97,35 @@ def extract_text_from_html(content):
     content = list(filter(tag_visible, texts))
     return content
 
-def get_text_diff(local_content, remote_content):
-    # extract content
+def extract_links_from_html(content):
+    links = list()
+    webpage_regex = re.compile("""<a[^>]+href=["'](.*?)["']""", re.IGNORECASE)
+    links = webpage_regex.findall(content)
+    return links
+
+def get_text_diff(local_content, remote_content, status):
+    # extract content and links
     extracted_local_content = extract_text_from_html(local_content)
+    extracted_local_links = extract_links_from_html(local_content)
     extracted_remote_content = extract_text_from_html(remote_content)
+    extracted_remote_links = extract_links_from_html(remote_content)
     # clean content ('\n' here)
     extracted_local_content = clean_content(extracted_local_content)
     extracted_remote_content = clean_content(extracted_remote_content)
-    # get all diffs
-    diff_neg = [x for x in extracted_local_content if x not in extracted_remote_content]
-    diff_pos = [x for x in extracted_remote_content if x not in extracted_local_content]
-    return diff_pos, diff_neg
+    # get content diffs
+    status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
+    status['diff_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
+    if status['diff_neg'] != []:
+        all_links_neg = set()
+        [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
+        status['all_links_neg'] = list(all_links_neg)
+        print('diff links found neg = {}'.format(status['all_links_neg']))
+    if status['diff_pos'] != []:
+        all_links_pos = set()
+        [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
+        status['all_links_pos'] = list(all_links_pos)
+        print('diff links found pos = {}'.format(status['all_links_pos']))
+    return status
 
 '''
 def extract_html(full_url, link):

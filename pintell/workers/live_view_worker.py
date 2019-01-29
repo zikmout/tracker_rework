@@ -8,6 +8,17 @@ import pintell.core.utils as utils
 import pintell.core.scrapper as scrapper
 import pintell.core.extractor as extractor
 
+def get_full_links(status, base_url):
+    keys = ['nearest_link_pos', 'nearest_link_neg', 'all_links_pos', 'all_links_neg']
+    for _ in keys:
+        if status[_] != []:
+            idx = 0
+            for x in status[_]:
+                if x.startswith(base_url) is False:
+                    status[_][idx] = base_url + x
+                idx += 1
+    return status
+
 @app_socket.task(bind=True, ignore_result=False)
 def live_view(self, links, base_path, diff_path, url):
     """ Try to download website parts that have changed """
@@ -21,10 +32,12 @@ def live_view(self, links, base_path, diff_path, url):
         status = {
             'url': url + utils.find_internal_link(link),
             'div': url.split('//')[-1].split('/')[0],
-            'diff_neg': None,
-            'diff_pos': None,
-            'nearest_link_pos': None,
-            'nearest_link_neg': None,
+            'diff_neg': list(),
+            'diff_pos': list(),
+            'nearest_link_pos': list(),
+            'nearest_link_neg': list(),
+            'all_links_pos': None,
+            'all_links_neg': None,
             'diff_nb': 0
         }
         i += 1
@@ -46,13 +59,11 @@ def live_view(self, links, base_path, diff_path, url):
         if local_content is None or remote_content is None:
             print('Problem fetching local content or remote content.')
         else:
-            status['diff_pos'], status['diff_neg'] = extractor.get_text_diff(local_content, remote_content)
+            status = extractor.get_text_diff(local_content, remote_content, status)
             # if a list of keywords is provided, only get diff that matches keywords
             if keywords != []:
-                status['diff_neg'], status['diff_pos'], status['nearest_link_pos'], status['nearest_link_neg'] = \
-                extractor.keyword_match(keywords, status['diff_neg'],
-                    status['diff_pos'], remote_content, status['url'], url)
-
+                status = extractor.keyword_match(keywords, status, remote_content, url)
+            status = get_full_links(status, url)
             self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
             time.sleep(2)
             

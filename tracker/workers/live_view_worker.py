@@ -15,7 +15,10 @@ def get_full_links(status, base_url):
             idx = 0
             for x in status[_]:
                 if x.startswith(base_url) is False:
-                    status[_][idx] = base_url + x
+                    if x.startswith('http') is False:
+                        status[_][idx] = base_url + x
+                    else:
+                        status[_][idx] = x
                 idx += 1
     return status
 

@@ -65,10 +65,10 @@ def live_view(self, links, base_path, diff_path, url):
                 status = extractor.keyword_match(keywords, status, remote_content, url)
             status = get_full_links(status, url)
             self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
-            time.sleep(2)
+            #time.sleep(3)
             
-            print('\n\n ({}) DIFF +++ :\n{}'.format(url, status['diff_pos']))
-            print('\n\n ({}) DIFF --- :\n{}'.format(url, status['diff_neg']))
+            print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
+            print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))
             #exit(0)
             if len(status['diff_pos']) > 0 or len(status['diff_neg']) > 0:
                 print('***** Content is different *****')

@@ -255,10 +255,10 @@ class RProject:
                 url = rows['Website']
                 regex = r"^https?://[^/]+"
                 url = re.findall(regex, url)[0]
-                #print('-------------------------------------------------------------------------------------------')
-                #print('\n-> New Unit loaded : {} \n'.format(url))
+                print('-------------------------------------------------------------------------------------------')
+                print('\n-> New Unit loaded : {} \n'.format(url))
                 self.units.append(Unit(self.data_path, url))
-        #print('-------------------------------------------------------------------------------------------')
+        print('-------------------------------------------------------------------------------------------')
         print('\n {} units successfuly loaded from excel.\n'.format(len(self.units)))
 
     def update_unit(self, url):

@@ -53,6 +53,7 @@ def get_nearest_link(keyword, remote_content, url):
 def keyword_match(keywords, status, remote_content, url):
     match_neg = list()
     match_pos = list()
+    
     for keyword in keywords:
         for neg in status['diff_neg']:
             if keyword in neg:
@@ -63,12 +64,14 @@ def keyword_match(keywords, status, remote_content, url):
                 print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
                 match_pos.append(pos)
                 status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
+
     status['diff_neg'] = match_neg
     status['diff_pos'] = match_pos
+
     if status['diff_pos'] == []:
-        status['all_links_pos'] = []
+        status['all_links_pos'] = [] 
     if status['diff_neg'] == []:
-        status['all_links_neg'] = []
+        status['all_links_neg'] = [] 
     return status
 
 def clean_content(input_list):
@@ -119,12 +122,12 @@ def get_text_diff(local_content, remote_content, status):
         all_links_neg = set()
         [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
         status['all_links_neg'] = list(all_links_neg)
-        print('diff links found neg = {}'.format(status['all_links_neg']))
+        print('diff all links neg = {}'.format(status['all_links_neg']))
     if status['diff_pos'] != []:
         all_links_pos = set()
         [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
         status['all_links_pos'] = list(all_links_pos)
-        print('diff links found pos = {}'.format(status['all_links_pos']))
+        print('diff all links pos = {}'.format(status['all_links_pos']))
     return status
 
 '''

@@ -6,6 +6,20 @@
     {% block content %}
     <div class="starter-template-fluid">
           <center><h3>Project {{ handler.session['current_project'] }} : Live alerts on content change</h3></center>
+
+          <br>
+            <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-horizontal">
+            <div class="form-inline">
+              <div class="form-group mb-2">
+                <input type="email" class="form-control" placeholder="Email" name="email">
+                <input type="hidden", name="fromPage" value="live_view">
+              </div>
+              <div class="col">
+                <button type="submit" class="btn btn-primary mb-2">Send report</button></input>
+              </div>
+            </div>
+            </form>
+
           {% for tasks in handler.session['tasks']['live_view']  %}
             <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center>
             <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center>
@@ -31,7 +45,7 @@
 
     ws.onopen = function() {
       {% for tasks in handler.session['tasks']['live_view'] %}
-          sleep(getRandomArbitrary(500, 2000));
+          //sleep(getRandomArbitrary(500, 2000));
           ws.send('{{ escape(str(tasks['id'])) }}');
       {% end %}
     };

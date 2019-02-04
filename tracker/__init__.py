@@ -11,6 +11,7 @@ import tracker.session as session
 from tracker.views.base import HomePage
 from tracker.views.user import UserListView, UserDelete, UserUnitView
 from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
+from tracker.views.mail import UserProjectSendMail
 from tracker.views.content import UserProjectContent, TestingView, UserProjectContentFromFile
 from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
 from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate
@@ -41,6 +42,9 @@ def main():
             url(r'/api/v1/auth/login', AuthLoginView, name='login'),
             url(r'/api/v1/auth/logout', AuthLogoutView, name='logout'),
             url(r'/api/v1/auth/register', AuthRegisterView, name='register'),
+
+            # tracker.views.mail.py
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/send_report', UserProjectSendMail),
 
             # tracker.views.content.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),

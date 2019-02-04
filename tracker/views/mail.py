@@ -1,0 +1,127 @@
+from datetime import datetime
+import smtplib, ssl
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart	
+from tracker.views.base import BaseView
+from tracker.utils import flash_message, login_required, get_celery_task_state
+from tracker.workers.live_view_worker import live_view
+
+class UserProjectSendMail(BaseView):
+	SUPPORTED_METHOD = ['POST']
+	@login_required
+	def post(self, username, projectname):
+		"""
+		{
+			'state': 'SUCCESS', 
+			'current': 100, 
+			'total': 100, 
+			'status': {
+				'url': 'http://investors.telenet.be/phoenix.zhtml?c=241896&p=agm-share-buy-back-program', 
+				'div': 'investors.telenet.be', 
+				'diff_neg': [], 
+				'diff_pos': [' – Telenet Group Holding NV ... shares.'], 
+				'nearest_link_pos': ['http://investors.telenet.be#tcontentSRP_2011'],
+				'nearest_link_neg': [], 
+				'all_links_pos': ['http://phx.corporate-ir.net/External.File'], 
+				'all_links_neg': [], 
+				'diff_nb': 1
+			  }, 
+			 'result': 1
+		}
+		"""
+		args = { k: self.get_argument(k) for k in self.request.arguments }
+		print('ARGS = {}'.format(args))
+		if 'fromPage' not in args:
+			flash_message(self, 'danger', 'Impossible to know from what page email has to be sent.'.format(args))
+			self.redirect('/')
+		else:
+			if args['fromPage'] == 'live_view' and 'live_view' in self.session['tasks']:
+				sender_email = "simon@electricity.ai"
+				receiver_email = args['email']
+				password = 'totosecret'
+
+				message = MIMEMultipart()
+				date = datetime.now().replace(microsecond=0)
+				message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
+				message["From"] = sender_email
+				message["To"] = receiver_email
+
+				task_results = list()
+				for worker in self.session['tasks']['live_view']:
+					task = live_view.AsyncResult(worker['id'])
+					response = get_celery_task_state(task)
+					if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != [] or response['status']['diff_pos'] != []):
+						task_results.append(response['status'])
+				print('list of all grabbed task = {}'.format(task_results))
+
+				html = """\
+				<html>
+				  <body>
+				    <p>Hello,<br><br>
+				       This is an automated email regarding alerts on share buybacks.</p>
+				"""
+				html += ("<b>" + str(len(task_results)) + " websites have changed regarding share buyback. PLease see logs below.</b><br>")
+				site_html = ''
+				for site in task_results:
+					site_html += "<br><hr><h3>" + site['div'] + "</h3>\
+					<h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>\
+					"
+					if site['diff_pos'] != []:
+						site_html += "<font color='green'><b>Added Content :</b><br>"
+						if len(site['diff_pos']) < 10:
+							for content in site['diff_pos']:
+								site_html += (content + "<br>")
+						else:
+							site_html += ('-> too many changes' + "<br>")
+						site_html += "<br>Links:<br>"
+						for nearest_link in site['nearest_link_pos']:
+							site_html += (nearest_link + "<br>")
+						if len(site['all_links_pos']) < 10:
+							for link in site['all_links_pos']:
+								if link not in site['nearest_link_pos']:
+									site_html += (link + "<br>")
+						else:
+							site_html += ('-> too many links' + "<br>")
+						site_html += "</font>"
+
+					if site['diff_neg'] != []:
+						site_html += "<font color='red'><b><br>Deleted Content :</b><br>"
+						if len(site['diff_neg']) < 10:
+							for content in site['diff_neg']:
+								site_html += (content + "<br>")
+						else:
+							site_html += ('-> too many changes' + "<br>")
+						site_html += "<br>Links:<br>"
+						for nearest_link in site['nearest_link_neg']:
+							site_html += (nearest_link + "<br>")
+						if len(site['all_links_neg']) < 10:
+							for link in site['all_links_neg']:
+								if link not in site['nearest_link_neg']:
+									site_html += (link + "<br>")
+						else:
+							site_html += ('-> too many links' + "<br>")
+						site_html += "</font>"
+				html += site_html
+				html += "<br><br>Best regards,<br></body></html>"
+
+				# Turn these into plain/html MIMEText objects
+				#part1 = MIMEText(text, "plain")
+				part2 = MIMEText(html, "html")
+
+				# Add HTML/plain-text parts to MIMEMultipart message
+				# The email client will try to render the last part first
+				#message.attach(part1)
+				message.attach(part2)
+
+				# Create secure connection with server and send email
+				context = ssl.create_default_context()
+				with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+				    server.login(sender_email, password)
+				    server.sendmail(
+				        sender_email, receiver_email, message.as_string()
+				    )
+				flash_message(self, 'success', 'Report successfully sent to {} .'.format(args['email']))
+				self.redirect('/')
+			else:
+				flash_message(self, 'danger', 'There has been a problem sending mail.')
+				self.redirect('/')

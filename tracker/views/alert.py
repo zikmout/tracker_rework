@@ -109,14 +109,17 @@ class AlertLiveView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
     def get(self, username, projectname):
-        tasks  = self.session['tasks']['live_view'].copy()
-        self.render('projects/alerts/live-view.html', tasks=tasks)
+        if 'live_view' in self.session['tasks']:
+            tasks  = self.session['tasks']['live_view'].copy()
+            self.render('projects/alerts/live-view.html', tasks=tasks)
+        else:
+            flash_message(self, 'warning', 'No current live view tasks')
+            self.redirect('/')            
 
 class AlertLiveUpdate(BaseView):
     SUPPORTED_METHODS = ['POST']
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('ARGS = {}'.format(args))
         if 'fromPage' not in args:
             flash_message(self, 'danger', 'Impossible to know from what page to download pages from.')
             self.redirect('/')
@@ -128,9 +131,6 @@ class AlertLiveUpdate(BaseView):
                     response = get_celery_task_state(task)
                     if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != [] or response['status']['diff_pos'] != []):
                         task_results.append(response['status'])
-                print('list of all grabbed task = {}'.format(task_results))
-                print('Now updating all the websites .....')
-            print('So loading project .....')
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
             # Loading project
@@ -140,5 +140,4 @@ class AlertLiveUpdate(BaseView):
             else:
                 rproject._load_units_from_excel()
             rproject.update_units_links([x['url'] for x in task_results])
-            print('DONNNNNNNEEEE !!!!!!!!!!')
-            self.write('OKAY')
+            self.redirect('/')

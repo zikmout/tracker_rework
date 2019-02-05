@@ -20,6 +20,13 @@
             </div>
             </form>
 
+            <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
+              <div class="form-inline">
+                  <input type="hidden", name="fromPage" value="live_view">
+                  <button type="submit" class="btn btn-primary">Save report and download updated pages</button></input>
+              </div>
+            </form>
+
           {% for tasks in handler.session['tasks']['live_view']  %}
             <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center>
             <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center>

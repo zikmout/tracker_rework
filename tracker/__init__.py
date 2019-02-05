@@ -14,7 +14,7 @@ from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 from tracker.views.mail import UserProjectSendMail
 from tracker.views.content import UserProjectContent, TestingView, UserProjectContentFromFile
 from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
-from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate
+from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate, AlertLiveUpdate
 from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus, UserProjectDownloadView
 from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop, UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
 from tracker.views.socket import EchoWebSocket
@@ -74,6 +74,7 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts', AlertView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create', AlertCreate),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/view', AlertLiveView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/update', AlertLiveUpdate),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/create/?(?P<alertid>[A-Za-z0-9-_]+)?', AlertLiveCreate),
 
             # tracker.views.socket.py

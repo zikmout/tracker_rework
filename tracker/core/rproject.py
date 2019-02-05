@@ -339,6 +339,24 @@ class RProject:
                     tasks.append(task)
         return tasks
 
+    def update_units_links(self, units_urls):
+        """ If units_urls is a list, download all content form websites provided in list
+            according to what crawled links have been found.
+            If units_url is a dict, key is the website, val is the uri regex, content downloaded
+            is only the one matching regex.
+            arg:
+                units_urls (list): list of units to update (i.e. delete former version and save new file) 
+        """
+        for url in units_urls:
+            regex = r"^https?://[^/]+"
+            base_url = re.findall(regex, url)[0]
+            unit = self.get_unit_from_url(base_url)
+            #unit.delete_downloaded
+            internal_link = url.replace(base_url, '')
+            print('URL : {}, internal_link : {}'.format(base_url, internal_link))
+            nb = unit.update_downloaded([internal_link])
+            print('Nb of unit updated for url {} : {}'.format(nb, base_url))
+
     def download_units_diff(self, links, save=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')

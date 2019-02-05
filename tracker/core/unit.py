@@ -103,6 +103,23 @@ class Unit:
             shutil.rmtree(self.download_path)
             print('All downloaded content from website \'{}\' has been deleted.'.format(self.url))
 
+    def update_downloaded(self, links):
+        idx = 0
+        for link in links:
+            filename = link.rpartition('/')[2]
+            print('Filename : {}\n\n'.format(filename))
+            dir_path = os.path.join(self.download_path, link.rpartition('/')[0][1:])
+            print('Saving file in {}'.format(dir_path))
+            full_url = self.url + link
+            print('URL + LINK : {}'.format(full_url))
+            assert dir_path.startswith(self.download_path)
+            if link.startswith('/'):
+                downloader.download_and_save_content(full_url, filename, dir_path, utils.rh(), check_duplicates=True, replace=True)
+                print('DOWNLOAD OK')
+                idx += 1
+        print('{} pages successfuly downloaded !'.format(idx))
+        return idx
+
     def _remote_tree(self):
         first_line, middle, last_line = self.load_urls(self.logfile)
         # get rid of <PDF> and <EXCEL> tags in list of links

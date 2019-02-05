@@ -60,7 +60,7 @@ class UserProjectSendMail(BaseView):
 				    <p>Hello,<br><br>
 				       This is an automated email regarding alerts on share buybacks.</p>
 				"""
-				html += ("<b>" + str(len(task_results)) + " websites have changed regarding share buyback. PLease see logs below.</b><br>")
+				html += ("<b>" + str(len(task_results)) + " websites have changed. Please see logs below.</b><br>")
 				site_html = ''
 				for site in task_results:
 					site_html += "<br><hr><h3>" + site['div'] + "</h3>\

@@ -5,9 +5,10 @@ import time
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, get_url_from_id, \
-json_response, make_session_factory
+json_response, make_session_factory, get_celery_task_state
 from tornado.websocket import WebSocketHandler
 from tracker.core.rproject import RProject
+from tracker.workers.live_view_worker import live_view
 
 class AlertView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -110,3 +111,34 @@ class AlertLiveView(BaseView):
     def get(self, username, projectname):
         tasks  = self.session['tasks']['live_view'].copy()
         self.render('projects/alerts/live-view.html', tasks=tasks)
+
+class AlertLiveUpdate(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    def post(self, username, projectname):
+        args = { k: self.get_argument(k) for k in self.request.arguments }
+        print('ARGS = {}'.format(args))
+        if 'fromPage' not in args:
+            flash_message(self, 'danger', 'Impossible to know from what page to download pages from.')
+            self.redirect('/')
+        else:
+            if args['fromPage'] == 'live_view' and 'live_view' in self.session['tasks']:
+                task_results = list()
+                for worker in self.session['tasks']['live_view']:
+                    task = live_view.AsyncResult(worker['id'])
+                    response = get_celery_task_state(task)
+                    if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != [] or response['status']['diff_pos'] != []):
+                        task_results.append(response['status'])
+                print('list of all grabbed task = {}'.format(task_results))
+                print('Now updating all the websites .....')
+            print('So loading project .....')
+            user = self.request_db.query(User).filter_by(username=username).first()
+            project = user.projects.filter_by(name=projectname).first()
+            # Loading project
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            if len(self.session['project_config_file']) == 0:
+                rproject._load_units_from_data_path()
+            else:
+                rproject._load_units_from_excel()
+            rproject.update_units_links([x['url'] for x in task_results])
+            print('DONNNNNNNEEEE !!!!!!!!!!')
+            self.write('OKAY')

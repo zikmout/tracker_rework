@@ -18,6 +18,53 @@ import gc
 import subprocess
 from subprocess import check_output
 
+def clean_content(input_list, min_sentence_len=5):
+    print('-> cleaning HTML content ....')
+    """ Method that clean every element of a list
+        arg:
+            input_list(list): List of elements to be cleaned
+        return:
+            ouput (list): List of cleaned elements
+    """
+    if input_list is None:
+        return None
+    output = [x for x in input_list if x != '\n']
+    output = [x for x in output if len(x.split(' ')) > min_sentence_len]
+
+    # to lower
+    output = [x.lower() for x in output]
+    
+    # get rid of punctuation
+    t = str.maketrans('', '', string.punctuation)
+    output = [x.translate(t) for x in output]
+    
+    # get rid of digits
+    t = str.maketrans('', '', string.digits)
+    output = [x.translate(t) for x in output]
+    
+    # get rid of whitespaces
+    t = str.maketrans('\n\t\r', '   ')
+    output = [x.translate(t) for x in output]
+    
+    # get rid of cookie and javascript sentences
+    to_exclude = ['cookie', 'javascript']
+    for _ in to_exclude:
+        output = [x for x in output if _ not in x]
+    
+    return output
+
+def get_essential_content(content, min_sentence_len):
+    extracted = extractor.extract_text_from_html(content)
+    cleaned = clean_content(extracted, min_sentence_len)
+    cleaned = list(map(str.strip, cleaned))
+    cleaned = [x for x in cleaned if len(x.split(' ')) > min_sentence_len]
+    cleaned = ''.join(cleaned)
+    if cleaned == '':
+        return None
+    else:
+        return cleaned
+
+
 def clean_pdf_content(input_str):
     print('-> cleaning pdf content ...')
     if input_str is None:
@@ -48,33 +95,60 @@ def is_valid_file(fname):
 def is_sbb_content(url, language='ENGLISH'):
     try:
         print('ENTER CHECK SBB : {}'.format(url))
+        req = urllib.request.Request(
+                url,
+                data=None,
+                headers=utils.rh()
+        )
+        # Faking SSL certificate to avoid unauthorized requests
+        gcontext = ssl._create_unverified_context()
+        response = urllib.request.urlopen(req, context=gcontext)
+
+        if response.geturl() != url:
+            print('//////////// {} has been redirected to : {} //////////'.format(response.geturl()))
+            url = response.geturl()
         filename = url.rpartition('/')[2]
-        if is_valid_file(filename):
 
-            filename = url.rpartition('/')[2]
-            req = urllib.request.Request(
-                    url,
-                    data=None,
-                    headers=utils.rh()
-            )
-            # Faking SSL certificate to avoid unauthorized requests
-            gcontext = ssl._create_unverified_context()
-            print('FETCH URL: {}'.format(url))
-            response = urllib.request.urlopen(req, context=gcontext)
+        info = response.info()
+        cs = info.get_content_type()
 
-            #info = response.info()
-            #cs = info.get_content_type()
-            #if 'pdf' in cs:
-
-
+        if is_valid_file(filename) or 'pdf' in cs:
+            #print('URL = {} (detected pdf)'.format(url))
             cleaned_content = clean_pdf_content(pdftotext.PDF(response))
-            print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
+            #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
             if cleaned_content is None:
-                print('Content {} is None !!!!!!!!!'.format(url))
+                #print('Content {} is None !!!!!!!!!'.format(url))
                 return False
             #if not is_language(cleaned_content, language):
             #    print('Language is NOT ENGLISH !!')
             #    return False
+            with open(filename + '.txt', 'w+') as fd:
+                #print('creating file : {}'.format(filename))
+                fd.write(cleaned_content)
+
+            out = check_output(['./fasttext', 'predict-prob', 'model2.bin', filename + '.txt'])
+            os.remove(filename + '.txt')
+            #print('-> deleted file : {}'.format(filename + '.txt'))
+            #predictions = su_model.predict(cleaned_content)
+            decoded = out.decode('utf-8')
+            print('decoded = {}'.format(decoded))
+            accuracy = float(decoded.split(' ')[1])
+            if '__label__1' in decoded and accuracy > 0.8:
+                prediction = '__label__1'
+                #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
+                return True
+            else:
+                prediction = '__label__2'
+                #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
+                return False
+        else:
+            print('URL = {} (detected NON pdf)'.format(url))
+            cleaned_content = get_essential_content(response.read(), 10)
+
+            #content = extractor.extract_text_from_html(response.read())
+            #cleaned_content = extractor.clean_content(content)
+            print('Content to analyse = {}'.format(cleaned_content[:100]))
+
             with open(filename + '.txt', 'w+') as fd:
                 print('creating file : {}'.format(filename))
                 fd.write(cleaned_content)
@@ -84,18 +158,19 @@ def is_sbb_content(url, language='ENGLISH'):
             print('-> deleted file : {}'.format(filename + '.txt'))
             #predictions = su_model.predict(cleaned_content)
             decoded = out.decode('utf-8')
-            print('decoded = {}'.format(decoded))
+            print('decoded (non PDF) = {}'.format(decoded))
             accuracy = float(decoded.split(' ')[1])
             if '__label__1' in decoded and accuracy > 0.9:
                 prediction = '__label__1'
-                print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
+                print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
                 return True
             else:
                 prediction = '__label__2'
-                print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
+                print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
                 return False
-        else:
+
             return False
+
     except Exception as e:
         print('ERROR ************* : {} (link: {})'.format(e, url))
         return False
@@ -205,7 +280,14 @@ def live_view(self, links, base_path, diff_path, url):
                 status = get_full_links(status, url)
             #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
             status = select_only_sbb_links(status)
-            print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
+
+            # taking off doublons in diff pos and diff neg
+            status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
+            status['diff_neg'] = [x.strip() for x in status['diff_neg'].copy()]
+            status['diff_pos'] = list(set(status['diff_pos'].copy()))
+            status['diff_neg'] = list(set(status['diff_neg'].copy()))
+
+            #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
             self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
             #time.sleep(3)
             

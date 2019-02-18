@@ -29,3 +29,6 @@ dist/
 
 # logs folder
 logs/
+
+# machine learning model files
+*.bin

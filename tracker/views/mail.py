@@ -32,7 +32,7 @@ class UserProjectSendMail(BaseView):
 		args = { k: self.get_argument(k) for k in self.request.arguments }
 		print('ARGS = {}'.format(args))
 		if 'fromPage' not in args:
-			flash_message(self, 'danger', 'Impossible to know from what page email has to be sent.'.format(args))
+			flash_message(self, 'danger', 'Impossible to know from what page email has to be sent.')
 			self.redirect('/')
 		else:
 			if args['fromPage'] == 'live_view' and 'live_view' in self.session['tasks']:

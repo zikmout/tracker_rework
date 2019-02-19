@@ -18,6 +18,11 @@ import gc
 import subprocess
 from subprocess import check_output
 
+#import tracker.ml_toolbox as mlbtx
+#model = mlbtx.SU_Model()
+
+from tracker.ml_toolbox import su_model as model
+
 def clean_content(input_list, min_sentence_len=5):
     print('-> cleaning HTML content ....')
     """ Method that clean every element of a list
@@ -92,9 +97,22 @@ def is_valid_file(fname):
         return False
     return False
 
-def is_sbb_content(url, language='ENGLISH'):
+def make_prediction(model, content):
+    preds = model.su_model.predict(content, k=2)
+    print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
+    if '__label__1' in preds[0][0] and preds[1][0] > min_acc:
+        prediction = '__label__1'
+        print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
+        return True
+    else:
+        prediction = '__label__2'
+        print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
+        return False
+
+def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     try:
         print('ENTER CHECK SBB : {}'.format(url))
+        global su_model
         req = urllib.request.Request(
                 url,
                 data=None,
@@ -109,6 +127,7 @@ def is_sbb_content(url, language='ENGLISH'):
             url = response.geturl()
         filename = url.rpartition('/')[2]
 
+        # get header charset
         info = response.info()
         cs = info.get_content_type()
 
@@ -122,6 +141,8 @@ def is_sbb_content(url, language='ENGLISH'):
             #if not is_language(cleaned_content, language):
             #    print('Language is NOT ENGLISH !!')
             #    return False
+
+            '''
             with open(filename + '.txt', 'w+') as fd:
                 #print('creating file : {}'.format(filename))
                 fd.write(cleaned_content)
@@ -141,6 +162,9 @@ def is_sbb_content(url, language='ENGLISH'):
                 prediction = '__label__2'
                 #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
                 return False
+            '''
+            return make_predictions(model)
+
         else:
             print('URL = {} (detected NON pdf)'.format(url))
             cleaned_content = get_essential_content(response.read(), 10)
@@ -148,7 +172,8 @@ def is_sbb_content(url, language='ENGLISH'):
             #content = extractor.extract_text_from_html(response.read())
             #cleaned_content = extractor.clean_content(content)
             print('Content to analyse = {}'.format(cleaned_content[:100]))
-
+            #preds = mmodel.su_model.predict(cleaned_content, k=2)
+            '''
             with open(filename + '.txt', 'w+') as fd:
                 print('creating file : {}'.format(filename))
                 fd.write(cleaned_content)
@@ -156,7 +181,10 @@ def is_sbb_content(url, language='ENGLISH'):
             out = check_output(['./fasttext', 'predict-prob', 'model2.bin', filename + '.txt'])
             os.remove(filename + '.txt')
             print('-> deleted file : {}'.format(filename + '.txt'))
+            '''
             #predictions = su_model.predict(cleaned_content)
+            return make_predictions(model)
+            '''
             decoded = out.decode('utf-8')
             print('decoded (non PDF) = {}'.format(decoded))
             accuracy = float(decoded.split(' ')[1])
@@ -168,6 +196,7 @@ def is_sbb_content(url, language='ENGLISH'):
                 prediction = '__label__2'
                 print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
                 return False
+                '''
 
             return False
 

@@ -14,7 +14,10 @@ requires = [
     'requests',
     'pdfminer.six',
     'xlrd',
-    'celery'
+    'celery',
+    'cython',
+    'fasttext',
+    'cld2-cffi'
 ]
 
 setup(

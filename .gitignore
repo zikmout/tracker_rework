@@ -30,6 +30,7 @@ dist/
 # logs folder
 logs/
 
-*.vec
+# machine learning model files
 *.bin
 *.ftz
+*.vec

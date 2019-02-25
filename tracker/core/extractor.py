@@ -1,4 +1,6 @@
 import os
+import http
+import urllib
 from urllib.request import urlopen
 import ssl
 import re
@@ -13,6 +15,7 @@ from io import open
 import lxml.html as LH
 import itertools
 import tracker.core.scrapper as scrapper
+import tracker.core.utils as utils
 
 def roundrobin(*iterables):
     # took from here https://docs.python.org/3/library/itertools.html#itertools-recipes
@@ -42,10 +45,11 @@ def get_nearest_link(keyword, remote_content, url):
     doc = LH.fromstring(remote_content)
     xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword))
     len_xpaths = len(xpaths)
+    #print('X Path = {}\n'.format(xpaths))
     for x in xpaths:
         nearest_link = [find_nearest(x)]
-        print('Nearsest link found = {}'.format(nearest_link))
-        if len_xpaths > 1:
+        print('Nearsest link found (url) = {} ({})'.format(nearest_link, url))
+        if len_xpaths > 1 and '#' not in nearest_link:
             print('Nearest founds are numerous for website : {}. Exit.'.format(url))
             break ;
     return nearest_link
@@ -106,6 +110,8 @@ def extract_links_from_html(content):
     links = webpage_regex.findall(content)
     return links
 
+
+
 def get_text_diff(local_content, remote_content, status):
     # extract content and links
     extracted_local_content = extract_text_from_html(local_content)
@@ -130,6 +136,8 @@ def get_text_diff(local_content, remote_content, status):
         print('diff all links pos = {}'.format(status['all_links_pos']))
     return status
 
+
+
 '''
 def extract_html(full_url, link):
     print('HTML -> {}'.format(link))
@@ -141,26 +149,4 @@ def extract_html(full_url, link):
     texts = bs.findAll(text=True)
     extracts = filter(tag_visible, texts)
     return list(extracts)
-
-def read_pdf(pdf_file):
-    rsrcmgr = PDFResourceManager()
-    retstr = StringIO()
-    laparams = LAParams()
-    device = TextConverter(rsrcmgr, retstr, laparams=laparams)
-
-    PDFPage.get_pages(rsrcmgr, device, pdf_file)
-    device.close()
-
-    content = retstr.getvalue()
-    retstr.close()
-    return content
-
-def extract_pdf(full_url, link):
-    print('FULL URL => {}'.format(full_url + link))
-    pdf = urlopen(full_url + link)
-    #pdf = get_response_from_url(full_url + link)
-    #print('PDF ->>>> {}'.format(type(pdf)))
-    output_string = read_pdf(pdf)
-    print(output_string)
-    pdf.close()
 '''

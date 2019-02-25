@@ -27,7 +27,7 @@ def allow_create_folder(current_path):
     else:
         allow_create_folder(current_path.rpartition('/')[0])
 
-def download_and_save_content(url, name, path, header, check_duplicates=False):
+def download_and_save_content(url, name, path, header, check_duplicates=False, replace=False):
     """ For each website link, download the content found on link.
         Checks whether there are no duplicates. If name of file is '',
         name becomes 'unknown___'. If name of file matches an already
@@ -61,9 +61,14 @@ def download_and_save_content(url, name, path, header, check_duplicates=False):
     full_path = os.path.join(path, name)
     if check_duplicates and os.path.isdir(full_path):
         full_path = full_path + '___'
-    if os.path.isfile(full_path):
+    if replace is False and os.path.isfile(full_path):
         print('\'{}\' already exists.\n'.format(full_path))
         return
+    elif replace is True and os.path.isfile(full_path):
+        print('Replace option activated, removing file : {}'.format(full_path))
+        os.remove(full_path)
+        print('Successfuly REMOVED.')
+        
     req = urllib.request.Request(
             url,
             data=None,

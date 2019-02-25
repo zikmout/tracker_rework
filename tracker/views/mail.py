@@ -60,10 +60,15 @@ class UserProjectSendMail(BaseView):
 				    <p>Hello,<br><br>
 				       This is an automated email regarding alerts on share buybacks.</p>
 				"""
-				html += ("<b>" + str(len(task_results)) + " websites have changed. Please see logs below.</b><br>")
+				html += "<b><a name='top'>" + str(len(task_results)) + " websites have changed: </a><br> " 
+				for site in task_results:
+					html += "<li><a href='#" + site['div'] + "'> " + site['div'] + "</a></li>"
+
+				html += "Please see logs below.</b><br>"
+
 				site_html = ''
 				for site in task_results:
-					site_html += "<br><hr><h3>" + site['div'] + "</h3>\
+					site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
 					<h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>\
 					"
 					if site['diff_pos'] != []:
@@ -72,8 +77,9 @@ class UserProjectSendMail(BaseView):
 							for content in site['diff_pos']:
 								site_html += (content + "<br>")
 						else:
-							site_html += ('-> too many changes' + "<br>")
-						site_html += "<br>Links:<br>"
+							site_html += ('*** too many changes ***' + "<br>")
+						if site['nearest_link_pos'] != [] or site['all_links_pos'] != []:
+							site_html += "<br>Link(s):<br>"
 						for nearest_link in site['nearest_link_pos']:
 							site_html += (nearest_link + "<br>")
 						if len(site['all_links_pos']) < 10:
@@ -81,7 +87,7 @@ class UserProjectSendMail(BaseView):
 								if link not in site['nearest_link_pos']:
 									site_html += (link + "<br>")
 						else:
-							site_html += ('-> too many links' + "<br>")
+							site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 
 					if site['diff_neg'] != []:
@@ -90,8 +96,9 @@ class UserProjectSendMail(BaseView):
 							for content in site['diff_neg']:
 								site_html += (content + "<br>")
 						else:
-							site_html += ('-> too many changes' + "<br>")
-						site_html += "<br>Links:<br>"
+							site_html += ('*** too many changes ***' + "<br>")
+						if site['nearest_link_neg'] != [] or site['all_links_neg'] != []:
+							site_html += "<br>Link(s):<br>"
 						for nearest_link in site['nearest_link_neg']:
 							site_html += (nearest_link + "<br>")
 						if len(site['all_links_neg']) < 10:
@@ -99,7 +106,7 @@ class UserProjectSendMail(BaseView):
 								if link not in site['nearest_link_neg']:
 									site_html += (link + "<br>")
 						else:
-							site_html += ('-> too many links' + "<br>")
+							site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 				html += site_html
 				html += "<br><br>Best regards,<br></body></html>"

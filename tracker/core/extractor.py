@@ -45,7 +45,7 @@ def get_nearest_link(keyword, remote_content, url):
     doc = LH.fromstring(remote_content)
     xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword))
     len_xpaths = len(xpaths)
-    print('X Path = {}\n'.format(xpaths))
+    #print('X Path = {}\n'.format(xpaths))
     for x in xpaths:
         nearest_link = [find_nearest(x)]
         print('Nearsest link found (url) = {} ({})'.format(nearest_link, url))

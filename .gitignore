@@ -32,3 +32,5 @@ logs/
 
 # machine learning model files
 *.bin
+*.ftz
+*.vec

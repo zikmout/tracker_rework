@@ -14,14 +14,12 @@ import re
 import string
 import pdftotext
 import gc
+import fastText
 
-import subprocess
-from subprocess import check_output
+global su_model
 
-#import tracker.ml_toolbox as mlbtx
-#model = mlbtx.SU_Model()
-
-from tracker.ml_toolbox import su_model as model
+import tracker.ml_toolbox as mltx
+su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
 
 def clean_content(input_list, min_sentence_len=5):
     print('-> cleaning HTML content ....')
@@ -74,7 +72,7 @@ def clean_pdf_content(input_str):
     print('-> cleaning pdf content ...')
     if input_str is None:
         return None
-    #intput_str = ''.join(x for x in input_str if x.isprintable())
+    intput_str = ''.join(x for x in input_str if x.isprintable())
     input_str = ''.join(input_str).lower()
     output = re.sub(r'[0-9]', '', input_str)
     t = str.maketrans('', '', string.punctuation)
@@ -97,9 +95,14 @@ def is_valid_file(fname):
         return False
     return False
 
-def make_prediction(model, content):
-    preds = model.su_model.predict(content, k=2)
-    print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
+def make_predictions(content, min_acc=0.75):
+    global su_model
+    print('su_model : {}'.format(su_model))
+    #gc.collect()
+    print('content : {}'.format(content))
+    preds = su_model.predict(content, 2)
+    print('predictions = {}'.format(preds))
+    #print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
     if '__label__1' in preds[0][0] and preds[1][0] > min_acc:
         prediction = '__label__1'
         print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
@@ -110,99 +113,97 @@ def make_prediction(model, content):
         return False
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
-    try:
-        print('ENTER CHECK SBB : {}'.format(url))
-        global su_model
-        req = urllib.request.Request(
-                url,
-                data=None,
-                headers=utils.rh()
-        )
-        # Faking SSL certificate to avoid unauthorized requests
-        gcontext = ssl._create_unverified_context()
-        response = urllib.request.urlopen(req, context=gcontext)
+    global su_model
+    print('ENTER CHECK SBB : {}'.format(url))
+    #global su_model
+    req = urllib.request.Request(
+            url,
+            data=None,
+            headers=utils.rh()
+    )
+    # Faking SSL certificate to avoid unauthorized requests
+    gcontext = ssl._create_unverified_context()
+    response = urllib.request.urlopen(req, context=gcontext)
 
-        if response.geturl() != url:
-            print('//////////// {} has been redirected to : {} //////////'.format(response.geturl()))
-            url = response.geturl()
-        filename = url.rpartition('/')[2]
+    if response.geturl() != url:
+        print('//////////// {} has been redirected to : {} //////////'.format(response.geturl(), url))
+        url = response.geturl()
+    filename = url.rpartition('/')[2]
 
-        # get header charset
-        info = response.info()
-        cs = info.get_content_type()
+    # get header charset
+    info = response.info()
+    cs = info.get_content_type()
 
-        if is_valid_file(filename) or 'pdf' in cs:
-            #print('URL = {} (detected pdf)'.format(url))
-            cleaned_content = clean_pdf_content(pdftotext.PDF(response))
-            #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
-            if cleaned_content is None:
-                #print('Content {} is None !!!!!!!!!'.format(url))
-                return False
-            #if not is_language(cleaned_content, language):
-            #    print('Language is NOT ENGLISH !!')
-            #    return False
-
-            '''
-            with open(filename + '.txt', 'w+') as fd:
-                #print('creating file : {}'.format(filename))
-                fd.write(cleaned_content)
-
-            out = check_output(['./fasttext', 'predict-prob', 'model2.bin', filename + '.txt'])
-            os.remove(filename + '.txt')
-            #print('-> deleted file : {}'.format(filename + '.txt'))
-            #predictions = su_model.predict(cleaned_content)
-            decoded = out.decode('utf-8')
-            print('decoded = {}'.format(decoded))
-            accuracy = float(decoded.split(' ')[1])
-            if '__label__1' in decoded and accuracy > 0.8:
-                prediction = '__label__1'
-                #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
-                return True
-            else:
-                prediction = '__label__2'
-                #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
-                return False
-            '''
-            return make_predictions(model)
-
-        else:
-            print('URL = {} (detected NON pdf)'.format(url))
-            cleaned_content = get_essential_content(response.read(), 10)
-
-            #content = extractor.extract_text_from_html(response.read())
-            #cleaned_content = extractor.clean_content(content)
-            print('Content to analyse = {}'.format(cleaned_content[:100]))
-            #preds = mmodel.su_model.predict(cleaned_content, k=2)
-            '''
-            with open(filename + '.txt', 'w+') as fd:
-                print('creating file : {}'.format(filename))
-                fd.write(cleaned_content)
-
-            out = check_output(['./fasttext', 'predict-prob', 'model2.bin', filename + '.txt'])
-            os.remove(filename + '.txt')
-            print('-> deleted file : {}'.format(filename + '.txt'))
-            '''
-            #predictions = su_model.predict(cleaned_content)
-            return make_predictions(model)
-            '''
-            decoded = out.decode('utf-8')
-            print('decoded (non PDF) = {}'.format(decoded))
-            accuracy = float(decoded.split(' ')[1])
-            if '__label__1' in decoded and accuracy > 0.9:
-                prediction = '__label__1'
-                print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
-                return True
-            else:
-                prediction = '__label__2'
-                print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
-                return False
-                '''
-
+    if is_valid_file(filename) or 'pdf' in cs:
+        #print('URL = {} (detected pdf)'.format(url))
+        cleaned_content = clean_pdf_content(pdftotext.PDF(response))
+        #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
+        if cleaned_content is None:
+            #print('Content {} is None !!!!!!!!!'.format(url))
             return False
+        #if not is_language(cleaned_content, language):
+        #    print('Language is NOT ENGLISH !!')
+        #    return False
 
-    except Exception as e:
-        print('ERROR ************* : {} (link: {})'.format(e, url))
+        '''
+        with open(filename + '.txt', 'w+') as fd:
+            #print('creating file : {}'.format(filename))
+            fd.write(cleaned_content)
+
+        out = check_output(['./fasttext', 'predict-prob', 'model2.bin', filename + '.txt'])
+        os.remove(filename + '.txt')
+        #print('-> deleted file : {}'.format(filename + '.txt'))
+        #predictions = su_model.predict(cleaned_content)
+        decoded = out.decode('utf-8')
+        print('decoded = {}'.format(decoded))
+        accuracy = float(decoded.split(' ')[1])
+        if '__label__1' in decoded and accuracy > 0.8:
+            prediction = '__label__1'
+            #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
+            return True
+        else:
+            prediction = '__label__2'
+            #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
+            return False
+        '''
+        return make_predictions(cleaned_content, min_acc=min_acc)
+
+    else:
+        print('URL = {} (detected NON pdf)'.format(url))
+        cleaned_content = get_essential_content(response.read(), 10)
+
+        #content = extractor.extract_text_from_html(response.read())
+        #cleaned_content = extractor.clean_content(content)
+        print('Content to analyse = {}'.format(cleaned_content[:100]))
+        #preds = mmodel.su_model.predict(cleaned_content, k=2)
+        '''
+        with open(filename + '.txt', 'w+') as fd:
+            print('creating file : {}'.format(filename))
+            fd.write(cleaned_content)
+
+        out = check_output(['./fasttext', 'predict-prob', 'model2.bin', filename + '.txt'])
+        os.remove(filename + '.txt')
+        print('-> deleted file : {}'.format(filename + '.txt'))
+        '''
+        #predictions = su_model.predict(cleaned_content)
+        return make_predictions(cleaned_content, min_acc=min_acc)
+        '''
+        decoded = out.decode('utf-8')
+        print('decoded (non PDF) = {}'.format(decoded))
+        accuracy = float(decoded.split(' ')[1])
+        if '__label__1' in decoded and accuracy > 0.9:
+            prediction = '__label__1'
+            print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
+            return True
+        else:
+            prediction = '__label__2'
+            print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
+            return False
+            '''
+
         return False
+
+
     return False
 
 def select_only_sbb_links(status):
@@ -261,11 +262,12 @@ def get_full_links(status, base_url):
     '''
     return status
 
-@app_socket.task(bind=True, ignore_result=False)
+@app_socket.task(bind=True, ignore_result=False, soft_time_limit=180)
 def live_view(self, links, base_path, diff_path, url):
     """ Try to download website parts that have changed """
     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
     #random.shuffle(links)
+
     total = len(links)
     i = 0
     for link in links:

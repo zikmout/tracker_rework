@@ -41,7 +41,7 @@ $ python setup.py install; python setup.py build; supervisord -n -c $APP_DIR/tra
 ```sh
 $ rabbitmq-server
 $ redis-server
-$ celery worker -A live_view_worker --loglevel=info --hostname w1@%%h
+$ celery worker -A live_view_worker --loglevel=info --hostname w1@%%h --concurrency=10 -Ofair --autoscale 30
 $ celery worker -A download_worker --loglevel=info --autoscale 30 --hostname w2@%%h
 $ celery worker -A crawl_worker --loglevel=info --autoscale 400 --hostname w3@%%h
 $ python setup.py install; python setup.py build; serve_app

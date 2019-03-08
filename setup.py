@@ -16,8 +16,9 @@ requires = [
     'xlrd',
     'celery',
     'cython',
-    'fasttext',
-    'cld2-cffi'
+    'fastText',
+    'cld2-cffi',
+    'pdftotext'
 ]
 
 setup(

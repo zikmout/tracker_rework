@@ -113,6 +113,8 @@ def make_predictions(content, min_acc=0.75):
         return False
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
+    if ('@' or ':') in url:
+        return False
     global su_model
     print('ENTER CHECK SBB : {}'.format(url))
     #global su_model
@@ -262,7 +264,7 @@ def get_full_links(status, base_url):
     '''
     return status
 
-@app_socket.task(bind=True, ignore_result=False, soft_time_limit=180)
+@app_socket.task(bind=True, ignore_result=False, soft_time_limit=900)
 def live_view(self, links, base_path, diff_path, url):
     """ Try to download website parts that have changed """
     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]

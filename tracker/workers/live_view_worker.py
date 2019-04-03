@@ -19,6 +19,7 @@ import fastText
 global su_model
 
 import tracker.ml_toolbox as mltx
+
 su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
 
 def clean_content(input_list, min_sentence_len=5):
@@ -125,7 +126,11 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     )
     # Faking SSL certificate to avoid unauthorized requests
     gcontext = ssl._create_unverified_context()
-    response = urllib.request.urlopen(req, context=gcontext)
+    try:
+        response = urllib.request.urlopen(req, context=gcontext)
+    except Exception as e:
+        print('-- [ERROR FETCHING URL {}] --\nReason:{}\n'.format(url, e))
+        return False
 
     if response.geturl() != url:
         print('//////////// {} has been redirected to : {} //////////'.format(response.geturl(), url))
@@ -174,6 +179,9 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         print('URL = {} (detected NON pdf)'.format(url))
         cleaned_content = get_essential_content(response.read(), 10)
 
+        if cleaned_content is None:
+            #print('Content {} is None !!!!!!!!!'.format(url))
+            return False
         #content = extractor.extract_text_from_html(response.read())
         #cleaned_content = extractor.clean_content(content)
         print('Content to analyse = {}'.format(cleaned_content[:100]))

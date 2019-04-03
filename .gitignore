@@ -34,3 +34,6 @@ logs/
 *.bin
 *.ftz
 *.vec
+
+# celery log file
+*.twt

@@ -19,6 +19,13 @@ class PurgeAllTasks(BaseView):
     def get(self, username, projectname):
         res = 0
         if 'live_view' in self.session['tasks']:
+
+            for worker in self.session['tasks']['live_view']:
+                task = live_view.AsyncResult(worker['id'])
+                task.abort()
+
+
+            '''
             task_ids_to_stop = list()
             for worker in self.session['tasks']['live_view']:
                 task_ids_to_stop.append(worker['id'])
@@ -34,6 +41,9 @@ class PurgeAllTasks(BaseView):
             print('succesfully PURGED.')
             print('Try discard All now ...')
             discard_all()
+            '''
+
+
 
             #print('Deleting live view tasks from session.')
             #del self.session['tasks']['live_view']

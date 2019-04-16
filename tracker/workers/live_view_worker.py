@@ -6,6 +6,7 @@ import urllib
 import ssl
 from celery import Celery
 from tracker.celery import app_socket
+from celery.contrib.abortable import AbortableTask
 import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
@@ -218,22 +219,39 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
 
     return False
 
-def select_only_sbb_links(status):
+def select_only_sbb_links(self, status):
     print('\n-------------------------------———\n')
+    i = 0
     excluded_links = list()
     for link in status['all_links_pos'].copy():
+        i += 1
+        if not i % 5:
+            if self.is_aborted():
+                return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['all_links_pos'].remove(link)#(index)
     for link in status['all_links_neg'].copy():
+        i += 1
+        if not i % 5:
+            if self.is_aborted():
+                return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['all_links_neg'].remove(link)
     for link in status['nearest_link_pos'].copy():
+        i += 1
+        if not i % 5:
+            if self.is_aborted():
+                return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['nearest_link_pos'].remove(link)
     for link in status['nearest_link_neg'].copy():
+        i += 1
+        if not i % 5:
+            if self.is_aborted():
+                return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['nearest_link_neg'].remove(link)
@@ -274,7 +292,7 @@ def get_full_links(status, base_url):
     '''
     return status
 
-@app_socket.task(bind=True, ignore_result=False, soft_time_limit=900)
+@app_socket.task(bind=True, base=AbortableTask, ignore_result=False, soft_time_limit=900)
 def live_view(self, links, base_path, diff_path, url):
     """ Try to download website parts that have changed """
     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
@@ -322,8 +340,11 @@ def live_view(self, links, base_path, diff_path, url):
                 print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
                 status = get_full_links(status, url)
             #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
-            status = select_only_sbb_links(status)
+            status = select_only_sbb_links(self, status)
 
+            if status is False:
+                print('\n-------- TASK ABORTED -------\n')
+                return
             # taking off doublons in diff pos and diff neg
             status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
             status['diff_neg'] = [x.strip() for x in status['diff_neg'].copy()]

@@ -68,7 +68,6 @@ def get_essential_content(content, min_sentence_len):
     else:
         return cleaned
 
-
 def clean_pdf_content(input_str):
     print('-> cleaning pdf content ...')
     if input_str is None:
@@ -98,9 +97,9 @@ def is_valid_file(fname):
 
 def make_predictions(content, min_acc=0.75):
     global su_model
-    print('su_model : {}'.format(su_model))
+    #print('su_model : {}'.format(su_model))
     #gc.collect()
-    print('content : {}'.format(content))
+    print('content : {} [...]'.format(content[:100]))
     preds = su_model.predict(content, 2)
     print('predictions = {}'.format(preds))
     #print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
@@ -148,9 +147,9 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         if cleaned_content is None:
             #print('Content {} is None !!!!!!!!!'.format(url))
             return False
-        #if not is_language(cleaned_content, language):
-        #    print('Language is NOT ENGLISH !!')
-        #    return False
+        # if not is_language(cleaned_content, 'ENGLISH'):
+        #     print('Language is NOT ENGLISH !! (Content = {}...)'.format(cleaned_content[:100]))
+        #     return False
 
         '''
         with open(filename + '.txt', 'w+') as fd:
@@ -184,7 +183,10 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
             return False
         #content = extractor.extract_text_from_html(response.read())
         #cleaned_content = extractor.clean_content(content)
-        print('Content to analyse = {}'.format(cleaned_content[:100]))
+        #print('Content to analyse = {}'.format(cleaned_content[:100]))
+        # if not is_language(cleaned_content, 'ENGLISH'):
+        #     print('Language is NOT ENGLISH (non pdf) !! (Content = {}...)'.format(cleaned_content[:100]))
+        #     return False
         #preds = mmodel.su_model.predict(cleaned_content, k=2)
         '''
         with open(filename + '.txt', 'w+') as fd:

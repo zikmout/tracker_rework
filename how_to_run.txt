@@ -17,3 +17,11 @@ $celery worker -A crawl_worker --loglevel=info --autoscale 400 --hostname w3@%%h
 $python setup.py install; python setup.py build; serve_app
 
 # Please note that all these tasks will be soon automatically launched with supervisor as deamons
+
+###############################################################
+# list rabbitmq queues
+$rabbitmqctl list_queues -q
+
+# delete all queues
+$rabbitmqadmin -f tsv -q list queues name > q.txt
+$while read -r name; do rabbitmqadmin -q delete queue name="${name}"; done < q.txt

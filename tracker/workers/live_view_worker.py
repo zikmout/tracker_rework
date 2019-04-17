@@ -224,34 +224,34 @@ def select_only_sbb_links(self, status):
     i = 0
     excluded_links = list()
     for link in status['all_links_pos'].copy():
-        i += 1
-        if not i % 5:
-            if self.is_aborted():
-                return False
+        # i += 1
+        # if not i % 5:
+        if self.is_aborted():
+            return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['all_links_pos'].remove(link)#(index)
     for link in status['all_links_neg'].copy():
-        i += 1
-        if not i % 5:
-            if self.is_aborted():
-                return False
+        # i += 1
+        # if not i % 5:
+        if self.is_aborted():
+            return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['all_links_neg'].remove(link)
     for link in status['nearest_link_pos'].copy():
-        i += 1
-        if not i % 5:
-            if self.is_aborted():
-                return False
+        # i += 1
+        # if not i % 5:
+        if self.is_aborted():
+            return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['nearest_link_pos'].remove(link)
     for link in status['nearest_link_neg'].copy():
-        i += 1
-        if not i % 5:
-            if self.is_aborted():
-                return False
+        # i += 1
+        # if not i % 5:
+        if self.is_aborted():
+            return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['nearest_link_neg'].remove(link)

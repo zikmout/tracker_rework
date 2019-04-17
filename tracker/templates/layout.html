@@ -68,6 +68,7 @@
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Alert</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/view">Live View</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/purge-all">Purge all tasks</a>
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/delete-all">Delete all queues</a>
                         </div>
                     </li>
                     {% end %}

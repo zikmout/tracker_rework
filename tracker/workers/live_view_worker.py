@@ -6,7 +6,7 @@ import urllib
 import ssl
 from celery import Celery
 from tracker.celery import app_socket
-from celery.contrib.abortable import AbortableTask
+#from celery.contrib.abortable import AbortableTask
 import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
@@ -51,6 +51,8 @@ def clean_content(input_list, min_sentence_len=5):
     t = str.maketrans('\n\t\r', '   ')
     output = [x.translate(t) for x in output]
     
+    # TODO: Add function to delete '-'s
+
     # get rid of cookie and javascript sentences
     to_exclude = ['cookie', 'javascript']
     for _ in to_exclude:
@@ -151,28 +153,6 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         # if not is_language(cleaned_content, 'ENGLISH'):
         #     print('Language is NOT ENGLISH !! (Content = {}...)'.format(cleaned_content[:100]))
         #     return False
-
-        '''
-        with open(filename + '.txt', 'w+') as fd:
-            #print('creating file : {}'.format(filename))
-            fd.write(cleaned_content)
-
-        out = check_output(['./fasttext', 'predict-prob', 'model2.bin', filename + '.txt'])
-        os.remove(filename + '.txt')
-        #print('-> deleted file : {}'.format(filename + '.txt'))
-        #predictions = su_model.predict(cleaned_content)
-        decoded = out.decode('utf-8')
-        print('decoded = {}'.format(decoded))
-        accuracy = float(decoded.split(' ')[1])
-        if '__label__1' in decoded and accuracy > 0.8:
-            prediction = '__label__1'
-            #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
-            return True
-        else:
-            prediction = '__label__2'
-            #print('Successfuly predicted \'{}\' with {} accuracy'.format(prediction, accuracy))
-            return False
-        '''
         return make_predictions(cleaned_content, min_acc=min_acc)
 
     else:
@@ -188,70 +168,27 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         # if not is_language(cleaned_content, 'ENGLISH'):
         #     print('Language is NOT ENGLISH (non pdf) !! (Content = {}...)'.format(cleaned_content[:100]))
         #     return False
-        #preds = mmodel.su_model.predict(cleaned_content, k=2)
-        '''
-        with open(filename + '.txt', 'w+') as fd:
-            print('creating file : {}'.format(filename))
-            fd.write(cleaned_content)
-
-        out = check_output(['./fasttext', 'predict-prob', 'model2.bin', filename + '.txt'])
-        os.remove(filename + '.txt')
-        print('-> deleted file : {}'.format(filename + '.txt'))
-        '''
-        #predictions = su_model.predict(cleaned_content)
         return make_predictions(cleaned_content, min_acc=min_acc)
-        '''
-        decoded = out.decode('utf-8')
-        print('decoded (non PDF) = {}'.format(decoded))
-        accuracy = float(decoded.split(' ')[1])
-        if '__label__1' in decoded and accuracy > 0.9:
-            prediction = '__label__1'
-            print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
-            return True
-        else:
-            prediction = '__label__2'
-            print('Successfuly predicted \'{}\' with {} accuracy (non PDF)'.format(prediction, accuracy))
-            return False
-            '''
-
-        return False
-
 
     return False
 
-def select_only_sbb_links(self, status):
+def select_only_sbb_links(status):
     print('\n-------------------------------———\n')
     i = 0
     excluded_links = list()
     for link in status['all_links_pos'].copy():
-        # i += 1
-        # if not i % 5:
-        if self.is_aborted():
-            return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['all_links_pos'].remove(link)#(index)
     for link in status['all_links_neg'].copy():
-        # i += 1
-        # if not i % 5:
-        if self.is_aborted():
-            return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['all_links_neg'].remove(link)
     for link in status['nearest_link_pos'].copy():
-        # i += 1
-        # if not i % 5:
-        if self.is_aborted():
-            return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['nearest_link_pos'].remove(link)
     for link in status['nearest_link_neg'].copy():
-        # i += 1
-        # if not i % 5:
-        if self.is_aborted():
-            return False
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['nearest_link_neg'].remove(link)
@@ -274,25 +211,9 @@ def get_full_links(status, base_url):
                         status[_][idx] = x
                 idx += 1
     print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
-    '''
-    #select_only_sbb_links(status)
-    for link in status['all_links_pos']:
-        print('in list : {}'.format(link))
-    for link in status['all_links_pos'].copy():
-        print('in list 2 ======= {}'.format(link))
-        try:
-            print('TRYING LINK: {}'.format(link))
-            if is_sbb_content(link) is False:
-                print('pass link = {}'.format(link))
-                status['all_links_pos'].remove(link)
-            else:
-                print('-------->>>>>>>>>>>>>< SBB not false')
-        except:
-            print('EOOR with link = {}'.format(link))
-    '''
     return status
 
-@app_socket.task(bind=True, base=AbortableTask, ignore_result=False, soft_time_limit=900)
+@app_socket.task(bind=True, ignore_result=False, soft_time_limit=900)
 def live_view(self, links, base_path, diff_path, url):
     """ Try to download website parts that have changed """
     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
@@ -340,11 +261,8 @@ def live_view(self, links, base_path, diff_path, url):
                 print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
                 status = get_full_links(status, url)
             #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
-            status = select_only_sbb_links(self, status)
+            status = select_only_sbb_links(status)
 
-            if status is False:
-                print('\n-------- TASK ABORTED -------\n')
-                return
             # taking off doublons in diff pos and diff neg
             status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
             status['diff_neg'] = [x.strip() for x in status['diff_neg'].copy()]

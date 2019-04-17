@@ -1,5 +1,6 @@
 import tornado
 import json
+from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
 
 def make_session_factory():
@@ -83,3 +84,23 @@ def get_celery_task_state(task):
         }
     print('response : {}'.format(response))
     return response
+
+def revoke_chain(last_result): 
+    print('[CALLER] Revoking: {}'.format(last_result.task_id))
+    last_result.revoke()
+    if last_result.parent is not None:
+        revoke_chain(last_result.parent)
+
+def revoke_all_tasks(app, task_func, ids):
+    res = 0
+    task_ids_to_stop = list()
+    for id in ids:
+        task_ids_to_stop.append(id)
+        task = task_func.AsyncResult(id)
+        revoke_chain(task)
+    res = app.control.revoke(task_ids_to_stop)
+    print('Purging task ids now ...')
+    app.control.purge()
+    discard_all()
+    print('\nAll task ids succesfully purged and discarded.')
+    return res

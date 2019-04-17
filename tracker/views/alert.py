@@ -5,9 +5,10 @@ import time
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, get_url_from_id, \
-json_response, make_session_factory, get_celery_task_state
+json_response, make_session_factory, get_celery_task_state, revoke_all_tasks
 from tornado.websocket import WebSocketHandler
 from tracker.core.rproject import RProject
+from tracker.celery import app_socket
 from tracker.workers.live_view_worker import live_view
 
 class AlertView(BaseView):
@@ -64,6 +65,7 @@ class AlertCreate(BaseView):
 
 class AlertLiveCreate(BaseView):
     SUPPORTED_METHODS = ['POST']
+
     @login_required
     def post(self, username, projectname, alertid):
         args = { k: self.get_argument(k) for k in self.request.arguments }
@@ -71,6 +73,13 @@ class AlertLiveCreate(BaseView):
         save_log_checked = False
         if 'saveLogChecked' + alertid in args:
             save_log_checked = True
+
+        # if session live view task present in session, delete them and revoke associated tasks
+        if 'live_view' in self.session['tasks']:
+            res = revoke_all_tasks(app_socket, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+            print('Deleting old live view tasks from session.')
+            del self.session['tasks']['live_view']
+
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         content = project.contents.filter_by(name=args['contentName']).first()
@@ -88,9 +97,6 @@ class AlertLiveCreate(BaseView):
             flash_message(self, 'danger', 'Problem creating LIVE ARLERT.')
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
         else:
-            # if session live view task present in session, delete them
-            if 'live_view' in self.session['tasks']:
-                del self.session['tasks']['live_view']
             updated_tasks = list()
             for task in tasks:
                 task_object = {

@@ -7,7 +7,7 @@ class UserListView(BaseView):
     """View for reading and adding new roles."""
     SUPPORTED_METHODS = ['GET']
     @login_required
-    def get(self): #, username):
+    def get(self):
         """Get all tasks for an existing user."""
         username = self.get_current_user()
         users_json = list()

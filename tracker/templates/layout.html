@@ -30,7 +30,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <!--
@@ -67,8 +67,9 @@
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content">Content</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Alert</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/view">Live View</a>
-                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/purge-all">Purge all tasks</a>
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/revoke-all">Purge all tasks</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/delete-all">Delete all queues</a>
+                            </li>
                         </div>
                     </li>
                     {% end %}
@@ -89,7 +90,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbar2">
                     <ul class="navbar-nav">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ reverse_url('users_list') }}">Users<span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">

@@ -37,3 +37,5 @@ logs/
 
 # celery log file
 *.twt
+queues.txt
+q.txt

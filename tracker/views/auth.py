@@ -4,8 +4,8 @@ from tracker.utils import flash_message, login_required
 from tracker.models import User
 import tracker.session as session
 
-from tracker.celery import app_socket
-from tracker.workers.live_view_worker import live_view
+from tracker.celery import live_view_worker_app
+from tracker.workers.live.live_view_worker import live_view
 from tracker.utils import revoke_all_tasks
 
 class AuthLoginView(BaseView):
@@ -61,7 +61,7 @@ class AuthLogoutView(BaseView):
     def get(self):
         # if session live view task present in session, delete them and revoke associated tasks
         if 'live_view' in self.session['tasks']:
-            res = revoke_all_tasks(app_socket, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+            res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
             print('Deleting old live view tasks from session.')
             del self.session['tasks']['live_view']
         self.session.delete()

@@ -1,7 +1,7 @@
 from tracker.views.base import BaseView
 from tracker.utils import flash_message, login_required, get_celery_task_state, revoke_all_tasks
-from tracker.celery import app_socket
-from tracker.workers.live_view_worker import live_view
+from tracker.celery import live_view_worker_app
+from tracker.workers.live.live_view_worker import live_view
 
 from tornado.process import Subprocess
 from tornado.iostream import StreamClosedError
@@ -55,7 +55,7 @@ class RevokeLiveTasks(BaseView):
     def get(self, username, projectname):
         res = 0
         if 'live_view' in self.session['tasks']:
-            res = revoke_all_tasks(app_socket, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+            res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
             print('Deleting live view tasks from session.')
             del self.session['tasks']['live_view']
             self.session.save()

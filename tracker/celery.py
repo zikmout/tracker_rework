@@ -1,11 +1,16 @@
 from celery import Celery
 
-app = Celery('download_worker',
+download_worker_app = Celery('download_worker',
               backend='amqp://',
-              broker='pyamqp://guest@localhost/',
-             include=['tracker.workers'])
+              broker='pyamqp://guest@localhost/')#,
+             #include=['tracker.workers'])
 
-app_socket = Celery('live_view',
+crawl_worker_app = Celery('crawl_worker',
               backend='amqp://',
-              broker='pyamqp://guest@localhost/',
-             include=['tracker.workers'])
+              broker='pyamqp://guest@localhost/')#,
+             #include=['tracker.workers'])
+
+live_view_worker_app = Celery('live_view',
+              backend='amqp://',
+              broker='pyamqp://guest@localhost/')#,
+             #include=['tracker.workers'])

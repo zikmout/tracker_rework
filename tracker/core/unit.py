@@ -7,7 +7,7 @@ import tracker.core.crawler as crawler
 import tracker.core.downloader as downloader
 import tracker.core.utils as utils
 from tracker.workers.download_worker import download_website
-from tracker.workers.live_view_worker import live_view
+from tracker.workers.live.live_view_worker import live_view
 from tracker.workers.crawl_worker import link_crawler
 
 class Unit:

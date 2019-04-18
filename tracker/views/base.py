@@ -9,7 +9,7 @@ from tracker.models import Permission, Role, Project, User
 from tracker.utils import make_session_factory, flash_message, login_required
 from tracker.models import User
 import tracker.session as session
-from tracker.workers.live_view_worker import live_view
+from tracker.workers.live.live_view_worker import live_view
 
 class BaseView(RequestHandler):
     """Base view for this application."""

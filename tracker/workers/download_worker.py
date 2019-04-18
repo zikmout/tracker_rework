@@ -2,11 +2,11 @@ import os
 import time
 import celery
 from celery import Celery
-from tracker.celery import app
+from tracker.celery import download_worker_app
 from tracker.core.downloader import download_and_save_content
 import tracker.core.utils as utils
 
-@app.task(bind=True)
+@download_worker_app.task(bind=True)
 def download_website(self, links, base_path, url, random_header=False):
     """ Loop through all links and download the content if not already downloaded
         args:

@@ -4,7 +4,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart	
 from tracker.views.base import BaseView
 from tracker.utils import flash_message, login_required, get_celery_task_state
-from tracker.workers.live_view_worker import live_view
+from tracker.workers.live.live_view_worker import live_view
 
 class UserProjectSendMail(BaseView):
 	SUPPORTED_METHOD = ['POST']

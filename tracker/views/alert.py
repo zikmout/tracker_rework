@@ -8,8 +8,8 @@ from tracker.utils import flash_message, login_required, get_url_from_id, \
 json_response, make_session_factory, get_celery_task_state, revoke_all_tasks
 from tornado.websocket import WebSocketHandler
 from tracker.core.rproject import RProject
-from tracker.celery import app_socket
-from tracker.workers.live_view_worker import live_view
+from tracker.celery import live_view_worker_app
+from tracker.workers.live.live_view_worker import live_view
 
 class AlertView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -76,7 +76,7 @@ class AlertLiveCreate(BaseView):
 
         # if session live view task present in session, delete them and revoke associated tasks
         if 'live_view' in self.session['tasks']:
-            res = revoke_all_tasks(app_socket, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+            res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
             print('Deleting old live view tasks from session.')
             del self.session['tasks']['live_view']
 

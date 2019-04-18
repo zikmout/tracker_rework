@@ -6,7 +6,7 @@ from urllib.parse import urljoin
 import re
 import celery
 from celery import Celery
-from tracker.celery import app_socket
+from tracker.celery import crawl_worker_app
 import tracker.core.crawler as crawler
 import tracker.core.logger as logger
 
@@ -20,7 +20,7 @@ links = set()
 files = set()
 full_links = set()
 
-@app_socket.task(bind=True, ignore_result=False)
+@crawl_worker_app.task(bind=True, ignore_result=False)
 def link_crawler(self, start_url, link_regex, logfile, user_agent, max_depth, robots_url=None, proxy=None, delay=3):
     """ Crawl from the given start URL following links matched by link_regex. In the current
         implementation, we do not actually scrapy any information.

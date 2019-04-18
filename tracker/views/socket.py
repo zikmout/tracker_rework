@@ -1,7 +1,7 @@
 import tornado
 import time
 from tornado.websocket import WebSocketHandler
-from tracker.workers.live_view_worker import live_view
+from tracker.workers.live.live_view_worker import live_view
 from tracker.workers.crawl_worker import link_crawler
 from tracker.utils import get_celery_task_state
 

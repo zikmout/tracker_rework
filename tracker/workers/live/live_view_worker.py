@@ -4,8 +4,8 @@ import random
 import celery
 import urllib
 import ssl
-from celery import Celery
-from tracker.celery import app_socket
+from celery import Celery#, Task
+from tracker.celery import live_view_worker_app
 #from celery.contrib.abortable import AbortableTask
 import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
@@ -17,11 +17,12 @@ import pdftotext
 import gc
 import fastText
 
-global su_model
-
-import tracker.ml_toolbox as mltx
-
-su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
+# Hack to load only necessary modules (pb with ml model)
+# TODO: Replace raw path with os.environ ($APP_DIR)
+# TODO: Look at __init__.py to load it more properly
+if '.egg' in __file__ and  'workers/live' in os.getcwd():
+    import tracker.ml_toolbox as mltx
+    su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
 
 def clean_content(input_list, min_sentence_len=5):
     print('-> cleaning HTML content ....')
@@ -211,9 +212,9 @@ def get_full_links(status, base_url):
                         status[_][idx] = x
                 idx += 1
     print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
-    return status
+    return status 
 
-@app_socket.task(bind=True, ignore_result=False, soft_time_limit=900)
+@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=900)
 def live_view(self, links, base_path, diff_path, url):
     """ Try to download website parts that have changed """
     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]

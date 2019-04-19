@@ -1,157 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    </head>
-    {% extends '../../layout.html' %}
-    {% block content %}
-    <div class="starter-template-fluid">
-          <center><h3>Project {{ handler.session['current_project'] }} : Live alerts on content change</h3></center>
+{% extends '../../layout.html' %}
+{% block content %}
+<div class="starter-template-fluid">
+      <center><h3>Project {{ handler.session['current_project'] }} : Live alerts on content change</h3></center>
 
-          <br>
-            <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-horizontal">
-            <div class="form-inline">
-              <div class="form-group mb-2">
-                <input type="email" class="form-control" placeholder="Email" name="email">
-                <input type="hidden", name="fromPage" value="live_view">
-              </div>
-              <div class="col">
-                <button type="submit" class="btn btn-primary mb-2">Send report</button></input>
-              </div>
-            </div>
-            </form>
+      <br>
+        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-horizontal">
+        <div class="form-inline">
+          <div class="form-group mb-2">
+            <input type="email" class="form-control" placeholder="Email" name="email">
+            <input type="hidden", name="fromPage" value="live_view">
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-primary mb-2">Send report</button></input>
+          </div>
+        </div>
+        </form>
 
-            <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
-              <div class="form-inline">
-                  <input type="hidden", name="fromPage" value="live_view">
-                  <button type="submit" class="btn btn-primary">Download updated pages</button></input>
-              </div>
-            </form>
-          {% if 'live_view' in handler.session['tasks'] %}
-            {% for tasks in handler.session['tasks']['live_view']  %}
-              <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center>
-              <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center>
-              <div id="changedContent{{ escape(str(tasks['id'])) }}"></div>
-            {% end %}
-          {% end %}
-    </div>
-    <script>
-    var ws = new WebSocket("ws://localhost:5567/websocket");
-    function timeout() {
-        setTimeout(function () {
-            ws.onopen()
-            timeout();
-        }, 3000);
-    }
-
-    function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms));
-    }
-
-    function getRandomArbitrary(min, max) {
-      return Math.random() * (max - min) + min;
-    }
-
-    ws.onopen = function() {
+        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
+          <div class="form-inline">
+              <input type="hidden", name="fromPage" value="live_view">
+              <button type="submit" class="btn btn-primary">Download updated pages</button></input>
+          </div>
+        </form>
       {% if 'live_view' in handler.session['tasks'] %}
-        {% for tasks in handler.session['tasks']['live_view'] %}
-            //sleep(getRandomArbitrary(500, 2000));
-            ws.send('{{ escape(str(tasks['id'])) }}');
+        {% for tasks in handler.session['tasks']['live_view']  %}
+          <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center>
+          <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center>
+          <div id="changedContent{{ escape(str(tasks['id'])) }}"></div>
         {% end %}
       {% end %}
-    };
+</div>
+<script>
+var ws = new WebSocket("ws://localhost:5567/websocket");
+function timeout() {
+    setTimeout(function () {
+        ws.onopen()
+        timeout();
+    }, 3000);
+}
 
-    function updateTitleState (data) {
-      // document.getElementById('currentState' + data.task_id).innerHTML = "<mark>" + data.state + "</mark>";
-      if (data.state != 'SUCCESS') {
-        //document.getElementById('currentCheck' + data.task_id).innerHTML = data.status.url;
-      }
-      else {
-        //document.getElementById('currentCheck' + data.task_id).innerHTML = "<font color='red'>Differences found : " + data.result + "</font>";
-      }
-    }
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-    function formatDiff(title, diff, nearest_link, all_links, type) {
-      var i;
-      var diffs = '';
-      for (i = 0; i < diff.length; i++) {
-          diffs += diff[i] + "<br>";
-      }
-      var firstPart = 
-      "<div class='card border-" + type + " mb-3'>\
-                  <div class='card-header bg-transparent border-" + type + " text-" + type + "'><b>" + title + "</b></div>\
-                  <div class='card-body text-" + type + "'>\
-                    <p class='card-text'>" + diffs + "</p></div>\
-                  <div class='card-footer bg-transparent border-" + type + "'>";
-      var lastPart = 
-      "</div>\
-      </div>";
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min;
+}
 
-      var middlePart = '';
-      if (all_links.length > 10) {
-        middlePart = '-> too many links'
-      }
-      else {
-        for (i = 0; i < all_links.length; i++) {
-          middlePart += "<a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + all_links[i] + "</a><br>";
-        }
-      }
-      for (i = 0; i < nearest_link.length; i++) {
-        if (middlePart.includes(nearest_link[i]) == false) {
-          middlePart = "<a href='" + nearest_link[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + nearest_link[i] + "</a><br>" + middlePart;
-        }
-      }
-      
-      var fullDiff = firstPart + middlePart + lastPart;
-      console.log('full diff' + fullDiff)
-      return fullDiff;
-    }
-
-    ws.onmessage = function (evt) {
-       if (evt != null) {
-           var data = JSON.parse(evt.data);
-           updateTitleState(data);
-           console.log('data.status = ' + data.state)
-           if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
-              if (!document.getElementById(data.status.div)) {
-                var title = document.createElement("H5");
-                title.innerHTML = data.status.div;
-                document.getElementById('changedContent' + data.task_id).append(title);
-                var title = document.createElement("DIV");
-                title.setAttribute("id", data.status.div);
-                document.getElementById('changedContent' + data.task_id).appendChild(title);
-                document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforebegin', '<br><hr>');
-                document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforeend', '<hr>');
-              }
-              if (data.state == 'SUCCESS' && document.getElementById(data.status.div) && !document.getElementById(data.current.toString() + data.task_id)) {
-
-                document.getElementById(data.status.div).insertAdjacentHTML('beforeend', "<h6><a href=" + data.status.url + " target='_blank'/>" + data.status.url + "</a></h6>");
-                var ulTitle = document.createElement("div");
-                ulTitle.setAttribute("id", data.current.toString() + data.task_id);
-                document.getElementById(data.status.div).append(ulTitle);
-
-                var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.all_links_pos, 'success');
-                var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.all_links_neg, 'danger');
-
-                if (data.status.diff_pos.length != 0) {
-                  document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_pos);
-                }
-                if (data.status.diff_neg.length != 0) {
-                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_neg);                
-                }
-                // document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li><b><font color='green'>" + data.status.diff_pos + "</b><br> nearest link = " + data.status.nearest_link_pos + " <br>all = " + data.status.all_links_pos + "</font></li>");
-                // document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li><b><font color='red'>" + data.status.diff_neg + "</b><br> nearest link = " + data.status.nearest_link_neg + " <br>links diff = " + data.status.all_links_neg + "<br>" + "</font></li>");
-              }
-           }
-           else {
-            console.log(data);
-            updateTitleState(data);
-           }
-        }
-     else {
-      console.log('[ERROR] Nothing to consume from websocket.');
-     }
-    };
-    timeout()
-    </script>
+ws.onopen = function() {
+  {% if 'live_view' in handler.session['tasks'] %}
+    {% for tasks in handler.session['tasks']['live_view'] %}
+        //sleep(getRandomArbitrary(500, 2000));
+        ws.send('{{ escape(str(tasks['id'])) }}');
     {% end %}
-</html>
+  {% end %}
+};
+
+function updateTitleState (data) {
+  // document.getElementById('currentState' + data.task_id).innerHTML = "<mark>" + data.state + "</mark>";
+  if (data.state != 'SUCCESS') {
+    //document.getElementById('currentCheck' + data.task_id).innerHTML = data.status.url;
+  }
+  else {
+    //document.getElementById('currentCheck' + data.task_id).innerHTML = "<font color='red'>Differences found : " + data.result + "</font>";
+  }
+}
+
+function formatDiff(title, diff, nearest_link, all_links, type) {
+  var i;
+  var diffs = '';
+  for (i = 0; i < diff.length; i++) {
+      diffs += diff[i] + "<br>";
+  }
+  var firstPart = 
+  "<div class='card border-" + type + " mb-3'>\
+              <div class='card-header bg-transparent border-" + type + " text-" + type + "'><b>" + title + "</b></div>\
+              <div class='card-body text-" + type + "'>\
+                <p class='card-text'>" + diffs + "</p></div>\
+              <div class='card-footer bg-transparent border-" + type + "'>";
+  var lastPart = 
+  "</div>\
+  </div>";
+
+  var middlePart = '';
+  if (all_links.length > 10) {
+    middlePart = '-> too many links'
+  }
+  else {
+    for (i = 0; i < all_links.length; i++) {
+      middlePart += "<a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + all_links[i] + "</a><br>";
+    }
+  }
+  for (i = 0; i < nearest_link.length; i++) {
+    if (middlePart.includes(nearest_link[i]) == false) {
+      middlePart = "<a href='" + nearest_link[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + nearest_link[i] + "</a><br>" + middlePart;
+    }
+  }
+  
+  var fullDiff = firstPart + middlePart + lastPart;
+  console.log('full diff' + fullDiff)
+  return fullDiff;
+}
+
+ws.onmessage = function (evt) {
+   if (evt != null) {
+       var data = JSON.parse(evt.data);
+       updateTitleState(data);
+       console.log('data.status = ' + data.state)
+       if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
+          if (!document.getElementById(data.status.div)) {
+            var title = document.createElement("H5");
+            title.innerHTML = data.status.div;
+            document.getElementById('changedContent' + data.task_id).append(title);
+            var title = document.createElement("DIV");
+            title.setAttribute("id", data.status.div);
+            document.getElementById('changedContent' + data.task_id).appendChild(title);
+            document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforebegin', '<br><hr>');
+            document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforeend', '<hr>');
+          }
+          if (data.state == 'SUCCESS' && document.getElementById(data.status.div) && !document.getElementById(data.current.toString() + data.task_id)) {
+
+            document.getElementById(data.status.div).insertAdjacentHTML('beforeend', "<h6><a href=" + data.status.url + " target='_blank'/>" + data.status.url + "</a></h6>");
+            var ulTitle = document.createElement("div");
+            ulTitle.setAttribute("id", data.current.toString() + data.task_id);
+            document.getElementById(data.status.div).append(ulTitle);
+
+            var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.all_links_pos, 'success');
+            var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.all_links_neg, 'danger');
+
+            if (data.status.diff_pos.length != 0) {
+              document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_pos);
+            }
+            if (data.status.diff_neg.length != 0) {
+            document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_neg);                
+            }
+            // document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li><b><font color='green'>" + data.status.diff_pos + "</b><br> nearest link = " + data.status.nearest_link_pos + " <br>all = " + data.status.all_links_pos + "</font></li>");
+            // document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li><b><font color='red'>" + data.status.diff_neg + "</b><br> nearest link = " + data.status.nearest_link_neg + " <br>links diff = " + data.status.all_links_neg + "<br>" + "</font></li>");
+          }
+       }
+       else {
+        console.log(data);
+        updateTitleState(data);
+       }
+    }
+ else {
+  console.log('[ERROR] Nothing to consume from websocket.');
+ }
+};
+timeout()
+</script>
+{% end %}

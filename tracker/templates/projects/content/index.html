@@ -1,166 +1,199 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    </head>
-    {% extends '../../layout.html' %}
-    {% block content %}
+{% extends '../../layout.html' %}
+{% block content %}
 
-    <link href="{{ static_url('hummingbird-treeview.css') }}" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="{{ static_url('hummingbird-treeview.js') }}"></script>
-    <link href="{{ static_url('font-awesome-4.7.0/css/font-awesome.css') }}" rel="stylesheet">
+<link href="{{ static_url('hummingbird-treeview.css') }}" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="{{ static_url('hummingbird-treeview.js') }}"></script>
+<link href="{{ static_url('font-awesome-4.7.0/css/font-awesome.css') }}" rel="stylesheet">
 
-    <script>
+<script>
 
-    $(document).ready(function() {
+$(document).ready(function() {
 
-        $.fn.hummingbird.defaults.checkDoubles= true;
-        $.fn.hummingbird.defaults.collapseAll= true;
-        //initializing
+    $.fn.hummingbird.defaults.checkDoubles= true;
+    $.fn.hummingbird.defaults.collapseAll= true;
+    //initializing
+    {% for uid in handler.session['units'] %}
+    $("#treeview{{ escape(uid) }}").hummingbird();
+    {% end %}
+
+ });    
+$(document).ready(function(){
+    $("#get_checked").click(function () {
+        if (document.getElementById('contentname').value == '') {
+          alert('Please type in a name !')
+          return
+        }
+        var List = {"id" : [], "dataid" : [], "text" : []};
         {% for uid in handler.session['units'] %}
-        $("#treeview{{ escape(uid) }}").hummingbird();
+        $("#treeview{{ escape(uid) }}").hummingbird("getChecked",{list:List,onlyEndNodes:true});
         {% end %}
-
-     });    
-    $(document).ready(function(){
-        $("#get_checked").click(function () {
-            if (document.getElementById('contentname').value == '') {
-              alert('Please type in a name !')
-              return
+        if (List['dataid'] == '') {
+          alert('Please select links to monitor !')
+          return
+        }
+        console.log(JSON.stringify(List['dataid']))
+        console.log('Id of project : ' + document.getElementById('contentname').value)
+        $.ajax({ 
+            url: "/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content",
+            data: JSON.stringify({
+                'name': document.getElementById('contentname').value,
+                'links': (List['dataid'])
+            }),
+            type: 'POST',
+            success: function() {
+                window.location.replace("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts");
+            },
+            error: function() {
+                console.log('Error occured when making POST request to api.')
             }
-            var List = {"id" : [], "dataid" : [], "text" : []};
-            {% for uid in handler.session['units'] %}
-            $("#treeview{{ escape(uid) }}").hummingbird("getChecked",{list:List,onlyEndNodes:true});
-            {% end %}
-            if (List['dataid'] == '') {
-              alert('Please select links to monitor !')
-              return
-            }
-            console.log(JSON.stringify(List['dataid']))
-            console.log('Id of project : ' + document.getElementById('contentname').value)
-            $.ajax({ 
-                url: "/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content",
-                data: JSON.stringify({
-                    'name': document.getElementById('contentname').value,
-                    'links': (List['dataid'])
-                }),
-                type: 'POST',
-                success: function() {
-                    window.location.replace("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts");
-                },
-                error: function() {
-                    console.log('Error occured when making POST request to api.')
-                }
-            });
         });
     });
-    </script>
+});
+</script>
 
-    <div class="starter-template-fluid">
-          <center><h3>Project {{ handler.session['current_project'] }} - Content labelizer</h3></center>
-          <center><p>Pinpoint here content you are interested in and give it a name to later launch alerts on it and monitor what has changed.</p></center>
+<div class="starter-template-fluid">
+
+      <center><h3>Project {{ handler.session['current_project'] }} - Content labelizer</h3></center>
+      <center><p>Pinpoint here content you are interested in and give it a name to later launch alerts on it and monitor what has changed.</p></center>
+    
+      <center>
+        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
+          Create content from file
+        </button>&nbsp;&nbsp;
+        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#treelookup" aria-expanded="false" aria-controls="treelookup">
+          Create content from tree
+        </button>
+      </center>
+      <p />
+
+      <div class="collapse" id="createalert">
         
-          <center>
-            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
-              Create content from file
-            </button>&nbsp;&nbsp;
-            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#treelookup" aria-expanded="false" aria-controls="treelookup">
-              Create content from tree
-            </button>
-          </center>
-          <p>
-
-          <div class="collapse" id="createalert">
-            <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content-from-file" method="post">
+        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content-from-file" method="post">
+        
             <div class="card card-body">
-              <div class="form-row">
-                  <div class="form-group col-md-4">
-                    <label for="inputName">Name</label>
-                    <input type="text" class="form-control" id="inputName" name="inputName">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputName">Column link name</label>
-                    <input type="text" class="form-control" id="columnLinkName" name="columnLinkName">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputName">Column keyword name</label>
-                    <input type="text" class="form-control" id="columnKeyWordName" name="columnKeyWordName">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputName">File path (.xls)</label>
-                    <input type="text" class="form-control" id="columnKeyWordName" name="fileNamePath">
-                  </div>
-              </div>
-              <br>
-              <div class="form-group">
-                <div class="form-check">
-                  <label class="form-check-label" for="addStrangerChecked">
-                    <input class="form-check-input" type="checkbox" id="addStrangerChecked" name="addStrangerChecked">
-                    put link in crawler logfile and download page if not found
-                  </label>
+                
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" name="inputName">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputName">Column link name</label>
+                        <input type="text" class="form-control" id="columnLinkName" name="columnLinkName">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputName">Column keyword name</label>
+                        <input type="text" class="form-control" id="columnKeyWordName" name="columnKeyWordName">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputName">File path (.xls)</label>
+                        <input type="text" class="form-control" id="columnKeyWordName" name="fileNamePath">
+                    </div>
                 </div>
-              </div>
-              <button type="submit" class="btn btn-outline-dark">Create</button>
-            </div>
-          </form>
-          </div>
+                <br />
 
-          <div class="collapse" id="treelookup">
-            <div class="card card-body">
                 <div class="form-group">
+                    <div class="form-check">
+                      <label class="form-check-label" for="addStrangerChecked">
+                        <input class="form-check-input" type="checkbox" id="addStrangerChecked" name="addStrangerChecked">
+                      put link in crawler logfile and download page if not found
+                      </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-outline-dark">Create</button>
+
+            </div>
+
+        </form>
+
+      </div>
+
+
+      <div class="collapse" id="treelookup">
+
+          <!-- begin card-body -->
+          <div class="card card-body">
+
+              <div class="form-group">
+
                   <label for="contentname">Label Name</label>
                   <input type="email" class="form-control" id="contentname" aria-describedby="emailHelp" placeholder="Enter name for content">
                   <small id="emailHelp" class="form-text text-muted">Use a label that easily identifies the content you selected.</small>
-                </div>
-                <!--
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="detectnewfile">
-                  <label class="form-check-label">Check if new file detected</label>
-                </div>
-                //-->
-                <input type="button" value="Classify Content from tree" id="get_checked" class="btn btn-outline-dark">
-                <br>
-                <br>
-                {% if formated_units == {} %}
-                  <center><p><font color="red">There are no unit crawled yet ! Or tree section has been desactivated ... :/</font></p></center>
-                {% else %}
-                  <div id="accordion">
-                  {% for uid, details in handler.session['units'].items() %}
-                    {% if details['is_base_crawled'] == True %}
-                        <div class="card">
-                          {% for k, v in details.items() %}
-                                {% if k == 'url' %}
-                                <!-- title //-->
-                                <div class="card-header" id="heading{{ escape(uid) }}">
-                                  <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ escape(uid) }}" aria-expanded="false" aria-controls="collapse{{ escape(uid) }}"><a class="text-secondary">
-                                      {{ escape(str(v)) }}</a>
-                                    </button>
-                                  </h5>
-                                </div>
-                                <!-- corpus //-->
-                                <div id="collapse{{ escape(uid) }}" class="collapse" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
-                                  <div class="card-body" id="treeview{{ escape(uid) }}">
-
-                                    <div class="hummingbird-treeview-converter" data-height="600px" data-scroll="true">
-                                          {% for _ in formated_units[escape(str(v))] %}
-                                              <li id="item" data-id="{{ escape(str(v)) }}{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
-                                          {% end %}
-                                    </div>
-
-                                  </div>
-                                </div>
-                                {% end %}
-                          {% end %}
-                        </div>
-                      {% end %}
-                  {% end %}
-                  </div>
-                {% end %}
 
               </div>
+              <!--
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="detectnewfile">
+                <label class="form-check-label">Check if new file detected</label>
+              </div>
+              //-->
+              <input type="button" value="Classify Content from tree" id="get_checked" class="btn btn-outline-dark">
+              <br>
+              <br>
+
+              {% if formated_units == {} %}
+
+              <center><p><font color="red">There are no unit crawled yet ! Or tree section has been desactivated ... :/</font></p></center>
+
+              {% else %}
+
+              <!-- begin accordion -->
+              <div id="accordion">
+
+                  {% for uid, details in handler.session['units'].items() %}
+
+                      {% if details['is_base_crawled'] == True %}
+
+                          <!-- begin card -->
+                          <div class="card">
+
+                            {% for k, v in details.items() %}
+
+                                {% if k == 'url' %}
+                                    <!-- title //-->
+                                    <div class="card-header" id="heading{{ escape(uid) }}">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ escape(uid) }}" aria-expanded="false" aria-controls="collapse{{ escape(uid) }}"><a class="text-secondary">
+                                              {{ escape(str(v)) }}</a>
+                                            </button>
+                                        </h5>
+                                    </div>
+                                    <!-- corpus //-->
+                                    <div id="collapse{{ escape(uid) }}" class="collapse" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
+                                        <div class="card-body" id="treeview{{ escape(uid) }}">
+
+                                            <div class="hummingbird-treeview-converter" data-height="600px" data-scroll="true">
+                                                {% for _ in formated_units[escape(str(v))] %}
+                                                    <li id="item" data-id="{{ escape(str(v)) }}{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
+                                                {% end %}
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                {% end %}
+
+                            {% end %}
+
+                          </div>
+                          <!-- end card -->
+
+                      {% end %}
+
+                  {% end %}
+
+              </div>
+              <!-- end accordion -->
               {% end %}
 
             </div>
+
+
           </div>
-</html>
+          <!-- end card-body -->
+
+      </div>
+</div>
+{% end %}

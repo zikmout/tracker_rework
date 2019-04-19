@@ -1,132 +1,127 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    </head>
-    {% extends '../layout.html' %}
-    {% block content %}
-    <script>
-            function update_progress(status_url, div_bar, task_id, uid) {
-                // send GET request to status URL
-                $.getJSON(status_url, function(data) {
-                    // update UI
-                    percent = parseInt(data['current'] * 100 / data['total']);
-                    // writing percentages
-                    $(div_bar.childNodes[0]).text(percent + '%');
-                    // making loading bar moving
-                    document.getElementById("pct" + task_id).style.width = percent + '%';
-                    //document.getElementById("state" + task_id).innerHTML = data['state'];
-                    document.getElementById("status" + uid).innerHTML = data['state'] + " (" + data['current'] + "/" + data['total'] + ")";
-                    document.getElementById("current" + task_id).innerHTML = data['status'];
-                    //document.getElementById("total" + task_id).innerHTML = data['total'];
-                    if (data['state'] != 'PENDING' && data['state'] != 'PROGRESS') {
-                        if ('result' in data) {
-                            // show result
-                            //document.getElementById("status" + task_id).innerHTML = data['result'];
-                            document.getElementById("status" + uid).innerHTML = 'TERMINATED';
-                        }
-                        else {
-                            // something unexpected happened
-                            //document.getElementById("status" + task_id).innerHTML = data['result'];
-                            document.getElementById("status" + uid).innerHTML = 'ERROR';
-                        }
-                    }
-                    else {
-                        // rerun in 1 seconds
-                        setTimeout(function() {
-                            update_progress(status_url, div_bar, task_id, uid);
-                        }, 1000);
-                    }
-                });
+{% extends '../layout.html' %}
+{% block content %}
+<script>
+function update_progress(status_url, div_bar, task_id, uid) {
+    // send GET request to status URL
+    $.getJSON(status_url, function(data) {
+        // update UI
+        percent = parseInt(data['current'] * 100 / data['total']);
+        // writing percentages
+        $(div_bar.childNodes[0]).text(percent + '%');
+        // making loading bar moving
+        document.getElementById("pct" + task_id).style.width = percent + '%';
+        //document.getElementById("state" + task_id).innerHTML = data['state'];
+        document.getElementById("status" + uid).innerHTML = data['state'] + " (" + data['current'] + "/" + data['total'] + ")";
+        document.getElementById("current" + task_id).innerHTML = data['status'];
+        //document.getElementById("total" + task_id).innerHTML = data['total'];
+        if (data['state'] != 'PENDING' && data['state'] != 'PROGRESS') {
+            if ('result' in data) {
+                // show result
+                //document.getElementById("status" + task_id).innerHTML = data['result'];
+                document.getElementById("status" + uid).innerHTML = 'TERMINATED';
             }
-            function start_download_task(uid) {
-                // send ajax POST request to start background job
-                $.ajax({
-                    type: 'POST',
-                    url: '/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/unit/' + uid,
-                    success: function(data, status, request) {
-                        // create task
-                        status_url = request.getResponseHeader('Location');
-                        // if download has not been already launched
-                        if (status_url != 0) {
-                            var regex = /[^/]+$/g
-                            // get task id
-                            task_id = regex.exec(status_url)
-                            // add task status elements
-                            /* div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>'); */
-                            div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div class="font-weight-lighter" id="current' + task_id + '"></div><div id="status' + task_id + '"></div>');
-
-                            $('#progress' + uid).append(div_bar);
-
-                            update_progress(status_url, div_bar[0], task_id, uid);
-                        }
-                    },
-                    error: function() {
-                        alert('Unexpected error');
-                    }
-                });
+            else {
+                // something unexpected happened
+                //document.getElementById("status" + task_id).innerHTML = data['result'];
+                document.getElementById("status" + uid).innerHTML = 'ERROR';
             }
-            function load_download_task(status_url, uid) {
-                // send ajax POST request to start background job
-                $.ajax({
-                    type: 'GET',
-                    url: status_url,
-                    success: function(data, status, request) {
-                        var regex = /[^/]+$/g
-                        // get task id
-                        task_id = regex.exec(status_url)
-                        // add task status elements
-                        div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><div class="font-weight-lighter" id="current' + task_id + '"></div><div id="status' + task_id + '"></div>');
+        }
+        else {
+            // rerun in 1 seconds
+            setTimeout(function() {
+                update_progress(status_url, div_bar, task_id, uid);
+            }, 1000);
+        }
+    });
+}
+function start_download_task(uid) {
+    // send ajax POST request to start background job
+    $.ajax({
+        type: 'POST',
+        url: '/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/unit/' + uid,
+        success: function(data, status, request) {
+            // create task
+            status_url = request.getResponseHeader('Location');
+            // if download has not been already launched
+            if (status_url != 0) {
+                var regex = /[^/]+$/g
+                // get task id
+                task_id = regex.exec(status_url)
+                // add task status elements
+                /* div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div id="state' + task_id + '"></div><div id="current' + task_id + '"></div><div id="total' + task_id + '">...</div><div id="status' + task_id + '"></div><hr>'); */
+                div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100" name="' + task_id + '"></div></div><div class="font-weight-lighter" id="current' + task_id + '"></div><div id="status' + task_id + '"></div>');
 
-                        $('#progress' + uid).append(div_bar);
-                        update_progress(status_url, div_bar[0], task_id, uid);
-                    },
-                    error: function() {
-                        alert('Unexpected error');
-                    }
-                });
+                $('#progress' + uid).append(div_bar);
+
+                update_progress(status_url, div_bar[0], task_id, uid);
             }
-        </script>
-    <div class="starter-template-fluid">
-          <script src="{{ static_url('jquery.min.js') }}"></script>
-          <center><h3>Project {{ handler.session['current_project'] }} - Download</h3></center>
-          <center><p>User can here download websites in order to later determine what content has changed.</p><br></center>
-            <table class="table table-responsive-sm table-striped">
-              <thead>
-                  <tr>
-                    <th>Base URL</th>
-                    <th>Pages</th>
-                    <th>Downloaded</th>
-                    <th>Crawling date</th>
-                    <th>Status</th>
-                    <th>Action</th>
-                    <th></th>
-                  </tr>
-              </thead>
-              <tbody>
-                  {% for uid, details in handler.session['units'].items() %}
-                  <tr>
-                  	{% for k, v in details.items() %}
-                      {% if k not in ['pages', 'pdfs', 'excels', 'errors', 'duration', 'is_base_crawled'] %}
-  	                     <th>{{ escape(str(v)) }}</th>
-                      {% end %}
+        },
+        error: function() {
+            alert('Unexpected error');
+        }
+    });
+}
+function load_download_task(status_url, uid) {
+    // send ajax POST request to start background job
+    $.ajax({
+        type: 'GET',
+        url: status_url,
+        success: function(data, status, request) {
+            var regex = /[^/]+$/g
+            // get task id
+            task_id = regex.exec(status_url)
+            // add task status elements
+            div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><div class="font-weight-lighter" id="current' + task_id + '"></div><div id="status' + task_id + '"></div>');
+
+            $('#progress' + uid).append(div_bar);
+            update_progress(status_url, div_bar[0], task_id, uid);
+        },
+        error: function() {
+            alert('Unexpected error');
+        }
+    });
+}
+</script>
+<div class="starter-template-fluid">
+      <script src="{{ static_url('jquery.min.js') }}"></script>
+      <center><h3>Project {{ handler.session['current_project'] }} - Download</h3></center>
+      <center><p>User can here download websites in order to later determine what content has changed.</p><br></center>
+        <table class="table table-responsive-sm table-striped">
+          <thead>
+              <tr>
+                <th>Base URL</th>
+                <th>Pages</th>
+                <th>Downloaded</th>
+                <th>Crawling date</th>
+                <th>Status</th>
+                <th>Action</th>
+                <th></th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for uid, details in handler.session['units'].items() %}
+              <tr>
+              	{% for k, v in details.items() %}
+                  {% if k not in ['pages', 'pdfs', 'excels', 'errors', 'duration', 'is_base_crawled'] %}
+	                     <th>{{ escape(str(v)) }}</th>
+                  {% end %}
+                {% end %}
+                <th id="status{{ escape(uid) }}">-</th>
+                <th><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" onclick="start_download_task({{ escape(uid) }})">Download</button></input></form>
+                </th>
+                <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/unit/{{ escape(uid) }}/stop" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Stop</button></input></form>
+                </th>
+                </tr>
+                <td colspan="7">
+                <div id="progress{{ escape(uid) }}"></div>
+                  {% if 'download' in handler.session['tasks'] %}
+                    {% if uid in [_['uid'] for _ in handler.session['tasks']['download']] %}
+                      <script>load_download_task("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/{{ [_ for _ in handler.session['tasks']['download'] if _['uid'] == uid][0]['id'] }}", "{{ escape(uid) }}")</script>
                     {% end %}
-                    <th id="status{{ escape(uid) }}">-</th>
-                    <th><form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" onclick="start_download_task({{ escape(uid) }})">Download</button></input></form>
-                    </th>
-                    <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/unit/{{ escape(uid) }}/stop" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark">Stop</button></input></form>
-                    </th>
-                    </tr>
-                    <td colspan="7">
-                    <div id="progress{{ escape(uid) }}"></div>
-                      {% if 'download' in handler.session['tasks'] %}
-                        {% if uid in [_['uid'] for _ in handler.session['tasks']['download']] %}
-                          <script>load_download_task("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download/{{ [_ for _ in handler.session['tasks']['download'] if _['uid'] == uid][0]['id'] }}", "{{ escape(uid) }}")</script>
-                        {% end %}
-                      {% end %}
-                    </td>
-	                {% end %}
-              </tbody>   
-            </table>         
-    </div>
-    {% end %}
-</html>
+                  {% end %}
+                </td>
+                {% end %}
+          </tbody>   
+        </table>         
+</div>
+{% end %}

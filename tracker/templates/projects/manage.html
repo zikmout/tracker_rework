@@ -1,41 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    </head>
-    {% extends '../layout.html' %}
-    {% block content %}
-    <div class="starter-template-fluid">
-            <h3>List of projects recorded for {{ handler.session['username'] }}</h3>
-            <p>You can here manage the monitoring projects you created. Load any project you want to access further options.</p>
-            <table class="table table-responsive-sm table-striped">
-                  <tr>
-                    <th>Project Name</th>
-                    <th>Data Path</th>
-                    <th>Config Path</th>
-                    <th>Creation Date</th>
-                    <th>From Excel</th>
-                    <th>Action</th>
-                    <th></th>
-                  </tr>
-                  {% for project in projects %}
-                  <tr>
-                  <th>{{ escape(project['name']) }}</th>
-                  <th>{{ escape(project['data_path']) }}</th>
-                  <th>{{ escape(project['config_file']) }}</th>
-                  <th>{{ escape(project['creation_date']) }}</th>
-                  <th>
-                      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="post" class="form-horizontal">
-                      <div class="form-group">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="gridCheck" name="fromExcel" style="transform: scale(1.5);">
-                        </div>
-                      </div>
-                  </th>
-                  <th><button type="submit" class="btn btn-outline-dark" value="">Load</button></form></th>
-                  <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete</button></form></th>
-                  </tr>
-                  {% end %}
-            </table>
-    </div>
-    {% end %}
-</html>
+{% extends '../layout.html' %}
+{% block content %}
+<div class="starter-template-fluid">
+        <h3>List of projects recorded for {{ handler.session['username'] }}</h3>
+        <p>You can here manage the monitoring projects you created. Load any project you want to access further options.</p>
+        <table class="table table-responsive-sm table-striped">
+              <tr>
+                <th>Project Name</th>
+                <th>Data Path</th>
+                <th>Config Path</th>
+                <th>Creation Date</th>
+                <th>From Excel</th>
+                <th>Action</th>
+                <th></th>
+              </tr>
+              {% for project in projects %}
+              <tr>
+              <th>{{ escape(project['name']) }}</th>
+              <th>{{ escape(project['data_path']) }}</th>
+              <th>{{ escape(project['config_file']) }}</th>
+              <th>{{ escape(project['creation_date']) }}</th>
+              <th>
+                  <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="post" class="form-horizontal">
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" name="fromExcel" style="transform: scale(1.5);">
+                    </div>
+                  </div>
+              </th>
+              <th><button type="submit" class="btn btn-outline-dark" value="">Load</button></form></th>
+              <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete</button></form></th>
+              </tr>
+              {% end %}
+        </table>
+</div>
+{% end %}

@@ -1,36 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    </head>
-    {% extends '../layout.html' %}
-    {% block content %}
-    <div class="starter-template-fluid">
-          <center><h3>Project {{ project['name'] }}</h3></center>
-          <center><p>Below are shown all the websites referenced in the project<br>A new menu appeard in the Navbar allowing user to download, select content, and launch live alerts.</p></center>
-            <table class="table table-responsive-sm table-striped">
-                  <tr>
-                    <th>Base URL</th>
-                    <th>Total</th>
-                    <th>Pages</th>
-                    <th>Pdfs</th>
-                    <th>Excels</th>
-                    <th>Errors</th>
-                    <th>Downloaded files</th>
-                    <th>Crawling date</th>
-                    <th>Duration</th>
-                    <th>Action</th>
-                  </tr>
-                  {% for uid, details in handler.session['units'].items() %}
-                  <tr>
-                  	{% for k, v in details.items() %}
-                      {% if k != 'is_base_crawled' %}
-	                     <th>{{ escape(str(v)) }}</th>
-                      {% end %}
-	                  {% end %}
-                  <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit/{{ escape(str(uid)) }}" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">View</button></input></form></th>
-                  </tr>
+{% extends '../layout.html' %}
+{% block content %}
+<div class="starter-template-fluid">
+      <center><h3>Project {{ project['name'] }}</h3></center>
+      <center><p>Below are shown all the websites referenced in the project<br>A new menu appeard in the Navbar allowing user to download, select content, and launch live alerts.</p></center>
+        <table class="table table-responsive-sm table-striped">
+              <tr>
+                <th>Base URL</th>
+                <th>Total</th>
+                <th>Pages</th>
+                <th>Pdfs</th>
+                <th>Excels</th>
+                <th>Errors</th>
+                <th>Downloaded files</th>
+                <th>Crawling date</th>
+                <th>Duration</th>
+                <th>Action</th>
+              </tr>
+              {% for uid, details in handler.session['units'].items() %}
+              <tr>
+              	{% for k, v in details.items() %}
+                  {% if k != 'is_base_crawled' %}
+                   <th>{{ escape(str(v)) }}</th>
                   {% end %}
-            </table>          
-    </div>
-    {% end %}
-</html>
+                {% end %}
+              <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit/{{ escape(str(uid)) }}" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">View</button></input></form></th>
+              </tr>
+              {% end %}
+        </table>          
+</div>
+{% end %}

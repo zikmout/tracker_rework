@@ -1,134 +1,129 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    </head>
-    {% extends '../../layout.html' %}
-    {% block content %}
-    <div class="starter-template-fluid">
-          <center><h3>Project {{ handler.session['current_project'] }} - Setup and launch alerts on content changes</h3></center>
-          <center><p>Below is a list of alerts you already configured. At the moment, only live alerts are available<br>
-          Click on Create Alert to configure a new alert. Use Content Lookup to remember what the content name refers to.<br>
-          Push Start button in order to launch live alert.</p><br></center>
+{% extends '../../layout.html' %}
+{% block content %}
+<div class="starter-template-fluid">
+      <center><h3>Project {{ handler.session['current_project'] }} - Setup and launch alerts on content changes</h3></center>
+      <center><p>Below is a list of alerts you already configured. At the moment, only live alerts are available<br>
+      Click on Create Alert to configure a new alert. Use Content Lookup to remember what the content name refers to.<br>
+      Push Start button in order to launch live alert.</p><br></center>
 
-          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create" method="post">
-          <p>
-          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
-            Create alert
-          </button>
-          <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
-            Content lookup
-          </button>
-          </p>
-          <div class="collapse" id="createalert">
-            <div class="card card-body">
-              <div class="form-row">
-                  <div class="form-group col-md-4">
-                    <label for="inputName">Name</label>
-                    <input type="text" class="form-control" id="inputName" name="inputName">
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputContent">Content</label>
-                    <select id="inputContent" class="form-control" name="inputContent">
-                      {% for json_content in contents %}
-                      <option>{{ escape(str(json_content['name'])) }}({{ escape(str(len(json_content['links']))) }} links)</option>
-                      {% end %}
-                    </select>
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputType">Type</label>
-                    <select id="inputType" class="form-control" name="inputType">
-                      <option selected>Live</option>
-                      <option>Deffered</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputStartTime" class="form-group col-md-4">Start time</label>
-                      <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="inputStartTime" name="inputStartTime"/>
-                  </div>
-                  <div class="form-group col-md-4">
-                    <label for="inputRepeat">Repeat</label>
-                    <select id="inputRepeat" class="form-control" name="inputRepeat">
-                      <option selected>hour</option>
-                      <option>day</option>
-                      <option>month</option>
-                      <option>year</option>
-                    </select>
-                  </div>
+      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create" method="post">
+      <p>
+      <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
+        Create alert
+      </button>
+      <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
+        Content lookup
+      </button>
+      </p>
+      <div class="collapse" id="createalert">
+        <div class="card card-body">
+          <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" name="inputName">
               </div>
-              <div class="form-group">
-                <div class="form-check">
-                  
-                  <label class="form-check-label" for="gridCheck">
-                    <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
-                    notify new files available
-                  </label>
-                </div>
-              </div>
-              <button type="submit" class="btn btn-outline-dark">Create</button>
-            </div>
-          </div>
-          <div class="collapse" id="contentlookup">
-            <div class="card card-body">
-              {% for content in contents %}
-                <details>
-                <summary>{{ escape(str(content['name'])) }}</summary>
-                {% for link, keywords in content['links'].items() %}
-                  {% if len(keywords) > 1 %}
-                    {{ escape(str(link)) }} : <font color='red'>{{ escape(str(keywords[0])) }} ... {{ escape(str(keywords[-1])) }}</font>
-                  {% else %}
-                    {{ escape(str(link)) }} : <font color='red'>{{ escape(str(keywords[0])) }}</font>
+              <div class="form-group col-md-4">
+                <label for="inputContent">Content</label>
+                <select id="inputContent" class="form-control" name="inputContent">
+                  {% for json_content in contents %}
+                  <option>{{ escape(str(json_content['name'])) }}({{ escape(str(len(json_content['links']))) }} links)</option>
                   {% end %}
-                  </br>
-                {% end %}
-                </details>
-              {% end %}
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputType">Type</label>
+                <select id="inputType" class="form-control" name="inputType">
+                  <option selected>Live</option>
+                  <option>Deffered</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputStartTime" class="form-group col-md-4">Start time</label>
+                  <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="inputStartTime" name="inputStartTime"/>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="inputRepeat">Repeat</label>
+                <select id="inputRepeat" class="form-control" name="inputRepeat">
+                  <option selected>hour</option>
+                  <option>day</option>
+                  <option>month</option>
+                  <option>year</option>
+                </select>
+              </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              
+              <label class="form-check-label" for="gridCheck">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
+                notify new files available
+              </label>
             </div>
           </div>
-          </form>
-          <br>
-          <table class="table table-responsive-sm table-striped">
-                  <tr>
-                    <th>Name</th>
-                    <th>Type</th>
-                    <th>Creation Date</th>
-                    <th>Start Time</th>
-                    <th>Repeat</th>
-                    <th>Notify</th>
-                    <th>Content Name</th>
-                    <th>Save in Log</th>
-                    <th>Action</th>
-                  </tr>
-                  <tr>
-                    {% for alert in alerts %}
-                      {% for k, v in alert.items() %}
-                        {% if k != 'id' %}
-                          <th>{{ escape(str(v)) }}</th>
-                        {% end %}
-                      {% end %}
-                      {% if alert['alert_type'] == 'Live' %}
-                        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
-                        <th>
-                        <div class="form-group">
-                          <div class="form-check">
-                              <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
-                          </div>
-                        </div>
-                        </th>
-                        <th><button type="submit" class="btn btn-dark" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
-                        </tr>
-                      {% else %}
-                        <th>
-                        <div class="form-group">
-                          <div class="form-check">
-                              <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
-                          </div>
-                        </div>
-                        </th>
-                        <th><form class="form-horizontal"><a class="btn btn-outline-dark disabled" value="">Start</a></input></form></th>
-                        </tr>
-                      {% end %}
+          <button type="submit" class="btn btn-outline-dark">Create</button>
+        </div>
+      </div>
+      <div class="collapse" id="contentlookup">
+        <div class="card card-body">
+          {% for content in contents %}
+            <details>
+            <summary>{{ escape(str(content['name'])) }}</summary>
+            {% for link, keywords in content['links'].items() %}
+              {% if len(keywords) > 1 %}
+                {{ escape(str(link)) }} : <font color='red'>{{ escape(str(keywords[0])) }} ... {{ escape(str(keywords[-1])) }}</font>
+              {% else %}
+                {{ escape(str(link)) }} : <font color='red'>{{ escape(str(keywords[0])) }}</font>
+              {% end %}
+              </br>
+            {% end %}
+            </details>
+          {% end %}
+        </div>
+      </div>
+      </form>
+      <br>
+      <table class="table table-responsive-sm table-striped">
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Creation Date</th>
+                <th>Start Time</th>
+                <th>Repeat</th>
+                <th>Notify</th>
+                <th>Content Name</th>
+                <th>Save in Log</th>
+                <th>Action</th>
+              </tr>
+              <tr>
+                {% for alert in alerts %}
+                  {% for k, v in alert.items() %}
+                    {% if k != 'id' %}
+                      <th>{{ escape(str(v)) }}</th>
                     {% end %}
-            </table>
-    </div>
-    {% end %}
-</html>
+                  {% end %}
+                  {% if alert['alert_type'] == 'Live' %}
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
+                    <th>
+                    <div class="form-group">
+                      <div class="form-check">
+                          <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
+                      </div>
+                    </div>
+                    </th>
+                    <th><button type="submit" class="btn btn-dark" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
+                    </tr>
+                  {% else %}
+                    <th>
+                    <div class="form-group">
+                      <div class="form-check">
+                          <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
+                      </div>
+                    </div>
+                    </th>
+                    <th><form class="form-horizontal"><a class="btn btn-outline-dark disabled" value="">Start</a></input></form></th>
+                    </tr>
+                  {% end %}
+                {% end %}
+        </table>
+</div>
+{% end %}

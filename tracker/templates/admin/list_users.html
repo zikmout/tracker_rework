@@ -1,31 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-    </head>
-    {% extends '../layout.html' %}
-    {% block content %}
-    <div class="starter-template-fluid">
-          <center><h3>Users registered in the database</h3></center><br>
-            <table class="table table-responsive-sm table-striped">
-                  <tr>
-                    <th>Username</th>
-                    <th>Password</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Registration date</th>
-                    <th>Action</th>
-                  </tr>
-                  {% for user in users_json %}
-                  <tr>
-                  <th>{{ escape(user['username']) }}</th>
-                  <th>{{ escape(user['password'][:10]) }} ... {{ escape(user['password'][-10:]) }}</th>
-                  <th>{{ escape(user['email']) }}</th>
-                  <th>{{ escape(user['role_id']) }}</th>
-                  <th>{{ escape(user['registration_date']) }}</th>
-                  <th><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete User</button></form></th>
-                  </tr>
-                  {% end %}
-            </table>
-    </div>
-    {% end %}
-</html>
+{% extends '../layout.html' %}
+{% block content %}
+<div class="starter-template-fluid">
+
+      <center><h3>Users registered in the database</h3></center><br>
+
+        <table class="table table-responsive-sm table-striped">
+              <tr>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Registration date</th>
+                <th>Action</th>
+              </tr>
+              {% for user in users_json %}
+              <tr>
+              <th>{{ escape(user['username']) }}</th>
+              <th>{{ escape(user['password'][:10]) }} ... {{ escape(user['password'][-10:]) }}</th>
+              <th>{{ escape(user['email']) }}</th>
+              <th>{{ escape(user['role_id']) }}</th>
+              <th>{{ escape(user['registration_date']) }}</th>
+              <th><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete User</button></form></th>
+              </tr>
+              {% end %}
+        </table>
+        
+</div>
+{% end %}

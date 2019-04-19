@@ -1,34 +1,35 @@
 {% extends '../layout.html' %}
 {% block content %}
   <div class="starter-template">
-
+    <br>
+    <center>
     <form action="" method=post class="form-horizontal">
 
-      <h2>Register new account</h2>
-      <div class="control-group">
+      <h2>Register</h2>
+      <div class="form-group">
         <div class="controls">
-          <input type="text" id="username" name="username" class="input-xlarge" placeholder="Enter Username" value="" required>
+          <input type="text" id="username" name="username" class="form-control col-md-2" placeholder="Enter Username" value="" required>
         </div>
       </div>
-      <div class="control-group">
+      <div class="form-group">
         <div class="controls">
-          <input type="password" id="password" name="password" class="input-xlarge" placeholder="Enter Password" value="" required>
-        </div>
-      </div>
-
-      <div class="control-group">
-        <div class="controls">
-          <input type="email" id="email" name="email" class="input-xlarge" placeholder="Enter Email" value="" required>
+          <input type="password" id="password" name="password" class="form-control col-md-2" placeholder="Enter Password" value="" required>
         </div>
       </div>
 
-      <div class="control-group">
+      <div class="form-group">
         <div class="controls">
-          <br /><button type="submit" class="btn btn-outline-dark">Signup</button>
+          <input type="email" id="email" name="email" class="form-control col-md-2" placeholder="Enter Email" value="" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="controls">
+          <button type="submit" class="btn btn-outline-dark">Signup</button>
         </div>
       </div>
       
     </form>
-
+    </center>
   </div>
 {% end %}

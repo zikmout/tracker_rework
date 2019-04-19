@@ -1,28 +1,28 @@
 {% extends '../layout.html' %}
 {% block content %}
     <div class="starter-template">
-
+    <br>
+    <center>
     <form action="" method=post class="form-horizontal">
         
-        <h2>Login to application</h2>
-        <div class="control-group">
+        <h2>Login</h2>
+        <div class="form-group">
             <div class="controls">
-                <input type="text" id="email" name="email" class="input-xlarge" placeholder="Enter Email" required>
+                <input type="text" id="email" name="email" class="form-control col-md-2" placeholder="Enter Email" required>
             </div>
         </div>
 
-        <div class="control-group">
+        <div class="form-group">
             <div class="controls">
-                <input type="password" id="password" name="password" class="input-xlarge" placeholder="Enter Password" required>
+                <input type="password" id="password" name="password" class="form-control col-md-2" placeholder="Enter Password" required>
             </div>
         </div>
-        <br />
         <div class="control-group">
             <div class="controls">
                 <button type="submit" class="btn btn-outline-dark">Signin</button>
             </div>
         </div>
     </form>
-
+</center>
     </div>
 {% end %}

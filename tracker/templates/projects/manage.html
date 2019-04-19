@@ -17,7 +17,7 @@
               {% for project in projects %}
               <tr>
               <th>{{ escape(project['name']) }}</th>
-              <th>{{ escape(project['data_path'][:5]) }} [...] {{ escape(project['data_path'][-5:]) }}</th>
+              <th>{{ escape(project['data_path'][:5]) }} ... {{ escape(project['data_path'][-5:]) }}</th>
               <th>{{ escape(project['config_file']) }}</th>
               <th>{{ escape(project['creation_date']) }}</th>
               <th>

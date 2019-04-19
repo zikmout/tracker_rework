@@ -1,6 +1,7 @@
 {% extends '../layout.html' %}
 {% block content %}
 <div class="starter-template-fluid">
+        <br>
         <h3>List of projects recorded for {{ handler.session['username'] }}</h3>
         <p>You can here manage the monitoring projects you created. Load any project you want to access further options.</p>
         <table class="table table-responsive-sm table-striped">
@@ -16,7 +17,7 @@
               {% for project in projects %}
               <tr>
               <th>{{ escape(project['name']) }}</th>
-              <th>{{ escape(project['data_path']) }}</th>
+              <th>{{ escape(project['data_path'][:5]) }} [...] {{ escape(project['data_path'][-5:]) }}</th>
               <th>{{ escape(project['config_file']) }}</th>
               <th>{{ escape(project['creation_date']) }}</th>
               <th>

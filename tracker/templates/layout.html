@@ -97,9 +97,9 @@
 
     <!-- Flash messages -->
     {% if hasattr(handler, 'flash') %}
-    <div class="alert alert-{{ handler.flash['type'] }}" role="alert">
-        {{ handler.flash['message'] }}
-    </div>
+        <div class="alert alert-{{ handler.flash['type'] }} p-1" role="alert">
+            {{ handler.flash['message'] }}
+        </div>
     {% end %}
 
     <main role="main" class="container-fluid">

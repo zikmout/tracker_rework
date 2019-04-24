@@ -71,7 +71,7 @@ function load_download_task(status_url, uid) {
             // get task id
             task_id = regex.exec(status_url)
             // add task status elements
-            div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><div class="font-weight-lighter" id="current' + task_id + '"></div><div id="status' + task_id + '"></div>');
+            div_bar = $('<div class="progress" name="' + task_id + '"><div class="progress-bar bg-info" id="pct' + task_id + '" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div></div><div class="font-weight-lighter" id="current' + task_id + '"></div><div id="status' + task_id + '"></div>');
 
             $('#progress' + uid).append(div_bar);
             update_progress(status_url, div_bar[0], task_id, uid);

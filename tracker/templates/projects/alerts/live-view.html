@@ -151,3 +151,10 @@ ws.onmessage = function (evt) {
 timeout()
 </script>
 {% end %}
+{% block script %}
+<script>
+  $('button').click(function(){
+     $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+  });
+</script>
+{% end %}

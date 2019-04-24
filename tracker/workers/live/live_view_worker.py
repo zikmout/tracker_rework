@@ -24,6 +24,7 @@ if '.egg' in __file__ and  'workers/live' in os.getcwd():
     import tracker.ml_toolbox as mltx
     su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
     already_visited = list()
+    already_seen_content = list()
 
 def clean_content(input_list, min_sentence_len=5):
     print('-> cleaning HTML content ....')
@@ -104,7 +105,7 @@ def make_predictions(content, min_acc=0.75):
     global su_model
     #print('su_model : {}'.format(su_model))
     #gc.collect()
-    print('content : {} [...]'.format(content[:100]))
+    print('content : {} [...]'.format(content[:1000]))
     preds = su_model.predict(content, 2)
     print('predictions = {}'.format(preds))
     #print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
@@ -122,6 +123,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return False
     global su_model
     global already_visited
+    global already_seen_content
 
     print('ENTER CHECK SBB : {}'.format(url))
     #global su_model
@@ -155,9 +157,10 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         #print('URL = {} (detected pdf)'.format(url))
         cleaned_content = clean_pdf_content(pdftotext.PDF(response))
         #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
-        if cleaned_content is None:
+        if cleaned_content is None or cleaned_content in already_seen_content:
             #print('Content {} is None !!!!!!!!!'.format(url))
             return False
+        already_seen_content.append(cleaned_content)
         # if not is_language(cleaned_content, 'ENGLISH'):
         #     print('Language is NOT ENGLISH !! (Content = {}...)'.format(cleaned_content[:100]))
         #     return False
@@ -167,9 +170,10 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         print('URL = {} (detected NON pdf)'.format(url))
         cleaned_content = get_essential_content(response.read(), 10)
 
-        if cleaned_content is None:
+        if cleaned_content is None or cleaned_content in already_seen_content:
             #print('Content {} is None !!!!!!!!!'.format(url))
             return False
+        already_seen_content.append(cleaned_content)
         #content = extractor.extract_text_from_html(response.read())
         #cleaned_content = extractor.clean_content(content)
         #print('Content to analyse = {}'.format(cleaned_content[:100]))

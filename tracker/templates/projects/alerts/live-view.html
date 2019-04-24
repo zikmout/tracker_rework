@@ -1,17 +1,18 @@
 {% extends '../../layout.html' %}
 {% block content %}
 <div class="starter-template-fluid">
+      <br />
       <center><h3>Project {{ handler.session['current_project'] }} : Live alerts on content change</h3></center>
 
       <br>
         <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-horizontal">
         <div class="form-inline">
           <div class="form-group mb-2">
-            <input type="email" class="form-control" placeholder="Email" name="email">
+            <input class="form-control" placeholder="Email" name="email">
             <input type="hidden", name="fromPage" value="live_view">
           </div>
           <div class="col">
-            <button type="submit" class="btn btn-primary mb-2">Send report</button></input>
+            <button type="submit" class="btn btn-outline-info mb-2">Send report</button></input>
           </div>
         </div>
         </form>
@@ -19,7 +20,7 @@
         <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
           <div class="form-inline">
               <input type="hidden", name="fromPage" value="live_view">
-              <button type="submit" class="btn btn-primary">Download updated pages</button></input>
+              <button type="submit" class="btn btn-outline-info">Download updated pages</button></input>
           </div>
         </form>
       {% if 'live_view' in handler.session['tasks'] %}

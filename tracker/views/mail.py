@@ -36,15 +36,6 @@ class UserProjectSendMail(BaseView):
 			self.redirect('/')
 		else:
 			if args['fromPage'] == 'live_view' and 'live_view' in self.session['tasks']:
-				sender_email = "simon@electricity.ai"
-				receiver_email = args['email']
-				password = 'totosecret'
-
-				message = MIMEMultipart()
-				date = datetime.now().replace(microsecond=0)
-				message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
-				message["From"] = sender_email
-				message["To"] = receiver_email
 
 				task_results = list()
 				for worker in self.session['tasks']['live_view']:
@@ -115,18 +106,37 @@ class UserProjectSendMail(BaseView):
 				#part1 = MIMEText(text, "plain")
 				part2 = MIMEText(html, "html")
 
-				# Add HTML/plain-text parts to MIMEMultipart message
-				# The email client will try to render the last part first
-				#message.attach(part1)
-				message.attach(part2)
 
-				# Create secure connection with server and send email
-				context = ssl.create_default_context()
-				with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-				    server.login(sender_email, password)
-				    server.sendmail(
-				        sender_email, receiver_email, message.as_string()
-				    )
+
+				sender_email = "simon@electricity.ai"
+				if ';' in args['email']:
+					receiver_email = args['email'].split(';')
+				else:
+					receiver_email = args['email']
+				password = 'totosecret'
+
+				if not isinstance(receiver_email, list):
+					receiver_email = [receiver_email]
+
+				for email in receiver_email:
+					message = MIMEMultipart()
+					date = datetime.now().replace(microsecond=0)
+					message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
+					message["From"] = 'Tracker Bot'
+					message["To"] = email
+
+					# Add HTML/plain-text parts to MIMEMultipart message
+					# The email client will try to render the last part first
+					#message.attach(part1)
+					message.attach(part2)
+
+					# Create secure connection with server and send email
+					context = ssl.create_default_context()
+					with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+					    server.login(sender_email, password)
+					    server.sendmail(
+					        sender_email, email, message.as_string()
+					    )
 				flash_message(self, 'success', 'Report successfully sent to {} .'.format(args['email']))
 				self.redirect('/')
 			else:

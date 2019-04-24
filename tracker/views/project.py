@@ -2,11 +2,83 @@ import tornado
 import json
 import datetime
 import time
+import os
+import pandas as pd
 from tracker.views.base import BaseView
-from tracker.models import Permission, Role, Project, User, Content
+from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, get_url_from_id, json_response
 import tracker.session as session
 from tracker.core.rproject import RProject
+
+
+class FastProjectCreateView(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @login_required
+    def post(self, username):
+        file1 = self.request.files['file1'][0]
+        fname = file1['filename']
+        project_name = os.path.splitext(fname)[0]
+        project_path = os.path.join(self.application.data_dir, project_name)
+
+
+        # creating project directory
+        os.mkdir(project_path)
+        # puting xlsx config file in it
+        config_path = os.path.join(project_path, 'config' + os.path.splitext(fname)[1])
+        with open(config_path, 'wb+') as fd:
+            fd.write(file1['body'])
+
+
+        # print('links = {}'.format(links))
+        # #print('DATAFRAME = {}'.format(df))
+        # os.remove(tmp_fname)
+
+        self.write('wait for page to redirect')
+        #create project
+        print('name = {}, data_path = {}, config_df = {}'.format(project_name, self.application.data_dir, config_path))
+        user = self.request_db.query(User).filter_by(username=username).first()
+        new_project = Project(project_name, self.application.data_dir, config_path)
+        user.projects.append(new_project)
+        
+        df = pd.read_excel(config_path)
+        links = dict(zip(df['target'], df['target_label']))
+        links = {k:[v] for k, v in links.items()}
+        
+        # add links to crawler logfile
+        rproject = RProject(new_project.name, new_project.data_path, new_project.config_file)
+        rproject.generate_crawl_logfile(links)
+        rproject._load_units_from_data_path()
+        rproject.add_links_to_crawler_logfile(links)
+
+
+        # create content
+        new_content = Content(project_name + '_qp_spider', links)
+        new_project.contents.append(new_content)
+
+        # # create live alert
+        new_alert = Alert(project_name + '_qp_live', 'Live', "2011-08-19T13:45:00")
+        new_content.alerts.append(new_alert)
+        self.request_db.add(user)
+        self.request_db.commit()
+
+        flash_message(self, 'success', '\'{}\' successfully uploaded. Alert {} created.'.format(fname, fname.replace('.xlsx', '')))
+        self.redirect('/')
+
+        # except Exception as e:
+        #     print('ERROR = {}'.format(e))
+        #     flash_message(self, 'danger', 'Problem creating quick project. Check logs.')
+        #     self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+
+
+
+
+
+
+
+
+
+
+
 
 class ProjectsCreateView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']

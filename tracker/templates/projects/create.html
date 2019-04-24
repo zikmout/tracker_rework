@@ -1,24 +1,77 @@
 {% extends '../layout.html' %}
 {% block content %}
-<div class="starter-template-fluid">
-    <h3>Project creation</h3>
-    <p>A project consist of a basic list of websites to monitor, selected by the user.<br>At the moment, projects can only be loaded directly from data path, but user will be soon able to load project from an excel file or directly through the user interface.</p>
+<script src="{{ static_url('jquery.min.js') }}"></script>
+
+<br />
+    <div class="starter-template-fluid">
+        <h3>Project creation</h3>
+        <p>A project consist of a basic list of websites to monitor, selected by the user.<br>At the moment, projects can only be loaded directly from data path, but user will be soon able to load project from an excel file or directly through the user interface.</p>
+<br />
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="project-tab" data-toggle="tab" href="#project" role="tab" aria-controls="project" aria-selected="true">Project</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="quickproject-tab" data-toggle="tab" href="#quickproject" role="tab" aria-controls="quickproject" aria-selected="false">Quick Project</a>
+  </li>
+</ul>
+
+<div class="tab-content" id="myTabContent">
+  <br />
+  <div class="tab-pane fade show active" id="project" role="tabpanel" aria-labelledby="project-tab">
+
+    <form action="/api/v1/users/{{ handler.session['username'] }}/project_create" method=post>
+      <div class="form-group">
+        <label for="ProjectName" id="ProjectName">Project Name</label>
+        <input type="text" class="form-control col-md-6" name="ProjectName" placeholder="Enter project name" required>
+      </div>
+      <div class="form-group">
+        <label for="ProjectLocation">Location of project</label>
+        <input type="text" class="form-control col-md-6" name="ProjectLocation" aria-describedby="ProjectLocation" placeholder="ex: /home/user/documents/project" required>
+        <small id="ProjectLocation" class="form-text text-muted">The location must correspond to an empty folder previously created.</small>
+      </div>
+      <div class="form-group">
+        <label for="ConfigLocation">Location of configuration file (optional)</label>
+        <input type="text" class="form-control col-md-6" name="ConfigLocation" aria-describedby="ConfigLocation" placeholder="ex: /home/user/documents/config.xlsx">
+        <small id="ConfigLocation" class="form-text text-muted">The configuration file must be .xlsx format</small>
+      </div>
+      <button type="submit" class="btn btn-outline-dark" class="btn btn-primary">Create Project</button>
+    </form>
+
+  </div>
+  <div class="tab-pane fade" id="quickproject" role="tabpanel" aria-labelledby="quickproject-tab">
+
+    <form action="/api/v1/users/{{ handler.session['username'] }}/quick-project-create" method="post" enctype="multipart/form-data">
+
+      <div class="custom-file">
+          <input type="file" class="custom-file-input" id="validatedCustomFile" name="file1" required>
+          <label class="custom-file-label col-md-6 custom-file-control form-control-file" for="validatedCustomFile">Choose file...</label>
+        </div>
+
+
+        <br />
+        <br />
+        <input type="submit" id="longLoad" class="btn btn-outline-dark" value="Create Project" />
+    </form>
+
+  </div>
 </div>
-<form action="/api/v1/users/{{ handler.session['username'] }}/project_create" method=post>
-  <div class="form-group">
-    <label for="ProjectName" id="ProjectName">Project Name</label>
-    <input type="text" class="form-control" name="ProjectName" placeholder="Enter project name" required>
-  </div>
-  <div class="form-group">
-    <label for="ProjectLocation">Location of project</label>
-    <input type="text" class="form-control" name="ProjectLocation" aria-describedby="ProjectLocation" placeholder="ex: /home/user/documents/project" required>
-    <small id="ProjectLocation" class="form-text text-muted">The location must correspond to an empty folder previously created.</small>
-  </div>
-  <div class="form-group">
-    <label for="ConfigLocation">Location of configuration file (optional)</label>
-    <input type="text" class="form-control" name="ConfigLocation" aria-describedby="ConfigLocation" placeholder="ex: /home/user/documents/config.xlsx">
-    <small id="ConfigLocation" class="form-text text-muted">The configuration file must be .xlsx format</small>
-  </div>
-  <button type="submit" class="btn btn-outline-dark" class="btn btn-primary">Create Project</button>
-</form>
+    </div>
+<script>
+$('.custom-file-input').on('change',function(){
+  var fileName = document.getElementById("validatedCustomFile").files[0].name;
+  $(this).next('.form-control-file').addClass("selected").html(fileName);
+})
+  $('#longLoad').click(function(){
+    if (!document.getElementById("validatedCustomFile").files[0]) {
+      console.log('Please choose file.');
+    }
+    else {
+   $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+    }
+});
+</script>
+
+
+
 {% end %}

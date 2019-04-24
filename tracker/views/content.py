@@ -1,5 +1,6 @@
 import tornado
 from math import isnan
+import time
 from tracker.views.base import BaseView
 from tracker.models import User, Content
 from tracker.utils import flash_message, login_required, json_response
@@ -118,11 +119,13 @@ class TestingView(BaseView):
     def get(self, username, projectname):
         self.write(username)
         self.write(projectname)
-        user = self.request_db.query(User).filter_by(username=username).first()
-        project = user.projects.filter_by(name=projectname).first()
-        rproject = RProject(project.name, project.data_path, project.config_file)
-        rproject._load_units_from_data_path()
-        print('begin crawling')
-        #unit = Unit(rproject.data_path, 'https://www.rsagroup.com')
-        #unit.crawl(max_depth=8)
-        print('-> DONE CRAWLING')
+        time.sleep(5)
+        # user = self.request_db.query(User).filter_by(username=username).first()
+        # project = user.projects.filter_by(name=projectname).first()
+        # rproject = RProject(project.name, project.data_path, project.config_file)
+        # rproject._load_units_from_data_path()
+        # print('begin crawling')
+        # #unit = Unit(rproject.data_path, 'https://www.rsagroup.com')
+        # #unit.crawl(max_depth=8)
+        # print('-> DONE CRAWLING')
+        self.redirect('/')

@@ -176,7 +176,7 @@ class Unit:
             return
         try :
             print('STARTING CRAWLING OF {} with max depth={}'.format(self.url, max_depth))
-            task = link_crawler.apply_async([self.url, starting_path, self.logfile, 'wsgt', max_depth]) 
+            task = link_crawler.apply_async([self.url, starting_path, self.logfile, 'wsgt', max_depth])
             return task
         except Exception as e:
             print('Error with website : {}. Error = {}\n'.format(self.url, traceback.format_exc()))

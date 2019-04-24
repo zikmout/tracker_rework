@@ -1,5 +1,6 @@
 import os
 import base64
+import logging
 from tornado.httpserver import HTTPServer
 from tornado.ioloop import IOLoop
 from tornado.options import define, options
@@ -14,7 +15,7 @@ from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 from tracker.views.mail import UserProjectSendMail
 from tracker.views.tasks import RevokeLiveTasks, DeleteTaskQueues
 from tracker.views.content import UserProjectContent, TestingView, UserProjectContentFromFile
-from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete
+from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete, FastProjectCreateView
 from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate, AlertLiveUpdate
 from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus, UserProjectDownloadView
 from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop, UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
@@ -72,6 +73,7 @@ def main():
             # tracker.views.project.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/project_create', ProjectsCreateView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects_manage', UserProjectListView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/quick-project-create', FastProjectCreateView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete),
 
@@ -105,6 +107,7 @@ def main():
             tornado.web.Application.__init__(self, handlers, **settings)
             try:
                 # app_db not used yet
+                self.data_dir = os.path.join(dirname, 'data')
                 self.app_db = app_db
                 self.meta = meta
                 self.session_manager = session.SessionManager(settings['session_secret'], settings['store_options'], settings['session_timeout'])
@@ -116,5 +119,6 @@ def main():
     http_server.listen(options.port)
     print('Listening on http://localhost:{}'.format(options.port))
     print('dirname ={}'.format(dirname))
+    logging.warning("Server running on port %d", options.port)
     #IOLoop.instance().start()
     IOLoop.current().start()

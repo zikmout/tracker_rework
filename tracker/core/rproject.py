@@ -2,8 +2,11 @@ import os
 import shutil
 import re
 import pandas as pd
+import time
+import datetime
 import tracker.core.utils as utils
 import tracker.core.loader as loader
+import tracker.core.logger as logger
 import tracker.core.downloader as downloader
 from tracker.core.unit import Unit
 
@@ -194,7 +197,7 @@ class RProject:
         """ Load project units from project self.data_path (full path where project data is stored)
         """
         print('Loading websites list from list \'{}\' ....\n'.format(units_url))
-        project_directories = utils.get_directories_list(self.data_path)
+        #project_directories = utils.get_directories_list(self.data_path)
         if self.units != []:
             del self.units[:]
         for url in units_url:
@@ -311,6 +314,24 @@ class RProject:
             task = unit.crawl(starting_path=starting_path, max_depth=depth)
             tasks.update({ url : task })
         return tasks
+
+    def generate_crawl_logfile(self, units_urls):
+        base_urls = set()
+        for url in units_urls:
+            regex = r"^https?://[^/]+"
+            base_url = re.findall(regex, url)[0]
+            base_urls.add(base_url)
+
+        for base_url in base_urls:
+            unit = Unit(self.data_path, base_url)
+            # minimal data for logfile
+            pages = ['/index.html']
+            logfile = unit.logfile
+            files = []
+            log_debut = '[{}] {}\n'.format(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), base_url)
+            log_fin = '\n[{}] Duration: {} / Total: 1 / Page(s): 1 / PDF(s): 0 / EXCEL(s): 0 / Errors: 0'.format(\
+                datetime.datetime.now().strftime("%Y-%m-%d %H:%M"), time.strftime("%H:%M:%S", time.gmtime(0)))
+            logger.save_urls(logfile, pages, files, log_debut, log_fin)
 
     def download_units(self, units_urls):
         """ If units_urls is a list, download all content form websites provided in list

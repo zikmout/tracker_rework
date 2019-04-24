@@ -139,7 +139,6 @@ class Content(Base):
     __table_args__ = {'extend_existing': True}
     id = Column(Integer, primary_key=True)
     name = Column(String(64), unique=True)
-    #links = Column(ARRAY(String))
     links = Column(PickleType)
     project_id = Column(Integer, ForeignKey('project.id'))
     alerts = relationship('Alert', cascade='save-update, delete', backref='content', lazy='dynamic')

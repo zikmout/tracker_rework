@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup
 import urllib
 import urllib.request
 import requests
+from socket import timeout
 import ssl
 import time
 import random
@@ -43,11 +44,11 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
     """
     #print('FULL URL ARRIVED -------> {}'.format(url))
     if not os.path.isdir(path):
-        print('path: {} is not a directory, changing name to unknown___'.format(path))
         # if there is a file with same name as folder, change its name
         if check_duplicates:
             if os.path.isfile(path):
                 os.rename(path, path + '___')
+                print('path: {} is not a directory, changing name to unknown___'.format(path))
         try:
             os.makedirs(path)
         except Exception as e:
@@ -78,9 +79,12 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
     gcontext = ssl._create_unverified_context()
     try:
         # download content of the url
-        response = urllib.request.urlopen(req, context=gcontext)
+        response = urllib.request.urlopen(req, context=gcontext, timeout=30)
     except (urllib.error.HTTPError, urllib.error.URLError, ConnectionResetError, UnicodeDecodeError) as e:
         print('[ERROR] download_and_save_content : {}'.format(e))
+        return None
+    except timeout:
+        print('[ERROR TIMEOUT] for url : {}'.format(url))
         return None
     # Save content in the provided path with binary format
     with open (full_path, 'wb+') as content:

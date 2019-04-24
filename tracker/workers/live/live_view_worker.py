@@ -23,6 +23,7 @@ import fastText
 if '.egg' in __file__ and  'workers/live' in os.getcwd():
     import tracker.ml_toolbox as mltx
     su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
+    already_visited = list()
 
 def clean_content(input_list, min_sentence_len=5):
     print('-> cleaning HTML content ....')
@@ -120,6 +121,8 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     if ('@' or ':') in url:
         return False
     global su_model
+    global already_visited
+
     print('ENTER CHECK SBB : {}'.format(url))
     #global su_model
     req = urllib.request.Request(
@@ -138,6 +141,10 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     if response.geturl() != url:
         print('//////////// {} has been redirected to : {} //////////'.format(response.geturl(), url))
         url = response.geturl()
+        if url in already_visited:
+            return False
+        already_visited.append(url)
+
     filename = url.rpartition('/')[2]
 
     # get header charset

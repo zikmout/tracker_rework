@@ -18,6 +18,8 @@
     <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.0/examples/offcanvas/offcanvas.css" rel="stylesheet">
 
+    <script src="{{ static_url('jquery.min.js') }}"></script>
+
     <style>
 /* Absolute Center Spinner */
 .loading {
@@ -235,6 +237,11 @@
     <script>window.jQuery || document.write('<script src="{{ static_url('assets/js/vendor/jquery-slim.min.js') }}"><\/script>')</script>
     <script src="{{ static_url('assets/js/vendor/popper.min.js') }}"></script>
     <script src="{{ static_url('dist/js/bootstrap.min.js') }}"></script>
+    <script>
+      $('.dropdown-item').click(function(){
+         $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+      });
+    </script>
     <!-- <script src="https://getbootstrap.com/docs/4.0/assets/js/vendor/holder.min.js"></script> -->
     <!-- <script src="https://getbootstrap.com/docs/4.0/examples/offcanvas/offcanvas.js"></script> -->
   </body>

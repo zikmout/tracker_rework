@@ -28,10 +28,15 @@
                     </div>
                   </div>
               </th>
-              <th><button type="submit" class="btn btn-outline-dark" value="">Load</button></form></th>
+              <th><button type="submit" class="btn btn-outline-dark" id="loadProject" value="">Load</button></form></th>
               <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete</button></form></th>
               </tr>
               {% end %}
         </table>
 </div>
+<script>
+  $('button').click(function(){
+     $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+  });
+</script>
 {% end %}

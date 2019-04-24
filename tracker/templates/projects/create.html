@@ -55,6 +55,8 @@
   </div>
 </div>
     </div>
+{% end %}
+{% block script %}
 <script>
 $('.custom-file-input').on('change',function(){
   var fileName = document.getElementById("validatedCustomFile").files[0].name;
@@ -69,7 +71,4 @@ $('.custom-file-input').on('change',function(){
     }
 });
 </script>
-
-
-
 {% end %}

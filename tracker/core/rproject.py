@@ -10,6 +10,11 @@ import tracker.core.logger as logger
 import tracker.core.downloader as downloader
 from tracker.core.unit import Unit
 
+import threading
+
+
+
+
 class RProject:
     """ A project consists of a list of websites to monitor,
         and parameters associated with each of these websites.
@@ -204,29 +209,48 @@ class RProject:
             self.units.append(Unit(self.data_path, url))
         print('\n {} units successfuly loaded from list.\n'.format(len(self.units)))
 
+
+
+
+
     def add_links_to_crawler_logfile(self, links_list):
-        print('Loading websites list to add crawled links in data_path \'{}\' ....\n'.format(self.data_path))
-        project_directories = utils.get_directories_list(self.data_path)
-        if self.units == []:
-            print('No Units loaded !')
-            return
-        idx = 0
-        for link in links_list:
-            regex = r"^https?://[^/]+"
-            unit_url = re.findall(regex, link)[0]
-            unit = self.get_unit_from_url(unit_url)
+
+
+        def run_downloads(unit, unit_url):
             if unit is None or unit.is_base_crawled is False:
                 print('Unit url : {} does not exist.'.format(unit_url))
             else:
                 internal_link = link.replace(unit_url, '')
                 print('len remote tree before = {}'.format(len(unit._remote_tree())))
                 if unit.add_crawler_link(internal_link) is True:
-                    idx += 1
                     if downloader.download_website([internal_link], unit.download_path, unit.url, random_header=True):
                         print('->Page {} successfuly downloaded'.format(unit_url + internal_link))
                     else:
                         print('->Unable to download page {}'.format(unit_url + internal_link))
-        return idx
+
+        print('Loading websites list to add crawled links in data_path \'{}\' ....\n'.format(self.data_path))
+        project_directories = utils.get_directories_list(self.data_path)
+        if self.units == []:
+            print('No Units loaded !')
+            return
+
+        threads = []
+        idx = 0
+        for link in links_list:
+            idx += 1
+            regex = r"^https?://[^/]+"
+            unit_url = re.findall(regex, link)[0]
+            unit = self.get_unit_from_url(unit_url)
+            if idx % 10 == 0:
+                time.sleep(5)
+            my_thread = threading.Thread(target=run_downloads, args=(unit, unit_url))
+            threads.append(my_thread)
+            my_thread.start()
+
+        for x in threads:
+            x.join()
+
+        print('All THREADS ARE DONE !!!!')
 
     def _load_units_from_data_path(self):
         """ Load project units from project self.data_path (full path where project data is stored)

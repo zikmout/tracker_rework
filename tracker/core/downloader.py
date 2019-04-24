@@ -81,7 +81,7 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
         # download content of the url
         response = urllib.request.urlopen(req, context=gcontext, timeout=30)
     except (urllib.error.HTTPError, urllib.error.URLError, ConnectionResetError, UnicodeDecodeError) as e:
-        print('[ERROR] download_and_save_content : {}'.format(e))
+        print('[ERROR] download_and_save_content : {}\n(url = {})'.format(e, url))
         return None
     except timeout:
         print('[ERROR TIMEOUT] for url : {}'.format(url))

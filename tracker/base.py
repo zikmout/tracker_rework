@@ -22,4 +22,4 @@ url, engine, meta = connect_psycopg2(user='matt', password='toto', db='testpytho
 #engine = create_engine('postgresql://matt:toto@localhost:8080/testpython')
 Session = sessionmaker(bind=engine)
 
-Base = declarative_base() 
+Base = declarative_base()

@@ -17,7 +17,6 @@ requires = [
     'celery',
     'cython',
     'fastText',
-    'cld2-cffi',
     'pdftotext'
 ]
 

@@ -22,7 +22,7 @@ class AuthLoginView(BaseView):
             self.redirect('/api/v1/auth/login')
             return
         self.session['username'] = registered_user.username
-        self.session['role_id'] = registered_user.role_id
+        self.session['is_admin'] = registered_user.is_administrator()
         self.session['tasks'] = {}
         self.session.save()
         flash_message(self, 'success', 'User {} succesfully logged in.'.format(registered_user.username))
@@ -45,7 +45,7 @@ class AuthRegisterView(BaseView):
             self.request_db.add(user)
             self.request_db.commit()
             self.session['username'] = username
-            self.session['role_id'] = user.role_id
+            self.session['is_admin'] = user.is_administrator()
             self.session['tasks'] = {}
             self.session.save()
             flash_message(self, 'success', 'User {} succesfully registered.'.format(username))

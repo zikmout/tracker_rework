@@ -71,7 +71,7 @@
                 </form>
             </div>
         </nav>
-        {% if hasattr(handler, 'session') and handler.session != {} and handler.session['role_id'] == 3 %}
+        {% if hasattr(handler, 'session') and handler.session != {} and handler.session['is_admin'] is True %}
 
         <nav class="navbar navbar-expand-md bg-white box-shadow py-0" style="padding-top: 15px;">
             <a class="navbar-brand" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color=''" style="font-size:0.9rem; color:#32c4d1;" href="#">Admin section</a>
@@ -105,7 +105,7 @@
         {% end %}
 
         {% if hasattr(handler, 'session') %}
-            
+
         {% end %}
 
 

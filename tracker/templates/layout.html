@@ -20,6 +20,7 @@
         <!-- Custom styles for this template -->
         <link href="{{ static_url('starter-template.css') }}" rel="stylesheet">
         <link rel="stylesheet" href="{{ static_url('loader.css') }}">
+        <link rel="stylesheet" href="{{ static_url('custom_tracker.css') }}">
     </head>
 
     <body style="padding-top: 56px;" class="bg-light">
@@ -73,9 +74,9 @@
         </nav>
         {% if hasattr(handler, 'session') and handler.session != {} and handler.session['is_admin'] is True %}
 
-        <nav class="navbar navbar-expand-md bg-white box-shadow py-0" style="padding-top: 15px;">
+        <nav class="navbar navbar-expand-md bg-white box-shadow py-0 custom-toggler" style="padding-top: 15px;">
             <a class="navbar-brand" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color=''" style="font-size:0.9rem; color:#32c4d1;" href="#">Admin section</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar2">

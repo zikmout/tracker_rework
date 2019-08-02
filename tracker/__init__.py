@@ -15,10 +15,15 @@ from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 from tracker.views.mail import UserProjectSendMail
 from tracker.views.tasks import RevokeLiveTasks, DeleteTaskQueues
 from tracker.views.content import UserProjectContent, TestingView, UserProjectContentFromFile
-from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView, UserProjectDelete, FastProjectCreateView
+from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView,\
+ UserProjectDelete, FastProjectCreateView
+from tracker.views.continuous_tracking import ContinuousTrackingCreateView, UserProjectWebsitesView,\
+ UserProjectAddWebsite, UserProjectDeleteWebsite
 from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate, AlertLiveUpdate
-from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus, UserProjectDownloadView
-from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop, UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
+from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus,\
+ UserProjectDownloadView
+from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop,\
+ UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
 from tracker.views.socket import EchoWebSocket
 
 define('port', default=5567, help='Port to listen on.')
@@ -76,6 +81,12 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/quick-project-create', FastProjectCreateView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete),
+
+            # tracker.views.continuous_tracking.py
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/continuous-tracking-create', ContinuousTrackingCreateView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/websites-manage', UserProjectWebsitesView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/website-add', UserProjectAddWebsite),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/website-delete', UserProjectDeleteWebsite),
 
             # tracker.views.alert.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts', AlertView),

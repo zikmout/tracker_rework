@@ -29,7 +29,27 @@
                   </div>
               </th>
               <th><button type="submit" class="btn btn-outline-dark" id="loadProject" value="">Load</button></form></th>
-              <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete</button></form></th>
+              <th><button type="button" class="btn btn-danger" value="" data-toggle="modal" data-target="#ModalConfirmDelete-{{ escape(project['name']) }}">Delete</button>
+              <div class="modal fade" id="ModalConfirmDelete-{{ escape(project['name']) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle-{{ escape(project['name']) }}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalCenterTitle-{{ escape(project['name']) }}">Deletion confirmation</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      This will completely erase folder on hard drive and all related files.
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" value="" data-dismiss="modal">Close</button>
+                      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-danger">Confirm</button></form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </th>
               </tr>
               {% end %}
         </table>
@@ -37,7 +57,7 @@
 {% end %}
 {% block script %}
 <script>
-  $('button').click(function(){
+  $('#loadProject').click(function(){
      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
   });
 </script>

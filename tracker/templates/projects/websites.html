@@ -1,0 +1,81 @@
+{% extends '../layout.html' %}
+{% block content %}
+<div class="starter-template-fluid">
+      <center><h3>Websites for project {{ project['name'] }}</h3></center>
+      
+
+
+        <div class='row'>
+          <div class='col'>
+            <button type="submit" class="btn btn-dark collapsed" value="" data-toggle="collapse" data-target="#addLine" aria-expanded="false" aria-controls="addLine">+ Add website</button>
+          </div>
+
+          <div class='col-10'>
+            <p>Below are shown all the websites referenced in the project as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup continuous tracking.</p>
+          </div>
+        </div>
+
+        <div class="collapse" id="addLine">
+          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-add" method="post">
+            <div class="card card-body">
+              <div class="form-row">
+                <div class="col-sm-3">
+                  <label for="inputName">Name</label>
+                  <input type="text" class="form-control" id="inputName" name="inputName">
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputWebsite">Website</label>
+                  <input type="text" class="form-control" id="inputWebsite" name="inputWebsite">
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputTarget">Target</label>
+                  <input type="text" class="form-control" id="inputTarget" name="inputTarget">
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputKeywords">Keywords</label>
+                  <input type="text" class="form-control" id="inputKeywords" name="inputKeywords">
+                </div>
+                <div class="col-sm-0">
+                  <br />
+                  <button type="submit" class="btn btn-info" id="createContinuousTracking">Create</button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <br />
+        </div>
+
+        <table class="table table-responsive-sm table-striped">
+              <tr>
+                <th>Name</th>
+                <th>Website</th>
+                <th>Target</th>
+                <th>keywords</th>
+                <th>Action</th>
+                <th></th>
+              </tr>
+              {% for line in lines %}
+              <tr>
+                  <th>{{ line['name'] }}</th>
+                  <th>{{ line['website'] }}</th>
+                  <th>{{ line['target'] }}</th>
+                  <th>{{ line['keywords'] }}</th>
+                  <th>
+                    <form action="#" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="" name="modifyButton">Modify</button></input></form>
+                  </th>
+                  <th>
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ line['website'] }}" name="websiteToDelete"><button type="submit" class="btn btn-danger" value="{{ line['target'] }}" name="targetToDelete">Delete</button></input></form>
+                  </th>
+              </tr>
+              {% end %}
+        </table>    
+        
+</div>
+{% end %}
+{% block script %}
+<script>
+  $('#createContinuousTracking').click(function(){
+     $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+  });
+</script>
+{% end %}

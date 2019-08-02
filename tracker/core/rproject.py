@@ -25,6 +25,7 @@ class RProject:
     """
     # list of websites objects
     units = list()
+    lines = list()
 
     def __init__(self, name, data_path, inputs_path=None):
         """ Constructor of Project object """
@@ -288,6 +289,30 @@ class RProject:
         print('-------------------------------------------------------------------------------------------')
         print('\n {} units successfuly loaded from excel.\n'.format(len(self.units)))
 
+    def _load_tracking_config_excel(self):
+        """ Load Name, target website, keywords, etc from excel config file.
+            Excel file must contain a column named 'Website', 'Name', 'target' and 'target_label'
+        """
+        print('Loading tracking excel config from file \'{}\' ....\n'.format(self.data_path))
+        if self.lines != []:
+            del self.lines[:]
+        for index, rows in self.config_df.iterrows():
+            if not pd.isnull(rows['Website']):
+                name = rows['Name']
+                website = rows['Website']
+                target = rows['target']
+                if ';' in rows['target_label']:
+                    target_label = rows['target_label'].split(';')
+                else:
+                    target_label = [rows['target_label']]
+                line = {
+                    'name': name,
+                    'website': website,
+                    'target': target,
+                    'keywords': target_label
+                }
+                self.lines.append(line)
+
     def update_unit(self, url):
         idx = 0
         for unit in self.units:
@@ -383,6 +408,19 @@ class RProject:
                     task = self.get_unit_from_url(unit_url).download()
                     tasks.append(task)
         return tasks
+
+    def delete_unit(self, url):
+        idx = 0
+        for unit in self.units:
+            print('unit = {}, compare to url = {}'.format(unit.url, url))
+            if url.startswith(unit.url):
+                self.units.pop(idx)
+                unit.delete_all()
+                print('Unit successfully deleted')
+                return True
+            idx += 1
+        print('Unit NOT successfully deleted')
+        return False
 
     def update_units_links(self, units_urls):
         """ If units_urls is a list, download all content form websites provided in list

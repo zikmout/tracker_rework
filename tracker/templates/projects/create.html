@@ -12,6 +12,9 @@
   <li class="nav-item">
     <a class="nav-link" id="quickproject-tab" data-toggle="tab" href="#quickproject" role="tab" aria-controls="quickproject" aria-selected="false">Quick Project</a>
   </li>
+  <li class="nav-item">
+    <a class="nav-link" id="continuoustracking-tab" data-toggle="tab" href="#continuoustracking" role="tab" aria-controls="continuoustracking" aria-selected="false">Continuous tracking</a>
+  </li>
 </ul>
 
 <div class="tab-content" id="myTabContent">
@@ -50,6 +53,20 @@
         <br />
         <br />
         <input type="submit" id="longLoad" class="btn btn-outline-dark" value="Create Project" />
+    </form>
+
+  </div>
+  <div class="tab-pane fade" id="continuoustracking" role="tabpanel" aria-labelledby="continuoustracking-tab">
+
+    <form action="/api/v1/users/{{ handler.session['username'] }}/continuous-tracking-create" method="post" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label for="ProjectName" id="ProjectName">Project Name</label>
+        <input type="text" class="form-control col-md-6" name="ProjectName" placeholder="Enter project name" required>
+      </div>
+
+        <br />
+        <input type="submit" id="longLoad" class="btn btn-outline-dark" value="Create continuous tracker" />
     </form>
 
   </div>

@@ -103,6 +103,16 @@ class Unit:
             shutil.rmtree(self.download_path)
             print('All downloaded content from website \'{}\' has been deleted.'.format(self.url))
 
+    def delete_all(self):
+        """ Deletes all unit (including logs, crawling file, downloaded content)
+        """
+        print('Trying to delete folder = {}'.format(self.path))
+        if not os.path.isdir(self.path):
+            print('There is nothing downloaded for website {}.\n'.format(self.url))
+        else:
+            shutil.rmtree(self.path)
+            print('All downloaded content from website \'{}\' has been deleted.'.format(self.url))
+
     def update_downloaded(self, links):
         idx = 0
         for link in links:

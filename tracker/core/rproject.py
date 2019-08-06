@@ -301,8 +301,12 @@ class RProject:
                 name = rows['Name']
                 website = rows['Website']
                 target = rows['target']
-                if ';' in rows['target_label']:
+                if isinstance(rows['target_label'], float):
+                    target_label = ''
+                elif ';' in rows['target_label']:
                     target_label = rows['target_label'].split(';')
+                # elif rows['target_label'] == '':
+                #     target_label = ''
                 else:
                     target_label = [rows['target_label']]
                 line = {

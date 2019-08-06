@@ -80,29 +80,13 @@ class UserProjectWebsitesView(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         json_project = project.as_dict()
         units = None
-        try:
-            rproject = RProject(project.name, project.data_path, project.config_file)
-            rproject._load_units_from_excel()
-            rproject._load_tracking_config_excel()
-            #units = rproject.units_stats(units=rproject.filter_units())
-        except Exception as e:
-            print('[ERROR] - {}'.format(e))
-            flash_message(self, 'danger', 'Problem while loading project {}. Are you sure path is correct and there is an excel file ?'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-            return 
-        if rproject.units is None:
-            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-            return
-        # TODO : check if 'is_excel' is in memory (below) and delete above check conditions
-        if 'units' not in self.session or 'current_project' not in self.session or 'project_data_path' not in self.session\
-        or 'project_config_file' not in self.session:
-            flash_message(self, 'danger', 'No current project in session at the moment. Please load one.')
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-            return
-        else:
-            print('project lines ==> {}'.format(rproject.lines))
-            self.render('projects/websites.html', project=json_project, units=units, lines=rproject.lines.copy())
+
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        rproject._load_units_from_excel()
+        rproject._load_tracking_config_excel()
+
+        print('project lines ==> {}'.format(rproject.lines))
+        self.render('projects/websites.html', project=json_project, units=units, lines=rproject.lines.copy())
 
 class UserProjectAddWebsite(BaseView):
     SUPPORTED_METHODS = ['POST']
@@ -156,6 +140,35 @@ class UserProjectDeleteWebsite(BaseView):
             print('Unit successfully deleted from hard drive')
         # reload units from excel
         rproject._load_units_from_data_path()
+        # change session data to take account of deleted unit
+        units = rproject.units_stats(units=rproject.filter_units())
+        self.session['units'] = units
+        self.session.save()
+        self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+
+class UserProjectEditWebsite(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
+    def post(self, username, projectname):
+        args = self.form_data
+        print('args = {}'.format(args))
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        print('config df before = {}'.format(rproject.config_df))
+        config_df_updated = rproject.config_df.copy()
+        config_df_updated = config_df_updated[config_df_updated.Website != args['inputWebsite'][0]]
+        if 'inputKeywords' in args:
+            keywords_excel = ';'.join(args['inputKeywords'])
+        else:
+            keywords_excel = ''
+        config_df_updated = config_df_updated.append({'Name': args['inputName'][0], 'Website': args['inputWebsite'][0],\
+            'target': args['inputTarget'][0], 'target_label':keywords_excel}, ignore_index=True)
+        print('config df after = {}'.format(config_df_updated))
+        config_df_updated.to_excel(project.config_file, index=False)
+
         # change session data to take account of deleted unit
         units = rproject.units_stats(units=rproject.filter_units())
         self.session['units'] = units

@@ -1,7 +1,10 @@
+from tornado import gen
+import json
 from tracker.views.base import BaseView
 from tracker.models import User
 from tracker.utils import flash_message, login_required, get_url_from_id
 from tracker.models import User
+from tracker.core.rproject import RProject
 
 class UserListView(BaseView):
     """View for reading and adding new roles."""
@@ -39,3 +42,39 @@ class UserUnitView(BaseView):
     def get(self, username, projectname, uid):
         url = get_url_from_id(self.session['units'], uid)
         self.render('unit/index.html', url=url)
+
+class UserUnitEditView(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
+    def post(self, username, projectname):
+        url = self.form_data['editUnitName'][0]
+
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        print('config df before = {}'.format(rproject.config_df))
+        config_df_updated = rproject.config_df.copy()
+        #config_df_updated.loc[config_df_updated['target'] == url, 'target_label'] = 'test;key;words'
+        # line = {'Name': config_df_updated.loc[config_df_updated['target'] == url, 'Name'], 'Website': args['inputWebsite'][0],\
+            # 'target': args['inputTarget'][0], 'target_label':args['inputKeywords'][0]}
+        keys = ['Name', 'Website', 'target', 'target_label']
+        print('keywords = ->{}<-'.format(config_df_updated[config_df_updated['target'] == url]['target_label'].item()))
+        line = {k:config_df_updated[config_df_updated['target'] == url][k].item() for k in keys}
+        if not isinstance(line['target_label'], float):
+            line['target_label'] = line['target_label'].split(';')
+        else:
+            line['target_label'] = ''
+        print('line = {}'.format(line))
+        config_df_updated.to_excel(project.config_file, index=False)
+        #line = config_df_updated.loc[config_df_updated['target'] == url].to_json()
+        self.render('unit/edit.html', url=url, line=line)
+
+
+
+
+
+
+
+

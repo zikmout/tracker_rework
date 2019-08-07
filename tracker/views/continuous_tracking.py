@@ -80,13 +80,29 @@ class UserProjectWebsitesView(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         json_project = project.as_dict()
         units = None
-
-        rproject = RProject(project.name, project.data_path, project.config_file)
-        rproject._load_units_from_excel()
-        rproject._load_tracking_config_excel()
-
-        print('project lines ==> {}'.format(rproject.lines))
-        self.render('projects/websites.html', project=json_project, units=units, lines=rproject.lines.copy())
+        try:
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            rproject._load_units_from_excel()
+            rproject._load_tracking_config_excel()
+            #units = rproject.units_stats(units=rproject.filter_units())
+        except Exception as e:
+            print('[ERROR] - {}'.format(e))
+            flash_message(self, 'danger', 'Problem while loading project {}. Are you sure path is correct and there is an excel file ?'.format(project.name))
+            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            return 
+        if rproject.units is None:
+            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
+            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            return
+        # TODO : check if 'is_excel' is in memory (below) and delete above check conditions
+        if 'units' not in self.session or 'current_project' not in self.session or 'project_data_path' not in self.session\
+        or 'project_config_file' not in self.session:
+            flash_message(self, 'danger', 'No current project in session at the moment. Please load one.')
+            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            return
+        else:
+            print('project lines ==> {}'.format(rproject.lines))
+            self.render('projects/websites.html', project=json_project, units=units, lines=rproject.lines.copy())
 
 class UserProjectAddWebsite(BaseView):
     SUPPORTED_METHODS = ['POST']

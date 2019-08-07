@@ -161,7 +161,7 @@ class Alert(Base):
     alert_type = Column(String(64))
     creation_date = Column(DateTime)
     start_time = Column(String(64))
-    repeat = Column(Time)
+    repeat = Column(String(64))
     notify = Column(Boolean)
     content_id = Column(Integer, ForeignKey('content.id'))
 

@@ -1,5 +1,6 @@
 from datetime import datetime
 import smtplib, ssl
+import tldextract
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart	
 from tracker.views.base import BaseView
@@ -118,10 +119,13 @@ class UserProjectSendMail(BaseView):
 				if not isinstance(receiver_email, list):
 					receiver_email = [receiver_email]
 
+				domains_list = [tldextract.extract(site['div']).domain.upper() for site in task_results]
+				print('DOMAIN LIST == {}'.format(domains_list))
 				for email in receiver_email:
 					message = MIMEMultipart()
 					date = datetime.now().replace(microsecond=0)
-					message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
+					#message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
+					message["Subject"] = '[SBB Alert] {}'.format(', '.join(domains_list))
 					message["From"] = 'Tracker Bot'
 					message["To"] = email
 

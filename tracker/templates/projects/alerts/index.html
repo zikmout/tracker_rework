@@ -20,10 +20,12 @@
   <div class="collapse" id="createalert">
     <div class="card card-body">
       <div class="form-row">
+
           <div class="form-group col-md-4">
             <label for="inputName">Name</label>
             <input type="text" class="form-control" id="inputName" name="inputName">
           </div>
+
           <div class="form-group col-md-4">
             <label for="inputContent">Content</label>
             <select id="inputContent" class="form-control" name="inputContent">
@@ -32,6 +34,7 @@
               {% end %}
             </select>
           </div>
+
           <div class="form-group col-md-4">
             <label for="inputType">Type</label>
             <select id="inputType" class="form-control" name="inputType">
@@ -43,21 +46,21 @@
           <div class="form-group col-md-4" id="ContinuousTracking">
 
               <label for="inputStartTime">Start time</label>
-                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="inputStartTime" name="inputStartTime"/>
+                <input class="form-control" type="datetime-local" value="" id="inputStartTime" name="inputStartTime"/>
 
 
               <label for="inputRepeat">Repeat</label>
               <select id="inputRepeat" class="form-control" name="inputRepeat">
-                <option selected>hour</option>
-                <option>day</option>
-                <option>month</option>
-                <option>year</option>
+                <option value="hour" selected>hour</option>
+                <option value="day">day</option>
+                <option value="month">month</option>
+                <option value="year">year</option>
               </select>
 
           </div>
 
-
       </div>
+
       <div class="form-group">
         <div class="form-check">
           
@@ -67,6 +70,7 @@
           </label>
         </div>
       </div>
+
       <div class="col-sm-0">
       <button type="submit" class="btn btn-info">Create</button>
     </div>
@@ -92,48 +96,43 @@
   </form>
   <br>
   <table class="table table-responsive-sm table-striped">
-          <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Creation Date</th>
-            <th>Start Time</th>
-            <th>Repeat</th>
-            <th>Notify</th>
-            <th>Content Name</th>
-            <th>Save in Log</th>
-            <th>Action</th>
-          </tr>
-          <tr>
-            {% for alert in alerts %}
-              {% for k, v in alert.items() %}
-                {% if k != 'id' %}
-                  <th>{{ escape(str(v)) }}</th>
-                {% end %}
-              {% end %}
-              {% if alert['alert_type'] == 'Live' %}
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
-                <th>
-                <div class="form-group">
-                  <div class="form-check">
-                      <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
-                  </div>
-                </div>
-                </th>
-                <th><button type="submit" class="btn btn-dark" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
-                </tr>
-              {% else %}
-                <th>
-                <div class="form-group">
-                  <div class="form-check">
-                      <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
-                  </div>
-                </div>
-                </th>
-                <th><form class="form-horizontal"><a class="btn btn-outline-dark disabled" value="">Start</a></input></form></th>
-                </tr>
-              {% end %}
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Creation Date</th>
+      <th>Start Time</th>
+      <th>Repeat</th>
+      <th>Notify</th>
+      <th>Content Name</th>
+      <th>Save in Log</th>
+      <th>Action</th>
+    </tr>
+      {% for alert in alerts %}
+    <tr>
+
+          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
+          <div class="form-group">
+
+          {% for k, v in alert.items() %}
+            {% if k != 'id'%}
+              <input type="hidden" name="{{ str(k) }}" value="{{ str(v) }}">
+              <th>{{ str(v) }}</th>
             {% end %}
-    </table>
+
+          {% end %}
+
+
+            <th>
+            
+              <div class="form-check">
+                  <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
+              </div>
+            </div>
+            </th>
+            <th><button type="submit" class="btn btn-info" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
+    </tr>
+    {% end %}
+  </table>
 </div>
 <script>
   $(document).ready(function() {

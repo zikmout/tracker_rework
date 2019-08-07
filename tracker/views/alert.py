@@ -31,6 +31,7 @@ class AlertView(BaseView):
                 json_alert = alert.as_dict()
                 json_alert['content_id'] = content.name
                 all_alerts.append(json_alert)
+        print('*********************\n{}'.format(all_alerts))
         self.render('projects/alerts/index.html', contents=json_contents, alerts=all_alerts)
 
 class AlertCreate(BaseView):
@@ -41,6 +42,7 @@ class AlertCreate(BaseView):
         print('post args = {}'.format(args))
         # if box is checked, variable comes in like { "gridCheck": "on" }
         checked = False
+
         if 'gridCheck' in args:
             checked = True
         content_name = args['inputContent'].split('(')[0]
@@ -49,7 +51,8 @@ class AlertCreate(BaseView):
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
             content = project.contents.filter_by(name=content_name).first()
-            new_alert = Alert(args['inputName'], args['inputType'], args['inputStartTime'], notify=checked)
+            new_alert = Alert(args['inputName'], args['inputType'], args['inputStartTime'],\
+                repeat=args['inputRepeat'], notify=checked)
             content.alerts.append(new_alert)
             self.request_db.add(content)
             self.request_db.commit()
@@ -74,42 +77,45 @@ class AlertLiveCreate(BaseView):
         if 'saveLogChecked' + alertid in args:
             save_log_checked = True
 
-        # if session live view task present in session, delete them and revoke associated tasks
-        if 'live_view' in self.session['tasks']:
-            res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
-            print('Deleting old live view tasks from session.')
-            del self.session['tasks']['live_view']
+        if args['alert_type'] == 'Live':
+            # if session live view task present in session, delete them and revoke associated tasks
+            if 'live_view' in self.session['tasks']:
+                res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+                print('Deleting old live view tasks from session.')
+                del self.session['tasks']['live_view']
 
-        user = self.request_db.query(User).filter_by(username=username).first()
-        project = user.projects.filter_by(name=projectname).first()
-        content = project.contents.filter_by(name=args['contentName']).first()
-        print('content --> {}'.format(content))
-        # Loading project
-        rproject = RProject(project.name, project.data_path, project.config_file)
-        if len(self.session['project_config_file']) == 0:
-            rproject._load_units_from_data_path()
-        else:
-            rproject._load_units_from_excel()
-        # need to change following line with PickleType
-        tasks = rproject.download_units_diff(content.links, save=True)
+            user = self.request_db.query(User).filter_by(username=username).first()
+            project = user.projects.filter_by(name=projectname).first()
+            content = project.contents.filter_by(name=args['contentName']).first()
+            print('content --> {}'.format(content))
+            # Loading project
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            if len(self.session['project_config_file']) == 0:
+                rproject._load_units_from_data_path()
+            else:
+                rproject._load_units_from_excel()
+            # need to change following line with PickleType
+            tasks = rproject.download_units_diff(content.links, save=True)
 
-        if tasks == None:
-            flash_message(self, 'danger', 'Problem creating LIVE ARLERT.')
-            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            if tasks == None:
+                flash_message(self, 'danger', 'Problem creating LIVE ARLERT.')
+                self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            else:
+                updated_tasks = list()
+                for task in tasks:
+                    task_object = {
+                        'username': username,
+                        'projectname': projectname,
+                        'uid': None, # reverse function get_id_from_url
+                        'url': None,#url, # to change with link list
+                        'id': task.id
+                    }
+                    updated_tasks.append(task_object)
+                self.session['tasks']['live_view'] = updated_tasks
+                self.session.save()
+                self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
         else:
-            updated_tasks = list()
-            for task in tasks:
-                task_object = {
-                    'username': username,
-                    'projectname': projectname,
-                    'uid': None, # reverse function get_id_from_url
-                    'url': None,#url, # to change with link list
-                    'id': task.id
-                }
-                updated_tasks.append(task_object)
-            self.session['tasks']['live_view'] = updated_tasks
-            self.session.save()
-            self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
+            self.write('Continuous Tracking Alert launching ...')
 
 class AlertLiveView(BaseView):
     SUPPORTED_METHODS = ['GET']

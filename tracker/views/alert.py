@@ -2,6 +2,7 @@ import tornado
 import json
 import datetime
 import time
+
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, get_url_from_id, \
@@ -10,6 +11,8 @@ from tornado.websocket import WebSocketHandler
 from tracker.core.rproject import RProject
 from tracker.celery import live_view_worker_app
 from tracker.workers.live.live_view_worker import live_view
+#from tracker.celery import continuous_tracking_worker_app
+#from tracker.workers.continuous_worker import setup_periodic_tasks
 
 class AlertView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -98,7 +101,7 @@ class AlertLiveCreate(BaseView):
             tasks = rproject.download_units_diff(content.links, save=True)
 
             if tasks == None:
-                flash_message(self, 'danger', 'Problem creating LIVE ARLERT.')
+                flash_message(self, 'danger', 'Problem creating LIVE ALERT.')
                 self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
             else:
                 updated_tasks = list()
@@ -116,6 +119,13 @@ class AlertLiveCreate(BaseView):
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
         else:
             self.write('Continuous Tracking Alert launching ...')
+            #setup_periodic_tasks(continuous_tracking_worker_app)
+            self.write('periodic tasks ok')
+
+
+
+
+
 
 class AlertLiveView(BaseView):
     SUPPORTED_METHODS = ['GET']

@@ -19,5 +19,5 @@ live_view_worker_app = Celery('live_view',
 
 # continuous_tracking_worker_app = Celery('continuous_tracking_worker',
 #               backend='amqp://',
-#               broker='pyamqp://guest@localhost/')#,
+#               broker='redis://localhost:6379/1')#,
              #include=['tracker.workers'])

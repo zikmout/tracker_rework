@@ -6,7 +6,8 @@ import os
 import pandas as pd
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
-from tracker.utils import flash_message, login_required, get_url_from_id, json_response
+from tracker.utils import flash_message, login_required, get_url_from_id, json_response,\
+replace_mix_option_with_all_existing_keywords
 import tracker.session as session
 from tracker.core.rproject import RProject
 
@@ -42,7 +43,8 @@ class FastProjectCreateView(BaseView):
         
         df = pd.read_excel(config_path)
         links = dict(zip(df['target'], df['target_label']))
-        links = {k:[v] for k, v in links.items()}
+        links = replace_mix_option_with_all_existing_keywords(links)
+        # links = {k:[v] for k, v in links.items()}
         
         # add links to crawler logfile
         rproject = RProject(new_project.name, new_project.data_path, new_project.config_file)

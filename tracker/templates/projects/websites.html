@@ -57,14 +57,14 @@
               {% for line in lines %}
               <tr>
                   <th>{{ line['name'] }}</th>
-                  <th>{{ line['website'] }}</th>
-                  <th>{{ line['target'] }}</th>
+                  <th>{{ line['website'][8:35] }} ... {{ line['website'][-15:] }}</th>
+                  <th>... {{ line['target'][-30:] }}</th>
                   <th>{{ line['keywords'] }}</th>
                   <th>
-                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="{{ line['target'] }}" name="editUnitName">Modify</button></input></form>
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-info" value="{{ line['target'] }}" name="editUnitName">Modify</button></input></form>
                   </th>
                   <th>
-                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ line['website'] }}" name="websiteToDelete"><button type="submit" class="btn btn-danger" value="{{ line['target'] }}" name="targetToDelete">Delete</button></input></form>
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ line['website'] }}" name="websiteToDelete"><button type="submit" class="btn btn-outline-danger" value="{{ line['target'] }}" name="targetToDelete">Delete</button></input></form>
                   </th>
               </tr>
               {% end %}

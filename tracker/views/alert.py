@@ -11,8 +11,9 @@ from tornado.websocket import WebSocketHandler
 from tracker.core.rproject import RProject
 from tracker.celery import live_view_worker_app
 from tracker.workers.live.live_view_worker import live_view
-#from tracker.celery import continuous_tracking_worker_app
-#from tracker.workers.continuous_worker import setup_periodic_tasks
+import tracker.workers.continuous_worker as continuous_worker
+# from tracker.celery import continuous_tracking_worker_app
+# from tracker.workers.continuous_worker import setup_periodic_tasks
 
 class AlertView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -119,7 +120,15 @@ class AlertLiveCreate(BaseView):
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
         else:
             self.write('Continuous Tracking Alert launching ...')
-            #setup_periodic_tasks(continuous_tracking_worker_app)
+            import cluster
+            #from tracker.celery import continuous_tracking_worker_app
+            from redbeat import RedBeatSchedulerEntry as Entry
+            # e = Entry('thingo', 'cluster.add_task', 10, args=[15, 4], app=cluster.app)
+            e = Entry('thingo1', 'continuous_tracking_worker.add_task', 5, args=[15, 4], app=continuous_worker.app)
+            e.save()
+            print('E = {}'.format(e))
+            #key = e.key()
+            # setup_periodic_tasks(continuous_tracking_worker_app)
             self.write('periodic tasks ok')
 
 

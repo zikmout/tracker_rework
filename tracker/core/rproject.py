@@ -216,13 +216,13 @@ class RProject:
 
     def add_links_to_crawler_logfile(self, links_list):
 
-
+        url_errors = list()
         def run_downloads(unit, unit_url):
             if unit is None or unit.is_base_crawled is False:
                 print('Unit url : {} does not exist.'.format(unit_url))
             else:
                 internal_link = link.replace(unit_url, '')
-                print('len remote tree before = {}'.format(len(unit._remote_tree())))
+                #print('len remote tree before = {}'.format(len(unit._remote_tree())))
                 if unit.add_crawler_link(internal_link) is True:
                     if downloader.download_website([internal_link], unit.download_path, unit.url, random_header=True):
                         print('->Page {} successfuly downloaded'.format(unit_url + internal_link))

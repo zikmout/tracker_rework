@@ -17,7 +17,9 @@ requires = [
     'celery',
     'cython',
     'fastText',
-    'pdftotext'
+    'pdftotext',
+    'celery-redbeat',
+    'flower'
 ]
 
 setup(

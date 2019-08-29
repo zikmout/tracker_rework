@@ -26,11 +26,9 @@ from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCraw
  UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
 from tracker.views.socket import EchoWebSocket
 
-define('port', default=5567, help='Port to listen on.')
-
-app_db, meta = make_session_factory()
-
 def main():
+    define('port', default=5567, help='Port to listen on.')
+    app_db, meta = make_session_factory()
     dirname = os.getcwd()
     
     """Construct and serve the tornado application."""

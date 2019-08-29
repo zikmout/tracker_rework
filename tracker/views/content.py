@@ -7,6 +7,7 @@ from tracker.utils import flash_message, login_required, json_response
 from tracker.core.rproject import RProject
 from tracker.core.unit import Unit
 from tracker.core.utils import get_formated_units
+from tracker.utils import replace_mix_option_with_all_existing_keywords
 from tracker.core.loader import get_df_from_excel
 
 class UserProjectContent(BaseView):
@@ -73,25 +74,26 @@ class UserProjectContentFromFile(BaseView):
             #print('list(links.values()) = {}'.format(list(links.values())))
             # if mixed set to True, links with label '<MIX>' are taking all tags of the list
             # temporary solution, does not really make sense yet
-            all_words = set()
-            if '<MIX>' in list(links.values()):
-                # create set of all keywords
-                for key_word in list(links.values()):
-                    if key_word != '<MIX>':
-                        #print('key word = {}'.format(key_word))
-                        all_words.add(key_word)
-                        # not case sensitive
-                        all_words.add(key_word.upper())
-                        all_words.add(key_word.lower())
-                # if <MIX> in the column, apply all key words matching
-                for k, v in links.copy().items():
-                    if v == '<MIX>':
-                        links[k] = list(all_words)
-                    else:
-                        links[k] = [v]
+            links = replace_mix_option_with_all_existing_keywords(links)
+            # all_words = set()
+            # if '<MIX>' in list(links.values()):
+            #     # create set of all keywords
+            #     for key_word in list(links.values()):
+            #         if key_word != '<MIX>':
+            #             #print('key word = {}'.format(key_word))
+            #             all_words.add(key_word)
+            #             # not case sensitive
+            #             all_words.add(key_word.upper())
+            #             all_words.add(key_word.lower())
+            #     # if <MIX> in the column, apply all key words matching
+            #     for k, v in links.copy().items():
+            #         if v == '<MIX>':
+            #             links[k] = list(all_words)
+            #         else:
+            #             links[k] = [v]
             # can save space here
-            else:
-                links = {k:[v] for k, v in links.items()}
+            # else:
+                # links = {k:[v] for k, v in links.items()}
             print('Link big dict = {}\n'.format(links))
             #print('Set of all_words = {}\n'.format(all_words))
             user = self.request_db.query(User).filter_by(username=username).first()

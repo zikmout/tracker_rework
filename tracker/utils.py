@@ -104,3 +104,24 @@ def revoke_all_tasks(app, task_func, ids):
     discard_all()
     print('\nAll task ids succesfully purged and discarded.')
     return res
+
+def replace_mix_option_with_all_existing_keywords(links):
+    all_words = set()
+    if '<MIX>' in list(links.values()):
+        # create set of all keywords
+        for key_word in list(links.values()):
+            if key_word != '<MIX>':
+                #print('key word = {}'.format(key_word))
+                all_words.add(key_word)
+                # not case sensitive
+                all_words.add(key_word.upper())
+                all_words.add(key_word.lower())
+        # if <MIX> in the column, apply all key words matching
+        for k, v in links.copy().items():
+            if v == '<MIX>':
+                links[k] = list(all_words)
+            else:
+                links[k] = [v]
+    else:
+        links = {k:[v] for k, v in links.items()}
+    return links

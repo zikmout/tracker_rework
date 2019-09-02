@@ -20,7 +20,7 @@
               <th>{{ escape(user['email']) }}</th>
               <th>{{ escape(user['role_id']) }}</th>
               <th>{{ escape(user['registration_date']) }}</th>
-              <th><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">Delete User</button></form></th>
+              <th><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-danger" value="">Delete</button></form></th>
               </tr>
               {% end %}
         </table>

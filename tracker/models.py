@@ -168,13 +168,15 @@ class Alert(Base):
     launched = Column(Boolean)
     content_id = Column(Integer, ForeignKey('content.id'))
 
-    def __init__(self, name, alert_type, start_time, repeat=None, notify=False):
+    def __init__(self, name, alert_type, start_time, end_time=None, repeat=None, email_notify=False, launched=False):
         self.name = name
         self.alert_type = alert_type
         self.creation_date = datetime.now().replace(microsecond=0)
         self.start_time = start_time
+        self.end_time = end_time
         self.repeat = repeat
-        self.notify = notify
+        self.email_notify = email_notify
+        self.launched = launched
 
     def __repr__(self):
         return '<id {}>'.format(self.id)

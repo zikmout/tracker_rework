@@ -101,11 +101,14 @@
       <th>Type</th>
       <th>Creation Date</th>
       <th>Start Time</th>
+      <th>End Time</th>
       <th>Repeat</th>
-      <th>Notify</th>
+      <th>Email notify</th>
+      <th>Launched ?</th>
       <th>Content Name</th>
       <th>Save in Log</th>
       <th>Action</th>
+      <th></th>
     </tr>
       {% for alert in alerts %}
     <tr>
@@ -129,7 +132,14 @@
               </div>
             </div>
             </th>
-            <th><button type="submit" class="btn btn-info" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
+            <th>
+              <button type="submit" class="btn btn-info" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+            </th>
+            <th>
+              <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/delete" method="post">
+                <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
+              <button type="submit" class="btn btn-danger" value="{{ alert['name'] }}" name="alertName">Delete</button></form>
+            </th>
     </tr>
     {% end %}
   </table>

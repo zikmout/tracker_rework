@@ -55,8 +55,10 @@ class AlertCreate(BaseView):
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
             content = project.contents.filter_by(name=content_name).first()
-            new_alert = Alert(args['inputName'], args['inputType'], args['inputStartTime'],\
-                repeat=args['inputRepeat'], notify=checked)
+            if args['inputStartTime'] == '':
+                start_time = datetime.datetime.now().replace(microsecond=0)
+            new_alert = Alert(args['inputName'], args['inputType'], start_time,\
+                repeat=args['inputRepeat'], email_notify=checked)
             content.alerts.append(new_alert)
             self.request_db.add(content)
             self.request_db.commit()
@@ -131,10 +133,28 @@ class AlertLiveCreate(BaseView):
             # setup_periodic_tasks(continuous_tracking_worker_app)
             self.write('periodic tasks ok')
 
-
-
-
-
+class AlertDelete(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    def post(self, username, projectname):
+        #print('ARGS = {}'.format(self.form_data))
+        content_name = self.get_argument('contentName')
+        alert_name = self.get_argument('alertName')
+        user = self.request_db.query(User).filter_by(username=username).first()
+        print('USER = {}'.format(user.username))
+        project = user.projects.filter_by(name=projectname).first()
+        content = project.contents.filter_by(name=content_name).first()
+        alert = content.alerts.filter_by(name=alert_name).first()
+        if alert:
+            try:
+                self.request_db.delete(alert)
+                self.request_db.commit()
+                flash_message(self, 'success', 'Alert {} succesfully deleted.'.format(alert_name))
+            except Exception as e:
+                flash_message(self, 'success', 'Impossible to delete alert. Check shell logs for more information.')
+                print('Exception : Impossible to delete user because : {}'.format(e))
+        else:
+            flash_message(self, 'danger', 'Alert {} not found. Delete aborded.'.format(alert_name))
+        self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
 
 class AlertLiveView(BaseView):
     SUPPORTED_METHODS = ['GET']

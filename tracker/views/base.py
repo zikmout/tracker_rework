@@ -3,6 +3,7 @@ import datetime
 import time
 import tornado
 import pickle
+import traceback
 from tornado.web import RequestHandler
 from werkzeug import check_password_hash
 from tracker.models import Permission, Role, Project, User
@@ -69,7 +70,22 @@ class BaseView(RequestHandler):
         self.set_status(status)
         self.write(json.dumps(data))
 
+    def write_error(self, status_code, **kwargs):
+        if 'exc_info' in kwargs:
+            tb = list()
+            # self.write('Exception :\n{}'.format(kwargs['exc_info'][0].__name__))
+            for line in traceback.format_exception(*kwargs["exc_info"]):
+                tb.append(line)
+            self.render('pages/500.html', traceback=tb)
+        else:
+            self.write('ERROR : (Status Code {})'.format(status_code))
+
 class HomePage(BaseView):
     SUPPORTED_METHODS = ['GET']
     def get(self):
         self.render('index.html')
+
+class My404Handler(BaseView):
+    def prepare(self):
+        self.set_status(404)
+        self.render('pages/404.html')

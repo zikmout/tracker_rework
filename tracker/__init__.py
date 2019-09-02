@@ -9,7 +9,7 @@ from tornado.web import url
 from tracker.utils import make_session_factory
 import tracker.session as session
 
-from tracker.views.base import HomePage
+from tracker.views.base import HomePage, My404Handler
 from tracker.views.user import UserListView, UserDelete, UserUnitView, UserUnitEditView
 from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 from tracker.views.mail import UserProjectSendMail
@@ -113,7 +113,8 @@ def main():
                 'debug': True,
                 'autoreload': True,
                 'serve_traceback':True,
-                'compiled_template_cache':False
+                'compiled_template_cache':False,
+                'default_handler_class': My404Handler
             }
             tornado.web.Application.__init__(self, handlers, **settings)
             try:

@@ -140,6 +140,7 @@ class Content(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(64), unique=True)
     links = Column(PickleType)
+    mailing_list = Column(PickleType) # must include template type
     project_id = Column(Integer, ForeignKey('project.id'))
     alerts = relationship('Alert', cascade='save-update, delete', backref='content', lazy='dynamic')
 
@@ -156,13 +157,15 @@ class Content(Base):
 class Alert(Base):
     __tablename__ = 'alert'
     __table_args__ = {'extend_existing': True}
-    id = Column(Integer, primary_key = True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(64), unique=True)
     alert_type = Column(String(64))
     creation_date = Column(DateTime)
-    start_time = Column(String(64))
-    repeat = Column(String(64))
-    notify = Column(Boolean)
+    start_time = Column(DateTime)
+    end_time = Column(DateTime)
+    repeat = Column(PickleType)
+    email_notify = Column(Boolean)
+    launched = Column(Boolean)
     content_id = Column(Integer, ForeignKey('content.id'))
 
     def __init__(self, name, alert_type, start_time, repeat=None, notify=False):

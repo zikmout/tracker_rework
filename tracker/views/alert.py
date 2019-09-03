@@ -2,6 +2,7 @@ import tornado
 import json
 import datetime
 import time
+from tornado import gen
 
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
@@ -51,14 +52,25 @@ class AlertCreate(BaseView):
             checked = True
         content_name = args['inputContent'].split('(')[0]
         print('content -> {}'.format(content_name))
+
         try:
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
             content = project.contents.filter_by(name=content_name).first()
             if args['inputStartTime'] == '':
                 start_time = datetime.datetime.now().replace(microsecond=0)
-            new_alert = Alert(args['inputName'], args['inputType'], start_time,\
-                repeat=args['inputRepeat'], email_notify=checked)
+            else:
+                start_time = args['start_time']
+            if args['inputType'] == 'Live':
+                start_time = datetime.datetime.now().replace(microsecond=0)
+                new_alert = Alert(args['inputName'], args['inputType'], start_time, email_notify=checked)
+            elif args['inputType'] == 'BasicReccurent':
+                new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat=args['inputRepeat'],\
+                    interval=args['inputEvery'], max_count=args['inputMaxCount'], email_notify=checked)
+            elif args['inputType'] == 'CrontabSchedule':
+                new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat_at=args['inputRepeatTime'],\
+                    days_of_week=[v[0] for k, v in args.items() if k.startswith('crontabDay')], email_notify=checked)
+                
             content.alerts.append(new_alert)
             self.request_db.add(content)
             self.request_db.commit()
@@ -83,7 +95,7 @@ class AlertLiveCreate(BaseView):
         if 'saveLogChecked' + alertid in args:
             save_log_checked = True
 
-        if args['alert_type'] == 'Live':
+        if args['alertType'] == 'Live':
             # if session live view task present in session, delete them and revoke associated tasks
             if 'live_view' in self.session['tasks']:
                 res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
@@ -93,6 +105,7 @@ class AlertLiveCreate(BaseView):
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
             content = project.contents.filter_by(name=args['contentName']).first()
+
             print('content --> {}'.format(content))
             # Loading project
             rproject = RProject(project.name, project.data_path, project.config_file)
@@ -117,6 +130,12 @@ class AlertLiveCreate(BaseView):
                         'id': task.id
                     }
                     updated_tasks.append(task_object)
+                
+                # Put status 'launched' on alert
+                alert = content.alerts.filter_by(name=args['alertName']).first()
+                alert.launched = True
+                self.request_db.commit()
+
                 self.session['tasks']['live_view'] = updated_tasks
                 self.session.save()
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
@@ -132,6 +151,32 @@ class AlertLiveCreate(BaseView):
             #key = e.key()
             # setup_periodic_tasks(continuous_tracking_worker_app)
             self.write('periodic tasks ok')
+
+class AlertStop(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
+    def post(self, username, projectname):
+        args = { k: self.get_argument(k) for k in self.request.arguments }
+        print('ARGS = {}'.format(args))
+
+        user = self.request_db.query(User).filter_by(username=username).first()
+        print('USER = {}'.format(user.username))
+        project = user.projects.filter_by(name=projectname).first()
+        content = project.contents.filter_by(name=args['contentName']).first()
+        alert = content.alerts.filter_by(name=args['alertName']).first()
+
+        if 'live_view' in self.session['tasks']:
+            res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+            print('Deleting old live view tasks from session.')
+            del self.session['tasks']['live_view']
+            self.session.save()
+
+        alert.launched = False
+        self.request_db.commit()
+        flash_message(self, 'success', 'Alert {} succesfully stopped.'.format(args['alertName']))
+        self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+
 
 class AlertDelete(BaseView):
     SUPPORTED_METHODS = ['POST']

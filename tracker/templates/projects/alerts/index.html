@@ -23,7 +23,7 @@
 
           <div class="form-group col-md-4">
             <label for="inputName">Name</label>
-            <input type="text" class="form-control" id="inputName" name="inputName">
+            <input type="text" class="form-control" id="inputName" name="inputName" required>
           </div>
 
           <div class="form-group col-md-4">
@@ -39,24 +39,105 @@
             <label for="inputType">Type</label>
             <select id="inputType" class="form-control" name="inputType">
               <option value="Live" selected>Live</option>
-              <option value="Deffered">Deffered</option>
+              <option value="BasicReccurent">Basic Reccurent</option>
+              <option value="CrontabSchedule">Crontab schedule</option>
             </select>
           </div>
 
-          <div class="form-group col-md-4" id="ContinuousTracking">
+          <div class="form-group col-md-4" id="BasicReccurent">
+            <div class="card card-body border-info">
 
               <label for="inputStartTime">Start time</label>
-                <input class="form-control" type="datetime-local" value="" id="inputStartTime" name="inputStartTime"/>
+              <input class="form-control" type="datetime-local" value="" name="inputStartTime">
 
+              <label for="inputEvery">Every</label>
+              <div class="row">
+                <div class="col-md-4">
+                  <input class="form-control" type="text" value="3" name="inputEvery"/ required>
+                </div>
 
-              <label for="inputRepeat">Repeat</label>
-              <select id="inputRepeat" class="form-control" name="inputRepeat">
-                <option value="hour" selected>hour</option>
-                <option value="day">day</option>
-                <option value="month">month</option>
-                <option value="year">year</option>
-              </select>
+                <div class="col-md-4">
+                  <select id="inputRepeat" class="form-control" name="inputRepeat">
+                    <option value="SECONDLY" selected>second</option>
+                    <option value="MINUTELY">minute</option>
+                    <option value="HOURLY">hour</option>
+                    <option value="DAILY">day</option>
+                    <option value="WEEKLY">week</option>
+                    <option value="MONTHLY">month</option>
+                    <option value="YEARLY">year</option>
+                  </select>
+                </div>
 
+              </div>
+              <label for="inputMaxCount">Max count</label>
+              <div class="row">
+                <div class="col-md-4">
+                  <input class="form-control" type="text" value="5" name="inputMaxCount"/ required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group col-md-12" id="CrontabSchedule">
+            <div class="card card-body border-info">
+
+              <div class="row">
+                <div class="col-md-2">
+                  <label for="inputRepeatTime">Time of repeat</label>
+                  <input class="form-control" type="time" value="" name="inputRepeatTime"/>
+                </div>
+
+                <div class="col-md-6">
+                  
+                  <div class="row">
+                    <label>Days of the week</label>
+                  </div>
+
+                  <div class="row">
+                    
+                    <div class="form-check-inline">
+
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="1" name="crontabDay1">Monday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="2" name="crontabDay2">Tuesday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="3" name="crontabDay3">Wednesday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="4" name="crontabDay4">Thursday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="5" name="crontabDay5">Friday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="6" name="crontabDay6">Saturday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="0" name="crontabDay0">Sunday
+                      </label>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
           </div>
 
       </div>
@@ -66,7 +147,7 @@
           
           <label class="form-check-label" for="gridCheck">
             <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
-            notify new files available
+            Send email
           </label>
         </div>
       </div>
@@ -94,35 +175,64 @@
     </div>
   </div>
   </form>
-  <br>
+  
   <table class="table table-responsive-sm table-striped">
     <tr>
       <th>Name</th>
       <th>Type</th>
-      <th>Creation Date</th>
-      <th>Start Time</th>
-      <th>End Time</th>
-      <th>Repeat</th>
+      <th>Creation</th>
+      <th>Start</th>
+      <th>End</th>
+      <th>Schedule</th>
       <th>Email notify</th>
-      <th>Launched ?</th>
+      <th>Launched</th>
       <th>Content Name</th>
-      <th>Save in Log</th>
+      <th>Notify Mail</th>
       <th>Action</th>
       <th></th>
+      <th></th>
     </tr>
-      {% for alert in alerts %}
+
+    {% for alert in alerts %}
+    {{ alert }}
     <tr>
 
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
           <div class="form-group">
 
-          {% for k, v in alert.items() %}
-            {% if k != 'id'%}
-              <input type="hidden" name="{{ str(k) }}" value="{{ str(v) }}">
-              <th>{{ str(v) }}</th>
+
+
+
+            <th>{{ alert['name'] }}</th>
+
+
+            <th>{{ alert['alert_type'] }}</th>
+
+
+            <th>{{ alert['creation_date'] }}</th>
+
+
+            <th>{{ alert['start_time'] }}</th>
+
+
+            <th>{{ alert['end_time'] }}</th>
+
+
+            {% if alert['alert_type'] == 'Live' %}
+            <th>-</th>
+            {% elif alert['alert_type'] == 'BasicReccurent' %}
+            <th>Every {{ alert['interval'] }} {{ alert['repeat'][:4] }} (max={{ alert['max_count'] }})</th>
+            {% elif alert['alert_type'] == 'CrontabSchedule' %}
+            <th>Days:{{ alert['days_of_week'] }} at {{ alert['repeat_at'] }}</th>
             {% end %}
 
-          {% end %}
+            <th>{{ alert['email_notify'] }}</th>
+
+
+            <th>{{ alert['launched'] }}</th>
+
+
+            <th>{{ alert['content_id'] }}</th>
 
 
             <th>
@@ -133,29 +243,54 @@
             </div>
             </th>
             <th>
+              {% if escape(alert['launched']) == 'False' %}
+              <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
+              <input type="hidden" value="{{ alert['name'] }}" name="alertName">
               <button type="submit" class="btn btn-info" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+              {% else %}
+              <button type="button" class="btn btn-info disabled" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+              {% end %}
+            </th>
+
+            <th>
+              {% if alert['launched'] == 'True' %}
+              <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post">
+                <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
+                <input type="hidden" value="{{ escape(alert['content_id']) }}" name="contentName">
+              <button type="submit" class="btn btn-info" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
+              {% else %}
+              <form action="#" method="post">
+                <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
+              <button type="button" class="btn btn-info disabled" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
+              {% end %}
             </th>
             <th>
               <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/delete" method="post">
                 <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
               <button type="submit" class="btn btn-danger" value="{{ alert['name'] }}" name="alertName">Delete</button></form>
             </th>
-    </tr>
-    {% end %}
+            </tr>
+            {% end %}
+    
+    
   </table>
 </div>
 <script>
   $(document).ready(function() {
-    console.log('Loading action on deffered ...');
-    $('#ContinuousTracking').hide();
+    $('#BasicReccurent').hide();
+    $('#CrontabSchedule').hide();
     $('#inputType').on('change', function() {
-      if (this.value == 'Deffered') {
-        console.log('Show !!');
-        $('#ContinuousTracking').show();
+      if (this.value == 'BasicReccurent') {
+        $('#CrontabSchedule').hide();
+        $('#BasicReccurent').show();
+      }
+      if (this.value == 'CrontabSchedule') {
+        $('#BasicReccurent').hide();
+        $('#CrontabSchedule').show();
       }
       if (this.value == 'Live') {
-        console.log('Hide !!');
-        $('#ContinuousTracking').hide();
+        $('#CrontabSchedule').hide();
+        $('#BasicReccurent').hide();
       }
     });
   });

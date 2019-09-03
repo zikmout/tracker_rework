@@ -163,18 +163,30 @@ class Alert(Base):
     creation_date = Column(DateTime)
     start_time = Column(DateTime)
     end_time = Column(DateTime)
-    repeat = Column(PickleType)
+    # for BasicReccurent alerts
+    repeat = Column(String(64))
+    interval = Column(Integer)
+    max_count = Column(Integer)
+    # for CrontabSchedule alerts
+    repeat_at = Column(String(64))
+    days_of_week = Column(PickleType) # Array with corresponding days of the week from 0 to 6
+    # Remainder
     email_notify = Column(Boolean)
     launched = Column(Boolean)
     content_id = Column(Integer, ForeignKey('content.id'))
 
-    def __init__(self, name, alert_type, start_time, end_time=None, repeat=None, email_notify=False, launched=False):
+    def __init__(self, name, alert_type, start_time, end_time=None, repeat=None, interval=None,\
+        max_count=None, repeat_at=None, days_of_week=None, email_notify=False, launched=False):
         self.name = name
         self.alert_type = alert_type
         self.creation_date = datetime.now().replace(microsecond=0)
         self.start_time = start_time
         self.end_time = end_time
         self.repeat = repeat
+        self.interval = interval
+        self.max_count = max_count
+        self.repeat_at = repeat_at
+        self.days_of_week = days_of_week
         self.email_notify = email_notify
         self.launched = launched
 

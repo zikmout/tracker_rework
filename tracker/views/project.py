@@ -58,11 +58,14 @@ class FastProjectCreateView(BaseView):
 
 
             # create content
-            new_content = Content(project_name + '_qp_spider', links)
+            mailing_list = dict(zip(df['target'], df['mailing_list']))
+            print('Mailing LIST = {}'.format(mailing_list))
+            new_content = Content(project_name + '_default', links, mailing_list)
             new_project.contents.append(new_content)
 
             # # create live alert
-            new_alert = Alert(project_name + '_qp_live', 'Live', "2011-08-19T13:45:00")
+            now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+            new_alert = Alert(project_name + '_default', 'Live', now)
             new_content.alerts.append(new_alert)
             self.request_db.add(user)
             self.request_db.commit()

@@ -144,9 +144,10 @@ class Content(Base):
     project_id = Column(Integer, ForeignKey('project.id'))
     alerts = relationship('Alert', cascade='save-update, delete', backref='content', lazy='dynamic')
 
-    def __init__(self, name, links):
+    def __init__(self, name, links, mailing_list=None):
         self.name = name
         self.links = links
+        self.mailing_list = mailing_list
 
     def __repr__(self):
         return '<id {}>'.format(self.id)

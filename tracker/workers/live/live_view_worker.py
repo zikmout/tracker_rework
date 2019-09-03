@@ -10,9 +10,8 @@ from tracker.celery import live_view_worker_app
 import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
-import cld2
+
 import re
-import string
 import pdftotext
 import gc
 import fastText
@@ -25,81 +24,6 @@ if '.egg' in __file__ and  'workers/live' in os.getcwd():
     su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
     already_visited = list()
     already_seen_content = list()
-
-def clean_content(input_list, min_sentence_len=5):
-    print('-> cleaning HTML content ....')
-    """ Method that clean every element of a list
-        arg:
-            input_list(list): List of elements to be cleaned
-        return:
-            ouput (list): List of cleaned elements
-    """
-    if input_list is None:
-        return None
-    output = [x for x in input_list if x != '\n']
-    output = [x for x in output if len(x.split(' ')) > min_sentence_len]
-
-    # to lower
-    output = [x.lower() for x in output]
-    
-    # get rid of punctuation
-    t = str.maketrans('', '', string.punctuation)
-    output = [x.translate(t) for x in output]
-    
-    # get rid of digits
-    t = str.maketrans('', '', string.digits)
-    output = [x.translate(t) for x in output]
-    
-    # get rid of whitespaces
-    t = str.maketrans('\n\t\r', '   ')
-    output = [x.translate(t) for x in output]
-    
-    # TODO: Add function to delete '-'s
-
-    # get rid of cookie and javascript sentences
-    to_exclude = ['cookie', 'javascript']
-    for _ in to_exclude:
-        output = [x for x in output if _ not in x]
-    
-    return output
-
-def get_essential_content(content, min_sentence_len):
-    extracted = extractor.extract_text_from_html(content)
-    cleaned = clean_content(extracted, min_sentence_len)
-    cleaned = list(map(str.strip, cleaned))
-    cleaned = [x for x in cleaned if len(x.split(' ')) > min_sentence_len]
-    cleaned = ''.join(cleaned)
-    if cleaned == '':
-        return None
-    else:
-        return cleaned
-
-def clean_pdf_content(input_str):
-    print('-> cleaning pdf content ...')
-    if input_str is None:
-        return None
-    intput_str = ''.join(x for x in input_str if x.isprintable())
-    input_str = ''.join(input_str).lower()
-    output = re.sub(r'[0-9]', '', input_str)
-    t = str.maketrans('', '', string.punctuation)
-    output = output.translate(t)
-    output = ' '.join(output.split())
-    return output
-
-def is_language(content, language):
-    isReliable, textBytesFound, details = cld2.detect(content)
-    if isReliable is True and details[0].language_name == language:
-        return True
-    return False
-
-def is_valid_file(fname):
-    to_include = ['.pdf', '.PDF']
-    for _ in to_include:
-        if _ in fname :
-            return True
-    if fname.startswith('.'):
-        return False
-    return False
 
 def make_predictions(content, min_acc=0.75):
     global su_model
@@ -153,22 +77,22 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     info = response.info()
     cs = info.get_content_type()
 
-    if is_valid_file(filename) or 'pdf' in cs:
+    if extractor.is_valid_file(filename) or 'pdf' in cs:
         #print('URL = {} (detected pdf)'.format(url))
-        cleaned_content = clean_pdf_content(pdftotext.PDF(response))
+        cleaned_content = extractor.clean_pdf_content(pdftotext.PDF(response))
         #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
         if cleaned_content is None or cleaned_content in already_seen_content:
             #print('Content {} is None !!!!!!!!!'.format(url))
             return False
         already_seen_content.append(cleaned_content)
-        # if not is_language(cleaned_content, 'ENGLISH'):
+        # if not extractor.is_language(cleaned_content, 'ENGLISH'):
         #     print('Language is NOT ENGLISH !! (Content = {}...)'.format(cleaned_content[:100]))
         #     return False
         return make_predictions(cleaned_content, min_acc=min_acc)
 
     else:
         print('URL = {} (detected NON pdf)'.format(url))
-        cleaned_content = get_essential_content(response.read(), 10)
+        cleaned_content = extractor.get_essential_content(response.read(), 10)
 
         if cleaned_content is None or cleaned_content in already_seen_content:
             #print('Content {} is None !!!!!!!!!'.format(url))
@@ -177,7 +101,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         #content = extractor.extract_text_from_html(response.read())
         #cleaned_content = extractor.clean_content(content)
         #print('Content to analyse = {}'.format(cleaned_content[:100]))
-        # if not is_language(cleaned_content, 'ENGLISH'):
+        # if not extractor.is_language(cleaned_content, 'ENGLISH'):
         #     print('Language is NOT ENGLISH (non pdf) !! (Content = {}...)'.format(cleaned_content[:100]))
         #     return False
         return make_predictions(cleaned_content, min_acc=min_acc)

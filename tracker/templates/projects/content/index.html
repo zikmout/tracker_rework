@@ -76,15 +76,15 @@ $(document).ready(function(){
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="inputName">Name</label>
-                        <input type="text" class="form-control" id="inputName" name="inputName">
+                        <input type="text" class="form-control" id="inputName" name="inputName" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputName">Column link name</label>
-                        <input type="text" class="form-control" id="columnLinkName" name="columnLinkName">
+                        <input type="text" class="form-control" id="columnLinkName" name="columnLinkName" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputName">Column keyword name</label>
-                        <input type="text" class="form-control" id="columnKeyWordName" name="columnKeyWordName">
+                        <input type="text" class="form-control" id="columnKeyWordName" name="columnKeyWordName" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputName">File path (.xls)</label>
@@ -97,12 +97,12 @@ $(document).ready(function(){
                     <div class="form-check">
                       <label class="form-check-label" for="addStrangerChecked">
                         <input class="form-check-input" type="checkbox" id="addStrangerChecked" name="addStrangerChecked">
-                      put link in crawler logfile and download page if not found
+                      Put link in crawler logfile and download page if not found
                       </label>
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-outline-dark">Create</button>
+                <button type="submit" class="btn btn-info" id="createButton">Create</button>
 
             </div>
 
@@ -129,7 +129,7 @@ $(document).ready(function(){
                 <label class="form-check-label">Check if new file detected</label>
               </div>
               //-->
-              <input type="button" value="Classify Content from tree" id="get_checked" class="btn btn-outline-dark">
+              <input type="button" value="Classify Content from tree" id="get_checked" class="btn btn-info">
               <br>
               <br>
 
@@ -196,4 +196,11 @@ $(document).ready(function(){
 
       </div>
 </div>
+{% end %}
+{% block script %}
+<script>
+  $('#createButton').click(function(){
+     $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+  });
+</script>
 {% end %}

@@ -4,6 +4,8 @@ import urllib
 from urllib.request import urlopen
 import ssl
 import re
+import cld2
+import string
 from bs4 import BeautifulSoup
 from bs4.element import Comment
 from pdfminer.pdfinterp import PDFResourceManager
@@ -16,6 +18,55 @@ import lxml.html as LH
 import itertools
 import tracker.core.scrapper as scrapper
 import tracker.core.utils as utils
+
+def clean_pdf_content(input_str):
+    print('-> cleaning pdf content ...')
+    if input_str is None:
+        return None
+    intput_str = ''.join(x for x in input_str if x.isprintable())
+    input_str = ''.join(input_str).lower()
+    output = re.sub(r'[0-9]', '', input_str)
+    t = str.maketrans('', '', string.punctuation)
+    output = output.translate(t)
+    output = ' '.join(output.split())
+    return output
+
+def clean_content(input_list, min_sentence_len=5):
+    print('-> cleaning HTML content ....')
+    """ Method that clean every element of a list
+        arg:
+            input_list(list): List of elements to be cleaned
+        return:
+            ouput (list): List of cleaned elements
+    """
+    if input_list is None:
+        return None
+    output = [x for x in input_list if x != '\n']
+    output = [x for x in output if len(x.split(' ')) > min_sentence_len]
+
+    # to lower
+    output = [x.lower() for x in output]
+    
+    # get rid of punctuation
+    t = str.maketrans('', '', string.punctuation)
+    output = [x.translate(t) for x in output]
+    
+    # get rid of digits
+    t = str.maketrans('', '', string.digits)
+    output = [x.translate(t) for x in output]
+    
+    # get rid of whitespaces
+    t = str.maketrans('\n\t\r', '   ')
+    output = [x.translate(t) for x in output]
+    
+    # TODO: Add function to delete '-'s
+
+    # get rid of cookie and javascript sentences
+    to_exclude = ['cookie', 'javascript']
+    for _ in to_exclude:
+        output = [x for x in output if _ not in x]
+    
+    return output
 
 def roundrobin(*iterables):
     # took from here https://docs.python.org/3/library/itertools.html#itertools-recipes
@@ -78,19 +129,6 @@ def keyword_match(keywords, status, remote_content, url):
         status['all_links_neg'] = [] 
     return status
 
-def clean_content(input_list):
-    """ Method that clean every element of a list
-        arg:
-            input_list(list): List of elements to be cleaned
-        return:
-            ouput (list): List of cleaned elements
-    """
-    output = [x for x in input_list if x != '\n']
-    #t = str.maketrans("\n\t\r", "   ")
-    #output = [x.translate(t) for x in output]
-    #output = [x.strip() for x in output]
-    return output
-
 def tag_visible(element):
     if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
         return False
@@ -136,8 +174,31 @@ def get_text_diff(local_content, remote_content, status):
         print('diff all links pos = {}'.format(status['all_links_pos']))
     return status
 
+def get_essential_content(content, min_sentence_len):
+    extracted = extract_text_from_html(content)
+    cleaned = clean_content(extracted, min_sentence_len)
+    cleaned = list(map(str.strip, cleaned))
+    cleaned = [x for x in cleaned if len(x.split(' ')) > min_sentence_len]
+    cleaned = ''.join(cleaned)
+    if cleaned == '':
+        return None
+    else:
+        return cleaned
 
+def is_language(content, language):
+    isReliable, textBytesFound, details = cld2.detect(content)
+    if isReliable is True and details[0].language_name == language:
+        return True
+    return False
 
+def is_valid_file(fname):
+    to_include = ['.pdf', '.PDF']
+    for _ in to_include:
+        if _ in fname :
+            return True
+    if fname.startswith('.'):
+        return False
+    return False
 '''
 def extract_html(full_url, link):
     print('HTML -> {}'.format(link))

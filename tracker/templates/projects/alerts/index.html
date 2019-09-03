@@ -48,7 +48,7 @@
             <div class="card card-body border-info">
 
               <label for="inputStartTime">Start time</label>
-              <input class="form-control" type="datetime-local" value="" name="inputStartTime">
+              <input class="form-control" type="datetime-local" value="2019-09-03T08:52" name="inputStartTime">
 
               <label for="inputEvery">Every</label>
               <div class="row">
@@ -194,7 +194,6 @@
     </tr>
 
     {% for alert in alerts %}
-    {{ alert }}
     <tr>
 
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">

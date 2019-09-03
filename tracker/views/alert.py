@@ -2,7 +2,12 @@ import tornado
 import json
 import datetime
 import time
+import pytz
 from tornado import gen
+from redbeat import RedBeatSchedulerEntry as Entry
+from redbeat.schedules import rrule
+from celery.schedules import crontab
+import tracker.workers.continuous_worker as continuous_worker
 
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
@@ -36,7 +41,7 @@ class AlertView(BaseView):
                 json_alert = alert.as_dict()
                 json_alert['content_id'] = content.name
                 all_alerts.append(json_alert)
-        print('*********************\n{}'.format(all_alerts))
+        #print('*********************\n{}'.format(all_alerts))
         self.render('projects/alerts/index.html', contents=json_contents, alerts=all_alerts)
 
 class AlertCreate(BaseView):
@@ -53,6 +58,8 @@ class AlertCreate(BaseView):
         content_name = args['inputContent'].split('(')[0]
         print('content -> {}'.format(content_name))
 
+        print('START TIME = {}'.format(args['inputStartTime']))
+
         try:
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
@@ -60,7 +67,7 @@ class AlertCreate(BaseView):
             if args['inputStartTime'] == '':
                 start_time = datetime.datetime.now().replace(microsecond=0)
             else:
-                start_time = args['start_time']
+                start_time = args['inputStartTime']
             if args['inputType'] == 'Live':
                 start_time = datetime.datetime.now().replace(microsecond=0)
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, email_notify=checked)
@@ -69,7 +76,7 @@ class AlertCreate(BaseView):
                     interval=args['inputEvery'], max_count=args['inputMaxCount'], email_notify=checked)
             elif args['inputType'] == 'CrontabSchedule':
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat_at=args['inputRepeatTime'],\
-                    days_of_week=[v[0] for k, v in args.items() if k.startswith('crontabDay')], email_notify=checked)
+                    days_of_week=[int(v[0]) for k, v in args.items() if k.startswith('crontabDay')], email_notify=checked)
                 
             content.alerts.append(new_alert)
             self.request_db.add(content)
@@ -95,16 +102,18 @@ class AlertLiveCreate(BaseView):
         if 'saveLogChecked' + alertid in args:
             save_log_checked = True
 
+        schedule = None
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        content = project.contents.filter_by(name=args['contentName']).first()
+        alert = content.alerts.filter_by(name=args['alertName']).first()
+
         if args['alertType'] == 'Live':
             # if session live view task present in session, delete them and revoke associated tasks
             if 'live_view' in self.session['tasks']:
                 res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
                 print('Deleting old live view tasks from session.')
                 del self.session['tasks']['live_view']
-
-            user = self.request_db.query(User).filter_by(username=username).first()
-            project = user.projects.filter_by(name=projectname).first()
-            content = project.contents.filter_by(name=args['contentName']).first()
 
             print('content --> {}'.format(content))
             # Loading project
@@ -119,6 +128,7 @@ class AlertLiveCreate(BaseView):
             if tasks == None:
                 flash_message(self, 'danger', 'Problem creating LIVE ALERT.')
                 self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+                return
             else:
                 updated_tasks = list()
                 for task in tasks:
@@ -132,25 +142,35 @@ class AlertLiveCreate(BaseView):
                     updated_tasks.append(task_object)
                 
                 # Put status 'launched' on alert
-                alert = content.alerts.filter_by(name=args['alertName']).first()
                 alert.launched = True
                 self.request_db.commit()
 
                 self.session['tasks']['live_view'] = updated_tasks
                 self.session.save()
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
-        else:
-            self.write('Continuous Tracking Alert launching ...')
-            import cluster
-            #from tracker.celery import continuous_tracking_worker_app
-            from redbeat import RedBeatSchedulerEntry as Entry
-            # e = Entry('thingo', 'cluster.add_task', 10, args=[15, 4], app=cluster.app)
-            e = Entry('thingo1', 'continuous_tracking_worker.add_task', 5, args=[15, 4], app=continuous_worker.app)
-            e.save()
-            print('E = {}'.format(e))
-            #key = e.key()
-            # setup_periodic_tasks(continuous_tracking_worker_app)
-            self.write('periodic tasks ok')
+                return
+        elif args['alertType'] == 'BasicReccurent':
+            date_delayed = alert.start_time
+            date_delayed = date_delayed.astimezone(pytz.utc)
+            schedule = rrule(alert.repeat, dtstart=date_delayed, count=alert.max_count, interval=alert.interval)
+            print('SCHEDULED BASIC RECC = {}'.format(schedule))
+        elif args['alertType'] == 'CrontabSchedule':
+            print('hour = {}, minute = {}'.format(alert.repeat_at.split(':')[0], alert.repeat_at.split(':')[1]))
+            print('days_of_week = {}'.format(alert.days_of_week))
+            schedule = crontab(hour=int(alert.repeat_at.split(':')[0]), minute=int(alert.repeat_at.split(':')[1]),\
+                day_of_week=alert.days_of_week, day_of_month='*', month_of_year='*')
+            print('SCHEDULED CRONTAB = {}'.format(schedule))
+            
+            
+        entry = Entry(alert.name, 'continuous_worker.add_task', schedule, args=(7, 7), app=continuous_worker.app)
+        entry.save()
+        print('ENTRY IS DUE = {}'.format(entry.is_due()))
+        # Update state in DB
+        alert.launched = True
+        self.request_db.commit()
+        flash_message(self, 'warning', 'Reccurent ({}) alert {} succesfully launched. Alert is supposed to start in {} seconds.'.format(args['alertType'], alert.name, entry.is_due()[1]))
+        self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+
 
 class AlertStop(BaseView):
     SUPPORTED_METHODS = ['POST']
@@ -161,16 +181,20 @@ class AlertStop(BaseView):
         print('ARGS = {}'.format(args))
 
         user = self.request_db.query(User).filter_by(username=username).first()
-        print('USER = {}'.format(user.username))
         project = user.projects.filter_by(name=projectname).first()
         content = project.contents.filter_by(name=args['contentName']).first()
         alert = content.alerts.filter_by(name=args['alertName']).first()
-
-        if 'live_view' in self.session['tasks']:
-            res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
-            print('Deleting old live view tasks from session.')
-            del self.session['tasks']['live_view']
-            self.session.save()
+        print('alert.alert_type = {}'.format(alert.alert_type))
+        if alert.alert_type == 'Live':
+            if 'live_view' in self.session['tasks']:
+                res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+                print('Deleting old live view tasks from session.')
+                del self.session['tasks']['live_view']
+                self.session.save()
+        elif alert.alert_type == 'BasicReccurent' or alert.alert_type == 'CrontabSchedule':
+            e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)
+            e.delete()
+            print('Alert {} succesfully deleted from redbeat'.format(alert.name))
 
         alert.launched = False
         self.request_db.commit()
@@ -185,7 +209,6 @@ class AlertDelete(BaseView):
         content_name = self.get_argument('contentName')
         alert_name = self.get_argument('alertName')
         user = self.request_db.query(User).filter_by(username=username).first()
-        print('USER = {}'.format(user.username))
         project = user.projects.filter_by(name=projectname).first()
         content = project.contents.filter_by(name=content_name).first()
         alert = content.alerts.filter_by(name=alert_name).first()

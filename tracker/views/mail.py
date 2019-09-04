@@ -42,7 +42,8 @@ class UserProjectSendMail(BaseView):
 				for worker in self.session['tasks']['live_view']:
 					task = live_view.AsyncResult(worker['id'])
 					response = get_celery_task_state(task)
-					if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != [] or response['status']['diff_pos'] != []):
+					if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != []\
+					 or response['status']['diff_pos'] != []):
 						task_results.append(response['status'])
 				print('list of all grabbed task = {}'.format(task_results))
 

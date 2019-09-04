@@ -4,27 +4,31 @@ import random
 import celery
 import urllib
 import ssl
-from celery import Celery#, Task
-from tracker.celery import live_view_worker_app
-#from celery.contrib.abortable import AbortableTask
+import re
+import gc
+import pdftotext
+import fastText
+import celery
+
+import tracker.celery_continuous_conf as celeryconf
 import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
-
-import re
-import pdftotext
-import gc
-import fastText
+# from tracker.celery import app
+from tracker.mail import mail_sbb
 
 # Hack to load only necessary modules (pb with ml model)
 # TODO: Replace raw path with os.environ ($APP_DIR)
 # TODO: Look at __init__.py to load it more properly
-print('FILE live == {}'.format(__file__))
-if '.egg' in __file__ and  'workers/live' in os.getcwd():
+print('FILE continuous == {}'.format(__file__))
+if '.egg' in __file__ and  'workers/continuous' in os.getcwd():
     import tracker.ml_toolbox as mltx
     su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
     already_visited = list()
     already_seen_content = list()
+
+app = celery.Celery(__name__) # TODO : Change to sth like 'permanent listener'
+app.config_from_object(celeryconf)
 
 def make_predictions(content, min_acc=0.75):
     global su_model
@@ -147,17 +151,21 @@ def get_full_links(status, base_url):
                     else:
                         status[_][idx] = x
                 idx += 1
-    print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
+    #print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
     return status 
 
-@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=900)
-def live_view(self, links, base_path, diff_path, url):
+@app.task(bind=True, ignore_result=False, soft_time_limit=120)
+def check_diff_delayed(self, links, base_path, diff_path, url):
     """ Try to download website parts that have changed """
     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
     #random.shuffle(links)
-
+    print('/FILE FROM\\ == {}'.format(__file__))
     total = len(links)
     i = 0
+    # print('LINKS ------> {}'.format(links))
+    # print('base_path ------> {}'.format(base_path))
+    # print('diff_path ------> {}'.format(diff_path))
+    # print('url ------> {}'.format(url))
     for link in links:
         keywords = link[1]
         link = link[0]
@@ -220,3 +228,22 @@ def live_view(self, links, base_path, diff_path, url):
                 print('***** Content is SIMILAR *****')
 
     return {'current': 100, 'total': 100, 'status': status, 'result': status['diff_nb']}
+
+
+@app.task(bind=True)
+def send_mails(self, task_results):
+    print('ALL TASKS EXECUTED !!! ;) END END END END . RET = {}\n-----> Checking diff for email now .....'\
+        .format(task_results))
+    task_results = [r['status'] for r in task_results.copy() if r['status']['diff_neg'] != []\
+                     or r['status']['diff_pos'] != []]
+    # if task_results == []:
+    #   print('No email to be sent because no diff found.')
+    # else:
+    mail_sbb(task_results, "simon.sicard@gmail.com")
+
+@app.task(bind=True)
+def sum_up_finish(self, add):
+    #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
+    return celery.chord((check_diff_delayed.s(k[0], k[1], k[2], k[3]) for k in add), send_mails.s())()
+
+

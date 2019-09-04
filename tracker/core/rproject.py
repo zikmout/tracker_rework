@@ -9,6 +9,8 @@ import tracker.core.loader as loader
 import tracker.core.logger as logger
 import tracker.core.downloader as downloader
 from tracker.core.unit import Unit
+import tracker.workers.continuous.continuous_worker as continuous_worker
+from redbeat import RedBeatSchedulerEntry as Entry
 
 import threading
 
@@ -467,3 +469,36 @@ class RProject:
         else:
             print('Dict() of units url is not OK.')
             return None
+
+
+
+    def download_units_diff_delayed_with_email(self, alert_name, schedule, links, mailing_list, save=False):
+        if links == {} or links is None:
+            print('[ERROR] delete_download_units : No urls specified.\n')
+            return None
+        print('links before = {}'.format(links))
+        dict_links = utils.from_links_to_dict(links)
+        print('links after = {}'.format(dict_links))
+        #exit(0)
+        task_args = list()
+        filename_time = datetime.datetime.now().strftime("%Y%m%d")
+        if isinstance(dict_links, dict) and bool(dict_links):            
+            for key, val in dict_links.items():
+                unit = self.get_unit_from_url(key)
+                if unit is not None:
+                    #print('VAL = {}'.format(val))
+                    # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
+                    #print('filename_time = {}'.format(filename_time))
+                    task_args.append((val, unit.download_path, unit.download_path + filename_time, unit.url))
+                else:
+                    print('Unit {} not found'.format(key))
+
+            print('SCHEDULED = {}'.format(schedule))
+            entry = Entry(alert_name, 'continuous_worker.sum_up_finish',\
+                schedule, args=(task_args, ), app=continuous_worker.app)
+            entry.save()
+            print('ENTRY IS DUE = {}'.format(entry.is_due()))
+            return entry
+        else:
+            print('Dict() of units url is not OK.')
+            return False

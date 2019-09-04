@@ -4,11 +4,12 @@ import datetime
 import time
 import pytz
 from tornado import gen
-from redbeat import RedBeatSchedulerEntry as Entry
+
 from redbeat.schedules import rrule
 from celery.schedules import crontab
-import tracker.workers.continuous_worker as continuous_worker
-
+# import tracker.workers.continuous_worker as continuous_worker
+import tracker.workers.continuous.continuous_worker as continuous_worker
+from redbeat import RedBeatSchedulerEntry as Entry
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, get_url_from_id, \
@@ -17,9 +18,6 @@ from tornado.websocket import WebSocketHandler
 from tracker.core.rproject import RProject
 from tracker.celery import live_view_worker_app
 from tracker.workers.live.live_view_worker import live_view
-import tracker.workers.continuous_worker as continuous_worker
-# from tracker.celery import continuous_tracking_worker_app
-# from tracker.workers.continuous_worker import setup_periodic_tasks
 
 class AlertView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -150,21 +148,44 @@ class AlertLiveCreate(BaseView):
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
                 return
         elif args['alertType'] == 'BasicReccurent':
+            print('content --> {}'.format(content))
+            # Loading project
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            if len(self.session['project_config_file']) == 0:
+                rproject._load_units_from_data_path()
+            else:
+                rproject._load_units_from_excel()
+
             date_delayed = alert.start_time
             date_delayed = date_delayed.astimezone(pytz.utc)
             schedule = rrule(alert.repeat, dtstart=date_delayed, count=alert.max_count, interval=alert.interval)
             print('SCHEDULED BASIC RECC = {}'.format(schedule))
+
+            # need to change following line with PickleType
+            entry = rproject.download_units_diff_delayed_with_email(alert.name, schedule, content.links, content.mailing_list, save=True)
+            
+
+
+##################
+        '''
+        elif args['alertType'] == 'BasicReccurent':
+            date_delayed = alert.start_time
+            date_delayed = date_delayed.astimezone(pytz.utc)
+            schedule = rrule(alert.repeat, dtstart=date_delayed, count=alert.max_count, interval=alert.interval)
+            print('SCHEDULED BASIC RECC = {}'.format(schedule))
+            entry = Entry(alert.name, 'continuous_worker.add_task', schedule, args=(7, 7), app=continuous_worker.app)
         elif args['alertType'] == 'CrontabSchedule':
             print('hour = {}, minute = {}'.format(alert.repeat_at.split(':')[0], alert.repeat_at.split(':')[1]))
             print('days_of_week = {}'.format(alert.days_of_week))
             schedule = crontab(hour=int(alert.repeat_at.split(':')[0]), minute=int(alert.repeat_at.split(':')[1]),\
                 day_of_week=alert.days_of_week, day_of_month='*', month_of_year='*')
             print('SCHEDULED CRONTAB = {}'.format(schedule))
+            entry = Entry(alert.name, 'continuous_worker2.add_task', schedule, args=(7, 7), app=continuous_worker.app)
+        '''
             
-            
-        entry = Entry(alert.name, 'continuous_worker.add_task', schedule, args=(7, 7), app=continuous_worker.app)
-        entry.save()
-        print('ENTRY IS DUE = {}'.format(entry.is_due()))
+        
+        #entry.save()
+        #print('ENTRY IS DUE = {}'.format(entry.is_due()))
         # Update state in DB
         alert.launched = True
         self.request_db.commit()

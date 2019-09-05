@@ -20,7 +20,7 @@ import tracker.core.scrapper as scrapper
 import tracker.core.utils as utils
 
 def clean_pdf_content(input_str):
-    print('-> cleaning pdf content ...')
+    #print('-> cleaning pdf content ...')
     if input_str is None:
         return None
     intput_str = ''.join(x for x in input_str if x.isprintable())
@@ -32,7 +32,7 @@ def clean_pdf_content(input_str):
     return output
 
 def clean_content(input_list, min_sentence_len=5):
-    print('-> cleaning HTML content ....')
+    #print('-> cleaning HTML content ....')
     """ Method that clean every element of a list
         arg:
             input_list(list): List of elements to be cleaned
@@ -99,7 +99,7 @@ def get_nearest_link(keyword, remote_content, url):
     #print('X Path = {}\n'.format(xpaths))
     for x in xpaths:
         nearest_link = [find_nearest(x)]
-        print('Nearsest link found (url) = {} ({})'.format(nearest_link, url))
+        #print('Nearsest link found (url) = {} ({})'.format(nearest_link, url))
         if len_xpaths > 1 and '#' not in nearest_link:
             print('Nearest founds are numerous for website : {}. Exit.'.format(url))
             break ;
@@ -116,7 +116,7 @@ def keyword_match(keywords, status, remote_content, url):
                 status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
         for pos in status['diff_pos']:
             if keyword in pos:
-                print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
+                #print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
                 match_pos.append(pos)
                 status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
 
@@ -166,12 +166,12 @@ def get_text_diff(local_content, remote_content, status):
         all_links_neg = set()
         [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
         status['all_links_neg'] = list(all_links_neg)
-        print('diff all links neg = {}'.format(status['all_links_neg']))
+        #print('diff all links neg = {}'.format(status['all_links_neg']))
     if status['diff_pos'] != []:
         all_links_pos = set()
         [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
         status['all_links_pos'] = list(all_links_pos)
-        print('diff all links pos = {}'.format(status['all_links_pos']))
+        #print('diff all links pos = {}'.format(status['all_links_pos']))
     return status
 
 def get_essential_content(content, min_sentence_len):

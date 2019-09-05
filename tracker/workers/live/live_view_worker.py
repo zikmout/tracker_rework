@@ -19,7 +19,7 @@ import fastText
 # Hack to load only necessary modules (pb with ml model)
 # TODO: Replace raw path with os.environ ($APP_DIR)
 # TODO: Look at __init__.py to load it more properly
-print('FILE live == {}'.format(__file__))
+print('FILE live == {} (cwd = {})'.format(__file__, os.getcwd()))
 if '.egg' in __file__ and  'workers/live' in os.getcwd():
     import tracker.ml_toolbox as mltx
     su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model

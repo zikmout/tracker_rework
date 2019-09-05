@@ -26,6 +26,7 @@ from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDow
 from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop,\
  UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
 from tracker.views.socket import EchoWebSocket
+from tracker.views.predict import SBBPredict
 
 def main():
     define('port', default=5567, help='Port to listen on.')
@@ -38,6 +39,7 @@ def main():
             handlers = [
             # tracker.views.base.py
             url(r'/', HomePage, name='home'),
+            url(r'/api/v1/predict/is_sbb', SBBPredict),
 
             # tracker.views.user.py
             url(r'/api/v1/users_list', UserListView, name='users_list'),

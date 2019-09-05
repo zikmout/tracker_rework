@@ -3,6 +3,7 @@ import urllib.request
 import ssl
 import time
 import requests
+# from socket import timeout
 
 def get_url_content(url, header, verbose=True):
     """ Open remote website content
@@ -17,11 +18,12 @@ def get_url_content(url, header, verbose=True):
     # Faking SSL certificate to avoid unauthorized requests
     gcontext = ssl._create_unverified_context()
     try:
-        with urllib.request.urlopen(req, context=gcontext) as response:
+        with urllib.request.urlopen(req, context=gcontext) as response: # TODO: Handle timeout errors
             if verbose:
                 print('[{}] {}\n'.format(response.getcode(), url))
             remote_content = response.read().decode('utf-8')
-    except (urllib.error.HTTPError, urllib.error.URLError, ConnectionResetError, UnicodeDecodeError) as e:
+    except (urllib.error.HTTPError, urllib.error.URLError, ConnectionResetError,\
+        UnicodeDecodeError, TimeoutError) as e:
             remote_content = None
     return remote_content
 

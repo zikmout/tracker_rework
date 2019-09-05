@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 
 
 def mail_sbb(task_results, mailing_list):
-	print('list of all grabbed task = {}'.format(task_results))
+	#print('list of all grabbed task = {}'.format(task_results))
 
 	html = """\
 	<html>

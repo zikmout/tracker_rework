@@ -57,7 +57,7 @@ def make_request_for_predictions(content, min_acc=0.75):
     http_client = httpclient.HTTPClient()
     try:
         response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)
-        print('RESPONSE => {}'.format(response.body))
+        #print('RESPONSE => {}'.format(response.body))
         http_client.close()
         return response.body
     except httpclient.HTTPError as e:
@@ -91,7 +91,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return False
 
     if response.geturl() != url:
-        #print('//////////// {} has been redirected to : {} //////////'.format(response.geturl(), url))
+        print('** {} has been redirected to : {} **'.format(response.geturl(), url))
         url = response.geturl()
         if url in already_visited:
             return False
@@ -104,7 +104,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     cs = info.get_content_type()
 
     if extractor.is_valid_file(filename) or 'pdf' in cs:
-        #print('URL = {} (detected pdf)'.format(url))
+        print('URL = {} (detected pdf)'.format(url))
         cleaned_content = extractor.clean_pdf_content(pdftotext.PDF(response))
         #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
         if cleaned_content is None or cleaned_content in already_seen_content:
@@ -119,7 +119,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return json.loads(resp)
 
     else:
-        #print('URL = {} (detected NON pdf)'.format(url))
+        print('URL = {} (detected NON pdf)'.format(url))
         cleaned_content = extractor.get_essential_content(response.read(), 10)
 
         if cleaned_content is None or cleaned_content in already_seen_content:
@@ -183,86 +183,95 @@ def get_full_links(status, base_url):
 def log_error(self, z):
     print('ERRRRRRRROR for z = {}'.format(z))
 
-@app.task(bind=True, ignore_result=False, soft_time_limit=120)
+@app.task(bind=True, ignore_result=False)#, soft_time_limit=1, time_limit=1)
 def check_diff_delayed(self, links, base_path, diff_path, url):
-    """ Try to download website parts that have changed """
-    # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-    #random.shuffle(links)
-    #print('/FILE FROM\\ == {}'.format(__file__))
-    total = len(links)
-    i = 0
-    # print('LINKS ------> {}'.format(links))
-    # print('base_path ------> {}'.format(base_path))
-    # print('diff_path ------> {}'.format(diff_path))
-    # print('url ------> {}'.format(url))
-    for link in links:
-        keywords = link[1]
-        link = link[0]
-        status = {
-            'url': url + utils.find_internal_link(link),
-            'div': url.split('//')[-1].split('/')[0],
-            'diff_neg': list(),
-            'diff_pos': list(),
-            'nearest_link_pos': list(),
-            'nearest_link_neg': list(),
-            'all_links_pos': None,
-            'all_links_neg': None,
-            'diff_nb': 0
-        }
-        i += 1
-        #time.sleep(random.randint(0, 10))
-        base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
-        filename = link.rpartition('/')[2]
-        base_dir_path_file = os.path.join(base_dir_path, filename)
-
-        # check whether adding 'unknown' is right ...
-        if os.path.isdir(base_dir_path_file) and os.path.isfile(base_dir_path_file + 'unknown___'):
-            base_dir_path_file = base_dir_path_file + 'unknown___'
-
-        # getting local and remote content
-        #print('\n-> Fetching local content from : {}'.format(base_dir_path_file))
-        #print('-> Fetching remote content from : {}'.format(status['url']))
-        local_content = scrapper.get_local_content(base_dir_path_file, 'rb')
-        remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
-
-        if local_content is None or remote_content is None:
-            #print('Problem fetching local content or remote content.')
-            pass
-        else:
-            status = extractor.get_text_diff(local_content, remote_content, status)
-            # if a list of keywords is provided, only get diff that matches keywords
-            if keywords != []:
-                status = extractor.keyword_match(keywords, status, remote_content, url)
-                #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
-                status = get_full_links(status, url)
-            #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
-            status = select_only_sbb_links(status)
-
-            # taking off doublons in diff pos and diff neg
-            status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
-            status['diff_neg'] = [x.strip() for x in status['diff_neg'].copy()]
-            status['diff_pos'] = list(set(status['diff_pos'].copy()))
-            status['diff_neg'] = list(set(status['diff_neg'].copy()))
-
-            #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
-            self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
-            #time.sleep(3)
+    try:
+        #time.sleep(5)
+        """ Try to download website parts that have changed """
+        # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
+        #random.shuffle(links)
+        #print('/FILE FROM\\ == {}'.format(__file__))
+        total = len(links)
+        i = 0
+        # print('LINKS ------> {}'.format(links))
+        # print('base_path ------> {}'.format(base_path))
+        # print('diff_path ------> {}'.format(diff_path))
+        # print('url ------> {}'.format(url))
+        i = 0
+        for link in links:
             
-            #print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
-            #print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))
-            #exit(0)
-            if len(status['diff_pos']) > 0 or len(status['diff_neg']) > 0:
-                #print('***** Content is different *****')
-                status['diff_nb'] += 1
-            else:
-                #print('***** Content is SIMILAR *****')
-                pass
+            keywords = link[1]
+            link = link[0]
+            flink = url + utils.find_internal_link(link)
+            status = {
+                'url': flink,
+                'div': url.split('//')[-1].split('/')[0],
+                'diff_neg': list(),
+                'diff_pos': list(),
+                'nearest_link_pos': list(),
+                'nearest_link_neg': list(),
+                'all_links_pos': None,
+                'all_links_neg': None,
+                'diff_nb': 0
+            }
+            i += 1
+            print('[{}/{}] Link = {}'.format(i, len(links), flink))
+            #time.sleep(random.randint(0, 10))
+            base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
+            filename = link.rpartition('/')[2]
+            base_dir_path_file = os.path.join(base_dir_path, filename)
 
-    return {'current': 100, 'total': 100, 'status': status, 'result': status['diff_nb']}
+            # check whether adding 'unknown' is right ...
+            if os.path.isdir(base_dir_path_file) and os.path.isfile(base_dir_path_file + 'unknown___'):
+                base_dir_path_file = base_dir_path_file + 'unknown___'
+
+            # getting local and remote content
+            #print('\n-> Fetching local content from : {}'.format(base_dir_path_file))
+            #print('-> Fetching remote content from : {}'.format(status['url']))
+            local_content = scrapper.get_local_content(base_dir_path_file, 'rb')
+            remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
+
+            if local_content is None or remote_content is None:
+                #print('Problem fetching local content or remote content.')
+                pass
+            else:
+                status = extractor.get_text_diff(local_content, remote_content, status)
+                # if a list of keywords is provided, only get diff that matches keywords
+                if keywords != []:
+                    status = extractor.keyword_match(keywords, status, remote_content, url)
+                    #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
+                    status = get_full_links(status, url)
+                #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
+                status = select_only_sbb_links(status)
+
+                # taking off doublons in diff pos and diff neg
+                status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
+                status['diff_neg'] = [x.strip() for x in status['diff_neg'].copy()]
+                status['diff_pos'] = list(set(status['diff_pos'].copy()))
+                status['diff_neg'] = list(set(status['diff_neg'].copy()))
+
+                #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
+                self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
+                #time.sleep(3)
+                
+                print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
+                print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))
+                #exit(0)
+                if len(status['diff_pos']) > 0 or len(status['diff_neg']) > 0:
+                    #print('***** Content is different *****')
+                    status['diff_nb'] += 1
+                else:
+                    #print('***** Content is SIMILAR *****')
+                    pass
+
+        return {'current': 100, 'total': 100, 'status': status, 'result': status['diff_nb']}
+    except Exception as e:
+        print("EEE=>{}".format(e))
+        return 999
 
 
 @app.task(bind=True)
-def send_mails(self, task_results, soft_time_limit=120):
+def send_mails(self, task_results):#, soft_time_limit=120):
     print('ALL TASKS EXECUTED !!! ;) END END END END . RET = {}\n-----> Checking diff for email now .....'\
         .format(task_results))
     task_results = [r['status'] for r in task_results.copy() if r['status']['diff_neg'] != []\

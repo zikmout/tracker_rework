@@ -213,6 +213,7 @@ class AlertStop(BaseView):
                 del self.session['tasks']['live_view']
                 self.session.save()
         elif alert.alert_type == 'BasicReccurent' or alert.alert_type == 'CrontabSchedule':
+            # TODO: ADD try / catch if key not found in redbeat
             e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)
             e.delete()
             print('Alert {} succesfully deleted from redbeat'.format(alert.name))

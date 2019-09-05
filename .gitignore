@@ -43,3 +43,5 @@ data
 error_log.txt
 server.txt
 errors.txt
+celerybeat.pid
+err.txt

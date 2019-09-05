@@ -38,6 +38,22 @@ class AlertView(BaseView):
             for alert in alerts:
                 json_alert = alert.as_dict()
                 json_alert['content_id'] = content.name
+                if json_alert['alert_type'] != 'Live':
+                    try:
+                        e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)
+                        if json_alert['launched'] == 'True':
+                            json_alert['state'] = 'Active'
+                        else:
+                            json_alert['state'] = 'Problem'
+                    except Exception as e:
+                        if json_alert['launched'] == 'False':
+                            json_alert['state'] = 'Ready'
+                        elif json_alert['launched'] == 'True':
+                            json_alert['state'] = 'Lost'
+                elif json_alert['launched'] == 'True':
+                    json_alert['state'] = 'Active'
+                else:
+                    json_alert['state'] = 'Ready'
                 all_alerts.append(json_alert)
         #print('*********************\n{}'.format(all_alerts))
         self.render('projects/alerts/index.html', contents=json_contents, alerts=all_alerts)
@@ -213,10 +229,17 @@ class AlertStop(BaseView):
                 del self.session['tasks']['live_view']
                 self.session.save()
         elif alert.alert_type == 'BasicReccurent' or alert.alert_type == 'CrontabSchedule':
-            # TODO: ADD try / catch if key not found in redbeat
-            e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)
-            e.delete()
-            print('Alert {} succesfully deleted from redbeat'.format(alert.name))
+            print('Passe heree')
+            try:
+                # TODO: ADD try / catch if key not found in redbeat
+                e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)
+                e.delete()
+                print('Alert {} succesfully deleted from redbeat'.format(alert.name))
+            except Exception as e:
+                print('Exception finding redbeat key : {}'.format(e))
+                flash_message(self, 'danger', 'Alert {} not found in scheduler database.'.format(args['alertName']))
+                self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+                return # TODO : Check if return is justified here
 
         alert.launched = False
         self.request_db.commit()

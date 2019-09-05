@@ -191,6 +191,7 @@
       <th>Action</th>
       <th></th>
       <th></th>
+      <th>State</th>
     </tr>
 
     {% for alert in alerts %}
@@ -267,6 +268,17 @@
               <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/delete" method="post">
                 <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
               <button type="submit" class="btn btn-danger" value="{{ alert['name'] }}" name="alertName">Delete</button></form>
+            </th>
+            <th>
+            {% if alert['state'] == 'Lost' %}
+              <span class="badge badge-warning">LOST</span>
+            {% elif alert['state'] == 'Ready' %}
+              <span class="badge badge-info">READY</span>
+            {% elif alert['state'] == 'Problem' %}
+              <span class="badge badge-danger">PROBLEM</span>
+            {% elif alert['state'] == 'Active' %}
+              <span class="badge badge-dark">ACTIVE</span>
+            {% end %}
             </th>
             </tr>
             {% end %}

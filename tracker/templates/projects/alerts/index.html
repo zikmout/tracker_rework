@@ -4,9 +4,9 @@
   <script src="{{ static_url('jquery.min.js') }}"></script>
   <br>
   <center><h3>Project {{ handler.session['current_project'] }} - Setup and launch alerts on content changes</h3></center>
-  <center><p>Below is a list of alerts you already configured. At the moment, only live alerts are available<br>
+  <center><p>Below is a list of alerts you already configured. <br>
   Click on Create Alert to configure a new alert. Use Content Lookup to remember what the content name refers to.<br>
-  Push Start button in order to launch live alert.</p><br></center>
+  Push Start button in order to launch alert.</p><br></center>
 
   <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create" method="post">
   <p>
@@ -191,98 +191,83 @@
       <th>Action</th>
       <th></th>
       <th></th>
-      <th>State</th>
+      <th>Worker state</th>
     </tr>
 
     {% for alert in alerts %}
     <tr>
 
-          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
-          <div class="form-group">
+      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
+      <div class="form-group">
 
+        <th>{{ alert['name'] }}</th>
+        <th>{{ alert['alert_type'] }}</th>
+        <th>{{ alert['creation_date'] }}</th>
+        <th>{{ alert['start_time'] }}</th>
+        <th>{{ alert['end_time'] }}</th>
 
+        {% if alert['alert_type'] == 'Live' %}
+          <th>-</th>
+        {% elif alert['alert_type'] == 'BasicReccurent' %}
+          <th>Every {{ alert['interval'] }} {{ alert['repeat'][:4] }} (max={{ alert['max_count'] }})</th>
+        {% elif alert['alert_type'] == 'CrontabSchedule' %}
+          <th>Days:{{ alert['days_of_week'] }} at {{ alert['repeat_at'] }}</th>
+        {% end %}
 
+        <th>{{ alert['email_notify'] }}</th>
+        <th>{{ alert['launched'] }}</th>
+        <th>{{ alert['content_id'] }}</th>
 
-            <th>{{ alert['name'] }}</th>
+        <th>
+          <div class="form-check">
+              <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
+          </div>
+        </div>
+        </th>
 
+        <th>
+          {% if escape(alert['launched']) == 'False' %}
+          <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
+          <input type="hidden" value="{{ alert['name'] }}" name="alertName">
+          <button type="submit" class="btn btn-info" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+          {% else %}
+          <button type="button" class="btn btn-info disabled" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+          {% end %}
+        </th>
 
-            <th>{{ alert['alert_type'] }}</th>
+        <th>
+          {% if alert['launched'] == 'True' %}
+          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post">
+            <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
+            <input type="hidden" value="{{ escape(alert['content_id']) }}" name="contentName">
+          <button type="submit" class="btn btn-info" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
+          {% else %}
+          <form action="#" method="post">
+            <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
+          <button type="button" class="btn btn-info disabled" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
+          {% end %}
+        </th>
 
+        <th>
+          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/delete" method="post">
+            <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
+          <button type="submit" class="btn btn-danger" value="{{ alert['name'] }}" name="alertName">Delete</button></form>
+        </th>
 
-            <th>{{ alert['creation_date'] }}</th>
+        <th>
+        {% if alert['state'] == 'Lost' %}
+          <span class="badge badge-warning">LOST</span>
+        {% elif alert['state'] == 'Ready' %}
+          <span class="badge badge-info">READY</span>
+        {% elif alert['state'] == 'Problem' %}
+          <span class="badge badge-danger">PROBLEM</span>
+        {% elif alert['state'] == 'Active' %}
+          <span class="badge badge-dark">ACTIVE</span>
+        {% end %}
+        </th>
 
-
-            <th>{{ alert['start_time'] }}</th>
-
-
-            <th>{{ alert['end_time'] }}</th>
-
-
-            {% if alert['alert_type'] == 'Live' %}
-            <th>-</th>
-            {% elif alert['alert_type'] == 'BasicReccurent' %}
-            <th>Every {{ alert['interval'] }} {{ alert['repeat'][:4] }} (max={{ alert['max_count'] }})</th>
-            {% elif alert['alert_type'] == 'CrontabSchedule' %}
-            <th>Days:{{ alert['days_of_week'] }} at {{ alert['repeat_at'] }}</th>
-            {% end %}
-
-            <th>{{ alert['email_notify'] }}</th>
-
-
-            <th>{{ alert['launched'] }}</th>
-
-
-            <th>{{ alert['content_id'] }}</th>
-
-
-            <th>
-            
-              <div class="form-check">
-                  <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
-              </div>
-            </div>
-            </th>
-            <th>
-              {% if escape(alert['launched']) == 'False' %}
-              <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
-              <input type="hidden" value="{{ alert['name'] }}" name="alertName">
-              <button type="submit" class="btn btn-info" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
-              {% else %}
-              <button type="button" class="btn btn-info disabled" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
-              {% end %}
-            </th>
-
-            <th>
-              {% if alert['launched'] == 'True' %}
-              <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post">
-                <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
-                <input type="hidden" value="{{ escape(alert['content_id']) }}" name="contentName">
-              <button type="submit" class="btn btn-info" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
-              {% else %}
-              <form action="#" method="post">
-                <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
-              <button type="button" class="btn btn-info disabled" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
-              {% end %}
-            </th>
-            <th>
-              <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/delete" method="post">
-                <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
-              <button type="submit" class="btn btn-danger" value="{{ alert['name'] }}" name="alertName">Delete</button></form>
-            </th>
-            <th>
-            {% if alert['state'] == 'Lost' %}
-              <span class="badge badge-warning">LOST</span>
-            {% elif alert['state'] == 'Ready' %}
-              <span class="badge badge-info">READY</span>
-            {% elif alert['state'] == 'Problem' %}
-              <span class="badge badge-danger">PROBLEM</span>
-            {% elif alert['state'] == 'Active' %}
-              <span class="badge badge-dark">ACTIVE</span>
-            {% end %}
-            </th>
-            </tr>
-            {% end %}
-    
+    </tr>
+    {% end %}
     
   </table>
 </div>

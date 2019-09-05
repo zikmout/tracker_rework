@@ -163,7 +163,7 @@ class AlertLiveCreate(BaseView):
                 self.session.save()
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
                 return
-        elif args['alertType'] == 'BasicReccurent':
+        elif args['alertType'] == 'BasicReccurent' of args['alertType'] == 'CrontabSchedule':
             print('content --> {}'.format(content))
             # Loading project
             rproject = RProject(project.name, project.data_path, project.config_file)
@@ -172,37 +172,32 @@ class AlertLiveCreate(BaseView):
             else:
                 rproject._load_units_from_excel()
 
-            date_delayed = alert.start_time
-            date_delayed = date_delayed.astimezone(pytz.utc)
-            schedule = rrule(alert.repeat, dtstart=date_delayed, count=alert.max_count, interval=alert.interval)
-            print('SCHEDULED BASIC RECC = {}'.format(schedule))
+            if args['alertType'] == 'BasicReccurent':
+                date_delayed = alert.start_time
+                date_delayed = date_delayed.astimezone(pytz.utc)
+                schedule = rrule(alert.repeat, dtstart=date_delayed, count=alert.max_count, interval=alert.interval)
+                print('SCHEDULED BASIC RECC = {}'.format(schedule))
+            else: # is necessarily a crontab schedule alert
+                print('hour = {}, minute = {}'.format(alert.repeat_at.split(':')[0], alert.repeat_at.split(':')[1]))
+                print('days_of_week = {}'.format(alert.days_of_week))
+                schedule = crontab(hour=int(alert.repeat_at.split(':')[0]), minute=int(alert.repeat_at.split(':')[1]),\
+                    day_of_week=alert.days_of_week, day_of_month='*', month_of_year='*')
+                print('SCHEDULED CRONTAB = {}'.format(schedule))
+        else: # there is room for further alert type
+            flash_message(self, 'danger', 'Alert type not recognized. Contact admin.')
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            return
 
-            # need to change following line with PickleType
-            entry = rproject.download_units_diff_delayed_with_email(alert.name, schedule, content.links, content.mailing_list, save=True)
-            
-
-
-##################
-        '''
-        elif args['alertType'] == 'BasicReccurent':
-            date_delayed = alert.start_time
-            date_delayed = date_delayed.astimezone(pytz.utc)
-            schedule = rrule(alert.repeat, dtstart=date_delayed, count=alert.max_count, interval=alert.interval)
-            print('SCHEDULED BASIC RECC = {}'.format(schedule))
-            entry = Entry(alert.name, 'continuous_worker.add_task', schedule, args=(7, 7), app=continuous_worker.app)
-        elif args['alertType'] == 'CrontabSchedule':
-            print('hour = {}, minute = {}'.format(alert.repeat_at.split(':')[0], alert.repeat_at.split(':')[1]))
-            print('days_of_week = {}'.format(alert.days_of_week))
-            schedule = crontab(hour=int(alert.repeat_at.split(':')[0]), minute=int(alert.repeat_at.split(':')[1]),\
-                day_of_week=alert.days_of_week, day_of_month='*', month_of_year='*')
-            print('SCHEDULED CRONTAB = {}'.format(schedule))
-            entry = Entry(alert.name, 'continuous_worker2.add_task', schedule, args=(7, 7), app=continuous_worker.app)
-        '''
-            
+        # Sync alert with Redbeat scheduler
+        entry = rproject.download_units_diff_delayed_with_email(alert.name, schedule, content.links, content.mailing_list, save=True)
         
-        #entry.save()
-        #print('ENTRY IS DUE = {}'.format(entry.is_due()))
-        # Update state in DB
+        # Scheduler must return an entry
+        if entry is False:
+            flash_message(self, 'danger', 'Scheduler not reachable.')
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            return
+
+        # Update DB state
         alert.launched = True
         self.request_db.commit()
         flash_message(self, 'warning', 'Reccurent ({}) alert {} succesfully launched. Alert is supposed to start in {} seconds.'.format(args['alertType'], alert.name, entry.is_due()[1]))

@@ -1,4 +1,5 @@
 import os
+import sys
 import base64
 import logging
 from tornado.httpserver import HTTPServer
@@ -26,9 +27,14 @@ from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDow
 from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop,\
  UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
 from tracker.views.socket import EchoWebSocket
-from tracker.views.predict import SBBPredict
 
 def main():
+    LOAD_MODEL = False
+    if 'no_model' not in sys.argv:
+        LOAD_MODEL = True
+
+    if LOAD_MODEL:
+        from tracker.views.predict import SBBPredict
     define('port', default=5567, help='Port to listen on.')
     app_db, meta = make_session_factory()
     dirname = os.getcwd()
@@ -39,7 +45,6 @@ def main():
             handlers = [
             # tracker.views.base.py
             url(r'/', HomePage, name='home'),
-            url(r'/api/v1/predict/is_sbb', SBBPredict),
 
             # tracker.views.user.py
             url(r'/api/v1/users_list', UserListView, name='users_list'),
@@ -104,6 +109,8 @@ def main():
             # tracker.views.socket.py
             url(r'/websocket', EchoWebSocket, name='websocket')
             ]
+            if LOAD_MODEL:
+                handlers.append(url(r'/api/v1/predict/is_sbb', SBBPredict))
             # todo : activate xsrf_cookies = True
             settings = {
                 'template_path': os.path.join(dirname, 'tracker/templates'),

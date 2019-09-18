@@ -1,9 +1,10 @@
+import os
 import tornado
 import json
 import datetime
 import time
-import os
 import pandas as pd
+import shutil
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, get_url_from_id, json_response,\
@@ -166,6 +167,13 @@ class UserProjectDelete(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
     def post(self, username, projectname):
+        #print('ARGS DELETE = {}'.format(self.args))
+        if 'deleteRelatedFilesCheck' in self.args:
+            #print('Removing project from hard drive ...')
+            fname = os.path.join(self.application.data_dir, projectname)
+            shutil.rmtree(fname)
+            print('Folder \'{}\' successfully removed.'.format(fname))
+
         user = self.request_db.query(User).filter_by(username=self.session['username']).first()
         project = user.projects.filter_by(name=projectname).first()
         self.request_db.delete(project)

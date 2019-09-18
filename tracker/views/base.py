@@ -55,6 +55,7 @@ class BaseView(RequestHandler):
             key: [val.decode('utf8') for val in val_list]
             for key, val_list in self.request.arguments.items()
         }
+        self.args = {k:self.get_argument(k) for k in self.request.arguments}
 
     def on_finish(self):
         if hasattr(self, 'request_db'):

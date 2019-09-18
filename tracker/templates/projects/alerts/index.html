@@ -160,7 +160,7 @@
   <div class="collapse" id="contentlookup">
     <div class="card card-body">
       {% for content in contents %}
-      {{ content }}
+
         <details>
         <summary>{{ escape(str(content['name'])) }}</summary>
         {% for link, keywords in content['links'].items() %}

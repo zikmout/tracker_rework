@@ -39,12 +39,21 @@
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal">
                     <div class="modal-body">
                       This will completely erase folder on hard drive and all related files.
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="deleteRelatedFilesCheck" name="deleteRelatedFilesCheck">
+                        <label class="form-check-label" for="deleteRelatedFilesCheck">
+                          Also delete all related files
+                        </label>
+                      </div>
+                    </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" value="" data-dismiss="modal">Close</button>
-                      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/delete" method="post" class="form-horizontal"><button type="submit" class="btn btn-danger">Confirm</button></form>
+                      <button type="submit" class="btn btn-danger">Confirm</button></form>
                     </div>
                   </div>
                 </div>

@@ -82,7 +82,7 @@ def get_celery_task_state(task):
             'total': 1,
             'status': str(task.info)
         }
-    print('response : {}'.format(response))
+    #print('response : {}'.format(response))
     return response
 
 def revoke_chain(last_result): 

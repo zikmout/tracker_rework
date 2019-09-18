@@ -4,7 +4,9 @@ import random
 import celery
 import urllib
 import ssl
+import json
 from celery import Celery#, Task
+from tornado import httpclient
 from tracker.celery import live_view_worker_app
 #from celery.contrib.abortable import AbortableTask
 import tracker.core.utils as utils
@@ -20,35 +22,56 @@ import fastText
 # TODO: Replace raw path with os.environ ($APP_DIR)
 # TODO: Look at __init__.py to load it more properly
 print('FILE live == {} (cwd = {})'.format(__file__, os.getcwd()))
-if '.egg' in __file__ and  'workers/live' in os.getcwd():
-    import tracker.ml_toolbox as mltx
-    su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
-    already_visited = list()
-    already_seen_content = list()
+already_visited = list()
+already_seen_content = list()
+# if '.egg' in __file__ and  'workers/live' in os.getcwd():
+#     import tracker.ml_toolbox as mltx
+#     su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
+#     already_visited = list()
+#     already_seen_content = list()
 
-def make_predictions(content, min_acc=0.75):
-    global su_model
-    #print('su_model : {}'.format(su_model))
-    #gc.collect()
-    print('content : {} [...]'.format(content[:1000]))
-    preds = su_model.predict(content, 2)
-    print('predictions = {}'.format(preds))
-    #print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
-    if '__label__1' in preds[0][0] and preds[1][0] > min_acc:
-        prediction = '__label__1'
-        print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
-        return True
-    else:
-        prediction = '__label__2'
-        print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
-        return False
+# def make_predictions(content, min_acc=0.75):
+#     global su_model
+#     #print('su_model : {}'.format(su_model))
+#     #gc.collect()
+#     print('content : {} [...]'.format(content[:1000]))
+#     preds = su_model.predict(content, 2)
+#     print('predictions = {}'.format(preds))
+#     #print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
+#     if '__label__1' in preds[0][0] and preds[1][0] > min_acc:
+#         prediction = '__label__1'
+#         print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
+#         return True
+#     else:
+#         prediction = '__label__2'
+#         print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
+#         return False
+
+def make_request_for_predictions(content, min_acc=0.75):
+    # Making synchronous HTTP Request (because workers are aynchronous already)
+    post_data = { 'content': content, 'min_acc': min_acc }
+    body = urllib.parse.urlencode(post_data)
+
+    http_client = httpclient.HTTPClient()
+    try:
+        response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)
+        #print('RESPONSE => {}'.format(response.body))
+        http_client.close()
+        return response.body
+    except httpclient.HTTPError as e:
+        print('HTTPError -> {}'.format(e))
+        http_client.close()
+    except Exception as e:
+        print('Error -> {}'.format(e))
+        http_client.close()
+    return False
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     if ('@' or ':') in url:
         return False
-    global su_model
-    global already_visited
-    global already_seen_content
+    # global su_model
+    # global already_visited
+    # global already_seen_content
 
     print('ENTER CHECK SBB : {}'.format(url))
     #global su_model
@@ -89,7 +112,8 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         # if not extractor.is_language(cleaned_content, 'ENGLISH'):
         #     print('Language is NOT ENGLISH !! (Content = {}...)'.format(cleaned_content[:100]))
         #     return False
-        return make_predictions(cleaned_content, min_acc=min_acc)
+        resp = make_request_for_predictions(cleaned_content, min_acc=min_acc)
+        return json.loads(resp)
 
     else:
         print('URL = {} (detected NON pdf)'.format(url))
@@ -105,7 +129,8 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         # if not extractor.is_language(cleaned_content, 'ENGLISH'):
         #     print('Language is NOT ENGLISH (non pdf) !! (Content = {}...)'.format(cleaned_content[:100]))
         #     return False
-        return make_predictions(cleaned_content, min_acc=min_acc)
+        resp = make_request_for_predictions(cleaned_content, min_acc=min_acc)
+        return json.loads(resp)
 
     return False
 

@@ -36,7 +36,9 @@
           </div>
         </div>
         <button type="submit" class="btn btn-info">Update Changes</button>
+        <a href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage" class="btn btn-danger">Cancel</a>
       </form>
+      <br>
 {% end %}
 </html>
 {% block script %}

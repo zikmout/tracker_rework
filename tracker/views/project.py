@@ -26,69 +26,50 @@ class FastProjectCreateView(BaseView):
             flash_message(self, 'danger', 'A directory with the same projectname seems to already exist.')
             self.redirect('/')
         else:
+            try:
+                # creating project directory
+                os.mkdir(project_path)
+                # puting xlsx config file in it
+                config_path = os.path.join(project_path, 'config' + os.path.splitext(fname)[1])
+                with open(config_path, 'wb+') as fd:
+                    fd.write(file1['body'])
 
-            # creating project directory
-            os.mkdir(project_path)
-            # puting xlsx config file in it
-            config_path = os.path.join(project_path, 'config' + os.path.splitext(fname)[1])
-            with open(config_path, 'wb+') as fd:
-                fd.write(file1['body'])
+                #create project
+                print('name = {}, data_path = {}, config_df = {}'.format(project_name, self.application.data_dir, config_path))
+                user = self.request_db.query(User).filter_by(username=username).first()
+                new_project = Project(project_name, self.application.data_dir, config_path)
+                user.projects.append(new_project)
+                
+                df = pd.read_excel(config_path)
+                links = dict(zip(df['target'], df['target_label']))
+                links = replace_mix_option_with_all_existing_keywords(links)
+                # links = {k:[v] for k, v in links.items()}
+                
+                # add links to crawler logfile
+                rproject = RProject(new_project.name, new_project.data_path, new_project.config_file)
+                rproject.generate_crawl_logfile(links)
+                rproject._load_units_from_data_path()
+                rproject.add_links_to_crawler_logfile(links)
 
+                # create content
+                mailing_list = dict(zip(df['target'], df['mailing_list']))
+                print('Mailing LIST = {}'.format(mailing_list))
+                new_content = Content(project_name + '_default', links, mailing_list)
+                new_project.contents.append(new_content)
 
-            # print('links = {}'.format(links))
-            # #print('DATAFRAME = {}'.format(df))
-            # os.remove(tmp_fname)
+                # # create live alert
+                now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
+                new_alert = Alert(project_name + '_default', 'Live', now)
+                new_content.alerts.append(new_alert)
+                self.request_db.add(user)
+                self.request_db.commit()
 
-            self.write('wait for page to redirect')
-            #create project
-            print('name = {}, data_path = {}, config_df = {}'.format(project_name, self.application.data_dir, config_path))
-            user = self.request_db.query(User).filter_by(username=username).first()
-            new_project = Project(project_name, self.application.data_dir, config_path)
-            user.projects.append(new_project)
-            
-            df = pd.read_excel(config_path)
-            links = dict(zip(df['target'], df['target_label']))
-            links = replace_mix_option_with_all_existing_keywords(links)
-            # links = {k:[v] for k, v in links.items()}
-            
-            # add links to crawler logfile
-            rproject = RProject(new_project.name, new_project.data_path, new_project.config_file)
-            rproject.generate_crawl_logfile(links)
-            rproject._load_units_from_data_path()
-            rproject.add_links_to_crawler_logfile(links)
-
-
-            # create content
-            mailing_list = dict(zip(df['target'], df['mailing_list']))
-            print('Mailing LIST = {}'.format(mailing_list))
-            new_content = Content(project_name + '_default', links, mailing_list)
-            new_project.contents.append(new_content)
-
-            # # create live alert
-            now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M')
-            new_alert = Alert(project_name + '_default', 'Live', now)
-            new_content.alerts.append(new_alert)
-            self.request_db.add(user)
-            self.request_db.commit()
-
-            flash_message(self, 'success', '\'{}\' successfully uploaded. Alert {} created.'.format(fname, fname.replace('.xlsx', '')))
-            self.redirect('/')
-
-            # except Exception as e:
-            #     print('ERROR = {}'.format(e))
-            #     flash_message(self, 'danger', 'Problem creating quick project. Check logs.')
-            #     self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
-
-
-
-
-
-
-
-
-
-
-
+                flash_message(self, 'success', '\'{}\' successfully uploaded. Alert {} created.'.format(fname, fname.replace('.xlsx', '')))
+                self.redirect('/')
+            except Exception as e:
+                print('ERROR = {}'.format(e))
+                flash_message(self, 'danger', 'Problem creating quick project. Check logs.')
+                self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
 
 class ProjectsCreateView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
@@ -144,7 +125,7 @@ class UserProjectView(BaseView):
             self.session['current_project'] = project.name
             self.session['project_data_path'] = project.data_path
             self.session['project_config_file'] = project.config_file
-            self.session['is_project_empty'] = True
+            # self.session['is_project_empty'] = True
             self.session.save()
             #flash_message(self, 'warning', 'There are no units at the moment. Go on the \'Website\' section and add one.')
             flash_message(self, 'danger', 'No units in the project {}.'.format(projectname))
@@ -172,7 +153,7 @@ class UserProjectView(BaseView):
             self.session['current_project'] = project.name
             self.session['project_data_path'] = project.data_path
             self.session['project_config_file'] = project.config_file
-            self.session['is_project_empty'] = False
+            # self.session['is_project_empty'] = False
             self.session.save()
             self.render('projects/index.html', project=json_project, units=units)    
             return
@@ -192,5 +173,13 @@ class UserProjectDelete(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         self.request_db.delete(project)
         self.request_db.commit()
+
+        # if deleted project was the current project, delete it from user session
+        del self.session['units']
+        del self.session['current_project']
+        del self.session['project_data_path']
+        del self.session['project_config_file']
+        self.session.save()
+
         flash_message(self, 'success', 'Project {} succesfully deleted.'.format(projectname))
         self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))

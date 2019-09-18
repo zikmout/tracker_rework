@@ -15,8 +15,9 @@ class UserProjectCrawlView(BaseView):
         if 'units' in self.session:
             units = self.session['units']
         if units is None or units == {}:
-            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            flash_message(self, 'danger', 'No units in the project {}.'.format(projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            return
         else:
             nb_crawled = 0
             nb_units = 0

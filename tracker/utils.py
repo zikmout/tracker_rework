@@ -111,11 +111,18 @@ def replace_mix_option_with_all_existing_keywords(links):
         # create set of all keywords
         for key_word in list(links.values()):
             if key_word != '<MIX>':
-                #print('key word = {}'.format(key_word))
-                all_words.add(key_word)
-                # not case sensitive
-                all_words.add(key_word.upper())
-                all_words.add(key_word.lower())
+                if ';' in key_word:
+                    for _ in key_word.split(';'):
+                        all_words.add(_)
+                        # not case sensitive
+                        all_words.add(_.upper())
+                        all_words.add(_.lower())
+                else:
+                    #print('key word = {}'.format(key_word))
+                    all_words.add(key_word)
+                    # not case sensitive
+                    all_words.add(key_word.upper())
+                    all_words.add(key_word.lower())
         # if <MIX> in the column, apply all key words matching
         for k, v in links.copy().items():
             if v == '<MIX>':
@@ -124,4 +131,7 @@ def replace_mix_option_with_all_existing_keywords(links):
                 links[k] = [v]
     else:
         links = {k:[v] for k, v in links.items()}
+    for k, v in links.copy().items():
+        if len(v) == 1 and ';' in v[0]:
+            links[k] = v[0].split(';')
     return links

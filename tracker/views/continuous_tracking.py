@@ -24,44 +24,10 @@ class ContinuousTrackingCreateView(BaseView):
             self.redirect('/api/v1/users/admin/project_create')
             return
 
-        # else create project directory
-        os.mkdir(project_path)
-
-        # puting xlsx config file in it
         config_path = os.path.join(project_path, 'config.xlsx')
-
-        # create both column 'target' and 'target_label' to prepare header of excel file
-        df = pd.DataFrame({'Name':['invader'], 'Website':['https://space-invaders.com/'], 'target':['https://space-invaders.com/spaceshop/'], 'target_label':['space-invader']})
-        writer = pd.ExcelWriter(config_path, engine='xlsxwriter')
-        df.to_excel(writer)
-        writer.save()
-
-        #create project in db
-        print('name = {}, data_path = {}, config_df = {}'.format(project_name, self.application.data_dir, config_path))
         user = self.request_db.query(User).filter_by(username=username).first()
         new_project = Project(project_name, self.application.data_dir, config_path)
         user.projects.append(new_project)
-        
-        df = pd.read_excel(config_path)
-        links = dict(zip(df['target'], df['target_label']))
-        links = {k:[v] for k, v in links.items()}
-
-        print('links look like this = {}'.format(links))
-        
-        # add links to crawler logfile
-        rproject = RProject(new_project.name, new_project.data_path, new_project.config_file)
-        rproject.generate_crawl_logfile(links)
-        rproject._load_units_from_data_path()
-        rproject.add_links_to_crawler_logfile(links)
-
-
-        # create content (consistent with name)
-        new_content = Content('invader_spider', links)
-        new_project.contents.append(new_content)
-
-        # # create live alert
-        #new_alert = Alert(project_name + '_qp_live', 'Live', "2011-08-19T13:45:00")
-        #new_content.alerts.append(new_alert)
         self.request_db.add(user)
         self.request_db.commit()
 
@@ -80,6 +46,10 @@ class UserProjectWebsitesView(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         json_project = project.as_dict()
         units = None
+        if not os.path.isfile(project.config_file):
+            #print('project lines ==> {}'.format(rproject.lines))
+            self.render('projects/websites.html', project=json_project, units=units, lines=None)
+            return
         try:
             rproject = RProject(project.name, project.data_path, project.config_file)
             rproject._load_units_from_excel()
@@ -112,28 +82,59 @@ class UserProjectAddWebsite(BaseView):
         args = self.form_data
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
-        rproject = RProject(project.name, project.data_path, project.config_file)
-        print('config df before = {}'.format(rproject.config_df))
-        config_df_updated = rproject.config_df.append({'Name': args['inputName'][0], 'Website': args['inputWebsite'][0],\
-            'target': args['inputTarget'][0], 'target_label':args['inputKeywords'][0]}, ignore_index=True)
-        print('config df after = {}'.format(config_df_updated))
-        config_df_updated.to_excel(project.config_file, index=False)
 
-        # generate crawl logfile
-        links = {args['inputTarget'][0]:args['inputKeywords']}
-        rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
-        rproject._load_units_from_data_path()
-        rproject.add_links_to_crawler_logfile(links)
+        # If first time adding website, must create config_file, folder, logfile
+        if not os.path.isfile(project.config_file):
+            # create project directory
+            project_path = os.path.join(self.application.data_dir, projectname)
+            os.mkdir(project_path)
+            # put xlsx config file in it with both column 'target' and 'target_label' to prepare header of excel file
+            config_path = os.path.join(project_path, 'config.xlsx')
+            df = pd.DataFrame({'Name':args['inputName'], 'Website':args['inputWebsite'], 'target':args['inputTarget'], 'target_label':args['inputKeywords']})
+            writer = pd.ExcelWriter(config_path, engine='xlsxwriter')
+            df.to_excel(writer)
+            writer.save()
+            
+            df = pd.read_excel(config_path)
+            links = dict(zip(df['target'], df['target_label']))
+            links = {k:[v] for k, v in links.items()}
+            
+            # add links to crawler logfile
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            rproject.generate_crawl_logfile(links)
+            rproject._load_units_from_data_path()
+            rproject.add_links_to_crawler_logfile(links)
 
-        # create content (consistent with name)
-        new_content = Content(args['inputName'][0] + '_spider', links)
-        project.contents.append(new_content)
+            self.request_db.commit()
+            units = rproject.units_stats(units=rproject.filter_units())
+            self.session['units'] = units
+            # self.session['is_project_empty'] = False
+            self.session.save()
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            return
+        else:
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            print('config df before = {}'.format(rproject.config_df))
+            config_df_updated = rproject.config_df.append({'Name': args['inputName'][0], 'Website': args['inputWebsite'][0],\
+                'target': args['inputTarget'][0], 'target_label':args['inputKeywords'][0]}, ignore_index=True)
+            print('config df after = {}'.format(config_df_updated))
+            config_df_updated.to_excel(project.config_file, index=False)
 
-        # change session data to take account of deleted unit
-        units = rproject.units_stats(units=rproject.filter_units())
-        self.session['units'] = units
-        self.session.save()
-        self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            # generate crawl logfile
+            links = {args['inputTarget'][0]:args['inputKeywords']}
+            rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
+            rproject._load_units_from_data_path()
+            idx = rproject.add_links_to_crawler_logfile(links)
+            print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
+            # create content (consistent with name)
+            new_content = Content(args['inputName'][0] + '_spider', links)
+            project.contents.append(new_content)
+
+            # change session data to take account of deleted unit
+            units = rproject.units_stats(units=rproject.filter_units())
+            self.session['units'] = units
+            self.session.save()
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
 
 class UserProjectDeleteWebsite(BaseView):
     SUPPORTED_METHODS = ['POST']
@@ -159,6 +160,12 @@ class UserProjectDeleteWebsite(BaseView):
         # change session data to take account of deleted unit
         units = rproject.units_stats(units=rproject.filter_units())
         self.session['units'] = units
+        # if units is None, it means project can be emptied
+        if units is None:
+            fname = os.path.join(self.application.data_dir, projectname)
+            shutil.rmtree(fname)
+            # self.session['is_project_empty'] = True
+
         self.session.save()
         self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
 

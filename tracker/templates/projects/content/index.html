@@ -54,18 +54,23 @@ $(document).ready(function(){
 
 <div class="starter-template-fluid">
 
-      <center><h3>Project {{ handler.session['current_project'] }} - Content labelizer</h3></center>
-      <center><p>Pinpoint here content you are interested in and give it a name to later launch alerts on it and monitor what has changed.</p></center>
-    
-      <center>
-        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
-          Create content from file
-        </button>&nbsp;&nbsp;
-        <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#treelookup" aria-expanded="false" aria-controls="treelookup">
-          Create content from tree
-        </button>
-      </center>
-      <p />
+        <center><h3>Project {{ handler.session['current_project'] }} - Content labelizer</h3></center>
+
+        <div class='row'>
+          <div class='col'>
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
+              Create content from file
+            </button><!-- &nbsp;&nbsp;
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#treelookup" aria-expanded="false" aria-controls="treelookup">
+              Create content from tree
+            </button> -->
+          </div>
+
+          <div class='col-10'>
+            <p>Pinpoint here content you are interested in and give it a name to later launch alerts on it and monitor what has changed.</p>
+          </div>
+        </div>
+
 
       <div class="collapse" id="createalert">
         
@@ -80,15 +85,19 @@ $(document).ready(function(){
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputName">Column link name</label>
-                        <input type="text" class="form-control" id="columnLinkName" name="columnLinkName" required>
+                        <input type="text" class="form-control" id="columnLinkName" name="columnLinkName" value="target" required>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="inputName">Column keyword name</label>
-                        <input type="text" class="form-control" id="columnKeyWordName" name="columnKeyWordName" required>
+                        <input type="text" class="form-control" id="columnKeyWordName" name="columnKeyWordName" value="target_label" required>
                     </div>
                     <div class="form-group col-md-4">
-                        <label for="inputName">File path (.xls)</label>
-                        <input type="text" class="form-control" id="columnKeyWordName" name="fileNamePath">
+                        <label for="inputName">Column mailing list name</label>
+                        <input type="text" class="form-control" id="columnMailingListName" name="columnMailingListName">
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputName">File path (.xlsx)</label>
+                        <input type="text" class="form-control" id="columnKeyWordName" name="fileNamePath" value="{{ handler.session['project_config_file'] }}">
                     </div>
                 </div>
                 <br />
@@ -102,7 +111,7 @@ $(document).ready(function(){
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-info" id="createButton">Create</button>
+                <button type="submit" class="btn btn-info col-lg-2" id="createButton">Create</button>
 
             </div>
 
@@ -129,7 +138,7 @@ $(document).ready(function(){
                 <label class="form-check-label">Check if new file detected</label>
               </div>
               //-->
-              <input type="button" value="Classify Content from tree" id="get_checked" class="btn btn-info">
+              <input type="button" value="Classify Content from tree" id="get_checked" class="btn btn-info col-lg-2">
               <br>
               <br>
 
@@ -196,11 +205,43 @@ $(document).ready(function(){
 
       </div>
 </div>
+<br>
+  {% if contents is not None %}
+    <table class="table table-responsive-sm table-striped">
+          <tr>
+            <th>Name</th>
+            <th>Nb of target</th>
+            <th>Mailing list</th>
+            <th>Action</th>
+            <th></th>
+          </tr>
+          {% for content in contents %}
+          <tr>
+              <th>{{ content['name'] }}</th>
+              <th>{{ len(content['links']) }}</th>
+              <th>{% if content['mailing_list'] is None %}No{% else %}Yes{% end %}</th>
+              <th>
+                <form action="#" method="post" class="form-horizontal"><button type="button" class="btn btn-outline-info disabled" value="{{ content['id'] }}" name="editContentId">Modify</button></input></form>
+              </th>
+              <th>
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ content['id'] }}" name="contentIdToDelete"><button type="submit" class="btn btn-outline-danger" value="{{ content['id'] }}" name="contentIdToDelete">Delete</button></input></form>
+              </th>
+          </tr>
+          {% end %}
+    </table>
+  {% else %}
+    No content yet. Create one from above buttons.
+  {% end %}
+
+
 {% end %}
 {% block script %}
 <script>
   $('#createButton').click(function(){
-     $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+     console.log($('#inputName').value);
+     if ($('#inputName').val()) {
+      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+     }
   });
 </script>
 {% end %}

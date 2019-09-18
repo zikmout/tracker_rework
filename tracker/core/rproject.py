@@ -235,7 +235,7 @@ class RProject:
         project_directories = utils.get_directories_list(self.data_path)
         if self.units == []:
             print('No Units loaded !')
-            return
+            return 0
 
         threads = []
         idx = 0
@@ -254,6 +254,7 @@ class RProject:
             x.join()
 
         print('All THREADS ARE DONE !!!!')
+        return idx
 
     def _load_units_from_data_path(self):
         """ Load project units from project self.data_path (full path where project data is stored)

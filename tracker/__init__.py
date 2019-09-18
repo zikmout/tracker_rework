@@ -15,7 +15,7 @@ from tracker.views.user import UserListView, UserDelete, UserUnitView, UserUnitE
 from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 from tracker.views.mail import UserProjectSendMail
 from tracker.views.tasks import RevokeLiveTasks, DeleteTaskQueues
-from tracker.views.content import UserProjectContent, TestingView, UserProjectContentFromFile
+from tracker.views.content import UserProjectContent, UserProjectContentFromFile, UserProjectDeleteContent
 from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView,\
  UserProjectDelete, FastProjectCreateView
 from tracker.views.continuous_tracking import ContinuousTrackingCreateView, UserProjectWebsitesView,\
@@ -32,8 +32,6 @@ def main():
     LOAD_MODEL = False
     if 'no_model' not in sys.argv:
         LOAD_MODEL = True
-
-    if LOAD_MODEL:
         from tracker.views.predict import SBBPredict
     define('port', default=5567, help='Port to listen on.')
     app_db, meta = make_session_factory()
@@ -66,8 +64,8 @@ def main():
 
             # tracker.views.content.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-delete', UserProjectDeleteContent),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-from-file', UserProjectContentFromFile),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/testview', TestingView),
 
             # tracker.views.crawl.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl', UserProjectCrawlView),

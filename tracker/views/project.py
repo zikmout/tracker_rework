@@ -137,7 +137,20 @@ class UserProjectView(BaseView):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         json_project = project.as_dict()
+        print('json_project = {}'.format(json_project))
         units = None
+        if not os.path.isfile(project.config_file):
+            self.session['units'] = units
+            self.session['current_project'] = project.name
+            self.session['project_data_path'] = project.data_path
+            self.session['project_config_file'] = project.config_file
+            self.session['is_project_empty'] = True
+            self.session.save()
+            #flash_message(self, 'warning', 'There are no units at the moment. Go on the \'Website\' section and add one.')
+            flash_message(self, 'danger', 'No units in the project {}.'.format(projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            # self.render('projects/index.html', project=json_project, units=units)    
+            return
         try:
             rproject = RProject(project.name, project.data_path, project.config_file)
             if 'fromExcel' in args:
@@ -159,6 +172,7 @@ class UserProjectView(BaseView):
             self.session['current_project'] = project.name
             self.session['project_data_path'] = project.data_path
             self.session['project_config_file'] = project.config_file
+            self.session['is_project_empty'] = False
             self.session.save()
             self.render('projects/index.html', project=json_project, units=units)    
             return

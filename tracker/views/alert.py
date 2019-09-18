@@ -69,6 +69,10 @@ class AlertCreate(BaseView):
 
         if 'gridCheck' in args:
             checked = True
+        if not 'inputContent' in args:
+            flash_message(self, 'danger', 'Please specify some content to base your alert on.')
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            return
         content_name = args['inputContent'].split('(')[0]
         print('content -> {}'.format(content_name))
 

@@ -3,7 +3,7 @@
 <div class="starter-template-fluid">
       <center><h3>Websites for project {{ project['name'] }}</h3></center>
       
-
+      {{ handler.session }}
 
         <div class='row'>
           <div class='col'>
@@ -45,6 +45,7 @@
           <br />
         </div>
 
+        {% if lines is not None and handler.session['units'] is not None %}
         <table class="table table-responsive-sm table-striped">
               <tr>
                 <th>Name</th>
@@ -68,7 +69,10 @@
                   </th>
               </tr>
               {% end %}
-        </table>    
+        </table>
+        {% else %}
+        No unit yet. Please create one by clicking '+ Add website'
+        {% end %}   
         
 </div>
 {% end %}

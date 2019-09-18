@@ -480,6 +480,29 @@ class RProject:
         dict_links = utils.from_links_to_dict(links)
         print('links after = {}'.format(dict_links))
         #exit(0)
+
+        # Rework mailing_list excel matrix (translate)
+        # At the moment, mails are like this : (mailing_list)
+        #       target1 --> mail1 mail2 mail3
+        #       target2 --> mail2 mail3
+        mails_set = set()
+        for t, m in mailing_list.items():
+            for s in m.split(';'):
+                mails_set.add(s)
+        
+        mails_content = dict()
+        for mail in mails_set:
+            mails_content[mail] = list()
+
+        for t, m in mailing_list.items():
+            for mail in mails_set:
+                if mail in m:
+                    mails_content[mail].append(t)
+        # Now, mails are like this: (mails_content)
+        #       mail1 --> target1
+        #       mail2 --> target1 target2
+        #       mail3 --> target2
+
         task_args = list()
         filename_time = datetime.datetime.now().strftime("%Y%m%d")
         if isinstance(dict_links, dict) and bool(dict_links):            
@@ -495,7 +518,7 @@ class RProject:
 
             print('SCHEDULED = {}'.format(schedule))
             entry = Entry(alert_name, 'continuous_worker.sum_up_finish',\
-                schedule, args=(task_args, ), app=continuous_worker.app)
+                schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
             entry.save()
             print('ENTRY IS DUE = {}'.format(entry.is_due()))
             return entry

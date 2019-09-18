@@ -78,6 +78,8 @@ class AlertCreate(BaseView):
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
             content = project.contents.filter_by(name=content_name).first()
+            
+            #print('mails_content ===> {}'.format(mails_content))
             if args['inputStartTime'] == '':
                 start_time = datetime.datetime.now().replace(microsecond=0)
             else:
@@ -163,7 +165,7 @@ class AlertLiveCreate(BaseView):
                 self.session.save()
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
                 return
-        elif args['alertType'] == 'BasicReccurent' of args['alertType'] == 'CrontabSchedule':
+        elif args['alertType'] == 'BasicReccurent' or args['alertType'] == 'CrontabSchedule':
             print('content --> {}'.format(content))
             # Loading project
             rproject = RProject(project.name, project.data_path, project.config_file)

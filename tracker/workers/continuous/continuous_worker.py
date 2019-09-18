@@ -17,7 +17,7 @@ import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
 # from tracker.celery import app
-from tracker.mail import mail_sbb
+from tracker.mail import simple_mail_sbb, designed_mail_sbb
 
 # Hack to load only necessary modules (pb with ml model)
 # TODO: Replace raw path with os.environ ($APP_DIR)
@@ -271,7 +271,7 @@ def check_diff_delayed(self, links, base_path, diff_path, url):
 
 
 @app.task(bind=True)
-def send_mails(self, task_results):#, soft_time_limit=120):
+def send_mails(self, task_results, mails):#, soft_time_limit=120):
     print('ALL TASKS EXECUTED !!! ;) END END END END . RET = {}\n-----> Checking diff for email now .....'\
         .format(task_results))
     task_results = [r['status'] for r in task_results.copy() if r['status']['diff_neg'] != []\
@@ -279,11 +279,14 @@ def send_mails(self, task_results):#, soft_time_limit=120):
     # if task_results == []:
     #   print('No email to be sent because no diff found.')
     # else:
-    mail_sbb(task_results, "simon.sicard@gmail.com")
+    print("MAILS CONTENT ----> {}".format(mails))
+    #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
+    designed_mail_sbb(task_results, mails)
 
 @app.task(bind=True)
-def sum_up_finish(self, add):
+def sum_up_finish(self, add, mails):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
-    return celery.chord((check_diff_delayed.s(k[0], k[1], k[2], k[3]).on_error(log_error.s()) for k in add), send_mails.s())()
+    return celery.chord((check_diff_delayed.s(k[0], k[1], k[2], k[3]\
+        ).on_error(log_error.s()) for k in add), send_mails.s(mails))()
 
 

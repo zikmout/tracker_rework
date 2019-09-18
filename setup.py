@@ -7,7 +7,6 @@ requires = [
     'werkzeug',
     'redis',
     'ujson',
-    'uuid',
     'pandas',
     'lxml',
     'bs4',

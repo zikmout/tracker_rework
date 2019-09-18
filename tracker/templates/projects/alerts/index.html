@@ -48,7 +48,7 @@
             <div class="card card-body border-info">
 
               <label for="inputStartTime">Start time</label>
-              <input class="form-control" type="datetime-local" value="2019-09-03T08:52" name="inputStartTime">
+              <input class="form-control" type="datetime-local" value="" name="inputStartTime" id="inputStartTime">
 
               <label for="inputEvery">Every</label>
               <div class="row">
@@ -160,6 +160,7 @@
   <div class="collapse" id="contentlookup">
     <div class="card card-body">
       {% for content in contents %}
+      {{ content }}
         <details>
         <summary>{{ escape(str(content['name'])) }}</summary>
         {% for link, keywords in content['links'].items() %}
@@ -271,8 +272,13 @@
     
   </table>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+<script src="{{ static_url('custom/utils.js') }}"></script>
 <script>
   $(document).ready(function() {
+    // 2019-09-03T08:52
+    //"MM ddd, YYYY hh:mm:ss a"
+    $('#inputStartTime').val(getCurrentDate("YYYY-MM-DDThh:mm", 30));
     $('#BasicReccurent').hide();
     $('#CrontabSchedule').hide();
     $('#inputType').on('change', function() {

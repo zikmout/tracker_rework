@@ -105,7 +105,8 @@ def get_nearest_link(keyword, remote_content, url):
             break ;
     return nearest_link
 
-def keyword_match(keywords, status, remote_content, url):
+def keyword_match(keywords, status, remote_content, url, detect_links=True):
+    """ Find diff pos, diff neg, nearest links pos, nearest links neg """
     match_neg = list()
     match_pos = list()
     
@@ -113,19 +114,21 @@ def keyword_match(keywords, status, remote_content, url):
         for neg in status['diff_neg']:
             if keyword in neg:
                 match_neg.append(neg)
-                status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
+                if detect_links:
+                    status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
         for pos in status['diff_pos']:
             if keyword in pos:
                 #print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
                 match_pos.append(pos)
-                status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
+                if detect_links:
+                    status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
 
     status['diff_neg'] = match_neg
     status['diff_pos'] = match_pos
 
-    if status['diff_pos'] == []:
+    if detect_links and status['diff_pos'] == []:
         status['all_links_pos'] = [] 
-    if status['diff_neg'] == []:
+    if detect_links and status['diff_neg'] == []:
         status['all_links_neg'] = [] 
     return status
 
@@ -150,28 +153,36 @@ def extract_links_from_html(content):
 
 
 
-def get_text_diff(local_content, remote_content, status):
+def get_text_diff(local_content, remote_content, status, detect_links=True):
     # extract content and links
     extracted_local_content = extract_text_from_html(local_content)
-    extracted_local_links = extract_links_from_html(local_content)
     extracted_remote_content = extract_text_from_html(remote_content)
-    extracted_remote_links = extract_links_from_html(remote_content)
+    if detect_links:
+        extracted_local_links = extract_links_from_html(local_content)
+        extracted_remote_links = extract_links_from_html(remote_content)
     # clean content ('\n' here)
     extracted_local_content = clean_content(extracted_local_content)
     extracted_remote_content = clean_content(extracted_remote_content)
     # get content diffs
     status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
     status['diff_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
-    if status['diff_neg'] != []:
+
+    if detect_links and status['diff_neg'] != []:
         all_links_neg = set()
         [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
         status['all_links_neg'] = list(all_links_neg)
         #print('diff all links neg = {}'.format(status['all_links_neg']))
-    if status['diff_pos'] != []:
+    else:
+        status['all_links_neg'] = None
+
+    if detect_links and status['diff_pos'] != []:
         all_links_pos = set()
         [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
         status['all_links_pos'] = list(all_links_pos)
         #print('diff all links pos = {}'.format(status['all_links_pos']))
+    else:
+        status['all_links_pos'] = None
+        
     return status
 
 def get_essential_content(content, min_sentence_len):

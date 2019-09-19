@@ -11,7 +11,7 @@ import tracker.core.downloader as downloader
 from tracker.core.unit import Unit
 import tracker.workers.continuous.continuous_worker as continuous_worker
 from redbeat import RedBeatSchedulerEntry as Entry
-
+import math
 import threading
 
 
@@ -473,37 +473,69 @@ class RProject:
 
 
 
-    def download_units_diff_delayed_with_email(self, alert_name, schedule, links, mailing_list, save=False):
+    def download_units_diff_delayed_with_email(self, alert_name, template_type,\
+        schedule, links, mailing_list, save=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
         print('links before = {}'.format(links))
         dict_links = utils.from_links_to_dict(links)
         print('links after = {}'.format(dict_links))
-        #exit(0)
 
         # Rework mailing_list excel matrix (translate)
         # At the moment, mails are like this : (mailing_list)
         #       target1 --> mail1 mail2 mail3
         #       target2 --> mail2 mail3
+        print('Mailing list ==> {}'.format(mailing_list))
         mails_set = set()
         for t, m in mailing_list.items():
-            for s in m.split(';'):
-                mails_set.add(s)
+            print('M = {}'.format(m))
+            if isinstance(m, float) and math.isnan(m):
+                continue;
+            if isinstance(m, float) and ';' not in str(m):
+                mails_set.add(str(m))
+            else:
+                for s in m.split(';'):
+                    mails_set.add(s)
         
+        print('mail set = {}'.format(mails_set))
         mails_content = dict()
         for mail in mails_set:
             mails_content[mail] = list()
 
         for t, m in mailing_list.items():
-            for mail in mails_set:
-                if mail in m:
+            if isinstance(m, float) and math.isnan(m):
+                continue;
+            elif isinstance(m, float) and ';' not in str(m):
+                if mail != str(m):
                     mails_content[mail].append(t)
+            else:
+                for mail in mails_set:
+                    if mail in m:
+                        mails_content[mail].append(t)
+        print('MAIL CONTENT = {}'.format(mails_content))
         # Now, mails are like this: (mails_content)
         #       mail1 --> target1
         #       mail2 --> target1 target2
         #       mail3 --> target2
 
+        if template_type == 'share buy back':
+            keywords_diff = True
+            detect_links = True
+            links_algorithm = 'http://localhost:5567/api/v1/predict/is_sbb'
+        elif template_type == 'diff':
+            keywords_diff = False
+            detect_links = False
+            links_algorithm = False
+        elif template_type == 'diff with keywords':
+            keywords_diff = True
+            detect_links = False
+            links_algorithm = False
+        else:
+            # This must not happen
+            return False
+
+        # Tasks are of type celery chords, so one argument per task
         task_args = list()
         filename_time = datetime.datetime.now().strftime("%Y%m%d")
         if isinstance(dict_links, dict) and bool(dict_links):            
@@ -513,13 +545,26 @@ class RProject:
                     #print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
                     #print('filename_time = {}'.format(filename_time))
-                    task_args.append((val, unit.download_path, unit.download_path + filename_time, unit.url))
+                    task_args.append((val,
+                        unit.download_path,
+                        unit.download_path + filename_time,
+                        unit.url,
+                        keywords_diff,
+                        detect_links,
+                        links_algorithm))
                 else:
                     print('Unit {} not found'.format(key))
 
             print('SCHEDULED = {}'.format(schedule))
-            entry = Entry(alert_name, 'continuous_worker.sum_up_finish',\
-                schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+            if template_type == 'share buy back':
+                entry = Entry(alert_name, 'continuous_worker.share_buy_back_task',\
+                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+            elif template_type == 'diff':
+                entry = Entry(alert_name, 'continuous_worker.diff_task',\
+                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+            elif template_type == 'diff with keywords':
+                entry = Entry(alert_name, 'continuous_worker.diff_with_keywords_task',\
+                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
             entry.save()
             print('ENTRY IS DUE = {}'.format(entry.is_due()))
             return entry

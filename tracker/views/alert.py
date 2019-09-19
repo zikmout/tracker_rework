@@ -65,10 +65,11 @@ class AlertCreate(BaseView):
         args = { k: self.get_argument(k) for k in self.request.arguments }
         print('post args = {}'.format(args))
         # if box is checked, variable comes in like { "gridCheck": "on" }
-        checked = False
+        email_notify = False
 
         if 'gridCheck' in args:
-            checked = True
+            email_notify = True
+
         if not 'inputContent' in args:
             flash_message(self, 'danger', 'Please specify some content to base your alert on.')
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
@@ -90,13 +91,16 @@ class AlertCreate(BaseView):
                 start_time = args['inputStartTime']
             if args['inputType'] == 'Live':
                 start_time = datetime.datetime.now().replace(microsecond=0)
-                new_alert = Alert(args['inputName'], args['inputType'], start_time, email_notify=checked)
+                new_alert = Alert(args['inputName'], args['inputType'], start_time, email_notify=email_notify,\
+                    template_type=args['mailTemplateType'])
             elif args['inputType'] == 'BasicReccurent':
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat=args['inputRepeat'],\
-                    interval=args['inputEvery'], max_count=args['inputMaxCount'], email_notify=checked)
+                    interval=args['inputEvery'], max_count=args['inputMaxCount'], email_notify=email_notify,\
+                    template_type=args['mailTemplateType'])
             elif args['inputType'] == 'CrontabSchedule':
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat_at=args['inputRepeatTime'],\
-                    days_of_week=[int(v[0]) for k, v in args.items() if k.startswith('crontabDay')], email_notify=checked)
+                    days_of_week=[int(v[0]) for k, v in args.items() if k.startswith('crontabDay')],\
+                    email_notify=email_notify, template_type=args['mailTemplateType'])
                 
             content.alerts.append(new_alert)
             self.request_db.add(content)
@@ -194,8 +198,10 @@ class AlertLiveCreate(BaseView):
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
             return
 
+
         # Sync alert with Redbeat scheduler
-        entry = rproject.download_units_diff_delayed_with_email(alert.name, schedule, content.links, content.mailing_list, save=True)
+        entry = rproject.download_units_diff_delayed_with_email(alert.name, alert.template_type,\
+            schedule, content.links, content.mailing_list, save=True)
         
         # Scheduler must return an entry
         if entry is False:
@@ -222,7 +228,7 @@ class AlertStop(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         content = project.contents.filter_by(name=args['contentName']).first()
         alert = content.alerts.filter_by(name=args['alertName']).first()
-        print('alert.alert_type = {}'.format(alert.alert_type))
+        #print('alert.alert_type = {}'.format(alert.alert_type))
         if alert.alert_type == 'Live':
             if 'live_view' in self.session['tasks']:
                 res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])

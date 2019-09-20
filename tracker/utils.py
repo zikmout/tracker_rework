@@ -1,5 +1,5 @@
-import tornado
 import json
+import tornado
 from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
 
@@ -31,6 +31,15 @@ def login_required(f):
     def _wrapper(self, *args, **kwargs):
         logged = self.get_current_user()
         if logged is None:
+            self.redirect('/api/v1/auth/login')
+        else:
+            ret = f(self, *args, **kwargs)
+    return _wrapper
+
+def admin_required(f):
+    def _wrapper(self, *args, **kwargs):
+        is_admin = self.session['is_admin']
+        if is_admin is False:
             self.redirect('/api/v1/auth/login')
         else:
             ret = f(self, *args, **kwargs)

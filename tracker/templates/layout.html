@@ -31,9 +31,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar1">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
+<!--                     <li class="nav-item">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-                    </li>
+                    </li> -->
                     {% if hasattr(handler, 'session') and handler.session != {} %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
@@ -56,8 +56,10 @@
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">{{ handler.session['current_project'] }}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage">Websites</a>
+                            {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl">Crawler</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download">Downloader</a>
+                            {% end %}
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content">Content</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Alert</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/view">Live View</a>
@@ -72,9 +74,15 @@
                     </li>
                     {% end %}
                 </ul>
+                {% if hasattr(handler, 'session') and 'is_simplified' in handler.session %}
                 <form class="form-inline my-2 my-lg-0">
-                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+                    <label class="switch">
+                    <input type="checkbox" id="switchDetailed" {% if handler.session['is_simplified'] is False %}checked{% end %}>
+                    <span class="slider round"></span>
+               </label>
+               {% end %}
+                  <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+                  <!-- <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button> -->
                 </form>
             </div>
         </nav>
@@ -121,12 +129,31 @@
 
         </main>
 
-            <script>window.jQuery || document.write('<script src="{{ static_url('assets/js/vendor/jquery-slim.min.js') }}"><\/script>')</script>
+            <script src="{{ static_url('jquery.min.js') }}"></script>
             <script src="{{ static_url('assets/js/vendor/popper.min.js') }}"></script>
             <script src="{{ static_url('dist/js/bootstrap.min.js') }}"></script>
+
             <script>
               $('.dropdown-item').click(function(){
                  $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+              });
+              $('#switchDetailed').change(function() {
+                var mode = $(this).prop('checked');
+                $.ajax({
+                    type:'POST',
+                    url: '/switch-mode',
+                    // data: {
+                    //     "is_simplified": mode
+                    // },
+                    success: function(response) {
+                        var jsonResp = JSON.parse(response);
+                        console.log(jsonResp);
+                        document.location.reload();
+                    },
+                    error: function(xhf) {
+                        console.log('An Error occured trying to switch mode');
+                    }
+                });
               });
             </script>
             {% block script %}{% end %}

@@ -155,31 +155,38 @@ class UserProjectView(BaseView):
             self.session['project_config_file'] = project.config_file
             # self.session['is_project_empty'] = False
             self.session.save()
-            self.render('projects/index.html', project=json_project, units=units)    
-            return
+            if 'is_admin' in self.session and 'is_simplified' in self.session and self.session['is_simplified'] is False:
+                self.render('projects/index.html', project=json_project, units=units)
+                return
+            else:
+                self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+
 
 class UserProjectDelete(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
     def post(self, username, projectname):
         #print('ARGS DELETE = {}'.format(self.args))
-        if 'deleteRelatedFilesCheck' in self.args:
-            #print('Removing project from hard drive ...')
-            fname = os.path.join(self.application.data_dir, projectname)
-            shutil.rmtree(fname)
-            print('Folder \'{}\' successfully removed.'.format(fname))
-
         user = self.request_db.query(User).filter_by(username=self.session['username']).first()
         project = user.projects.filter_by(name=projectname).first()
         self.request_db.delete(project)
         self.request_db.commit()
 
         # if deleted project was the current project, delete it from user session
-        del self.session['units']
-        del self.session['current_project']
-        del self.session['project_data_path']
-        del self.session['project_config_file']
+        keys_to_delete = ['units', 'current_project', 'project_data_path', 'project_config_file']
+        for k in keys_to_delete:
+            if k in self.session:
+                del self.session[k]
         self.session.save()
 
-        flash_message(self, 'success', 'Project {} succesfully deleted.'.format(projectname))
+        if 'deleteRelatedFilesCheck' in self.args:
+            #print('Removing project from hard drive ...')
+            fname = os.path.join(self.application.data_dir, projectname)
+            if not os.path.exists(fname):
+                flash_message(self, 'warning', 'Project {} succesfully deleted from DB but was not \
+                    found on server ! Maybe no websites were parameterized yet?'.format(projectname))
+            else:
+                shutil.rmtree(fname)
+                print('Folder \'{}\' successfully removed.'.format(fname))
+                flash_message(self, 'success', 'Project {} succesfully deleted from DB and server.'.format(projectname))
         self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))

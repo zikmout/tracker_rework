@@ -10,7 +10,7 @@ from tornado.web import url
 from tracker.utils import make_session_factory
 import tracker.session as session
 
-from tracker.views.base import HomePage, My404Handler
+from tracker.views.base import HomePage, My404Handler, SwitchMode
 from tracker.views.user import UserListView, UserDelete, UserUnitView, UserUnitEditView
 from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 from tracker.views.mail import UserProjectSendMail
@@ -43,6 +43,7 @@ def main():
             handlers = [
             # tracker.views.base.py
             url(r'/', HomePage, name='home'),
+            url(r'/switch-mode', SwitchMode),
 
             # tracker.views.user.py
             url(r'/api/v1/users_list', UserListView, name='users_list'),

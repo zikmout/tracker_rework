@@ -2,12 +2,13 @@ import json
 import datetime
 import time
 import tornado
+from tornado import gen
 import pickle
 import traceback
 from tornado.web import RequestHandler
 from werkzeug import check_password_hash
 from tracker.models import Permission, Role, Project, User
-from tracker.utils import make_session_factory, flash_message, login_required
+from tracker.utils import make_session_factory, flash_message, login_required, admin_required
 from tracker.models import User
 import tracker.session as session
 from tracker.workers.live.live_view_worker import live_view
@@ -85,6 +86,20 @@ class HomePage(BaseView):
     SUPPORTED_METHODS = ['GET']
     def get(self):
         self.render('index.html')
+
+class SwitchMode(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    # @admin_required
+    @gen.coroutine
+    def post(self):
+        # is_simplified = self.get_argument('is_simplified')
+        # user = self.app_db.query(User).filter_by(username=self.session['username']).first()
+        # print('Switch to : {}'.format(is_simplified))
+        # del self.session['is_simplified']
+        self.session['is_simplified'] = not self.session['is_simplified']
+        self.session.save()
+        flash_message(self, 'info', 'Simplified interface : {}.'.format(self.session['is_simplified']))
+        self.send_response({ 'response': 'OK' })
 
 class My404Handler(BaseView):
     def prepare(self):

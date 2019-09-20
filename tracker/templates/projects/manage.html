@@ -7,8 +7,10 @@
         <table class="table table-responsive-sm table-striped">
               <tr>
                 <th>Project Name</th>
+                {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                 <th>Data Path</th>
                 <th>Config Path</th>
+                {% end %}
                 <th>Creation Date</th>
                 <th>From Excel</th>
                 <th>Action</th>
@@ -17,8 +19,10 @@
               {% for project in projects %}
               <tr>
               <th>{{ escape(project['name']) }}</th>
+              {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
               <th>{{ escape(project['data_path'][:5]) }} ... {{ escape(project['data_path'][-5:]) }}</th>
               <th>{{ escape(project['config_file']) }}</th>
+              {% end %}
               <th>{{ escape(project['creation_date']) }}</th>
               <th>
                   <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="post" class="form-horizontal">

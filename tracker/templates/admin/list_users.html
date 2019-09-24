@@ -4,7 +4,8 @@
       <br>
       <center><h3>List of database users</h3></center><br>
 
-        <table class="table table-responsive-sm table-striped">
+        <table class="table table-sm">
+          <thead class="thead-light">
               <tr>
                 <th>Username</th>
                 <th>Password</th>
@@ -13,16 +14,19 @@
                 <th>Registration date</th>
                 <th>Action</th>
               </tr>
+          </thead>
+          <tbody>
               {% for user in users_json %}
               <tr>
-              <th>{{ escape(user['username']) }}</th>
-              <th>{{ escape(user['password'][:10]) }} ... {{ escape(user['password'][-10:]) }}</th>
-              <th>{{ escape(user['email']) }}</th>
-              <th>{{ escape(user['role_id']) }}</th>
-              <th>{{ escape(user['registration_date']) }}</th>
-              <th><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-danger" value="">Delete</button></form></th>
+              <td style="vertical-align:middle;">{{ escape(user['username']) }}</td>
+              <td style="vertical-align:middle;">{{ escape(user['password'][:10]) }} ... {{ escape(user['password'][-10:]) }}</td>
+              <td style="vertical-align:middle;">{{ escape(user['email']) }}</td>
+              <td style="vertical-align:middle;">{{ escape(user['role_id']) }}</td>
+              <td style="vertical-align:middle;">{{ escape(user['registration_date']) }}</td>
+              <td style="vertical-align:middle;"><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-danger btn-sm" value="">Delete</button></form></td>
               </tr>
               {% end %}
+          </tbody>
         </table>
         
 </div>

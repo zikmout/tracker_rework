@@ -46,29 +46,37 @@
         </div>
 
         {% if lines is not None and handler.session['units'] is not None %}
-        <table class="table table-responsive-sm table-striped">
+        <table class="table table-sm table-hover">
+          <thead class="thead-light">
               <tr>
                 <th>Name</th>
+                {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                 <th>Website</th>
+                {% end %}
                 <th>Target</th>
                 <th>keywords</th>
                 <th>Action</th>
                 <th></th>
               </tr>
+          </thead>
+          <tbody>
               {% for line in lines %}
               <tr>
-                  <th>{{ line['name'] }}</th>
-                  <th>{{ line['website'][8:35] }} ... {{ line['website'][-15:] }}</th>
-                  <th>... {{ line['target'][-30:] }}</th>
-                  <th>{{ line['keywords'] }}</th>
-                  <th>
-                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-info" value="{{ line['target'] }}" name="editUnitName">Modify</button></input></form>
-                  </th>
-                  <th>
-                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ line['website'] }}" name="websiteToDelete"><button type="submit" class="btn btn-outline-danger" value="{{ line['target'] }}" name="targetToDelete">Delete</button></input></form>
-                  </th>
+                  <td style="vertical-align:middle;">{{ line['name'] }}</td>
+                  {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+                  <td style="vertical-align:middle;">{{ line['website'][7:35] }} ...</td>
+                  {% end %}
+                  <td style="vertical-align:middle;">... {{ line['target'][-30:] }}</td>
+                  <td style="vertical-align:middle;">{{ line['keywords'] }}</td>
+                  <td style="vertical-align:middle;">
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-info btn-sm" value="{{ line['target'] }}" name="editUnitName">Modify</button></input></form>
+                  </td>
+                  <td style="vertical-align:middle;">
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ line['website'] }}" name="websiteToDelete"><button type="submit" class="btn btn-danger btn-sm" value="{{ line['target'] }}" name="targetToDelete">Delete</button></input></form>
+                  </td>
               </tr>
               {% end %}
+          </tbody>
         </table>
         {% else %}
         No unit yet. Please create one by clicking '+ Add website'

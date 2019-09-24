@@ -207,7 +207,8 @@ $(document).ready(function(){
 </div>
 <br>
   {% if contents is not None %}
-    <table class="table table-responsive-sm table-striped">
+    <table class="table table-sm">
+      <thead class="thead-light">
           <tr>
             <th>Name</th>
             <th>Nb of target</th>
@@ -215,19 +216,22 @@ $(document).ready(function(){
             <th>Action</th>
             <th></th>
           </tr>
+      </thead>
+      <tbody>
           {% for content in contents %}
           <tr>
-              <th>{{ content['name'] }}</th>
-              <th>{{ len(content['links']) }}</th>
-              <th>{% if content['mailing_list'] is None %}No{% else %}Yes{% end %}</th>
-              <th>
-                <form action="#" method="post" class="form-horizontal"><button type="button" class="btn btn-outline-info disabled" value="{{ content['id'] }}" name="editContentId">Modify</button></input></form>
-              </th>
-              <th>
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ content['id'] }}" name="contentIdToDelete"><button type="submit" class="btn btn-outline-danger" value="{{ content['id'] }}" name="contentIdToDelete">Delete</button></input></form>
-              </th>
+              <td style="vertical-align:middle;">{{ content['name'] }}</td>
+              <td style="vertical-align:middle;">{{ len(content['links']) }}</td>
+              <td style="vertical-align:middle;">{% if content['mailing_list'] is None %}No{% else %}Yes{% end %}</td>
+              <td style="vertical-align:middle;">
+                <form action="#" method="post" class="form-horizontal"><button type="button" class="btn btn-info btn-sm disabled" value="{{ content['id'] }}" name="editContentId">Modify</button></input></form>
+              </td>
+              <td style="vertical-align:middle;">
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ content['id'] }}" name="contentIdToDelete"><button type="submit" class="btn btn-danger btn-sm" value="{{ content['id'] }}" name="contentIdToDelete">Delete</button></input></form>
+              </td>
           </tr>
           {% end %}
+      </tbody>
     </table>
   {% else %}
     No content yet. Create one from above buttons.

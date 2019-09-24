@@ -2,6 +2,8 @@ import os
 import shutil
 import pandas as pd
 from tornado import gen
+import re
+
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required
@@ -82,7 +84,11 @@ class UserProjectAddWebsite(BaseView):
         args = self.form_data
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
-
+        # print('ARGSSSS = {}'.format(args))
+        if args['inputWebsite'][0] == '':
+            regex = r"^https?://[^/]+"
+            url = re.findall(regex, args['inputTarget'][0])[0]
+            args['inputWebsite'][0] = url
         # If first time adding website, must create config_file, folder, logfile
         if not os.path.isfile(project.config_file):
             # create project directory

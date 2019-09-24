@@ -4,19 +4,29 @@
   <script src="{{ static_url('jquery.min.js') }}"></script>
   <br>
   <center><h3>Project {{ handler.session['current_project'] }} - Setup and launch alerts on content changes</h3></center>
-  <center><p>Below is a list of alerts you already configured. <br>
-  Click on Create Alert to configure a new alert. Use Content Lookup to remember what the content name refers to.<br>
-  Push Start button in order to launch alert.</p><br></center>
+
+  
 
   <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create" method="post">
   <p>
-  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
+
+  <div class='row'>
+    <div class='col'>
+      <p>
+      <button class="btn btn-dark col-md-10" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
     Create alert
-  </button>
-  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
+      </button></p>
+      <button class="btn btn-dark col-md-10" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
     Content lookup
-  </button>
-  </p>
+      </button>
+    </p>
+    </div>
+    <div class="col-10">
+  <p>Below is a list of alerts you already configured. <br>
+  Click on Create Alert to configure a new alert. Use Content Lookup to remember what the content name refers to.<br>
+  Push Start button in order to launch alert.</p><br>
+  </div>
+  </div>
   <div class="collapse" id="createalert">
     <div class="card card-body">
       <div class="form-row">
@@ -185,88 +195,100 @@
     </div>
   </div>
   </form>
-  
-  <table class="table table-responsive-sm table-striped">
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Creation</th>
-      <th>Start</th>
-      <th>End</th>
-      <th>Schedule</th>
-      <th>Email notify</th>
-      <th>Template Type</th>
-      <th>Launched</th>
-      <th>Content Name</th>
-      <th>Notify Mail</th>
-      <th>Action</th>
-      <th></th>
-      <th></th>
-      <th>Worker state</th>
-    </tr>
 
+  
+  <table class="table table-sm">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col" style="vertical-align:middle;">Name</th>
+        <th scope="col" style="vertical-align:middle;">Type</th>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <th scope="col" style="vertical-align:middle;">Creation</th>
+        {% end %}
+        <th scope="col" style="vertical-align:middle;">Start</th>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <th scope="col" style="vertical-align:middle;">End</th>
+        {% end %}
+        <th scope="col" style="vertical-align:middle;">Schedule</th>
+        <th scope="col" style="vertical-align:middle;">Email notify</th>
+        <th scope="col" style="vertical-align:middle;">Template Type</th>
+        <th scope="col" style="vertical-align:middle;">Launched</th>
+        <th scope="col" style="vertical-align:middle;">Content Name</th>
+        <th scope="col" style="vertical-align:middle;">Notify Mail</th>
+        <th scope="col" style="vertical-align:middle;">Action</th>
+        <th scope="col" style="vertical-align:middle;"></th>
+        <th scope="col" style="vertical-align:middle;"></th>
+        <th scope="col" style="vertical-align:middle;">Worker state</th>
+      </tr>
+    </thead>
+    <tbody>
     {% for alert in alerts %}
+    
     <tr>
 
       <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
       <div class="form-group">
 
-        <th>{{ alert['name'] }}</th>
-        <th>{{ alert['alert_type'] }}</th>
-        <th>{{ alert['creation_date'] }}</th>
-        <th>{{ alert['start_time'] }}</th>
-        <th>{{ alert['end_time'] }}</th>
-
-        {% if alert['alert_type'] == 'Live' %}
-          <th>-</th>
-        {% elif alert['alert_type'] == 'BasicReccurent' %}
-          <th>Every {{ alert['interval'] }} {{ alert['repeat'][:4] }} (max={{ alert['max_count'] }})</th>
-        {% elif alert['alert_type'] == 'CrontabSchedule' %}
-          <th>Days:{{ alert['days_of_week'] }} at {{ alert['repeat_at'] }}</th>
+        <td style="vertical-align:middle;">{{ alert['name'] }}</td>
+        <td style="vertical-align:middle;">{{ alert['alert_type'] }}</td>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <td style="vertical-align:middle;">{{ alert['creation_date'][5:-8] }}</td>
+        {% end %}
+        <td style="vertical-align:middle;">{{ alert['start_time'][:-3] }}</td>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <td style="vertical-align:middle;">{{ alert['end_time'] }}</td>
         {% end %}
 
-        <th>{{ alert['email_notify'] }}</th>
-        <th>{{ alert['template_type'] }}</th>
-        <th>{{ alert['launched'] }}</th>
-        <th>{{ alert['content_id'] }}</th>
+        {% if alert['alert_type'] == 'Live' %}
+          <td style="vertical-align:middle;">-</td>
+        {% elif alert['alert_type'] == 'BasicReccurent' %}
+          <td style="vertical-align:middle;">Every {{ alert['interval'] }} {{ alert['repeat'][:4] }} (max={{ alert['max_count'] }})</td>
+        {% elif alert['alert_type'] == 'CrontabSchedule' %}
+          <td style="vertical-align:middle;">Days:{{ alert['days_of_week'] }} at {{ alert['repeat_at'] }}</td>
+        {% end %}
 
-        <th>
+        <td style="vertical-align:middle;">{{ alert['email_notify'] }}</td>
+        <td style="vertical-align:middle;">{{ alert['template_type'] }}</td>
+        <td style="vertical-align:middle;">{{ alert['launched'] }}</td>
+        <td style="vertical-align:middle;">{{ alert['content_id'] }}</td>
+
+        <td style="vertical-align:middle;">
           <div class="form-check">
-              <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
+              <input class="form-check-input" style="transform: scale(1.5); margin-top:0; position:relative" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
           </div>
         </div>
-        </th>
+        </td>
 
-        <th>
+        <td style="vertical-align:middle;">
           {% if escape(alert['launched']) == 'False' %}
           <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
           <input type="hidden" value="{{ alert['name'] }}" name="alertName">
-          <button type="submit" class="btn btn-info" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+          <button type="submit" class="btn btn-info btn-sm" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
           {% else %}
-          <button type="button" class="btn btn-info disabled" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+          <button type="button" class="btn btn-info btn-sm disabled" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
           {% end %}
-        </th>
+        </td>
 
-        <th>
+        <td style="vertical-align:middle;">
           {% if alert['launched'] == 'True' %}
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post">
             <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
             <input type="hidden" value="{{ escape(alert['content_id']) }}" name="contentName">
-          <button type="submit" class="btn btn-info" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
+          <button type="submit" class="btn btn-info btn-sm" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
           {% else %}
           <form action="#" method="post">
             <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
-          <button type="button" class="btn btn-info disabled" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
+          <button type="button" class="btn btn-info btn-sm disabled" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
           {% end %}
-        </th>
+        </td>
 
-        <th>
+        <td style="vertical-align:middle;">
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/delete" method="post">
             <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
-          <button type="submit" class="btn btn-danger" value="{{ alert['name'] }}" name="alertName">Delete</button></form>
-        </th>
+          <button type="submit" class="btn btn-danger btn-sm" value="{{ alert['name'] }}" name="alertName">Delete</button></form>
+        </td>
 
-        <th>
+        <td style="vertical-align:middle;">
         {% if alert['state'] == 'Lost' %}
           <span class="badge badge-warning">LOST</span>
         {% elif alert['state'] == 'Ready' %}
@@ -276,11 +298,11 @@
         {% elif alert['state'] == 'Active' %}
           <span class="badge badge-dark">ACTIVE</span>
         {% end %}
-        </th>
+        </td>
 
     </tr>
     {% end %}
-    
+    </tbody>
   </table>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>

@@ -4,7 +4,8 @@
         <br>
         <h3>List of projects recorded for {{ handler.session['username'] }}</h3>
         <p>You can here manage the monitoring projects you created. Load any project you want to access further options.</p>
-        <table class="table table-responsive-sm table-striped">
+        <table class="table table-sm">
+          <thead class="thead-light">
               <tr>
                 <th>Project Name</th>
                 {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
@@ -16,24 +17,26 @@
                 <th>Action</th>
                 <th></th>
               </tr>
+            </thead>
+            <tbody>
               {% for project in projects %}
               <tr>
-              <th>{{ escape(project['name']) }}</th>
+              <td style="vertical-align:middle;">{{ escape(project['name']) }}</td>
               {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
-              <th>{{ escape(project['data_path'][:5]) }} ... {{ escape(project['data_path'][-5:]) }}</th>
-              <th>{{ escape(project['config_file']) }}</th>
+              <td style="vertical-align:middle;">{{ escape(project['data_path'][:5]) }} ... {{ escape(project['data_path'][-5:]) }}</td>
+              <td style="vertical-align:middle;">{{ escape(project['config_file']) }}</td>
               {% end %}
-              <th>{{ escape(project['creation_date']) }}</th>
-              <th>
+              <td style="vertical-align:middle;">{{ escape(project['creation_date'][:-3]) }}</td>
+              <td style="vertical-align:middle;">
                   <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="post" class="form-horizontal">
                   <div class="form-group">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="gridCheck" name="fromExcel" style="transform: scale(1.5);">
+                      <input class="form-check-input" type="checkbox" id="gridCheck" name="fromExcel" style="transform: scale(1.5); margin-top:0; position:relative" checked>
                     </div>
                   </div>
-              </th>
-              <th><button type="submit" class="btn btn-outline-info" id="loadProject" value="">Load</button></form></th>
-              <th><button type="button" class="btn btn-outline-danger" value="" data-toggle="modal" data-target="#ModalConfirmDelete-{{ escape(project['name']) }}">Delete</button>
+              </td>
+              <td style="vertical-align:middle;"><button type="submit" class="btn btn-info btn-sm" id="loadProject" value="">Load</button></form></th>
+              <td style="vertical-align:middle;"><button type="button" class="btn btn-danger btn-sm" value="" data-toggle="modal" data-target="#ModalConfirmDelete-{{ escape(project['name']) }}">Delete</button>
               <div class="modal fade" id="ModalConfirmDelete-{{ escape(project['name']) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle-{{ escape(project['name']) }}" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
@@ -62,9 +65,10 @@
                   </div>
                 </div>
               </div>
-              </th>
+              </td>
               </tr>
               {% end %}
+            </tbody>
         </table>
 </div>
 {% end %}

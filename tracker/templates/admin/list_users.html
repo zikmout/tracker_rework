@@ -4,11 +4,53 @@
       <br>
       <center><h3>List of database users</h3></center><br>
 
+        <div class='row'>
+          <div class='col'>
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createuser" aria-expanded="false" aria-controls="createuser">
+              Create user
+            </button><!-- &nbsp;&nbsp;
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#treelookup" aria-expanded="false" aria-controls="treelookup">
+              Create content from tree
+            </button> -->
+          </div>
+
+          <div class='col-10'>
+            <!-- <p>Use this button to create new user with chosen permissions.</p> -->
+          </div>
+        </div>
+
+      <div class="collapse" id="createuser">
+        <br>
+        <form action="/api/v1/user-create" method="post">
+        
+            <div class="card card-body">
+                
+                <div class="input-group">
+                <input type="email" name="inputEmail" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon2">
+                <input type="text" name="inputUsername" class="form-control" placeholder="username" aria-label="username" aria-describedby="basic-addon2">
+                <input type="password" name="inputPassword" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon2">
+                <select class="form-control" name="inputRole" placeholder="role" aria-label="role">
+                    <option>User</option>
+                    <option>Moderator</option>
+                    <option>Administrator</option>
+                </select>
+                <div class="input-group-append">
+                  <button class="btn btn-info" type="submit">Create</button>
+                  <button class="btn btn-danger" type="reset">Reset</button>
+                </div>
+              </div>
+
+            </div>
+
+        </form>
+
+      </div>
+      <br />
+
         <table class="table table-sm">
           <thead class="thead-light">
               <tr>
                 <th>Username</th>
-                <th>Password</th>
                 <th>Email</th>
                 <th>Role</th>
                 <th>Registration date</th>
@@ -18,11 +60,10 @@
           <tbody>
               {% for user in users_json %}
               <tr>
-              <td style="vertical-align:middle;">{{ escape(user['username']) }}</td>
-              <td style="vertical-align:middle;">{{ escape(user['password'][:10]) }} ... {{ escape(user['password'][-10:]) }}</td>
-              <td style="vertical-align:middle;">{{ escape(user['email']) }}</td>
-              <td style="vertical-align:middle;">{{ escape(user['role_id']) }}</td>
-              <td style="vertical-align:middle;">{{ escape(user['registration_date']) }}</td>
+              <td style="vertical-align:middle;">{{ user['username'] }}</td>
+              <td style="vertical-align:middle;">{{ user['email'] }}</td>
+              <td style="vertical-align:middle;">{{ user['role'] }}</td>
+              <td style="vertical-align:middle;">{{ user['registration_date'] }}</td>
               <td style="vertical-align:middle;"><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-danger btn-sm" value="">Delete</button></form></td>
               </tr>
               {% end %}

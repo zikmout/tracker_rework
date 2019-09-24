@@ -71,11 +71,12 @@ class User(Base):
     role_id = Column(Integer, ForeignKey('roles.id'))
     projects = relationship('Project', cascade='save-update, delete', backref='users', lazy='dynamic')
 
-    def __init__(self, username, password, email, session, meta):
+    def __init__(self, username, password, email, session, meta, role=None):
         self.username = username
         self.password = generate_password_hash(password)
         self.email = email
         self.registration_date = datetime.now().replace(microsecond=0)
+        self.role = role
         if self.role is None:
             print('self.role is none')
             print('self.email = {}'.format(self.email))
@@ -92,6 +93,16 @@ class User(Base):
 
     def is_administrator(self):
         return self.can(Permission.ADMIN)
+
+    def get_rolename(self):
+        if self.can(Permission.ADMIN):
+            return 'Administrator'
+        elif self.can(Permission.MODERATE):
+            return 'Moderator'
+        elif self.can(Permission.WRITE):
+            return 'User'
+        else:
+            return None
 
     def is_authenticated(self):
         return True

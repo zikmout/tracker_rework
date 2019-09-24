@@ -15,10 +15,12 @@ requires = [
     'xlrd',
     'celery',
     'cython',
+    'pycld2',
     'fastText',
     'pdftotext',
     'celery-redbeat',
-    'flower'
+    'tldextract'
+    # 'flower'
 ]
 
 setup(

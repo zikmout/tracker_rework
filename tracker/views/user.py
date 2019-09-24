@@ -3,7 +3,7 @@ import json
 from tracker.views.base import BaseView
 from tracker.models import User
 from tracker.utils import flash_message, login_required, get_url_from_id
-from tracker.models import User
+from tracker.models import User, Role
 from tracker.core.rproject import RProject
 
 class UserListView(BaseView):
@@ -13,10 +13,15 @@ class UserListView(BaseView):
     def get(self):
         """Get all tasks for an existing user."""
         username = self.get_current_user()
-        users_json = list()
-        users = self.request_db.query(User).all()
-        if users:
-            [users_json.append(user.as_dict()) for user in users]
+        db_users = self.request_db.query(User).all()
+        users_json = []
+        for user in db_users:
+            users_json.append({
+                "username": user.username,
+                "registration_date": user.registration_date,
+                "email": user.email,
+                "role": user.get_rolename()
+                })
         self.render('admin/list_users.html', users_json=users_json)
 
 class UserDelete(BaseView):
@@ -69,7 +74,36 @@ class UserUnitEditView(BaseView):
         #line = config_df_updated.loc[config_df_updated['target'] == url].to_json()
         self.render('unit/edit.html', url=url, line=line)
 
-
+class AdminUserCreate(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
+    def post(self):
+        args = self.form_data
+        print('Args = {}'.format(args))
+        if 'inputUpdatedRole' in args and 'inputUsername' in args:
+            try:
+                user = self.request_db.query(User).filter_by(username=args['inputUsername'][0]).first()
+                user.role = self.request_db.query(Role).filter_by(name=args['inputUpdatedRole'][0]).first()
+                self.request_db.commit()
+                flash_message(self, 'success', 'User {} : Permission succesfully updated to {}.'\
+                    .format(args['inputUsername'][0], args['inputUpdatedRole'][0]))
+            except Exception as e:
+                print('Exception updating user role : {}'.format(e))
+                flash_message(self, 'danger', 'Failed changing permission for user: {}.'\
+                .format(args['inputUsername'][0]))
+        else:
+            try:
+                user = User(args['inputUsername'][0], args['inputPassword'][0], args['inputEmail'][0], \
+                    self.request_db, self.meta, role=self.request_db.query(Role).filter_by(name=args['inputRole'][0]).first())
+                self.request_db.add(user)
+                self.request_db.commit()
+                flash_message(self, 'success', 'User {} succesfully registered.'.format(args['inputUsername'][0]))
+            except Exception as e:
+                print('Exception : {}'.format(e))
+                flash_message(self, 'danger', 'Username {} already exists or email {} already taken.'\
+                    .format(args['inputUsername'][0], args['inputEmail'][0]))
+        self.redirect('/api/v1/users_list')
 
 
 

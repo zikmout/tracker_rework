@@ -4,7 +4,8 @@ import urllib
 from urllib.request import urlopen
 import ssl
 import re
-import cld2
+# import cld2
+import pycld2 as cld2
 import string
 from bs4 import BeautifulSoup
 from bs4.element import Comment

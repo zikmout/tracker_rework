@@ -22,6 +22,8 @@
           <input type="text" class="form-control" name="inputWebsite" value="{{ line['Website'] }}" readonly>
           <small class="form-text text-muted">If you want to change the website, you better add website directly rather than modifying existing one.</small>
         </div>
+	{% else %}
+          <input type="hidden" class="form-control" name="inputWebsite" value="{{ line['Website'] }}" readonly>
         {% end %}
         <div class="form-group">
           <label for="inputTarget" id="inputTarget">Target</label>

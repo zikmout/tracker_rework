@@ -39,7 +39,7 @@ class SBBPredict(BaseView):
     @gen.coroutine
     def post(self):
     	args = { k: self.get_argument(k) for k in self.request.arguments }
-    	#print('Ask to predict = {}'.format(args))
+    	print('Ask to predict = {}'.format(args))
     	content = args['content']
     	min_acc = 0.75
     	if 'min_acc' in args:

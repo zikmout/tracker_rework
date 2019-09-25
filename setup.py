@@ -18,7 +18,8 @@ requires = [
     'pycld2',
     'pdftotext',
     'celery-redbeat',
-    'tldextract'
+    'tldextract',
+    'openpyxl'
     # 'flower'
 ]
 

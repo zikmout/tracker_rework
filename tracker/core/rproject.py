@@ -216,7 +216,7 @@ class RProject:
 
 
 
-    def add_links_to_crawler_logfile(self, links_list):
+    def add_links_to_crawler_logfile(self, links_list, wait=True):
 
         url_errors = list()
         def run_downloads(unit, unit_url):
@@ -246,7 +246,7 @@ class RProject:
             regex = r"^https?://[^/]+"
             unit_url = re.findall(regex, link)[0]
             unit = self.get_unit_from_url(unit_url)
-            if idx % 10 == 0:
+            if wait and idx % 10 == 0:
                 time.sleep(5)
             my_thread = threading.Thread(target=run_downloads, args=(unit, unit_url))
             threads.append(my_thread)

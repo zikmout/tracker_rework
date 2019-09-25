@@ -102,7 +102,7 @@ class UserProjectContentFromFile(BaseView):
 
             rproject = RProject(project.name, project.data_path, project.config_file)
             rproject._load_units_from_data_path()
-            idx = rproject.add_links_to_crawler_logfile(list(links))
+            idx = rproject.add_links_to_crawler_logfile(list(links), wait=add_stranger)
             #print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
             mailing_list = None
             if 'columnMailingListName' in args and args['columnMailingListName'] != '':

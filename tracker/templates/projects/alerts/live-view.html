@@ -12,15 +12,16 @@
             <input type="hidden", name="fromPage" value="live_view">
           </div>
           <div class="col">
-            <button type="submit" class="btn btn-outline-info mb-2">Send report</button></input>
+            <button type="submit" class="btn btn-info mb-2">Send report</button></input>
           </div>
+          Remaining tasks:&nbsp;<font color="red"><div id="numberOfPendingTasks">0</div></font>/{{ len(handler.session['tasks']['live_view']) }}
         </div>
         </form>
 
         <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
           <div class="form-inline">
               <input type="hidden", name="fromPage" value="live_view">
-              <button type="submit" class="btn btn-outline-info">Download updated pages</button></input>
+              <button type="submit" class="btn btn-info">Download updated pages</button></input>
           </div>
         </form>
       {% if 'live_view' in handler.session['tasks'] %}
@@ -32,10 +33,11 @@
       {% end %}
 </div>
 <script>
-var ws = new WebSocket("ws://ns3047875.ip-51-254-196.eu:5567/websocket");
+var ws = new WebSocket("ws://localhost:5567/websocket");
 function timeout() {
     setTimeout(function () {
-        ws.onopen()
+        ws.onopen();
+        //document.getElementById('numberOfPendingTasks').value = 0;
         timeout();
     }, 3000);
 }
@@ -49,6 +51,8 @@ function getRandomArbitrary(min, max) {
 }
 
 ws.onopen = function() {
+  // document.getElementById('numberOfPendingTasks').value = 0;
+  counterRemaining = 0;
   {% if 'live_view' in handler.session['tasks'] %}
     {% for tasks in handler.session['tasks']['live_view'] %}
         //sleep(getRandomArbitrary(500, 2000));
@@ -60,6 +64,9 @@ ws.onopen = function() {
 function updateTitleState (data) {
   // document.getElementById('currentState' + data.task_id).innerHTML = "<mark>" + data.state + "</mark>";
   if (data.state != 'SUCCESS') {
+    // if (data.state == 'PENDING') {
+    //   document.getElementById('numberOfPendingTasks').value = getRandomArbitrary(4, 500);
+    // }
     //document.getElementById('currentCheck' + data.task_id).innerHTML = data.status.url;
   }
   else {
@@ -103,11 +110,20 @@ function formatDiff(title, diff, nearest_link, all_links, type) {
   return fullDiff;
 }
 
+var counterRemaining = 0;
+
 ws.onmessage = function (evt) {
    if (evt != null) {
        var data = JSON.parse(evt.data);
        updateTitleState(data);
+       // document.getElementById('numberOfPendingTasks').value = getRandomArbitrary(4, 500);
+       //$('#numberOfPendingTasks').html(0);
        console.log('data.status = ' + data.state)
+       if (data.state == 'PENDING') {
+          console.log('pass remaining');
+          counterRemaining += 1;
+          $('#numberOfPendingTasks').html(counterRemaining);
+       }
        if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
           if (!document.getElementById(data.status.div)) {
             var title = document.createElement("H5");

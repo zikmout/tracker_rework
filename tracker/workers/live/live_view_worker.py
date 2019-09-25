@@ -16,7 +16,7 @@ import tracker.core.extractor as extractor
 import re
 import pdftotext
 import gc
-import fasttext as fastText
+import fastText
 
 # Hack to load only necessary modules (pb with ml model)
 # TODO: Replace raw path with os.environ ($APP_DIR)

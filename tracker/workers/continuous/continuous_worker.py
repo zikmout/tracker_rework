@@ -7,7 +7,7 @@ import ssl
 import re
 import gc
 import pdftotext
-import fasttext as fastText
+import fastText
 import celery
 import json
 

@@ -21,7 +21,7 @@
 
 <div class="tab-content" id="myTabContent">
   <br />
-  {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is True %}
+  {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
   <div class="tab-pane fade" id="project" role="tabpanel" aria-labelledby="project-tab">
 
     <form action="/api/v1/users/{{ handler.session['username'] }}/project_create" method=post>

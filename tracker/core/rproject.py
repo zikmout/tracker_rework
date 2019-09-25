@@ -230,6 +230,8 @@ class RProject:
                         print('->Page {} successfuly downloaded'.format(unit_url + internal_link))
                     else:
                         print('->Unable to download page {}'.format(unit_url + internal_link))
+                else:
+                    print('-> No need to download: {}'.format(unit_url + internal_link))
 
         print('Loading websites list to add crawled links in data_path \'{}\' ....\n'.format(self.data_path))
         project_directories = utils.get_directories_list(self.data_path)
@@ -451,9 +453,9 @@ class RProject:
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
-        print('links before = {}'.format(links))
+        #print('links before = {}'.format(links))
         dict_links = utils.from_links_to_dict(links)
-        print('links after = {}'.format(dict_links))
+        #print('links after = {}'.format(dict_links))
         #exit(0)
         tasks = list()
         if isinstance(dict_links, dict) and bool(dict_links):

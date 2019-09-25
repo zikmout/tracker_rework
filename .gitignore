@@ -25,7 +25,7 @@ parts
 *.egg-info
 lib
 lib64
-#dist/
+dist/
 
 # logs folder
 logs/

@@ -48,9 +48,9 @@ def main():
             # tracker.views.user.py
             url(r'/api/v1/users_list', UserListView, name='users_list'),
             url(r'/api/v1/user-create', AdminUserCreate),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?', UserDelete, name='user_delete'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?', UserUnitView, name='user_unit_view'),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit-edit', UserUnitEditView, name='unit-edit-view'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?', UserDelete, name='user_delete'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?', UserUnitView, name='user_unit_view'),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit-edit', UserUnitEditView, name='unit-edit-view'),
 
             # tracker.views.auth.py
             url(r'/api/v1/auth/login', AuthLoginView, name='login'),
@@ -58,53 +58,53 @@ def main():
             url(r'/api/v1/auth/register', AuthRegisterView, name='register'),
 
             # tracker.views.mail.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/send_report', UserProjectSendMail),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/send_report', UserProjectSendMail),
 
             # tracker.views.tasks.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/tasks/revoke-all', RevokeLiveTasks),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/tasks/delete-all', DeleteTaskQueues),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/tasks/revoke-all', RevokeLiveTasks),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/tasks/delete-all', DeleteTaskQueues),
 
             # tracker.views.content.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-delete', UserProjectDeleteContent),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-from-file', UserProjectContentFromFile),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-delete', UserProjectDeleteContent),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-from-file', UserProjectContentFromFile),
 
             # tracker.views.crawl.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl', UserProjectCrawlView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl/create_task', UserCrawlsCreate),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl/delete/?(?P<uid>[A-Za-z0-9-]+)?', UserCrawlDeleteLogfile),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl/stop_task/?(?P<task_id>[A-Za-z0-9-]+)?', UserCrawlStop),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl/end_task/?(?P<uid>[A-Za-z0-9-]+)?', DeleteCrawlTaskFromSession), 
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl', UserProjectCrawlView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl/create_task', UserCrawlsCreate),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl/delete/?(?P<uid>[A-Za-z0-9-]+)?', UserCrawlDeleteLogfile),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl/stop_task/?(?P<task_id>[A-Za-z0-9-]+)?', UserCrawlStop),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/crawl/end_task/?(?P<uid>[A-Za-z0-9-]+)?', DeleteCrawlTaskFromSession), 
 
             # tracker.views.download.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/unit/?(?P<uid>[0-9]+)?', UserDownloadCreate),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/unit/?(?P<uid>[0-9]+)?/stop', UserDownloadStop),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/?(?P<task_id>[A-Za-z0-9-]+)?', UserDownloadStatus),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/unit/?(?P<uid>[0-9]+)?', UserDownloadCreate),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/unit/?(?P<uid>[0-9]+)?/stop', UserDownloadStop),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download', UserProjectDownloadView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/download/?(?P<task_id>[A-Za-z0-9-]+)?', UserDownloadStatus),
             
             # tracker.views.project.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/project_create', ProjectsCreateView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects_manage', UserProjectListView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/quick-project-create', FastProjectCreateView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/project_create', ProjectsCreateView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects_manage', UserProjectListView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/quick-project-create', FastProjectCreateView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete),
 
             # tracker.views.continuous_tracking.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/continuous-tracking-create', ContinuousTrackingCreateView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/websites-manage', UserProjectWebsitesView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/website-add', UserProjectAddWebsite),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/website-delete', UserProjectDeleteWebsite),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/website-edit', UserProjectEditWebsite),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/continuous-tracking-create', ContinuousTrackingCreateView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/websites-manage', UserProjectWebsitesView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/website-add', UserProjectAddWebsite),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/website-delete', UserProjectDeleteWebsite),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/website-edit', UserProjectEditWebsite),
 
             # tracker.views.alert.py
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts', AlertView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create', AlertCreate),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alert/stop', AlertStop),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/delete', AlertDelete),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/stop', AlertStop),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/view', AlertLiveView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/update', AlertLiveUpdate),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/create/?(?P<alertid>[A-Za-z0-9-_]+)?', AlertLiveCreate),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts', AlertView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/create', AlertCreate),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alert/stop', AlertStop),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/delete', AlertDelete),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/stop', AlertStop),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/view', AlertLiveView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/update', AlertLiveUpdate),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/create/?(?P<alertid>[A-Za-z0-9-_]+)?', AlertLiveCreate),
 
             # tracker.views.socket.py
             url(r'/websocket', EchoWebSocket, name='websocket')

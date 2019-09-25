@@ -73,7 +73,7 @@ class UserProjectWebsitesView(BaseView):
             self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
             return
         else:
-            print('project lines ==> {}'.format(rproject.lines))
+            #print('project lines ==> {}'.format(rproject.lines))
             self.render('projects/websites.html', project=json_project, units=units, lines=rproject.lines.copy())
 
 class UserProjectAddWebsite(BaseView):

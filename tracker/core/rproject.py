@@ -476,12 +476,14 @@ class RProject:
 
         tasks = list()
         if isinstance(dict_links, dict) and bool(dict_links):
+            counter = 0
             for key, val in dict_links.items():
                 unit = self.get_unit_from_url(key)
                 if unit is not None:
+                    counter += 1
                     #print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links, links_algorithm)
+                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links, links_algorithm, counter)
                     tasks.append(task)
                 else:
                     print('Unit {} not found'.format(key))
@@ -501,6 +503,9 @@ class RProject:
         dict_links = utils.from_links_to_dict(links)
         print('links after = {}'.format(dict_links))
 
+        # If asked to send mail but no mailing_list provided, return False
+        if mailing_list is None:
+            return False
         # Rework mailing_list excel matrix (translate)
         # At the moment, mails are like this : (mailing_list)
         #       target1 --> mail1 mail2 mail3

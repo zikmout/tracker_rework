@@ -175,8 +175,8 @@ def get_full_links(status, base_url):
     print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
     return status 
 
-@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=900)
-def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm):
+@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=300)
+def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm, counter):
     # try:
     """ Download website parts that have changed 
         -> diff based on keyword matching
@@ -249,7 +249,7 @@ def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_link
             status['diff_neg'] = list(set(status['diff_neg'].copy()))
 
             #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
-            self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
+            self.update_state(state='PROGRESS', meta={'current': counter, 'total': total, 'status': status})
             
             print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
             print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))

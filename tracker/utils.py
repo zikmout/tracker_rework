@@ -103,7 +103,9 @@ def revoke_chain(last_result):
 def revoke_all_tasks(app, task_func, ids):
     res = 0
     task_ids_to_stop = list()
+
     for id in ids:
+        print('pass id')
         task_ids_to_stop.append(id)
         task = task_func.AsyncResult(id)
         revoke_chain(task)

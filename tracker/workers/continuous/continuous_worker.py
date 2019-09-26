@@ -277,16 +277,21 @@ def log_error_sbb(self, z):
 
 @app.task(bind=True)
 def sbb_end_routine(self, task_results, mails):#, soft_time_limit=120):
-    print('----> SBB_END_ROUTINE <---- \n(RET = {})\n-----> Sending mail with SBB template now .....'\
-        .format(task_results))
     task_results = [r['status'] for r in task_results.copy() if r['status']['diff_neg'] != []\
                      or r['status']['diff_pos'] != []]
     # if task_results == []:
     #   print('No email to be sent because no diff found.')
     # else:
-    print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
-    #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-    designed_mail_sbb(task_results, mails)
+    if mails is None:
+        print('----> SBB_END_ROUTINE <---- \n(RET = {})\n-----> No mail to be send .....'\
+        .format(task_results))
+    else:
+        print('----> SBB_END_ROUTINE <---- \n(RET = {})\n-----> Sending mail with SBB template now .....'\
+        .format(task_results))
+        print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
+        #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
+        designed_mail_sbb(task_results, mails)
+        print('- Mails successfully sent -')
 
 @app.task(bind=True)
 def share_buy_back_task(self, add, mails):
@@ -305,16 +310,21 @@ def log_error_diff(self, z):
 
 @app.task(bind=True)
 def diff_end_routine(self, task_results, mails):#, soft_time_limit=120):
-    print('----> DIFF_END_ROUTINE <---- \n(RET = {})\n-----> Sending mail with diff template now .....'\
-        .format(task_results))
     task_results = [r['status'] for r in task_results.copy() if r['status']['diff_neg'] != []\
                      or r['status']['diff_pos'] != []]
     # if task_results == []:
     #   print('No email to be sent because no diff found.')
     # else:
-    print("DIFF MAILS TEMPLATE CONTENT : {}".format(mails))
-    #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-    generic_mail_template(task_results, mails, 'diff task', show_links=True)
+    if mails is None:
+        print('----> DIFF_END_ROUTINE <---- \n(RET = {})\n-----> No mail to be send .....'\
+        .format(task_results))
+    else:
+        print('----> DIFF_END_ROUTINE <---- \n(RET = {})\n-----> Sending mail with SBB template now .....'\
+        .format(task_results))
+        print("DIFF MAILS TEMPLATE CONTENT : {}".format(mails))
+        #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
+        generic_mail_template(task_results, mails, 'diff task', show_links=True)
+        print('- Mails successfully sent -')
 
 @app.task(bind=True)
 def diff_task(self, add, mails):
@@ -341,9 +351,17 @@ def diff_with_keywords_end_routine(self, task_results, mails):#, soft_time_limit
     # if task_results == []:
     #   print('No email to be sent because no diff found.')
     # else:
+    if mails is None:
+        print('----> DIFF_END_ROUTINE <---- \n(RET = {})\n-----> No mail to be send .....'\
+        .format(task_results))
+    else:
+        print('----> DIFF_END_ROUTINE <---- \n(RET = {})\n-----> Sending mail with SBB template now .....'\
+        .format(task_results))
+        print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
+        #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
+        generic_mail_template(task_results, mails, 'diff with keywords task', show_links=True)
+        print('- Mails successfully sent -')
     print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
-    #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-    generic_mail_template(task_results, mails, 'diff with keywords task', show_links=True)
 
 @app.task(bind=True)
 def diff_with_keywords_task(self, add, mails):

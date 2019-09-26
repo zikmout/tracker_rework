@@ -449,7 +449,7 @@ class RProject:
             nb = unit.update_downloaded([internal_link])
             print('Nb of unit updated for url {} : {}'.format(nb, base_url))
 
-    def download_units_diff(self, links, save=False):
+    def download_units_diff(self, template_type, links, save=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
@@ -457,6 +457,23 @@ class RProject:
         dict_links = utils.from_links_to_dict(links)
         #print('links after = {}'.format(dict_links))
         #exit(0)
+
+        if template_type == 'share buy back':
+            keywords_diff = True
+            detect_links = True
+            links_algorithm = 'http://localhost:5567/api/v1/predict/is_sbb'
+        elif template_type == 'diff':
+            keywords_diff = False
+            detect_links = False
+            links_algorithm = False
+        elif template_type == 'diff with keywords':
+            keywords_diff = True
+            detect_links = False
+            links_algorithm = False
+        else:
+            # This must not happen
+            return False
+
         tasks = list()
         if isinstance(dict_links, dict) and bool(dict_links):
             for key, val in dict_links.items():
@@ -464,7 +481,7 @@ class RProject:
                 if unit is not None:
                     #print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-                    task = unit.download_changed_files_from_links(val)
+                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links, links_algorithm)
                     tasks.append(task)
                 else:
                     print('Unit {} not found'.format(key))

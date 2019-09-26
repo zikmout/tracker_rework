@@ -214,7 +214,7 @@
         <th scope="col" style="vertical-align:middle;">Template Type</th>
         <th scope="col" style="vertical-align:middle;">Launched</th>
         <th scope="col" style="vertical-align:middle;">Content Name</th>
-        <th scope="col" style="vertical-align:middle;">Notify Mail</th>
+        <!-- <th scope="col" style="vertical-align:middle;">Notify Mail</th> -->
         <th scope="col" style="vertical-align:middle;">Action</th>
         <th scope="col" style="vertical-align:middle;"></th>
         <th scope="col" style="vertical-align:middle;"></th>
@@ -226,7 +226,7 @@
     
     <tr>
 
-      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
+      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/launch/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
       <div class="form-group">
 
         <td style="vertical-align:middle;">{{ alert['name'] }}</td>
@@ -252,12 +252,12 @@
         <td style="vertical-align:middle;">{{ alert['launched'] }}</td>
         <td style="vertical-align:middle;">{{ alert['content_id'] }}</td>
 
-        <td style="vertical-align:middle;">
+<!--         <td style="vertical-align:middle;">
           <div class="form-check">
               <input class="form-check-input" style="transform: scale(1.5); margin-top:0; position:relative" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
           </div>
         </div>
-        </td>
+        </td> -->
 
         <td style="vertical-align:middle;">
           {% if escape(alert['launched']) == 'False' %}

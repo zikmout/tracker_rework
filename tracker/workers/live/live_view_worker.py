@@ -176,18 +176,28 @@ def get_full_links(status, base_url):
     return status 
 
 @live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=900)
-def live_view(self, links, base_path, diff_path, url):
-    """ Try to download website parts that have changed """
+def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm):
+    # try:
+    """ Download website parts that have changed 
+        -> diff based on keyword matching
+        -> links identified with ml algorithm that detect share buy back content (pdf or raw text)
+    """
     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-    #random.shuffle(links)
-
+    # trying to hide scrapping patterns
+    random.shuffle(links)
     total = len(links)
     i = 0
+    # print('LINKS ------> {}'.format(links))
+    # print('base_path ------> {}'.format(base_path))
+    # print('diff_path ------> {}'.format(diff_path))
+    # print('url ------> {}'.format(url))
     for link in links:
-        keywords = link[1]
+        
+        keywords = link[1] if keywords_diff else []
         link = link[0]
+        flink = url + utils.find_internal_link(link)
         status = {
-            'url': url + utils.find_internal_link(link),
+            'url': flink,
             'div': url.split('//')[-1].split('/')[0],
             'diff_neg': list(),
             'diff_pos': list(),
@@ -198,6 +208,7 @@ def live_view(self, links, base_path, diff_path, url):
             'diff_nb': 0
         }
         i += 1
+        print('[{}/{}] Link = {}'.format(i, len(links), flink))
         #time.sleep(random.randint(0, 10))
         base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
         filename = link.rpartition('/')[2]
@@ -208,22 +219,28 @@ def live_view(self, links, base_path, diff_path, url):
             base_dir_path_file = base_dir_path_file + 'unknown___'
 
         # getting local and remote content
-        print('\n-> Fetching local content from : {}'.format(base_dir_path_file))
-        print('-> Fetching remote content from : {}'.format(status['url']))
+        #print('\n-> Fetching local content from : {}'.format(base_dir_path_file))
+        #print('-> Fetching remote content from : {}'.format(status['url']))
         local_content = scrapper.get_local_content(base_dir_path_file, 'rb')
         remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
 
         if local_content is None or remote_content is None:
-            print('Problem fetching local content or remote content.')
+            print('!!!! Problem fetching local content or remote content. !!!!')
+            # Must return error here ?! Just like exception under
+            pass
         else:
-            status = extractor.get_text_diff(local_content, remote_content, status)
+            status = extractor.get_text_diff(local_content, remote_content, status,\
+                detect_links=detect_links)
             # if a list of keywords is provided, only get diff that matches keywords
             if keywords != []:
-                status = extractor.keyword_match(keywords, status, remote_content, url)
-                print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
-                status = get_full_links(status, url)
+                status = extractor.keyword_match(keywords, status, remote_content, url,\
+                    detect_links=detect_links)
+                #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
+                if detect_links:
+                    status = get_full_links(status, url)
             #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
-            status = select_only_sbb_links(status)
+            if detect_links:
+                status = select_only_sbb_links(status)
 
             # taking off doublons in diff pos and diff neg
             status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
@@ -233,15 +250,14 @@ def live_view(self, links, base_path, diff_path, url):
 
             #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
             self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
-            #time.sleep(3)
             
             print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
             print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))
-            #exit(0)
             if len(status['diff_pos']) > 0 or len(status['diff_neg']) > 0:
                 print('***** Content is different *****')
                 status['diff_nb'] += 1
             else:
                 print('***** Content is SIMILAR *****')
+                pass
 
     return {'current': 100, 'total': 100, 'status': status, 'result': status['diff_nb']}

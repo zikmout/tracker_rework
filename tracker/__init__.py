@@ -20,7 +20,7 @@ from tracker.views.project import ProjectsCreateView, UserProjectListView, UserP
  UserProjectDelete, FastProjectCreateView
 from tracker.views.continuous_tracking import ContinuousTrackingCreateView, UserProjectWebsitesView,\
  UserProjectAddWebsite, UserProjectDeleteWebsite, UserProjectEditWebsite
-from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLiveCreate, AlertDelete,\
+from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLaunch, AlertDelete,\
 AlertLiveUpdate, AlertStop
 from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus,\
  UserProjectDownloadView
@@ -104,7 +104,7 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/stop', AlertStop),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/view', AlertLiveView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/update', AlertLiveUpdate),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/live/create/?(?P<alertid>[A-Za-z0-9-_]+)?', AlertLiveCreate),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/alerts/launch/?(?P<alertid>[A-Za-z0-9-_]+)?', AlertLaunch),
 
             # tracker.views.socket.py
             url(r'/websocket', EchoWebSocket, name='websocket')

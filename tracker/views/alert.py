@@ -84,12 +84,23 @@ class AlertCreate(BaseView):
             project = user.projects.filter_by(name=projectname).first()
             content = project.contents.filter_by(name=content_name).first()
             
+            if email_notify and content.mailing_list is None:
+                flash_message(self, 'danger', 'Cannot create alert. Content \'{}\' has no mailing list in it. \
+                    Select content with mailing list please.'.format(content_name))
+                self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+                return
             #print('mails_content ===> {}'.format(mails_content))
             if args['inputStartTime'] == '':
                 start_time = datetime.datetime.now().replace(microsecond=0)
             else:
                 start_time = args['inputStartTime']
             if args['inputType'] == 'Live':
+                if email_notify:
+                    email_notify = False
+                    msg = ['warning', 'You selected live alert and checked the option \'send mail \'\
+                    but mails are manually sent on live alert. Setting mail notify to False.']
+                else:
+                    msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
                 start_time = datetime.datetime.now().replace(microsecond=0)
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, email_notify=email_notify,\
                     template_type=args['mailTemplateType'])
@@ -97,16 +108,18 @@ class AlertCreate(BaseView):
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat=args['inputRepeat'],\
                     interval=args['inputEvery'], max_count=args['inputMaxCount'], email_notify=email_notify,\
                     template_type=args['mailTemplateType'])
+                msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
             elif args['inputType'] == 'CrontabSchedule':
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat_at=args['inputRepeatTime'],\
                     days_of_week=[int(v[0]) for k, v in args.items() if k.startswith('crontabDay')],\
                     email_notify=email_notify, template_type=args['mailTemplateType'])
+                msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
                 
             content.alerts.append(new_alert)
             self.request_db.add(content)
             self.request_db.commit()
             # need to put the code for crontab here now !! 
-            flash_message(self, 'success', 'Alert {} successfully created.'.format(args['inputName']))
+            flash_message(self, msg[0], msg[1])
             # to be change to redirect to alerts/monitor_all view
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
         except Exception as e:
@@ -115,16 +128,17 @@ class AlertCreate(BaseView):
             # to be change to redirect to alerts/monitor_all view
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
 
-class AlertLiveCreate(BaseView):
+class AlertLaunch(BaseView):
     SUPPORTED_METHODS = ['POST']
 
     @login_required
     def post(self, username, projectname, alertid):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('args AlertLiveCreate => {}'.format(args))
-        save_log_checked = False
-        if 'saveLogChecked' + alertid in args:
-            save_log_checked = True
+        print('args AlertLaunch => {}'.format(args))
+        # Checkbox in UI ready to use :)
+        # save_log_checked = False
+        # if 'saveLogChecked' + alertid in args:
+        #     save_log_checked = True
 
         schedule = None
         user = self.request_db.query(User).filter_by(username=username).first()
@@ -147,7 +161,7 @@ class AlertLiveCreate(BaseView):
             else:
                 rproject._load_units_from_excel()
             # need to change following line with PickleType
-            tasks = rproject.download_units_diff(content.links, save=True)
+            tasks = rproject.download_units_diff(alert.template_type, content.links, save=True)
 
             if tasks == None:
                 flash_message(self, 'danger', 'Problem creating LIVE ALERT.')

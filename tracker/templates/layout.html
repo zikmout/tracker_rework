@@ -44,7 +44,7 @@
                     </li>
                     {% if hasattr(handler, 'session') and handler.session != {} %}
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Watchlists</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/project_create">Create</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects-manage">Manage</a>
@@ -55,7 +55,7 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">{{ handler.session['current_project'] }}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage">Watchlist</a>
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage">Websites</a>
                             {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl">Crawler</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download">Downloader</a>
@@ -65,6 +65,7 @@
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/view">Live View</a>
                         </div>
                     </li>
+                    {% if hasattr(handler, 'session') and handler.session != {} and handler.session['is_admin'] is True and handler.session['is_simplified'] is False %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Queues/Tasks</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -72,6 +73,7 @@
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/delete-all">Delete all queues</a>
                         </div>
                     </li>
+                    {% end %}
                     {% end %}
                 </ul>
                 {% if hasattr(handler, 'session') and 'is_simplified' in handler.session %}
@@ -98,7 +100,7 @@
                     <li class="nav-item">
                         <a class="nav-link disabled" style="font-size:0.9rem;" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color=''" href="{{ reverse_url('users_list') }}">Users<span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color=''">
+<!--                     <li class="nav-item" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color=''">
                         <a class="nav-link disabled" style="font-size:0.9rem;" href="#">Data</a>
                     </li>
                     <li class="nav-item" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color=''">
@@ -106,7 +108,7 @@
                     </li>
                     <li class="nav-item" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color=''">
                         <a class="nav-link disabled" style="font-size:0.9rem;" href="#">Tasks</a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </nav>

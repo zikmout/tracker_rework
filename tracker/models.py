@@ -191,7 +191,7 @@ class Alert(Base):
 
     def __init__(self, name, alert_type, start_time, end_time=None, repeat=None, interval=None,\
         max_count=None, repeat_at=None, days_of_week=None, email_notify=False,\
-        template_type=None, diff_links=True, launched=False):
+        template_type='diff', diff_links=True, launched=False):
         self.name = name
         self.alert_type = alert_type
         self.creation_date = datetime.now().replace(microsecond=0)

@@ -16,9 +16,11 @@
       <button class="btn btn-dark col-md-10" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
     Create alert
       </button></p>
+      {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
       <button class="btn btn-dark col-md-10" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
     Content lookup
       </button>
+      {% end %}
     </p>
     </div>
     <div class="col-10">
@@ -186,7 +188,9 @@
           {% if len(keywords) > 1 %}
             {{ escape(str(link)) }} : <font color='red'>{{ str(keywords[0]) }} ... {{ str(keywords[-1]) }}</font>
           {% else %}
-            {{ escape(str(link)) }} : <font color='red'>{{ str(keywords[0]) }}</font>
+            
+              {{ escape(str(link)) }} : <font color='red'>{% if len(keywords) > 0 %}{{ str(keywords[0]) }}{% else %}-{% end %}</font>
+
           {% end %}
           </br>
         {% end %}

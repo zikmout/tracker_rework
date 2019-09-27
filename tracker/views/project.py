@@ -18,7 +18,7 @@ class FastProjectCreateView(BaseView):
     @login_required
     def post(self, username):
         file1 = self.request.files['file1'][0]
-        fname = file1['filename']
+        fname = file1['filename'].replace(' ', '_')
         project_name = os.path.splitext(fname)[0]
         project_path = os.path.join(self.application.data_dir, project_name)
 

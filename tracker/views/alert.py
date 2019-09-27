@@ -162,6 +162,8 @@ class AlertLaunch(BaseView):
                 rproject._load_units_from_excel()
             # need to change following line with PickleType
             tasks = rproject.download_units_diff(alert.template_type, content.links, save=True)
+            #print('alert.template type = {}'.format(alert.template_type))
+            #print('TASKSS ===> {}'.format(tasks))
 
             if tasks == None:
                 flash_message(self, 'danger', 'Problem creating LIVE ALERT.')
@@ -184,6 +186,8 @@ class AlertLaunch(BaseView):
                 self.request_db.commit()
 
                 self.session['tasks']['live_view'] = updated_tasks
+                self.session['current_live_view_content'] = args['contentName']
+                self.session['current_live_view_alert'] = args['alertName']
                 self.session.save()
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
                 return

@@ -3,7 +3,6 @@ import shutil
 import pandas as pd
 from tornado import gen
 import re
-
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required
@@ -96,7 +95,8 @@ class UserProjectAddWebsite(BaseView):
             os.mkdir(project_path)
             # put xlsx config file in it with both column 'target' and 'target_label' to prepare header of excel file
             config_path = os.path.join(project_path, 'config.xlsx')
-            df = pd.DataFrame({'Name':args['inputName'], 'Website':args['inputWebsite'], 'target':args['inputTarget'], 'target_label':args['inputKeywords'], 'mailing_list': args['inputMailingList']})
+            df = pd.DataFrame({'Name':args['inputName'], 'Website':args['inputWebsite'], 'target':args['inputTarget'],\
+                'target_label':args['inputKeywords'], 'mailing_list': args['inputMailingList']})
             writer = pd.ExcelWriter(config_path, engine='xlsxwriter')
             df.to_excel(writer)
             writer.save()
@@ -111,6 +111,9 @@ class UserProjectAddWebsite(BaseView):
             rproject._load_units_from_data_path()
             rproject.add_links_to_crawler_logfile(links)
 
+            mailing_list = dict(zip(df['target'], df['mailing_list']))
+            new_content = Content(projectname + '_default', links, mailing_list)
+            project.contents.append(new_content)
             self.request_db.commit()
             units = rproject.units_stats(units=rproject.filter_units())
             self.session['units'] = units
@@ -127,14 +130,27 @@ class UserProjectAddWebsite(BaseView):
             config_df_updated.to_excel(project.config_file, index=False)
 
             # generate crawl logfile
-            links = {args['inputTarget'][0]:args['inputKeywords']}
-            rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
+            
+
+            links1 = {args['inputTarget'][0]:args['inputKeywords']}
+            #rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
             rproject._load_units_from_data_path()
-            idx = rproject.add_links_to_crawler_logfile(links)
-            print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
-            # create content (consistent with name)
-            new_content = Content(args['inputName'][0] + '_spider', links)
+            idx = rproject.add_links_to_crawler_logfile(links1)
+            #print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
+            
+            # Update content (take first content with name projectname + '_default')
+            df = pd.read_excel(project.config_file)
+            links = dict(zip(df['target'], df['target_label']))
+            links = {k:[v] for k, v in links.items()}
+
+            content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+            self.request_db.delete(content_to_delete)
+            self.request_db.commit()
+
+            mailing_list = dict(zip(df['target'], df['mailing_list']))
+            new_content = Content(projectname + '_default', links, mailing_list)
             project.contents.append(new_content)
+            self.request_db.commit()
 
             # change session data to take account of deleted unit
             units = rproject.units_stats(units=rproject.filter_units())
@@ -170,7 +186,20 @@ class UserProjectDeleteWebsite(BaseView):
         if units is None:
             fname = os.path.join(self.application.data_dir, projectname)
             shutil.rmtree(fname)
-            # self.session['is_project_empty'] = True
+        else:
+            # Update content (take first content with name projectname + '_default')
+            df = pd.read_excel(project.config_file)
+            links = dict(zip(df['target'], df['target_label']))
+            links = {k:[v] for k, v in links.items()}
+            
+            content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+            self.request_db.delete(content_to_delete)
+            self.request_db.commit()
+
+            mailing_list = dict(zip(df['target'], df['mailing_list']))
+            new_content = Content(projectname + '_default', links, mailing_list)
+            project.contents.append(new_content)
+            self.request_db.commit()
 
         self.session.save()
         self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
@@ -201,6 +230,20 @@ class UserProjectEditWebsite(BaseView):
             'target': args['inputTarget'][0], 'target_label':keywords_excel, 'mailing_list': mailing_list_excel}, ignore_index=True)
         print('config df after = {}'.format(config_df_updated))
         config_df_updated.to_excel(project.config_file, index=False)
+
+        # Update content (take first content with name projectname + '_default')
+        df = pd.read_excel(project.config_file)
+        links = dict(zip(df['target'], df['target_label']))
+        links = {k:[v] for k, v in links.items()}
+        
+        content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+        self.request_db.delete(content_to_delete)
+        self.request_db.commit()
+
+        mailing_list = dict(zip(df['target'], df['mailing_list']))
+        new_content = Content(projectname + '_default', links, mailing_list)
+        project.contents.append(new_content)
+        self.request_db.commit()
 
         # change session data to take account of deleted unit
         units = rproject.units_stats(units=rproject.filter_units())

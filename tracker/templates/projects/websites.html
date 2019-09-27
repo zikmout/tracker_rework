@@ -22,25 +22,33 @@
                 <div class="col-sm-3">
                   <label for="inputName">Name</label>
                   <input type="text" class="form-control" id="inputName" name="inputName">
+                  <small id="inputName" class="form-text text-muted">Name of the source url</small>
                 </div>
+                {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                 <div class="col-sm-3">
                   <label for="inputWebsite">Website</label>
                   <input type="text" class="form-control" id="inputWebsite" name="inputWebsite">
+                  <small id="inputWebsite" class="form-text text-muted">Optionnal (for crawling only)</small>
                 </div>
+                {% else %}
+                  <input type="hidden" class="form-control" id="inputWebsite" name="inputWebsite">
+                {% end %}
                 <div class="col-sm-3">
                   <label for="inputTarget">Target</label>
                   <input type="text" class="form-control" id="inputTarget" name="inputTarget">
+                  <small id="inputTarget" class="form-text text-muted">URL where content is located</small>
                 </div>
                 <div class="col-sm-3">
                   <label for="inputKeywords">Keywords</label>
                   <input type="text" class="form-control" id="inputKeywords" name="inputKeywords">
+                  <small id="inputKeywords" class="form-text text-muted">must be ';' if more than one</small>
                 </div>
                 <div class="col-sm-3">
                   <label for="inputMailingList">Mailing list</label>
                   <input type="text" class="form-control" id="inputMailingList" name="inputMailingList">
+                  <small id="inputMailingList" class="form-text text-muted">must be ';' if more than one</small>
                 </div>
                 <div class="col-sm-0">
-                  <br />
                   <button type="submit" class="btn btn-info" id="createContinuousTracking">Create</button>
                 </div>
               </div>

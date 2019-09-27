@@ -20,7 +20,8 @@ requires = [
     'celery-redbeat',
     'tldextract',
     'openpyxl',
-    'eventlet'
+    'eventlet',
+    'xlsxwriter'
     # 'flower'
 ]
 

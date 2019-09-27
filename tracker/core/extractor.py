@@ -164,6 +164,8 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
     # clean content ('\n' here)
     extracted_local_content = clean_content(extracted_local_content)
     extracted_remote_content = clean_content(extracted_remote_content)
+    print('EXTRACTED REMOTE = {}'.format(extracted_remote_content))
+    print('EXTRACTED LOCAL = {}'.format(extracted_local_content))
     # get content diffs
     status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
     status['diff_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]

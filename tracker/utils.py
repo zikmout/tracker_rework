@@ -1,5 +1,6 @@
 import json
 import tornado
+import math
 from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
 
@@ -143,6 +144,8 @@ def replace_mix_option_with_all_existing_keywords(links):
     else:
         links = {k:[v] for k, v in links.items()}
     for k, v in links.copy().items():
-        if len(v) == 1 and ';' in v[0]:
+        if isinstance(v[0], float) and math.isnan(v[0]):
+            links[k] = [];
+        elif len(v) == 1 and ';' in v[0]:
             links[k] = v[0].split(';')
     return links

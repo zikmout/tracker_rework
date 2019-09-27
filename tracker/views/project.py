@@ -23,7 +23,7 @@ class FastProjectCreateView(BaseView):
         project_path = os.path.join(self.application.data_dir, project_name)
 
         if os.path.isdir(project_path):
-            flash_message(self, 'danger', 'A directory with the same projectname seems to already exist.')
+            flash_message(self, 'danger', 'A directory with the same watchlist name seems to already exist.')
             self.redirect('/')
         else:
             try:
@@ -68,8 +68,8 @@ class FastProjectCreateView(BaseView):
                 self.redirect('/')
             except Exception as e:
                 print('ERROR = {}'.format(e))
-                flash_message(self, 'danger', 'Problem creating quick project. Check logs.')
-                self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+                flash_message(self, 'danger', 'Problem creating quick watchlist. Check logs.')
+                self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
 
 class ProjectsCreateView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
@@ -92,11 +92,11 @@ class ProjectsCreateView(BaseView):
         try:
             self.request_db.add(user)
             self.request_db.commit()
-            flash_message(self, 'success', 'Project {} succesfully created.'.format(name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            flash_message(self, 'success', 'Watchlist {} succesfully created.'.format(name))
+            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
         except Exception as e:
-            flash_message(self, 'danger', 'Problem creating project: {}. Maybe try another name ?'.format(name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            flash_message(self, 'danger', 'Problem creating watchlist: {}. Maybe try another name ?'.format(name))
+            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
 
 class UserProjectListView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -128,7 +128,7 @@ class UserProjectView(BaseView):
             # self.session['is_project_empty'] = True
             self.session.save()
             #flash_message(self, 'warning', 'There are no units at the moment. Go on the \'Website\' section and add one.')
-            flash_message(self, 'danger', 'No units in the project {}.'.format(projectname))
+            flash_message(self, 'danger', 'No website in watchlist {} yet.'.format(projectname))
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
             # self.render('projects/index.html', project=json_project, units=units)    
             return
@@ -141,12 +141,12 @@ class UserProjectView(BaseView):
             units = rproject.units_stats(units=rproject.filter_units())
         except Exception as e:
             print('[ERROR] - {}'.format(e))
-            flash_message(self, 'danger', 'Problem while loading project {}. Please check paths.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            flash_message(self, 'danger', 'Problem while loading watchlist {}. Please check paths.'.format(project.name))
+            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
             return 
         if units is None:
-            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            flash_message(self, 'danger', 'There are no units in watchlist {}. Or filtered units are 0.'.format(project.name))
+            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
             return
         else:
             self.session['units'] = units
@@ -183,10 +183,10 @@ class UserProjectDelete(BaseView):
             #print('Removing project from hard drive ...')
             fname = os.path.join(self.application.data_dir, projectname)
             if not os.path.exists(fname):
-                flash_message(self, 'warning', 'Project {} succesfully deleted from DB but was not \
+                flash_message(self, 'warning', 'Watchlist {} succesfully deleted from DB but was not \
                     found on server ! Maybe no websites were parameterized yet?'.format(projectname))
             else:
                 shutil.rmtree(fname)
                 print('Folder \'{}\' successfully removed.'.format(fname))
-                flash_message(self, 'success', 'Project {} succesfully deleted from DB and server.'.format(projectname))
-        self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+                flash_message(self, 'success', 'Watchlist {} succesfully deleted from DB and server.'.format(projectname))
+        self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))

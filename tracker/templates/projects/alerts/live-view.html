@@ -16,29 +16,53 @@
         <div class="progress" name="liveViewProgress">
           <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" id="pct" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="100">0%</div>
         </div>
-        <br>
-        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-horizontal">
-        <div class="form-inline">
-          <div class="form-group mb-2">
-            <input class="form-control" placeholder="Email" name="email">
-            <input type="hidden", name="fromPage" value="live_view">
-          </div>
-          <div class="col">
-            <button type="submit" class="btn btn-info mb-2">Send report</button></input>
-          </div>
-          </form>
-          Remaining tasks:&nbsp;<font color="red"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div></font>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)
 
-        </div>
         
 
-        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
-          <div class="form-inline">
-              <input type="hidden", name="fromPage" value="live_view">
-              <button type="submit" class="btn btn-info">Download updated pages</button></input>
-              <!-- <button type="submit" class="btn btn-danger">Stop Live View task</button></input> -->
-          </div>
-        </form>
+
+            <div class="row">
+              <div class="col-lg-10">
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-inline">
+
+                  <input type="text" class="form-control mt-2" placeholder="Email" name="email">
+                  <input type="hidden" name="fromPage" value="live_view">
+
+
+                  <button type="submit" class="btn btn-info ml-1 mr-2 mt-2">Send report</button></input>
+                
+                Remaining tasks:&nbsp;<font color="red"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div></font>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)
+                </form>
+              </div>
+              
+              
+              
+
+            </div>
+            <div class="row">
+              <div class="col-lg-2 mt-1">
+
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
+
+                    <input type="hidden", name="fromPage" value="live_view">
+                    <button type="submit" class="btn btn-info btn-sm">Download updated pages</button></input>
+
+                </form>
+
+              </div>
+              <div class="col-lg-2 mt-1">
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/revoke-all" method="POST">
+                  <!-- TODO: Change route with alert stop //-->
+                  <button type="submit" class="btn btn-danger btn-sm">Stop Live View task</button></input>
+                </form>
+              </div>
+            </div>
+
+
+
+
+        
+
+        
 
       {% if 'live_view' in handler.session['tasks'] %}
         {% for tasks in handler.session['tasks']['live_view']  %}
@@ -176,9 +200,10 @@ ws.onmessage = function (evt) {
        }
        if (counterDone > counterDoneMaster) {
         counterDoneMaster = counterDone;
-        updateProgressBar('#liveViewProgress', (Math.round(parseInt((counterDoneMaster) + parseInt(counterFailureMaster))/parseInt(totalTaskNb))*100));
         counterRemaining = totalTaskNb - counterDoneMaster;
         $('#numberOfPendingTasks').html(counterRemaining - counterFailureMaster);
+        updateProgressBar('#liveViewProgress', ((counterDoneMaster+counterFailureMaster)/totalTaskNb)*100);
+        console.log('counter remaining = ' + counterRemaining + ' counter done = ' + counterDoneMaster);
        }
      }
  else {
@@ -188,9 +213,10 @@ ws.onmessage = function (evt) {
 timeout();
 function updateProgressBar(divId, percent) {
   // if (percent <= 100) {
+    console.log('percent -> ' + percent);
     $(divId).text(percent + '%');
     document.getElementById("pct").style.width = percent + '%';
-    document.getElementById("pct").innerHTML = percent + '%';
+    document.getElementById("pct").innerHTML = Math.round(percent) + '%';
   // }
 }
 

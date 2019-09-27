@@ -35,7 +35,7 @@ class ContinuousTrackingCreateView(BaseView):
 
         flash_message(self, 'success', 'Continuous tracker project \'{}\' successfully created.'\
             .format(project_name))
-        self.redirect('/api/v1/users/admin/projects_manage')
+        self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
 
 class UserProjectWebsitesView(BaseView):
     SUPPORTED_METHODS = ['GET']
@@ -60,17 +60,17 @@ class UserProjectWebsitesView(BaseView):
         except Exception as e:
             print('[ERROR] - {}'.format(e))
             flash_message(self, 'danger', 'Problem while loading project {}. Are you sure path is correct and there is an excel file ?'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
             return 
         if rproject.units is None:
             flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
             return
         # TODO : check if 'is_excel' is in memory (below) and delete above check conditions
         if 'units' not in self.session or 'current_project' not in self.session or 'project_data_path' not in self.session\
         or 'project_config_file' not in self.session:
             flash_message(self, 'danger', 'No current project in session at the moment. Please load one.')
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
             return
         else:
             #print('project lines ==> {}'.format(rproject.lines))
@@ -96,7 +96,7 @@ class UserProjectAddWebsite(BaseView):
             os.mkdir(project_path)
             # put xlsx config file in it with both column 'target' and 'target_label' to prepare header of excel file
             config_path = os.path.join(project_path, 'config.xlsx')
-            df = pd.DataFrame({'Name':args['inputName'], 'Website':args['inputWebsite'], 'target':args['inputTarget'], 'target_label':args['inputKeywords']})
+            df = pd.DataFrame({'Name':args['inputName'], 'Website':args['inputWebsite'], 'target':args['inputTarget'], 'target_label':args['inputKeywords'], 'mailing_list': args['inputMailingList']})
             writer = pd.ExcelWriter(config_path, engine='xlsxwriter')
             df.to_excel(writer)
             writer.save()
@@ -122,7 +122,7 @@ class UserProjectAddWebsite(BaseView):
             rproject = RProject(project.name, project.data_path, project.config_file)
             print('config df before = {}'.format(rproject.config_df))
             config_df_updated = rproject.config_df.append({'Name': args['inputName'][0], 'Website': args['inputWebsite'][0],\
-                'target': args['inputTarget'][0], 'target_label':args['inputKeywords'][0]}, ignore_index=True)
+                'target': args['inputTarget'][0], 'target_label':args['inputKeywords'][0], 'mailing_list': args['inputMailingList'][0]}, ignore_index=True)
             print('config df after = {}'.format(config_df_updated))
             config_df_updated.to_excel(project.config_file, index=False)
 
@@ -193,8 +193,12 @@ class UserProjectEditWebsite(BaseView):
             keywords_excel = ';'.join(args['inputKeywords'])
         else:
             keywords_excel = ''
+        if 'inputMailingList' in args:
+            mailing_list_excel = ';'.join(args['inputMailingList'])
+        else:
+            mailing_list_excel = '' # why is this ??!
         config_df_updated = config_df_updated.append({'Name': args['inputName'][0], 'Website': args['inputWebsite'][0],\
-            'target': args['inputTarget'][0], 'target_label':keywords_excel}, ignore_index=True)
+            'target': args['inputTarget'][0], 'target_label':keywords_excel, 'mailing_list': mailing_list_excel}, ignore_index=True)
         print('config df after = {}'.format(config_df_updated))
         config_df_updated.to_excel(project.config_file, index=False)
 

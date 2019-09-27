@@ -19,7 +19,8 @@ requires = [
     'pdftotext',
     'celery-redbeat',
     'tldextract',
-    'openpyxl'
+    'openpyxl',
+    'eventlet'
     # 'flower'
 ]
 

@@ -84,7 +84,7 @@ def main():
             
             # tracker.views.project.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/project_create', ProjectsCreateView),
-            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects_manage', UserProjectListView),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects-manage', UserProjectListView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/quick-project-create', FastProjectCreateView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete),

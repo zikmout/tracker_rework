@@ -34,15 +34,6 @@
 <!--                     <li class="nav-item">
                         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                     </li> -->
-                    {% if hasattr(handler, 'session') and handler.session != {} %}
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-                        <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/project_create">Create</a>
-                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects_manage">Manage</a>
-                        </div>
-                    </li>
-                    {% end %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -51,16 +42,25 @@
                             <a class="dropdown-item" href="{{ reverse_url('register') }}">Register</a>
                         </div>
                     </li>
+                    {% if hasattr(handler, 'session') and handler.session != {} %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/project_create">Create</a>
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects-manage">Manage</a>
+                        </div>
+                    </li>
+                    {% end %}
                     {% if 'units' in handler.session %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">{{ handler.session['current_project'] }}</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage">Websites</a>
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage">Watchlist</a>
                             {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl">Crawler</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download">Downloader</a>
-                            {% end %}
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content">Content</a>
+                            {% end %}
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Alert</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/view">Live View</a>
                         </div>
@@ -120,6 +120,7 @@
         {% end %}
 
         {% if hasattr(handler, 'session') %}
+
         {% end %}
 
 

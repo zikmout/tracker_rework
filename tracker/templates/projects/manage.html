@@ -13,7 +13,9 @@
                 <th>Config Path</th>
                 {% end %}
                 <th>Creation Date</th>
+                {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                 <th>From Excel</th>
+                {% end %}
                 <th>Action</th>
                 <th></th>
               </tr>
@@ -27,14 +29,19 @@
               <td style="vertical-align:middle;">{{ escape(project['config_file']) }}</td>
               {% end %}
               <td style="vertical-align:middle;">{{ escape(project['creation_date'][:-3]) }}</td>
+              <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="post" class="form-horizontal">
+              {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
               <td style="vertical-align:middle;">
-                  <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}" method="post" class="form-horizontal">
+                  
                   <div class="form-group">
                     <div class="form-check">
                       <input class="form-check-input" type="checkbox" id="gridCheck" name="fromExcel" style="transform: scale(1.5); margin-top:0; position:relative" checked>
                     </div>
                   </div>
               </td>
+              {% else %}
+              <input class="form-check-input" type="hidden" id="gridCheck" name="fromExcel" value="on" style="transform: scale(1.5); margin-top:0; position:relative" checked>
+              {% end %}
               <td style="vertical-align:middle;"><button type="submit" class="btn btn-info btn-sm" id="loadProject" value="">Load</button></form></th>
               <td style="vertical-align:middle;"><button type="button" class="btn btn-danger btn-sm" value="" data-toggle="modal" data-target="#ModalConfirmDelete-{{ escape(project['name']) }}">Delete</button>
               <div class="modal fade" id="ModalConfirmDelete-{{ escape(project['name']) }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle-{{ escape(project['name']) }}" aria-hidden="true">

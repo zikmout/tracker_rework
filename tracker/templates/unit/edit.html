@@ -22,7 +22,7 @@
           <input type="text" class="form-control" name="inputWebsite" value="{{ line['Website'] }}" readonly>
           <small class="form-text text-muted">If you want to change the website, you better add website directly rather than modifying existing one.</small>
         </div>
-	{% else %}
+	      {% else %}
           <input type="hidden" class="form-control" name="inputWebsite" value="{{ line['Website'] }}" readonly>
         {% end %}
         <div class="form-group">
@@ -30,15 +30,25 @@
           <input type="text" class="form-control" name="inputTarget" aria-describedby="inputTargetHelp" value="{{ line['target'] }}">
           <small class="form-text text-muted">Target strictly defines the page you are tracking.</small>
         </div>
-        <div class="col-lg-9 col-xl-6">
+
           <div id="bagOfWordsContainer">
+            <label for="inputKeywords" id="inputTarget">Keywords</label>
             <ul id="inputKeywords">
                 {% for label in line['target_label'] %}
                 <li>{{ label }}</li>
                 {% end %}
             </ul>
           </div>
-        </div>
+
+          <div id="bagOfMailsContainer">
+            <label for="inputMailingList" id="inputTarget">Mailing list</label>
+            <ul id="inputMailingList">
+                {% for label in line['mailing_list'] %}
+                <li>{{ label }}</li>
+                {% end %}
+            </ul>
+          </div>
+
         <button type="submit" class="btn btn-info">Update Changes</button>
         <a href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage" class="btn btn-danger">Cancel</a>
       </form>
@@ -56,6 +66,11 @@
   $(document).ready(function() {
     $("#inputKeywords").tagit({
     fieldName: "inputKeywords"
+    //caseSensitive: false
+    //tagLimit
+    });
+    $("#inputMailingList").tagit({
+    fieldName: "inputMailingList"
     //caseSensitive: false
     //tagLimit
     });

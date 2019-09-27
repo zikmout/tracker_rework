@@ -62,14 +62,18 @@ class UserUnitEditView(BaseView):
         #config_df_updated.loc[config_df_updated['target'] == url, 'target_label'] = 'test;key;words'
         # line = {'Name': config_df_updated.loc[config_df_updated['target'] == url, 'Name'], 'Website': args['inputWebsite'][0],\
             # 'target': args['inputTarget'][0], 'target_label':args['inputKeywords'][0]}
-        keys = ['Name', 'Website', 'target', 'target_label']
+        keys = ['Name', 'Website', 'target', 'target_label', 'mailing_list']
         print('keywords = ->{}<-'.format(config_df_updated[config_df_updated['target'] == url]['target_label'].item()))
         line = {k:config_df_updated[config_df_updated['target'] == url][k].item() for k in keys}
         if not isinstance(line['target_label'], float):
             line['target_label'] = line['target_label'].split(';')
         else:
             line['target_label'] = ''
-        print('line = {}'.format(line))
+        if not isinstance(line['mailing_list'], float):
+            line['mailing_list'] = line['mailing_list'].split(';')
+        else:
+            line['mailing_list'] = ''
+        print('mailing_list = {}'.format(line['mailing_list']))
         config_df_updated.to_excel(project.config_file, index=False)
         #line = config_df_updated.loc[config_df_updated['target'] == url].to_json()
         self.render('unit/edit.html', url=url, line=line)

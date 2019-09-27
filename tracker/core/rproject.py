@@ -306,6 +306,7 @@ class RProject:
                 name = rows['Name']
                 website = rows['Website']
                 target = rows['target']
+                # can be one or multiple keywords
                 if isinstance(rows['target_label'], float):
                     target_label = ''
                 elif ';' in rows['target_label']:
@@ -314,11 +315,22 @@ class RProject:
                 #     target_label = ''
                 else:
                     target_label = [rows['target_label']]
+
+                # can be one or multiple email addresses
+                if isinstance(rows['mailing_list'], float):
+                    mailing_list = ''
+                elif ';' in rows['mailing_list']:
+                    mailing_list = rows['mailing_list'].split(';')
+                # elif rows['target_label'] == '':
+                #     target_label = ''
+                else:
+                    mailing_list = [rows['mailing_list']]
                 line = {
                     'name': name,
                     'website': website,
                     'target': target,
-                    'keywords': target_label
+                    'keywords': target_label,
+                    'mailing_list' : mailing_list
                 }
                 self.lines.append(line)
 
@@ -505,6 +517,7 @@ class RProject:
 
         # If asked to send mail but no mailing_list provided, return False
         if mailing_list is None:
+            print('PB : No mailing_list !!')
             return False
         # Rework mailing_list excel matrix (translate)
         # At the moment, mails are like this : (mailing_list)

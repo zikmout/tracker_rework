@@ -1,7 +1,7 @@
 {% extends '../layout.html' %}
 {% block content %}
 <div class="starter-template-fluid">
-      <center><h3>Websites for project {{ project['name'] }}</h3></center>
+      <center><h3>Websites for watchlist {{ project['name'] }}</h3></center>
       
 
 
@@ -11,7 +11,7 @@
           </div>
 
           <div class='col-10'>
-            <p>Below are shown all the websites referenced in the project as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup continuous tracking.</p>
+            <p>Below are shown all the websites referenced in the watchlist as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup live or scheduled tracking.</p>
           </div>
         </div>
 
@@ -35,6 +35,10 @@
                   <label for="inputKeywords">Keywords</label>
                   <input type="text" class="form-control" id="inputKeywords" name="inputKeywords">
                 </div>
+                <div class="col-sm-3">
+                  <label for="inputMailingList">Mailing list</label>
+                  <input type="text" class="form-control" id="inputMailingList" name="inputMailingList">
+                </div>
                 <div class="col-sm-0">
                   <br />
                   <button type="submit" class="btn btn-info" id="createContinuousTracking">Create</button>
@@ -55,6 +59,7 @@
                 {% end %}
                 <th>Target</th>
                 <th>keywords</th>
+                <th>Mailing list</th>
                 <th>Action</th>
                 <th></th>
               </tr>
@@ -68,6 +73,7 @@
                   {% end %}
                   <td style="vertical-align:middle;">... {{ line['target'][-30:] }}</td>
                   <td style="vertical-align:middle;">{{ line['keywords'] }}</td>
+                  <td style="vertical-align:middle;">{{ line['mailing_list'] }}</td>
                   <td style="vertical-align:middle;">
                     <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-info btn-sm" value="{{ line['target'] }}" name="editUnitName">Modify</button></input></form>
                   </td>
@@ -79,7 +85,7 @@
           </tbody>
         </table>
         {% else %}
-        No unit yet. Please create one by clicking '+ Add website'
+        No website yet. Please create new one by clicking '+ Add website'
         {% end %}   
         
 </div>

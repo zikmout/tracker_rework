@@ -15,6 +15,7 @@ class ContinuousTrackingCreateView(BaseView):
     @gen.coroutine
     def post(self, username):
         project_name = self.get_argument('ProjectName')
+        project_name = project_name.replace(' ', '_') 
         project_path = os.path.join(self.application.data_dir, project_name)
         print('project name = {}, project path = {}'.format(project_name, project_path))
 

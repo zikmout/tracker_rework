@@ -78,7 +78,7 @@
                 </form>
             </div>
         </nav>
-        {% if hasattr(handler, 'session') and handler.session != {} and handler.session['is_admin'] is True %}
+        {% if hasattr(handler, 'session') and handler.session != {} and handler.session['rolename'] == 'Administrator' %}
 
         <nav class="navbar navbar-expand-md bg-white box-shadow py-0 custom-toggler" style="padding-top: 15px;">
             <a class="navbar-brand" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color='#28a8b3'" style="font-size:0.9rem; color:#28a8b3;" href="#">Admin section</a>

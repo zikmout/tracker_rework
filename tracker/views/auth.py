@@ -23,6 +23,9 @@ class AuthLoginView(BaseView):
             return
         self.session['username'] = registered_user.username
         self.session['is_admin'] = registered_user.is_administrator()
+        if self.session['is_admin'] == True:
+            self.session['is_simplified'] = False
+        self.session['rolename'] = registered_user.get_rolename()
         self.session['tasks'] = {}
         self.session.save()
         flash_message(self, 'success', 'User {} succesfully logged in.'.format(registered_user.username))
@@ -46,6 +49,9 @@ class AuthRegisterView(BaseView):
             self.request_db.commit()
             self.session['username'] = username
             self.session['is_admin'] = user.is_administrator()
+            if self.session['is_admin'] == True:
+                self.session['is_simplified'] = False
+            self.session['rolename'] = user.get_rolename()
             self.session['tasks'] = {}
             self.session.save()
             flash_message(self, 'success', 'User {} succesfully registered.'.format(username))

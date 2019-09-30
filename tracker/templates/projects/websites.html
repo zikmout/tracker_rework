@@ -1,7 +1,7 @@
 {% extends '../layout.html' %}
 {% block content %}
 <div class="starter-template-fluid">
-      <center><h3>Websites for project {{ project['name'] }}</h3></center>
+      <center><h3>Edit watchlist {{ project['name'] }}</h3></center>
       
 
 
@@ -11,10 +11,10 @@
           </div>
 
           <div class='col-10'>
-            <p>Below are shown all the websites referenced in the project as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup continuous tracking.</p>
+            <!-- <p>Below are shown all the websites referenced in the watchlist as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup live or scheduled tracking.</p> -->
           </div>
         </div>
-
+        <br>
         <div class="collapse" id="addLine">
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-add" method="post">
             <div class="card card-body">
@@ -22,21 +22,33 @@
                 <div class="col-sm-3">
                   <label for="inputName">Name</label>
                   <input type="text" class="form-control" id="inputName" name="inputName">
+                  <small id="inputName" class="form-text text-muted">Name of the source url</small>
                 </div>
+                {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                 <div class="col-sm-3">
                   <label for="inputWebsite">Website</label>
                   <input type="text" class="form-control" id="inputWebsite" name="inputWebsite">
+                  <small id="inputWebsite" class="form-text text-muted">Optionnal (for crawling only)</small>
                 </div>
+                {% else %}
+                  <input type="hidden" class="form-control" id="inputWebsite" name="inputWebsite">
+                {% end %}
                 <div class="col-sm-3">
-                  <label for="inputTarget">Target</label>
+                  <label for="inputTarget">Target URL</label>
                   <input type="text" class="form-control" id="inputTarget" name="inputTarget">
+                  <small id="inputTarget" class="form-text text-muted">URL where content is located</small>
                 </div>
                 <div class="col-sm-3">
                   <label for="inputKeywords">Keywords</label>
                   <input type="text" class="form-control" id="inputKeywords" name="inputKeywords">
+                  <small id="inputKeywords" class="form-text text-muted">must be ';' separated if more than one</small>
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputMailingList">Email recipients</label>
+                  <input type="text" class="form-control" id="inputMailingList" name="inputMailingList">
+                  <small id="inputMailingList" class="form-text text-muted">must be ';' separated if more than one</small>
                 </div>
                 <div class="col-sm-0">
-                  <br />
                   <button type="submit" class="btn btn-info" id="createContinuousTracking">Create</button>
                 </div>
               </div>
@@ -45,30 +57,44 @@
           <br />
         </div>
 
-        <table class="table table-responsive-sm table-striped">
+        {% if lines is not None and handler.session['units'] is not None %}
+        <table class="table table-sm table-hover">
+          <thead class="thead-light">
               <tr>
                 <th>Name</th>
-                <th>Website</th>
-                <th>Target</th>
-                <th>keywords</th>
-                <th>Action</th>
+                {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+                <th>Target domain</th>
+                {% end %}
+                <th>Target URL</th>
+                <th>Keywords</th>
+                <th>Email recipients</th>
+                <th></th>
                 <th></th>
               </tr>
+          </thead>
+          <tbody>
               {% for line in lines %}
               <tr>
-                  <th>{{ line['name'] }}</th>
-                  <th>{{ line['website'] }}</th>
-                  <th>{{ line['target'] }}</th>
-                  <th>{{ line['keywords'] }}</th>
-                  <th>
-                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="{{ line['target'] }}" name="editUnitName">Modify</button></input></form>
-                  </th>
-                  <th>
-                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ line['website'] }}" name="websiteToDelete"><button type="submit" class="btn btn-danger" value="{{ line['target'] }}" name="targetToDelete">Delete</button></input></form>
-                  </th>
+                  <td style="vertical-align:middle;">{{ line['name'] }}</td>
+                  {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+                  <td style="vertical-align:middle;">{{ line['website'][7:35] }} ...</td>
+                  {% end %}
+                  <td style="vertical-align:middle;">... {{ line['target'][-30:] }}</td>
+                  <td style="vertical-align:middle;">{{ line['keywords'] }}</td>
+                  <td style="vertical-align:middle;">{{ line['mailing_list'] }}</td>
+                  <td style="vertical-align:middle;">
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-info btn-sm" value="{{ line['target'] }}" name="editUnitName">Edit</button></input></form>
+                  </td>
+                  <td style="vertical-align:middle;">
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ line['website'] }}" name="websiteToDelete"><button type="submit" class="btn btn-danger btn-sm" value="{{ line['target'] }}" name="targetToDelete">Delete</button></input></form>
+                  </td>
               </tr>
               {% end %}
-        </table>    
+          </tbody>
+        </table>
+        {% else %}
+        No website yet. Please create new one by clicking '+ Add website'
+        {% end %}   
         
 </div>
 {% end %}

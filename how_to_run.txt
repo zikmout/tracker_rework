@@ -13,6 +13,10 @@ $celery worker -A live_view_worker --loglevel=info --hostname w1@%%h --concurren
 # start crawl worker
 $celery worker -A crawl_worker --loglevel=info --autoscale 400 --hostname w3@%%h
 
+# start the continuous worker
+celery worker -A continuous_worker -l info #-P eventlet
+celery beat -A continuous_worker -l info
+
 # start the app
 $python setup.py install; python setup.py build; serve_app
 

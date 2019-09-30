@@ -3,26 +3,69 @@
 <div class="starter-template-fluid">
       <br />
       <center><h3>Project {{ handler.session['current_project'] }} : Live alerts on content change</h3></center>
-
-      <br>
-        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-horizontal">
-        <div class="form-inline">
-          <div class="form-group mb-2">
-            <input class="form-control" placeholder="Email" name="email">
-            <input type="hidden", name="fromPage" value="live_view">
-          </div>
-          <div class="col">
-            <button type="submit" class="btn btn-outline-info mb-2">Send report</button></input>
+      
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="myLargeModalLabel" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content" id="myLargeModalLabelContent">
+            
           </div>
         </div>
-        </form>
+      </div>
 
-        <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
-          <div class="form-inline">
-              <input type="hidden", name="fromPage" value="live_view">
-              <button type="submit" class="btn btn-outline-info">Download updated pages</button></input>
-          </div>
-        </form>
+      <br>
+        <div class="progress" name="liveViewProgress">
+          <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" id="pct" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="100">0%</div>
+        </div>
+
+        
+
+
+            <div class="row">
+              <div class="col-lg-10">
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-inline">
+
+                  <input type="text" class="form-control mt-2" placeholder="Email" name="email">
+                  <input type="hidden" name="fromPage" value="live_view">
+
+
+                  <button type="submit" class="btn btn-info ml-1 mr-2 mt-2">Send report</button></input>
+                
+                Remaining tasks:&nbsp;<font color="red"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div></font>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)
+                </form>
+              </div>
+              
+              
+              
+
+            </div>
+            <div class="row">
+              <div class="col-lg-2 mt-1">
+
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
+
+                    <input type="hidden", name="fromPage" value="live_view">
+                    <button type="submit" class="btn btn-info btn-sm">Download updated pages</button></input>
+
+                </form>
+
+              </div>
+              <div class="col-lg-2 mt-1">
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="POST">
+                  <input type="hidden" value="{{ handler.session['current_live_view_content'] }}" name="contentName">
+                  <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
+                  <!-- TODO: Change route with alert stop //-->
+                  <button type="submit" class="btn btn-danger btn-sm">Stop Live View task</button></input>
+                </form>
+              </div>
+            </div>
+
+
+
+
+        
+
+        
+
       {% if 'live_view' in handler.session['tasks'] %}
         {% for tasks in handler.session['tasks']['live_view']  %}
           <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center>
@@ -32,11 +75,20 @@
       {% end %}
 </div>
 <script>
+var counterDone = 0;
+var counterDoneMaster = 0;
+var counterFailureMaster = 0;
+var failures = Array();
+var failuresURL = Array();
+var totalTaskNb = {{ len(handler.session['tasks']['live_view']) }};
+var counterRemaining = totalTaskNb;
+
 var ws = new WebSocket("ws://localhost:5567/websocket");
 function timeout() {
     setTimeout(function () {
-        ws.onopen()
+        ws.onopen();
         timeout();
+        counterDone = 0;
     }, 3000);
 }
 
@@ -51,21 +103,10 @@ function getRandomArbitrary(min, max) {
 ws.onopen = function() {
   {% if 'live_view' in handler.session['tasks'] %}
     {% for tasks in handler.session['tasks']['live_view'] %}
-        //sleep(getRandomArbitrary(500, 2000));
         ws.send('{{ escape(str(tasks['id'])) }}');
     {% end %}
   {% end %}
 };
-
-function updateTitleState (data) {
-  // document.getElementById('currentState' + data.task_id).innerHTML = "<mark>" + data.state + "</mark>";
-  if (data.state != 'SUCCESS') {
-    //document.getElementById('currentCheck' + data.task_id).innerHTML = data.status.url;
-  }
-  else {
-    //document.getElementById('currentCheck' + data.task_id).innerHTML = "<font color='red'>Differences found : " + data.result + "</font>";
-  }
-}
 
 function formatDiff(title, diff, nearest_link, all_links, type) {
   var i;
@@ -84,30 +125,52 @@ function formatDiff(title, diff, nearest_link, all_links, type) {
   </div>";
 
   var middlePart = '';
-  if (all_links.length > 10) {
-    middlePart = '-> too many links'
-  }
-  else {
-    for (i = 0; i < all_links.length; i++) {
-      middlePart += "<a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + all_links[i] + "</a><br>";
+  if (all_links != null && all_links != undefined) {
+    if (all_links.length > 10) {
+      middlePart = '-> too many links'
     }
-  }
-  for (i = 0; i < nearest_link.length; i++) {
-    if (middlePart.includes(nearest_link[i]) == false) {
-      middlePart = "<a href='" + nearest_link[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + nearest_link[i] + "</a><br>" + middlePart;
+    else {
+      for (i = 0; i < all_links.length; i++) {
+        middlePart += "<a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + all_links[i] + "</a><br>";
+      }
+    }
+    for (i = 0; i < nearest_link.length; i++) {
+      if (middlePart.includes(nearest_link[i]) == false) {
+        middlePart = "<a href='" + nearest_link[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + nearest_link[i] + "</a><br>" + middlePart;
+      }
     }
   }
   
   var fullDiff = firstPart + middlePart + lastPart;
-  console.log('full diff' + fullDiff)
   return fullDiff;
 }
 
 ws.onmessage = function (evt) {
    if (evt != null) {
        var data = JSON.parse(evt.data);
-       updateTitleState(data);
-       console.log('data.status = ' + data.state)
+
+
+          //console.log(data.state);
+
+       if (data.state == 'SUCCESS') {
+          counterDone += 1;
+       }
+       if (data.state == 'FAILURE' && !failures.includes(data.current)) {
+          failures.push(data.current);
+          // urlFailed = {
+          //   "url" : data.status.url,
+          //   "info" : data.info
+          // }
+          urlFailed = {
+            "state" : data.state,
+            "status" : data.status
+          }
+          failuresURL.push(urlFailed);
+          counterFailureMaster += 1;
+          $('#numberOfFailedTasks').html(counterFailureMaster);
+          // document.getElementById('numberOfFailedTasks').
+       }
+
        if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
           if (!document.getElementById(data.status.div)) {
             var title = document.createElement("H5");
@@ -135,20 +198,41 @@ ws.onmessage = function (evt) {
             if (data.status.diff_neg.length != 0) {
             document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_neg);                
             }
-            // document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li><b><font color='green'>" + data.status.diff_pos + "</b><br> nearest link = " + data.status.nearest_link_pos + " <br>all = " + data.status.all_links_pos + "</font></li>");
-            // document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', "<li><b><font color='red'>" + data.status.diff_neg + "</b><br> nearest link = " + data.status.nearest_link_neg + " <br>links diff = " + data.status.all_links_neg + "<br>" + "</font></li>");
           }
        }
-       else {
-        console.log(data);
-        updateTitleState(data);
+       if (counterDone > counterDoneMaster) {
+        counterDoneMaster = counterDone;
+        counterRemaining = totalTaskNb - counterDoneMaster;
+        $('#numberOfPendingTasks').html(counterRemaining - counterFailureMaster);
+        updateProgressBar('#liveViewProgress', ((counterDoneMaster+counterFailureMaster)/totalTaskNb)*100);
+        console.log('counter remaining = ' + counterRemaining + ' counter done = ' + counterDoneMaster);
        }
-    }
+     }
  else {
   console.log('[ERROR] Nothing to consume from websocket.');
  }
 };
-timeout()
+timeout();
+function updateProgressBar(divId, percent) {
+  // if (percent <= 100) {
+    console.log('percent -> ' + percent);
+    $(divId).text(percent + '%');
+    document.getElementById("pct").style.width = percent + '%';
+    document.getElementById("pct").innerHTML = Math.round(percent) + '%';
+  // }
+}
+
+function showFailedTasksDetails() {
+  console.log('failed details clicked  !');
+  $('#myLargeModalLabelContent').empty();
+  for (i = 0; i < failuresURL.length; i++) {
+    $('#myLargeModalLabelContent').append(failuresURL[i].state + ':' +  failuresURL[i].status + '<br>');
+    console.log(failuresURL[i]);
+  }
+  if (failuresURL.length > 0) {
+    $('#myLargeModalLabel').modal('show');
+  }
+}
 </script>
 {% end %}
 {% block script %}

@@ -216,10 +216,12 @@ class Unit:
         '''
         downloader.download_website_diff(partial_remote_tree, self.download_path, self.download_path + filename_time, self.url)
 
-    def download_changed_files_from_links(self, links_dict):
+    def download_changed_files_from_links(self, links_dict, keywords_diff, detect_links, links_algorithm, counter):
         filename_time = datetime.datetime.now().strftime("%Y%m%d")
-        print('filename_time = {}'.format(filename_time))
-        task = live_view.apply_async([links_dict, self.download_path, self.download_path + filename_time, self.url])
+        #print('filename_time = {}'.format(filename_time))
+        #print('Starting TASK nb {}'.format(counter));
+        task = live_view.apply_async([links_dict, self.download_path, self.download_path + filename_time, self.url,\
+            keywords_diff, detect_links, links_algorithm, counter])
         return task
 
     def get_unit_json(self):

@@ -3,60 +3,168 @@
 <div class="starter-template-fluid">
   <script src="{{ static_url('jquery.min.js') }}"></script>
   <br>
-  <center><h3>Project {{ handler.session['current_project'] }} - Setup and launch alerts on content changes</h3></center>
-  <center><p>Below is a list of alerts you already configured. At the moment, only live alerts are available<br>
-  Click on Create Alert to configure a new alert. Use Content Lookup to remember what the content name refers to.<br>
-  Push Start button in order to launch live alert.</p><br></center>
+  <center><h3>Manage alerts for {{ handler.session['current_project'] }}</h3></center>
+
+  
 
   <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create" method="post">
   <p>
-  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
+
+  <div class='row'>
+    <div class='col'>
+      <p>
+      <button class="btn btn-dark col-md-10" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
     Create alert
-  </button>
-  <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
+      </button></p>
+      {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+      <button class="btn btn-dark col-md-10" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
     Content lookup
-  </button>
-  </p>
+      </button>
+      {% end %}
+    </p>
+    </div>
+    <div class="col-10">
+  <p>Alerts are triggered when the content of the target URL changes and matches the set keywords.<br>
+Manage your alerts or create new ones.
+Press the "Start" button to launch monitoring.</p><br>
+  </div>
+  </div>
   <div class="collapse" id="createalert">
     <div class="card card-body">
       <div class="form-row">
 
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-3">
             <label for="inputName">Name</label>
-            <input type="text" class="form-control" id="inputName" name="inputName">
+            <input type="text" class="form-control" id="inputName" name="inputName" required>
           </div>
 
-          <div class="form-group col-md-4">
-            <label for="inputContent">Content</label>
-            <select id="inputContent" class="form-control" name="inputContent">
-              {% for json_content in contents %}
-              <option>{{ escape(str(json_content['name'])) }}({{ escape(str(len(json_content['links']))) }} links)</option>
-              {% end %}
-            </select>
-          </div>
+          {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+            <div class="form-group col-md-3">
+              <label for="inputContent">Content</label>
+              <select id="inputContent" class="form-control" name="inputContent">
+                {% for json_content in contents %}
+                <option>{{ escape(str(json_content['name'])) }}({{ escape(str(len(json_content['links']))) }} links)</option>
+                {% end %}
+              </select>
+            </div>
+          {% else %}
+            {% for json_content in contents %}
+              <input type="hidden" name="inputContent" value={{ escape(str(json_content['name'])) }}({{ escape(str(len(json_content['links']))) }} links)>
+            {% end %}
+          {% end %}
 
-          <div class="form-group col-md-4">
+          <div class="form-group col-md-3">
             <label for="inputType">Type</label>
             <select id="inputType" class="form-control" name="inputType">
               <option value="Live" selected>Live</option>
-              <option value="Deffered">Deffered</option>
+              <option value="BasicReccurent">Basic Reccurent</option>
+              <option value="CrontabSchedule">Crontab schedule</option>
             </select>
           </div>
 
-          <div class="form-group col-md-4" id="ContinuousTracking">
+          <div class="form-group col-md-3">
+            <label for="mailTemplateType">Mail template</label>
+            <select id="mailTemplateType" class="form-control" name="mailTemplateType">
+              <option value="share buy back" selected>share buy back</option>
+              <option value="diff">diff</option>
+              <option value="diff with keywords">diff with keywords</option>
+            </select>
+          </div>
+
+          <div class="form-group col-md-4" id="BasicReccurent">
+            <div class="card card-body border-info">
 
               <label for="inputStartTime">Start time</label>
-                <input class="form-control" type="datetime-local" value="" id="inputStartTime" name="inputStartTime"/>
+              <input class="form-control" type="datetime-local" value="" name="inputStartTime" id="inputStartTime">
 
+              <label for="inputEvery">Every</label>
+              <div class="row">
+                <div class="col-md-4">
+                  <input class="form-control" type="text" value="3" name="inputEvery"/ required>
+                </div>
 
-              <label for="inputRepeat">Repeat</label>
-              <select id="inputRepeat" class="form-control" name="inputRepeat">
-                <option value="hour" selected>hour</option>
-                <option value="day">day</option>
-                <option value="month">month</option>
-                <option value="year">year</option>
-              </select>
+                <div class="col-md-4">
+                  <select id="inputRepeat" class="form-control" name="inputRepeat">
+                    <option value="SECONDLY" selected>second</option>
+                    <option value="MINUTELY">minute</option>
+                    <option value="HOURLY">hour</option>
+                    <option value="DAILY">day</option>
+                    <option value="WEEKLY">week</option>
+                    <option value="MONTHLY">month</option>
+                    <option value="YEARLY">year</option>
+                  </select>
+                </div>
 
+              </div>
+              <label for="inputMaxCount">Max count</label>
+              <div class="row">
+                <div class="col-md-4">
+                  <input class="form-control" type="text" value="5" name="inputMaxCount"/ required>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group col-md-12" id="CrontabSchedule">
+            <div class="card card-body border-info">
+
+              <div class="row">
+                <div class="col-md-2">
+                  <label for="inputRepeatTime">Time of repeat (/!\ UTC /!\)</label>
+                  <input class="form-control" type="time" value="15:00" name="inputRepeatTime"/>
+                </div>
+
+                <div class="col-md-6">
+                  
+                  <div class="row">
+                    <label>Days of the week</label>
+                  </div>
+
+                  <div class="row">
+                    
+                    <div class="form-check-inline">
+
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="1" name="crontabDay1">Monday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="2" name="crontabDay2">Tuesday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="3" name="crontabDay3">Wednesday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="4" name="crontabDay4">Thursday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="5" name="crontabDay5">Friday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="6" name="crontabDay6">Saturday
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" value="0" name="crontabDay0">Sunday
+                      </label>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
           </div>
 
       </div>
@@ -66,7 +174,7 @@
           
           <label class="form-check-label" for="gridCheck">
             <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck">
-            notify new files available
+            Send email
           </label>
         </div>
       </div>
@@ -79,13 +187,16 @@
   <div class="collapse" id="contentlookup">
     <div class="card card-body">
       {% for content in contents %}
+      
         <details>
         <summary>{{ escape(str(content['name'])) }}</summary>
         {% for link, keywords in content['links'].items() %}
           {% if len(keywords) > 1 %}
             {{ escape(str(link)) }} : <font color='red'>{{ str(keywords[0]) }} ... {{ str(keywords[-1]) }}</font>
           {% else %}
-            {{ escape(str(link)) }} : <font color='red'>{{ str(keywords[0]) }}</font>
+            
+              {{ escape(str(link)) }} : <font color='red'>{% if len(keywords) > 0 %}{{ str(keywords[0]) }}{% else %}-{% end %}</font>
+
           {% end %}
           </br>
         {% end %}
@@ -94,58 +205,153 @@
     </div>
   </div>
   </form>
-  <br>
-  <table class="table table-responsive-sm table-striped">
+
+  
+  <table class="table table-sm">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col" style="vertical-align:middle;">Source name</th>
+        <th scope="col" style="vertical-align:middle;">Type</th>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <th scope="col" style="vertical-align:middle;">Creation</th>
+        {% end %}
+        <th scope="col" style="vertical-align:middle;">Start</th>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <th scope="col" style="vertical-align:middle;">End</th>
+        {% end %}
+        <th scope="col" style="vertical-align:middle;">Schedule</th>
+        <th scope="col" style="vertical-align:middle;">Email</th>
+        <th scope="col" style="vertical-align:middle;">Template</th>
+        <th scope="col" style="vertical-align:middle;">Status</th>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <th scope="col" style="vertical-align:middle;">Content Name</th>
+        {% end %}
+        <!-- <th scope="col" style="vertical-align:middle;">Notify Mail</th> -->
+        <th scope="col" style="vertical-align:middle;"></th>
+        <th scope="col" style="vertical-align:middle;"></th>
+        <th scope="col" style="vertical-align:middle;"></th>
+        <th scope="col" style="vertical-align:middle;">Worker state</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for alert in alerts %}
+    
     <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Creation Date</th>
-      <th>Start Time</th>
-      <th>Repeat</th>
-      <th>Notify</th>
-      <th>Content Name</th>
-      <th>Save in Log</th>
-      <th>Action</th>
-    </tr>
-      {% for alert in alerts %}
-    <tr>
 
-          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/live/create/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
-          <div class="form-group">
+      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/launch/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
+      <div class="form-group">
 
-          {% for k, v in alert.items() %}
-            {% if k != 'id'%}
-              <input type="hidden" name="{{ str(k) }}" value="{{ str(v) }}">
-              <th>{{ str(v) }}</th>
-            {% end %}
+        <td style="vertical-align:middle;">{{ alert['name'] }}</td>
+        <td style="vertical-align:middle;">{{ alert['alert_type'] }}</td>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <td style="vertical-align:middle;">{{ alert['creation_date'][5:-8] }}</td>
+        {% end %}
+        <td style="vertical-align:middle;">{{ alert['start_time'][:-3] }}</td>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <td style="vertical-align:middle;">{{ alert['end_time'] }}</td>
+        {% end %}
 
+        {% if alert['alert_type'] == 'Live' %}
+          <td style="vertical-align:middle;">-</td>
+        {% elif alert['alert_type'] == 'BasicReccurent' %}
+          <td style="vertical-align:middle;">Every {{ alert['interval'] }} {{ alert['repeat'][:4] }} (max={{ alert['max_count'] }})</td>
+        {% elif alert['alert_type'] == 'CrontabSchedule' %}
+          <td style="vertical-align:middle;">Days:{{ alert['days_of_week'] }} at {{ alert['repeat_at'] }}</td>
+        {% end %}
+
+        <td style="vertical-align:middle;">
+          {% if alert['email_notify'] is False %}
+            yes
+          {% else %}
+            no
           {% end %}
+        </td>
+        <td style="vertical-align:middle;">{{ alert['template_type'] }}</td>
+        <td style="vertical-align:middle;">
+          {% if alert['launched'] == 'False' %}
+            Stopped
+          {% else %}
+            Launched
+          {% end %}
+        </td>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+          <td style="vertical-align:middle;">{{ alert['content_id'] }}</td>
+        {% end %}
 
+<!--         <td style="vertical-align:middle;">
+          <div class="form-check">
+              <input class="form-check-input" style="transform: scale(1.5); margin-top:0; position:relative" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
+          </div>
+        </div>
+        </td> -->
 
-            <th>
-            
-              <div class="form-check">
-                  <input class="form-check-input" style="transform: scale(1.5);" type="checkbox" id="saveLogChecked{{ escape(alert['id']) }}" name="saveLogChecked{{ escape(alert['id']) }}">
-              </div>
-            </div>
-            </th>
-            <th><button type="submit" class="btn btn-info" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form></th>
+        <td style="vertical-align:middle;">
+          {% if escape(alert['launched']) == 'False' %}
+          <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
+          <input type="hidden" value="{{ alert['name'] }}" name="alertName">
+          <button type="submit" class="btn btn-info btn-sm" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+          {% else %}
+          <button type="button" class="btn btn-info btn-sm disabled" value="{{ escape(alert['content_id']) }}" name="contentName">Start</button></input></form>
+          {% end %}
+        </td>
+
+        <td style="vertical-align:middle;">
+          {% if alert['launched'] == 'True' %}
+          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post">
+            <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">
+            <input type="hidden" value="{{ escape(alert['content_id']) }}" name="contentName">
+          <button type="submit" class="btn btn-info btn-sm" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
+          {% else %}
+          <form action="#" method="post">
+            <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
+          <button type="button" class="btn btn-info btn-sm disabled" value="{{ alert['name'] }}" name="alertName">Stop</button></form>
+          {% end %}
+        </td>
+
+        <td style="vertical-align:middle;">
+          <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/delete" method="post">
+            <input type="hidden" value="{{ alert['content_id'] }}" name="contentName">
+          <button type="submit" class="btn btn-danger btn-sm" value="{{ alert['name'] }}" name="alertName">Delete</button></form>
+        </td>
+
+        <td style="vertical-align:middle;">
+        {% if alert['state'] == 'Lost' %}
+          <span class="badge badge-warning">LOST</span>
+        {% elif alert['state'] == 'Ready' %}
+          <span class="badge badge-info">READY</span>
+        {% elif alert['state'] == 'Problem' %}
+          <span class="badge badge-danger">PROBLEM</span>
+        {% elif alert['state'] == 'Active' %}
+          <span class="badge badge-dark">ACTIVE</span>
+        {% end %}
+        </td>
+
     </tr>
     {% end %}
+    </tbody>
   </table>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+<script src="{{ static_url('custom/utils.js') }}"></script>
 <script>
   $(document).ready(function() {
-    console.log('Loading action on deffered ...');
-    $('#ContinuousTracking').hide();
+    // 2019-09-03T08:52
+    //"MM ddd, YYYY hh:mm:ss a"
+    $('#inputStartTime').val(getCurrentDate("YYYY-MM-DDThh:mm", 30));
+    $('#BasicReccurent').hide();
+    $('#CrontabSchedule').hide();
     $('#inputType').on('change', function() {
-      if (this.value == 'Deffered') {
-        console.log('Show !!');
-        $('#ContinuousTracking').show();
+      if (this.value == 'BasicReccurent') {
+        $('#CrontabSchedule').hide();
+        $('#BasicReccurent').show();
+      }
+      if (this.value == 'CrontabSchedule') {
+        $('#BasicReccurent').hide();
+        $('#CrontabSchedule').show();
       }
       if (this.value == 'Live') {
-        console.log('Hide !!');
-        $('#ContinuousTracking').hide();
+        $('#CrontabSchedule').hide();
+        $('#BasicReccurent').hide();
       }
     });
   });

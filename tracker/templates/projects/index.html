@@ -3,6 +3,7 @@
 <div class="starter-template-fluid">
       <center><h3>Project {{ project['name'] }}</h3></center>
       <center><p>Below are shown all the websites referenced in the project<br>A new menu appeard in the Navbar allowing user to download, select content, and launch live alerts.</p></center>
+      {% if handler.session['units'] is not None %}
         <table class="table table-responsive-sm table-striped">
               <tr>
                 <th>Base URL</th>
@@ -26,6 +27,9 @@
               <th><form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit/{{ escape(str(uid)) }}" method="get" class="form-horizontal"><button type="submit" class="btn btn-outline-dark" value="">View</button></input></form></th>
               </tr>
               {% end %}
-        </table>          
+        </table>
+      {% else %}
+      There are no configured websites yet.
+      {% end %}        
 </div>
 {% end %}

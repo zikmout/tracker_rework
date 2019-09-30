@@ -1,4 +1,5 @@
 import tornado
+from tornado import gen
 from math import isnan
 import time
 from tracker.views.base import BaseView
@@ -7,11 +8,26 @@ from tracker.utils import flash_message, login_required, json_response
 from tracker.core.rproject import RProject
 from tracker.core.unit import Unit
 from tracker.core.utils import get_formated_units
+from tracker.utils import replace_mix_option_with_all_existing_keywords
 from tracker.core.loader import get_df_from_excel
+
+class UserProjectDeleteContent(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
+    def post(self, username, projectname):
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        content_to_delete = project.contents.filter_by(id=int(self.args['contentIdToDelete'])).first()
+        self.request_db.delete(content_to_delete)
+        self.request_db.commit()
+        flash_message(self, 'success', 'Content \'{}\' successfuly deleted.'.format(content_to_delete.name))
+        self.redirect('/api/v1/users/{}/projects/{}/content'.format(username, projectname))
 
 class UserProjectContent(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
     @login_required
+    @gen.coroutine
     def get(self, username, projectname):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
@@ -23,12 +39,18 @@ class UserProjectContent(BaseView):
         if 'units' in self.session:
             units = self.session['units']
         if units is None or units == {}:
-            flash_message(self, 'danger', 'There are no units in the project {}. Or filtered units are 0.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects_manage'.format(self.session['username']))
+            flash_message(self, 'danger', 'No units in the project {}.'.format(projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            return
         else:
-            self.render('projects/content/index.html', formated_units=formated_units)
+            user = self.request_db.query(User).filter_by(username=username).first()
+            project = user.projects.filter_by(name=projectname).first()
+            contents = project.contents.all()
+            json_contents = [_.as_dict() for _ in contents]
+            self.render('projects/content/index.html', formated_units=formated_units, contents=json_contents)
 
     @login_required
+    @gen.coroutine
     def post(self, username, projectname):
         self.set_header("Content-Type", 'application/json; charset="utf-8"')
         data = tornado.escape.json_decode(self.request.body)
@@ -55,6 +77,8 @@ class UserProjectContent(BaseView):
 
 class UserProjectContentFromFile(BaseView):
     SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
         print('Received args = {}'.format(args))
@@ -69,63 +93,28 @@ class UserProjectContentFromFile(BaseView):
         try:
             df_links = get_df_from_excel(file_path)
             links = dict(zip(df_links[args['columnLinkName']], df_links[args['columnKeyWordName']]))
-            #print('links from excel file = {}\n'.format(links))
-            #print('list(links.values()) = {}'.format(list(links.values())))
             # if mixed set to True, links with label '<MIX>' are taking all tags of the list
             # temporary solution, does not really make sense yet
-            all_words = set()
-            if '<MIX>' in list(links.values()):
-                # create set of all keywords
-                for key_word in list(links.values()):
-                    if key_word != '<MIX>':
-                        #print('key word = {}'.format(key_word))
-                        all_words.add(key_word)
-                        # not case sensitive
-                        all_words.add(key_word.upper())
-                        all_words.add(key_word.lower())
-                # if <MIX> in the column, apply all key words matching
-                for k, v in links.copy().items():
-                    if v == '<MIX>':
-                        links[k] = list(all_words)
-                    else:
-                        links[k] = [v]
-            # can save space here
-            else:
-                links = {k:[v] for k, v in links.items()}
-            print('Link big dict = {}\n'.format(links))
-            #print('Set of all_words = {}\n'.format(all_words))
+            links = replace_mix_option_with_all_existing_keywords(links)
+
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
 
             rproject = RProject(project.name, project.data_path, project.config_file)
             rproject._load_units_from_data_path()
-            idx = rproject.add_links_to_crawler_logfile(list(links))
-            print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
-
-            new_content = Content(args['inputName'], links)
+            idx = rproject.add_links_to_crawler_logfile(list(links), wait=add_stranger)
+            #print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
+            mailing_list = None
+            if 'columnMailingListName' in args and args['columnMailingListName'] != '':
+                mailing_list = dict(zip(df_links[args['columnLinkName']], df_links[args['columnMailingListName']]))
+            new_content = Content(args['inputName'], links, mailing_list)
             project.contents.append(new_content)
             self.request_db.add(project)
             self.request_db.commit()
-            flash_message(self, 'success', 'Content {} successfully created.'.format(args['inputName']))
-            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            flash_message(self, 'success', 'Content {} successfully created.({}/{} links needed to crawled)'.format(args['inputName'], idx, len(links)))
+            self.redirect('/api/v1/users/{}/projects/{}/content'.format(username, projectname))
         except Exception as e:
             print('ERROR -> {}'.format(e))
             flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(args['inputName']))
-            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/content'.format(username, projectname))
 
-
-class TestingView(BaseView):
-    SUPPORTED_METHODS = ['GET']
-    def get(self, username, projectname):
-        self.write(username)
-        self.write(projectname)
-        time.sleep(5)
-        # user = self.request_db.query(User).filter_by(username=username).first()
-        # project = user.projects.filter_by(name=projectname).first()
-        # rproject = RProject(project.name, project.data_path, project.config_file)
-        # rproject._load_units_from_data_path()
-        # print('begin crawling')
-        # #unit = Unit(rproject.data_path, 'https://www.rsagroup.com')
-        # #unit.crawl(max_depth=8)
-        # print('-> DONE CRAWLING')
-        self.redirect('/')

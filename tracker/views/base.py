@@ -2,11 +2,13 @@ import json
 import datetime
 import time
 import tornado
+from tornado import gen
 import pickle
+import traceback
 from tornado.web import RequestHandler
 from werkzeug import check_password_hash
 from tracker.models import Permission, Role, Project, User
-from tracker.utils import make_session_factory, flash_message, login_required
+from tracker.utils import make_session_factory, flash_message, login_required, admin_required
 from tracker.models import User
 import tracker.session as session
 from tracker.workers.live.live_view_worker import live_view
@@ -54,6 +56,7 @@ class BaseView(RequestHandler):
             key: [val.decode('utf8') for val in val_list]
             for key, val_list in self.request.arguments.items()
         }
+        self.args = {k:self.get_argument(k) for k in self.request.arguments}
 
     def on_finish(self):
         if hasattr(self, 'request_db'):
@@ -69,7 +72,36 @@ class BaseView(RequestHandler):
         self.set_status(status)
         self.write(json.dumps(data))
 
+    def write_error(self, status_code, **kwargs):
+        if 'exc_info' in kwargs:
+            tb = list()
+            # self.write('Exception :\n{}'.format(kwargs['exc_info'][0].__name__))
+            for line in traceback.format_exception(*kwargs["exc_info"]):
+                tb.append(line)
+            self.render('pages/500.html', traceback=tb)
+        else:
+            self.write('ERROR : (Status Code {})'.format(status_code))
+
 class HomePage(BaseView):
     SUPPORTED_METHODS = ['GET']
     def get(self):
         self.render('index.html')
+
+class SwitchMode(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    # @admin_required
+    @gen.coroutine
+    def post(self):
+        # is_simplified = self.get_argument('is_simplified')
+        # user = self.app_db.query(User).filter_by(username=self.session['username']).first()
+        # print('Switch to : {}'.format(is_simplified))
+        # del self.session['is_simplified']
+        self.session['is_simplified'] = not self.session['is_simplified']
+        self.session.save()
+        flash_message(self, 'info', 'Simplified interface : {}.'.format(self.session['is_simplified']))
+        self.send_response({ 'response': 'OK' })
+
+class My404Handler(BaseView):
+    def prepare(self):
+        self.set_status(404)
+        self.render('pages/404.html')

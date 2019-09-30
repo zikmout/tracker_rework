@@ -1,5 +1,6 @@
-import tornado
 import json
+import tornado
+import math
 from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
 
@@ -31,6 +32,15 @@ def login_required(f):
     def _wrapper(self, *args, **kwargs):
         logged = self.get_current_user()
         if logged is None:
+            self.redirect('/api/v1/auth/login')
+        else:
+            ret = f(self, *args, **kwargs)
+    return _wrapper
+
+def admin_required(f):
+    def _wrapper(self, *args, **kwargs):
+        is_admin = self.session['is_admin']
+        if is_admin is False:
             self.redirect('/api/v1/auth/login')
         else:
             ret = f(self, *args, **kwargs)
@@ -82,7 +92,7 @@ def get_celery_task_state(task):
             'total': 1,
             'status': str(task.info)
         }
-    print('response : {}'.format(response))
+    #print('response : {}'.format(response))
     return response
 
 def revoke_chain(last_result): 
@@ -94,7 +104,9 @@ def revoke_chain(last_result):
 def revoke_all_tasks(app, task_func, ids):
     res = 0
     task_ids_to_stop = list()
+
     for id in ids:
+        print('pass id')
         task_ids_to_stop.append(id)
         task = task_func.AsyncResult(id)
         revoke_chain(task)
@@ -104,3 +116,36 @@ def revoke_all_tasks(app, task_func, ids):
     discard_all()
     print('\nAll task ids succesfully purged and discarded.')
     return res
+
+def replace_mix_option_with_all_existing_keywords(links):
+    all_words = set()
+    if '<MIX>' in list(links.values()):
+        # create set of all keywords
+        for key_word in list(links.values()):
+            if key_word != '<MIX>':
+                if ';' in key_word:
+                    for _ in key_word.split(';'):
+                        all_words.add(_)
+                        # not case sensitive
+                        all_words.add(_.upper())
+                        all_words.add(_.lower())
+                else:
+                    #print('key word = {}'.format(key_word))
+                    all_words.add(key_word)
+                    # not case sensitive
+                    all_words.add(key_word.upper())
+                    all_words.add(key_word.lower())
+        # if <MIX> in the column, apply all key words matching
+        for k, v in links.copy().items():
+            if v == '<MIX>':
+                links[k] = list(all_words)
+            else:
+                links[k] = [v]
+    else:
+        links = {k:[v] for k, v in links.items()}
+    for k, v in links.copy().items():
+        if isinstance(v[0], float) and math.isnan(v[0]):
+            links[k] = [];
+        elif len(v) == 1 and ';' in v[0]:
+            links[k] = v[0].split(';')
+    return links

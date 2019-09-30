@@ -9,10 +9,10 @@ import tracker.core.loader as loader
 import tracker.core.logger as logger
 import tracker.core.downloader as downloader
 from tracker.core.unit import Unit
-
+import tracker.workers.continuous.continuous_worker as continuous_worker
+from redbeat import RedBeatSchedulerEntry as Entry
+import math
 import threading
-
-
 
 
 class RProject:
@@ -214,26 +214,28 @@ class RProject:
 
 
 
-    def add_links_to_crawler_logfile(self, links_list):
+    def add_links_to_crawler_logfile(self, links_list, wait=True):
 
-
+        url_errors = list()
         def run_downloads(unit, unit_url):
             if unit is None or unit.is_base_crawled is False:
                 print('Unit url : {} does not exist.'.format(unit_url))
             else:
                 internal_link = link.replace(unit_url, '')
-                print('len remote tree before = {}'.format(len(unit._remote_tree())))
+                #print('len remote tree before = {}'.format(len(unit._remote_tree())))
                 if unit.add_crawler_link(internal_link) is True:
                     if downloader.download_website([internal_link], unit.download_path, unit.url, random_header=True):
                         print('->Page {} successfuly downloaded'.format(unit_url + internal_link))
                     else:
                         print('->Unable to download page {}'.format(unit_url + internal_link))
+                else:
+                    print('-> No need to download: {}'.format(unit_url + internal_link))
 
         print('Loading websites list to add crawled links in data_path \'{}\' ....\n'.format(self.data_path))
         project_directories = utils.get_directories_list(self.data_path)
         if self.units == []:
             print('No Units loaded !')
-            return
+            return 0
 
         threads = []
         idx = 0
@@ -242,7 +244,7 @@ class RProject:
             regex = r"^https?://[^/]+"
             unit_url = re.findall(regex, link)[0]
             unit = self.get_unit_from_url(unit_url)
-            if idx % 10 == 0:
+            if wait and idx % 10 == 0:
                 time.sleep(5)
             my_thread = threading.Thread(target=run_downloads, args=(unit, unit_url))
             threads.append(my_thread)
@@ -252,6 +254,7 @@ class RProject:
             x.join()
 
         print('All THREADS ARE DONE !!!!')
+        return idx
 
     def _load_units_from_data_path(self):
         """ Load project units from project self.data_path (full path where project data is stored)
@@ -301,6 +304,7 @@ class RProject:
                 name = rows['Name']
                 website = rows['Website']
                 target = rows['target']
+                # can be one or multiple keywords
                 if isinstance(rows['target_label'], float):
                     target_label = ''
                 elif ';' in rows['target_label']:
@@ -309,11 +313,22 @@ class RProject:
                 #     target_label = ''
                 else:
                     target_label = [rows['target_label']]
+
+                # can be one or multiple email addresses
+                if isinstance(rows['mailing_list'], float):
+                    mailing_list = ''
+                elif ';' in rows['mailing_list']:
+                    mailing_list = rows['mailing_list'].split(';')
+                # elif rows['target_label'] == '':
+                #     target_label = ''
+                else:
+                    mailing_list = [rows['mailing_list']]
                 line = {
                     'name': name,
                     'website': website,
                     'target': target,
-                    'keywords': target_label
+                    'keywords': target_label,
+                    'mailing_list' : mailing_list
                 }
                 self.lines.append(line)
 
@@ -444,22 +459,41 @@ class RProject:
             nb = unit.update_downloaded([internal_link])
             print('Nb of unit updated for url {} : {}'.format(nb, base_url))
 
-    def download_units_diff(self, links, save=False):
+    def download_units_diff(self, template_type, links, save=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
-        print('links before = {}'.format(links))
+        #print('links before = {}'.format(links))
         dict_links = utils.from_links_to_dict(links)
-        print('links after = {}'.format(dict_links))
+        #print('links after = {}'.format(dict_links))
         #exit(0)
+
+        if template_type == 'share buy back':
+            keywords_diff = True
+            detect_links = True
+            links_algorithm = 'http://localhost:5567/api/v1/predict/is_sbb'
+        elif template_type == 'diff':
+            keywords_diff = False
+            detect_links = False
+            links_algorithm = False
+        elif template_type == 'diff with keywords':
+            keywords_diff = True
+            detect_links = False
+            links_algorithm = False
+        else:
+            # This must not happen
+            return False
+
         tasks = list()
         if isinstance(dict_links, dict) and bool(dict_links):
+            counter = 0
             for key, val in dict_links.items():
                 unit = self.get_unit_from_url(key)
                 if unit is not None:
+                    counter += 1
                     #print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-                    task = unit.download_changed_files_from_links(val)
+                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links, links_algorithm, counter)
                     tasks.append(task)
                 else:
                     print('Unit {} not found'.format(key))
@@ -467,3 +501,108 @@ class RProject:
         else:
             print('Dict() of units url is not OK.')
             return None
+
+
+
+    def download_units_diff_delayed_with_email(self, alert_name, template_type,\
+        schedule, links, mailing_list, save=False):
+        if links == {} or links is None:
+            print('[ERROR] delete_download_units : No urls specified.\n')
+            return None
+        print('links before = {}'.format(links))
+        dict_links = utils.from_links_to_dict(links)
+        print('links after = {}'.format(dict_links))
+
+        # If asked to send mail but no mailing_list provided, return False
+        if mailing_list is None:
+            print('PB : No mailing_list !!')
+            return False
+        # Rework mailing_list excel matrix (translate)
+        # At the moment, mails are like this : (mailing_list)
+        #       target1 --> mail1 mail2 mail3
+        #       target2 --> mail2 mail3
+        print('Mailing list ==> {}'.format(mailing_list))
+        mails_set = set()
+        for t, m in mailing_list.items():
+            print('M = {}'.format(m))
+            if isinstance(m, float) and math.isnan(m):
+                continue;
+            if isinstance(m, float) and ';' not in str(m):
+                mails_set.add(str(m))
+            else:
+                for s in m.split(';'):
+                    mails_set.add(s)
+        
+        print('mail set = {}'.format(mails_set))
+        mails_content = dict()
+        for mail in mails_set:
+            mails_content[mail] = list()
+
+        for t, m in mailing_list.items():
+            if isinstance(m, float) and math.isnan(m):
+                continue;
+            elif isinstance(m, float) and ';' not in str(m):
+                if mail != str(m):
+                    mails_content[mail].append(t)
+            else:
+                for mail in mails_set:
+                    if mail in m:
+                        mails_content[mail].append(t)
+        print('MAIL CONTENT = {}'.format(mails_content))
+        # Now, mails are like this: (mails_content)
+        #       mail1 --> target1
+        #       mail2 --> target1 target2
+        #       mail3 --> target2
+
+        if template_type == 'share buy back':
+            keywords_diff = True
+            detect_links = True
+            links_algorithm = 'http://localhost:5567/api/v1/predict/is_sbb'
+        elif template_type == 'diff':
+            keywords_diff = False
+            detect_links = False
+            links_algorithm = False
+        elif template_type == 'diff with keywords':
+            keywords_diff = True
+            detect_links = False
+            links_algorithm = False
+        else:
+            # This must not happen
+            return False
+
+        # Tasks are of type celery chords, so one argument per task
+        task_args = list()
+        filename_time = datetime.datetime.now().strftime("%Y%m%d")
+        if isinstance(dict_links, dict) and bool(dict_links):            
+            for key, val in dict_links.items():
+                unit = self.get_unit_from_url(key)
+                if unit is not None:
+                    #print('VAL = {}'.format(val))
+                    # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
+                    #print('filename_time = {}'.format(filename_time))
+                    task_args.append((val,
+                        unit.download_path,
+                        unit.download_path + filename_time,
+                        unit.url,
+                        keywords_diff,
+                        detect_links,
+                        links_algorithm))
+                else:
+                    print('Unit {} not found'.format(key))
+
+            print('SCHEDULED = {}'.format(schedule))
+            if template_type == 'share buy back':
+                entry = Entry(alert_name, 'continuous_worker.share_buy_back_task',\
+                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+            elif template_type == 'diff':
+                entry = Entry(alert_name, 'continuous_worker.diff_task',\
+                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+            elif template_type == 'diff with keywords':
+                entry = Entry(alert_name, 'continuous_worker.diff_with_keywords_task',\
+                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+            entry.save()
+            print('ENTRY IS DUE = {}'.format(entry.is_due()))
+            return entry
+        else:
+            print('Dict() of units url is not OK.')
+            return False

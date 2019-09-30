@@ -6,6 +6,4 @@ class SU_Model():
 		print('[LOADING ML MODEL] from folder: \'{}\''.format(os.getcwd()))
 		self.name = name 
 		self.su_model = fastText.load_model(name)
-		print('Successfuly loaded model named : {} (\'{}\').'.format(self.name, self.su_model))
-
-#su_model = SU_Model()
+		print('Successfuly loaded model named : {} (\'{}\').'.format(self.name, self.su_model))

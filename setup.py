@@ -7,7 +7,6 @@ requires = [
     'werkzeug',
     'redis',
     'ujson',
-    'uuid',
     'pandas',
     'lxml',
     'bs4',
@@ -16,8 +15,14 @@ requires = [
     'xlrd',
     'celery',
     'cython',
-    'fastText',
-    'pdftotext'
+    'pycld2',
+    'pdftotext',
+    'celery-redbeat',
+    'tldextract',
+    'openpyxl',
+    'eventlet',
+    'xlsxwriter'
+    # 'flower'
 ]
 
 setup(

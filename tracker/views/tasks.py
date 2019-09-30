@@ -59,8 +59,8 @@ class RevokeLiveTasks(BaseView):
             print('Deleting live view tasks from session.')
             del self.session['tasks']['live_view']
             self.session.save()
-            flash_message(self, 'success', 'Live view tasks succesfully purged ! Purged tasks = {}'.format(res))
+            flash_message(self, 'success', 'Live view tasks succesfully revoked ! Tasks = {}'.format(res))
             self.redirect('/')
         else:
-            flash_message(self, 'danger', 'Failed purging live tasks')
+            flash_message(self, 'danger', 'Failed revoking live tasks')
             self.redirect('/')

@@ -71,15 +71,16 @@ class User(Base):
     role_id = Column(Integer, ForeignKey('roles.id'))
     projects = relationship('Project', cascade='save-update, delete', backref='users', lazy='dynamic')
 
-    def __init__(self, username, password, email, session, meta):
+    def __init__(self, username, password, email, session, meta, role=None):
         self.username = username
         self.password = generate_password_hash(password)
         self.email = email
         self.registration_date = datetime.now().replace(microsecond=0)
+        self.role = role
         if self.role is None:
             print('self.role is none')
             print('self.email = {}'.format(self.email))
-            if self.email == 'admin@gmail.com':
+            if self.email == 'simon@electricity.ai':
                 self.role = session.query(Role).filter_by(name='Administrator').first()
                 print('<OK Admin registration detected>')
                 print('self.role 1 = {}'.format(self.role))
@@ -92,6 +93,16 @@ class User(Base):
 
     def is_administrator(self):
         return self.can(Permission.ADMIN)
+
+    def get_rolename(self):
+        if self.can(Permission.ADMIN):
+            return 'Administrator'
+        elif self.can(Permission.MODERATE):
+            return 'Moderator'
+        elif self.can(Permission.WRITE):
+            return 'User'
+        else:
+            return None
 
     def is_authenticated(self):
         return True
@@ -140,12 +151,14 @@ class Content(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(64), unique=True)
     links = Column(PickleType)
+    mailing_list = Column(PickleType) # must include template type
     project_id = Column(Integer, ForeignKey('project.id'))
     alerts = relationship('Alert', cascade='save-update, delete', backref='content', lazy='dynamic')
 
-    def __init__(self, name, links):
+    def __init__(self, name, links, mailing_list=None):
         self.name = name
         self.links = links
+        self.mailing_list = mailing_list
 
     def __repr__(self):
         return '<id {}>'.format(self.id)
@@ -156,22 +169,43 @@ class Content(Base):
 class Alert(Base):
     __tablename__ = 'alert'
     __table_args__ = {'extend_existing': True}
-    id = Column(Integer, primary_key = True)
+    id = Column(Integer, primary_key=True)
     name = Column(String(64), unique=True)
     alert_type = Column(String(64))
     creation_date = Column(DateTime)
-    start_time = Column(String(64))
+    start_time = Column(DateTime)
+    end_time = Column(DateTime)
+    # for BasicReccurent alerts
     repeat = Column(String(64))
-    notify = Column(Boolean)
+    interval = Column(Integer)
+    max_count = Column(Integer)
+    # for CrontabSchedule alerts
+    repeat_at = Column(String(64))
+    days_of_week = Column(PickleType) # Array with corresponding days of the week from 0 to 6
+    # Remainder
+    email_notify = Column(Boolean)
+    template_type = Column(String(64))
+    diff_links = Column(String(64)) # Not bolean to keep possibility for ml algo in label
+    launched = Column(Boolean)
     content_id = Column(Integer, ForeignKey('content.id'))
 
-    def __init__(self, name, alert_type, start_time, repeat=None, notify=False):
+    def __init__(self, name, alert_type, start_time, end_time=None, repeat=None, interval=None,\
+        max_count=None, repeat_at=None, days_of_week=None, email_notify=False,\
+        template_type='diff', diff_links=True, launched=False):
         self.name = name
         self.alert_type = alert_type
         self.creation_date = datetime.now().replace(microsecond=0)
         self.start_time = start_time
+        self.end_time = end_time
         self.repeat = repeat
-        self.notify = notify
+        self.interval = interval
+        self.max_count = max_count
+        self.repeat_at = repeat_at
+        self.days_of_week = days_of_week
+        self.email_notify = email_notify
+        self.template_type = template_type
+        self.diff_links = diff_links
+        self.launched = launched
 
     def __repr__(self):
         return '<id {}>'.format(self.id)

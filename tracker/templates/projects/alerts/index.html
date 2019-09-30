@@ -3,7 +3,7 @@
 <div class="starter-template-fluid">
   <script src="{{ static_url('jquery.min.js') }}"></script>
   <br>
-  <center><h3>Project {{ handler.session['current_project'] }} - Setup and launch alerts on content changes</h3></center>
+  <center><h3>Manage alerts for {{ handler.session['current_project'] }}</h3></center>
 
   
 
@@ -24,9 +24,9 @@
     </p>
     </div>
     <div class="col-10">
-  <p>Below is a list of alerts you already configured. <br>
-  Click on Create Alert to configure a new alert. Use Content Lookup to remember what the content name refers to.<br>
-  Push Start button in order to launch alert.</p><br>
+  <p>Alerts are triggered when the content of the target URL changes and matches the set keywords.<br>
+Manage your alerts or create new ones.
+Press the "Start" button to launch monitoring.</p><br>
   </div>
   </div>
   <div class="collapse" id="createalert">
@@ -38,14 +38,20 @@
             <input type="text" class="form-control" id="inputName" name="inputName" required>
           </div>
 
-          <div class="form-group col-md-3">
-            <label for="inputContent">Content</label>
-            <select id="inputContent" class="form-control" name="inputContent">
-              {% for json_content in contents %}
-              <option>{{ escape(str(json_content['name'])) }}({{ escape(str(len(json_content['links']))) }} links)</option>
-              {% end %}
-            </select>
-          </div>
+          {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+            <div class="form-group col-md-3">
+              <label for="inputContent">Content</label>
+              <select id="inputContent" class="form-control" name="inputContent">
+                {% for json_content in contents %}
+                <option>{{ escape(str(json_content['name'])) }}({{ escape(str(len(json_content['links']))) }} links)</option>
+                {% end %}
+              </select>
+            </div>
+          {% else %}
+            {% for json_content in contents %}
+              <input type="hidden" name="inputContent" value={{ escape(str(json_content['name'])) }}({{ escape(str(len(json_content['links']))) }} links)>
+            {% end %}
+          {% end %}
 
           <div class="form-group col-md-3">
             <label for="inputType">Type</label>
@@ -204,7 +210,7 @@
   <table class="table table-sm">
     <thead class="thead-light">
       <tr>
-        <th scope="col" style="vertical-align:middle;">Name</th>
+        <th scope="col" style="vertical-align:middle;">Source name</th>
         <th scope="col" style="vertical-align:middle;">Type</th>
         {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <th scope="col" style="vertical-align:middle;">Creation</th>
@@ -214,12 +220,14 @@
         <th scope="col" style="vertical-align:middle;">End</th>
         {% end %}
         <th scope="col" style="vertical-align:middle;">Schedule</th>
-        <th scope="col" style="vertical-align:middle;">Email notify</th>
-        <th scope="col" style="vertical-align:middle;">Template Type</th>
-        <th scope="col" style="vertical-align:middle;">Launched</th>
+        <th scope="col" style="vertical-align:middle;">Email</th>
+        <th scope="col" style="vertical-align:middle;">Template</th>
+        <th scope="col" style="vertical-align:middle;">Status</th>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <th scope="col" style="vertical-align:middle;">Content Name</th>
+        {% end %}
         <!-- <th scope="col" style="vertical-align:middle;">Notify Mail</th> -->
-        <th scope="col" style="vertical-align:middle;">Action</th>
+        <th scope="col" style="vertical-align:middle;"></th>
         <th scope="col" style="vertical-align:middle;"></th>
         <th scope="col" style="vertical-align:middle;"></th>
         <th scope="col" style="vertical-align:middle;">Worker state</th>
@@ -251,10 +259,24 @@
           <td style="vertical-align:middle;">Days:{{ alert['days_of_week'] }} at {{ alert['repeat_at'] }}</td>
         {% end %}
 
-        <td style="vertical-align:middle;">{{ alert['email_notify'] }}</td>
+        <td style="vertical-align:middle;">
+          {% if alert['email_notify'] is False %}
+            yes
+          {% else %}
+            no
+          {% end %}
+        </td>
         <td style="vertical-align:middle;">{{ alert['template_type'] }}</td>
-        <td style="vertical-align:middle;">{{ alert['launched'] }}</td>
-        <td style="vertical-align:middle;">{{ alert['content_id'] }}</td>
+        <td style="vertical-align:middle;">
+          {% if alert['launched'] == 'False' %}
+            Stopped
+          {% else %}
+            Launched
+          {% end %}
+        </td>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+          <td style="vertical-align:middle;">{{ alert['content_id'] }}</td>
+        {% end %}
 
 <!--         <td style="vertical-align:middle;">
           <div class="form-check">

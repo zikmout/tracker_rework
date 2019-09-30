@@ -2,8 +2,8 @@
 {% block content %}
 <br />
     <div class="starter-template-fluid">
-        <h3>Watchlist creation</h3>
-        <p>A watchlist consist of a basic list of websites to monitor, selected by the user.</p>
+        <h3>Create a watchlist</h3>
+        <p>A watchlist is the list of websites you want to monitor, what to search for, and who must be notified.</p>
 <br />
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
@@ -53,7 +53,11 @@
           <input type="file" class="custom-file-input" id="validatedCustomFile" name="file1" required>
           <label class="custom-file-label col-md-6 custom-file-control form-control-file" for="validatedCustomFile">Choose file...</label>
 
-          <small id="ProjectLocation" class="form-text text-muted"><br>The file you select must be a '.xlsx' file with following columns: Name, Website, target, target_label, mailing_list.<br> Target labels are keywords, they must be ';' separated if numerours. <br>Mailing list are emails, they must be ';' separated if numerous as well.<br> Watchlist name will take the name of the xlsx file.</small>
+          <small id="ProjectLocation" class="form-text text-muted"><br>The file you upload must be a valid ".xlsx" file. It must have the following columns:<br>
+          Name, Website, target, target_label, mailing_list (case sensitive).<br>
+          Target must contain the keywords to look at in the monitored pages. They must be separated by ";".<br>
+          Mailing lists must contain the email addresses of the recipients to whom a notification must be sent. They must be seprated by a ";"<br>
+          The watchlist will bare the name of the .xlsx file. Please do not use space in the excel file.</small>
         </div>
 
 

@@ -15,8 +15,6 @@ import math
 import threading
 
 
-
-
 class RProject:
     """ A project consists of a list of websites to monitor,
         and parameters associated with each of these websites.

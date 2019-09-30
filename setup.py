@@ -36,7 +36,7 @@ setup(
     install_requires=requires,
     entry_points={
         'console_scripts': [
-            'serve_app = tracker:main',
+            'tracker_app = tracker:main',
             'initdb = tracker.scripts.initialize_db:main',
             'reset_db = tracker.scripts.reset_db:main'
         ],

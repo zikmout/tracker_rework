@@ -1,7 +1,7 @@
 {% extends '../layout.html' %}
 {% block content %}
 <div class="starter-template-fluid">
-      <center><h3>Websites for watchlist {{ project['name'] }}</h3></center>
+      <center><h3>Edit watchlist {{ project['name'] }}</h3></center>
       
 
 
@@ -11,10 +11,10 @@
           </div>
 
           <div class='col-10'>
-            <p>Below are shown all the websites referenced in the watchlist as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup live or scheduled tracking.</p>
+            <!-- <p>Below are shown all the websites referenced in the watchlist as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup live or scheduled tracking.</p> -->
           </div>
         </div>
-
+        <br>
         <div class="collapse" id="addLine">
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-add" method="post">
             <div class="card card-body">
@@ -34,19 +34,19 @@
                   <input type="hidden" class="form-control" id="inputWebsite" name="inputWebsite">
                 {% end %}
                 <div class="col-sm-3">
-                  <label for="inputTarget">Target</label>
+                  <label for="inputTarget">Target URL</label>
                   <input type="text" class="form-control" id="inputTarget" name="inputTarget">
                   <small id="inputTarget" class="form-text text-muted">URL where content is located</small>
                 </div>
                 <div class="col-sm-3">
                   <label for="inputKeywords">Keywords</label>
                   <input type="text" class="form-control" id="inputKeywords" name="inputKeywords">
-                  <small id="inputKeywords" class="form-text text-muted">must be ';' if more than one</small>
+                  <small id="inputKeywords" class="form-text text-muted">must be ';' separated if more than one</small>
                 </div>
                 <div class="col-sm-3">
-                  <label for="inputMailingList">Mailing list</label>
+                  <label for="inputMailingList">Email recipients</label>
                   <input type="text" class="form-control" id="inputMailingList" name="inputMailingList">
-                  <small id="inputMailingList" class="form-text text-muted">must be ';' if more than one</small>
+                  <small id="inputMailingList" class="form-text text-muted">must be ';' separated if more than one</small>
                 </div>
                 <div class="col-sm-0">
                   <button type="submit" class="btn btn-info" id="createContinuousTracking">Create</button>
@@ -63,12 +63,12 @@
               <tr>
                 <th>Name</th>
                 {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
-                <th>Website</th>
+                <th>Target domain</th>
                 {% end %}
-                <th>Target</th>
-                <th>keywords</th>
-                <th>Mailing list</th>
-                <th>Action</th>
+                <th>Target URL</th>
+                <th>Keywords</th>
+                <th>Email recipients</th>
+                <th></th>
                 <th></th>
               </tr>
           </thead>
@@ -83,7 +83,7 @@
                   <td style="vertical-align:middle;">{{ line['keywords'] }}</td>
                   <td style="vertical-align:middle;">{{ line['mailing_list'] }}</td>
                   <td style="vertical-align:middle;">
-                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-info btn-sm" value="{{ line['target'] }}" name="editUnitName">Modify</button></input></form>
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-info btn-sm" value="{{ line['target'] }}" name="editUnitName">Edit</button></input></form>
                   </td>
                   <td style="vertical-align:middle;">
                     <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ line['website'] }}" name="websiteToDelete"><button type="submit" class="btn btn-danger btn-sm" value="{{ line['target'] }}" name="targetToDelete">Delete</button></input></form>

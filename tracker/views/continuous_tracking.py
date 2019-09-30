@@ -32,7 +32,7 @@ class ContinuousTrackingCreateView(BaseView):
         self.request_db.add(user)
         self.request_db.commit()
 
-        flash_message(self, 'success', 'Continuous tracker project \'{}\' successfully created.'\
+        flash_message(self, 'success', 'Watchlist \'{}\' successfully created.'\
             .format(project_name))
         self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
 

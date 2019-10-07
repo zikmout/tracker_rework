@@ -117,8 +117,8 @@ def main():
             settings = {
                 'template_path': os.path.join(dirname, 'tracker/templates'),
                 'static_path': os.path.join(dirname, 'tracker/static'),
-                'cookie_secret': 'd5006258ba9aaa1d86a8014e767c6d8cf3d2ad69a4021901e6c47af740b15ad5',#os.urandom(32).hex(),
-                'session_secret': '28bd17bdb79af5032d2dd03dd549d60e14ef83e5c7902bed0ed4497c5e0fc011',#os.urandom(32).hex(),
+                'cookie_secret': '22cb77ce055301d377346c6deb8c2db097bd191577c6fd811e18faff4f645f26',#os.urandom(32).hex(),
+                'session_secret': 'c230848c20f2eb8119080c92677aacf1695df092251ed2c712d3c9110480c4ee',#os.urandom(32).hex(),
                 'session_timeout': 60000,
                 'store_options': {
                     'redis_host': 'localhost',

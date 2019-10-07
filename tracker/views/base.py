@@ -57,6 +57,10 @@ class BaseView(RequestHandler):
             for key, val_list in self.request.arguments.items()
         }
         self.args = {k:self.get_argument(k) for k in self.request.arguments}
+        if hasattr(self, 'session'):
+            # print('REQUEST = {}'.format(self.request))
+            self.session['current_page'] = self.request.uri
+            print('\nSESSION = {}'.format(self.session))
 
     def on_finish(self):
         if hasattr(self, 'request_db'):

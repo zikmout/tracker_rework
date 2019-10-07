@@ -6,21 +6,22 @@
     {% block content %}
     <div class="starter-template-fluid">
           <script src="{{ static_url('jquery.min.js') }}"></script>
-          <center><h3>Edit source : {{ line['Name'] }}</h3></center>
-          <center><p class="lead">Edit your keywords</p><br></center>
-    </div><br>
+          <br>
+          <h3>Edit source : {{ line['Name'] }}</h3>
+          <small class="form-text text-muted"><p>Edit your keywords</p></small><br>
+    </div>
 
       <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-edit" method="post">
         <div class="form-group">
           <label for="inputName" id="inputName">Source Name</label>
           <input type="text" class="form-control" name="inputName" aria-describedby="inputNameHelp" value="{{ line['Name'] }}">
-          <small class="form-text text-muted">Name of the website to monitor.</small>
+          <small class="form-text text-muted">Name of the source to monitor.</small>
         </div>
         {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <div class="form-group">
           <label for="inputWebsite" id="inputWebsite">Domain URL</label>
           <input type="text" class="form-control" name="inputWebsite" value="{{ line['Website'] }}" readonly>
-          <small class="form-text text-muted">If you want to change the domain, you better add website directly rather than modifying existing one.</small>
+          <small class="form-text text-muted">If you want to change the domain, you better add source directly rather than modifying existing one.</small>
         </div>
 	      {% else %}
           <input type="hidden" class="form-control" name="inputWebsite" value="{{ line['Website'] }}" readonly>
@@ -28,7 +29,7 @@
         <div class="form-group">
           <label for="inputTarget" id="inputTarget">Target URL</label>
           <input type="text" class="form-control" name="inputTarget" aria-describedby="inputTargetHelp" value="{{ line['target'] }}">
-          <small class="form-text text-muted">Enter the full URL of the page to monitor.</small>
+          <small class="form-text text-muted">Enter the full URL of the source to monitor.</small>
         </div>
 
           <div id="bagOfWordsContainer">

@@ -91,6 +91,11 @@ class HomePage(BaseView):
     def get(self):
         self.render('index.html')
 
+class BlankPage(BaseView):
+    SUPPORTED_METHODS = ['GET']
+    def get(self):
+        self.render('blank.html')
+
 class SwitchMode(BaseView):
     SUPPORTED_METHODS = ['POST']
     # @admin_required

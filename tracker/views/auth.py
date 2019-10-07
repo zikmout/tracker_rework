@@ -29,7 +29,7 @@ class AuthLoginView(BaseView):
         self.session['tasks'] = {}
         self.session.save()
         flash_message(self, 'success', 'User {} succesfully logged in.'.format(registered_user.username))
-        self.redirect('/')
+        self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
 
 class AuthRegisterView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']

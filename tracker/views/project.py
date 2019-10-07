@@ -128,7 +128,7 @@ class UserProjectView(BaseView):
             # self.session['is_project_empty'] = True
             self.session.save()
             #flash_message(self, 'warning', 'There are no units at the moment. Go on the \'Website\' section and add one.')
-            flash_message(self, 'danger', 'No website in watchlist {} yet.'.format(projectname))
+            flash_message(self, 'danger', 'No source in watchlist {} yet.'.format(projectname))
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
             # self.render('projects/index.html', project=json_project, units=units)    
             return
@@ -145,7 +145,7 @@ class UserProjectView(BaseView):
             self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
             return 
         if units is None:
-            flash_message(self, 'danger', 'There are no units in watchlist {}. Or filtered units are 0.'.format(project.name))
+            flash_message(self, 'danger', 'There are no source in watchlist {}.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
             return
         else:
@@ -184,7 +184,7 @@ class UserProjectDelete(BaseView):
             fname = os.path.join(self.application.data_dir, projectname)
             if not os.path.exists(fname):
                 flash_message(self, 'warning', 'Watchlist {} succesfully deleted from DB but was not \
-                    found on server ! Maybe no websites were parameterized yet?'.format(projectname))
+                    found on server ! Maybe no source had been parameterized yet?'.format(projectname))
             else:
                 shutil.rmtree(fname)
                 print('Folder \'{}\' successfully removed.'.format(fname))

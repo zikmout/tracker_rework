@@ -302,8 +302,8 @@ class AlertLiveView(BaseView):
             tasks  = self.session['tasks']['live_view'].copy()
             self.render('projects/alerts/live-view.html', tasks=tasks)
         else:
-            flash_message(self, 'warning', 'No current live view tasks')
-            self.redirect('/')            
+            flash_message(self, 'warning', 'No current live view tasks yet.')
+            self.redirect('/blank')            
 
 class AlertLiveUpdate(BaseView):
     SUPPORTED_METHODS = ['POST']

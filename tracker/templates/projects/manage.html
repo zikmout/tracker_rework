@@ -3,6 +3,9 @@
 <div class="starter-template-fluid">
         <br>
         <h3>Your watchlists</h3>
+        {% if len(projects) == 0 %}
+        <small class="form-text text-muted"><p>No watchlist configured yet. Create watchlist from Watchlists menu on the navigation bar.</p></small>
+        {% end %}
         <!-- <p>You can here manage the monitoring projects you created. Load any project you want to access further options.</p> -->
         <table class="table table-sm">
           <thead class="thead-light">

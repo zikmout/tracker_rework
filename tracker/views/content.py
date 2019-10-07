@@ -40,7 +40,7 @@ class UserProjectContent(BaseView):
         if 'units' in self.session:
             units = self.session['units']
         if units is None or units == {}:
-            flash_message(self, 'danger', 'No units in the project {}.'.format(projectname))
+            flash_message(self, 'danger', 'No source in watchlist {}.'.format(projectname))
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
             return
         else:

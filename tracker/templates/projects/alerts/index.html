@@ -3,33 +3,32 @@
 <div class="starter-template-fluid">
   <script src="{{ static_url('jquery.min.js') }}"></script>
   <br>
-  <center><h3>Manage alerts for {{ handler.session['current_project'] }}</h3></center>
+  <h3>Manage alerts for {{ handler.session['current_project'] }}</h3>
 
   
 
   <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/create" method="post">
-  <p>
 
-  <div class='row'>
-    <div class='col'>
-      <p>
-      <button class="btn btn-dark col-md-10" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
-    Create alert
-      </button></p>
-      {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
-      <button class="btn btn-dark col-md-10" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
-    Content lookup
+
+      <small id="ProjectLocation" class="form-text text-muted">
+        <p>Alerts are triggered when the content of the target URL changes and matches the set keywords.<br>
+            Manage your alerts or create new ones.
+              Press the "Start" button to launch monitoring.
+        </p>
+      </small>
+
+      <button class="btn btn-dark btn-sm" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
+        + Create alert
       </button>
+      {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <button class="btn btn-dark btn-sm" type="button" data-toggle="collapse" data-target="#contentlookup" aria-expanded="false" aria-controls="contentlookup">
+          Content lookup
+        </button>
       {% end %}
-    </p>
-    </div>
-    <div class="col-10">
-  <p>Alerts are triggered when the content of the target URL changes and matches the set keywords.<br>
-Manage your alerts or create new ones.
-Press the "Start" button to launch monitoring.</p><br>
-  </div>
-  </div>
+
+
   <div class="collapse" id="createalert">
+    <br>
     <div class="card card-body">
       <div class="form-row">
 
@@ -57,8 +56,8 @@ Press the "Start" button to launch monitoring.</p><br>
             <label for="inputType">Type</label>
             <select id="inputType" class="form-control" name="inputType">
               <option value="Live" selected>Live</option>
-              <option value="BasicReccurent">Basic Reccurent</option>
-              <option value="CrontabSchedule">Crontab schedule</option>
+              <option value="BasicReccurent">Time interval</option>
+              <option value="CrontabSchedule">Days of week</option>
             </select>
           </div>
 
@@ -110,7 +109,7 @@ Press the "Start" button to launch monitoring.</p><br>
 
               <div class="row">
                 <div class="col-md-2">
-                  <label for="inputRepeatTime">Time of repeat (/!\ UTC /!\)</label>
+                  <label for="inputRepeatTime"><small class="form-text text-muted">Time of repeat (/!\ UTC /!\)</small></label>
                   <input class="form-control" type="time" value="15:00" name="inputRepeatTime"/>
                 </div>
 
@@ -180,11 +179,12 @@ Press the "Start" button to launch monitoring.</p><br>
       </div>
 
       <div class="col-sm-0">
-      <button type="submit" class="btn btn-info">Create</button>
+      <button type="submit" class="btn btn-info">Create</button>&nbsp;<button type="button" class="btn btn-danger" id="CancelButton">Cancel</button>
     </div>
     </div>
   </div>
   <div class="collapse" id="contentlookup">
+    <br>
     <div class="card card-body">
       {% for content in contents %}
       
@@ -205,6 +205,7 @@ Press the "Start" button to launch monitoring.</p><br>
     </div>
   </div>
   </form>
+  <br>
 
   
   <table class="table table-sm">
@@ -222,15 +223,15 @@ Press the "Start" button to launch monitoring.</p><br>
         <th scope="col" style="vertical-align:middle;">Schedule</th>
         <th scope="col" style="vertical-align:middle;">Email</th>
         <th scope="col" style="vertical-align:middle;">Template</th>
-        <th scope="col" style="vertical-align:middle;">Status</th>
         {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        <th scope="col" style="vertical-align:middle;">Status</th>
         <th scope="col" style="vertical-align:middle;">Content Name</th>
         {% end %}
         <!-- <th scope="col" style="vertical-align:middle;">Notify Mail</th> -->
         <th scope="col" style="vertical-align:middle;"></th>
         <th scope="col" style="vertical-align:middle;"></th>
         <th scope="col" style="vertical-align:middle;"></th>
-        <th scope="col" style="vertical-align:middle;">Worker state</th>
+        <th scope="col" style="vertical-align:middle;">Status</th>
       </tr>
     </thead>
     <tbody>
@@ -242,7 +243,15 @@ Press the "Start" button to launch monitoring.</p><br>
       <div class="form-group">
 
         <td style="vertical-align:middle;">{{ alert['name'] }}</td>
-        <td style="vertical-align:middle;">{{ alert['alert_type'] }}</td>
+        <td style="vertical-align:middle;">
+          {% if alert['alert_type'] == 'BasicReccurent' %}
+            Time interval
+          {% elif alert['alert_type'] == 'CrontabSchedule' %}
+            Days of week
+          {% elif alert['alert_type'] == 'Live' %}
+            Live
+          {% end %}
+        </td>
         {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <td style="vertical-align:middle;">{{ alert['creation_date'][5:-8] }}</td>
         {% end %}
@@ -267,6 +276,7 @@ Press the "Start" button to launch monitoring.</p><br>
           {% end %}
         </td>
         <td style="vertical-align:middle;">{{ alert['template_type'] }}</td>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <td style="vertical-align:middle;">
           {% if alert['launched'] == 'False' %}
             Stopped
@@ -274,7 +284,7 @@ Press the "Start" button to launch monitoring.</p><br>
             Launched
           {% end %}
         </td>
-        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+        
           <td style="vertical-align:middle;">{{ alert['content_id'] }}</td>
         {% end %}
 
@@ -334,6 +344,9 @@ Press the "Start" button to launch monitoring.</p><br>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
 <script src="{{ static_url('custom/utils.js') }}"></script>
 <script>
+  $('#CancelButton').click(function(){
+     $('#createalert').collapse('hide');
+  });
   $(document).ready(function() {
     // 2019-09-03T08:52
     //"MM ddd, YYYY hh:mm:ss a"

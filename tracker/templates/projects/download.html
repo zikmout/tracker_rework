@@ -84,8 +84,9 @@ function load_download_task(status_url, uid) {
 </script>
 <div class="starter-template-fluid">
       <script src="{{ static_url('jquery.min.js') }}"></script>
-      <center><h3>Project {{ handler.session['current_project'] }} - Download</h3></center>
-      <center><p>User can here download websites in order to later determine what content has changed.</p><br></center>
+      <br>
+      <h3>Project {{ handler.session['current_project'] }} - Download</h3>
+      <small class="form-text text-muted"><p>User can here download websites in order to later determine what content has changed.</p></small><br></center>
         <table class="table table-responsive-sm table-striped">
           <thead>
               <tr>

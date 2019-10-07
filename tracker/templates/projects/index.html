@@ -1,8 +1,9 @@
 {% extends '../layout.html' %}
 {% block content %}
 <div class="starter-template-fluid">
-      <center><h3>Project {{ project['name'] }}</h3></center>
-      <center><p>Below are shown all the websites referenced in the project<br>A new menu appeard in the Navbar allowing user to download, select content, and launch live alerts.</p></center>
+      <br>
+      <h3>Project {{ project['name'] }}</h3>
+      <small class="form-text text-muted"><p>Below are shown all the websites referenced in the project<br>A new menu appeard in the Navbar allowing user to download, select content, and launch live alerts.</p></small>
       {% if handler.session['units'] is not None %}
         <table class="table table-responsive-sm table-striped">
               <tr>

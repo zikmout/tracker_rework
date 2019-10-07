@@ -2,8 +2,9 @@
 {% block content %}
 <br />
     <div class="starter-template-fluid">
+      <br>
         <h3>Create a watchlist</h3>
-        <p>A watchlist is the list of websites you want to monitor, what to search for, and who must be notified.</p>
+        <small class="form-text text-muted"><p>A watchlist is the list of websites you want to monitor, what to search for, and who must be notified.</p></small>
 <br />
 <ul class="nav nav-tabs" id="myTab" role="tablist">
   {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}

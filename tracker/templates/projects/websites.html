@@ -1,13 +1,13 @@
 {% extends '../layout.html' %}
 {% block content %}
-<div class="starter-template-fluid">
-      <center><h3>Edit watchlist {{ project['name'] }}</h3></center>
+<div class="starter-template-fluid"><br>
+      <h3>Edit watchlist {{ project['name'] }}</h3>
       
 
 
         <div class='row'>
           <div class='col'>
-            <button type="submit" class="btn btn-dark collapsed" value="" data-toggle="collapse" data-target="#addLine" aria-expanded="false" aria-controls="addLine">+ Add source</button>
+            <button type="submit" class="btn btn-dark btn-sm collapsed" value="" data-toggle="collapse" data-target="#addLine" aria-expanded="false" aria-controls="addLine">+ Add source</button>
           </div>
 
           <div class='col-10'>
@@ -49,11 +49,10 @@
                   <small id="inputMailingList" class="form-text text-muted">must be ';' separated if more than one</small>
                 </div>
                 <div class="col-sm-0">
-                  <button type="submit" class="btn btn-info" id="createContinuousTracking">Create</button>
+                  <button type="submit" class="btn btn-info mt-2" id="ContinuousTrackingCreate">Create</button></form>&nbsp;<button type="button" class="btn btn-danger mt-2" id="CancelContinuousTrackingCreate">Cancel</button>
                 </div>
               </div>
             </div>
-          </form>
           <br />
         </div>
 
@@ -102,6 +101,9 @@
 <script>
   $('#createContinuousTracking').click(function(){
      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+  });
+  $('#CancelContinuousTrackingCreate').click(function(){
+     $('#addLine').collapse('hide');
   });
 </script>
 {% end %}

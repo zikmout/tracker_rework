@@ -53,13 +53,15 @@
                         </div>
                     </li>
                     {% end %}
-                    {% if hasattr(handler, 'session') and handler.session != {} and 'is_admin' in handler.session and handler.session['is_admin'] is True and handler.session['is_simplified'] is False %}
+                    {% if hasattr(handler, 'session') and handler.session != {} and 'is_admin' in handler.session and handler.session['is_admin'] is True %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Admin</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item" href="{{ reverse_url('users_list') }}">Users</a>
-                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/revoke-all">Revoke all tasks</a>
-                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/delete-all">Delete all queues</a>
+                            {% if 'current_project' in handler.session %}
+                                <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/revoke-all">Revoke all tasks</a>
+                                <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/delete-all">Delete all queues</a>
+                            {% end %}
                         </div>
                     </li>
                     {% end %}
@@ -76,7 +78,7 @@
                 </form>
             </div>
         </nav>
-        {% if hasattr(handler, 'session') and 'units' in handler.session %}
+        {% if hasattr(handler, 'session') and 'units' in handler.session and 'current_project' in handler.session %}
 
         <nav class="navbar navbar-expand-md bg-white box-shadow py-0 custom-toggler" style="padding-top: 15px;">
             <a class="navbar-brand" onmouseover="this.style.color='#343a40'" onmouseout="this.style.color='#343a40'" style="font-size:0.9rem; color: #343a40;" href="#"><b>{{ handler.session['current_project'] }}</b></a>

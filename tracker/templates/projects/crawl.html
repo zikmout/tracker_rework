@@ -3,8 +3,9 @@
 <div class="starter-template-fluid">
       <script src="{{ static_url('jquery.min.js') }}"></script>
       <link href="{{ static_url('font-awesome-4.7.0/css/font-awesome.css') }}" rel="stylesheet">
-      <center><h3>Project {{ handler.session['current_project'] }} - Crawl</h3></center>
-      <center><p>User can here crawl websites in order to map websites.</p><br></center>
+      <br>
+      <h3>Project {{ handler.session['current_project'] }} - Crawl</h3>
+      <small class="form-text text-muted"><p>User can here crawl websites in order to map websites.</p></small>
                   
       <script>
       var ws = new WebSocket("ws://localhost:5567/websocket");
@@ -67,9 +68,9 @@
       };
       timeout()
       </script>
-        <a href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/stop_task/all" class="btn btn-secondary">Stop All</a></input>
+        <a href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/stop_task/all" class="btn btn-dark btn-sm">Stop All</a></input>
 
-        <button type="submit" class="btn btn-secondary" form="allTable">Crawl Selected
+        <button type="submit" class="btn btn-dark btn-sm" form="allTable">Crawl Selected
         <form method="post" id="allTable" action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl/create_task"></button>
         <br><br>
         <h4>Number of units currently crawled : <font color="red">{{ escape(str(nb_crawled)) }}</font>

@@ -61,7 +61,7 @@
                             {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl">Crawler</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download">Downloader</a>
-                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content">Content</a>
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/spider">Spider</a>
                             {% end %}
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Manage Alerts</a>
                             <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/view">Live View</a>

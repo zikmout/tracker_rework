@@ -1,6 +1,7 @@
 import tornado
 from tornado import gen
 from math import isnan
+import json
 import time
 from tracker.views.base import BaseView
 from tracker.models import User, Content
@@ -21,8 +22,8 @@ class UserProjectDeleteContent(BaseView):
         content_to_delete = project.contents.filter_by(id=int(self.args['contentIdToDelete'])).first()
         self.request_db.delete(content_to_delete)
         self.request_db.commit()
-        flash_message(self, 'success', 'Content \'{}\' successfuly deleted.'.format(content_to_delete.name))
-        self.redirect('/api/v1/users/{}/projects/{}/content'.format(username, projectname))
+        flash_message(self, 'success', 'Spider \'{}\' successfuly deleted.'.format(content_to_delete.name))
+        self.redirect('/api/v1/users/{}/projects/{}/spider'.format(username, projectname))
 
 class UserProjectContent(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
@@ -75,11 +76,109 @@ class UserProjectContent(BaseView):
             flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(data['name']))
             self.write(json_response('error', None, '{}'.format(e)))
 
+
+class UserProjectSpider(BaseView):
+    SUPPORTED_METHODS = ['GET', 'POST']
+    @login_required
+    @gen.coroutine
+    def get(self, username, projectname):
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        json_project = project.as_dict()
+        # rproject = RProject(project.name, project.data_path, project.config_file)
+        # rproject._load_units_from_data_path()
+        # formated_units = get_formated_units(rproject.units)
+        # for now, formated_units is desactivated because loading is too big
+        formated_units = {}
+        if 'units' in self.session:
+            units = self.session['units']
+        if units is None or units == {}:
+            flash_message(self, 'danger', 'No sources in watchlist {}.'.format(projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            return
+        else:
+            try:
+                rproject = RProject(project.name, project.data_path, project.config_file)
+                rproject._load_units_from_excel()
+                rproject._load_tracking_config_excel()
+            #units = rproject.units_stats(units=rproject.filter_units())
+            except Exception as e:
+                print('[ERROR] UserProjectSpider : {}'.format(e))
+                flash_message(self, 'danger', 'Problem while loading watchlist {}. Check DB.'.format(project.name))
+                self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+                return
+            contents = project.contents.all()
+            json_contents = [_.as_dict() for _ in contents]
+            self.render('projects/content/spider.html', formated_units=formated_units, contents=json_contents,\
+                project=json_project, lines=rproject.lines.copy())
+
+    @login_required
+    @gen.coroutine
+    def post(self, username, projectname):
+        self.set_header("Content-Type", 'application/json; charset="utf-8"')
+        
+        print('POST received, links are = {}'.format(self.args))
+        
+        links = dict()
+        for obj in json.loads(self.args['content']):
+            links[obj['target']] = obj['keywords']
+
+        content = json.loads(self.args['content'])
+        mails_set = set()
+        for c in content:
+            print('M = >> {}'.format(c))
+            if c['mailing_list'] == '':
+                continue;
+            else:
+                for s in c['mailing_list']:
+                    mails_set.add(s)
+
+        mails_content = dict()
+        for mail in mails_set:
+            mails_content[mail] = list()
+
+        for c in content:
+            for mail in mails_set:
+                if c['mailing_list'] != '' and mail in c['mailing_list']:
+                    mails_content[mail].append(c['target'])
+
+        # print('mails after = {}'.format(mails_content))
+        # print('\nlinks after : {}'.format(links))
+        # print('SPIDER NAME = {}'.format(self.args['spidername']))
+        # self.write(json_response('error', None, '{}'.format(e)))
+        try:
+            user = self.request_db.query(User).filter_by(username=username).first()
+            project = user.projects.filter_by(name=projectname).first()
+            new_content = Content(self.args['spidername'], links, mails_content)
+            project.contents.append(new_content)
+            self.request_db.add(project)
+            self.request_db.commit()
+            flash_message(self, 'success', 'Spider {} successfully created.'.format(self.args['spidername']))
+            self.write('OK')
+        except Exception as e:
+            print('Error recording spider in DB : {}'.format(e))
+            flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(self.args['spidername']))
+            self.write('{}'.format(e))
+
+
 class UserProjectContentFromFile(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
     @gen.coroutine
     def post(self, username, projectname):
+        """
+        When recording Content, this is how links and mailing_list look like ^^
+        links : {'https://www.iliad.fr/fr/finances/2019': ['transactions sur actions propres'], \
+        'https://www.schneider-electric.com/en/about-us/investor-relations/regulatory-information/share-buyback.jsp': \
+        ['trading in own shares'], 'https://divitarot.com/fr/resultat.php': ['je'], ...}
+
+        mailing_list : {'https://www.iliad.fr/fr/finances/2019': 'simon@electricity.ai',\
+        'https://www.schneider-electric.com/en/about-us/investor-relations/regulatory-information/share-buyback.jsp': nan,\
+        'https://divitarot.com/fr/resultat.php': 'simon@electricity.ai;sicsim64@gmail.com',\
+        'https://www.thalesgroup.com/fr/investor/publications/publications-et-communiques': 'simon@electricity.ai',\
+        'https://www.loreal-finance.com/fr/operation-titres-declarations-programme-rachats-actions': 'simon@electricity.ai',\
+        'http://www.spie.com/en/finance/regulated-information': 'simon@electricity.ai'}
+        """
         args = { k: self.get_argument(k) for k in self.request.arguments }
         print('Received args = {}'.format(args))
         add_stranger = False
@@ -112,9 +211,9 @@ class UserProjectContentFromFile(BaseView):
             self.request_db.add(project)
             self.request_db.commit()
             flash_message(self, 'success', 'Content {} successfully created.({}/{} links needed to crawled)'.format(args['inputName'], idx, len(links)))
-            self.redirect('/api/v1/users/{}/projects/{}/content'.format(username, projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/spider'.format(username, projectname))
         except Exception as e:
             print('ERROR -> {}'.format(e))
             flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(args['inputName']))
-            self.redirect('/api/v1/users/{}/projects/{}/content'.format(username, projectname))
+            self.redirect('/api/v1/users/{}/projects/{}/spider'.format(username, projectname))
 

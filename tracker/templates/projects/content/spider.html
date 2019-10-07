@@ -1,0 +1,422 @@
+{% extends '../../layout.html' %}
+{% block content %}
+
+<link href="{{ static_url('hummingbird-treeview.css') }}" rel="stylesheet">
+<link href="{{ static_url('font-awesome-4.7.0/css/font-awesome.css') }}" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+<div class="starter-template-fluid">
+
+        <center><h3>Project {{ handler.session['current_project'] }} - Create spider</h3></center>
+
+        <!-- <div class='row'>
+          <div class='col'>
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#createalert" aria-expanded="false" aria-controls="createalert">
+              Create content from file
+            </button>&nbsp;&nbsp;
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target="#treelookup" aria-expanded="false" aria-controls="treelookup">
+              Create content from tree
+            </button>
+          </div>
+
+          <div class='col-10'>
+            <p>Pinpoint here content you are interested in and give it a name to later launch alerts on it and monitor what has changed.</p>
+          </div>
+        </div> -->
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+  <li class="nav-item">
+    <a class="nav-link" id="spidertree-tab" data-toggle="tab" href="#spidertree" role="tab" aria-controls="spidertree" aria-selected="false">From tree</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="spiderfile-tab" data-toggle="tab" href="#spiderfile" role="tab" aria-controls="spiderfile" aria-selected="false">From file</a>
+  </li>
+  {% end %}
+  <li class="nav-item">
+    <a class="nav-link active" id="spiderwatchlist-tab" data-toggle="tab" href="#spiderwatchlist" role="tab" aria-controls="spiderwatchlist" aria-selected="true">From watchlist</a>
+  </li>
+</ul>
+
+
+
+<div class="tab-content" id="myTabContent">
+  <br />
+  {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+  <div class="tab-pane fade" id="spidertree" role="tabpanel" aria-labelledby="spidertree-tab">
+    
+    <div class="card card-body">
+
+        <div class="form-group">
+
+            <label for="contentname">Label Name</label>
+            <input type="email" class="form-control" id="contentname" aria-describedby="emailHelp" placeholder="Enter name for content">
+            <small id="emailHelp" class="form-text text-muted">Use a label that easily identifies the content you selected.</small>
+
+        </div>
+
+        <input type="button" value="Classify Content from tree" id="get_checked" class="btn btn-info col-lg-2">
+        <br>
+        <br>
+
+        {% if formated_units == {} %}
+
+        <center><p><font color="red">There are no unit crawled yet ! Or tree section has been desactivated ... :/</font></p></center>
+
+        {% else %}
+
+
+        <div id="accordion">
+
+            {% for uid, details in handler.session['units'].items() %}
+
+                {% if details['is_base_crawled'] == True %}
+
+
+                    <div class="card">
+
+                      {% for k, v in details.items() %}
+
+                          {% if k == 'url' %}
+
+                              <div class="card-header" id="heading{{ escape(uid) }}">
+                                  <h5 class="mb-0">
+                                      <button class="btn btn-link collapsed" data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{ escape(uid) }}" aria-expanded="false" aria-controls="collapse{{ escape(uid) }}"><a class="text-secondary">
+                                        {{ escape(str(v)) }}</a>
+                                      </button>
+                                  </h5>
+                              </div>
+
+                              <div id="collapse{{ escape(uid) }}" class="collapse" aria-labelledby="heading{{ escape(uid) }}" data-parent="#accordion">
+                                  <div class="card-body" id="treeview{{ escape(uid) }}">
+
+                                      <div class="hummingbird-treeview-converter" data-height="600px" data-scroll="true">
+                                          {% for _ in formated_units[escape(str(v))] %}
+                                              <li id="item" data-id="{{ escape(str(v)) }}{{ escape(str(_[1])) }}">{{ escape(str(_[0])) }}</li>
+                                          {% end %}
+                                      </div>
+
+                                  </div>
+                              </div>
+
+                          {% end %}
+
+                      {% end %}
+
+                    </div>
+
+
+                {% end %}
+
+            {% end %}
+
+        </div>
+
+        {% end %}
+    </div>
+
+  </div>
+  
+
+  <div class="tab-pane fade" id="spiderfile" role="tabpanel" aria-labelledby="spiderfile-tab">
+
+    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content-from-file" method="post">
+
+    <div class="card card-body">
+        
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputName">Name</label>
+                <input type="text" class="form-control" id="inputName" name="inputName" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputName">Column link name</label>
+                <input type="text" class="form-control" id="columnLinkName" name="columnLinkName" value="target" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputName">Column keyword name</label>
+                <input type="text" class="form-control" id="columnKeyWordName" name="columnKeyWordName" value="target_label" required>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputName">Column mailing list name</label>
+                <input type="text" class="form-control" id="columnMailingListName" name="columnMailingListName">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputName">File path (.xlsx)</label>
+                <input type="text" class="form-control" id="columnKeyWordName" name="fileNamePath" value="{{ handler.session['project_config_file'] }}">
+            </div>
+        </div>
+        <br />
+
+        <div class="form-group">
+            <div class="form-check">
+              <label class="form-check-label" for="addStrangerChecked">
+                <input class="form-check-input" type="checkbox" id="addStrangerChecked" name="addStrangerChecked" checked>
+              Put link in crawler logfile and download page if not found
+              </label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-info col-lg-2" id="createButton">Create</button>
+
+    </div>
+
+    </form>
+
+  </div>
+  {% end %}
+
+  <div class="tab-pane fade show active" id="spiderwatchlist" role="tabpanel" aria-labelledby="spiderwatchlist-tab">
+
+    
+    {% if lines is not None and handler.session['units'] is not None %}
+    <button class="btn btn-danger btn-sm" id="showSelectedTargets" data-toggle="modal" data-target="#exampleModal">Show selected</button>&nbsp;<button class="btn btn-dark btn-sm" id="selectAll">(Un)select all</button><br><br />
+        <table id="spiderFromWatchlistTable" class="table table-sm table-striped table-bordered" style="width:100%">
+          <thead>
+              <tr>
+                <th>Name</th>
+                {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+                <!-- <th>Target domain</th> -->
+                {% end %}
+                <th>Target URL</th>
+                <th>Keywords</th>
+                <th>Email recipients</th>
+                <th>Select</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for line in lines %}
+              <tr>
+                  <td style="vertical-align:middle;">{{ line['name'] }}</td>
+                  {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
+                  <!-- <td style="vertical-align:middle;">{{ line['website'][7:35] }} ...</td> -->
+                  {% end %}
+                  <td style="vertical-align:middle;">... {{ line['target'][-30:] }}</td>
+                  <td style="vertical-align:middle;">{{ line['keywords'] }}</td>
+                  <td style="vertical-align:middle;">{{ line['mailing_list'] }}</td>
+                  <td style="vertical-align:middle;">
+                    <div class="form-group">
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="{{ line['target'] }}" name="selectedTarget" style="transform: scale(1.5); margin-top:0; position:relative" checked>
+                        </div>
+                      </div>
+                  </td>
+              </tr>
+              {% end %}
+          </tbody>
+        </table>
+        {% else %}
+        No website in watchlist yet. You must add websites before creating spider.
+        {% end %}   
+    <!-- <form action="/api/v1/users/{{ handler.session['username'] }}/continuous-tracking-create" method="post" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label for="ProjectName" id="ProjectName">Watchlist name</label>
+        <input type="text" class="form-control col-md-6" name="ProjectName" placeholder="Enter watchlist name" required>
+      </div>
+
+        <input type="submit" id="longLoad" class="btn btn-info" value="Create" />
+    </form> -->
+
+  </div>
+
+</div>
+
+
+</div>
+<br>
+<hr>
+<br>
+  
+  {% if contents is not None %}
+    <table class="table table-sm">
+      <thead class="thead-light">
+          <tr>
+            <th>Name</th>
+            <th>Nb of target</th>
+            <th>Mailing list</th>
+            <th></th>
+            <th></th>
+          </tr>
+      </thead>
+      <tbody>
+          {% for content in contents %}
+          <tr>
+              <td style="vertical-align:middle;">{{ content['name'] }}</td>
+              <td style="vertical-align:middle;">{{ len(content['links']) }}</td>
+              <td style="vertical-align:middle;">{% if content['mailing_list'] is None %}No{% else %}Yes{% end %}</td>
+              <td style="vertical-align:middle;">
+                <form action="#" method="post" class="form-horizontal"><button type="button" class="btn btn-info btn-sm disabled" value="{{ content['id'] }}" name="editContentId">Edit</button></input></form>
+              </td>
+              <td style="vertical-align:middle;">
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content-delete" method="post" class="form-horizontal"><input type="hidden" value="{{ content['id'] }}" name="contentIdToDelete"><button type="submit" class="btn btn-danger btn-sm" value="{{ content['id'] }}" name="contentIdToDelete">Delete</button></input></form>
+              </td>
+          </tr>
+          {% end %}
+      </tbody>
+    </table>
+  {% else %}
+    No content yet. Create one from above buttons.
+  {% end %}
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Selected target URLs</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="fillSelectedTargets"></div>
+      </div>
+      <div class="modal-footer">
+        Name :&nbsp;<input type="text" class="form-control col-lg-4" id="spiderName" value=""></input>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="saveSpider">Create spider</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% end %}
+{% block script %}
+<script src="{{ static_url('hummingbird-treeview.js') }}"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+
+<script>
+  
+$(document).ready(function(){
+
+      // get all selectedTargets
+      $('#showSelectedTargets').click(function(){
+        var favorites = [];
+        $.each($("input[name='selectedTarget']:checked"), function() {
+          favorites.push($(this).val());
+        });
+        $('#fillSelectedTargets').empty();
+        $.each(favorites, function(index, value) {
+          $('#fillSelectedTargets').append('<p><a href=' + value + ' target="_blank">' + value + '</a></p>');
+        })
+        $('#fillSelectedTargets').append('<p><b>Total : ' + favorites.length + '</b></p>');
+      });
+
+      $('#saveSpider').click(function() {
+        var favoritesURL = [];
+        $.each($("input[name='selectedTarget']:checked"), function() {
+          favoritesURL.push($(this).val());
+        });
+        var FullURLS = {% raw lines %};
+        //console.log('full urls : ');
+        //console.log(FullURLS);
+        var spiderName = $('#spiderName').val();
+        if (spiderName == '') {
+          alert('Please enter a name for your spider.');
+          return
+        }
+
+        var favoritesFull = [];
+        var i;
+        var j;
+        for(i = 0; i < FullURLS.length; i++) {
+          for (j = 0; j < favoritesURL.length; j++) {
+            if (FullURLS[i]['target'] == favoritesURL[j]) {
+              favoritesFull.push({
+                "name" : FullURLS[i]['name'],
+                "website" : FullURLS[i]['website'],
+                "target": FullURLS[i]['target'],
+                "keywords": FullURLS[i]['keywords'],
+                "mailing_list": FullURLS[i]['mailing_list']
+              });
+              break;
+            }
+          }
+        }
+        $.ajax({
+          type: "POST",
+          url: "/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/spider",
+          data : {
+            spidername: spiderName,
+            content: JSON.stringify(favoritesFull)
+          },
+          success: function(response) {
+            console.log('SUCCESS : ' + response);
+            document.location.reload();
+          },
+          error: function(xhf) {
+            console.log('ERROR');
+            console.log(xhf);
+          }
+        });
+
+      });
+
+    $('#selectAll').click(function() {
+      $.each($("input[name='selectedTarget']"), function() {
+        if ($(this).is(":checked")) {
+          $(this).prop("checked", false);
+        }
+        else {
+          $(this).prop("checked", true);
+        }
+      });
+    })
+    // load datatable
+    $('#spiderFromWatchlistTable').DataTable();
+
+    $("#get_checked").click(function () {
+        if (document.getElementById('contentname').value == '') {
+          alert('Please type in a name !')
+          return
+        }
+        var List = {"id" : [], "dataid" : [], "text" : []};
+        {% for uid in handler.session['units'] %}
+          $("#treeview{{ escape(uid) }}").hummingbird("getChecked",{list:List,onlyEndNodes:true});
+        {% end %}
+        if (List['dataid'] == '') {
+          alert('Please select links to monitor !')
+          return
+        }
+        console.log(JSON.stringify(List['dataid']))
+        console.log('Id of project : ' + document.getElementById('contentname').value)
+        $.ajax({ 
+            url: "/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/content",
+            data: JSON.stringify({
+                'name': document.getElementById('contentname').value,
+                'links': (List['dataid'])
+            }),
+            type: 'POST',
+            success: function() {
+                window.location.replace("/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts");
+            },
+            error: function() {
+                console.log('Error occured when making POST request to api.')
+            }
+        });
+    });
+
+    $.fn.hummingbird.defaults.checkDoubles= true;
+    $.fn.hummingbird.defaults.collapseAll= true;
+    //initializing
+    {% for uid in handler.session['units'] %}
+      $("#treeview{{ escape(uid) }}").hummingbird();
+    {% end %}
+});
+</script>
+<script>
+  $('#createButton').click(function(){
+     console.log($('#inputName').value);
+     if ($('#inputName').val()) {
+      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+     }
+  });
+</script>
+{% end %}

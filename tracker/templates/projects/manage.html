@@ -7,14 +7,14 @@
         <table class="table table-sm">
           <thead class="thead-light">
               <tr>
-                <th>Project Name</th>
+                <th>Watchlist Name</th>
                 {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                 <th>Data Path</th>
                 <th>Config Path</th>
                 {% end %}
                 <th>Creation Date</th>
                 {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
-                <th>From Excel</th>
+                <th>From DB</th>
                 {% end %}
                 <th>Action</th>
                 <th></th>

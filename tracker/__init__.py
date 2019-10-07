@@ -15,7 +15,8 @@ from tracker.views.user import UserListView, UserDelete, UserUnitView, UserUnitE
 from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 from tracker.views.mail import UserProjectSendMail
 from tracker.views.tasks import RevokeLiveTasks, DeleteTaskQueues
-from tracker.views.content import UserProjectContent, UserProjectContentFromFile, UserProjectDeleteContent
+from tracker.views.content import UserProjectContent, UserProjectContentFromFile, UserProjectDeleteContent,\
+UserProjectSpider
 from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView,\
  UserProjectDelete, FastProjectCreateView
 from tracker.views.continuous_tracking import ContinuousTrackingCreateView, UserProjectWebsitesView,\
@@ -66,6 +67,7 @@ def main():
 
             # tracker.views.content.py
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content', UserProjectContent),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/spider', UserProjectSpider),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-delete', UserProjectDeleteContent),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/content-from-file', UserProjectContentFromFile),
 

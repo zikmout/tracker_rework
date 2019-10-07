@@ -53,6 +53,16 @@
                         </div>
                     </li>
                     {% end %}
+                    {% if hasattr(handler, 'session') and handler.session != {} and 'is_admin' in handler.session and handler.session['is_admin'] is True and handler.session['is_simplified'] is False %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Admin</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown01">
+                            <a class="dropdown-item" href="{{ reverse_url('users_list') }}">Users</a>
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/revoke-all">Revoke all tasks</a>
+                            <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/delete-all">Delete all queues</a>
+                        </div>
+                    </li>
+                    {% end %}
                 </ul>
                 {% if hasattr(handler, 'session') and 'is_simplified' in handler.session %}
                 <form class="form-inline my-2 my-lg-0">

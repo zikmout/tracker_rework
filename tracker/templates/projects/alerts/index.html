@@ -33,7 +33,7 @@
       <div class="form-row">
 
           <div class="form-group col-md-3">
-            <label for="inputName">Name</label>
+            <label for="inputName">Alert name</label>
             <input type="text" class="form-control" id="inputName" name="inputName" required>
           </div>
 
@@ -84,9 +84,9 @@
 
                 <div class="col-md-4">
                   <select id="inputRepeat" class="form-control" name="inputRepeat">
-                    <option value="SECONDLY" selected>second</option>
+                    <option value="SECONDLY">second</option>
                     <option value="MINUTELY">minute</option>
-                    <option value="HOURLY">hour</option>
+                    <option value="HOURLY" selected>hour</option>
                     <option value="DAILY">day</option>
                     <option value="WEEKLY">week</option>
                     <option value="MONTHLY">month</option>
@@ -168,6 +168,7 @@
 
       </div>
 
+      {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
       <div class="form-group">
         <div class="form-check">
           
@@ -177,6 +178,9 @@
           </label>
         </div>
       </div>
+      {% else %}
+        <input class="form-check-input" type="hidden" id="gridCheck" name="gridCheck">
+      {% end %}
 
       <div class="col-sm-0">
       <button type="submit" class="btn btn-info">Create</button>&nbsp;<button type="button" class="btn btn-danger" id="CancelButton">Cancel</button>
@@ -221,7 +225,9 @@
         <th scope="col" style="vertical-align:middle;">End</th>
         {% end %}
         <th scope="col" style="vertical-align:middle;">Schedule</th>
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <th scope="col" style="vertical-align:middle;">Email</th>
+        {% end %}
         <th scope="col" style="vertical-align:middle;">Template</th>
         {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <th scope="col" style="vertical-align:middle;">Status</th>
@@ -268,6 +274,7 @@
           <td style="vertical-align:middle;">Days:{{ alert['days_of_week'] }} at {{ alert['repeat_at'] }}</td>
         {% end %}
 
+        {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <td style="vertical-align:middle;">
           {% if alert['email_notify'] is False %}
             yes
@@ -275,6 +282,7 @@
             no
           {% end %}
         </td>
+        {% end %}
         <td style="vertical-align:middle;">{{ alert['template_type'] }}</td>
         {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <td style="vertical-align:middle;">

@@ -79,8 +79,22 @@
                   <td style="vertical-align:middle;">{{ line['website'][7:35] }} ...</td>
                   {% end %}
                   <td style="vertical-align:middle;">... {{ line['target'][-30:] }}</td>
-                  <td style="vertical-align:middle;">{{ line['keywords'] }}</td>
-                  <td style="vertical-align:middle;">{{ line['mailing_list'] }}</td>
+                  <td style="vertical-align:middle;">
+                    {% if len(line['keywords']) > 0 %}
+                      {{ line['keywords'][0] }}{% if len(line['keywords']) > 1 %} ... {% end %}
+                      <div class="float-right"><span class="badge badge-pill badge-info" data-placement="bottom" data-toggle="tooltip" data-html="true" title="{% for kw in line['keywords'] %}<em>'{{ kw }}'</em><br>{% end %}">{{ str(len(line['keywords'])) }}</span>&nbsp;&nbsp;</div>
+                    {% else %}
+                      -
+                    {% end %}
+                  </td>
+                  <td style="vertical-align:middle;">
+                    {% if len(line['mailing_list']) > 0 %}
+                      {{ line['mailing_list'][0] }}{% if len(line['mailing_list']) > 1 %} ... {% end %}
+                      <div class="float-right"><span class="badge badge-pill badge-info" data-placement="bottom" data-toggle="tooltip" data-html="true" title="{% for ml in line['mailing_list'] %}<em>'{{ ml }}'</em><br>{% end %}">{{ str(len(line['mailing_list'])) }}</span>&nbsp;&nbsp;</div>
+                    {% else %}
+                      -
+                    {% end %}
+                  </td>
                   <td style="vertical-align:middle;">
                     <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(project['name']) }}/unit-edit" method="post" class="form-horizontal"><button type="submit" class="btn btn-info btn-sm" value="{{ line['target'] }}" name="editUnitName">Edit</button></input></form>
                   </td>
@@ -99,6 +113,12 @@
 {% end %}
 {% block script %}
 <script>
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+</script>
+<script>
+
   $('#createContinuousTracking').click(function(){
      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
   });

@@ -60,7 +60,7 @@ class BaseView(RequestHandler):
         if hasattr(self, 'session'):
             # print('REQUEST = {}'.format(self.request))
             self.session['current_page'] = self.request.uri
-            print('\nSESSION = {}'.format(self.session))
+            #print('\nSESSION = {}'.format(self.session))
 
     def on_finish(self):
         if hasattr(self, 'request_db'):

@@ -227,6 +227,13 @@ class AlertLaunch(BaseView):
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
             return
 
+        if entry.is_due()[1] is None:
+            #delete entry that does not want to start
+            entry.delete()
+            flash_message(self, 'danger', 'Unable to start alert. Check if start date is greater than now.')
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            return
+
         # Update DB state
         alert.launched = True
         self.request_db.commit()

@@ -120,6 +120,9 @@ def designed_mail_sbb(task_results, mailing_list):
 
 	for receiver_email, targets in mailing_list.items():
 		designed_task_results = [k for k in task_results if k['url'] in targets]
+		# If no change observed, no need to send mail
+		if len(designed_task_results) == 0:
+			continue;
 
 		html = """\
 		<html>
@@ -219,6 +222,9 @@ def generic_mail_template(task_results, mailing_list, task_name, show_links=True
 
 	for receiver_email, targets in mailing_list.items():
 		designed_task_results = [k for k in task_results if k['url'] in targets]
+		# If no change observed, no need to send mail
+		if len(designed_task_results) == 0:
+			continue;
 
 		html = """\
 		<html>

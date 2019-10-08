@@ -529,6 +529,9 @@ class RProject:
                 continue;
             if isinstance(m, float) and ';' not in str(m):
                 mails_set.add(str(m))
+            elif isinstance(m, list):
+                for s in m:
+                    mails_set.add(s)
             else:
                 for s in m.split(';'):
                     mails_set.add(s)

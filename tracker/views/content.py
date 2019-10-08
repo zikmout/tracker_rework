@@ -119,28 +119,32 @@ class UserProjectSpider(BaseView):
         
         print('POST received, links are = {}'.format(self.args))
         
+        content = json.loads(self.args['content'])
         links = dict()
-        for obj in json.loads(self.args['content']):
+        for obj in content:
             links[obj['target']] = obj['keywords']
 
-        content = json.loads(self.args['content'])
-        mails_set = set()
-        for c in content:
-            print('M = >> {}'.format(c))
-            if c['mailing_list'] == '':
-                continue;
-            else:
-                for s in c['mailing_list']:
-                    mails_set.add(s)
+        
+        mailing_list = dict()
+        for obj in content:
+            mailing_list[obj['target']] = obj['mailing_list']
+        # mails_set = set()
+        # for c in content:
+        #     print('M = >> {}'.format(c))
+        #     if c['mailing_list'] == '':
+        #         continue;
+        #     else:
+        #         for s in c['mailing_list']:
+        #             mails_set.add(s)
 
-        mails_content = dict()
-        for mail in mails_set:
-            mails_content[mail] = list()
+        # mails_content = dict()
+        # for mail in mails_set:
+        #     mails_content[mail] = list()
 
-        for c in content:
-            for mail in mails_set:
-                if c['mailing_list'] != '' and mail in c['mailing_list']:
-                    mails_content[mail].append(c['target'])
+        # for c in content:
+        #     for mail in mails_set:
+        #         if c['mailing_list'] != '' and mail in c['mailing_list']:
+        #             mails_content[mail].append(c['target'])
 
         # print('mails after = {}'.format(mails_content))
         # print('\nlinks after : {}'.format(links))
@@ -149,16 +153,16 @@ class UserProjectSpider(BaseView):
         try:
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
-            new_content = Content(self.args['spidername'], links, mails_content)
+            new_content = Content(self.args['spidername'], links, mailing_list)
             project.contents.append(new_content)
             self.request_db.add(project)
             self.request_db.commit()
             flash_message(self, 'success', 'Spider {} successfully created.'.format(self.args['spidername']))
-            self.write('OK')
+            self.write(json.dumps({'message' : 'OK'}))
         except Exception as e:
             print('Error recording spider in DB : {}'.format(e))
-            flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(self.args['spidername']))
-            self.write('{}'.format(e))
+            flash_message(self, 'danger', 'Spider {} failed. Check DB.'.format(self.args['spidername']))
+            self.write(json.dumps({'message' : '{}'.format(e)}))
 
 
 class UserProjectContentFromFile(BaseView):

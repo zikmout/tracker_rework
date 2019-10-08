@@ -291,7 +291,7 @@ def sbb_end_routine(self, task_results, mails):#, soft_time_limit=120):
         print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
         designed_mail_sbb(task_results, mails)
-        print('- Mails successfully sent -')
+        print('- Mails successfully sent if any changed noticed -')
 
 @app.task(bind=True)
 def share_buy_back_task(self, add, mails):
@@ -324,7 +324,7 @@ def diff_end_routine(self, task_results, mails):#, soft_time_limit=120):
         print("DIFF MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
         generic_mail_template(task_results, mails, 'diff task', show_links=True)
-        print('- Mails successfully sent -')
+        print('- Mails successfully sent if any changed noticed -')
 
 @app.task(bind=True)
 def diff_task(self, add, mails):
@@ -360,7 +360,7 @@ def diff_with_keywords_end_routine(self, task_results, mails):#, soft_time_limit
         print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
         generic_mail_template(task_results, mails, 'diff with keywords task', show_links=True)
-        print('- Mails successfully sent -')
+        print('- Mails successfully sent if any changed noticed -')
     print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
 
 @app.task(bind=True)

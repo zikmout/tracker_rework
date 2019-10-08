@@ -348,11 +348,9 @@ $(document).ready(function(){
             content: JSON.stringify(favoritesFull)
           },
           success: function(response) {
-            //console.log('SUCCESS : ' + response);
             document.location.reload();
           },
           error: function(xhf) {
-            //console.log('ERROR');
             console.log(xhf);
           }
         });

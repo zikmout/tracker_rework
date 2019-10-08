@@ -1,5 +1,6 @@
 import os
 import tornado
+from tornado import gen
 import time
 from tracker.views.base import BaseView
 from tracker.utils import flash_message, login_required, get_url_from_id, get_id_from_url
@@ -11,6 +12,7 @@ from tracker.core.rproject import RProject
 class UserProjectCrawlView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self, username, projectname):
         if 'units' in self.session:
             units = self.session['units']
@@ -33,6 +35,7 @@ class UserProjectCrawlView(BaseView):
 
 class UserCrawlsCreate(BaseView):
     @login_required
+    @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
         units_url_to_crawl = dict()
@@ -78,6 +81,7 @@ class UserCrawlsCreate(BaseView):
 class UserCrawlStop(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self, username, projectname, task_id):
         if task_id == 'all':
             print('STOPPING ALL TASKS')
@@ -102,6 +106,7 @@ class UserCrawlStop(BaseView):
 class UserCrawlDeleteLogfile(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self, username, projectname, uid):
         units = self.session['units'].copy()
         url = get_url_from_id(units, uid)
@@ -123,6 +128,7 @@ class UserCrawlDeleteLogfile(BaseView):
 class DeleteCrawlTaskFromSession(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self, username, projectname, uid):
         # maybe change the command here to delete task from queue
         # because task should be already terminated

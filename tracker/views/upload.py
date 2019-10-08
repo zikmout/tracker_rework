@@ -3,10 +3,12 @@ import random
 import string
 import pandas as pd
 import tornado
+from tornado import gen
 from tracker.views.base import BaseView
 from tracker.utils import flash_message, login_required
 
 class UploadHandler(BaseView):
+    @gen.coroutine
     def post(self):
         #print('self.request.files = {}'.format(self.request.files))
         file1 = self.request.files['file1'][0]

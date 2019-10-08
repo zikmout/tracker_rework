@@ -88,11 +88,13 @@ class BaseView(RequestHandler):
 
 class HomePage(BaseView):
     SUPPORTED_METHODS = ['GET']
+    @gen.coroutine
     def get(self):
         self.render('index.html')
 
 class BlankPage(BaseView):
     SUPPORTED_METHODS = ['GET']
+    @gen.coroutine
     def get(self):
         self.render('blank.html')
 

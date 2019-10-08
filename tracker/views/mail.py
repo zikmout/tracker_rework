@@ -10,6 +10,7 @@ from tracker.workers.live.live_view_worker import live_view
 class UserProjectSendMail(BaseView):
 	SUPPORTED_METHOD = ['POST']
 	@login_required
+	@gen.coroutine
 	def post(self, username, projectname):
 		"""
 		{

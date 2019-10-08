@@ -1,3 +1,4 @@
+from tornado import gen
 from tracker.views.base import BaseView
 from werkzeug import check_password_hash
 from tracker.utils import flash_message, login_required
@@ -10,9 +11,11 @@ from tracker.utils import revoke_all_tasks
 
 class AuthLoginView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
+    @gen.coroutine
     def get(self):
         self.render('auth/login.html')
 
+    @gen.coroutine
     def post(self):
         email = self.get_argument('email')
         password = self.get_argument('password')
@@ -33,12 +36,14 @@ class AuthLoginView(BaseView):
 
 class AuthRegisterView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
+    @gen.coroutine
     def get(self):
         if self.get_current_user() != None:
             flash_message(self, 'danger', 'Please log out before trying to register new user.')
             self.redirect('/')
         self.render('auth/register.html')
 
+    @gen.coroutine
     def post(self):
         username = self.get_argument('username')
         password = self.get_argument('password')
@@ -64,6 +69,7 @@ class AuthRegisterView(BaseView):
 class AuthLogoutView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self):
         # if session live view task present in session, delete them and revoke associated tasks
         if 'live_view' in self.session['tasks']:

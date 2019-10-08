@@ -10,6 +10,7 @@ class UserListView(BaseView):
     """View for reading and adding new roles."""
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self):
         """Get all tasks for an existing user."""
         username = self.get_current_user()
@@ -26,6 +27,8 @@ class UserListView(BaseView):
 
 class UserDelete(BaseView):
     SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
     def post(self, username):
         user = self.request_db.query(User).filter_by(username=username).first()
         if user:
@@ -42,6 +45,8 @@ class UserDelete(BaseView):
 
 class UserUnitView(BaseView):
     SUPPORTED_METHODS = ['GET']
+    @login_required
+    @gen.coroutine
     def get(self, username, projectname, uid):
         url = get_url_from_id(self.session['units'], uid)
         self.render('unit/index.html', url=url)
@@ -108,9 +113,3 @@ class AdminUserCreate(BaseView):
                 flash_message(self, 'danger', 'Username {} already exists or email {} already taken.'\
                     .format(args['inputUsername'][0], args['inputEmail'][0]))
         self.redirect('/api/v1/users_list')
-
-
-
-
-
-

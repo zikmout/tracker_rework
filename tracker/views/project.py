@@ -1,5 +1,6 @@
 import os
 import tornado
+from tornado import gen
 import json
 import datetime
 import time
@@ -16,6 +17,7 @@ from tracker.core.rproject import RProject
 class FastProjectCreateView(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
+    @gen.coroutine
     def post(self, username):
         file1 = self.request.files['file1'][0]
         fname = file1['filename'].replace(' ', '_')
@@ -74,10 +76,12 @@ class FastProjectCreateView(BaseView):
 class ProjectsCreateView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']
     @login_required
+    @gen.coroutine
     def get(self, username):
         self.render('projects/create.html')
 
     @login_required
+    @gen.coroutine
     def post(self, username):
         name = self.get_argument('ProjectName')
         data_path = self.get_argument('ProjectLocation')
@@ -101,6 +105,7 @@ class ProjectsCreateView(BaseView):
 class UserProjectListView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self, username):
         user = self.request_db.query(User).filter_by(username=username).first()
         user_projects_json = list()
@@ -112,6 +117,7 @@ class UserProjectListView(BaseView):
 class UserProjectView(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
+    @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
         # if box is checked, variable comes in like { "fromExcel": "on" }
@@ -165,6 +171,7 @@ class UserProjectView(BaseView):
 class UserProjectDelete(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
+    @gen.coroutine
     def post(self, username, projectname):
         #print('ARGS DELETE = {}'.format(self.args))
         user = self.request_db.query(User).filter_by(username=self.session['username']).first()

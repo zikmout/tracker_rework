@@ -22,6 +22,7 @@ from tracker.workers.live.live_view_worker import live_view
 class AlertView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self, username, projectname):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
@@ -61,6 +62,7 @@ class AlertView(BaseView):
 class AlertCreate(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
+    @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
         print('post args = {}'.format(args))
@@ -132,6 +134,7 @@ class AlertLaunch(BaseView):
     SUPPORTED_METHODS = ['POST']
 
     @login_required
+    @gen.coroutine
     def post(self, username, projectname, alertid):
         args = { k: self.get_argument(k) for k in self.request.arguments }
         print('args AlertLaunch => {}'.format(args))
@@ -281,6 +284,8 @@ class AlertStop(BaseView):
 
 class AlertDelete(BaseView):
     SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
     def post(self, username, projectname):
         #print('ARGS = {}'.format(self.form_data))
         content_name = self.get_argument('contentName')
@@ -304,6 +309,7 @@ class AlertDelete(BaseView):
 class AlertLiveView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self, username, projectname):
         if 'live_view' in self.session['tasks']:
             tasks  = self.session['tasks']['live_view'].copy()
@@ -314,6 +320,8 @@ class AlertLiveView(BaseView):
 
 class AlertLiveUpdate(BaseView):
     SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
         if 'fromPage' not in args:

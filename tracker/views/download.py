@@ -1,4 +1,5 @@
 import tornado
+from tornado import gen
 from tracker.views.base import BaseView
 from tracker.utils import flash_message, login_required, get_url_from_id, get_celery_task_state
 from tracker.models import User
@@ -7,6 +8,8 @@ from tracker.workers.download_worker import download_website
 
 class UserDownloadCreate(BaseView):
     SUPPORTED_METHOD = ['POST']
+    @login_required
+    @gen.coroutine
     def post(self, username, projectname, uid):
         # check if download already started
         task_exists = False
@@ -59,6 +62,8 @@ class UserDownloadStatus(BaseView):
         """Set the default response header to be JSON."""
         self.set_header("Content-Type", 'application/json; charset="utf-8"')
 
+    @login_required
+    @gen.coroutine
     def get(self, username, projectname, task_id):
         task = download_website.AsyncResult(task_id)
         print('Task backend = {}'.format(task.backend))
@@ -70,6 +75,7 @@ class UserDownloadStatus(BaseView):
 class UserDownloadStop(BaseView):
     SUPPORTED_METHODS = ['POST']
     @login_required
+    @gen.coroutine
     def post(self, username, projectname, uid):
         task_id = None
         if 'download' in self.session['tasks']:
@@ -101,6 +107,7 @@ class UserDownloadStop(BaseView):
 class UserProjectDownloadView(BaseView):
     SUPPORTED_METHODS = ['GET']
     @login_required
+    @gen.coroutine
     def get(self, username, projectname):
         if 'units' in self.session:
             units = self.session['units']

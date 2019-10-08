@@ -91,7 +91,7 @@
                         <a class="nav-link {% if '/websites-manage' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/websites-manage' in handler.session['current_page'] %}; color: #28a8b3;{% else %}{% end %}" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage">Edit Watchlist<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if '/alerts' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/alerts' in handler.session['current_page'] %}; color: #28a8b3;{% else %}{% end %}"  href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Manage Alerts<span class="sr-only">(current)</span></a>
+                        <a class="nav-link {% if '/alerts' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/alerts' in handler.session['current_page'] and not '/live' in handler.session['current_page'] %}; color: #28a8b3;{% else %}{% end %}"  href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Manage Alerts<span class="sr-only">(current)</span></a>
                     </li>
                     {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                     <li class="nav-item">

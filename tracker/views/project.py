@@ -20,8 +20,8 @@ class FastProjectCreateView(BaseView):
     @gen.coroutine
     def post(self, username):
         file1 = self.request.files['file1'][0]
-        fname = file1['filename'].replace(' ', '_')
-        project_name = file1['filename'].replace(' ', '_')#os.path.splitext(fname)[0]
+        fname = file1['filename'].replace(' ', '_').replace('.xlsx', '')
+        project_name = file1['filename'].replace(' ', '_').replace('.xlsx', '')#os.path.splitext(fname)[0]
         project_path = os.path.join(self.application.data_dir, project_name)
 
         if os.path.isdir(project_path):
@@ -32,7 +32,7 @@ class FastProjectCreateView(BaseView):
                 # creating project directory
                 os.mkdir(project_path)
                 # puting xlsx config file in it
-                config_path = os.path.join(project_path, 'config' + os.path.splitext(fname)[1])
+                config_path = os.path.join(project_path, 'config.xlsx')
                 with open(config_path, 'wb+') as fd:
                     fd.write(file1['body'])
 

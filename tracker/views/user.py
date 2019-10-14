@@ -79,6 +79,7 @@ class UserUnitEditView(BaseView):
         else:
             line['mailing_list'] = ''
         print('mailing_list = {}'.format(line['mailing_list']))
+        print('project config file : {}'.format(project.config_file))
         config_df_updated.to_excel(project.config_file, index=False)
         #line = config_df_updated.loc[config_df_updated['target'] == url].to_json()
         self.render('unit/edit.html', url=url, line=line)

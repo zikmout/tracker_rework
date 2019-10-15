@@ -5,7 +5,7 @@ from tornado import gen
 import re
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
-from tracker.utils import flash_message, login_required
+from tracker.utils import flash_message, login_required, is_project_name_well_formated
 import tracker.session as session
 from tracker.core.rproject import RProject
 
@@ -14,28 +14,39 @@ class ContinuousTrackingCreateView(BaseView):
     @login_required
     @gen.coroutine
     def post(self, username):
-        project_name = self.get_argument('ProjectName')
-        project_name = project_name.replace(' ', '_')#.replace('.xlsx', '') 
-        project_path = os.path.join(self.application.data_dir, project_name)
-        print('project name = {}, project path = {}'.format(project_name, project_path))
+        try:
+            project_name = self.get_argument('ProjectName')
+            project_name = project_name
+            project_name = '_'.join(re.split(r"\s+", project_name.strip()))
+            
+            project_path = os.path.join(self.application.data_dir, project_name)
+            if not is_project_name_well_formated(project_name):
+                flash_message(self, 'danger', 'Error creating watchlist. Please use only spaces or alphanumeric characters.')
+                self.redirect('/api/v1/users/{}/project_create'.format(self.session['username']))
+                return
+            
+            print('project name = {}, project path = {}'.format(project_name, project_path))
+            # check whether project with similar name exist on computer
+            if os.path.exists(project_path):
+                flash_message(self, 'danger', '\'{}\' project name already exists. Please choose a different name.'\
+                    .format(project_name))
+                self.redirect('/api/v1/users/admin/project_create')
+                return
 
-        # check whether project with similar name exist on computer
-        if os.path.exists(project_path):
-            flash_message(self, 'danger', '\'{}\' project name already exists. Please choose a different name.'\
+            config_path = os.path.join(project_path, 'config.xlsx')
+            user = self.request_db.query(User).filter_by(username=username).first()
+            new_project = Project(project_name, self.application.data_dir, config_path)
+            user.projects.append(new_project)
+            self.request_db.add(user)
+            self.request_db.commit()
+
+            flash_message(self, 'success', 'Watchlist \'{}\' successfully created.'\
                 .format(project_name))
-            self.redirect('/api/v1/users/admin/project_create')
-            return
-
-        config_path = os.path.join(project_path, 'config.xlsx')
-        user = self.request_db.query(User).filter_by(username=username).first()
-        new_project = Project(project_name, self.application.data_dir, config_path)
-        user.projects.append(new_project)
-        self.request_db.add(user)
-        self.request_db.commit()
-
-        flash_message(self, 'success', 'Watchlist \'{}\' successfully created.'\
-            .format(project_name))
-        self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+        except Exception as e:
+            flash_message(self, 'danger', 'Error creating watchlist, please contact admin for further details.')
+            print('Error creating watchlist : {}'.format(e))
+            self.redirect('/api/v1/users/{}/project_create'.format(self.session['username']))
 
 class UserProjectWebsitesView(BaseView):
     SUPPORTED_METHODS = ['GET']

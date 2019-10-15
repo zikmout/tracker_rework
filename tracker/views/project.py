@@ -9,7 +9,7 @@ import shutil
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, get_url_from_id, json_response,\
-replace_mix_option_with_all_existing_keywords
+replace_mix_option_with_all_existing_keywords, is_project_name_well_formated
 import tracker.session as session
 from tracker.core.rproject import RProject
 
@@ -22,11 +22,17 @@ class FastProjectCreateView(BaseView):
         file1 = self.request.files['file1'][0]
         fname = file1['filename'].replace(' ', '_').replace('.xlsx', '')
         project_name = file1['filename'].replace(' ', '_').replace('.xlsx', '')#os.path.splitext(fname)[0]
+        if not is_project_name_well_formated(project_name):
+            flash_message(self, 'danger', 'Error creating watchlist. Excel file name must only contain spaces or\
+                alphanumeric characters.')
+            self.redirect('/api/v1/users/{}/project_create'.format(username))
+            return
         project_path = os.path.join(self.application.data_dir, project_name)
 
         if os.path.isdir(project_path):
             flash_message(self, 'danger', 'A directory with the same watchlist name seems to already exist.')
             self.redirect('/')
+            return
         else:
             try:
                 # creating project directory
@@ -79,7 +85,7 @@ class FastProjectCreateView(BaseView):
                 self.redirect('/')
             except Exception as e:
                 print('ERROR = {}'.format(e))
-                flash_message(self, 'danger', 'Problem creating watchlist. Check logs.')
+                flash_message(self, 'danger', 'Problem creating watchlist. Contact admin for further details.')
                 self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
 
 class ProjectsCreateView(BaseView):

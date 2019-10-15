@@ -4,6 +4,11 @@ import math
 from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
 
+def is_project_name_well_formated(projectname):
+    if not all(x.isalnum() or x.isspace() or x == '_' for x in projectname):
+        return False
+    return True
+
 def make_session_factory():
     # generate database schema  
     Base.metadata.create_all(engine)

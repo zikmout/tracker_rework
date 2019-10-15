@@ -2,6 +2,7 @@ import os
 import shutil
 import pandas as pd
 from tornado import gen
+import math
 import re
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
@@ -247,6 +248,14 @@ class UserProjectEditWebsite(BaseView):
         df = pd.read_excel(project.config_file)
         links = dict(zip(df['target'], df['target_label']))
         links = {k:[v] for k, v in links.items()}
+        for k, v in links.copy().items():
+            # print('K = {}, V = {} (type:{})'.format(k, v, type(v)))
+            try:
+                if math.isnan(v[0]):
+                    links[k] = ''
+            except Exception as e:
+                print('Not NAN')
+        print('linKS HERE ====== {}'.format(links))
         
         content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
         self.request_db.delete(content_to_delete)

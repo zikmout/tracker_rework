@@ -186,6 +186,16 @@ def _format_output_hummingbird(links):
     return final_links
 
 def from_links_to_dict(links):
+    print('************************ LINKS ******************************************** \n')
+    print('links before = {}'.format(links))
+    for k, v in links.copy().items():
+        print('k = {}'.format(k))
+        if k.count('/') == 2 and not k.endswith('/'):
+            print('entered add')
+            del links[k]
+            links[k + '/'] = v
+            # links[k] = links[k] + '/'
+    print('links after = {}'.format(links))
     domains = set()
     for link in links:
         splited = link.split('/', 3)
@@ -197,9 +207,11 @@ def from_links_to_dict(links):
         first_parts[domain] = list()    
 
     for link, keywords in links.items():
+        if keywords == '':
+            keywords = []
         first = re.search('((.*?\/.*?)){3}', link).group(0)
         splited = link.split('/', 3)
         second = splited[3]
         first_parts[first[:-1]].append(['/' + second, keywords])
-    print('keyworDS = {}'.format(keywords))
+        print('keyworDS = {}'.format(keywords))
     return first_parts

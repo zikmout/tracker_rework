@@ -78,7 +78,7 @@
                   {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                   <td style="vertical-align:middle;">{{ line['website'][7:35] }} ...</td>
                   {% end %}
-                  <td style="vertical-align:middle;">... {{ line['target'][-30:] }}</td>
+                  <td style="vertical-align:middle;">{{ line['target'] }}</td>
                   <td style="vertical-align:middle;">
                     {% if len(line['keywords']) > 0 %}
                       {{ line['keywords'][0] }}{% if len(line['keywords']) > 1 %} ... {% end %}

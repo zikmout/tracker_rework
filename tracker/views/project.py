@@ -12,6 +12,8 @@ from tracker.utils import flash_message, login_required, get_url_from_id, json_r
 replace_mix_option_with_all_existing_keywords, is_project_name_well_formated
 import tracker.session as session
 from tracker.core.rproject import RProject
+import tracker.workers.continuous.continuous_worker as continuous_worker
+from redbeat import RedBeatSchedulerEntry as Entry
 
 
 class FastProjectCreateView(BaseView):
@@ -191,6 +193,19 @@ class UserProjectDelete(BaseView):
         #print('ARGS DELETE = {}'.format(self.args))
         user = self.request_db.query(User).filter_by(username=self.session['username']).first()
         project = user.projects.filter_by(name=projectname).first()
+        content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+        if content_to_delete is not None:
+            alerts_to_delete = content_to_delete.alerts.all()
+            for a in alerts_to_delete:
+                #print('a.name = {}'.format(a.name))
+                if a.alert_type != 'Live':
+                    try:
+                        print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                        e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
+                        e.delete()
+                    except Exception as e:
+                        print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
+                        print('Reason = {}'.format(e))
         self.request_db.delete(project)
         self.request_db.commit()
 

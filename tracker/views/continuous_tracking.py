@@ -9,6 +9,8 @@ from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, is_project_name_well_formated
 import tracker.session as session
 from tracker.core.rproject import RProject
+import tracker.workers.continuous.continuous_worker as continuous_worker
+from redbeat import RedBeatSchedulerEntry as Entry
 
 class ContinuousTrackingCreateView(BaseView):
     SUPPORTED_METHODS = ['POST']
@@ -157,6 +159,17 @@ class UserProjectAddWebsite(BaseView):
             links = {k:[v] for k, v in links.items()}
 
             content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+            alerts_to_delete = content_to_delete.alerts.all()
+            for a in alerts_to_delete:
+                print('a.name = {}'.format(a.name))
+                if a.alert_type != 'Live':
+                    try:
+                        print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                        e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
+                        e.delete()
+                    except Exception as e:
+                        print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
+                        print('Reason = {}'.format(e))
             self.request_db.delete(content_to_delete)
             self.request_db.commit()
 
@@ -206,6 +219,17 @@ class UserProjectDeleteWebsite(BaseView):
             links = {k:[v] for k, v in links.items()}
             
             content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+            alerts_to_delete = content_to_delete.alerts.all()
+            for a in alerts_to_delete:
+                print('a.name = {}'.format(a.name))
+                if a.alert_type != 'Live':
+                    try:
+                        print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                        e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
+                        e.delete()
+                    except Exception as e:
+                        print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
+                        print('Reason = {}'.format(e))
             self.request_db.delete(content_to_delete)
             self.request_db.commit()
 
@@ -254,10 +278,22 @@ class UserProjectEditWebsite(BaseView):
                 if math.isnan(v[0]):
                     links[k] = ''
             except Exception as e:
-                print('Not NAN')
-        print('linKS HERE ====== {}'.format(links))
+                pass
+                #print('Not NAN')
+        #print('linKS HERE ====== {}'.format(links))
         
         content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+        alerts_to_delete = content_to_delete.alerts.all()
+        for a in alerts_to_delete:
+            print('a.name = {}'.format(a.name))
+            if a.alert_type != 'Live':
+                try:
+                    print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                    e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
+                    e.delete()
+                except Exception as e:
+                    print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
+                    print('Reason = {}'.format(e))
         self.request_db.delete(content_to_delete)
         self.request_db.commit()
 

@@ -82,17 +82,18 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
         response = urllib.request.urlopen(req, context=gcontext, timeout=30)
     except (urllib.error.HTTPError, urllib.error.URLError, ConnectionResetError, UnicodeDecodeError) as e:
         print('[ERROR] download_and_save_content : {}\n(url = {})'.format(e, url))
-        return None
+        return { url : '[URL ERROR] {}'.format(e)}
     except timeout:
         print('[ERROR TIMEOUT] for url : {}'.format(url))
-        return None
+        return { url : '[TIMEOUT]'}
     # Save content in the provided path with binary format
     with open (full_path, 'wb+') as content:
         try:
             content.write(response.read())
         except (http.client.IncompleteRead) as e:
             print('[ERROR] - Incomplete Read. Skipping download for this file. Details = {}'.format(e))
-            return None
+            return { url : '[INCOMPLETE READ] {}'.format(e) }
+    return { url : 'OK'}
 
 def download_website(links, base_path, url, random_header=False):
     """ Loop through all links and download the content if not already downloaded
@@ -103,6 +104,7 @@ def download_website(links, base_path, url, random_header=False):
         kwarg:
             random_header (bool): If True, use a different header for each request (default: False)
     """
+    rets = list() # rets is like : [{ url : '[TIMEOUT]'}, ...]
     header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
     counter = 0
     total = len(links)
@@ -128,7 +130,7 @@ def download_website(links, base_path, url, random_header=False):
         print('URL + LINK : {}'.format(full_url))
         assert dir_path.startswith(base_path)
         if link.startswith('/'):
-            download_and_save_content(full_url, filename, dir_path, header, check_duplicates=True)
+            rets.append(download_and_save_content(full_url, filename, dir_path, header, check_duplicates=True))
         '''
         elif link.startswith('<PDF>') or link.startswith('<EXCEL>'):
             download_and_save_content(full_url, filename, dir_path, header)
@@ -136,7 +138,7 @@ def download_website(links, base_path, url, random_header=False):
         elif link.startswith('<ERROR>'):
             print('ERROR -> {}'.format(link))
         '''
-    return True
+    return rets
 
 def download_website_diff(links, base_path, diff_path, url):
     """ Try to download website parts that have changed """

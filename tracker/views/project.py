@@ -68,7 +68,7 @@ class FastProjectCreateView(BaseView):
                 rproject = RProject(new_project.name, new_project.data_path, new_project.config_file)
                 rproject.generate_crawl_logfile(links)
                 rproject._load_units_from_data_path()
-                rproject.add_links_to_crawler_logfile(links, wait=2)
+                idx, url_errors = rproject.add_links_to_crawler_logfile(links, wait=2)
 
                 # create content
                 mailing_list = dict(zip(df['target'], df['mailing_list']))
@@ -83,8 +83,16 @@ class FastProjectCreateView(BaseView):
                 self.request_db.add(user)
                 self.request_db.commit()
 
-                flash_message(self, 'success', '\'{}\' successfully uploaded. Alert {} created.'.format(fname, fname.replace('.xlsx', '')))
-                self.redirect('/')
+                if len(url_errors) != 0:
+                    formated_errors = list()
+                    for errs in url_errors:
+                        for k, v in errs.items():
+                            formated_errors.append('{} ({})'.format(k, v)) 
+                    flash_message(self, 'warning', '\'{}\' successfully uploaded. Default live alert {} created. Here are the website that could\
+                        not be downloaded : {}'.format(fname, fname.replace('.xlsx', ''), '-'.join(formated_errors)))
+                else:
+                    flash_message(self, 'success', '\'{}\' successfully uploaded. Alert {} created.'.format(fname, fname.replace('.xlsx', '')))
+                self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
             except Exception as e:
                 print('ERROR = {}'.format(e))
                 flash_message(self, 'danger', 'Problem creating watchlist. Contact admin for further details.')

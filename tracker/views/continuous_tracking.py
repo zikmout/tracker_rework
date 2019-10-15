@@ -124,7 +124,7 @@ class UserProjectAddWebsite(BaseView):
             rproject = RProject(project.name, project.data_path, project.config_file)
             rproject.generate_crawl_logfile(links)
             rproject._load_units_from_data_path()
-            rproject.add_links_to_crawler_logfile(links)
+            idx, url_errors = rproject.add_links_to_crawler_logfile(links)
 
             mailing_list = dict(zip(df['target'], df['mailing_list']))
             new_content = Content(projectname + '_default', links, mailing_list)
@@ -150,7 +150,7 @@ class UserProjectAddWebsite(BaseView):
             links1 = {args['inputTarget'][0]:args['inputKeywords']}
             #rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
             rproject._load_units_from_data_path()
-            idx = rproject.add_links_to_crawler_logfile(links1)
+            idx, url_errors = rproject.add_links_to_crawler_logfile(links1)
             #print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
             
             # Update content (take first content with name projectname + '_default')

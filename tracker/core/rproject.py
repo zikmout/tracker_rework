@@ -224,10 +224,19 @@ class RProject:
                 internal_link = link.replace(unit_url, '')
                 #print('len remote tree before = {}'.format(len(unit._remote_tree())))
                 if unit.add_crawler_link(internal_link) is True:
-                    if downloader.download_website([internal_link], unit.download_path, unit.url, random_header=True):
-                        print('->Page {} successfuly downloaded'.format(unit_url + internal_link))
-                    else:
-                        print('->Unable to download page {}'.format(unit_url + internal_link))
+                    rets = downloader.download_website([internal_link], unit.download_path, unit.url, random_header=True)
+                    for ret in rets:
+                        for k, v in ret.items():
+                            if v == 'OK':
+                                print('->Page {} successfuly downloaded'.format(k))
+                            else:
+                                print('->Unable to download page {} (Reason : {})'.format(k, v))
+                                url_errors.append({k:v})
+                    # if ret is True:
+                    #     print('->Page {} successfuly downloaded'.format(unit_url + internal_link))
+                    # else:
+                    #     print('->Unable to download page {}'.format(unit_url + internal_link))
+                    #     url_errors.append(err)
                 else:
                     print('-> No need to download: {}'.format(unit_url + internal_link))
 
@@ -254,7 +263,7 @@ class RProject:
             x.join()
 
         print('All THREADS ARE DONE !!!!')
-        return idx
+        return idx, url_errors
 
     def _load_units_from_data_path(self):
         """ Load project units from project self.data_path (full path where project data is stored)

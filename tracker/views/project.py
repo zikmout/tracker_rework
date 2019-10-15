@@ -36,13 +36,22 @@ class FastProjectCreateView(BaseView):
                 with open(config_path, 'wb+') as fd:
                     fd.write(file1['body'])
 
+                df = pd.read_excel(config_path)
+                required_columns = ['Name', 'Website', 'target', 'target_label', 'mailing_list']
+                for _ in required_columns:
+                    if _ not in df.columns:
+                        shutil.rmtree(project_path)
+                        flash_message(self, 'danger', 'Problem creating watchlist. Please make sure following\
+                         columns name are in excel file : {}.'.format(','.join(required_columns)))
+                        self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+                        return
+
                 #create project
                 print('name = {}, data_path = {}, config_df = {}'.format(project_name, self.application.data_dir, config_path))
                 user = self.request_db.query(User).filter_by(username=username).first()
                 new_project = Project(project_name, self.application.data_dir, config_path)
                 user.projects.append(new_project)
                 
-                df = pd.read_excel(config_path)
                 links = dict(zip(df['target'], df['target_label']))
                 links = replace_mix_option_with_all_existing_keywords(links)
                 # links = {k:[v] for k, v in links.items()}
@@ -51,7 +60,7 @@ class FastProjectCreateView(BaseView):
                 rproject = RProject(new_project.name, new_project.data_path, new_project.config_file)
                 rproject.generate_crawl_logfile(links)
                 rproject._load_units_from_data_path()
-                rproject.add_links_to_crawler_logfile(links)
+                rproject.add_links_to_crawler_logfile(links, wait=2)
 
                 # create content
                 mailing_list = dict(zip(df['target'], df['mailing_list']))
@@ -70,7 +79,7 @@ class FastProjectCreateView(BaseView):
                 self.redirect('/')
             except Exception as e:
                 print('ERROR = {}'.format(e))
-                flash_message(self, 'danger', 'Problem creating quick watchlist. Check logs.')
+                flash_message(self, 'danger', 'Problem creating watchlist. Check logs.')
                 self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
 
 class ProjectsCreateView(BaseView):

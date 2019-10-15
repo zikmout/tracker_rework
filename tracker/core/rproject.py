@@ -245,7 +245,7 @@ class RProject:
             unit_url = re.findall(regex, link)[0]
             unit = self.get_unit_from_url(unit_url)
             if wait and idx % 10 == 0:
-                time.sleep(5)
+                time.sleep(wait)
             my_thread = threading.Thread(target=run_downloads, args=(unit, unit_url))
             threads.append(my_thread)
             my_thread.start()

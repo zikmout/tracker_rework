@@ -160,7 +160,7 @@ def download_website_diff(links, base_path, diff_path, url):
         # getting full_url content
         print('-> Getting content of webpage to compare : {}'.format(full_url))
         
-        remote_content = scrapper.get_url_content(full_url, header=utils.rh())
+        remote_content, error_remote_content = scrapper.get_url_content(full_url, header=utils.rh())
 
         extracted_local_content = extractor.extract_text_from_html(local_content)
         extracted_local_content = extractor.clean_content(extracted_local_content)

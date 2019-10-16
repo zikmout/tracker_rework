@@ -216,7 +216,7 @@ def is_valid_file(fname):
 '''
 def extract_html(full_url, link):
     print('HTML -> {}'.format(link))
-    html = scrapper.get_url_content(full_url + link)
+    html, error_remote_content = scrapper.get_url_content(full_url + link)
     if html is None:
         return None
     html = html.encode('utf-8')

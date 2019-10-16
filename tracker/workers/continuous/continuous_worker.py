@@ -226,7 +226,7 @@ def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links
         #print('\n-> Fetching local content from : {}'.format(base_dir_path_file))
         #print('-> Fetching remote content from : {}'.format(status['url']))
         local_content = scrapper.get_local_content(base_dir_path_file, 'rb')
-        remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
+        remote_content, error_remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
 
         if local_content is None or remote_content is None:
             print('!!!! Problem fetching local content or remote content. !!!!')

@@ -59,7 +59,8 @@
               </div>
             </div>
 
-
+            <br>
+            <div id="errors"></div>
 
 
         
@@ -68,8 +69,8 @@
 
       {% if 'live_view' in handler.session['tasks'] %}
         {% for tasks in handler.session['tasks']['live_view']  %}
-          <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center>
-          <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center>
+          <!-- <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center> -->
+          <!-- <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center> -->
           <div id="changedContent{{ escape(str(tasks['id'])) }}"></div>
         {% end %}
       {% end %}
@@ -149,9 +150,23 @@ ws.onmessage = function (evt) {
    if (evt != null) {
        var data = JSON.parse(evt.data);
 
-
-          //console.log(data.state);
-
+       //console.log(data.state);
+       // logging errors from http requests
+       if (data.state == 'SUCCESS' && data.status['errors'].length > 0 && !document.getElementById('err-' + data.task_id)) {
+        console.log(data.status['errors']);
+        var newError = document.createElement("DIV");
+        newError.setAttribute("id", 'err-' + data.task_id);
+        var errorLog = '';
+        var i;
+        for (i = -1; i++; i <= data.status['errors'].length) {
+          errorLog += '<small>';
+          errorLog += Object.keys(data.status['errors'][i]);
+          errorLog += '&nbsp;<font color="red">(' + Object.values(data.status['errors'][i]) + ')</font></small>';
+        }
+        newError.innerHTML = errorLog;
+        document.getElementById('errors').appendChild(newError);
+        // $('#errors').appendChild
+       }
        if (data.state == 'SUCCESS') {
           counterDone += 1;
        }
@@ -205,7 +220,7 @@ ws.onmessage = function (evt) {
         counterRemaining = totalTaskNb - counterDoneMaster;
         $('#numberOfPendingTasks').html(counterRemaining - counterFailureMaster);
         updateProgressBar('#liveViewProgress', ((counterDoneMaster+counterFailureMaster)/totalTaskNb)*100);
-        console.log('counter remaining = ' + counterRemaining + ' counter done = ' + counterDoneMaster);
+        //console.log('counter remaining = ' + counterRemaining + ' counter done = ' + counterDoneMaster);
        }
      }
  else {
@@ -215,7 +230,7 @@ ws.onmessage = function (evt) {
 timeout();
 function updateProgressBar(divId, percent) {
   // if (percent <= 100) {
-    console.log('percent -> ' + percent);
+    //console.log('percent -> ' + percent);
     $(divId).text(percent + '%');
     document.getElementById("pct").style.width = percent + '%';
     document.getElementById("pct").innerHTML = Math.round(percent) + '%';
@@ -223,11 +238,11 @@ function updateProgressBar(divId, percent) {
 }
 
 function showFailedTasksDetails() {
-  console.log('failed details clicked  !');
+  //console.log('failed details clicked  !');
   $('#myLargeModalLabelContent').empty();
   for (i = 0; i < failuresURL.length; i++) {
     $('#myLargeModalLabelContent').append(failuresURL[i].state + ':' +  failuresURL[i].status + '<br>');
-    console.log(failuresURL[i]);
+    //console.log(failuresURL[i]);
   }
   if (failuresURL.length > 0) {
     $('#myLargeModalLabel').modal('show');

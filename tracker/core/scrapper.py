@@ -13,6 +13,7 @@ def get_url_content(url, header, verbose=True):
         return:
             remote_content: Binary content decoded
     """
+    error = None
     # Faking User-Agent to avoid forbidden requests
     req = urllib.request.Request(url, data=None, headers=header)
     # Faking SSL certificate to avoid unauthorized requests
@@ -25,7 +26,10 @@ def get_url_content(url, header, verbose=True):
     except (urllib.error.HTTPError, urllib.error.URLError, ConnectionResetError,\
         UnicodeDecodeError, TimeoutError) as e:
             remote_content = None
-    return remote_content
+            msg = '{}'.format(e)
+            error = { url: msg }
+            print('ERROR : url = {}, message => {}'.format(url, msg))
+    return remote_content, error
 
 def get_local_content(path, mode):
     """ Open local file content

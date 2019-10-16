@@ -18,34 +18,8 @@ import pdftotext
 import gc
 import fastText
 
-# Hack to load only necessary modules (pb with ml model)
-# TODO: Replace raw path with os.environ ($APP_DIR)
-# TODO: Look at __init__.py to load it more properly
-print('FILE live == {} (cwd = {})'.format(__file__, os.getcwd()))
 already_visited = list()
 already_seen_content = list()
-# if '.egg' in __file__ and  'workers/live' in os.getcwd():
-#     import tracker.ml_toolbox as mltx
-#     su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
-#     already_visited = list()
-#     already_seen_content = list()
-
-# def make_predictions(content, min_acc=0.75):
-#     global su_model
-#     #print('su_model : {}'.format(su_model))
-#     #gc.collect()
-#     print('content : {} [...]'.format(content[:1000]))
-#     preds = su_model.predict(content, 2)
-#     print('predictions = {}'.format(preds))
-#     #print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
-#     if '__label__1' in preds[0][0] and preds[1][0] > min_acc:
-#         prediction = '__label__1'
-#         print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
-#         return True
-#     else:
-#         prediction = '__label__2'
-#         print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
-#         return False
 
 def make_request_for_predictions(content, min_acc=0.75):
     # Making synchronous HTTP Request (because workers are aynchronous already)
@@ -55,7 +29,6 @@ def make_request_for_predictions(content, min_acc=0.75):
     http_client = httpclient.HTTPClient()
     try:
         response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)
-        #print('RESPONSE => {}'.format(response.body))
         http_client.close()
         return response.body
     except httpclient.HTTPError as e:
@@ -69,12 +42,7 @@ def make_request_for_predictions(content, min_acc=0.75):
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     if ('@' or ':') in url:
         return False
-    # global su_model
-    # global already_visited
-    # global already_seen_content
 
-    print('ENTER CHECK SBB : {}'.format(url))
-    #global su_model
     req = urllib.request.Request(
             url,
             data=None,
@@ -175,7 +143,7 @@ def get_full_links(status, base_url):
     print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
     return status 
 
-@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=300)
+@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=500)
 def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm, counter):
     # try:
     """ Download website parts that have changed 
@@ -205,7 +173,8 @@ def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_link
             'nearest_link_neg': list(),
             'all_links_pos': None,
             'all_links_neg': None,
-            'diff_nb': 0
+            'diff_nb': 0,
+            'errors': list()
         }
         i += 1
         print('[{}/{}] Link = {}'.format(i, len(links), flink))
@@ -222,10 +191,13 @@ def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_link
         #print('\n-> Fetching local content from : {}'.format(base_dir_path_file))
         #print('-> Fetching remote content from : {}'.format(status['url']))
         local_content = scrapper.get_local_content(base_dir_path_file, 'rb')
-        remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
+        remote_content, error_remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
 
-        if local_content is None or remote_content is None:
-            print('!!!! Problem fetching local content or remote content. !!!!')
+        if local_content is None:
+            print('!!!! Problem fetching local content !!!! (url:{})'.format(flink))
+        if remote_content is None:
+            print('!!!! Problem fetching remote content. !!!! ERROR = {}'.format(error_remote_content))
+            status['errors'].append(error_remote_content)
             # Must return error here ?! Just like exception under
             pass
         else:

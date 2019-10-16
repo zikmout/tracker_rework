@@ -91,7 +91,7 @@ def get_site_map(rp, url):
     if 'http' not in rp:
         rp = url + rp
     try:
-        content = scrapper.get_url_content(rp)
+        content, error_remote_content = scrapper.get_url_content(rp)
         name = rp.split('/')[-1]
         return name, content
     except ValueError:

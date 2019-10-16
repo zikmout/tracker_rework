@@ -3,8 +3,6 @@
 <div class="starter-template-fluid"><br>
       <h3>Edit watchlist {{ project['name'] }}</h3>
       
-
-
         <div class='row'>
           <div class='col'>
             <button type="submit" class="btn btn-dark btn-sm collapsed" value="" data-toggle="collapse" data-target="#addLine" aria-expanded="false" aria-controls="addLine">+ Add source</button>
@@ -80,7 +78,7 @@
                   {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                   <td style="vertical-align:middle;">{{ line['website'][7:35] }} ...</td>
                   {% end %}
-                  <td style="vertical-align:middle;">... {{ line['target'][-40:] }}</td>
+                  <td style="vertical-align:middle;" title="{{ line['target'] }}">... {{ line['target'][-40:] }}</td>
                   <td style="vertical-align:middle;">
                     {% if len(line['keywords']) > 0 %}
                       {{ line['keywords'][0] }}{% if len(line['keywords']) > 1 %} ... {% end %}

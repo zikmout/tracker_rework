@@ -35,7 +35,6 @@ def make_predictions(content, min_acc=0.75):
 
 class SBBPredict(BaseView):
     SUPPORTED_METHODS = ['POST']
-    #@login_required #
     @gen.coroutine
     def post(self):
     	args = { k: self.get_argument(k) for k in self.request.arguments }

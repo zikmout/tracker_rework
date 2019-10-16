@@ -514,7 +514,7 @@ class RProject:
 
 
     def download_units_diff_delayed_with_email(self, alert_name, template_type,\
-        schedule, links, mailing_list, save=False):
+        schedule, links, mailing_list, user_email, project_name, save=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
@@ -569,14 +569,17 @@ class RProject:
         if template_type == 'share buy back':
             keywords_diff = True
             detect_links = True
+            # send_error_to_user = True
             links_algorithm = 'http://localhost:5567/api/v1/predict/is_sbb'
         elif template_type == 'diff':
             keywords_diff = False
             detect_links = False
+            # send_error_to_user = True
             links_algorithm = False
         elif template_type == 'diff with keywords':
             keywords_diff = True
             detect_links = False
+            # send_error_to_user = True
             links_algorithm = False
         else:
             # This must not happen
@@ -605,13 +608,13 @@ class RProject:
             print('SCHEDULED = {}'.format(schedule))
             if template_type == 'share buy back':
                 entry = Entry(alert_name, 'continuous_worker.share_buy_back_task',\
-                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name), app=continuous_worker.app)
             elif template_type == 'diff':
                 entry = Entry(alert_name, 'continuous_worker.diff_task',\
-                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name), app=continuous_worker.app)
             elif template_type == 'diff with keywords':
                 entry = Entry(alert_name, 'continuous_worker.diff_with_keywords_task',\
-                    schedule, args=(task_args, mails_content, ), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name), app=continuous_worker.app)
             entry.save()
             print('ENTRY IS DUE = {}'.format(entry.is_due()))
             return entry

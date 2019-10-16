@@ -22,7 +22,7 @@ from tracker.views.project import ProjectsCreateView, UserProjectListView, UserP
 from tracker.views.continuous_tracking import ContinuousTrackingCreateView, UserProjectWebsitesView,\
  UserProjectAddWebsite, UserProjectDeleteWebsite, UserProjectEditWebsite
 from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLaunch, AlertDelete,\
-AlertLiveUpdate, AlertStop
+AlertLiveUpdate, AlertStop, AlertLiveUpdateJSON
 from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDownloadStatus,\
  UserProjectDownloadView
 from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop,\
@@ -46,6 +46,7 @@ def main():
             url(r'/', HomePage, name='home'),
             url(r'/blank', BlankPage, name='blank'),
             url(r'/switch-mode', SwitchMode),
+            url(r'/api/v1/update-content', AlertLiveUpdateJSON),
 
             # tracker.views.user.py
             url(r'/api/v1/users_list', UserListView, name='users_list'),

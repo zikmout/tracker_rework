@@ -141,6 +141,8 @@ def tag_visible(element):
     return True
 
 def extract_text_from_html(content):
+    if content is None:
+        return content
     bs = BeautifulSoup(content, 'lxml')
     texts = bs.findAll(text=True)
     content = list(filter(tag_visible, texts))

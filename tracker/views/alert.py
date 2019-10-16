@@ -223,7 +223,7 @@ class AlertLaunch(BaseView):
 
         # Sync alert with Redbeat scheduler
         entry = rproject.download_units_diff_delayed_with_email(alert.name, alert.template_type,\
-            schedule, content.links, content.mailing_list, save=True)
+            schedule, content.links, content.mailing_list, user.email, project.name, save=True)
         
         # Scheduler must return an entry
         if entry is False:
@@ -334,7 +334,8 @@ class AlertLiveUpdate(BaseView):
                 for worker in self.session['tasks']['live_view']:
                     task = live_view.AsyncResult(worker['id'])
                     response = get_celery_task_state(task)
-                    if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != [] or response['status']['diff_pos'] != []):
+                    if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != []\
+                        or response['status']['diff_pos'] != []):
                         task_results.append(response['status'])
             user = self.request_db.query(User).filter_by(username=username).first()
             project = user.projects.filter_by(name=projectname).first()
@@ -346,3 +347,21 @@ class AlertLiveUpdate(BaseView):
                 rproject._load_units_from_excel()
             rproject.update_units_links([x['url'] for x in task_results])
             self.redirect('/')
+
+class AlertLiveUpdateJSON(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @gen.coroutine
+    def post(self):
+        # try:
+        args = json.loads(self.request.body)
+        print('received args to update ------------------> {}'.format(args))
+        user = self.request_db.query(User).filter_by(email=args['user_email']).first()
+        project = user.projects.filter_by(name=args['project_name']).first()
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        rproject._load_units_from_excel()
+        print('TYPE args[url] = > {}'.format(type(args['urls'])))
+        rproject.update_units_links(args['urls'])
+        self.send_response(data={ 'message': 'OK' })
+        # except Exception as e:
+        #     print('Error updating content. Reason {}'.format(e))
+        #     self.send_response(data={ 'message': 'ERROR {}'.format(e) })

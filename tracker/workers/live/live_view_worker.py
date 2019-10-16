@@ -195,12 +195,11 @@ def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_link
 
         if local_content is None:
             print('!!!! Problem fetching local content !!!! (url:{})'.format(flink))
+            # TODO: Log errors from local content here and put in status just like for remote content
         if remote_content is None:
             print('!!!! Problem fetching remote content. !!!! ERROR = {}'.format(error_remote_content))
             status['errors'].append(error_remote_content)
-            # Must return error here ?! Just like exception under
-            pass
-        else:
+        if local_content is not None and remote_content is not None:
             status = extractor.get_text_diff(local_content, remote_content, status,\
                 detect_links=detect_links)
             # if a list of keywords is provided, only get diff that matches keywords

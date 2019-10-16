@@ -16,38 +16,35 @@ import tracker.celery_continuous_conf as celeryconf
 import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
+# from tracker.core.rproject import RProject
 # from tracker.celery import app
 from tracker.mail import simple_mail_sbb, designed_mail_sbb, generic_mail_template
+# from tracker.models import Project, User
 
-# Hack to load only necessary modules (pb with ml model)
-# TODO: Replace raw path with os.environ ($APP_DIR)
-# TODO: Look at __init__.py to load it more properly
-print('FILE continuous == {} (cwd = {})'.format(__file__, os.getcwd()))
-# if 'workers/continuous' in os.getcwd():
-#     import tracker.ml_toolbox as mltx
-#     su_model = mltx.SU_Model('trained_800_wiki2.bin').su_model
 already_visited = list()
 already_seen_content = list()
 
 app = celery.Celery(__name__) # TODO : Change to sth like 'permanent listener'
 app.config_from_object(celeryconf)
 
-# def make_predictions(content, min_acc=0.75):
-#     global su_model
-#     #print('su_model : {}'.format(su_model))
-#     #gc.collect()
-#     #print('content : {} [...]'.format(content[:1000]))
-#     preds = su_model.predict(content, 2)
-#     print('predictions = {}'.format(preds))
-#     #print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
-#     if '__label__1' in preds[0][0] and preds[1][0] > min_acc:
-#         prediction = '__label__1'
-#         print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
-#         return True
-#     else:
-#         prediction = '__label__2'
-#         print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
-#         return False
+def make_request_for_updating_content(user_email, project_name, urls):
+    # Making synchronous HTTP Request (because workers are aynchronous already)
+    post_data = { 'user_email': user_email, 'project_name': project_name, 'urls': urls }
+    body = json.dumps(post_data)
+
+    http_client = httpclient.HTTPClient()
+    try:
+        response = http_client.fetch('http://localhost:5567/api/v1/update-content', method='POST', body=body)
+        #print('RESPONSE => {}'.format(response.body))
+        http_client.close()
+        return response.body
+    except httpclient.HTTPError as e:
+        print('HTTPError -> {}'.format(e))
+        http_client.close()
+    except Exception as e:
+        print('Error -> {}'.format(e))
+        http_client.close()
+    return False
 
 def make_request_for_predictions(content, min_acc=0.75):
     # Making synchronous HTTP Request (because workers are aynchronous already)
@@ -71,12 +68,7 @@ def make_request_for_predictions(content, min_acc=0.75):
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     if ('@' or ':') in url:
         return False
-    # global su_model
-    # global already_visited
-    # global already_seen_content
 
-    #print('ENTER CHECK SBB : {}'.format(url))
-    #global su_model
     req = urllib.request.Request(
             url,
             data=None,
@@ -209,7 +201,8 @@ def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links
             'nearest_link_neg': list(),
             'all_links_pos': None,
             'all_links_neg': None,
-            'diff_nb': 0
+            'diff_nb': 0,
+            'errors': list()
         }
         i += 1
         print('[{}/{}] Link = {}'.format(i, len(links), flink))
@@ -228,11 +221,13 @@ def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links
         local_content = scrapper.get_local_content(base_dir_path_file, 'rb')
         remote_content, error_remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
 
-        if local_content is None or remote_content is None:
-            print('!!!! Problem fetching local content or remote content. !!!!')
-            # Must return error here ?! Just like exception under
-            pass
-        else:
+        if local_content is None:
+            print('!!!! Problem fetching local content !!!! (url:{})'.format(flink))
+            # TODO: Log errors from local content here and put in status just like for remote content
+        if remote_content is None:
+            print('!!!! Problem fetching remote content. !!!! ERROR = {}'.format(error_remote_content))
+            status['errors'].append(error_remote_content)
+        if local_content is not None and remote_content is not None:
             status = extractor.get_text_diff(local_content, remote_content, status,\
                 detect_links=detect_links)
             # if a list of keywords is provided, only get diff that matches keywords
@@ -276,7 +271,7 @@ def log_error_sbb(self, z):
     print('ERROR for share_buy_back_task = {}'.format(z))
 
 @app.task(bind=True)
-def sbb_end_routine(self, task_results, mails):#, soft_time_limit=120):
+def sbb_end_routine(self, task_results, mails, user_email, project_name):#, soft_time_limit=120):
     task_results = [r['status'] for r in task_results.copy() if r['status']['diff_neg'] != []\
                      or r['status']['diff_pos'] != []]
     # if task_results == []:
@@ -293,11 +288,16 @@ def sbb_end_routine(self, task_results, mails):#, soft_time_limit=120):
         designed_mail_sbb(task_results, mails)
         print('- Mails successfully sent if any changed noticed -')
 
+    # Updating and download content now ...
+    urls = [x['url'] for x in task_results]
+    make_request_for_updating_content(user_email, project_name, urls)
+    print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results]))
+
 @app.task(bind=True)
-def share_buy_back_task(self, add, mails):
+def share_buy_back_task(self, add, mails, user_email, project_name):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
     return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
-        ).on_error(log_error_sbb.s()) for k in add), sbb_end_routine.s(mails))()
+        ).on_error(log_error_sbb.s()) for k in add), sbb_end_routine.s(mails, user_email, project_name))()
 
 ###################################################################################################
 
@@ -309,7 +309,7 @@ def log_error_diff(self, z):
     print('ERROR for diff_with_keywords_task = {}'.format(z))
 
 @app.task(bind=True)
-def diff_end_routine(self, task_results, mails):#, soft_time_limit=120):
+def diff_end_routine(self, task_results, mails, user_email, project_name):#, soft_time_limit=120):
     task_results = [r['status'] for r in task_results.copy() if r['status']['diff_neg'] != []\
                      or r['status']['diff_pos'] != []]
     # if task_results == []:
@@ -326,11 +326,16 @@ def diff_end_routine(self, task_results, mails):#, soft_time_limit=120):
         generic_mail_template(task_results, mails, 'diff task', show_links=True)
         print('- Mails successfully sent if any changed noticed -')
 
+    # Updating and download content now ...
+    urls = [x['url'] for x in task_results]
+    make_request_for_updating_content(user_email, project_name, urls)
+    print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results]))
+
 @app.task(bind=True)
-def diff_task(self, add, mails):
+def diff_task(self, add, mails, user_email, project_name):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
     return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
-        ).on_error(log_error_diff.s()) for k in add), diff_end_routine.s(mails))()
+        ).on_error(log_error_diff.s()) for k in add), diff_end_routine.s(mails, user_email, project_name))()
 
 ###################################################################################################
 
@@ -342,7 +347,7 @@ def log_error_diff_with_keywords(self, z):
     print('ERROR for diff_with_keywords_task = {}'.format(z))
 
 @app.task(bind=True)
-def diff_with_keywords_end_routine(self, task_results, mails):#, soft_time_limit=120):
+def diff_with_keywords_end_routine(self, task_results, mails, user_email, project_name):#, soft_time_limit=120):
     print('----> DIFF_WITH_KEYWORDS_END_ROUTINE <---- \n(RET = {})\n----->\
      Sending mail with diff template now .....'\
         .format(task_results))
@@ -362,11 +367,17 @@ def diff_with_keywords_end_routine(self, task_results, mails):#, soft_time_limit
         generic_mail_template(task_results, mails, 'diff with keywords task', show_links=True)
         print('- Mails successfully sent if any changed noticed -')
     print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
+    
+    # Updating and download content now ...
+    urls = [x['url'] for x in task_results]
+    make_request_for_updating_content(user_email, project_name, urls)
+    print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results]))
 
 @app.task(bind=True)
-def diff_with_keywords_task(self, add, mails):
+def diff_with_keywords_task(self, add, mails, user_email, project_name):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
     return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
-        ).on_error(log_error_diff_with_keywords.s()) for k in add), diff_with_keywords_end_routine.s(mails))()
+        ).on_error(log_error_diff_with_keywords.s()) for k in add), diff_with_keywords_end_routine.s(mails,\
+    user_email, project_name))()
 
 ###################################################################################################

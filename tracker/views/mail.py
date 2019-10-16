@@ -77,7 +77,9 @@ class UserProjectSendMail(BaseView):
 							site_html += "<br>Link(s):<br>"
 						for nearest_link in site['nearest_link_pos']:
 							site_html += (nearest_link + "<br>")
-						if len(site['all_links_pos']) < 10:
+						if site['all_links_pos'] is None:
+							site_html += ('*** no added links ***' + "<br>")
+						elif len(site['all_links_pos']) < 10:
 							for link in site['all_links_pos']:
 								if link not in site['nearest_link_pos']:
 									site_html += (link + "<br>")
@@ -96,7 +98,9 @@ class UserProjectSendMail(BaseView):
 							site_html += "<br>Link(s):<br>"
 						for nearest_link in site['nearest_link_neg']:
 							site_html += (nearest_link + "<br>")
-						if len(site['all_links_neg']) < 10:
+						if site['all_links_neg'] is None:
+							site_html += ('*** no deleted links ***' + "<br>")
+						elif len(site['all_links_neg']) < 10:
 							for link in site['all_links_neg']:
 								if link not in site['nearest_link_neg']:
 									site_html += (link + "<br>")

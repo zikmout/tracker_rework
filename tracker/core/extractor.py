@@ -113,12 +113,14 @@ def keyword_match(keywords, status, remote_content, url, detect_links=True):
     
     for keyword in keywords:
         for neg in status['diff_neg']:
-            if keyword in neg:
+            # add lower to make keyword match non case sensitive
+            if keyword.lower() in neg:
                 match_neg.append(neg)
                 if detect_links:
                     status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
         for pos in status['diff_pos']:
-            if keyword in pos:
+            # add lower to make keyword match non case sensitive
+            if keyword.lower() in pos:
                 #print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
                 match_pos.append(pos)
                 if detect_links:
@@ -166,8 +168,8 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
     # clean content ('\n' here)
     extracted_local_content = clean_content(extracted_local_content)
     extracted_remote_content = clean_content(extracted_remote_content)
-    print('EXTRACTED REMOTE = {}'.format(extracted_remote_content))
-    print('EXTRACTED LOCAL = {}'.format(extracted_local_content))
+    print('EXTRACTED #REMOTE = {}'.format(extracted_remote_content))
+    print('EXTRACTED #LOCAL = {}'.format(extracted_local_content))
     # get content diffs
     status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
     status['diff_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]

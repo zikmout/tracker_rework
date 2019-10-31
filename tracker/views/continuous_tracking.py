@@ -145,19 +145,17 @@ class UserProjectAddWebsite(BaseView):
             config_df_updated.to_excel(project.config_file, index=False)
 
             # generate crawl logfile
-            
-
-            links1 = {args['inputTarget'][0]:args['inputKeywords']}
-            #rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
-            rproject._load_units_from_data_path()
-            idx, url_errors = rproject.add_links_to_crawler_logfile(links1)
-            #print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
-            
-            # Update content (take first content with name projectname + '_default')
             df = pd.read_excel(project.config_file)
             links = dict(zip(df['target'], df['target_label']))
             links = {k:[v] for k, v in links.items()}
 
+            #links1 = {args['inputTarget'][0]:args['inputKeywords']}
+            rproject = RProject(project.name, project.data_path, project.config_file)
+            rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
+            rproject._load_units_from_data_path()
+            idx, url_errors = rproject.add_links_to_crawler_logfile(links)
+            #print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
+            
             content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
             alerts_to_delete = content_to_delete.alerts.all()
             for a in alerts_to_delete:

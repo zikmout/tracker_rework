@@ -346,6 +346,7 @@ class AlertLiveUpdate(BaseView):
             else:
                 rproject._load_units_from_excel()
             rproject.update_units_links([x['url'] for x in task_results])
+            flash_message(self, 'success', 'Pages successfully updated.')
             self.redirect('/')
 
 class AlertLiveUpdateJSON(BaseView):

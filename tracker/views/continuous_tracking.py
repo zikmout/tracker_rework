@@ -271,12 +271,15 @@ class UserProjectEditWebsite(BaseView):
         links = dict(zip(df['target'], df['target_label']))
         links = {k:[v] for k, v in links.items()}
         for k, v in links.copy().items():
-            # print('K = {}, V = {} (type:{})'.format(k, v, type(v)))
+            print('K = {}, V = {} (type:{})'.format(k, v, type(v)))
             try:
                 if math.isnan(v[0]):
                     links[k] = ''
+                elif ';' in v[0]:
+                    links[k] = v[0].split(';')
             except Exception as e:
-                pass
+                if ';' in v[0]:
+                    links[k] = v[0].split(';')
                 #print('Not NAN')
         #print('linKS HERE ====== {}'.format(links))
         

@@ -110,22 +110,39 @@ def keyword_match(keywords, status, remote_content, url, detect_links=True):
     """ Find diff pos, diff neg, nearest links pos, nearest links neg """
     match_neg = list()
     match_pos = list()
+    #print('KEYWORRRRRDS ::: {}'.format(keywords))
     
     for keyword in keywords:
-        for neg in status['diff_neg']:
-            # add lower to make keyword match non case sensitive
-            if keyword.lower() in neg:
-                match_neg.append(neg)
-                if detect_links:
-                    status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
-        for pos in status['diff_pos']:
-            # add lower to make keyword match non case sensitive
-            if keyword.lower() in pos:
-                #print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
-                match_pos.append(pos)
-                if detect_links:
-                    status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
-
+        if not ' ' in keyword:
+            for neg in status['diff_neg']:
+                for word in neg.split(' '):
+                    if keyword.lower() == word:
+                        if neg not in match_neg:
+                            match_neg.append(neg)
+                        if detect_links:
+                            status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
+            for pos in status['diff_pos']:
+                for word in pos.split(' '):
+                    if keyword.lower() == word:
+                        #print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
+                        if pos not in match_pos:
+                            match_pos.append(pos)
+                        if detect_links:
+                            status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
+        else:
+            for neg in status['diff_neg']:
+                if keyword.lower() in neg:
+                    if neg not in match_neg:
+                        match_neg.append(neg)
+                    if detect_links:
+                        status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
+            for pos in status['diff_pos']:
+                if keyword.lower() in pos:
+                    if pos not in match_pos:
+                        match_pos.append(pos)
+                    if detect_links:
+                        status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
+        
     status['diff_neg'] = match_neg
     status['diff_pos'] = match_pos
 

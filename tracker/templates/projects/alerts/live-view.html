@@ -109,6 +109,11 @@ ws.onopen = function() {
   {% end %}
 };
 
+function escapeHtml(unsafe) {
+	// function taken from : https://stackoverflow.com/questions/6234773/can-i-escape-html-special-chars-in-javascript
+	return unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
+}
+
 function formatDiff(title, diff, nearest_link, all_links, type) {
   var i;
   var diffs = '';
@@ -153,7 +158,7 @@ ws.onmessage = function (evt) {
        //console.log(data.state);
        // logging errors from http requests
        if (data.state == 'SUCCESS' && data.status['errors'].length > 0 && !document.getElementById('err-' + data.task_id)) {
-        console.log(data.status['errors']);
+        //console.log(data.status['errors']);
         var newError = document.createElement("DIV");
         newError.setAttribute("id", 'err-' + data.task_id);
         var errorLog = '';
@@ -161,7 +166,7 @@ ws.onmessage = function (evt) {
         for (i = -1; i++; i <= data.status['errors'].length) {
           errorLog += '<small>';
           errorLog += Object.keys(data.status['errors'][i]);
-          errorLog += '&nbsp;<font color="red">(' + Object.values(data.status['errors'][i]) + ')</font></small>';
+          errorLog += '&nbsp;<font color="red">(' + escapeHtml(Object.values(data.status['errors'][i]).toString()) + ')</font></small>';
         }
         newError.innerHTML = errorLog;
         document.getElementById('errors').appendChild(newError);

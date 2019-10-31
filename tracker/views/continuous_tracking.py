@@ -177,6 +177,7 @@ class UserProjectAddWebsite(BaseView):
             self.request_db.commit()
 
             # change session data to take account of deleted unit
+            rproject = RProject(project.name, project.data_path, project.config_file) # freshly added
             units = rproject.units_stats(units=rproject.filter_units())
             self.session['units'] = units
             self.session.save()
@@ -271,7 +272,7 @@ class UserProjectEditWebsite(BaseView):
         links = dict(zip(df['target'], df['target_label']))
         links = {k:[v] for k, v in links.items()}
         for k, v in links.copy().items():
-            print('K = {}, V = {} (type:{})'.format(k, v, type(v)))
+            #print('K = {}, V = {} (type:{})'.format(k, v, type(v)))
             try:
                 if math.isnan(v[0]):
                     links[k] = ''
@@ -304,6 +305,7 @@ class UserProjectEditWebsite(BaseView):
         self.request_db.commit()
 
         # change session data to take account of deleted unit
+        rproject = RProject(project.name, project.data_path, project.config_file)
         units = rproject.units_stats(units=rproject.filter_units())
         self.session['units'] = units
         self.session.save()

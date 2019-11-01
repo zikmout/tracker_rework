@@ -1,5 +1,6 @@
 {% extends '../../layout.html' %}
 {% block content %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
 <div class="starter-template-fluid">
   <script src="{{ static_url('jquery.min.js') }}"></script>
   <br>
@@ -215,7 +216,7 @@
   <table class="table table-sm">
     <thead class="thead-light">
       <tr>
-        <th scope="col" style="vertical-align:middle;">Source name</th>
+        <th scope="col" style="vertical-align:middle;">Alert name</th>
         <th scope="col" style="vertical-align:middle;">Type</th>
         {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <th scope="col" style="vertical-align:middle;">Creation</th>
@@ -238,6 +239,7 @@
         <th scope="col" style="vertical-align:middle;"></th>
         <th scope="col" style="vertical-align:middle;"></th>
         <th scope="col" style="vertical-align:middle;">Status</th>
+        <th scope="col" style="vertical-align:middle;">Next trigger</th>
       </tr>
     </thead>
     <tbody>
@@ -343,6 +345,16 @@
           <span class="badge badge-dark">ACTIVE</span>
         {% end %}
         </td>
+        <td style="vertical-align:middle;">
+        {% if alert['state'] == 'Active' %}
+        <script>
+          document.write(moment.duration({"seconds": {{ alert['next_due'] }}}).humanize());
+          //(new Date( * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0]
+        </script>
+        {% else %}
+          -
+        {% end %}
+        </td>
 
     </tr>
     {% end %}
@@ -350,7 +362,7 @@
   </table>
 </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+
 <script src="{{ static_url('custom/utils.js') }}"></script>
 <script>
   $('#CancelButton').click(function(){

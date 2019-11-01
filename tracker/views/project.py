@@ -137,6 +137,26 @@ class UserProjectListView(BaseView):
         user_projects = user.projects.all()
         if user_projects:
             [user_projects_json.append(project.as_dict()) for project in user_projects]
+        # get nb of active alerts in projects from redbeat
+        actives_json = {k['name']:0 for k in user_projects_json}
+        for user_project in user_projects:
+            user_contents = user_project.contents.all()
+            for user_content in user_contents:
+                alerts = user_content.alerts.all()
+                for alert in alerts:
+                    json_alert = alert.as_dict()
+                    if json_alert['alert_type'] != 'Live':
+                        try:
+                            e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)
+                            if json_alert['launched'] == 'True':
+                                if user_project.name in actives_json:
+                                    actives_json[user_project.name] = actives_json[user_project.name] + 1
+                                else:
+                                    actives_json[user_project.name] = 1
+                        except Exception as e:
+                            pass
+        for user_project_json in user_projects_json.copy():
+            user_project_json['nb_active_alerts'] = actives_json[user_project_json['name']]
         self.render('projects/manage.html', projects=user_projects_json)
 
 class UserProjectView(BaseView):

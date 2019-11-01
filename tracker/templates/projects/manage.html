@@ -19,8 +19,9 @@
                 {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                 <th>From DB</th>
                 {% end %}
-                <th>Action</th>
                 <th></th>
+                <th></th>
+                <th>Alerts status</th>
               </tr>
             </thead>
             <tbody>
@@ -75,6 +76,17 @@
                   </div>
                 </div>
               </div>
+              </td>
+              <td>
+                {% if  project['nb_active_alerts'] != 0 %}
+                  {% if project['nb_active_alerts'] > 1 %}
+                    <span class="badge badge-dark">{{ project['nb_active_alerts'] }}&nbsp;actives</span>
+                  {% else %}
+                    <span class="badge badge-dark">{{ project['nb_active_alerts'] }}&nbsp;active</span>
+                  {% end %}
+                {% else %}
+                  -
+                {% end %}
               </td>
               </tr>
               {% end %}

@@ -44,17 +44,26 @@ class AlertView(BaseView):
                         e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)
                         if json_alert['launched'] == 'True':
                             json_alert['state'] = 'Active'
+                            if e.is_due()[1] is None:
+                                json_alert['next_due'] = '?'
+                            else:
+                                json_alert['next_due'] = e.is_due()[1]
                         else:
                             json_alert['state'] = 'Problem'
+                            json_alert['next_due'] = '-'
                     except Exception as e:
                         if json_alert['launched'] == 'False':
                             json_alert['state'] = 'Ready'
+                            json_alert['next_due'] = '-'
                         elif json_alert['launched'] == 'True':
                             json_alert['state'] = 'Lost'
+                            json_alert['next_due'] = '-'
                 elif json_alert['launched'] == 'True':
                     json_alert['state'] = 'Active'
+                    json_alert['next_due'] = '-'
                 else:
                     json_alert['state'] = 'Ready'
+                    json_alert['next_due'] = '-'
                 all_alerts.append(json_alert)
         #print('*********************\n{}'.format(all_alerts))
         self.render('projects/alerts/index.html', contents=json_contents, alerts=all_alerts)
@@ -126,7 +135,7 @@ class AlertCreate(BaseView):
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
         except Exception as e:
             print('Error recording alert in DB : {}'.format(e))
-            flash_message(self, 'danger', 'Content {} failed. Check DB.'.format(args['inputName']))
+            flash_message(self, 'danger', 'Content {} failed. Please choose another name.'.format(args['inputName']))
             # to be change to redirect to alerts/monitor_all view
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
 
@@ -137,7 +146,7 @@ class AlertLaunch(BaseView):
     @gen.coroutine
     def post(self, username, projectname, alertid):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('args AlertLaunch => {}'.format(args))
+        #print('args AlertLaunch => {}'.format(args))
         # Checkbox in UI ready to use :)
         # save_log_checked = False
         # if 'saveLogChecked' + alertid in args:

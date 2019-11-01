@@ -99,7 +99,7 @@
               <label for="inputMaxCount">Max count</label>
               <div class="row">
                 <div class="col-md-4">
-                  <input class="form-control" type="text" value="5" name="inputMaxCount"/ required>
+                  <input class="form-control" type="text" value="5000" name="inputMaxCount"/ required>
                 </div>
               </div>
             </div>
@@ -371,7 +371,7 @@
   $(document).ready(function() {
     // 2019-09-03T08:52
     //"MM ddd, YYYY hh:mm:ss a"
-    $('#inputStartTime').val(getCurrentDate("YYYY-MM-DDThh:mm", 30));
+    $('#inputStartTime').val(getCurrentDate("YYYY-MM-DDThh:mm", 90));
     $('#BasicReccurent').hide();
     $('#CrontabSchedule').hide();
     $('#inputType').on('change', function() {

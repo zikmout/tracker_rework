@@ -22,7 +22,7 @@ def get_url_content(url, header, verbose=True):
         with urllib.request.urlopen(req, context=gcontext) as response: # TODO: Handle timeout errors
             if verbose:
                 print('[{}] {}\n'.format(response.getcode(), url))
-            remote_content = response.read().decode('utf-8')
+            remote_content = response.read().decode('utf-8', errors='ignore')
     except (urllib.error.HTTPError, urllib.error.URLError, ConnectionResetError,\
         UnicodeDecodeError, TimeoutError) as e:
             remote_content = None

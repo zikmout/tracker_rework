@@ -1,5 +1,10 @@
 {% extends '../../layout.html' %}
 {% block content %}
+<style>
+a {
+    color: #6c757d;
+}
+</style>
 <div class="starter-template-fluid">
       <br />
       <h3>Live alert on {{ handler.session['current_project'] }}</h3>
@@ -39,18 +44,17 @@
 
             </div>
             <div class="row">
-              <div class="col-lg-2 mt-1">
+              <div class="col mt-1">
 
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal">
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal" style="display: inline;">
 
                     <input type="hidden", name="fromPage" value="live_view">
                     <button type="submit" class="btn btn-info btn-sm">Download updated pages</button></input>
 
                 </form>
 
-              </div>
-              <div class="col-lg-2 mt-1">
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="POST">
+
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="POST" style="display: inline;">
                   <input type="hidden" value="{{ handler.session['current_live_view_content'] }}" name="contentName">
                   <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
                   <!-- TODO: Change route with alert stop //-->
@@ -60,6 +64,7 @@
             </div>
 
             <br>
+            <b>Errors:</b>
             <div id="errors"></div>
 
 
@@ -165,7 +170,7 @@ ws.onmessage = function (evt) {
         var i;
         for (i = -1; i++; i <= data.status['errors'].length) {
           errorLog += '<small>';
-          errorLog += Object.keys(data.status['errors'][i]);
+          errorLog += '<a href="' + Object.keys(data.status['errors'][i]) + '" target="_blank">' + Object.keys(data.status['errors'][i]) + '</a>';
           errorLog += '&nbsp;<font color="red">(' + escapeHtml(Object.values(data.status['errors'][i]).toString()) + ')</font></small>';
         }
         newError.innerHTML = errorLog;

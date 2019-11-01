@@ -15,6 +15,16 @@ from tracker.core.rproject import RProject
 import tracker.workers.continuous.continuous_worker as continuous_worker
 from redbeat import RedBeatSchedulerEntry as Entry
 
+class DownloadFile(BaseView):
+    @login_required
+    @gen.coroutine
+    def get(self, username, projectname):
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+        ifile  = open(project.config_file, 'rb')
+        self.set_header('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')
+        self.set_header('Content-Disposition', 'attachment; filename='+project.name+'.xlsx')
+        self.write (ifile.read())
 
 class FastProjectCreateView(BaseView):
     SUPPORTED_METHODS = ['POST']

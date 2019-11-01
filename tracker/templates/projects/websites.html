@@ -6,9 +6,8 @@
         <div class='row'>
           <div class='col'>
             <button type="submit" class="btn btn-dark btn-sm collapsed" value="" data-toggle="collapse" data-target="#addLine" aria-expanded="false" aria-controls="addLine">+ Add source</button>
-          </div>
 
-          <div class='col-10'>
+            <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/export-watchlist" method="get" class="form-horizontal" style="display: inline;"><button type="submit" class="btn btn-dark btn-sm collapsed">Export</button></input></form>
             <!-- <p>Below are shown all the websites referenced in the watchlist as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup live or scheduled tracking.</p> -->
           </div>
         </div>
@@ -19,7 +18,7 @@
               <div class="form-row">
                 <div class="col-sm-3">
                   <label for="inputName">Name</label>
-                  <input type="text" class="form-control" id="inputName" name="inputName">
+                  <input type="text" class="form-control" id="inputName" name="inputName" required>
                   <small id="inputName" class="form-text text-muted">Name of the source url</small>
                 </div>
                 {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
@@ -33,7 +32,7 @@
                 {% end %}
                 <div class="col-sm-3">
                   <label for="inputTarget">Target URL</label>
-                  <input type="text" class="form-control" id="inputTarget" name="inputTarget">
+                  <input type="text" class="form-control" id="inputTarget" name="inputTarget" required>
                   <small id="inputTarget" class="form-text text-muted">URL where content is located</small>
                 </div>
                 <div class="col-sm-3">
@@ -53,7 +52,6 @@
             </div>
           <br />
         </div>
-
         
         {% if lines is not None and handler.session['units'] is not None %}
         <div class="table-responsive">

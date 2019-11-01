@@ -1,7 +1,7 @@
 {% extends '../layout.html' %}
 {% block content %}
 <div class="starter-template-fluid"><br>
-      <h3>Edit watchlist {{ project['name'] }}</h3>
+      <h3>Edit watchlist</h3>
       
         <div class='row'>
           <div class='col'>
@@ -78,11 +78,11 @@
                   {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                   <td style="vertical-align:middle;">{{ line['website'][7:35] }} ...</td>
                   {% end %}
-                  <td style="vertical-align:middle;" title="{{ line['target'] }}">... {{ line['target'][-40:] }}</td>
+                  <td style="vertical-align:middle;" title="{{ line['target'] }}"><a href="{{ line['target'] }}" style="text-decorations:none; color:inherit;" target="_blank">... {{ line['target'][-40:] }}</a></td>
                   <td style="vertical-align:middle;">
                     {% if len(line['keywords']) > 0 %}
                       {{ line['keywords'][0] }}{% if len(line['keywords']) > 1 %} ... {% end %}
-                      <div class="float-right"><span class="badge badge-pill badge-info" data-placement="bottom" data-toggle="tooltip" data-html="true" title="{% for kw in line['keywords'] %}<em>'{{ kw }}'</em><br>{% end %}">{{ str(len(line['keywords'])) }}</span>&nbsp;&nbsp;</div>
+                      <div class="float-right"><span class="badge badge-pill badge-info" data-placement="right" data-toggle="tooltip" data-html="true" title="{% for kw in line['keywords'] %}<em>'{{ kw }}'</em><br>{% end %}">{{ str(len(line['keywords'])) }}</span>&nbsp;&nbsp;</div>
                     {% else %}
                       -
                     {% end %}
@@ -90,7 +90,7 @@
                   <td style="vertical-align:middle;">
                     {% if len(line['mailing_list']) > 0 %}
                       {{ line['mailing_list'][0] }}{% if len(line['mailing_list']) > 1 %} ... {% end %}
-                      <div class="float-right"><span class="badge badge-pill badge-info" data-placement="bottom" data-toggle="tooltip" data-html="true" title="{% for ml in line['mailing_list'] %}<em>'{{ ml }}'</em><br>{% end %}">{{ str(len(line['mailing_list'])) }}</span>&nbsp;&nbsp;</div>
+                      <div class="float-right"><span class="badge badge-pill badge-info" data-placement="right" data-toggle="tooltip" data-html="true" title="{% for ml in line['mailing_list'] %}<em>'{{ ml }}'</em><br>{% end %}">{{ str(len(line['mailing_list'])) }}</span>&nbsp;&nbsp;</div>
                     {% else %}
                       -
                     {% end %}
@@ -114,9 +114,9 @@
 {% end %}
 {% block script %}
 <script>
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+$(document).ready(function() {
+  $('[data-toggle="tooltip"]').tooltip({ pointerEvents: 'none' });
+});
 </script>
 <script>
 

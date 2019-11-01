@@ -250,7 +250,20 @@ class AlertLaunch(BaseView):
         # Update DB state
         alert.launched = True
         self.request_db.commit()
-        flash_message(self, 'warning', 'Reccurent ({}) alert {} succesfully launched. Alert is supposed to start in {} seconds.'.format(args['alertType'], alert.name, entry.is_due()[1]))
+        def convert_seconds(seconds):
+            # taken from : https://stackoverflow.com/questions/4048651/python-function-to-convert-seconds-into-minutes-hours-and-days
+            h = int(seconds//(60*60))
+            m = int((seconds-h*60*60)//60)
+            s = int(seconds-(h*60*60)-(m*60))
+            str_shown = ''
+            if h != 0:
+                str_shown += str(h) + ' hour '
+            if m != 0:
+                str_shown += str(m) + ' minutes '
+            if s != 0 and h < 5:
+                str_shown += str(s) + ' seconds'
+            return str_shown
+        flash_message(self, 'warning', 'Alert {} succesfully launched. Alert is supposed to start in {}.'.format(alert.name, convert_seconds(entry.is_due()[1])))
         self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
 
 
@@ -260,7 +273,7 @@ class AlertStop(BaseView):
     @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('ARGS = {}'.format(args))
+        #print('ARGS = {}'.format(args))
 
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
@@ -274,7 +287,7 @@ class AlertStop(BaseView):
                 del self.session['tasks']['live_view']
                 self.session.save()
         elif alert.alert_type == 'BasicReccurent' or alert.alert_type == 'CrontabSchedule':
-            print('Passe heree')
+            #print('Passe heree')
             try:
                 # TODO: ADD try / catch if key not found in redbeat
                 e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)

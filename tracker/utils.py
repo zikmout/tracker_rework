@@ -97,7 +97,7 @@ def get_celery_task_state(task):
             'total': 1,
             'status': str(task.info)
         }
-    print('response : {}'.format(response))
+    #print('response : {}'.format(response))
     return response
 
 def revoke_chain(last_result): 
@@ -111,7 +111,7 @@ def revoke_all_tasks(app, task_func, ids):
     task_ids_to_stop = list()
 
     for id in ids:
-        print('pass id')
+        #print('pass id')
         task_ids_to_stop.append(id)
         task = task_func.AsyncResult(id)
         revoke_chain(task)
@@ -136,7 +136,9 @@ def replace_mix_option_with_all_existing_keywords(links):
                         #all_words.add(_.lower())
                 else:
                     #print('key word = {}'.format(key_word))
-                    all_words.add(key_word)
+                    # Add condition for l'Oréal
+                    if key_word not in ['le', 'la', 'les', 'du', 'au']:
+                        all_words.add(key_word)
                     # not case sensitive
                     #all_words.add(key_word.upper())
                     #all_words.add(key_word.lower())

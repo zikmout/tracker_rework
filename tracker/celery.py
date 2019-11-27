@@ -1,6 +1,27 @@
-from celery import Celery
-# import tracker.celery_continuous_conf as celeryconf
-# CELERY_TIMEZONE = 'Europe/London'
+import celery
+from celery import Celery, group, states
+from celery.backends.redis import RedisBackend
+
+def patch_celery():
+    """Patch redis backend."""
+    def _unpack_chord_result(
+        self, tup, decode,
+        EXCEPTION_STATES=states.EXCEPTION_STATES,
+        PROPAGATE_STATES=states.PROPAGATE_STATES,
+    ):
+        _, tid, state, retval = decode(tup)
+
+        if state in EXCEPTION_STATES:
+            retval = self.exception_to_python(retval)
+        if state in PROPAGATE_STATES:
+            # retval is an Exception
+            return '{}: {}'.format(retval.__class__.__name__, str(retval))
+
+        return retval
+
+    celery.backends.redis.RedisBackend._unpack_chord_result = _unpack_chord_result
+
+    return celery
 
 download_worker_app = Celery('download_worker',
               backend='amqp://',
@@ -12,7 +33,7 @@ crawl_worker_app = Celery('crawl_worker',
               broker='pyamqp://guest@localhost/')#,
              #include=['tracker.workers'])
 
-live_view_worker_app = Celery('live_view',
+live_view_worker_app = patch_celery().Celery('live_view',
               backend='amqp://',
               broker='pyamqp://guest@localhost/')#,
              #include=['tracker.workers'])

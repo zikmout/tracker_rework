@@ -1,4 +1,5 @@
 import json
+import html as htmlib
 from datetime import datetime
 import smtplib, ssl
 import tldextract
@@ -7,7 +8,7 @@ from email.mime.multipart import MIMEMultipart
 
 # TODO: Make on function for all mails
 
-def simple_mail_sbb(task_results, mailing_list):
+def simple_mail_sbb(task_results, mailing_list, total_scanned):
 	#print('list of all grabbed task = {}'.format(task_results))
 
 	html = """\
@@ -64,8 +65,20 @@ def simple_mail_sbb(task_results, mailing_list):
 			else:
 				site_html += ('*** too many links ***' + "<br>")
 			site_html += "</font>"
+
 	html += site_html
-	html += "<br><br>Best regards,<br></body></html>"
+	html += "<br><br>Best regards,<br>"
+
+	# Errors logging in mail (sent to everyone yet)
+	if errors != {}:
+		html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
+		for k, v in errors.items():
+			html += "<br>{} : {}".format(k, htmlib.escape(v))
+
+	html += "<br><pre style='line-height:15.86px'><wbr>______________________________<wbr>"
+	html += "This is an automated email alert tracking website change(s). If you wish to unsubscribe, contact your administrator."
+	html += "<wbr>______________________________<wbr></pre>"
+	html += "</body></html>"
 
 	# Turn these into plain/html MIMEText objects
 	#part1 = MIMEText(text, "plain")
@@ -111,7 +124,7 @@ def simple_mail_sbb(task_results, mailing_list):
 
 
 
-def designed_mail_sbb(task_results, mailing_list):
+def designed_mail_sbb(task_results, mailing_list, total_scanned):
 	"""
 		Mailing list must be of type dict here
 	"""
@@ -179,7 +192,16 @@ def designed_mail_sbb(task_results, mailing_list):
 					site_html += ('*** too many links ***' + "<br>")
 				site_html += "</font>"
 		html += site_html
-		html += "<br><br>Best regards,<br></body></html>"
+		html += "<br><br>Best regards,<br>"
+		if errors != {}:
+			html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
+			for k, v in errors.items():
+				html += "<br>{} : {}".format(k, htmlib.escape(v))
+
+		html += "<br><pre style='line-height:15.86px'><wbr>______________________________<wbr>"
+		html += "This is an automated email alert tracking website change(s). If you wish to unsubscribe, contact your administrator."
+		html += "<wbr>______________________________<wbr></pre>"
+		html += "</body></html>"
 
 		# Turn these into plain/html MIMEText objects
 		#part1 = MIMEText(text, "plain")
@@ -213,25 +235,26 @@ def designed_mail_sbb(task_results, mailing_list):
 		print('********* Mail sent to {} (SUBJECT:{}) *********'.format(receiver_email, message["Subject"]))
 
 
-def generic_mail_template(task_results, mailing_list, task_name, show_links=True):
+def generic_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links=True):
 	"""
 		Mailing list must be of type dict here
 	"""
+	print('----> ERRORS IN MAIL = {} (type : {})'.format(errors, type(errors)))
 	if not isinstance(mailing_list, dict):
 		raise ValueError("Mailing List must be dict type.")
 
 	for receiver_email, targets in mailing_list.items():
 		designed_task_results = [k for k in task_results if k['url'] in targets]
 		# If no change observed, no need to send mail
+		print('DESIGNED TASK RESULST = {}'.format(designed_task_results))
 		if len(designed_task_results) == 0:
 			continue;
 
 		html = """\
 		<html>
 		  <body>
-		    <p>Hello,<br><br>
-		       This is an automated email regarding alerts on website change.</p>
 		"""
+		# html += "<a style='color:#32c4d1; font-weight: 700;'' href='/'>TRACKER</a><br>"
 		# html += "<b><font color='blue'>"
 		# html += '(ALERT TYPE :'
 		# html += task_name
@@ -240,7 +263,7 @@ def generic_mail_template(task_results, mailing_list, task_name, show_links=True
 		for site in designed_task_results:
 			html += "<li><a href='#" + site['div'] + "'> " + site['div'] + "</a></li>"
 
-		html += "Please see logs below.</b><br>"
+		html += "<br>"
 
 		site_html = ''
 		for site in designed_task_results:
@@ -286,9 +309,20 @@ def generic_mail_template(task_results, mailing_list, task_name, show_links=True
 					else:
 						site_html += ('*** too many links ***' + "<br>")
 				site_html += "</font>"
+				
 		html += site_html
-		html += "<br><br>Best regards,<br></body></html>"
+		html += "<br><br>Best regards,<br>"
 
+		if errors != {}:
+			html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
+			for k, v in errors.items():
+				html += "<br>{} : {}".format(k, htmlib.escape(v))
+
+		html += "<br><pre style='line-height:15.86px'><wbr>______________________________<wbr>"
+		html += "This is an automated email alert tracking website change(s). If you wish to unsubscribe, contact your administrator."
+		html += "<wbr>______________________________<wbr></pre>"
+		html += "</body></html>"
+		
 		# Turn these into plain/html MIMEText objects
 		#part1 = MIMEText(text, "plain")
 		part2 = MIMEText(html, "html")

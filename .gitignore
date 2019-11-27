@@ -47,3 +47,5 @@ errors.txt
 celerybeat.pid
 err.txt
 .vscode/
+*.txt
+*.log

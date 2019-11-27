@@ -26,11 +26,11 @@ def make_predictions(content, min_acc=0.75):
     #print('predictions = {} (acc = {})'.format(preds[0][0], preds[1][0]))
     if '__label__1' in preds[0][0] and preds[1][0] > float(min_acc):
         prediction = '__label__1'
-        print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
+        #print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
         return True
     else:
         prediction = '__label__2'
-        print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
+        #print('[FastText] Predicted {} with {} confidence.'.format(prediction, preds[1][0]))
         return False
 
 class SBBPredict(BaseView):
@@ -38,7 +38,7 @@ class SBBPredict(BaseView):
     @gen.coroutine
     def post(self):
     	args = { k: self.get_argument(k) for k in self.request.arguments }
-    	print('Ask to predict = {}'.format(args))
+    	#print('Ask to predict = {}'.format(args))
     	content = args['content']
     	min_acc = 0.75
     	if 'min_acc' in args:

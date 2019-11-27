@@ -162,17 +162,27 @@ ws.onmessage = function (evt) {
 
        //console.log(data.state);
        // logging errors from http requests
-       if (data.state == 'SUCCESS' && data.status['errors'].length > 0 && !document.getElementById('err-' + data.task_id)) {
+
+       console.log(data.status['errors']);
+       if (data.state == 'SUCCESS' && !document.getElementById('err-' + data.task_id)) {
         //console.log(data.status['errors']);
         var newError = document.createElement("DIV");
         newError.setAttribute("id", 'err-' + data.task_id);
         var errorLog = '';
         var i;
-        for (i = -1; i++; i <= data.status['errors'].length) {
-          errorLog += '<small>';
-          errorLog += '<a href="' + Object.keys(data.status['errors'][i]) + '" target="_blank">' + Object.keys(data.status['errors'][i]) + '</a>';
-          errorLog += '&nbsp;<font color="red">(' + escapeHtml(Object.values(data.status['errors'][i]).toString()) + ')</font></small>';
+        console.log('entered !');
+        for (var p in data.status['errors']) {
+          if (data.status['errors'].hasOwnProperty(p)) {
+            errorLog += '<small>';
+            errorLog += '<a href="' + p + '" target="_blank">' + p + '</a>';
+            errorLog += '&nbsp;<font color="red">(' + escapeHtml(data.status['errors'][p]) + ')</font></small>';
+          }
         }
+        // for (i = -1; i++; i <= data.status['errors'].length) {
+        //   errorLog += '<small>';
+        //   errorLog += '<a href="' + Object.keys(data.status['errors'][i]) + '" target="_blank">' + Object.keys(data.status['errors'][i]) + '</a>';
+        //   errorLog += '&nbsp;<font color="red">(' + escapeHtml(Object.values(data.status['errors'][i]).toString()) + ')</font></small>';
+        // }
         newError.innerHTML = errorLog;
         document.getElementById('errors').appendChild(newError);
         // $('#errors').appendChild

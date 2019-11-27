@@ -346,7 +346,7 @@
         {% end %}
         </td>
         <td style="vertical-align:middle;">
-        {% if alert['state'] == 'Active' %}
+        {% if alert['state'] == 'Active' and alert['alert_type'] != 'Live' %}
         <script>
           document.write(moment.duration({"seconds": {{ alert['next_due'] }}}).humanize());
           //(new Date( * 1000)).toUTCString().match(/(\d\d:\d\d:\d\d)/)[0]

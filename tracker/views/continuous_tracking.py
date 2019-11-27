@@ -267,6 +267,8 @@ class UserProjectEditWebsite(BaseView):
         print('config df after = {}'.format(config_df_updated))
         config_df_updated.to_excel(project.config_file, index=False)
 
+
+
         # Update content (take first content with name projectname + '_default')
         df = pd.read_excel(project.config_file)
         links = dict(zip(df['target'], df['target_label']))
@@ -282,7 +284,13 @@ class UserProjectEditWebsite(BaseView):
                 if ';' in v[0]:
                     links[k] = v[0].split(';')
                 #print('Not NAN')
-        #print('linKS HERE ====== {}'.format(links))
+
+        # Need to download new link if it changes
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        rproject._load_units_from_data_path()
+        idx, url_errors = rproject.add_links_to_crawler_logfile(links)
+
+        print('IDX = {}, URL_ERRORS  ={}'.format(idx, url_errors))
         
         content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
         alerts_to_delete = content_to_delete.alerts.all()
@@ -309,4 +317,13 @@ class UserProjectEditWebsite(BaseView):
         units = rproject.units_stats(units=rproject.filter_units())
         self.session['units'] = units
         self.session.save()
+        if url_errors != []:
+            # Supposed to be only one error here, because one link (TODO: Check if problem there is)
+            for err in url_errors:
+                for k, v in err.items():
+                    target_url = k
+                    target_error = v
+            flash_message(self, 'danger', 'Impossible to download provided target URL : {} (Reason: {})'.format(args['inputTarget'][0], target_error))
+        else:
+            flash_message(self, 'success', 'Successfully downloaded URL : {}'.format(args['inputTarget'][0]))
         self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))

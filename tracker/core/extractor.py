@@ -20,17 +20,23 @@ import itertools
 import tracker.core.scrapper as scrapper
 import tracker.core.utils as utils
 
+# def exclude_links(url):
+
 def clean_pdf_content(input_str):
     #print('-> cleaning pdf content ...')
-    if input_str is None:
+    try:
+        if input_str is None:
+            return None
+        intput_str = ''.join(x for x in input_str if x.isprintable())
+        input_str = ''.join(input_str).lower()
+        output = re.sub(r'[0-9]', '', input_str)
+        t = str.maketrans('', '', string.punctuation)
+        output = output.translate(t)
+        output = ' '.join(output.split())
+        return output
+    except Exception as e:
+        print('[CLEAN PDF CONTENT EXCEPTION] : {}'.format(e))
         return None
-    intput_str = ''.join(x for x in input_str if x.isprintable())
-    input_str = ''.join(input_str).lower()
-    output = re.sub(r'[0-9]', '', input_str)
-    t = str.maketrans('', '', string.punctuation)
-    output = output.translate(t)
-    output = ' '.join(output.split())
-    return output
 
 def clean_content(input_list, min_sentence_len=5):
     #print('-> cleaning HTML content ....')
@@ -110,7 +116,7 @@ def keyword_match(keywords, status, remote_content, url, detect_links=True):
     """ Find diff pos, diff neg, nearest links pos, nearest links neg """
     match_neg = list()
     match_pos = list()
-    #print('KEYWORRRRRDS ::: {}'.format(keywords))
+    print('KEYWORRRRRDS ::: {}'.format(keywords))
     
     for keyword in keywords:
         if not ' ' in keyword:
@@ -171,6 +177,22 @@ def extract_links_from_html(content):
     links = list()
     webpage_regex = re.compile("""<a[^>]+href=["'](.*?)["']""", re.IGNORECASE)
     links = webpage_regex.findall(content)
+
+    to_exclude = ['facebook.', 'twitter.', 'youtube.', 'instagram.', 'google.', 'linkedin.', '#', 'mailto', 'viadeo.']
+    excluded = set()
+    for link in links:
+        for word in to_exclude:
+            if word in link:
+                excluded.add(link)
+    
+    links = [_ for _ in links if _ not in excluded]
+    links = list(set(links))
+    # print('\n\nLINKS INCLUDED :\n')
+    # for i in links:
+        # print(i)
+    # print('\n\nLINKS EXCLUDED :\n')
+    # for e in excluded:
+        # print(e)
     return links
 
 
@@ -185,8 +207,8 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
     # clean content ('\n' here)
     extracted_local_content = clean_content(extracted_local_content)
     extracted_remote_content = clean_content(extracted_remote_content)
-    print('EXTRACTED #REMOTE = {}'.format(extracted_remote_content))
-    print('EXTRACTED #LOCAL = {}'.format(extracted_local_content))
+    #print('EXTRACTED #REMOTE = {}'.format(extracted_remote_content))
+    #print('EXTRACTED #LOCAL = {}'.format(extracted_local_content))
     # get content diffs
     status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
     status['diff_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
@@ -194,18 +216,13 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
     if detect_links and status['diff_neg'] != []:
         all_links_neg = set()
         [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
-        status['all_links_neg'] = list(all_links_neg)
-        #print('diff all links neg = {}'.format(status['all_links_neg']))
-    else:
-        status['all_links_neg'] = None
+        status['all_links_neg'].extend(all_links_neg)
+
 
     if detect_links and status['diff_pos'] != []:
         all_links_pos = set()
         [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
-        status['all_links_pos'] = list(all_links_pos)
-        #print('diff all links pos = {}'.format(status['all_links_pos']))
-    else:
-        status['all_links_pos'] = None
+        status['all_links_pos'].extend(all_links_pos)
         
     return status
 

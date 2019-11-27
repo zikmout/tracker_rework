@@ -4,6 +4,7 @@ import datetime
 import time
 import pytz
 from tornado import gen
+import math
 
 from redbeat.schedules import rrule
 from celery.schedules import crontab
@@ -207,6 +208,22 @@ class AlertLaunch(BaseView):
         elif args['alertType'] == 'BasicReccurent' or args['alertType'] == 'CrontabSchedule':
             print('content --> {}'.format(content))
             # Loading project
+            user = self.request_db.query(User).filter_by(username=username).first()
+            project = user.projects.filter_by(name=projectname).first()
+            content = project.contents.filter_by(name=args['contentName']).first()
+            
+            i = 0
+            print('content mailing list = {}'.format(content.mailing_list))
+            for k in content.mailing_list:
+                if isinstance(content.mailing_list[k], float):
+                    #print('NO WATCHABLE CONTENT')
+                    i += 1
+            if i == len(content.mailing_list):
+                flash_message(self, 'danger', 'Please spectify mailing list for this kind of alert.')
+                self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+                return
+
+
             rproject = RProject(project.name, project.data_path, project.config_file)
             if len(self.session['project_config_file']) == 0:
                 rproject._load_units_from_data_path()

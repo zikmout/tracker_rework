@@ -426,6 +426,8 @@ class RProject:
                 unit = self.get_unit_from_url(key)
                 if unit:
                     for _ in val:
+                        # unit.add_crawler_link(unit.get_regex_remote_tree(_))
+                        # unit.add_crawler_link()
                         task = unit.download(provided_links=unit.get_regex_remote_tree(_))
                         tasks.append(task)
         else:
@@ -587,17 +589,18 @@ class RProject:
 
         # Tasks are of type celery chords, so one argument per task
         task_args = list()
-        filename_time = datetime.datetime.now().strftime("%Y%m%d")
+        # filename_time = datetime.datetime.now().strftime("%Y%m%d")
         if isinstance(dict_links, dict) and bool(dict_links):            
             for key, val in dict_links.items():
                 unit = self.get_unit_from_url(key)
+
                 if unit is not None:
-                    #print('VAL = {}'.format(val))
+                    print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
                     #print('filename_time = {}'.format(filename_time))
                     task_args.append((val,
                         unit.download_path,
-                        unit.download_path + filename_time,
+                        unit.download_path,
                         unit.url,
                         keywords_diff,
                         detect_links,
@@ -605,6 +608,7 @@ class RProject:
                 else:
                     print('Unit {} not found'.format(key))
 
+            print('Task args ====> {}'.format(task_args))
             print('SCHEDULED = {}'.format(schedule))
             if template_type == 'share buy back':
                 entry = Entry(alert_name, 'continuous_worker.share_buy_back_task',\

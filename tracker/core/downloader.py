@@ -16,6 +16,40 @@ import tracker.core.utils as utils
 import tracker.core.extractor as extractor
 import http.client
 
+from pprint import pprint
+
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+
+
+class AdidasScraper:
+    """ for website https://www.adidas-group.com/en/investors/investor-events/ only
+    """
+    def __init__(self, url):
+
+        self.url = url
+        # binary = FirefoxBinary('/Users/xxx/')
+        # self.driver = webdriver.Firefox(firefox_binary=binary)
+        self.driver = webdriver.Firefox()
+
+    def get_html_wait(self):#, max_company_count=1000):
+        """Extracts and returns company links (maximum number of company links for return is provided)."""
+        self.driver.implicitly_wait(10)
+        self.driver.get(self.url)
+        # elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
+        # text = elements.html
+        html = self.driver.page_source
+        # elements = self.driver.find_element_by_class_name("events future visible")
+        # element = WebDriverWait(self.driver, 15).until(
+        #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
+        # )
+
+        self.driver.close()
+        return html
+
 def allow_create_folder(current_path):
     if os.path.isfile(current_path):
         try:
@@ -42,7 +76,12 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
         kwarg:
             check_duplicates (bool): Make sure no duplicate in names (default:False)
     """
-    #print('FULL URL ARRIVED -------> {}'.format(url))
+    print('FULL URL ARRIVED -------> {}'.format(url))
+    if url.endswith('/'):
+        name = 'unknown___'
+        print('Changing name to unknown')
+    else:
+        print('NO NEED TO CHANGE NAME TO UNKNOWN')
     if not os.path.isdir(path):
         # if there is a file with same name as folder, change its name
         if check_duplicates:
@@ -77,19 +116,37 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
     )
     # Faking SSL certificate to avoid unauthorized requests
     gcontext = ssl._create_unverified_context()
+    checked=False
     try:
         # download content of the url
-        response = urllib.request.urlopen(req, context=gcontext, timeout=30)
+        response = urllib.request.urlopen(req, context=gcontext, timeout=10)
     except (urllib.error.HTTPError, urllib.error.URLError, ConnectionResetError, UnicodeDecodeError) as e:
         print('[ERROR] download_and_save_content : {}\n(url = {})'.format(e, url))
         return { url : '[URL ERROR] {}'.format(e)}
-    except timeout:
-        print('[ERROR TIMEOUT] for url : {}'.format(url))
-        return { url : '[TIMEOUT]'}
+    except (timeout, TimeoutError) as e:
+        print('[ERROR TIMEOUT] for url : {} (Error : {})'.format(url, e))
+        print('\n-------------> TIMEOUT ERROR CATCHED <----------------\n')
+        print('Retrying HTTP request now ...\n')
+        scraper = AdidasScraper(url)
+        remote_content = scraper.get_html_wait().encode('utf-8')
+        print('Return from scrapper2 =======>> {}'.format(remote_content))
+        msg = '{}'.format(e)
+        error = { url: msg }
+        checked = True
+    # except Exception as e:
+    #     remote_content = None
+    #     msg = '{}'.format(e)
+    #     error = { url: msg }
+    #     print('ERROR : url = {}, message => {}'.format(url, msg))
+    # return remote_content, error
+        # return { url : '[TIMEOUT--]'}
     # Save content in the provided path with binary format
     with open (full_path, 'wb+') as content:
         try:
-            content.write(response.read())
+            if checked:
+                content.write(remote_content)
+            else:
+                content.write(response.read())
         except (http.client.IncompleteRead) as e:
             print('[ERROR] - Incomplete Read. Skipping download for this file. Details = {}'.format(e))
             return { url : '[INCOMPLETE READ] {}'.format(e) }

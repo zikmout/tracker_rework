@@ -109,7 +109,10 @@ class SwitchMode(BaseView):
         # del self.session['is_simplified']
         self.session['is_simplified'] = not self.session['is_simplified']
         self.session.save()
-        flash_message(self, 'info', 'Simplified interface : {}.'.format(self.session['is_simplified']))
+        if self.session['is_simplified'] is False:
+            flash_message(self, 'info', 'Extended interface ON.')
+        else:
+            flash_message(self, 'info', 'Simplified interface ON.')
         self.send_response({ 'response': 'OK' })
 
 class My404Handler(BaseView):

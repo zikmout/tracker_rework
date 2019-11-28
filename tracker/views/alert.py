@@ -290,11 +290,15 @@ class AlertStop(BaseView):
     @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        #print('ARGS = {}'.format(args))
+        print('ARGS alert STOP = {}'.format(args))
 
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         content = project.contents.filter_by(name=args['contentName']).first()
+        # if content is None:
+        #     flash_message(self, 'danger', 'Something wrong happened. Please retry.')
+        #     self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+        #     return
         alert = content.alerts.filter_by(name=args['alertName']).first()
         #print('alert.alert_type = {}'.format(alert.alert_type))
         if alert.alert_type == 'Live':
@@ -355,8 +359,8 @@ class AlertLiveView(BaseView):
             tasks  = self.session['tasks']['live_view'].copy()
             self.render('projects/alerts/live-view.html', tasks=tasks)
         else:
-            flash_message(self, 'warning', 'No current live view tasks yet.')
-            self.redirect('/blank')            
+            # flash_message(self, 'warning', 'No current live view tasks yet.')
+            self.render('projects/alerts/live-view.html')            
 
 class AlertLiveUpdate(BaseView):
     SUPPORTED_METHODS = ['POST']

@@ -152,6 +152,8 @@ def keyword_match(keywords, status, remote_content, url, detect_links=True):
     status['diff_neg'] = match_neg
     status['diff_pos'] = match_pos
 
+    # TODO: Maybe let all links diff anyway ? In this case, need to change condition (of 
+    # showing diff pos or diff neg) in tracker.mail
     if detect_links and status['diff_pos'] == []:
         status['all_links_pos'] = [] 
     if detect_links and status['diff_neg'] == []:
@@ -205,8 +207,12 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
         extracted_local_links = extract_links_from_html(local_content)
         extracted_remote_links = extract_links_from_html(remote_content)
     # clean content ('\n' here)
-    extracted_local_content = clean_content(extracted_local_content)
-    extracted_remote_content = clean_content(extracted_remote_content)
+    # Save raw data for client 
+    status['diff_raw_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
+    status['diff_raw_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
+
+    # extracted_local_content = clean_content(extracted_local_content)
+    # extracted_remote_content = clean_content(extracted_remote_content)
     #print('EXTRACTED #REMOTE = {}'.format(extracted_remote_content))
     #print('EXTRACTED #LOCAL = {}'.format(extracted_local_content))
     # get content diffs
@@ -223,6 +229,21 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
         all_links_pos = set()
         [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
         status['all_links_pos'].extend(all_links_pos)
+
+    # taking off doublons in diff pos and diff neg
+                
+    # Strip
+    status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
+    status['diff_neg'] = [x.strip() for x in status['diff_neg'].copy()]
+    
+    # Set
+    status['diff_pos'] = list(set(status['diff_pos'].copy()))
+    status['diff_neg'] = list(set(status['diff_neg'].copy()))
+    
+    # Intersect
+    intersect = set(status['diff_pos']).intersection(set(status['diff_neg']))
+    status['diff_pos'] = [x for x in status['diff_pos'].copy() if x not in intersect]
+    status['diff_neg'] = [x for x in status['diff_neg'].copy() if x not in intersect]
         
     return status
 

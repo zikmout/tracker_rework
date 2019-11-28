@@ -15,6 +15,11 @@ from tracker.core.rproject import RProject
 import tracker.workers.continuous.continuous_worker as continuous_worker
 from redbeat import RedBeatSchedulerEntry as Entry
 
+from tracker.celery import live_view_worker_app
+from tracker.workers.live.live_view_worker import live_view
+from tracker.utils import revoke_all_tasks
+
+
 class DownloadFile(BaseView):
     @login_required
     @gen.coroutine
@@ -220,6 +225,13 @@ class UserProjectView(BaseView):
                 self.render('projects/index.html', project=json_project, units=units)
                 return
             else:
+                # TODO: Also set all alert in postgresql so status launched = False if s.o. forget to stop its alert
+                # Deleting live view from session and killing backend task
+                if 'live_view' in self.session['tasks']:
+                    res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+                    print('Deleting live view tasks from session.')
+                    del self.session['tasks']['live_view']
+                    self.session.save()
                 self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
 
 
@@ -238,11 +250,11 @@ class UserProjectDelete(BaseView):
                 #print('a.name = {}'.format(a.name))
                 if a.alert_type != 'Live':
                     try:
-                        print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                        print('Deleting non Live alert from redbeat : {}'.format(a.name))
                         e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
                         e.delete()
                     except Exception as e:
-                        print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
+                        print('[FAIL] Deleting non Live alert from redbeat : {}'.format(a.name))
                         print('Reason = {}'.format(e))
         self.request_db.delete(project)
         self.request_db.commit()

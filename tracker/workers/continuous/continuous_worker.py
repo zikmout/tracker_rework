@@ -95,6 +95,7 @@ def make_request_for_predictions(content, min_acc=0.75):
     return json.dumps({ 'error': '{}'.format(e)})
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
+    # TODO: Add more characters
     if ('@' or ':') in url:
         return False
 
@@ -126,7 +127,8 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
 
     if extractor.is_valid_file(filename) or 'pdf' in cs:
         print('URL = {} (detected pdf)'.format(url))
-        cleaned_content = extractor.clean_pdf_content(pdftotext.PDF(response))
+        extracted = pdftotext.PDF(response)
+        cleaned_content = extractor.clean_pdf_content(extracted)
         #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
         if cleaned_content is None or cleaned_content in already_seen_content:
             #print('Content {} is None !!!!!!!!!'.format(url))
@@ -140,8 +142,8 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return json.loads(resp)
 
     else:
-        if 'www.facebook.' or 'www.twitter.' or 'www.youtube.' in url:
-            return False
+        # if 'www.facebook.' or 'www.twitter.' or 'www.youtube.' in url:
+        #     return False
         print('URL = {} (detected NON pdf)'.format(url))
         cleaned_content = extractor.get_essential_content(response.read(), 10)
 
@@ -165,18 +167,22 @@ def select_only_sbb_links(status):
     #print('\n-------------------------------———\n')
     i = 0
     excluded_links = list()
+
     for link in status['all_links_pos'].copy():
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['all_links_pos'].remove(link)#(index)
+
     for link in status['all_links_neg'].copy():
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['all_links_neg'].remove(link)
+
     for link in status['nearest_link_pos'].copy():
         if is_sbb_content(link) is False:
             excluded_links.append(link)
             status['nearest_link_pos'].remove(link)
+
     for link in status['nearest_link_neg'].copy():
         if is_sbb_content(link) is False:
             excluded_links.append(link)
@@ -282,12 +288,6 @@ def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links
                 if detect_links:
                     status = get_full_links(status, url)
                     status = select_only_sbb_links(status)
-
-                # taking off doublons in diff pos and diff neg
-                status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
-                status['diff_neg'] = [x.strip() for x in status['diff_neg'].copy()]
-                status['diff_pos'] = list(set(status['diff_pos'].copy()))
-                status['diff_neg'] = list(set(status['diff_neg'].copy()))
 
                 #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
                 self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})

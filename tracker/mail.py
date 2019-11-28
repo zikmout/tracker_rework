@@ -67,7 +67,7 @@ def simple_mail_sbb(task_results, mailing_list, total_scanned):
 			site_html += "</font>"
 
 	html += site_html
-	html += "<br><br>Best regards,<br>"
+	# html += "<br><br>Best regards,<br>"
 
 	# Errors logging in mail (sent to everyone yet)
 	if errors != {}:
@@ -117,12 +117,6 @@ def simple_mail_sbb(task_results, mailing_list, total_scanned):
 		        sender_email, email, message.as_string()
 		    )
 	print('********* ALL MAILS SENT !! *****')
-
-
-
-
-
-
 
 def designed_mail_sbb(task_results, mailing_list, total_scanned):
 	"""
@@ -192,9 +186,9 @@ def designed_mail_sbb(task_results, mailing_list, total_scanned):
 					site_html += ('*** too many links ***' + "<br>")
 				site_html += "</font>"
 		html += site_html
-		html += "<br><br>Best regards,<br>"
+		html += "<br>"
 		if errors != {}:
-			html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
+			html += "<br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
 			for k, v in errors.items():
 				html += "<br>{} : {}".format(k, htmlib.escape(v))
 
@@ -216,7 +210,7 @@ def designed_mail_sbb(task_results, mailing_list, total_scanned):
 		message = MIMEMultipart()
 		date = datetime.now().replace(microsecond=0)
 		#message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
-		message["Subject"] = '[SBB Alert] {}'.format(', '.join(domains_list))
+		message["Subject"] = '[{}] {}'.format('SBB Alert', ', '.join(domains_list))
 		message["From"] = 'Tracker Bot'
 		message["To"] = receiver_email
 
@@ -311,7 +305,7 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
 				site_html += "</font>"
 				
 		html += site_html
-		html += "<br><br>Best regards,<br>"
+		# html += "<br><br>Best regards,<br>"
 
 		if errors != {}:
 			html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
@@ -336,7 +330,7 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
 		message = MIMEMultipart()
 		date = datetime.now().replace(microsecond=0)
 		#message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
-		message["Subject"] = '[{}] {}'.format('Diff keyword alert', ', '.join(domains_list))
+		message["Subject"] = '[{}] {}'.format('Diff alert', ', '.join(domains_list))
 		message["From"] = 'Tracker Bot'
 		message["To"] = receiver_email
 

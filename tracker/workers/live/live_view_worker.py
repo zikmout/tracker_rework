@@ -58,7 +58,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return False
 
     if response.geturl() != url:
-        print('//////////// {} has been redirected to : {} //////////'.format(response.geturl(), url))
+        print('** {} has been redirected to : {} **'.format(response.geturl(), url))
         url = response.geturl()
         if url in already_visited:
             return False
@@ -232,12 +232,6 @@ def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_link
                 if detect_links:
                     status = get_full_links(status, url)
                     status = select_only_sbb_links(status)
-
-                # taking off doublons in diff pos and diff neg
-                status['diff_pos'] = [x.strip() for x in status['diff_pos'].copy()]
-                status['diff_neg'] = [x.strip() for x in status['diff_neg'].copy()]
-                status['diff_pos'] = list(set(status['diff_pos'].copy()))
-                status['diff_neg'] = list(set(status['diff_neg'].copy()))
 
                 #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
                 self.update_state(state='PROGRESS', meta={'current': counter, 'total': total, 'status': status})

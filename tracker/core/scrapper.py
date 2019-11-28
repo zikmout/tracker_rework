@@ -14,6 +14,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
+from selenium.webdriver.firefox.options import Options
 
 
 class AdidasScraper:
@@ -24,7 +25,9 @@ class AdidasScraper:
         self.url = url
         # binary = FirefoxBinary('/Users/xxx/')
         # self.driver = webdriver.Firefox(firefox_binary=binary)
-        self.driver = webdriver.Firefox()
+        options = Options()
+        options.headless = True
+        self.driver = webdriver.Firefox(options=options)
 
     def get_text_wait(self):#, max_company_count=1000):
         """Extracts and returns company links (maximum number of company links for return is provided)."""
@@ -38,7 +41,7 @@ class AdidasScraper:
         #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
         # )
 
-        self.driver.close()
+        self.driver.quit()
         return html
         # last_line_number = 0
         # while last_line_number < max_company_count:

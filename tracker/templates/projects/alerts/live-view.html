@@ -7,7 +7,7 @@ a {
 </style>
 <div class="starter-template-fluid">
       <br />
-      <h3>Live alert on {{ handler.session['current_project'] }}</h3>
+      <h3>Live alert</h3>
       
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="myLargeModalLabel" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -24,7 +24,7 @@ a {
 
         
 
-
+          {% if 'live_view' in handler.session['tasks'] %}
             <div class="row">
               <div class="col-lg-10">
                 <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-inline">
@@ -67,6 +67,10 @@ a {
             <b>Errors:</b>
             <div id="errors"></div>
 
+          {% else %}
+            <br><br><center><p class="lead">Launch a live alert and monitor it from here.</p></center>
+          {% end %}
+
 
         
 
@@ -86,7 +90,11 @@ var counterDoneMaster = 0;
 var counterFailureMaster = 0;
 var failures = Array();
 var failuresURL = Array();
+{% if 'live_view' in handler.session['tasks'] %}
 var totalTaskNb = {{ len(handler.session['tasks']['live_view']) }};
+{% else %}
+var totalTaskNb = 0;
+{% end %}
 var counterRemaining = totalTaskNb;
 
 var ws = new WebSocket(location.origin.replace(/^http/, 'ws') + "/websocket");

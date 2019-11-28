@@ -81,31 +81,31 @@
         {% if hasattr(handler, 'session') and 'units' in handler.session and 'current_project' in handler.session %}
 
         <nav class="navbar navbar-expand-md bg-white box-shadow py-0 custom-toggler" style="padding-top: 15px;">
-            <a class="navbar-brand" onmouseover="this.style.color='#343a40'" onmouseout="this.style.color='#343a40'" style="font-size:0.9rem; color: #343a40;" href="#"><b>{{ handler.session['current_project'] }}</b></a>
+            <a class="navbar-brand" onmouseover="this.style.color='#343a40'" onmouseout="this.style.color='#343a40'" style="font-size:0.9rem; color: #343a40" href="#"><b>{{ handler.session['current_project'] }}</b></a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbar2">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link {% if '/websites-manage' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/websites-manage' in handler.session['current_page'] %}; color: #28a8b3;{% else %}{% end %}" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage">Edit Watchlist<span class="sr-only">(current)</span></a>
+                        <a class="nav-link {% if '/websites-manage' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/websites-manage' in handler.session['current_page'] %}; color: #28a8b3; background-color: #343a40 !important{% else %}{% end %}" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/websites-manage">Edit Watchlist<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if '/alerts' in handler.session['current_page'] and not 'live' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/alerts' in handler.session['current_page'] and not '/live' in handler.session['current_page'] %}; color: #28a8b3;{% else %}{% end %}"  href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Manage Alerts<span class="sr-only">(current)</span></a>
+                        <a class="nav-link {% if '/alerts' in handler.session['current_page'] and not 'live' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/alerts' in handler.session['current_page'] and not '/live' in handler.session['current_page'] %}; color: #28a8b3; background-color: #343a40 !important{% else %}{% end %}"  href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts">Manage Alerts<span class="sr-only">(current)</span></a>
                     </li>
                     {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
                     <li class="nav-item">
-                        <a class="nav-link {% if '/crawl' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/crawl' in handler.session['current_page'] %}; color: #28a8b3;{% else %}{% end %}"  href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl">Crawler<span class="sr-only">(current)</span></a>
+                        <a class="nav-link {% if '/crawl' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/crawl' in handler.session['current_page'] %}; color: #28a8b3; background-color: #343a40 !important{% else %}{% end %}"  href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/crawl">Crawler<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if '/download' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/download' in handler.session['current_page'] %}; color: #28a8b3;{% else %}{% end %}" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download">Downloader<span class="sr-only">(current)</span></a>
+                        <a class="nav-link {% if '/download' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/download' in handler.session['current_page'] %}; color: #28a8b3; background-color: #343a40 !important{% else %}{% end %}" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/download">Downloader<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if '/spider' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/spider' in handler.session['current_page']%}; color: #28a8b3;{% else %}{% end %}"  href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/spider">Spider<span class="sr-only">(current)</span></a>
+                        <a class="nav-link {% if '/spider' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if '/spider' in handler.session['current_page']%}; color: #28a8b3; background-color: #343a40 !important{% else %}{% end %}"  href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/spider">Spider<span class="sr-only">(current)</span></a>
                     </li>
                     {% end %}
                     <li class="nav-item">
-                        <a class="nav-link {% if 'alerts/live/view' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if 'alerts/live/view' in handler.session['current_page'] %}; color: #28a8b3;{% else %}{% end %}" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/view">Live View<span class="sr-only">(current)</span></a>
+                        <a class="nav-link {% if 'alerts/live/view' in handler.session['current_page'] %}{% else %}disabled{% end %}" style="font-size:0.9rem{% if 'alerts/live/view' in handler.session['current_page'] %}; color: #28a8b3; background-color: #343a40 !important{% else %}{% end %}" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/view">Live View<span class="sr-only">(current)</span></a>
                     </li>
 
 <!--                     <li class="nav-item" onmouseover="this.style.color='#28a8b3'" onmouseout="this.style.color=''">

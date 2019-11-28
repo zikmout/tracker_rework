@@ -14,7 +14,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 
 
 class AdidasScraper:
@@ -25,8 +25,8 @@ class AdidasScraper:
         self.url = url
         # binary = FirefoxBinary('/Users/xxx/')
         # self.driver = webdriver.Firefox(firefox_binary=binary)
-        options = Options()
-        options.headless = True
+        options = FirefoxOptions()
+        options.add_argument("--headless")
         self.driver = webdriver.Firefox(options=options)
 
     def get_text_wait(self):#, max_company_count=1000):

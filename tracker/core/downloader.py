@@ -23,16 +23,20 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from pyvirtualdisplay import Display
 
 class AdidasScraper:
     """ for website https://www.adidas-group.com/en/investors/investor-events/ only
     """
     def __init__(self, url):
-
+        self.display = Display(visible=0, size=(800, 600))
+        self.display.start()
         self.url = url
         # binary = FirefoxBinary('/Users/xxx/')
         # self.driver = webdriver.Firefox(firefox_binary=binary)
+        #options = FirefoxOptions()
+        #options.add_argument("--headless")
         self.driver = webdriver.Firefox()
 
     def get_html_wait(self):#, max_company_count=1000):
@@ -46,12 +50,12 @@ class AdidasScraper:
         # element = WebDriverWait(self.driver, 15).until(
         #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
         # )
-
-        self.driver.close()
+        self.driver.quit()
+        self.display.stop()
         return html
 
 def allow_create_folder(current_path):
-    if os.path.isfile(current_path):
+    if os.path.isfile(current_path) and not os.exists(current_path + '___'):
         try:
             os.rename(current_path, current_path + '___')
             print('[REC]: Filename {} changed into {}'.format(current_path, current_path + '___'))
@@ -62,6 +66,38 @@ def allow_create_folder(current_path):
     else:
         allow_create_folder(current_path.rpartition('/')[0])
 
+def save_remote_content(remote_content, url, path, name, check_duplicates=False):
+    print('< Asked to save remote_content on disk > url: {} (utils find internal link = {}'.format(url, utils.find_internal_link(path)))
+    if url.endswith('/') or name == '':
+        name = 'unknown___'
+    if not os.path.isdir(path):
+        print('** PATH =>>>> {}'.format(path))
+        # if there is a file with same name as folder, change its name
+        if check_duplicates:
+            if os.path.isfile(path):
+                os.rename(path, path + '___')
+                print('** path: {} is not a directory, changing name to unknown___'.format(path))
+        try:
+            os.makedirs(path)
+        except Exception as e:
+            print('Not possible to create directory {}, coming up in depth to fix it..'.format(path))
+            allow_create_folder(path)
+            os.makedirs(path)
+        except Exception as e:
+            print('[ERROR] - save_remote_content : {}'.format(e))
+            return False
+
+    # Save content in the provided path with binary format
+    full_path = os.path.join(path, name)
+    with open (full_path, 'wb+') as content:
+        try:
+            content.write(remote_content)
+            #content.write(response.read())
+        except (http.client.IncompleteRead) as e:
+            print('[ERROR] - save_remote_content : {}'.format(e))
+            return False
+    return True
+ 
 def download_and_save_content(url, name, path, header, check_duplicates=False, replace=False):
     """ For each website link, download the content found on link.
         Checks whether there are no duplicates. If name of file is '',

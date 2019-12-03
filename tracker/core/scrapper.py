@@ -96,7 +96,7 @@ def get_url_content(url, header, verbose=True):
         print('CATCHED SSL HANDSHAKE ERROR : {}'.format(e))
         print('Retrying HTTP request now ...\n')
         scraper = AdidasScraper(url)
-        remote_content = scraper.get_text_wait()
+        remote_content = scraper.get_html_wait()
         return remote_content, {url : '{}'.format(e)}
 
     except (timeout, TimeoutError) as e:
@@ -104,7 +104,7 @@ def get_url_content(url, header, verbose=True):
         # print('\n-------------> TIMEOUT ERROR CATCHED <----------------\n')
         print('Retrying HTTP request now ...\n')
         scraper = AdidasScraper(url)
-        remote_content = scraper.get_text_wait()
+        remote_content = scraper.get_html_wait()
         return remote_content, {url : '{}'.format(e)}
 
     except (urllib.error.HTTPError, ConnectionResetError, UnicodeDecodeError) as e:

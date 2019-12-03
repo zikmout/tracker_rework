@@ -214,7 +214,7 @@ def bad_task(self):
     time.sleep(10)
     print('stop sleep')
 
-@app.task(bind=True, ignore_result=False, soft_time_limit=120)#, time_limit=121)
+@app.task(bind=True, ignore_result=False, soft_time_limit=60)#, time_limit=121)
 def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm):
     """ Download website parts that have changed 
         -> diff based on keyword matching

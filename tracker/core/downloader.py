@@ -51,6 +51,7 @@ class AdidasScraper:
         #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
         # )
         self.driver.quit()
+        self.driver.close()
         self.display.stop()
         return html
 
@@ -91,6 +92,7 @@ def save_remote_content(remote_content, url, path, name, check_duplicates=False)
     full_path = os.path.join(path, name)
     with open (full_path, 'wb+') as content:
         try:
+            print('TT REMOTE COTENT = {}'.format(type(remote_content)))
             content.write(remote_content)
             #content.write(response.read())
         except (http.client.IncompleteRead) as e:

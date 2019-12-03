@@ -177,6 +177,8 @@ def extract_text_from_html(content):
 
 def extract_links_from_html(content):
     links = list()
+    if isinstance(content, bytes):
+        content = content.decode('utf-8', errors='ignore')
     webpage_regex = re.compile("""<a[^>]+href=["'](.*?)["']""", re.IGNORECASE)
     links = webpage_regex.findall(content)
 

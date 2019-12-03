@@ -147,7 +147,7 @@ def get_full_links(status, base_url):
     print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
     return status 
 
-@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=19, time_limit=20)
+@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=20, time_limit=20)
 def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm, counter):
     # try:
     """ Download website parts that have changed 

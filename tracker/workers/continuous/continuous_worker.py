@@ -214,7 +214,7 @@ def bad_task(self):
     time.sleep(10)
     print('stop sleep')
 
-@app.task(bind=True, ignore_result=False, soft_time_limit=60)#, time_limit=121)
+@app.task(bind=True, ignore_result=False, hard_time_limit=50, soft_time_limit=50)#soft_time_limit=60)#, time_limit=121)
 def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm):
     """ Download website parts that have changed 
         -> diff based on keyword matching
@@ -367,7 +367,7 @@ def log_error_diff(self, z):
     print('ERROR for diff_with_keywords_task = {}'.format(z))
 
 @app.task(bind=True)
-def diff_end_routine(self, task_results, mails, user_email, project_name):#, soft_time_limit=120):
+def diff_end_routine(self, task_results, mails, user_email, project_name):#, time_limit=10, soft_time_limit=10):#, soft_time_limit=120):
     task_results_successful = [r['status'] for r in task_results.copy() if (r['status']['diff_neg'] != []\
                      or r['status']['diff_pos'] != [])]
     errors = dict()
@@ -425,20 +425,29 @@ def diff_with_keywords_end_routine(self, task_results, mails, user_email, projec
      Sending mail with diff template now .....'\
         .format(task_results))
     errors = dict()
+    task_results_successful = []
     if isinstance(task_results, dict):
         if task_results['status']['diff_pos'] != [] or task_results['status']['diff_neg'] != []:
             task_results_successful = [task_results['status']]
-        else:
-            task_results_successful = []
         errors.update(task_results['status']['errors'])
     else:
-        task_results_successful = [r['status'] for r in task_results if (r['status']['diff_neg'] != []\
-                     or r['status']['diff_pos'] != [])]
-        for task in task_results.copy():
-            if task['status']['errors'] != {}:
-                errors.update(task['status']['errors'])
+        
+        for _ in task_results:
+            try:
+                if _['status']['diff_neg'] != [] or _['status']['diff_pos'] != []:
+                    task_results_successful.append(_['status'])
+                if _['status']['errors'] != {}:
+                    errors.update(_['status']['errors'])
+            except Exception as e:
+                errors.update(_['status']['errors'])
+
+        # task_results_successful = [r['status'] for r in task_results if (r['status']['diff_neg'] != []\
+        #              or r['status']['diff_pos'] != [])]
+        # for task in task_results.copy():
+        #     if task['status']['errors'] != {}:
+        #         errors.update(task['status']['errors'])
     # errors = [r['errors'] for r in task_results.copy()]
-    print('\ntask result = {}, \n\nerrors : {}'.format(task_results_successful.copy(), errors))
+    print('\ntask result = {}, \n\nerrors : {}'.format(task_results_successful, errors))
     # if task_results == []:
     #   print('No email to be sent because no diff found.')
     # else:

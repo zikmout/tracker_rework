@@ -43,6 +43,7 @@ class UserProjectSendMail(BaseView):
 
 				task_results = list()
 				errors = list()
+				total_scanned = len(self.session['tasks']['live_view'])
 				for worker in self.session['tasks']['live_view']:
 					task = live_view.AsyncResult(worker['id'])
 					response = get_celery_task_state(task)
@@ -116,7 +117,7 @@ class UserProjectSendMail(BaseView):
 				html += site_html
 				print('ERRRORRRRRS ooooooooooooooooo>>>>>>>>> {}'.format(errors))
 				if errors != []:
-					html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(len(errors) + len(task_results)) + " total scanned)</b><br>"
+					html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
 					for err in errors:
 						for k, v in err.items():
 							html += "<br>{} : {}".format(k, htmlib.escape(v))

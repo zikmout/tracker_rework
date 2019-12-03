@@ -1,5 +1,6 @@
 from datetime import datetime
 from tornado import gen
+import html as htmlib
 import smtplib, ssl
 import tldextract
 from email.mime.text import MIMEText
@@ -41,14 +42,18 @@ class UserProjectSendMail(BaseView):
 			if args['fromPage'] == 'live_view' and 'live_view' in self.session['tasks']:
 
 				task_results = list()
+				errors = list()
 				for worker in self.session['tasks']['live_view']:
 					task = live_view.AsyncResult(worker['id'])
 					response = get_celery_task_state(task)
+					if response['status']['errors'] != {}:
+						errors.append(response['status']['errors'])
 					if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != []\
 					 or response['status']['diff_pos'] != []):
 						task_results.append(response['status'])
 				#print('list of all grabbed task = {}'.format(task_results))
 
+				print('TSA RESULTS :: {}'.format(task_results))
 				html = """\
 				<html>
 				  <body>
@@ -56,6 +61,11 @@ class UserProjectSendMail(BaseView):
 				html += "<b><a name='top'>" + str(len(task_results)) + " websites have changed: </a><br> " 
 				for site in task_results:
 					html += "<li><a href='#" + site['div'] + "'> " + site['div'] + "</a></li>"
+
+				# errors = list()
+				# for site in task_results:
+				# 	if site['errors'] != {}:
+				# 		errors.append(site['errors'])
 
 				site_html = ''
 				for site in task_results:
@@ -104,13 +114,22 @@ class UserProjectSendMail(BaseView):
 							site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 				html += site_html
+				print('ERRRORRRRRS ooooooooooooooooo>>>>>>>>> {}'.format(errors))
+				if errors != []:
+					html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(len(errors) + len(task_results)) + " total scanned)</b><br>"
+					for err in errors:
+						for k, v in err.items():
+							html += "<br>{} : {}".format(k, htmlib.escape(v))
+
 				html += "<br></body></html>"
 
+				html += "<br><pre style='line-height:15.86px'><wbr>______________________________<wbr>"
+				html += "This is an automated email alert tracking website change(s). If you wish to unsubscribe, contact your administrator."
+				html += "<wbr>______________________________<wbr></pre>"
+				html += "</body></html>"
+
 				# Turn these into plain/html MIMEText objects
-				#part1 = MIMEText(text, "plain")
 				part2 = MIMEText(html, "html")
-
-
 
 				sender_email = "simon@electricity.ai"
 				if ';' in args['email']:
@@ -123,30 +142,24 @@ class UserProjectSendMail(BaseView):
 					receiver_email = [receiver_email]
 
 				domains_list = [tldextract.extract(site['div']).domain.upper() for site in task_results]
-				print('DOiMAIN LIST == {}'.format(domains_list))
-				print('[Live Alert Report] {}'.format(', '.join(domains_list)))
 				for email in receiver_email:
-                                    message = MIMEMultipart()
-                                    #date = datetime.now().replace(microsecond=0)
-                                    #message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
-                                    #message["Subject"] = '[Live Report] {}'.format(', '.join(domains_list))
-                                    # Problem, subject always shows 'SBB Alert' ?!
-                                    message["Subject"] = '[Live Alert Report] {}'.format(', '.join(domains_list))
-                                    message["From"] = 'Tracker Bot'
-                                    message["To"] = email
+									message = MIMEMultipart()
+									message["Subject"] = '[Live Alert Report] {}'.format(', '.join(domains_list))
+									message["From"] = 'Tracker Bot'
+									message["To"] = email
 
-                                    # Add HTML/plain-text parts to MIMEMultipart message
-                                    # The email client will try to render the last part first
-                                    #message.attach(part1)
-                                    message.attach(part2)
+									# Add HTML/plain-text parts to MIMEMultipart message
+									# The email client will try to render the last part first
+									#message.attach(part1)
+									message.attach(part2)
 
-                                    # Create secure connection with server and send email
-                                    context = ssl.create_default_context()
-                                    with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-                                        server.login(sender_email, password)
-                                        server.sendmail(
-                                            sender_email, email, message.as_string()
-                                        )
+									# Create secure connection with server and send email
+									context = ssl.create_default_context()
+									with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+										server.login(sender_email, password)
+										server.sendmail(
+											sender_email, email, message.as_string()
+										)
 				flash_message(self, 'success', 'Report successfully sent to {} .'.format(args['email']))
 				self.redirect('/')
 			else:

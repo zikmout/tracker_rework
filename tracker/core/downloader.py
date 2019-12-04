@@ -24,35 +24,39 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
-from pyvirtualdisplay import Display
+
+# from pyvirtualdisplay import Display
 
 class AdidasScraper:
     """ for website https://www.adidas-group.com/en/investors/investor-events/ only
     """
     def __init__(self, url):
-        self.display = Display(visible=0, size=(800, 600))
-        self.display.start()
+        # self.display = Display(visible=0, size=(800, 600))
+        # self.display.start()
         self.url = url
         # binary = FirefoxBinary('/Users/xxx/')
         # self.driver = webdriver.Firefox(firefox_binary=binary)
         #options = FirefoxOptions()
         #options.add_argument("--headless")
-        self.driver = webdriver.Firefox()
+        options = FirefoxOptions()
+        options.headless = True
+        self.driver = webdriver.Firefox(options=options)
 
     def get_html_wait(self):#, max_company_count=1000):
         """Extracts and returns company links (maximum number of company links for return is provided)."""
-        self.driver.implicitly_wait(10)
+        self.driver.implicitly_wait(15)
         self.driver.get(self.url)
         # elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
         # text = elements.html
         html = self.driver.page_source
+        print('\n\npage source --------> \n\n{}\n\n'.format(html))
         # elements = self.driver.find_element_by_class_name("events future visible")
         # element = WebDriverWait(self.driver, 15).until(
         #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
         # )
         self.driver.quit()
         self.driver.close()
-        self.display.stop()
+        # self.display.stop()
         return html
 
 def allow_create_folder(current_path):
@@ -93,7 +97,7 @@ def save_remote_content(remote_content, url, path, name, check_duplicates=False)
     with open (full_path, 'wb+') as content:
         try:
             print('TT REMOTE COTENT = {}'.format(type(remote_content)))
-            content.write(remote_content)
+            content.write(remote_content.encode('utf-8'))
             #content.write(response.read())
         except (http.client.IncompleteRead) as e:
             print('[ERROR] - save_remote_content : {}'.format(e))
@@ -188,7 +192,7 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
         except (http.client.IncompleteRead) as e:
             print('[ERROR] - Incomplete Read. Skipping download for this file. Details = {}'.format(e))
             return { url : '[INCOMPLETE READ] {}'.format(e) }
-    return { url : 'OK'}
+    return { url : 'OK Successfuly downloaded'}
 
 def download_website(links, base_path, url, random_header=False):
     """ Loop through all links and download the content if not already downloaded

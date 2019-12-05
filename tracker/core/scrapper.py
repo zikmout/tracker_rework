@@ -16,7 +16,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 # from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
-# from pyvirtualdisplay import Display
+from pyvirtualdisplay import Display
 
 
 class AdidasScraper:
@@ -24,19 +24,19 @@ class AdidasScraper:
     """
     def __init__(self, url):
         
-        # self.display = Display(visible=0, size=(800, 600))
-        # self.display.start()
+        self.display = Display(visible=0, size=(800, 600))
+        self.display.start()
         self.url = url
         # binary = FirefoxBinary('/Users/xxx/')
         # self.driver = webdriver.Firefox(firefox_binary=binary)
-        options = FirefoxOptions()
-        options.add_argument("--headless")
-        self.driver = webdriver.Firefox(options=options)
+        #options = FirefoxOptions()
+        #options.add_argument("--headless")
+        self.driver = webdriver.Firefox()#options=options)
         
 
     def get_html_wait(self):#, max_company_count=1000):
         """Extracts and returns company links (maximum number of company links for return is provided)."""
-        self.driver.implicitly_wait(10)
+        self.driver.implicitly_wait(15)
         self.driver.get(self.url)
         # Is this necessary ?
         # elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
@@ -46,9 +46,9 @@ class AdidasScraper:
         # element = WebDriverWait(self.driver, 15).until(
         #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
         # )
-
         self.driver.quit()
-        # self.display.stop()
+        self.driver.close()
+        self.display.stop()
         return html
         # last_line_number = 0
         # while last_line_number < max_company_count:

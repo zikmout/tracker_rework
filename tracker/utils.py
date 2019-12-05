@@ -137,7 +137,7 @@ def replace_mix_option_with_all_existing_keywords(links):
                 else:
                     #print('key word = {}'.format(key_word))
                     # Add condition for l'Oréal
-                    if key_word not in ['le', 'la', 'les', 'du', 'au']:
+                    if key_word not in ['le', 'la', 'les', 'du', 'au', 'de', 'des']:
                         all_words.add(key_word)
                     # not case sensitive
                     #all_words.add(key_word.upper())

@@ -217,13 +217,11 @@ def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_link
                 #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
                 #print('--- [PARAMS] ---> flink : {}, name : {}, base_dir_path_file : {}'.format(flink, name, base_dir_path))
 
+                res = False
                 if remote_content is not None:
                     res = downloader.save_remote_content(remote_content, url, base_dir_path, filename)
-                if res is False:
-                    err = 'Sth went wrong while saving remote content.....'
-                    status['errors'].update(err)
-                else:
-                    status['errors'].update({url: ''})
+                if res:
+                    status['errors'].update({url: 'Page sucessfully downloaded'})
 
                 #err = downloader.download_and_save_content(flink, filename, base_dir_path, header, check_duplicates=False, replace=True)
                 # TODO: Log errors from local content here and put in status just like for remote content

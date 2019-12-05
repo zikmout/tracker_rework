@@ -114,22 +114,53 @@ def get_nearest_link(keyword, remote_content, url):
 
 def keyword_match(keywords, status, remote_content, url, detect_links=True):
     """ Find diff pos, diff neg, nearest links pos, nearest links neg """
+    def clean_sentence(input_sentence):
+
+        # to lower
+        output = input_sentence.lower()
+        
+        # get rid of punctuation
+        t = str.maketrans('', '', string.punctuation)
+        output = output.translate(t)
+        
+        # get rid of digits
+        # t = str.maketrans('', '', string.digits)
+        # output = output.translate(t)
+        
+        # get rid of whitespaces
+        # t = str.maketrans('\n\t\r', '   ')
+        output = output.replace('\n', '').replace('\r', '').replace('\t', '').replace('  ', ' ')
+
+        return output
+
+
     match_neg = list()
     match_pos = list()
-    print('KEYWORRRRRDS ::: {}'.format(keywords))
-    
+
+    # print('KEYWORRRRRDS ::: {}'.format(keywords))
+    # print('DIFF NEGATIVE = {}'.format(status['diff_neg']))
+    # print('DIFF POSITIVE = {}'.format(status['diff_pos']))
+
+    if isinstance(keywords, list) and len(keywords) == 1:
+        keywords = keywords[0].split(';')
     for keyword in keywords:
+
+        # print('\n\nKeyword === {}\n\n'.format(keyword))
         if not ' ' in keyword:
             for neg in status['diff_neg']:
-                for word in neg.split(' '):
-                    if keyword.lower() == word:
+                # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
+                for word in clean_sentence(neg).split(' '):
+                    #print('try to match <{}><{}>'.format(keyword.lower(), word))
+                    if keyword.lower() == word.lower():
                         if neg not in match_neg:
                             match_neg.append(neg)
                         if detect_links:
                             status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
             for pos in status['diff_pos']:
-                for word in pos.split(' '):
-                    if keyword.lower() == word:
+                # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
+                for word in clean_sentence(pos).split(' '):
+                    #print('try to match <{}><{}>'.format(keyword.lower(), word))
+                    if keyword.lower() == word.lower():
                         #print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
                         if pos not in match_pos:
                             match_pos.append(pos)
@@ -137,13 +168,15 @@ def keyword_match(keywords, status, remote_content, url, detect_links=True):
                             status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
         else:
             for neg in status['diff_neg']:
-                if keyword.lower() in neg:
+                if keyword.lower() in clean_sentence(neg):
+                    #print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     if neg not in match_neg:
                         match_neg.append(neg)
                     if detect_links:
                         status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
             for pos in status['diff_pos']:
-                if keyword.lower() in pos:
+                if keyword.lower() in clean_sentence(pos):
+                    #print('try to match <{}><{}>'.format(keyword.lower(), pos))
                     if pos not in match_pos:
                         match_pos.append(pos)
                     if detect_links:

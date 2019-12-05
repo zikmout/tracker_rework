@@ -92,29 +92,19 @@ def get_url_content(url, header, verbose=True):
         # download content of the url
         response = urllib.request.urlopen(req, context=gcontext, timeout=12)
         remote_content = response.read()#.decode('utf-8', errors='ignore')
-    except (urllib.error.URLError, SSLError) as e:
-        print('CATCHED SSL HANDSHAKE ERROR : {}'.format(e))
+    except (timeout, TimeoutError, SSLError) as e:
+        print('[ERROR TIMEOUT OR SSL] for url : {} (Error : {})'.format(url, e))
         print('Retrying HTTP request now ...\n')
         scraper = AdidasScraper(url)
         remote_content = scraper.get_html_wait()
         return remote_content, {url : '{}'.format(e)}
 
-    except (timeout, TimeoutError) as e:
-        print('[ERROR TIMEOUT] for url : {} (Error : {})'.format(url, e))
-        # print('\n-------------> TIMEOUT ERROR CATCHED <----------------\n')
-        print('Retrying HTTP request now ...\n')
-        scraper = AdidasScraper(url)
-        remote_content = scraper.get_html_wait()
-        return remote_content, {url : '{}'.format(e)}
-
-    except (urllib.error.HTTPError, ConnectionResetError, UnicodeDecodeError) as e:
+    except (urllib.error.URLError, urllib.error.HTTPError, ConnectionResetError, UnicodeDecodeError) as e:
         print('[ERROR] get_url_content : {}\n(url = {})'.format(e, url))
         return None, {url : '{}'.format(e)}
-        #print('Return from scrapper2 =======>> {}'.format(remote_content))
 
-    # if error is None:
     return remote_content, {url : ''}
-    # Save content in the provided path with binary format
+
 
 def get_local_content(path, mode):
     """ Open local file content

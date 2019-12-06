@@ -173,9 +173,14 @@ class AlertLaunch(BaseView):
                 rproject._load_units_from_data_path()
             else:
                 rproject._load_units_from_excel()
-            print('RPROJECT UNITS = {}'.format([unit.url for unit in rproject.units]))
+            #print('RPROJECT UNITS = {}'.format([unit.url for unit in rproject.units]))
             # need to change following line with PickleType
-            tasks = rproject.download_units_diff(alert.template_type, content.links, save=True)
+            # print('GOTTEN TIME LIMIT = {}'.format(args['alertTimeLimit']))
+            if 'alertTimeLimit' in args:
+                lmt = args['alertTimeLimit']
+            else:
+                lmt = False 
+            tasks = rproject.download_units_diff(alert.template_type, content.links, save=True, time_limit=lmt)
             #print('alert.template type = {}'.format(alert.template_type))
             #print('TASKSS ===> {}'.format(tasks))
 

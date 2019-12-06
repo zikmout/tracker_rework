@@ -14,9 +14,10 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import tracker.core.utils as utils
 # from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
-from pyvirtualdisplay import Display
+# from pyvirtualdisplay import Display
 
 
 class AdidasScraper:
@@ -24,14 +25,14 @@ class AdidasScraper:
     """
     def __init__(self, url):
         
-        self.display = Display(visible=0, size=(800, 600))
-        self.display.start()
+        # self.display = Display(visible=0, size=(800, 600))
+        # self.display.start()
         self.url = url
         # binary = FirefoxBinary('/Users/xxx/')
         # self.driver = webdriver.Firefox(firefox_binary=binary)
-        #options = FirefoxOptions()
-        #options.add_argument("--headless")
-        self.driver = webdriver.Firefox()#options=options)
+        options = FirefoxOptions()
+        options.headless = True
+        self.driver = webdriver.Firefox(options=options)
         
 
     def get_html_wait(self):#, max_company_count=1000):
@@ -47,8 +48,8 @@ class AdidasScraper:
         #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
         # )
         self.driver.quit()
-        self.driver.close()
-        self.display.stop()
+        # self.driver.close()
+        # self.display.stop()
         return html
         # last_line_number = 0
         # while last_line_number < max_company_count:
@@ -80,11 +81,11 @@ def get_url_content(url, header, verbose=True):
             remote_content: Binary content decoded
     """
     error = None
-    header = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
-    }
+    # header = {
+    # 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
+    # }
     # Faking User-Agent to avoid forbidden requests
-    req = urllib.request.Request(url, data=None, headers=header)
+    req = urllib.request.Request(url, data=None, headers=utils.rh())
     # Faking SSL certificate to avoid unauthorized requests
     gcontext = ssl._create_unverified_context()
 
@@ -92,14 +93,15 @@ def get_url_content(url, header, verbose=True):
         # download content of the url
         response = urllib.request.urlopen(req, context=gcontext, timeout=12)
         remote_content = response.read()#.decode('utf-8', errors='ignore')
-    except (timeout, TimeoutError, SSLError) as e:
+        response.close()
+    except (urllib.error.URLError, timeout, TimeoutError, SSLError) as e:
         print('[ERROR TIMEOUT OR SSL] for url : {} (Error : {})'.format(url, e))
         print('Retrying HTTP request now ...\n')
         scraper = AdidasScraper(url)
         remote_content = scraper.get_html_wait()
         return remote_content, {url : '{}'.format(e)}
 
-    except (urllib.error.URLError, urllib.error.HTTPError, ConnectionResetError, UnicodeDecodeError) as e:
+    except (urllib.error.HTTPError, ConnectionResetError, UnicodeDecodeError) as e:
         print('[ERROR] get_url_content : {}\n(url = {})'.format(e, url))
         return None, {url : '{}'.format(e)}
 

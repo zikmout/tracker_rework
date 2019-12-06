@@ -76,6 +76,7 @@ def get_celery_task_state(task):
     if task.state == 'PENDING':
         response = {
             'state': task.state,
+            'url': task.info.get('url'),
             'current': 0,
             'total': 1,
             'status': 'Pending ...'
@@ -83,6 +84,7 @@ def get_celery_task_state(task):
     elif task.info is not None and task.state != 'FAILURE':
         response = {
             'state': task.state,
+            'url': task.info.get('url'),
             'current': task.info.get('current', 0),
             'total': task.info.get('total', 1),
             'status': task.info.get('status', '')
@@ -93,6 +95,7 @@ def get_celery_task_state(task):
         # something went wrong in background job
         response = {
             'state': task.state,
+            'url': task.info.get('url'),
             'current': 1,
             'total': 1,
             'status': str(task.info)
@@ -115,7 +118,7 @@ def revoke_all_tasks(app, task_func, ids):
         task_ids_to_stop.append(id)
         task = task_func.AsyncResult(id)
         revoke_chain(task)
-    res = app.control.revoke(task_ids_to_stop)
+    res = app.control.revoke(task_ids_to_stop, terminate=True, signal='SIGKILL')
     print('Purging task ids now ...')
     app.control.purge()
     discard_all()

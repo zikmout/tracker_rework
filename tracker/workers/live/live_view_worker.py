@@ -147,8 +147,11 @@ def get_full_links(status, base_url):
     print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
     return status 
 
-@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=50, time_limit=60)
+@live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=50)#, time_limit=5)
 def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm, counter):
+    # if soft_time_limit is True:
+        # self.soft_time_limit = soft_time_limit
+    # print('SELF.TIMELIMIT = {}'.format(self.soft_time_limit))
     # try:
     """ Download website parts that have changed 
         -> diff based on keyword matching
@@ -243,7 +246,7 @@ def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_link
                     status = select_only_sbb_links(status)
 
                 #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
-                self.update_state(state='PROGRESS', meta={'current': counter, 'total': total, 'status': status})
+                self.update_state(state='PROGRESS', meta={'url': flink,'current': counter, 'total': total, 'status': status})
                 
                 #print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
                 #print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))
@@ -257,6 +260,6 @@ def live_view(self, links, base_path, diff_path, url, keywords_diff, detect_link
             # TODO: Kill SIGKILL all pending tasks
             print("Share buy back diff exception => {}".format(e))
             status['errors'].update({status['url'] : '{}'.format(e)})
-            return {'current': 100, 'total': 100, 'status': status, 'result': status['diff_nb']}
+            return {'url': flink, 'current': 100, 'total': 100, 'status': status, 'result': status['diff_nb']}
 
-    return {'current': 100, 'total': 100, 'status': status, 'result': status['diff_nb']}
+    return {'url': flink, 'current': 100, 'total': 100, 'status': status, 'result': status['diff_nb']}

@@ -205,8 +205,9 @@ ws.onmessage = function (evt) {
           //   "info" : data.info
           // }
           urlFailed = {
-            "state" : data.state,
-            "status" : data.status
+            // "state" : data.state,
+            // "status" : data.status,
+            "obj": JSON.stringify(data)
           }
           failuresURL.push(urlFailed);
           counterFailureMaster += 1;
@@ -269,7 +270,8 @@ function showFailedTasksDetails() {
   //console.log('failed details clicked  !');
   $('#myLargeModalLabelContent').empty();
   for (i = 0; i < failuresURL.length; i++) {
-    $('#myLargeModalLabelContent').append(failuresURL[i].state + ':' +  failuresURL[i].status + '<br>');
+    console.log(failuresURL[i]);
+    $('#myLargeModalLabelContent').append('['+failuresURL[i].state +'] ' + JSON.stringify(failuresURL[i]) + ':' +  failuresURL[i].status + '<br>');
     //console.log(failuresURL[i]);
   }
   if (failuresURL.length > 0) {

@@ -470,7 +470,7 @@ class RProject:
             nb = unit.update_downloaded([internal_link])
             print('Nb of unit updated for url {} : {}'.format(nb, base_url))
 
-    def download_units_diff(self, template_type, links, save=False):
+    def download_units_diff(self, template_type, links, save=False, time_limit=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
@@ -504,7 +504,7 @@ class RProject:
                     counter += 1
                     #print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links, links_algorithm, counter)
+                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links, links_algorithm, counter, time_limit=time_limit)
                     tasks.append(task)
                 else:
                     print('Unit {} not found'.format(key))

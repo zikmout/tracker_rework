@@ -233,6 +233,7 @@
         {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
         <th scope="col" style="vertical-align:middle;">Status</th>
         <th scope="col" style="vertical-align:middle;">Content Name</th>
+        <th scope="col" style="vertical-align:middle;">Timeout/req</th>
         {% end %}
         <!-- <th scope="col" style="vertical-align:middle;">Notify Mail</th> -->
         <th scope="col" style="vertical-align:middle;"></th>
@@ -296,6 +297,7 @@
         </td>
         
           <td style="vertical-align:middle;">{{ alert['content_id'] }}</td>
+          <td style="vertical-align:middle;"><input name="alertTimeLimit" style="width:50px;" type="text" value="50"></input></td>
         {% end %}
 
 <!--         <td style="vertical-align:middle;">
@@ -304,7 +306,7 @@
           </div>
         </div>
         </td> -->
-
+        
         <td style="vertical-align:middle;">
           {% if escape(alert['launched']) == 'False' %}
           <input type="hidden" value="{{ alert['alert_type'] }}" name="alertType">

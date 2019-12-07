@@ -5,6 +5,7 @@ a {
     color: #6c757d;
 }
 </style>
+<script src="{{ static_url('jquery.min.js') }}"></script>
 <div class="starter-template-fluid">
       <br />
       <h3>Live alert</h3>
@@ -64,7 +65,7 @@ a {
             </div>
 
             <br>
-            <b>Errors:</b>
+            <b>Info:</b>
             <div id="errors"></div>
 
           {% else %}
@@ -98,7 +99,17 @@ var totalTaskNb = 0;
 var counterRemaining = totalTaskNb;
 
 var ws = new WebSocket(location.origin.replace(/^http/, 'ws') + "/websocket");
+var executed = 0;
+var remainingTaskNb = 0;
 function timeout() {
+    // console.log('TOTO END');
+    remainingTaskNb = totalTaskNb - executed;
+    $('#numberOfPendingTasks').html(remainingTaskNb);//counterRemaining - counterFailureMaster);
+    updateProgressBar('#liveViewProgress', (executed/totalTaskNb)*100);
+    console.log('eXeCuTeD ==> ' + executed );
+    console.log('rEmAiNiNg TaSk NuMbEr ==> ' + remainingTaskNb);
+    executed = 0;
+    remainingTaskNb = 0;
     setTimeout(function () {
         ws.onopen();
         timeout();
@@ -163,7 +174,8 @@ function formatDiff(title, diff, nearest_link, all_links, type) {
   var fullDiff = firstPart + middlePart + lastPart;
   return fullDiff;
 }
-
+var nc = 0;
+var curr = 0;
 ws.onmessage = function (evt) {
    if (evt != null) {
        var data = JSON.parse(evt.data);
@@ -171,14 +183,16 @@ ws.onmessage = function (evt) {
        //console.log(data.state);
        // logging errors from http requests
 
-       console.log(data.status['errors']);
+       //console.log(data.status['errors']);
+       curr = data.current;
+       // console.log('curr --> ' + curr);
        if (data.state == 'SUCCESS' && !document.getElementById('err-' + data.task_id)) {
         //console.log(data.status['errors']);
         var newError = document.createElement("DIV");
         newError.setAttribute("id", 'err-' + data.task_id);
         var errorLog = '';
         var i;
-        console.log('entered !');
+        //console.log('entered !');
         for (var p in data.status['errors']) {
           if (data.status['errors'].hasOwnProperty(p)) {
             errorLog += '<small>';
@@ -197,7 +211,10 @@ ws.onmessage = function (evt) {
        }
        if (data.state == 'SUCCESS') {
           counterDone += 1;
+          nc += 1;
+          // failures.push(data.current);
        }
+       // console.log(data);
        if (data.state == 'FAILURE' && !failures.includes(data.current)) {
           failures.push(data.current);
           // urlFailed = {
@@ -247,10 +264,18 @@ ws.onmessage = function (evt) {
        if (counterDone > counterDoneMaster) {
         counterDoneMaster = counterDone;
         counterRemaining = totalTaskNb - counterDoneMaster;
-        $('#numberOfPendingTasks').html(counterRemaining - counterFailureMaster);
-        updateProgressBar('#liveViewProgress', ((counterDoneMaster+counterFailureMaster)/totalTaskNb)*100);
+        // $('#numberOfPendingTasks').html(totalTaskNb - executed);//counterRemaining - counterFailureMaster);
+        // updateProgressBar('#liveViewProgress', ((counterDoneMaster+counterFailureMaster)/totalTaskNb)*100);
         //console.log('counter remaining = ' + counterRemaining + ' counter done = ' + counterDoneMaster);
        }
+       if (data.state != 'PENDING') {
+          executed += 1
+       }
+       // console.log('data status total ' + data.total)
+       // if (curr == (data.total - 1)) {
+       //  console.log('END OF IT');
+       // }
+
      }
  else {
   console.log('[ERROR] Nothing to consume from websocket.');
@@ -270,8 +295,8 @@ function showFailedTasksDetails() {
   //console.log('failed details clicked  !');
   $('#myLargeModalLabelContent').empty();
   for (i = 0; i < failuresURL.length; i++) {
-    console.log(failuresURL[i]);
-    $('#myLargeModalLabelContent').append('['+failuresURL[i].state +'] ' + JSON.stringify(failuresURL[i]) + ':' +  failuresURL[i].status + '<br>');
+    //console.log(failuresURL[i]);
+    $('#myLargeModalLabelContent').append('['+failuresURL[i].url +'] ' + JSON.stringify(failuresURL[i]) + ':' +  failuresURL[i].status + '<br>');
     //console.log(failuresURL[i]);
   }
   if (failuresURL.length > 0) {

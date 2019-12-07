@@ -216,19 +216,28 @@ class Unit:
         '''
         downloader.download_website_diff(partial_remote_tree, self.download_path, self.download_path + filename_time, self.url)
 
-    def download_changed_files_from_links(self, links_dict, keywords_diff, detect_links, links_algorithm, counter, time_limit=False):
+    def download_changed_files_from_links(self, 
+                                        links_dict, 
+                                        keywords_diff, 
+                                        detect_links, 
+                                        links_algorithm, 
+                                        counter, 
+                                        total_task,
+                                        time_limit=False):
+
         filename_time = datetime.datetime.now().strftime("%Y%m%d")
         #print('filename_time = {}'.format(filename_time))
         #print('Starting TASK nb {}'.format(counter));
+        print('--> TOTAL TASK RECEIVED = {}'.format(total_task))
         if time_limit:
-            #print('--> THERE IS TIME LIMI = {}'.format(time_limit))
+            
             task = live_view.apply_async(args=(links_dict, self.download_path, self.download_path + filename_time, self.url,\
-            keywords_diff, detect_links, links_algorithm, counter), soft_time_limit=float(time_limit))
+            keywords_diff, detect_links, links_algorithm, counter, total_task), soft_time_limit=float(time_limit))
             # task = live_view.apply_async(args=[links_dict, self.download_path, self.download_path + filename_time, self.url,\
             # keywords_diff, detect_links, links_algorithm, counter], kwargs={}, soft_time_limit=time_limit)
         else:
             task = live_view.apply_async([links_dict, self.download_path, self.download_path + filename_time, self.url,\
-            keywords_diff, detect_links, links_algorithm, counter])
+            keywords_diff, detect_links, links_algorithm, counter, total_task])
         return task
 
     def get_unit_json(self):

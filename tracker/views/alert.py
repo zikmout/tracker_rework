@@ -189,6 +189,9 @@ class AlertLaunch(BaseView):
                 self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
                 return
             else:
+                # if 'live_view' in self.session['tasks']:
+                # del self.session['tasks']['live_view']
+                # self.session.save()
                 updated_tasks = list()
                 for task in tasks:
                     task_object = {
@@ -305,6 +308,10 @@ class AlertStop(BaseView):
         #     self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
         #     return
         alert = content.alerts.filter_by(name=args['alertName']).first()
+        if alert is None:
+            flash_message(self, 'danger', 'Alert {} not found in DB.'.format(args['alertName']))
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            return # TODO : Check if return is justified here
         #print('alert.alert_type = {}'.format(alert.alert_type))
         if alert.alert_type == 'Live':
             if 'live_view' in self.session['tasks']:

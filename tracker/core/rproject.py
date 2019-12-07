@@ -502,9 +502,11 @@ class RProject:
                 unit = self.get_unit_from_url(key)
                 if unit is not None:
                     counter += 1
+                    print('SENDING LEN TASK = {}'.format(len(dict_links)))
                     #print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links, links_algorithm, counter, time_limit=time_limit)
+                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links,\
+                        links_algorithm, counter, len(dict_links), time_limit=time_limit)
                     tasks.append(task)
                 else:
                     print('Unit {} not found'.format(key))

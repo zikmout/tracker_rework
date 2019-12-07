@@ -76,7 +76,7 @@ def get_celery_task_state(task):
     if task.state == 'PENDING':
         response = {
             'state': task.state,
-            'url': task.info.get('url'),
+            'url': '',
             'current': 0,
             'total': 1,
             'status': 'Pending ...'
@@ -96,8 +96,8 @@ def get_celery_task_state(task):
         response = {
             'state': task.state,
             'url': task.info.get('url'),
-            'current': 1,
-            'total': 1,
+            'current': task.info.get('current', 1),
+            'total': task.info.get('total', 1),
             'status': str(task.info)
         }
     #print('response : {}'.format(response))

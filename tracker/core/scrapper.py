@@ -17,7 +17,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import tracker.core.utils as utils
 # from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
-# from pyvirtualdisplay import Display
+from pyvirtualdisplay import Display
 
 
 class AdidasScraper:
@@ -25,14 +25,14 @@ class AdidasScraper:
     """
     def __init__(self, url):
         
-        # self.display = Display(visible=0, size=(800, 600))
-        # self.display.start()
+        self.display = Display(visible=0, size=(800, 600))
+        self.display.start()
         self.url = url
         # binary = FirefoxBinary('/Users/xxx/')
         # self.driver = webdriver.Firefox(firefox_binary=binary)
-        options = FirefoxOptions()
-        options.headless = True
-        self.driver = webdriver.Firefox(options=options)
+        # options = FirefoxOptions()
+        # options.headless = True
+        self.driver = webdriver.Firefox()#options=options)
         
 
     def get_html_wait(self):#, max_company_count=1000):
@@ -49,7 +49,7 @@ class AdidasScraper:
         # )
         self.driver.quit()
         # self.driver.close()
-        # self.display.stop()
+        self.display.stop()
         return html
         # last_line_number = 0
         # while last_line_number < max_company_count:

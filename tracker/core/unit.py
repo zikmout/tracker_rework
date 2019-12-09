@@ -214,7 +214,8 @@ class Unit:
             shutil.rmtree(self.download_path + filename_time)
         os.mkdir(self.download_path + filename_time)
         '''
-        downloader.download_website_diff(partial_remote_tree, self.download_path, self.download_path + filename_time, self.url)
+        downloader.download_website_diff(partial_remote_tree, self.download_path,\
+            self.download_path + filename_time, self.url)
 
     def download_changed_files_from_links(self, 
                                         links_dict, 
@@ -228,15 +229,18 @@ class Unit:
         filename_time = datetime.datetime.now().strftime("%Y%m%d")
         #print('filename_time = {}'.format(filename_time))
         #print('Starting TASK nb {}'.format(counter));
-        print('--> TOTAL TASK RECEIVED = {}'.format(total_task))
+        # print('--> TOTAL TASK RECEIVED = {}'.format(total_task))
         if time_limit:
             
-            task = live_view.apply_async(args=(links_dict, self.download_path, self.download_path + filename_time, self.url,\
-            keywords_diff, detect_links, links_algorithm, counter, total_task), soft_time_limit=float(time_limit))
+            task = live_view.apply_async(args=(links_dict, self.download_path,\
+                self.download_path + filename_time, self.url,\
+                keywords_diff, detect_links, links_algorithm, counter, total_task),\
+                soft_time_limit=float(time_limit))
             # task = live_view.apply_async(args=[links_dict, self.download_path, self.download_path + filename_time, self.url,\
             # keywords_diff, detect_links, links_algorithm, counter], kwargs={}, soft_time_limit=time_limit)
         else:
-            task = live_view.apply_async([links_dict, self.download_path, self.download_path + filename_time, self.url,\
+            task = live_view.apply_async([links_dict, self.download_path,\
+                self.download_path + filename_time, self.url,\
             keywords_diff, detect_links, links_algorithm, counter, total_task])
         return task
 

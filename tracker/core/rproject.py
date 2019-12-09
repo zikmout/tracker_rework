@@ -13,6 +13,7 @@ import tracker.workers.continuous.continuous_worker as continuous_worker
 from redbeat import RedBeatSchedulerEntry as Entry
 import math
 import threading
+import random
 
 
 class RProject:
@@ -295,11 +296,11 @@ class RProject:
                 url = rows['Website']
                 regex = r"^https?://[^/]+"
                 url = re.findall(regex, url)[0]
-                print('-------------------------------------------------------------------------------------------')
-                print('\n-> New Unit loaded : {} \n'.format(url))
+                #print('-------------------------------------------------------------------------------------------')
+                #print('\n-> New Unit loaded : {} \n'.format(url))
                 self.units.append(Unit(self.data_path, url))
-        print('-------------------------------------------------------------------------------------------')
-        print('\n {} units successfuly loaded from excel.\n'.format(len(self.units)))
+        #print('-------------------------------------------------------------------------------------------')
+        print('\n[OK] {} units successfuly loaded from excel.\n'.format(len(self.units)))
 
     def _load_tracking_config_excel(self):
         """ Load Name, target website, keywords, etc from excel config file.
@@ -498,16 +499,32 @@ class RProject:
         tasks = list()
         if isinstance(dict_links, dict) and bool(dict_links):
             counter = 0
-            for key, val in dict_links.items():
+            # i = 0
+            for key, links in dict_links.items():
                 unit = self.get_unit_from_url(key)
+                #print('unit url : {}'.format(unit.url))
+
                 if unit is not None:
                     counter += 1
-                    print('SENDING LEN TASK = {}'.format(len(dict_links)))
-                    #print('VAL = {}'.format(val))
+
+                    random.shuffle(links)
+                    total = len(dict_links)
+                    
+                    # print('-> start task, sleeping.')
+                    # time.sleep(6)
+                    # print('-> stop sleeping.')
+                    # print('LINKS ------> {}'.format(links))
+                    # print('base_path ------> {}'.format(base_path))
+                    # print('diff_path ------> {}'.format(diff_path))
+                    # print('url ------> {}'.format(url))
+                    for link in links:
+
+                        print('SENDING link for task = {}'.format(link))
+                        # print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-                    task = unit.download_changed_files_from_links(val, keywords_diff, detect_links,\
+                        task = unit.download_changed_files_from_links(link, keywords_diff, detect_links,\
                         links_algorithm, counter, len(dict_links), time_limit=time_limit)
-                    tasks.append(task)
+                        tasks.append(task)
                 else:
                     print('Unit {} not found'.format(key))
             return tasks

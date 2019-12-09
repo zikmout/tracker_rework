@@ -189,9 +189,9 @@ def from_links_to_dict(links):
     #print('************************ LINKS ******************************************** \n')
     #print('links before = {}'.format(links))
     for k, v in links.copy().items():
-        print('k = {}'.format(k))
+        #print('k = {}'.format(k))
         if k.count('/') == 2 and not k.endswith('/'):
-            print('entered add')
+            #print('entered add')
             del links[k]
             links[k + '/'] = v
             # links[k] = links[k] + '/'

@@ -56,19 +56,20 @@ class UserUnitEditView(BaseView):
     @login_required
     @gen.coroutine
     def post(self, username, projectname):
-        url = self.form_data['editUnitName'][0]
+        # print('FORM DATA EDIT = {}'.format(self.form_data))
+        url = self.form_data['editUnitName'][0] ####
 
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
 
         rproject = RProject(project.name, project.data_path, project.config_file)
-        print('config df before = {}'.format(rproject.config_df))
+        # print('config df before = {}'.format(rproject.config_df))
         config_df_updated = rproject.config_df.copy()
         #config_df_updated.loc[config_df_updated['target'] == url, 'target_label'] = 'test;key;words'
         # line = {'Name': config_df_updated.loc[config_df_updated['target'] == url, 'Name'], 'Website': args['inputWebsite'][0],\
             # 'target': args['inputTarget'][0], 'target_label':args['inputKeywords'][0]}
         keys = ['Name', 'Website', 'target', 'target_label', 'mailing_list']
-        print('keywords = ->{}<-'.format(config_df_updated[config_df_updated['target'] == url]['target_label'].item()))
+        # print('keywords = ->{}<-'.format(config_df_updated[config_df_updated['target'] == url]['target_label'].item()))
         line = {k:config_df_updated[config_df_updated['target'] == url][k].item() for k in keys}
         if not isinstance(line['target_label'], float):
             line['target_label'] = line['target_label'].split(';')
@@ -78,8 +79,8 @@ class UserUnitEditView(BaseView):
             line['mailing_list'] = line['mailing_list'].split(';')
         else:
             line['mailing_list'] = ''
-        print('mailing_list = {}'.format(line['mailing_list']))
-        print('project config file : {}'.format(project.config_file))
+        # print('mailing_list = {}'.format(line['mailing_list']))
+        # print('project config file : {}'.format(project.config_file))
         config_df_updated.to_excel(project.config_file, index=False)
         #line = config_df_updated.loc[config_df_updated['target'] == url].to_json()
         self.render('unit/edit.html', url=url, line=line)
@@ -90,7 +91,7 @@ class AdminUserCreate(BaseView):
     @gen.coroutine
     def post(self):
         args = self.form_data
-        print('Args = {}'.format(args))
+        # print('Args = {}'.format(args))
         if 'inputUpdatedRole' in args and 'inputUsername' in args:
             try:
                 user = self.request_db.query(User).filter_by(username=args['inputUsername'][0]).first()

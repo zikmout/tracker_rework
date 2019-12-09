@@ -162,7 +162,8 @@ class AlertLaunch(BaseView):
         if args['alertType'] == 'Live':
             # if session live view task present in session, delete them and revoke associated tasks
             if 'live_view' in self.session['tasks']:
-                res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+                res = revoke_all_tasks(live_view_worker_app, live_view,\
+                    [worker['id'] for worker in self.session['tasks']['live_view']])
                 print('Deleting old live view tasks from session.')
                 del self.session['tasks']['live_view']
 

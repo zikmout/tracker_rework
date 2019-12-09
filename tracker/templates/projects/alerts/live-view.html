@@ -40,36 +40,33 @@ a {
                 </form>
               </div>
               
-              
-              
-
-            </div>
-            <div class="row">
-              <div class="col mt-1">
-
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal" style="display: inline;">
-
-                    <input type="hidden", name="fromPage" value="live_view">
-                    <button type="submit" class="btn btn-info btn-sm">Download updated pages</button></input>
-
-                </form>
-
-
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="POST" style="display: inline;">
-                  <input type="hidden" value="{{ handler.session['current_live_view_content'] }}" name="contentName">
-                  <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
-                  <!-- TODO: Change route with alert stop //-->
-                  <button type="submit" class="btn btn-danger btn-sm">Stop Live View task</button></input>
-                </form>
               </div>
-            </div>
+              <div class="row">
+                <div class="col mt-1">
 
-            <br>
-            <b>Info:</b>
-            <div id="errors"></div>
+                  <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal" style="display: inline;">
+
+                      <input type="hidden", name="fromPage" value="live_view">
+                      <button type="submit" class="btn btn-info btn-sm">Download updated pages</button></input>
+
+                  </form>
+
+
+                  <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="POST" style="display: inline;">
+                    <input type="hidden" value="{{ handler.session['current_live_view_content'] }}" name="contentName">
+                    <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
+                    <!-- TODO: Change route with alert stop //-->
+                    <button type="submit" class="btn btn-danger btn-sm">Stop Live View task</button></input>
+                  </form>
+                </div>
+              </div>
+
+              <br>
+              <b>Info:</b>
+              <div id="errors"></div>
 
           {% else %}
-            <br><br><center><p class="lead">Launch a live alert and monitor it from here.</p></center>
+              <br><br><center><p class="lead">Launch a live alert and monitor it from here.</p></center>
           {% end %}
 
 
@@ -86,8 +83,7 @@ a {
       {% end %}
 </div>
 <script>
-var counterDone = 0;
-var counterDoneMaster = 0;
+
 var counterFailureMaster = 0;
 var failures = Array();
 var failuresURL = Array();
@@ -102,18 +98,14 @@ var ws = new WebSocket(location.origin.replace(/^http/, 'ws') + "/websocket");
 var executed = 0;
 var remainingTaskNb = 0;
 function timeout() {
-    // console.log('TOTO END');
     remainingTaskNb = totalTaskNb - executed;
-    $('#numberOfPendingTasks').html(remainingTaskNb);//counterRemaining - counterFailureMaster);
+    $('#numberOfPendingTasks').html(remainingTaskNb);
     updateProgressBar('#liveViewProgress', (executed/totalTaskNb)*100);
-    console.log('eXeCuTeD ==> ' + executed );
-    console.log('rEmAiNiNg TaSk NuMbEr ==> ' + remainingTaskNb);
     executed = 0;
     remainingTaskNb = 0;
     setTimeout(function () {
         ws.onopen();
         timeout();
-        counterDone = 0;
     }, 3000);
 }
 
@@ -179,20 +171,12 @@ var curr = 0;
 ws.onmessage = function (evt) {
    if (evt != null) {
        var data = JSON.parse(evt.data);
-
-       //console.log(data.state);
-       // logging errors from http requests
-
-       //console.log(data.status['errors']);
        curr = data.current;
-       // console.log('curr --> ' + curr);
+
        if (data.state == 'SUCCESS' && !document.getElementById('err-' + data.task_id)) {
-        //console.log(data.status['errors']);
         var newError = document.createElement("DIV");
         newError.setAttribute("id", 'err-' + data.task_id);
         var errorLog = '';
-        var i;
-        //console.log('entered !');
         for (var p in data.status['errors']) {
           if (data.status['errors'].hasOwnProperty(p)) {
             errorLog += '<small>';
@@ -200,21 +184,12 @@ ws.onmessage = function (evt) {
             errorLog += '&nbsp;<font color="red">(' + escapeHtml(data.status['errors'][p]) + ')</font></small>';
           }
         }
-        // for (i = -1; i++; i <= data.status['errors'].length) {
-        //   errorLog += '<small>';
-        //   errorLog += '<a href="' + Object.keys(data.status['errors'][i]) + '" target="_blank">' + Object.keys(data.status['errors'][i]) + '</a>';
-        //   errorLog += '&nbsp;<font color="red">(' + escapeHtml(Object.values(data.status['errors'][i]).toString()) + ')</font></small>';
-        // }
         newError.innerHTML = errorLog;
         document.getElementById('errors').appendChild(newError);
-        // $('#errors').appendChild
        }
        if (data.state == 'SUCCESS') {
-          counterDone += 1;
           nc += 1;
-          // failures.push(data.current);
        }
-       // console.log(data);
        if (data.state == 'FAILURE' && !failures.includes(data.current)) {
           failures.push(data.current);
           // urlFailed = {
@@ -229,7 +204,6 @@ ws.onmessage = function (evt) {
           failuresURL.push(urlFailed);
           counterFailureMaster += 1;
           $('#numberOfFailedTasks').html(counterFailureMaster);
-          // document.getElementById('numberOfFailedTasks').
        }
 
        if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
@@ -261,20 +235,10 @@ ws.onmessage = function (evt) {
             }
           }
        }
-       if (counterDone > counterDoneMaster) {
-        counterDoneMaster = counterDone;
-        counterRemaining = totalTaskNb - counterDoneMaster;
-        // $('#numberOfPendingTasks').html(totalTaskNb - executed);//counterRemaining - counterFailureMaster);
-        // updateProgressBar('#liveViewProgress', ((counterDoneMaster+counterFailureMaster)/totalTaskNb)*100);
-        //console.log('counter remaining = ' + counterRemaining + ' counter done = ' + counterDoneMaster);
-       }
+
        if (data.state != 'PENDING') {
           executed += 1
        }
-       // console.log('data status total ' + data.total)
-       // if (curr == (data.total - 1)) {
-       //  console.log('END OF IT');
-       // }
 
      }
  else {
@@ -283,21 +247,15 @@ ws.onmessage = function (evt) {
 };
 timeout();
 function updateProgressBar(divId, percent) {
-  // if (percent <= 100) {
-    //console.log('percent -> ' + percent);
     $(divId).text(percent + '%');
     document.getElementById("pct").style.width = percent + '%';
     document.getElementById("pct").innerHTML = Math.round(percent) + '%';
-  // }
 }
 
 function showFailedTasksDetails() {
-  //console.log('failed details clicked  !');
   $('#myLargeModalLabelContent').empty();
   for (i = 0; i < failuresURL.length; i++) {
-    //console.log(failuresURL[i]);
     $('#myLargeModalLabelContent').append('['+failuresURL[i].url +'] ' + JSON.stringify(failuresURL[i]) + ':' +  failuresURL[i].status + '<br>');
-    //console.log(failuresURL[i]);
   }
   if (failuresURL.length > 0) {
     $('#myLargeModalLabel').modal('show');

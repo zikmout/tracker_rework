@@ -5,11 +5,13 @@ import json
 import datetime
 import time
 import pandas as pd
+import numpy
 import shutil
+import math
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, get_url_from_id, json_response,\
-replace_mix_option_with_all_existing_keywords, is_project_name_well_formated
+replace_mix_option_with_all_existing_keywords, is_project_name_well_formated, check_valid_mail
 import tracker.session as session
 from tracker.core.rproject import RProject
 import tracker.workers.continuous.continuous_worker as continuous_worker
@@ -19,6 +21,94 @@ from tracker.celery import live_view_worker_app
 from tracker.workers.live.live_view_worker import live_view
 from tracker.utils import revoke_all_tasks
 
+class EmailToWatchlist(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @login_required
+    @gen.coroutine
+    def post(self, username, projectname):
+        print('ARGS = {}'.format(self.form_data))
+        if 'emailForWatchlist' not in self.form_data or\
+         check_valid_mail(self.form_data['emailForWatchlist'][0]) is False:
+            flash_message(self, 'danger', '\'{}\' is not a valid email address.'.format(self.form_data['emailForWatchlist'][0]))
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            return
+        to_delete = False
+        to_add = False
+        if 'emailForWatchlistType' in self.form_data and self.form_data['emailForWatchlistType'][0] == 'add':
+            to_add = True
+        else:
+            to_delete = True
+
+        user = self.request_db.query(User).filter_by(username=username).first()
+        project = user.projects.filter_by(name=projectname).first()
+
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        # print('config df before = {}'.format(rproject.config_df))
+        config_df_updated = rproject.config_df.copy()
+
+        # print('type col == {}'.format(type(config_df_updated['mailing_list'])))
+        # if isinstance(config_df_updated['mailing_list'], numpy.float64):
+            # config_df_updated.at[i, 'mailing_list'] = config_df_updated.at[i, 'mailing_list'].astype(str)
+        # print('TYPE OF DF COL MAILING LIST = {}'.format(config_df_updated.dtypes['mailing_list']))
+        if config_df_updated.dtypes['mailing_list'] == 'float64':
+            # print('FLOAAT')
+            config_df_updated['mailing_list'] = config_df_updated['mailing_list'].astype(str)
+            # config_df_updated['mailing_list'].fillna('', inplace=True)
+        for i in config_df_updated.index:
+            cell = config_df_updated['mailing_list'][i]
+            # print('cell == {}'.format(cell))
+            # print('cell type : {}'.format(type(cell)))
+            if to_add:
+                if isinstance(cell, float) and math.isnan(cell):
+                    # print('-> Is NaN or is equal to nothing')
+                    # config_df_updated.at[i, 'mailing_list'] = config_df_updated.at[i, 'mailing_list'].astype(str)
+                    # if isinstance(ccell, float):
+                        # config_df_updated.at[i, 'mailing_list'] = config_df_updated.at[i, 'mailing_list'].astype(str)
+                    # config_df_updated.at[i, 'mailing_list'] = config_df_updated.at[i, 'mailing_list'].astype(str)
+                    config_df_updated.at[i, 'mailing_list'] = self.form_data['emailForWatchlist'][0]
+                elif self.form_data['emailForWatchlist'][0] in cell:
+                    flash_message(self, 'danger', '\'{}\' already in mailing_list.'.format(self.form_data['emailForWatchlist'][0]))
+                    self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+                    return
+                elif ';' in cell:
+                    # print('-> Is MulTiPlE')
+                    config_df_updated.at[i, 'mailing_list'] = cell + ';' + self.form_data['emailForWatchlist'][0]
+                elif cell == 'nan':
+                    # print('is nan guillement')
+                    config_df_updated.at[i, 'mailing_list'] = self.form_data['emailForWatchlist'][0]
+                else:
+                    config_df_updated.at[i, 'mailing_list'] = config_df_updated.at[i, 'mailing_list'] + ';' + \
+                    self.form_data['emailForWatchlist'][0]
+            elif to_delete:
+                if isinstance(cell, float) and math.isnan(cell):
+                    config_df_updated['mailing_list'][i] = ''
+                    # No need to delete from nothing !
+                    pass
+                elif ';' in cell:
+                    split_cell = cell.split(';')
+                    try:
+                        split_cell.remove(self.form_data['emailForWatchlist'][0])
+                        split_cell = ';'.join(split_cell)
+                        config_df_updated.at[i, 'mailing_list'] = split_cell
+                    except Exception as e:
+                        pass
+                        # print('enter except = {}'.format(e))
+                elif cell == 'nan':
+                    config_df_updated.at[i, 'mailing_list'] = ''
+                elif cell == self.form_data['emailForWatchlist'][0]:
+                    config_df_updated.at[i, 'mailing_list'] = ''
+                else:
+                    pass
+                    # config_df_updated.at[i, 'mailing_list'] = ''
+        
+        config_df_updated.to_excel(project.config_file, index=False)
+
+        if to_add:
+            flash_message(self, 'success', '\'{}\' successfully added to email recipients.'.format(self.form_data['emailForWatchlist'][0]))
+        elif to_delete:
+            flash_message(self, 'success', '\'{}\' successfully deleted from email recipients.'.format(self.form_data['emailForWatchlist'][0]))
+        
+        self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
 
 class DownloadFile(BaseView):
     @login_required

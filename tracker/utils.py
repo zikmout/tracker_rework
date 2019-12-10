@@ -1,8 +1,20 @@
 import json
 import tornado
 import math
+import re
 from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
+
+def check_valid_mail(email):  
+    # Make a regular expression 
+    # for validating an Email 
+    regex = '^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$'
+    # pass the regualar expression 
+    # and the string in search() method 
+    if(re.search(regex,email)):  
+        return True
+    else:  
+        return False
 
 def is_project_name_well_formated(projectname):
     if not all(x.isalnum() or x.isspace() or x == '_' for x in projectname):

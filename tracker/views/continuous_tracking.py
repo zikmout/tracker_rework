@@ -253,7 +253,7 @@ class UserProjectEditWebsite(BaseView):
         rproject = RProject(project.name, project.data_path, project.config_file)
         print('config df before = {}'.format(rproject.config_df))
         config_df_updated = rproject.config_df.copy()
-        config_df_updated = config_df_updated[config_df_updated.Website != args['inputWebsite'][0]]
+        config_df_updated = config_df_updated[config_df_updated.target != args['inputTarget'][0]]
         if 'inputKeywords' in args:
             keywords_excel = ';'.join(args['inputKeywords'])
         else:

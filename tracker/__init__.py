@@ -18,7 +18,7 @@ from tracker.views.tasks import RevokeLiveTasks, DeleteTaskQueues
 from tracker.views.content import UserProjectContent, UserProjectContentFromFile, UserProjectDeleteContent,\
 UserProjectSpider
 from tracker.views.project import ProjectsCreateView, UserProjectListView, UserProjectView,\
- UserProjectDelete, FastProjectCreateView, DownloadFile
+ UserProjectDelete, FastProjectCreateView, DownloadFile, EmailToWatchlist
 from tracker.views.continuous_tracking import ContinuousTrackingCreateView, UserProjectWebsitesView,\
  UserProjectAddWebsite, UserProjectDeleteWebsite, UserProjectEditWebsite
 from tracker.views.alert import AlertView, AlertCreate, AlertLiveView, AlertLaunch, AlertDelete,\
@@ -91,6 +91,7 @@ def main():
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects-manage', UserProjectListView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/quick-project-create', FastProjectCreateView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/export-watchlist', DownloadFile),
+            url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/email-to-watchlist', EmailToWatchlist),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?', UserProjectView),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/delete', UserProjectDelete),
 

@@ -3,16 +3,33 @@
 <div class="starter-template-fluid"><br>
       <h3>Edit watchlist</h3>
       
-        <div class='row'>
-          <div class='col'>
-            <button type="submit" class="btn btn-dark btn-sm collapsed" value="" data-toggle="collapse" data-target="#addLine" aria-expanded="false" aria-controls="addLine">+ Add source</button>
+        
 
-            <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/export-watchlist" method="get" class="form-horizontal" style="display: inline;"><button type="submit" class="btn btn-dark btn-sm collapsed">Export</button></input></form>
-            <!-- <p>Below are shown all the websites referenced in the watchlist as well as content pages to monitor, keywords to check, etc.<br>In this page you can modify de list of websites to monitor and setup live or scheduled tracking.</p> -->
-          </div>
-        </div>
-        <br>
-        <div class="collapse" id="addLine">
+
+                <div class="form-group row">
+                    <div class="col">
+                    <button type="submit" class="btn btn-dark btn-sm collapsed" value="" data-toggle="collapse" data-target="#addLine" aria-expanded="false" aria-controls="addLine">+ Add source</button>
+
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/export-watchlist" method="get" class="form-horizontal" style="display: inline;"><button type="submit" class="btn btn-dark btn-sm collapsed">Export</button></form>
+                  </div>
+                <!-- </div> -->
+
+
+                <!-- <div class='row'> -->
+
+                    <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/email-to-watchlist" method="post" class="form-horizontal">
+<div class="col">
+                    Email: <input type="text" name="emailForWatchlist" value=""></input>
+                    <button type="submit" class="btn btn-dark btn-sm collapsed" name="emailForWatchlistType" value="add">+ Add to all</button>
+
+                    <button type="submit" class="btn btn-dark btn-sm collapsed" name="emailForWatchlistType" value="del">- Del from all</button></form>
+                  </div>
+                </div>
+
+
+
+
+          <div class="collapse" id="addLine">
           <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-add" method="post">
             <div class="card card-body">
               <div class="form-row">

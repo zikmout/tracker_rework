@@ -8,7 +8,7 @@ a {
 <script src="{{ static_url('jquery.min.js') }}"></script>
 <div class="starter-template-fluid">
       <br />
-      <h3>Live alert</h3>
+      <h3>Live {% if 'live_view' in handler.session['tasks'] %}<span class="badge badge-pill badge-dark">{{ handler.session['tasks']['live_view'][0]['template_type'] }}</span> alert{% end %}</h3>
       
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="myLargeModalLabel" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
@@ -26,28 +26,58 @@ a {
         
 
           {% if 'live_view' in handler.session['tasks'] %}
+          <form class="form-inline">
             <div class="row">
-              <div class="col-lg-10">
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-inline">
 
-                  <input type="text" class="form-control mt-2" placeholder="Email" name="email">
+              <div class="form-group ml-3">
+              <!-- <div class="col"> -->
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-inline mt-2">
+                  <input type="text" class="form-control form-control-sm mt-2" placeholder="Email" name="email">
                   <input type="hidden" name="fromPage" value="live_view">
-
-
-                  <button type="submit" class="btn btn-info ml-1 mr-2 mt-2">Send report</button></input>
-                
-                Remaining tasks:&nbsp;<font color="red"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div></font>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)
+                  <button type="submit" class="btn btn-info btn-sm ml-1 mt-2">Send report</button></input>
                 </form>
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-inline mt-2">
+                  <input type="hidden", name="fromPage" value="live_view">
+                  <button type="submit" class="btn btn-info btn-sm ml-1">Update</button></input>
+                </form>
+
+                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post" class="form-inline mt-2">
+                  <input type="hidden" value="{{ handler.session['current_live_view_content'] }}" name="contentName">
+                  <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
+                  <button type="submit" class="btn btn-danger btn-sm ml-1">Stop</button></input>
+                </form>
+
+                <form action="" class="form-inline ml-2 mt-2">
+                  <p>
+                  <label for="exampleFormControlTextarea1"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)</label>
+                  </p>
+                  
+                </form>
+
+              </div>
+
+              
+              <!-- <div class="form-group mb-2 mt-2"> -->
+
+                
+
+              <!-- </div> -->
+
+              <!-- <div class="col"> -->
+  <!--               <div  class="ml-1 mr-2 float-right"> -->
+                  
+              <!-- </div> -->
+            <!-- </div> -->
               </div>
               
-              </div>
-              <div class="row">
+              <!-- </div> -->
+<!--               <div class="row">
                 <div class="col mt-1">
 
                   <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal" style="display: inline;">
 
                       <input type="hidden", name="fromPage" value="live_view">
-                      <button type="submit" class="btn btn-info btn-sm">Download updated pages</button></input>
+                      <button type="submit" class="btn btn-info btn-sm">Update</button></input>
 
                   </form>
 
@@ -55,16 +85,16 @@ a {
                   <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="POST" style="display: inline;">
                     <input type="hidden" value="{{ handler.session['current_live_view_content'] }}" name="contentName">
                     <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
-                    <!-- TODO: Change route with alert stop //-->
-                    <button type="submit" class="btn btn-danger btn-sm">Stop Live View task</button></input>
+
+                    <button type="submit" class="btn btn-danger btn-sm">Stop</button></input>
                   </form>
-                </div>
+                </div> //-->
               </div>
 
-              <br>
+              <div class="mt-2">
               <b>Info:</b>
               <div id="errors"></div>
-
+            </div>
           {% else %}
               <br><br><center><p class="lead">Launch a live alert and monitor it from here.</p></center>
           {% end %}
@@ -85,6 +115,7 @@ a {
 <script>
 
 var counterFailureMaster = 0;
+var counterPending = 0
 var failures = Array();
 var failuresURL = Array();
 {% if 'live_view' in handler.session['tasks'] %}
@@ -93,7 +124,6 @@ var totalTaskNb = {{ len(handler.session['tasks']['live_view']) }};
 var totalTaskNb = 0;
 {% end %}
 var counterRemaining = totalTaskNb;
-
 var ws = new WebSocket(location.origin.replace(/^http/, 'ws') + "/websocket");
 var executed = 0;
 var remainingTaskNb = 0;
@@ -103,6 +133,7 @@ function timeout() {
     updateProgressBar('#liveViewProgress', (executed/totalTaskNb)*100);
     executed = 0;
     remainingTaskNb = 0;
+    counterPending = 0;
     setTimeout(function () {
         ws.onopen();
         timeout();
@@ -115,6 +146,26 @@ function sleep(ms) {
 
 function getRandomArbitrary(min, max) {
   return Math.random() * (max - min) + min;
+}
+
+function isEncoded(uri) {
+  uri = uri || '';
+
+  return uri !== decodeURIComponent(uri);
+}
+
+function GetFilename(url)
+{
+   var uri = url.split('/').pop();
+   if (isEncoded(uri)) {
+      uri = decodeURI(uri);
+   }
+   if (uri == '' && url.endsWith('/') == true) {
+      var splitted = url.split('/');
+      uri = splitted[splitted.length - 2];
+   }
+   // console.log(uri + ' is encoded: ' + isEncoded(uri));
+   return uri
 }
 
 ws.onopen = function() {
@@ -130,49 +181,94 @@ function escapeHtml(unsafe) {
 	return unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 }
 
-function formatDiff(title, diff, nearest_link, all_links, type) {
+function formatDiff(title, diff, nearest_link, sbb_links, all_links, type) {
   var i;
   var diffs = '';
   for (i = 0; i < diff.length; i++) {
-      diffs += diff[i] + "<br>";
+      if (nearest_link[diff[i]] != undefined) {
+        diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0)'/>" + diff[i] + "</a>" + "<br>";
+      }
+      else {
+        diffs += diff[i] + "<br>";
+      }
+      
   }
+
   var firstPart = 
   "<div class='card border-" + type + " mb-3'>\
               <div class='card-header bg-transparent border-" + type + " text-" + type + "'><b>" + title + "</b></div>\
-              <div class='card-body text-" + type + "'>\
-                <p class='card-text'>" + diffs + "</p></div>\
-              <div class='card-footer bg-transparent border-" + type + "'>";
+              <div class='card-body'>\
+                <p class='card-text'>" + diffs + "</p></div>";
+              // <div class='card-footer bg-transparent border-" + type + "'>";
+
+  var middlePart = "";
+  var fn = '';
+
+  // console.log(sbb_links);
+  middlePart += "<div class='card-group'>"
+
+  {% if 'live_view' in handler.session['tasks'] and handler.session['tasks']['live_view'][0]['template_type'] == 'share buy back' %}
+    middlePart += "<div class='card'><div class='card-body'>\
+      <h5 class='card-title'>SBB links</h5>"
+  
+  // console.log(all_links);
+  for (i = 0; i < sbb_links.length; i++) {
+      
+      fn = GetFilename(sbb_links[i]);
+      middlePart +="<li class='square'><a href='" + sbb_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + fn + "</a></li>";
+  }
+
+  middlePart += "</div>\
+  </div>";
+  {% end %}
+
+  {% if 'live_view' in handler.session['tasks'] and handler.session['tasks']['live_view'][0]['template_type'] == 'diff with keywords' %}
+  middlePart += "<div class='card'>\
+    <div class='card-body'>\
+      <h5 class='card-title'>Nearest links</h5>";
+
+  for (var property in nearest_link) {
+    if (nearest_link.hasOwnProperty(property)) {
+      middlePart += "<li class='square'><a href='" + nearest_link[property] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(nearest_link[property]) + "</a></li>";
+    }
+  }
+  middlePart += "</div>\
+  </div>"
+  {% end %}
+  
+  middlePart += "<div class='card'>\
+    <div class='card-body'>\
+      <h5 class='card-title'>All links</h5>"
+
+  if ((all_links.length < 5) && (all_links != null && all_links != undefined)) {
+    for (i = 0; i < all_links.length; i++) {
+        middlePart += "<li class='square'><a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(all_links[i]) + "</a></li>";
+    }
+  }
+  else {
+    middlePart += '-> too many links</div></div>';
+  }
+  
+  middlePart += "</div>\
+  </div>"
+
   var lastPart = 
   "</div>\
   </div>";
-
-  var middlePart = '';
-  if (all_links != null && all_links != undefined) {
-    if (all_links.length > 10) {
-      middlePart = '-> too many links'
-    }
-    else {
-      for (i = 0; i < all_links.length; i++) {
-        middlePart += "<a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + all_links[i] + "</a><br>";
-      }
-    }
-    for (i = 0; i < nearest_link.length; i++) {
-      if (middlePart.includes(nearest_link[i]) == false) {
-        middlePart = "<a href='" + nearest_link[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + nearest_link[i] + "</a><br>" + middlePart;
-      }
-    }
-  }
   
   var fullDiff = firstPart + middlePart + lastPart;
   return fullDiff;
 }
-var nc = 0;
-var curr = 0;
+
 ws.onmessage = function (evt) {
    if (evt != null) {
-       var data = JSON.parse(evt.data);
-       curr = data.current;
 
+       
+       if (evt.data.includes('<LIMIT_STOP>')) {
+        console.log('LIMIT_STOP');
+       }
+       var data = JSON.parse(evt.data);
+       // console.log(data);
        if (data.state == 'SUCCESS' && !document.getElementById('err-' + data.task_id)) {
         var newError = document.createElement("DIV");
         newError.setAttribute("id", 'err-' + data.task_id);
@@ -187,11 +283,20 @@ ws.onmessage = function (evt) {
         newError.innerHTML = errorLog;
         document.getElementById('errors').appendChild(newError);
        }
-       if (data.state == 'SUCCESS') {
-          nc += 1;
-       }
+       // if (data.state == 'SUCCESS') {
+        // if (data.status == '')
+          // nc += 1;
+
+          // console.log('SUCCESS :' + data.current + data.url);
+          
+       // }
+       // if (data.state == 'PENDING') {
+        // console.log('PENDING :');
+        // console.log(data);
+       // }
        if (data.state == 'FAILURE' && !failures.includes(data.current)) {
           failures.push(data.current);
+          // console.log('FAILURE :' + data.current);
           // urlFailed = {
           //   "url" : data.status.url,
           //   "info" : data.info
@@ -206,6 +311,18 @@ ws.onmessage = function (evt) {
           $('#numberOfFailedTasks').html(counterFailureMaster);
        }
 
+       // if (data.state != 'SUCCESS' && data.state != 'PENDING') {
+        // console.log('RestE')
+       // }
+       if (data.status.errors == undefined) {
+        console.log(data);
+       }
+       
+       // if (data.status == undefined) {
+        // console.log('undef');
+        // counterPending += 1;
+        // console.log('pending = ' + counterPending);
+       // }
        if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
           if (!document.getElementById(data.status.div)) {
             var title = document.createElement("H5");
@@ -224,8 +341,8 @@ ws.onmessage = function (evt) {
             ulTitle.setAttribute("id", data.current.toString() + data.task_id);
             document.getElementById(data.status.div).append(ulTitle);
 
-            var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.all_links_pos, 'success');
-            var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.all_links_neg, 'danger');
+            var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success');
+            var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger');
 
             if (data.status.diff_pos.length != 0) {
               document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_pos);
@@ -264,9 +381,9 @@ function showFailedTasksDetails() {
 </script>
 {% end %}
 {% block script %}
-<script>
+<!-- <script>
   $('button').click(function(){
      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
   });
-</script>
+</script> -->
 {% end %}

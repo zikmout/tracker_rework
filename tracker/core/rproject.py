@@ -471,7 +471,7 @@ class RProject:
             nb = unit.update_downloaded([internal_link])
             print('Nb of unit updated for url {} : {}'.format(nb, base_url))
 
-    def download_units_diff(self, template_type, links, save=False, time_limit=False):
+    def download_units_diff(self, template_type, links, save=False, show_links=False, time_limit=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
@@ -494,9 +494,9 @@ class RProject:
             links_algorithm = False
         else:
             # This must not happen
-            return False
+            return None
 
-        tasks = list()
+        tasks = dict()
         if isinstance(dict_links, dict) and bool(dict_links):
             counter = 0
             # i = 0
@@ -519,12 +519,13 @@ class RProject:
                     # print('url ------> {}'.format(url))
                     for link in links:
 
-                        print('SENDING link for task = {}'.format(link))
+                        # print('SENDING link for task = {}'.format(link))
                         # print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
                         task = unit.download_changed_files_from_links(link, keywords_diff, detect_links,\
-                        links_algorithm, counter, len(dict_links), time_limit=time_limit)
-                        tasks.append(task)
+                        show_links, links_algorithm, counter, len(dict_links), time_limit=time_limit)
+                        
+                        tasks.update({str(unit.url+link[0]): task})
                 else:
                     print('Unit {} not found'.format(key))
             return tasks
@@ -535,7 +536,7 @@ class RProject:
 
 
     def download_units_diff_delayed_with_email(self, alert_name, template_type,\
-        schedule, links, mailing_list, user_email, project_name, save=False):
+        schedule, links, mailing_list, user_email, project_name, show_links, save=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
@@ -566,7 +567,7 @@ class RProject:
                 for s in m.split(';'):
                     mails_set.add(s)
         
-        print('mail set = {}'.format(mails_set))
+        # print('mail set = {}'.format(mails_set))
         mails_content = dict()
         for mail in mails_set:
             mails_content[mail] = list()
@@ -581,7 +582,7 @@ class RProject:
                 for mail in mails_set:
                     if mail in m:
                         mails_content[mail].append(t)
-        print('MAIL CONTENT = {}'.format(mails_content))
+        # print('MAIL CONTENT = {}'.format(mails_content))
         # Now, mails are like this: (mails_content)
         #       mail1 --> target1
         #       mail2 --> target1 target2
@@ -623,6 +624,7 @@ class RProject:
                         unit.url,
                         keywords_diff,
                         detect_links,
+                        show_links,
                         links_algorithm))
                 else:
                     print('Unit {} not found'.format(key))
@@ -631,13 +633,13 @@ class RProject:
             print('SCHEDULED = {}'.format(schedule))
             if template_type == 'share buy back':
                 entry = Entry(alert_name, 'continuous_worker.share_buy_back_task',\
-                    schedule, args=(task_args, mails_content, user_email, project_name), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name, show_links), app=continuous_worker.app)
             elif template_type == 'diff':
                 entry = Entry(alert_name, 'continuous_worker.diff_task',\
-                    schedule, args=(task_args, mails_content, user_email, project_name), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name, show_links), app=continuous_worker.app)
             elif template_type == 'diff with keywords':
                 entry = Entry(alert_name, 'continuous_worker.diff_with_keywords_task',\
-                    schedule, args=(task_args, mails_content, user_email, project_name), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name, show_links), app=continuous_worker.app)
             entry.save()
             print('ENTRY IS DUE = {}'.format(entry.is_due()))
             return entry

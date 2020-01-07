@@ -75,12 +75,16 @@ class AlertCreate(BaseView):
     @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('post args = {}'.format(args))
+        print('** post args = {}'.format(args))
         # if box is checked, variable comes in like { "gridCheck": "on" }
         email_notify = False
 
-        if 'gridCheck' in args:
+        if 'gridCheck' in args and args['gridCheck'] == 'on':
             email_notify = True
+        if 'gridCheckShowLinks' in args and args['gridCheckShowLinks'] == 'on':
+            show_links = True
+        else:
+            show_links = False
 
         if not 'inputContent' in args:
             flash_message(self, 'danger', 'Please specify some content to base your alert on.')
@@ -106,6 +110,8 @@ class AlertCreate(BaseView):
                 start_time = datetime.datetime.now().replace(microsecond=0)
             else:
                 start_time = args['inputStartTime']
+
+            # Live alert
             if args['inputType'] == 'Live':
                 if email_notify:
                     email_notify = False
@@ -115,16 +121,20 @@ class AlertCreate(BaseView):
                     msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
                 start_time = datetime.datetime.now().replace(microsecond=0)
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, email_notify=email_notify,\
-                    template_type=args['mailTemplateType'])
+                    show_links=show_links, template_type=args['mailTemplateType'])
+
+            # Time interval alert
             elif args['inputType'] == 'BasicReccurent':
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat=args['inputRepeat'],\
                     interval=args['inputEvery'], max_count=args['inputMaxCount'], email_notify=email_notify,\
-                    template_type=args['mailTemplateType'])
+                    show_links=show_links, template_type=args['mailTemplateType'])
                 msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
+
+            # Days of week alert
             elif args['inputType'] == 'CrontabSchedule':
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat_at=args['inputRepeatTime'],\
                     days_of_week=[int(v[0]) for k, v in args.items() if k.startswith('crontabDay')],\
-                    email_notify=email_notify, template_type=args['mailTemplateType'])
+                    email_notify=email_notify, show_links=show_links, template_type=args['mailTemplateType'])
                 msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
                 
             content.alerts.append(new_alert)
@@ -147,7 +157,7 @@ class AlertLaunch(BaseView):
     @gen.coroutine
     def post(self, username, projectname, alertid):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        #print('args AlertLaunch => {}'.format(args))
+        print('args AlertLaunch => {}'.format(args))
         # Checkbox in UI ready to use :)
         # save_log_checked = False
         # if 'saveLogChecked' + alertid in args:
@@ -157,8 +167,13 @@ class AlertLaunch(BaseView):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         content = project.contents.filter_by(name=args['contentName']).first()
+        if content is None:
+            flash_message(self, 'danger', 'Problem creating LIVE ALERT.')
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            return
         alert = content.alerts.filter_by(name=args['alertName']).first()
 
+        ##################### LIVE ALERT LAUNCH #######################################
         if args['alertType'] == 'Live':
             # if session live view task present in session, delete them and revoke associated tasks
             if 'live_view' in self.session['tasks']:
@@ -181,7 +196,9 @@ class AlertLaunch(BaseView):
                 lmt = args['alertTimeLimit']
             else:
                 lmt = False 
-            tasks = rproject.download_units_diff(alert.template_type, content.links, save=True, time_limit=lmt)
+            
+            tasks = rproject.download_units_diff(alert.template_type, content.links,
+                save=True, show_links=alert.show_links, time_limit=lmt)
             #print('alert.template type = {}'.format(alert.template_type))
             #print('TASKSS ===> {}'.format(tasks))
 
@@ -193,13 +210,16 @@ class AlertLaunch(BaseView):
                 # if 'live_view' in self.session['tasks']:
                 # del self.session['tasks']['live_view']
                 # self.session.save()
+
                 updated_tasks = list()
-                for task in tasks:
+                for url, task in tasks.items():
+                    
                     task_object = {
                         'username': username,
                         'projectname': projectname,
-                        'uid': None, # reverse function get_id_from_url
-                        'url': None,#url, # to change with link list
+                        #'uid': self.session, # reverse function get_id_from_url
+                        'url': url,#url, # to change with link list
+                        'template_type': alert.template_type,
                         'id': task.id
                     }
                     updated_tasks.append(task_object)
@@ -214,6 +234,9 @@ class AlertLaunch(BaseView):
                 self.session.save()
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
                 return
+
+        ###############################################################################
+        ##################### DIFFERED ALERT LAUNCH ###################################
         elif args['alertType'] == 'BasicReccurent' or args['alertType'] == 'CrontabSchedule':
             print('content --> {}'.format(content))
             # Loading project
@@ -258,7 +281,7 @@ class AlertLaunch(BaseView):
 
         # Sync alert with Redbeat scheduler
         entry = rproject.download_units_diff_delayed_with_email(alert.name, alert.template_type,\
-            schedule, content.links, content.mailing_list, user.email, project.name, save=True)
+            schedule, content.links, content.mailing_list, user.email, project.name, alert.show_links, save=True)
         
         # Scheduler must return an entry
         if entry is False:

@@ -184,13 +184,14 @@ class Alert(Base):
     days_of_week = Column(PickleType) # Array with corresponding days of the week from 0 to 6
     # Remainder
     email_notify = Column(Boolean)
+    show_links = Column(Boolean)
     template_type = Column(String(64))
     diff_links = Column(String(64)) # Not bolean to keep possibility for ml algo in label
     launched = Column(Boolean)
     content_id = Column(Integer, ForeignKey('content.id'))
 
     def __init__(self, name, alert_type, start_time, end_time=None, repeat=None, interval=None,\
-        max_count=None, repeat_at=None, days_of_week=None, email_notify=False,\
+        max_count=None, repeat_at=None, days_of_week=None, email_notify=False, show_links=False,\
         template_type='diff', diff_links=True, launched=False):
         self.name = name
         self.alert_type = alert_type
@@ -203,6 +204,7 @@ class Alert(Base):
         self.repeat_at = repeat_at
         self.days_of_week = days_of_week
         self.email_notify = email_notify
+        self.show_links = show_links
         self.template_type = template_type
         self.diff_links = diff_links
         self.launched = launched

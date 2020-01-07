@@ -96,7 +96,7 @@ def save_remote_content(remote_content, url, path, name, check_duplicates=False)
     full_path = os.path.join(path, name)
     with open (full_path, 'wb+') as content:
         try:
-            print('TT REMOTE COTENT = {}'.format(type(remote_content)))
+            #print('TT REMOTE COTENT = {}'.format(type(remote_content)))
             if not isinstance(remote_content, bytes):
                 content.write(remote_content.encode('utf-8'))
             else:

@@ -76,6 +76,7 @@ def clean_content(input_list, min_sentence_len=5):
     return output
 
 def roundrobin(*iterables):
+    print('Enter roundrobin ALGO1:')
     # took from here https://docs.python.org/3/library/itertools.html#itertools-recipes
 
     """roundrobin('ABC', 'D', 'EF') --> A D E B F C"""
@@ -95,33 +96,81 @@ def find_nearest(elt):
     preceding = elt.xpath('preceding::*/@href')[::-1]
     following = elt.xpath('following::*/@href')
     parent = elt.xpath('parent::*/@href')
+
     for href in roundrobin(parent, preceding, following):
         return href
+    # preceding = elt.xpath('preceding::*/@href')[::-1]
+    # following = elt.xpath('following::*/@href')
+    # parent = elt.xpath('parent::*/@href')
+    # print('preceding : \n{}\n\nfollowing : {}\n\nparent : {}\n\n'.format(preceding, following, parent))
+    # for href in roundrobin(parent, preceding, following):
+    #     return href
 
-def get_nearest_link(keyword, remote_content, url):
-    nearest_link = []
-    doc = LH.fromstring(remote_content)
-    xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = keyword))
-    len_xpaths = len(xpaths)
-    #print('X Path = {}\n'.format(xpaths))
-    for x in xpaths:
-        nearest_link = [find_nearest(x)]
-        #print('Nearsest link found (url) = {} ({})'.format(nearest_link, url))
-        if len_xpaths > 1 and '#' not in nearest_link:
-            print('Nearest founds are numerous for website : {}. Exit.'.format(url))
-            break ;
-    return nearest_link
+def get_nearest_link(match, keyword, content):
 
-def keyword_match(keywords, status, remote_content, url, detect_links=True):
+    nearest_link = dict()
+    print('looking for kw ========> {}'.format(match))
+
+    doc = LH.fromstring(content)
+    el2 = doc.xpath('/html/body//a[contains(text(),{s!r})]/@href'.format(s = match))
+    if el2 != []:
+        print('HERE el2 not None -> {}'.format(el2))
+        #print('el2 = {}'.format(el2))
+        nearest_link.update({match: el2[0]})
+        return nearest_link
+    else:
+    #     return []
+    
+        print('* el2 is None *')
+        for x in doc.xpath('//*[contains(text(),{s!r})]'.format(s = match)):
+            nearest = find_nearest(x)
+            # if not nearest.startswith('http'):
+                # nearest_link.update({match: url + nearest})
+            # else:
+            nearest_link.update({match:nearest})
+
+        # print('el2 is None rr')
+
+        return nearest_link
+
+
+
+
+# def find_nearest2(elt):
+#     preceding = elt.xpath('preceding::*/@href')[::-1]
+#     following = elt.xpath('following::*/@href')
+#     parent = elt.xpath('parent::*/@href')
+#     print('preceding 2: \n{}\n\nfollowing 2: {}\n\nparent 2: {}\n\n'.format(preceding, following, parent))
+#     for href in roundrobin(parent, preceding, following):
+#         return href
+
+# def get_nearest_link2(all_links, keyword, remote_content, url):
+#     nearest_link = []
+#     doc = LH.fromstring(remote_content)
+#     xpaths = doc.xpath('//*[contains(text(),{s!r})]'.format(s = 'risque de correction sous'))
+#     len_xpaths = len(xpaths)
+#     print('X Path2 len = {}\n'.format(len(xpaths)))
+#     for x in xpaths:
+#         nearest_link = [find_nearest2(x)]
+
+#         print('Nearest link2 found (url) = {} ({})'.format(nearest_link, url))
+#         if len_xpaths > 100 and '#' not in nearest_link:
+#             print('Nearest links 2 founds are numerous for website : {}. Exit.'.format(url))
+#             break ;
+#     return nearest_link
+
+def keyword_match(keywords, status, local_content, remote_content, url, detect_links=True):
     """ Find diff pos, diff neg, nearest links pos, nearest links neg """
+    # remote_content = remote_content.decode('utf8').replace('<b>', '').replace('</b>', '')
+    #print('REMOTEEE FROM HERE : {}'.format(remote_content))
     def clean_sentence(input_sentence):
 
         # to lower
         output = input_sentence.lower()
         
         # get rid of punctuation
-        t = str.maketrans('', '', string.punctuation)
-        output = output.translate(t)
+        # t = str.maketrans('', '', string.punctuation)
+        # output = output.translate(t)
         
         # get rid of digits
         # t = str.maketrans('', '', string.digits)
@@ -150,22 +199,23 @@ def keyword_match(keywords, status, remote_content, url, detect_links=True):
             for neg in status['diff_neg']:
                 # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
                 for word in clean_sentence(neg).split(' '):
-                    #print('try to match <{}><{}>'.format(keyword.lower(), word))
-                    if keyword.lower() == word.lower():
+                    #print('try to match <{}><{}>'.format(keyword.lower(), word.lower()))
+                    if keyword.lower() == word:
                         if neg not in match_neg:
                             match_neg.append(neg)
                         if detect_links:
-                            status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
+                            status['nearest_link_neg'].update(get_nearest_link(neg, keyword, local_content))
             for pos in status['diff_pos']:
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 for word in clean_sentence(pos).split(' '):
-                    #print('try to match <{}><{}>'.format(keyword.lower(), word))
-                    if keyword.lower() == word.lower():
-                        #print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
+                    # print('try to match <{}><{}>'.format(keyword.lower(), word))
+                    if keyword.lower() == word:
+                        # print('**** <!> KEYWORD_MATCH : \'{}\' on url {} <!> ****'.format(keyword, status['url']))
                         if pos not in match_pos:
+                            #print('POS = {}'.format(pos))
                             match_pos.append(pos)
                         if detect_links:
-                            status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
+                            status['nearest_link_pos'].update(get_nearest_link(pos, keyword, remote_content))
         else:
             for neg in status['diff_neg']:
                 if keyword.lower() in clean_sentence(neg):
@@ -173,14 +223,14 @@ def keyword_match(keywords, status, remote_content, url, detect_links=True):
                     if neg not in match_neg:
                         match_neg.append(neg)
                     if detect_links:
-                        status['nearest_link_neg'] = get_nearest_link(keyword, remote_content, url)
+                        status['nearest_link_neg'].update(get_nearest_link(neg, keyword, local_content))
             for pos in status['diff_pos']:
                 if keyword.lower() in clean_sentence(pos):
                     #print('try to match <{}><{}>'.format(keyword.lower(), pos))
                     if pos not in match_pos:
                         match_pos.append(pos)
                     if detect_links:
-                        status['nearest_link_pos'] = get_nearest_link(keyword, remote_content, url)
+                        status['nearest_link_pos'].update(get_nearest_link(pos, keyword, remote_content))
         
     status['diff_neg'] = match_neg
     status['diff_pos'] = match_pos
@@ -190,7 +240,8 @@ def keyword_match(keywords, status, remote_content, url, detect_links=True):
     if detect_links and status['diff_pos'] == []:
         status['all_links_pos'] = [] 
     if detect_links and status['diff_neg'] == []:
-        status['all_links_neg'] = [] 
+        status['all_links_neg'] = []
+    # print('url : {}\n->all links pos = {}\n->all links neg = {}\n'.format(url, status['all_links_pos'], status['all_links_neg']))
     return status
 
 def tag_visible(element):
@@ -210,12 +261,12 @@ def extract_text_from_html(content):
 
 def extract_links_from_html(content):
     links = list()
-    if isinstance(content, bytes):
-        content = content.decode('utf-8', errors='ignore')
+    # if isinstance(content, bytes):
+        # content = content.decode('utf-8', errors='ignore')
     webpage_regex = re.compile("""<a[^>]+href=["'](.*?)["']""", re.IGNORECASE)
     links = webpage_regex.findall(content)
 
-    to_exclude = ['facebook.', 'twitter.', 'youtube.', 'instagram.', 'google.', 'linkedin.', '#', 'mailto', 'viadeo.']
+    to_exclude = ['javascript:', 'facebook.','twitter.', 'youtube.', 'instagram.', 'google.', 'linkedin.', '#', 'mailto', 'viadeo.']
     excluded = set()
     for link in links:
         for word in to_exclude:
@@ -236,6 +287,7 @@ def extract_links_from_html(content):
 
 def get_text_diff(local_content, remote_content, status, detect_links=True):
     # extract content and links
+    # print('REMOTE CONTENT : {}'.format(remote_content))
     extracted_local_content = extract_text_from_html(local_content)
     extracted_remote_content = extract_text_from_html(remote_content)
     if detect_links:
@@ -248,7 +300,7 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
 
     # extracted_local_content = clean_content(extracted_local_content)
     # extracted_remote_content = clean_content(extracted_remote_content)
-    #print('EXTRACTED #REMOTE = {}'.format(extracted_remote_content))
+    # print('EXTRACTED #REMOTE = {}'.format(extracted_remote_content))
     #print('EXTRACTED #LOCAL = {}'.format(extracted_local_content))
     # get content diffs
     status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
@@ -264,6 +316,7 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
         all_links_pos = set()
         [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
         status['all_links_pos'].extend(all_links_pos)
+        
 
     # taking off doublons in diff pos and diff neg
                 

@@ -80,6 +80,7 @@ class EmailToWatchlist(BaseView):
                     config_df_updated.at[i, 'mailing_list'] = config_df_updated.at[i, 'mailing_list'] + ';' + \
                     self.form_data['emailForWatchlist'][0]
             elif to_delete:
+                print('CELL TO DELETE = {}'.format(cell))
                 if isinstance(cell, float) and math.isnan(cell):
                     config_df_updated['mailing_list'][i] = ''
                     # No need to delete from nothing !

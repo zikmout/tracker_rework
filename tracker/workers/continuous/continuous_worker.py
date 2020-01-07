@@ -20,7 +20,7 @@ import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
 # from tracker.core.rproject import RProject
 # from tracker.celery import app
-from tracker.mail import simple_mail_sbb, designed_mail_sbb, generic_mail_template
+from tracker.mail import generic_mail_template, sbb_mail_template
 # from tracker.models import Project, User
 from celery import Celery, group, states
 from celery.backends.redis import RedisBackend
@@ -46,12 +46,11 @@ def patch_celery():
         return retval
 
     celery.backends.redis.RedisBackend._unpack_chord_result = _unpack_chord_result
-
     return celery
+
 
 app = patch_celery().Celery(__name__) # TODO : Change to sth like 'permanent listener'
 app.config_from_object(celeryconf)
-
 
 
 def make_request_for_updating_content(user_email, project_name, urls):
@@ -62,13 +61,8 @@ def make_request_for_updating_content(user_email, project_name, urls):
     http_client = httpclient.HTTPClient()
     try:
         response = http_client.fetch('http://localhost:5567/api/v1/update-content', method='POST', body=body)
-        #print('RESPONSE => {}'.format(response.body))
         http_client.close()
         return response.body
-    # except httpclient.HTTPError as e:
-    #     print('HTTPError -> {}'.format(e))
-    #     http_client.close()
-    #     return json.dumps({ 'error': '{}'.format(e)})
     except Exception as e:
         print('Error -> {}'.format(e))
         http_client.close()
@@ -79,11 +73,9 @@ def make_request_for_predictions(content, min_acc=0.75):
     # Making synchronous HTTP Request (because workers are aynchronous already)
     post_data = { 'content': content, 'min_acc': min_acc }
     body = urllib.parse.urlencode(post_data)
-
     http_client = httpclient.HTTPClient()
     try:
         response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)
-        #print('RESPONSE => {}'.format(response.body))
         http_client.close()
         return response.body
     except httpclient.HTTPError as e:
@@ -93,6 +85,7 @@ def make_request_for_predictions(content, min_acc=0.75):
         print('Error -> {}'.format(e))
         http_client.close()
     return json.dumps({ 'error': '{}'.format(e)})
+
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     # TODO: Add more characters
@@ -163,34 +156,54 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
 
     return False
 
-def select_only_sbb_links(status):
-    #print('\n-------------------------------———\n')
+def select_only_sbb_links(status, show_links=False):
+    print('\n-------------------------------———\n')
     i = 0
     excluded_links = list()
 
-    for link in status['all_links_pos'].copy():
-        if is_sbb_content(link) is False:
-            excluded_links.append(link)
-            status['all_links_pos'].remove(link)#(index)
+    all_links = set(status['all_links_pos'] + status['all_links_neg'] +
+     status['nearest_link_pos'] + status['nearest_link_neg'])
+    all_links = {k: True for k in all_links}
 
-    for link in status['all_links_neg'].copy():
-        if is_sbb_content(link) is False:
-            excluded_links.append(link)
-            status['all_links_neg'].remove(link)
+    for k, v in all_links.copy().items():
+        if not is_sbb_content(k):
+            all_links[k] = False
 
-    for link in status['nearest_link_pos'].copy():
-        if is_sbb_content(link) is False:
-            excluded_links.append(link)
-            status['nearest_link_pos'].remove(link)
+    for k, v in all_links.copy().items():
+        if not show_links and v is False:
+            status['all_links_neg'].remove(k)
+            status['all_links_pos'].remove(k)
+            status['nearest_link_pos'].remove(k)
+            status['nearest_link_neg'].remove(k)
+            excluded_links.append(k)
 
-    for link in status['nearest_link_neg'].copy():
-        if is_sbb_content(link) is False:
-            excluded_links.append(link)
-            status['nearest_link_neg'].remove(link)
-    #print('Excluded links are :\n')
-    #for _ in excluded_links:
-    #    print(_)
-    #print('\n-------------------------------———\n')
+
+    # for link in status['all_links_pos'].copy():
+    #     if is_sbb_content(link) is False:
+    #         excluded_links.append(link)
+    #         status['all_links_pos'].remove(link)#(index)
+
+    # for link in status['all_links_neg'].copy():
+    #     if is_sbb_content(link) is False:
+    #         excluded_links.append(link)
+    #         status['all_links_neg'].remove(link)
+
+    # if show_links:
+    #     for link in status['nearest_link_pos'].copy():
+    #         if is_sbb_content(link) is False:
+    #             excluded_links.append(link)
+    #             status['nearest_link_pos'].remove(link)
+
+    #     for link in status['nearest_link_neg'].copy():
+    #         if is_sbb_content(link) is False:
+    #             excluded_links.append(link)
+    #             status['nearest_link_neg'].remove(link)
+
+    print('Excluded links are :\n')
+    for _ in excluded_links:
+       print(_)
+    print('\n-------------------------------———\n')
+
     return status
 
 def get_full_links(status, base_url):
@@ -214,8 +227,8 @@ def bad_task(self):
     time.sleep(10)
     print('stop sleep')
 
-@app.task(bind=True, ignore_result=False, hard_time_limit=30, soft_time_limit=30)#soft_time_limit=60)#, time_limit=121)
-def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links, links_algorithm):
+@app.task(bind=True, ignore_result=False, hard_time_limit=50, soft_time_limit=50)#soft_time_limit=60)#, time_limit=121)
+def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links, show_links, links_algorithm):
     """ Download website parts that have changed 
         -> diff based on keyword matching
         -> links identified with ml algorithm that detect share buy back content (pdf or raw text)
@@ -287,7 +300,7 @@ def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links
                 #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
                 if detect_links:
                     status = get_full_links(status, url)
-                    status = select_only_sbb_links(status)
+                    status = select_only_sbb_links(status, show_links=show_links)
 
                 #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
                 self.update_state(state='PROGRESS', meta={'current': i, 'total': total, 'status': status})
@@ -316,7 +329,7 @@ def log_error_sbb(self, z):
     print('ERROR for share_buy_back_task = {}'.format(z))
 
 @app.task(bind=True)
-def sbb_end_routine(self, task_results, mails, user_email, project_name):#, soft_time_limit=120):
+def sbb_end_routine(self, task_results, mails, user_email, project_name, show_links):#, soft_time_limit=120):
     task_results_successful = [r['status'] for r in task_results.copy() if (r['status']['diff_neg'] != []\
                      or r['status']['diff_pos'] != [])]
     errors = dict()
@@ -336,7 +349,7 @@ def sbb_end_routine(self, task_results, mails, user_email, project_name):#, soft
         .format(task_results))
         print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-        generic_mail_template(task_results_successful, errors, mails, 'sbb task', len(task_results), show_links=True)
+        sbb_mail_template(task_results_successful, errors, mails, 'sbb task', len(task_results), show_links=True)
         print('- Mails successfully sent if any changed noticed -')
     print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
     
@@ -351,7 +364,7 @@ def share_buy_back_task(self, add, mails, user_email, project_name):
     #.set(
                 # soft_time_limit=1
             # )
-    return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name)).delay()
+    return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links)).delay()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
     #     ).on_error(log_error_sbb.s()) for k in add), sbb_end_routine.s(mails, user_email, project_name))()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
@@ -399,7 +412,7 @@ def diff_end_routine(self, task_results, mails, user_email, project_name):#, tim
 @app.task(bind=True)
 def diff_task(self, add, mails, user_email, project_name):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
-    return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name)).delay()
+    return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links)).delay()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
     #     ).on_error(log_error_diff.s()) for k in add), diff_end_routine.s(mails, user_email, project_name))()
 
@@ -479,7 +492,7 @@ def diff_with_keywords_task(self, add, mails, user_email, project_name):
     print('ADD = {}'.format(add))
     print('len ADD = {}'.format(len(add)))
     if len(add) == 1:
-        return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6]) | diff_with_keywords_end_routine.s(mails, user_email, project_name)).delay()
+        return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6]) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links)).delay()
     # return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add) | bad_task() | diff_with_keywords_end_routine.s(mails, user_email, project_name)).delay()
     else:
         return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name)).delay()

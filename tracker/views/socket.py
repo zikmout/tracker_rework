@@ -1,5 +1,6 @@
 import tornado
 import time
+import json
 from tornado.websocket import WebSocketHandler
 from tracker.workers.live.live_view_worker import live_view
 from tracker.workers.crawl_worker import link_crawler
@@ -37,12 +38,14 @@ class EchoWebSocket(WebSocketHandler):
                     #print('-> task response with uid : {}'.format(response))
                     self.write_message(response)
                 except Exception as e:
+                    # response['state'] == 'PENDING'
                     print('still pending....')
+                    # self.write_message('<STOP>{}#{}'.format(uid, task_id))
         else:
             try:
                 #print(' *** Live view ...')
                 self.message = message
-                #print('message = {}'.format(message))
+                # print('message = {}'.format(message))
                 task_id = message
                 task = live_view.AsyncResult(task_id)
                 #print('Task backend = {}'.format(task.backend))
@@ -51,7 +54,9 @@ class EchoWebSocket(WebSocketHandler):
                 response['task_id'] = task_id
                 self.write_message(response)
             except Exception as e:
-                print('still pending....')
+                print('still pending....{}'.format(message))
+                #self.write_message(json.dumps({message: 'PENDING'}))
+                # {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}
 
     def on_close(self):
         print('WebSocket closed')

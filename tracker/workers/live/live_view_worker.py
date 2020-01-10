@@ -194,104 +194,104 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
         'diff_nb': 0,
         'errors': dict()
     }
-    # try:
-    # print('[{}/{}] Link = {}'.format(i, len(links), flink))
-        #time.sleep(random.randint(0, 10))
-    base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
-    filename = link.rpartition('/')[2]
-    print('FILNAME = {}'.format(filename))
-    base_dir_path_file = os.path.join(base_dir_path, filename)
+    try:
+        # print('[{}/{}] Link = {}'.format(i, len(links), flink))
+            #time.sleep(random.randint(0, 10))
+        base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
+        filename = link.rpartition('/')[2]
+        print('FILNAME = {}'.format(filename))
+        base_dir_path_file = os.path.join(base_dir_path, filename)
 
-        # check whether adding 'unknown' is right ...
-    if os.path.isdir(base_dir_path_file) and os.path.isfile(base_dir_path_file + 'unknown___'):
-        base_dir_path_file = base_dir_path_file + 'unknown___'
+            # check whether adding 'unknown' is right ...
+        if os.path.isdir(base_dir_path_file) and os.path.isfile(base_dir_path_file + 'unknown___'):
+            base_dir_path_file = base_dir_path_file + 'unknown___'
 
-        # getting local and remote content
-        #print('\n-> Fetching local content from : {}'.format(base_dir_path_file))
-        #print('-> Fetching remote content from : {}'.format(status['url']))
+            # getting local and remote content
+            #print('\n-> Fetching local content from : {}'.format(base_dir_path_file))
+            #print('-> Fetching remote content from : {}'.format(status['url']))
 
-    local_content = scrapper.get_local_content(base_dir_path_file, 'rb')
-    remote_content, error_remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
+        local_content = scrapper.get_local_content(base_dir_path_file, 'rb')
+        remote_content, error_remote_content = scrapper.get_url_content(status['url'], header=utils.rh())
 
-    if remote_content is None:
-        print('!!!! Problem fetching remote content. !!!! ERROR = {}'.format(error_remote_content))
-        status['errors'].update(error_remote_content)
-    
-    if local_content is None:
-        print('!!!! Problem fetching local content !!!! (url:{})'.format(flink))
-        print('Downloading page : {} now ....'.format(flink))
+        if remote_content is None:
+            print('!!!! Problem fetching remote content. !!!! ERROR = {}'.format(error_remote_content))
+            status['errors'].update(error_remote_content)
         
-        name = link.rpartition('/')[2]
-        base_path = link.rpartition('/')[0]
-        # dir_path = os.path.join(base_dir_path_file, 'website_content', utils.find_internal_link(flink).rpartition('/')[0][1:])
-        print('base dir path = {}, website_content, internal link = {}'.format(base_dir_path, utils.find_internal_link(flink).rpartition('/')[0][1:]))
-        #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
-        #print('--- [PARAMS] ---> flink : {}, name : {}, base_dir_path_file : {}'.format(flink, name, base_dir_path))
-
-        res = False
-        if remote_content is not None:
-            res = downloader.save_remote_content(remote_content, url, base_dir_path, filename)
-        if res:
-            status['errors'].update({url: 'Page sucessfully downloaded'})
-
-        #err = downloader.download_and_save_content(flink, filename, base_dir_path, header, check_duplicates=False, replace=True)
-        # TODO: Log errors from local content here and put in status just like for remote content
-
-    
-    if remote_content is not None and local_content is not None:
-        if isinstance(remote_content, bytes):
-            remote_content = remote_content.decode('utf-8', errors='ignore').replace('<b>', '').replace('</b>', '')
-        if isinstance(local_content, bytes):
-            local_content = local_content.decode('utf-8', errors='ignore').replace('<b>', '').replace('</b>', '')
-        
-        status = extractor.get_text_diff(local_content, remote_content, status,\
-            detect_links=show_links)
-        # if a list of keywords is provided, only get diff that matches keywords
-        if keywords != [] and not isinstance(keywords[0], float):
-            status = extractor.keyword_match(keywords, status, local_content, remote_content, url,\
-                detect_links=show_links)
-            #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
-        # if detect_links:
+        if local_content is None:
+            print('!!!! Problem fetching local content !!!! (url:{})'.format(flink))
+            print('Downloading page : {} now ....'.format(flink))
             
-        #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
-        status = get_full_links(status, url)
-        if detect_links:
-            # status = select_only_sbb_links(status, show_links=show_links)
-            for _ in status['all_links_pos']:
+            name = link.rpartition('/')[2]
+            base_path = link.rpartition('/')[0]
+            # dir_path = os.path.join(base_dir_path_file, 'website_content', utils.find_internal_link(flink).rpartition('/')[0][1:])
+            print('base dir path = {}, website_content, internal link = {}'.format(base_dir_path, utils.find_internal_link(flink).rpartition('/')[0][1:]))
+            #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
+            #print('--- [PARAMS] ---> flink : {}, name : {}, base_dir_path_file : {}'.format(flink, name, base_dir_path))
 
-                res = is_sbb_content(_)
-                print('RESSS ---------->  {}'.format(res))
-                if isinstance(res, dict):#res and 'error' in res:
-                   status['errors'].update({status['url'] : '{}'.format(res['error'])})
+            res = False
+            if remote_content is not None:
+                res = downloader.save_remote_content(remote_content, url, base_dir_path, filename)
+            if res:
+                status['errors'].update({url: 'Page sucessfully downloaded'})
 
-                   self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                # else:
-                #     continue
+            #err = downloader.download_and_save_content(flink, filename, base_dir_path, header, check_duplicates=False, replace=True)
+            # TODO: Log errors from local content here and put in status just like for remote content
 
-            for _ in status['all_links_neg']:
-                res = is_sbb_content(_)
-                print('RESSS ---------->  {} [ type : {}]'.format(res, type(res)))
-                if isinstance(res, dict):# and 'error' in res:
-                    status['errors'].update({status['url'] : '{}'.format(res['error'])})
-                    self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                # else:
-                #     continue
-
-        #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
-        self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
         
-        #print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
-        #print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))
-        if len(status['diff_pos']) > 0 or len(status['diff_neg']) > 0:
-            print('***** Content is DIFFERENT ({}) *****'.format(flink))
-            status['diff_nb'] += 1
-        else:
-            print('***** Content is SIMILAR *****')
-            pass
-    # except Exception as e:
-    #     # TODO: Kill SIGKILL all pending tasks
-    #     print("Share buy back diff exception => {}".format(e))
-    #     status['errors'].update({status['url'] : '{}'.format(e)})
-    #     return {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}
+        if remote_content is not None and local_content is not None:
+            if isinstance(remote_content, bytes):
+                remote_content = remote_content.decode('utf-8', errors='ignore').replace('<b>', '').replace('</b>', '')
+            if isinstance(local_content, bytes):
+                local_content = local_content.decode('utf-8', errors='ignore').replace('<b>', '').replace('</b>', '')
+            
+            status = extractor.get_text_diff(local_content, remote_content, status,\
+                detect_links=show_links)
+            # if a list of keywords is provided, only get diff that matches keywords
+            if keywords != [] and not isinstance(keywords[0], float):
+                status = extractor.keyword_match(keywords, status, local_content, remote_content, url,\
+                    detect_links=show_links)
+                #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
+            # if detect_links:
+                
+            #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
+            status = get_full_links(status, url)
+            if detect_links:
+                # status = select_only_sbb_links(status, show_links=show_links)
+                for _ in status['all_links_pos']:
+
+                    res = is_sbb_content(_)
+                    print('RESSS ---------->  {}'.format(res))
+                    if isinstance(res, dict):#res and 'error' in res:
+                       status['errors'].update({status['url'] : '{}'.format(res['error'])})
+
+                       self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+                    # else:
+                    #     continue
+
+                for _ in status['all_links_neg']:
+                    res = is_sbb_content(_)
+                    print('RESSS ---------->  {} [ type : {}]'.format(res, type(res)))
+                    if isinstance(res, dict):# and 'error' in res:
+                        status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                        self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+                    # else:
+                    #     continue
+
+            #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
+            self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+            
+            #print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
+            #print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))
+            if len(status['diff_pos']) > 0 or len(status['diff_neg']) > 0:
+                print('***** Content is DIFFERENT ({}) *****'.format(flink))
+                status['diff_nb'] += 1
+            else:
+                print('***** Content is SIMILAR *****')
+                pass
+    except Exception as e:
+        print("Share buy back diff exception => {}".format(e))
+        status['errors'].update({status['url'] : '{}'.format(e)})
+        self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+        # return {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}
 
     return {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}

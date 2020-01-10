@@ -49,7 +49,7 @@ class AdidasScraper:
         # elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
         # text = elements.html
         html = self.driver.page_source
-        print('\n\npage source --------> \n\n{}\n\n'.format(html))
+        #print('\n\npage source --------> \n\n{}\n\n'.format(html))
         # elements = self.driver.find_element_by_class_name("events future visible")
         # element = WebDriverWait(self.driver, 15).until(
         #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))

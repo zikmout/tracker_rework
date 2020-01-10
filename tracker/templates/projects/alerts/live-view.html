@@ -38,7 +38,7 @@ a {
                 </form>
                 <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-inline mt-2">
                   <input type="hidden", name="fromPage" value="live_view">
-                  <button type="submit" class="btn btn-info btn-sm ml-1">Update</button></input>
+                  <button type="submit" class="btn btn-info btn-sm ml-1" id="updatePages">Update</button></input>
                 </form>
 
                 <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post" class="form-inline mt-2">
@@ -92,9 +92,8 @@ a {
               </div>
 
               <div class="mt-2">
-              <b>Info:</b>
-              <div id="errors"></div>
-            </div>
+                <div id="errors"></div>
+              </div>
           {% else %}
               <br><br><center><p class="lead">Launch a live alert and monitor it from here.</p></center>
           {% end %}
@@ -120,6 +119,7 @@ var failures = Array();
 var failuresURL = Array();
 {% if 'live_view' in handler.session['tasks'] %}
 var totalTaskNb = {{ len(handler.session['tasks']['live_view']) }};
+var liveTasks = {% raw handler.session['tasks']['live_view'] %};
 {% else %}
 var totalTaskNb = 0;
 {% end %}
@@ -260,102 +260,167 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type) {
   return fullDiff;
 }
 
+function getUrlFromTaskId(task_id) {
+  // console.log(liveTasks.length);
+  var u;
+  for (u = 0; u < liveTasks.length; u++) {
+    // console.log(liveTasks[u]);
+    if (liveTasks[u]['id'] == task_id) {
+      return liveTasks[u];
+    }
+  }
+}
+
+
 ws.onmessage = function (evt) {
    if (evt != null) {
-
-       
-       if (evt.data.includes('<LIMIT_STOP>')) {
-        console.log('LIMIT_STOP');
-       }
-       var data = JSON.parse(evt.data);
-       // console.log(data);
-       if (data.state == 'SUCCESS' && !document.getElementById('err-' + data.task_id)) {
-        var newError = document.createElement("DIV");
-        newError.setAttribute("id", 'err-' + data.task_id);
-        var errorLog = '';
-        for (var p in data.status['errors']) {
-          if (data.status['errors'].hasOwnProperty(p)) {
-            errorLog += '<small>';
-            errorLog += '<a href="' + p + '" target="_blank">' + p + '</a>';
-            errorLog += '&nbsp;<font color="red">(' + escapeHtml(data.status['errors'][p]) + ')</font></small>';
+    var elt = document.getElementById('errors');
+          // console.log(elt.childNodes.length);
+          if (elt.childNodes.length == 0) {
+            var errorHeader = document.createElement("DIV");
+            errorHeader.innerHTML = "<b>Info:</b>";
+            document.getElementById('errors').appendChild(errorHeader);
           }
+      // console.log(JSON.parse(evt.data).state.errors);
+       // console.log(evt.data);
+       if (evt.data.includes('<LIMIT_STOP>') && evt.data.includes('#')) {
+        var jsonMeta = evt.data.split('#')[1];
+        var currentUrl = getUrlFromTaskId(jsonMeta)['url'];
+        // console.log('LIMIT STOP = > ' + getUrlFromTaskId(jsonMeta)['url']);
+        // getUrlFromTaskId();
+        //document.write('{{ handler.session['tasks']['live_view'] }}');
+
+
+        if (!document.getElementById('err-' + jsonMeta)) {
+          var newError = document.createElement("DIV");
+          newError.setAttribute("id", 'err-' + jsonMeta);
+          var errorLog = '';
+
+              errorLog += '<small>';
+              errorLog += '<a href="' + currentUrl + '" target="_blank">' + currentUrl + '</a>';
+              errorLog += '&nbsp;<font color="red">(SoftTimeLimitExceeded()II)</font></small>';
+
+
+          newError.innerHTML = errorLog;
+          document.getElementById('errors').appendChild(newError);
         }
-        newError.innerHTML = errorLog;
-        document.getElementById('errors').appendChild(newError);
-       }
-       // if (data.state == 'SUCCESS') {
-        // if (data.status == '')
-          // nc += 1;
+        // console.log('LIMIT_STOP');
+        // console.log(jsonMeta);
+        
+        // console.log(evt);
+        executed += 1
 
-          // console.log('SUCCESS :' + data.current + data.url);
-          
-       // }
-       // if (data.state == 'PENDING') {
-        // console.log('PENDING :');
-        // console.log(data);
-       // }
-       if (data.state == 'FAILURE' && !failures.includes(data.current)) {
-          failures.push(data.current);
-          // console.log('FAILURE :' + data.current);
-          // urlFailed = {
-          //   "url" : data.status.url,
-          //   "info" : data.info
+       }
+       else {
+
+
+         var data = JSON.parse(evt.data);
+         // console.log(data);
+         if (data.state == 'SUCCESS' && !document.getElementById('err-' + data.task_id)) {
+          // console.log('err === ' );
+
+          var newError = document.createElement("DIV");
+          newError.setAttribute("id", 'err-' + data.task_id);
+          var errorLog = '';
+          for (var p in data.status['errors']) {
+            if (data.status['errors'].hasOwnProperty(p)) {
+              errorLog += '<small>';
+              errorLog += '<a href="' + p + '" target="_blank">' + p + '</a>';
+              errorLog += '&nbsp;<font color="red">(' + escapeHtml(data.status['errors'][p]) + ')</font></small>';
+            }
+          }
+          newError.innerHTML = errorLog;
+          // var elt = document.getElementById('errors');
+          // if (elt.childNodes.length == 0) {
+          //   errorLog = "<b>Info:</b>" + errorLog;
           // }
-          urlFailed = {
-            // "state" : data.state,
-            // "status" : data.status,
-            "obj": JSON.stringify(data)
+          document.getElementById('errors').appendChild(newError);
+         }
+
+         // if (data.state == 'SUCCESS') {
+          // if (data.status == '')
+            // nc += 1;
+
+            // console.log('SUCCESS :' + data.current + data.url);
+            
+         // }
+         // if (data.state == 'PENDING') {
+          // console.log('PENDING :');
+          // console.log(data);
+         // }
+         if (data.state == 'FAILURE' && !failures.includes(data.current)) {
+          // console.log('Fail');
+          // console.log(data.status['errors']);
+            failures.push(data.current);
+            // console.log('FAILURE :' + data.current);
+            // urlFailed = {
+            //   "url" : data.status.url,
+            //   "info" : data.info
+            // }
+
+            urlFailed = {
+              // "state" : data.state,
+              // "status" : data.status,
+              "obj": JSON.stringify(data)
+            }
+            failuresURL.push(urlFailed);
+            counterFailureMaster += 1;
+            $('#numberOfFailedTasks').html(counterFailureMaster);
+         }
+
+         // if (data.state != 'SUCCESS' && data.state != 'PENDING') {
+          // console.log('RestE')
+         // }
+         // if (data != undefined) {
+          // console.log(data);
+        // }
+         // var ojb = Object.hasOwnProperty.call(data, errors)
+         // if (ojb != undefined) {
+          // console.log(data);
+         // }
+         
+         // if (data.status == undefined) {
+         //  console.log('undef');
+         //  counterPending += 1;
+         //  console.log('pending = ' + counterPending);
+         // }
+         if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
+            if (!document.getElementById(data.status.div)) {
+              var title = document.createElement("H5");
+              title.innerHTML = data.status.div;
+              document.getElementById('changedContent' + data.task_id).append(title);
+              var title = document.createElement("DIV");
+              title.setAttribute("id", data.status.div);
+              document.getElementById('changedContent' + data.task_id).appendChild(title);
+              document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforebegin', '<br><hr>');
+              document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforeend', '<hr>');
+            }
+            if (data.state == 'SUCCESS' && document.getElementById(data.status.div) && !document.getElementById(data.current.toString() + data.task_id)) {
+
+              document.getElementById(data.status.div).insertAdjacentHTML('beforeend', "<h6><a href=" + data.status.url + " target='_blank'/>" + data.status.url + "</a></h6>");
+              var ulTitle = document.createElement("div");
+              ulTitle.setAttribute("id", data.current.toString() + data.task_id);
+              document.getElementById(data.status.div).append(ulTitle);
+
+              var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success');
+              var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger');
+
+              if (data.status.diff_pos.length != 0) {
+                document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_pos);
+              }
+              if (data.status.diff_neg.length != 0) {
+              document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_neg);                
+              }
+            }
+         }
+
+          if (data.state != 'PENDING') {
+            executed += 1
+
           }
-          failuresURL.push(urlFailed);
-          counterFailureMaster += 1;
-          $('#numberOfFailedTasks').html(counterFailureMaster);
        }
 
-       // if (data.state != 'SUCCESS' && data.state != 'PENDING') {
-        // console.log('RestE')
-       // }
-       if (data.status.errors == undefined) {
-        console.log(data);
-       }
        
-       // if (data.status == undefined) {
-        // console.log('undef');
-        // counterPending += 1;
-        // console.log('pending = ' + counterPending);
-       // }
-       if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
-          if (!document.getElementById(data.status.div)) {
-            var title = document.createElement("H5");
-            title.innerHTML = data.status.div;
-            document.getElementById('changedContent' + data.task_id).append(title);
-            var title = document.createElement("DIV");
-            title.setAttribute("id", data.status.div);
-            document.getElementById('changedContent' + data.task_id).appendChild(title);
-            document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforebegin', '<br><hr>');
-            document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforeend', '<hr>');
-          }
-          if (data.state == 'SUCCESS' && document.getElementById(data.status.div) && !document.getElementById(data.current.toString() + data.task_id)) {
-
-            document.getElementById(data.status.div).insertAdjacentHTML('beforeend', "<h6><a href=" + data.status.url + " target='_blank'/>" + data.status.url + "</a></h6>");
-            var ulTitle = document.createElement("div");
-            ulTitle.setAttribute("id", data.current.toString() + data.task_id);
-            document.getElementById(data.status.div).append(ulTitle);
-
-            var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success');
-            var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger');
-
-            if (data.status.diff_pos.length != 0) {
-              document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_pos);
-            }
-            if (data.status.diff_neg.length != 0) {
-            document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_neg);                
-            }
-          }
-       }
-
-       if (data.state != 'PENDING') {
-          executed += 1
-       }
 
      }
  else {
@@ -381,9 +446,9 @@ function showFailedTasksDetails() {
 </script>
 {% end %}
 {% block script %}
-<!-- <script>
-  $('button').click(function(){
+<script>
+  $('#updatePages').click(function(){
      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
   });
-</script> -->
+</script>
 {% end %}

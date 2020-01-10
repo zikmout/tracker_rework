@@ -338,9 +338,13 @@ class AlertStop(BaseView):
             return # TODO : Check if return is justified here
         #print('alert.alert_type = {}'.format(alert.alert_type))
         if alert.alert_type == 'Live':
-            if 'live_view' in self.session['tasks']:
-                res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
-                print('Deleting old live view tasks from session.')
+            if 'live_view' in self.session['tasks']:    
+                try:
+                    res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+                    print('Deleting old live view tasks from session.')
+                except Exception as e:
+                    print('[ERROR] Deleting old live view tasks from session. /!\\')
+                    
                 del self.session['tasks']['live_view']
                 self.session.save()
         elif alert.alert_type == 'BasicReccurent' or alert.alert_type == 'CrontabSchedule':

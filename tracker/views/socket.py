@@ -39,8 +39,8 @@ class EchoWebSocket(WebSocketHandler):
                     self.write_message(response)
                 except Exception as e:
                     # response['state'] == 'PENDING'
-                    print('still pending....')
-                    # self.write_message('<STOP>{}#{}'.format(uid, task_id))
+                    # print('still pending....')
+                    self.write_message('<STOP_LIMIT>{}#{}'.format(uid, task_id))
         else:
             try:
                 #print(' *** Live view ...')
@@ -50,13 +50,16 @@ class EchoWebSocket(WebSocketHandler):
                 task = live_view.AsyncResult(task_id)
                 #print('Task backend = {}'.format(task.backend))
                 #print('task_id: {}'.format(task_id))
+                # print('TASL = {}'.format(task))
                 response = get_celery_task_state(task)
                 response['task_id'] = task_id
                 self.write_message(response)
             except Exception as e:
-                print('still pending....{}'.format(message))
-                #self.write_message(json.dumps({message: 'PENDING'}))
-                # {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}
+                # print('still pending....{}'.format(message))
+                task = live_view.AsyncResult(task_id)
+                self.write_message('<LIMIT_STOP>#{}'.format(task))
+                # self.write_message(json.dumps({message: 'PENDING'}))
+
 
     def on_close(self):
         print('WebSocket closed')

@@ -26,16 +26,18 @@ a {
         
 
           {% if 'live_view' in handler.session['tasks'] %}
-          <form class="form-inline">
+          <div class="form-inline">
             <div class="row">
 
               <div class="form-group ml-3">
               <!-- <div class="col"> -->
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-inline mt-2">
-                  <input type="text" class="form-control form-control-sm mt-2" placeholder="Email" name="email">
+                <!-- <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report" method="post" class="form-inline mt-2"> -->
+                  <input type="text" class="form-control form-control-sm mt-2" placeholder="Email" id="email" name="email">
                   <input type="hidden" name="fromPage" value="live_view">
-                  <button type="submit" class="btn btn-info btn-sm ml-1 mt-2">Send report</button></input>
+                  <!-- <div id="limitErrors" name="limitErrors"></div> -->
+                  <button onclick="sendReport()" class="btn btn-info btn-sm ml-1 mt-2">Send report</button></input>
                 </form>
+
                 <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-inline mt-2">
                   <input type="hidden", name="fromPage" value="live_view">
                   <button type="submit" class="btn btn-info btn-sm ml-1" id="updatePages">Update</button></input>
@@ -69,7 +71,7 @@ a {
               <!-- </div> -->
             <!-- </div> -->
               </div>
-              
+              </div>
               <!-- </div> -->
 <!--               <div class="row">
                 <div class="col mt-1">
@@ -113,8 +115,11 @@ a {
 </div>
 <script>
 
+
+
 var counterFailureMaster = 0;
 var counterPending = 0
+var limitErrors = {};
 var failures = Array();
 var failuresURL = Array();
 {% if 'live_view' in handler.session['tasks'] %}
@@ -127,6 +132,33 @@ var counterRemaining = totalTaskNb;
 var ws = new WebSocket(location.origin.replace(/^http/, 'ws') + "/websocket");
 var executed = 0;
 var remainingTaskNb = 0;
+
+
+function sendReport() {
+  // console.log('limit errors         kk');
+  // console.log(JSON.parse(limitErrors));
+  emails = $('#email').val();
+  $.ajax({
+        type: 'POST',
+        url: '/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/send_report',
+        data: {
+          'email': emails,
+          'fromPage': 'live_view',
+          'limitErrors' : JSON.stringify(limitErrors)
+        },
+        success: function(data, status, request) {
+            // create task
+
+            // console.log('send mail OK');
+            $('<div class="alert alert-success py-0" role="alert">Just sent alert report to : ' + emails + '</div>').prependTo('#flashMessage');
+            
+        },
+        error: function() {
+            console.log('Unexpected error');
+        }
+    });
+}
+
 function timeout() {
     remainingTaskNb = totalTaskNb - executed;
     $('#numberOfPendingTasks').html(remainingTaskNb);
@@ -280,25 +312,44 @@ ws.onmessage = function (evt) {
             var errorHeader = document.createElement("DIV");
             errorHeader.innerHTML = "<b>Info:</b>";
             document.getElementById('errors').appendChild(errorHeader);
+
           }
       // console.log(JSON.parse(evt.data).state.errors);
        // console.log(evt.data);
        if (evt.data.includes('<LIMIT_STOP>') && evt.data.includes('#')) {
         var jsonMeta = evt.data.split('#')[1];
         var currentUrl = getUrlFromTaskId(jsonMeta)['url'];
+        // if (!document.getElementById('limitErrors').includes(currentUrl)) {
+        //  document.getElementById('limitErrors').push(currentUrl);
+        // }
         // console.log('LIMIT STOP = > ' + getUrlFromTaskId(jsonMeta)['url']);
         // getUrlFromTaskId();
         //document.write('{{ handler.session['tasks']['live_view'] }}');
 
 
         if (!document.getElementById('err-' + jsonMeta)) {
+          console.log('pass here');
+          var c = getUrlFromTaskId(jsonMeta)['url'];
+          // console.log(c);
+          // var objErr = { c: 'SoftTimeLimitExceeded()II'};
+          limitErrors[c] = 'HardTimeLimitExceeded()';
+          // console.log(limitErrors);
+
+          // var hiddenInput = document.createElement('input');
+
+          // hiddenInput.type = 'hidden';
+          // hiddenInput.name = 'myarray[]';
+          // hiddenInput.value = currentUrl;
+
+          // document.getElementById('limitErrors').appendChild(hiddenInput);
+
           var newError = document.createElement("DIV");
           newError.setAttribute("id", 'err-' + jsonMeta);
           var errorLog = '';
 
               errorLog += '<small>';
               errorLog += '<a href="' + currentUrl + '" target="_blank">' + currentUrl + '</a>';
-              errorLog += '&nbsp;<font color="red">(SoftTimeLimitExceeded()II)</font></small>';
+              errorLog += '&nbsp;<font color="red">(HardTimeLimitExceeded())</font></small>';
 
 
           newError.innerHTML = errorLog;
@@ -448,7 +499,7 @@ function showFailedTasksDetails() {
 {% block script %}
 <script>
   $('#updatePages').click(function(){
-     $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
+     $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);     
   });
 </script>
 {% end %}

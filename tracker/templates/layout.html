@@ -123,11 +123,13 @@
 
         {% end %}
         
-        {% if hasattr(handler, 'flash') %}
-        <div class="alert alert-{{ handler.flash['type'] }} py-0" role="alert">
-            {{ handler.flash['message'] }}
+        <div id="flashMessage">
+            {% if hasattr(handler, 'flash') %}
+            <div class="alert alert-{{ handler.flash['type'] }} py-0" role="alert">
+                {{ handler.flash['message'] }}
+            </div>
+            {% end %}
         </div>
-        {% end %}
 
         {% if hasattr(handler, 'session') %}
 

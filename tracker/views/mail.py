@@ -2,6 +2,7 @@ from datetime import datetime
 from tornado import gen
 import html as htmlib
 import smtplib, ssl
+import json
 import tldextract
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart	
@@ -35,6 +36,8 @@ class UserProjectSendMail(BaseView):
 		"""
 		args = { k: self.get_argument(k) for k in self.request.arguments }
 		print('ARGS = {}'.format(args))
+		errs = json.loads(args['limitErrors'])
+		print('limit errors = {}'.format(errs))
 		if 'fromPage' not in args:
 			flash_message(self, 'danger', 'Impossible to know from what page email has to be sent.')
 			self.redirect('/')
@@ -46,12 +49,17 @@ class UserProjectSendMail(BaseView):
 				total_scanned = len(self.session['tasks']['live_view'])
 				for worker in self.session['tasks']['live_view']:
 					task = live_view.AsyncResult(worker['id'])
-					response = get_celery_task_state(task)
-					if response['state'] == 'SUCCESS' and response['status']['errors'] != {}:
-						errors.append(response['status']['errors'])
-					if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != []\
-					 or response['status']['diff_pos'] != []):
-						task_results.append(response['status'])
+					try:
+						response = get_celery_task_state(task)
+						if response['state'] == 'SUCCESS' and response['status']['errors'] != {}:
+							errors.append(response['status']['errors'])
+						if response['state'] == 'SUCCESS' and (response['status']['diff_neg'] != []\
+						 or response['status']['diff_pos'] != []):
+							task_results.append(response['status'])
+					except Exception as e:
+						pass
+						# print('Task {} does not exist anymore.'.format(worker['id']))
+						# print(e)
 				#print('list of all grabbed task = {}'.format(task_results))
 
 				print('TSA RESULTS :: {}'.format(task_results))
@@ -68,43 +76,60 @@ class UserProjectSendMail(BaseView):
 				# 	if site['errors'] != {}:
 				# 		errors.append(site['errors'])
 
+				
 				site_html = ''
 				for site in task_results:
 					site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
 					<h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>\
 					"
+					found = False
 					if site['diff_pos'] != []:
 						site_html += "<font color='green'><b>Added Content :</b><br>"
 						if len(site['diff_pos']) < 10:
 							for content in site['diff_pos']:
-								site_html += (content + "<br>")
+								for k, v in site['nearest_link_pos'].items():
+									if k == content:
+										site_html += ('<a style="color: green;" href="' + site['nearest_link_pos'][k] + '">' + k + "</a><br>")
+										found = True
+										break;
+								if not found:				
+									site_html += (content + "<br>")
+									found = False
+
 						else:
 							site_html += ('*** too many changes ***' + "<br>")
 						if site['nearest_link_pos'] != [] or site['all_links_pos'] != []:
 							site_html += "<br>Link(s):<br>"
-						for nearest_link in site['nearest_link_pos']:
-							site_html += (nearest_link + "<br>")
+						# for nearest_link in site['nearest_link_pos']:
+						# 	site_html += (nearest_link + "<br>")
 						if site['all_links_pos'] is None:
 							pass
 						elif len(site['all_links_pos']) < 10:
 							for link in site['all_links_pos']:
-								if link not in site['nearest_link_pos']:
-									site_html += (link + "<br>")
+								site_html += (link + "<br>")
 						else:
 							site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 
+					found = False
 					if site['diff_neg'] != []:
 						site_html += "<font color='red'><b><br>Deleted Content :</b><br>"
 						if len(site['diff_neg']) < 10:
 							for content in site['diff_neg']:
-								site_html += (content + "<br>")
+								for k, v in site['nearest_link_neg'].items():
+									if k == content:
+										site_html += ('<a style="color: red;" href="' + site['nearest_link_neg'][k] + '">' + k + "</a><br>")
+										found = True
+										break;
+								if not found:				
+									site_html += (content + "<br>")
+									found = False
 						else:
 							site_html += ('*** too many changes ***' + "<br>")
 						if site['nearest_link_neg'] != [] or site['all_links_neg'] != []:
 							site_html += "<br>Link(s):<br>"
-						for nearest_link in site['nearest_link_neg']:
-							site_html += (nearest_link + "<br>")
+						# for nearest_link in site['nearest_link_neg']:
+						# 	site_html += (nearest_link + "<br>")
 						if site['all_links_neg'] is None:
 							pass
 						elif len(site['all_links_neg']) < 10:
@@ -115,12 +140,18 @@ class UserProjectSendMail(BaseView):
 							site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 				html += site_html
-				print('ERRRORRRRRS ooooooooooooooooo>>>>>>>>> {}'.format(errors))
-				if errors != []:
-					html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
-					for err in errors:
-						for k, v in err.items():
+				print('ERRORS 1 : {}'.format(errors))
+				print('ERRORS 2 : {}'.format(errs))
+				if errors != [] or errs != {}:
+					html += "<br><br><b>Errors : (" + str(len(errors) + len(errs)) + "/" + str(total_scanned) + " total scanned)</b><br>"
+					if errors != []:
+						for err in errors:
+							for k, v in err.items():
+								html += "<br>{} : {}".format(k, htmlib.escape(v))
+					if errs != {}:
+						for k, v in errs.items():
 							html += "<br>{} : {}".format(k, htmlib.escape(v))
+
 
 				html += "<br></body></html>"
 

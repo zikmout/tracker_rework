@@ -77,13 +77,14 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
             #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
             if cleaned_content is None or cleaned_content in already_seen_content:
                 #print('Content {} is None !!!!!!!!!'.format(url))
-                #return False
-                return { 'error': 'Content is none : ({})'.format(url)}
+                return False
+                # return { 'error': 'Content is none or has already been seen: ({})'.format(url)}
             already_seen_content.append(cleaned_content)
             # if not extractor.is_language(cleaned_content, 'ENGLISH'):
             #     print('Language is NOT ENGLISH !! (Content = {}...)'.format(cleaned_content[:100]))
             #     return False
             resp = make_request_for_predictions(cleaned_content, min_acc=min_acc)
+            # print('response = {}'.format(resp))
             return json.loads(resp)
 
         else:
@@ -94,7 +95,8 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
 
             if cleaned_content is None or cleaned_content in already_seen_content:
                 #print('Content {} is None !!!!!!!!!'.format(url))
-                return { 'error': 'Content is none : ({})'.format(url)}
+                # return { 'error': 'Content is none or has already been seen: ({})'.format(url)}
+                return False
             already_seen_content.append(cleaned_content)
             #content = extractor.extract_text_from_html(response.read())
             #cleaned_content = extractor.clean_content(content)
@@ -103,6 +105,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
             #     print('Language is NOT ENGLISH (non pdf) !! (Content = {}...)'.format(cleaned_content[:100]))
             #     return False
             resp = make_request_for_predictions(cleaned_content, min_acc=min_acc)
+            # print('response = {}'.format(resp))
             return json.loads(resp)
     except Exception as e:
         return { 'error': '{}'.format(e)}
@@ -167,7 +170,7 @@ def get_full_links(status, base_url):
                     status[_][k] = base_url + v
                 # else
     #print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
-    return status 
+    return status
 
 @live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=50)#, time_limit=5)
 def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links,\
@@ -257,23 +260,41 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             status = get_full_links(status, url)
             if detect_links:
                 # status = select_only_sbb_links(status, show_links=show_links)
-                for _ in status['all_links_pos']:
+                for _ in status['all_links_pos'].copy():
 
                     res = is_sbb_content(_)
-                    print('RESSS ---------->  {}'.format(res))
-                    if isinstance(res, dict):#res and 'error' in res:
-                       status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                    # print('RES = {} TYPE = {}'.format(res, type(res)))
+                    if isinstance(res, bool) and res is True:
+                        print('RES IS TRUE POS ---------->  {}'.format(_))
+                        status['sbb_links_pos'].append(_)
+                        self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+                    # elif isinstance(res, dict):
+                        # status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                        # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
-                       self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+
+                    # if isinstance(res, dict):#res and 'error' in res:
+                       # status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                    # elif res 
+
+                       # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     # else:
                     #     continue
 
-                for _ in status['all_links_neg']:
+                for _ in status['all_links_neg'].copy():
                     res = is_sbb_content(_)
-                    print('RESSS ---------->  {} [ type : {}]'.format(res, type(res)))
-                    if isinstance(res, dict):# and 'error' in res:
-                        status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                    # print('RES = {} TYPE = {}'.format(res, type(res)))
+                    if isinstance(res, bool) and res is True:
+                        print('RES IS TRUE NEG ---------->  {}'.format(_))
+                        status['sbb_links_neg'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+                    # elif isinstance(res, dict):
+                        # status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                        # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+                    # print('RESSS ---------->  {} [ type : {}]'.format(res, type(res)))
+                    # if isinstance(res, dict):# and 'error' in res:
+                        # status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                        # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     # else:
                     #     continue
 
@@ -292,6 +313,6 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
         print("Share buy back diff exception => {}".format(e))
         status['errors'].update({status['url'] : '{}'.format(e)})
         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-        # return {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}
+        return {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}
 
     return {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}

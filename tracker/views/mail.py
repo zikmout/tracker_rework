@@ -1,9 +1,13 @@
+import os
 from datetime import datetime
 from tornado import gen
 import html as htmlib
 import smtplib, ssl
 import json
 import tldextract
+import tornado
+from tornado.escape import url_unescape as url_unescape
+# from urllib.parse import urlparse
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart	
 from tracker.views.base import BaseView
@@ -25,8 +29,8 @@ class UserProjectSendMail(BaseView):
 				'div': 'investors.telenet.be', 
 				'diff_neg': [], 
 				'diff_pos': [' – Telenet Group Holding NV ... shares.'], 
-				'nearest_link_pos': ['http://investors.telenet.be#tcontentSRP_2011'],
-				'nearest_link_neg': [], 
+				'nearest_link_pos': ['http://investors.telenet.be#tcontentSRP_2011'], DICTIONNARY
+				'nearest_link_neg': [], DICTIONNARY
 				'all_links_pos': ['http://phx.corporate-ir.net/External.File'], 
 				'all_links_neg': [], 
 				'diff_nb': 1
@@ -98,17 +102,53 @@ class UserProjectSendMail(BaseView):
 
 						else:
 							site_html += ('*** too many changes ***' + "<br>")
-						if site['nearest_link_pos'] != [] or site['all_links_pos'] != []:
-							site_html += "<br>Link(s):<br>"
+
+						# SBB LINKS POS
+						# if site['sbb_links_pos'] is not None and site['sbb_links_pos'] != []:
+							# site_html += "<br>SBB link(s) (if not above):<br>"
+						if site['sbb_links_pos'] is None:
+							pass
+						elif len(site['sbb_links_pos']) < 10:
+							first_time = True
+							for link in site['sbb_links_pos']:	
+								if link not in list(site['nearest_link_pos'].values()):
+									if first_time:
+										site_html += "<br>SBB link(s) (if not above):<br>"
+										first_time = False
+									formated_link = os.path.basename(link)
+									# site_html += (str(formated_link) + "<br>")
+									if '.' in formated_link:
+										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+						else:
+							site_html += ('*** too many sbb links ***' + "<br>")
+
+						
 						# for nearest_link in site['nearest_link_pos']:
 						# 	site_html += (nearest_link + "<br>")
+						site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in site['sbb_links_pos'] and _ not in list(site['nearest_link_pos'].values())]
 						if site['all_links_pos'] is None:
 							pass
 						elif len(site['all_links_pos']) < 10:
+							first_time = True
+							# if site['all_links_pos'] != []:
+								# site_html += "<br>Link(s):<br>"
 							for link in site['all_links_pos']:
-								site_html += (link + "<br>")
+								if first_time:
+									site_html += "<br>Link(s):<br>"
+									first_time = False
+								# site_html += (link + "<br>")
+								if link.endswith('/'):
+									formated_link = link.split('/')[-2]
+								else:
+									formated_link = os.path.basename(link)
+									# site_html += (str(formated_link) + "<br>")
+								if '.' in formated_link:
+										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+								site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
 						else:
-							site_html += ('*** too many links ***' + "<br>")
+							pass
+							#site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 
 					found = False
@@ -126,18 +166,59 @@ class UserProjectSendMail(BaseView):
 									found = False
 						else:
 							site_html += ('*** too many changes ***' + "<br>")
-						if site['nearest_link_neg'] != [] or site['all_links_neg'] != []:
-							site_html += "<br>Link(s):<br>"
+						
 						# for nearest_link in site['nearest_link_neg']:
 						# 	site_html += (nearest_link + "<br>")
+
+						
+						# if site['sbb_links_neg'] is not None and site['sbb_links_neg'] != []:
+							# site_html += "<br>SBB link(s) (if not above):<br>"
+						if site['sbb_links_neg'] is None:
+							pass
+						elif len(site['sbb_links_neg']) < 10:
+							# SBB LINKS NEG
+							first_time = True
+							for link in site['sbb_links_neg']:
+								if link not in list(site['nearest_link_neg'].values()):
+									if first_time:
+										site_html += "<br>SBB link(s) (if not above):<br>"
+										first_time = False
+									formated_link = os.path.basename(link)
+									# site_html += (str(formated_link) + "<br>")
+									if '.' in formated_link:
+										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+						else:
+							site_html += ('*** too many sbb links ***' + "<br>")
+
+						
+
+						site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in site['sbb_links_neg'] and _ not in list(site['nearest_link_neg'].values())]
 						if site['all_links_neg'] is None:
 							pass
 						elif len(site['all_links_neg']) < 10:
+							# ALL LINKS NEG
+							first_time = True
+							# if site['all_links_neg'] != []:
+								# site_html += "<br>Link(s):<br>"
 							for link in site['all_links_neg']:
-								if link not in site['nearest_link_neg']:
-									site_html += (link + "<br>")
+								if link not in list(site['nearest_link_neg'].values()):
+									if first_time:
+										site_html += "<br>Link(s):<br>"
+										first_time = False
+									if link.endswith('/'):
+										formated_link = link.split('/')[-2]
+									else:
+										formated_link = os.path.basename(link)
+									if '.' in formated_link:
+										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+									# site_html += (str(formated_link) + "<br>")
+									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+
+									# site_html += (link + "<br>")
 						else:
-							site_html += ('*** too many links ***' + "<br>")
+							pass
+							#site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 				html += site_html
 				print('ERRORS 1 : {}'.format(errors))

@@ -76,7 +76,7 @@ def clean_content(input_list, min_sentence_len=5):
     return output
 
 def roundrobin(*iterables):
-    print('Enter roundrobin ALGO1:')
+    # print('Enter roundrobin ALGO1:')
     # took from here https://docs.python.org/3/library/itertools.html#itertools-recipes
 
     """roundrobin('ABC', 'D', 'EF') --> A D E B F C"""
@@ -93,6 +93,7 @@ def roundrobin(*iterables):
             nexts = itertools.cycle(itertools.islice(nexts, pending))
 
 def find_nearest(elt):
+    # TODO: Take off links with '#' like adidas group
     preceding = elt.xpath('preceding::*/@href')[::-1]
     following = elt.xpath('following::*/@href')
     parent = elt.xpath('parent::*/@href')
@@ -109,25 +110,27 @@ def find_nearest(elt):
 def get_nearest_link(match, keyword, content):
 
     nearest_link = dict()
-    print('looking for kw ========> {}'.format(match))
+    # print('looking for kw ========> {}'.format(match))
 
     doc = LH.fromstring(content)
     el2 = doc.xpath('/html/body//a[contains(text(),{s!r})]/@href'.format(s = match))
     if el2 != []:
-        print('HERE el2 not None -> {}'.format(el2))
+        # print('HERE el2 not None -> {}'.format(el2))
         #print('el2 = {}'.format(el2))
-        nearest_link.update({match: el2[0]})
+        if '#' not in el2[0]:
+            nearest_link.update({match: el2[0]})
         return nearest_link
     else:
     #     return []
     
-        print('* el2 is None *')
+        # print('* el2 is None *')
         for x in doc.xpath('//*[contains(text(),{s!r})]'.format(s = match)):
             nearest = find_nearest(x)
             # if not nearest.startswith('http'):
                 # nearest_link.update({match: url + nearest})
             # else:
-            nearest_link.update({match:nearest})
+            if '#' not in nearest:
+                nearest_link.update({match:nearest})
 
         # print('el2 is None rr')
 

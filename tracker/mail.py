@@ -1,13 +1,15 @@
+import os
 import json
 import html as htmlib
 from datetime import datetime
 import smtplib, ssl
 import tldextract
 from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart	
+from email.mime.multipart import MIMEMultipart
+import tornado
+from tornado.escape import url_unescape as url_unescape
 
-
-def generic_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links=True):
+def generic_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links):
     """
             Mailing list must be of type dict here
     """
@@ -18,7 +20,7 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
     for receiver_email, targets in mailing_list.items():
         designed_task_results = [k for k in task_results if k['url'] in targets]
         # If no change observed, no need to send mail
-        print('DESIGNED TASK RESULST = {}'.format(designed_task_results))
+        #print('DESIGNED TASK RESULST = {}'.format(designed_task_results))
         if len(designed_task_results) == 0:
             continue;
 
@@ -35,53 +37,153 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         for site in designed_task_results:
             html += "<li><a href='#" + site['div'] + "'> " + site['div'] + "</a></li>"
 
-        html += "<br>"
 
         site_html = ''
         for site in designed_task_results:
             site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
             <h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>\
             "
+            found = False
             if site['diff_pos'] != []:
                 site_html += "<font color='green'><b>Added Content :</b><br>"
                 if len(site['diff_pos']) < 10:
                     for content in site['diff_pos']:
-                        site_html += (content + "<br>")
+                        if  content in list(site['nearest_link_pos'].keys()):
+                            site_html += ('<a style="color: green;" href="' + site['nearest_link_pos'][content] + '">' + content + "</a><br>")
+                            found = True
+                            break;
+                        if not found:
+                            site_html += (content + "<br>")
+                            found = False
+                        # for k, v in site['nearest_link_pos'].items():
+                        #     print('k = {}, v = {}'.format(k, v))
+                        #     if k == content:
+                        #         site_html += ('<a style="color: green;" href="' + site['nearest_link_pos'][k] + '">' + k + "</a><br>")
+                        #         found = True
+                        #         break;
+                        # if not found:               
+                        #     site_html += (content + "<br>")
+                        #     found = False
+
                 else:
                     site_html += ('*** too many changes ***' + "<br>")
 
-                if show_links and site['nearest_link_pos'] != []:
-                    site_html += "<br>Nearest link(s):<br>"
-                    for nearest_link in site['nearest_link_pos']:
-                        site_html += (nearest_link + "<br>")
+                # SBB LINKS POS
+                # if site['sbb_links_pos'] is not None and site['sbb_links_pos'] != []:
+                    # site_html += "<br>SBB link(s) (if not above):<br>"
+                # if site['sbb_links_pos'] is None:
+                #     pass
+                # elif len(site['sbb_links_pos']) < 10:
+                #     first_time = True
+                #     for link in site['sbb_links_pos']:  
+                #         if link not in list(site['nearest_link_pos'].values()):
+                #             if first_time:
+                #                 site_html += "<br>SBB link(s) (if not above):<br>"
+                #                 first_time = False
+                #             formated_link = os.path.basename(link)
+                #             # site_html += (str(formated_link) + "<br>")
+                #             if '.' in formated_link:
+                #                 formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+                #             site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+                # else:
+                #     site_html += ('*** too many sbb links ***' + "<br>")
 
-                if show_links and site['all_links_pos'] is not None and len(site['all_links_pos']) < 10:
-                    site_html += "<br>All other link(s):<br>"
+                
+                # for nearest_link in site['nearest_link_pos']:
+                #   site_html += (nearest_link + "<br>")
+                site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in list(site['nearest_link_pos'].values())]
+                if site['all_links_pos'] is None:
+                    pass
+                elif len(site['all_links_pos']) < 10:
+                    first_time = True
+                    # if site['all_links_pos'] != []:
+                        # site_html += "<br>Link(s):<br>"
                     for link in site['all_links_pos']:
-                        if link not in site['nearest_link_pos']:
-                            site_html += (link + "<br>")
+                        if first_time:
+                            site_html += "<br>Link(s):<br>"
+                            first_time = False
+                        # site_html += (link + "<br>")
+                        if link.endswith('/'):
+                            formated_link = link.split('/')[-2]
+                        else:
+                            formated_link = os.path.basename(link)
+                            # site_html += (str(formated_link) + "<br>")
+                        if '.' in formated_link:
+                                formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+                        site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+                else:
+                    pass
+                    #site_html += ('*** too many links ***' + "<br>")
                 site_html += "</font>"
 
+            found = False
             if site['diff_neg'] != []:
                 site_html += "<font color='red'><b><br>Deleted Content :</b><br>"
                 if len(site['diff_neg']) < 10:
                     for content in site['diff_neg']:
-                        site_html += (content + "<br>")
+                        for k, v in site['nearest_link_neg'].items():
+                            if k == content:
+                                site_html += ('<a style="color: red;" href="' + site['nearest_link_neg'][k] + '">' + k + "</a><br>")
+                                found = True
+                                break;
+                        if not found:               
+                            site_html += (content + "<br>")
+                            found = False
                 else:
                     site_html += ('*** too many changes ***' + "<br>")
-
-                if show_links and site['nearest_link_neg'] != []:
-                    site_html += "<br>Nearest link(s):<br>"
-                    for nearest_link in site['nearest_link_neg']:
-                        site_html += (nearest_link + "<br>")
-
-                if show_links and site['all_links_neg'] is not None and len(site['all_links_neg']) < 10:
-                    site_html += "<br>All other link(s):<br>"
-                    for link in site['all_links_neg']:
-                        if link not in site['nearest_link_neg']:
-                            site_html += (link + "<br>")
-                site_html += "</font>"
                 
+                # for nearest_link in site['nearest_link_neg']:
+                #   site_html += (nearest_link + "<br>")
+
+                
+                # if site['sbb_links_neg'] is not None and site['sbb_links_neg'] != []:
+                    # site_html += "<br>SBB link(s) (if not above):<br>"
+
+                # if site['sbb_links_neg'] is None:
+                #     pass
+                # elif len(site['sbb_links_neg']) < 10:
+                #     # SBB LINKS NEG
+                #     first_time = True
+                #     for link in site['sbb_links_neg']:
+                #         if link not in list(site['nearest_link_neg'].values()):
+                #             if first_time:
+                #                 site_html += "<br>SBB link(s) (if not above):<br>"
+                #                 first_time = False
+                #             formated_link = os.path.basename(link)
+                #             # site_html += (str(formated_link) + "<br>")
+                #             if '.' in formated_link:
+                #                 formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+                #             site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+                # else:
+                #     site_html += ('*** too many sbb links ***' + "<br>")
+
+                site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in list(site['nearest_link_neg'].values())]
+                if site['all_links_neg'] is None:
+                    pass
+                elif len(site['all_links_neg']) < 10:
+                    # ALL LINKS NEG
+                    first_time = True
+                    # if site['all_links_neg'] != []:
+                        # site_html += "<br>Link(s):<br>"
+                    for link in site['all_links_neg']:
+                        if link not in list(site['nearest_link_neg'].values()):
+                            if first_time:
+                                site_html += "<br>Link(s):<br>"
+                                first_time = False
+                            if link.endswith('/'):
+                                formated_link = link.split('/')[-2]
+                            else:
+                                formated_link = os.path.basename(link)
+                            if '.' in formated_link:
+                                formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+                            # site_html += (str(formated_link) + "<br>")
+                            site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+
+                            # site_html += (link + "<br>")
+                else:
+                    pass
+                            #site_html += ('*** too many links ***' + "<br>")
+                site_html += "</font>"
         html += site_html
         # html += "<br><br>Best regards,<br>"
 
@@ -123,7 +225,7 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
             )
         print('********* Mail sent to {} (SUBJECT:{}) *********'.format(receiver_email, message["Subject"]))
 
-def sbb_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links=True):
+def sbb_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links):
     """
             Mailing list must be of type dict here
     """

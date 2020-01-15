@@ -500,6 +500,7 @@ class RProject:
         if isinstance(dict_links, dict) and bool(dict_links):
             counter = 0
             # i = 0
+            total_task = len(dict_links)
             for key, links in dict_links.items():
                 unit = self.get_unit_from_url(key)
                 #print('unit url : {}'.format(unit.url))
@@ -523,7 +524,7 @@ class RProject:
                         # print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
                         task = unit.download_changed_files_from_links(link, keywords_diff, detect_links,\
-                        show_links, links_algorithm, counter, len(dict_links), time_limit=time_limit)
+                        show_links, links_algorithm, counter, total_task, time_limit=time_limit)
                         
                         tasks.update({str(unit.url+link[0]): task})
                 else:
@@ -540,19 +541,19 @@ class RProject:
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
-        print('links before = {}'.format(links))
+        # print('links before = {}'.format(links))
         dict_links = utils.from_links_to_dict(links)
-        print('links after = {}'.format(dict_links))
+        # print('links after = {}'.format(dict_links))
 
         # If asked to send mail but no mailing_list provided, return False
         if mailing_list is None:
-            print('PB : No mailing_list !!')
+            # print('PB : No mailing_list !!')
             return False
         # Rework mailing_list excel matrix (translate)
         # At the moment, mails are like this : (mailing_list)
         #       target1 --> mail1 mail2 mail3
         #       target2 --> mail2 mail3
-        print('Mailing list ==> {}'.format(mailing_list))
+        # print('Mailing list ==> {}'.format(mailing_list))
         mails_set = set()
         for t, m in mailing_list.items():
             print('M = {}'.format(m))
@@ -610,12 +611,15 @@ class RProject:
         # Tasks are of type celery chords, so one argument per task
         task_args = list()
         # filename_time = datetime.datetime.now().strftime("%Y%m%d")
+        counter = 0
+        total_task = len(dict_links)
         if isinstance(dict_links, dict) and bool(dict_links):            
             for key, val in dict_links.items():
                 unit = self.get_unit_from_url(key)
 
                 if unit is not None:
-                    print('VAL = {}'.format(val))
+                    counter += 1
+                    # print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
                     #print('filename_time = {}'.format(filename_time))
                     task_args.append((val,
@@ -625,11 +629,13 @@ class RProject:
                         keywords_diff,
                         detect_links,
                         show_links,
-                        links_algorithm))
+                        links_algorithm,
+                        counter,
+                        total_task))
                 else:
                     print('Unit {} not found'.format(key))
 
-            print('Task args ====> {}'.format(task_args))
+            # print('Task args ====> {}'.format(task_args))
             print('SCHEDULED = {}'.format(schedule))
             if template_type == 'share buy back':
                 entry = Entry(alert_name, 'continuous_worker.share_buy_back_task',\

@@ -66,7 +66,7 @@ class UserProjectSendMail(BaseView):
 						# print(e)
 				#print('list of all grabbed task = {}'.format(task_results))
 
-				print('TSA RESULTS :: {}'.format(task_results))
+				#print('TSA RESULTS :: {}'.format(task_results))
 				html = """\
 				<html>
 				  <body>

@@ -26,7 +26,6 @@ def make_request_for_predictions(content, min_acc=0.75):
     # Making synchronous HTTP Request (because workers are aynchronous already)
     post_data = { 'content': content, 'min_acc': min_acc }
     body = urllib.parse.urlencode(post_data)
-
     http_client = httpclient.HTTPClient()
     try:
         response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)
@@ -54,7 +53,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     try:
         response = urllib.request.urlopen(req, context=gcontext)
     except Exception as e:
-        print('-- [ERROR FETCHING URL {}] --\nReason:{}\n'.format(url, e))
+        # print('-- [ERROR FETCHING URL {}] --\nReason:{}\n'.format(url, e))
         return False
 
     if response.geturl() != url:
@@ -202,7 +201,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             #time.sleep(random.randint(0, 10))
         base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
         filename = link.rpartition('/')[2]
-        print('FILNAME = {}'.format(filename))
+        # print('FILNAME = {}'.format(filename))
         base_dir_path_file = os.path.join(base_dir_path, filename)
 
             # check whether adding 'unknown' is right ...

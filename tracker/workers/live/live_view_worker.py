@@ -194,7 +194,8 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
         'sbb_links_pos': list(),
         'sbb_links_neg': list(),
         'diff_nb': 0,
-        'errors': dict()
+        'errors': dict(),
+        'keywords': list()
     }
     try:
         # print('[{}/{}] Link = {}'.format(i, len(links), flink))
@@ -250,8 +251,21 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                 detect_links=show_links)
             # if a list of keywords is provided, only get diff that matches keywords
             if keywords != [] and not isinstance(keywords[0], float):
+                print('Keywords arrived like THIS = {}'.format(keywords))
+                # Put keywords in status in order to highlight them on front side
+                
+                if isinstance(keywords, list) and isinstance(keywords[0], str):
+                    if ';' in keywords[0]:
+                        for _ in keywords[0].split(';'):
+                            status['keywords'].append(_)
+                    else:
+                        status['keywords'] = keywords;
+                # if len(keywords) == 1 and:
+                    # status['keywords'] = keywords
                 status = extractor.keyword_match(keywords, status, local_content, remote_content, url,\
                     detect_links=show_links)
+                # Add update for status keywords
+                self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
             # else get nearest link for each diff
             elif keywords == []:
@@ -268,7 +282,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                     res = is_sbb_content(_)
                     # print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
-                        print('RES IS TRUE POS ---------->  {}'.format(_))
+                        # print('RES IS TRUE POS ---------->  {}'.format(_))
                         status['sbb_links_pos'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     # elif isinstance(res, dict):
@@ -288,7 +302,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                     res = is_sbb_content(_)
                     # print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
-                        print('RES IS TRUE NEG ---------->  {}'.format(_))
+                        # print('RES IS TRUE NEG ---------->  {}'.format(_))
                         status['sbb_links_neg'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     # elif isinstance(res, dict):
@@ -310,7 +324,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                 print('***** Content is DIFFERENT ({}) *****'.format(flink))
                 status['diff_nb'] += 1
             else:
-                print('***** Content is SIMILAR *****')
+                # print('***** Content is SIMILAR *****')
                 pass
     except Exception as e:
         print("Share buy back diff exception => {}".format(e))

@@ -213,15 +213,36 @@ function escapeHtml(unsafe) {
 	return unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 }
 
-function formatDiff(title, diff, nearest_link, sbb_links, all_links, type) {
+function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywords) {
   var i;
   var diffs = '';
   // console.log(diff.length);
   for (i = 0; i < diff.length; i++) {
       if (nearest_link[diff[i]] != undefined) {
-        diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + diff[i] + "</a>" + "<br>";
+        var difi = '';
+
+        for (x = 0; x < keywords.length; x++) {
+          // var pattern = ('/' + keywords[x] + '/ig')
+          var pattern = diff[i].match(new RegExp(keywords[x], 'ig'));
+          if (pattern != null) {
+            difi = diff[i].replace(pattern, '<b>' + pattern + '</b>');
+            break;
+          }
+          // var test = diff[i].search(pattern);
+          
+          // if (diff[i].toLowerCase().includes(keywords[x].toLowerCase())) {
+            // console.log('x = ' + keywords[x] + '  |  y = ' + diff[i]);
+            // 
+          }
+          // console.log('pattern => ' + pattern);
+          // else {
+            // difi = diff[i];
+          // }
+
+          diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + difi + "</a>" + "<br>";
       }
       else {
+        // console.log('else');
         diffs += diff[i] + "<br>";
       }
       
@@ -261,12 +282,15 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type) {
 
   {% if 'live_view' in handler.session['tasks'] and handler.session['tasks']['live_view'][0]['template_type'] == 'diff with keywords' %}
   middlePart += "<div class='card'>\
+\
+\
+  \
     <div class='card-body'>\
-      <h5 class='card-title'>Nearest links</h5>";
+      <h6 class='card-title text-"+type+"'>Nearest links</h6>";
 
   for (var property in nearest_link) {
     if (nearest_link.hasOwnProperty(property)) {
-      middlePart += "<li class='square'><a href='" + nearest_link[property] + "' target='_blank' style='color: rgb(0,60,90)'/>" + GetFilename(nearest_link[property]) + "</a></li>";
+      middlePart += "<li class='square'><a href='" + nearest_link[property] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(nearest_link[property]) + "</a></li>";
     }
   }
   middlePart += "</div>\
@@ -275,7 +299,7 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type) {
   
   middlePart += "<div class='card'>\
     <div class='card-body'>\
-      <h5 class='card-title'>All links</h5>"
+      <h6 class='card-title text-"+type+"'>All links</h6>"
 
   if ((all_links.length < 5) && (all_links != null && all_links != undefined)) {
     for (i = 0; i < all_links.length; i++) {
@@ -283,7 +307,7 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type) {
     }
   }
   else {
-    middlePart += '-> too many links</div></div>';
+    middlePart += '<div style="color: grey"><span>&#9888;</span><i><small> too many links</small></i></div></div></div>';
   }
   
   middlePart += "</div>\
@@ -385,8 +409,8 @@ ws.onmessage = function (evt) {
          // console.log(data.status['errors'].length);
          if (data.state == 'SUCCESS' && !document.getElementById('err-' + data.task_id) && data.status['errors'] != undefined && data.status['errors'].length > 1) {
           // console.log(data.status);
-          console.log('err === ' );
-          console.log(data.status['errors']);
+          // console.log('err === ' );
+          // console.log(data.status['errors']);
           var elt = document.getElementById('errors');
           if (elt.childNodes.length < 2) {
             var errorHeader = document.createElement("DIV");
@@ -480,8 +504,9 @@ ws.onmessage = function (evt) {
               document.getElementById(data.status.div).append(ulTitle);
 
               // console.log(data.status.sbb_links_neg);
-              var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success');
-              var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger');
+              // console.log('data.status.keywords = ' + data.status.keywords);
+              var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords);
+              var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger', data.status.keywords);
 
               if (data.status.diff_pos.length != 0) {
                 document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_pos);

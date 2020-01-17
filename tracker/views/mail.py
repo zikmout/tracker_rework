@@ -93,7 +93,7 @@ class UserProjectSendMail(BaseView):
 							for content in site['diff_pos']:
 								for k, v in site['nearest_link_pos'].items():
 									if k == content:
-										site_html += ('<a style="color: green;" href="' + site['nearest_link_pos'][k] + '">' + k + "</a><br>")
+										site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_pos'][k] + '">' + k + "</a><br>")
 										found = True
 										break;
 								if not found:				
@@ -158,7 +158,7 @@ class UserProjectSendMail(BaseView):
 							for content in site['diff_neg']:
 								for k, v in site['nearest_link_neg'].items():
 									if k == content:
-										site_html += ('<a style="color: red;" href="' + site['nearest_link_neg'][k] + '">' + k + "</a><br>")
+										site_html += ('<a style="color: red; text-decoration: underline;" href="' + site['nearest_link_neg'][k] + '">' + k + "</a><br>")
 										found = True
 										break;
 								if not found:				

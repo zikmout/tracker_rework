@@ -252,6 +252,10 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             if keywords != [] and not isinstance(keywords[0], float):
                 status = extractor.keyword_match(keywords, status, local_content, remote_content, url,\
                     detect_links=show_links)
+
+            # else get nearest link for each diff
+            elif keywords == []:
+                extractor.nearest_link_match(status, local_content, remote_content, url)
                 #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
             # if detect_links:
                 

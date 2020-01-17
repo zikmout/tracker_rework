@@ -113,6 +113,7 @@ def get_nearest_link(match, keyword, content):
     # print('looking for kw ========> {}'.format(match))
 
     doc = LH.fromstring(content)
+    print('ASKED TO FIND FOLLOWINF MATCH ->{}<-'.format(match))
     el2 = doc.xpath('/html/body//a[contains(text(),{s!r})]/@href'.format(s = match))
     if el2 != []:
         # print('HERE el2 not None -> {}'.format(el2))
@@ -161,6 +162,19 @@ def get_nearest_link(match, keyword, content):
 #             print('Nearest links 2 founds are numerous for website : {}. Exit.'.format(url))
 #             break ;
 #     return nearest_link
+
+def nearest_link_match(status, local_content, remote_content, url):
+
+    """ Find diff pos, diff neg, nearest links pos, nearest links neg """
+    # remote_content = remote_content.decode('utf8').replace('<b>', '').replace('</b>', '')
+    #print('REMOTEEE FROM HERE : {}'.format(remote_content))
+    for neg in status['diff_neg']:
+        status['nearest_link_neg'].update(get_nearest_link(neg.replace('\'', ' '), neg.replace('\'', ' '), local_content.replace('\'', ' ')))
+
+    for pos in status['diff_pos']:
+        status['nearest_link_pos'].update(get_nearest_link(pos.replace('\'', ' '), pos.replace('\'', ' '), remote_content.replace('\'', ' ')))
+
+    return status
 
 def keyword_match(keywords, status, local_content, remote_content, url, detect_links=True):
     """ Find diff pos, diff neg, nearest links pos, nearest links neg """

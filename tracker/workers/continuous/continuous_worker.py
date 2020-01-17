@@ -20,7 +20,7 @@ import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
 # from tracker.core.rproject import RProject
 # from tracker.celery import app
-from tracker.mail import generic_mail_template, sbb_mail_template
+from tracker.mail import generic_mail_template#, sbb_mail_template
 # from tracker.models import Project, User
 from celery import Celery, group, states
 from celery.backends.redis import RedisBackend
@@ -156,56 +156,6 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return { 'error': '{}'.format(e)}
     return False
 
-# def select_only_sbb_links(status, show_links=False):
-#     print('\n-------------------------------———\n')
-#     i = 0
-#     excluded_links = list()
-
-#     all_links = set(status['all_links_pos'] + status['all_links_neg'] +
-#      status['nearest_link_pos'] + status['nearest_link_neg'])
-#     all_links = {k: True for k in all_links}
-
-#     for k, v in all_links.copy().items():
-#         if not is_sbb_content(k):
-#             all_links[k] = False
-
-#     for k, v in all_links.copy().items():
-#         if not show_links and v is False:
-#             status['all_links_neg'].remove(k)
-#             status['all_links_pos'].remove(k)
-#             status['nearest_link_pos'].remove(k)
-#             status['nearest_link_neg'].remove(k)
-#             excluded_links.append(k)
-
-
-    # for link in status['all_links_pos'].copy():
-    #     if is_sbb_content(link) is False:
-    #         excluded_links.append(link)
-    #         status['all_links_pos'].remove(link)#(index)
-
-    # for link in status['all_links_neg'].copy():
-    #     if is_sbb_content(link) is False:
-    #         excluded_links.append(link)
-    #         status['all_links_neg'].remove(link)
-
-    # if show_links:
-    #     for link in status['nearest_link_pos'].copy():
-    #         if is_sbb_content(link) is False:
-    #             excluded_links.append(link)
-    #             status['nearest_link_pos'].remove(link)
-
-    #     for link in status['nearest_link_neg'].copy():
-    #         if is_sbb_content(link) is False:
-    #             excluded_links.append(link)
-    #             status['nearest_link_neg'].remove(link)
-
-    # print('Excluded links are :\n')
-    # for _ in excluded_links:
-    #    print(_)
-    # print('\n-------------------------------———\n')
-
-    # return status
-
 def get_full_links(status, base_url):
     keys = ['all_links_pos', 'all_links_neg']
     for _ in keys:
@@ -328,6 +278,9 @@ def get_diff(self, links, base_path, diff_path, url, keywords_diff, detect_links
                         # detect_links=detect_links)
                     status = extractor.keyword_match(keywords, status, local_content, remote_content, url,\
                     detect_links=show_links)
+                 # else get nearest link for each diff
+                elif keywords == []:
+                    extractor.nearest_link_match(status, local_content, remote_content, url)
                     #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
                     # if detect_links:
                         
@@ -413,22 +366,22 @@ def sbb_end_routine(self, task_results, mails, user_email, project_name, show_li
         .format(task_results))
         print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-        sbb_mail_template(task_results_successful, errors, mails, 'sbb task', len(task_results), show_links=show_links)
+        generic_mail_template(task_results_successful, errors, mails, 'sbb', len(task_results), show_links=show_links)
         print('- Mails successfully sent if any changed noticed -')
     print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
     
     # Updating and download content now ...
     urls = [x['url'] for x in task_results_successful]
-    make_request_for_updating_content(user_email, project_name, urls)
+    # make_request_for_updating_content(user_email, project_name, urls)
     print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
 
 @app.task(bind=True)
-def share_buy_back_task(self, add, mails, user_email, project_name):
+def share_buy_back_task(self, add, mails, user_email, project_name, show_links):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
     #.set(
                 # soft_time_limit=1
             # )
-    return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links)).delay()
+    return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]) for k in add) | sbb_end_routine.s(mails, user_email, project_name, show_links)).delay()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
     #     ).on_error(log_error_sbb.s()) for k in add), sbb_end_routine.s(mails, user_email, project_name))()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
@@ -441,7 +394,7 @@ def share_buy_back_task(self, add, mails, user_email, project_name):
 ###################################### DIFF SCHEDULED ROUTINE #####################################
 @app.task(bind=True)
 def log_error_diff(self, z):
-    print('ERROR for diff_with_keywords_task = {}'.format(z))
+    print('ERROR for diff_task = {}'.format(z))
 
 @app.task(bind=True)
 def diff_end_routine(self, task_results, mails, user_email, project_name, show_links):#, time_limit=10, soft_time_limit=10):#, soft_time_limit=120):
@@ -464,19 +417,19 @@ def diff_end_routine(self, task_results, mails, user_email, project_name, show_l
         .format(task_results))
         print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-        generic_mail_template(task_results_successful, errors, mails, 'diff task', len(task_results), show_links=show_links)
+        generic_mail_template(task_results_successful, errors, mails, 'diff', len(task_results), show_links=show_links)
         print('- Mails successfully sent if any changed noticed -')
     print("DIFF MAILS TEMPLATE CONTENT : {}".format(mails))
     
     # Updating and download content now ...
     urls = [x['url'] for x in task_results_successful]
-    make_request_for_updating_content(user_email, project_name, urls)
+    # make_request_for_updating_content(user_email, project_name, urls)
     print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
 
 @app.task(bind=True)
-def diff_task(self, add, mails, user_email, project_name):
+def diff_task(self, add, mails, user_email, project_name, show_links):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
-    return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links)).delay()
+    return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]) for k in add) | diff_end_routine.s(mails, user_email, project_name, show_links)).delay()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
     #     ).on_error(log_error_diff.s()) for k in add), diff_end_routine.s(mails, user_email, project_name))()
 
@@ -535,7 +488,7 @@ def diff_with_keywords_end_routine(self, task_results, mails, user_email, projec
         .format(task_results))
         print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-        generic_mail_template(task_results_successful, errors, mails, 'diff with keywords task', len(task_results), show_links=show_links)
+        generic_mail_template(task_results_successful, errors, mails, 'diff with keywords', len(task_results), show_links=show_links)
         print('- Mails successfully sent if any changed noticed -')
     print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
     

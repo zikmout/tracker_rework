@@ -104,6 +104,49 @@ class EmailToWatchlist(BaseView):
         
         config_df_updated.to_excel(project.config_file, index=False)
 
+        
+
+        # Reload project and delete alert accordingly
+        df = pd.read_excel(project.config_file)
+
+        links = dict(zip(df['target'], df['target_label']))
+        links = {k:[v] for k, v in links.items()}
+
+        content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+
+        if content_to_delete:
+            alerts_to_delete = content_to_delete.alerts.all()
+            for a in alerts_to_delete:
+                print('a.name = {}'.format(a.name))
+                if a.alert_type != 'Live':
+                    try:
+                        print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                        e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
+                        e.delete()
+                    except Exception as e:
+                        print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
+                        print('Reason = {}'.format(e))
+            self.request_db.delete(content_to_delete)
+            self.request_db.commit()
+        else:
+            print('No need to delete alert.')
+
+        
+        # self.request_db.commit()
+        print('after request db delete')
+        mailing_list = dict(zip(df['target'], df['mailing_list']))
+        new_content = Content(projectname + '_default', links, mailing_list)
+        project.contents.append(new_content)
+        self.request_db.commit()
+        print('after request db commit()')
+
+        # change session data to take account of deleted unit
+        rproject = RProject(project.name, project.data_path, project.config_file) # freshly added
+        units = rproject.units_stats(units=rproject.filter_units())
+        self.session['units'] = units
+        self.session.save()
+        print('after session save()')
+
         if to_add:
             flash_message(self, 'success', '\'{}\' successfully added to email recipients.'.format(self.form_data['emailForWatchlist'][0]))
         elif to_delete:

@@ -219,7 +219,7 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type) {
   // console.log(diff.length);
   for (i = 0; i < diff.length; i++) {
       if (nearest_link[diff[i]] != undefined) {
-        diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0)'/>" + diff[i] + "</a>" + "<br>";
+        diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + diff[i] + "</a>" + "<br>";
       }
       else {
         diffs += diff[i] + "<br>";

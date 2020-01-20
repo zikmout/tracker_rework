@@ -5,7 +5,12 @@ a {
     color: #6c757d;
 }
 </style>
-<script src="{{ static_url('jquery.min.js') }}"></script>
+
+<!-- <script src="{{ static_url('jquery.min.js') }}"></script> -->
+
+<!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/js/bootstrap-switch.js" rel="stylesheet"> -->
+<link href="{{ static_url('dist/css/bootstrap4-toggle.min.css') }}" rel="stylesheet">
+<script src="{{ static_url('dist/js/bootstrap4-toggle.min.js') }}"></script>
 <div class="starter-template-fluid">
       <br />
       <h3>Live {% if 'live_view' in handler.session['tasks'] %}<span class="badge badge-pill badge-dark">{{ handler.session['tasks']['live_view'][0]['template_type'] }}</span> alert{% end %}</h3>
@@ -48,7 +53,9 @@ a {
                   <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
                   <button type="submit" class="btn btn-danger btn-sm ml-1">Stop</button></input>
                 </form>
-
+                <div class="mt-2 ml-1">
+                <input type="checkbox" {% if handler.session['is_live_simplified'] %}checked {% end %}data-toggle="toggle" id="customSwitch1" data-size="sm" data-onstyle="info" data-width="60" data-on="Details" data-off="Basic">
+              </div>
                 <form action="" class="form-inline ml-2 mt-2">
                   <p>
                   <label for="exampleFormControlTextarea1"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)</label>
@@ -56,8 +63,14 @@ a {
                   
                 </form>
 
-              </div>
 
+
+
+              </div>
+<!-- <div class="custom-control custom-switch">
+  <input type="checkbox" class="custom-control-input" id="customSwitch1" name="customSwitch1">
+  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+</div> -->
               
               <!-- <div class="form-group mb-2 mt-2"> -->
 
@@ -259,7 +272,7 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
   "<div class='card border-" + type + " mb-3'>\
               <div class='card-header bg-transparent border-" + type + " text-" + type + "'><b>" + title + "</b></div>\
               <div class='card-body'>\
-                <p class='card-text'>" + diffs + "</p></div>";
+                <p class='card-text'><div class='col-sm-4 scroll' style='max-width: 100%; max-height: 300px; overflow-y: auto;'>" + diffs + "</div></p></div>";
               // <div class='card-footer bg-transparent border-" + type + "'>";
 
   var middlePart = "";
@@ -269,56 +282,74 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
   middlePart += "<div class='card-group'>"
 
   {% if 'live_view' in handler.session['tasks'] and handler.session['tasks']['live_view'][0]['template_type'] == 'share buy back' %}
-    middlePart += "<div class='card'><div class='card-body'>\
-      <h6 class='card-title text-"+type+"'>SBB links</h6>"
-  
-    console.log(sbb_links);
-    for (i = 0; i < sbb_links.length; i++) {
-      
-      fn = GetFilename(sbb_links[i]);
-      middlePart +="<li class='square'><a href='" + sbb_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + fn + "</a></li>";
-    }
+
+     {% if handler.session['is_live_simplified'] %}
+
+          middlePart += "<div class='card'><div class='card-body'>\
+            <h6 class='card-title text-"+type+"'>SBB links</h6><div class='col-sm-4 scroll' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>"
+        
+          console.log(sbb_links);
+          for (i = 0; i < sbb_links.length; i++) {
+            
+            fn = GetFilename(sbb_links[i]);
+            middlePart +="<li class='square'><a href='" + sbb_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + fn + "</a></li>";
+          }
   
 
   // console.log(all_links);
   
 
-  middlePart += "</div>\
-  </div>";
+          middlePart += "</div></div>\
+          </div>";
+
+      {% end %}
+
   {% end %}
 
   {% if 'live_view' in handler.session['tasks'] and (handler.session['tasks']['live_view'][0]['template_type'] == 'diff with keywords' or handler.session['tasks']['live_view'][0]['template_type'] == 'diff') %}
-  middlePart += "<div class='card'>\
-    <div class='card-body'>\
-      <h6 class='card-title text-"+type+"'>Nearest links</h6>";
 
-  for (var property in nearest_link) {
-    if (nearest_link.hasOwnProperty(property)) {
-      middlePart += "<li class='square'><a href='" + nearest_link[property] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(nearest_link[property]) + "</a></li>";
-    }
-  }
-  middlePart += "</div>\
-  </div>"
+        {% if handler.session['is_live_simplified'] %}
+
+            middlePart += "<div class='card mt-2 ml-2 mb-2 mr-2' id='detailsDiffNearestLinks' style=' border-radius: .25rem;'>\
+              <div class='card-body'>\
+                <h6 class='card-title text-"+type+"'>Nearest links</h6><div class='col-sm-4 scroll' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>";
+
+            for (var property in nearest_link) {
+              if (nearest_link.hasOwnProperty(property)) {
+                middlePart += "<li class='square'><a href='" + nearest_link[property] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(nearest_link[property]) + "</a></li>";
+              }
+            }
+            middlePart += "</div></div>\
+            </div>"
+
+        {% end %}
+
   {% end %}
   
-  middlePart += "<div class='card'>\
-    <div class='card-body'>\
-      <h6 class='card-title text-"+type+"'>All links</h6>"
+  {% if handler.session['is_live_simplified'] %}
+
+      middlePart += "<div class='card mt-2 ml-2 mb-2 mr-2' id='detailsDiffAllLinks' style='border-left-width: 1px; border-left-style: solid; border-radius: .25rem; border: 1px solid rgba(0,0,0,.125);'>\
+        <div class='card-body'>\
+          <h6 class='card-title text-"+type+"'>All links</h6><div class='col-sm-4 scroll' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>"
 
 
-  if ((all_links.length < 5) && (all_links != null && all_links != undefined)) {
-    for (i = 0; i < all_links.length; i++) {
-        // if (!nearest_link[all_links[i]]  !sbb_links.includes(all_links[i])) {
-        middlePart += "<li class='square'><a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(all_links[i]) + "</a></li>";
-      // }
-    }
-  }
-  else {
-    middlePart += '<div style="color: grey"><span>&#9888;</span><i><small> too many links</small></i></div></div></div>';
-  }
-  
-  middlePart += "</div>\
-  </div>"
+      if ((all_links.length < 50) && (all_links != null && all_links != undefined)) {
+        for (i = 0; i < all_links.length; i++) {
+            // if (!nearest_link[all_links[i]]  !sbb_links.includes(all_links[i])) {
+            middlePart += "<li class='square'><a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)' data-toggle='tooltip' title='Some tooltip text!'>" + GetFilename(all_links[i]) + "</a></li>";
+
+
+          // }
+        }
+      }
+      else {
+        middlePart += '<div style="color: grey"><span>&#9888;</span><i><small> too many links</small></i></div></div></div>';
+      }
+      
+      middlePart += "</div></div>\
+      </div>"
+
+  {% end %}
 
   var lastPart = 
   "</div>\
@@ -557,6 +588,31 @@ function showFailedTasksDetails() {
 {% end %}
 {% block script %}
 <script>
+  $(function() {
+    $('#customSwitch1').change(function() {
+      var mode = $(this).prop('checked');
+      $.ajax({
+          type:'POST',
+          url: '/switch-detailded-live-view',
+          // data: {
+          //     "is_simplified": mode
+          // },
+          success: function(response) {
+              var jsonResp = JSON.parse(response);
+              console.log(jsonResp);
+              document.location.reload();
+          },
+          error: function(xhf) {
+              console.log('An Error occured trying to switch mode');
+          }
+      });
+    })
+  })
+  $(document).ready(function() {
+    console.log('ok tooltip');
+  $('[data-toggle="tooltip"]').tooltip({ pointerEvents: 'none' });
+});
+  // $("[name='customSwitch1']").bootstrapSwitch();
   $('#updatePages').click(function(){
      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);     
   });

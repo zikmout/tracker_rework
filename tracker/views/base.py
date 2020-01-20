@@ -115,6 +115,23 @@ class SwitchMode(BaseView):
             flash_message(self, 'info', 'Simplified interface ON.')
         self.send_response({ 'response': 'OK' })
 
+class SwitchDetailedLiveView(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    # @admin_required
+    @gen.coroutine
+    def post(self):
+        # is_simplified = self.get_argument('is_simplified')
+        # user = self.app_db.query(User).filter_by(username=self.session['username']).first()
+        # print('Switch to : {}'.format(is_simplified))
+        # del self.session['is_simplified']
+        self.session['is_live_simplified'] = not self.session['is_live_simplified']
+        self.session.save()
+        if self.session['is_live_simplified'] is False:
+            flash_message(self, 'info', 'Live details OFF.')
+        else:
+            flash_message(self, 'info', 'Live details ON.')
+        self.send_response({ 'response': 'OK' })
+
 class My404Handler(BaseView):
     def prepare(self):
         self.set_status(404)

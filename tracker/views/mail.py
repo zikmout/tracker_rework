@@ -71,9 +71,10 @@ class UserProjectSendMail(BaseView):
 				<html>
 				  <body>
 				"""
-				html += "<b><a name='top'>" + str(len(task_results)) + " websites have changed: </a><br> " 
-				for site in task_results:
-					html += "<li><a href='#" + site['div'] + "'> " + site['div'] + "</a></li>"
+				html += "<b><a name='top'>" + str(len(task_results)) + " websites have changed: </a><br> "
+				site_set = set([site['div'] for site in task_results])
+				for _ in site_set:
+					html += "<li><a href='#" + _ + "'> " + _ + "</a></li>"
 
 				# errors = list()
 				# for site in task_results:
@@ -257,7 +258,7 @@ class UserProjectSendMail(BaseView):
 				domains_list = [tldextract.extract(site['div']).domain.upper() for site in task_results]
 				for email in receiver_email:
 									message = MIMEMultipart()
-									message["Subject"] = '[Live Alert Report] {}'.format(', '.join(domains_list))
+									message["Subject"] = '[Live Alert Report] {}'.format(', '.join(list(set(domains_list))))
 									message["From"] = 'Tracker Bot'
 									message["To"] = email
 

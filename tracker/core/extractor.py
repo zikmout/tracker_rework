@@ -251,6 +251,8 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
         
     status['diff_neg'] = match_neg
     status['diff_pos'] = match_pos
+    print('diff neg == {}'.format(match_neg))
+    print('diff pos == {}'.format(match_pos))
 
     # TODO: Maybe let all links diff anyway ? In this case, need to change condition (of 
     # showing diff pos or diff neg) in tracker.mail

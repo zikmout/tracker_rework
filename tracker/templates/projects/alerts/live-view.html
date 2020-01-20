@@ -216,6 +216,7 @@ function escapeHtml(unsafe) {
 function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywords) {
   var i;
   var diffs = '';
+  var found = false;
   // console.log(diff.length);
   for (i = 0; i < diff.length; i++) {
       if (nearest_link[diff[i]] != undefined) {
@@ -226,6 +227,7 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
           var pattern = diff[i].match(new RegExp(keywords[x], 'ig'));
           if (pattern != null) {
             difi = diff[i].replace(pattern, '<b>' + pattern + '</b>');
+            found = true;
             break;
           }
           // var test = diff[i].search(pattern);
@@ -238,8 +240,13 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
           // else {
             // difi = diff[i];
           // }
-
-          diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + difi + "</a>" + "<br>";
+          if (found == true) {
+            diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + difi + "</a>" + "<br>";
+          }
+          else {
+            diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + diff[i] + "</a>" + "<br>";
+          }
+          
       }
       else {
         // console.log('else');
@@ -263,9 +270,9 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
 
   {% if 'live_view' in handler.session['tasks'] and handler.session['tasks']['live_view'][0]['template_type'] == 'share buy back' %}
     middlePart += "<div class='card'><div class='card-body'>\
-      <h5 class='card-title'>SBB links</h5>"
+      <h6 class='card-title text-"+type+"'>SBB links</h6>"
   
-
+    console.log(sbb_links);
     for (i = 0; i < sbb_links.length; i++) {
       
       fn = GetFilename(sbb_links[i]);
@@ -280,11 +287,8 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
   </div>";
   {% end %}
 
-  {% if 'live_view' in handler.session['tasks'] and handler.session['tasks']['live_view'][0]['template_type'] == 'diff with keywords' %}
+  {% if 'live_view' in handler.session['tasks'] and (handler.session['tasks']['live_view'][0]['template_type'] == 'diff with keywords' or handler.session['tasks']['live_view'][0]['template_type'] == 'diff') %}
   middlePart += "<div class='card'>\
-\
-\
-  \
     <div class='card-body'>\
       <h6 class='card-title text-"+type+"'>Nearest links</h6>";
 
@@ -301,9 +305,12 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
     <div class='card-body'>\
       <h6 class='card-title text-"+type+"'>All links</h6>"
 
+
   if ((all_links.length < 5) && (all_links != null && all_links != undefined)) {
     for (i = 0; i < all_links.length; i++) {
+        // if (!nearest_link[all_links[i]]  !sbb_links.includes(all_links[i])) {
         middlePart += "<li class='square'><a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(all_links[i]) + "</a></li>";
+      // }
     }
   }
   else {

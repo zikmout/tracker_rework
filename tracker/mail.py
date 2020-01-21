@@ -13,12 +13,15 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
     """
             Mailing list must be of type dict here
     """
-    print('----> ERRORS IN MAIL = {} (type : {})'.format(errors, type(errors)))
+    # print('----> ERRORS IN MAIL = {} (type : {})'.format(errors, type(errors)))
     if not isinstance(mailing_list, dict):
         raise ValueError("Mailing List must be dict type.")
 
+    # print('TASK RESULTS ==> {}'.format(task_results))
     for receiver_email, targets in mailing_list.items():
         designed_task_results = [k for k in task_results if k['url'] in targets]
+        # print('receiver email : {}'.format(receiver_email))
+        # print('loop designed task result ==> {}'.format(designed_task_results))
         # If no change observed, no need to send mail
         #print('DESIGNED TASK RESULST = {}'.format(designed_task_results))
         if len(designed_task_results) == 0:
@@ -35,7 +38,7 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         # html += ")</font></b><br>"
         html += "<b><a name='top'>" + str(len(designed_task_results)) + " websites have changed: </a><br> " 
         for site in designed_task_results:
-            html += "<li><a href='#" + site['div'] + "'> " + site['div'] + "</a></li>"
+            html += "<li><a href='#" + site['url'] + "'> " + site['url'] + "</a></li>"
 
 
         site_html = ''
@@ -46,19 +49,19 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
             found = False
             if site['diff_pos'] != []:
                 site_html += "<font color='green'><b>Added Content :</b><br>"
-                if len(site['diff_pos']) < 10:
+                if len(site['diff_pos']) < 20:
                     # if task_name == 'diff':
                     #     for content in site['diff_pos']:
                     #         site_html += (content + "<br>")
                     # else:
                     for content in site['diff_pos']:
+                        found = False
                         if  content in list(site['nearest_link_pos'].keys()):
                             site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_pos'][content] + '">' + content + "</a><br>")
                             found = True
-                            break;
                         if not found:
                             site_html += (content + "<br>")
-                            found = False
+                            # found = False
                             # for k, v in site['nearest_link_pos'].items():
                             #     print('k = {}, v = {}'.format(k, v))
                             #     if k == content:
@@ -126,7 +129,7 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
             found = False
             if site['diff_neg'] != []:
                 site_html += "<font color='red'><b><br>Deleted Content :</b><br>"
-                if len(site['diff_neg']) < 10:
+                if len(site['diff_neg']) < 20:
                     # if task_name == 'diff':
                     #     for content in site['diff_neg']:
                     #         site_html += (content + "<br>")
@@ -224,9 +227,9 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         message = MIMEMultipart()
         date = datetime.now().replace(microsecond=0)
         #message["Subject"] = '[{}] Alerts on share buybacks'.format(date)
-        message["Subject"] = '[{}] {}'.format(task_name + ' alert', ', '.join(domains_list))
-        message["From"] = 'Tracker Bot'
-        message["To"] = receiver_email
+        message['Subject'] = '[{} alert] {}'.format(task_name, ', '.join(list(set(domains_list))))
+        message['From'] = 'Tracker Bot'
+        message['To'] = receiver_email
 
         message.attach(part2)
 

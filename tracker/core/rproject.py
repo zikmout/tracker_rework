@@ -541,9 +541,9 @@ class RProject:
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
-        # print('links before = {}'.format(links))
+        print('links before = {}'.format(links))
         dict_links = utils.from_links_to_dict(links)
-        # print('links after = {}'.format(dict_links))
+        print('links after = {}'.format(dict_links))
 
         # If asked to send mail but no mailing_list provided, return False
         if mailing_list is None:
@@ -556,7 +556,7 @@ class RProject:
         # print('Mailing list ==> {}'.format(mailing_list))
         mails_set = set()
         for t, m in mailing_list.items():
-            print('M = {}'.format(m))
+            #print('M = {}'.format(m))
             if isinstance(m, float) and math.isnan(m):
                 continue;
             if isinstance(m, float) and ';' not in str(m):
@@ -618,20 +618,22 @@ class RProject:
                 unit = self.get_unit_from_url(key)
 
                 if unit is not None:
-                    counter += 1
-                    # print('VAL = {}'.format(val))
-                    # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
-                    #print('filename_time = {}'.format(filename_time))
-                    task_args.append((val,
-                        unit.download_path,
-                        unit.download_path,
-                        unit.url,
-                        keywords_diff,
-                        detect_links,
-                        show_links,
-                        links_algorithm,
-                        counter,
-                        total_task))
+                    for _ in val:
+                        counter += 1
+                        print('VAL = {}'.format(_))
+                        # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
+                        #print('filename_time = {}'.format(filename_time))
+                        # TODO: Add random shuffle of links to hide a bit ?
+                        task_args.append((_,
+                            unit.download_path,
+                            unit.download_path,#os.path.join(unit.download_path, _[0]),
+                            unit.url,
+                            keywords_diff,
+                            detect_links,
+                            show_links,
+                            links_algorithm,
+                            counter,
+                            total_task))
                 else:
                     print('Unit {} not found'.format(key))
 

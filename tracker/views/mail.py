@@ -89,7 +89,7 @@ class UserProjectSendMail(BaseView):
 					"
 					found = False
 					if site['diff_pos'] != []:
-						site_html += "<font color='green'><b>Added Content :</b><br>"
+						site_html += "<font color='green'><b>Added :</b><br>"
 						if len(site['diff_pos']) < 10:
 							for content in site['diff_pos']:
 								for k, v in site['nearest_link_pos'].items():
@@ -154,7 +154,7 @@ class UserProjectSendMail(BaseView):
 
 					found = False
 					if site['diff_neg'] != []:
-						site_html += "<font color='red'><b><br>Deleted Content :</b><br>"
+						site_html += "<font color='red'><b><br>Deleted :</b><br>"
 						if len(site['diff_neg']) < 10:
 							for content in site['diff_neg']:
 								for k, v in site['nearest_link_neg'].items():

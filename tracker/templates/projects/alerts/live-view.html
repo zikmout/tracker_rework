@@ -232,38 +232,50 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
   var found = false;
   // console.log(diff.length);
   for (i = 0; i < diff.length; i++) {
-      if (nearest_link[diff[i]] != undefined) {
-        var difi = '';
+    var difi = '';
 
         for (x = 0; x < keywords.length; x++) {
+          // console.log(keywords);
           // var pattern = ('/' + keywords[x] + '/ig')
           var pattern = diff[i].match(new RegExp(keywords[x], 'ig'));
           if (pattern != null) {
             difi = diff[i].replace(pattern, '<b>' + pattern + '</b>');
             found = true;
+
             break;
           }
+          }
+      if (nearest_link[diff[i]] != undefined) {
+
+          // else {
+          //   console.log(diff[i]);
+          // }
           // var test = diff[i].search(pattern);
           
           // if (diff[i].toLowerCase().includes(keywords[x].toLowerCase())) {
             // console.log('x = ' + keywords[x] + '  |  y = ' + diff[i]);
             // 
-          }
-          // console.log('pattern => ' + pattern);
-          // else {
-            // difi = diff[i];
-          // }
-          if (found == true) {
-            diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + difi + "</a>" + "<br>";
-          }
-          else {
-            diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + diff[i] + "</a>" + "<br>";
-          }
+        
+        // console.log('pattern => ' + pattern);
+        // else {
+          // difi = diff[i];
+        // }
+        if (found == true) {
+          diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + difi + "</a><br>";
+        }
+        else {
+          diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + diff[i] + "</a><br>";
+        }
           
       }
       else {
         // console.log('else');
-        diffs += diff[i] + "<br>";
+        if (found == true) {
+          diffs += difi + "<br>";
+        }
+        else {
+          diffs += diff[i] + "<br>";
+        }
       }
       
   }
@@ -285,7 +297,8 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
 
      {% if handler.session['is_live_simplified'] %}
 
-          middlePart += "<div class='card'><div class='card-body'>\
+          middlePart += "<div class='card mt-2 ml-2 mb-2 mr-2' id='detailsDiffSbbLinks' style=' border-radius: .25rem; margin:.5rem;'>\
+          <div class='card-body'>\
             <h6 class='card-title text-"+type+"'>SBB links</h6><div class='col-sm-4 scroll' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>"
         
           console.log(sbb_links);
@@ -333,7 +346,7 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
           <h6 class='card-title text-"+type+"'>All links</h6><div class='col-sm-4 scroll' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>"
 
 
-      if ((all_links.length < 50) && (all_links != null && all_links != undefined)) {
+      if ((all_links.length < 50000) && (all_links != null && all_links != undefined)) {
         for (i = 0; i < all_links.length; i++) {
             // if (!nearest_link[all_links[i]]  !sbb_links.includes(all_links[i])) {
             middlePart += "<li class='square'><a href='" + all_links[i] + "' target='_blank' style='color: rgb(0,0,0)' data-toggle='tooltip' title='Some tooltip text!'>" + GetFilename(all_links[i]) + "</a></li>";
@@ -543,8 +556,8 @@ ws.onmessage = function (evt) {
 
               // console.log(data.status.sbb_links_neg);
               // console.log('data.status.keywords = ' + data.status.keywords);
-              var div_pos = formatDiff("Added Content", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords);
-              var div_neg = formatDiff("Deleted Content", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger', data.status.keywords);
+              var div_pos = formatDiff("Added", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords);
+              var div_neg = formatDiff("Deleted", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger', data.status.keywords);
 
               if (data.status.diff_pos.length != 0) {
                 document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_pos);

@@ -378,13 +378,23 @@ class AlertDelete(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         content = project.contents.filter_by(name=content_name).first()
         alert = content.alerts.filter_by(name=alert_name).first()
+
         if alert:
             try:
                 self.request_db.delete(alert)
                 self.request_db.commit()
+                if 'live_view' in self.session['tasks'] and alert.alert_type == 'Live':    
+                    try:
+                        res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
+                        print('Deleting old live view tasks from session.')
+                    except Exception as e:
+                        print('[ERROR] Deleting old live view tasks from session. /!\\')
+                        
+                    del self.session['tasks']['live_view']
+                    self.session.save()
                 flash_message(self, 'success', 'Alert {} succesfully deleted.'.format(alert_name))
             except Exception as e:
-                flash_message(self, 'success', 'Impossible to delete alert. Check shell logs for more information.')
+                flash_message(self, 'danger', 'Impossible to delete alert. Check shell logs for more information.')
                 print('Exception : Impossible to delete user because : {}'.format(e))
         else:
             flash_message(self, 'danger', 'Alert {} not found. Delete aborded.'.format(alert_name))

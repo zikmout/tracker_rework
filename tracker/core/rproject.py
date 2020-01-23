@@ -613,6 +613,7 @@ class RProject:
         # filename_time = datetime.datetime.now().strftime("%Y%m%d")
         counter = 0
         total_task = len(dict_links)
+        # keywords_dict = {}
         if isinstance(dict_links, dict) and bool(dict_links):            
             for key, val in dict_links.items():
                 unit = self.get_unit_from_url(key)
@@ -634,6 +635,7 @@ class RProject:
                             links_algorithm,
                             counter,
                             total_task))
+                        # keywords_dict.update({_[0]: _[1]})
                 else:
                     print('Unit {} not found'.format(key))
 

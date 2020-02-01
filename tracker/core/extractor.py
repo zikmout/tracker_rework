@@ -65,6 +65,8 @@ def clean_content(input_list, min_sentence_len=5):
     # get rid of whitespaces
     t = str.maketrans('\n\t\r', '   ')
     output = [x.translate(t) for x in output]
+    filters = ''.join([chr(i) for i in range(1, 32)])
+    ouput = [_.translate(str.maketrans('', '', filters)).strip() for _ in output]
     
     # TODO: Add function to delete '-'s
 

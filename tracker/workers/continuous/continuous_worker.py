@@ -82,9 +82,9 @@ def make_request_for_predictions(content, min_acc=0.75):
     #     print('HTTPError -> {}'.format(e))
     #     http_client.close()
     except Exception as e:
-        print('Error -> {}'.format(e))
+        print('Error make_request_for_predictions -> {}'.format(e))
         http_client.close()
-        return json.dumps({ 'error': '{}'.format(e)})
+        return json.dumps({'error':'{}'.format(e)})
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     if ('@' or ':') in url:
@@ -188,7 +188,7 @@ def bad_task(self):
     time.sleep(10)
     print('stop sleep')
 
-@app.task(bind=True, ignore_result=False, soft_time_limit=50, time_limit=50)#soft_time_limit=60)#, time_limit=121)
+@app.task(bind=True, ignore_result=False, soft_time_limit=50, time_limit=60)#, time_limit=1)#soft_time_limit=60)#, time_limit=121)
 def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links, show_links,\
     links_algorithm, counter, total_task):
     """ Download website parts that have changed 
@@ -276,7 +276,7 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
                 detect_links=show_links)
             # if a list of keywords is provided, only get diff that matches keywords
             if keywords != [] and not isinstance(keywords[0], float):
-                print('Keywords arrived like THIS = {}'.format(keywords))
+                # print('Keywords arrived like THIS = {}'.format(keywords))
                 # Put keywords in status in order to highlight them on front side
                 
                 if isinstance(keywords, list) and isinstance(keywords[0], str):
@@ -307,12 +307,12 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
                     res = is_sbb_content(_)
                     # print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
-                        print('RES IS TRUE POS ---------->  {}'.format(_))
+                        # print('RES IS TRUE POS ---------->  {}'.format(_))
                         status['sbb_links_pos'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                    # elif isinstance(res, dict):
-                        # status['errors'].update({status['url'] : '{}'.format(res['error'])})
-                        # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+                    elif isinstance(res, dict):
+                        status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                        self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
 
                     # if isinstance(res, dict):#res and 'error' in res:
@@ -327,10 +327,12 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
                     res = is_sbb_content(_)
                     # print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
-                        print('RES IS TRUE NEG ---------->  {}'.format(_))
+                        # print('RES IS TRUE NEG ---------->  {}'.format(_))
                         status['sbb_links_neg'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-
+                    elif isinstance(res, dict):
+                        status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                        self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
             #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
             self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
             
@@ -347,7 +349,7 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
         # pass
         # status['diff_nb'] = 0
         print("Share buy back diff exception => {}".format(e))
-        status['errors'].update({status['url'] : '{}'.format(e)})
+        status['errors'].update('{}'.format(e))
         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
         return {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}
 
@@ -373,7 +375,7 @@ def sbb_end_routine(self, task_results, mails, user_email, project_name, show_li
             if 'status' in _ and (_['status']['diff_neg'] != [] or _['status']['diff_pos'] != []):
                 task_results_successful.append(_['status'])
             if 'status' in _ and _['status']['errors'] != {}:
-                errors.update(_['status']['errors'])
+                errors.update({_['status']['url']:_['status']['errors']})
             # except Exception as e:
                 # errors.update(_['status']['errors'])
     # errors = [r['errors'] for r in task_results.copy()]
@@ -436,7 +438,7 @@ def diff_end_routine(self, task_results, mails, user_email, project_name, show_l
             if 'status' in _ and (_['status']['diff_neg'] != [] or _['status']['diff_pos'] != []):
                 task_results_successful.append(_['status'])
             if 'status' in _ and _['status']['errors'] != {}:
-                errors.update(_['status']['errors'])
+                errors.update({_['status']['url']:_['status']['errors']})
     # errors = [r['errors'] for r in task_results.copy()]
     print('\ntask result = {}, \n\nerrors : {}'.format(task_results_successful.copy(), errors))
     # if task_results == []:
@@ -478,8 +480,8 @@ def diff_task(self, add, mails, user_email, project_name, show_links):
 # def log_error_diff_with_keywords(request):
 #     print('Task {0} raised :/'.format(request))
 def log_error_diff_with_keywords(self, z):
-    print('---> Error With Task <---')
-    #print('ERROR for diff_with_keywords_task = {} [{}] -> (traceback = {})'.format(z, self.__dict__, self.__trace__.__dict__))
+    # print('---> Error With Task <---')
+    print('ERROR* for diff_with_keywords_task = {} '.format(z))
 
 @app.task(bind=True)
 def bad_task(self):
@@ -498,13 +500,16 @@ def diff_with_keywords_end_routine(self, task_results, mails, user_email, projec
         errors.update(task_results['status']['errors'])
     else:
         for _ in task_results:
+            # if isinstance(_, str):
+                # print('->{}<- is an STR'.format(_))
+                # errors.update(_)
             try:
                 if _['status']['diff_neg'] != [] or _['status']['diff_pos'] != []:
                     task_results_successful.append(_['status'])
                 if _['status']['errors'] != {}:
                     errors.update(_['status']['errors'])
             except Exception as e:
-                errors.update(_['status']['errors'])
+                errors.update({_['status']['url']:_['status']['errors']})
 
         # task_results_successful = [r['status'] for r in task_results if (r['status']['diff_neg'] != []\
         #              or r['status']['diff_pos'] != [])]
@@ -526,13 +531,13 @@ def diff_with_keywords_end_routine(self, task_results, mails, user_email, projec
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
         generic_mail_template(task_results_successful, errors, mails, 'diff with keywords', len(task_results), show_links=show_links)
         print('- Mails successfully sent if any changed noticed -')
-    print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
+    # print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
     
     # Updating and download content now ...
-    if task_results_successful != []:
-        urls = [x['url'] for x in task_results_successful if (x['errors'] == {} and (x['diff_neg'] != [] or x['diff_pos'] != []))]
+    # if task_results_successful != []:
+        # urls = [x['url'] for x in task_results_successful if (x['errors'] == {} and (x['diff_neg'] != [] or x['diff_pos'] != []))]
         # make_request_for_updating_content(user_email, project_name, urls)
-        print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
+        # print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
         
 @app.task(bind=True)
 def diff_with_keywords_task(self, add, mails, user_email, project_name, show_links):

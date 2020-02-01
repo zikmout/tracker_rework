@@ -173,6 +173,11 @@ class AlertLaunch(BaseView):
             return
         alert = content.alerts.filter_by(name=args['alertName']).first()
 
+        # Get timelimit from UX
+        if 'alertTimeLimit' in args:
+                lmt = args['alertTimeLimit']
+        else:
+            lmt = False 
         ##################### LIVE ALERT LAUNCH #######################################
         if args['alertType'] == 'Live':
             # if session live view task present in session, delete them and revoke associated tasks
@@ -192,10 +197,6 @@ class AlertLaunch(BaseView):
             #print('RPROJECT UNITS = {}'.format([unit.url for unit in rproject.units]))
             # need to change following line with PickleType
             # print('GOTTEN TIME LIMIT = {}'.format(args['alertTimeLimit']))
-            if 'alertTimeLimit' in args:
-                lmt = args['alertTimeLimit']
-            else:
-                lmt = False 
             
             tasks = rproject.download_units_diff(alert.template_type, content.links,
                 save=True, show_links=alert.show_links, time_limit=lmt)

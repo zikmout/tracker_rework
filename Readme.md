@@ -83,3 +83,55 @@ The typical format of the logfile is as follow:
 `<PDF> /-/media/Corporate/Group/PDF-for-pages/Gouvernance/Comites/20180604-Committees.pdf`
 - last line : 
 `[2018-10-28 14:22] Duration 00:20:52 /Total 432 / Page(s): 167 / PDF(s): 263 / EXCEL(s): 0 / Errors: 2`
+
+### How to set up Nginx reverse proxy
+Here is the config file to put in /etc/nginx/site-available
+Best practices tell us to make a symbolic link to /etc/nginx/site-enabled also
+-> you find the tracker.lu nginx config file in tracker/config/ssl 
+
+### Generate SSL certificate
+Go to `https://certbot.eff.org/lets-encrypt/ubuntuxenial-nginx` and follow the instructions ([Tuto](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-18-04) or [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/)):
+```sh
+sudo certbot --nginx -d tracker.lu -d www.tracker.lu
+sudo cat /etc/letsencrypt/live/tracker.lu/fullchain.pem
+sudo cat /etc/letsencrypt/live/tracker.lu/privkey.pem
+```
+Test if future certificate auto-renew is ok:
+```sh
+sudo certbot renew --dry-run
+```
+
+### Manage Nginx
+Allow HTTP and HTTPS protocols:
+```sh
+sudo ufw allow 'Nginx HTTP'
+sudo ufw allow 'Nginx HTTPS'
+sudo ufw app list
+```
+Enable firewall:
+```sh
+sudo ufw enable
+```
+Start, stop, status nginx:
+```sh
+sudo systemctl start nginx
+sudo systemctl stop nginx
+sudo systemctl status nginx
+```
+Test the config file:
+```sh
+sudo nginx -t
+```
+
+
+
+
+
+
+
+
+
+
+
+
+

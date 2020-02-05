@@ -171,3 +171,16 @@ def replace_mix_option_with_all_existing_keywords(links):
         elif len(v) == 1 and ';' in v[0]:
             links[k] = v[0].split(';')
     return links
+
+def highlight_keywords(keywords, content):
+    for kw in keywords:
+        regx = re.compile('{}'.format(kw), re.I)
+        ret = regx.findall(content)
+        if isinstance(ret, list) and ret != []:
+            if len(ret) > 1:
+                for r in ret:
+                    content = content.replace(r, '<mark>{}</mark>'.format(r))
+            else:
+                content = content.replace(ret[0], '<mark>{}</mark>'.format(ret[0]))
+                break;
+    return content

@@ -233,18 +233,20 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
   // console.log(diff.length);
   for (i = 0; i < diff.length; i++) {
     var difi = '';
-
+        // console.log(diff[i]);
         for (x = 0; x < keywords.length; x++) {
           // console.log(keywords);
           // var pattern = ('/' + keywords[x] + '/ig')
           var pattern = diff[i].match(new RegExp(keywords[x], 'ig'));
+          // console.log(pattern);
+
           if (pattern != null) {
-            difi = diff[i].replace(pattern, '<b>' + pattern + '</b>');
+            difi = diff[i].replace(pattern, '<span style="background-color:yellow">' + pattern + '</span>');
             found = true;
 
             break;
           }
-          }
+        }
       if (nearest_link[diff[i]] != undefined) {
 
           // else {
@@ -269,7 +271,8 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
           
       }
       else {
-        // console.log('else');
+        console.log('else');
+        console.log(difi);
         if (found == true) {
           diffs += difi + "<br>";
         }
@@ -556,6 +559,7 @@ ws.onmessage = function (evt) {
 
               // console.log(data.status.sbb_links_neg);
               // console.log('data.status.keywords = ' + data.status.keywords);
+              // console.log(data.status.diff_neg);
               var div_pos = formatDiff("Added", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords);
               var div_neg = formatDiff("Deleted", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger', data.status.keywords);
 

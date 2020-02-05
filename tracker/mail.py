@@ -9,19 +9,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import tornado
 from tornado.escape import url_unescape as url_unescape
-
-def highlight_keywords(keywords, content):
-    for kw in keywords:
-        regx = re.compile('{}'.format(kw), re.I)
-        ret = regx.findall(content)
-        if isinstance(ret, list) and ret != []:
-            if len(ret) > 1:
-                for r in ret:
-                    content = content.replace(r, '<i>{}</i>'.format(r))
-            else:
-                content = content.replace(ret[0], '<i>{}</i>'.format(ret[0]))
-                break;
-    return content
+from tracker.utils import highlight_keywords
 
 def generic_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links):
     """
@@ -55,25 +43,27 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
             found = False
             if site['diff_pos'] != []:
                 site_html += "<font color='green'><b>Added :</b><br>"
+
+
                 if len(site['diff_pos']) < 50:
                     for content in site['diff_pos']:
                         for k, v in site['nearest_link_pos'].items():
                             if k == content:
                                 content2 = highlight_keywords(site['keywords'], content)
                                 site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_pos'][k] + '">' + content2 + "</a><br>")
-                                found = True
+                                # found = True
                                 break;
-                        if not found:# or content.replace('\'', ' ') not in list(site['nearest_link_pos'].keys()):
-                            content2 = highlight_keywords(site['keywords'], content)
-                            site_html += (content2 + "<br>")
-                            found = False
+                        # if not found:# or content.replace('\'', ' ') not in list(site['nearest_link_pos'].keys()):
+                        #     content2 = highlight_keywords(site['keywords'], content)
+                        #     site_html += (content2 + "<br>")
+                        #     found = False
 
-                    # Additions that have no nearest link
                     remainder = list(set(site['diff_pos']).difference(set(list(site['nearest_link_pos'].keys()))))
-                    print('remainder diff pos = {}'.format(remainder))
+                    #print('remainder diff pos = {}'.format(remainder))
                     for r in remainder:
-                        content = highlight_keywords(site['keywords'], r)
-                        site_html += (content + "<br>")
+
+                        content2 = highlight_keywords(site['keywords'], r)
+                        site_html += (content2 + "<br>")
                 else:
                     site_html += ('*** too many changes ***' + "<br>")
             
@@ -121,29 +111,45 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
             # DIFF NEG
             found = False
             if site['diff_neg'] != []:
+
                 if site['diff_pos'] != []:
-                    site_html += "<br><font color='red'><b>Deleted :</b><br>"
-                else:
-                    site_html += "<font color='red'><b>Deleted :</b><br>"
+                    site_html += "<br>"
+                site_html += "<font color='red'><b>Deleted :</b><br>"
+
                 if len(site['diff_neg']) < 50:
                     for content in site['diff_neg']:
                         for k, v in site['nearest_link_neg'].items():
                             if k == content:
                                 content2 = highlight_keywords(site['keywords'], content)
                                 site_html += ('<a style="color: red; text-decoration: underline;" href="' + site['nearest_link_neg'][k] + '">' + content2 + "</a><br>")
-                                found = True
+                                # found = True
                                 break;
-                        if not found:
-                            content2 = highlight_keywords(site['keywords'], content)
-                            site_html += (content2 + "<br>")
-                            found = False
+                        # if not found:
+                        #     content2 = highlight_keywords(site['keywords'], content)
+                        #     site_html += (content2 + "<br>")
+                        #     found = False
+                    remainder = list(set(site['diff_neg']).difference(set(list(site['nearest_link_neg'].keys()))))
+                    #print('remainder diff neg = {}'.format(remainder))
+                    for r in remainder:
+                        content2 = highlight_keywords(site['keywords'], r)
+                        site_html += (content2 + "<br>")
 
                     # Deletions that have no nearest link
-                    remainder = list(set(site['diff_neg']).difference(set(list(site['nearest_link_neg'].keys()))))
-                    for r in remainder:
-                        content = highlight_keywords(site['keywords'], r)
-                        site_html += (content + "<br>")
-                    print('remainder diff neg = {}'.format(remainder))
+                    # remainder = list()
+                    # nl = list(site['nearest_link_neg'].keys())
+
+                    # for _ in site['diff_neg']:
+                    #     # if _ not in nl:
+                    #     remainder.append(_)
+                    # # remainder = list(set(list(site['nearest_link_neg'].keys())).difference(set(site['diff_neg'])))
+                    # #print('remainder diff neg = {}'.format(remainder))
+                    # for r in remainder:
+                    #     content2 = highlight_keywords(site['keywords'], r)
+                    #     if content in list(site['nearest_link_neg'].keys()):
+                    #         site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_neg'][content] + '">' + content2 + "</a><br>")
+                    #     else:
+                    #         site_html += (content2 + "<br>")
+                    #print('remainder diff neg = {}'.format(remainder))
                 else:
                     site_html += ('*** too many changes ***' + "<br>")
 

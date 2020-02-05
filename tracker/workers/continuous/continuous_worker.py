@@ -188,7 +188,7 @@ def bad_task(self):
     time.sleep(10)
     print('stop sleep')
 
-@app.task(bind=True, ignore_result=False, soft_time_limit=50, time_limit=60)#, time_limit=1)#soft_time_limit=60)#, time_limit=121)
+@app.task(bind=True, ignore_result=False, soft_time_limit=29, time_limit=30)#, time_limit=1)#soft_time_limit=60)#, time_limit=121)
 def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links, show_links,\
     links_algorithm, counter, total_task):
     """ Download website parts that have changed 
@@ -348,8 +348,10 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
     except Exception as e:
         # pass
         # status['diff_nb'] = 0
-        print("Share buy back diff exception => {}".format(e))
-        status['errors'].update('{}'.format(e))
+        errr = {status['url']: '{}'.format(e)}
+        print("Share buy back diff exception => {}".format(errr))
+        status['errors'].update(errr)
+
         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
         return {'url': flink, 'current': counter, 'total': total_task, 'status': status, 'result': status['diff_nb']}
 
@@ -375,7 +377,7 @@ def sbb_end_routine(self, task_results, mails, user_email, project_name, show_li
             if 'status' in _ and (_['status']['diff_neg'] != [] or _['status']['diff_pos'] != []):
                 task_results_successful.append(_['status'])
             if 'status' in _ and _['status']['errors'] != {}:
-                errors.update({_['status']['url']:_['status']['errors']})
+                errors.update(_['status']['errors'])
             # except Exception as e:
                 # errors.update(_['status']['errors'])
     # errors = [r['errors'] for r in task_results.copy()]
@@ -438,7 +440,7 @@ def diff_end_routine(self, task_results, mails, user_email, project_name, show_l
             if 'status' in _ and (_['status']['diff_neg'] != [] or _['status']['diff_pos'] != []):
                 task_results_successful.append(_['status'])
             if 'status' in _ and _['status']['errors'] != {}:
-                errors.update({_['status']['url']:_['status']['errors']})
+                errors.update(_['status']['errors'])
     # errors = [r['errors'] for r in task_results.copy()]
     print('\ntask result = {}, \n\nerrors : {}'.format(task_results_successful.copy(), errors))
     # if task_results == []:
@@ -489,9 +491,6 @@ def bad_task(self):
 
 @app.task(bind=True)
 def diff_with_keywords_end_routine(self, task_results, mails, user_email, project_name, show_links):#, soft_time_limit=120):
-    print('----> DIFF_WITH_KEYWORDS_END_ROUTINE <---- \n(RET = {})\n----->\
-     Sending mail with diff template now .....'\
-        .format(task_results))
     errors = dict()
     task_results_successful = []
     if isinstance(task_results, dict):
@@ -500,16 +499,11 @@ def diff_with_keywords_end_routine(self, task_results, mails, user_email, projec
         errors.update(task_results['status']['errors'])
     else:
         for _ in task_results:
-            # if isinstance(_, str):
-                # print('->{}<- is an STR'.format(_))
-                # errors.update(_)
-            try:
-                if _['status']['diff_neg'] != [] or _['status']['diff_pos'] != []:
-                    task_results_successful.append(_['status'])
-                if _['status']['errors'] != {}:
-                    errors.update(_['status']['errors'])
-            except Exception as e:
-                errors.update({_['status']['url']:_['status']['errors']})
+            # try:
+            if 'status' in _ and (_['status']['diff_neg'] != [] or _['status']['diff_pos'] != []):
+                task_results_successful.append(_['status'])
+            if 'status' in _ and _['status']['errors'] != {}:
+                errors.update(_['status']['errors'])
 
         # task_results_successful = [r['status'] for r in task_results if (r['status']['diff_neg'] != []\
         #              or r['status']['diff_pos'] != [])]

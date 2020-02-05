@@ -177,7 +177,8 @@ class AlertLaunch(BaseView):
         if 'alertTimeLimit' in args:
                 lmt = args['alertTimeLimit']
         else:
-            lmt = False 
+            lmt = False
+
         ##################### LIVE ALERT LAUNCH #######################################
         if args['alertType'] == 'Live':
             # if session live view task present in session, delete them and revoke associated tasks
@@ -237,7 +238,9 @@ class AlertLaunch(BaseView):
                 return
 
         ###############################################################################
-        ##################### DIFFERED ALERT LAUNCH ###################################
+
+        ##################### DEFFERED ALERT LAUNCH ###################################
+
         elif args['alertType'] == 'BasicReccurent' or args['alertType'] == 'CrontabSchedule':
             print('content --> {}'.format(content))
             # Loading project

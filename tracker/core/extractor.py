@@ -197,7 +197,10 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
         
         # get rid of whitespaces
         # t = str.maketrans('\n\t\r', '   ')
-        output = output.replace('\n', '').replace('\r', '').replace('\t', '').replace('  ', ' ')
+        # output = unicodedata.normalize(output, unicode_str)
+        # output = output.replace('-', '').replace('\\xa0', '')
+        output = output.replace('\n', '').replace('\r', '').replace('\t', '').replace('  ', ' ').replace('-', ' ')
+
 
         return output
 
@@ -206,7 +209,7 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
     match_pos = list()
 
     # print('KEYWORRRRRDS ::: {}'.format(keywords))
-    # print('DIFF NEGATIVE = {}'.format(status['diff_neg']))
+    #print('DIFF NEGATIVE = {}'.format(status['diff_neg']))
     # print('DIFF POSITIVE = {}'.format(status['diff_pos']))
 
     if isinstance(keywords, list) and len(keywords) == 1:
@@ -266,7 +269,7 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
     return status
 
 def tag_visible(element):
-    if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]']:
+    if element.parent.name in ['style', 'script', 'head', 'title', 'meta', '[document]', 'b']:
         return False
     if isinstance(element, Comment):
         return False
@@ -278,7 +281,8 @@ def extract_text_from_html(content):
     bs = BeautifulSoup(content, 'lxml')
     texts = bs.findAll(text=True)
     content = list(filter(tag_visible, texts))
-    return content
+
+    return content#[_.encode('ascii', errors='ignore').decode('ascii', errors='ignore') for _ in content]
 
 def extract_links_from_html(content):
     links = list()

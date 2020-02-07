@@ -132,6 +132,7 @@ def get_full_links(status, base_url):
                     status[_][k] = base_url + v
             if x.startswith('/'):
                 status[_][k] = base_url + v
+    return status
     # status['nearest_link_neg'] = format_all_nearest_links(status['nearest_link_neg'], base_url)
     # status['nearest_link_pos'] = format_all_nearest_links(status['nearest_link_pos'], base_url)
     
@@ -208,13 +209,17 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             #err = downloader.download_and_save_content(flink, filename, base_dir_path, header, check_duplicates=False, replace=True)
             # TODO: Log errors from local content here and put in status just like for remote content
 
-        
         if remote_content is not None and local_content is not None:
             if isinstance(remote_content, bytes):
-                remote_content = remote_content.decode('utf-8', errors='ignore').replace('<b>', '').replace('</b>', '')
+                remote_content = remote_content.decode('utf-8', errors='ignore')
+            remote_content = remote_content.replace('<b>', '').replace('</b>', '').replace('&nbsp;', ' ')
+            status = extractor.get_nearest_link_with_bs(remote_content, status, 'all_nearest_links_remote')
+                # print('NEAREST LINKKK LOCAL === {}'.format(status['all_nearest_links_local']))
             if isinstance(local_content, bytes):
-                local_content = local_content.decode('utf-8', errors='ignore').replace('<b>', '').replace('</b>', '')
-            
+                local_content = local_content.decode('utf-8', errors='ignore')
+            local_content = local_content.replace('<b>', '').replace('</b>', '').replace('&nbsp;', ' ')
+            status = extractor.get_nearest_link_with_bs(local_content, status, 'all_nearest_links_local')
+
             status = extractor.get_text_diff(local_content, remote_content, status,\
                 detect_links=show_links)
             # if a list of keywords is provided, only get diff that matches keywords
@@ -236,7 +241,8 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
 
             # else get nearest link for each diff
             elif keywords == []:
-                status = extractor.nearest_link_match(status, local_content, remote_content, url)
+                # status = extractor.nearest_link_match(status, local_content, remote_content, url)
+                status = extractor.nearest_link_match_bs(status, local_content, remote_content, url)
 
                 #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
                 print('status nearest_link_neg = {}'.format(status['nearest_link_neg']))
@@ -271,7 +277,9 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                     elif isinstance(res, dict):
                         status['errors'].update({status['url'] : '{}'.format(res['error'])})
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+            
             status = get_full_links(status, url)
+            print('AFTER STATUS GET FULL LINKS - nearest_link_neg = {}'.format(status['nearest_link_neg']))
             #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
             self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
             

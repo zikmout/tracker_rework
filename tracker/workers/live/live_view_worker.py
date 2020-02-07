@@ -5,10 +5,10 @@ import celery
 import urllib
 import ssl
 import json
-from celery import Celery#, Task
+from celery import Celery
 from tornado import httpclient
+from tracker.utils import format_all_nearest_links
 from tracker.celery import live_view_worker_app
-#from celery.contrib.abortable import AbortableTask
 import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
@@ -31,9 +31,6 @@ def make_request_for_predictions(content, min_acc=0.75):
         response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)
         http_client.close()
         return response.body
-    # except httpclient.HTTPError as e:
-    #     print('HTTPError -> {}'.format(e))
-    #     http_client.close()
     except Exception as e:
         print('Error -> {}'.format(e))
         http_client.close()
@@ -110,65 +107,34 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return { 'error': '{}'.format(e)}
     return False
 
-# def select_only_sbb_links(status, show_links=False):
-#     print('\n-------------------------------———\n')
-#     i = 0
-#     excluded_links = list()
-
-
-#     # all_links = set(status['all_links_pos'] + status['all_links_neg'] +
-#      # status['nearest_link_pos'] + status['nearest_link_neg'])
-#     # all_links = {k: True for k in all_links}
-
-
-#     for _ in status['all_links_pos']:
-#         if is_sbb_content(_):
-#             status['sbb_links_pos'] = _
-
-#     for _ in status['all_links_neg']:
-#         if is_sbb_content(_):
-#             status['sbb_links_neg'] = _
-
-#     # print('ALL LINKS : {}'.format(all_links))
-#     # for k, v in all_links.copy().items():
-#     #     if not show_links and v is False:
-#     #         status['all_links_neg'].remove(k)
-#     #         status['all_links_pos'].remove(k)
-#     #         status['nearest_link_pos'].remove(k)
-#     #         status['nearest_link_neg'].remove(k)
-#     #         excluded_links.append(k)
-
-#     # print('Excluded links are :\n')
-#     # for _ in excluded_links:
-#     #    print(_)
-#     # print('\n-------------------------------———\n')
-
-#     return status
-
 def get_full_links(status, base_url):
     keys = ['all_links_pos', 'all_links_neg']
     for _ in keys:
         if status[_] != []:
             idx = 0
-            for x in status[_]:
-                #print('log status {}. x = {}'.format(_, x))
+            for x in status[_].copy():
                 if x.startswith(base_url) is False:
                     if x.startswith('//'):
                         status[_][idx] = 'http:' + x
                     elif x.startswith('http') is False:
                         status[_][idx] = base_url + x
-                    # else:
-                    #     status[_][idx] = x
+                if x.startswith('/'):
+                    status[_][idx] = base_url + x
                 idx += 1
 
     keys = ['nearest_link_pos', 'nearest_link_neg']
     for _ in keys:
         for k, v in status[_].copy().items():
             if v.startswith(base_url) is False:
-                if v.startswith('http') is False:
+                if x.startswith('//'):
+                    status[_][k] = 'http:' + v
+                elif v.startswith('http') is False:
                     status[_][k] = base_url + v
-                # else
-    #print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
+            if x.startswith('/'):
+                status[_][k] = base_url + v
+    # status['nearest_link_neg'] = format_all_nearest_links(status['nearest_link_neg'], base_url)
+    # status['nearest_link_pos'] = format_all_nearest_links(status['nearest_link_pos'], base_url)
+    
     return status
 
 @live_view_worker_app.task(bind=True, ignore_result=False, soft_time_limit=50)#, time_limit=5)
@@ -189,6 +155,8 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
         'diff_pos': list(),
         'nearest_link_pos': dict(),
         'nearest_link_neg': dict(),
+        'all_nearest_links_local': dict(),
+        'all_nearest_links_remote': dict(),
         'all_links_pos': list(),
         'all_links_neg': list(),
         'sbb_links_pos': list(),
@@ -198,8 +166,8 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
         'keywords': list()
     }
     try:
-        # print('[{}/{}] Link = {}'.format(i, len(links), flink))
-            #time.sleep(random.randint(0, 10))
+    # print('[{}/{}] Link = {}'.format(i, len(links), flink))
+        #time.sleep(random.randint(0, 10))
         base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
         filename = link.rpartition('/')[2]
         # print('FILNAME = {}'.format(filename))
@@ -251,7 +219,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                 detect_links=show_links)
             # if a list of keywords is provided, only get diff that matches keywords
             if keywords != [] and not isinstance(keywords[0], float):
-                print('Keywords arrived like THIS = {}'.format(keywords))
+                #print('Keywords arrived like THIS = {}'.format(keywords))
                 # Put keywords in status in order to highlight them on front side
                 
                 if isinstance(keywords, list) and isinstance(keywords[0], str):
@@ -260,8 +228,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                             status['keywords'].append(_)
                     else:
                         status['keywords'] = keywords;
-                # if len(keywords) == 1 and:
-                    # status['keywords'] = keywords
+
                 status = extractor.keyword_match(keywords, status, local_content, remote_content, url,\
                     detect_links=show_links)
                 # Add update for status keywords
@@ -269,15 +236,20 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
 
             # else get nearest link for each diff
             elif keywords == []:
-                extractor.nearest_link_match(status, local_content, remote_content, url)
+                status = extractor.nearest_link_match(status, local_content, remote_content, url)
+
                 #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
-            # if detect_links:
+                print('status nearest_link_neg = {}'.format(status['nearest_link_neg']))
+                print('status nearest_link_pos = {}'.format(status['nearest_link_pos']))
                 
             #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
-            status = get_full_links(status, url)
+            
+            # status['all_nearest_links_remote'] = format_all_nearest_links(status['all_nearest_links_remote'], url)
+            # status['all_nearest_links_local'] = format_all_nearest_links(status['all_nearest_links_local'], url)
+            
             if detect_links:
                 # status = select_only_sbb_links(status, show_links=show_links)
-                for _ in status['all_links_pos'].copy():
+                for _ in status['all_links_pos']:
 
                     res = is_sbb_content(_)
                     # print('RES = {} TYPE = {}'.format(res, type(res)))
@@ -285,36 +257,21 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                         # print('RES IS TRUE POS ---------->  {}'.format(_))
                         status['sbb_links_pos'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                    # elif isinstance(res, dict):
-                        # status['errors'].update({status['url'] : '{}'.format(res['error'])})
-                        # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+                    elif isinstance(res, dict):
+                        status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                        self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
-
-                    # if isinstance(res, dict):#res and 'error' in res:
-                       # status['errors'].update({status['url'] : '{}'.format(res['error'])})
-                    # elif res 
-
-                       # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                    # else:
-                    #     continue
-
-                for _ in status['all_links_neg'].copy():
+                for _ in status['all_links_neg']:
                     res = is_sbb_content(_)
                     # print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
                         # print('RES IS TRUE NEG ---------->  {}'.format(_))
                         status['sbb_links_neg'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                    # elif isinstance(res, dict):
-                        # status['errors'].update({status['url'] : '{}'.format(res['error'])})
-                        # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                    # print('RESSS ---------->  {} [ type : {}]'.format(res, type(res)))
-                    # if isinstance(res, dict):# and 'error' in res:
-                        # status['errors'].update({status['url'] : '{}'.format(res['error'])})
-                        # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                    # else:
-                    #     continue
-
+                    elif isinstance(res, dict):
+                        status['errors'].update({status['url'] : '{}'.format(res['error'])})
+                        self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
+            status = get_full_links(status, url)
             #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
             self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
             

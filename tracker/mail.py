@@ -201,7 +201,7 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         if errors != {}:
             html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " total scanned)</b><br>"
             for k, v in errors.items():
-                print('ERRORRS ====> k = {}, v = {}'.format(k, v))
+                # print('ERRORRS ====> k = {}, v = {}'.format(k, v))
                 html += "<br>{} : {}".format(k, v)
 
         html += "<br><pre style='line-height:15.86px'><wbr>______________________________<wbr>"

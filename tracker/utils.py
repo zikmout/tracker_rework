@@ -1,4 +1,5 @@
 import json
+import string
 import tornado
 import math
 import re
@@ -184,3 +185,30 @@ def highlight_keywords(keywords, content):
                 content = content.replace(ret[0], '<mark>{}</mark>'.format(ret[0]))
                 break;
     return content
+
+import string
+def format_all_nearest_links(input_dict, base_url):
+    
+    output_dict = dict()
+    
+    if input_dict is None:
+        return None
+    
+    for k, v in input_dict.items():
+        print('k = {}, v = {}'.format(k, v))
+        if k != '\n' and k != '' and v is not None:
+            t = str.maketrans('\n', ' ')
+            l = k.translate(t)
+            t = str.maketrans('\t', ' ')
+            l = l.translate(t)
+            t = str.maketrans('\r', ' ')
+            l = l.translate(t)
+            l = ' '.join(l.split())
+            m = v
+            if not v.startswith('http'):
+                if v.startswith('//'):
+                    m = 'http:' + v
+                elif v.startswith('/'):
+                    m = base_url + v
+            output_dict[l] = m
+    return output_dict

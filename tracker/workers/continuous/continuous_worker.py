@@ -78,9 +78,6 @@ def make_request_for_predictions(content, min_acc=0.75):
         response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)
         http_client.close()
         return response.body
-    # except httpclient.HTTPError as e:
-    #     print('HTTPError -> {}'.format(e))
-    #     http_client.close()
     except Exception as e:
         print('Error make_request_for_predictions -> {}'.format(e))
         http_client.close()
@@ -161,15 +158,12 @@ def get_full_links(status, base_url):
     for _ in keys:
         if status[_] != []:
             idx = 0
-            for x in status[_]:
-                #print('log status {}. x = {}'.format(_, x))
+            for x in status[_].copy():
                 if x.startswith(base_url) is False:
                     if x.startswith('//'):
                         status[_][idx] = 'http:' + x
                     elif x.startswith('http') is False:
                         status[_][idx] = base_url + x
-                    # else:
-                    #     status[_][idx] = x
                 idx += 1
 
     keys = ['nearest_link_pos', 'nearest_link_neg']
@@ -178,8 +172,6 @@ def get_full_links(status, base_url):
             if v.startswith(base_url) is False:
                 if v.startswith('http') is False:
                     status[_][k] = base_url + v
-                # else
-    #print('RETURNED ALL LINKS POS = {} (len = {})'.format(status['all_links_pos'], len(status['all_links_pos'])))
     return status
 
 @app.task(bind=True)
@@ -219,6 +211,8 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
         'diff_pos': list(),
         'nearest_link_pos': dict(),
         'nearest_link_neg': dict(),
+        'all_nearest_links_local': dict(),
+        'all_nearest_links_remote': dict(),
         'all_links_pos': list(),
         'all_links_neg': list(),
         'sbb_links_pos': list(),
@@ -294,7 +288,7 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
 
             # else get nearest link for each diff
             elif keywords == []:
-                extractor.nearest_link_match(status, local_content, remote_content, url)
+                status = extractor.nearest_link_match(status, local_content, remote_content, url)
             #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
             # if detect_links:
                     
@@ -302,7 +296,7 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
             status = get_full_links(status, url)
             if detect_links:
             # status = select_only_sbb_links(status, show_links=show_links)
-                for _ in status['all_links_pos'].copy():
+                for _ in status['all_links_pos']:
 
                     res = is_sbb_content(_)
                     # print('RES = {} TYPE = {}'.format(res, type(res)))
@@ -314,16 +308,7 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
                         status['errors'].update({status['url'] : '{}'.format(res['error'])})
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
-
-                    # if isinstance(res, dict):#res and 'error' in res:
-                       # status['errors'].update({status['url'] : '{}'.format(res['error'])})
-                    # elif res 
-
-                       # self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
-                    # else:
-                    #     continue
-
-                for _ in status['all_links_neg'].copy():
+                for _ in status['all_links_neg']:
                     res = is_sbb_content(_)
                     # print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
@@ -540,8 +525,8 @@ def diff_with_keywords_task(self, add, mails, user_email, project_name, show_lin
     #     (get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add), 
     #     diff_with_keywords_end_routine.s(mails, user_email, project_name)
     # )()
-    print('ADD = {}'.format(add))
-    print('len ADD = {}'.format(len(add)))
+    # print('ADD = {}'.format(add))
+    # print('len ADD = {}'.format(len(add)))
     if len(add) == 1:
         return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6], add[0][7], add[0][8], add[0][9]) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links)).delay()
     # return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add) | bad_task() | diff_with_keywords_end_routine.s(mails, user_email, project_name)).delay()

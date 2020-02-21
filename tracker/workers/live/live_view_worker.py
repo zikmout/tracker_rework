@@ -1,6 +1,7 @@
 import os
 import time
 # import random
+import string
 import celery
 import urllib
 import ssl
@@ -13,7 +14,7 @@ import tracker.core.utils as utils
 import tracker.core.scrapper as scrapper
 import tracker.core.extractor as extractor
 import tracker.core.downloader as downloader
-
+from tracker.utils import trim_text
 import re
 import pdftotext
 import gc
@@ -118,6 +119,8 @@ def get_full_links(status, base_url):
                         status[_][idx] = 'http:' + x
                     elif x.startswith('http') is False:
                         status[_][idx] = base_url + x
+                    # elif x.startswith('http'):
+                    #     status[_][idx] = x
                 if x.startswith('/'):
                     status[_][idx] = base_url + x
                 idx += 1
@@ -126,13 +129,23 @@ def get_full_links(status, base_url):
     for _ in keys:
         for k, v in status[_].copy().items():
             if v.startswith(base_url) is False:
-                if x.startswith('//'):
-                    status[_][k] = 'http:' + v
+                if v.startswith('//'):
+                    status[_][trim_text(k)] = 'http:' + v
                 elif v.startswith('http') is False:
-                    status[_][k] = base_url + v
-            if x.startswith('/'):
-                status[_][k] = base_url + v
-    return status
+                    status[_][trim_text(k)] = base_url + v
+                # elif v.startswith('http'):
+                #     status[_][k] = v
+            if v.startswith('/'):
+                status[_][trim_text(k)] = base_url + v
+
+    # new_keys = ['new_nearest_link_pos', 'new_nearest_link_neg']
+    # # Delete doublons
+    # for o, n in zip(keys, new_keys):
+    #     dict_vals = status[o].values()
+    #     for k, v in status[o].copy().items():
+    #         if v not in dict_vals:
+                
+    # return status
     # status['nearest_link_neg'] = format_all_nearest_links(status['nearest_link_neg'], base_url)
     # status['nearest_link_pos'] = format_all_nearest_links(status['nearest_link_pos'], base_url)
     
@@ -167,14 +180,14 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
         'keywords': list()
     }
     try:
-    # print('[{}/{}] Link = {}'.format(i, len(links), flink))
+        # print('[{}/{}] Link = {}'.format(i, len(links), flink))
         #time.sleep(random.randint(0, 10))
         base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
         filename = link.rpartition('/')[2]
         # print('FILNAME = {}'.format(filename))
         base_dir_path_file = os.path.join(base_dir_path, filename)
 
-            # check whether adding 'unknown' is right ...
+        # check whether adding 'unknown' is right ...
         if os.path.isdir(base_dir_path_file) and os.path.isfile(base_dir_path_file + 'unknown___'):
             base_dir_path_file = base_dir_path_file + 'unknown___'
 
@@ -196,7 +209,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             name = link.rpartition('/')[2]
             base_path = link.rpartition('/')[0]
             # dir_path = os.path.join(base_dir_path_file, 'website_content', utils.find_internal_link(flink).rpartition('/')[0][1:])
-            print('base dir path = {}, website_content, internal link = {}'.format(base_dir_path, utils.find_internal_link(flink).rpartition('/')[0][1:]))
+            # print('base dir path = {}, website_content, internal link = {}'.format(base_dir_path, utils.find_internal_link(flink).rpartition('/')[0][1:]))
             #header = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36'}
             #print('--- [PARAMS] ---> flink : {}, name : {}, base_dir_path_file : {}'.format(flink, name, base_dir_path))
 
@@ -214,14 +227,16 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                 remote_content = remote_content.decode('utf-8', errors='ignore')
             remote_content = remote_content.replace('<b>', '').replace('</b>', '').replace('&nbsp;', ' ')
             status = extractor.get_nearest_link_with_bs(remote_content, status, 'all_nearest_links_remote')
-                # print('NEAREST LINKKK LOCAL === {}'.format(status['all_nearest_links_local']))
+            # print('NEAREST LINKKK REMOTE === {}'.format(status['all_nearest_links_remote']))
             if isinstance(local_content, bytes):
                 local_content = local_content.decode('utf-8', errors='ignore')
             local_content = local_content.replace('<b>', '').replace('</b>', '').replace('&nbsp;', ' ')
             status = extractor.get_nearest_link_with_bs(local_content, status, 'all_nearest_links_local')
+            # print('NEAREST LINKKK LOCAL === {}'.format(status['all_nearest_links_local']))
 
             status = extractor.get_text_diff(local_content, remote_content, status,\
                 detect_links=show_links)
+            
             # if a list of keywords is provided, only get diff that matches keywords
             if keywords != [] and not isinstance(keywords[0], float):
                 #print('Keywords arrived like THIS = {}'.format(keywords))
@@ -242,11 +257,11 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             # else get nearest link for each diff
             elif keywords == []:
                 # status = extractor.nearest_link_match(status, local_content, remote_content, url)
-                status = extractor.nearest_link_match_bs(status, local_content, remote_content, url)
+                status = extractor.nearest_link_match(status, local_content, remote_content, url)
 
                 #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
-                print('status nearest_link_neg = {}'.format(status['nearest_link_neg']))
-                print('status nearest_link_pos = {}'.format(status['nearest_link_pos']))
+                # print('status nearest_link_neg = {}'.format(status['nearest_link_neg']))
+                # print('status nearest_link_pos = {}'.format(status['nearest_link_pos']))
                 
             #print('******* len status all linsk pos 2: {}'.format(len(status['all_links_pos'])))
             
@@ -279,7 +294,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
             
             status = get_full_links(status, url)
-            print('AFTER STATUS GET FULL LINKS - nearest_link_neg = {}'.format(status['nearest_link_neg']))
+            # print('AFTER STATUS GET FULL LINKS - nearest_link_pos = {}'.format(status['nearest_link_pos']))
             #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))
             self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
             

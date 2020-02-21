@@ -186,7 +186,6 @@ def highlight_keywords(keywords, content):
                 break;
     return content
 
-import string
 def format_all_nearest_links(input_dict, base_url):
     
     output_dict = dict()
@@ -212,3 +211,16 @@ def format_all_nearest_links(input_dict, base_url):
                     m = base_url + v
             output_dict[l] = m
     return output_dict
+
+def trim_text(key):
+    if key != '\n' and key != '':
+        t = str.maketrans('\n', ' ')
+        l = key.translate(t)
+        t = str.maketrans('\t', ' ')
+        l = l.translate(t)
+        t = str.maketrans('\r', ' ')
+        l = l.translate(t)
+        l = ' '.join(l.split())
+        return l
+    else:
+        return None

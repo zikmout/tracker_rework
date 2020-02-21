@@ -262,10 +262,15 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
         
         if remote_content is not None and local_content is not None:
             if isinstance(remote_content, bytes):
-                remote_content = remote_content.decode('utf-8', errors='ignore').replace('<b>', '').replace('</b>', '')
+                remote_content = remote_content.decode('utf-8', errors='ignore')
+            remote_content = remote_content.replace('<b>', '').replace('</b>', '').replace('&nbsp;', ' ')
+            status = extractor.get_nearest_link_with_bs(remote_content, status, 'all_nearest_links_remote')
+                # print('NEAREST LINKKK LOCAL === {}'.format(status['all_nearest_links_local']))
             if isinstance(local_content, bytes):
-                local_content = local_content.decode('utf-8', errors='ignore').replace('<b>', '').replace('</b>', '')
-            
+                local_content = local_content.decode('utf-8', errors='ignore')
+            local_content = local_content.replace('<b>', '').replace('</b>', '').replace('&nbsp;', ' ')
+            status = extractor.get_nearest_link_with_bs(local_content, status, 'all_nearest_links_local')
+
             status = extractor.get_text_diff(local_content, remote_content, status,\
                 detect_links=show_links)
             # if a list of keywords is provided, only get diff that matches keywords
@@ -288,6 +293,7 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
 
             # else get nearest link for each diff
             elif keywords == []:
+                # status = extractor.nearest_link_match(status, local_content, remote_content, url)
                 status = extractor.nearest_link_match(status, local_content, remote_content, url)
             #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
             # if detect_links:

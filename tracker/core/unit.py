@@ -232,7 +232,6 @@ class Unit:
         #print('Starting TASK nb {}'.format(counter));
         # print('--> TOTAL TASK RECEIVED = {}'.format(total_task))
         if time_limit:
-            
             task = live_view.apply_async(args=(links_dict, self.download_path,\
                 self.download_path + filename_time, self.url,\
                 keywords_diff, detect_links, show_links, links_algorithm, counter, total_task),\

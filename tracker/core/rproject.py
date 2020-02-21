@@ -476,7 +476,6 @@ class RProject:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
         #print('links before = {}'.format(links))
-        dict_links = utils.from_links_to_dict(links)
         #print('links after = {}'.format(dict_links))
         #exit(0)
 
@@ -495,6 +494,25 @@ class RProject:
         else:
             # This must not happen
             return None
+
+        
+        if keywords_diff:
+            links_without_keywords = dict()
+            for k, v in links.items():
+                if v != '':
+                    links_without_keywords.update({k:v})
+            links = links_without_keywords
+        dict_links = utils.from_links_to_dict(links)
+
+
+        # print('DICT LINKS = {}'.format(dict_links))
+        # if keywords_diff:
+        #     dict_links_without_keywords = dict()
+        #     for key, links in dict_links.items():
+        #         keywords = links[1]
+        #         if keywords != []:
+        #             dict_links_without_keywords.update({key: links})
+        #     dict_links = dict_links_without_keywords
 
         tasks = dict()
         if isinstance(dict_links, dict) and bool(dict_links):
@@ -523,10 +541,13 @@ class RProject:
                         # print('SENDING link for task = {}'.format(link))
                         # print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
+                    # if keywords_diff and keywords != []:
                         task = unit.download_changed_files_from_links(link, keywords_diff, detect_links,\
                         show_links, links_algorithm, counter, total_task, time_limit=time_limit)
                         
                         tasks.update({str(unit.url+link[0]): task})
+                    # else:
+                        # print('No need to fetch {} because no keyword provided ...'.format(keywords))
                 else:
                     print('Unit {} not found'.format(key))
             return tasks

@@ -2,7 +2,8 @@ import os
 from datetime import datetime
 from tornado import gen
 import html as htmlib
-import smtplib, ssl
+import smtplib
+import ssl
 import json
 import tldextract
 import tornado

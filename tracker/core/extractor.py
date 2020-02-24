@@ -242,7 +242,7 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                 # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
                 for word in clean_sentence(neg).split(' '):
                     # if 'sqli' in word.lower():
-                        print('try to match <{}><{}>'.format(keyword.lower(), word.lower()))
+                    # print('try to match <{}><{}>'.format(keyword.lower(), word.lower()))
                     if keyword.lower() == word and neg not in match_neg:
                         match_neg.append(neg)
                         if detect_links:
@@ -255,7 +255,7 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                 pos = x#trim_text(x)#.replace('\xa0', ' ')
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 for word in clean_sentence(pos).split(' '):
-                    print('try to match <{}><{}>'.format(keyword.lower(), word))
+                    # print('try to match <{}><{}>'.format(keyword.lower(), word))
                     if keyword.lower() == word and pos not in match_pos:
                         match_pos.append(pos)
                         if detect_links:
@@ -267,9 +267,10 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
         else:
             for x in status['diff_neg']:
                 neg = x#trim_text(x)#.replace('\xa0', ' ')
+                # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
                 if keyword.lower() in clean_sentence(neg) and neg not in match_neg:
                     # if 'sqli' in keyword.lower():
-                    print('try to match <{}><{}>'.format(keyword.lower(), neg))
+                    # print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     match_neg.append(neg)
                     if detect_links:
                         for k, v in status['all_nearest_links_local'].items():
@@ -279,8 +280,9 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
 
             for x in status['diff_pos']:
                 pos = x#trim_text(x)#.replace('\xa0', ' ')
+                # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 if keyword.lower() in clean_sentence(pos) and pos not in match_pos:
-                    print('try to match <{}><{}>'.format(keyword.lower(), neg))
+                    # print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     match_pos.append(pos)
                     if detect_links:
                         for k, v in status['all_nearest_links_remote'].items():

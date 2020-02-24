@@ -189,6 +189,7 @@
           </thead>
           <tbody>
               {% for line in lines %}
+              
               <tr>
                   <td style="vertical-align:middle;">{{ line['name'] }}</td>
                   {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
@@ -348,6 +349,7 @@ $(document).ready(function(){
             content: JSON.stringify(favoritesFull)
           },
           success: function(response) {
+            // console.log('succ');
             document.location.reload();
           },
           error: function(xhf) {
@@ -368,7 +370,9 @@ $(document).ready(function(){
       });
     })
     // load datatable
-    $('#spiderFromWatchlistTable').DataTable();
+    $('#spiderFromWatchlistTable').DataTable({
+  "pageLength": 500
+} );
 
     $("#get_checked").click(function () {
         if (document.getElementById('contentname').value == '') {

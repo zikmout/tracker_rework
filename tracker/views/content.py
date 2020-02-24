@@ -101,6 +101,7 @@ class UserProjectSpider(BaseView):
                 rproject = RProject(project.name, project.data_path, project.config_file)
                 rproject._load_units_from_excel()
                 rproject._load_tracking_config_excel()
+                print('LINES ====== {}'.format(rproject.lines))
             #units = rproject.units_stats(units=rproject.filter_units())
             except Exception as e:
                 print('[ERROR] UserProjectSpider : {}'.format(e))
@@ -109,8 +110,9 @@ class UserProjectSpider(BaseView):
                 return
             contents = project.contents.all()
             json_contents = [_.as_dict() for _ in contents]
+            
             self.render('projects/content/spider.html', formated_units=formated_units, contents=json_contents,\
-                project=json_project, lines=rproject.lines.copy())
+                project=json_project, lines=[_ for _ in rproject.lines.copy() if not isinstance(_['name'], float)])
 
     @login_required
     @gen.coroutine

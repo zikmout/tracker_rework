@@ -136,7 +136,7 @@ def get_nearest_link(match, keyword, content):
         # print('el2 = {}'.format(el2))
         if '#' not in el2[0] and (el2[0].startswith('/') or el2[0].startswith('http')):
             nearest_link.update({match: el2[0]}) # TODO : Add trim_text() from utils 
-        return nearest_link
+        # return nearest_link
     else:
     #     return []
     
@@ -152,7 +152,7 @@ def get_nearest_link(match, keyword, content):
 
         # print('el2 is None rr')
 
-        return nearest_link
+    return nearest_link
 
 # def nearest_link_match(status, local_content, remote_content, url):
 
@@ -209,8 +209,6 @@ def get_nearest_link_with_bs(content, status, key):
         if href is not None and href != '' and href != '/' and trim_text(txt) is not None and trim_text(txt) != '':
             href = href.strip()
             txt = trim_text(txt)
-        # else:
-        #     continue
             for _ in to_exclude:
                 if _ in href:
                     dirty = True
@@ -220,7 +218,9 @@ def get_nearest_link_with_bs(content, status, key):
     return status
 
 def keyword_match(keywords, status, local_content, remote_content, url, detect_links=True):
-    """ Find diff pos, diff neg, nearest links pos, nearest links neg """
+    """ 
+        Find diff pos, diff neg, nearest links pos, nearest links neg 
+    """
     # remote_content = remote_content.decode('utf8').replace('<b>', '').replace('</b>', '')
     #print('REMOTEEE FROM HERE : {}'.format(remote_content))
 
@@ -242,7 +242,7 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                 # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
                 for word in clean_sentence(neg).split(' '):
                     # if 'sqli' in word.lower():
-                        # print('try to match <{}><{}>'.format(keyword.lower(), word.lower()))
+                        print('try to match <{}><{}>'.format(keyword.lower(), word.lower()))
                     if keyword.lower() == word and neg not in match_neg:
                         match_neg.append(neg)
                         if detect_links:
@@ -255,7 +255,7 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                 pos = x#trim_text(x)#.replace('\xa0', ' ')
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 for word in clean_sentence(pos).split(' '):
-                    # print('try to match <{}><{}>'.format(keyword.lower(), word))
+                    print('try to match <{}><{}>'.format(keyword.lower(), word))
                     if keyword.lower() == word and pos not in match_pos:
                         match_pos.append(pos)
                         if detect_links:
@@ -269,7 +269,7 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                 neg = x#trim_text(x)#.replace('\xa0', ' ')
                 if keyword.lower() in clean_sentence(neg) and neg not in match_neg:
                     # if 'sqli' in keyword.lower():
-                        # print('try to match <{}><{}>'.format(keyword.lower(), neg))
+                    print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     match_neg.append(neg)
                     if detect_links:
                         for k, v in status['all_nearest_links_local'].items():
@@ -280,6 +280,7 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
             for x in status['diff_pos']:
                 pos = x#trim_text(x)#.replace('\xa0', ' ')
                 if keyword.lower() in clean_sentence(pos) and pos not in match_pos:
+                    print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     match_pos.append(pos)
                     if detect_links:
                         for k, v in status['all_nearest_links_remote'].items():
@@ -310,12 +311,23 @@ def tag_visible(element):
     return True
 
 def extract_text_from_html(content):
-    if content is None:
-        return content
-    bs = BeautifulSoup(content, 'lxml') #lxml
-    texts = bs.findAll(text=True)
-    content = list(filter(tag_visible, texts))
+    # Seems that if exception is kept inside this function, program does not stop
+    try:
+        if content is None:
+            # print('return content')
+            return content
 
+        # print('before BS')
+        bs = BeautifulSoup(content, 'lxml') #lxml
+        # print('after BS')
+        texts = bs.findAll(text=True)
+        # print('after findall text')
+        content = list(filter(tag_visible, texts))
+        # print('after contennnt')
+    except Exception as e:
+        print('EXCEPTION = {}'.format(e))
+        return None
+    # print('just before end return')
     # Get rid of html or unicode space
     return [_.replace('\xa0', ' ') for _ in content]
     #[_.encode('ascii', errors='ignore').decode('ascii', errors='ignore') for _ in content]
@@ -393,13 +405,21 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
 
 def get_essential_content(content, min_sentence_len):
     extracted = extract_text_from_html(content)
+    # print('EXTRACTED = {}'.format(extracted))
     cleaned = clean_content(extracted, min_sentence_len)
+    # print('CLEANED 1 = {}'.format(cleaned))
     cleaned = list(map(str.strip, cleaned))
+    # print('CLEANED 2 = {}'.format(cleaned))
     cleaned = [x for x in cleaned if len(x.split(' ')) > min_sentence_len]
-    cleaned = ''.join(cleaned)
+    # print('CLEANED 3 = {}'.format(cleaned))
+    cleaned = ' '.join(cleaned) # was ''
+    cleaned = cleaned.replace('  ', ' ')
+    # print('CLEANED 4 = {}'.format(cleaned))
     if cleaned == '':
+        # print('CLEANED 5 = {}'.format(cleaned))
         return None
     else:
+        # print('CLEANED 5 not None = {}'.format(cleaned))
         return cleaned
 
 def is_language(content, language):

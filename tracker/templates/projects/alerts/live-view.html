@@ -4,6 +4,17 @@
 a {
     color: #6c757d;
 }
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+  display:inline-block;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
 </style>
 
 <link href="{{ static_url('dist/css/bootstrap4-toggle.min.css') }}" rel="stylesheet">
@@ -11,7 +22,7 @@ a {
 <div class="starter-template-fluid">
       <br />
       <h3>Live {% if 'live_view' in handler.session['tasks'] %}<span class="badge badge-pill badge-dark">{{ handler.session['tasks']['live_view'][0]['template_type'] }}</span> alert{% end %}</h3>
-      
+      <small>Analyzing : <div id="currentWebSite" style="display:inline-block; color:grey;"></div></small>
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="myLargeModalLabel" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content" id="myLargeModalLabelContent">
@@ -457,6 +468,10 @@ ws.onmessage = function (evt) {
 
 
          var data = JSON.parse(evt.data);
+         if (data.state == 'PROGRESS') {
+          $('#currentWebSite').text(data.status.current_target);
+         console.log(data.status.current_target);
+       }
         // if (!(Object.entries(data.status.errors).length === 0 && data.status.errors.constructor === Object)) {
           // console.log(data.status.errors);
          // }
@@ -539,7 +554,13 @@ ws.onmessage = function (evt) {
          //  counterPending += 1;
          //  console.log('pending = ' + counterPending);
          // }
+         
+         // if (data.status.sbb_links_pos.length && data.status.sbb_links_pos.length > 5) {
+          // console.log(data.state);
+          // console.log(data.status.sbb_links_pos.length);
+         // }
          if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0)) {
+
             if (!document.getElementById(data.status.div)) {
               var title = document.createElement("H5");
               title.innerHTML = data.status.div;

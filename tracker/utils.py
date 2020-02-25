@@ -223,4 +223,4 @@ def trim_text(key):
         l = ' '.join(l.split())
         return l
     else:
-        return None
+        return ''

@@ -22,7 +22,9 @@ a {
 <div class="starter-template-fluid">
       <br />
       <h3>Live {% if 'live_view' in handler.session['tasks'] %}<span class="badge badge-pill badge-dark">{{ handler.session['tasks']['live_view'][0]['template_type'] }}</span> alert{% end %}</h3>
-      <small>Analyzing : <div id="currentWebSite" style="display:inline-block; color:grey;"></div></small>
+      
+        <small id="currentTargetDetails">Analyzing : <div id="currentWebSite" style="display:inline-block; color:grey;"></div></small>
+     
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="myLargeModalLabel" aria-labelledby="myLargeModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
           <div class="modal-content" id="myLargeModalLabelContent">
@@ -180,6 +182,9 @@ function sendReport() {
 
 function timeout() {
     remainingTaskNb = totalTaskNb - executed;
+    if (remainingTaskNb == 0) {
+      $('#currentTargetDetails').empty();
+    }
     $('#numberOfPendingTasks').html(remainingTaskNb);
     updateProgressBar('#liveViewProgress', (executed/totalTaskNb)*100);
     executed = 0;
@@ -408,7 +413,22 @@ function getUrlFromTaskId(task_id) {
 
 ws.onmessage = function (evt) {
    if (evt != null) {
-    
+      // if (evt.data.state == 'PROGRESS') {
+      let dat = JSON.parse(evt.data);
+      console.log(dat);
+      if (dat.state == 'PENDING') {
+        // $('#currentWebSite').text(dat.status.current_target);
+        let be = dat.task_id;
+        $('#currentWebSite').text(getUrlFromTaskId(be)['url']);
+      }
+    // }
+       //     if (evt.data) {
+       //   var dataCheck = JSON.parse(evt.data);
+       //     if (dataCheck.state == 'PROGRESS') {
+       //      $('#currentWebSite').text(dataCheck.status.current_target);
+       //     console.log(dataCheck.status.current_target);
+       //   }
+       // }
        // console.log(elt.childNodes.length);
        // console.log(JSON.parse(evt.data).state.errors);
        // console.log(evt.data);
@@ -468,10 +488,10 @@ ws.onmessage = function (evt) {
 
 
          var data = JSON.parse(evt.data);
-         if (data.state == 'PROGRESS') {
-          $('#currentWebSite').text(data.status.current_target);
-         console.log(data.status.current_target);
-       }
+       //   if (data.state == 'PROGRESS') {
+       //    $('#currentWebSite').text(data.status.current_target);
+       //   console.log(data.status.current_target);
+       // }
         // if (!(Object.entries(data.status.errors).length === 0 && data.status.errors.constructor === Object)) {
           // console.log(data.status.errors);
          // }

@@ -128,15 +128,15 @@ def get_nearest_link(match, keyword, content):
     # print('looking for kw ========> {}'.format(match))
     # match = match.replace('\xa0', ' ')
     doc = LH.fromstring(content.replace('\'', ' '))
-    print('ASKED TO FIND FOLLOWINF MATCH ->{}<-'.format(match))
+    # print('ASKED TO FIND FOLLOWINF MATCH ->{}<-'.format(match))
     # el2 = doc.xpath('//a[text()={s!r}]/@href'.format(s = match))
     try:
         el2 = doc.xpath('/html/body//a[contains(text(),{s!r})]/@href'.format(s = match))
     except Exception as e:
-        print('/!\\ Impossible to get nearest link')
+        # print('/!\\ Impossible to get nearest link')
         return None
     if el2 != []:
-        print('HERE el2 not None -> {}'.format(el2))
+        # print('HERE el2 not None -> {}'.format(el2))
         # print('el2 = {}'.format(el2))
         if '#' not in el2[0] and (el2[0].startswith('/') or el2[0].startswith('http')):
             return el2[0]#nearest_link.update({match: el2[0]}) # TODO : Add trim_text() from utils 
@@ -144,10 +144,10 @@ def get_nearest_link(match, keyword, content):
     else:
     #     return []
     
-        print('* el2 is None *')
+        # print('* el2 is None *')
         for x in doc.xpath('//*[contains(text(),{s!r})]'.format(s = match)):
             nearest = find_nearest(x)
-            print('nearest => {}'.format(nearest))
+            # print('nearest => {}'.format(nearest))
             # if not nearest.startswith('http'):
                 # nearest_link.update({match: url + nearest})
             # else:
@@ -356,7 +356,7 @@ def extract_text_from_html(content):
         content = list(filter(tag_visible, texts))
         # print('after contennnt')
     except Exception as e:
-        print('EXCEPTION = {}'.format(e))
+        print('Impossible to extract_text_from_html() : {}'.format(e))
         return None
     # print('just before end return')
     # Get rid of html or unicode space
@@ -436,21 +436,21 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
 
 def get_essential_content(content, min_sentence_len):
     extracted = extract_text_from_html(content)
-    # print('EXTRACTED = {}'.format(extracted))
+    print('EXTRACTED = {}'.format(extracted))
     cleaned = clean_content(extracted, min_sentence_len)
-    # print('CLEANED 1 = {}'.format(cleaned))
+    print('CLEANED 1 = {}'.format(cleaned))
     cleaned = list(map(str.strip, cleaned))
-    # print('CLEANED 2 = {}'.format(cleaned))
+    print('CLEANED 2 = {}'.format(cleaned))
     cleaned = [x for x in cleaned if len(x.split(' ')) > min_sentence_len]
-    # print('CLEANED 3 = {}'.format(cleaned))
+    print('CLEANED 3 = {}'.format(cleaned))
     cleaned = ' '.join(cleaned) # was ''
     cleaned = cleaned.replace('  ', ' ')
-    # print('CLEANED 4 = {}'.format(cleaned))
+    print('CLEANED 4 = {}'.format(cleaned))
     if cleaned == '':
-        # print('CLEANED 5 = {}'.format(cleaned))
+        print('CLEANED 5 = {}'.format(cleaned))
         return None
     else:
-        # print('CLEANED 5 not None = {}'.format(cleaned))
+        print('CLEANED 5 not None = {}'.format(cleaned))
         return cleaned
 
 def is_language(content, language):

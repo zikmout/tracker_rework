@@ -55,7 +55,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return False
 
     if response.geturl() != url:
-        print('** {} has been redirected to : {} **'.format(response.geturl(), url))
+        print('## -> Redirection {} to : {} **'.format(response.geturl(), url))
         url = response.geturl()
         if url in already_visited:
             return False
@@ -130,7 +130,7 @@ def get_full_links(status, base_url):
     keys = ['nearest_link_pos', 'nearest_link_neg']
     for _ in keys:
         for k, v in status[_].copy().items():
-            print('k = {}, v = {}'.format(k, v))
+            # print('k = {}, v = {}'.format(k, v))
             # if isinstance(v, dict):
             #     print('V = = = > {}'.format(v))
             if v:

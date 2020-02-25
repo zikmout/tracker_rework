@@ -124,31 +124,36 @@ def find_nearest(elt):
 
 def get_nearest_link(match, keyword, content):
 
-    nearest_link = dict()
+    nearest_link = None
     # print('looking for kw ========> {}'.format(match))
     # match = match.replace('\xa0', ' ')
     doc = LH.fromstring(content.replace('\'', ' '))
-    # print('ASKED TO FIND FOLLOWINF MATCH ->{}<-'.format(match))
-    el2 = doc.xpath('//a[text()={s!r}]/@href'.format(s = match))
-    # el2 = doc.xpath('/html/body//a[contains(text(),{s!r})]/@href'.format(s = match))
+    print('ASKED TO FIND FOLLOWINF MATCH ->{}<-'.format(match))
+    # el2 = doc.xpath('//a[text()={s!r}]/@href'.format(s = match))
+    try:
+        el2 = doc.xpath('/html/body//a[contains(text(),{s!r})]/@href'.format(s = match))
+    except Exception as e:
+        print('/!\\ Impossible to get nearest link')
+        return None
     if el2 != []:
-        # print('HERE el2 not None -> {}'.format(el2))
+        print('HERE el2 not None -> {}'.format(el2))
         # print('el2 = {}'.format(el2))
         if '#' not in el2[0] and (el2[0].startswith('/') or el2[0].startswith('http')):
-            nearest_link.update({match: el2[0]}) # TODO : Add trim_text() from utils 
+            return el2[0]#nearest_link.update({match: el2[0]}) # TODO : Add trim_text() from utils 
         # return nearest_link
     else:
     #     return []
     
-        # print('* el2 is None *')
+        print('* el2 is None *')
         for x in doc.xpath('//*[contains(text(),{s!r})]'.format(s = match)):
             nearest = find_nearest(x)
-            # print('nearest => {}'.format(nearest))
+            print('nearest => {}'.format(nearest))
             # if not nearest.startswith('http'):
                 # nearest_link.update({match: url + nearest})
             # else:
-            if '#' not in nearest and (nearest.startswith('/') or nearest.startswith('http')):
-                nearest_link.update({match:nearest})
+            if nearest is not None and '#' not in nearest and (nearest.startswith('/') or nearest.startswith('http')):
+                nearest_link = nearest#nearest_link.update({match:nearest})
+                return nearest#print({match:nearest})
 
         # print('el2 is None rr')
 
@@ -240,6 +245,8 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
             for x in status['diff_neg']:
                 neg = x#trim_text(x)#.replace('\xa0', ' ')
                 # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
+                if clean_sentence(neg) is None:
+                    print('problem for --> {}'.format(neg))
                 for word in clean_sentence(neg).split(' '):
                     # if 'sqli' in word.lower():
                     # print('try to match <{}><{}>'.format(keyword.lower(), word.lower()))
@@ -250,9 +257,15 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                                 if neg in k:# and (v is not None and v.strip() != ''):
                                     status['nearest_link_neg'][neg] = v
                                     # break
+                if neg not in status['nearest_link_neg']:
+                    nearest = get_nearest_link(neg, neg, local_content)
+                    if nearest is not None:
+                        status['nearest_link_neg'][neg] = nearest
 
             for x in status['diff_pos']:
                 pos = x#trim_text(x)#.replace('\xa0', ' ')
+                if clean_sentence(pos) is None:
+                    print('problem for --> {}'.format(pos))
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 for word in clean_sentence(pos).split(' '):
                     # print('try to match <{}><{}>'.format(keyword.lower(), word))
@@ -263,10 +276,16 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                                 if pos in k:# and (v is not None and v.strip() != ''):
                                     status['nearest_link_pos'][pos] = v
                                     # break
+                if pos not in status['nearest_link_neg']:
+                    nearest = get_nearest_link(pos, pos, remote_content)
+                    if nearest is not None:
+                        status['nearest_link_neg'][pos] = nearest
         
         else:
             for x in status['diff_neg']:
                 neg = x#trim_text(x)#.replace('\xa0', ' ')
+                if clean_sentence(neg) is None:
+                    print('problem for --> {}'.format(neg))
                 # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
                 if keyword.lower() in clean_sentence(neg) and neg not in match_neg:
                     # if 'sqli' in keyword.lower():
@@ -277,9 +296,15 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                             if neg in k:# and (v is not None and v.strip() != ''):
                                 status['nearest_link_neg'][neg] = v
                                 # break
+                if neg not in status['nearest_link_neg']:
+                    nearest = get_nearest_link(neg, neg, local_content)
+                    if nearest is not None:
+                        status['nearest_link_neg'][neg] = nearest
 
             for x in status['diff_pos']:
                 pos = x#trim_text(x)#.replace('\xa0', ' ')
+                if clean_sentence(pos) is None:
+                    print('problem for --> {}'.format(pos))
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 if keyword.lower() in clean_sentence(pos) and pos not in match_pos:
                     # print('try to match <{}><{}>'.format(keyword.lower(), neg))
@@ -289,6 +314,10 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                             if pos in k:# and (v is not None and v.strip() != ''):
                                 status['nearest_link_pos'][pos] = v
                                 # break
+                if pos not in status['nearest_link_pos']:
+                    nearest = get_nearest_link(pos, pos, remote_content)
+                    if nearest is not None:
+                        status['nearest_link_pos'][pos] = nearest
         
     status['diff_neg'] = match_neg#[_.replace('\xa0', ' ') for _ in match_neg]
     status['diff_pos'] = match_pos#[_.replace('\xa0', ' ') for _ in match_pos]

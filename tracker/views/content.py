@@ -101,7 +101,7 @@ class UserProjectSpider(BaseView):
                 rproject = RProject(project.name, project.data_path, project.config_file)
                 rproject._load_units_from_excel()
                 rproject._load_tracking_config_excel()
-                print('LINES ====== {}'.format(rproject.lines))
+                # print('LINES ====== {}'.format(rproject.lines))
             #units = rproject.units_stats(units=rproject.filter_units())
             except Exception as e:
                 print('[ERROR] UserProjectSpider : {}'.format(e))

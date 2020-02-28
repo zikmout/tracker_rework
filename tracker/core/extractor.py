@@ -436,21 +436,21 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
 
 def get_essential_content(content, min_sentence_len):
     extracted = extract_text_from_html(content)
-    print('EXTRACTED = {}'.format(extracted))
+    # print('EXTRACTED = {}'.format(extracted))
     cleaned = clean_content(extracted, min_sentence_len)
-    print('CLEANED 1 = {}'.format(cleaned))
+    # print('CLEANED 1 = {}'.format(cleaned))
     cleaned = list(map(str.strip, cleaned))
-    print('CLEANED 2 = {}'.format(cleaned))
+    # print('CLEANED 2 = {}'.format(cleaned))
     cleaned = [x for x in cleaned if len(x.split(' ')) > min_sentence_len]
-    print('CLEANED 3 = {}'.format(cleaned))
+    # print('CLEANED 3 = {}'.format(cleaned))
     cleaned = ' '.join(cleaned) # was ''
     cleaned = cleaned.replace('  ', ' ')
-    print('CLEANED 4 = {}'.format(cleaned))
+    # print('CLEANED 4 = {}'.format(cleaned))
     if cleaned == '':
-        print('CLEANED 5 = {}'.format(cleaned))
+        # print('CLEANED 5 = {}'.format(cleaned))
         return None
     else:
-        print('CLEANED 5 not None = {}'.format(cleaned))
+        # print('CLEANED 5 not None = {}'.format(cleaned))
         return cleaned
 
 def is_language(content, language):

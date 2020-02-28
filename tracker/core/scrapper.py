@@ -94,15 +94,15 @@ def get_url_content(url, header, verbose=True):
         response = urllib.request.urlopen(req, context=gcontext, timeout=12)
         remote_content = response.read()#.decode('utf-8', errors='ignore')
         response.close()
-    except (urllib.error.URLError, timeout, TimeoutError, SSLError) as e:
+    except (timeout, TimeoutError, SSLError) as e:
         print('[ERROR TIMEOUT OR SSL] for url : {} (Error : {})'.format(url, e))
         print('Retrying HTTP request now ...\n')
         scraper = AdidasScraper(url)
         remote_content = scraper.get_html_wait()
         return remote_content, {url : '{}'.format(e)}
 
-    except (urllib.error.HTTPError, ConnectionResetError, UnicodeDecodeError) as e:
-        print('[ERROR] get_url_content : {}\n(url = {})'.format(e, url))
+    except (urllib.error.URLError, urllib.error.HTTPError, ConnectionResetError, UnicodeDecodeError) as e:
+        print('[ERROR] {} : {}\n'.format(url, e))
         return None, {url : '{}'.format(e)}
 
     return remote_content, {url : ''}

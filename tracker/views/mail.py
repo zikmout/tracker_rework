@@ -161,29 +161,30 @@ class UserProjectSendMail(BaseView):
 						
 						# for nearest_link in site['nearest_link_pos']:
 						# 	site_html += (nearest_link + "<br>")
-						site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in site['sbb_links_pos'] and _ not in list(site['nearest_link_pos'].values())]
-						if site['all_links_pos'] is None:
-							pass
-						elif len(site['all_links_pos']) < 10:
-							first_time = True
-							# if site['all_links_pos'] != []:
-								# site_html += "<br>Link(s):<br>"
-							for link in site['all_links_pos']:
-								if first_time:
-									site_html += "<br>Link(s):<br>"
-									first_time = False
-								# site_html += (link + "<br>")
-								if link.endswith('/'):
-									formated_link = link.split('/')[-2]
-								else:
-									formated_link = os.path.basename(link)
-									# site_html += (str(formated_link) + "<br>")
-								if '.' in formated_link:
-										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-								site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
-						else:
-							pass
-							#site_html += ('*** too many links ***' + "<br>")
+						if args['mailAlertType'] == 'share buy back':
+							site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in site['sbb_links_pos'] and _ not in list(site['nearest_link_pos'].values())]
+							if site['all_links_pos'] is None:
+								pass
+							elif len(site['all_links_pos']) < 10:
+								first_time = True
+								# if site['all_links_pos'] != []:
+									# site_html += "<br>Link(s):<br>"
+								for link in site['all_links_pos']:
+									if first_time:
+										site_html += "<br>Link(s):<br>"
+										first_time = False
+									# site_html += (link + "<br>")
+									if link.endswith('/'):
+										formated_link = link.split('/')[-2]
+									else:
+										formated_link = os.path.basename(link)
+										# site_html += (str(formated_link) + "<br>")
+									if '.' in formated_link:
+											formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+							else:
+								pass
+								#site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 
 					found = False
@@ -257,33 +258,33 @@ class UserProjectSendMail(BaseView):
 							site_html += ('*** too many sbb links ***' + "<br>")
 
 						
+						if args['mailAlertType'] == 'share buy back':
+							site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in site['sbb_links_neg'] and _ not in list(site['nearest_link_neg'].values())]
+							if site['all_links_neg'] is None:
+								pass
+							elif len(site['all_links_neg']) < 10:
+								# ALL LINKS NEG
+								first_time = True
+								# if site['all_links_neg'] != []:
+									# site_html += "<br>Link(s):<br>"
+								for link in site['all_links_neg']:
+									if link not in list(site['nearest_link_neg'].values()):
+										if first_time:
+											site_html += "<br>Link(s):<br>"
+											first_time = False
+										if link.endswith('/'):
+											formated_link = link.split('/')[-2]
+										else:
+											formated_link = os.path.basename(link)
+										if '.' in formated_link:
+											formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+										# site_html += (str(formated_link) + "<br>")
+										site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
 
-						site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in site['sbb_links_neg'] and _ not in list(site['nearest_link_neg'].values())]
-						if site['all_links_neg'] is None:
-							pass
-						elif len(site['all_links_neg']) < 10:
-							# ALL LINKS NEG
-							first_time = True
-							# if site['all_links_neg'] != []:
-								# site_html += "<br>Link(s):<br>"
-							for link in site['all_links_neg']:
-								if link not in list(site['nearest_link_neg'].values()):
-									if first_time:
-										site_html += "<br>Link(s):<br>"
-										first_time = False
-									if link.endswith('/'):
-										formated_link = link.split('/')[-2]
-									else:
-										formated_link = os.path.basename(link)
-									if '.' in formated_link:
-										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-									# site_html += (str(formated_link) + "<br>")
-									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
-
-									# site_html += (link + "<br>")
-						else:
-							pass
-							#site_html += ('*** too many links ***' + "<br>")
+										# site_html += (link + "<br>")
+							else:
+								pass
+								#site_html += ('*** too many links ***' + "<br>")
 						site_html += "</font>"
 				html += site_html
 				print('ERRORS 1 : {}'.format(errors))

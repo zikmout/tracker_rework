@@ -154,6 +154,7 @@ var totalTaskNb = 0;
 var counterRemaining = totalTaskNb;
 var ws = new WebSocket(location.origin.replace(/^http/, 'ws') + "/websocket");
 var executed = 0;
+var currentTargets = Array();
 var remainingTaskNb = 0;
 
 
@@ -165,12 +166,11 @@ function sendReport() {
         data: {
           'email': emails,
           'fromPage': 'live_view',
-          'limitErrors' : JSON.stringify(limitErrors)
+          'limitErrors' : JSON.stringify(limitErrors),
+          'mailAlertType' : '{{ handler.session['tasks']['live_view'][0]['template_type'] }}',
         },
         success: function(data, status, request) {
             // create task
-
-            // console.log('send mail OK');
             $('<div class="alert alert-success py-0" role="alert">Just sent alert report to : ' + emails + '</div>').prependTo('#flashMessage');
             
         },
@@ -182,9 +182,11 @@ function sendReport() {
 
 function timeout() {
     remainingTaskNb = totalTaskNb - executed;
-    if (remainingTaskNb == 0) {
-      $('#currentTargetDetails').empty();
-    }
+    // if (remainingTaskNb == 0) {
+      // $('#currentTargetDetails').empty();
+    // }
+    // $('hr').remove();
+    // $('div[id^="changedContent"]').empty();
     $('#numberOfPendingTasks').html(remainingTaskNb);
     updateProgressBar('#liveViewProgress', (executed/totalTaskNb)*100);
     executed = 0;
@@ -193,7 +195,7 @@ function timeout() {
     setTimeout(function () {
         ws.onopen();
         timeout();
-    }, 3000);
+    }, 200);
 }
 
 function sleep(ms) {
@@ -237,7 +239,7 @@ function escapeHtml(unsafe) {
 	return unsafe.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 }
 
-function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywords) {
+function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywords, task_id) {
   var i;
   var diffs = '';
   var found = false;
@@ -313,7 +315,17 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
 
           middlePart += "<div class='card mt-2 ml-2 mb-2 mr-2' id='detailsDiffSbbLinks' style=' border-radius: .25rem; margin:.5rem;'>\
           <div class='card-body'>\
-            <h6 class='card-title text-" + type + "'>SBB links</h6><div class='col-sm-4 scroll' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>"
+            <h6 class='card-title text-" + type + "'>SBB links</h6><div class='col-sm-4 scroll'  id='sbb";
+
+            if (type == 'success') {
+              middlePart += "LinksPos-" + task_id + "' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>"
+            }
+            else if (type == 'danger') {
+              middlePart += "LinksNeg-" + task_id + "' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>"
+            }
+
+            
+            
         
           // console.log(sbb_links);
           for (i = 0; i < sbb_links.length; i++) {
@@ -413,14 +425,32 @@ function getUrlFromTaskId(task_id) {
 
 ws.onmessage = function (evt) {
    if (evt != null) {
+      
+      // 'diff with keywords' OR 'diff'
+      {% if handler.session['tasks']['live_view'][0]['template_type'] == 'diff with keywords' or handler.session['tasks']['live_view'][0]['template_type'] == 'diff' %}
+         
+          var data = JSON.parse(evt.data);
+          $('#currentWebSite').text(currentTargets[current_target.length - 1]);
+
+          if (data.state == 'PENDING')
+          {
+            console.log(Object.keys(data.status.current_target)[0]);
+            if (!currentTargets.includes(Object.keys(data.status.current_target)[0]))
+            {
+              // $('#currentWebSite').text(data.status.current_target);
+              currentTargets.push(Object.keys(data.status.current_target)[0]);
+            }
+          }
+
+      {% end %}
       // if (evt.data.state == 'PROGRESS') {
-      let dat = JSON.parse(evt.data);
-      console.log(dat);
-      if (dat.state == 'PENDING') {
-        // $('#currentWebSite').text(dat.status.current_target);
-        let be = dat.task_id;
-        $('#currentWebSite').text(getUrlFromTaskId(be)['url']);
-      }
+      // let dat = JSON.parse(evt.data);
+      // console.log(dat);
+      // if (dat.state == 'PENDING') {
+      //   // $('#currentWebSite').text(dat.status.current_target);
+      //   let be = dat.task_id;
+      //   $('#currentWebSite').text(getUrlFromTaskId(be)['url']);
+      // }
     // }
        //     if (evt.data) {
        //   var dataCheck = JSON.parse(evt.data);
@@ -486,12 +516,315 @@ ws.onmessage = function (evt) {
        }
        else {
 
+      //   {% if handler.session['tasks']['live_view'][0]['template_type'] == 'share buy back' %}
+      //      var data = JSON.parse(evt.data);
+      //       if (data.state == 'PROGRESS' || data.state =='SUCCESS') {
+              
 
-         var data = JSON.parse(evt.data);
-       //   if (data.state == 'PROGRESS') {
-       //    $('#currentWebSite').text(data.status.current_target);
-       //   console.log(data.status.current_target);
-       // }
+      //        // check if sbb link is already there. If not, put it in there !
+      //        var fn = GetFilename(Object.keys(data.status.current_target)[0]);
+      //        var ty = Object.values(data.status.current_target)[0]
+      //        console.log(ty);
+      //        var tag = ''
+      //        if (ty == 'sbb_links_pos') {
+      //           tag = 'sbbLinksPos-';
+      //        }
+      //        else if (ty == 'sbb_links_neg') {
+      //           tag = 'sbbLinksNeg-';
+      //        }
+      //        let el = document.getElementById(tag + getUrlFromTaskId(ty));
+      //        // console.log('Here is it : ');
+      //        // console.log(el)
+
+      //        if (el == null) {
+      //         console.log('------> el null !');
+      //        }
+      //        else {
+      //         console.log('Not null');
+      //         var found = false
+      //         let unders = el.getElementByClassName("square");
+      //         let undersLength;
+      //         for (i = 0; i < undersLength; i++) {
+      //           if (Object.keys(data.status.current_target)[0] == Object.value(unders[i])) {
+      //             console.log('Already there : ' + Object.value(unders[i]))
+      //             found = true;
+      //           }
+
+      //       }
+      //       if (found == true) {
+      //         console.log('New link ! ' + Object.value(unders[i]))
+      //       }
+      //       $('#currentWebSite').text(Object.keys(data.status.current_target)[0]);
+      //       console.log(Object.keys(data.status.current_target)[0]);
+      //     }
+
+      //       // middlePart +="<li class='square'><a href='" + sbb_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + fn + "</a></li>";
+      // }
+      //   {% end %}
+
+
+        // 'sbb'
+        {% if handler.session['tasks']['live_view'][0]['template_type'] == 'share buy back' %}
+            
+            var data = JSON.parse(evt.data);
+            // console.log(data.status);
+            if (data.state == 'PROGRESS' && Object.keys(data.status.current_target)[0] != undefined)
+            {
+              $('#currentWebSite').text(Object.keys(data.status.current_target)[0]);
+              // console.log('current website: ' + Object.keys(data.status.current_target)[0]);
+
+              if (!currentTargets.includes(Object.keys(data.status.current_target)[0]))
+              {
+                // $('#currentWebSite').text(data.status.current_target);
+                currentTargets.push(Object.keys(data.status.current_target)[0]);
+              }
+
+               // check if sbb link is already there. If not, put it in there !
+               // console.log('last currentTargets = ' + currentTargets[currentTargets.length-1]);
+               // console.log('data.status.current_target = ' + Object.keys(data.status.current_target)[0]);
+
+
+               
+            // $('#currentWebSite').text(Object.keys(data.status.current_target)[0]);
+            // console.log(Object.keys(data.status.current_target)[0]);
+            }
+
+              if (data.status.current_target != undefined && Object.keys(data.status.current_target)[0] != undefined) {
+
+               // console.log('PASS HERE');
+               var fn = GetFilename(Object.keys(data.status.current_target)[0]);
+               var ty = Object.values(data.status.current_target)[0];
+               // console.log('ty = ' + ty + ', fn = ' + fn);
+               // var tag = '';
+               // var tag2 = '';
+
+               // if (ty == 'sbb_links_pos')
+               // {
+               //    tag = 'sbbLinksPos-';
+               //    // tag2 = 'ssb_links_pos';
+               // }
+               // else if (ty == 'sbb_links_neg')
+               // {
+               //    tag = 'sbbLinksNeg-';
+               //    // tag2 = 'sbb_links_neg';
+               // }
+
+               // console.log(tag + data.task_id);
+               // console.log('tag2 = ' + tag2);
+               var elPos = null;
+               var elNeg = null;
+               var foundPos = true;
+               var foundNeg = true;
+
+               if (ty == 'sbb_links_pos' || ty == 'sbb_links_neg')
+               {
+                 var elNeg = document.getElementById('sbbLinksNeg-' + data.task_id);
+                 var elPos = document.getElementById('sbbLinksPos-' + data.task_id);
+
+               }
+
+
+               if (elPos != null)
+               {
+
+                // console.log('Here is it POS: ' + elNeg);
+                // var unders = el.getElementsByClassName("square");
+                var undersPos = Array();
+                var undersPosTmp = elPos.querySelectorAll("li a");
+                if (undersPosTmp != undefined) {
+                  for (t = 0; t < undersPosTmp.length; t++) {
+                    undersPos.push(undersPosTmp[t].getAttribute('href'));
+                  }
+                }
+                // console.log('undersPos : '+ undersPos);
+                // console.log('unders length ----> ' + unders.length);
+                
+               }
+
+               if (elNeg != null)
+               {
+                // console.log('Here is it NEG: ' + elNeg);
+                var undersNeg = Array();
+                var undersNegTmp = elNeg.querySelectorAll("li a");
+                if (undersNegTmp != undefined) {
+                  for (t = 0; t < undersNegTmp.length; t++) {
+                    undersNeg.push(undersNegTmp[t].getAttribute('href'));
+                  }
+                }
+                // console.log('undersNeg : '+ undersNeg.length);
+                // console.log('unders length ----> ' + unders.length);
+                
+               }
+
+               // console.log('status SBB POS =>');
+               // console.log(data.status.sbb_links_pos);
+
+               // console.log('status SBB NEG =>');
+               // console.log(data.status.sbb_links_neg);
+                
+              if (undersPos != undefined) {
+
+                  
+                 var lst = data.status.sbb_links_pos;
+                 if (lst != undefined) {
+                  // console.log('lst = ' + lst);
+                       for (var i = 0; i < lst.length; i++)
+                       {
+                          // console.log(undersPos);
+                          if (undersPos.includes(lst[i]) == false) {
+                            console.log('NOT FOUND POS : ' + lst[i]);
+                            console.log('undersPos = ' + undersPos);
+                            foundPos = false;
+                            break;
+                          }
+                           // for (var  j = 0; j < undersPos.length; j++)
+                           // {
+                           //  // console.log('unders['+j+'] ='+unders[j]);
+                           //  // console.log('POS trying : ' + lst[i] + ' with : ' + undersPos[j]);
+                           //  if (lst[i] != undersPos[j])
+                           //  {
+                           //       console.log('NOT FOUND : ' + undersPos[j]);
+                           //       // foundPos = true;
+                           //       // break;
+                           //  }
+                           // }
+                       }
+
+
+                     if (foundPos == false) {
+                          // console.log('New link to show to user ! POS ' + Object.keys(data.status.current_target)[0]);
+                          
+                          var newLinkElement = document.createElement("li");
+                          newLinkElement.setAttribute('class', 'square');
+                          
+
+                          var newLinkElement2 = document.createElement('a');
+                          newLinkElement2.setAttribute('href', Object.keys(data.status.current_target)[0]);
+                          newLinkElement2.setAttribute('_target', 'blank');
+                          newLinkElement2.setAttribute('style', 'color: rgb(0,0,0)');
+                          newLinkElement2.innerHTML = fn;
+
+                          newLinkElement.appendChild(newLinkElement2);
+                          elPos.appendChild(newLinkElement);
+                          // document.getElementById(tag + data.task_id).appendChild("<li class='square'><a href='" + Object.keys(data.status.current_target)[0] + "' target='_blank' style='color: rgb(0,0,0)'/>" + fn + "</a></li>");
+                         }
+
+                  }
+
+                }
+                if (undersNeg != undefined) {
+
+                  var lst = data.status.sbb_links_neg;
+                  if (lst != undefined) {
+                        // console.log('lst = ' + lst);
+                       for (var i = 0; i < lst.length; i++)
+                       {
+
+                          if (undersNeg.includes(lst[i]) == false) {
+                            console.log('NOT FOUND NEG : ' + lst[i]);
+                            console.log('undersNeg = ' + undersNeg);
+                            foundNeg = false;
+                            break;
+                          }
+                       
+                           // for (var  j = 0; j < undersNeg.length; j++)
+                           // {
+                           //  // console.log('unders['+j+'] ='+unders[j]);
+                           //  // console.log('NEG trying : ' + lst[i] + ' with : ' + undersNeg[j]);
+                           //  if (lst[i] == undersNeg[j])
+                           //  {
+                           //       // console.log('Already there 2: ' + undersNeg[j]);
+                           //       foundNeg = true;
+                           //       break;
+                           //  }
+                           // }
+                       }
+
+
+                     if (foundNeg == false) {
+                          // console.log('New link to show to user ! NEG ' + Object.keys(data.status.current_target)[0]);
+                          
+                          var newLinkElement = document.createElement("li");
+                          newLinkElement.setAttribute('class', 'square');
+                          
+
+                          var newLinkElement2 = document.createElement('a');
+                          newLinkElement2.setAttribute('href', Object.keys(data.status.current_target)[0]);
+                          newLinkElement2.setAttribute('_target', 'blank');
+                          newLinkElement2.setAttribute('style', 'color: rgb(0,0,0)');
+                          newLinkElement2.innerHTML = fn;
+
+                          newLinkElement.appendChild(newLinkElement2);
+                          elNeg.appendChild(newLinkElement);
+                          // document.getElementById(tag + data.task_id).appendChild("<li class='square'><a href='" + Object.keys(data.status.current_target)[0] + "' target='_blank' style='color: rgb(0,0,0)'/>" + fn + "</a></li>");
+                         }
+
+                  }
+
+
+
+               }
+
+
+                       // console.log('len unders --------> ' + unders.length);
+
+                       // let undersLength = unders.length;
+                       // if (undersLength >= 2)
+                       // {
+                       //   unders.forEach(function(currentValue, currentIndex, listObj)
+                       //   {
+                       //    console.log('currentValue = ' + currentValue + ', currentIndex = ' + currentIndex, 'listObj = ' + listObj);
+                       //   },
+                       //   'myThisArg'
+                       //   );
+                       // }
+
+
+                       // if (tag2 == 'sbb_links_pos' || tag2 == 'sbb_links_neg'){
+                       //  lst = data.status[tag2];
+                       // for (var i = 0; i < lst.length; i++)
+                       // {
+                       
+                       //     for (var  j = 0; j < unders.length; j++)
+                       //     {
+                       //      // console.log('unders['+j+'] ='+unders[j]);
+                       //      console.log('trying : ' + lst[i] + ' with : ' + unders[j]);
+                       //      if (lst[i] == unders[j])
+                       //      {
+                       //           // console.log('Already there : ' + unders[j]);
+                       //           found = true;
+                       //           break;
+                       //      }
+                       //     }
+                       // }
+                     // }
+                       // if (undersLength >= 1) {
+                         // for (item of unders)
+                         // {
+                         //   console.log('**** trying: ' + (Object.keys(data.status.current_target)[0] + ' == ' + item));
+                         //   if (Object.keys(data.status.current_target)[0] == item)
+                         //   {
+                         //     console.log('Already there : ' + item);
+                         //     found = true;
+                         //   }
+
+                         // }
+                         // console.log('unders i === ' + item);
+                         
+                       // }
+                       // else {
+                       //  // if (item.href != undefined && (found == true || unders.length == 0)) {
+                       //    console.log('New link to show to user ! ' + item.href);
+                       //    el.appendChild("<li class='square'><a href='" + item.href + "' target='_blank' style='color: rgb(0,0,0)'/>" + fn + "</a></li>");
+                       //   // }
+
+                       // }
+                     // }
+
+                }
+
+
+        {% end %}
         // if (!(Object.entries(data.status.errors).length === 0 && data.status.errors.constructor === Object)) {
           // console.log(data.status.errors);
          // }
@@ -601,8 +934,8 @@ ws.onmessage = function (evt) {
               // console.log(data.status.sbb_links_neg);
               // console.log('data.status.keywords = ' + data.status.keywords);
               // console.log(data.status.diff_neg);
-              var div_pos = formatDiff("Added", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords);
-              var div_neg = formatDiff("Deleted", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger', data.status.keywords);
+              var div_pos = formatDiff("Added", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords, data.task_id);
+              var div_neg = formatDiff("Deleted", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger', data.status.keywords, data.task_id);
 
               if (data.status.diff_pos.length != 0) {
                 document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_pos);

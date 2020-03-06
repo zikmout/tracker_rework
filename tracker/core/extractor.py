@@ -39,7 +39,7 @@ def clean_pdf_content(input_str):
     try:
         if input_str is None:
             return None
-        intput_str = ''.join(x for x in input_str if x.isprintable())
+        # input_str = ''.join(x for x in input_str if x.isprintable())
         input_str = ''.join(input_str).lower()
         output = re.sub(r'[0-9]', '', input_str)
         t = str.maketrans('', '', string.punctuation)

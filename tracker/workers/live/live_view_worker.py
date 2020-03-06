@@ -81,7 +81,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
             cleaned_content = extractor.clean_pdf_content(pdftotext.PDF(response))
             # print('after detected PDF')
             #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
-            if cleaned_content is None or cleaned_content in already_seen_content:
+            if len(cleaned_content) == 0 or cleaned_content is None or cleaned_content in already_seen_content:
                 #print('Content {} is None !!!!!!!!!'.format(url))
                 return False
                 # return { 'error': 'Content is none or has already been seen: ({})'.format(url)}
@@ -101,7 +101,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
             cleaned_content = extractor.get_essential_content(response.read(), 10)
             # print('after detected non PDF')
 
-            if cleaned_content is None or cleaned_content in already_seen_content:
+            if len(cleaned_content) == 0 or cleaned_content is None or cleaned_content in already_seen_content:
                 #print('Content {} is None !!!!!!!!!'.format(url))
                 # return { 'error': 'Content is none or has already been seen: ({})'.format(url)}
                 return False

@@ -45,6 +45,15 @@ def is_valid_url(url):
             return False
     return True
 
+def is_valid_cleaned_content(cleaned_content, already_seen_content):
+    if cleaned_content is None:
+        return False
+    if len(cleaned_content) == 0:
+        return False
+    if cleaned_content in already_seen_content:
+        return False
+    return True
+
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     # if not is_valid_url(url):
         # return False
@@ -81,8 +90,8 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
             cleaned_content = extractor.clean_pdf_content(pdftotext.PDF(response))
             # print('after detected PDF')
             #print('cleaned content url {} = {}'.format(url, cleaned_content[:50]))
-            if len(cleaned_content) == 0 or cleaned_content is None or cleaned_content in already_seen_content:
-                #print('Content {} is None !!!!!!!!!'.format(url))
+            valid = is_valid_cleaned_content(cleaned_content, already_seen_content)
+            if not valid:
                 return False
                 # return { 'error': 'Content is none or has already been seen: ({})'.format(url)}
             already_seen_content.append(cleaned_content)
@@ -101,9 +110,8 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
             cleaned_content = extractor.get_essential_content(response.read(), 10)
             # print('after detected non PDF')
 
-            if len(cleaned_content) == 0 or cleaned_content is None or cleaned_content in already_seen_content:
-                #print('Content {} is None !!!!!!!!!'.format(url))
-                # return { 'error': 'Content is none or has already been seen: ({})'.format(url)}
+            valid = is_valid_cleaned_content(cleaned_content, already_seen_content)
+            if not valid:
                 return False
             already_seen_content.append(cleaned_content)
             #content = extractor.extract_text_from_html(response.read())
@@ -295,6 +303,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             if detect_links:
                 # status = select_only_sbb_links(status, show_links=show_links)
                 for _ in status['all_links_pos']:
+                    status['current_target'] = {_:'all_links_pos'}
                     res = is_sbb_content(_)
                     print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
@@ -310,7 +319,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
                 for _ in status['all_links_neg']:
-                    
+                    status['current_target'] = {_:'all_links_pos'}
                     res = is_sbb_content(_)
                     print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:

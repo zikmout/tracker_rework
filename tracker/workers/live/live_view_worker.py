@@ -202,9 +202,12 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
         'diff_nb': 0,
         'errors': dict(),
         'keywords': list(),
-        'current_target' : dict()
+        'current_target' : list()
     }
     try:
+        if flink not in status['current_target']:
+            status['current_target'].append(flink)
+            self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
         # print('[{}/{}] Link = {}'.format(i, len(links), flink))
         #time.sleep(random.randint(0, 10))
         base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
@@ -303,35 +306,40 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             if detect_links:
                 # status = select_only_sbb_links(status, show_links=show_links)
                 for _ in status['all_links_pos']:
-                    status['current_target'] = {_:'all_links_pos'}
+                    if _ not in status['current_target']:
+                        status['current_target'].append(_)
+                    self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     res = is_sbb_content(_)
                     print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
                         print('RES IS TRUE POS ---------->  {}'.format(_))
-                        status['current_target'] = {_:'sbb_links_pos'}
+                        # status['current_target'] = {_:'sbb_links_pos'}
                         status['sbb_links_pos'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     elif isinstance(res, dict):
                         status['errors'].update({status['url'] : '{}'.format(res['error'])})
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     else:
-                        status['current_target'] = {_:'all_links_pos'}
+                        # status['current_target'] = {_:'all_links_pos'}
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
                 for _ in status['all_links_neg']:
-                    status['current_target'] = {_:'all_links_pos'}
+                    # status['current_target'] = {_:'all_links_neg'}
+                    if _ not in status['current_target']:
+                        status['current_target'].append(_)
+                    self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     res = is_sbb_content(_)
                     print('RES = {} TYPE = {}'.format(res, type(res)))
                     if isinstance(res, bool) and res is True:
                         print('RES IS TRUE NEG ---------->  {}'.format(_))
-                        status['current_target'] = {_:'sbb_links_neg'}
+                        # status['current_target'] = {_:'sbb_links_neg'}
                         status['sbb_links_neg'].append(_)
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     elif isinstance(res, dict):
                         status['errors'].update({status['url'] : '{}'.format(res['error'])})
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
                     else:
-                        status['current_target'] = {_:'all_links_neg'}
+                        # status['current_target'] = {_:'all_links_neg'}
                         self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
             # print('AFTER STATUS GET FULL LINKS - nearest_link_pos = {}'.format(status['nearest_link_pos']))
             #print('******* len status all linsk pos 3: {}'.format(len(status['all_links_pos'])))

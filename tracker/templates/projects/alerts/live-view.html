@@ -436,17 +436,26 @@ ws.onmessage = function (evt) {
           {
             var data = JSON.parse(evt.data);
             if (data.status.current_target != undefined) {
-              $('#currentWebSite').text(currentTargets[data.status.current_target.length - 1]);
-
-              if (data.state == 'PENDING')
+              console.log(currentTargets);
+              let lenCurrentTargets = data.status.current_target.length;
+              if (lenCurrentTargets > 1)
               {
-                // console.log(Object.keys(data.status.current_target)[0]);
-                if (!currentTargets.includes(Object.keys(data.status.current_target)[0]))
+                for (x = 0; x <= lenCurrentTargets; x++)
                 {
-                  // $('#currentWebSite').text(data.status.current_target);
-                  currentTargets.push(Object.keys(data.status.current_target)[0]);
+                  if (!currentTargets.includes(data.status.current_target[x]))
+                  {
+                    currentTargets.push(data.status.current_target[x]);
+                  }
                 }
               }
+              else
+              {
+                  if (!currentTargets.includes(data.status.current_target[0]))
+                  {
+                    currentTargets.push(data.status.current_target[0]);
+                  }
+              }
+              $('#currentWebSite').text(currentTargets[currentTargets.length - 1]);
             }
           }
 
@@ -536,14 +545,34 @@ ws.onmessage = function (evt) {
         {% if handler.session['tasks']['live_view'][0]['template_type'] == 'share buy back' %}
             
             var data = JSON.parse(evt.data);
-            if (data.state == 'PROGRESS' && Object.keys(data.status.current_target)[0] != undefined)
+            if (data.state == 'PROGRESS' && data.status.current_target != undefined)
             {
-              $('#currentWebSite').text(Object.keys(data.status.current_target)[0]);
-              if (!currentTargets.includes(Object.keys(data.status.current_target)[0]))
+              console.log(currentTargets);
+              let lenCurrentTargets = data.status.current_target.length;
+              if (lenCurrentTargets > 1)
               {
-                // $('#currentWebSite').text(data.status.current_target);
-                currentTargets.push(Object.keys(data.status.current_target)[0]);
+                for (x = 0; x <= lenCurrentTargets; x++)
+                {
+                  if (!currentTargets.includes(data.status.current_target[x]))
+                  {
+                    currentTargets.push(data.status.current_target[x]);
+                  }
+                }
               }
+              else
+              {
+                  if (!currentTargets.includes(data.status.current_target[0]))
+                  {
+                    currentTargets.push(data.status.current_target[0]);
+                  }
+              }
+              $('#currentWebSite').text(currentTargets[currentTargets.length - 1]);
+              // $('#currentWebSite').text(Object.keys(data.status.current_target)[0]);
+              // if (!currentTargets.includes(Object.keys(data.status.current_target)[0]))
+              // {
+              //   // $('#currentWebSite').text(data.status.current_target);
+              //   currentTargets.push(Object.keys(data.status.current_target)[0]);
+              // }
             }
 
             // if (data.status.current_target != undefined && Object.keys(data.status.current_target)[0] != undefined)

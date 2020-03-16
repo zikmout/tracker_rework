@@ -68,6 +68,12 @@ a {
                 <div class="mt-2 ml-1">
                   <input type="checkbox" {% if handler.session['is_live_simplified'] %}checked {% end %}data-toggle="toggle" id="customSwitch1" data-size="sm" data-onstyle="info" data-width="60" data-on="Details" data-off="Basic">
                 </div>
+                <div class="mt-2 ml-1">
+                  <input type="checkbox" {% if handler.session['is_pos_live'] %}checked {% end %}data-toggle="toggle" id="customSwitchPos" data-size="sm" data-onstyle="info" data-width="60" data-on="+ ON" data-off="+ OFF">
+                </div>
+                <div class="mt-2 ml-1">
+                  <input type="checkbox" {% if handler.session['is_neg_live'] %}checked {% end %}data-toggle="toggle" id="customSwitchNeg" data-size="sm" data-onstyle="info" data-width="60" data-on="- ON" data-off="- OFF">
+                </div>
                 <form action="" class="form-inline ml-2 mt-2">
                   <p>
                   <label for="exampleFormControlTextarea1"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)</label>
@@ -475,7 +481,7 @@ ws.onmessage = function (evt) {
           {
             var data = JSON.parse(evt.data);
             if (data.status.current_target != undefined) {
-              console.log(currentTargets);
+              //console.log(currentTargets);
               let lenCurrentTargets = data.status.current_target.length;
               if (lenCurrentTargets > 1)
               {
@@ -839,8 +845,17 @@ ws.onmessage = function (evt) {
               // console.log(data.status.sbb_links_neg);
               // console.log('data.status.keywords = ' + data.status.keywords);
               // console.log(data.status.diff_neg);
-              var div_pos = formatDiff("Added", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords, data.task_id);
-              var div_neg = formatDiff("Deleted", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger', data.status.keywords, data.task_id);
+              {% if 'live_view' in handler.session['tasks'] and handler.session['is_pos_live'] is True %}
+                var div_pos = formatDiff("Added", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords, data.task_id);
+              {% else %}
+                var div_pos = '';
+              {% end %}
+
+              {% if 'live_view' in handler.session['tasks'] and handler.session['is_neg_live'] is True %}
+                var div_neg = formatDiff("Deleted", data.status.diff_neg, data.status.nearest_link_neg, data.status.sbb_links_neg, data.status.all_links_neg, 'danger', data.status.keywords, data.task_id);
+              {% else %}
+                var div_neg = '';
+              {% end %}
 
               if (data.status.diff_pos.length != 0)
               {
@@ -913,6 +928,41 @@ function showFailedTasksDetails() {
       });
     })
   })
+
+  $(function() {
+    $('#customSwitchPos').change(function() {
+      var mode = $(this).prop('checked');
+      $.ajax({
+          type:'POST',
+          url: '/switch-pos-live-view',
+          success: function(response) {
+              var jsonResp = JSON.parse(response);
+              document.location.reload();
+          },
+          error: function(xhf) {
+              console.log('An Error occured trying to switch mode');
+          }
+      });
+    })
+  })
+
+  $(function() {
+    $('#customSwitchNeg').change(function() {
+      var mode = $(this).prop('checked');
+      $.ajax({
+          type:'POST',
+          url: '/switch-neg-live-view',
+          success: function(response) {
+              var jsonResp = JSON.parse(response);
+              document.location.reload();
+          },
+          error: function(xhf) {
+              console.log('An Error occured trying to switch mode');
+          }
+      });
+    })
+  })
+
   $(document).ready(function() {
     // console.log('ok tooltip');
   $('[data-toggle="tooltip"]').tooltip({ pointerEvents: 'none' });

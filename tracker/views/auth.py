@@ -27,6 +27,8 @@ class AuthLoginView(BaseView):
         self.session['username'] = registered_user.username
         self.session['is_admin'] = registered_user.is_administrator()
         self.session['is_live_simplified'] = False
+        self.session['is_pos_live'] = True
+        self.session['is_neg_live'] = True
         if self.session['is_admin'] == True:
             self.session['is_simplified'] = True
         self.session['rolename'] = registered_user.get_rolename()

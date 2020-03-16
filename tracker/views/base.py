@@ -132,6 +132,30 @@ class SwitchDetailedLiveView(BaseView):
             flash_message(self, 'info', 'Live details ON.')
         self.send_response({ 'response': 'OK' })
 
+class SwitchPosLiveView(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @gen.coroutine
+    def post(self):
+        self.session['is_pos_live'] = not self.session['is_pos_live']
+        self.session.save()
+        if self.session['is_pos_live'] is False:
+            flash_message(self, 'info', 'Positive diff OFF.')
+        else:
+            flash_message(self, 'info', 'Positive diff ON.')
+        self.send_response({ 'response': 'OK' })
+
+class SwitchNegLiveView(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @gen.coroutine
+    def post(self):
+        self.session['is_neg_live'] = not self.session['is_neg_live']
+        self.session.save()
+        if self.session['is_neg_live'] is False:
+            flash_message(self, 'info', 'Negative diff OFF.')
+        else:
+            flash_message(self, 'info', 'Negative diff ON.')
+        self.send_response({ 'response': 'OK' })
+
 class My404Handler(BaseView):
     def prepare(self):
         self.set_status(404)

@@ -10,7 +10,8 @@ from tornado.web import url
 from tracker.utils import make_session_factory
 import tracker.session as session
 
-from tracker.views.base import HomePage, My404Handler, SwitchMode, SwitchDetailedLiveView, BlankPage
+from tracker.views.base import HomePage, My404Handler, SwitchMode, SwitchDetailedLiveView, SwitchPosLiveView,\
+SwitchNegLiveView, BlankPage
 from tracker.views.user import UserListView, UserDelete, UserUnitView, UserUnitEditView, AdminUserCreate
 from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView
 from tracker.views.mail import UserProjectSendMail
@@ -47,6 +48,8 @@ def main():
             url(r'/blank', BlankPage, name='blank'),
             url(r'/switch-mode', SwitchMode),
             url(r'/switch-detailded-live-view', SwitchDetailedLiveView),
+            url(r'/switch-pos-live-view', SwitchPosLiveView),
+            url(r'/switch-neg-live-view', SwitchNegLiveView),
             url(r'/api/v1/update-content', AlertLiveUpdateJSON),
 
             # tracker.views.user.py

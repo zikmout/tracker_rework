@@ -128,7 +128,7 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
         return { 'error': '{}'.format(e)}
     return False
 
-def get_full_links(status, base_url):
+def get_full_all_links(status, base_url):
     keys = ['all_links_pos', 'all_links_neg']
     for _ in keys:
         if status[_] != []:
@@ -144,7 +144,9 @@ def get_full_links(status, base_url):
                 if x.startswith('/'):
                     status[_][idx] = base_url + x
                 idx += 1
+    return status
 
+def get_full_nearest_links(status, base_url):
     keys = ['nearest_link_pos', 'nearest_link_neg']
     for _ in keys:
         for k, v in status[_].copy().items():
@@ -161,6 +163,41 @@ def get_full_links(status, base_url):
                     #     status[_][k] = v
                 if v.startswith('/'):
                     status[_][trim_text(k)] = base_url + v
+    return status
+
+# def get_full_links(status, base_url):
+#     keys = ['all_links_pos', 'all_links_neg']
+#     for _ in keys:
+#         if status[_] != []:
+#             idx = 0
+#             for x in status[_].copy():
+#                 if x.startswith(base_url) is False:
+#                     if x.startswith('//'):
+#                         status[_][idx] = 'http:' + x
+#                     elif x.startswith('http') is False:
+#                         status[_][idx] = base_url + x
+#                     # elif x.startswith('http'):
+#                     #     status[_][idx] = x
+#                 if x.startswith('/'):
+#                     status[_][idx] = base_url + x
+#                 idx += 1
+
+#     keys = ['nearest_link_pos', 'nearest_link_neg']
+#     for _ in keys:
+#         for k, v in status[_].copy().items():
+#             # print('k = {}, v = {}'.format(k, v))
+#             # if isinstance(v, dict):
+#             #     print('V = = = > {}'.format(v))
+#             if v:
+#                 if v.startswith(base_url) is False:
+#                     if v.startswith('//'):
+#                         status[_][trim_text(k)] = 'http:' + v
+#                     elif v.startswith('http') is False:
+#                         status[_][trim_text(k)] = base_url + v
+#                     # elif v.startswith('http'):
+#                     #     status[_][k] = v
+#                 if v.startswith('/'):
+#                     status[_][trim_text(k)] = base_url + v
 
     # new_keys = ['new_nearest_link_pos', 'new_nearest_link_neg']
     # # Delete doublons
@@ -269,6 +306,8 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
 
             status = extractor.get_text_diff(local_content, remote_content, status,\
                 detect_links=show_links)
+
+            status = get_full_all_links(status, url)
             
             # if a list of keywords is provided, only get diff that matches keywords
             if keywords != [] and not isinstance(keywords[0], float):
@@ -284,13 +323,16 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
 
                 status = extractor.keyword_match(keywords, status, local_content, remote_content, url,\
                     detect_links=show_links)
+                status = get_full_nearest_links(status, url)
                 # Add update for status keywords
                 self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
             # else get nearest link for each diff
-            elif keywords == []:
+            elif keywords == [] or detect_links:
                 # status = extractor.nearest_link_match(status, local_content, remote_content, url)
                 status = extractor.nearest_link_match(status, local_content, remote_content, url)
+
+                status = get_full_nearest_links(status, url)
 
                 #print('******* len status all linsk pos 1: {}'.format(len(status['all_links_pos'])))
                 # print('status nearest_link_neg = {}'.format(status['nearest_link_neg']))
@@ -301,7 +343,7 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             # status['all_nearest_links_remote'] = format_all_nearest_links(status['all_nearest_links_remote'], url)
             # status['all_nearest_links_local'] = format_all_nearest_links(status['all_nearest_links_local'], url)
             
-            status = get_full_links(status, url)
+            #status = get_full_links(status, url)
 
             if detect_links:
                 # status = select_only_sbb_links(status, show_links=show_links)

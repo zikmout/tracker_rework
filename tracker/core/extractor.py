@@ -128,7 +128,7 @@ def get_nearest_link(match, keyword, content):
     # print('looking for kw ========> {}'.format(match))
     # match = match.replace('\xa0', ' ')
     doc = LH.fromstring(content.replace('\'', ' '))
-    # print('ASKED TO FIND FOLLOWINF MATCH ->{}<-'.format(match))
+    # print('ASKED TO FIND FOLLOWING MATCH ->{}<-'.format(match))
     # el2 = doc.xpath('//a[text()={s!r}]/@href'.format(s = match))
     try:
         el2 = doc.xpath('/html/body//a[contains(text(),{s!r})]/@href'.format(s = match))

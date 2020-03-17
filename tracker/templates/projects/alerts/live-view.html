@@ -135,18 +135,30 @@ a {
         
 
         
-
+          <div id="whatHasChanged"></div>
       {% if 'live_view' in handler.session['tasks'] %}
         {% for tasks in handler.session['tasks']['live_view']  %}
           <!-- <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center> -->
           <!-- <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center> -->
-          <div id="changedContent{{ escape(str(tasks['id'])) }}"></div>
+          <!-- <div id="changedContent{{ escape(str(tasks['id'])) }}"></div> -->
         {% end %}
       {% end %}
 </div>
 <script>
 
+{% if 'live_view' in handler.session['tasks'] %}
+  {% if handler.session['is_pos_live'] is True %}
+    var isPosLive = true;
+  {% else %}
+    var isPosLive = false;
+  {% end %}
 
+  {% if handler.session['is_neg_live'] is True %}
+    var isNegLive = true;
+  {% else %}
+    var isNegLive = false;
+  {% end %}
+{% end %}
 
 var counterFailureMaster = 0;
 var counterPending = 0
@@ -832,17 +844,32 @@ ws.onmessage = function (evt) {
             // console.log(executed);
             // executed += 1;
           }
+
+        function shouldTitleBeShown(task_id)
+        {
+          return ((isPosLive == true && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (isNegLive == true && data.status.diff_neg != undefined && data.status.diff_neg.length > 0))
+        }
+
          if ((data.status.diff_pos != null && data.status.diff_pos != undefined && data.status.diff_pos.length > 0) || (data.status.diff_neg != null && data.status.diff_neg != undefined && data.status.diff_neg.length > 0))
          {
             if (!document.getElementById(data.status.div)) {
-              var title = document.createElement("H5");
-              title.innerHTML = data.status.div;
-              document.getElementById('changedContent' + data.task_id).append(title);
-              var title = document.createElement("DIV");
-              title.setAttribute("id", data.status.div);
-              document.getElementById('changedContent' + data.task_id).appendChild(title);
-              document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforebegin', '<br><hr>');
-              document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforeend', '<hr>');
+
+              if (shouldTitleBeShown(data.task_id) == true)
+              {
+                let inside = document.createElement("DIV");
+                inside.setAttribute("id", 'changedContent' + data.task_id);
+                document.getElementById("whatHasChanged").appendChild(inside);
+              
+
+                var title = document.createElement("H5");
+                title.innerHTML = data.status.div;
+                document.getElementById('changedContent' + data.task_id).append(title);
+                var title = document.createElement("DIV");
+                title.setAttribute("id", data.status.div);
+                document.getElementById('changedContent' + data.task_id).appendChild(title);
+                document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforebegin', '<br><hr>');
+                document.getElementById('changedContent' + data.task_id).insertAdjacentHTML('beforeend', '<hr>');
+              }
             }
             if (document.getElementById(data.status.div) && !document.getElementById(data.current.toString() + data.task_id))
             {

@@ -8,7 +8,6 @@ import json
 import tldextract
 import tornado
 from tornado.escape import url_unescape as url_unescape
-# from urllib.parse import urlparse
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart	
 from tracker.views.base import BaseView
@@ -28,6 +27,7 @@ class UserProjectSendMail(BaseView):
 	@gen.coroutine
 	def post(self, username, projectname):
 		"""
+		TODO: Update because some more attributes have been recently added
 		{
 			'state': 'SUCCESS', 
 			'current': 100, 
@@ -88,12 +88,6 @@ class UserProjectSendMail(BaseView):
 				for _ in site_set:
 					html += "<li><a href='#" + _ + "'> " + _ + "</a></li>"
 
-				# errors = list()
-				# for site in task_results:
-				# 	if site['errors'] != {}:
-				# 		errors.append(site['errors'])
-
-				
 				site_html = ''
 				for site in task_results:
 					site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
@@ -103,21 +97,6 @@ class UserProjectSendMail(BaseView):
 					if site['diff_pos'] != [] and self.session['is_pos_live'] is True:
 						site_html += "<font color='green'><b>Added :</b><br>"
 
-
-						# if len(site['diff_pos']) < 10:
-						# 	for content in site['diff_pos']:
-						# 		for k, v in site['nearest_link_pos'].items():
-						# 			if k == content:
-						# 				site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_pos'][k] + '">' + k + "</a><br>")
-						# 				found = True
-						# 				break;
-						# 		if not found:				
-						# 			site_html += (content + "<br>")
-						# 			found = False
-
-						# else:
-						# 	site_html += ('*** too many changes ***' + "<br>")
-
 						if len(site['diff_pos']) < MAX_DIFF_POS_LENGTH:
 							for content in site['diff_pos']:
 								for k, v in site['nearest_link_pos'].items():
@@ -126,19 +105,6 @@ class UserProjectSendMail(BaseView):
 										site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_pos'][k] + '">' + content2 + "</a><br>")
 										# found = True
 										break;
-								# if not found:# or content.replace('\'', ' ') not in list(site['nearest_link_pos'].keys()):
-								# 	content2 = highlight_keywords(site['keywords'], content)
-								# 	site_html += (content2 + "<br>")
-								# 	found = False
-
-							# Additions that have no nearest link
-							# remainder = list()
-							# nl = list(site['nearest_link_pos'].keys())
-
-							# for _ in site['diff_pos']:
-							# 	print('_ = {} in {} ?? '.format(_, nl))
-							# 	if _ not in nl:
-							# 		remainder.append(_)
 
 							remainder = list(set(site['diff_pos']).difference(set(list(site['nearest_link_pos'].keys()))))
 							# print('remainder diff pos = {}'.format(remainder))
@@ -150,8 +116,6 @@ class UserProjectSendMail(BaseView):
 							site_html += ('*** too many changes ***' + "<br>")
 
 						# SBB LINKS POS
-						# if site['sbb_links_pos'] is not None and site['sbb_links_pos'] != []:
-							# site_html += "<br>SBB link(s) (if not above):<br>"
 						if site['sbb_links_pos'] is None:
 							pass
 						elif len(site['sbb_links_pos']) < MAX_SBB_LINKS_POS_LENGTH:
@@ -169,9 +133,6 @@ class UserProjectSendMail(BaseView):
 						else:
 							site_html += ('<BR>*** too many sbb links ***' + "<br>")
 
-						
-						# for nearest_link in site['nearest_link_pos']:
-						# 	site_html += (nearest_link + "<br>")
 						if args['mailAlertType'] == 'share buy back':
 							site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in site['sbb_links_pos'] and _ not in list(site['nearest_link_pos'].values())]
 						
@@ -179,63 +140,33 @@ class UserProjectSendMail(BaseView):
 							pass
 						elif len(site['all_links_pos']) < MAX_ALL_LINKS_POS_LENGTH:
 							first_time = True
-							# if site['all_links_pos'] != []:
-								# site_html += "<br>Link(s):<br>"
 							for link in site['all_links_pos']:
 								if first_time:
 									site_html += "<br>Link(s):<br>"
 									first_time = False
-								# site_html += (link + "<br>")
 								if link.endswith('/'):
 									formated_link = link.split('/')[-2]
 								else:
 									formated_link = os.path.basename(link)
-									# site_html += (str(formated_link) + "<br>")
 								if '.' in formated_link:
-										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+									formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
 								site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
 						else:
 							print('greater than max pos')
 							site_html += ('<BR>*** too many links ***' + "<br>")
 						site_html += "</font>"
 
-					found = False
 					if site['diff_neg'] != [] and self.session['is_neg_live'] is True:
 						site_html += "<font color='red'><b><br>Deleted :</b><br>"
-						
-						# if len(site['diff_neg']) < 10:
-						# 	for content in site['diff_neg']:
-						# 		for k, v in site['nearest_link_neg'].items():
-						# 			if k == content:
-						# 				site_html += ('<a style="color: red; text-decoration: underline;" href="' + site['nearest_link_neg'][k] + '">' + k + "</a><br>")
-						# 				found = True
-						# 				break;
-						# 		if not found:				
-						# 			site_html += (content + "<br>")
-						# 			found = False
-						# else:
-						# 	site_html += ('*** too many changes ***' + "<br>")
+
 						if len(site['diff_neg']) < MAX_DIFF_NEG_LENGTH:
 							for content in site['diff_neg']:
 								for k, v in site['nearest_link_neg'].items():
 									if k == content:
 										content2 = highlight_keywords(site['keywords'], content)
 										site_html += ('<a style="color: red; text-decoration: underline;" href="' + site['nearest_link_neg'][k] + '">' + content2 + "</a><br>")
-										# found = True
 										break;
-								# if not found:
-								# 	content2 = highlight_keywords(site['keywords'], content)
-								# 	site_html += (content2 + "<br>")
-								# 	found = False
 
-							# Deletions that have no nearest link
-							# remainder = list()
-							# nl = list(site['nearest_link_neg'].keys())
-
-							# for _ in site['diff_neg']:
-							# 	print('_ = {} in {} ?? '.format(_, nl))
-							# 	if _ not in nl:
-							# 		remainder.append(_)
 							remainder = list(set(site['diff_neg']).difference(set(list(site['nearest_link_neg'].keys()))))
 							print('remainder diff neg = {}'.format(remainder))
 							for r in remainder:
@@ -244,13 +175,7 @@ class UserProjectSendMail(BaseView):
 							# print('remainder diff neg = {}'.format(remainder))
 						else:
 							site_html += ('*** too many changes ***' + "<br>")
-						
-						# for nearest_link in site['nearest_link_neg']:
-						# 	site_html += (nearest_link + "<br>")
 
-						
-						# if site['sbb_links_neg'] is not None and site['sbb_links_neg'] != []:
-							# site_html += "<br>SBB link(s) (if not above):<br>"
 						if site['sbb_links_neg'] is None:
 							pass
 						elif len(site['sbb_links_neg']) < MAX_SBB_LINKS_NEG_LENGTH:
@@ -277,8 +202,6 @@ class UserProjectSendMail(BaseView):
 						elif len(site['all_links_neg']) < MAX_ALL_LINKS_NEG_LENGTH:
 							# ALL LINKS NEG
 							first_time = True
-							# if site['all_links_neg'] != []:
-								# site_html += "<br>Link(s):<br>"
 							for link in site['all_links_neg']:
 								if link not in list(site['nearest_link_neg'].values()):
 									if first_time:
@@ -290,10 +213,7 @@ class UserProjectSendMail(BaseView):
 										formated_link = os.path.basename(link)
 									if '.' in formated_link:
 										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-									# site_html += (str(formated_link) + "<br>")
 									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
-
-									# site_html += (link + "<br>")
 						else:
 							site_html += ('<BR>*** too many links ***' + "<br>")
 							print('greater than max neg')
@@ -334,25 +254,25 @@ class UserProjectSendMail(BaseView):
 
 				domains_list = [tldextract.extract(site['div']).domain.upper() for site in task_results]
 				for email in receiver_email:
-									message = MIMEMultipart()
-									message["Subject"] = '[Live Alert Report] {}'.format(', '.join(list(set(domains_list))))
-									message["From"] = 'Tracker Bot'
-									message["To"] = email
+					message = MIMEMultipart()
+					message["Subject"] = '[Live Alert Report] {}'.format(', '.join(list(set(domains_list))))
+					message["From"] = 'Tracker Bot'
+					message["To"] = email
 
-									# Add HTML/plain-text parts to MIMEMultipart message
-									# The email client will try to render the last part first
-									#message.attach(part1)
-									message.attach(part2)
+					# Add HTML/plain-text parts to MIMEMultipart message
+					# The email client will try to render the last part first
+					#message.attach(part1)
+					message.attach(part2)
 
-									# Create secure connection with server and send email
-									context = ssl.create_default_context()
-									with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
-										server.login(sender_email, password)
-										server.sendmail(
-											sender_email, email, message.as_string()
-										)
-				flash_message(self, 'success', 'Report successfully sent to {} .'.format(args['email']))
-				self.redirect('/')
+					# Create secure connection with server and send email
+					context = ssl.create_default_context()
+					with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+						server.login(sender_email, password)
+						server.sendmail(
+							sender_email, email, message.as_string()
+						)
+				self.write({'response': 'OK', 'message': 'Report successfully sent to {} .'.format(args['email'])})
+				return
 			else:
-				flash_message(self, 'danger', 'There has been a problem sending mail.')
-				self.redirect('/')
+				self.write({'response': 'NO', 'message': 'There has been a problem sending mail.'})
+				return

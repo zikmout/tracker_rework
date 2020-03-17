@@ -180,7 +180,17 @@ function sendReport() {
         },
         success: function(data, status, request) {
             // create task
-            $('<div class="alert alert-success py-0" role="alert">Just sent alert report to : ' + emails + '</div>').prependTo('#flashMessage');
+            // let resP = JSON.parse(request);
+            let resP = request.responseJSON;
+            if (resP.response == 'NO')
+            {
+              $('<div class="alert alert-danger py-0 mb-0" role="alert">' + resP.message + '</div>').prependTo('#flashMessage');
+            }
+            else
+            {
+              $('<div class="alert alert-success py-0 mb-0" role="alert">Just sent alert report to : ' + emails + '</div>').prependTo('#flashMessage');
+            }
+            
             
         },
         error: function() {

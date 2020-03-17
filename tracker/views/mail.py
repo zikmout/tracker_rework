@@ -15,6 +15,13 @@ from tracker.views.base import BaseView
 from tracker.utils import flash_message, login_required, get_celery_task_state, highlight_keywords
 from tracker.workers.live.live_view_worker import live_view
 
+MAX_DIFF_POS_LENGTH = 50
+MAX_DIFF_NEG_LENGTH = 50
+MAX_SBB_LINKS_POS_LENGTH = 10
+MAX_SBB_LINKS_NEG_LENGTH = 10
+MAX_ALL_LINKS_POS_LENGTH = 10
+MAX_ALL_LINKS_NEG_LENGTH = 10
+
 class UserProjectSendMail(BaseView):
 	SUPPORTED_METHOD = ['POST']
 	@login_required
@@ -40,12 +47,16 @@ class UserProjectSendMail(BaseView):
 		}
 		"""
 		args = { k: self.get_argument(k) for k in self.request.arguments }
-		print('ARGS = {}'.format(args))
+		# print('ARGS = {}'.format(args))
 		errs = json.loads(args['limitErrors'])
-		print('limit errors = {}'.format(errs))
+		# print('limit errors = {}'.format(errs))
+		# DOES NOT WORK, NEED TO RETURN OK OR NOT OK
 		if 'fromPage' not in args:
-			flash_message(self, 'danger', 'Impossible to know from what page email has to be sent.')
-			self.redirect('/')
+			self.write({'response': 'NO', 'message': 'Impossible to know from what page email has to be sent.'})
+			return
+		elif args['email'] == '':
+			self.write({'response': 'NO', 'message': 'Email address is not valid.'})
+			return
 		else:
 			if args['fromPage'] == 'live_view' and 'live_view' in self.session['tasks']:
 
@@ -89,7 +100,7 @@ class UserProjectSendMail(BaseView):
 					<h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>\
 					"
 					found = False
-					if site['diff_pos'] != []:
+					if site['diff_pos'] != [] and self.session['is_pos_live'] is True:
 						site_html += "<font color='green'><b>Added :</b><br>"
 
 
@@ -107,7 +118,7 @@ class UserProjectSendMail(BaseView):
 						# else:
 						# 	site_html += ('*** too many changes ***' + "<br>")
 
-						if len(site['diff_pos']) < 50:
+						if len(site['diff_pos']) < MAX_DIFF_POS_LENGTH:
 							for content in site['diff_pos']:
 								for k, v in site['nearest_link_pos'].items():
 									if k == content:
@@ -143,7 +154,7 @@ class UserProjectSendMail(BaseView):
 							# site_html += "<br>SBB link(s) (if not above):<br>"
 						if site['sbb_links_pos'] is None:
 							pass
-						elif len(site['sbb_links_pos']) < 10:
+						elif len(site['sbb_links_pos']) < MAX_SBB_LINKS_POS_LENGTH:
 							first_time = True
 							for link in site['sbb_links_pos']:	
 								if link not in list(site['nearest_link_pos'].values()):
@@ -156,39 +167,40 @@ class UserProjectSendMail(BaseView):
 										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
 									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
 						else:
-							site_html += ('*** too many sbb links ***' + "<br>")
+							site_html += ('<BR>*** too many sbb links ***' + "<br>")
 
 						
 						# for nearest_link in site['nearest_link_pos']:
 						# 	site_html += (nearest_link + "<br>")
 						if args['mailAlertType'] == 'share buy back':
 							site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in site['sbb_links_pos'] and _ not in list(site['nearest_link_pos'].values())]
-							if site['all_links_pos'] is None:
-								pass
-							elif len(site['all_links_pos']) < 10:
-								first_time = True
-								# if site['all_links_pos'] != []:
-									# site_html += "<br>Link(s):<br>"
-								for link in site['all_links_pos']:
-									if first_time:
-										site_html += "<br>Link(s):<br>"
-										first_time = False
-									# site_html += (link + "<br>")
-									if link.endswith('/'):
-										formated_link = link.split('/')[-2]
-									else:
-										formated_link = os.path.basename(link)
-										# site_html += (str(formated_link) + "<br>")
-									if '.' in formated_link:
-											formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
-							else:
-								pass
-								#site_html += ('*** too many links ***' + "<br>")
+						
+						if site['all_links_pos'] is None or self.session['is_live_simplified'] is False:
+							pass
+						elif len(site['all_links_pos']) < MAX_ALL_LINKS_POS_LENGTH:
+							first_time = True
+							# if site['all_links_pos'] != []:
+								# site_html += "<br>Link(s):<br>"
+							for link in site['all_links_pos']:
+								if first_time:
+									site_html += "<br>Link(s):<br>"
+									first_time = False
+								# site_html += (link + "<br>")
+								if link.endswith('/'):
+									formated_link = link.split('/')[-2]
+								else:
+									formated_link = os.path.basename(link)
+									# site_html += (str(formated_link) + "<br>")
+								if '.' in formated_link:
+										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+								site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+						else:
+							print('greater than max pos')
+							site_html += ('<BR>*** too many links ***' + "<br>")
 						site_html += "</font>"
 
 					found = False
-					if site['diff_neg'] != []:
+					if site['diff_neg'] != [] and self.session['is_neg_live'] is True:
 						site_html += "<font color='red'><b><br>Deleted :</b><br>"
 						
 						# if len(site['diff_neg']) < 10:
@@ -203,7 +215,7 @@ class UserProjectSendMail(BaseView):
 						# 			found = False
 						# else:
 						# 	site_html += ('*** too many changes ***' + "<br>")
-						if len(site['diff_neg']) < 50:
+						if len(site['diff_neg']) < MAX_DIFF_NEG_LENGTH:
 							for content in site['diff_neg']:
 								for k, v in site['nearest_link_neg'].items():
 									if k == content:
@@ -241,7 +253,7 @@ class UserProjectSendMail(BaseView):
 							# site_html += "<br>SBB link(s) (if not above):<br>"
 						if site['sbb_links_neg'] is None:
 							pass
-						elif len(site['sbb_links_neg']) < 10:
+						elif len(site['sbb_links_neg']) < MAX_SBB_LINKS_NEG_LENGTH:
 							# SBB LINKS NEG
 							first_time = True
 							for link in site['sbb_links_neg']:
@@ -255,36 +267,36 @@ class UserProjectSendMail(BaseView):
 										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
 									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
 						else:
-							site_html += ('*** too many sbb links ***' + "<br>")
+							site_html += ('<BR>*** too many sbb links ***' + "<br>")
 
 						
 						if args['mailAlertType'] == 'share buy back':
 							site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in site['sbb_links_neg'] and _ not in list(site['nearest_link_neg'].values())]
-							if site['all_links_neg'] is None:
-								pass
-							elif len(site['all_links_neg']) < 10:
-								# ALL LINKS NEG
-								first_time = True
-								# if site['all_links_neg'] != []:
-									# site_html += "<br>Link(s):<br>"
-								for link in site['all_links_neg']:
-									if link not in list(site['nearest_link_neg'].values()):
-										if first_time:
-											site_html += "<br>Link(s):<br>"
-											first_time = False
-										if link.endswith('/'):
-											formated_link = link.split('/')[-2]
-										else:
-											formated_link = os.path.basename(link)
-										if '.' in formated_link:
-											formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-										# site_html += (str(formated_link) + "<br>")
-										site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+						if site['all_links_neg'] is None or self.session['is_live_simplified'] is False:
+							pass
+						elif len(site['all_links_neg']) < MAX_ALL_LINKS_NEG_LENGTH:
+							# ALL LINKS NEG
+							first_time = True
+							# if site['all_links_neg'] != []:
+								# site_html += "<br>Link(s):<br>"
+							for link in site['all_links_neg']:
+								if link not in list(site['nearest_link_neg'].values()):
+									if first_time:
+										site_html += "<br>Link(s):<br>"
+										first_time = False
+									if link.endswith('/'):
+										formated_link = link.split('/')[-2]
+									else:
+										formated_link = os.path.basename(link)
+									if '.' in formated_link:
+										formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
+									# site_html += (str(formated_link) + "<br>")
+									site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
 
-										# site_html += (link + "<br>")
-							else:
-								pass
-								#site_html += ('*** too many links ***' + "<br>")
+									# site_html += (link + "<br>")
+						else:
+							site_html += ('<BR>*** too many links ***' + "<br>")
+							print('greater than max neg')
 						site_html += "</font>"
 				html += site_html
 				print('ERRORS 1 : {}'.format(errors))

@@ -51,6 +51,13 @@ class EchoWebSocket(WebSocketHandler):
                 #print('Task backend = {}'.format(task.backend))
                 #print('task_id: {}'.format(task_id))
                 # print('TASL = {}'.format(task))
+
+                # TODO: Catch ugly 
+                # File "/usr/local/lib/python3.6/site-packages/tracker-0.0-py3.6.egg/tracker/utils.py", line 111, in get_celery_task_state
+                #     'url': task.info.get('url'),
+                # AttributeError: 'TimeLimitExceeded' object has no attribute 'get'
+                # Maybe with :
+                # if str(task.info).startswith('TimeLimitExceeded'):
                 response = get_celery_task_state(task)
                 response['task_id'] = task_id
                 self.write_message(response)

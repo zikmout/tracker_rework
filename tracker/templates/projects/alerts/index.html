@@ -264,7 +264,7 @@
     
     <tr>
 
-      <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/launch/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
+      <form onsubmit="clearLocalStorage();" action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alerts/launch/{{ escape(alert['id']) }}" method="post" class="form-horizontal">
       <div class="form-group">
 
         <td style="vertical-align:middle;">{{ alert['name'] }}</td>
@@ -383,6 +383,14 @@
 
 <script src="{{ static_url('custom/utils.js') }}"></script>
 <script>
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  function clearLocalStorage()
+  {
+    // local storage (keeping unfinished task from live view that should be still shown to the user) must be cleared
+    localStorage.clear();
+  }
   $('#CancelButton').click(function(){
      $('#createalert').collapse('hide');
   });

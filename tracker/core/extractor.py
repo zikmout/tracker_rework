@@ -394,45 +394,53 @@ def extract_links_from_html(content):
 def get_text_diff(local_content, remote_content, status, detect_links=True):
     # extract content and links
     # print('REMOTE CONTENT : {}'.format(remote_content))
-    extracted_local_content = extract_text_from_html(local_content)
-    extracted_remote_content = extract_text_from_html(remote_content)
-    if detect_links:
-        extracted_local_links = extract_links_from_html(local_content)
-        extracted_remote_links = extract_links_from_html(remote_content)
-    # clean content ('\n' here)
-    # Save raw data for client 
-    status['diff_raw_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
-    status['diff_raw_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
+    try:
+        extracted_local_content = extract_text_from_html(local_content)
+        extracted_remote_content = extract_text_from_html(remote_content)
+        print('REMOTE CONTENT : {}'.format(remote_content))
+        print('LOCAL CONTENT : {}'.format(local_content))
+        if detect_links:
+            extracted_local_links = extract_links_from_html(local_content)
+            extracted_remote_links = extract_links_from_html(remote_content)
+            print('EXTRACTED REMOTE CONTENT : {}'.format(extracted_remote_content))
+            print('EXTRACTED LOCAL CONTENT : {}'.format(extracted_local_content))
+        # clean content ('\n' here)
+        # Save raw data for client 
+        status['diff_raw_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
+        status['diff_raw_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
 
-    # get content diffs
-    status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
-    status['diff_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
+        # get content diffs
+        status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
+        status['diff_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
 
-    if detect_links and status['diff_neg'] != []:
-        all_links_neg = set()
-        [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
-        status['all_links_neg'].extend(all_links_neg)
+        if detect_links and status['diff_neg'] != []:
+            all_links_neg = set()
+            [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
+            status['all_links_neg'].extend(all_links_neg)
 
-    if detect_links and status['diff_pos'] != []:
-        all_links_pos = set()
-        [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
-        status['all_links_pos'].extend(all_links_pos)
+        if detect_links and status['diff_pos'] != []:
+            all_links_pos = set()
+            [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
+            status['all_links_pos'].extend(all_links_pos)
+            
+        # taking off doublons in diff pos and diff neg    
+        # Strip / Trim / Clean text
+        status['diff_pos'] = [trim_text(x) for x in status['diff_pos'].copy() if trim_text(x) != ''] # was .strip() instead of trim_text
+        status['diff_neg'] = [trim_text(x) for x in status['diff_neg'].copy() if trim_text(x) != ''] # was .strip() instead of trim_text
         
-    # taking off doublons in diff pos and diff neg    
-    # Strip / Trim / Clean text
-    status['diff_pos'] = [trim_text(x) for x in status['diff_pos'].copy() if trim_text(x) != ''] # was .strip() instead of trim_text
-    status['diff_neg'] = [trim_text(x) for x in status['diff_neg'].copy() if trim_text(x) != ''] # was .strip() instead of trim_text
-    
-    # Set
-    status['diff_pos'] = list(set(status['diff_pos'].copy()))
-    status['diff_neg'] = list(set(status['diff_neg'].copy()))
-    
-    # Intersect
-    intersect = set(status['diff_pos']).intersection(set(status['diff_neg']))
-    status['diff_pos'] = [x for x in status['diff_pos'].copy() if x not in intersect]
-    status['diff_neg'] = [x for x in status['diff_neg'].copy() if x not in intersect]
+        # Set
+        status['diff_pos'] = list(set(status['diff_pos'].copy()))
+        status['diff_neg'] = list(set(status['diff_neg'].copy()))
         
-    return status
+        # Intersect
+        intersect = set(status['diff_pos']).intersection(set(status['diff_neg']))
+        status['diff_pos'] = [x for x in status['diff_pos'].copy() if x not in intersect]
+        status['diff_neg'] = [x for x in status['diff_neg'].copy() if x not in intersect]
+            
+        return status
+    except Exception as e:
+        print('get_text_diff exception -> {} (SoftTimeLimit() must have been raised)'.format(e))
+        return None
 
 def get_essential_content(content, min_sentence_len):
     extracted = extract_text_from_html(content)

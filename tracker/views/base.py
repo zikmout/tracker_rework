@@ -144,6 +144,18 @@ class SwitchPosLiveView(BaseView):
             flash_message(self, 'info', 'Positive diff ON.')
         self.send_response({ 'response': 'OK' })
 
+class SwitchTimeoutLiveView(BaseView):
+    SUPPORTED_METHODS = ['POST']
+    @gen.coroutine
+    def post(self):
+        self.session['is_timeout_live'] = not self.session['is_timeout_live']
+        self.session.save()
+        if self.session['is_timeout_live'] is False:
+            flash_message(self, 'info', 'Timeout tasks hidden.')
+        else:
+            flash_message(self, 'info', 'Timeout tasks shown.')
+        self.send_response({ 'response': 'OK' })
+
 class SwitchNegLiveView(BaseView):
     SUPPORTED_METHODS = ['POST']
     @gen.coroutine

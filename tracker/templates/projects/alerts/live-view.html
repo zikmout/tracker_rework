@@ -60,7 +60,7 @@ a {
                   <button type="submit" class="btn btn-info btn-sm ml-1" id="updatePages">Update</button></input>
                 </form>
 
-                <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post" class="form-inline mt-2">
+                <form onsubmit="clearLocalStorage();" action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="post" class="form-inline mt-2">
                   <input type="hidden" value="{{ handler.session['current_live_view_content'] }}" name="contentName">
                   <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
                   <button type="submit" class="btn btn-danger btn-sm ml-1">Stop</button></input>
@@ -69,11 +69,16 @@ a {
                   <input type="checkbox" {% if handler.session['is_live_simplified'] %}checked {% end %}data-toggle="toggle" id="customSwitch1" data-size="sm" data-onstyle="info" data-width="60" data-on="Details" data-off="Basic">
                 </div>
                 <div class="mt-2 ml-1">
-                  <input type="checkbox" {% if handler.session['is_pos_live'] %}checked {% end %}data-toggle="toggle" id="customSwitchPos" data-size="sm" data-onstyle="info" data-width="60" data-on="+ ON" data-off="+ OFF">
+                  <input type="checkbox" {% if handler.session['is_pos_live'] %}checked {% end %}data-toggle="toggle" id="customSwitchPos" data-size="sm" data-onstyle="info" data-width="50" data-on="+ ON" data-off="+ OFF">
                 </div>
                 <div class="mt-2 ml-1">
-                  <input type="checkbox" {% if handler.session['is_neg_live'] %}checked {% end %}data-toggle="toggle" id="customSwitchNeg" data-size="sm" data-onstyle="info" data-width="60" data-on="- ON" data-off="- OFF">
+                  <input type="checkbox" {% if handler.session['is_neg_live'] %}checked {% end %}data-toggle="toggle" id="customSwitchNeg" data-size="sm" data-onstyle="info" data-width="50" data-on="- ON" data-off="- OFF">
                 </div>
+                {% if hasattr(handler, 'session') and handler.session != {} and 'is_admin' in handler.session and handler.session['is_admin'] is True and handler.session['is_simplified'] is False %}
+                <div class="mt-2 ml-1">
+                  <input type="checkbox" {% if handler.session['is_timeout_live'] %}checked {% end %}data-toggle="toggle" id="customSwitchTimeout" data-size="sm" data-onstyle="info" data-width="70" data-on="Timeout" data-off="Timeout">
+                </div>
+                {% end %}
                 <form action="" class="form-inline ml-2 mt-2">
                   <p>
                   <label for="exampleFormControlTextarea1"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)</label>
@@ -136,13 +141,13 @@ a {
 
         
           <div id="whatHasChanged"></div>
-      {% if 'live_view' in handler.session['tasks'] %}
-        {% for tasks in handler.session['tasks']['live_view']  %}
+<!--       {% if 'live_view' in handler.session['tasks'] %}
+        {% for tasks in handler.session['tasks']['live_view']  %} -->
           <!-- <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center> -->
           <!-- <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center> -->
           <!-- <div id="changedContent{{ escape(str(tasks['id'])) }}"></div> -->
-        {% end %}
-      {% end %}
+<!--         {% end %}
+      {% end %} -->
 </div>
 <script>
 
@@ -158,6 +163,13 @@ a {
   {% else %}
     var isNegLive = false;
   {% end %}
+
+  {% if 'is_admin' in handler.session and handler.session['is_admin'] is True and handler.session['is_timeout_live'] is True %}
+    var isTimeoutLive = true;
+  {% else %}
+    var isTimeoutLive = false;
+  {% end %}
+
 {% end %}
 
 var counterFailureMaster = 0;
@@ -233,6 +245,10 @@ function timeout() {
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+function outerHTML(node){
+  return node.outerHTML || new XMLSerializer().serializeToString(node);
 }
 
 function getRandomArbitrary(min, max) {
@@ -546,8 +562,9 @@ ws.onmessage = function (evt) {
        // console.log(elt.childNodes.length);
        // console.log(JSON.parse(evt.data).state.errors);
        // console.log(evt.data);
+       var jsonMeta = null;
        if (evt.data.includes('<LIMIT_STOP>') && evt.data.includes('#')) {
-        var jsonMeta = evt.data.split('#')[1];
+        jsonMeta = evt.data.split('#')[1];
         var currentUrl = getUrlFromTaskId(jsonMeta)['url'];
         // if (!document.getElementById('limitErrors').includes(currentUrl)) {
         //  document.getElementById('limitErrors').push(currentUrl);
@@ -573,6 +590,30 @@ ws.onmessage = function (evt) {
           // console.log(c);
           // var objErr = { c: 'SoftTimeLimitExceeded()II'};
           limitErrors[c] = 'HardTimeLimitExceeded()';
+          
+          if (jsonMeta != null)
+          {
+            // console.log('POU POU : ' + jsonMeta);
+            // let hardTimeLimitPartialTask = document.getElementById('err-' + jsonMeta);
+            let hardTimeLimitPartialTaskShown = document.getElementById('changedContent' + jsonMeta);
+
+            if (hardTimeLimitPartialTaskShown !== null)
+            {
+              // add Timeout badge to show user task has not been fully completed
+
+              let outerHTMLString = outerHTML(hardTimeLimitPartialTaskShown);
+              if (outerHTMLString.includes("badge-info") == false)
+              {
+                var htmlWithBadge = outerHTMLString.replace('</h5>', '&nbsp;<span class="badge badge-info">Timeout</span></h5>');
+              }
+              else
+              {
+                var htmlWithBadge = outerHTMLString;
+              }
+              localStorage.setItem(jsonMeta, htmlWithBadge);
+            }
+          }
+          
           // console.log(limitErrors);
           // var hiddenInput = document.createElement('input');
           // hiddenInput.type = 'hidden';
@@ -621,7 +662,7 @@ ws.onmessage = function (evt) {
             var data = JSON.parse(evt.data);
             if (data.state == 'PROGRESS' && data.status.current_target != undefined)
             {
-              console.log(currentTargets);
+              // console.log(currentTargets);
               let lenCurrentTargets = data.status.current_target.length;
               if (lenCurrentTargets > 1)
               {
@@ -926,6 +967,7 @@ ws.onmessage = function (evt) {
 
 };
 timeout();
+
 function updateProgressBar(divId, percent) {
     $(divId).text(percent + '%');
     document.getElementById("pct").style.width = percent + '%';
@@ -945,18 +987,20 @@ function showFailedTasksDetails() {
 {% end %}
 {% block script %}
 <script>
+  function clearLocalStorage()
+  {
+    // local storage (keeping unfinished task from live view that should be still shown to the user) must be cleared
+    localStorage.clear();
+  }
+
   $(function() {
     $('#customSwitch1').change(function() {
       var mode = $(this).prop('checked');
       $.ajax({
           type:'POST',
           url: '/switch-detailded-live-view',
-          // data: {
-          //     "is_simplified": mode
-          // },
           success: function(response) {
               var jsonResp = JSON.parse(response);
-              // console.log(jsonResp);
               document.location.reload();
           },
           error: function(xhf) {
@@ -1000,13 +1044,44 @@ function showFailedTasksDetails() {
     })
   })
 
-  $(document).ready(function() {
-    // console.log('ok tooltip');
-  $('[data-toggle="tooltip"]').tooltip({ pointerEvents: 'none' });
-});
+  $(function() {
+    $('#customSwitchTimeout').change(function() {
+      var mode = $(this).prop('checked');
+      $.ajax({
+          type:'POST',
+          url: '/switch-timeout-live-view',
+          success: function(response) {
+              var jsonResp = JSON.parse(response);
+              document.location.reload();
+          },
+          error: function(xhf) {
+              console.log('An Error occured trying to switch mode');
+          }
+      });
+    })
+  })
+
+  $(document).ready(function()
+  {
+    if (isTimeoutLive == true)
+    {
+    for (var i = 0; i < localStorage.length; i++)
+      {
+        var key = localStorage.key(i);
+        var item = localStorage.getItem(key) ;
+        if(document.getElementById('changedContent' + key) == null)
+        {
+          document.getElementById('whatHasChanged').insertAdjacentHTML('beforeend', "<br><hr>" + item);
+        }
+      }
+    }
+    $('[data-toggle="tooltip"]').tooltip({ pointerEvents: 'none' });
+  });
   // $("[name='customSwitch1']").bootstrapSwitch();
-  $('#updatePages').click(function(){
+  $('#updatePages').click(function()
+  {
      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);     
   });
+
 </script>
 {% end %}

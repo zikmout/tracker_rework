@@ -31,6 +31,9 @@ class AuthLoginView(BaseView):
         self.session['is_neg_live'] = True
         if self.session['is_admin'] == True:
             self.session['is_simplified'] = True
+            self.session['is_timeout_live'] = True
+        else:
+            self.session['is_timeout_live'] = False
         self.session['rolename'] = registered_user.get_rolename()
         self.session['tasks'] = {}
         self.session.save()

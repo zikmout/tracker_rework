@@ -25,10 +25,10 @@
         <link rel="stylesheet" href="{{ static_url('custom_tracker.css') }}">
 
         <script src="{{ static_url('jquery.min.js') }}"></script>
-            <script src="{{ static_url('assets/js/vendor/popper.min.js') }}"></script>
-            <script src="{{ static_url('dist/js/bootstrap.min.js') }}"></script>
-            <!-- <script src="{{ static_url('dist/js/bootstrap-switch.js') }}"></script> -->
-            <!-- <script src="{{ static_url('assets/scss/bootstrap-switch.scss') }}"></script> -->
+        <script src="{{ static_url('assets/js/vendor/popper.min.js') }}"></script>
+        <script src="{{ static_url('dist/js/bootstrap.min.js') }}"></script>
+        <!-- <script src="{{ static_url('dist/js/bootstrap-switch.js') }}"></script> -->
+        <!-- <script src="{{ static_url('assets/scss/bootstrap-switch.scss') }}"></script> -->
             
     </head>
 
@@ -47,7 +47,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Session</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
                             <a class="dropdown-item" href="{{ reverse_url('login') }}">Login</a>
-                            <a class="dropdown-item" href="{{ reverse_url('logout') }}">Logout</a>
+                            <a class="dropdown-item" href="{{ reverse_url('logout') }}" onclick="clearLocalStorage();">Logout</a>
                             {% if hasattr(handler, 'session') and handler.session != {} and 'is_admin' in handler.session and handler.session['is_admin'] is True and handler.session['is_simplified'] is False %}
                                 <a class="dropdown-item" href="{{ reverse_url('register') }}">Register</a>
                             {% end %}
@@ -90,7 +90,11 @@
         {% if hasattr(handler, 'session') and 'units' in handler.session and 'current_project' in handler.session %}
 
         <nav class="navbar navbar-expand-md bg-white box-shadow py-0 custom-toggler" style="padding-top: 15px;">
-            <a class="navbar-brand" onmouseover="this.style.color='#343a40'" onmouseout="this.style.color='#343a40'" style="font-size:0.9rem; color: #343a40" href="#"><b>{{ handler.session['current_project'] }}</b></a>
+            <a class="navbar-brand" onmouseover="this.style.color='#343a40'" onmouseout="this.style.color='#343a40'" style="font-size:0.9rem; color: #343a40" href="#">
+                <b>
+                    {{ handler.session['current_project'] }}
+                </b>
+            </a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -153,6 +157,11 @@
 
 
             <script>
+              function clearLocalStorage()
+              {
+                // local storage (keeping unfinished task from live view that should be still shown to the user) must be cleared
+                localStorage.clear();
+              }
               $('.dropdown-item').click(function(){
                  $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
               });

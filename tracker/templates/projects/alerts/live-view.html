@@ -24,7 +24,7 @@ a {
       {% if 'live_view' in handler.session['tasks'] %}
       <h3>Live <span class="badge badge-pill badge-dark">{{ handler.session['tasks']['live_view'][0]['template_type'] }}</span> alert{% end %}</h3>
       {% if 'live_view' in handler.session['tasks'] %}
-        <small id="currentTargetDetails">Analyzing : <div id="currentWebSite" style="display:inline-block; color:grey;"></div></small>
+        <small id="currentTargetDetails">Analyzing <font color="red">(total : <div id="totalFetched" style="display: inline-block;"></div>)</font> : <div id="currentWebSite" style="display: inline-block; color:grey;"></div></small>
       {% end %}
      
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="myLargeModalLabel" aria-labelledby="myLargeModalLabel" aria-hidden="true">
@@ -81,7 +81,7 @@ a {
                 {% end %}
                 <form action="" class="form-inline ml-2 mt-2">
                   <p>
-                  <label for="exampleFormControlTextarea1"><div id="numberOfPendingTasks">{{ len(handler.session['tasks']['live_view']) }}</div>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)</label>
+                  <label for="exampleFormControlTextarea1"><div id="numberOfPendingTasks">0</div>/{{ len(handler.session['tasks']['live_view']) }} (<font color="red"><div id="numberOfFailedTasks" onclick="showFailedTasksDetails()">0</div></font>&nbsp;failed)</label>
                   </p>
                   
                 </form>
@@ -172,6 +172,9 @@ a {
 
 {% end %}
 
+var areTasksFinished = false;
+var counterShownAnalyzed = 0;
+var nbOfTimeLastAnalyzedShown = 0;
 var counterFailureMaster = 0;
 var counterPending = 0
 var limitErrors = {};
@@ -232,7 +235,7 @@ function timeout() {
     // }
     // $('hr').remove();
     // $('div[id^="changedContent"]').empty();
-    $('#numberOfPendingTasks').html(remainingTaskNb);
+    $('#numberOfPendingTasks').html(totalTaskNb - remainingTaskNb);
     updateProgressBar('#liveViewProgress', (nbExecuted/totalTaskNb)*100);
     // executed = 0;
     remainingTaskNb = 0;
@@ -681,7 +684,8 @@ ws.onmessage = function (evt) {
                     currentTargets.push(data.status.current_target[0]);
                   }
               }
-              $('#currentWebSite').text(currentTargets[currentTargets.length - 1]);
+              
+
               // $('#currentWebSite').text(Object.keys(data.status.current_target)[0]);
               // if (!currentTargets.includes(Object.keys(data.status.current_target)[0]))
               // {
@@ -959,6 +963,41 @@ ws.onmessage = function (evt) {
        }
      }
 
+      if ($('#currentWebSite').text() != 'completed' && currentTargets.length >= 0 && ($('#currentWebSite').text() != currentTargets[currentTargets.length - 1]))
+      {
+        counterShownAnalyzed += 1;
+        nbOfTimeLastAnalyzedShown = 0;
+      }
+      else
+      {
+        nbOfTimeLastAnalyzedShown += 1;
+      }
+      if (nbOfTimeLastAnalyzedShown > 100)
+      {
+        $('#currentWebSite').text('completed');
+        if (currentTargets.length != 0)
+        {
+          localStorage.setItem('totalFetched', currentTargets.length);
+        }
+      }
+      else
+      {
+        $('#currentWebSite').text(currentTargets[currentTargets.length - 1]);
+        if (currentTargets.length != 0)
+        {
+          $('#totalFetched').text(currentTargets.length);
+        }
+      }
+      // console.log(nbOfTimeLastAnalyzedShown);
+      // console.log(currentTargets.length);
+      if (areTasksFinished == false && currentTargets.length == 0 && (nbExecuted/totalTaskNb) == 1)
+      {
+        $('#currentWebSite').text('completed');
+        areTasksFinished = true;
+        let totalFetchedFromLocalStorage = localStorage.getItem('totalFetched');
+        $('#totalFetched').text(totalFetchedFromLocalStorage);
+        // console.log('END DECLARED, total feteched :' + totalFetchedFromLocalStorage);
+      }
  }
  else
  {
@@ -1069,7 +1108,7 @@ function showFailedTasksDetails() {
       {
         var key = localStorage.key(i);
         var item = localStorage.getItem(key) ;
-        if(document.getElementById('changedContent' + key) == null)
+        if(key != 'totalFetched' && document.getElementById('changedContent' + key) == null)
         {
           document.getElementById('whatHasChanged').insertAdjacentHTML('beforeend', "<br><hr>" + item);
         }

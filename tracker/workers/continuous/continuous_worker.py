@@ -182,7 +182,7 @@ def bad_task(self):
 
 @app.task(bind=True, ignore_result=False, soft_time_limit=29, time_limit=30)#, time_limit=1)#soft_time_limit=60)#, time_limit=121)
 def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links, show_links,\
-    links_algorithm, counter, total_task):
+    show_diff_pos, show_diff_neg, links_algorithm, counter, total_task):
     """ Download website parts that have changed 
         -> diff based on keyword matching
         -> links identified with ml algorithm that detect share buy back content (pdf or raw text)
@@ -355,7 +355,7 @@ def log_error_sbb(self, z):
     print('ERROR for share_buy_back_task = {}'.format(z))
 
 @app.task(bind=True)
-def sbb_end_routine(self, task_results, mails, user_email, project_name, show_links):#, soft_time_limit=120):
+def sbb_end_routine(self, task_results, mails, user_email, project_name, show_links, show_diff_pos, show_diff_neg):#, soft_time_limit=120):
     errors = dict()
     task_results_successful = []
     if isinstance(task_results, dict):
@@ -372,7 +372,7 @@ def sbb_end_routine(self, task_results, mails, user_email, project_name, show_li
             # except Exception as e:
                 # errors.update(_['status']['errors'])
     # errors = [r['errors'] for r in task_results.copy()]
-    print('\ntask result = {}, \n\nerrors : {}'.format(task_results_successful.copy(), errors))
+    # print('\ntask result = {}, \n\nerrors : {}'.format(task_results_successful.copy(), errors))
     # if task_results == []:
     #   print('No email to be sent because no diff found.')
     # else:
@@ -384,7 +384,8 @@ def sbb_end_routine(self, task_results, mails, user_email, project_name, show_li
         .format(task_results))
         print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-        generic_mail_template(task_results_successful, errors, mails, 'sbb', len(task_results), show_links=show_links)
+        generic_mail_template(task_results_successful, errors, mails, 'sbb', len(task_results), show_links=show_links,\
+            show_diff_pos=show_diff_pos, show_diff_neg=show_diff_neg)
         print('- Mails successfully sent if any changed noticed -')
     print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
     
@@ -394,15 +395,19 @@ def sbb_end_routine(self, task_results, mails, user_email, project_name, show_li
     print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
 
 @app.task(bind=True)
-def share_buy_back_task(self, add, mails, user_email, project_name, show_links):
+def share_buy_back_task(self, add, mails, user_email, project_name, show_links, show_diff_pos, show_diff_neg):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
     #.set(
                 # soft_time_limit=1
             # )
     if len(add) == 1:
-        return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6], add[0][7], add[0][8], add[0][9]) | sbb_end_routine.s(mails, user_email, project_name, show_links)).delay()
+        return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6],\
+         add[0][7], add[0][8], add[0][9], add[0][10], add[0][11]) | sbb_end_routine.s(mails, user_email,\
+         project_name, show_links, show_diff_pos, show_diff_neg)).delay()
     else:
-        return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]) for k in add) | sbb_end_routine.s(mails, user_email, project_name, show_links)).delay()
+        return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9], k[10],\
+            k[11]) for k in add) | sbb_end_routine.s(mails, user_email, project_name, show_links, show_diff_pos,\
+        show_diff_neg)).delay()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
     #     ).on_error(log_error_sbb.s()) for k in add), sbb_end_routine.s(mails, user_email, project_name))()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
@@ -418,7 +423,7 @@ def log_error_diff(self, z):
     print('ERROR for diff_task = {}'.format(z))
 
 @app.task(bind=True)
-def diff_end_routine(self, task_results, mails, user_email, project_name, show_links):#, time_limit=10, soft_time_limit=10):#, soft_time_limit=120):
+def diff_end_routine(self, task_results, mails, user_email, project_name, show_links, show_diff_pos, show_diff_neg):#, time_limit=10, soft_time_limit=10):#, soft_time_limit=120):
     errors = dict()
     task_results_successful = []
     if isinstance(task_results, dict):
@@ -433,7 +438,7 @@ def diff_end_routine(self, task_results, mails, user_email, project_name, show_l
             if 'status' in _ and _['status']['errors'] != {}:
                 errors.update(_['status']['errors'])
     # errors = [r['errors'] for r in task_results.copy()]
-    print('\ntask result = {}, \n\nerrors : {}'.format(task_results_successful.copy(), errors))
+    # print('\ntask result = {}, \n\nerrors : {}'.format(task_results_successful.copy(), errors))
     # if task_results == []:
     #   print('No email to be sent because no diff found.')
     # else:
@@ -445,7 +450,8 @@ def diff_end_routine(self, task_results, mails, user_email, project_name, show_l
         .format(task_results))
         print("DIFF MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-        generic_mail_template(task_results_successful, errors, mails, 'diff', len(task_results), show_links=show_links)
+        generic_mail_template(task_results_successful, errors, mails, 'diff', len(task_results), show_links=show_links,\
+            show_diff_pos=show_diff_pos, show_diff_neg=show_diff_neg)
         print('- Mails successfully sent if any changed noticed -')
     print("DIFF MAILS TEMPLATE CONTENT : {}".format(mails))
     
@@ -455,12 +461,16 @@ def diff_end_routine(self, task_results, mails, user_email, project_name, show_l
     print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
 
 @app.task(bind=True)
-def diff_task(self, add, mails, user_email, project_name, show_links):
+def diff_task(self, add, mails, user_email, project_name, show_links, show_diff_pos, show_diff_neg):
     #print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
     if len(add) == 1:
-        return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6], add[0][7], add[0][8], add[0][9]) | diff_end_routine.s(mails, user_email, project_name, show_links)).delay()
+        return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6],\
+            add[0][7], add[0][8], add[0][9], add[0][10], add[0][11]) | diff_end_routine.s(mails, user_email,\
+            project_name, show_links, show_diff_pos, show_diff_neg)).delay()
     else:
-        return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]) for k in add) | diff_end_routine.s(mails, user_email, project_name, show_links)).delay()
+        return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9], k[10],\
+            k[11]) for k in add) | diff_end_routine.s(mails, user_email, project_name, show_links, show_diff_pos,\
+        show_diff_neg)).delay()
     # return celery.chord((get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
     #     ).on_error(log_error_diff.s()) for k in add), diff_end_routine.s(mails, user_email, project_name))()
 
@@ -481,7 +491,8 @@ def bad_task(self):
     time.sleep(10)
 
 @app.task(bind=True)
-def diff_with_keywords_end_routine(self, task_results, mails, user_email, project_name, show_links):#, soft_time_limit=120):
+def diff_with_keywords_end_routine(self, task_results, mails, user_email, project_name, show_links,\
+show_diff_pos, show_diff_neg):#, soft_time_limit=120):
     errors = dict()
     task_results_successful = []
     if isinstance(task_results, dict):
@@ -502,7 +513,7 @@ def diff_with_keywords_end_routine(self, task_results, mails, user_email, projec
         #     if task['status']['errors'] != {}:
         #         errors.update(task['status']['errors'])
     # errors = [r['errors'] for r in task_results.copy()]
-    print('\ntask result successful = {}, \n\nerrors : {}'.format(task_results_successful, errors))
+    # print('\ntask result successful = {}, \n\nerrors : {}'.format(task_results_successful, errors))
     # if task_results == []:
     #   print('No email to be sent because no diff found.')
     # else:
@@ -514,7 +525,8 @@ def diff_with_keywords_end_routine(self, task_results, mails, user_email, projec
         .format(task_results_successful))
         print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
         #simple_mail_sbb(task_results, "simon.sicard@gmail.com")
-        generic_mail_template(task_results_successful, errors, mails, 'diff with keywords', len(task_results), show_links=show_links)
+        generic_mail_template(task_results_successful, errors, mails, 'diff with keywords', len(task_results),\
+            show_links=show_links, show_diff_pos=show_diff_pos, show_diff_neg=show_diff_neg)
         print('- Mails successfully sent if any changed noticed -')
     # print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
     
@@ -525,7 +537,7 @@ def diff_with_keywords_end_routine(self, task_results, mails, user_email, projec
         # print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
         
 @app.task(bind=True)
-def diff_with_keywords_task(self, add, mails, user_email, project_name, show_links):
+def diff_with_keywords_task(self, add, mails, user_email, project_name, show_links, show_diff_pos, show_diff_neg):
     # print('ARGS SENT ==> {}'.format([[k[0], k[1], k[2], k[3]] for k in add]))
     # return celery.chord(
     #     (get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add), 
@@ -534,10 +546,14 @@ def diff_with_keywords_task(self, add, mails, user_email, project_name, show_lin
     # print('ADD = {}'.format(add))
     # print('len ADD = {}'.format(len(add)))
     if len(add) == 1:
-        return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6], add[0][7], add[0][8], add[0][9]) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links)).delay()
+        return (get_diff.s(add[0][0], add[0][1], add[0][2], add[0][3], add[0][4], add[0][5], add[0][6],\
+            add[0][7], add[0][8], add[0][9], add[0][10], add[0][11]) | diff_with_keywords_end_routine.s(mails, user_email,\
+            project_name, show_links, show_diff_pos, show_diff_neg)).delay()
     # return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]) for k in add) | bad_task() | diff_with_keywords_end_routine.s(mails, user_email, project_name)).delay()
     else:
-        return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links)).delay()
+        return (group(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9], k[10],\
+            k[11]) for k in add) | diff_with_keywords_end_routine.s(mails, user_email, project_name, show_links,\
+        show_diff_pos, show_diff_neg)).delay()
     # return celery.chord(get_diff.s(k[0], k[1], k[2], k[3], k[4], k[5], k[6]\
         # ) for k in add | diff_with_keywords_end_routine.s(mails, \
     # user_email, project_name).on_error(log_error_diff_with_keywords.s()))

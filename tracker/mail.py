@@ -11,7 +11,15 @@ import tornado
 from tornado.escape import url_unescape as url_unescape
 from tracker.utils import highlight_keywords
 
-def generic_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links):
+MAX_DIFF_POS_LENGTH = 50
+MAX_DIFF_NEG_LENGTH = 50
+MAX_SBB_LINKS_POS_LENGTH = 10
+MAX_SBB_LINKS_NEG_LENGTH = 10
+MAX_ALL_LINKS_POS_LENGTH = 10
+MAX_ALL_LINKS_NEG_LENGTH = 10
+
+def generic_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links,\
+    show_diff_pos=True, show_diff_neg=True):
     """
             Mailing list must be of type dict here
     """
@@ -37,41 +45,34 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
 
         site_html = ''
         for site in designed_task_results:
-            site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
-            <h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>\
-            "
-            found = False
-            if site['diff_pos'] != []:
+            if (site['diff_pos'] != [] and show_diff_pos is True) or (site['diff_neg'] != [] and show_diff_neg is True):
+                site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
+                <h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>"
+
+            if site['diff_pos'] != [] and show_diff_pos is True:
                 site_html += "<font color='green'><b>Added :</b><br>"
 
 
-                if len(site['diff_pos']) < 50:
+                if len(site['diff_pos']) < MAX_DIFF_POS_LENGTH:
                     for content in site['diff_pos']:
                         for k, v in site['nearest_link_pos'].items():
                             if k == content:
                                 content2 = highlight_keywords(site['keywords'], content)
                                 site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_pos'][k] + '">' + content2 + "</a><br>")
-                                # found = True
                                 break;
-                        # if not found:# or content.replace('\'', ' ') not in list(site['nearest_link_pos'].keys()):
-                        #     content2 = highlight_keywords(site['keywords'], content)
-                        #     site_html += (content2 + "<br>")
-                        #     found = False
 
                     remainder = list(set(site['diff_pos']).difference(set(list(site['nearest_link_pos'].keys()))))
-                    #print('remainder diff pos = {}'.format(remainder))
                     for r in remainder:
-
                         content2 = highlight_keywords(site['keywords'], r)
                         site_html += (content2 + "<br>")
                 else:
                     site_html += ('*** too many changes ***' + "<br>")
             
             # SBB LINKS POS
-            if task_name == 'sbb':
+            if task_name == 'sbb' and show_diff_pos is True:
                 if site['sbb_links_pos'] is None:
                     pass
-                elif len(site['sbb_links_pos']) < 10:
+                elif len(site['sbb_links_pos']) < MAX_SBB_LINKS_POS_LENGTH:
                     first_time = True
                     for link in site['sbb_links_pos']:  
                         if link not in list(site['nearest_link_pos'].values()):
@@ -79,21 +80,20 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                                 site_html += "<br>SBB link(s) (if not above):<br>"
                                 first_time = False
                             formated_link = os.path.basename(link)
-                            # site_html += (str(formated_link) + "<br>")
                             if '.' in formated_link:
                                 formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
                             site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
                 else:
-                    site_html += ('*** too many sbb links ***' + "<br>")
+                    site_html += ('<BR>*** too many sbb links ***' + "<br>")
 
-            else:
+            elif show_diff_pos is True:
                 # ALL LINKS POS
                 site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in list(site['nearest_link_pos'].values())]
                 if task_name == 'sbb':
                     site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in site['sbb_links_pos']]
-                if site['all_links_pos'] is None:
+                if site['all_links_pos'] is None or show_links is False:
                     pass
-                elif len(site['all_links_pos']) < 10:
+                elif len(site['all_links_pos']) < MAX_ALL_LINKS_POS_LENGTH:
                     first_time = True
                     for link in site['all_links_pos']:
                         if first_time:
@@ -106,58 +106,37 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                         if '.' in formated_link:
                                 formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
                         site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
-            site_html += "</font>"
+                else:
+                    site_html += ('<BR>*** too many links ***' + "<br>")
+                site_html += "</font>"
 
             # DIFF NEG
-            found = False
-            if site['diff_neg'] != []:
+            if site['diff_neg'] != [] and show_diff_neg is True:
 
-                if site['diff_pos'] != []:
+                if site['diff_pos'] != [] and show_diff_pos is True:
                     site_html += "<br>"
                 site_html += "<font color='red'><b>Deleted :</b><br>"
 
-                if len(site['diff_neg']) < 50:
+                if len(site['diff_neg']) < MAX_DIFF_NEG_LENGTH:
                     for content in site['diff_neg']:
                         for k, v in site['nearest_link_neg'].items():
                             if k == content:
                                 content2 = highlight_keywords(site['keywords'], content)
                                 site_html += ('<a style="color: red; text-decoration: underline;" href="' + site['nearest_link_neg'][k] + '">' + content2 + "</a><br>")
-                                # found = True
                                 break;
-                        # if not found:
-                        #     content2 = highlight_keywords(site['keywords'], content)
-                        #     site_html += (content2 + "<br>")
-                        #     found = False
                     remainder = list(set(site['diff_neg']).difference(set(list(site['nearest_link_neg'].keys()))))
-                    #print('remainder diff neg = {}'.format(remainder))
                     for r in remainder:
                         content2 = highlight_keywords(site['keywords'], r)
                         site_html += (content2 + "<br>")
 
-                    # Deletions that have no nearest link
-                    # remainder = list()
-                    # nl = list(site['nearest_link_neg'].keys())
-
-                    # for _ in site['diff_neg']:
-                    #     # if _ not in nl:
-                    #     remainder.append(_)
-                    # # remainder = list(set(list(site['nearest_link_neg'].keys())).difference(set(site['diff_neg'])))
-                    # #print('remainder diff neg = {}'.format(remainder))
-                    # for r in remainder:
-                    #     content2 = highlight_keywords(site['keywords'], r)
-                    #     if content in list(site['nearest_link_neg'].keys()):
-                    #         site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_neg'][content] + '">' + content2 + "</a><br>")
-                    #     else:
-                    #         site_html += (content2 + "<br>")
-                    #print('remainder diff neg = {}'.format(remainder))
                 else:
                     site_html += ('*** too many changes ***' + "<br>")
 
                 # SBB LINKS NEG
-                if task_name == 'sbb':
+                if task_name == 'sbb' and show_diff_neg is True:
                     if site['sbb_links_neg'] is None:
                         pass
-                    elif len(site['sbb_links_neg']) < 10:
+                    elif len(site['sbb_links_neg']) < MAX_SBB_LINKS_NEG_LENGTH:
                         first_time = True
                         for link in site['sbb_links_neg']:
                             if link not in list(site['nearest_link_neg'].values()):
@@ -171,15 +150,15 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                     else:
                         site_html += ('*** too many sbb links ***' + "<br>")
 
-                else:
+                elif show_diff_neg is True:
                     # ALL LINKS NEG
                     site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in list(site['nearest_link_neg'].values())]
                     if task_name == 'sbb':
                         site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in site['sbb_links_neg']]
                     
-                    if site['all_links_neg'] is None:
+                    if site['all_links_neg'] is None or show_links is False:
                         pass
-                    elif len(site['all_links_neg']) < 10:
+                    elif len(site['all_links_neg']) < MAX_ALL_LINKS_NEG_LENGTH:
                         first_time = True
                         for link in site['all_links_neg']:
                             if link not in list(site['nearest_link_neg'].values()):
@@ -193,8 +172,10 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                                 if '.' in formated_link:
                                     formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
                                 site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+                    else:
+                        site_html += ('<BR>*** too many links ***' + "<br>")
+                    site_html += "</font>"
 
-                site_html += "</font>"
         html += site_html
         # html += "<br><br>Best regards,<br>"
 

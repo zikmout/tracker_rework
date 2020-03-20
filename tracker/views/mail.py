@@ -93,7 +93,6 @@ class UserProjectSendMail(BaseView):
 					site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
 					<h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>\
 					"
-					found = False
 					if site['diff_pos'] != [] and self.session['is_pos_live'] is True:
 						site_html += "<font color='green'><b>Added :</b><br>"
 
@@ -103,7 +102,6 @@ class UserProjectSendMail(BaseView):
 									if k == content:
 										content2 = highlight_keywords(site['keywords'], content)
 										site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_pos'][k] + '">' + content2 + "</a><br>")
-										# found = True
 										break;
 
 							remainder = list(set(site['diff_pos']).difference(set(list(site['nearest_link_pos'].keys()))))

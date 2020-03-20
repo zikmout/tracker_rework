@@ -185,6 +185,8 @@ class Alert(Base):
     # Remainder
     email_notify = Column(Boolean)
     show_links = Column(Boolean)
+    show_diff_pos = Column(Boolean)
+    show_diff_neg = Column(Boolean)
     template_type = Column(String(64))
     diff_links = Column(String(64)) # Not bolean to keep possibility for ml algo in label
     launched = Column(Boolean)
@@ -192,7 +194,7 @@ class Alert(Base):
 
     def __init__(self, name, alert_type, start_time, end_time=None, repeat=None, interval=None,\
         max_count=None, repeat_at=None, days_of_week=None, email_notify=False, show_links=False,\
-        template_type='diff', diff_links=True, launched=False):
+        show_diff_pos=True, show_diff_neg=True, template_type='diff', diff_links=True, launched=False):
         self.name = name
         self.alert_type = alert_type
         self.creation_date = datetime.now().replace(microsecond=0)
@@ -205,6 +207,8 @@ class Alert(Base):
         self.days_of_week = days_of_week
         self.email_notify = email_notify
         self.show_links = show_links
+        self.show_diff_pos = show_diff_pos
+        self.show_diff_neg = show_diff_neg
         self.template_type = template_type
         self.diff_links = diff_links
         self.launched = launched

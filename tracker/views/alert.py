@@ -76,15 +76,25 @@ class AlertCreate(BaseView):
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
         print('** post args = {}'.format(args))
-        # if box is checked, variable comes in like { "gridCheck": "on" }
         email_notify = False
+        show_links = False
+        show_diff_pos = False
+        show_diff_neg = False
 
         if 'gridCheck' in args and args['gridCheck'] == 'on':
             email_notify = True
         if 'gridCheckShowLinks' in args and args['gridCheckShowLinks'] == 'on':
             show_links = True
-        else:
-            show_links = False
+        if 'gridCheckShowDiffPos' in args and args['gridCheckShowDiffPos'] == 'on':
+            show_diff_pos = True
+        if 'gridCheckShowDiffNeg' in args and args['gridCheckShowDiffNeg'] == 'on':
+            show_diff_neg = True
+
+        if show_diff_neg is False and show_diff_pos is False:
+            print('Please make sure you checked the right boxes. You can\'t either unselect diff Neg and diff Pos. Otherwise there is nothing to show !')
+            flash_message(self, 'danger', 'Please make sure you checked the right boxes. You can\'t either unselect diff Neg and diff Pos. Otherwise there is nothing to show !')
+            self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            return
 
         if not 'inputContent' in args:
             flash_message(self, 'danger', 'Please specify some content to base your alert on.')
@@ -121,20 +131,23 @@ class AlertCreate(BaseView):
                     msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
                 start_time = datetime.datetime.now().replace(microsecond=0)
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, email_notify=email_notify,\
-                    show_links=show_links, template_type=args['mailTemplateType'])
+                    show_links=show_links, show_diff_pos=show_diff_pos, show_diff_neg=show_diff_neg,\
+                    template_type=args['mailTemplateType'])
 
             # Time interval alert
             elif args['inputType'] == 'BasicReccurent':
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat=args['inputRepeat'],\
                     interval=args['inputEvery'], max_count=args['inputMaxCount'], email_notify=email_notify,\
-                    show_links=show_links, template_type=args['mailTemplateType'])
+                    show_links=show_links, show_diff_pos=show_diff_pos, show_diff_neg=show_diff_neg,\
+                    template_type=args['mailTemplateType'])
                 msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
 
             # Days of week alert
             elif args['inputType'] == 'CrontabSchedule':
                 new_alert = Alert(args['inputName'], args['inputType'], start_time, repeat_at=args['inputRepeatTime'],\
                     days_of_week=[int(v[0]) for k, v in args.items() if k.startswith('crontabDay')],\
-                    email_notify=email_notify, show_links=show_links, template_type=args['mailTemplateType'])
+                    email_notify=email_notify, show_links=show_links, show_diff_pos=show_diff_pos, show_diff_neg=show_diff_neg,\
+                    template_type=args['mailTemplateType'])
                 msg = ['success', 'Alert {} successfully created.'.format(args['inputName'])]
                 
             content.alerts.append(new_alert)
@@ -285,7 +298,8 @@ class AlertLaunch(BaseView):
 
         # Sync alert with Redbeat scheduler
         entry = rproject.download_units_diff_delayed_with_email(alert.name, alert.template_type,\
-            schedule, content.links, content.mailing_list, user.email, project.name, alert.show_links, save=True)
+            schedule, content.links, content.mailing_list, user.email, project.name, alert.show_links,\
+            alert.show_diff_pos, alert.show_diff_neg, save=True)
         
         # Scheduler must return an entry
         if entry is False:

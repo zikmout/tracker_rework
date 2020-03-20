@@ -558,7 +558,8 @@ class RProject:
 
 
     def download_units_diff_delayed_with_email(self, alert_name, template_type,\
-        schedule, links, mailing_list, user_email, project_name, show_links, save=False):
+        schedule, links, mailing_list, user_email, project_name, show_links,\
+        show_diff_pos, show_diff_neg, save=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
@@ -653,6 +654,8 @@ class RProject:
                             keywords_diff,
                             detect_links,
                             show_links,
+                            show_diff_pos,
+                            show_diff_neg,
                             links_algorithm,
                             counter,
                             total_task))
@@ -664,13 +667,16 @@ class RProject:
             print('SCHEDULED = {}'.format(schedule))
             if template_type == 'share buy back':
                 entry = Entry(alert_name, 'continuous_worker.share_buy_back_task',\
-                    schedule, args=(task_args, mails_content, user_email, project_name, show_links), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name, show_links,\
+                        show_diff_pos, show_diff_neg), app=continuous_worker.app)
             elif template_type == 'diff':
                 entry = Entry(alert_name, 'continuous_worker.diff_task',\
-                    schedule, args=(task_args, mails_content, user_email, project_name, show_links), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name, show_links,\
+                        show_diff_pos, show_diff_neg), app=continuous_worker.app)
             elif template_type == 'diff with keywords':
                 entry = Entry(alert_name, 'continuous_worker.diff_with_keywords_task',\
-                    schedule, args=(task_args, mails_content, user_email, project_name, show_links), app=continuous_worker.app)
+                    schedule, args=(task_args, mails_content, user_email, project_name, show_links,\
+                        show_diff_pos, show_diff_neg), app=continuous_worker.app)
             entry.save()
             print('ENTRY IS DUE = {}'.format(entry.is_due()))
             return entry

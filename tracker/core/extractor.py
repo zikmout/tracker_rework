@@ -397,13 +397,13 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
     try:
         extracted_local_content = extract_text_from_html(local_content)
         extracted_remote_content = extract_text_from_html(remote_content)
-        print('REMOTE CONTENT : {}'.format(remote_content))
-        print('LOCAL CONTENT : {}'.format(local_content))
+        # print('REMOTE CONTENT : {}'.format(remote_content))
+        # print('LOCAL CONTENT : {}'.format(local_content))
         if detect_links:
             extracted_local_links = extract_links_from_html(local_content)
             extracted_remote_links = extract_links_from_html(remote_content)
-            print('EXTRACTED REMOTE CONTENT : {}'.format(extracted_remote_content))
-            print('EXTRACTED LOCAL CONTENT : {}'.format(extracted_local_content))
+            # print('EXTRACTED REMOTE CONTENT : {}'.format(extracted_remote_content))
+            # print('EXTRACTED LOCAL CONTENT : {}'.format(extracted_local_content))
         # clean content ('\n' here)
         # Save raw data for client 
         status['diff_raw_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]

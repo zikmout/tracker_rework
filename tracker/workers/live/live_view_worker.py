@@ -33,15 +33,18 @@ def make_request_for_predictions(content, min_acc=0.75):
         http_client.close()
         return response.body
     except Exception as e:
-        print('Error -> {}'.format(e))
+        error_str = 'Error making SBB prediction ({})'.format(e)
+        print('Error -> {}'.format(error_str))
         http_client.close()
-        return json.dumps({ 'error': '{}'.format(e)})
+        return json.dumps({ 'error': '{}'.format(error_str)})
 
 def is_valid_url(url):
-    to_exclude = ['@', ':', '.mp3', 'www.youtube', 'www.facebook', 'www.linkedin', 'www.instagram']
+    to_exclude = ['.m4a', 'www.youtube', 'www.facebook', 'www.linkedin', 'www.instagram',\
+    '.jpg', '.jpeg', '.png', '.wmv', '.ics', '.mp3', '.zip', '.rtf', '.mov', '.mp4', '.mpg',\
+     '@', '.doc', '#', ';', 'amp%3B', '.gif', '.vcf', '.exe', '.xml', '&amp', '.tif', '.JPG', '.pptx', '.ppt']
     for _ in to_exclude:
-        # print('{} IN {} ??????'.format(_, url))
-        if _ in url:
+        if _ in url or _.upper() in url:
+            # print('Found {} IN {} : URL is NOT VALID'.format(_, url))
             return False
     return True
 
@@ -55,8 +58,8 @@ def is_valid_cleaned_content(cleaned_content, already_seen_content):
     return True
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
-    # if not is_valid_url(url):
-        # return False
+    if not is_valid_url(url):
+        return False
 
     req = urllib.request.Request(
             url,

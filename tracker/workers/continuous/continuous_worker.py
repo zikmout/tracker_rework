@@ -200,7 +200,6 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
             status = extractor.get_nearest_link_with_bs(remote_content, status, 'all_nearest_links_remote')
             status = extractor.get_nearest_link_with_bs(local_content, status, 'all_nearest_links_local')
 
-            status = extractor.get_full_all_links(status, url)
             # if a list of keywords is provided, only get diff that matches keywords
             if keywords != [] and not isinstance(keywords[0], float):
                 # print('Keywords arrived like THIS = {}'.format(keywords))
@@ -214,11 +213,10 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
             # TODO: send show_diff_pos and show_diff_neg to get_text_diff in order to avoir useless computation ?
             status = extractor.get_text_diff(local_content, remote_content, status, keywords_diff, keywords)#,\
                 # detect_links=show_links)
+            status = extractor.get_full_all_links(status, url)
 
             if status is None:
                 return
-            
-
                 # status = extractor.keyword_match(keywords, status, local_content, remote_content, url)#,\
                     # detect_links=show_links)
 

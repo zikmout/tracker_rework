@@ -246,6 +246,7 @@ def get_full_all_links(status, base_url):
                     #     status[_][idx] = x
                 if x.startswith('/'):
                     status[_][idx] = base_url + x
+                # print('link = {} (after = {})'.format(x, status[_][idx]))
                 idx += 1
     return status
 
@@ -428,7 +429,7 @@ def extract_links_from_html(content):
             if word in link:
                 excluded.add(link)
     
-    links = [_ for _ in links if _ not in excluded]
+    links = [_ for _ in links if (_ not in excluded and _ != '')]
     links = list(set(links))
 
     return links

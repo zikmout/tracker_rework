@@ -22,9 +22,9 @@ a {
 <div class="starter-template-fluid">
       <br />
       {% if 'live_view' in handler.session['tasks'] %}
-      <h3>Live <span class="badge badge-pill badge-dark">{{ handler.session['tasks']['live_view'][0]['template_type'] }}</span> alert{% end %}</h3>
+      <h3>Live <span class="badge badge-pill badge-dark">{{ handler.session['tasks']['live_view'][0]['template_type'] }}</span> alert{% end %} ({{ handler.session['current_live_view_alert'] }})</h3>
       {% if 'live_view' in handler.session['tasks'] %}
-        <small id="currentTargetDetails">Analyzing <font color="red">(total : <div id="totalFetched" style="display: inline-block;"></div>)</font> : <div id="currentWebSite" style="display: inline-block; color:grey;"></div></small>
+        <small id="currentTargetDetails">Analyzing <font color="red">(fetched : <div id="totalFetched" style="display: inline-block;"></div>)</font> : <div id="currentWebSite" style="display: inline-block; color:grey;"></div></small>
       {% end %}
      
       <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="myLargeModalLabel" aria-labelledby="myLargeModalLabel" aria-hidden="true">

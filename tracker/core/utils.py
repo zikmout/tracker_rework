@@ -215,3 +215,22 @@ def from_links_to_dict(links):
         first_parts[first[:-1]].append(['/' + second, keywords])
         # print('keyworDS = {}'.format(keywords))
     return first_parts
+
+def is_valid_url(url):
+    to_exclude = ['.m4a', 'www.youtube', 'www.facebook', 'www.linkedin', 'www.instagram',\
+    '.jpg', '.jpeg', '.png', '.wmv', '.ics', '.mp3', '.zip', '.rtf', '.mov', '.mp4', '.mpg',\
+     '@', '.doc', '#', ';', 'amp%3B', '.gif', '.vcf', '.exe', '.xml', '&amp', '.tif', '.JPG', '.pptx', '.ppt']
+    for _ in to_exclude:
+        if _ in url or _.upper() in url:
+            # print('Found {} IN {} : URL is NOT VALID'.format(_, url))
+            return False
+    return True
+
+def is_valid_cleaned_content(cleaned_content, already_seen_content):
+    if cleaned_content is None:
+        return False
+    if len(cleaned_content) == 0:
+        return False
+    if cleaned_content in already_seen_content:
+        return False
+    return True

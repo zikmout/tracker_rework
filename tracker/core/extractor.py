@@ -192,12 +192,20 @@ def nearest_link_match(status, local_content, remote_content, url):
             # print('k = {}, v = {}'.format(k, v))
             if neg in k:
                 status['nearest_link_neg'][neg] = v
+        if neg not in status['nearest_link_neg']:
+            nearest = get_nearest_link(neg, neg, local_content)
+            if nearest is not None:
+                status['nearest_link_pos'][neg] = nearest
 
     for pos in status['diff_pos']:
         for k, v in status['all_nearest_links_remote'].items():
             # print('k = {}, v = {}'.format(k, v))
             if pos in k:
                 status['nearest_link_pos'][pos] = v
+        if pos not in status['nearest_link_pos']:
+            nearest = get_nearest_link(pos, pos, remote_content)
+            if nearest is not None:
+                status['nearest_link_pos'][pos] = nearest
 
     return status
 
@@ -219,10 +227,48 @@ def get_nearest_link_with_bs(content, status, key):
                     dirty = True
                     break
             if not dirty:
+                # print('txt : {} / href : {}'.format(txt, href))
                 status[key][txt] = href
     return status
 
-def keyword_match(keywords, status, local_content, remote_content, url, detect_links=True):
+def get_full_all_links(status, base_url):
+    keys = ['all_links_pos', 'all_links_neg']
+    for _ in keys:
+        if status[_] != []:
+            idx = 0
+            for x in status[_].copy():
+                if x.startswith(base_url) is False:
+                    if x.startswith('//'):
+                        status[_][idx] = 'http:' + x
+                    elif x.startswith('http') is False:
+                        status[_][idx] = base_url + x
+                    # elif x.startswith('http'):
+                    #     status[_][idx] = x
+                if x.startswith('/'):
+                    status[_][idx] = base_url + x
+                idx += 1
+    return status
+
+def get_full_nearest_links(status, base_url):
+    keys = ['nearest_link_pos', 'nearest_link_neg']
+    for _ in keys:
+        for k, v in status[_].copy().items():
+            # print('k = {}, v = {}'.format(k, v))
+            # if isinstance(v, dict):
+            #     print('V = = = > {}'.format(v))
+            if v:
+                if v.startswith(base_url) is False:
+                    if v.startswith('//'):
+                        status[_][trim_text(k)] = 'http:' + v
+                    elif v.startswith('http') is False:
+                        status[_][trim_text(k)] = base_url + v
+                    # elif v.startswith('http'):
+                    #     status[_][k] = v
+                if v.startswith('/'):
+                    status[_][trim_text(k)] = base_url + v
+    return status
+
+def keyword_match(keywords, status, local_content, remote_content):#, detect_links=True):
     """ 
         Find diff pos, diff neg, nearest links pos, nearest links neg 
     """
@@ -236,14 +282,13 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
     #print('DIFF NEGATIVE = {}'.format(status['diff_neg']))
     # print('DIFF POSITIVE = {}'.format(status['diff_pos']))
 
-    if isinstance(keywords, list) and len(keywords) == 1:
-        keywords = keywords[0].split(';')
+    # if isinstance(keywords, list) and len(keywords) == 1:
+    #     keywords = keywords[0].split(';')
     for keyword in keywords:
-
         # print('\n\nKeyword === {}\n\n'.format(keyword))
         if not ' ' in keyword:
-            for x in status['diff_neg']:
-                neg = x#trim_text(x)#.replace('\xa0', ' ')
+            for neg in status['diff_neg']:
+                # neg = x#trim_text(x)#.replace('\xa0', ' ')
                 # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
                 if clean_sentence(neg) is None:
                     print('problem for --> {}'.format(neg))
@@ -252,18 +297,18 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                     # print('try to match <{}><{}>'.format(keyword.lower(), word.lower()))
                     if keyword.lower() == word and neg not in match_neg:
                         match_neg.append(neg)
-                        if detect_links:
-                            for k, v in status['all_nearest_links_local'].items():
-                                if neg in k:# and (v is not None and v.strip() != ''):
-                                    status['nearest_link_neg'][neg] = v
-                                    # break
-                if neg not in status['nearest_link_neg']:
-                    nearest = get_nearest_link(neg, neg, local_content)
-                    if nearest is not None:
-                        status['nearest_link_neg'][neg] = nearest
+                        # if detect_links:
+                #         for k, v in status['all_nearest_links_local'].items():
+                #             if neg in k:# and (v is not None and v.strip() != ''):
+                #                 status['nearest_link_neg'][neg] = v
+                #                 # break
+                # if neg not in status['nearest_link_neg']:
+                #     nearest = get_nearest_link(neg, neg, local_content)
+                #     if nearest is not None:
+                #         status['nearest_link_neg'][neg] = nearest
 
-            for x in status['diff_pos']:
-                pos = x#trim_text(x)#.replace('\xa0', ' ')
+            for pos in status['diff_pos']:
+                # pos = x#trim_text(x)#.replace('\xa0', ' ')
                 if clean_sentence(pos) is None:
                     print('problem for --> {}'.format(pos))
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
@@ -271,19 +316,19 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                     # print('try to match <{}><{}>'.format(keyword.lower(), word))
                     if keyword.lower() == word and pos not in match_pos:
                         match_pos.append(pos)
-                        if detect_links:
-                            for k, v in status['all_nearest_links_remote'].items():
-                                if pos in k:# and (v is not None and v.strip() != ''):
-                                    status['nearest_link_pos'][pos] = v
-                                    # break
-                if pos not in status['nearest_link_neg']:
-                    nearest = get_nearest_link(pos, pos, remote_content)
-                    if nearest is not None:
-                        status['nearest_link_neg'][pos] = nearest
+                        # if detect_links:
+                #         for k, v in status['all_nearest_links_remote'].items():
+                #             if pos in k:# and (v is not None and v.strip() != ''):
+                #                 status['nearest_link_pos'][pos] = v
+                #                 # break
+                # if pos not in status['nearest_link_neg']:
+                #     nearest = get_nearest_link(pos, pos, remote_content)
+                #     if nearest is not None:
+                #         status['nearest_link_neg'][pos] = nearest
         
         else:
-            for x in status['diff_neg']:
-                neg = x#trim_text(x)#.replace('\xa0', ' ')
+            for neg in status['diff_neg']:
+                # neg = x#trim_text(x)#.replace('\xa0', ' ')
                 if clean_sentence(neg) is None:
                     print('problem for --> {}'.format(neg))
                 # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
@@ -291,33 +336,33 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
                     # if 'sqli' in keyword.lower():
                     # print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     match_neg.append(neg)
-                    if detect_links:
-                        for k, v in status['all_nearest_links_local'].items():
-                            if neg in k:# and (v is not None and v.strip() != ''):
-                                status['nearest_link_neg'][neg] = v
-                                # break
-                if neg not in status['nearest_link_neg']:
-                    nearest = get_nearest_link(neg, neg, local_content)
-                    if nearest is not None:
-                        status['nearest_link_neg'][neg] = nearest
+                    # if detect_links:
+                #     for k, v in status['all_nearest_links_local'].items():
+                #         if neg in k:# and (v is not None and v.strip() != ''):
+                #             status['nearest_link_neg'][neg] = v
+                #             # break
+                # if neg not in status['nearest_link_neg']:
+                #     nearest = get_nearest_link(neg, neg, local_content)
+                #     if nearest is not None:
+                #         status['nearest_link_neg'][neg] = nearest
 
-            for x in status['diff_pos']:
-                pos = x#trim_text(x)#.replace('\xa0', ' ')
+            for pos in status['diff_pos']:
+                # pos = x#trim_text(x)#.replace('\xa0', ' ')
                 if clean_sentence(pos) is None:
                     print('problem for --> {}'.format(pos))
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 if keyword.lower() in clean_sentence(pos) and pos not in match_pos:
                     # print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     match_pos.append(pos)
-                    if detect_links:
-                        for k, v in status['all_nearest_links_remote'].items():
-                            if pos in k:# and (v is not None and v.strip() != ''):
-                                status['nearest_link_pos'][pos] = v
-                                # break
-                if pos not in status['nearest_link_pos']:
-                    nearest = get_nearest_link(pos, pos, remote_content)
-                    if nearest is not None:
-                        status['nearest_link_pos'][pos] = nearest
+                    # if detect_links:
+                #     for k, v in status['all_nearest_links_remote'].items():
+                #         if pos in k:# and (v is not None and v.strip() != ''):
+                #             status['nearest_link_pos'][pos] = v
+                #             # break
+                # if pos not in status['nearest_link_pos']:
+                #     nearest = get_nearest_link(pos, pos, remote_content)
+                #     if nearest is not None:
+                #         status['nearest_link_pos'][pos] = nearest
         
     status['diff_neg'] = match_neg#[_.replace('\xa0', ' ') for _ in match_neg]
     status['diff_pos'] = match_pos#[_.replace('\xa0', ' ') for _ in match_pos]
@@ -326,12 +371,11 @@ def keyword_match(keywords, status, local_content, remote_content, url, detect_l
 
     # TODO: Maybe let all links diff anyway ? In this case, need to change condition (of 
     # showing diff pos or diff neg) in tracker.mail
-    if detect_links and status['diff_pos'] == []:
-        status['all_links_pos'] = [] 
-    if detect_links and status['diff_neg'] == []:
-        status['all_links_neg'] = []
+    # if status['diff_pos'] == []:
+    #     status['all_links_pos'] = [] 
+    # if status['diff_neg'] == []:
+    #     status['all_links_neg'] = []
     # print('url : {}\n->all links pos = {}\n->all links neg = {}\n'.format(url, status['all_links_pos'], status['all_links_neg']))
-    
     return status
 
 def tag_visible(element):
@@ -391,7 +435,7 @@ def extract_links_from_html(content):
 
 
 
-def get_text_diff(local_content, remote_content, status, detect_links=True):
+def get_text_diff(local_content, remote_content, status, keywords_diff, keywords):#, detect_links=True):
     # extract content and links
     # print('REMOTE CONTENT : {}'.format(remote_content))
     try:
@@ -399,11 +443,9 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
         extracted_remote_content = extract_text_from_html(remote_content)
         # print('REMOTE CONTENT : {}'.format(remote_content))
         # print('LOCAL CONTENT : {}'.format(local_content))
-        if detect_links:
-            extracted_local_links = extract_links_from_html(local_content)
-            extracted_remote_links = extract_links_from_html(remote_content)
-            # print('EXTRACTED REMOTE CONTENT : {}'.format(extracted_remote_content))
-            # print('EXTRACTED LOCAL CONTENT : {}'.format(extracted_local_content))
+        # if detect_links:
+        # print('EXTRACTED REMOTE CONTENT : {}'.format(extracted_remote_content))
+        # print('EXTRACTED LOCAL CONTENT : {}'.format(extracted_local_content))
         # clean content ('\n' here)
         # Save raw data for client 
         status['diff_raw_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
@@ -412,16 +454,6 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
         # get content diffs
         status['diff_neg'] = [x for x in extracted_local_content if x not in extracted_remote_content]
         status['diff_pos'] = [x for x in extracted_remote_content if x not in extracted_local_content]
-
-        if detect_links and status['diff_neg'] != []:
-            all_links_neg = set()
-            [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
-            status['all_links_neg'].extend(all_links_neg)
-
-        if detect_links and status['diff_pos'] != []:
-            all_links_pos = set()
-            [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
-            status['all_links_pos'].extend(all_links_pos)
             
         # taking off doublons in diff pos and diff neg    
         # Strip / Trim / Clean text
@@ -436,8 +468,25 @@ def get_text_diff(local_content, remote_content, status, detect_links=True):
         intersect = set(status['diff_pos']).intersection(set(status['diff_neg']))
         status['diff_pos'] = [x for x in status['diff_pos'].copy() if x not in intersect]
         status['diff_neg'] = [x for x in status['diff_neg'].copy() if x not in intersect]
-            
+
+        if keywords_diff is True:
+            keyword_match(keywords, status, local_content, remote_content)
+        
+        extracted_local_links = extract_links_from_html(local_content)
+        extracted_remote_links = extract_links_from_html(remote_content)
+        # if detect_links and status['diff_neg'] != []:
+        if status['diff_neg'] != []:
+            all_links_neg = set()
+            [all_links_neg.add(x) for x in extracted_local_links if x not in extracted_remote_links]
+            status['all_links_neg'].extend(all_links_neg)
+
+        # if detect_links and status['diff_pos'] != []:
+        if status['diff_pos'] != []:
+            all_links_pos = set()
+            [all_links_pos.add(x) for x in extracted_remote_links if x not in extracted_local_links]
+            status['all_links_pos'].extend(all_links_pos)
         return status
+
     except Exception as e:
         print('get_text_diff exception -> {} (SoftTimeLimit() must have been raised)'.format(e))
         return None

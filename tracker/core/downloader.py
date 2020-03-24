@@ -286,3 +286,18 @@ def download_website_diff(links, base_path, diff_path, url):
         else:
             print('***** Content is SIMILAR *****')
         
+def make_request_for_updating_content(user_email, project_name, urls):
+    # Making synchronous HTTP Request (because workers are aynchronous already)
+    post_data = { 'user_email': user_email, 'project_name': project_name, 'urls': urls }
+    body = json.dumps(post_data)
+
+    http_client = httpclient.HTTPClient()
+    try:
+        response = http_client.fetch('http://localhost:5567/api/v1/update-content', method='POST', body=body)
+        http_client.close()
+        return response.body
+    except Exception as e:
+        error_str = 'Error making request for updating content ({})'.format(e)
+        print('Error -> {}'.format(error_str))
+        http_client.close()
+        return json.dumps({ 'error': '{}'.format(error_str)})

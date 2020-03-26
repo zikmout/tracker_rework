@@ -516,7 +516,9 @@ ws.onmessage = function (evt) {
       
       // 'diff with keywords' OR 'diff'
       {% if 'live_view' in handler.session['tasks'] and (handler.session['tasks']['live_view'][0]['template_type'] == 'diff with keywords' or handler.session['tasks']['live_view'][0]['template_type'] == 'diff') %}
-         
+          
+
+          // console.log(evt.data);
           // console.log(evt.data);
           if (evt.data[0] != '<' && evt.data != undefined)
           {
@@ -972,7 +974,7 @@ ws.onmessage = function (evt) {
       {
         nbOfTimeLastAnalyzedShown += 1;
       }
-      if (nbOfTimeLastAnalyzedShown > 100)
+      if (nbOfTimeLastAnalyzedShown > 10000)
       {
         $('#currentWebSite').text('completed');
         if (currentTargets.length != 0)

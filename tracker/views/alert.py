@@ -250,6 +250,46 @@ class AlertLaunch(BaseView):
                 self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
                 return
 
+            # IF USING DOWNLOAD_UNITS_DIFF2 WITH CELERY CHORD
+            # tasks_urls, tasks_ids = rproject.download_units_diff(alert.template_type, content.links,
+            #     save=True, show_links=alert.show_links)
+            # #print('alert.template type = {}'.format(alert.template_type))
+            # #print('TASKSS ===> {}'.format(tasks))
+
+            # if tasks_ids is False:
+            #     flash_message(self, 'danger', 'Problem creating LIVE ALERT.')
+            #     self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
+            #     return
+            # else:
+            #     # if 'live_view' in self.session['tasks']:
+            #     # del self.session['tasks']['live_view']
+            #     # self.session.save()
+
+            #     updated_tasks = list()
+            #     # for task in tasks.items():
+            #     for url, id in zip(tasks_urls, tasks_ids):
+            #         task_object = {
+            #             'username': username,
+            #             'projectname': projectname,
+            #             #'uid': self.session, # reverse function get_id_from_url
+            #             'url': url,#url, # to change with link list
+            #             'template_type': alert.template_type,
+            #             'id': id
+            #         }
+            #         updated_tasks.append(task_object)
+                
+            #     # Put status 'launched' on alert
+            #     alert.launched = True
+            #     self.request_db.commit()
+
+            #     self.session['tasks']['live_view'] = updated_tasks
+            #     self.session['current_live_view_content'] = args['contentName']
+            #     self.session['current_live_view_alert'] = args['alertName']
+            #     self.session.save()
+            #     self.redirect('/api/v1/users/{}/projects/{}/alerts/live/view'.format(username, projectname))
+            #     return
+            ####################################
+
         ###############################################################################
 
         ##################### DEFFERED ALERT LAUNCH ###################################

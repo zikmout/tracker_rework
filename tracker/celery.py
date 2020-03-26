@@ -33,11 +33,19 @@ crawl_worker_app = Celery('crawl_worker',
               broker='pyamqp://guest@localhost/')#,
              #include=['tracker.workers'])
 
+
+             #include=['tracker.workers'])
+# live_view_worker_app2 = patch_celery().Celery('live_view2',
+#               backend='amqp://',
+#               broker='pyamqp://guest@localhost/')#,
+
+# live_view_worker_app2.conf.update(
+# result_expires=999600,
+# )
+
 live_view_worker_app = patch_celery().Celery('live_view',
               backend='amqp://',
               broker='pyamqp://guest@localhost/')#,
-             #include=['tracker.workers'])
-
 # app = Celery(__name__) # TODO : Change to sth like 'permanent listener'
 # app.config_from_object(celeryconf)
 # continuous_tracking_worker_app = Celery('continuous_tracking_worker',

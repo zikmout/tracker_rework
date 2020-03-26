@@ -9,7 +9,9 @@ import tracker.core.loader as loader
 import tracker.core.logger as logger
 import tracker.core.downloader as downloader
 from tracker.core.unit import Unit
+from celery import chord
 import tracker.workers.continuous.continuous_worker as continuous_worker
+# import tracker.workers.live.live_view_worker2 as live_view_worker2
 from redbeat import RedBeatSchedulerEntry as Entry
 import math
 import threading
@@ -555,7 +557,91 @@ class RProject:
             print('Dict() of units url is not OK.')
             return None
 
+    # def download_units_diff2(self, template_type, links, save=False, show_links=False, time_limit=False):
+    #     if links == {} or links is None:
+    #         print('[ERROR] delete_download_units : No urls specified.\n')
+    #         return None
+    #     #print('links before = {}'.format(links))
+    #     #print('links after = {}'.format(dict_links))
+    #     #exit(0)
 
+    #     if template_type == 'share buy back':
+    #         keywords_diff = True
+    #         detect_links = True
+    #         links_algorithm = 'http://localhost:5567/api/v1/predict/is_sbb'
+    #     elif template_type == 'diff':
+    #         keywords_diff = False
+    #         detect_links = False
+    #         links_algorithm = False
+    #     elif template_type == 'diff with keywords':
+    #         keywords_diff = True
+    #         detect_links = False
+    #         links_algorithm = False
+    #     else:
+    #         # This must not happen
+    #         return False
+        
+    #     if keywords_diff:
+    #         links_without_keywords = dict()
+    #         for k, v in links.items():
+    #             if v != '':
+    #                 links_without_keywords.update({k:v})
+    #         links = links_without_keywords
+    #     dict_links = utils.from_links_to_dict(links)
+
+
+    #     # NEW PART WITH CHORDS
+    #     # Tasks are of type celery chords, so one argument per task
+    #     task_args = list()
+    #     # filename_time = datetime.datetime.now().strftime("%Y%m%d")
+    #     counter = 0
+    #     total_task = len(dict_links)
+    #     tasks_urls = list()
+    #     # keywords_dict = {}
+    #     if isinstance(dict_links, dict) and bool(dict_links):            
+    #         for key, val in dict_links.items():
+    #             unit = self.get_unit_from_url(key)
+
+    #             if unit is not None:
+    #                 for _ in val:
+    #                     counter += 1
+    #                     print('VAL = {}'.format(_))
+    #                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
+    #                     #print('filename_time = {}'.format(filename_time))
+    #                     # TODO: Add random shuffle of links to hide a bit ?
+    #                     task_args.append((_,
+    #                         unit.download_path,
+    #                         unit.download_path,#os.path.join(unit.download_path, _[0]),
+    #                         unit.url,
+    #                         keywords_diff,
+    #                         detect_links,
+    #                         show_links,
+    #                         links_algorithm,
+    #                         counter,
+    #                         total_task))
+    #                     tasks_urls.append(unit.url)
+    #                     # keywords_dict.update({_[0]: _[1]})
+    #             else:
+    #                 print('Unit {} not found'.format(key))
+            
+    #         callback = live_view_worker2.live_view_end_routine.subtask()
+    #         header = [live_view_worker2.live_view2.subtask((k[0], k[1], k[2], k[3], k[4], k[5], k[6], k[7], k[8], k[9])) for k in task_args]
+    #         print('HEADER = {}'.format(header))
+    #         result = chord(header)(callback)
+            
+    #         print('result = > {}'.format(result))
+    #         tasks_ids = list()
+    #         childrens = result.parent.children
+    #         print('IDS = {}'.format(childrens))
+    #         for _ in childrens:
+    #             print('type => {}'.format(_.id))
+    #             tasks_ids.append(_.id)
+    #         # ret = result.get()
+    #         # print('RESULT OF CHORD BABY : {}'.format(ret))
+    #         return tasks_urls, tasks_ids
+    #     else:
+    #         print('Dict() of units url is not OK.')
+    #         return False, False
 
     def download_units_diff_delayed_with_email(self, alert_name, template_type,\
         schedule, links, mailing_list, user_email, project_name, show_links,\

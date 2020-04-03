@@ -18,7 +18,7 @@ from tracker.utils import trim_text
 import re
 import pdftotext
 import gc
-import fastText
+import fasttext as fastText
 
 already_visited = list()
 already_seen_content = list()

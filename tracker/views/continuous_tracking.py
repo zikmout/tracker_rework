@@ -6,7 +6,8 @@ import math
 import re
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
-from tracker.utils import flash_message, login_required, is_project_name_well_formated
+from tracker.utils import flash_message, login_required, is_project_name_well_formated,\
+        is_url_well_formated
 import tracker.session as session
 from tracker.core.rproject import RProject
 import tracker.workers.continuous.continuous_worker as continuous_worker
@@ -98,7 +99,16 @@ class UserProjectAddWebsite(BaseView):
         args = self.form_data
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
-        # print('ARGSSSS = {}'.format(args))
+        #print('ARGSSSS = {}'.format(args))
+        if not (is_url_well_formated(args['inputTarget'][0]) or (args['inputWebsite'][0] != ''  and is_url_well_formated(\
+                args['intputWebsite'][0]))):
+            flash_message(self, 'danger', 'Url not properly formated (must start with \'http\')')
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            return
+        if args['inputTarget'][0].count('/') == 2:
+            args['inputTarget'][0] = args['inputTarget'][0] + '/'
+        if args['inputWebsite'][0].count('/') == 2:
+            args['inputWebsite'][0] = args['inputWebsite'][0] + '/'
         if args['inputWebsite'][0] == '':
             regex = r"^https?://[^/]+"
             url = re.findall(regex, args['inputTarget'][0])[0]

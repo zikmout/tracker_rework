@@ -54,6 +54,7 @@ class AdidasScraper:
         # element = WebDriverWait(self.driver, 15).until(
         #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
         # )
+        self.display.popen.kill()
         self.driver.quit()
         # self.driver.close()
         # self.display.stop()

@@ -22,6 +22,11 @@ def is_project_name_well_formated(projectname):
         return False
     return True
 
+def is_url_well_formated(url):
+    if not (url.startswith('http://') or url.startswith('https://')):
+        return False
+    return True
+
 def make_session_factory():
     # generate database schema  
     Base.metadata.create_all(engine)

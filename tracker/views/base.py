@@ -6,7 +6,6 @@ from tornado import gen
 import pickle
 import traceback
 from tornado.web import RequestHandler
-from werkzeug import check_password_hash
 from tracker.models import Permission, Role, Project, User
 from tracker.utils import make_session_factory, flash_message, login_required, admin_required
 from tracker.models import User

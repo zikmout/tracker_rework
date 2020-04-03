@@ -5,7 +5,7 @@
 # $sudo chown -R electricity:electricity /home/electricity/Projects/tracker
 # Tornado config here: https://www.tornadoweb.org/en/stable/guide/running.html
 
-user simon; 
+user electricity; 
 worker_processes 1;
 
 error_log /var/log/nginx/error.log;
@@ -44,28 +44,19 @@ http {
 
         #include /etc/nginx/sites-enabled/*;
 
-        server {
-		# default_server;
+        server {# default_server;
                 #listen [::]:80;
                 server_name tracker.lu www.tracker.lu;
 
                 client_max_body_size 50M;
 
-		location /websocket {
-			proxy_pass http://frontends;
-			proxy_http_version 1.1;
-			proxy_set_header Upgrade $http_upgrade;
-			proxy_set_header Connection "upgrade";
-			proxy_read_timeout 86400;
-		}
-
                 #location ^~ /static/ {
-                #	root /home/electricity/Projects/tracker/tracker/templates;
-        	#	index  templates/index.html;
+                #               root /home/electricity/Projects/tracker/tracker/templates;
+        #                       index  templates/index.html;
                 #       if ($query_string) {
-        	#		expires max;
-        	#	}
-        	#}
+        #                       expires max;
+        #                       }
+        #               }
 
                 #location = /favicon.ico {
                 #       rewrite (.*) /static/favicon.ico;
@@ -84,29 +75,33 @@ http {
                         proxy_pass http://frontends;
                 }
 
-    		listen 443 ssl; # managed by Certbot
-    		ssl_certificate /etc/letsencrypt/live/tracker.lu/fullchain.pem; # managed by Certbot
-    		ssl_certificate_key /etc/letsencrypt/live/tracker.lu/privkey.pem; # managed by Certbot
-    		include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
-    		ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/tracker.lu/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/tracker.lu/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+
 
 }
 
 
 
         server {
-    		if ($host = www.tracker.lu) {
-        		return 301 https://$host$request_uri;
-    		} # managed by Certbot
+    if ($host = www.tracker.lu) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
 
 
-    		if ($host = tracker.lu) {
-        		return 301 https://$host$request_uri;
-    		} # managed by Certbot
+    if ($host = tracker.lu) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
 
                 listen 80;
                 server_name tracker.lu www.tracker.lu;
-    		return 404; # managed by Certbot
-	}
+    return 404; # managed by Certbot
 
-}
+
+
+
+}}

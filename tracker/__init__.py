@@ -29,6 +29,7 @@ from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDow
 from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop,\
  UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
 from tracker.views.socket import EchoWebSocket
+#from tracker.models import Role
 
 def main():
     LOAD_MODEL = False
@@ -39,6 +40,8 @@ def main():
     app_db, meta = make_session_factory()
     dirname = os.getcwd()
     
+    # TODO : Check if data dir exist, if not create it and insert_Roles()
+    #Role.insert_roles()
     """Construct and serve the tornado application."""
     class Application(tornado.web.Application):
         def __init__(self):
@@ -134,6 +137,7 @@ def main():
                     'redis_port': 6379,
                     'redis_pass': None
                 },
+                'xheaders': True,
                 'debug': True,
                 'autoreload': True,
                 'serve_traceback':True,

@@ -1,6 +1,6 @@
 from tornado import gen
 from tracker.views.base import BaseView
-from werkzeug import check_password_hash
+from werkzeug.security import check_password_hash
 from tracker.utils import flash_message, login_required
 from tracker.models import User
 import tracker.session as session
@@ -29,11 +29,10 @@ class AuthLoginView(BaseView):
         self.session['is_live_simplified'] = False
         self.session['is_pos_live'] = True
         self.session['is_neg_live'] = True
+        self.session['is_timeout_live'] = False
         if self.session['is_admin'] == True:
             self.session['is_simplified'] = True
             self.session['is_timeout_live'] = True
-        else:
-            self.session['is_timeout_live'] = False
         self.session['rolename'] = registered_user.get_rolename()
         self.session['tasks'] = {}
         self.session.save()
@@ -61,8 +60,12 @@ class AuthRegisterView(BaseView):
             self.session['username'] = username
             self.session['is_admin'] = user.is_administrator()
             self.session['is_live_simplified'] = False
+            self.session['is_pos_live'] = True
+            self.session['is_neg_live'] = True
+            self.session['is_timeout_live'] = False
             if self.session['is_admin'] == True:
                 self.session['is_simplified'] = True
+                self.session['is_timeout_live'] = True
             self.session['rolename'] = user.get_rolename()
             self.session['tasks'] = {}
             self.session.save()

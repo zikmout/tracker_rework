@@ -75,7 +75,7 @@ class AlertCreate(BaseView):
     @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('** post args = {}'.format(args))
+        # print('** post args = {}'.format(args))
         email_notify = False
         show_links = False
         show_diff_pos = False
@@ -101,9 +101,9 @@ class AlertCreate(BaseView):
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
             return
         content_name = args['inputContent'].split('(')[0]
-        print('content -> {}'.format(content_name))
+        # print('content -> {}'.format(content_name))
 
-        print('START TIME = {}'.format(args['inputStartTime']))
+        # print('START TIME = {}'.format(args['inputStartTime']))
 
         try:
             user = self.request_db.query(User).filter_by(username=username).first()
@@ -170,7 +170,7 @@ class AlertLaunch(BaseView):
     @gen.coroutine
     def post(self, username, projectname, alertid):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('args AlertLaunch => {}'.format(args))
+        # print('args AlertLaunch => {}'.format(args))
         # Checkbox in UI ready to use :)
         # save_log_checked = False
         # if 'saveLogChecked' + alertid in args:
@@ -201,7 +201,7 @@ class AlertLaunch(BaseView):
                 print('Deleting old live view tasks from session.')
                 del self.session['tasks']['live_view']
 
-            print('content --> {}'.format(content))
+            # print('content --> {}'.format(content))
             # Loading project
             rproject = RProject(project.name, project.data_path, project.config_file)
             if len(self.session['project_config_file']) == 0:
@@ -302,7 +302,7 @@ class AlertLaunch(BaseView):
             content = project.contents.filter_by(name=args['contentName']).first()
             
             i = 0
-            print('content mailing list = {}'.format(content.mailing_list))
+            # print('content mailing list = {}'.format(content.mailing_list))
             for k in content.mailing_list:
                 if isinstance(content.mailing_list[k], float):
                     #print('NO WATCHABLE CONTENT')
@@ -323,13 +323,13 @@ class AlertLaunch(BaseView):
                 date_delayed = alert.start_time
                 date_delayed = date_delayed.astimezone(pytz.utc)
                 schedule = rrule(alert.repeat, dtstart=date_delayed, count=alert.max_count, interval=alert.interval)
-                print('SCHEDULED BASIC RECC = {}'.format(schedule))
+                # print('SCHEDULED BASIC RECC = {}'.format(schedule))
             else: # is necessarily a crontab schedule alert
-                print('hour = {}, minute = {}'.format(alert.repeat_at.split(':')[0], alert.repeat_at.split(':')[1]))
-                print('days_of_week = {}'.format(alert.days_of_week))
+                # print('hour = {}, minute = {}'.format(alert.repeat_at.split(':')[0], alert.repeat_at.split(':')[1]))
+                # print('days_of_week = {}'.format(alert.days_of_week))
                 schedule = crontab(hour=int(alert.repeat_at.split(':')[0]), minute=int(alert.repeat_at.split(':')[1]),\
                     day_of_week=alert.days_of_week, day_of_month='*', month_of_year='*')
-                print('SCHEDULED CRONTAB = {}'.format(schedule))
+                # print('SCHEDULED CRONTAB = {}'.format(schedule))
         else: # there is room for further alert type
             flash_message(self, 'danger', 'Alert type not recognized. Contact admin.')
             self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
@@ -380,7 +380,7 @@ class AlertStop(BaseView):
     @gen.coroutine
     def post(self, username, projectname):
         args = { k: self.get_argument(k) for k in self.request.arguments }
-        print('ARGS alert STOP = {}'.format(args))
+        # print('ARGS alert STOP = {}'.format(args))
 
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
@@ -398,10 +398,11 @@ class AlertStop(BaseView):
         if alert.alert_type == 'Live':
             if 'live_view' in self.session['tasks']:    
                 try:
-                    res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
-                    print('Deleting old live view tasks from session.')
+                    res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
+                     in self.session['tasks']['live_view']])
+                    # print('Deleting old live view tasks from session.')
                 except Exception as e:
-                    print('[ERROR] Deleting old live view tasks from session. /!\\')
+                    print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
                     
                 del self.session['tasks']['live_view']
                 self.session.save()
@@ -411,9 +412,9 @@ class AlertStop(BaseView):
                 # TODO: ADD try / catch if key not found in redbeat
                 e = Entry.from_key('redbeat:'+alert.name, app=continuous_worker.app)
                 e.delete()
-                print('Alert {} succesfully deleted from redbeat'.format(alert.name))
+                # print('Alert {} succesfully deleted from redbeat'.format(alert.name))
             except Exception as e:
-                print('Exception finding redbeat key : {}'.format(e))
+                # print('Exception finding redbeat key : {}'.format(e))
                 flash_message(self, 'danger', 'Alert {} not found in scheduler database.'.format(args['alertName']))
                 self.redirect('/api/v1/users/{}/projects/{}/alerts'.format(username, projectname))
                 return # TODO : Check if return is justified here
@@ -444,9 +445,9 @@ class AlertDelete(BaseView):
                 if 'live_view' in self.session['tasks'] and alert.alert_type == 'Live':    
                     try:
                         res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker in self.session['tasks']['live_view']])
-                        print('Deleting old live view tasks from session.')
+                        # print('Deleting old live view tasks from session.')
                     except Exception as e:
-                        print('[ERROR] Deleting old live view tasks from session. /!\\')
+                        print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
                         
                     del self.session['tasks']['live_view']
                     self.session.save()
@@ -506,12 +507,12 @@ class AlertLiveUpdateJSON(BaseView):
     def post(self):
         # try:
         args = json.loads(self.request.body)
-        print('received args to update ------------------> {}'.format(args))
+        # print('received args to update ------------------> {}'.format(args))
         user = self.request_db.query(User).filter_by(email=args['user_email']).first()
         project = user.projects.filter_by(name=args['project_name']).first()
         rproject = RProject(project.name, project.data_path, project.config_file)
         rproject._load_units_from_excel()
-        print('TYPE args[url] = > {}'.format(type(args['urls'])))
+        # print('TYPE args[url] = > {}'.format(type(args['urls'])))
         rproject.update_units_links(args['urls'])
         self.send_response(data={ 'message': 'OK' })
         # except Exception as e:

@@ -7,10 +7,12 @@ import re
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, is_project_name_well_formated,\
-        is_url_well_formated
+        is_url_well_formated, revoke_all_tasks
 import tracker.session as session
 from tracker.core.rproject import RProject
 import tracker.workers.continuous.continuous_worker as continuous_worker
+from tracker.celery import live_view_worker_app
+from tracker.workers.live.live_view_worker import live_view
 from redbeat import RedBeatSchedulerEntry as Entry
 
 class ContinuousTrackingCreateView(BaseView):
@@ -29,7 +31,7 @@ class ContinuousTrackingCreateView(BaseView):
                 self.redirect('/api/v1/users/{}/project_create'.format(self.session['username']))
                 return
             
-            print('project name = {}, project path = {}'.format(project_name, project_path))
+            # print('project name = {}, project path = {}'.format(project_name, project_path))
             # check whether project with similar name exist on computer
             if os.path.exists(project_path):
                 flash_message(self, 'danger', '\'{}\' project name already exists. Please choose a different name.'\
@@ -169,15 +171,25 @@ class UserProjectAddWebsite(BaseView):
             content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
             alerts_to_delete = content_to_delete.alerts.all()
             for a in alerts_to_delete:
-                print('a.name = {}'.format(a.name))
+                # print('a.name = {}'.format(a.name))
                 if a.alert_type != 'Live':
                     try:
-                        print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                        # print('Deleting from redbeat non Live alert : {}'.format(a.name))
                         e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
                         e.delete()
                     except Exception as e:
                         print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
-                        print('Reason = {}'.format(e))
+                        # print('Reason = {}'.format(e))
+                elif a.alert_type == 'Live':
+                    # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
+                    try:
+                        res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
+                         in self.session['tasks']['live_view']])
+                        # print('Deleting old live view tasks from session: OK !!!')
+                    except Exception as e:
+                        print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
+                    del self.session['tasks']['live_view']
+
             self.request_db.delete(content_to_delete)
             self.request_db.commit()
 
@@ -204,7 +216,7 @@ class UserProjectDeleteWebsite(BaseView):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         rproject = RProject(project.name, project.data_path, project.config_file)
-        print('config df before = {}'.format(rproject.config_df))
+        # print('config df before = {}'.format(rproject.config_df))
         config_df_updated = rproject.config_df[rproject.config_df.Website != args['websiteToDelete'][0]]
         config_df_updated.to_excel(project.config_file, index=False)
         # delete unit from hard drive
@@ -230,15 +242,24 @@ class UserProjectDeleteWebsite(BaseView):
             content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
             alerts_to_delete = content_to_delete.alerts.all()
             for a in alerts_to_delete:
-                print('a.name = {}'.format(a.name))
+                # print('a.name = {}'.format(a.name))
                 if a.alert_type != 'Live':
                     try:
-                        print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                        # print('Deleting from redbeat non Live alert : {}'.format(a.name))
                         e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
                         e.delete()
                     except Exception as e:
                         print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
                         print('Reason = {}'.format(e))
+                elif a.alert_type == 'Live':
+                    # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
+                    try:
+                        res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
+                         in self.session['tasks']['live_view']])
+                        # print('Deleting old live view tasks from session: OK !!!')
+                    except Exception as e:
+                        print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
+                    del self.session['tasks']['live_view']
             self.request_db.delete(content_to_delete)
             self.request_db.commit()
 
@@ -261,7 +282,7 @@ class UserProjectEditWebsite(BaseView):
         project = user.projects.filter_by(name=projectname).first()
 
         rproject = RProject(project.name, project.data_path, project.config_file)
-        print('config df before = {}'.format(rproject.config_df))
+        # print('config df before = {}'.format(rproject.config_df))
         config_df_updated = rproject.config_df.copy()
         config_df_updated = config_df_updated[config_df_updated.target != args['inputTarget'][0]]
         if 'inputKeywords' in args:
@@ -300,20 +321,29 @@ class UserProjectEditWebsite(BaseView):
         rproject._load_units_from_data_path()
         idx, url_errors = rproject.add_links_to_crawler_logfile(links)
 
-        print('IDX = {}, URL_ERRORS  ={}'.format(idx, url_errors))
+        # print('IDX = {}, URL_ERRORS  ={}'.format(idx, url_errors))
         
         content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
         alerts_to_delete = content_to_delete.alerts.all()
         for a in alerts_to_delete:
-            print('a.name = {}'.format(a.name))
+            # print('a.name = {}'.format(a.name))
             if a.alert_type != 'Live':
                 try:
-                    print('Deleting from redbeat non Live alert : {}'.format(a.name))
+                    # print('Deleting from redbeat non Live alert : {}'.format(a.name))
                     e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
                     e.delete()
                 except Exception as e:
                     print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
                     print('Reason = {}'.format(e))
+            elif a.alert_type == 'Live':
+                # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
+                try:
+                    res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
+                     in self.session['tasks']['live_view']])
+                    # print('Deleting old live view tasks from session: OK !!!')
+                except Exception as e:
+                    print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
+                del self.session['tasks']['live_view']
         self.request_db.delete(content_to_delete)
         self.request_db.commit()
 

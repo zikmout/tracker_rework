@@ -7,7 +7,10 @@ import ssl
 import re
 import gc
 import pdftotext
-import fasttext as fastText
+try:
+    import fasttext as fastText
+except:
+    import fastText
 import celery
 import json
 

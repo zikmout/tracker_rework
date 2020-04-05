@@ -1,5 +1,8 @@
 import os
-import fasttext as fastText
+try:
+    import fasttext as fastText
+except:
+    import fastText
 
 class SU_Model():
 	def __init__(self, name):

@@ -29,7 +29,7 @@ def is_url_well_formated(url):
 
 def make_sure_entries_by_user_are_well_formated(input_website, input_target):
     # Minimum need is a target URL !
-    if input_target == '':
+    if isinstance(input_target, float) or input_target == '':
         return False, False
     
     # Add a trailing '/' on target URL if not specified by user
@@ -37,7 +37,7 @@ def make_sure_entries_by_user_are_well_formated(input_website, input_target):
         input_target = input_target + '/'
 
     # If no domain website, take it from target URL
-    if input_website == '':
+    if isinstance(input_website, float) or input_website == '':
         regex = r"^https?://[^/]+"
         url = re.findall(regex, input_target)[0]
         input_website = url

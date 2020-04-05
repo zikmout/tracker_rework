@@ -162,7 +162,7 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
     )
     # Faking SSL certificate to avoid unauthorized requests
     gcontext = ssl._create_unverified_context()
-    checked=False
+    checked = False
     try:
         # download content of the url
         response = urllib.request.urlopen(req, context=gcontext, timeout=12)
@@ -182,6 +182,7 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
         error = { url: msg }
         checked = True
     # except Exception as e:
+        # print('LAST EXCEPTION = {}'.format(e))
     #     remote_content = None
     #     msg = '{}'.format(e)
     #     error = { url: msg }
@@ -200,6 +201,8 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
             print('[ERROR] - Incomplete Read. Skipping download for this file. Details = {}'.format(e))
             response.close()
             return { url : '[INCOMPLETE READ] {}'.format(e) }
+    if replace is False and os.path.isfile(full_path):
+        return { url : 'OK'}
     return { url : 'TargetURL was not found on local storage. Successfuly downloaded.'}
 
 def download_website(links, base_path, url, random_header=False):
@@ -219,6 +222,7 @@ def download_website(links, base_path, url, random_header=False):
         counter += 1
         if random_header:
             header = utils.rh()
+        print('Link : {}\n\n'.format(link))
         filename = link.rpartition('/')[2]
         print('Filename : {}\n\n'.format(filename))
         ''''
@@ -231,6 +235,7 @@ def download_website(links, base_path, url, random_header=False):
             full_url = link.replace('<EXCEL> ', '')
         else:
         '''
+        # print('link = {}'.format(link))
         dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
         print('Saving file in {}'.format(dir_path))
         full_url = url + utils.find_internal_link(link)

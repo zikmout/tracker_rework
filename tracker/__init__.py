@@ -41,6 +41,7 @@ def main():
     dirname = os.getcwd()
     
     # TODO : Check if data dir exist, if not create it and insert_Roles()
+    # if os.path.isdir(project_path):
     #Role.insert_roles()
     """Construct and serve the tornado application."""
     class Application(tornado.web.Application):

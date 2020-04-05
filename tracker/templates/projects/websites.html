@@ -10,13 +10,15 @@
                     <div class="col">
                     <button type="submit" class="btn btn-dark btn-sm collapsed" value="" data-toggle="collapse" data-target="#addLine" aria-expanded="false" aria-controls="addLine">+ Add source</button>
 
+                    {% if lines is not None %}
                     <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/export-watchlist" method="get" class="form-horizontal" style="display: inline;"><button type="submit" class="btn btn-dark btn-sm collapsed">Export</button></form>
+                    {% end %}
                   </div>
                 <!-- </div> -->
 
 
                 <!-- <div class='row'> -->
-
+                  {% if lines is not None %}
                     <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/email-to-watchlist" method="post" class="form-horizontal">
 <div class="col">
                     Email: <input type="text" name="emailForWatchlist" value=""></input>
@@ -24,6 +26,7 @@
 
                     <button type="submit" class="btn btn-dark btn-sm collapsed" name="emailForWatchlistType" value="del">- Del from all</button></form>
                   </div>
+                  {% end %}
                 </div>
 
 

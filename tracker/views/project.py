@@ -14,6 +14,7 @@ from tracker.utils import flash_message, login_required, get_url_from_id, json_r
 replace_mix_option_with_all_existing_keywords, is_project_name_well_formated, check_valid_mail
 import tracker.session as session
 from tracker.core.rproject import RProject
+import tracker.core.loader as loader
 import tracker.workers.continuous.continuous_worker as continuous_worker
 from redbeat import RedBeatSchedulerEntry as Entry
 
@@ -204,10 +205,12 @@ class FastProjectCreateView(BaseView):
                         return
 
                 #create project
-                print('name = {}, data_path = {}, config_df = {}'.format(project_name, self.application.data_dir, config_path))
+                # print('name = {}, data_path = {}, config_df = {}'.format(project_name, self.application.data_dir, config_path))
                 user = self.request_db.query(User).filter_by(username=username).first()
                 new_project = Project(project_name, self.application.data_dir, config_path)
                 user.projects.append(new_project)
+
+
                 
                 links = dict(zip(df['target'], df['target_label']))
                 links = replace_mix_option_with_all_existing_keywords(links)
@@ -221,7 +224,7 @@ class FastProjectCreateView(BaseView):
 
                 # create content
                 mailing_list = dict(zip(df['target'], df['mailing_list']))
-                print('Mailing LIST = {}'.format(mailing_list))
+                # print('Mailing LIST = {}'.format(mailing_list))
                 new_content = Content(project_name + '_default', links, mailing_list)
                 new_project.contents.append(new_content)
 
@@ -260,12 +263,12 @@ class ProjectsCreateView(BaseView):
         name = self.get_argument('ProjectName')
         data_path = self.get_argument('ProjectLocation')
         try:
-            config_df = self.get_argument('ConfigLocation')
+            inputs_path = self.get_argument('ConfigLocation')
         except Exception as e:
-            config_df = None
-        print('name = {}, data_path = {}, config_df = {}'.format(name, data_path, config_df))
+            inputs_path = None
+        # print('name = {}, data_path = {}, config_df = {}'.format(name, data_path, inputs_path))
         user = self.request_db.query(User).filter_by(username=self.session['username']).first()
-        new_project = Project(name, data_path, config_df)
+        new_project = Project(name, data_path, inputs_path)
         user.projects.append(new_project)
         try:
             self.request_db.add(user)
@@ -406,8 +409,15 @@ class UserProjectDelete(BaseView):
             if not os.path.exists(fname):
                 flash_message(self, 'warning', 'Watchlist {} succesfully deleted from DB but was not \
                     found on server ! Maybe no source had been parameterized yet?'.format(projectname))
+                self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+                return
             else:
                 shutil.rmtree(fname)
                 print('Folder \'{}\' successfully removed.'.format(fname))
                 flash_message(self, 'success', 'Watchlist {} succesfully deleted from DB and server.'.format(projectname))
+                self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+                return
+
+        flash_message(self, 'success', 'Watchlist {} succesfully deleted from server.'.format(projectname))
         self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+        return

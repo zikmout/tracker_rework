@@ -278,6 +278,7 @@ class Unit:
 
     def add_crawler_link(self, link):
         if link in self._remote_tree():
+            print('link is in self._remote_tree (self._remote_tree = {})'.format(self._remote_tree))
             return False
         if os.path.isfile(self.logfile):
             with open(self.logfile, 'r') as fd:
@@ -293,6 +294,27 @@ class Unit:
             fd.close()
             # need to change stats of logfile here
             return True
+        else:
+            print('No logfile for url = {}'.format(self.url))
+            return False
+
+    def remove_crawler_link(self, link):
+        found = False
+        if os.path.isfile(self.logfile):
+            with open(self.logfile, 'r') as fd:
+                lines = fd.readlines()
+            with open(self.logfile, 'w') as fd:
+                for line in lines:
+                    link_line = link.replace(self.url, '') + '\n'
+                    # print('is {} != {}'.format(line, link_line))
+                    if line != link_line:
+                        fd.write(line)
+                    else:
+                        found = True
+            if found is True:
+                return True
+            else:
+                return False
         else:
             print('No logfile for url = {}'.format(self.url))
             return False

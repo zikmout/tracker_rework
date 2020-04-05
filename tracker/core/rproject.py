@@ -8,6 +8,7 @@ import tracker.core.utils as utils
 import tracker.core.loader as loader
 import tracker.core.logger as logger
 import tracker.core.downloader as downloader
+from tracker.utils import make_sure_entries_by_user_are_well_formated
 from tracker.core.unit import Unit
 from celery import chord
 import tracker.workers.continuous.continuous_worker as continuous_worker
@@ -36,8 +37,34 @@ class RProject:
         self.name = name
         self.data_path = os.path.join(data_path, name)
         print('Poject input path ->{}<-'.format(inputs_path))
+        need_to_rewrite_xlsx_config_file = False
         if inputs_path != '' and inputs_path is not None and len(inputs_path) != 0:
-            self.config_df = loader.get_df_from_excel(inputs_path)
+            config_df = loader.get_df_from_excel(inputs_path)
+            # This has been a real fuck up ! If user does not put trailing '/' (like http://www.orange.fr),
+            # all rationale is dead. Can be easily fixed though. So here we are reformating the config_df file
+            for i in config_df.index:
+
+                target_cell = config_df['target'][i]
+                target_website = config_df['Website'][i]
+                target_website_check, target_cell_check = make_sure_entries_by_user_are_well_formated(target_website,\
+                    target_cell)
+                
+                if ((target_website_check is not False and target_cell_check != target_cell) or\
+                    (target_website_check is not False and target_website_check != target_website)):
+                    need_to_rewrite_xlsx_config_file = True
+                    config_df.at[i,'target'] = target_cell_check
+                    config_df.at[i,'Website'] = target_website_check
+                
+                if target_website_check is False or target_cell_check is False:
+                    config_df = None
+                    print('EROOR HERE = target_cell : {}, target_website : {}'.format(target_cell_check,\
+                        target_website_check))
+                    break
+
+            self.config_df = config_df
+            if need_to_rewrite_xlsx_config_file is True and config_df is not None:
+                print('[WARNING] Config_df rewritten because trailing \'/\' where not properly formated in original config file.')
+                config_df.to_excel(inputs_path, index=False) 
         else:
             self.config_df = None
         # If project does not exist, creates it
@@ -224,8 +251,10 @@ class RProject:
             if unit is None or unit.is_base_crawled is False:
                 print('Unit url : {} does not exist.'.format(unit_url))
             else:
+                # print('r_project unit_url : {}'.format(unit_url))
                 internal_link = link.replace(unit_url, '')
                 #print('len remote tree before = {}'.format(len(unit._remote_tree())))
+                # print('r_project internal_link : {}'.format(internal_link))
                 if unit.add_crawler_link(internal_link) is True:
                     rets = downloader.download_website([internal_link], unit.download_path, unit.url, random_header=True)
                     for ret in rets:
@@ -242,6 +271,7 @@ class RProject:
                     #     url_errors.append(err)
                 else:
                     print('-> No need to download: {}'.format(unit_url + internal_link))
+                    # url_errors.append({k:v})
 
         print('Loading websites list to add crawled links in data_path \'{}\' ....\n'.format(self.data_path))
         project_directories = utils.get_directories_list(self.data_path)
@@ -281,9 +311,13 @@ class RProject:
                 with open(os.path.join(self.data_path, subdirname, subdirname + '.txt')) as fd:
                     file_content = fd.readlines()
                     url = file_content[0].split(' ')[2].replace('\n', '')
+                    # print('first url = {}'.format(url))
+                    # if url.count('/') == 2:
+                        # url = url + '/'
+                        # print('-> changing url to = {}'.format(url))
                     self.units.append(Unit(self.data_path, url))
             except Exception as e:
-                print('No crawler logfile for dirname : {}'.format(subdirname))
+                print('No crawler logfile for dirname : {} (error = {})'.format(subdirname, e))
         print('\n {} units successfuly loaded from data_path.\n'.format(len(self.units)))
 
     def _load_units_from_excel(self):

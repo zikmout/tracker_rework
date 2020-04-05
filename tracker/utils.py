@@ -27,6 +27,31 @@ def is_url_well_formated(url):
         return False
     return True
 
+def make_sure_entries_by_user_are_well_formated(input_website, input_target):
+    # Minimum need is a target URL !
+    if input_target == '':
+        return False, False
+    
+    # Add a trailing '/' on target URL if not specified by user
+    if input_target.count('/') == 2:
+        input_target = input_target + '/'
+
+    # If no domain website, take it from target URL
+    if input_website == '':
+        regex = r"^https?://[^/]+"
+        url = re.findall(regex, input_target)[0]
+        input_website = url
+
+    # Add a trailing '/' on domain website
+    if input_website.count('/') == 2:
+        input_website = input_website + '/'
+
+    # Check if both url start with 'http' or 'https'
+    if not (is_url_well_formated(input_website) and is_url_well_formated(input_target)):
+        return False, False
+        
+    return input_website, input_target
+
 def make_session_factory():
     # generate database schema  
     Base.metadata.create_all(engine)

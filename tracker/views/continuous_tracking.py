@@ -6,8 +6,8 @@ import math
 import re
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
-from tracker.utils import flash_message, login_required, is_project_name_well_formated,\
-        is_url_well_formated, revoke_all_tasks
+from tracker.utils import flash_message, login_required, is_project_name_well_formated, revoke_all_tasks,\
+make_sure_entries_by_user_are_well_formated
 import tracker.session as session
 from tracker.core.rproject import RProject
 import tracker.workers.continuous.continuous_worker as continuous_worker
@@ -102,19 +102,16 @@ class UserProjectAddWebsite(BaseView):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         #print('ARGSSSS = {}'.format(args))
-        if not (is_url_well_formated(args['inputTarget'][0]) or (args['inputWebsite'][0] != ''  and is_url_well_formated(\
-                args['intputWebsite'][0]))):
-            flash_message(self, 'danger', 'Url not properly formated (must start with \'http\')')
+
+        # Make sure user does not mess up with url entries otherwise messes up with the crawler/downloader !!
+        args['inputWebsite'][0], args['inputTarget'][0] = make_sure_entries_by_user_are_well_formated(\
+            args['inputWebsite'][0], args['inputTarget'][0])
+        
+        if args['inputWebsite'][0] is False or args['inputTarget'][0] is False:
+            flash_message(self, 'danger', 'Url(s) not properly formated.')
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
             return
-        if args['inputTarget'][0].count('/') == 2:
-            args['inputTarget'][0] = args['inputTarget'][0] + '/'
-        if args['inputWebsite'][0].count('/') == 2:
-            args['inputWebsite'][0] = args['inputWebsite'][0] + '/'
-        if args['inputWebsite'][0] == '':
-            regex = r"^https?://[^/]+"
-            url = re.findall(regex, args['inputTarget'][0])[0]
-            args['inputWebsite'][0] = url
+
         # If first time adding website, must create config_file, folder, logfile
         if not os.path.isfile(project.config_file):
             # create project directory
@@ -138,6 +135,9 @@ class UserProjectAddWebsite(BaseView):
             rproject._load_units_from_data_path()
             idx, url_errors = rproject.add_links_to_crawler_logfile(links)
 
+
+
+
             mailing_list = dict(zip(df['target'], df['mailing_list']))
             new_content = Content(projectname + '_default', links, mailing_list)
             project.contents.append(new_content)
@@ -146,6 +146,31 @@ class UserProjectAddWebsite(BaseView):
             self.session['units'] = units
             # self.session['is_project_empty'] = False
             self.session.save()
+
+            if url_errors != []:
+                # Supposed to be only one error here, because one link (TODO: Check if problem there is)
+                for err in url_errors:
+                    for k, v in err.items():
+                        target_url = k
+                        target_error = v
+                        # Getting unit that was unable to be downloaded and take it off from crawler logfile
+                        if k.count('/') == 3 and k.endswith('/'):
+                            k2 = k[:-1]
+                            del_unit = rproject.get_unit_from_url(k2)
+                        else:
+                            del_unit = rproject.get_unit_from_url(k)
+                        
+                        print('Here is the unit : {}'.format(del_unit))
+                        # unit_to_be_deleted_from_crwaler_logfile.remove_crawler_link(link)
+                        # print('removing it. middle before = {}'.format(del_unit.load_urls(del_unit.logfile)))
+                        del_unit.remove_crawler_link(k)
+                        # print('AFTER. middle after = {}'.format(del_unit.load_urls(del_unit.logfile)))
+
+                flash_message(self, 'danger', 'Impossible to download provided target URL : {} (Reason: {})'.format(args['inputTarget'][0], target_error))
+            else:
+                flash_message(self, 'success', 'Successfully downloaded URL : {}'.format(args['inputTarget'][0]))
+                # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+                # return
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
             return
         else:
@@ -159,7 +184,7 @@ class UserProjectAddWebsite(BaseView):
             # generate crawl logfile
             df = pd.read_excel(project.config_file)
             links = dict(zip(df['target'], df['target_label']))
-            links = {k:[v] for k, v in links.items()}
+            links = {k:[v] for k, v in links.items() if k == args['inputTarget'][0]} # Make sur only one link is selected
 
             #links1 = {args['inputTarget'][0]:args['inputKeywords']}
             rproject = RProject(project.name, project.data_path, project.config_file)
@@ -203,7 +228,33 @@ class UserProjectAddWebsite(BaseView):
             units = rproject.units_stats(units=rproject.filter_units())
             self.session['units'] = units
             self.session.save()
+            
+            if url_errors != []:
+                # Supposed to be only one error here, because one link (TODO: Check if problem there is)
+                for err in url_errors:
+                    for k, v in err.items():
+                        target_url = k
+                        target_error = v
+                        # Getting unit that was unable to be downloaded and take it off from crawler logfile
+                        if k.count('/') == 3 and k.endswith('/'):
+                            k2 = k[:-1]
+                            del_unit = rproject.get_unit_from_url(k2)
+                        else:
+                            del_unit = rproject.get_unit_from_url(k)
+                        print('Here is the unit : {}'.format(del_unit))
+                        # unit_to_be_deleted_from_crwaler_logfile.remove_crawler_link(link)
+                        # print('removing it. middle before = {}'.format(del_unit.load_urls(del_unit.logfile)))
+                        del_unit.remove_crawler_link(k)
+                        # print('AFTER. middle after = {}'.format(del_unit.load_urls(del_unit.logfile)))
+
+                flash_message(self, 'danger', 'Impossible to download provided target URL : {} (Reason: {})'.format(args['inputTarget'][0], target_error))
+            else:
+                flash_message(self, 'success', 'Successfully downloaded URL : {}'.format(args['inputTarget'][0]))
+                # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+                # return
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            return
+
 
 class UserProjectDeleteWebsite(BaseView):
     SUPPORTED_METHODS = ['POST']
@@ -233,6 +284,9 @@ class UserProjectDeleteWebsite(BaseView):
         if units is None:
             fname = os.path.join(self.application.data_dir, projectname)
             shutil.rmtree(fname)
+            content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
+            self.request_db.delete(content_to_delete)
+            self.request_db.commit()
         else:
             # Update content (take first content with name projectname + '_default')
             df = pd.read_excel(project.config_file)
@@ -281,6 +335,15 @@ class UserProjectEditWebsite(BaseView):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
 
+        # Make sure user does not mess up with url entries otherwise messes up with the crawler/downloader !!
+        args['inputWebsite'][0], args['inputTarget'][0] = make_sure_entries_by_user_are_well_formated(\
+            args['inputWebsite'][0], args['inputTarget'][0])
+        
+        if args['inputWebsite'][0] is False or args['inputTarget'][0] is False:
+            flash_message(self, 'danger', 'Url(s) not properly formated.')
+            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            return
+
         rproject = RProject(project.name, project.data_path, project.config_file)
         # print('config df before = {}'.format(rproject.config_df))
         config_df_updated = rproject.config_df.copy()
@@ -303,7 +366,7 @@ class UserProjectEditWebsite(BaseView):
         # Update content (take first content with name projectname + '_default')
         df = pd.read_excel(project.config_file)
         links = dict(zip(df['target'], df['target_label']))
-        links = {k:[v] for k, v in links.items()}
+        links = {k:[v] for k, v in links.items() if k == args['inputTarget'][0]} # Make sur only one link is selected
         for k, v in links.copy().items():
             #print('K = {}, V = {} (type:{})'.format(k, v, type(v)))
             try:
@@ -319,6 +382,10 @@ class UserProjectEditWebsite(BaseView):
         # Need to download new link if it changes
         rproject = RProject(project.name, project.data_path, project.config_file)
         rproject._load_units_from_data_path()
+        # print('links = {} (before stuff'.format(links))
+        # flash_message(self, 'danger', 'NOPE !')
+        # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+        # return
         idx, url_errors = rproject.add_links_to_crawler_logfile(links)
 
         # print('IDX = {}, URL_ERRORS  ={}'.format(idx, url_errors))
@@ -330,7 +397,7 @@ class UserProjectEditWebsite(BaseView):
             if a.alert_type != 'Live':
                 try:
                     # print('Deleting from redbeat non Live alert : {}'.format(a.name))
-                    e = Entry.from_key('redbeat:'+a.name, app=continuous_worker.app)
+                    e = Entry.from_key('redbeat:' + a.name, app=continuous_worker.app)
                     e.delete()
                 except Exception as e:
                     print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
@@ -343,7 +410,8 @@ class UserProjectEditWebsite(BaseView):
                     # print('Deleting old live view tasks from session: OK !!!')
                 except Exception as e:
                     print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
-                del self.session['tasks']['live_view']
+                if 'live_view' in self.session['tasks']:
+                    del self.session['tasks']['live_view']
         self.request_db.delete(content_to_delete)
         self.request_db.commit()
 
@@ -363,7 +431,23 @@ class UserProjectEditWebsite(BaseView):
                 for k, v in err.items():
                     target_url = k
                     target_error = v
+                    # Getting unit that was unable to be downloaded and take it off from crawler logfile
+                    if k.count('/') == 3 and k.endswith('/'):
+                        k2 = k[:-1]
+                        del_unit = rproject.get_unit_from_url(k2)
+                    else:
+                        del_unit = rproject.get_unit_from_url(k)
+                    
+                    print('Here is the unit : {}'.format(del_unit))
+                    # unit_to_be_deleted_from_crwaler_logfile.remove_crawler_link(link)
+                    # print('removing it. middle before = {}'.format(del_unit.load_urls(del_unit.logfile)))
+                    del_unit.remove_crawler_link(k)
+                    # print('AFTER. middle after = {}'.format(del_unit.load_urls(del_unit.logfile)))
+
             flash_message(self, 'danger', 'Impossible to download provided target URL : {} (Reason: {})'.format(args['inputTarget'][0], target_error))
         else:
             flash_message(self, 'success', 'Successfully downloaded URL : {}'.format(args['inputTarget'][0]))
+            # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            # return
         self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+        return

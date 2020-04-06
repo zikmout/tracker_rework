@@ -23,39 +23,45 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-from selenium.webdriver.firefox.options import Options as FirefoxOptions
-
-# from pyvirtualdisplay import Display
+#from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from pyvirtualdisplay import Display
 
 class AdidasScraper:
     """ for website https://www.adidas-group.com/en/investors/investor-events/ only
     """
     def __init__(self, url):
-        # self.display = Display(visible=0, size=(800, 600))
-        # self.display.start()
+        
         self.url = url
         # binary = FirefoxBinary('/Users/xxx/')
         # self.driver = webdriver.Firefox(firefox_binary=binary)
         #options = FirefoxOptions()
-        #options.add_argument("--headless")
-        options = FirefoxOptions()
-        options.headless = True
-        self.driver = webdriver.Firefox(options=options)
+        #options.headless = True
+        #self.driver = webdriver.Firefox(options=options)
+        
 
     def get_html_wait(self):#, max_company_count=1000):
         """Extracts and returns company links (maximum number of company links for return is provided)."""
-        self.driver.implicitly_wait(15)
-        self.driver.get(self.url)
-        # elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
-        # text = elements.html
-        html = self.driver.page_source
-        #print('\n\npage source --------> \n\n{}\n\n'.format(html))
-        # elements = self.driver.find_element_by_class_name("events future visible")
-        # element = WebDriverWait(self.driver, 15).until(
-        #     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
-        # )
-        self.display.popen.kill()
-        self.driver.quit()
+        display = Display(visible=0, size=(800, 600))
+        display.start()
+        
+        try:
+            browser = webdriver.Firefox()
+        
+            browser.implicitly_wait(15)
+            browser.get(self.url)
+        	# Is this necessary ?
+        	# elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
+            html = browser.page_source
+        	#self.driver.save_screenshot(os.path.join(os.getcwd(), 'test.png'))
+        	# elements = self.driver.find_element_by_class_name("events future visible")
+        	# element = WebDriverWait(self.driver, 15).until(
+        	#     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
+        	# )
+        
+        finally:
+            browser.quit()
+            display.stop()
+        #self.display.popen.kill()
         # self.driver.close()
         # self.display.stop()
         return html

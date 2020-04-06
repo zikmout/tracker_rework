@@ -184,13 +184,15 @@ class UserProjectAddWebsite(BaseView):
             # generate crawl logfile
             df = pd.read_excel(project.config_file)
             links = dict(zip(df['target'], df['target_label']))
-            links = {k:[v] for k, v in links.items() if k == args['inputTarget'][0]} # Make sur only one link is selected
+            new_link = {k:[v] for k, v in links.items() if k == args['inputTarget'][0]} # Make sur only one link is selected
+            # Carreful: Need to keep all links here because new content has to be created !
+            all_links = {k:[v] for k, v in links.items()}
 
             #links1 = {args['inputTarget'][0]:args['inputKeywords']}
             rproject = RProject(project.name, project.data_path, project.config_file)
-            rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
+            # rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
             rproject._load_units_from_data_path()
-            idx, url_errors = rproject.add_links_to_crawler_logfile(links)
+            idx, url_errors = rproject.add_links_to_crawler_logfile(new_link)
             #print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
             
             content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
@@ -205,21 +207,21 @@ class UserProjectAddWebsite(BaseView):
                     except Exception as e:
                         print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
                         # print('Reason = {}'.format(e))
-                elif a.alert_type == 'Live':
-                    # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
-                    try:
-                        res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
-                         in self.session['tasks']['live_view']])
-                        # print('Deleting old live view tasks from session: OK !!!')
-                    except Exception as e:
-                        print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
-                    del self.session['tasks']['live_view']
+            if 'tasks' in self.session and 'live_view' in self.session['tasks']:
+                # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
+                try:
+                    res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
+                     in self.session['tasks']['live_view']])
+                    # print('Deleting old live view tasks from session: OK !!!')
+                except Exception as e:
+                    print('[ERROR] Revoking live view tasks from session. /!\\ ERROR = {}'.format(e))
+                del self.session['tasks']['live_view']
 
             self.request_db.delete(content_to_delete)
             self.request_db.commit()
 
             mailing_list = dict(zip(df['target'], df['mailing_list']))
-            new_content = Content(projectname + '_default', links, mailing_list)
+            new_content = Content(projectname + '_default', all_links, mailing_list)
             project.contents.append(new_content)
             self.request_db.commit()
 
@@ -273,6 +275,8 @@ class UserProjectDeleteWebsite(BaseView):
         # delete unit from hard drive
         # TODO: Here it delete the entire unit, not the target subunit, need to correct this !!
         # (i.e use args['targetToDelete'] which is not used yet)
+        # TODO 2: Need to delete link from crawled logfile !!!!
+        # by using new function : del_unit.remove_crawler_link(k) !!!!
         if (rproject.delete_unit(args['websiteToDelete'][0])):
             print('Unit successfully deleted from hard drive')
         # reload units from excel
@@ -305,15 +309,15 @@ class UserProjectDeleteWebsite(BaseView):
                     except Exception as e:
                         print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
                         print('Reason = {}'.format(e))
-                elif a.alert_type == 'Live':
-                    # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
-                    try:
-                        res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
-                         in self.session['tasks']['live_view']])
-                        # print('Deleting old live view tasks from session: OK !!!')
-                    except Exception as e:
-                        print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
-                    del self.session['tasks']['live_view']
+            if 'tasks' in self.session and 'live_view' in self.session['tasks']:
+                # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
+                try:
+                    res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
+                     in self.session['tasks']['live_view']])
+                    # print('Deleting old live view tasks from session: OK !!!')
+                except Exception as e:
+                    print('[ERROR] Revoking live view tasks from session. /!\\ ERROR = {}'.format(e))
+                del self.session['tasks']['live_view']
             self.request_db.delete(content_to_delete)
             self.request_db.commit()
 
@@ -366,27 +370,33 @@ class UserProjectEditWebsite(BaseView):
         # Update content (take first content with name projectname + '_default')
         df = pd.read_excel(project.config_file)
         links = dict(zip(df['target'], df['target_label']))
-        links = {k:[v] for k, v in links.items() if k == args['inputTarget'][0]} # Make sur only one link is selected
-        for k, v in links.copy().items():
+        new_link = {k:[v] for k, v in links.items() if k == args['inputTarget'][0]} # Make sur only one link is selected
+        # Carreful: Need to keep all links here because new content has to be created !
+        all_links = {k:[v] for k, v in links.items()}
+        
+        # TODO: Fix this: Here we are looping on all links whereas the edit view is only for ONE LINK !!! Not possible
+        for k, v in all_links.copy().items():
             #print('K = {}, V = {} (type:{})'.format(k, v, type(v)))
             try:
                 if math.isnan(v[0]):
-                    links[k] = ''
+                    all_links[k] = ''
                 elif ';' in v[0]:
-                    links[k] = v[0].split(';')
+                    all_links[k] = v[0].split(';')
             except Exception as e:
                 if ';' in v[0]:
-                    links[k] = v[0].split(';')
+                    all_links[k] = v[0].split(';')
                 #print('Not NAN')
 
         # Need to download new link if it changes
         rproject = RProject(project.name, project.data_path, project.config_file)
         rproject._load_units_from_data_path()
-        # print('links = {} (before stuff'.format(links))
+        # print('links = {} (before stuff'.format(all_links))
         # flash_message(self, 'danger', 'NOPE !')
         # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
         # return
-        idx, url_errors = rproject.add_links_to_crawler_logfile(links)
+        # TODO: Change crawler logfile with only the link that changed, not all of them !!
+        # Or use generate crawl logfile and delete the old one !
+        idx, url_errors = rproject.add_links_to_crawler_logfile(new_link)
 
         # print('IDX = {}, URL_ERRORS  ={}'.format(idx, url_errors))
         
@@ -402,21 +412,20 @@ class UserProjectEditWebsite(BaseView):
                 except Exception as e:
                     print('[FAIL] Deleting from redbeat non Live alert : {}'.format(a.name))
                     print('Reason = {}'.format(e))
-            elif a.alert_type == 'Live':
-                # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
-                try:
-                    res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
-                     in self.session['tasks']['live_view']])
-                    # print('Deleting old live view tasks from session: OK !!!')
-                except Exception as e:
-                    print('[ERROR] Deleting old live view tasks from session. /!\\ ERROR = {}'.format(e))
-                if 'live_view' in self.session['tasks']:
-                    del self.session['tasks']['live_view']
+        if 'tasks' in self.session and 'live_view' in self.session['tasks']:
+            # print('There is a live alert to be DELETED HERE : {}'.format(a.alert_type))
+            try:
+                res = revoke_all_tasks(live_view_worker_app, live_view, [worker['id'] for worker\
+                 in self.session['tasks']['live_view']])
+                # print('Deleting old live view tasks from session: OK !!!')
+            except Exception as e:
+                print('[ERROR] Revoking live view tasks from session. /!\\ ERROR = {}'.format(e))
+            del self.session['tasks']['live_view']
         self.request_db.delete(content_to_delete)
         self.request_db.commit()
 
         mailing_list = dict(zip(df['target'], df['mailing_list']))
-        new_content = Content(projectname + '_default', links, mailing_list)
+        new_content = Content(projectname + '_default', all_links, mailing_list)
         project.contents.append(new_content)
         self.request_db.commit()
 

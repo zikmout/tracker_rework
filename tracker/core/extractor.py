@@ -471,7 +471,8 @@ def get_text_diff(local_content, remote_content, status, keywords_diff, keywords
         status['diff_neg'] = [x for x in status['diff_neg'].copy() if x not in intersect]
 
         if keywords_diff is True:
-            keyword_match(keywords, status, local_content, remote_content)
+            print('PASS KEYWORD DIFF')
+            status = keyword_match(keywords, status, local_content, remote_content)
         
         extracted_local_links = extract_links_from_html(local_content)
         extracted_remote_links = extract_links_from_html(remote_content)

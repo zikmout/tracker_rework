@@ -21,7 +21,9 @@ requires = [
     'tldextract',
     'openpyxl',
     'eventlet',
-    'xlsxwriter'
+    'xlsxwriter',
+    'selenium',
+    'pyvirtualdisplay'
     # 'flower'
 ]
 

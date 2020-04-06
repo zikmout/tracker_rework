@@ -29,7 +29,6 @@ from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDow
 from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop,\
  UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
 from tracker.views.socket import EchoWebSocket
-#from tracker.models import Role
 
 def main():
     LOAD_MODEL = False
@@ -41,8 +40,12 @@ def main():
     dirname = os.getcwd()
     
     # TODO : Check if data dir exist, if not create it and insert_Roles()
-    # if os.path.isdir(project_path):
-    #Role.insert_roles()
+    project_path = os.path.join(dirname, 'data')
+    if not os.path.isdir(project_path):
+        from tracker.models import Role
+        os.mkdir(project_path)
+        Role.insert_roles()
+    
     """Construct and serve the tornado application."""
     class Application(tornado.web.Application):
         def __init__(self):
@@ -148,7 +151,7 @@ def main():
             tornado.web.Application.__init__(self, handlers, **settings)
             try:
                 # app_db not used yet
-                self.data_dir = os.path.join(dirname, 'data')
+                self.data_dir = project_path 
                 self.app_db = app_db
                 self.meta = meta
                 self.session_manager = session.SessionManager(settings['session_secret'], settings['store_options'], settings['session_timeout'])

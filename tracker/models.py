@@ -80,7 +80,7 @@ class User(Base):
         if self.role is None:
             print('self.role is none')
             print('self.email = {}'.format(self.email))
-            if self.email == 'simon@electricity.ai':
+            if self.email == 'simon.sicard@gmail.com':
                 self.role = session.query(Role).filter_by(name='Administrator').first()
                 print('<OK Admin registration detected>')
                 print('self.role 1 = {}'.format(self.role))

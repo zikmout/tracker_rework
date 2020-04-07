@@ -272,6 +272,7 @@ class UserProjectDeleteWebsite(BaseView):
         # print('config df before = {}'.format(rproject.config_df))
         config_df_updated = rproject.config_df[rproject.config_df.Website != args['websiteToDelete'][0]]
         config_df_updated.to_excel(project.config_file, index=False)
+        
         # delete unit from hard drive
         # TODO: Here it delete the entire unit, not the target subunit, need to correct this !!
         # (i.e use args['targetToDelete'] which is not used yet)

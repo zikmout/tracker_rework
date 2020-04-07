@@ -134,19 +134,19 @@ class EmailToWatchlist(BaseView):
 
         
         # self.request_db.commit()
-        print('after request db delete')
+        # print('after request db delete')
         mailing_list = dict(zip(df['target'], df['mailing_list']))
         new_content = Content(projectname + '_default', links, mailing_list)
         project.contents.append(new_content)
         self.request_db.commit()
-        print('after request db commit()')
+        # print('after request db commit()')
 
         # change session data to take account of deleted unit
         rproject = RProject(project.name, project.data_path, project.config_file) # freshly added
         units = rproject.units_stats(units=rproject.filter_units())
         self.session['units'] = units
         self.session.save()
-        print('after session save()')
+        # print('after session save()')
 
         if to_add:
             flash_message(self, 'success', '\'{}\' successfully added to email recipients.'.format(self.form_data['emailForWatchlist'][0]))
@@ -209,8 +209,6 @@ class FastProjectCreateView(BaseView):
                 user = self.request_db.query(User).filter_by(username=username).first()
                 new_project = Project(project_name, self.application.data_dir, config_path)
                 user.projects.append(new_project)
-
-
                 
                 links = dict(zip(df['target'], df['target_label']))
                 links = replace_mix_option_with_all_existing_keywords(links)
@@ -266,17 +264,29 @@ class ProjectsCreateView(BaseView):
             inputs_path = self.get_argument('ConfigLocation')
         except Exception as e:
             inputs_path = None
-        # print('name = {}, data_path = {}, config_df = {}'.format(name, data_path, inputs_path))
-        user = self.request_db.query(User).filter_by(username=self.session['username']).first()
-        new_project = Project(name, data_path, inputs_path)
-        user.projects.append(new_project)
+
         try:
+            # print('name = {}, data_path = {}, config_df = {}'.format(name, data_path, inputs_path))
+            user = self.request_db.query(User).filter_by(username=self.session['username']).first()
+            new_project = Project(name, data_path, inputs_path)
+            
+
+            # NEW: Need to create associated content
+            df = pd.read_excel(new_project.config_file)
+            links = dict(zip(df['target'], df['target_label']))
+            links = {k:[v] for k, v in links.items()}
+            mailing_list = dict(zip(df['target'], df['mailing_list']))
+            new_content = Content(name + '_default', links, mailing_list)
+            new_project.contents.append(new_content)
+            user.projects.append(new_project)
+            # print('OK content created ;)')
+            # self.request_db.commit()
             self.request_db.add(user)
             self.request_db.commit()
             flash_message(self, 'success', 'Watchlist {} succesfully created.'.format(name))
             self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
         except Exception as e:
-            flash_message(self, 'danger', 'Problem creating watchlist: {}. Maybe try another name ?'.format(name))
+            flash_message(self, 'danger', 'Problem creating watchlist: {}.'.format(name))
             self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
 
 class UserProjectListView(BaseView):

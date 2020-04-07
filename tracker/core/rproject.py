@@ -489,6 +489,19 @@ class RProject:
         print('Unit NOT successfully deleted')
         return False
 
+    def delete_link_inside_unit(self, website, target):
+        idx = 0
+        for unit in self.units:
+            print('unit = {}, compare to url = {}'.format(unit.url, url))
+            if url.startswith(unit.url):
+                self.units.pop(idx)
+                unit.delete_all()
+                print('Unit successfully deleted')
+                return True
+            idx += 1
+        print('Unit NOT successfully deleted')
+        return False
+
     def update_units_links(self, units_urls):
         """ If units_urls is a list, download all content form websites provided in list
             according to what crawled links have been found.

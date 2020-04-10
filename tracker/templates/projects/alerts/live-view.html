@@ -663,8 +663,8 @@ ws.onmessage = function (evt) {
 
         // 'sbb'
         {% if 'live_view' in handler.session['tasks'] and handler.session['tasks']['live_view'][0]['template_type'] == 'share buy back' %}
-            
             var data = JSON.parse(evt.data);
+            //console.log(data);
             if (data.state == 'PROGRESS' && data.status.current_target != undefined)
             {
               // console.log(currentTargets);

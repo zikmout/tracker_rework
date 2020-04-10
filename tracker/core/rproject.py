@@ -531,7 +531,9 @@ class RProject:
         if template_type == 'share buy back':
             keywords_diff = True
             detect_links = True
-            links_algorithm = 'http://localhost:5567/api/v1/predict/is_sbb'
+            #links_algorithm = 'http://localhost:5567/api/v1/predict/is_sbb'
+            links_algorithm = 'https://tracker.lu/api/v1/predict/is_sbb'
+            #links_algorithm = 'http://tracker.lu:5567/api/v1/predict/is_sbb'
         elif template_type == 'diff':
             keywords_diff = False
             detect_links = False

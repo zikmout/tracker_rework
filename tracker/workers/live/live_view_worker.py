@@ -27,6 +27,7 @@ already_visited = list()
 already_seen_content = list()
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
+    time.sleep(2)
     if not utils.is_valid_url(url):
         return False
 

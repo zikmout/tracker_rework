@@ -46,6 +46,7 @@ class AdidasScraper:
         	# Is this necessary ?
         	# elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
             html = browser.page_source
+            print('Here is the page source = {}'.format(html))
         	#self.driver.save_screenshot(os.path.join(os.getcwd(), 'test.png'))
         	# elements = self.driver.find_element_by_class_name("events future visible")
         	# element = WebDriverWait(self.driver, 15).until(
@@ -53,8 +54,10 @@ class AdidasScraper:
         	# )
         
         finally:
+            print('before brwoser quit and display stop in finally')
             browser.quit()
             display.stop()
+            print('after all !!')
         #self.display.popen.kill()
         # self.driver.close()
         # self.display.stop()

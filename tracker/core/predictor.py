@@ -10,7 +10,7 @@ def make_request_for_predictions(content, min_acc=0.75):
     body = urllib.parse.urlencode(post_data)
     http_client = httpclient.HTTPClient()
     try:
-        response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)
+        response = http_client.fetch('http://localhost:5567/api/v1/predict/is_sbb', method='POST', body=body)#, connect_timeout=180, request_timeout=180)
         http_client.close()
         return response.body
     except Exception as e:

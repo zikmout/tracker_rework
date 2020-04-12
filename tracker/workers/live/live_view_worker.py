@@ -27,7 +27,7 @@ already_visited = list()
 already_seen_content = list()
 
 def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
-    time.sleep(2)
+    # time.sleep(2)
     if not utils.is_valid_url(url):
         return False
 
@@ -39,7 +39,11 @@ def is_sbb_content(url, language='ENGLISH', min_acc=0.8):
     # Faking SSL certificate to avoid unauthorized requests
     gcontext = ssl._create_unverified_context()
     try:
-        response = urllib.request.urlopen(req, context=gcontext)
+        # if url == 'https://www.adidas-group.com/media/filer_public/e9/da/e9da3184-11ec-4d53-bd17-12780c95d469/en_publication_delvo_tranche_3_20200103.pdf':
+        #     timeout = 60
+        # else:
+        #     timeout = 3
+        response = urllib.request.urlopen(req, context=gcontext, timeout=12)
     except Exception as e:
         print('-- [ERROR FETCHING URL {}] --\nReason:{}\n'.format(url, e))
         return False

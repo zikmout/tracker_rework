@@ -16,9 +16,29 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import tracker.core.utils as utils
 # from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-#from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from pyvirtualdisplay import Display
 
+class AdidasScraper2:
+    """ for website https://www.adidas-group.com/en/investors/investor-events/ only
+    """
+    def __init__(self, url):
+        
+        self.url = url
+        self.options = FirefoxOptions()
+        self.options.headless = True
+
+    def get_html_wait(self):
+        """Extracts and returns company links (maximum number of company links for return is provided)."""
+        try:
+            driver = webdriver.Firefox(options=self.options)
+            driver.implicitly_wait(15)
+            driver.get(self.url)
+            html = driver.page_source
+            # print('Here is the page source = {}'.format(html))
+        finally:
+            driver.quit()
+        return html
 
 class AdidasScraper:
     """ for website https://www.adidas-group.com/en/investors/investor-events/ only
@@ -62,26 +82,6 @@ class AdidasScraper:
         # self.driver.close()
         # self.display.stop()
         return html
-        # last_line_number = 0
-        # while last_line_number < max_company_count:
-        #     self.driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-
-        #     self.wait.until(lambda driver: self.get_last_line_number() != last_line_number)
-        #     last_line_number = self.get_last_line_number()
-        # return self.driver.find_elements_by_css_selector("ul.company-list > li > a")
-        # return [company_link.get_attribute("href")
-        #         for company_link in self.driver.find_elements_by_css_selector("ul.company-list > li > a")]
-
-    # def get_company_data(self, company_link):
-    #     """Extracts and prints out company specific information."""
-    #     self.driver.get(company_link)
-
-    #     return {
-    #         row.find_element_by_css_selector(".company-info-card-label").text: row.find_element_by_css_selector(".company-info-card-data").text
-    #         for row in self.driver.find_elements_by_css_selector('.company-info-card-table > .columns > .row')
-    #     }
-
-##############################################################################################
 
 def get_url_content(url, header, verbose=True):
     """ Open remote website content
@@ -108,7 +108,7 @@ def get_url_content(url, header, verbose=True):
     except (timeout, TimeoutError, SSLError) as e:
         print('[ERROR TIMEOUT OR SSL] for url : {} (Error : {})'.format(url, e))
         print('Retrying HTTP request now ...\n')
-        scraper = AdidasScraper(url)
+        scraper = AdidasScraper2(url)
         remote_content = scraper.get_html_wait()
         return remote_content, {url : '{}'.format(e)}
 

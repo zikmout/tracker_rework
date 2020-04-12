@@ -15,56 +15,8 @@ import tracker.core.logger as logger
 import tracker.core.utils as utils
 import tracker.core.extractor as extractor
 import http.client
-
 from pprint import pprint
 
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
-#from selenium.webdriver.firefox.options import Options as FirefoxOptions
-from pyvirtualdisplay import Display
-
-class AdidasScraper:
-    """ for website https://www.adidas-group.com/en/investors/investor-events/ only
-    """
-    def __init__(self, url):
-        
-        self.url = url
-        # binary = FirefoxBinary('/Users/xxx/')
-        # self.driver = webdriver.Firefox(firefox_binary=binary)
-        #options = FirefoxOptions()
-        #options.headless = True
-        #self.driver = webdriver.Firefox(options=options)
-        
-
-    def get_html_wait(self):#, max_company_count=1000):
-        """Extracts and returns company links (maximum number of company links for return is provided)."""
-        display = Display(visible=0, size=(800, 600))
-        display.start()
-        
-        try:
-            browser = webdriver.Firefox()
-        
-            browser.implicitly_wait(15)
-            browser.get(self.url)
-        	# Is this necessary ?
-        	# elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
-            html = browser.page_source
-        	#self.driver.save_screenshot(os.path.join(os.getcwd(), 'test.png'))
-        	# elements = self.driver.find_element_by_class_name("events future visible")
-        	# element = WebDriverWait(self.driver, 15).until(
-        	#     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
-        	# )
-        
-        finally:
-            browser.quit()
-            display.stop()
-        #self.display.popen.kill()
-        # self.driver.close()
-        # self.display.stop()
-        return html
 
 def allow_create_folder(current_path):
     if os.path.isfile(current_path) and not os.exists(current_path + '___'):
@@ -181,7 +133,7 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
         print('[ERROR TIMEOUT] for url : {} (Error : {})'.format(url, e))
         print('\n-------------> TIMEOUT ERROR CATCHED <----------------\n')
         print('Retrying HTTP request now ...\n')
-        scraper = AdidasScraper(url)
+        scraper = scrapper.AdidasScraper(url)
         remote_content = scraper.get_html_wait()
         # print('Return from scrapper2 =======>> {}'.format(remote_content))
         msg = '{}'.format(e)

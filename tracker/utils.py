@@ -1,3 +1,4 @@
+import os
 import json
 import string
 import tornado
@@ -5,6 +6,15 @@ import math
 import re
 from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
+
+def erase_link_from_hd(url, path):
+    len_files = 0
+    if url.endswith('/') or name == '':
+        name = 'unknown___'
+    if os.path.isdir(path):
+        len_files = len(os.listdir(path))
+    full_path = os.path.join(path, name)
+    return len_files, full_path
 
 def check_valid_mail(email):  
     # Make a regular expression 

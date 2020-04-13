@@ -64,6 +64,7 @@ class BaseView(RequestHandler):
     def on_finish(self):
         if hasattr(self, 'request_db'):
             self.request_db.close()
+        # raise Finish()
 
     def set_default_headers(self):
         """Set the default response header to be JSON."""
@@ -75,7 +76,32 @@ class BaseView(RequestHandler):
         self.set_status(status)
         self.write(json.dumps(data))
 
+    # def write_error(self, status_code, **kwargs):
+
+    #     self.set_header('Content-Type', 'application/json')
+    #     if self.settings.get("serve_traceback") and "exc_info" in kwargs:
+    #         # in debug mode, try to send a traceback
+    #         lines = []
+    #         for line in traceback.format_exception(*kwargs["exc_info"]):
+    #             lines.append(line)
+    #         self.finish(json.dumps({
+    #             'error': {
+    #                 'code': status_code,
+    #                 'message': self._reason,
+    #                 'traceback': lines,
+    #             }
+    #         }))
+    #     else:
+    #         self.finish(json.dumps({
+    #             'error': {
+    #                 'code': status_code,
+    #                 'message': self._reason,
+    #             }
+    #         }))
+
+    # TODO : Make this 500 error traceback show when working with future ! Because never invoked !!
     def write_error(self, status_code, **kwargs):
+        # print('-----> PASSS write_error !!!!!!!!!!!!!')
         if 'exc_info' in kwargs:
             tb = list()
             # self.write('Exception :\n{}'.format(kwargs['exc_info'][0].__name__))

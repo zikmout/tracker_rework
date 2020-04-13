@@ -7,9 +7,10 @@ import re
 from tracker.views.base import BaseView
 from tracker.models import Permission, Role, Project, User, Content, Alert
 from tracker.utils import flash_message, login_required, is_project_name_well_formated, revoke_all_tasks,\
-make_sure_entries_by_user_are_well_formated
+make_sure_entries_by_user_are_well_formated, erase_link_from_hd
 import tracker.session as session
 from tracker.core.rproject import RProject
+import tracker.core.utils as utils
 import tracker.workers.continuous.continuous_worker as continuous_worker
 from tracker.celery import live_view_worker_app
 from tracker.workers.live.live_view_worker import live_view
@@ -103,10 +104,12 @@ class UserProjectAddWebsite(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         #print('ARGSSSS = {}'.format(args))
 
+        print('INPUT WEBSITE ENTER = {}, INPUT TARGET ENTER = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))
         # Make sure user does not mess up with url entries otherwise messes up with the crawler/downloader !!
         args['inputWebsite'][0], args['inputTarget'][0] = make_sure_entries_by_user_are_well_formated(\
             args['inputWebsite'][0], args['inputTarget'][0])
         
+        print('INPUT WEBSITE EXIT = {}, INPUT TARGET EXIT = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))
         if args['inputWebsite'][0] is False or args['inputTarget'][0] is False:
             flash_message(self, 'danger', 'Url(s) not properly formated.')
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
@@ -131,12 +134,10 @@ class UserProjectAddWebsite(BaseView):
             
             # add links to crawler logfile
             rproject = RProject(project.name, project.data_path, project.config_file)
+            # print('links to generate are = {}'.format(links))
             rproject.generate_crawl_logfile(links)
             rproject._load_units_from_data_path()
             idx, url_errors = rproject.add_links_to_crawler_logfile(links)
-
-
-
 
             mailing_list = dict(zip(df['target'], df['mailing_list']))
             new_content = Content(projectname + '_default', links, mailing_list)
@@ -154,25 +155,17 @@ class UserProjectAddWebsite(BaseView):
                         target_url = k
                         target_error = v
                         # Getting unit that was unable to be downloaded and take it off from crawler logfile
-                        if k.count('/') == 3 and k.endswith('/'):
-                            k2 = k[:-1]
-                            del_unit = rproject.get_unit_from_url(k2)
-                        else:
-                            del_unit = rproject.get_unit_from_url(k)
-                        
-                        print('Here is the unit : {}'.format(del_unit))
-                        # unit_to_be_deleted_from_crwaler_logfile.remove_crawler_link(link)
-                        # print('removing it. middle before = {}'.format(del_unit.load_urls(del_unit.logfile)))
+                        # TODO : Delete this below off when reconfiguring crawler !
+                        del_unit = rproject.get_unit_from_url(k)
                         del_unit.remove_crawler_link(k)
-                        # print('AFTER. middle after = {}'.format(del_unit.load_urls(del_unit.logfile)))
 
                 flash_message(self, 'danger', 'Impossible to download provided target URL : {} (Reason: {})'.format(args['inputTarget'][0], target_error))
             else:
                 flash_message(self, 'success', 'Successfully downloaded URL : {}'.format(args['inputTarget'][0]))
                 # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
                 # return
-            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
-            return
+            # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+            # return
         else:
             rproject = RProject(project.name, project.data_path, project.config_file)
             print('config df before = {}'.format(rproject.config_df))
@@ -190,7 +183,7 @@ class UserProjectAddWebsite(BaseView):
 
             #links1 = {args['inputTarget'][0]:args['inputKeywords']}
             rproject = RProject(project.name, project.data_path, project.config_file)
-            # rproject.generate_crawl_logfile(links) # TODO: take off index.html from function 
+            rproject.generate_crawl_logfile(new_link) # TODO: take off index.html from function 
             rproject._load_units_from_data_path()
             idx, url_errors = rproject.add_links_to_crawler_logfile(new_link)
             #print('{}/{} links needed to be added to logfile.'.format(idx, len(links)))
@@ -237,25 +230,16 @@ class UserProjectAddWebsite(BaseView):
                     for k, v in err.items():
                         target_url = k
                         target_error = v
-                        # Getting unit that was unable to be downloaded and take it off from crawler logfile
-                        if k.count('/') == 3 and k.endswith('/'):
-                            k2 = k[:-1]
-                            del_unit = rproject.get_unit_from_url(k2)
-                        else:
-                            del_unit = rproject.get_unit_from_url(k)
-                        print('Here is the unit : {}'.format(del_unit))
-                        # unit_to_be_deleted_from_crwaler_logfile.remove_crawler_link(link)
-                        # print('removing it. middle before = {}'.format(del_unit.load_urls(del_unit.logfile)))
+                        del_unit = rproject.get_unit_from_url(k)
                         del_unit.remove_crawler_link(k)
-                        # print('AFTER. middle after = {}'.format(del_unit.load_urls(del_unit.logfile)))
 
                 flash_message(self, 'danger', 'Impossible to download provided target URL : {} (Reason: {})'.format(args['inputTarget'][0], target_error))
             else:
                 flash_message(self, 'success', 'Successfully downloaded URL : {}'.format(args['inputTarget'][0]))
                 # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
                 # return
-            self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
-            return
+        self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
+        return
 
 
 class UserProjectDeleteWebsite(BaseView):
@@ -269,17 +253,37 @@ class UserProjectDeleteWebsite(BaseView):
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
         rproject = RProject(project.name, project.data_path, project.config_file)
+
+        # Get initial links to remove later (not optimal ! Eventually change later)
+        initial_df = pd.read_excel(project.config_file)
+        initial_links = dict(zip(initial_df['target'], initial_df['target_label']))
         # print('config df before = {}'.format(rproject.config_df))
-        config_df_updated = rproject.config_df[rproject.config_df.Website != args['websiteToDelete'][0]]
+        config_df_updated = rproject.config_df[rproject.config_df.target != args['targetToDelete'][0]]
         config_df_updated.to_excel(project.config_file, index=False)
-        
-        # delete unit from hard drive
-        # TODO: Here it delete the entire unit, not the target subunit, need to correct this !!
-        # (i.e use args['targetToDelete'] which is not used yet)
-        # TODO 2: Need to delete link from crawled logfile !!!!
-        # by using new function : del_unit.remove_crawler_link(k) !!!!
-        if (rproject.delete_unit(args['websiteToDelete'][0])):
-            print('Unit successfully deleted from hard drive')
+
+        k = args['websiteToDelete'][0]
+        print('Website to delete = {}'.format(k))
+        del_unit = rproject.get_unit_from_url(k)
+        print('Del Unit = {}'.format(del_unit))
+        del_link = {k:[v] for k, v in initial_links.items() if k == args['targetToDelete'][0]}
+        internal_link = args['targetToDelete'][0].replace(args['websiteToDelete'][0], '')
+        # should not happen, but as a measure of precaution
+        if internal_link.startswith('/'):
+            internal_link = internal_link[1:]
+        base_dir_path = os.path.join(del_unit.download_path, internal_link)
+
+        del_unit.remove_crawler_link(args['targetToDelete'][0])
+        len_files, link_on_hd = erase_link_from_hd(args['targetToDelete'][0], base_dir_path)
+        # If file was alone on directory, no need to keep directory, so delete it
+        if len_files == 1:
+            shutil.rmtree(base_dir_path)
+            print('Directory \'{}\' successfully deleted on HD'.format(base_dir_path))
+        else:
+            print('File \'{}\' successfully deleted on HD'.format(link_on_hd))
+            os.remove(link_on_hd)
+
+        # if (rproject.delete_unit(args['websiteToDelete'][0])):
+        #     print('Unit successfully deleted from hard drive')
         # reload units from excel
         rproject._load_units_from_data_path()
         # change session data to take account of deleted unit
@@ -366,8 +370,6 @@ class UserProjectEditWebsite(BaseView):
         print('config df after = {}'.format(config_df_updated))
         config_df_updated.to_excel(project.config_file, index=False)
 
-
-
         # Update content (take first content with name projectname + '_default')
         df = pd.read_excel(project.config_file)
         links = dict(zip(df['target'], df['target_label']))
@@ -441,18 +443,8 @@ class UserProjectEditWebsite(BaseView):
                 for k, v in err.items():
                     target_url = k
                     target_error = v
-                    # Getting unit that was unable to be downloaded and take it off from crawler logfile
-                    if k.count('/') == 3 and k.endswith('/'):
-                        k2 = k[:-1]
-                        del_unit = rproject.get_unit_from_url(k2)
-                    else:
-                        del_unit = rproject.get_unit_from_url(k)
-                    
-                    print('Here is the unit : {}'.format(del_unit))
-                    # unit_to_be_deleted_from_crwaler_logfile.remove_crawler_link(link)
-                    # print('removing it. middle before = {}'.format(del_unit.load_urls(del_unit.logfile)))
+                    del_unit = rproject.get_unit_from_url(k)
                     del_unit.remove_crawler_link(k)
-                    # print('AFTER. middle after = {}'.format(del_unit.load_urls(del_unit.logfile)))
 
             flash_message(self, 'danger', 'Impossible to download provided target URL : {} (Reason: {})'.format(args['inputTarget'][0], target_error))
         else:

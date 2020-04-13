@@ -144,8 +144,8 @@ def main():
                 'xheaders': True,
                 'debug': True,
                 'autoreload': True,
-                'serve_traceback':True,
-                'compiled_template_cache':False,
+                'serve_traceback': True,
+                'compiled_template_cache': False,
                 'default_handler_class': My404Handler
             }
             tornado.web.Application.__init__(self, handlers, **settings)

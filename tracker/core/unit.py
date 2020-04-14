@@ -124,7 +124,8 @@ class Unit:
             print('URL + LINK : {}'.format(full_url))
             assert dir_path.startswith(self.download_path)
             if link.startswith('/'):
-                downloader.download_and_save_content(full_url, filename, dir_path, utils.rh(), check_duplicates=True, replace=True)
+                downloader.download_and_save_content(full_url, filename, dir_path, utils.rh(),\
+                    check_duplicates=True, replace=True)
                 idx += 1
         print('{} pages successfuly downloaded !'.format(idx))
         return idx

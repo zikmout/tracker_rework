@@ -104,12 +104,12 @@ class UserProjectAddWebsite(BaseView):
         project = user.projects.filter_by(name=projectname).first()
         #print('ARGSSSS = {}'.format(args))
 
-        print('INPUT WEBSITE ENTER = {}, INPUT TARGET ENTER = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))
+        # print('INPUT WEBSITE ENTER = {}, INPUT TARGET ENTER = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))
         # Make sure user does not mess up with url entries otherwise messes up with the crawler/downloader !!
         args['inputWebsite'][0], args['inputTarget'][0] = make_sure_entries_by_user_are_well_formated(\
             args['inputWebsite'][0], args['inputTarget'][0])
         
-        print('INPUT WEBSITE EXIT = {}, INPUT TARGET EXIT = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))
+        # print('INPUT WEBSITE EXIT = {}, INPUT TARGET EXIT = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))
         if args['inputWebsite'][0] is False or args['inputTarget'][0] is False:
             flash_message(self, 'danger', 'Url(s) not properly formated.')
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))

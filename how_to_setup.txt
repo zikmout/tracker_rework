@@ -61,6 +61,18 @@ sudo apt-get install esl-erlang
 sudo apt -y install rabbitmq-server
 sudo service rabbitmq-server status
 
+# Install rabbitmqadmin plugin to check queues statuses
+sudo rabbitmq-plugins enable rabbitmq_amqp1_0
+sudo rabbitmq-plugins enable rabbitmq_management
+sudo rabbitmq-plugins enable rabbitmq_mqtt
+sudo rabbitmq-plugins enable rabbitmq_stomp
+
+# Get rabbitmqadmin (from rabbitmq_management) on command line
+sudo wget http://127.0.0.1:15672/cli/rabbitmqadmin
+chmod +x rabbitmqadmin
+sudo chmod +x rabbitmqadmin
+sudo mv rabbitmqadmin /usr/local/bin
+
 # Install firefox and pyvirtualdisplay (xvfb)
 sudo apt-get install firefox xvfb
 

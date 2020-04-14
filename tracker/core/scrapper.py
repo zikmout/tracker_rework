@@ -8,14 +8,11 @@ import requests
 from socket import timeout
 
 # Taken from : https://codereview.stackexchange.com/questions/167327/scraping-the-full-content-from-a-lazy-loading-webpage
-from pprint import pprint
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import tracker.core.utils as utils
-# from selenium.webdriver.firefox.firefox_binary import FirefoxBinary
 from selenium.webdriver.firefox.options import Options as FirefoxOptions
 from pyvirtualdisplay import Display
 
@@ -23,7 +20,6 @@ class AdidasScraper2:
     """ for website https://www.adidas-group.com/en/investors/investor-events/ only
     """
     def __init__(self, url):
-        
         self.url = url
         self.options = FirefoxOptions()
         self.options.headless = True
@@ -44,43 +40,21 @@ class AdidasScraper:
     """ for website https://www.adidas-group.com/en/investors/investor-events/ only
     """
     def __init__(self, url):
-        
         self.url = url
-        # binary = FirefoxBinary('/Users/xxx/')
-        # self.driver = webdriver.Firefox(firefox_binary=binary)
-        #options = FirefoxOptions()
-        #options.headless = True
-        #self.driver = webdriver.Firefox(options=options)
         
-
     def get_html_wait(self):#, max_company_count=1000):
         """Extracts and returns company links (maximum number of company links for return is provided)."""
         display = Display(visible=0, size=(800, 600))
         display.start()
-        
         try:
             browser = webdriver.Firefox()
         
             browser.implicitly_wait(15)
             browser.get(self.url)
-        	# Is this necessary ?
-        	# elements = WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.XPATH, '/html/body/div/div/div/article/section/div/section[2]')))
-            html = browser.page_source
-            print('Here is the page source = {}'.format(html))
-        	#self.driver.save_screenshot(os.path.join(os.getcwd(), 'test.png'))
-        	# elements = self.driver.find_element_by_class_name("events future visible")
-        	# element = WebDriverWait(self.driver, 15).until(
-        	#     EC.presence_of_element_located((By.CLASS_NAME, "events future visible"))
-        	# )
-        
+        	html = browser.page_source
         finally:
-            print('before brwoser quit and display stop in finally')
             browser.quit()
             display.stop()
-            print('after all !!')
-        #self.display.popen.kill()
-        # self.driver.close()
-        # self.display.stop()
         return html
 
 def get_url_content(url, header, verbose=True):
@@ -92,9 +66,6 @@ def get_url_content(url, header, verbose=True):
             remote_content: Binary content decoded
     """
     error = None
-    # header = {
-    # 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.95 Safari/537.36'
-    # }
     # Faking User-Agent to avoid forbidden requests
     req = urllib.request.Request(url, data=None, headers=utils.rh())
     # Faking SSL certificate to avoid unauthorized requests
@@ -111,7 +82,6 @@ def get_url_content(url, header, verbose=True):
         scraper = AdidasScraper2(url)
         remote_content = scraper.get_html_wait()
         return remote_content, {url : '{}'.format(e)}
-
     except (urllib.error.URLError, urllib.error.HTTPError, ConnectionResetError, UnicodeDecodeError) as e:
         print('[ERROR] {} : {}\n'.format(url, e))
         return None, {url : '{}'.format(e)}

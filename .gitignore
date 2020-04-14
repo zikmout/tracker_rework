@@ -49,3 +49,7 @@ err.txt
 .vscode/
 *.txt
 *.log
+celerybeat-schedule
+
+# firefox emulated browser logs
+geckodriver.log

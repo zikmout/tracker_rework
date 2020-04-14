@@ -91,7 +91,6 @@ sudo service nginx status
 sudo add-apt-repository ppa:certbot/certbot
 sudo apt install python-certbot-nginx
 
-
 sudo certbot --nginx -d tracker.lu -d www.tracker.lu # before this step ports 80, 443, 5567? must be open
 sudo cat /etc/letsencrypt/live/tracker.lu/fullchain.pem
 sudo cat /etc/letsencrypt/live/tracker.lu/privkey.pem
@@ -107,7 +106,6 @@ sudo cp ~/Projects/tracker/tracker/config/ssl/default /etc/nginx/sites-available
 sudo service nginx -t
 sudo service nginx restart
 
-
 # Install tracker dependencies
 cd Projects/tracker
 source ENV/bin/activate
@@ -121,6 +119,9 @@ python3 setup.py build
 
 # Launch Tracker
 tracker_app no_model
+
+# Launch xvfb
+Xvfb :100 -ac &
 
 # At this point, you must get an error because trackerdb is not created yet, so let’s create it
 sudo -u postgres psql # specify -p 8080 if needed

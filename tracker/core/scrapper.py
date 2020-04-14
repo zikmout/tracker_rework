@@ -48,10 +48,9 @@ class AdidasScraper:
         display.start()
         try:
             browser = webdriver.Firefox()
-        
             browser.implicitly_wait(15)
             browser.get(self.url)
-        	html = browser.page_source
+            html = browser.page_source
         finally:
             browser.quit()
             display.stop()

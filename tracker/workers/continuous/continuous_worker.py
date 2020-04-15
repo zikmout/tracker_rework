@@ -214,7 +214,7 @@ def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links,
                     else:
                         status['keywords'] = keywords
             # TODO: send show_diff_pos and show_diff_neg to get_text_diff in order to avoir useless computation ?
-            status = extractor.get_text_diff(local_content, remote_content, status, keywords_diff, keywords)#,\
+            status = extractor.get_text_diff(local_content, remote_content, status, keywords_diff)#,\
                 # detect_links=show_links)
             status = extractor.get_full_all_links(status, url)
 

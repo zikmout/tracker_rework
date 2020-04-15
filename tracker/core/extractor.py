@@ -208,14 +208,14 @@ def get_full_nearest_links(status, base_url):
                     status[_][trim_text(k)] = base_url + v
     return status
 
-def keyword_match(keywords, status, local_content, remote_content):#, detect_links=True):
+def keyword_match(status, local_content, remote_content):#, detect_links=True):
     """ 
         Find diff pos, diff neg, nearest links pos, nearest links neg 
     """
     match_neg = list()
     match_pos = list()
 
-    for keyword in keywords:
+    for keyword in status['keywords']:
         # print('\n\nKeyword === {}\n\n'.format(keyword))
         if not ' ' in keyword:
             for neg in status['diff_neg']:
@@ -297,7 +297,7 @@ def extract_links_from_html(content):
 
     return links
 
-def get_text_diff(local_content, remote_content, status, keywords_diff, keywords):#, detect_links=True):
+def get_text_diff(local_content, remote_content, status, keywords_diff):#, detect_links=True):
     # extract content and links
     # print('REMOTE CONTENT : {}'.format(remote_content))
     try:
@@ -326,7 +326,8 @@ def get_text_diff(local_content, remote_content, status, keywords_diff, keywords
         status['diff_neg'] = [x for x in status['diff_neg'].copy() if x not in intersect]
 
         if keywords_diff is True:
-            status = keyword_match(keywords, status, local_content, remote_content)
+            # print('pass keyword match')
+            status = keyword_match(status, local_content, remote_content)
         
         extracted_local_links = extract_links_from_html(local_content)
         extracted_remote_links = extract_links_from_html(remote_content)

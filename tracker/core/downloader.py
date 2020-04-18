@@ -1,4 +1,5 @@
 import os
+import json
 import re
 import lxml
 from bs4 import BeautifulSoup
@@ -14,9 +15,8 @@ import tracker.core.scrapper as scrapper
 import tracker.core.logger as logger
 import tracker.core.utils as utils
 import tracker.core.extractor as extractor
-import http.client
+from tornado import httpclient
 from pprint import pprint
-
 
 def allow_create_folder(current_path):
     if os.path.isfile(current_path) and not os.exists(current_path + '___'):
@@ -254,7 +254,6 @@ def make_request_for_updating_content(user_email, project_name, urls):
     # Making synchronous HTTP Request (because workers are aynchronous already)
     post_data = { 'user_email': user_email, 'project_name': project_name, 'urls': urls }
     body = json.dumps(post_data)
-
     http_client = httpclient.HTTPClient()
     try:
         response = http_client.fetch('http://localhost:5567/api/v1/update-content', method='POST', body=body)

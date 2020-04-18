@@ -13,7 +13,6 @@ except:
     import fastText
 import celery
 import json
-
 from celery.exceptions import SoftTimeLimitExceeded
 import math
 from tornado import httpclient
@@ -114,7 +113,7 @@ def bad_task(self):
     time.sleep(10)
     print('stop sleep')
 
-@app.task(bind=True, ignore_result=False, soft_time_limit=29, time_limit=30)#, time_limit=1)#soft_time_limit=60)#, time_limit=121)
+@app.task(bind=True, ignore_result=False, soft_time_limit=240, time_limit=242)#, time_limit=1)#soft_time_limit=60)#, time_limit=121)
 def get_diff(self, link, base_path, diff_path, url, keywords_diff, detect_links, show_links,\
     show_diff_pos, show_diff_neg, links_algorithm, counter, total_task):
     """ Download website parts that have changed 
@@ -311,9 +310,10 @@ def sbb_end_routine(self, task_results, mails, user_email, project_name, show_li
     print("SBB MAILS TEMPLATE CONTENT : {}".format(mails))
     
     # Updating and download content now ...
-    urls = [x['url'] for x in task_results_successful]
-    # downloader.make_request_for_updating_content(user_email, project_name, urls)
-    print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
+    if task_results_successful != []:
+        urls = [x['url'] for x in task_results_successful]
+        downloader.make_request_for_updating_content(user_email, project_name, urls)
+        print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
 
 @app.task(bind=True)
 def share_buy_back_task(self, add, mails, user_email, project_name, show_links, show_diff_pos, show_diff_neg):
@@ -377,9 +377,10 @@ def diff_end_routine(self, task_results, mails, user_email, project_name, show_l
     print("DIFF MAILS TEMPLATE CONTENT : {}".format(mails))
     
     # Updating and download content now ...
-    urls = [x['url'] for x in task_results_successful]
-    # downloader.make_request_for_updating_content(user_email, project_name, urls)
-    print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
+    if task_results_successful != []:
+        urls = [x['url'] for x in task_results_successful]
+        downloader.make_request_for_updating_content(user_email, project_name, urls)
+        print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
 
 @app.task(bind=True)
 def diff_task(self, add, mails, user_email, project_name, show_links, show_diff_pos, show_diff_neg):
@@ -453,10 +454,10 @@ show_diff_pos, show_diff_neg):#, soft_time_limit=120):
     # print("DIFF WITH KEYWORDS MAILS TEMPLATE CONTENT : {}".format(mails))
     
     # Updating and download content now ...
-    # if task_results_successful != []:
-        # urls = [x['url'] for x in task_results_successful if (x['errors'] == {} and (x['diff_neg'] != [] or x['diff_pos'] != []))]
-        # downloader.make_request_for_updating_content(user_email, project_name, urls)
-        # print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
+    if task_results_successful != []:
+        urls = [x['url'] for x in task_results_successful if (x['errors'] == {} and (x['diff_neg'] != [] or x['diff_pos'] != []))]
+        downloader.make_request_for_updating_content(user_email, project_name, urls)
+        print('All links ({}) successfully updated ! Yeay ! :)) '.format([x['url'] for x in task_results_successful]))
         
 @app.task(bind=True)
 def diff_with_keywords_task(self, add, mails, user_email, project_name, show_links, show_diff_pos, show_diff_neg):

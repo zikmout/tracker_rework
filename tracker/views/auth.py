@@ -1,8 +1,9 @@
 from tornado import gen
 from tracker.views.base import BaseView
-from werkzeug.security import check_password_hash
+from werkzeug.security import check_password_hash, generate_password_hash
 from tracker.utils import flash_message, login_required
 from tracker.models import User
+from sqlalchemy import update
 import tracker.session as session
 
 from tracker.celery import live_view_worker_app
@@ -38,6 +39,33 @@ class AuthLoginView(BaseView):
         self.session.save()
         flash_message(self, 'success', 'User {} succesfully logged in.'.format(registered_user.username))
         self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+
+class AuthUpdatedPasswordView(BaseView):
+    SUPPORTED_METHODS = ['GET', 'POST']
+    @gen.coroutine
+    def get(self):
+        self.render('auth/change-password.html')
+
+    @gen.coroutine
+    def post(self):
+        old_password = self.get_argument('old_password')
+        new_password_1 = self.get_argument('new_password_1')
+        new_password_2 = self.get_argument('new_password_2')
+        username = self.get_current_user()
+        registered_user = self.request_db.query(User).filter_by(username=username).first()
+        if registered_user is None or not check_password_hash(registered_user.password, old_password):
+            flash_message(self, 'danger', 'Password is incorrect.')
+            self.redirect('/api/v1/auth/update-password')
+            return
+        if new_password_1 != new_password_2:
+            flash_message(self, 'danger', 'New password does not match !')
+            self.redirect('/api/v1/auth/update-password')
+            return
+        if check_password_hash(registered_user.password, old_password) and new_password_1 == new_password_2:
+            registered_user.password = generate_password_hash(new_password_1)
+            self.request_db.commit()
+            flash_message(self, 'success', 'Password successfully updated.')
+            self.redirect('/')
 
 class AuthRegisterView(BaseView):
     SUPPORTED_METHODS = ['GET', 'POST']

@@ -51,6 +51,9 @@
                             {% if hasattr(handler, 'session') and handler.session != {} and 'is_admin' in handler.session and handler.session['is_admin'] is True and handler.session['is_simplified'] is False %}
                                 <a class="dropdown-item" href="{{ reverse_url('register') }}">Register</a>
                             {% end %}
+                            {% if hasattr(handler, 'session') and 'username' in handler.session %}
+                            <a class="dropdown-item" href="{{ reverse_url('update_password') }}">Change password</a>
+                            {% end %}
                         </div>
                     </li>
                     {% if hasattr(handler, 'session') and 'username' in handler.session %}

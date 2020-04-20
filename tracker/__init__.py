@@ -12,7 +12,8 @@ import tracker.session as session
 
 from tracker.views.base import HomePage, My404Handler, SwitchMode, SwitchDetailedLiveView, SwitchPosLiveView,\
 SwitchNegLiveView, SwitchTimeoutLiveView, BlankPage
-from tracker.views.user import UserListView, UserDelete, UserUnitView, UserUnitEditView, AdminUserCreate
+from tracker.views.user import UserListView, UserDelete, UserUnitView, UserUnitEditView, AdminUserCreate,\
+AdminProjectsView
 from tracker.views.auth import AuthLoginView, AuthRegisterView, AuthLogoutView, AuthUpdatedPasswordView
 from tracker.views.mail import UserProjectSendMail
 from tracker.views.tasks import RevokeLiveTasks, DeleteTaskQueues
@@ -62,6 +63,7 @@ def main():
 
             # tracker.views.user.py
             url(r'/api/v1/users_list', UserListView, name='users_list'),
+            url(r'/api/v1/users-projects', AdminProjectsView, name='users_projects'),
             url(r'/api/v1/user-create', AdminUserCreate),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?', UserDelete, name='user_delete'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?', UserUnitView, name='user_unit_view'),

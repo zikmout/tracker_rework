@@ -1,0 +1,43 @@
+{% extends '../layout.html' %}
+{% block content %}
+<div class="starter-template-fluid">
+      <br>
+      <h3>List of database projects</h3>
+      <br>
+
+        <table class="table table-sm">
+          <thead class="thead-light">
+              <tr>
+                <th>Watchlist Name</th>
+                <th>Owner</th>
+                <th>Active alerts</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for user in users_json %}
+                {% for project in list(user.values())[0] %}
+                  <tr>
+                    <td style="vertical-align:middle;">{{ project['name'].replace('_', ' ') }}</td>
+                    <td style="vertical-align:middle;">{{ list(user.keys())[0] }}</td>
+                    <td style="vertical-align:middle;">
+
+                {% if  project['nb_active_alerts'] != 0 %}
+                  {% if project['nb_active_alerts'] > 1 %}
+                    <span class="badge badge-dark">{{ project['nb_active_alerts'] }}&nbsp;actives</span>
+                  {% else %}
+                    <span class="badge badge-dark">{{ project['nb_active_alerts'] }}&nbsp;active</span>
+                  {% end %}
+                {% else %}
+                  -
+                {% end %}
+
+
+                    </td>
+                  </tr>
+                {% end %}
+              {% end %}
+          </tbody>
+        </table>
+        
+</div>
+{% end %}

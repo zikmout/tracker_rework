@@ -69,7 +69,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">Admin</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown01">
-                            <a class="dropdown-item" href="{{ reverse_url('users_list') }}">Users</a>
+                            <a class="dropdown-item" href="{{ reverse_url('users_list') }}">DB Users</a>
+                            <a class="dropdown-item" href="{{ reverse_url('users_projects') }}">DB Projects</a>
                             {% if 'current_project' in handler.session %}
                                 <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/revoke-all">Revoke all tasks</a>
                                 <a class="dropdown-item" href="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/tasks/delete-all">Delete all queues</a>

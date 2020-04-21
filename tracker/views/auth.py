@@ -115,5 +115,5 @@ class AuthLogoutView(BaseView):
             print('Deleting old live view tasks from session.')
             del self.session['tasks']['live_view']
         self.session.delete()
-        flash_message(self, 'success', 'You succesfully logged out.')
+        flash_message(self, 'success', 'You successfully logged out.')
         self.redirect('/')

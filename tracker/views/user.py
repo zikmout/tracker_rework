@@ -2,7 +2,7 @@ from tornado import gen
 import json
 from tracker.views.base import BaseView
 from tracker.models import User
-from tracker.utils import flash_message, login_required, get_url_from_id
+from tracker.utils import flash_message, login_required, get_url_from_id, send_welcome_email
 from tracker.models import User, Role
 from tracker.core.rproject import RProject
 import tracker.workers.continuous.continuous_worker as continuous_worker
@@ -77,7 +77,7 @@ class UserDelete(BaseView):
             try:
                 self.request_db.delete(user)
                 self.request_db.commit()
-                flash_message(self, 'success', 'User {} succesfully deleted.'.format(username))
+                flash_message(self, 'success', 'User {} successfully deleted.'.format(username))
             except Exception as e:
                 flash_message(self, 'success', 'Impossible to delete user. Check shell logs for more information.')
                 print('Exception : Impossible to delete user because : {}'.format(e))
@@ -133,13 +133,16 @@ class AdminUserCreate(BaseView):
     @gen.coroutine
     def post(self):
         args = self.form_data
+        welcome_email = True if args['inputEmailSend'][0] == 'Email' else False
+        # print('SEND EMAIL = {}'.format(send_welcome_email))
         # print('Args = {}'.format(args))
+        # TODO : Make the updated possible !
         if 'inputUpdatedRole' in args and 'inputUsername' in args:
             try:
                 user = self.request_db.query(User).filter_by(username=args['inputUsername'][0]).first()
                 user.role = self.request_db.query(Role).filter_by(name=args['inputUpdatedRole'][0]).first()
                 self.request_db.commit()
-                flash_message(self, 'success', 'User {} : Permission succesfully updated to {}.'\
+                flash_message(self, 'success', 'User {} : Permission successfully updated to {}.'\
                     .format(args['inputUsername'][0], args['inputUpdatedRole'][0]))
             except Exception as e:
                 print('Exception updating user role : {}'.format(e))
@@ -149,9 +152,20 @@ class AdminUserCreate(BaseView):
             try:
                 user = User(args['inputUsername'][0], args['inputPassword'][0], args['inputEmail'][0], \
                     self.request_db, self.meta, role=self.request_db.query(Role).filter_by(name=args['inputRole'][0]).first())
+                # Send email with credentials if asked
+                if welcome_email is True:
+                    ret = send_welcome_email(args['inputUsername'][0], args['inputPassword'][0], args['inputEmail'][0], '[Tracker] Welcome to tracker.lu !')
+                    if ret is False:
+                        flash_message(self, 'danger', 'Problem sending Welcome email.')
+                        self.redirect('/api/v1/users_list')
+                        return
                 self.request_db.add(user)
                 self.request_db.commit()
-                flash_message(self, 'success', 'User {} succesfully registered.'.format(args['inputUsername'][0]))
+                if welcome_email and ret is True:
+                    flash_message(self, 'success', 'User {} successfully registered and email sent to \'{}\''\
+                        .format(args['inputUsername'][0], args['inputEmail'][0]))
+                else:
+                    flash_message(self, 'success', 'User {} successfully registered.'.format(args['inputUsername'][0]))
             except Exception as e:
                 print('Exception : {}'.format(e))
                 flash_message(self, 'danger', 'Username {} already exists or email {} already taken.'\

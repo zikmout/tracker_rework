@@ -6,6 +6,9 @@ import math
 import re
 from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
+import smtplib, ssl
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 def erase_link_from_hd(url, path):
     len_files = 0
@@ -264,3 +267,55 @@ def trim_text(key):
         return l
     else:
         return ''
+
+def send_welcome_email(username, password, email, subject):
+    try:
+        html = """\
+        <html>
+          <body>
+            <p>Bonjour """
+
+        html += username
+
+        html += """,<br><br>
+               Veuillez trouver ci-joint vos login/pass pour vous connecter sur le site <a href='https://www.tracker.lu'>\
+               Tracker</a>.</p>
+        """
+
+        html += "<br><b>Login : </b>" + email + "<br>"
+        html += "<br><b>Password : </b>" + password + "<br>"
+        html += "<br><br>Tracker Bot.<br></body></html>"
+
+        # Turn these into plain/html MIMEText objects
+        part = MIMEText(html, "html")
+
+        sender_email = "simon@electricity.ai"
+        receiver_email = ['{}'.format(email)]
+        password = 'totosecret'
+
+        for mail in receiver_email:
+            message = MIMEMultipart()
+            # date = datetime.now().replace(microsecond=0)
+            message["Subject"] = subject
+            message["From"] = 'Tracker Bot'
+            message["To"] = email
+            # Add HTML/plain-text parts to MIMEMultipart message
+            # The email client will try to render the last part first
+            message.attach(part)
+            # Create secure connection with server and send email
+            context = ssl.create_default_context()
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465, context=context) as server:
+                server.login(sender_email, password)
+                server.sendmail(
+                    sender_email, mail, message.as_string()
+                )
+        return True
+    except Exception as e:
+        print('There has been a problem sending Welcome email. (Error: {})'.format(e))
+        return False
+
+
+
+
+
+

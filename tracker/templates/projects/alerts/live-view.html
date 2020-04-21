@@ -1028,11 +1028,6 @@ function showFailedTasksDetails() {
 {% end %}
 {% block script %}
 <script>
-  function clearLocalStorage()
-  {
-    // local storage (keeping unfinished task from live view that should be still shown to the user) must be cleared
-    localStorage.clear();
-  }
 
   $(function() {
     $('#customSwitch1').change(function() {
@@ -1110,7 +1105,7 @@ function showFailedTasksDetails() {
       {
         var key = localStorage.key(i);
         var item = localStorage.getItem(key) ;
-        if(key != 'totalFetched' && document.getElementById('changedContent' + key) == null)
+        if(key != 'totalFetched' && key != 'showTutorial' && document.getElementById('changedContent' + key) == null)
         {
           document.getElementById('whatHasChanged').insertAdjacentHTML('beforeend', "<br><hr>" + item);
         }

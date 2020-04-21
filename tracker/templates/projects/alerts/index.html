@@ -386,15 +386,10 @@
 </div>
 </div>
 
-<script src="{{ static_url('custom/utils.js') }}"></script>
+<!-- <script src="{{ static_url('custom/utils.js') }}"></script> -->
 <script>
   function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
-  }
-  function clearLocalStorage()
-  {
-    // local storage (keeping unfinished task from live view that should be still shown to the user) must be cleared
-    localStorage.clear();
   }
   $('#CancelButton').click(function(){
      $('#createalert').collapse('hide');

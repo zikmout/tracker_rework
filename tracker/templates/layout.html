@@ -29,6 +29,10 @@
         <script src="{{ static_url('dist/js/bootstrap.min.js') }}"></script>
         <!-- <script src="{{ static_url('dist/js/bootstrap-switch.js') }}"></script> -->
         <!-- <script src="{{ static_url('assets/scss/bootstrap-switch.scss') }}"></script> -->
+
+        <!-- utils for Tracker //-->
+        <script src="{{ static_url('custom/utils.js') }}"></script>
+        
             
     </head>
 
@@ -96,7 +100,7 @@
         <nav class="navbar navbar-expand-md bg-white box-shadow py-0 custom-toggler" style="padding-top: 15px;">
             <a class="navbar-brand" onmouseover="this.style.color='#343a40'" onmouseout="this.style.color='#343a40'" style="font-size:0.9rem; color: #343a40" href="#">
                 <b>
-                    {{ handler.session['current_project'] }}
+                    {{ handler.session['current_project'].replace('_', ' ') }}
                 </b>
             </a>
             <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbar2" aria-expanded="false" aria-label="Toggle navigation">
@@ -161,11 +165,6 @@
 
 
             <script>
-              function clearLocalStorage()
-              {
-                // local storage (keeping unfinished task from live view that should be still shown to the user) must be cleared
-                localStorage.clear();
-              }
               $('.dropdown-item').click(function(){
                  $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);
               });

@@ -3,7 +3,35 @@ import re
 import datetime
 import random
 import time
+import shutil
+from tracker.utils import erase_link_from_hd
 from tracker.core.user_agent_list import USER_AGENTS
+
+def clean_link_from_hd(rproject, domain_link, full_link, initial_links):
+    """ Delete an entire link under unit """
+    del_unit = rproject.get_unit_from_url(domain_link)
+    print('Del Unit = {}'.format(del_unit))
+    del_link = {k:[v] for k, v in initial_links.items() if k == full_link}
+    internal_link = full_link.replace(domain_link, '')
+    # should not happen, but as a measure of precaution
+    if internal_link.startswith('/'):
+        internal_link = internal_link[1:]
+    base_dir_path = os.path.join(del_unit.download_path, internal_link.rpartition('/')[0])
+    filename = internal_link.rpartition('/')[2]
+
+    print('\ninternal_link = {}'.format(internal_link))
+    print('\nbase_dir_path = {}'.format(base_dir_path))
+    print('\nfilename = {}'.format(filename))
+
+    del_unit.remove_crawler_link(full_link)
+    len_files, link_on_hd = erase_link_from_hd(full_link, base_dir_path, filename)
+    # If file was alone on directory, no need to keep directory, so delete it
+    if len_files == 1:
+        shutil.rmtree(base_dir_path)
+        print('Directory \'{}\' successfully deleted on HD'.format(base_dir_path))
+    else:
+        print('File \'{}\' successfully deleted on HD'.format(link_on_hd))
+        os.remove(link_on_hd)
 
 def rh():
     """ Return a random header with random User-Agent """

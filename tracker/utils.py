@@ -10,7 +10,7 @@ import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-def erase_link_from_hd(url, path):
+def erase_link_from_hd(url, path, name):
     len_files = 0
     if url.endswith('/') or name == '':
         name = 'unknown___'
@@ -61,6 +61,9 @@ def make_sure_entries_by_user_are_well_formated(input_website, input_target):
 
     # Check if both url start with 'http' or 'https'
     if not (is_url_well_formated(input_website) and is_url_well_formated(input_target)):
+        return False, False
+
+    if input_website not in input_target:
         return False, False
         
     return input_website, input_target

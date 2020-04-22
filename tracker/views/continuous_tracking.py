@@ -261,26 +261,8 @@ class UserProjectDeleteWebsite(BaseView):
         config_df_updated = rproject.config_df[rproject.config_df.target != args['targetToDelete'][0]]
         config_df_updated.to_excel(project.config_file, index=False)
 
-        k = args['websiteToDelete'][0]
-        print('Website to delete = {}'.format(k))
-        del_unit = rproject.get_unit_from_url(k)
-        print('Del Unit = {}'.format(del_unit))
-        del_link = {k:[v] for k, v in initial_links.items() if k == args['targetToDelete'][0]}
-        internal_link = args['targetToDelete'][0].replace(args['websiteToDelete'][0], '')
-        # should not happen, but as a measure of precaution
-        if internal_link.startswith('/'):
-            internal_link = internal_link[1:]
-        base_dir_path = os.path.join(del_unit.download_path, internal_link)
-
-        del_unit.remove_crawler_link(args['targetToDelete'][0])
-        len_files, link_on_hd = erase_link_from_hd(args['targetToDelete'][0], base_dir_path)
-        # If file was alone on directory, no need to keep directory, so delete it
-        if len_files == 1:
-            shutil.rmtree(base_dir_path)
-            print('Directory \'{}\' successfully deleted on HD'.format(base_dir_path))
-        else:
-            print('File \'{}\' successfully deleted on HD'.format(link_on_hd))
-            os.remove(link_on_hd)
+        # Delete all traces in HD (since no database !!!)
+        utils.clean_link_from_hd(rproject, args['websiteToDelete'][0], args['targetToDelete'][0], initial_links)
 
         # if (rproject.delete_unit(args['websiteToDelete'][0])):
         #     print('Unit successfully deleted from hard drive')
@@ -356,7 +338,8 @@ class UserProjectEditWebsite(BaseView):
         rproject = RProject(project.name, project.data_path, project.config_file)
         # print('config df before = {}'.format(rproject.config_df))
         config_df_updated = rproject.config_df.copy()
-        config_df_updated = config_df_updated[config_df_updated.target != args['inputTarget'][0]]
+        initial_links = dict(zip(config_df_updated['target'], config_df_updated['target_label']))
+        config_df_updated = config_df_updated[config_df_updated.target != args['inputTargetOld'][0]]
         if 'inputKeywords' in args:
             keywords_excel = ';'.join(args['inputKeywords'])
         else:
@@ -369,6 +352,9 @@ class UserProjectEditWebsite(BaseView):
             'target': args['inputTarget'][0], 'target_label':keywords_excel, 'mailing_list': mailing_list_excel}, ignore_index=True)
         print('config df after = {}'.format(config_df_updated))
         config_df_updated.to_excel(project.config_file, index=False)
+
+        # Delete all traces in HD (since no database !!!)
+        utils.clean_link_from_hd(rproject, args['inputWebsite'][0], args['inputTargetOld'][0], initial_links)
 
         # Update content (take first content with name projectname + '_default')
         df = pd.read_excel(project.config_file)

@@ -285,8 +285,10 @@ def send_welcome_email(username, password, email, subject):
                Tracker</a>.</p>
         """
 
-        html += "<b>Login : </b>" + email + "<br>"
-        html += "<br><b>Password : </b>" + password + "<br>"
+        html += "<b>Login : </b>" + email
+        html += "<br><b>Password : </b>" + password
+        html += "<br><br>Une fois connecté, vous pouvez si vous le souhaitez changer votre mot de passe dans le menu Session.<br>"
+        html += "Cordialement,"
         html += "<br><br>Tracker Bot.<br></body></html>"
 
         # Turn these into plain/html MIMEText objects

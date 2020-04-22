@@ -154,7 +154,7 @@ class AdminUserCreate(BaseView):
                     self.request_db, self.meta, role=self.request_db.query(Role).filter_by(name=args['inputRole'][0]).first())
                 # Send email with credentials if asked
                 if welcome_email is True:
-                    ret = send_welcome_email(args['inputUsername'][0], args['inputPassword'][0], args['inputEmail'][0], '[Tracker] Welcome to tracker.lu !')
+                    ret = send_welcome_email(args['inputUsername'][0], args['inputPassword'][0], args['inputEmail'][0], 'Welcome to tracker.lu !')
                     if ret is False:
                         flash_message(self, 'danger', 'Problem sending Welcome email.')
                         self.redirect('/api/v1/users_list')

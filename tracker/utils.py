@@ -282,7 +282,7 @@ def send_welcome_email(username, password, email, subject):
                Tracker</a>.</p>
         """
 
-        html += "<br><b>Login : </b>" + email + "<br>"
+        html += "<b>Login : </b>" + email + "<br>"
         html += "<br><b>Password : </b>" + password + "<br>"
         html += "<br><br>Tracker Bot.<br></body></html>"
 

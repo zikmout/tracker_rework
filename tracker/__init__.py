@@ -64,7 +64,7 @@ def main():
             # tracker.views.user.py
             url(r'/api/v1/users_list', UserListView, name='users_list'),
             url(r'/api/v1/users-projects', AdminProjectsView, name='users_projects'),
-            url(r'/api/v1/user-create', AdminUserCreate),
+            url(r'/api/v1/user-create', AdminUserCreate, name='admin_user_create'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?', UserDelete, name='user_delete'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit/?(?P<uid>[0-9]+)?', UserUnitView, name='user_unit_view'),
             url(r'/api/v1/users/?(?P<username>[A-Za-z0-9-_]+)?/projects/?(?P<projectname>[A-Za-z0-9-_]+)?/unit-edit', UserUnitEditView, name='unit-edit-view'),

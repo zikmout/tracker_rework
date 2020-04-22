@@ -133,7 +133,6 @@ class AdminUserCreate(BaseView):
     @gen.coroutine
     def post(self):
         args = self.form_data
-        welcome_email = True if args['inputEmailSend'][0] == 'Email' else False
         # print('SEND EMAIL = {}'.format(send_welcome_email))
         # print('Args = {}'.format(args))
         # TODO : Make the updated possible !
@@ -150,6 +149,7 @@ class AdminUserCreate(BaseView):
                 .format(args['inputUsername'][0]))
         else:
             try:
+                welcome_email = True if args['inputEmailSend'][0] == 'Email' else False
                 user = User(args['inputUsername'][0], args['inputPassword'][0], args['inputEmail'][0], \
                     self.request_db, self.meta, role=self.request_db.query(Role).filter_by(name=args['inputRole'][0]).first())
                 # Send email with credentials if asked

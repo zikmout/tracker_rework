@@ -55,20 +55,34 @@
           <thead class="thead-light">
               <tr>
                 <th>Username</th>
+                <th>Registration date</th>
                 <th>Email</th>
                 <th>Role</th>
-                <th>Registration date</th>
-                <th>Action</th>
+                <th></th>
+                <th></th>
               </tr>
           </thead>
           <tbody>
               {% for user in users_json %}
+              <form action="{{ reverse_url('admin_user_create') }}" method="post">
               <tr>
               <td style="vertical-align:middle;">{{ user['username'] }}</td>
-              <td style="vertical-align:middle;">{{ user['email'] }}</td>
-              <td style="vertical-align:middle;">{{ user['role'] }}</td>
               <td style="vertical-align:middle;">{{ user['registration_date'] }}</td>
-              <td style="vertical-align:middle;"><form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-danger btn-sm" value="">Delete</button></form></td>
+              <td style="vertical-align:middle;">{{ user['email'] }}</td>
+              <td>
+                <select class="form-control" name="inputUpdatedRole" placeholder="role" aria-label="role">
+                  <option {% if user['role'] == 'User' %} selected{% end %}>User</option>
+                  <option{% if user['role'] == 'Moderator' %} selected{% end %}>Moderator</option>
+                  <option{% if user['role'] == 'Administrator' %} selected{% end %}>Administrator</option>
+                </select>
+              </td>
+              <td style="vertical-align:middle;">
+                    <button type="submit" name="inputUsername" value="{{ escape(user['username']) }}" class="btn btn-info btn-sm">Update</button>
+                </form>
+              </td>
+              <td style="vertical-align:middle;">
+                <form action="/api/v1/users/{{ escape(user['username']) }}" method=post class="form-horizontal"><button type="submit" class="btn btn-danger btn-sm" value="">Delete</button></form>
+              </td>
               </tr>
               {% end %}
           </tbody>

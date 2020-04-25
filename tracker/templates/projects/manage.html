@@ -51,7 +51,7 @@
             <tbody>
               {% for project in projects %}
               <tr>
-              <td style="vertical-align:middle;">{{ escape(project['name']) }}</td>
+              <td style="vertical-align:middle;">{{ escape(project['name'].replace('_', ' ')) }}</td>
               {% if 'is_simplified' in handler.session and handler.session['is_simplified'] is False %}
               <td style="vertical-align:middle;">{{ escape(project['data_path'][:5]) }} ... {{ escape(project['data_path'][-5:]) }}</td>
               <td style="vertical-align:middle;">{{ escape(project['config_file']) }}</td>

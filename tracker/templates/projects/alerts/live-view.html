@@ -90,43 +90,8 @@ a {
 
 
               </div>
-<!-- <div class="custom-control custom-switch">
-  <input type="checkbox" class="custom-control-input" id="customSwitch1" name="customSwitch1">
-  <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-</div> -->
-              
-              <!-- <div class="form-group mb-2 mt-2"> -->
-
-                
-
-              <!-- </div> -->
-
-              <!-- <div class="col"> -->
-  <!--               <div  class="ml-1 mr-2 float-right"> -->
-                  
-              <!-- </div> -->
-            <!-- </div> -->
               </div>
               </div>
-              <!-- </div> -->
-<!--               <div class="row">
-                <div class="col mt-1">
-
-                  <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/alerts/live/update" method="post" class="form-horizontal" style="display: inline;">
-
-                      <input type="hidden", name="fromPage" value="live_view">
-                      <button type="submit" class="btn btn-info btn-sm">Update</button></input>
-
-                  </form>
-
-
-                  <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ escape(handler.session['current_project']) }}/alert/stop" method="POST" style="display: inline;">
-                    <input type="hidden" value="{{ handler.session['current_live_view_content'] }}" name="contentName">
-                    <input type="hidden" value="{{ handler.session['current_live_view_alert'] }}" name="alertName">
-
-                    <button type="submit" class="btn btn-danger btn-sm">Stop</button></input>
-                  </form>
-                </div> //-->
               </div>
 
               <div class="mt-2">
@@ -136,18 +101,8 @@ a {
               <br><br><center><p class="lead">Launch a live alert and monitor it from here.</p></center>
           {% end %}
 
-
-        
-
-        
           <div id="whatHasChanged"></div>
-<!--       {% if 'live_view' in handler.session['tasks'] %}
-        {% for tasks in handler.session['tasks']['live_view']  %} -->
-          <!-- <center><p class="lead" id="currentState{{ escape(str(tasks['id'])) }}"></p></center> -->
-          <!-- <center><p class="lead" id="currentCheck{{ escape(str(tasks['id'])) }}"></p></center> -->
-          <!-- <div id="changedContent{{ escape(str(tasks['id'])) }}"></div> -->
-<!--         {% end %}
-      {% end %} -->
+
 </div>
 <script>
 
@@ -207,7 +162,6 @@ function sendReport() {
         },
         success: function(data, status, request) {
             // create task
-            // let resP = JSON.parse(request);
             let resP = request.responseJSON;
             if (resP.response == 'NO')
             {
@@ -230,14 +184,8 @@ function sendReport() {
 function timeout() {
     nbExecuted = Object.keys(executed).length;
     remainingTaskNb = totalTaskNb - nbExecuted;
-    // if (remainingTaskNb == 0) {
-      // $('#currentTargetDetails').empty();
-    // }
-    // $('hr').remove();
-    // $('div[id^="changedContent"]').empty();
     $('#numberOfPendingTasks').html(totalTaskNb - remainingTaskNb);
     updateProgressBar('#liveViewProgress', (nbExecuted/totalTaskNb)*100);
-    // executed = 0;
     remainingTaskNb = 0;
     counterPending = 0;
     setTimeout(function () {
@@ -274,8 +222,7 @@ function GetFilename(url)
       var splitted = url.split('/');
       uri = splitted[splitted.length - 2];
    }
-   // console.log(uri + ' is encoded: ' + isEncoded(uri));
-   return uri;//uri.split('-').join(' ');
+   return uri;
 }
 
 ws.onopen = function() {
@@ -297,20 +244,33 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
   var diffs = '';
   var found = false;
   var templateType = '{{ handler.session['tasks']['live_view'][0]['template_type'] }}';
-  // console.log(diff.length);
+
   for (i = 0; i < diff.length; i++)
   {
     var difi = '';
-    // console.log(diff[i]);
     for (x = 0; x < keywords.length; x++)
     {
-      // console.log(keywords);
-      // var pattern = ('/' + keywords[x] + '/ig')
       var pattern = diff[i].match(new RegExp(keywords[x], 'ig'));
-      // console.log(pattern);
       if (pattern != null)
       {
-        difi = diff[i].replace(pattern, '<span style="background-color:yellow">' + pattern + '</span>');
+        if (pattern.length > 1)
+        {
+          for(j = 0; j < pattern.length; j++)
+          {
+            if (j == 0)
+            {
+              difi = diff[i].replace(pattern[j], '<span style="background-color:yellow">' + pattern[j] + '</span>');
+            }
+            else
+            {
+              difi = difi.replace(pattern[j], '<span style="background-color:yellow">' + pattern[j] + '</span>');
+            }
+          }
+        }
+        else
+        {
+          difi = diff[i].replace(pattern, '<span style="background-color:yellow">' + pattern + '</span>');
+        }
         found = true;
         break;
       }
@@ -328,7 +288,6 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
     }
     else if (templateType == 'diff')
     {
-      // diffs += 'TOP';
       if (nearest_link[diff[i]] != undefined)
       {
         diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + diff[i] + "</a><br>";
@@ -338,41 +297,6 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
         diffs += diff[i] + "<br>";
       }
     }
-    // else
-    // { 
-    //   if (nearest_link[diff[i]] != undefined)
-    //   {
-    //     diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + diff[i] + "</a><br>";
-    //   }
-    //   else
-    //   {
-    //     diffs += diff[i] + "<br>";
-    //   }
-    // }
-
-
-    // if (nearest_link[diff[i]] != undefined)
-    // {
-    //   if (found == true)
-    //   {
-    //     diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + difi + "</a><br>";
-    //   }
-    //   else
-    //   {
-    //     diffs += "<a href='" + nearest_link[diff[i]] + "' target='_blank' style='color: rgb(0,0,0); text-decoration: underline;'/>" + diff[i] + "</a><br>";
-    //   }
-    // }
-    // else
-    // {
-    //   if (found == true)
-    //   {
-    //     diffs += difi + "<br>";
-    //   }
-    //   else
-    //   {
-    //     diffs += diff[i] + "<br>";
-    //   }
-    // }
     found = false;
   }
 
@@ -406,19 +330,11 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
                 middlePart += "LinksNeg-" + task_id + "' style='max-width: 100%; max-height: 150px; overflow-y: auto;'>"
               }
 
-              
-              
-          
-            // console.log(sbb_links);
             for (i = 0; i < sbb_links.length; i++) {
               
               fn = GetFilename(sbb_links[i]);
               middlePart +="<li class='square'><a href='" + sbb_links[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + fn + "</a></li>";
             }
-    
-
-    // console.log(all_links);
-    
 
             middlePart += "</div></div>\
             </div>";
@@ -444,11 +360,6 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
                 middlePart += "<li class='square'><a href='" + uniqNearestLink[i] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(uniqNearestLink[i]) + "</a></li>";
               }
 
-              // for (var property in nearest_link) {
-              //   if (nearest_link.hasOwnProperty(property)) {
-              //     middlePart += "<li class='square'><a href='" + nearest_link[property] + "' target='_blank' style='color: rgb(0,0,0)'/>" + GetFilename(nearest_link[property]) + "</a></li>";
-              //   }
-              // }
               middlePart += "</div></div>\
               </div>"
 
@@ -469,11 +380,7 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
           uniqAllLink = Array.from(new Set(Object.values(all_links)));
           var m = uniqAllLink.length;
           for (i = 0; i < m; i++) {
-              // if (!nearest_link[all_links[i]]  !sbb_links.includes(all_links[i])) {
               middlePart += "<li class='square'><a href='" + uniqAllLink[i] + "' target='_blank' style='color: rgb(0,0,0)' data-toggle='tooltip' title='Some tooltip text!'>" + GetFilename(uniqAllLink[i]) + "</a></li>";
-
-
-            // }
           }
         }
         else {
@@ -500,16 +407,13 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
 {% end %}
 
 function getUrlFromTaskId(task_id) {
-  // console.log(liveTasks.length);
   var u;
   for (u = 0; u < liveTasks.length; u++) {
-    // console.log(liveTasks[u]);
     if (liveTasks[u]['id'] == task_id) {
       return liveTasks[u];
     }
   }
 }
-
 
 ws.onmessage = function (evt) {
    if (evt != null) {
@@ -519,12 +423,10 @@ ws.onmessage = function (evt) {
           
 
           // console.log(evt.data);
-          // console.log(evt.data);
           if (evt.data[0] != '<' && evt.data != undefined)
           {
             var data = JSON.parse(evt.data);
             if (data.status.current_target != undefined) {
-              //console.log(currentTargets);
               let lenCurrentTargets = data.status.current_target.length;
               if (lenCurrentTargets > 1)
               {
@@ -548,64 +450,31 @@ ws.onmessage = function (evt) {
           }
 
       {% end %}
-      // if (evt.data.state == 'PROGRESS') {
-      // let dat = JSON.parse(evt.data);
-      // console.log(dat);
-      // if (dat.state == 'PENDING') {
-      //   // $('#currentWebSite').text(dat.status.current_target);
-      //   let be = dat.task_id;
-      //   $('#currentWebSite').text(getUrlFromTaskId(be)['url']);
-      // }
-    // }
-       //     if (evt.data) {
-       //   var dataCheck = JSON.parse(evt.data);
-       //     if (dataCheck.state == 'PROGRESS') {
-       //      $('#currentWebSite').text(dataCheck.status.current_target);
-       //     console.log(dataCheck.status.current_target);
-       //   }
-       // }
-       // console.log(elt.childNodes.length);
-       // console.log(JSON.parse(evt.data).state.errors);
-       // console.log(evt.data);
        var jsonMeta = null;
        if (evt.data.includes('<LIMIT_STOP>') && evt.data.includes('#')) {
         jsonMeta = evt.data.split('#')[1];
         var currentUrl = getUrlFromTaskId(jsonMeta)['url'];
-        // if (!document.getElementById('limitErrors').includes(currentUrl)) {
-        //  document.getElementById('limitErrors').push(currentUrl);
-        // }
-        // console.log('LIMIT STOP = > ' + getUrlFromTaskId(jsonMeta)['url']);
-        // getUrlFromTaskId();
-
-
 
         if (!document.getElementById('err-' + jsonMeta)) {
           var elt = document.getElementById('errors');
 
           if (elt.childNodes.length < 2) {
             var errorHeader = document.createElement("DIV");
-            // errorHeader.id = 'titl'; 
             errorHeader.innerHTML = "<b>Info:</b>";
             elt.appendChild(errorHeader);
-
           }
 
-          // console.log('pass here');
           var c = getUrlFromTaskId(jsonMeta)['url'];
-          // console.log(c);
-          // var objErr = { c: 'SoftTimeLimitExceeded()II'};
           limitErrors[c] = 'HardTimeLimitExceeded()';
           
           if (jsonMeta != null)
           {
-            // console.log('POU POU : ' + jsonMeta);
             // let hardTimeLimitPartialTask = document.getElementById('err-' + jsonMeta);
             let hardTimeLimitPartialTaskShown = document.getElementById('changedContent' + jsonMeta);
 
             if (hardTimeLimitPartialTaskShown !== null)
             {
               // add Timeout badge to show user task has not been fully completed
-
               let outerHTMLString = outerHTML(hardTimeLimitPartialTaskShown);
               if (outerHTMLString.includes("badge-info") == false)
               {
@@ -618,13 +487,6 @@ ws.onmessage = function (evt) {
               localStorage.setItem(jsonMeta, htmlWithBadge);
             }
           }
-          
-          // console.log(limitErrors);
-          // var hiddenInput = document.createElement('input');
-          // hiddenInput.type = 'hidden';
-          // hiddenInput.name = 'myarray[]';
-          // hiddenInput.value = currentUrl;
-          // document.getElementById('limitErrors').appendChild(hiddenInput);
 
           var newError = document.createElement("DIV");
           newError.setAttribute("id", 'err-' + jsonMeta);
@@ -639,25 +501,13 @@ ws.onmessage = function (evt) {
           elt.appendChild(newError);
           if (!Object.keys(executed).includes(currentUrl))
           {
-            // executed.push(test);
             executed[currentUrl] = 0;
-            // console.log(executed);
-            // executed += 1;
           }
         }
-        // console.log('LIMIT_STOP');
-        // console.log(jsonMeta);
-        // console.log(evt);
-        // executed += 1
           if (data != undefined && data.result != undefined && !Object.keys(executed).includes(data.url))
           {
-            // executed.push(test);
             executed[data.url] = data.result;
-            // console.log(executed);
-            // executed += 1;
           }
-
-
        }
        else {
 
@@ -686,34 +536,14 @@ ws.onmessage = function (evt) {
                     currentTargets.push(data.status.current_target[0]);
                   }
               }
-              
-
-              // $('#currentWebSite').text(Object.keys(data.status.current_target)[0]);
-              // if (!currentTargets.includes(Object.keys(data.status.current_target)[0]))
-              // {
-              //   // $('#currentWebSite').text(data.status.current_target);
-              //   currentTargets.push(Object.keys(data.status.current_target)[0]);
-              // }
             }
-
-            // if (data.status.current_target != undefined && Object.keys(data.status.current_target)[0] != undefined)
-            // {
-              // console.log(data.status);
-              //  var fn = GetFilename(Object.keys(data.status.url));//[0]);
-              //  var ty = Object.values(data.status.url);//[0];
-              //  console.log('ty = ' + ty + ', fn = ' + fn);
 
                var elPos = null;
                var elNeg = null;
                var foundPos = true;
                var foundNeg = true;
-
                var elNeg = document.getElementById('sbbLinksNeg-' + data.task_id);
                var elPos = document.getElementById('sbbLinksPos-' + data.task_id);
-
-                
-               // console.log('looking for = ' + 'sbbLinksPos-' + data.task_id)
-               // console.log('Here is it POS: ' + elPos);
                
                if (elPos != null)
                {
@@ -793,24 +623,14 @@ ws.onmessage = function (evt) {
                 }
               }
 
-            // }
-
-
         {% end %}
-        // if (!(Object.entries(data.status.errors).length === 0 && data.status.errors.constructor === Object)) {
-          // console.log(data.status.errors);
-         // }
          if (data.state == 'SUCCESS' && !document.getElementById('err-' + data.task_id) && data.status.errors != undefined && !(Object.entries(data.status.errors).length === 0 && data.status.errors.constructor === Object)) {
-
-          // console.log(data.status.errors);
+          
           var elt = document.getElementById('errors');
-          // console.log(data.status.errors);
           if (elt.childNodes.length < 2) {
             var errorHeader = document.createElement("DIV");
-            // errorHeader.id = 'titl'; 
             errorHeader.innerHTML = "<b>Info:</b>";
             elt.appendChild(errorHeader);
-
           }
 
           var newError = document.createElement("DIV");
@@ -824,72 +644,21 @@ ws.onmessage = function (evt) {
             }
           }
           newError.innerHTML = errorLog;
-          // var elt = document.getElementById('errors');
-          // if (elt.childNodes.length == 0) {
-          //   errorLog = "<b>Info:</b>" + errorLog;
-          // }
-          // console.log('pp');
           document.getElementById('errors').appendChild(newError);
          }
 
-         // if (data.state == 'SUCCESS') {
-          // if (data.status == '')
-            // nc += 1;
-
-            // console.log('SUCCESS :' + data.current + data.url);
-            
-         // }
-         // if (data.state == 'PENDING') {
-          // console.log('PENDING :');
-          // console.log(data);
-         // }
          if (data.state == 'FAILURE' && !failures.includes(data.current)) {
-          // console.log('Fail');
-          // console.log(data.status['errors']);
             failures.push(data.current);
-            // console.log('FAILURE :' + data.current);
-            // urlFailed = {
-            //   "url" : data.status.url,
-            //   "info" : data.info
-            // }
-
             urlFailed = {
-              // "state" : data.state,
-              // "status" : data.status,
               "obj": JSON.stringify(data)
             }
             failuresURL.push(urlFailed);
             counterFailureMaster += 1;
             $('#numberOfFailedTasks').html(counterFailureMaster);
          }
-
-         // if (data.state != 'SUCCESS' && data.state != 'PENDING') {
-          // console.log('RestE')
-         // }
-         // if (data != undefined) {
-          // console.log(data);
-        // }
-         // var ojb = Object.hasOwnProperty.call(data, errors)
-         // if (ojb != undefined) {
-          // console.log(data);
-         // }
-         
-         // if (data.status == undefined) {
-         //  console.log('undef');
-         //  counterPending += 1;
-         //  console.log('pending = ' + counterPending);
-         // }
-         
-         // if (data.status.sbb_links_pos.length && data.status.sbb_links_pos.length > 5) {
-          // console.log(data.state);
-          // console.log(data.status.sbb_links_pos.length);
-         // }
           if ((data.result != undefined) && !Object.keys(executed).includes(data.url))
           {
-            // executed.push(test);
             executed[data.url] = data.result;
-            // console.log(executed);
-            // executed += 1;
           }
 
         function shouldTitleBeShown(task_id)
@@ -926,9 +695,6 @@ ws.onmessage = function (evt) {
               ulTitle.setAttribute("id", data.current.toString() + data.task_id);
               document.getElementById(data.status.div).append(ulTitle);
 
-              // console.log(data.status.sbb_links_neg);
-              // console.log('data.status.keywords = ' + data.status.keywords);
-              // console.log(data.status.diff_neg);
               {% if 'live_view' in handler.session['tasks'] and handler.session['is_pos_live'] is True %}
                 var div_pos = formatDiff("Added", data.status.diff_pos, data.status.nearest_link_pos, data.status.sbb_links_pos, data.status.all_links_pos, 'success', data.status.keywords, data.task_id);
               {% else %}
@@ -950,18 +716,6 @@ ws.onmessage = function (evt) {
               document.getElementById(data.current.toString() + data.task_id).insertAdjacentHTML('beforeend', div_neg);
               }
             }
-         
-
-          // console.log('url : ' + data.url + ', result : ' + data.result);
-          // let test = new Object();
-          // test[data.url] = data.result;
-
-          // console.log({data.url:data.result});
-          // console.log(Object.keys(executed).length);
-
-          // console.log(executed);
-
-
        }
      }
 
@@ -990,15 +744,12 @@ ws.onmessage = function (evt) {
           $('#totalFetched').text(currentTargets.length);
         }
       }
-      // console.log(nbOfTimeLastAnalyzedShown);
-      // console.log(currentTargets.length);
       if (areTasksFinished == false && currentTargets.length == 0 && (nbExecuted/totalTaskNb) == 1)
       {
         $('#currentWebSite').text('completed');
         areTasksFinished = true;
         let totalFetchedFromLocalStorage = localStorage.getItem('totalFetched');
         $('#totalFetched').text(totalFetchedFromLocalStorage);
-        // console.log('END DECLARED, total feteched :' + totalFetchedFromLocalStorage);
       }
  }
  else
@@ -1113,7 +864,6 @@ function showFailedTasksDetails() {
     }
     $('[data-toggle="tooltip"]').tooltip({ pointerEvents: 'none' });
   });
-  // $("[name='customSwitch1']").bootstrapSwitch();
   $('#updatePages').click(function()
   {
      $('<div class="loading">Loading&#8230;</div>').prependTo(document.body);     

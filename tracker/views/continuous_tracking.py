@@ -102,6 +102,7 @@ class UserProjectAddWebsite(BaseView):
         args = self.form_data
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
+        # print('telk = {}'.format(telko))
         #print('ARGSSSS = {}'.format(args))
 
         # print('INPUT WEBSITE ENTER = {}, INPUT TARGET ENTER = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))

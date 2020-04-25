@@ -62,6 +62,8 @@ class BaseView(RequestHandler):
             #print('\nSESSION = {}'.format(self.session))
 
     def on_finish(self):
+        import traceback
+        # print('\n----> On finish called !! get = {}'.format(traceback.print_stack()))
         if hasattr(self, 'request_db'):
             self.request_db.close()
         # raise Finish()
@@ -101,7 +103,7 @@ class BaseView(RequestHandler):
 
     # TODO : Make this 500 error traceback show when working with future ! Because never invoked !!
     def write_error(self, status_code, **kwargs):
-        # print('-----> PASSS write_error !!!!!!!!!!!!!')
+        print('-----> PASSS write_error !!!!!!!!!!!!!')
         if 'exc_info' in kwargs:
             tb = list()
             # self.write('Exception :\n{}'.format(kwargs['exc_info'][0].__name__))

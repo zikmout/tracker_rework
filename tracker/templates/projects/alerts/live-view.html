@@ -250,7 +250,9 @@ function formatDiff(title, diff, nearest_link, sbb_links, all_links, type, keywo
     var difi = '';
     for (x = 0; x < keywords.length; x++)
     {
-      var pattern = diff[i].match(new RegExp(keywords[x], 'ig'));
+      var pattern = diff[i].match(new RegExp('\\b' + keywords[x] + '\\b', 'ig'));
+      // var pattern = diff[i].match(new RegExp(keywords[x], 'ig'));
+      console.log(diff[i] + ' : ' + pattern);
       if (pattern != null)
       {
         if (pattern.length > 1)

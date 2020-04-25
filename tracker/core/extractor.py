@@ -223,7 +223,8 @@ def keyword_match(status, local_content, remote_content):#, detect_links=True):
                 if clean_sentence(neg) is None:
                     print('problem for --> {}'.format(neg))
                 for word in clean_sentence(neg).split(' '):
-                    # print('try to match <{}><{}>'.format(keyword.lower(), word.lower()))
+                    # if keyword.lower() == 'ue':
+                        # print('try to match <{}><{}> (RES:{})'.format(keyword.lower(), word, keyword.lower() == word))
                     if keyword.lower() == word and neg not in match_neg:
                         match_neg.append(neg)
 
@@ -232,7 +233,8 @@ def keyword_match(status, local_content, remote_content):#, detect_links=True):
                     print('problem for --> {}'.format(pos))
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 for word in clean_sentence(pos).split(' '):
-                    # print('try to match <{}><{}>'.format(keyword.lower(), word))
+                    # if keyword.lower() == 'ue':
+                        # print('try to match <{}><{}> (RES:{})'.format(keyword.lower(), word, keyword.lower() == word))
                     if keyword.lower() == word and pos not in match_pos:
                         match_pos.append(pos)
         else:
@@ -241,7 +243,8 @@ def keyword_match(status, local_content, remote_content):#, detect_links=True):
                     print('problem for --> {}'.format(neg))
                 # print('sentence = {} / cleaned = {}'.format(neg, clean_sentence(neg)))
                 if keyword.lower() in clean_sentence(neg) and neg not in match_neg:
-                    # print('try to match <{}><{}>'.format(keyword.lower(), neg))
+                    # if keyword.lower() == 'ue':
+                        # print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     match_neg.append(neg)
 
             for pos in status['diff_pos']:
@@ -249,7 +252,8 @@ def keyword_match(status, local_content, remote_content):#, detect_links=True):
                     print('problem for --> {}'.format(pos))
                 # print('sentence = {} / cleaned = {}'.format(pos, clean_sentence(pos)))
                 if keyword.lower() in clean_sentence(pos) and pos not in match_pos:
-                    # print('try to match <{}><{}>'.format(keyword.lower(), neg))
+                    # if keyword.lower() == 'ue':
+                        # print('try to match <{}><{}>'.format(keyword.lower(), neg))
                     match_pos.append(pos)
         
     status['diff_neg'] = match_neg

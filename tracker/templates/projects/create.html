@@ -46,19 +46,7 @@
   </div>
   {% end %}
 
-  <div class="tab-pane fade show active" id="continuoustracking" role="tabpanel" aria-labelledby="continuoustracking-tab">
 
-    <form action="/api/v1/users/{{ handler.session['username'] }}/continuous-tracking-create" method="post" enctype="multipart/form-data">
-
-      <div class="form-group">
-        <label for="ProjectName" id="ProjectName">Watchlist name</label>
-        <input type="text" class="form-control col-md-6" name="ProjectName" placeholder="Enter watchlist name" required>
-      </div>
-
-        <input type="submit" id="longLoad" class="btn btn-info" value="Create" />
-    </form>
-
-  </div>
 
   <div class="tab-pane fade" id="quickproject" role="tabpanel" aria-labelledby="quickproject-tab">
 
@@ -82,7 +70,19 @@
     </form>
 
   </div>
+  <div class="tab-pane fade show active" id="continuoustracking" role="tabpanel" aria-labelledby="continuoustracking-tab">
 
+    <form action="/api/v1/users/{{ handler.session['username'] }}/continuous-tracking-create" method="post" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label for="ProjectName" id="ProjectName">Watchlist name</label>
+        <input type="text" class="form-control col-md-6" name="ProjectName" placeholder="Enter watchlist name" required>
+      </div>
+
+        <input type="submit" id="longLoad" class="btn btn-info" value="Create" />
+    </form>
+
+  </div>
   
 
 </div>

@@ -52,11 +52,14 @@ def make_sure_entries_by_user_are_well_formated(input_website, input_target, rew
     # If no domain website, take it from target URL
     if isinstance(input_website, float) or input_website == '' or\
     input_website not in input_target or\
-    ((input_website.count('/') == 3 and input_website.rpartition('/')[2] != '')):
+    ((input_website.count('/') == 3 and input_website.rpartition('/')[2] != '')) or\
+    input_website.count('/') > 3:
+        before = input_website
         regex = r"^https?://[^/]+"
         url = re.findall(regex, input_target)[0]
         input_website = url + '/'
         rewrite = True
+        # print('PASS REGEX, url was = {} and is now = {}'.format(before, input_website))
 
     # Add a trailing '/' on domain website
     if input_website.count('/') == 2:

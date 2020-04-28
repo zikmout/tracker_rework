@@ -107,8 +107,8 @@ class UserProjectAddWebsite(BaseView):
 
         # print('INPUT WEBSITE ENTER = {}, INPUT TARGET ENTER = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))
         # Make sure user does not mess up with url entries otherwise messes up with the crawler/downloader !!
-        args['inputWebsite'][0], args['inputTarget'][0] = make_sure_entries_by_user_are_well_formated(\
-            args['inputWebsite'][0], args['inputTarget'][0])
+        args['inputWebsite'][0], args['inputTarget'][0], _ = make_sure_entries_by_user_are_well_formated(\
+            args['inputWebsite'][0], args['inputTarget'][0], False)
         
         # print('INPUT WEBSITE EXIT = {}, INPUT TARGET EXIT = {}'.format(args['inputWebsite'][0], args['inputTarget'][0]))
         if args['inputWebsite'][0] is False or args['inputTarget'][0] is False:
@@ -249,7 +249,7 @@ class UserProjectDeleteWebsite(BaseView):
     @gen.coroutine
     def post(self, username, projectname):
         args = self.form_data
-        print('args = {}'.format(args))
+        # print('args = {}'.format(args))
         # delete unit from excel file
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
@@ -315,6 +315,7 @@ class UserProjectDeleteWebsite(BaseView):
             self.request_db.commit()
 
         self.session.save()
+        flash_message(self, 'success', 'Successfully deleted target URL : {}'.format(args['targetToDelete'][0]))
         self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
 
 class UserProjectEditWebsite(BaseView):
@@ -328,8 +329,8 @@ class UserProjectEditWebsite(BaseView):
         project = user.projects.filter_by(name=projectname).first()
 
         # Make sure user does not mess up with url entries otherwise messes up with the crawler/downloader !!
-        args['inputWebsite'][0], args['inputTarget'][0] = make_sure_entries_by_user_are_well_formated(\
-            args['inputWebsite'][0], args['inputTarget'][0])
+        args['inputWebsite'][0], args['inputTarget'][0], _ = make_sure_entries_by_user_are_well_formated(\
+            args['inputWebsite'][0], args['inputTarget'][0], False)
         
         if args['inputWebsite'][0] is False or args['inputTarget'][0] is False:
             flash_message(self, 'danger', 'Url(s) not properly formated.')

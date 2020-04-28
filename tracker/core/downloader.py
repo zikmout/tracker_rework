@@ -133,7 +133,7 @@ def download_and_save_content(url, name, path, header, check_duplicates=False, r
         print('[ERROR TIMEOUT] for url : {} (Error : {})'.format(url, e))
         print('\n-------------> TIMEOUT ERROR CATCHED <----------------\n')
         print('Retrying HTTP request now ...\n')
-        scraper = scrapper.AdidasScraper(url)
+        scraper = scrapper.AdidasScraper2(url)
         remote_content = scraper.get_html_wait()
         # print('Return from scrapper2 =======>> {}'.format(remote_content))
         msg = '{}'.format(e)

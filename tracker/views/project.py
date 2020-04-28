@@ -345,18 +345,18 @@ class UserProjectView(BaseView):
             self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
             # self.render('projects/index.html', project=json_project, units=units)    
             return
-        try:
-            rproject = RProject(project.name, project.data_path, project.config_file)
-            if 'fromExcel' in args:
-                rproject._load_units_from_excel()
-            else:
-                rproject._load_units_from_data_path()
-            units = rproject.units_stats(units=rproject.filter_units())
-        except Exception as e:
-            print('[ERROR] - {}'.format(e))
-            flash_message(self, 'danger', 'Problem while loading watchlist {}. Please check paths.'.format(project.name))
-            self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
-            return 
+        # try:
+        rproject = RProject(project.name, project.data_path, project.config_file)
+        if 'fromExcel' in args:
+            rproject._load_units_from_excel()
+        else:
+            rproject._load_units_from_data_path()
+        units = rproject.units_stats(units=rproject.filter_units())
+        # except Exception as e:
+        #     print('[ERROR] - {}'.format(e))
+        #     flash_message(self, 'danger', 'Problem while loading watchlist {}. Please check paths.'.format(project.name))
+        #     self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))
+        #     return 
         if units is None:
             flash_message(self, 'danger', 'There are no source in watchlist {}.'.format(project.name))
             self.redirect('/api/v1/users/{}/projects-manage'.format(self.session['username']))

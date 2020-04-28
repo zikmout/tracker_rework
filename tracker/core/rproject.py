@@ -37,7 +37,7 @@ class RProject:
         self.name = name
         self.data_path = os.path.join(data_path, name)
         print('Poject input path ->{}<-'.format(inputs_path))
-        need_to_rewrite_xlsx_config_file = False
+        rewrite_xlsx = False
         if inputs_path != '' and inputs_path is not None and len(inputs_path) != 0:
             config_df = loader.get_df_from_excel(inputs_path)
             # This has been a real fuck up ! If user does not put trailing '/' (like http://www.orange.fr),
@@ -46,12 +46,13 @@ class RProject:
 
                 target_cell = config_df['target'][i]
                 target_website = config_df['Website'][i]
-                target_website_check, target_cell_check = make_sure_entries_by_user_are_well_formated(target_website,\
-                    target_cell)
+
+                target_website_check, target_cell_check, rewrite_xlsx = \
+                make_sure_entries_by_user_are_well_formated(target_website, target_cell, rewrite_xlsx)
                 
                 if ((target_website_check is not False and target_cell_check != target_cell) or\
                     (target_website_check is not False and target_website_check != target_website)):
-                    need_to_rewrite_xlsx_config_file = True
+                    rewrite_xlsx = True
                     config_df.at[i,'target'] = target_cell_check
                     config_df.at[i,'Website'] = target_website_check
                 
@@ -62,8 +63,8 @@ class RProject:
                     break
 
             self.config_df = config_df
-            if need_to_rewrite_xlsx_config_file is True and config_df is not None:
-                print('[WARNING] Config_df rewritten because trailing \'/\' where not properly formated in original config file.')
+            if rewrite_xlsx is True and config_df is not None:
+                print('[WARNING] Config_df rewritten because trailing \'/\' where not properly formated in original config file or because website was not consistent with website target.')
                 config_df.to_excel(inputs_path, index=False) 
         else:
             self.config_df = None

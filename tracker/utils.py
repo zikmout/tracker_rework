@@ -40,20 +40,23 @@ def is_url_well_formated(url):
         return False
     return True
 
-def make_sure_entries_by_user_are_well_formated(input_website, input_target):
+def make_sure_entries_by_user_are_well_formated(input_website, input_target, rewrite):
     # Minimum need is a target URL !
     if isinstance(input_target, float) or input_target == '':
-        return False, False
+        return False, False, rewrite
     
     # Add a trailing '/' on target URL if not specified by user
     if input_target.count('/') == 2:
         input_target = input_target + '/'
 
     # If no domain website, take it from target URL
-    if isinstance(input_website, float) or input_website == '':
+    if isinstance(input_website, float) or input_website == '' or\
+    input_website not in input_target or\
+    ((input_website.count('/') == 3 and input_website.rpartition('/')[2] != '')):
         regex = r"^https?://[^/]+"
         url = re.findall(regex, input_target)[0]
-        input_website = url
+        input_website = url + '/'
+        rewrite = True
 
     # Add a trailing '/' on domain website
     if input_website.count('/') == 2:
@@ -61,12 +64,12 @@ def make_sure_entries_by_user_are_well_formated(input_website, input_target):
 
     # Check if both url start with 'http' or 'https'
     if not (is_url_well_formated(input_website) and is_url_well_formated(input_target)):
-        return False, False
+        return False, False, rewrite
 
     if input_website not in input_target:
-        return False, False
+        return False, False, rewrite
         
-    return input_website, input_target
+    return input_website, input_target, rewrite
 
 def make_session_factory():
     # generate database schema  

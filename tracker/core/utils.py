@@ -25,13 +25,21 @@ def clean_link_from_hd(rproject, domain_link, full_link, initial_links):
 
     del_unit.remove_crawler_link(full_link)
     len_files, link_on_hd = erase_link_from_hd(full_link, base_dir_path, filename)
+
     # If file was alone on directory, no need to keep directory, so delete it
+    # But if file could not be downloaded on HD, it does not exist so just notice the user in this case
     if len_files == 1:
-        shutil.rmtree(base_dir_path)
-        print('Directory \'{}\' successfully deleted on HD'.format(base_dir_path))
+        if not os.path.isdir(base_dir_path):
+            print('[WARNING] Directory \'{}\' was supposed to exist and be deleted but was not found on HD ! '.format(base_dir_path))
+        else:
+            shutil.rmtree(base_dir_path)
+            print('[SUCCESS] Directory \'{}\' successfully deleted on HD'.format(base_dir_path))
     else:
-        print('File \'{}\' successfully deleted on HD'.format(link_on_hd))
-        os.remove(link_on_hd)
+        if not os.path.isfile(link_on_hd):
+            print('[WARNING] File \'{}\' was supposed to exist and be deleted but was not found on HD ! '.format(link_on_hd))
+        else:
+            os.remove(link_on_hd)
+            print('File \'{}\' successfully deleted on HD'.format(link_on_hd))
 
 def rh():
     """ Return a random header with random User-Agent """

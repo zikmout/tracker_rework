@@ -14,6 +14,7 @@
       <form action="/api/v1/users/{{ handler.session['username'] }}/projects/{{ handler.session['current_project'] }}/website-edit" method="post">
         <div class="form-group">
           <label for="inputName" id="inputName">Source Name</label>
+          <input type="hidden" class="form-control" name="inputNameOld" value="{{ line['Name'] }}">
           <input type="text" class="form-control" name="inputName" aria-describedby="inputNameHelp" value="{{ line['Name'] }}">
           <small class="form-text text-muted">Name of the source to monitor.</small>
         </div>
@@ -24,13 +25,14 @@
         </div>
         <div class="form-group">
           <label for="inputTarget" id="inputTarget">Target URL</label>
-          <input type="hidden" class="form-control" name="inputTargetOld" aria-describedby="inputTargetHelp" value="{{ line['target'] }}">
+          <input type="hidden" class="form-control" name="inputTargetOld" value="{{ line['target'] }}">
           <input type="text" class="form-control" name="inputTarget" aria-describedby="inputTargetHelp" value="{{ line['target'] }}">
           <small class="form-text text-muted">Enter the full URL of the source to monitor.</small>
         </div>
 
           <div id="bagOfWordsContainer">
-            <label for="inputKeywords" id="inputTarget">Keywords</label>
+            <label for="inputKeywords" id="inputKeywordTitle">Keywords</label>
+            <input type="hidden" class="form-control" name="inputKeywordsOld" value="{{ json_encode(line['target_label']) }}">
             <ul id="inputKeywords">
                 {% for label in line['target_label'] %}
                 <li>{{ label }}</li>
@@ -41,6 +43,7 @@
 
           <div id="bagOfMailsContainer" class="mt-2">
             <label for="inputMailingList" id="inputTarget">Email Recipients</label>
+            <input type="hidden" class="form-control" name="inputMailingListOld" value="{{ json_encode(line['mailing_list']) }}">
             <ul id="inputMailingList">
                 {% for label in line['mailing_list'] %}
                 <li>{{ label }}</li>

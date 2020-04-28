@@ -2,6 +2,7 @@ import os
 import shutil
 import pandas as pd
 from tornado import gen
+from tornado.escape import json_decode
 import math
 import re
 from tracker.views.base import BaseView
@@ -249,7 +250,7 @@ class UserProjectDeleteWebsite(BaseView):
     @gen.coroutine
     def post(self, username, projectname):
         args = self.form_data
-        # print('args = {}'.format(args))
+        print('args = {}'.format(args))
         # delete unit from excel file
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
@@ -265,9 +266,6 @@ class UserProjectDeleteWebsite(BaseView):
         # Delete all traces in HD (since no database !!!)
         utils.clean_link_from_hd(rproject, args['websiteToDelete'][0], args['targetToDelete'][0], initial_links)
 
-        # if (rproject.delete_unit(args['websiteToDelete'][0])):
-        #     print('Unit successfully deleted from hard drive')
-        # reload units from excel
         rproject._load_units_from_data_path()
         # change session data to take account of deleted unit
         units = rproject.units_stats(units=rproject.filter_units())
@@ -325,6 +323,11 @@ class UserProjectEditWebsite(BaseView):
     def post(self, username, projectname):
         args = self.form_data
         print('args = {}'.format(args))
+        # For lists, content had been encoded from front
+        args['inputKeywordsOld'][0] = json_decode(args['inputKeywordsOld'][0])
+        args['inputMailingListOld'][0] = json_decode(args['inputMailingListOld'][0])
+
+
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
 
@@ -355,9 +358,12 @@ class UserProjectEditWebsite(BaseView):
         print('config df after = {}'.format(config_df_updated))
         config_df_updated.to_excel(project.config_file, index=False)
 
-        # Delete all traces in HD (since no database !!!)
-        utils.clean_link_from_hd(rproject, args['inputWebsite'][0], args['inputTargetOld'][0], initial_links)
-
+        
+        if args['inputTargetOld'][0] != args['inputTarget'][0]:
+            # Delete all traces in HD (since no database !!!)
+            utils.clean_link_from_hd(rproject, args['inputWebsite'][0], args['inputTargetOld'][0], initial_links)
+        else:
+            print('\n\nINPUT TARGET OLD == INPUT TARGET (no need to download target URL)\n\n')
         # Update content (take first content with name projectname + '_default')
         df = pd.read_excel(project.config_file)
         links = dict(zip(df['target'], df['target_label']))
@@ -381,15 +387,8 @@ class UserProjectEditWebsite(BaseView):
         # Need to download new link if it changes
         rproject = RProject(project.name, project.data_path, project.config_file)
         rproject._load_units_from_data_path()
-        # print('links = {} (before stuff'.format(all_links))
-        # flash_message(self, 'danger', 'NOPE !')
-        # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
-        # return
-        # TODO: Change crawler logfile with only the link that changed, not all of them !!
-        # Or use generate crawl logfile and delete the old one !
+        
         idx, url_errors = rproject.add_links_to_crawler_logfile(new_link)
-
-        # print('IDX = {}, URL_ERRORS  ={}'.format(idx, url_errors))
         
         content_to_delete = project.contents.filter_by(name=(projectname + '_default')).first()
         alerts_to_delete = content_to_delete.alerts.all()
@@ -435,9 +434,9 @@ class UserProjectEditWebsite(BaseView):
                     del_unit.remove_crawler_link(k)
 
             flash_message(self, 'danger', 'Impossible to download provided target URL : {} (Reason: {})'.format(args['inputTarget'][0], target_error))
-        else:
+        elif args['inputTargetOld'][0] != args['inputTarget'][0]:
             flash_message(self, 'success', 'Successfully downloaded URL : {}'.format(args['inputTarget'][0]))
-            # self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
-            # return
+        else:
+            flash_message(self, 'success', 'Successfully updated : {}'.format(args['inputName'][0]))
         self.redirect('/api/v1/users/{}/projects/{}/websites-manage'.format(username, projectname))
         return

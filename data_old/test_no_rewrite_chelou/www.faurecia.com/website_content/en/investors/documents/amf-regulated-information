@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"0e6e0c7e1a",applicationID:"597315892"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><meta property="og:site_name" content="Faurecia" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="http://www.faurecia.com/en/investors/documents/amf-regulated-information" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta http-equiv="content-language" content="en" />
+<meta name="twitter:description" content="As a global leader in automotive technologies, Faurecia is anticipating all the challenges of a changing industry." />
+<meta name="twitter:title" content="| Faurecia" />
+<meta name="description" content="As a global leader in automotive technologies, Faurecia is anticipating all the challenges of a changing industry." />
+<meta property="og:title" content="| Faurecia" />
+<meta property="og:description" content="As a global leader in automotive technologies, Faurecia is anticipating all the challenges of a changing industry." />
+<meta name="twitter:image" content="https://www.faurecia.com/sites/groupe/files/Twitter.png" />
+<meta name="twitter:image:alt" content="Faurecia, inspiring mobility" />
+<meta property="og:image" content="https://www.faurecia.com/sites/groupe/files/Facebook.png" />
+<meta property="og:image:url" content="https://www.faurecia.com/sites/groupe/files/Facebook.png" />
+<meta property="og:image:secure_url" content="https://www.faurecia.com/sites/groupe/files/Facebook.png" />
+<meta property="og:image:alt" content="Faurecia, inspiring mobility" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:image" content="http://www.faurecia.com/sites/groupe/files/styles/pour_share/public/pages/accueil-actionnaires_0.jpg?itok=eFvkcQWa" />
+<link rel="shortcut icon" href="/sites/groupe/themes/faurecia/favicon.ico" type="image/vnd.microsoft.icon" />
+<script src="/sites/groupe/files/google_tag/tag_base/google_tag.script.js?q9fu9m" defer></script>
+
+    <title>| Faurecia</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" media="all" href="/sites/groupe/files/css/css_sEXGYRt3C8KKYd1aAOXB1nM1BYU1T4ajqrq0Xa_k8vE.css" />
+<link rel="stylesheet" media="all" href="/sites/groupe/files/css/css_cYgAC1Oa_w_VqnqKuzOV-BIYhA9C7uvF8yxQgQEzOhQ.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/groupe/files/js/js_ThRQC_NzEERIrVRx3OTv1lLTdZWB68cQWEE08RKjdq4.js"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-investisseurs lang-en has-glyphicons">
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N227MK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+              <header class="navbar navbar-default container" id="navbar" role="banner">
+            <div class="navbar-header">
+                <section class="block block-faurecia-main block-custom-search-block clearfix">
+  
+    
+
+      <form class="search-blk-form" data-drupal-selector="search-blk-form" action="/en" method="post" id="search-blk-form" accept-charset="UTF-8">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-fulltext js-form-item-fulltext form-no-label form-group">
+  
+  
+  <input placeholder="Search here" aria-label="Search here" data-drupal-selector="edit-fulltext" class="form-text form-control" type="text" id="edit-fulltext" name="fulltext" value="" size="60" maxlength="128" />
+
+  
+  
+  </div>
+<button data-drupal-selector="edit-submit" class="button js-form-submit form-submit btn-primary btn icon-before" type="submit" id="edit-submit" name="op" value="Search"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span>
+Search</button><input autocomplete="off" data-drupal-selector="form-ggselznhwocfrc5inl3lzwmemgoyqgph6m5svcki6wq" type="hidden" name="form_build_id" value="form-GgSElznhWocfRC5iNL3LzwmEMgoyQGPh6M5svckI6wQ" /><input data-drupal-selector="edit-search-blk-form" type="hidden" name="form_id" value="search_blk_form" />
+</form>
+<div class="close"></div>
+  </section>
+
+
+          <div class="region region-navigation">
+          <a class="logo navbar-btn pull-left" href="/index.php/en" title="Home" rel="home">
+      <img src="/sites/groupe/files/logo%402x.png" alt="Home" />
+    </a>
+        <a class="name navbar-brand" href="/index.php/en" title="Home" rel="home">Faurecia</a>
+    <section id="block-faureciaheader" class="block block-faurecia-main block-faurecia-main-header clearfix">
+  
+    
+
+        <div class="header-content">
+	<div class="menu-header"><nav role="navigation" aria-labelledby="block-menuheader-menu" id="block-menuheader">
+          
+        
+      <ul class="menu menu--menu-header nav">
+                        <li>
+        <a href="https://careers.faurecia.com" target="_blank" title="Candidates">Candidates</a>
+                  </li>
+                        <li>
+        <a href="/en/investors-shareholders" title="Investors" data-drupal-link-system-path="node/45">Investors</a>
+                  </li>
+                        <li>
+        <a href="/en/newsroom" title="Newsroom" data-drupal-link-system-path="node/40">Newsroom</a>
+                  </li>
+                        <li>
+        <a href="/en/innovation" title="Innovation" data-drupal-link-system-path="node/250">Innovation</a>
+                  </li>
+                        <li>
+        <a href="/en/group" title="Group" data-drupal-link-system-path="node/2">Group</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+</div>
+	<div class="bourse"><section id="block-bourseheader" class="block block-faurecia-bourse block-faurecia-bourse-header clearfix">
+  
+    
+
+      <div class="gosearch"></div>
+<a href="/en/investors/share-information/share-price" class="flexbourse">
+  <div class="logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.5 16.5">
+  <defs>
+    <style>
+      .cls-1bourse {
+        fill: #003684;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_1355" data-name="Groupe 1355" transform="translate(-1197 -29)">
+    <g id="Groupe_1354" data-name="Groupe 1354" transform="translate(2 5)">
+      <g id="Groupe_7" data-name="Groupe 7" transform="translate(1195 24)">
+        <g id="Groupe_164" data-name="Groupe 164">
+          <path id="Tracé_299" data-name="Tracé 299" class="cls-1bourse" d="M6.4,9.2,9.2,12l5.2-5.2v3.3h.7V5.6H10.7v.7H14L9.2,11,6.4,8.3,2,12.8l.5.5Zm0,0"/>
+          <path id="Tracé_300" data-name="Tracé 300" class="cls-1bourse" d="M2.5,13.6l-.8-.8L6.5,7.9l2.8,2.8,4.2-4.1h-3V5.4h4.9v5H14.2V7.5l-5,4.9L6.4,9.6Zm-.1-.8.1.1L6.4,8.8l2.8,2.8,5.5-5.4V9.8h.2v-4H11V6h3.7L9.3,11.3,6.4,8.6Z"/>
+        </g>
+        <g id="Groupe_165" data-name="Groupe 165">
+          <path id="Tracé_301" data-name="Tracé 301" class="cls-1bourse" d="M.2.3v16h16v-.7H.9V.3ZM.9.3"/>
+          <path id="Tracé_302" data-name="Tracé 302" class="cls-1bourse" d="M16.5,16.5H0V0H1.2V15.3H16.5ZM.5,16H16v-.2H.7V.5H.5Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
+</div>
+  <div class="cours">31.91&euro;</div>
+  <div class="variation up"><svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 6.1 5" style="enable-background:new 0 0 6.1 5;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#FA0057;}
+</style>
+<g id="Groupe_162" transform="translate(6.068 0) rotate(90)">
+	<g id="Groupe_154">
+		<g>
+			<defs>
+				<rect id="SVGID_1_" x="-0.5" y="0.5" width="6.1" height="5"/>
+			</defs>
+			<clipPath id="SVGID_2_">
+				<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+			</clipPath>
+			<g id="Groupe_153" class="st0">
+				<path id="Tracé_297" class="st1" d="M4.9,2.2C5,2.4,5,2.6,4.9,2.8s-0.4,0.2-0.6,0l0,0L2.9,1.4v4.3c0,0.2-0.2,0.4-0.4,0.4
+					c-0.2,0-0.4-0.2-0.4-0.4c0,0,0,0,0,0V1.4L0.7,2.8c-0.2,0.2-0.4,0.2-0.6,0S0,2.4,0.1,2.2l2.1-2.1C2.4,0,2.6,0,2.8,0.1
+					c0,0,0,0,0,0L4.9,2.2z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
+</div>
+</a>
+
+  </section>
+
+</div>
+	<div class="languageswitcher"><section class="language-switcher-language-url block block-language block-language-blocklanguage-interface clearfix" id="block-selecteurdelangue" role="navigation">
+  
+    
+
+      <ul class="links"><li hreflang="fr" data-drupal-link-system-path="investisseurs/documentation/informations-reglementees-amf" class="fr"><a href="/investisseurs/documentation/informations-reglementees-amf" class="language-link" hreflang="fr" data-drupal-link-system-path="investisseurs/documentation/informations-reglementees-amf">fr</a></li><li hreflang="en" data-drupal-link-system-path="investisseurs/documentation/informations-reglementees-amf" class="en is-active"><a href="/en/investors/documents/amf-regulated-information" class="language-link is-active" hreflang="en" data-drupal-link-system-path="investisseurs/documentation/informations-reglementees-amf">en</a></li></ul>
+  </section>
+
+</div>
+  </div>
+
+  </section>
+
+
+  </div>
+
+                      </div>
+
+                      </header>
+  
+  <div role="main" class="main-container container js-quickedit-main-content">
+    <div class="row">
+
+                              <div class="col-sm-12" role="heading">
+              <div class="region region-header">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+          </div>
+              
+            
+                  <section class="col-sm-12">
+
+                
+                
+                          <a id="main-content"></a>
+            <div class="region region-content">
+      <div class="views-element-container form-group"><div class="view view-publications view-id-publications view-display-id-page_2 js-view-dom-id-058f8f3bc8a380e7a8fe742af1f3fe21abe7498dc4653d062948b0f016bcea36">
+  <div class="contenu-breadcrumb">
+        <ol class="breadcrumb">
+          <li >
+                  <a href="/en">Faurecia</a>
+              </li>
+          <li >
+                  <a href="/en/investors-shareholders">Investors</a>
+              </li>
+          <li >
+                  <a href="/en/investors/documents/results-reports-releases-presentations">Documents</a>
+              </li>
+          <li  class="active">
+                  AMF regulated information
+              </li>
+      </ol>
+
+
+    <section class="block block-faurecia-main block-faurecia-main-menu-prev-next clearfix">
+  
+    
+
+      <div class="prevnext"><div class="prev"><a href="/en/investors/documents/results-reports-releases-presentations" title="" class="btn_prev"></a></div><div class="next"><a href="/en/investors/documents/other-documents" title="" class="btn_next"></a></div></div>
+  </section>
+
+
+  </div>
+  <div class="contenu-menu">
+    <div class="field field--name-dynamic-block-fieldnode-menu-investisseur field--type-ds field--label-above">
+      <div class="field--label">Accès directs</div>
+      <div class="field--item">
+        <nav role="navigation" aria-labelledby="-menu">
+      
+  <h2 id="-menu"></h2>
+  
+
+        
+      <ul class="menu menu--investisseur nav">
+                        <li class="expanded dropdown active">
+	   	     <a href="/en/investors-shareholders" class="dropdown-toggle" data-toggle="dropdown" title="Investors">Investors <span class="caret"></span></a>
+       	                      <ul class="dropdown-menu">
+                        <li class="expanded">
+        <a href="/en" title="Financial key figures" data-drupal-link-system-path="&lt;front&gt;">Financial key figures</a>
+                          <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/investors/financial-key-figures/sales" title="Sales" data-drupal-link-system-path="node/44">Sales</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/financial-key-figures/profitability" title="Profitability" data-drupal-link-system-path="node/46">Profitability</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/financial-key-figures/investments" title="Investments" data-drupal-link-system-path="node/50">Investments</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/financial-key-figures/debt" title="Debt" data-drupal-link-system-path="node/114">Debt</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/financial-key-figures/workforce" title="Workforce" data-drupal-link-system-path="node/115">Workforce</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded">
+        <a href="/en" title="Share information" data-drupal-link-system-path="&lt;front&gt;">Share information</a>
+                          <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/investors/share-information/share-price" title="Share price" data-drupal-link-system-path="node/51">Share price</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/share-information/capital-structure" title="Capital structure" data-drupal-link-system-path="node/52">Capital structure</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/share-information/dividends" title="Dividends" data-drupal-link-system-path="node/53">Dividends</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/share-information/equity-analysts-covering-faurecia" title="Equity analysts covering Faurecia" data-drupal-link-system-path="node/54">Equity analysts covering Faurecia</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded">
+        <a href="/en/investors/bond-information" title="Bond information" data-drupal-link-system-path="node/249">Bond information</a>
+                          <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/investors/bond-information" title="Bond information" data-drupal-link-system-path="node/249">Bond information</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded">
+        <a href="/en/investors/shareholders/shareholders-area" title="Shareholders" data-drupal-link-system-path="node/111">Shareholders</a>
+                          <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/investors/shareholders/shareholders-area" title="Shareholders area&#039;s home" data-drupal-link-system-path="node/111">Shareholders area</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/shareholders/shareholders-rights-duties" title="Shareholders rights &amp; duties" data-drupal-link-system-path="node/224">Shareholders rights &amp; duties</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/shareholders/recording-shares-pure-registered-shares" title="Recording shares as pure registered shares" data-drupal-link-system-path="node/496">Recording shares as pure registered shares</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/shareholders/shareholders-meeting" title="Shareholders meeting" data-drupal-link-system-path="node/495">Shareholders meeting</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/shareholders/questions-answers" title="Questions &amp; answers" data-drupal-link-system-path="node/225">Questions &amp; answers</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded active">
+        <a href="/en/investors/documents/results-reports-releases-presentations" title="Documents" data-drupal-link-system-path="investisseurs/documentation/resultats-rapports-communiques-presentations">Documents</a>
+                          <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/investors/documents/results-reports-releases-presentations" title="Results, releases &amp; presentations" data-drupal-link-system-path="investisseurs/documentation/resultats-rapports-communiques-presentations">Results, releases &amp; presentations</a>
+                  </li>
+                        <li class="active">
+        <a href="/en/investors/documents/amf-regulated-information" title="AMF regulated information" data-drupal-link-system-path="investisseurs/documentation/informations-reglementees-amf" class="is-active">AMF regulated information</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/documents/other-documents" title="Other documents" data-drupal-link-system-path="investisseurs/documentation/autres-publications">Other documents</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li>
+        <a href="/en/group/governance" title="Governance" data-drupal-link-system-path="groupe/gouvernance">Governance</a>
+                  </li>
+        </ul>
+  
+            </li>
+        </ul>
+  
+
+  </nav>
+
+      </div>
+    </div>
+  </div>
+  <div class="contenu">
+	
+		
+	<div class="view-header">
+	  
+<div class="node node--type-investisseur node--view-mode-amf ds-1col clearfix">
+
+  
+
+          <div  class="field-label-visually-hidden">Titre</div>
+  
+                          <h1  >
+      AMF regulated information</h1>
+      
+  
+
+
+  <div class="field field--name-field-textlong-unik-2 field--type-string-long field--label-visually_hidden">
+    <div class="field--label sr-only">Chapô</div>
+              <div class="field--item">Shareholders and Investors can view all of our regulatory and financial documents since 2008, from periodic publications to preparatory documents for shareholder meetings to remain informed on the group’s financials.</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-bouton-share-currentroute field--type-ds field--label-hidden field--item">
+	    <a href="/en/investors/documents/amf-regulated-information" class="btn-share" title="Share">Share</a>
+				  <div class="share_ctenr">
+            <div class="share_ctenr_inner">
+			  <div>share</div>
+              <a target="_blank" title="New window: Share on Twitter" href="http://twitter.com/share?url=http://www.faurecia.com/en/investors/documents/amf-regulated-information&amp;text=AMF+regulated+information+%40Faurecia&amp;size=l&amp;count=none" class="share_twt"></a>              <a target="_blank" title="New window: Share on LinkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://www.faurecia.com/en/investors/documents/amf-regulated-information&amp;title=AMF+regulated+information" class="share_lk"></a>              <a target="_blank" title="New window: Share on Facebook" href="http://www.facebook.com/sharer/sharer.php?u=http://www.faurecia.com/en/investors/documents/amf-regulated-information" class="share_fb"></a>              			  <div class="closeshare"></div>
+		    </div>
+		  </div>  
+			  </div>	
+      
+
+</div>
+
+    <div class="strate1">
+	    
+  <div class="field field--name-field-text-unik-3 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Titre Infos périodiques</div>
+              <div class="field--item">Periodic publications</div>
+          </div>
+
+      <div class="strate1_inner">
+    	  <div class="views-element-container form-group"><div class="view view-publications view-id-publications view-display-id-block_5 js-view-dom-id-90dcc4f7f0d9d6f9ea191b0c10159cd14eb9cf8499e8bfa76dc0e5a685e113fd">
+  
+    
+      <div class="view-header">
+      <div class="taxonomy-term taxonomy-term--type-type-publication taxonomy-term--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-text-unik-1 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Nom pour affichage</div>
+              <div class="field--item">Annual and half-year reports</div>
+          </div>
+
+
+</div>
+
+
+              <div class="view-filters form-group">
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-publications-block-5" action="/en/investors/documents/results-reports-releases-presentations" method="get" id="views-exposed-form-publications-block-5" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-select js-form-type-select form-item-field-ref-tax-1 js-form-item-field-ref-tax-1 form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-field-ref-tax-1" class="form-select form-control" id="edit-field-ref-tax-1" name="field_ref_tax_1"><option
+            value="All" selected="selected">Type of publication</option><option
+            value="39">Report</option></select></div>
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-year js-form-item-year form-group">
+      <label for="edit-year" class="control-label"><span>Year of publication</span></label>
+  
+  
+  <input data-drupal-selector="edit-year" class="form-text form-control" type="text" id="edit-year" name="year" value="2020" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-select js-form-type-select form-item-fake-year js-form-item-fake-year form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-fake-year" class="form-select form-control" id="edit-fake-year" name="fake_year"><option
+            value="2020" selected="selected">2020</option><option
+            value="2019">2019</option><option
+            value="2018">2018</option><option
+            value="2017">2017</option><option
+            value="2016">2016</option><option
+            value="2015">2015</option><option
+            value="2014">2014</option><option
+            value="2013">2013</option><option
+            value="2012">2012</option><option
+            value="2011">2011</option><option
+            value="2010">2010</option><option
+            value="2009">2009</option><option
+            value="2008">2008</option></select></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-publications" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-publications" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+        </div>
+          </div>
+    
+      <div class="view-content">
+          <div class="views-row"><div class="node node--type-publication node--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2020-02-17T12:00:00Z">02.17.2020</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/FAURECIA%20RA2019%20FR_2020_02_14_MEL%20DEF_0.pdf" title="2019 financial report" target="_blank">2019 financial report</a></p>
+</div>
+      
+  <div class="field field--name-field-ref-tax-1 field--type-entity-reference field--label-visually_hidden">
+    <div class="field--label sr-only">Catégorie</div>
+              <div class="field--item">Report</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/FAURECIA%20RA2019%20FR_2020_02_14_MEL%20DEF_0.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    	  <div class="views-element-container form-group"><div class="view view-droits-votes-actions view-id-droits_votes_actions view-display-id-block_1 js-view-dom-id-da79a5db4dadf112982d432108d1c4e535d5ce6e317d716bfb14fbe3d4875172">
+  
+    
+    <div class="view-header">
+	  
+  <div class="field field--name-field-text-unik-6 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Titre</div>
+              <div class="field--item">Declarations of voting rights and shares outstanding</div>
+          </div>
+
+	  
+              <div class="view-filters form-group">
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-droits-votes-actions-block-1" action="/en/investors/documents/amf-regulated-information" method="get" id="views-exposed-form-droits-votes-actions-block-1" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-date-unik-1-value js-form-item-field-date-unik-1-value form-group">
+      <label for="edit-field-date-unik-1-value" class="control-label"><span>de</span></label>
+  
+  
+  <input data-drupal-selector="edit-field-date-unik-1-value" class="form-text form-control" type="text" id="edit-field-date-unik-1-value" name="field_date_unik_1_value" value="2020-01-01" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-field-date-unik-1-value-1 js-form-item-field-date-unik-1-value-1 form-group">
+      <label for="edit-field-date-unik-1-value-1" class="control-label"><span>Date (field_date_unik_1)</span></label>
+  
+  
+  <input data-drupal-selector="edit-field-date-unik-1-value-1" class="form-text form-control" type="text" id="edit-field-date-unik-1-value-1" name="field_date_unik_1_value_1" value="2020-12-31" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-select js-form-type-select form-item-fake-year js-form-item-fake-year form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-fake-year" class="form-select form-control" id="edit-fake-year" name="fake_year"><option
+            value="2020" selected="selected">2020</option><option
+            value="2019">2019</option><option
+            value="2018">2018</option><option
+            value="2017">2017</option><option
+            value="2016">2016</option><option
+            value="2015">2015</option><option
+            value="2014">2014</option><option
+            value="2013">2013</option></select></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-droits-votes-actions" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-droits-votes-actions" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+        </div>
+          </div>
+  
+      <div class="view-content">
+        <div class="table-responsive">
+<table class="table table-hover table-striped">
+        <thead>
+    <tr>
+                                      <th id="view-field-date-unik-1-table-column" class="views-field views-field-field-date-unik-1" scope="col">Date</th>
+                                      <th id="view-field-integer-unik-1-table-column" class="views-field views-field-field-integer-unik-1" scope="col">Total number of shares</th>
+                                      <th id="view-field-integer-unik-2-table-column" class="views-field views-field-field-integer-unik-2" scope="col">Total number of voting rights (theoretical)</th>
+                                      <th id="view-field-file-unik-1-table-column" class="views-field views-field-field-file-unik-1" scope="col">Press release</th>
+          </tr>
+    </thead>
+    <tbody>
+      <tr>
+                                                                      <td headers="view-field-date-unik-1-table-column" class="views-field views-field-field-date-unik-1"><time datetime="2020-03-31T12:00:00Z">March 31, 2020</time>
+        </td>
+                                                                      <td headers="view-field-integer-unik-1-table-column" class="views-field views-field-field-integer-unik-1">138 035 801        </td>
+                                                                      <td headers="view-field-integer-unik-2-table-column" class="views-field views-field-field-integer-unik-2">203 078 819        </td>
+                                                                      <td headers="view-field-file-unik-1-table-column" class="views-field views-field-field-file-unik-1"><a href="/sites/groupe/files/droitsdevoteeetactions/declarationddvactionsau31mars2020.pdf" title="Download" target="_blank">Download</a>        </td>
+          </tr>
+      <tr>
+                                                                      <td headers="view-field-date-unik-1-table-column" class="views-field views-field-field-date-unik-1"><time datetime="2020-02-29T12:00:00Z">February 29, 2020</time>
+        </td>
+                                                                      <td headers="view-field-integer-unik-1-table-column" class="views-field views-field-field-integer-unik-1">138 035 801        </td>
+                                                                      <td headers="view-field-integer-unik-2-table-column" class="views-field views-field-field-integer-unik-2">203 082 112        </td>
+                                                                      <td headers="view-field-file-unik-1-table-column" class="views-field views-field-field-file-unik-1"><a href="/sites/groupe/files/droitsdevoteeetactions/declarationddvactionsau29f%C3%A9vrier2020.pdf" title="Download" target="_blank">Download</a>        </td>
+          </tr>
+      <tr>
+                                                                      <td headers="view-field-date-unik-1-table-column" class="views-field views-field-field-date-unik-1"><time datetime="2020-01-31T12:00:00Z">January 31, 2020</time>
+        </td>
+                                                                      <td headers="view-field-integer-unik-1-table-column" class="views-field views-field-field-integer-unik-1">138 035 801        </td>
+                                                                      <td headers="view-field-integer-unik-2-table-column" class="views-field views-field-field-integer-unik-2">203 084 341        </td>
+                                                                      <td headers="view-field-file-unik-1-table-column" class="views-field views-field-field-file-unik-1"><a href="/sites/groupe/files/droitsdevoteeetactions/declarationddvactionsau31janvier2020.pdf" title="Download" target="_blank">Download</a>        </td>
+          </tr>
+    </tbody>
+</table>
+  </div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+    </div>
+    <div class="strate2">
+      <div id="assgen"></div>
+  	  
+  <div class="field field--name-field-text-unik-11 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Titre assemblée générale</div>
+              <div class="field--item">Shareholders meetings</div>
+          </div>
+
+      <div class="strate2_inner">
+  	    <div class="views-element-container form-group"><div class="view view-publications view-id-publications view-display-id-block_8 js-view-dom-id-c7b0c2e4ba3753b7c6a661240af8381b7a98c668d4ddce310054b8b6a86af3b1">
+  
+    
+      <div class="view-header">
+      <div class="taxonomy-term taxonomy-term--type-type-publication taxonomy-term--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-text-unik-1 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Nom pour affichage</div>
+              <div class="field--item">Shareholders meetings documents</div>
+          </div>
+
+
+</div>
+
+
+              <div class="view-filters form-group">
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-publications-block-8" action="/en/investors/documents/results-reports-releases-presentations" method="get" id="views-exposed-form-publications-block-8" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-year js-form-item-year form-group">
+      <label for="edit-year" class="control-label"><span>Year of publication</span></label>
+  
+  
+  <input data-drupal-selector="edit-year" class="form-text form-control" type="text" id="edit-year" name="year" value="2019" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-select js-form-type-select form-item-fake-year js-form-item-fake-year form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-fake-year" class="form-select form-control" id="edit-fake-year" name="fake_year"><option
+            value="2019" selected="selected">2019</option><option
+            value="2018">2018</option><option
+            value="2017">2017</option><option
+            value="2016">2016</option><option
+            value="2015">2015</option><option
+            value="2014">2014</option></select></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-publications" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-publications" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+        </div>
+          </div>
+    
+      <div class="view-content">
+          <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-06-03T12:00:00Z">06.03.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/R%C3%A9sultats%20des%20votes%20AG%20Mai%202019%20pour%20mise%20en%20ligne.pdf" title="Vote results of the 28 May 2019 shareholder's meeting (French only)" target="_blank">Vote results of the 28 May 2019 shareholder's meeting (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/R%C3%A9sultats%20des%20votes%20AG%20Mai%202019%20pour%20mise%20en%20ligne.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-28T12:00:00Z">05.28.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Assembl%C3%A9e%20G%C3%A9n%C3%A9rale%202019%20presentation.pdf" title="2019 Shareholders meeting - Presentation" target="_blank">2019 Shareholders meeting - Presentation</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Assembl%C3%A9e%20G%C3%A9n%C3%A9rale%202019%20presentation.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-28T12:00:00Z">05.28.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/CommuniqueDePresse%20AG%202019%20UK.pdf" title="2019 Shareholders meeting - Press release" target="_blank">2019 Shareholders meeting - Press release</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/CommuniqueDePresse%20AG%202019%20UK.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-10T12:00:00Z">05.10.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Avis%20de%20convocation%20paru%20au%20BALO%20du%2010%20mai%202019.pdf" title="Avis de convocation paru au BALO du 10 mai 2019 (French only)" target="_blank">Avis de convocation paru au BALO du 10 mai 2019 (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Avis%20de%20convocation%20paru%20au%20BALO%20du%2010%20mai%202019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-07T12:00:00Z">05.07.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/CP%20MAD%20doc%20AG%20VA%20070519.pdf" title="Release in respect of documents for the May 28, 2019 AGM" target="_blank">Release in respect of documents for the May 28, 2019 AGM</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/CP%20MAD%20doc%20AG%20VA%20070519.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-07T12:00:00Z">05.07.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Table%20of%20the%20utilization%20of%20the%20financial%20authorizations.pdf" title="Table of the utilization of the financial authorizations" target="_blank">Table of the utilization of the financial authorizations</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Table%20of%20the%20utilization%20of%20the%20financial%20authorizations.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-03T12:00:00Z">05.03.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Number%20of%20voting%20rights%20and%20shares%20on%20prior%20notice.pdf" title="Total number of voting rights and shares as of 22 April 2019, date of publication of the prior notice in the BALO" target="_blank">Total number of voting rights and shares as of 22 April 2019, date of publication of the prior notice in the BALO</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Number%20of%20voting%20rights%20and%20shares%20on%20prior%20notice.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-03T12:00:00Z">05.03.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Request%20for%20documents%20GM%20280519.pdf" title="Request for documents and additional information" target="_blank">Request for documents and additional information</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Request%20for%20documents%20GM%20280519.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-04-30T12:00:00Z">04.30.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/DDR%202018%20VA%2013052019_0.pdf" title="2018 registration document" target="_blank">2018 registration document</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/DDR%202018%20VA%2013052019_0.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-04-30T12:00:00Z">04.30.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Brochure%20de%20convocation%20VA%20MEL2.pdf" title="Convening Notice to the Shareholders’ meeting of May 28, 2019" target="_blank">Convening Notice to the Shareholders’ meeting of May 28, 2019</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Brochure%20de%20convocation%20VA%20MEL2.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-04-30T12:00:00Z">04.30.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Mod%C3%A8le%20de%20formulaire%20de%20vote%20et%20de%20pouvoir.pdf" title="Draft proxy form " target="_blank">Draft proxy form </a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Mod%C3%A8le%20de%20formulaire%20de%20vote%20et%20de%20pouvoir.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-04-23T12:00:00Z">04.23.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Avis%20pr%C3%A9alable%20au%20BALO%20du%2022%20avril%202019.pdf" title="Extract of the prior notice published in the April 22, 2019 BALO (French only)" target="_blank">Extract of the prior notice published in the April 22, 2019 BALO (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Avis%20pr%C3%A9alable%20au%20BALO%20du%2022%20avril%202019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+    </div>
+    <div class="strate3">
+	    
+  <div class="field field--name-field-text-unik-4 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Titre Infos permanantes</div>
+              <div class="field--item">Ongoing information</div>
+          </div>
+
+      <div class="strate3_inner">
+    	  <div class="views-element-container form-group"><div class="view view-publications view-id-publications view-display-id-block_2 js-view-dom-id-7bb9ee85bbc0018715db6d87f035873332d823aeb9fb4786cc7f656190ae86ae">
+  
+    
+      <div class="view-header">
+      <div class="taxonomy-term taxonomy-term--type-type-publication taxonomy-term--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-text-unik-1 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Nom pour affichage</div>
+              <div class="field--item">Declarations of transaction by company officers</div>
+          </div>
+
+
+</div>
+
+
+              <div class="view-filters form-group">
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-publications-block-2" action="/en/investors/documents/results-reports-releases-presentations" method="get" id="views-exposed-form-publications-block-2" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-year js-form-item-year form-group">
+      <label for="edit-year" class="control-label"><span>Year of publication</span></label>
+  
+  
+  <input data-drupal-selector="edit-year" class="form-text form-control" type="text" id="edit-year" name="year" value="2018" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-select js-form-type-select form-item-fake-year js-form-item-fake-year form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-fake-year" class="form-select form-control" id="edit-fake-year" name="fake_year"><option
+            value="2018" selected="selected">2018</option><option
+            value="2017">2017</option><option
+            value="2016">2016</option><option
+            value="2015">2015</option><option
+            value="2014">2014</option></select></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-publications" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-publications" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+        </div>
+          </div>
+    
+      <div class="view-content">
+          <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2018-12-05T12:00:00Z">12.05.2018</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/D%C3%A9claration%20achats%20de%20titres%20MdR%20novembre%202018.pdf" title="Declaration of transaction by company officers in 2018 (French only)" target="_blank">Declaration of transaction by company officers in 2018 (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/D%C3%A9claration%20achats%20de%20titres%20MdR%20novembre%202018.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    	  <div class="views-element-container form-group"><div class="view view-publications view-id-publications view-display-id-block_4 js-view-dom-id-c7cdfa2552f75477230b5df7733ca2ae527de4ad089dcdb61ebef627667490a1">
+  
+    
+      <div class="view-header">
+      <div class="taxonomy-term taxonomy-term--type-type-publication taxonomy-term--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-text-unik-1 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Nom pour affichage</div>
+              <div class="field--item">Crossings of thresholds</div>
+          </div>
+
+
+</div>
+
+
+              <div class="view-filters form-group">
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-publications-block-4" action="/en/investors/documents/results-reports-releases-presentations" method="get" id="views-exposed-form-publications-block-4" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-year js-form-item-year form-group">
+      <label for="edit-year" class="control-label"><span>Year of publication</span></label>
+  
+  
+  <input data-drupal-selector="edit-year" class="form-text form-control" type="text" id="edit-year" name="year" value="2019" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-select js-form-type-select form-item-fake-year js-form-item-fake-year form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-fake-year" class="form-select form-control" id="edit-fake-year" name="fake_year"><option
+            value="2019" selected="selected">2019</option><option
+            value="2018">2018</option><option
+            value="2017">2017</option><option
+            value="2016">2016</option><option
+            value="2015">2015</option><option
+            value="2014">2014</option></select></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-publications" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-publications" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+        </div>
+          </div>
+    
+      <div class="view-content">
+          <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-06T12:00:00Z">05.06.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Franchissements%20de%20seuil%20d%C3%A9clar%C3%A9s%20au%20cours%20de%20l%27exercice%202019%20-%207%20f%C3%A9vrier%202019.pdf" title="Crossings of thresholds declared in 2019 - February 7th (French only)" target="_blank">Crossings of thresholds declared in 2019 - February 7th (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Franchissements%20de%20seuil%20d%C3%A9clar%C3%A9s%20au%20cours%20de%20l%27exercice%202019%20-%207%20f%C3%A9vrier%202019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-06T12:00:00Z">05.06.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Franchissements%20de%20seuil%20d%C3%A9clar%C3%A9s%20au%20cours%20de%20l%27exercice%202019%20-%2022%20f%C3%A9vrier%202019.pdf" title="Crossings of thresholds declared in 2019 - February 22nd (French only)" target="_blank">Crossings of thresholds declared in 2019 - February 22nd (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Franchissements%20de%20seuil%20d%C3%A9clar%C3%A9s%20au%20cours%20de%20l%27exercice%202019%20-%2022%20f%C3%A9vrier%202019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-05-06T12:00:00Z">05.06.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Franchissements%20de%20seuil%20d%C3%A9clar%C3%A9s%20au%20cours%20de%20l%27exercice%202019%20-%2028%20f%C3%A9vrier%202019.pdf" title="Crossings of thresholds declared in 2019 - February 28th (French only)" target="_blank">Crossings of thresholds declared in 2019 - February 28th (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Franchissements%20de%20seuil%20d%C3%A9clar%C3%A9s%20au%20cours%20de%20l%27exercice%202019%20-%2028%20f%C3%A9vrier%202019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+    </div>
+    <div class="strate4">
+	    
+  <div class="field field--name-field-text-unik-5 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Titre autres infos</div>
+              <div class="field--item">Other documents</div>
+          </div>
+
+      <div class="strate4_inner">
+    	  <div class="views-element-container form-group"><div class="view view-publications view-id-publications view-display-id-block_3 js-view-dom-id-3f96a98e82be88d549a8000d1a7255ec70b5bcf5dcb28fc53752228bbcad3481">
+  
+    
+      <div class="view-header">
+      <div class="taxonomy-term taxonomy-term--type-type-publication taxonomy-term--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-text-unik-1 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Nom pour affichage</div>
+              <div class="field--item">Statements with respect to the liquidity contract</div>
+          </div>
+
+
+</div>
+
+
+              <div class="view-filters form-group">
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-publications-block-3" action="/en/investors/documents/results-reports-releases-presentations" method="get" id="views-exposed-form-publications-block-3" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-year js-form-item-year form-group">
+      <label for="edit-year" class="control-label"><span>Year of publication</span></label>
+  
+  
+  <input data-drupal-selector="edit-year" class="form-text form-control" type="text" id="edit-year" name="year" value="2020" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-select js-form-type-select form-item-fake-year js-form-item-fake-year form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-fake-year" class="form-select form-control" id="edit-fake-year" name="fake_year"><option
+            value="2020" selected="selected">2020</option><option
+            value="2019">2019</option><option
+            value="2018">2018</option><option
+            value="2017">2017</option><option
+            value="2016">2016</option><option
+            value="2015">2015</option><option
+            value="2014">2014</option></select></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-publications" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-publications" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+        </div>
+          </div>
+    
+      <div class="view-content">
+          <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2020-01-09T12:00:00Z">01.09.2020</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Bilan%20Semestriel%20Contrat%20Liquidite%2031%20D%C3%A9cembre%202019.pdf" title="December 31, 2019 statement with respect to the liquidity contract (French only) " target="_blank">December 31, 2019 statement with respect to the liquidity contract (French only) </a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Bilan%20Semestriel%20Contrat%20Liquidite%2031%20D%C3%A9cembre%202019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    	  <div class="views-element-container form-group"><div class="view view-publications view-id-publications view-display-id-block_1 js-view-dom-id-795f3b2d4f3ba2e1dd1dd8aa86f11ba7631ea62bbdda727509d13ae0814a1e4d">
+  
+    
+      <div class="view-header">
+      <div class="taxonomy-term taxonomy-term--type-type-publication taxonomy-term--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-text-unik-1 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Nom pour affichage</div>
+              <div class="field--item">Declarations of transactions on treasury shares</div>
+          </div>
+
+
+</div>
+
+
+              <div class="view-filters form-group">
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-publications-block-1" action="/en/investors/documents/results-reports-releases-presentations" method="get" id="views-exposed-form-publications-block-1" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-year js-form-item-year form-group">
+      <label for="edit-year" class="control-label"><span>Year of publication</span></label>
+  
+  
+  <input data-drupal-selector="edit-year" class="form-text form-control" type="text" id="edit-year" name="year" value="2019" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-select js-form-type-select form-item-fake-year js-form-item-fake-year form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-fake-year" class="form-select form-control" id="edit-fake-year" name="fake_year"><option
+            value="2019" selected="selected">2019</option><option
+            value="2018">2018</option><option
+            value="2017">2017</option><option
+            value="2016">2016</option></select></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-publications" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-publications" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+        </div>
+          </div>
+    
+      <div class="view-content">
+          <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-02-14T12:00:00Z">02.14.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2004-02-2019%20au%2007-02-2019.pdf" title="Declaration of transactions on treasury shares from 4 to 7 February 2019 (French only)" target="_blank">Declaration of transactions on treasury shares from 4 to 7 February 2019 (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2004-02-2019%20au%2007-02-2019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-02-06T12:00:00Z">02.06.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2028-01-2019%20au%2001-02-2019.pdf" title="Declaration of transactions on treasury shares from 28 January to 1st February 2019 (in French only)" target="_blank">Declaration of transactions on treasury shares from 28 January to 1st February 2019 (in French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2028-01-2019%20au%2001-02-2019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-01-30T12:00:00Z">01.30.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2022-01-2019%20au%2025-01-2019.pdf" title="Declaration of transactions on treasury shares from 22 to 25 January 2019 (French only)" target="_blank">Declaration of transactions on treasury shares from 22 to 25 January 2019 (French only)</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2022-01-2019%20au%2025-01-2019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-01-24T12:00:00Z">01.24.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2014-01-2019%20au%2017-01-2019.pdf" title="Declaration of transactions on treasury shares from 14 to 17 January 2019" target="_blank">Declaration of transactions on treasury shares from 14 to 17 January 2019</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2014-01-2019%20au%2017-01-2019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-01-17T12:00:00Z">01.17.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2007-01-2019%20au%2011-01-2019.pdf" title="Declaration of transactions on treasury shares from 7 to 11 January 2019 " target="_blank">Declaration of transactions on treasury shares from 7 to 11 January 2019 </a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Faurecia%20Reporting%20d%C3%A9taill%C3%A9%20du%2007-01-2019%20au%2011-01-2019.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+    	  <div class="views-element-container form-group"><div class="view view-publications view-id-publications view-display-id-block_6 js-view-dom-id-66d72be9e2d45b4e8ad614953f6c8890877d906807526489f184a65c2c3c1cc3">
+  
+    
+      <div class="view-header">
+      <div class="taxonomy-term taxonomy-term--type-type-publication taxonomy-term--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-text-unik-1 field--type-string field--label-visually_hidden">
+    <div class="field--label sr-only">Nom pour affichage</div>
+              <div class="field--item">Other</div>
+          </div>
+
+
+</div>
+
+
+              <div class="view-filters form-group">
+          <form class="views-exposed-form" data-drupal-selector="views-exposed-form-publications-block-6" action="/en/investors/documents/results-reports-releases-presentations" method="get" id="views-exposed-form-publications-block-6" accept-charset="UTF-8">
+  <div class="form--inline form-inline clearfix">
+  <div class="form-item js-form-item form-type-textfield js-form-type-textfield form-item-year js-form-item-year form-group">
+      <label for="edit-year" class="control-label"><span>Year of publication</span></label>
+  
+  
+  <input data-drupal-selector="edit-year" class="form-text form-control" type="text" id="edit-year" name="year" value="2019" size="30" maxlength="128" />
+
+  
+  
+  </div>
+<div class="form-item js-form-item form-type-select js-form-type-select form-item-fake-year js-form-item-fake-year form-no-label form-group">
+  
+  
+  <div class="select-wrapper"><select data-drupal-selector="edit-fake-year" class="form-select form-control" id="edit-fake-year" name="fake_year"><option
+            value="2019" selected="selected">2019</option><option
+            value="2018">2018</option><option
+            value="2015">2015</option></select></div>
+
+  
+  
+  </div>
+<div data-drupal-selector="edit-actions" class="form-actions form-group js-form-wrapper form-wrapper" id="edit-actions"><button data-drupal-selector="edit-submit-publications" class="button js-form-submit form-submit btn-info btn" type="submit" id="edit-submit-publications" value="Apply" name="">Apply</button></div>
+
+</div>
+
+</form>
+
+        </div>
+          </div>
+    
+      <div class="view-content">
+          <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-07-23T12:00:00Z">07.23.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/CP%20MAD%20RFS%202019%20V2%20%28EN%29.pdf" title="2019 half year report filing press release" target="_blank">2019 half year report filing press release</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/CP%20MAD%20RFS%202019%20V2%20%28EN%29.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+    <div class="views-row"><div class="node node--type-publication node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <div class="field field--name-field-date-unik-1 field--type-datetime field--label-visually_hidden">
+    <div class="field--label sr-only">Date</div>
+              <div class="field--item"><time datetime="2019-04-29T12:00:00Z">04.29.2019</time>
+</div>
+          </div>
+
+            <div class="field field--name-dynamic-token-fieldnode-titre-lien field--type-ds field--label-hidden field--item"><p><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Registration%20document%202018%20filing%20EN.pdf" title="2018 registration document filing press release" target="_blank">2018 registration document filing press release</a></p>
+</div>
+      
+            <div class="field field--name-dynamic-token-fieldnode-download2 field--type-ds field--label-hidden field--item"><a href="http://www.faurecia.com/sites/groupe/files/investisseurs/Registration%20document%202018%20filing%20EN.pdf" title="Download" target="_blank">Download</a></div>
+      
+
+</div>
+
+</div>
+
+    </div>
+  
+          </div>
+</div>
+
+      </div>
+    </div>
+	</div>
+		
+	
+					  </div>
+</div>
+</div>
+
+
+  </div>
+
+              </section>
+
+                </div>
+  </div>
+
+      <footer class="footer container" role="contentinfo">
+        <div class="region region-footer">
+    <section id="block-rsfooter" class="block block-faurecia-main block-faurecia-main-footerrs clearfix">
+  
+    
+
+        <div class="footer-rs">
+    <ul>
+	  		<li class="linkedin"><a href="https://www.linkedin.com/company/faurecia" title="Linkedin" target="_blank"></a></li>
+	  		<li class="youtube"><a href="https://www.youtube.com/user/faurecia" title="Youtube" target="_blank"></a></li>
+	  		<li class="twitter"><a href="https://twitter.com/faurecia" title="Twitter" target="_blank"></a></li>
+	  		<li class="instagram"><a href="https://www.instagram.com/faureciagroup" title="Instagram" target="_blank"></a></li>
+	  	</ul>
+  </div>
+<div class="back-to-top" title="Back to top"></div>
+
+  </section>
+
+<nav role="navigation" aria-labelledby="block-faurecia-main-menu-menu" id="block-faurecia-main-menu">
+            <h2 class="sr-only" id="block-faurecia-main-menu-menu">Main navigation</h2>
+
+      
+      <ul class="menu menu--main nav navbar-nav">
+                        <li class="expanded dropdown">
+	   	     <a href="/en/group" class="dropdown-toggle" data-toggle="dropdown" title="Group">Group <span class="caret"></span></a>
+       	                      <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/group/vision-and-strategy" title="Vision &amp; strategy" data-drupal-link-system-path="groupe/vision-et-strategie">Vision &amp; strategy</a>
+                  </li>
+                        <li>
+        <a href="/en/group/governance" title="Governance" data-drupal-link-system-path="groupe/gouvernance">Governance</a>
+                  </li>
+                        <li>
+        <a href="/en/group/our-business-groups" title="Our business groups" data-drupal-link-system-path="groupe/activites">Our business groups</a>
+                  </li>
+                        <li>
+        <a href="/en/group/operational-excellence" title="Operational excellence" data-drupal-link-system-path="groupe/excellence-operationnelle">Operational excellence</a>
+                  </li>
+                        <li>
+        <a href="/en/group/convictions-and-values" title="Convictions and values" data-drupal-link-system-path="groupe/valeurs-et-convictions">Convictions and values</a>
+                  </li>
+                        <li>
+        <a href="/en/group/key-figures" title="Key figures" data-drupal-link-system-path="groupe/chiffres-cles">Key figures</a>
+                  </li>
+                        <li>
+        <a href="/en/group/faurecia-on-board" title="Faurecia On Board" data-drupal-link-system-path="groupe/faurecia-on-board">Faurecia On Board</a>
+                  </li>
+                        <li>
+        <a href="/en/group/locations" title="Locations" data-drupal-link-system-path="groupe/implantations">Locations</a>
+                  </li>
+                        <li>
+        <a href="/en/group/history" title="History" data-drupal-link-system-path="groupe/histoire">History</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown">
+	   	     <a href="/en/innovation" class="dropdown-toggle" data-toggle="dropdown" title="Innovation">Innovation <span class="caret"></span></a>
+       	                      <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/innovation/smart-life-board" title="Smart life on board" data-drupal-link-system-path="node/429">Cockpit of the Future</a>
+                  </li>
+                        <li>
+        <a href="/en/innovation/sustainable-mobility" title="Sustainable mobility" data-drupal-link-system-path="node/447">Sustainable mobility</a>
+                  </li>
+                        <li>
+        <a href="/en/innovation/faurecia-innovation-ecosystem" title="Faurecia’s innovation ecosystem" data-drupal-link-system-path="node/398">Faurecia’s innovation ecosystem</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li>
+        <a href="/en/newsroom" title="Newsroom" data-drupal-link-system-path="node/40">Newsroom</a>
+                  </li>
+                        <li class="expanded dropdown active">
+	   	     <a href="/en/investors-shareholders" class="dropdown-toggle" data-toggle="dropdown" title="Investors">Investors <span class="caret"></span></a>
+       	                      <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/investors/financial-key-figures/sales" title="Financial key figures" data-drupal-link-system-path="node/44">Financial key figures</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/share-information/share-price" title="Share information" data-drupal-link-system-path="node/51">Share information</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/bond-information" title="Bond information" data-drupal-link-system-path="node/249">Bond information</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/shareholders/shareholders-area" title="Shareholders" data-drupal-link-system-path="node/111">Shareholders</a>
+                  </li>
+                        <li>
+        <a href="/en/investors/documents/results-reports-releases-presentations" title="Documents" data-drupal-link-system-path="investisseurs/documentation/resultats-rapports-communiques-presentations">Documents</a>
+                  </li>
+                        <li class="active">
+        <a href="/en/investors/documents/amf-regulated-information" title="Informations réglementaires AMF" data-drupal-link-system-path="investisseurs/documentation/informations-reglementees-amf" class="is-active">AMF regulated information</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown">
+	   	     <a href="/en/suppliers" class="dropdown-toggle" data-toggle="dropdown" title="Suppliers">Suppliers <span class="caret"></span></a>
+       	                      <ul class="dropdown-menu">
+                        <li>
+        <a href="/en/fournisseurs/ariba-support" title="ARIBA support" data-drupal-link-system-path="node/1986">ARIBA support</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown">
+	           <div class="dropdown-toggle" data-toggle="dropdown" title="Candidates">Candidates <span class="caret"></span></div>
+			                      <ul class="dropdown-menu">
+                        <li>
+        <a href="http://careers.faurecia.com/" title="Careers website">Careers website</a>
+                  </li>
+        </ul>
+  
+            </li>
+                        <li class="expanded dropdown">
+	           <div class="dropdown-toggle" data-toggle="dropdown" title="Our other websites">Our other websites <span class="caret"></span></div>
+			                      <ul class="dropdown-menu">
+                        <li>
+        <a href="https://www.faurecia.de/" title="Faurecia Germany">Faurecia Germany</a>
+                  </li>
+                        <li>
+        <a href="http://www.faurecia.cn/" target="_blank" title="Faurecia China">Faurecia China</a>
+                  </li>
+                        <li>
+        <a href="https://www.faurecia-japan.jp" title="Faurecia Japan">Faurecia Japan</a>
+                  </li>
+                        <li>
+        <a href="http://www.faurecia-mexico.mx/" title="Faurecia Mexico">Faurecia Mexico</a>
+                  </li>
+                        <li>
+        <a href="https://faurecia.jobs.cz/" title="Faurecia Czech Republic">Faurecia Czech Republic</a>
+                  </li>
+                        <li>
+        <a href="http://www.faurecia-us.com/" title="Faurecia USA">Faurecia USA</a>
+                  </li>
+                        <li>
+        <a href="https://www.faurecia-service.com/" target="_blank" title="Faurecia Service">Faurecia Service</a>
+                  </li>
+        </ul>
+  
+            </li>
+        </ul>
+  
+
+  </nav>
+<section id="block-copyrightfooter" class="block block-faurecia-main block-faurecia-main-footercopyright clearfix">
+  
+    
+
+      <div class="copyrigth">©2020 Faurecia</div>
+  </section>
+
+<nav role="navigation" aria-labelledby="block-faurecia-footer-menu" id="block-faurecia-footer">
+            
+  <h2 class="visually-hidden" id="block-faurecia-footer-menu">Footer menu</h2>
+  
+
+        
+      <ul class="menu menu--footer nav">
+                        <li>
+        <a href="/en/legal-statements" title="Legal statements" data-drupal-link-system-path="node/463">Legal statements</a>
+                  </li>
+                        <li>
+        <a href="/en/credits" title="Credits" data-drupal-link-system-path="node/492">Credits</a>
+                  </li>
+                        <li>
+        <a href="/en/accessibility" title="Accessibility" data-drupal-link-system-path="node/494">Accessibility</a>
+                  </li>
+                        <li>
+        <a href="/en/contact-us" title="Contacts" data-drupal-link-system-path="node/491">Contacts</a>
+                  </li>
+        </ul>
+  
+
+  </nav>
+
+  </div>
+
+    </footer>
+  
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"investisseurs\/documentation\/informations-reglementees-amf","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"bootstrap\/theme,core\/html5shiv,eu_cookie_compliance\/eu_cookie_compliance_bare,faurecia\/bootstrap-scripts,faurecia\/global-styling,faurecia_main\/back2top,faurecia_main\/vues_investisseur,system\/base,views\/views.ajax,views\/views.module,webform_bootstrap\/webform_bootstrap","theme":"faurecia","theme_token":null},"ajaxTrustedUrl":{"\/en\/investors\/documents\/results-reports-releases-presentations":true,"\/en\/investors\/documents\/amf-regulated-information":true,"\/en":true},"eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":true,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info\u0022\u003E\n    \u003Cdiv class =\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n            \u003Cp\u003EEn continuant \u00e0 naviguer sur ce site, vous acceptez l\u0027utilisation de cookies afin d\u0027am\u00e9liorer votre navigation, et nous permettre de r\u00e9aliser des statistiques de visites.\u003C\/p\u003E\n\u003Cp\u003E\u003Ca href=\u0022\/mentions-legales\u0022 target=\u0022_blank\u0022\u003EEn savoir plus\u003C\/a\u003E\u003C\/p\u003E\n\n        \u003C\/div\u003E\n        \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-agree-button\u0022\u003EJ\u0026#039;accepte\u003C\/button\u003E\n                    \u003C\/div\u003E\n    \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info\u0022\u003E\n    \u003Cdiv class =\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n            \n        \u003C\/div\u003E\n        \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-agree-button\u0022\u003EJ\u0026#039;accepte\u003C\/button\u003E\n                    \u003C\/div\u003E\n    \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":true,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/mentions-legales","popup_link_new_window":true,"popup_position":false,"fixed_top_position":true,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","domain_all_sites":false,"popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Ch2\u003EWe use cookies on this site to enhance your user experience\u003C\/h2\u003E\n\u003Cp\u003EYou have given your consent for us to set cookies.\u003C\/p\u003E\n\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false,"withdraw_button_on_info_popup":false,"cookie_categories":[],"enable_save_preferences_button":true,"fix_first_cookie_category":true,"select_all_categories_by_default":false},"bootstrap":{"forms_has_error_value_toggle":1,"modal_animation":1,"modal_backdrop":"true","modal_focus_input":1,"modal_keyboard":1,"modal_select_text":1,"modal_show":1,"modal_size":""},"views":{"ajax_path":"\/en\/views\/ajax","ajaxViews":{"views_dom_id:058f8f3bc8a380e7a8fe742af1f3fe21abe7498dc4653d062948b0f016bcea36":{"view_name":"publications","view_display_id":"page_2","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":"investisseurs\/documentation\/informations-reglementees-amf","view_dom_id":"058f8f3bc8a380e7a8fe742af1f3fe21abe7498dc4653d062948b0f016bcea36","pager_element":0},"views_dom_id:66d72be9e2d45b4e8ad614953f6c8890877d906807526489f184a65c2c3c1cc3":{"view_name":"publications","view_display_id":"block_6","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":"investisseurs\/documentation\/resultats-rapports-communiques-presentations","view_dom_id":"66d72be9e2d45b4e8ad614953f6c8890877d906807526489f184a65c2c3c1cc3","pager_element":0},"views_dom_id:795f3b2d4f3ba2e1dd1dd8aa86f11ba7631ea62bbdda727509d13ae0814a1e4d":{"view_name":"publications","view_display_id":"block_1","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":"investisseurs\/documentation\/resultats-rapports-communiques-presentations","view_dom_id":"795f3b2d4f3ba2e1dd1dd8aa86f11ba7631ea62bbdda727509d13ae0814a1e4d","pager_element":0},"views_dom_id:3f96a98e82be88d549a8000d1a7255ec70b5bcf5dcb28fc53752228bbcad3481":{"view_name":"publications","view_display_id":"block_3","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":"investisseurs\/documentation\/resultats-rapports-communiques-presentations","view_dom_id":"3f96a98e82be88d549a8000d1a7255ec70b5bcf5dcb28fc53752228bbcad3481","pager_element":0},"views_dom_id:c7cdfa2552f75477230b5df7733ca2ae527de4ad089dcdb61ebef627667490a1":{"view_name":"publications","view_display_id":"block_4","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":"investisseurs\/documentation\/resultats-rapports-communiques-presentations","view_dom_id":"c7cdfa2552f75477230b5df7733ca2ae527de4ad089dcdb61ebef627667490a1","pager_element":0},"views_dom_id:7bb9ee85bbc0018715db6d87f035873332d823aeb9fb4786cc7f656190ae86ae":{"view_name":"publications","view_display_id":"block_2","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":"investisseurs\/documentation\/resultats-rapports-communiques-presentations","view_dom_id":"7bb9ee85bbc0018715db6d87f035873332d823aeb9fb4786cc7f656190ae86ae","pager_element":0},"views_dom_id:c7b0c2e4ba3753b7c6a661240af8381b7a98c668d4ddce310054b8b6a86af3b1":{"view_name":"publications","view_display_id":"block_8","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":"investisseurs\/documentation\/resultats-rapports-communiques-presentations","view_dom_id":"c7b0c2e4ba3753b7c6a661240af8381b7a98c668d4ddce310054b8b6a86af3b1","pager_element":0},"views_dom_id:da79a5db4dadf112982d432108d1c4e535d5ce6e317d716bfb14fbe3d4875172":{"view_name":"droits_votes_actions","view_display_id":"block_1","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":null,"view_dom_id":"da79a5db4dadf112982d432108d1c4e535d5ce6e317d716bfb14fbe3d4875172","pager_element":0},"views_dom_id:90dcc4f7f0d9d6f9ea191b0c10159cd14eb9cf8499e8bfa76dc0e5a685e113fd":{"view_name":"publications","view_display_id":"block_5","view_args":"","view_path":"\/investisseurs\/documentation\/informations-reglementees-amf","view_base_path":"investisseurs\/documentation\/resultats-rapports-communiques-presentations","view_dom_id":"90dcc4f7f0d9d6f9ea191b0c10159cd14eb9cf8499e8bfa76dc0e5a685e113fd","pager_element":0}}},"user":{"uid":0,"permissionsHash":"2c4620309242314aa9d629911410a4ba6be40b63b140dfb5d8934244ac1f75d6"}}</script>
+<script src="/sites/groupe/files/js/js_m_JWDKXR8mix1QUWAIml6QG6Fg_2IaiPwFPH69fJ-2I.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0e6e0c7e1a","applicationID":"597315892","transactionName":"Zl1TZkFYXxcDVkcMX18XcFFHUF4KTXFBEEBQVG1xXEtUOC9QXRBsdV1XU0ZVRSkHW0YpWV9TZUBWXHwFDFxDEFxQTF5AQBQPAwdbVhdRRV14XFdcSSUMUWAKQkU=","queueTime":0,"applicationTime":3946,"atts":"ShpQEAlCTBk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

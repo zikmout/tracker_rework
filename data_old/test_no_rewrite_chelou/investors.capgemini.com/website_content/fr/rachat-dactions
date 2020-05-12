@@ -1,0 +1,359 @@
+
+<!DOCTYPE html>
+<html lang="fr-FR" class="no-js no-svg">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+	<meta charset="UTF-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"6b6b1d1407",applicationID:"209785598"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="https://investors.capgemini.com/fr/wp-content/themes/cg-investors/assets/images/favicon.ico" type="image/x-icon" />
+	<script>var h=document.getElementsByTagName('html')[0];h.className=h.className.replace('no-js','js-enabled')</script>
+	<title>Rachat d’actions &#8211; Capgemini Investors FR</title>
+
+	<style>
+		#wpadminbar{
+			background: #94e617 !important;
+		}
+		#wpadminbar .quicklinks>ul>li>a,
+		#wpadminbar>#wp-toolbar span.ab-label,
+		#wpadminbar>#wp-toolbar div.ab-item {
+			color: #2b0a3d;
+		}
+		#wpadminbar>#wp-toolbar div.ab-item:hover {
+			color: #ffffff;
+		}
+	</style>
+
+	<script>var dataLayer = [ {"type":"post","subtype":"page","context":{"is_front_page":"","is_singular":"1","is_archive":"","is_home":"","is_search":"","is_404":"","is_post_type_archive":"","is_tax":""},"user":{"role":[]},"blog":{"url":"https:\/\/investors.capgemini.com\/fr","id":"3"},"network":{"url":"https:\/\/investors.capgemini.com","id":"1"},"post":{"ID":"3760","slug":"rachat-dactions","published":"2019-05-09 13:52:50","modified":"2019-09-20 18:37:32","comments":"0","template":"page.php","thumbnail":"","author_ID":"3","author_slug":"elzbietawrobel-2"}} ];</script>
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KS927ZX');</script>
+		<!-- End Google Tag Manager -->
+		<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Capgemini Investors FR &raquo; Flux" href="https://investors.capgemini.com/fr/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Capgemini Investors FR &raquo; Flux des commentaires" href="https://investors.capgemini.com/fr/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/investors.capgemini.com\/fr\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='all-css-0' href='https://investors.capgemini.com/fr/_static/??-eJx1j0EOwjAMBD9EahXUigviLWnqFgvHqWIX6O8JROICXFczq124L44k8DqiQlCFkdRg4BSujmnIPm+gtjE2kaQpwA6KEZIYisHC60yiQNlJMpooeKNUAq+KVgur/c8sET4Ms3h2EzHqpoYRlnVgCm//N+Eq8dVrF4yvJ3N5dUO1lD9j6rNVxjrnHE9td+wP3b7v2ifW6GL2' type='text/css' media='all' />
+<style id='wp-block-library-inline-css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='opensans-css'  href='https://fonts.googleapis.com/css?family=Open+Sans%3A400%2C600&#038;ver=5.4' media='all' />
+<link rel='stylesheet' id='wpb-google-fonts-css'  href='https://fonts.googleapis.com/css?family=Ubuntu%3A300%2C400%2C400i%2C500%2C700&#038;ver=5.4' media='all' />
+<link rel='stylesheet' id='all-css-4' href='https://investors.capgemini.com/fr/_static/??-eJxtjF0KwkAMhC9kmiqU9kU8y7pmS3V/QpKl13e1FQR9GJgZ5htcGXzJRtmQY52XrNgqc9dILKSKvulGwdVoXVpy1/IB/1B+BpbCJBCKJEWnSrbh3z0EaeDPS6rwObqTsfOPN7n71/ySzsdhGvvhNPbTEw1gQ9s=' type='text/css' media='all' />
+<script type='text/javascript' src='https://investors.capgemini.com/fr/_static/??-eJzTLy/QzcxLzilNSS3WzwKiwtLUokoopZdVrKOPT4FubmZ6UWJJql5uZh5QsX2uraGphamZhaWpsVkWACXnIL4='></script>
+<script async defer async defer src='https://www.google.com/recaptcha/api.js?ver=1.0.1'></script>
+<script type='text/javascript' src='https://investors.capgemini.com/fr/wp-content/plugins/wp-external-filesystem/public/js/wp-external-filesystem-public.js?m=1554388268g'></script>
+<link rel='https://api.w.org/' href='https://investors.capgemini.com/fr/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://investors.capgemini.com/fr/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://investors.capgemini.com/fr/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.4" />
+<link rel="canonical" href="https://investors.capgemini.com/fr/rachat-dactions/" />
+<link rel='shortlink' href='https://wp.me/PaZqyB-YE' />
+<link rel="alternate" type="application/json+oembed" href="https://investors.capgemini.com/fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finvestors.capgemini.com%2Ffr%2Frachat-dactions%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://investors.capgemini.com/fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Finvestors.capgemini.com%2Ffr%2Frachat-dactions%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Rachat d’actions" />
+<meta property="og:url" content="https://investors.capgemini.com/fr/rachat-dactions/" />
+<meta property="og:description" content="Dans le cadre de l&rsquo;autorisation de rachat d&rsquo;actions approuvée par l&rsquo;assemblée générale, Capgemini pourra procéder à des rachat d&rsquo;actions dans les contextes suivants : le con…" />
+<meta property="article:published_time" content="2019-05-09T13:52:50+00:00" />
+<meta property="article:modified_time" content="2019-09-20T18:37:32+00:00" />
+<meta property="og:site_name" content="Capgemini Investors FR" />
+<meta property="og:image" content="https://s0.wp.com/i/blank.jpg" />
+<meta property="og:locale" content="fr_FR" />
+<meta name="twitter:text:title" content="Rachat d’actions" />
+<meta name="twitter:card" content="summary" />
+
+<!-- End Jetpack Open Graph Tags -->
+</head>
+
+<body class="page-template page-template-page page-template-page-php page page-id-3760">
+
+	
+<!-- TODO: Setup JS into main-menu -->
+
+	<header class="header">
+		<ul class="header-top d-none d-lg-flex">
+			<li><a href="https://www.capgemini.com">Capgemini.com</a></li>
+			<li class="active"><a href="https://investors.capgemini.com/fr/">Investisseurs</a></li>
+		</ul>
+
+		<div class="header-bottom">
+				<a href="https://investors.capgemini.com/fr/" class="header__logo"><img src="https://investors.capgemini.com/fr/wp-content/themes/cg-investors/assets/images/logo.svg" alt="Capgemini Investors FR"></a>
+
+			<nav class="nav">
+				<input type="checkbox" id="menu_mobile" class="nav-mobile-checkbox d-lg-none">
+				<label for="menu_mobile" class="nav-mobile-label d-lg-none"><span class="d-none">Menu mobile</span></label>
+
+				<div class="nav-inner">
+					<ul id="menu-main-menu" class="menu"><li id="menu-item-3768" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3768"><a>Résultats &#038; rapports financiers</a>
+<ul class="sub-menu">
+	<li id="menu-item-11427" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11427"><a href="https://investors.capgemini.com/fr/resultats-financiers/">Résultats financiers</a></li>
+	<li id="menu-item-3779" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3779"><a href="https://investors.capgemini.com/fr/evenements-financier/">Evénements financiers</a></li>
+	<li id="menu-item-12646" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12646"><a href="https://investors.capgemini.com/fr/rapports-annuels/">Rapports annuels</a></li>
+	<li id="menu-item-11429" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11429"><a href="https://investors.capgemini.com/fr/information-reglementee/">Information réglementée</a></li>
+	<li id="menu-item-3780" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3780"><a href="https://investors.capgemini.com/fr/toutes-les-publications/">Toutes les publications</a></li>
+</ul>
+</li>
+<li id="menu-item-3769" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3769"><a href="#">Calendrier &#038; communiqués</a>
+<ul class="sub-menu">
+	<li id="menu-item-11430" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11430"><a href="https://investors.capgemini.com/fr/communiques-financiers/">Communiqués financiers</a></li>
+	<li id="menu-item-11431" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11431"><a href="https://investors.capgemini.com/fr/calendrier/">Calendrier</a></li>
+</ul>
+</li>
+<li id="menu-item-3770" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-3770"><a href="#">Actionnaires</a>
+<ul class="sub-menu">
+	<li id="menu-item-11432" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11432"><a href="https://investors.capgemini.com/fr/devenir-actionnaire/">Devenir actionnaire</a></li>
+	<li id="menu-item-11433" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11433"><a href="https://investors.capgemini.com/fr/assemblee-generale/">Assemblée Générale</a></li>
+	<li id="menu-item-11434" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11434"><a href="https://investors.capgemini.com/fr/lettre-aux-actionnaires/">Lettre aux actionnaires</a></li>
+</ul>
+</li>
+<li id="menu-item-3771" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-3771"><a href="#">Actions &#038; Obligations</a>
+<ul class="sub-menu">
+	<li id="menu-item-11435" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11435"><a href="https://investors.capgemini.com/fr/structure-de-lactionnariat/">Structure de l’actionnariat</a></li>
+	<li id="menu-item-11436" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11436"><a href="https://investors.capgemini.com/fr/dividendes/">Dividendes</a></li>
+	<li id="menu-item-11437" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-11437"><a href="https://investors.capgemini.com/fr/rachat-dactions/" aria-current="page">Rachat d’actions</a></li>
+	<li id="menu-item-11438" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11438"><a href="https://investors.capgemini.com/fr/dette-obligations/">Dette &#038; Obligations</a></li>
+	<li id="menu-item-11439" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11439"><a href="https://investors.capgemini.com/fr/analystes/">Analystes</a></li>
+</ul>
+</li>
+<li id="menu-item-3778" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3778"><a href="https://investors.capgemini.com/fr/nous-contacter/">Nous contacter</a></li>
+</ul>
+					<div class="header-search-mobile d-sm-none">
+						<a href="https://investors.capgemini.com/fr/search" class="button header-search">Rechercher</a>
+					</div>
+
+					<div class="header-top-mobile d-lg-none">
+						<span class="header-top-mobile-name">Changer de site</span>
+						<ul>
+							<li><a href="https://www.capgemini.com">Capgemini.com</a></li>
+							<li class="active"><a href="https://investors.capgemini.com/fr/">Investisseurs</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<div class="header-right">
+				<nav class="lang">
+						<ul>
+		<li ><a href="https://investors.capgemini.com/en/?p=3756">EN</a></li>
+		<li class="active"><a href="#">FR</a></li>
+	</ul>
+					</nav>
+				<a href="https://investors.capgemini.com/fr/search" class="button header-search d-none d-sm-inline-flex">Rechercher</a>
+			</div>
+
+		</div>
+	</header>
+
+	
+<div class="hero ">
+	<div class="container">
+		<div class="row">
+
+			<div class="hero-texts 				col-lg-12 ">
+
+				
+									<span class="hero-title">Rachat d’actions</span>
+				
+				
+					<span class="hero-date">
+
+											</span>
+				
+									<div class="hero-lead">
+						Dans le cadre de l'autorisation de rachat d'actions approuvée par l'assemblée générale, Capgemini pourra procéder à des rachat d'actions dans les contextes suivants : le contrat de liquidité, le programme pluriannuel de rachat d'actions et des opérations de rachats ad-hoc.					</div>
+				
+				
+				
+				
+			</div>
+								</div>
+	</div>
+</div>
+
+
+	<section class="container main-content">
+		<div class="row">
+			<div class="col-12 col-md-8 offset-md-2 article-text">
+				<p>Dans le cadre de l’autorisation de rachat d’actions votée en assemblée générale, Capgemini est amené à effectuer des rachats d’actions, conformément au programme de rachat d’actions, dans les contextes suivants :</p>
+<ul>
+<li>le contrat de liquidité</li>
+<li>le programme pluriannuel de rachat d’actions</li>
+<li>d’autres opérations de rachat d’actions</li>
+</ul>
+<h2><strong>Le contrat de liquidité</strong></h2>
+<p>Le contrat de liquidité souscrit auprès d’un prestataire de services d’investissement a pour but de favoriser la liquidité du titre Capgemini et une plus grande régularité de ses cotations conformément à la pratique de marché admise par l’Autorité des marchés financiers.</p>
+<p>Le contrat de liquidité fait l’objet d’un bilan semestriel consultable <a href="https://investors.capgemini.com/fr/information-reglementee/"><u>ici</u></a>.</p>
+<p>En 2018, il a ainsi été procédé à l’achat pour le compte de Capgemini SE d’un total de 1 585 947 actions représentant 0,95 %  du capital au 31 décembre 2018, à un cours moyen de 104,32 euros. Sur la même période, il a été procédé à la vente de 1 397 520 actions Capgemini, représentant 0,84 % du capital au 31 décembre 2018, à un cours moyen de 105,80 euros. À la clôture de l’exercice, le compte de liquidité présentait un solde de 217 358 actions (soit 0,13 % du capital) et d’environ 2 millions d’euros.</p>
+<h2><strong>Le programme pluriannuel de rachat d’actions</strong></h2>
+<p>Dans le cadre de la gestion active du capital social, le Conseil d’Administration de Capgemini a décidé en février 2016 de lancer un programme pluriannuel de rachat d’actions pour un montant total de 600 millions d’euros avant de le porter en décembre 2016 à 1 100 millions d’euros.</p>
+<p>Les rachats d’actions effectués au titre de ce programme pluriannuel ont été (sur la base de la date d’exécution des ordres d’achat, et non celle du règlement livraison) :</p>
+<table>
+<tbody>
+<tr>
+<td width="106"><strong>Année</strong></td>
+<td width="158"><strong>Montant</strong><br />
+(en millions d’euros)</td>
+<td width="154"><strong>Volume<br />
+</strong>(nombre d’actions)</td>
+<td width="154"><strong>Prix moyen<br />
+</strong>(en euros)</td>
+</tr>
+<tr>
+<td width="106">2016<sup>*</sup></td>
+<td width="158">324</td>
+<td width="154">3 973 710</td>
+<td width="154">81,45</td>
+</tr>
+<tr>
+<td width="106">2017</td>
+<td width="158">176</td>
+<td width="154">1 958 761</td>
+<td width="154">90,02</td>
+</tr>
+<tr>
+<td width="106">2018</td>
+<td width="158">200</td>
+<td width="154">1 831 810</td>
+<td width="154">109,18</td>
+</tr>
+<tr>
+<td colspan="4" width="572">* en 2016, 203 530 actions ont également été rachetées au titre d’un précédent programme (à un prix moyen de 75,66 euros pour un montant total de 15 millions d’euros)</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h2><strong>Autres opérations de rachat d’actions</strong></h2>
+<p>Toujours dans le cadre des autorisations votées en assemblée générale, Capgemini peut également être amené à racheter des actions en complément des rachats effectués dans le cadre du programme pluriannuel de rachat d’actions.</p>
+<p>Capgemini met en place des plans d’actionnariat salarié (« ESOP », Employee Share Ownership Plan) qui visent à associer les collaborateurs au développement et à la performance du Groupe. Afin de neutraliser la dilution résultant de l’augmentation de capital de ces plans ESOP, Capgemini peut mettre en place un plan spécifique de rachat d’actions.</p>
+<p>Ainsi, en 2017 puis en 2018, dans le cadre des 4<sup>ème</sup>  et 5<sup>ème</sup> plans ESOP, Capgemini a procédé à des rachats d’actions pour respectivement 360 millions d’euros et 264 millions d’euros.</p>
+<table>
+<tbody>
+<tr>
+<td width="106"><strong>Année</strong></td>
+<td width="158"><strong>Montant</strong><br />
+(en millions d’euros)</td>
+<td width="154"><strong>Volume<br />
+</strong>(nombre d’actions)</td>
+<td width="154"><strong>Prix moyen<br />
+</strong>(en euros)</td>
+</tr>
+<tr>
+<td width="106"></td>
+<td width="158"></td>
+<td width="154"></td>
+<td width="154"></td>
+</tr>
+<tr>
+<td width="106">2017</td>
+<td width="158">360</td>
+<td width="154">3 522 495</td>
+<td width="154">102,20</td>
+</tr>
+<tr>
+<td width="106">2018</td>
+<td width="158">264</td>
+<td width="154">2 500 000</td>
+<td width="154">105,46</td>
+</tr>
+</tbody>
+</table>
+<p>Ces rachats sont également sujets à une déclaration réglementaire de « transactions sur actions propres » à J+7 (consultable <a href="https://investors.capgemini.com/fr/regulated-information/?fiscal-year=2019#expand_reg-notice-of-trading-on-own-shares"><u>ici</u></a>).</p>
+			</div>
+		</div>
+	</section>
+
+	
+
+
+	<footer class="footer">
+		<div class="container">
+
+			<div class="row footer-top">
+				<div class="d-none d-md-block col-md-3 logo">
+					<img alt="Logo Capgemini" src="https://investors.capgemini.com/fr/wp-content/themes/cg-investors/assets/images/logo.svg">
+				</div>
+
+				<div class="col-12 col-md-9 col-lg-6">
+					<div class="row footer-row">
+						<div class="col-6 col-md-4"><h3 class="footer-header">Sur ce site</h3><ul class="footer-top-nav"><li><span class="footer-top__list location-le-groupe"">  </span><a href="https://www.capgemini.com/fr-fr/notre-groupe/">Le Groupe</a></li><li><span class="footer-top__list location-11119"">  </span><a href="https://investors.capgemini.com/fr/resultats-financiers/">Résultats financiers</a></li><li><span class="footer-top__list location-11120"">  </span><a href="https://investors.capgemini.com/fr/communiques-financiers/">Communiqués financiers</a></li><li><span class="footer-top__list location-11123"">  </span><a href="https://investors.capgemini.com/fr/structure-de-lactionnariat/">Structure de l&rsquo;actionnariat</a></li><li><span class="footer-top__list location-11122"">  </span><a href="https://investors.capgemini.com/fr/dette-obligations/">Dette &amp; Obligations</a></li><li><span class="footer-top__list location-11124"">  </span><a href="https://investors.capgemini.com/fr/nous-contacter/">Nous contacter</a></li></ul></div><div class="col-6 col-md-4"><h3 class="footer-header">Nos sites</h3><ul class="footer-top-nav"><li><span class="footer-top__list location-capgemini-france"">  </span><a href="https://www.capgemini.com/fr-fr/">Capgemini.com</a></li><li><span class="footer-top__list location-site-investisseurs"">  </span><a href="/fr/">Site Investisseurs</a></li></ul></div>
+						<div class="col-6 col-md-4 footer-brands">
+							
+<h3 class="footer-header">Nos marques:</h3>
+
+<ul class="footer-top-nav">
+	<li><a href="https://www.altran.com/fr/fr/" class="altran" target="_blank"><img alt="Altran part of Capgemini" src="https://investors.capgemini.com/fr/wp-content/themes/cg-investors/assets/images/altran_logo_new.svg"></a></li>
+	<li><a href="https://www.capgemini.com/service/invent/" class="capconsult"><img alt="Logo Capgemini Invent" src="https://investors.capgemini.com/fr/wp-content/themes/cg-investors/assets/images/capgemini-invent.svg"></a></li>
+	<li><a href="https://www.sogeti.com/" class="sogeti" target="_blank"><img alt="Sogeti par Capgemini" src="https://investors.capgemini.com/fr/wp-content/themes/cg-investors/assets/images/sogeti-by-capgemini.svg"></a></li>
+</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-bottom">
+				<div class="footer-bottom-nav">
+					<div class="menu-horizontal-footer-menu-container"><ul id="menu-horizontal-footer-menu" class="menu"><li id="menu-item-11113" class="external-link menu-item menu-item-type-custom menu-item-object-custom menu-item-11113"><a target="_blank" rel="noopener noreferrer" href="https://www.capgemini.com/fr-fr/conditions-dutilisation/">Conditions générales d’utilisation</a></li>
+<li id="menu-item-11114" class="external-link menu-item menu-item-type-custom menu-item-object-custom menu-item-11114"><a target="_blank" rel="noopener noreferrer" href="https://www.capgemini.com/fr-fr/charte-de-protection-des-donnees-personnelles-site-internet/">Données personnelles</a></li>
+<li id="menu-item-11115" class="external-link menu-item menu-item-type-custom menu-item-object-custom menu-item-11115"><a target="_blank" rel="noopener noreferrer" href="https://www.capgemini.com/fr-fr/politique-dutilisation-des-medias-sociaux-de-capgemini/">Politique d&rsquo;utilisation des médias sociaux</a></li>
+<li id="menu-item-11116" class="external-link menu-item menu-item-type-custom menu-item-object-custom menu-item-11116"><a target="_blank" rel="noopener noreferrer" href="https://www.capgemini.com/legal-information-mentions-legales/">Mentions Légales</a></li>
+</ul></div>				</div>
+
+				<ul class="footer-social">
+																			</ul>
+			</div>
+
+			<div class="footer-copyright " role="contentinfo">Tous droits réservés par Capgemini. <span>Copyright &copy; 2020</span></div>
+
+		</div>
+	</footer>
+
+	<script src='https://investors.capgemini.com/fr/wp-content/plugins/cg-shortcodes/assets/js/cg-shortcodes-front.js?ver=1.0.0'></script>
+<script>
+		jQuery(function($){$("a.cg_footnote_link").click( function(e){ e.preventDefault(); var t = $( $(this).attr("href") ); if (!t.get(0)) { return false; } $("html,body").animate( { scrollTop: t.offset().top - 20 }, 400 ); } ) });
+</script>
+<script>
+var IRNOTIF = {"ajaxURL":"https:\/\/investors.capgemini.com\/fr\/wp-admin\/admin-ajax.php","strings":{"submitted":"Submitted"}};
+</script>
+<script>
+var IR = {"please_select":"S\u00e9lectionner","ajaxURL":"https:\/\/investors.capgemini.com\/fr\/wp-admin\/admin-ajax.php"};
+</script>
+<script>
+var PF = {"ajaxURL":"https:\/\/investors.capgemini.com\/fr\/wp-admin\/admin-ajax.php","ajaxNonce":"e4b4152d3d","strings":{"remove_file":"remove file","select_file":"Select File","uploading":"uploading...","file_selected":"File selected","default_error":"This field's value is invalid!","required_error":"This field is required!","email_error":"Please enter a valid email address!","date_format_error":"Please enter date in valid format!"}};
+</script>
+<script type='text/javascript' src='https://investors.capgemini.com/fr/_static/??-eJydkE2OwjAMhS80aYRQ+VmM5hCcoCRu4yqJM7YD4vZECKQKwQJ29vP7nmXbczGOskJWW2KdMIsNyUya7CACKhZObSbdLD/2hRfZZFIc0Q2K1IQ7NbeqlGdKAyQQ6yaD+QSixEtg/q/Al06punA4Y4EuYf4sIpIfJHzBFROAyUhED/wB61HUHmv2Ed69qGGFqQCbkTgtty5lM3LjHhmYXawebq7WQjqCv1/1l35X/a7f7Pb9ejtfAU6yp/k='></script>
+<script type='text/javascript' src='https://stats.wp.com/e-202018.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.4.2',blog:'162403457',post:'3760',tz:'0',srv:'investors.capgemini.com'} ]);
+	_stq.push([ 'clickTrackerInit', '162403457', '3760' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"6b6b1d1407","applicationID":"209785598","transactionName":"YANaNUJSCkUHVUZYDFlJeQJEWgtYSUZTVgY=","queueTime":0,"applicationTime":144,"atts":"TERNQwpIGRpEVxALGEob","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

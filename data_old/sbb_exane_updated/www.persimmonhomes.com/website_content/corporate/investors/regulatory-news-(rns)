@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+    <!-- Designed & Developed By : Jones and Palmer Limited, www.jonesandpalmer.co.uk -->
+    <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8 ie" lang="en"><![endif]-->
+    <!--[if IE 8]><html class="no-js lt-ie9 ie" lang="en"><![endif]-->
+    <!--[if IE]><html class="no-js ie" lang="en"><![endif]-->
+    <!--[if gt IE 8]><!-->
+    <html class="no-js" lang="en">
+    <!--<![endif]-->
+    <head id="ContentPlaceHolderDefault_head"><title>
+	Regulatory News (RNS)
+</title>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="width">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="root" content="1065">
+    
+
+<link href="/corporate/css/bootstrap.min.css" rel="stylesheet" type="text/css" /><link href="/corporate/css/jp-content.css" rel="stylesheet" type="text/css" /><link href="/corporate/css/brand.css?v=017" rel="stylesheet" type="text/css" /><link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/b231278b-523e-478b-bbbf-4c8592492ea6.css" />
+			
+        <!--[if IE 8]><link href="/corporate/css/ie-styles.css?v=003" rel="stylesheet" type="text/css" /><![endif]-->	
+			
+        <link rel="shortcut icon" href="/corporate/favicon.ico" /><link rel="apple-touch-icon" href="/corporate/iphoneIcon.png" /><script id="ContentPlaceHolderDefault_jQuery" type="text/javascript" src="/corporate/umbraco_client/ui/jquery.js"></script><script id="ContentPlaceHolderDefault_DatePickerJs" type="text/javascript" src="/corporate/scripts/vendor/bootstrap-datepicker.js"></script><link id="ContentPlaceHolderDefault_DatePickerCss" rel="stylesheet" type="text/css" href="/corporate/css/vendor/datepicker.css"></link><link id="ContentPlaceHolderDefault_RSS_4496" rel="alternate" type="application/rss+xml" href="/corporate/investors/regulatory-news-(rns)/rssRns" title="RSS Feed for Regulatory News (RNS)"></link></head>
+    <body class='range'>
+        <noscript>
+            <div class="alert alert-error">
+                <strong>No Javascript detected!</strong> This website works best with Javascript enabled. Here is some help to get you started - <a href="https://enable-javascript.com/" target="_blank">How to enable Javascript</a>
+            </div>
+        </noscript>
+        <div class="modal hide" id="modal">
+            <article>
+                <header>
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">×</button>
+                        <h1></h1>
+                    </div>
+                </header>
+                <div class="modal-body">
+                    <p>loading</p>
+                </div>
+            </article>
+        </div>
+        <form method="post" action="/corporate/investors/regulatory-news-(rns)" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUENTM4MWRkYM+mEy2BDReflTlTwQQ/sfl8sCDumbNiTchHNTKe0i0=" />
+</div>
+
+
+<script type="text/javascript">
+//<![CDATA[
+$(function(){$('#dtFrom,#dtTo').datepicker(
+    {
+    todayBtn: "linked",
+    endDate: "27/11/2019",
+    todayHighlight: true,
+    clearBtn: true,
+    autoclose: true
+    })
+;});$(document).ready(function(){$('.glossary').tooltip();});
+                 var _gaq = _gaq || [];
+                 _gaq.push(['_setAccount', 'UA-53333587-1']);
+                 _gaq.push(['_trackPageview']);
+                (function() {
+                    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                })();
+            var UC_ITEM_INFO_SERVICE = "/umbraco/uComponents/Items";var UC_IMAGE_SERVICE = "/umbraco/controls/Images/ImageViewerUpdater.asmx/UpdateImage";var UC_SETTINGS = { ENABLE_DRAG_AND_DROP: false, ENABLE_TRAY_PEEK: false};//]]>
+</script>
+
+            
+
+
+            <div class="slider-menu-holder">
+                <div class="slider-left" data-loaded="false"></div>
+                <div class="slider-right" data-loaded="false"></div>
+            </div>
+            <div id="wrapr" class="wrap">
+                <a name="topAnchor" id="topAnchor"></a>
+                <!-- Top Section -->
+				<div id="page-top"> 
+                    <div class="container">
+                        <header>
+                            <div class="logo">
+        <a href="/corporate/" title="Back to Persimmon Plc homepage">
+            <img src="/corporate/media/71466/persimmon_plc_logo.png" alt="Persimmon Plc">
+        </a>
+    </div>
+
+							<div class="search search-collapse">
+    <div class="form form-search">
+        <div class="input-append clearfix">
+            <button type="submit" id="searchstringsubmit" name="submitBtn" value="searchSubmited" class="btn search-button"><i class="icon-search icon-horizontal"></i></button>
+            <input type="text" class="span12 search-query" id="searchstring" placeholder="search" autocomplete="off" name="searchstring" data-submit="searchstringsubmit" />
+        </div>
+        <div id="searchresults"></div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        var content = $('#searchstring').val();
+
+        $('#searchstring').keypress(function (e) {
+            if (e.which == 13) {
+                e.preventDefault();
+            }
+        });
+
+        $('#searchstring').keyup(function () {
+            if ($('#searchstring').val().length > 2) {
+                if ($('#searchstring').val() != content) {
+                    content = $('#searchstring').val();
+                    $.ajax({
+                        type: "POST",
+                        //url: "/search", // Preview version
+                        url: "/corporate/search", // Live version
+                        data: "q=" + content + "&t=abr",
+                        success: function (data) {
+                            $('#searchresults').html($(data).find("#results").html());
+                        }
+                    });
+                }
+            }
+            else {
+                $("#searchresults").children().remove();
+            }
+        });
+    });
+</script>
+
+							
+
+
+
+
+
+
+
+    <a href="#" alt="" id="menuAnchor"></a>
+    <nav role="navigation">
+        <div class="navbar">
+            <div class="nav-inner">
+               
+                <button type="button" class="btn btn-navbar collapsed" data-jp="snap" data-snap-target=".slider-right">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="nav-collapse collapse">
+                    <ul id="nav" class="nav">
+                                <li class="">
+            <a href="/corporate/" class="dropdown-toggle"  title="Home">Home </a>
+        </li>
+        <li class="dropdown">
+            <a href="/corporate/about-us" class="dropdown-toggle"  title="About Us">About Us <b class="caret"></b></a>
+    <ul class="subnav dropdown-submenu">
+            <li><a href="/corporate/about-us/corporate-profile" class=""  title="Corporate Profile">Corporate Profile</a></li>
+            <li><a href="/corporate/about-us/our-performance" class=""  title="Our Performance">Our Performance</a></li>
+            <li><a href="/corporate/about-us/our-history" class=""  title="Our History">Our History</a></li>
+            <li><a href="/corporate/about-us/our-brands" class=""  title="Our Brands">Our Brands</a></li>
+            <li><a href="/corporate/about-us/national-presence" class="range101"  title="National Presence">National Presence</a></li>
+            <li><a href="/corporate/about-us/our-customer-pledge" class=""  title="Our Customer Pledge">Our Customer Pledge</a></li>
+    </ul>
+        </li>
+        <li class="current dropdown">
+            <a href="/corporate/investors" class="dropdown-toggle"  title="Investor Relations">Investors <b class="caret"></b></a>
+    <ul class="subnav dropdown-submenu">
+            <li><a href="/corporate/investors/at-a-glance" class=""  title="At a Glance">At a Glance</a></li>
+            <li><a href="/corporate/investors/our-business/group-chief-executives-welcome" class=""  title="Our Business">Our Business</a></li>
+            <li><a href="/corporate/investors/corporate-governance" class=""  title="Corporate Governance">Corporate Governance</a></li>
+            <li><a href="/corporate/investors/shareholder-information/capital-return-plan" class=""  title="Shareholder Information">Shareholder Information</a></li>
+            <li><a href="/corporate/investors/share-price-information/share-price" class=""  title="Share Price Information">Share Price Information</a></li>
+            <li><a href="/corporate/investors/regulatory-news-(rns)" class="active current"  title="Regulatory News (RNS)">Regulatory News (RNS)</a></li>
+            <li><a href="/corporate/investors/results-presentations-and-financial-reports" class="range99"  title="Results, Presentations and Financial Reports">Results, Presentations and Financial Reports</a></li>
+            <li><a href="/corporate/investors/latest-highlights" class=""  title="Latest Highlights">Latest Highlights</a></li>
+            <li><a href="/corporate/investors/five-year-financial-summary" class=""  title="Five Year Financial Summary">Five Year Financial Summary</a></li>
+            <li><a href="/corporate/investors/frequently-asked-questions" class=""  title="Frequently Asked Questions ">Frequently Asked Questions</a></li>
+            <li><a href="/corporate/investors/alert-service" class=""  title="Alert Service">Alert Service</a></li>
+    </ul>
+        </li>
+        <li class="dropdown">
+            <a href="/corporate/corporate-responsibility/chief-executives-introduction" class="dropdown-toggle"  title="Corporate Responsibility">Corporate Responsibility <b class="caret"></b></a>
+    <ul class="subnav dropdown-submenu">
+            <li><a href="/corporate/corporate-responsibility/chief-executives-introduction" class=""  title="Chief Executives Introduction">Chief Executive&#39;s Introduction</a></li>
+            <li><a href="/corporate/corporate-responsibility/sustainability-reports" class="range99"  title="Sustainability Reports">Sustainability Reports</a></li>
+            <li><a href="/corporate/corporate-responsibility/sustainability-in-action-case-studies" class=""  title="Sustainability in Action - Case Studies">Sustainability in Action - Case Studies</a></li>
+            <li><a href="/corporate/corporate-responsibility/kpis" class=""  title="KPI&#39;s ">KPIs</a></li>
+            <li><a href="/corporate/corporate-responsibility/gender-pay-gap-reports" class="range99"  title="Gender Pay Gap Reports">Gender Pay Gap Reports</a></li>
+            <li><a href="https://www.persimmonhomes.com/corporate/media/381715/modern-slavery-statement.pdf" class="" target="_blank" title="Modern Slavery Statement (opens in a new window)">Modern Slavery Statement</a></li>
+            <li><a href="/corporate/corporate-responsibility/policies" class=""  title="Policies">Policies</a></li>
+            <li><a href="/corporate/corporate-responsibility/feedback" class=""  title="Feedback ">Feedback</a></li>
+    </ul>
+        </li>
+        <li class="">
+            <a href="/corporate/careers" class="dropdown-toggle"  title="Careers">Careers </a>
+        </li>
+        <li class="">
+            <a href="/corporate/land-requirements" class="dropdown-toggle"  title="Land Requirements">Land Requirements </a>
+        </li>
+        <li class="range98 dropdown">
+            <a href="/corporate/contact-us" class="dropdown-toggle"  title="Contact Us">Contact Us <b class="caret"></b></a>
+    <ul class="subnav dropdown-submenu">
+    </ul>
+        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+				        </header>
+                    </div>
+                </div>
+				
+                <!-- /containerfluid -->
+                <!-- Mid Section -->
+                
+
+	<div id="page-middle" class="standard-page">
+        <div class="container">			
+			<div class="row-fluid">				
+				<div class="span4 sub-menu-holder no-print">
+					
+
+
+
+
+<nav role="navigation" class="sub-menu">
+    <ul class="nav">
+            <li class="first"><a href="/corporate/investors/at-a-glance" title="At a Glance">At a Glance</a>
+            </li>
+            <li><a href="/corporate/investors/our-business/group-chief-executives-welcome" title="Our Business">Our Business</a>
+            </li>
+            <li><a href="/corporate/investors/corporate-governance" title="Corporate Governance">Corporate Governance</a>
+            </li>
+            <li><a href="/corporate/investors/shareholder-information/capital-return-plan" title="Shareholder Information">Shareholder Information</a>
+            </li>
+            <li><a href="/corporate/investors/share-price-information/share-price" title="Share Price Information">Share Price Information</a>
+            </li>
+            <li class="active current"><a href="/corporate/investors/regulatory-news-(rns)" title="Regulatory News (RNS)">Regulatory News (RNS)</a>
+            </li>
+            <li class="range99"><a href="/corporate/investors/results-presentations-and-financial-reports" title="Results, Presentations and Financial Reports">Results, Presentations and Financial Reports</a>
+            </li>
+            <li><a href="/corporate/investors/latest-highlights" title="Latest Highlights">Latest Highlights</a>
+            </li>
+            <li><a href="/corporate/investors/five-year-financial-summary" title="Five Year Financial Summary">Five Year Financial Summary</a>
+            </li>
+            <li><a href="/corporate/investors/frequently-asked-questions" title="Frequently Asked Questions ">Frequently Asked Questions</a>
+            </li>
+            <li class="last"><a href="/corporate/investors/alert-service" title="Alert Service">Alert Service</a>
+            </li>
+
+    </ul>
+
+</nav>
+					<!--mobile ddl subnav-->
+
+
+
+
+<nav role="navigation" class="sub-menu mobile-sub-menu">
+          <select class="select-menu">            <option class="first" value="/corporate/investors/at-a-glance" title="At a Glance">At a Glance</option>
+            <option value="/corporate/investors/our-business/group-chief-executives-welcome" title="Our Business">Our Business</option>
+            <option value="/corporate/investors/corporate-governance" title="Corporate Governance">Corporate Governance</option>
+            <option value="/corporate/investors/shareholder-information/capital-return-plan" title="Shareholder Information">Shareholder Information</option>
+            <option value="/corporate/investors/share-price-information/share-price" title="Share Price Information">Share Price Information</option>
+            <option class="active current" selected="selected" value="/corporate/investors/regulatory-news-(rns)" title="Regulatory News (RNS)">Regulatory News (RNS)</option>
+            <option class="range99" value="/corporate/investors/results-presentations-and-financial-reports" title="Results, Presentations and Financial Reports">Results, Presentations and Financial Reports</option>
+            <option value="/corporate/investors/latest-highlights" title="Latest Highlights">Latest Highlights</option>
+            <option value="/corporate/investors/five-year-financial-summary" title="Five Year Financial Summary">Five Year Financial Summary</option>
+            <option value="/corporate/investors/frequently-asked-questions" title="Frequently Asked Questions ">Frequently Asked Questions</option>
+            <option class="last" value="/corporate/investors/alert-service" title="Alert Service">Alert Service</option>
+</select>
+
+</nav><!--end mobile ddl subnav-->
+					
+
+        	<div class="row-fluid">
+
+    <div class="tabs-holder span12 abstract abstract-feature-shareprice themeGreen abstract-feature">
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#shareprice" data-toggle="tab">Share Price</a></li>
+            <li><a href="#rns" data-toggle="tab">Regulatory News</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active" id="shareprice">
+
+
+
+    <div id="shareprice" class="abstract-feature-shareprice span12">
+        <div class="block-panel">
+        <section>
+ <p class="price">2563.00p</p>  <p class="change">Change: <strong>-5.00p (-0.19%) <i class="icon-angle-down">down</i></strong></p> 				<p class="disclaimer">Data delayed at least 15 minutes</p>
+ <p class="offer">High<span>2585.00p</span></p>  <p class="bid">Low<span>2550.00p</span></p>  <p class="last-trade">Last<span>2563.00p</span></p>  <p class="symbol">Persimmon (LSE) trade on the London. (Symbol: PSN)</p>   
+			<a href="/corporate/investors/share-price-information/share-price">View Share Price Information</a>
+        </section>
+        </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            setInterval(function(){
+                $.ajax({
+                    type: "GET",
+                    url: "/corporate/investors/regulatory-news-(rns)",
+                    data: "q=shareprice",
+                    success: function (data) {
+                        $("#shareprice").children().remove();
+                        $("#shareprice").html($(data).find("#shareprice").html());
+                    }
+                });
+            }, 450000);
+        });
+    </script>
+    </div>
+</div>
+            <div class="tab-pane" id="rns">
+				
+        <div class="list span12">
+                <a title="Subscribe to RSS feed" class="sprite-rss" href="/corporate/investors/regulatory-news-(rns)/rssRns">RSS</a>
+            
+
+                <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14312720" title="Additional Listing">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Additional Listing [ALS] </strong>
+                                        <em>        <em class="date">18/11/2019</em>        
+</em>
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14297896" title="Third Quarter Trading Statement ">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Third Quarter Trading Statement  [TST] </strong>
+                                        <em>        <em class="date">07/11/2019</em>        
+</em>
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14291240" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                        <em>        <em class="date">01/11/2019</em>        
+</em>
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+
+        </div>
+    
+    
+
+
+ 
+				<a class="view-rns" href="/corporate/investors/regulatory-news-(rns)" title="Regulatory News Service">View RNS</a>
+			</div>
+        </div>
+				
+				
+    </div>
+
+
+</div><div class="row-fluid">            <div class="themeWhite related span12">
+                <div class="block-panel">
+                <section>
+<h1>Related Items</h1>                    <ul class="thumbnails">
+                            <li class="span12">
+                                <a href="/corporate/investors/shareholder-information/meeting-information" >
+                                    <div class="thumbnail">
+                                        <div class="caption">
+                                            <strong>Meeting information</strong>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="span12">
+                                <a href="/corporate/investors/results-presentations-and-financial-reports" >
+                                    <div class="thumbnail">
+                                        <div class="caption">
+                                            <strong>Financial Reports</strong>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="span12">
+                                <a href="/corporate/investors/share-price-information/share-calculator" >
+                                    <div class="thumbnail">
+                                        <div class="caption">
+                                            <strong>Share Calculator</strong>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="span12">
+                                <a href="/corporate/investors/alert-service" >
+                                    <div class="thumbnail">
+                                        <div class="caption">
+                                            <strong>Alert Service</strong>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                    </ul>
+                </section>
+                </div>
+            </div>
+
+
+			 </div>
+     
+				</div>
+				<!-- /span -->
+				<div id="content" role="main" class="span8">
+					<article class="article">
+							<!-- main content area-->
+						
+							<header>
+								<div class="page-header">
+                    				
+
+<nav id="breadcrumb">
+      <ul class="breadcrumb">
+          <li class=first><a href="/corporate/" title="umbraco.MacroEngines.PropertyResult"><span>Home<i class="icon-angle-right"></i></span></a></li>
+          <li ><a href="/corporate/investors" title="umbraco.MacroEngines.PropertyResult"><span>Investors<i class="icon-angle-right"></i></span></a></li>
+        
+        <li class="last"><em>Regulatory News (RNS)</em></li>
+      </ul>
+</nav>
+
+
+									<h1 class="page-title">
+										Regulatory News (RNS)
+										
+									</h1>
+								</div>
+							</header>
+					
+							
+							<a name="contentAnchor" id="contentAnchor"></a>
+						
+							<div class="content-area">
+								<div class="row-fluid">
+									<div class="span12">
+										
+
+
+										
+	
+<div class="well">
+    <div class="form-inline">
+	    <fieldset>
+		    <legend>RNS search options</legend>
+		    <div class="row-fluid">
+			    <div class="span12">
+				    <input type="submit" name="submitBtn" id="submitDefault" class="btn" value="View the latest RNS" />
+				    <hr>
+			    </div>
+		    </div>
+		    <div class="row-fluid">
+			    <div class="span6">
+				    <div class="control-group">
+					    <label class="control-label" for="txtKeywords" id="lblKeywords">Keyword/s</label>
+                        <div class="controls">
+					        <input name="txtKeywords" type="text" id="txtKeywords" class="" data-submit="rnssearchsubmit" />
+                        </div>
+				    </div>
+                </div>
+				<div class="span6">
+					<div class="row-fluid">
+                        <div class="span6">
+                            <div class="control-group">
+						        <label class="control-label" for="dtFrom">Date From</label>
+                                <div class="controls">
+						            <input type="text" class="input-small" data-date-format="dd/mm/yyyy" id="dtFrom" name="dtFrom" data-submit="rnssearchsubmit">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span6">
+                            <div class="control-group">
+						        <label for="dtTo">Date To</label>
+                                <div class="controls">
+						            <input type="text" class="input-small" data-date-format="dd/mm/yyyy" id="dtTo" name="dtTo" data-submit="rnssearchsubmit">
+                                </div>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+            <div class="row-fluid">
+                <div class="span12">
+					<input type="submit" name="submitBtn" id="rnssearchsubmit" class="btn btn-primary" value="Search the RNS" />
+				</div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+     <h2 style="display:none;">Results</h2>         <div class="list span12">
+                <a title="Subscribe to RSS feed" class="sprite-rss" href="/corporate/investors/regulatory-news-(rns)/rssRns">RSS</a>
+            
+
+            <ul class="thumbnails grouped">
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">November</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14312720" title="Additional Listing">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Additional Listing [ALS] </strong>
+                                                <em class="date">18/11/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14297896" title="Third Quarter Trading Statement ">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Third Quarter Trading Statement  [TST] </strong>
+                                                <em class="date">07/11/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14291240" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/11/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">October</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14274138" title="Board Changes ">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Board Changes  [BOA] </strong>
+                                                <em class="date">21/10/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14270506" title="Director/PDMR Shareholding">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Director/PDMR Shareholding [DSH] </strong>
+                                                <em class="date">17/10/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14266538" title="Additional Listing">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Additional Listing [ALS] </strong>
+                                                <em class="date">15/10/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14249515" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/10/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">August</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14195377" title="Half-year results - Amendment">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Half-year results - Amendment [IR] </strong>
+                                                <em class="date">20/08/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14194821" title="Half-year Results">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Half-year Results [IR] </strong>
+                                                <em class="date">20/08/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14173486" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/08/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">July</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14135981" title="Trading Update">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Trading Update [TST] </strong>
+                                                <em class="date">04/07/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">June</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14106116" title="Director/PDMR Shareholding">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Director/PDMR Shareholding [DSH] </strong>
+                                                <em class="date">11/06/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14096499" title="Block listing Interim Review">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Block listing Interim Review [BLR] </strong>
+                                                <em class="date">03/06/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14096493" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">03/06/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">May</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14085510" title="Additional Listing">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Additional Listing [ALS] </strong>
+                                                <em class="date">23/05/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14059942" title="Result of AGM">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Result of AGM [RAG] </strong>
+                                                <em class="date">01/05/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14059336" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/05/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14058392" title="Trading Update">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Trading Update [TST] </strong>
+                                                <em class="date">01/05/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">April</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14043835" title="Director Appointment">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Director Appointment [BOA] </strong>
+                                                <em class="date">17/04/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14023852" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/04/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">March</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14009963" title="Customer Care Improvement Plan">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Customer Care Improvement Plan [MSC] </strong>
+                                                <em class="date">21/03/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/14006176" title="Annual Financial Report">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Annual Financial Report [ACS] </strong>
+                                                <em class="date">18/03/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13999499" title="Additional Listing">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Additional Listing [ALS] </strong>
+                                                <em class="date">12/03/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13989308" title="Director/PDMR Shareholding">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Director/PDMR Shareholding [DSH] </strong>
+                                                <em class="date">04/03/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13987919" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/03/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">February</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13981269" title="CEO Appointment">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>CEO Appointment [BOA] </strong>
+                                                <em class="date">26/02/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13981230" title="Final Results">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Final Results [FR] </strong>
+                                                <em class="date">26/02/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13956077" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/02/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2019</span>
+                        <span class="month">January</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13934299" title="Trading Update">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Trading Update [TST] </strong>
+                                                <em class="date">15/01/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13932605" title="Holding(s) in Company">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Holding(s) in Company [HOL] </strong>
+                                                <em class="date">11/01/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13921210" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">02/01/2019</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2018</span>
+                        <span class="month">December</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13899165" title="Director/PDMR Shareholding">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Director/PDMR Shareholding [DSH] </strong>
+                                                <em class="date">11/12/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13896115" title="Director/PDMR Shareholding">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Director/PDMR Shareholding [DSH] </strong>
+                                                <em class="date">07/12/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13894781" title="Director/PDMR Shareholding">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Director/PDMR Shareholding [DSH] </strong>
+                                                <em class="date">06/12/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13891315" title="Block listing Interim Review">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Block listing Interim Review [BLR] </strong>
+                                                <em class="date">04/12/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13889569" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">03/12/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2018</span>
+                        <span class="month">November</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13857614" title="CEO change">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>CEO change [BOA] </strong>
+                                                <em class="date">07/11/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13857547" title="Third Quarter Trading Statement">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Third Quarter Trading Statement [TST] </strong>
+                                                <em class="date">07/11/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13852142" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/11/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2018</span>
+                        <span class="month">October</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13841394" title="Additional Listing">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Additional Listing [ALS] </strong>
+                                                <em class="date">24/10/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13839699" title="EBT Share Purchase">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>EBT Share Purchase [POS] </strong>
+                                                <em class="date">23/10/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13835502" title="Director/PDMR Shareholding">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Director/PDMR Shareholding [DSH] </strong>
+                                                <em class="date">19/10/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13829361" title="EBT Share Purchase">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>EBT Share Purchase [MSC] </strong>
+                                                <em class="date">15/10/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13820711" title="Holding(s) in Company">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Holding(s) in Company [HOL] </strong>
+                                                <em class="date">08/10/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13815469" title="EBT Share Purchase  ">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>EBT Share Purchase   [DSH] </strong>
+                                                <em class="date">03/10/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13811578" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/10/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2018</span>
+                        <span class="month">September</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13796637" title="EBT Share Purchase">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>EBT Share Purchase [MSC] </strong>
+                                                <em class="date">19/09/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13776504" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">03/09/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="span12">
+                    <strong class="banner">
+
+                        <span class="year">2018</span>
+                        <span class="month">August</span>
+                    </strong>
+                    <ul class="thumbnails">
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13762103" title="Half Year Results">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Half Year Results [IR] </strong>
+                                                <em class="date">21/08/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                        <li class="span12">
+                            <a target="_blank" href="/corporate/investors/regulatory-news-(rns)/rns-news/13740057" title="Total Voting Rights">
+                                <div class="thumbnail">
+                                    <div class="caption">
+                                        <strong>Total Voting Rights [TVR] </strong>
+                                                <em class="date">01/08/2018</em>        
+
+                                    </div>
+                                </div>
+				            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+
+        </div>
+    
+    
+
+
+
+
+									</div>
+								</div>
+								    <div id="cookie-law">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+        <a href="/corporate/site-essentials/cookies-policy">
+            <p><strong>Cookies</strong> This website uses cookies. Read our cookie policy for further details.</p>
+        </a>
+    </div>
+
+								
+							</div>
+							
+					</article>
+				</div>
+				<!-- /span8 -->
+			</div>
+        </div>
+    </div>
+
+                <!-- Footer Section -->
+                <div id="page-bottom">
+                    <div class="container">
+                        <div class="row-fluid">
+                           
+                            
+                        </div>
+                    </div>
+                    <div class="container footer-collapse">
+                               <footer>
+                            <div class="footer-holder">
+                                <div class="row-fluid subMenu">
+								    
+        <div class="list-inline span11">
+		       <ul >
+				        <li>
+					        
+                            
+                            
+                                <a href="/corporate/site-essentials/site-map" title="umbraco.MacroEngines.PropertyResult">Site Map</a>
+				        </li>
+				        <li>
+					        
+                            
+                            
+                                <a href="/corporate/site-essentials/accessibility" title="umbraco.MacroEngines.PropertyResult">Accessibility</a>
+				        </li>
+				        <li>
+					        
+                            
+                            
+                                <a href="/corporate/site-essentials/cookies-policy" title="umbraco.MacroEngines.PropertyResult">Cookies Policy</a>
+				        </li>
+				        <li>
+					        
+                            
+                            
+                                <a href="/corporate/site-essentials/terms-and-conditions-of-use" title="umbraco.MacroEngines.PropertyResult">Terms and Conditions of Use</a>
+				        </li>
+				        <li>
+					        
+                            
+                            
+                                <a href="https://www.persimmonhomes.com/corporate/media/381715/modern-slavery-statement.pdf" title="umbraco.MacroEngines.PropertyResult" target="_blank">Modern Slavery Statement</a>
+				        </li>
+		      </ul>
+        </div>
+
+									<div class="span1 pull-right">
+                                		<a href="#topAnchor" class="footer-btn-top btn">
+											<i class="icon-angle-up"></i>
+                                		</a>
+                            		</div>
+                                </div>
+                 
+                                <div class="row-fluid">
+                                    
+                                    <div class="span8">
+                                        <p class="copyright">&copy; 2014
+                                            Persimmon Plc Persimmon House Fulford York YO19 4FE
+                                        </p>
+                                    </div>
+									<div class="span4 powered-by align-right">
+                                        <p class="powered-by">
+                                            Powered By
+                                            <a href="http://www.jonesandpalmer.co.uk" title="Navigate to the jones and palmer website">Jones and Palmer</a>
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                <!-- /container-fluid -->
+                
+
+
+                <script src="/corporate/scripts/vendor/modernizr.min.js" type="text/javascript"></script>
+                <!--[if lt IE 9]>
+                <script src="/corporate/scripts/vendor/selectivizr-min.js" type="text/javascript"></script>
+                <script src="/corporate/scripts/vendor/html5shiv.js" type="text/javascript"></script>
+                <![endif]-->
+                <script src="/corporate/scripts/vendor/bootstrap.min.js" type="text/javascript"></script>
+                <script src="/corporate/scripts/vendor/snap.min.js" type="text/javascript"></script>
+                <script src="/corporate/scripts/main.js" type="text/javascript"></script>
+            </div>
+        
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div></form>
+    </body>
+    </html>

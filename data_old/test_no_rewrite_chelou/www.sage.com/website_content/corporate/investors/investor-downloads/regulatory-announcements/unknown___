@@ -1,0 +1,941 @@
+
+
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+<head>
+    <meta charset="utf-8" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"74d88afaf4","applicationID":"80707136","transactionName":"ZlZaNkACXkNRVkEPWl8cdTRxTGNZRFBWCUdUcFcMRhFfXFxQR0l8X1ddGg==","queueTime":0,"applicationTime":3293,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VQ8FU1FTDxAIVFZSAAAEUA==",licenseKey:"74d88afaf4",applicationID:"80707136"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||"document"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+    <meta name="viewport" content="width=device-width, target-densityDpi=device-dpi, initial-scale=1, user-scalable=no" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/Areas/SageDotCom/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Areas/SageDotCom/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Areas/SageDotCom/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/Areas/SageDotCom/img/favicon/manifest.json">
+    <link rel="mask-icon" href="/Areas/SageDotCom/img/favicon/safari-pinned-tab.svg" color="#007db8">
+    <meta name="theme-color" content="#ffffff">
+
+        <script type="text/javascript" src="//tags.tiqcdn.com/utag/sage/en-gb/prod/utag.sync.js"></script>
+
+
+
+    
+
+    <meta name="twitter:card" content="" />
+    <meta name="twitter:site" content="" />
+    <meta name="sage:metakeywords" content="" />
+    <meta name="sage:product" content="" />
+    <meta name="sage:businessarea" content="" />
+    <meta name="sage:businesssize" content="" />
+    <meta name="sage:industry" content="" />
+    <meta name="sage:other" content="" />
+    <meta name="sage:companyinformation" content="Regulatory Announcements" />
+    <meta name="sage:langcode" content="en-GB" />
+    <meta name="sage:pagetitle" content="Regulatory Announcements" />
+    <meta name="sage:pagedescription" content="Regulatory Announcements" />
+    <meta name="og:locale" content="en_GB" />
+
+        <title>Regulatory Announcements</title>
+
+
+    <meta property="og:type" content="article" />
+
+
+    <meta property="og:description" content="Regulatory Announcements" />
+    <meta name="description" content="Regulatory Announcements" />
+
+<meta property="og:url" content="https://www.sage.com/investors/investor-downloads/regulatory-announcements/" />
+<meta name="robots" content="INDEX, FOLLOW" />
+
+    <link href="https://www.sage.com/investors/investor-downloads/regulatory-announcements/" rel="canonical" />
+
+    
+
+
+    
+
+    
+
+
+    <link href="/Areas/SageDotCom/css/main.css?v=637229623893698650" rel="stylesheet" />
+
+    <!-- -->
+
+
+    
+<meta name="VIcurrentDateTime" content="637236579440475824" />
+<script type="text/javascript" src="/imagine-assets/layouts/system/VisitorIdentification.js"></script>
+
+    
+</head>
+<body class="neutral mode-live">
+    
+
+        <div id="cookiesbanner" style="display: none;">
+            <div class="container full-width score-page-layout-column1 " id="1columnwidescreen-c2cc43dc65d140ab94fb3b0b21abea75-0">
+    <div class="score-column1 cookies-banner" vbpg="1">
+        <div class="score-center">
+            <div class="score-content-spot" id="contentspot-b348a25a3cb54eb7b8fe63975055ed17-0">
+    We use cookies on our website to provide you with the best experience.&nbsp;If you continue browsing, you are consenting to our use of these cookies, but if you would like to know more, including how you can change your settings, take a look at our <a href="/en-gb/legal/privacy-and-cookies/">Privacy Notice</a>.
+</div><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[&quot;close cookie banner&quot;],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="#" onclick="javascript:void(0);return false;" id="button-7c277bb056ce4be48fcf9f68763a7559-0">Accept &amp; Close</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+
+    <header class="score-header investors" id="header-f3c9a82e08e6413f82dde28bf57a5bb2-0">
+    <a class="score-image-button search" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" id="imagebutton-445b34bb81a44a938b4f8611af04e81c-0"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/icons/navigation/icon-magnify.png?h=64&amp;la=en-GB&amp;w=64&amp;hash=23878485417AC123A5BEB61DFF5EA46D" class=" img-responsive" alt="Search Icon"></a><div class="container score-page-layout-column1 " id="1column-8ef4da08ab7a4b309303e35f49e75854-0">
+    <div class="score-column1 " vbpg="1">
+        <div class="score-center">
+            <div aria-hidden="true" aria-labelledby="modal-96da1cc3-202d-4722-8357-f7c569c36903-Label" class="modal fade score-modal share-ticker-modal" data-ux-args="{&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[&quot;open modal&quot;],&quot;HideActionMessages&quot;:[],&quot;ShowMessagesTransmitting&quot;:[],&quot;HideMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/Modal" data-ux-state="pending" id="modal-96da1cc3-202d-4722-8357-f7c569c36903" role="dialog" tabindex="-1">        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header" id="modal-96da1cc3-202d-4722-8357-f7c569c36903-Label">
+                    Share Price
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="score-iframe" data-ux-args="{}" data-ux-module="score_bootstrap/Components/IFrame" data-ux-state="pending" id="iframe-b2ccd73dd67a4f2ebb2aadeb6d1ef5b7-0">            <iframe class="iframe-component" src="https://qfx.tools.investis.com/clients/(S(bwepondccmmshzamkbwal4x0))/uk/sage_group/SM6.3/default.aspx?culture=en-GB" width="" height="" data-autosize="disabled"></iframe>
+</div>
+                </div>
+                <div class="modal-footer score-call-to-action">
+                    
+                </div>
+            </div>
+        </div>
+</div>
+        </div>
+    </div>
+</div>
+<div class="container full-width score-page-layout-column1 " id="1columnwidescreen-a8c693b0d3324f89aff7b8709b73185a-0">
+    <div class="score-column1 " vbpg="1">
+        <div class="score-center">
+                <nav class="score-megamenu" id="megamenu-2e715278e7bd4383b45e97b7f166de1f-1">
+        <div class="score-nav-wrapper">
+            <div class="score-nav">
+                <!-- score-nav-wrapper is the container -->
+                <div class="navbar-header score-navbar-header">
+                    <button type="button" data-toggle="collapse" data-target="#mm-2e715278-e7bd-4383-b45e-97b7f166de1f" class="score-hamburger navbar-toggle">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                        <a href="/en-gb/" class="navbar-brand">
+                            <img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/logos/sage-logo%20svg.svg?la=en-GB&amp;hash=02DAB26CDF5C2AF8010F31B0DED5F7BD" class="img-responsive" alt="Sage logo">
+                            /investors/sitecore/content/sagedotcom/uk/home/
+                        </a>
+                </div>
+                <div class="collapse navbar-collapse" id="mm-2e715278-e7bd-4383-b45e-97b7f166de1f">
+                    <ul class="nav navbar-nav score-nav" id="megamenunavbar-816972e7bd15438c9afbac7ab195580b-0">
+    <li class="score-megamenu-basic-item active-section" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/BasicMenuItem" data-ux-state="pending" id="basicmenuitem-7fa425b4a7b34ca1b7e22cbb252c6e70-0"><a href="/investors/">Overview</a></li><li class="score-megamenu-dropdown" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MegaMenuItem" data-ux-state="pending" id="megamenuitem-e24c3b8c8c244ab4bd208bbf142967ab-0">        <a href="#" data-toggle="dropdown">
+            Downloads
+        </a>
+        <a href="#" class="dropdown-toggle toggle-caret" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">toggle menu</span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <div class="score-megamenu-content">
+                    <div class="score-content-spot back-button" id="contentspot-00ac28039f7a4b1ba5ef66f31554d921-0">
+    Back
+</div><div class="score-content-spot" id="contentspot-bc68b318e7074b778cdf98965edce5ab-0">
+    <h3 style="z-index: 1;">Downloads</h3>
+</div><ul class="score-menu-list" role="menu" id="menulist-ebebab860b944a66917eb9fe68fee9ed-0">
+    
+
+<li class="score-menu-list-item active-section" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-cd797903a0f74ad0b40d1c53ce62c4be-1"><a href="/investors/investor-downloads/">Overview</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-fb1c1f64ae1d45e5868dc4f1dc41307b-1"><a href="/investors/investor-downloads/capital-markets-day/">Capital Markets Day</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-e1d2d213d47549c0a9e9a8298bfc8883-1"><a href="/investors/investor-downloads/financial-results-announcements/">Financial results announcements</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-9285bd6a189e429b806457cd3486e867-1"><a href="/investors/investor-downloads/press-releases/">Press releases</a></li>
+
+<li class="score-menu-list-item active" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-0ca332e7e810442c8c96254308ccc88a-1"><a href="/investors/investor-downloads/regulatory-announcements/">Regulatory announcements</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-9cd8dc1764c04a1d84eb9658fd688352-1"><a href="/investors/investor-downloads/other-downloads/">Other downloads</a></li>
+</ul>
+                </div>
+            </li>
+        </ul>
+</li><li class="score-megamenu-basic-item" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/BasicMenuItem" data-ux-state="pending" id="basicmenuitem-a46fabbcba8444929b66998bf79ace99-0"><a href="/investors/annual-report/">Annual Report</a></li><li class="score-megamenu-dropdown" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MegaMenuItem" data-ux-state="pending" id="megamenuitem-7ef4426d3dcb4f9cbea5a6390b31f7db-0">        <a href="#" data-toggle="dropdown">
+            Investor resources
+        </a>
+        <a href="#" class="dropdown-toggle toggle-caret" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">toggle menu</span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <div class="score-megamenu-content">
+                    <div class="score-content-spot back-button" id="contentspot-31c4e8e7e6604d77b204d6304b4dbbed-0">
+    Back
+</div><div class="score-content-spot" id="contentspot-28793a05abb64e8ba8457fc981801307-0">
+    <h3 style="z-index: 1;">Investor resources</h3>
+</div><ul class="score-menu-list" role="menu" id="menulist-22752ec420b24b8abb9157318a0c20aa-0">
+    
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-7d86ee7c38564db984e0ce0ab798646d-1"><a href="/investors/investor-resources/">Overview</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-b140f8fcfb0e4db29f4499777e32124b-1"><a href="/investors/investor-resources/shareholder-services/">Shareholder services</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-ccfa83c91f074f5fa97a16324640231d-1"><a href="/investors/investor-resources/analysts/">Analysts</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-1de78539040a45cfb0ddaa682f9826b6-1"><a href="/investors/investor-resources/sage-advisors/">Sage advisors</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-3789744b705a475a8aea63ca6ff94ad6-1"><a href="/investors/investor-resources/consensus-estimates/">Consensus Estimates</a></li>
+</ul>
+                </div>
+            </li>
+        </ul>
+</li><li class="score-megamenu-basic-item" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/BasicMenuItem" data-ux-state="pending" id="basicmenuitem-85f696e2fa6e45879d841f7b5135e437-0"><a href="/investors/shareholder-performance/">Shareholder performance</a></li><li class="score-megamenu-dropdown" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MegaMenuItem" data-ux-state="pending" id="megamenuitem-b0a8c6aa2b484fbd99c4db5864cf73a6-0">        <a href="#" data-toggle="dropdown">
+            Corporate governance
+        </a>
+        <a href="#" class="dropdown-toggle toggle-caret" data-toggle="dropdown">
+            <span class="caret"></span>
+            <span class="sr-only">toggle menu</span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+            <li>
+                <div class="score-megamenu-content">
+                    <div class="score-content-spot back-button" id="contentspot-c45a1f875bd14507a9ea6a3d070056ca-0">
+    Back
+</div><div class="score-content-spot" id="contentspot-3989cdf7ee0c41908799b58e4e00d3b3-0">
+    <h3 style="z-index: 1;">Corporate governance</h3>
+</div><ul class="score-menu-list" role="menu" id="menulist-524cb6cfc9d441539ab8b25661104329-0">
+    
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-2acc96f27739409b8adbe64065173051-1"><a href="/investors/corporate-governance/">Overview</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-52646031278c429daf4b5f7892f99366-1"><a href="/investors/corporate-governance/articles-of-association/">Articles of Association</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-2c1157634b7d466d9d7a13ebd3dd3611-1"><a href="/investors/corporate-governance/code-of-conduct/">Code of Conduct</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-fe7dba86b0e349e29c078a8c8e5c879f-1"></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-e3b4dce631a74ce7b93eab8dac99d305-1"><a href="/investors/corporate-governance/corporate-risk/">Corporate risk</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-98e9ce83b7fb4e1a8f2a261b71192d16-1"><a href="/investors/corporate-governance/anti-slavery-and-human-trafficking-statement/">Modern slavery and human trafficking statement</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-f63bda039a3f43c79bd1be97b1117c55-1"><a href="/investors/corporate-governance/our-tax-strategy/">Our tax strategy</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-50e000885f7c4e6ba7f695263a3c6dc7-1"><a href="/investors/corporate-governance/remuneration-policy/">Remuneration Policy</a></li>
+
+<li class="score-menu-list-item" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/MenuListItem" data-ux-state="pending" id="menulistitem-441636a017904ec1a8ce87dbc313df28-1"><a href="/investors/corporate-governance/sage-public-affairs/">Sage Public Affairs</a></li>
+</ul>
+                </div>
+            </li>
+        </ul>
+</li><li class="score-megamenu-basic-item" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[]}" data-ux-module="score_bootstrap/Components/BasicMenuItem" data-ux-state="pending" id="basicmenuitem-b4d08cf62a17428bb3cc3c6d7a987715-0"><a href="/investors/alert-service/">Alert service</a></li>
+</ul><ul class="nav navbar-nav score-nav" id="megamenunavbar-0a48d9ed901d4117afeb0322c9f9669e-0">
+    <div class="sage-funnelback-search-box" data-ux-args="{&quot;IsExperienceEditorEditing&quot;:false,&quot;SuggestedProductsLabel&quot;:&quot;Suggested products&quot;,&quot;IsSearchResultsPage&quot;:false,&quot;SearchResultsPageUrl&quot;:&quot;/en-gb/search-results/&quot;,&quot;ContextLanguage&quot;:&quot;en-GB&quot;,&quot;AutoCompletionsDefaultAmount&quot;:5,&quot;SuggestedProductsDefaultAmount&quot;:3,&quot;CurrentPageName&quot;:&quot;regulatory-announcements&quot;}" data-ux-module="SageDotCom/Components/FunnelbackSearchBox" data-ux-state="pending" id="funnelbacksearchbox-f89d5320f31a49088bd89555114a6602-0">        <input type="text" class="search-term-input" placeholder="Search" aria-label="Search">
+        <button type="submit" class="score-btn js-funnelback-search-button">
+            Search
+        </button> 
+</div>
+
+</ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        </div>
+    </div>
+</div>
+<div class="score-stripe stripe--no-bottom-margin" style="" vbpg="1" id="stripe-eef7616b72b04e21a9c32cd4739e1c41-0">
+
+
+    <div class="container full-width score-page-layout-column1 " id="1columnwidescreen-9413665049254ab6b4e6e19fe3a07e5b-0">
+    <div class="score-column1 " vbpg="1">
+        <div class="score-center">
+            <div class="score-right-text " id="righttext-e3ce54c92af94b54b3a4acb1201dfd67-0">
+    <a class="score-button share-price-ticker" data-ux-args="{&quot;clickMessages&quot;:[&quot;open modal&quot;],&quot;currency&quot;:&quot;GBp&quot;}" data-ux-module="Components/Content/Buttons/SharePriceButton" data-ux-state="pending" href="#" id="sharepricebutton-680f14d327f24721ac18081ebc17c575-0">            <p class="share-title">LSE:SGE</p>
+</a>
+</div>
+        </div>
+    </div>
+</div>
+
+</div><div class="score-stripe sage-search-mobile" style="" vbpg="1" id="stripe-84e97a8cd1854ec2bbbfe9e16f12a0da-0">
+
+
+    <div class="container score-page-layout-column1 " id="1column-fd684c529ec549379dad6be41d4cede9-0">
+    <div class="score-column1 " vbpg="1">
+        <div class="score-center">
+            <div class="sage-funnelback-search-box" data-ux-args="{&quot;IsExperienceEditorEditing&quot;:false,&quot;SuggestedProductsLabel&quot;:&quot;Suggested products&quot;,&quot;IsSearchResultsPage&quot;:false,&quot;SearchResultsPageUrl&quot;:&quot;/en-gb/search-results/&quot;,&quot;ContextLanguage&quot;:&quot;en-GB&quot;,&quot;AutoCompletionsDefaultAmount&quot;:5,&quot;SuggestedProductsDefaultAmount&quot;:3,&quot;CurrentPageName&quot;:&quot;regulatory-announcements&quot;}" data-ux-module="SageDotCom/Components/FunnelbackSearchBox" data-ux-state="pending" id="funnelbacksearchbox-222efd09bcba4bae84f7e6370364dd8f-0">        <input type="text" class="search-term-input" placeholder="Search" aria-label="Search">
+        <button type="submit" class="score-btn js-funnelback-search-button">
+            Search
+        </button> 
+</div>
+
+        </div>
+    </div>
+</div>
+
+</div>
+</header>
+    <div class="page-wrapper">
+        <div class="score-pic-stripe stripe--no-bottom-margin cover" data-ux-args="{}" data-ux-module="score_bootstrap/Components/PictureStripe" data-ux-state="pending" style="" vbpg="1"><picture Style="display:none;" ViewportSource="{D97CC140-2B7B-4A56-9E4E-84735CF869FA}"><!--[if IE 9]><video style="display: none;"><![endif]--><source srcset="https://www.sage.com/investors/-/media/images/investors/investors-2019-banner-1920x780/desktop.png" media="(min-width: 1260px)" /><source srcset="https://www.sage.com/investors/-/media/images/investors/investors-2019-banner-1920x780/mobile.png" media="(max-width: 959px)" /><source srcset="https://www.sage.com/investors/-/media/images/investors/investors-2019-banner-1920x780/tablet.png" media="(min-width: 960px) and (max-width: 1259px)" /><!--[if IE 9]></video><![endif]--><img src="#" srcset="/sitecore/images/blank.gif"/></picture><div class="container full-width score-page-layout-column1 " id="1columnwidescreen-3273b7258f604abc875b4406a82aef57-0">
+    <div class="score-column1 " vbpg="1">
+        <div class="score-center">
+            <div class="score-column2 equal" vbpg="1" id="2columnequal-899b0fdae48b48fab9654b555cce7e92-0">
+    <div class="score-left">
+        
+    </div>
+    <div class="score-right">
+        <div class="score-hero hero__heading--large" style="background-color:#009900;" caching="0|0|0|0|0|0|0|0" id="hero-476547cf79754658abb01c5e77cee37f-0">
+
+        <h1>
+            Regulatory announcements
+
+        </h1>
+
+        <h2>Sage - Investor Center</h2>
+
+        <div class="score-hero-body">
+            Sage is a global market leader for technology that helps small and medium businesses perform at their best. Sage is trusted by millions of customers worldwide to deliver the best cloud technology and support, with our partners, to manage finances, operations, and people.
+        </div>
+
+    <div class="score-call-to-action">
+        
+    </div>
+</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+</div><div class="container score-page-layout-column1 " id="1column-cf3f4a078bf74d33b3b49fb654bed1a7-0">
+    <div class="score-column1 " vbpg="1">
+        <div class="score-center">
+            <div class="score-style-box style-box--margin-bottom-med" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/StyleBox" data-ux-state="pending" style="" id="stylebox-99728434915647a5b0d765d7b4cf2634-0"></div><div class="score-column2 wide-right results-listing-pages" vbpg="1" id="2columnwideright-c081d3cfce14495da4b6ac588259bad8-0">
+    <div class="score-left">
+        <!-- renderingUID: {0D50C85B-7016-40D4-9397-13E83549DAE4} -->
+<div data-ux-args="{}" data-ux-module="SageDotCom/Components/Listing/PageFacets" data-ux-state="pending" id="pagefacets-1699a2361e364bf780280116ae131fbe-2">        <div class="sage-funnelback-facets-filter">
+            <button class="score-button funnelback-refine-btn">Refine results</button>
+            <div class="search-stats js-funnelback-search-stats"><strong>333 results</strong></div>
+            <div class="facets-list js-funnelback-facets-list ">
+                <div class="js-funnelback-facets-list-wrapper">
+                    <button class="score-button funnelback-return-btn">Back to results</button>
+                    <div class="sage-funnelback-facet-section" style="">
+                        <div class="js-funnelback-facet-section facet-section">
+                                <div class="facet-heading">
+                                    Year
+                                </div>
+                                                            <div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="2020" onclick="location.href = '?year=2020'" data-tracking-refinement="?year=2020">
+                                        2020
+                                    </label>
+                                    <span class="score-facet-count">30</span>
+                                </div>
+                                <div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="2019" onclick="location.href = '?year=2019'" data-tracking-refinement="?year=2019">
+                                        2019
+                                    </label>
+                                    <span class="score-facet-count">63</span>
+                                </div>
+                                <div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="2018" onclick="location.href = '?year=2018'" data-tracking-refinement="?year=2018">
+                                        2018
+                                    </label>
+                                    <span class="score-facet-count">71</span>
+                                </div>
+                                <div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="2017" onclick="location.href = '?year=2017'" data-tracking-refinement="?year=2017">
+                                        2017
+                                    </label>
+                                    <span class="score-facet-count">53</span>
+                                </div>
+                                <div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="2016" onclick="location.href = '?year=2016'" data-tracking-refinement="?year=2016">
+                                        2016
+                                    </label>
+                                    <span class="score-facet-count">61</span>
+                                </div>
+                                <div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="2015" onclick="location.href = '?year=2015'" data-tracking-refinement="?year=2015">
+                                        2015
+                                    </label>
+                                    <span class="score-facet-count">55</span>
+                                </div>
+
+
+                        </div>
+                    </div>
+                    <div class="sage-funnelback-facet-section" style="">
+                        <div class="js-funnelback-facet-section facet-section">
+                                <div class="facet-heading">
+                                    Month
+                                </div>
+                            <div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="1" onclick="location.href = '?month=1'" data-tracking-refinement="?month=1">
+                                        January
+                                    </label>
+                                    <span class="score-facet-count">34</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="2" onclick="location.href = '?month=2'" data-tracking-refinement="?month=2">
+                                        February
+                                    </label>
+                                    <span class="score-facet-count">26</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="3" onclick="location.href = '?month=3'" data-tracking-refinement="?month=3">
+                                        March
+                                    </label>
+                                    <span class="score-facet-count">34</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="4" onclick="location.href = '?month=4'" data-tracking-refinement="?month=4">
+                                        April
+                                    </label>
+                                    <span class="score-facet-count">19</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="5" onclick="location.href = '?month=5'" data-tracking-refinement="?month=5">
+                                        May
+                                    </label>
+                                    <span class="score-facet-count">30</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="6" onclick="location.href = '?month=6'" data-tracking-refinement="?month=6">
+                                        June
+                                    </label>
+                                    <span class="score-facet-count">31</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="7" onclick="location.href = '?month=7'" data-tracking-refinement="?month=7">
+                                        July
+                                    </label>
+                                    <span class="score-facet-count">22</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="8" onclick="location.href = '?month=8'" data-tracking-refinement="?month=8">
+                                        August
+                                    </label>
+                                    <span class="score-facet-count">27</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="9" onclick="location.href = '?month=9'" data-tracking-refinement="?month=9">
+                                        September
+                                    </label>
+                                    <span class="score-facet-count">20</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="10" onclick="location.href = '?month=10'" data-tracking-refinement="?month=10">
+                                        October
+                                    </label>
+                                    <span class="score-facet-count">16</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="11" onclick="location.href = '?month=11'" data-tracking-refinement="?month=11">
+                                        November
+                                    </label>
+                                    <span class="score-facet-count">33</span>
+                                </div>
+<div class="score-facet-row js-category">
+                                    <label>
+                                        <input type="checkbox" value="12" onclick="location.href = '?month=12'" data-tracking-refinement="?month=12">
+                                        December
+                                    </label>
+                                    <span class="score-facet-count">41</span>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+    <div class="score-right">
+        <!-- renderingUID: {849D51F9-7B6D-4D00-9C53-B0344EBCCA67} -->
+
+<div class="sage-page-listing" data-ux-args="{&quot;IsExperienceEditorEditing&quot;:false}" data-ux-module="SageDotCom/Components/Listing/PageListing" data-ux-state="pending" id="pagelisting-fd563249ba8f4954ae201fe50228a54f-2">        <div class="sage-funnelback-search-results">
+            <div class="js-funnelback-search-results-template results">
+                    <div class="result">                         
+                        <a href="/investors/investor-downloads/regulatory-announcements/2020/04/publication-of-articles-of-association-1388055/" class="title">
+                            <span class="text">Publication of Articles of Association</span>
+                        </a>
+                        <div class="date">
+                            April 27, 2020
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>                   
+                    <div class="result">                         
+                        <a href="/investors/investor-downloads/regulatory-announcements/2020/04/director-declaration-1387298/" class="title">
+                            <span class="text">Director Declaration</span>
+                        </a>
+                        <div class="date">
+                            April 23, 2020
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>                   
+                    <div class="result">                         
+                        <a href="/investors/investor-downloads/regulatory-announcements/2020/04/disclosure-under-s-4302b-companies-act-2006-1384856/" class="title">
+                            <span class="text">Disclosure under S. 430(2B) Companies Act 2006</span>
+                        </a>
+                        <div class="date">
+                            April 07, 2020
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>                   
+                    <div class="result">                         
+                        <a href="/investors/investor-downloads/regulatory-announcements/2020/04/trading-and-covid-19-update-1384432/" class="title">
+                            <span class="text">Trading and COVID-19 Update</span>
+                        </a>
+                        <div class="date">
+                            April 06, 2020
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>                   
+                    <div class="result">                         
+                        <a href="/investors/investor-downloads/regulatory-announcements/2020/04/sage-completes-disposal-of-brazilian-business-1383501/" class="title">
+                            <span class="text">Sage completes disposal of Brazilian Business</span>
+                        </a>
+                        <div class="date">
+                            April 01, 2020
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>                   
+            </div>
+
+            <div class="stats">Showing  1 - 5 of 333 results</div>
+
+
+            <div class="pagination-container"><ul class="pagination"><li class="active"><span>1</span></li><li><a href="?page=2">2</a></li><li><a href="?page=3">3</a></li><li><a href="?page=4">4</a></li><li><a href="?page=5">5</a></li><li class="PagedList-skipToNext"><a href="?page=2" rel="next">></a></li><li class="PagedList-skipToLast"><a href="?page=67">>></a></li></ul></div>
+        </div>
+</div>
+    </div>
+</div><div class="score-style-box style-box--margin-bottom-med" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/StyleBox" data-ux-state="pending" style="" id="stylebox-dc60379a7812440d854c0accdca77970-0"></div>
+        </div>
+    </div>
+</div>
+ 
+        
+    <div id="rantandrave">
+        <div class="sage-modal-button" data-ux-args="{}" data-ux-module="SageDotCom/Components/ModalWithButton" data-ux-state="pending" id="modal-25335776-3385-45ca-b336-005dced4b48f">        <a class="score-button rant-rave-feedback-btn " href=""></a>
+        <div class="modal fade rant-rave-modal" tabindex="-1" role="dialog" aria-labelledby="modal-25335776-3385-45ca-b336-005dced4b48f-Label" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <div class="modal-header" id="modal-25335776-3385-45ca-b336-005dced4b48f-Label">
+                        Feedback
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- renderingUID: {31875B82-AA30-4C5C-B15A-4826081BB9A0} --><form action="/formbuilder?fxb.FormItemId=31875b82-aa30-4c5c-b15a-4826081bb9a0&amp;fxb.HtmlPrefix=fxb.d4034e67-7709-435c-a37f-48e1e7876f1b" data-ajax="true" data-ajax-method="Post" data-ajax-mode="replace-with" data-ajax-success="$.validator.unobtrusive.parse(&#39;#fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_31875b82-aa30-4c5c-b15a-4826081bb9a0&#39;);$.fxbFormTracker.parse(&#39;#fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_31875b82-aa30-4c5c-b15a-4826081bb9a0&#39;);" data-ajax-update="#fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_31875b82-aa30-4c5c-b15a-4826081bb9a0" data-sc-fxb="31875b82-aa30-4c5c-b15a-4826081bb9a0" enctype="multipart/form-data" id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_31875b82-aa30-4c5c-b15a-4826081bb9a0" method="post"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_FormSessionId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.FormSessionId" type="hidden" value="8c5dfae4-921e-4904-ab1b-8231e23f6bf6"><input name="__RequestVerificationToken" type="hidden" value="UVBd1_4iW37oZxInBONi3yQLpLTDpGOntb3W1SrgmMv9-nhmXrnNfrQvXQ4ia3WOH2IQbA3w4WgETd0HOgWp8wen2qpy0biBB56uz9Mef6E1"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_FormItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.FormItemId" type="hidden" value="31875b82-aa30-4c5c-b15a-4826081bb9a0"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_PageItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.PageItemId" type="hidden" value="d36a8b51-429a-4bb5-90ab-e70845016f14">
+<div class="form-group rant-rave-form current-section">
+    <div class="form-group radio-to-slider">
+    <input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_Index_40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields.Index" type="hidden" value="40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc__ItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].ItemId" type="hidden" value="40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc"><label class="control-label full-width" aria-label="Based on your experience today, how likely would you be to recommend Sage to others on a scale of 0-10 (where 0 is not at all likely and 10 is extremely likely)?">Based on your experience today, how likely would you be to recommend Sage to others on a scale of 0-10 (where 0 is not at all likely and 10 is extremely likely)?</label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="0" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="0" data-sc-tracking="True" data-sc-field-name="Question 1 radio" data-val-required="Based on your experience today, how likely would you be to recommend Sage to others on a scale of 0-10 (where 0 is not at all likely and 10 is extremely likely)? is required." data-val="true">0
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="1" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="1" data-sc-tracking="True" data-sc-field-name="Question 1 radio">1
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="2" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="2" data-sc-tracking="True" data-sc-field-name="Question 1 radio">2
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="3" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="3" data-sc-tracking="True" data-sc-field-name="Question 1 radio">3
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="4" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="4" data-sc-tracking="True" data-sc-field-name="Question 1 radio">4
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="5" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="5" data-sc-tracking="True" data-sc-field-name="Question 1 radio">5
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="6" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="6" data-sc-tracking="True" data-sc-field-name="Question 1 radio">6
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="7" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="7" data-sc-tracking="True" data-sc-field-name="Question 1 radio">7
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="8" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="8" data-sc-tracking="True" data-sc-field-name="Question 1 radio">8
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="9" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="9" data-sc-tracking="True" data-sc-field-name="Question 1 radio">9
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="10" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" value="10" data-sc-tracking="True" data-sc-field-name="Question 1 radio">10
+    </label>
+<span class="field-validation-valid" data-valmsg-for="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[40ad7e95-6ca5-43b5-9a5c-0b699eea6ebc].Value" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group radio-to-slider">
+    <input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_Index_574a706b-f61e-4179-af81-01b74408c124" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields.Index" type="hidden" value="574a706b-f61e-4179-af81-01b74408c124"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_574a706b-f61e-4179-af81-01b74408c124__ItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].ItemId" type="hidden" value="574a706b-f61e-4179-af81-01b74408c124"><label class="control-label full-width" aria-label="How easy was it to deal with Sage today on a scale of 0-10 (where 0 is not at all easy and 10 is extremely easy)?">How easy was it to deal with Sage today on a scale of 0-10 (where 0 is not at all easy and 10 is extremely easy)?</label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="0" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="0" data-sc-tracking="True" data-sc-field-name="Question 2 radio" data-val-required="How easy was it to deal with Sage today on a scale of 0-10 (where 0 is not at all easy and 10 is extremely easy)? is required." data-val="true">0
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="1" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="1" data-sc-tracking="True" data-sc-field-name="Question 2 radio">1
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="2" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="2" data-sc-tracking="True" data-sc-field-name="Question 2 radio">2
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="3" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="3" data-sc-tracking="True" data-sc-field-name="Question 2 radio">3
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="4" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="4" data-sc-tracking="True" data-sc-field-name="Question 2 radio">4
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="5" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="5" data-sc-tracking="True" data-sc-field-name="Question 2 radio">5
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="6" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="6" data-sc-tracking="True" data-sc-field-name="Question 2 radio">6
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="7" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="7" data-sc-tracking="True" data-sc-field-name="Question 2 radio">7
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="8" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="8" data-sc-tracking="True" data-sc-field-name="Question 2 radio">8
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="9" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="9" data-sc-tracking="True" data-sc-field-name="Question 2 radio">9
+    </label>
+    <label>
+        <input type="radio" role="radiogroup" aria-label="10" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" value="10" data-sc-tracking="True" data-sc-field-name="Question 2 radio">10
+    </label>
+<span class="field-validation-valid" data-valmsg-for="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[574a706b-f61e-4179-af81-01b74408c124].Value" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group form-nav-section text-center">
+    
+
+<input aria-label="Next" value="Next" type="submit" class="form-next-btn" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.cdf7a93f-a93d-41ee-b02d-2322b80a6d67">
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_NavigationButtons" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.NavigationButtons" type="hidden" value="cdf7a93f-a93d-41ee-b02d-2322b80a6d67">
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_cdf7a93f-a93d-41ee-b02d-2322b80a6d67" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.cdf7a93f-a93d-41ee-b02d-2322b80a6d67" type="hidden" value="1">
+</div>
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_Index_eebc5c52-780e-4081-bfd2-7b7bd2145a35" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields.Index" type="hidden" value="eebc5c52-780e-4081-bfd2-7b7bd2145a35"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_eebc5c52-780e-4081-bfd2-7b7bd2145a35__ItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[eebc5c52-780e-4081-bfd2-7b7bd2145a35].ItemId" type="hidden" value="eebc5c52-780e-4081-bfd2-7b7bd2145a35"><label for="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_eebc5c52-780e-4081-bfd2-7b7bd2145a35__Value" aria-label="" class="hidden"></label>
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_eebc5c52-780e-4081-bfd2-7b7bd2145a35__Value" aria-label="" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[eebc5c52-780e-4081-bfd2-7b7bd2145a35].Value" class="hidden rant-rave-form-visitor-id" type="text" value="" maxlength="255" placeholder="" data-sc-tracking="True" data-sc-field-name="Client ID">
+<span class="field-validation-valid" data-valmsg-for="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[eebc5c52-780e-4081-bfd2-7b7bd2145a35].Value" data-valmsg-replace="true"></span><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_Index_92cd9c2a-aab8-42b5-8f6d-c371b0f58f10" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields.Index" type="hidden" value="92cd9c2a-aab8-42b5-8f6d-c371b0f58f10"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_92cd9c2a-aab8-42b5-8f6d-c371b0f58f10__ItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[92cd9c2a-aab8-42b5-8f6d-c371b0f58f10].ItemId" type="hidden" value="92cd9c2a-aab8-42b5-8f6d-c371b0f58f10"><label for="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_92cd9c2a-aab8-42b5-8f6d-c371b0f58f10__Value" aria-label="" class="hidden"></label>
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_92cd9c2a-aab8-42b5-8f6d-c371b0f58f10__Value" aria-label="" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[92cd9c2a-aab8-42b5-8f6d-c371b0f58f10].Value" class="rant-rave-form-current-url hidden" type="text" value="" maxlength="255" placeholder="" data-sc-tracking="True" data-sc-field-name="Current URL">
+<span class="field-validation-valid" data-valmsg-for="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[92cd9c2a-aab8-42b5-8f6d-c371b0f58f10].Value" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group rant-rave-form hidden-section">
+    <div class="form-group">
+    <input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_Index_c27e8cc8-a12c-43de-a7d1-8d5518b9d66f" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields.Index" type="hidden" value="c27e8cc8-a12c-43de-a7d1-8d5518b9d66f"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_c27e8cc8-a12c-43de-a7d1-8d5518b9d66f__ItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[c27e8cc8-a12c-43de-a7d1-8d5518b9d66f].ItemId" type="hidden" value="c27e8cc8-a12c-43de-a7d1-8d5518b9d66f"><label for="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_c27e8cc8-a12c-43de-a7d1-8d5518b9d66f__Value" class="control-label">Please tell us more about your sage.com experience</label>
+<textarea id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_c27e8cc8-a12c-43de-a7d1-8d5518b9d66f__Value" aria-label="Please tell us more about your sage.com experience" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[c27e8cc8-a12c-43de-a7d1-8d5518b9d66f].Value" class="form-control" rows="4" maxlength="512" placeholder="" data-sc-tracking="True" data-sc-field-name="Question 3" data-val-regex="HTML is not allowed on this field. ( Please tell us more about your sage.com experience )" data-val-regex-pattern="^[a-zA-Z0-9 -&#39;,.!?]*$" data-val="true"></textarea>
+<span class="field-validation-valid" data-valmsg-for="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[c27e8cc8-a12c-43de-a7d1-8d5518b9d66f].Value" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group checkbox">
+    <input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_Index_6505531b-ac9e-4527-a4f1-335e0f481419" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields.Index" type="hidden" value="6505531b-ac9e-4527-a4f1-335e0f481419"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_6505531b-ac9e-4527-a4f1-335e0f481419__ItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[6505531b-ac9e-4527-a4f1-335e0f481419].ItemId" type="hidden" value="6505531b-ac9e-4527-a4f1-335e0f481419"><label class="control-label">
+    <input aria-label="I am happy to be contacted to discuss feedback" type="checkbox" id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_6505531b-ac9e-4527-a4f1-335e0f481419__Value" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[6505531b-ac9e-4527-a4f1-335e0f481419].Value" class="tc-field" value="true" data-sc-tracking="True" data-sc-field-name="Question 4">I am happy to be contacted to discuss feedback
+    <input type="hidden" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[6505531b-ac9e-4527-a4f1-335e0f481419].Value" value="false">
+</label>
+<span class="field-validation-valid" data-valmsg-for="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[6505531b-ac9e-4527-a4f1-335e0f481419].Value" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group">
+    <input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_Index_bd817d5f-9782-40a8-91ff-c6dc5cf55ce1" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields.Index" type="hidden" value="bd817d5f-9782-40a8-91ff-c6dc5cf55ce1"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_bd817d5f-9782-40a8-91ff-c6dc5cf55ce1__ItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[bd817d5f-9782-40a8-91ff-c6dc5cf55ce1].ItemId" type="hidden" value="bd817d5f-9782-40a8-91ff-c6dc5cf55ce1"><label for="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_bd817d5f-9782-40a8-91ff-c6dc5cf55ce1__Value" aria-label="Name" class="control-label">Name</label>
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_bd817d5f-9782-40a8-91ff-c6dc5cf55ce1__Value" aria-label="Name" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[bd817d5f-9782-40a8-91ff-c6dc5cf55ce1].Value" class="form-control rant-rave-mandatory" type="text" value="" maxlength="255" placeholder="" data-sc-tracking="True" data-sc-field-name="Question 5">
+<span class="field-validation-valid" data-valmsg-for="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[bd817d5f-9782-40a8-91ff-c6dc5cf55ce1].Value" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group">
+    <input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_Index_83ab847b-97f5-4465-bc84-aef57bb07c79" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields.Index" type="hidden" value="83ab847b-97f5-4465-bc84-aef57bb07c79"><input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_83ab847b-97f5-4465-bc84-aef57bb07c79__ItemId" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[83ab847b-97f5-4465-bc84-aef57bb07c79].ItemId" type="hidden" value="83ab847b-97f5-4465-bc84-aef57bb07c79"><label for="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_83ab847b-97f5-4465-bc84-aef57bb07c79__Value" aria-label="Email" class="control-label">Email</label>
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_Fields_83ab847b-97f5-4465-bc84-aef57bb07c79__Value" aria-label="Email" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[83ab847b-97f5-4465-bc84-aef57bb07c79].Value" class="form-control rant-rave-mandatory" type="text" value="" maxlength="255" placeholder="" data-sc-tracking="True" data-sc-field-name="Question 6" data-val-regex="" data-val-regex-pattern="^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,17}$" data-val="true">
+<span class="field-validation-valid" data-valmsg-for="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.Fields[83ab847b-97f5-4465-bc84-aef57bb07c79].Value" data-valmsg-replace="true"></span>
+</div>
+<div class="form-group container full-width form-nav-section">
+    
+
+<input aria-label="Back" value="Back" type="submit" class="form-back-btn col-xs-5 cancel" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.7db9e254-340c-47f2-9729-658af6497864">
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_NavigationButtons" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.NavigationButtons" type="hidden" value="7db9e254-340c-47f2-9729-658af6497864">
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_7db9e254-340c-47f2-9729-658af6497864" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.7db9e254-340c-47f2-9729-658af6497864" type="hidden" value="-1">
+
+<input aria-label="Submit" value="Submit" type="submit" class="col-xs-5 pull-right" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.bc7c2f1f-c8c0-430f-b78d-17b56bd16194">
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_NavigationButtons" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.NavigationButtons" type="hidden" value="bc7c2f1f-c8c0-430f-b78d-17b56bd16194">
+<input id="fxb_d4034e67-7709-435c-a37f-48e1e7876f1b_bc7c2f1f-c8c0-430f-b78d-17b56bd16194" name="fxb.d4034e67-7709-435c-a37f-48e1e7876f1b.bc7c2f1f-c8c0-430f-b78d-17b56bd16194" type="hidden" value="0">
+</div>
+
+</div>
+</form>
+
+                    </div>
+                    <div class="modal-footer score-call-to-action">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+    </div>
+
+ 
+        <script src="/imagine-assets/sitecore%20modules/Web/ExperienceForms/scripts/jquery-2.1.3.min.js"></script>
+<script src="/imagine-assets/sitecore%20modules/Web/ExperienceForms/scripts/jquery.validate.min.js"></script>
+<script src="/imagine-assets/sitecore%20modules/Web/ExperienceForms/scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="/imagine-assets/sitecore%20modules/Web/ExperienceForms/scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="/imagine-assets/sitecore%20modules/Web/ExperienceForms/scripts/form.validate.js"></script>
+<script src="/imagine-assets/sitecore%20modules/Web/ExperienceForms/scripts/form.tracking.js"></script>
+<script src="/imagine-assets/sitecore%20modules/Web/ExperienceForms/scripts/rantandrave.js"></script>
+
+    </div>
+    <footer class="score-footer " id="footer-c3d142c4d9d04e4194d6d03c21be8dfb-0">
+    <div class="score-stripe" style="color:#FFFFFF;background-color:#003349;" vbpg="1" id="stripe-fecd28cef6ae4aa2b1125c5716650f0b-0">
+
+
+    <div class="container score-page-layout-column1 " id="1column-ffcc8f007d76468a9ad378056c1e3b5b-0">
+    <div class="score-column1 " vbpg="1">
+        <div class="score-center">
+            <div class="score-column2 wide-right" vbpg="1" id="2columnwideright-df47f202deba457da88ed742585ddea3-0">
+    <div class="score-left">
+        <div class="score-style-box" data-ux-args="{&quot;IsEditorEditing&quot;:false,&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/StyleBox" data-ux-state="pending" style="" id="stylebox-672bff98f879447d91cedbaa1065689f-0"><a class="score-image-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/" id="imagebutton-f890df19085247f7bf881bbbaa27760a-0"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/logos/sage-logo%20svg.svg?la=en-GB&amp;hash=02DAB26CDF5C2AF8010F31B0DED5F7BD" class=" img-responsive" alt="Sage logo, green on white"></a><p class="score-lead" id="lead-50f3062ba83c4bbd8670a61bf8f30ccd-0">
+    Can’t find what you need?
+</p><div class="sage-funnelback-search-box" data-ux-args="{&quot;IsExperienceEditorEditing&quot;:false,&quot;SuggestedProductsLabel&quot;:&quot;Suggested products&quot;,&quot;IsSearchResultsPage&quot;:false,&quot;SearchResultsPageUrl&quot;:&quot;/en-gb/search-results&quot;,&quot;ContextLanguage&quot;:&quot;en-GB&quot;,&quot;AutoCompletionsDefaultAmount&quot;:5,&quot;SuggestedProductsDefaultAmount&quot;:3,&quot;CurrentPageName&quot;:&quot;regulatory-announcements&quot;}" data-ux-module="SageDotCom/Components/FunnelbackSearchBox" data-ux-state="pending" id="funnelbacksearchbox-266bc2a3e7c44901b3f0d6fc26ec9828-0">        <input type="text" class="search-term-input" placeholder="Search" aria-label="Search">
+        <button type="submit" class="score-btn js-funnelback-search-button">
+            Search
+        </button> 
+</div>
+<div class="score-button-group " id="buttongroup-dc8efc55120f472c9df4bed7ed49fb07-0">
+    <a class="score-image-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="https://facebook.com/sage" target="_blank" id="imagebutton-337e25501dc643b3b8ce694adcee1bb0-0"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/icons/social/icon-facebook-white%20svg.svg?la=en-GB&amp;hash=E214C860E18AAF3E88C8AF6B9ADFA910" class=" img-responsive" alt="Facebook logo, white on white"></a><a class="score-image-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="https://twitter.com/sagegroupplc" target="_blank" id="imagebutton-8bf1b61c905a41f68a3f2946a3cd1fa5-0"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/icons/social/icon-twitter-white%20svg.svg?la=en-GB&amp;hash=14763BABE873119FF73B38670586F22A" class=" img-responsive" alt="Twitter logo, white on white"></a><a class="score-image-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="https://www.linkedin.com/company/sage-software/" target="_blank" id="imagebutton-9d83828629304f5facac1abb07324dd9-0"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/icons/social/icon-linkedin-white%20svg.svg?la=en-GB&amp;hash=6BCC3ED5BC209DAA4F18F8BC3D88FC39" class=" img-responsive" alt="LinkedIn logo, white on white"></a><a class="score-image-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="http://www.youtube.com/sagegroupplc" target="_blank" id="imagebutton-26d9f47411d54532bb5a99d29cba5f35-0"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/icons/social/icon-youtube-white%20svg.svg?la=en-GB&amp;hash=7ED722A9A36FCBC1F7A392BF14933F22" class=" img-responsive" alt="YouTube logo, white on white"></a><a class="score-image-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="https://www.instagram.com/sageofficial/" target="_blank" id="imagebutton-0c5057d471274d438c7d612b6cdabd3f-0"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/icons/social/icon-instagram-white%20svg.svg?la=en-GB&amp;hash=F72A332938D530EE68178D4F1AA0AE29" class=" img-responsive" alt="Instagram logo, white on white"></a>
+</div></div>
+    </div>
+    <div class="score-right">
+        <div class="score-column4 equal" vbpg="1" id="4columnequal-9915a467e157401690eb25b054ef4aff-0">
+    <div class="score-left">
+        <p class="score-lead" id="lead-d719851d22f04bb78303e415163b25a1-0">
+    PRODUCTS
+</p><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/sage-business-cloud/accounting/" id="button-d450bb7385be4386b4824fda7c51499f-0">Accounting</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/sage-business-cloud/sage-x3/" id="button-5e462932f42743b5aca6c6e40afe117a-0">Sage X3</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/sage-business-cloud/people/" id="button-2ab143953ca541cca23826cf365776c8-0">People</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/sage-business-cloud/intacct/" id="button-3c732dfcd0e24703ac5504939644c09b-0">Sage Intacct</a>
+    </div>
+    <div class="score-center">
+        <p class="score-lead" id="lead-58456589541647d2af025472c39be64d-0">
+    INVESTORS
+</p><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/investors/investor-downloads/" id="button-b9d4e490886545ec80cb3b1e2e30e174-0">Investor Downloads</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/investors/annual-report/" id="button-af74494325614a01ac85a75ef186da43-0">Annual Report</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/investors/investor-resources/" id="button-6b3862f975a4453cb5e0037c3680d34a-0">Investor Resources</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/investors/shareholder-performance/" id="button-5e4905a22b7644ccb2198ad6f03c80ca-0">Shareholder Performance</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/investors/corporate-governance/" id="button-31ad5051ea684e6283d5c840b22ee977-0">Corporate Governance</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/investors/alert-service/" id="button-c6521be8746b4ecaba33529e4cc60da7-0">Alert Service</a>
+    </div>
+    <div class="score-center2">
+        <p class="score-lead" id="lead-129e99fa37d74c54820917efbae97a40-0">
+    ABOUT SAGE
+</p><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/company/about-sage/" id="button-8d6294a6a8de4ae488da58de938ac04e-0">Overview</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/about-us/contact-us/" id="button-890ad2cb4ff34f06923c39c10a683bad-0">Contact Us</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/legal/terms-and-conditions/website-terms-of-use/" id="button-c2ac0641cecb409f82e34520b223fa17-0">Terms of Use</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/legal/privacy-and-cookies/" id="button-0fbdc55c616b4f7a81e6a83223a0fd0f-0">Privacy notice and cookies</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/investors/corporate-governance/anti-slavery-and-human-trafficking-statement/" id="button-e5b3d6d946fc4631aac67640b200ddf9-0">Anti-slavery statement</a>
+    </div>
+    <div class="score-right">
+        <p class="score-lead" id="lead-3dad8cf2207b494d850e5b3b2e3a3033-0">
+    SAGE FOUNDATION
+</p><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/company/sage-foundation/" id="button-140b938fd0354b40a123b2253dcccc4c-0">Overview</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/company/sage-foundation/vision-and-mission/" id="button-64dd8a0108794e90b06f11d242fe3359-0">Vision and Mission</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/company/sage-foundation/case-studies/" id="button-21eb4a8b075049589382a578d08e0a92-0">Case Studies</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/company/sage-foundation/2millionchallenge/" id="button-f7e7050aaca04705b0447ebd8fe71a30-0">$2 Million by 2022</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/company/sage-foundation/products/" id="button-6a8339c558fb4b5ea31528ac412fab2f-0">Products</a><a class="score-button" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/company/sage-foundation/support-and-funding/" id="button-c8f656c3495b4c518bd8d34b74ee5d25-0">Support and Funding</a><a class="score-button hidden-xs hidden-sm hidden-md hidden-lg" data-ux-args="{&quot;ClickMessagesTransmitting&quot;:[],&quot;StateChangeMessagesTransmitting&quot;:[],&quot;ShowActionMessages&quot;:[],&quot;HideActionMessages&quot;:[]}" data-ux-module="score_bootstrap/Components/Button" data-ux-state="pending" href="/en-gb/company/sage-foundation/the-enterprise-fund/" id="button-62627bcd7baf4618bcfd22181509d14c-0">The Enterprise Fund</a>
+    </div>
+</div><div class="score-column1 " vbpg="1" id="1column-93df2259876545ebb554baa3782ccbb4-0">
+    <div class="score-center">
+        <div class="country-selector" data-ux-args="{&quot;IsExperienceEditorEditing&quot;:false}" data-ux-module="SageDotCom/Components/Navigation/CountrySelector" data-ux-state="pending" style="" id="countryselector-fd3a066ac7514705b1c16fc426aa4d95-0">        <div class="btn" tabindex="0">United Kingdom ǀ English</div>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close" tabindex="0">&times;</span>
+                    <div class="choose-your-region">Choose your region and language</div>
+                            <div class="region">
+                                NORTH AMERICA
+                                <ul>
+                                        <li>
+                                               <a href="/en-ca/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ca.svg" alt="Canada (English)" title="Canada (English)">Canada (English)</a>
+                                        </li>
+                                        <li>
+                                               <a href="/fr-ca/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ca.svg" alt="Canada (Fran&#231;ais)" title="Canada (Fran&#231;ais)">Canada (Fran&#231;ais)</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-us/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-us.svg" alt="United States" title="United States">United States</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="region">
+                                EUROPE
+                                <ul>
+                                        <li>
+                                               <a href="/nl-be/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-be.svg" alt="Belgi&#235; (Nederlands)" title="Belgi&#235; (Nederlands)">Belgi&#235; (Nederlands)</a>
+                                        </li>
+                                        <li>
+                                               <a href="/fr-be/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-be.svg" alt="Belgique (Fran&#231;ais)" title="Belgique (Fran&#231;ais)">Belgique (Fran&#231;ais)</a>
+                                        </li>
+                                        <li>
+                                               <a href="/de-de/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-de.svg" alt="Deutschland" title="Deutschland">Deutschland</a>
+                                        </li>
+                                        <li>
+                                               <a href="/es-es/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-es.svg" alt="Espa&#241;a" title="Espa&#241;a">Espa&#241;a</a>
+                                        </li>
+                                        <li>
+                                               <a href="/fr-fr/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-fr.svg" alt="France" title="France">France</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-ie/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ie.svg" alt="Ireland" title="Ireland">Ireland</a>
+                                        </li>
+                                        <li>
+                                               <a href="/de-at/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-at.svg" alt="&#214;sterreich" title="&#214;sterreich">&#214;sterreich</a>
+                                        </li>
+                                        <li>
+                                               <a href="/pl-pl/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-pl.svg" alt="Polska" title="Polska">Polska</a>
+                                        </li>
+                                        <li>
+                                               <a href="/pt-pt/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-pt.svg" alt="Portugal" title="Portugal">Portugal</a>
+                                        </li>
+                                        <li>
+                                               <a href="/de-ch/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ch.svg" alt="Schweiz (Deutsch)" title="Schweiz (Deutsch)">Schweiz (Deutsch)</a>
+                                        </li>
+                                        <li>
+                                               <a href="/fr-ch/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ch.svg" alt="Suisse (Fran&#231;ais)" title="Suisse (Fran&#231;ais)">Suisse (Fran&#231;ais)</a>
+                                        </li>
+                                        <li>
+                                               <a href="/it-ch/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ch.svg" alt="Svizzera (Italiano)" title="Svizzera (Italiano)">Svizzera (Italiano)</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-gb/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-gb.svg" alt="United Kingdom" title="United Kingdom">United Kingdom</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="region">
+                                AFRICA &amp; MIDDLE EAST
+                                <ul>
+                                        <li>
+                                               <a href="/africa/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-zw.png" alt="Africa" title="Africa">Africa</a>
+                                        </li>
+                                        <li>
+                                               <a href="https://www.sage.com/africa/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-bw.svg" alt="Botswana" title="Botswana">Botswana</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-ke/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ke.svg" alt="Kenya" title="Kenya">Kenya</a>
+                                        </li>
+                                        <li>
+                                               <a href="/fr-ma/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ma.svg" alt="Maroc" title="Maroc">Maroc</a>
+                                        </li>
+                                        <li>
+                                               <a href="https://www.sage.com/africa/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-na.svg" alt="Namibia" title="Namibia">Namibia</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-ng/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ng.svg" alt="Nigeria" title="Nigeria">Nigeria</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-za/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-za.svg" alt="South Africa" title="South Africa">South Africa</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-ae/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-ae.svg" alt="United Arab Emirates" title="United Arab Emirates">United Arab Emirates</a>
+                                        </li>
+                                        <li>
+                                               <a href="/ar-sa/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-sa.svg" alt="السعودية" title="السعودية">السعودية</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="region">
+                                ASIA PACIFIC
+                                <ul>
+                                        <li>
+                                               <a href="/en-au/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-au.svg" alt="Australia" title="Australia">Australia</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-hk/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-hk.svg" alt="Hong Kong" title="Hong Kong">Hong Kong</a>
+                                        </li>
+                                        <li>
+                                               <a href="https://www.sagesoftware.co.in/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-in.svg" alt="India" title="India">India</a>
+                                        </li>
+                                        <li>
+                                               <a href="/id-id/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-id.svg" alt="Indonesia" title="Indonesia">Indonesia</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-my/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-my.svg" alt="Malaysia" title="Malaysia">Malaysia</a>
+                                        </li>
+                                        <li>
+                                               <a href="/en-sg/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-sg.svg" alt="Singapore" title="Singapore">Singapore</a>
+                                        </li>
+                                        <li>
+                                               <a href="/th-th/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-th.svg" alt="ประเทศไทย" title="ประเทศไทย">ประเทศไทย</a>
+                                        </li>
+                                        <li>
+                                               <a href="/zh-cn/" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-cn.svg" alt="中华人民共和国" title="中华人民共和国">中华人民共和国</a>
+                                        </li>
+                                </ul>
+                            </div>
+                            <div class="region">
+                                SOUTH AMERICA
+                                <ul>
+                                        <li>
+                                               <a href="https://www.sage.com/pt-br" data-lang="" data-currentlang="en-GB" class="country-selector-link"><img src="https://www.sage.com/investors/-/media/images/sagedotcom/master/country%20flag%20icons/icon-flag-br.svg" alt="Brasil" title="Brasil">Brasil</a>
+                                        </li>
+                                </ul>
+                            </div>
+            </div>
+        </div>
+</div>
+    </div>
+</div>
+    </div>
+</div>
+        </div>
+    </div>
+</div>
+
+</div>
+</footer>
+
+
+    <div id="liveperson-chat-container"></div>
+
+
+    <script>
+    window.utag_data = {
+        language: "en-gb",
+        platform: "sitecore",
+        country: "gb",
+        page_name: "regulatory-announcements",
+        page_format: "Standard Template: Investor Content Page",
+        page_template: "Investor Content Page",
+        page_type: "article",
+        page_title: "Regulatory Announcements",
+        page_description: "Regulatory Announcements",
+        page_form_exists: "false", // default to false, and let components override via registerPageData
+        page_business_area: "",
+        page_business_size: "",
+        page_business_industry: "",
+        page_business_cloud_solution: "(not set)",
+        page_business_type: "(not set)",
+        page_journey_stage: "(not set)",
+        page_phone_number: "(not set)",
+                        };
+</script>
+
+<script type="text/javascript">
+    ;(function(global) {
+        global.require = global.require || {};
+        global.require.paths = global.require.paths || {};
+        global.require.paths.tealium = '//tags.tiqcdn.com/utag/sage/en-gb/prod/utag';       
+    })(this /* window */);
+</script>
+
+ 
+    <script data-ux-args="{&quot;IsExperienceEditorEditing&quot;:false,&quot;SiteLayoutType&quot;:&quot;desktop&quot;,&quot;UserId&quot;:&quot;(not set)&quot;,&quot;UserAuthStatus&quot;:&quot;not authenticated&quot;,&quot;UserRegStatus&quot;:&quot;not registered&quot;}" data-ux-module="SageDotCom/DataLayer/Config/userConfiguration" data-ux-state="pending" type="text/javascript"></script> 
+    <script src="/Areas/SageDotCom/js/SageDotCom.bundle.config.js?v=637229623893698650" type="text/javascript"></script>
+    <script src="/Areas/ScoreCCF/js/Vendor/require.js?v=637229623893698650" data-main="/Areas/SageDotCom/js/main.js" type="text/javascript"></script>
+     
+    
+
+    
+
+
+
+    <script src="/Areas/SageDotCom/js/SitecoreExtensions/ExperienceEditorExtension.js?v=637229623893698650" type="text/javascript"></script>
+</body>
+</html>

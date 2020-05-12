@@ -1,0 +1,4976 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="cgApp">
+<head>
+    <base href="">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" name="viewport">
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <!-- rel=dynamic-content indicates an element that is replaced with the contents produced by the specified href.
+        dyn-cs:* URIs are resolved using the values within the 'wp_dyncs_simple' theme module. -->
+    <link rel="stylesheet" href="/wps/contenthandler/cg/!ut/p/digest!EJ1CgQd0vi21w8-xsT7RLg/sp/mashup:ra:collection?soffset=0&amp;eoffset=11&amp;themeID=ZJ_JAHEGG82LGK300A7LMF2603466&amp;locale=en&amp;locale=nl&amp;mime-type=text%2Fcss&amp;lm=1587590963000&amp;entry=wp_toolbar_common__0.0%3Ahead_css&amp;entry=wp_dialog_css__0.0%3Ahead_css&amp;entry=wp_toolbar_projectmenu__0.0%3Ahead_css&amp;entry=wp_toolbar_common_actionbar__0.0%3Ahead_css&amp;entry=wp_toolbar_sitepreview__0.0%3Ahead_css&amp;entry=wp_toolbar_logo__0.0%3Ahead_css&amp;entry=wp_simple_contextmenu_css__0.0%3Ahead_css&amp;entry=wp_toolbar_actionbar__0.0%3Ahead_css&amp;entry=wp_theme_simple__0.0%3Ahead_css&amp;entry=cgicons__0.0%3Ahead_css&amp;entry=wp_toolbar_moremenu__0.0%3Ahead_css" type="text/css"/><link rel="alternate" id="head_css_deferred" href="/wps/contenthandler/cg/!ut/p/digest!EJ1CgQd0vi21w8-xsT7RLg/sp/mashup:ra:collection?soffset=0&amp;eoffset=6&amp;themeID=ZJ_JAHEGG82LGK300A7LMF2603466&amp;locale=en&amp;locale=nl&amp;mime-type=text%2Fcss&amp;lm=1497589838000&amp;entry=wp_status_bar__0.0%3Ahead_css&amp;entry=wp_federated_documents_picker__0.0%3Ahead_css&amp;entry=wcm_inplaceEdit__0.0%3Ahead_css&amp;entry=wp_dnd_css__0.0%3Ahead_css&amp;entry=wp_content_targeting_cam__0.0%3Ahead_css&amp;deferred=true"/><script type="text/javascript">var djConfig={"baseUrl":"/wps/portal_dojo/v1.9/dojo/","locale":"en","isDebug":false,"debugAtAllCosts":false,"parseOnLoad":false,"afterOnLoad":false,"has":{"dojo-bidi":true},"modulePaths":{"com":"/wps/themeModules/js/com","ibm":"/wps/themeModules/js/ibm","pagebuilder":"/wps/themeModules/modules/pagebuilder/js","portalclient":"/wps/themeModules/modules/portalclient/js","asa":"/wps/themeModules/modules/asa/js","contentmapping":"/wps/themeModules/modules/contentmapping/js","federation":"/wps/themeModules/modules/federation/js"}};djConfig.locale=djConfig.locale.replace(/_/g, "-").replace(/iw/, "he").toLowerCase();(function(){if (typeof(wpModules) == 'undefined') wpModules = {}; if (typeof(wpModules.state) == 'undefined') wpModules.state = {}; if (typeof(wpModules.state.page) == 'undefined') wpModules.state.page = {};wpModules.state.page._initial=[{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"selection","value":["Z6_482AG842MGM2F0ANO54QDG2837"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"labelMappings","value":["Z6_482AG842M072D0AR5G9CF7GGS0","Z6_482AG842MGM2F0ANO54QDG2837","Z6_00000000000000A0BR2B300GO2","Z6_482AG842MGM2F0ANO54QDG2837","Z6_000000000000000000000000A0","Z6_482AG842MGM2F0ANO54QDG2837"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"path-info","value":["financial-press-releases"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"expansions","value":["Z6_000000000000000000000000A0","Z6_00000000000000A0BR2B300GO2","Z6_482AG842M072D0AR5G9CF7GGS0","Z6_482AG842M072D0AR5G9CF7GGS1"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"locale","value":["en"]}];wpModules.state.page.selectionPath=['Z6_000000000000000000000000A0','Z6_00000000000000A0BR2B300GO2','Z6_482AG842M072D0AR5G9CF7GGS0','Z6_482AG842M072D0AR5G9CF7GGS1','Z6_482AG842MGM2F0ANO54QDG2837'];wpModules.state.page.supportsEditMode=true;wpModules.state.page.supportsToolbar=true;wpModules.state.page.path='/wps/portal/cg';wpModules.state.page.protectedPath='/wps/myportal/cg';wpModules.state.page.publicPath='/wps/portal/cg';})();</script><script type="text/javascript" src="/wps/contenthandler/cg/!ut/p/digest!I09QqdexEzXA4cnnhWD_QQ/mashup/ra:collection?themeID=ZJ_JAHEGG82LGK300A7LMF2603466&amp;locale=en&amp;locale=nl&amp;mime-type=text%2Fjavascript&amp;lm=1548742988000&amp;entry=wp_client_main__0.0%3Ahead_js&amp;entry=wp_client_ext__0.0%3Ahead_js&amp;entry=wp_client_logging__0.0%3Ahead_js&amp;entry=wp_client_tracing__0.0%3Ahead_js&amp;entry=wp_modules__0.0%3Ahead_js&amp;entry=wp_state_page__0.0%3Ahead_js&amp;entry=wp_photon_dom__0.0%3Ahead_js&amp;entry=wp_dialog_util__0.0%3Ahead_js&amp;entry=wp_toolbar_common__0.0%3Ahead_js&amp;entry=wp_client_selector__0.0%3Ahead_js&amp;entry=wp_a11y__0.0%3Ahead_js&amp;entry=wp_dialog_draggable__0.0%3Ahead_js&amp;entry=wp_dialog_main__0.0%3Ahead_js&amp;entry=wp_theme_utils__0.0%3Ahead_js&amp;entry=wp_toolbar_viewframe_validator__0.0%3Ahead_js&amp;entry=custom_js__0.0%3Ahead_js"></script><link rel="alternate" id="head_js_deferred" href="/wps/contenthandler/cg/!ut/p/digest!I09QqdexEzXA4cnnhWD_QQ/mashup/ra:collection?themeID=ZJ_JAHEGG82LGK300A7LMF2603466&amp;locale=en&amp;locale=nl&amp;mime-type=text%2Fjavascript&amp;lm=1497589838000&amp;entry=dojo_19__0.0%3Ahead_js&amp;entry=dojo_app_19__0.0%3Ahead_js&amp;entry=dojo_dom_19__0.0%3Ahead_js&amp;entry=dojo_dnd_basic_19__0.0%3Ahead_js&amp;entry=dojo_fx_19__0.0%3Ahead_js&amp;entry=dojo_data_19__0.0%3Ahead_js&amp;entry=dojo_dnd_ext_19__0.0%3Ahead_js&amp;entry=dojo_selector_lite_19__0.0%3Ahead_js&amp;entry=dijit_19__0.0%3Ahead_js&amp;entry=dijit_layout_basic_19__0.0%3Ahead_js&amp;entry=dojox_layout_basic_19__0.0%3Ahead_js&amp;entry=dijit_menu_19__0.0%3Ahead_js&amp;entry=dojo_fmt_19__0.0%3Ahead_js&amp;entry=dijit_form_19__0.0%3Ahead_js&amp;entry=dijit_tree_19__0.0%3Ahead_js&amp;entry=dijit_layout_ext_19__0.0%3Ahead_js&amp;entry=wp_dnd_namespace__0.0%3Ahead_js&amp;entry=wp_dnd_source__0.0%3Ahead_js&amp;entry=wp_dnd_util__0.0%3Ahead_js&amp;entry=wcm_inplaceEdit__0.0%3Ahead_js&amp;entry=wp_client_dnd__0.0%3Ahead_js&amp;entry=wp_dnd_target__0.0%3Ahead_js&amp;deferred=true"/><link id="YSyLWJhsO64" rel="alternate" href="https://www.colruytgroup.com/wps/portal/cg/en/home/investors/financial-press-releases/!ut/p/z1/nZDRCoIwFIafSHaaM-1SE0fRkhTJdhMjpi1sipMuevq86KJFZHTuDnzfzzk_4qhEXIubqsWgWi2acT_w-ZEEOKQBwYwynEC4TT2yiykOXB_tbQB8HEOYeXSxTHxKc0D8Fx-sCSHKcOQC0BT_478mTfnrKWBsAPdsyWrEOzGcHaWrFpWV0kKflGicrpfGOL1spDDSjPdwO_G9kdkUAE_gWycfAOvpXGrUXYuivG-qfHUhDwUAF_Y!/"><script type="text/javascript">(function() {
+	var element = document.getElementById("YSyLWJhsO64");
+	if (element) {
+		wpModules.theme.WindowUtils.baseURL.resolve(element.href);
+	}
+}());</script><base href="https://www.colruytgroup.com/wps/portal/cg/en/home/investors/financial-press-releases/!ut/p/z1/nZDRCoIwFIafSHaaM-1SE0fRkhTJdhMjpi1sipMuevq86KJFZHTuDnzfzzk_4qhEXIubqsWgWi2acT_w-ZEEOKQBwYwynEC4TT2yiykOXB_tbQB8HEOYeXSxTHxKc0D8Fx-sCSHKcOQC0BT_478mTfnrKWBsAPdsyWrEOzGcHaWrFpWV0kKflGicrpfGOL1spDDSjPdwO_G9kdkUAE_gWycfAOvpXGrUXYuivG-qfHUhDwUAF_Y!/"><!-- Request url -->
+<title>Financial press releases | Colruyt Group</title>
+
+
+<meta name="description" content="View the financial press releases of the past years.
+">
+<meta property="og:locale" content="en_BE">
+<meta property="og:site_name" content="Colruyt Group">
+<meta property="og:url" content="https://www.colruytgroup.com/wps/portal/cg/en/home/investors/financial-press-releases">
+<meta name="twitter:url" content="https://www.colruytgroup.com/wps/portal/cg/en/home/investors/financial-press-releases">
+ 
+<meta content="Financial press releases" name="twitter:title"><meta content="article" property="og:type"><meta content="Financial press releases" property="og:title"><meta content="View the financial press releases of the past years.
+" name="twitter:card"><meta content="View the financial press releases of the past years.
+" property="og:description"><meta content="View the financial press releases of the past years.
+" name="twitter:description"><meta content="https://www.colruytgroup.com:443/wps/wcm/connect/cg/cb9d06ec-3262-42c0-bd9a-7ad14482a4ef/image?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_NI0C1CS0O81620QKM9KAC02H94-cb9d06ec-3262-42c0-bd9a-7ad14482a4ef-myo1iBx" property="og:image">
+	<link id="com.ibm.lotus.NavStateUrl" rel="alternate" href="/wps/portal/cg/en/home/investors/financial-press-releases/!ut/p/z1/nZDRCoIwFIafSHaaM-1SE0fRkhTJdhMjpi1sipMuevq86KJFZHTuDnzfzzk_4qhEXIubqsWgWi2acT_w-ZEEOKQBwYwynEC4TT2yiykOXB_tbQB8HEOYeXSxTHxKc0D8Fx-sCSHKcOQC0BT_478mTfnrKWBsAPdsyWrEOzGcHaWrFpWV0kKflGicrpfGOL1spDDSjPdwO_G9kdkUAE_gWycfAOvpXGrUXYuivG-qfHUhDwUAF_Y!/dz/d5/L2dJQSEvUUt3QS80TmxFL1o2XzQ4MkFHODQyTUdNMkYwQU5PNTRRREcyODM3/" />
+
+
+<link href="/wps/contenthandler/cg/!ut/p/digest!M9taBTMiVvdp0vR6byQGFQ/dav/fs-type1/themes/ColruytGroupStaticTheme/css/colruytgroup/images/touch-icon.png" rel="apple-touch-icon-precomposed" type="image/x-icon" />
+<link href="/wps/contenthandler/cg/!ut/p/digest!M9taBTMiVvdp0vR6byQGFQ/dav/fs-type1/themes/ColruytGroupStaticTheme/css/colruytgroup/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<!-- Google site verification code-->
+<meta name="google-site-verification" content="ueOyXeq9u8TKXXO-mooxNdQHQFccV-WbJYDqJSN19A8" />
+
+
+
+</head>
+<!-- Body Tag -->
+
+	<body id="content" class=" lotusui30dojo tundra claro locale_en" ontouchstart="" onmouseover="">
+<!-- Tealium tag -->
+
+
+<script type="text/javascript">
+	var utag_data={ // attributes below are mandatory
+	  env_template: "top_cat_page",
+      env_language: "en",
+	  page_name : "Financial press releases",
+	  user_logged:"no"
+	};
+</script>
+
+
+
+<script type="text/javascript">
+    (function(a,b,c,d){
+    a='//tags.tiqcdn.com/utag/colruytgroup/colruytgroup.com/prod/utag.js';
+    b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+    a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+    })();
+</script><!--header-->
+<header ng-controller="MenuCtrl as menu">
+    <div class="stToolbar">
+        </div>
+    <!-- top nav-->
+    <nav class="cg-top-nav container d-flex justify-content-end">
+        
+    <ul class="alternate-menu">
+        
+                <li
+                        class="profile" >
+                    <a href='https://portal.colruytgroup.com/'
+                       title=''>
+                        Employee
+                    </a>
+                </li>
+            
+                <li
+                        class="contact-us" >
+                    <a href='/wps/portal/cg/en/t/contact-us'
+                       title=''>
+                        Contact us
+                    </a>
+                </li>
+            
+    </ul>
+    <ul class="language-menu">
+        <!--{{contentUid is the value needed.. filled in by angular.}}-->
+<li class="language-item ">
+	<a href="/ColruytMLCustom/multilingual/cg/redirectUrl/{{contentUid}}/nl"  name="locale"  value="nl">
+		nl
+	</a>
+</li>
+<li class="language-item ">
+	<a  href="/ColruytMLCustom/multilingual/cg/redirectUrl/{{contentUid}}/fr"  name="locale"  value="fr">
+		fr
+	</a>
+</li>
+
+    </ul>
+</nav>
+    <!-- main nav-->
+    <div class="header-wrapper">
+        <div class="cg-header">
+            <div class="logo">
+                
+	<a href="/wps/portal/cg/en/home" title="Colruyt Group" class="">
+		<img src="/wps/contenthandler/cg/!ut/p/digest!M9taBTMiVvdp0vR6byQGFQ/dav/fs-type1/themes/ColruytGroupStaticTheme/css/colruytgroup/images/logo/CG.svg" alt="ColruytGroup">
+	</a>
+</div>
+            <div class="cg-main-nav" ng-class="{'open':menu.showMainNav}">
+                <div class="logo">
+                    
+	<a href="/wps/portal/cg/en/home" title="Colruyt Group" class="">
+		<img src="/wps/contenthandler/cg/!ut/p/digest!M9taBTMiVvdp0vR6byQGFQ/dav/fs-type1/themes/ColruytGroupStaticTheme/css/colruytgroup/images/logo/CG.svg" alt="ColruytGroup">
+	</a>
+</div>
+                
+    <ul class="top-level-nav" >
+
+        <div class="header">
+            <img class="logo" src="/wps/contenthandler/cg/!ut/p/digest!M9taBTMiVvdp0vR6byQGFQ/dav/fs-type1/themes/ColruytGroupStaticTheme/css/colruytgroup/images/logo/cg-icon-negative.svg" />
+            <span class="nav-close" ng-click="menu.toggleHamburger()"></span>
+        </div>
+
+        
+                <li class="top-level-link " ng-class="{'cg-active': menu.menuId === 1}">
+                    <a href="/wps/portal/cg/en/home/about-us" ng-click="menu.toggleSubNav(1, $event);">
+                        <span>About us</span>
+                    </a>
+                    
+
+                    <div class="sub-menu-block" ng-class="{'cg-closed': menu.menuId !== 1 && menu.closed}">
+                        <div class="content" area="about-us">
+                            <div><a href="#" class="closable" ng-click="menu.toggleSubNav(1,$event)">
+    <span>Close</span>
+    </a>
+</div>
+<div>
+    <div class="sub-menu-item">
+        
+        <a href="/wps/portal/cg/en/home/about-us
+">To overview</a>
+        
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/about-us/history
+">History</a>
+            
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/about-us/mission-and-values
+">Mission and values</a>
+            
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/about-us/key-figures
+">Key figures</a>
+            
+        
+    </div></div>
+<div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/about-us/sustainability
+">Sustainability</a>
+            
+        
+    </div></div>
+    <div class="cg-main-nav-related-item">
+    
+            <a href="https://issuu.com/colruytgroup/docs/annual_report_1819/16?fr=sMWY0ZTcwNTU1" target="_blank">
+                <div class="image">
+                    <img src="/wps/wcm/connect/cg/942b2acb-9098-4aae-9ff9-5136ffd7bab8/767188_JV19_COVER_EN.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_NI0C1CS0O81620QKM9KAC02H94-942b2acb-9098-4aae-9ff9-5136ffd7bab8-m.bpnGB"/>
+                </div>
+                <div class="content">
+                    <span class="title" >See our sustainability strategy </span>
+                    
+                </div>
+            </a>
+    
+
+    
+    </div>
+
+ 
+
+    <div class="cg-main-nav-related-item">
+    
+        
+            <a href="https://nutriscore.colruytgroup.com/colruytgroup/en/" target="_blank" >
+                <div class="image">
+                    <img src="/wps/wcm/connect/cg/1e74f9f0-0d2c-44d4-b694-005e55898dac/nutriscore1.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_NI0C1CS0O81620QKM9KAC02H94-1e74f9f0-0d2c-44d4-b694-005e55898dac-m.bpnGB)"/>
+                </div>
+                <div class="content">
+                    <span class="title" >Choose wisely using the Nutri-Score</span>
+                    
+                </div>
+            </a>
+     
+     
+</div>
+
+
+
+        
+
+                        </div>
+                    </div>
+                    
+                </li>
+            
+                <li class="top-level-link " ng-class="{'cg-active': menu.menuId === 2}">
+                    <a href="/wps/portal/cg/en/home/brands" ng-click="menu.toggleSubNav(2, $event);">
+                        <span>Brands</span>
+                    </a>
+                    
+                </li>
+            
+                <li class="top-level-link  cg-current" ng-class="{'cg-active': menu.menuId === 3}">
+                    <a href="/wps/portal/cg/en/home/investors" ng-click="menu.toggleSubNav(3, $event);">
+                        <span>Investors</span>
+                    </a>
+                    
+
+                    <div class="sub-menu-block" ng-class="{'cg-closed': menu.menuId !== 3 && menu.closed}">
+                        <div class="content" area="investors">
+                            <div><a href="#" class="closable" ng-click="menu.toggleSubNav(3,$event)">
+    <span>Close</span>
+    </a>
+</div>
+<div>
+    <div class="sub-menu-item">
+        
+        <a href="/wps/portal/cg/en/home/investors
+">To overview</a>
+        
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/investors/financial-press-releases
+">Financial press releases</a>
+            
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/investors/annualreport
+">Annual Report 2018/19</a>
+            
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/investors/annual-reports
+">All annual reports</a>
+            
+        
+    </div></div>
+<div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/investors/shareholders
+">Shareholders&#39; information</a>
+            
+        
+    </div></div>
+    <div class="cg-main-nav-related-item">
+    
+            <a href="https://issuu.com/colruytgroup/docs/annual_report_1819?fr=sMWY0ZTcwNTU1" target="_blank">
+                <div class="image">
+                    <img src="/wps/wcm/connect/cg/9b235616-d66d-4bc3-a534-e5db5e771843/767188_JV19_COVER_EN.jpg?MOD=AJPERES&amp;CACHEID=ROOTWORKSPACE.Z18_NI0C1CS0O81620QKM9KAC02H94-9b235616-d66d-4bc3-a534-e5db5e771843-m.bpC27"/>
+                </div>
+                <div class="content">
+                    <span class="title" >Read our Annual Report 2018/19 </span>
+                    
+                </div>
+            </a>
+    
+
+    
+    </div>
+
+ 
+
+
+
+        
+
+                        </div>
+                    </div>
+                    
+                </li>
+            
+                <li class="top-level-link " ng-class="{'cg-active': menu.menuId === 4}">
+                    <a href="/wps/portal/cg/en/home/press" ng-click="menu.toggleSubNav(4, $event);">
+                        <span>Press</span>
+                    </a>
+                    
+
+                    <div class="sub-menu-block" ng-class="{'cg-closed': menu.menuId !== 4 && menu.closed}">
+                        <div class="content" area="press">
+                            <div><a href="#" class="closable" ng-click="menu.toggleSubNav(4,$event)">
+    <span>Close</span>
+    </a>
+</div>
+<div>
+    <div class="sub-menu-item">
+        
+        <a href="/wps/portal/cg/en/home/press
+">To overview</a>
+        
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/press/press-releases
+">Press releases</a>
+            
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/press/media-material
+">Media material</a>
+            
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/press/recal
+">Recalls</a>
+            
+        
+    </div></div>
+ 
+
+
+
+        
+
+                        </div>
+                    </div>
+                    
+                </li>
+            
+                <li class="top-level-link " ng-class="{'cg-active': menu.menuId === 5}">
+                    <a href="/wps/portal/cg/en/home/working-for-us" ng-click="menu.toggleSubNav(5, $event);">
+                        <span>Working for us</span>
+                    </a>
+                    
+
+                    <div class="sub-menu-block" ng-class="{'cg-closed': menu.menuId !== 5 && menu.closed}">
+                        <div class="content" area="working-for-us">
+                            <div><a href="#" class="closable" ng-click="menu.toggleSubNav(5,$event)">
+    <span>Close</span>
+    </a>
+</div>
+<div>
+    <div class="sub-menu-item">
+        
+        <a href="/wps/portal/cg/en/home/working-for-us
+">To overview</a>
+        
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/working-for-us/do-together
+">Do together</a>
+            
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/working-for-us/Grow+together
+">Grow together</a>
+            
+        
+    </div>
+    <div class="sub-menu-item">
+        
+        
+            
+            
+                <a href="/wps/portal/cg/en/home/working-for-us/dream-together
+">Dream together</a>
+            
+        
+    </div></div>
+ 
+
+
+
+        
+
+                        </div>
+                    </div>
+                    
+                </li>
+            <!--mobile only-->
+    </ul>
+
+    <ul class="alternate-menu">
+        
+                <li
+                        class="profile" >
+                    <a href='https://portal.colruytgroup.com/'
+                       title=''>
+                        Employee
+                    </a>
+                </li>
+            
+                <li
+                        class="contact-us" >
+                    <a href='/wps/portal/cg/en/t/contact-us'
+                       title=''>
+                        Contact us
+                    </a>
+                </li>
+            
+    </ul>
+    <ul class="language-menu">
+        <!--{{contentUid is the value needed.. filled in by angular.}}-->
+<li class="language-item ">
+	<a href="/ColruytMLCustom/multilingual/cg/redirectUrl/{{contentUid}}/nl"  name="locale"  value="nl">
+		nl
+	</a>
+</li>
+<li class="language-item ">
+	<a  href="/ColruytMLCustom/multilingual/cg/redirectUrl/{{contentUid}}/fr"  name="locale"  value="fr">
+		fr
+	</a>
+</li>
+
+    </ul>
+</div>
+            <div class="header-search">
+                <script type="application/json" id="search_config">{"feed":"/wps/portal/cg/caas?current=true&urile=wcm:path:cg_shared/system/search/"}</script>
+
+<!--toggleSearch-->
+<div ng-controller="SearchFormCtrl" class="cg-search-input cg-search-dropdown" ng-class="{'open':menu.showSearch}" clickoutside="menu.showSuggested = false" outside-if-not="cg-search-btn,cg-search-close-btn">
+    <form  method="GET" action="/wps/portal/cg/en/home/search" ng-submit="storeQuery(searchInputText)">
+    <div class="search-field" >
+        <button type="button" class="search-menu-item" ng-click="menu.toggleSearch()"></button>
+
+        <div class="search-wrapper">
+            <span>
+            <button type="cancel" class="cancel-button" ng-click="menu.toggleSearch()">
+            </button>
+            <input autocomplete="off" type="text" placeholder="Search" maxlength="50" ng-model="searchInputText" ng-change="loadSearchStreamData()" name="q" focus-me="menu.showSearch" ng-click="menu.showSuggested = true">
+
+            <button type="submit" class="search-button"></button>
+        </span>
+            <div class="cg-search-results-header" ng-show="menu.showSuggested">
+                <div class="cg-search-results cg-search-last" ng-hide="popup || stQueries.length < 1 || stQueries === undefined" ng-show="searchInputText.length < 4">
+                    <ul>
+                        <li ng-repeat="item in stQueries track by $index" ng-click="searchStored(item,false)">
+                            <i class="icon icon-cg-close input-delete" ng-click="deleteFromStored(item)"></i> <a href="/wps/portal/cg/en/home/search/?q={{item}}">{{item}}</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="cg-search-results" ng-show="popup" ng-if="(data['1-search-stories'].searchResults.entries.length > 0 || data['4-search-investors'].searchResults.entries.length > 0 || data['7-search-press'].searchResults.entries.length > 0) && searchInputText.length > 3">
+
+                    <div class="cg-search-result" ng-if="data['1-search-stories'].searchResults.entries.length > 0">
+                        <p class="cg-category">Stories</p>
+                        <p class="cg-result-body">
+                        <ul>
+                            <li ng-repeat="item in data['1-search-stories'].searchResults.entries | limitTo: 3">
+                                <a href="?urile=wcm:oid:{{item.docId}}">{{item.name}}</a>
+                            </li>
+                        </ul>
+                        </p>
+                        <a href="/wps/portal/cg/en/home/search?q={{searchInputText}}&p:type=1-search-stories" class="cg-result-more"> Search our stories <i class="icon icon-cg-arrow-right"></i></a>
+                        <hr>
+                    </div>
+
+
+
+                    <div class="cg-search-result" ng-if="data['4-search-investors'].searchResults.entries.length > 0">
+                        <p class="cg-category">Financieel EN</p>
+                        <p class="cg-result-body">
+                        <ul>
+                            <li ng-repeat="item in data['4-search-investors'].searchResults.entries | limitTo: 3">
+                                <a href="?urile=wcm:oid:{{item.docId}}">{{item.name}}</a>
+                            </li>
+                        </ul>
+                        </p>
+                        <a href="/wps/portal/cg/en/home/search?q={{searchInputText}}&p:type=4-search-investors" class="cg-result-more"> Search our financial press releases <i class="icon icon-cg-arrow-right"></i></a>
+                        <hr>
+                    </div>
+
+
+
+                    <div class="cg-search-result" ng-if="data['7-search-press'].searchResults.entries.length > 0">
+
+                        <p class="cg-category">Media EN</p>
+                        <p class="cg-result-body">
+                        <ul>
+                            <li ng-repeat="item in data['7-search-press'].searchResults.entries | limitTo: 3">
+                                <a href="?urile=wcm:oid:{{item.docId}}">{{item.name}}</a>
+                            </li>
+                        </ul>
+                        </p>
+                        <a href="/wps/portal/cg/en/home/search?q={{searchInputText}}&p:type=7-search-press"  class="cg-result-more"> Search the media material <i class="icon icon-cg-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+            </form>
+
+            <!-- Shows when results come in -->
+
+        </div>
+
+</div>
+            <div class="mobile-nav" ng-click="menu.toggleHamburger()"></div>
+        </div>
+    </div>
+
+</header>
+
+<section class="cg-main-content-section">
+    <!-- these wptheme* classes are required for the hidden widget container -->
+    <div aria-label="IBM Digital Experience Main" class="stMainContent wpthemeMainContent" role="main">
+        <!-- required - do not remove -->
+        <div style="display:none" id="portletState">{}</div><div class="wpthemeLayoutContainersHidden" id="layoutContainers">
+            <div class="hiddenWidgetsDiv">
+    <!-- widgets in this container are hidden in the UI by default -->
+    <div class='component-container ibmDndRow hiddenWidgetsContainer id-Z7_IKRODVMU4V0SM9SR3KSL3HECH2' name='ibmHiddenWidgets' ></div></div>
+            <div class='component-container ibmDndColumn id-Z7_TNOAEH3MC09KJMQVHJ7LL1Q4B2' name='ibmMainContainer' ><div class='component-control id-Z7_482AG842M08CC0ANAHFV5S0GG2' ><!-- The Control element contains the portlet banner and the portlet content. -->
+<div class="ibmPortalControl stControl wpthemeControl a11yRegionTarget" >
+    <!-- The ControlHeader element is the banner which contains the portlet title and menu -->
+    <div class="stControlHeader wpthemeControlHeader">
+        <!-- A FocusableLink shows or hides the ControlHeader when the link receives a "focus" or "blur" event. This -->
+        <!-- element's event handlers are added by JavaScript in the st_skin module when the page is in "Edit" mode. -->
+        <!-- This link corresponds to the entire ControlHeader element. -->
+        <a tabindex="0" class="stFocusableLink stStartHeader"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="start portlet menu bar"/></a>
+        <div>
+            <div>
+                <h2 class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+                    ondragend="wpModules.dnd.util.portletDragEnd(event);">
+                    <!-- The "lm:title" dynamic spot is used for dynamic title support. -->
+                    <span class="lm-dynamic-title a11yRegionLabel"><span lang="en" dir="ltr">Web Content Viewer</span></span>
+                </h2>
+                <!-- the content menu -->
+                <a aria-haspopup="true" aria-label="Display content menu" role="button" href="javascript:;" class="contextMenuInSkinIcon stGroup" style="display:none" >
+                    <span title="Display content menu">
+                        <svg class="stSkinMenuIcon" aria-label="Display content menu"><title>Display content menu</title><use xlink:href="#stContent-Menu"></use></svg>
+                    </span>
+                </a>
+                <!-- A FocusableLink shows or hides the ControlHeader when the link receives a "focus" or "blur" event. This -->
+                <!-- element's event handlers are added when the portlet is in "Edit" mode, via JavaScript (st_skin module). -->
+                <!-- This link corresponds to the portlet menu element. -->
+                <a class="stActionMenu" aria-label="Display portlet menu" aria-haspopup="true" role="button" href="javascript:;" onclick="wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});" onkeydown="if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}">
+                    <span title="Display portlet menu">
+                        <svg class="stSkinMenuIcon" aria-label="Display portlet menu"><title>Display portlet menu</title><use xlink:href="#stPortlet-Menu"></use></svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <a tabindex="0" class="stFocusableLink stEndHeader"><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="end portlet menu bar"/></a>
+    </div>
+    
+    <!-- The ControlBody element contains the portlet content. -->
+    <div class="stControlBody stOverflowAuto wpthemeControlBody">
+        <!-- The "lm:control" dynamic spot is used for the markup of a layout control. -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <!-- Tealium data information -->
+
+
+<input type="hidden" class="cg-layer-data" name="page_cat1" value="Investors">
+<input type="hidden" class="cg-layer-data" name="page_cat2" value="Financial press releases">
+
+<input type="hidden" class="cg-layer-data" name="env_template" value="sub_cat_page">
+
+
+<div class="hide" ng-init="contentUid='1e8b17e1-9d6c-4e8c-bcbc-b81e1cc9d62e'"></div>
+
+<section class="hidden-xs breadcrumbs-wrapper">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs-list">                   
+
+<li class="breadcrumb"><a href="/wps/portal/cg/en/home">Home</a></li>
+
+<!-- TW: explanation next NotEquals statement: if parent not equals to home, render the parent because it is an intermediate page between home and the current page
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb"><a href="/wps/portal/cg/en/home/investors">Investors</a></li>
+
+
+
+
+
+
+
+</ul>
+        <div class="breadcrumbs-social" ng-controller="SocialShareCtrl as socialCtrl">
+
+            <span>Share</span>
+            <a target="_blank" ng-href="https://www.facebook.com/sharer/sharer.php?u={{socialCtrl.location}}" title="" target="" class="icon">
+                <i class="icon icon-facebook"></i>
+            </a>
+            <a target="_blank" ng-href="https://twitter.com/intent/tweet?url={{socialCtrl.location}}&text=Financial press releases:%20...%20-%20" class="icon">
+                <i class="icon icon-twitter"></i>
+            </a>
+            <a target="_blank" ng-href="https://www.linkedin.com/shareArticle?url={{socialCtrl.location}}" class="icon">
+                <i class="icon icon-linkedin"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section class="cg-intro-section">
+    
+    
+    <h1>Financial press releases</h1>
+    <div class="cg-intro">
+        
+    </div>
+    
+</section>
+<!-- start layers -->
+<!-- layers test-->
+<!-- nav layer -- webpage-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- configuration-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- component-section-->
+
+
+
+
+
+
+<!-- property name=component-press-releases-->
+
+<!--match not found..-->
+<div class="content-wrapper">
+
+
+
+
+
+
+
+
+
+
+<script type="application/json" id="config">{"detailUrl":{"append":"path", "replace":true,"templates":{"pressrelease":["en/press/press-releases","/wps/portal/cg/en/home/press/press-releases"]}}}</script>
+
+
+<section class="fin-press-release" ng-controller="financialPressReleaseController as pressReleaseCtrl"
+feed="/ColruytGroupWCMService/wcm/service/stream/en/cg" >
+    <collection ng-if="!pressReleaseCtrl.loading" filters="pressReleaseCtrl.filters"
+                template="pressReleaseCtrl.template" service="pressReleaseCtrl.serviceCallback(param)" sort="pressReleaseCtrl.sort"    ></collection>
+    <script type="text/ng-template" id="press-release-asset2.html">
+        <div class="col-xs-12 col-sm-6 col-lg-4 cg-block-media" year="2017">
+  <a href="/wps/portal/cg/en/home/investors/financial-press-releases/component-press-releases" class="cg-flex cg-no-events">
+<figure style="background-image: url()" class="">
+    <img src="" alt="" title="">
+  </figure>
+  <div class="cg-block-media-text">
+    <h3>Financial press releases</h3>
+    <span><i class="icon icon-cg-calendar"></i>28 July
+
+ 2017</span>
+  </div>
+</a>
+<!-- COLRG-652
+
+-->
+</div>
+
+    </script>
+
+
+
+
+
+
+<!-- property closing name=component-press-releases-->
+
+<!--match not found..-->
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- contact-->
+
+
+
+
+   <div class="content-wrapper">
+ 
+        
+        
+        
+       
+            <div class="col-xs-12 col-md-9">
+
+                <div class="contact-block">
+                    
+                    <h3>Contact for questions about financial matters</h3>
+                    
+                    <p>  </p>
+                    
+                    <div class="cg-contact-phone">
+                        <i class="cg-icon icon-cg-phone"></i>
+                        <div>
+                            <h4>+32 (0)2 363 55 45</h4>
+                            <p>Monday to Friday from 9am to 5pm</p>
+                        </div>
+                    </div>
+                    
+                    <a class="cg-btn cg-btn-primary" href="/wps/portal/cg/en/t/contact-us/form?p_brand=Colruytgroup&p_type=Finance">
+                        To the contact form<i class="icon icon-cg-arrowround-right"></i>
+                    </a>
+                </div>
+            </div>
+        
+        
+        
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- nav layer -- pressrelease-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end layers -->
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+</div>
+</div> 
+</div></div>
+</div>
+    </div>
+    <!--end main content-->
+</section>
+
+<!--Footer-->
+
+<footer class="footer">
+
+     <div class="footer-wrapper">
+<!-- calling individual generated navigation based on language -->
+
+<ul>
+    
+<li>
+
+
+<a href="/wps/portal/cg/en/home/about-us
+" target="_top">About us</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+    <li>
+<a href="/wps/portal/cg/en/home/brands
+" target="_top">Our Brands
+</a>
+</li>
+
+</ul>
+<ul>
+    
+<li>
+
+
+<a href="/wps/portal/cg/en/home/investors
+" target="_top">Investors</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+
+
+    
+<li>
+
+
+<a href="/wps/portal/cg/en/home/press
+" target="_top">Press</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+</ul>
+
+<ul>
+    
+<li>
+
+
+<a href="/wps/portal/cg/en/home/working-for-us
+" target="_top">Working For Us</a>
+
+</li>
+
+
+
+
+
+
+
+
+
+    <li>
+    <a href='/wps/portal/cg/en/t/contact-us' target="_top">Contact us</a>
+    </li>
+</ul>
+
+
+
+
+<ul>
+ <li class="title">
+<span>
+    Follow us
+</span>   
+</li>
+<li>
+ <ul class="social-media-icons">
+ 
+   <li>
+     <a class="icon icon-circle icon-facebook" href="https://www.facebook.com/colruytgroup/" target="_blank">
+     </a>
+   </li>
+  <li>
+     <a class="icon icon-circle icon-twitter" href="https://twitter.com/colruytgroup?lang=en" target="_blank">
+     </a>
+   </li>
+   <li>
+     <a class="icon icon-circle icon-linkedin" href="https://www.linkedin.com/company/colruyt-group" target="_blank">
+     </a>
+   </li>
+ 
+<li>
+     <a class="icon icon-circle icon-youtube" href="https://www.youtube.com/user/colruytgroup" target="_blank">
+     </a>
+   </li>
+ </ul>
+</li>
+</ul>
+
+</div>
+		<div class="second-footer">
+<nav class="cg-nav-bottom">
+<div class="logo-footer">
+<a href="/wps/portal/cg/en" title="Colruyt Group" >
+<img src="/wps/contenthandler/cg/!ut/p/digest!CLafhlTt6GKxPF6yspDRMg/dav/fs-type1/themes/ColruytGroupStaticTheme/css/colruytgroup/images/logo/CG.svg" alt="ColruytGroup" 
+/>
+</a>
+</div>
+
+
+
+<!-- calling individual legal generated based on language -->
+
+
+<ul>
+   <li>
+      <span>© Colruyt Group 2020</span>
+   </li>
+   <li>
+      <privacy display="link" lang="en" code="X_PS_CGFORMS"></privacy>    
+   </li>
+   <li>
+<a href="/en/cookies">Cookies</a>   
+</li><li>
+<a href="/en/email-disclaimer">E-mail disclaimer</a>   
+</li></ul>
+
+
+
+
+
+</nav>
+</div>
+
+<script type="application/json" class="labels">
+{
+"Monday":"Monday",
+"Tuesday":"Tuesday",
+"Wednesday":"Wednesday",
+"Thursday":"Thursday",
+"Friday":"Friday",
+"Saturday":"Saturday",
+"Sunday":"Sunday",
+"January":"january",
+"February":"february",
+"March":"march",
+"April":"april",
+"May":"may",
+"June":"june",
+"July":"july",
+"August":"august",
+"September":"september",
+"October":"october",
+"November":"november",
+"December":"december",
+
+"BACK_TO_TOP": "Back to Top",
+"FILTER_CONTENT": "Filter content",
+"ALL_BRANDS": "All brands",
+"ALL_FILETYPES": "All filetypes",
+"ALL_YEARS": "All years",	
+"LOAD_MORE": "",
+"NOTHING_MORE": "",
+"NO_RESULTS": "No results found",
+"CONTACT_REASONS": [{
+  "name": "WF000000387 - Contactformulier schoolopdracht - WFEN",
+  "title": "School assignment",
+  "id":1
+},{
+  "name": "WF000000388 - Contactformulier eindwerk - WFEN",
+  "title": "Final work",
+  "id":2
+},{
+  "name": "WF000000389 - Contactformulier Thesis - WFEN",
+  "title": "Thesis",
+  "id":3
+},{
+  "name": "WF000000390 - Contactformulier doctoraat - WFEN",
+  "title": "Doctorate",
+  "id":4
+}],
+"story.module.pattern.option2":"col-sm-12 col-md-9 cg-story-large,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-12 col-md-6,col-sm-12 col-md-6,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3",
+"story.module.pattern.option1":"col-sm-12 col-md-6,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-12 col-md-6,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3,col-sm-6 col-md-3"
+}
+</script></footer>
+
+<!-- This is responsible for bootstrapping the configuration for the javascript framework.
+     This is located here instead of the head section to improve client performance. -->
+<div aria-labelledby="stComplementaryContentText" class="stComplementaryContent" id="wpthemeComplementaryContent"
+     role="region">
+    <script type="text/javascript" src="/wps/contenthandler/cg/!ut/p/digest!M9taBTMiVvdp0vR6byQGFQ/mashup/ra:collection?themeID=ZJ_JAHEGG82LGK300A7LMF2603466&amp;locale=en&amp;locale=nl&amp;mime-type=text%2Fjavascript&amp;lm=1587356382802&amp;entry=wp_portal__0.0%3Aconfig_config_static&amp;entry=wcm_config__0.0%3Aconfig_config_static&amp;entry=wcm_inplaceEdit__0.0%3Aconfig_config_static"></script><script type="text/javascript">i$.merge({"ibmCfg":{"themeConfig":{"themeUniqueName":"custom.portal.theme.ColruytGroupStaticTheme","themeRootURI":"/wps/contenthandler/cg/!ut/p/digest!M9taBTMiVvdp0vR6byQGFQ/dav/fs-type1/themes/ColruytGroupStaticTheme","themeWebAppBaseURI":"/wps/simpleTheme/themes/html/dynamicSpots","themeWebDAVBaseURI":"dav:fs-type1/themes/ColruytGroupStaticTheme/","modulesWebAppBaseURI":"/wps/themeModules","commonResourcesRootURI":"/wps/contenthandler/cg/!ut/p/digest!M9taBTMiVvdp0vR6byQGFQ/dav/fs-type1/common-resources","isRTL":false,"isPageRenderModeCSA":false,"portletOverridePageTitle":"Financial press releases","currentContentNodeOID":"Z6_482AG842MGM2F0ANO54QDG2837","loadingImage":"css/images/loading.gif","dndSourceDefinitions":[],"categorySources":[],"styleSources":[],"layoutSources":[]},"portalConfig":{"locale":"en","portalURI":"/wps/portal","contentHandlerURI":"/wps/contenthandler/cg/!ut/p/digest!TQO8kir8LLAcE73q0LkziQ/?locale=en&locale=nl-BE&locale=nl&locale=ltr","pocURI":"/wps/portal/cg/!ut/p/z0/0wcA1NLTeQ!!/","isVirtualPortal":true,"canImpersonate":false,"themeRootURI":"/wps/simpleTheme/themes/html/dynamicSpots","parentPageID":"Z6_482AG842M072D0AR5G9CF7GGS1","currentPageOID":"Z6_482AG842MGM2F0ANO54QDG2837","canAnonymousUserViewCurrentPage":true,"bootstrapState":"&lt;?xml version=&#034;1.0&#034; encoding=&#034;UTF-8&#034;?&gt;&lt;root xmlns=&#034;http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/portal-state&#034;&gt;&lt;state type=&#034;navigational&#034;&gt;&lt;selection selection-node=&#034;Z6_482AG842MGM2F0ANO54QDG2837&#034;&gt;&lt;mapping src=&#034;Z6_482AG842M072D0AR5G9CF7GGS0&#034; dst=&#034;Z6_482AG842MGM2F0ANO54QDG2837&#034;/&gt;&lt;mapping src=&#034;Z6_00000000000000A0BR2B300GO2&#034; dst=&#034;Z6_482AG842MGM2F0ANO54QDG2837&#034;/&gt;&lt;mapping src=&#034;Z6_000000000000000000000000A0&#034; dst=&#034;Z6_482AG842MGM2F0ANO54QDG2837&#034;/&gt;&lt;/selection&gt;&lt;shared-parameters id=&#034;Z6_482AG842MGM2F0ANO54QDG2837&#034;&gt;&lt;shared-parameter nsuri=&#034;http://www.ibm.com/xmlns/prod/websphere/portal/publicparams&#034; localpart=&#034;path-info&#034;&gt;&lt;value&gt;financial-press-releases&lt;/value&gt;&lt;/shared-parameter&gt;&lt;/shared-parameters&gt;&lt;expansions&gt;&lt;node id=&#034;Z6_482AG842M072D0AR5G9CF7GGS1&#034;/&gt;&lt;node id=&#034;Z6_482AG842M072D0AR5G9CF7GGS0&#034;/&gt;&lt;node id=&#034;Z6_00000000000000A0BR2B300GO2&#034;/&gt;&lt;node id=&#034;Z6_000000000000000000000000A0&#034;/&gt;&lt;/expansions&gt;&lt;locale&gt;en&lt;/locale&gt;&lt;/state&gt;&lt;/root&gt;","isUserLoggedIn":false,"currentUser":"anonymous portal user","currentUserOID":"","aggregatedStyle":null,"isCurrentPageEditable":true,"wcmPageMetadata":{"contentRoot":null,"sharingScope":null},"projectUUID":null},"userName":""},"com_ibm_theme_capabilities":{"angular_filters":"0.0","wp_toolbar_viewframe_validator":"0.0","wp_skin_region":"8.5","toolbar":"8.5","highContrast":"1.0","colruytgroup_dynamicContentSpots":"0.0","wp_client_ext":"0.0","cgicons":"0.0","wp_a11y":"0.0","wp_custom_page_style":"0.0","wp_simple_contextmenu_main":"0.0","wp_client_tracing":"0.0","wp_toolbar85":"0.0","angular_controllers":"0.0","wp_theme_simple":"0.0","angular_services":"0.0","angular_app":"0.0","wp_theme_utils":"0.0","wp_toolbar_common":"0.0","angular_sanitize":"0.0","photon.dom":"1.0","wp_toolbar_sitepreview_menuactions":"0.0","wp_dialog_draggable":"0.0","wp_toolbar_common_actionbar":"0.0","wp_simple_contextmenu_css":"0.0","hasBaseURL":"true","wp_client_logging":"0.0","wp_portal":"0.0","wp_toolbar_contextmenu":"0.0","wp_toolbar_logo":"0.0","wp_toolbar_menuactions":"0.0","angular":"0.0","wp_dialog_css":"0.0","wp_simple_contextmenu_ext":"0.0","wp_high_contrast":"0.0","wp_photon_dom":"0.0","wp_simple_contextmenu_templates":"0.0","wp_state_page_modes":"0.0","wp_toolbar_sitepreview":"0.0","custom_js":"0.0","angular_directives":"0.0","wp_toolbar_projectmenu":"0.0","wp_toolbar_actionbar":"0.0","wp_searchbar":"0.0","wp_toolbar_moremenu":"0.0","wp_dialog_main":"0.0","wp_modules":"0.0","wp_dyncs_simple":"0.0","wp_client_selector":"0.0","wp_hiddenpages":"0.0","wp_client_main":"0.0","wp_hiddencontent":"0.0","wp_toolbar_utils":"0.0","a11y":"1.0","wp_toolbar_host_view":"0.0","wp_dialog_util":"0.0","wp_state_page":"0.0","simple-contextmenu":"1.1","modules":"0.1","wp_simple_contextmenu_js":"0.0"},"com_ibm_device_class":[]});ibmCfg.portalConfig.bootstrapState=(ibmCfg.portalConfig.bootstrapState||"").replace(/&lt;/gm, '<').replace(/&gt;/gm, '>').replace(/&amp;/gm, '&').replace(/&#039;/gm, "'").replace(/&#034;/gm, '"');i$.merge({"ibmCfg":{"portalConfig":{"isShowHiddenPages":false}}});</script><script type="text/javascript" src="/wps/contenthandler/cg/!ut/p/digest!I09QqdexEzXA4cnnhWD_QQ/mashup/ra:collection?themeID=ZJ_JAHEGG82LGK300A7LMF2603466&amp;locale=en&amp;locale=nl&amp;mime-type=text%2Fjavascript&amp;lm=1587590032000&amp;entry=angular__0.0%3Aconfig_js&amp;entry=angular_sanitize__0.0%3Aconfig_js&amp;entry=angular_app__0.0%3Aconfig_js&amp;entry=angular_filters__0.0%3Aconfig_js&amp;entry=angular_directives__0.0%3Aconfig_js&amp;entry=wp_toolbar_utils__0.0%3Aconfig_js&amp;entry=wp_toolbar_menuactions__0.0%3Aconfig_js&amp;entry=wp_simple_contextmenu_js__0.0%3Aconfig_js&amp;entry=wp_simple_contextmenu_ext__0.0%3Aconfig_js&amp;entry=wp_toolbar_actionbar__0.0%3Aconfig_js&amp;entry=wp_high_contrast__0.0%3Aconfig_js&amp;entry=wp_state_page_modes__0.0%3Aconfig_js&amp;entry=wp_skin_region__0.0%3Aconfig_js&amp;entry=wp_dialog_main__0.0%3Aconfig_js&amp;entry=angular_services__0.0%3Aconfig_js&amp;entry=angular_controllers__0.0%3Aconfig_js&amp;entry=wp_toolbar_projectmenu__0.0%3Aconfig_js&amp;entry=wp_toolbar_sitepreview_menuactions__0.0%3Aconfig_js&amp;entry=wp_toolbar_contextmenu__0.0%3Aconfig_js&amp;entry=wp_toolbar_sitepreview__0.0%3Aconfig_js&amp;entry=custom_js__0.0%3Aconfig_js"></script><a rel="alternate" id="config_js_deferred" href="/wps/contenthandler/cg/!ut/p/digest!I09QqdexEzXA4cnnhWD_QQ/mashup/ra:collection?themeID=ZJ_JAHEGG82LGK300A7LMF2603466&amp;locale=en&amp;locale=nl&amp;mime-type=text%2Fjavascript&amp;lm=1587356383000&amp;entry=wp_portal_ui_utils__0.0%3Aconfig_js&amp;entry=wp_federated_documents_picker__0.0%3Aconfig_js&amp;entry=wp_liveobject_framework_core__0.0%3Aconfig_js&amp;entry=wp_skin_cam__0.0%3Aconfig_js&amp;entry=st_skin__0.0%3Aconfig_js&amp;entry=wp_dnd_main__0.0%3Aconfig_js&amp;entry=wp_contextmenu_config_lof__0.0%3Aconfig_js&amp;entry=wp_status_bar__0.0%3Aconfig_js&amp;entry=wp_content_targeting_cam__0.0%3Aconfig_js&amp;entry=st_svg__0.0%3Aconfig_js&amp;entry=wp_movecontrols__0.0%3Aconfig_js&amp;entry=wp_toolbar_controlactions__0.0%3Aconfig_js&amp;deferred=true" style="display:none"></a><span id="simpleMenuTemplate" class="wpthemeMenuLeft">
+    <div class="wpthemeMenuBorder">
+        <div class="wpthemeMenuNotchBorder"></div>
+        <!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+        <ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+            <li class="${css-class}" role="menuitem" tabindex="-1"><span class="wpthemeMenuText">${title}</span>${badge}</li>
+        </ul>
+    </div>
+    <!-- Template for loading -->
+    <div class="wpthemeMenuLoading wpthemeMenuLoadingText wpthemeTemplateLoading">${loading}</div>
+    <!-- Template for submenu -->
+    <div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+        <div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+            <ul id="${submenu-id}" class="wpthemeMenuDropDown" role="menu"><li role="menuitem" tabindex="-1"></li></ul>
+        </div>
+    </div>
+</span><a rel="alternate" id="config_markup_deferred" href="/wps/contenthandler/cg/!ut/p/digest!JdtFUGpPd0K6x5XP7yC1eQ/mashup/ra:collection?themeID=ZJ_JAHEGG82LGK300A7LMF2603466&amp;locale=en&amp;locale=nl&amp;mime-type=text%2Fplain&amp;entry=wp_skin_cam__0.0%3Aconfig_markup&amp;entry=wp_dnd_main__0.0%3Aconfig_markup&amp;deferred=true" style="display:none"></a></div>
+<back-to-top></back-to-top>
+<base href="https://www.colruytgroup.com/wps/portal/cg/en/home/investors/financial-press-releases/!ut/p/z1/nZDRCoIwFIafSHaaM-1SE0fRkhTJdhMjpi1sipMuevq86KJFZHTuDnzfzzk_4qhEXIubqsWgWi2acT_w-ZEEOKQBwYwynEC4TT2yiykOXB_tbQB8HEOYeXSxTHxKc0D8Fx-sCSHKcOQC0BT_478mTfnrKWBsAPdsyWrEOzGcHaWrFpWV0kKflGicrpfGOL1spDDSjPdwO_G9kdkUAE_gWycfAOvpXGrUXYuivG-qfHUhDwUAF_Y!/"><script src="https://api.colruytgroup.com/api/static/script/cookienotif.js" type="text/javascript"></script>
+<script>
+  if (!("ontouchstart" in document)) {
+    document.body.className += ' stNoTouch';
+  }
+</script>
+<script src="//api.colruytgroup.com/api/static/script/gdpr.js" type="text/javascript"></script>
+</body>
+</html>

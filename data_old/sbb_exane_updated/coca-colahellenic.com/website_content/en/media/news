@@ -1,0 +1,1357 @@
+
+
+<!doctype html>
+<!--[if IE 9]><html class="no-js ie9"> <![endif]-->
+<!--[if !IE]>-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"bda1045bcd","applicationID":"18544190","transactionName":"b1VbMkNWWkcDUUJfV1YfdDByGGZRDFZTRHVOU3oJX0NGWw5eU0QXdFlKElhZU3MHXFNEUVs=","queueTime":0,"applicationTime":866,"ttGuid":"743728774850C3AC","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"bda1045bcd",applicationID:"18544190"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <title>News | Coca-Cola HBC </title>
+      <meta property="og:title" content="News" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://coca-colahellenic.com/en/media/news/" />
+    <meta property="og:description" content="We’re committed to sharing our business activities in an open and frank way." />
+    <meta property="og:image" content="https://coca-colahellenic.com/media/2471/00059_1920x675.jpg?center=0.62068965517241381,0.23684210526315788&amp;mode=crop&amp;quality=80&amp;width=600&amp;rnd=131039951070000000" />
+
+    <meta name="description" content="Coca-Cola Hellenic Bottling Company latest news and business activities.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="x7OnaYvWJFst9jMg_mB5pANoqXFJJTs4nH0mup7e2aw" />
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MGC7Z3B');</script>
+        <link rel="canonical" href="https://coca-colahellenic.com/en/media/news/">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
+    
+        <link rel="stylesheet" href="/assets/css/styles.css?v=12">
+
+    
+    <script async src="/assets/js/min/jquery.min.js"></script>
+    
+
+    
+    
+
+
+    
+<link rel="alternate" type="application/rss+xml" title="News | Coca-Cola HBC" href="http://coca-colahellenic.com/en/media/news/rss" />
+</head>
+<body>
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MGC7Z3B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <div class="cookie-banner">
+        <p><p><span>We use cookies to optimise our website to provide you with the best, most relevant experience. By continuing to browse the site you are agreeing to our </span><span class="html-tag"><a data-id="2309" href="/en/privacy-and-cookie-notice/" title="Privacy and cookie notice">Cookie Policy</a>.</span></p></p>
+        <a class="button button-white" href="#">OK</a>
+    </div>
+
+      <div class="survey-banner" data-showcount="5" data-surveycode="tRaiETqnLgj758hTBazgd70dl_2Bm9oGrh7DiyYgE7yp8JVbxy0x9Id3m4M9mzzlII">
+    <p>Welcome back!</p>
+<p>If you’ve been exploring our new Careers pages, we´d love to hear your feedback. It will only take 2 minutes.</p>
+    <a class="dismiss-button button button-white" href="#">No thanks</a>
+    <a class="accept-button button" href="https://www.research.net/r/coca-colahellenic-careers-feedback" target="_blank">Give feedback</a>
+  </div>
+
+
+      <!--noindex-->
+  <div id="navigation" class="country-selector">
+    <div class="country-selector__header">
+      <div class="country-selector__header--inner">
+        <strong class="country-selector__header-title">Site selector</strong>
+          <p>
+            Current site: <em>Group</em>
+          </p>
+        <a href="" class="country-selector__close" rel="nofollow">Close</a>
+      </div>
+    </div>
+
+      <ul>
+          <li>
+            <a class="country-selector__link" href="https://coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Group"></span>Group</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Group</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+414 483 59 111</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:webmaster@cchellenic.com" rel="nofollow">webmaster@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://coca-colahellenic.com/" rel="nofollow">https://coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC AG
+Turmstrasse 26
+Zug 6300
+Switzerland</span>
+                          <span class="locality">Zug</span>
+                                                  <span class="postal-code">6300</span>
+                                                  <span class="country-name">Switzerland</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://am.coca-colahellenic.com/hy/contact-us/" rel="nofollow"><span class="sprite sprite-Armenia"></span>Armenia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Armenia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+374 105 41 028</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:reception.am@cchellenic.com" rel="nofollow">reception.am@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://am.coca-colahellenic.com" rel="nofollow">https://am.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Armenia,
+Tbilisyan Highway Lane, 
+8/3 Building</span>
+                          <span class="locality">Yerevan,</span>
+                                                  <span class="postal-code">0052,</span>
+                                                  <span class="country-name">Armenia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="http://www.coca-colahellenic.at/contacts/" rel="nofollow"><span class="sprite sprite-Austria"></span>Austria</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Austria</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+431 610 60 0</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:cocacolaksco@cchellenic.com" rel="nofollow">cocacolaksco@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://at.coca-colahellenic.com" rel="nofollow">https://at.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Austria,
+Clemens-Holzmeister-Stra&szlig;e 6,</span>
+                          <span class="locality">Vienna,</span>
+                                                  <span class="postal-code">1100,</span>
+                                                  <span class="country-name">Austria</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://by.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Belarus"></span>Belarus</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Belarus</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+375 172 10 0210</span><br/>
+                                                              <strong>Website:</strong>
+                      <a class="url" href="https://by.coca-colahellenic.com/" rel="nofollow">https://by.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola Beverages Belorussiya FE,
+Kolyadichi,</span>
+                          <span class="locality">Minsk District,</span>
+                                                  <span class="postal-code">223010,</span>
+                                                  <span class="country-name">Belarus</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ba.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Bosnia-and-Herzegovina"></span>Bosnia &amp; Herzegovina</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Bosnia &amp; Herzegovina</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+387 332 84 100</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:info.ba@cchellenic.com" rel="nofollow">info.ba@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://ba.coca-colahellenic.com/" rel="nofollow">https://ba.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC B-H Sarajevo,
+Mostarsko raskrsce bb,</span>
+                          <span class="locality">Hadzici,</span>
+                                                  <span class="postal-code">71240,</span>
+                                                  <span class="country-name">Bosnia-Herzegovina</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://bg.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Bulgaria"></span>Bulgaria</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Bulgaria</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+359 2 92 14 600</span><br/>
+                                                              <strong>Website:</strong>
+                      <a class="url" href="https://bg.coca-colahellenic.com/" rel="nofollow">https://bg.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Bulgaria,
+Coca-Cola Business Center,
+8 Racho Petkov Kazandzhiyata Str.,</span>
+                          <span class="locality">Sofia,</span>
+                                                  <span class="postal-code">1766,</span>
+                                                  <span class="country-name">Bulgaria</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://hr.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Croatia"></span>Croatia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Croatia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+385 124 80 222</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto: info.hr@cchellenic.com" rel="nofollow"> info.hr@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://hr.coca-colahellenic.com/" rel="nofollow">https://hr.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Croatia,
+Milana Sachsa 1,</span>
+                          <span class="locality">Zagreb,</span>
+                                                  <span class="postal-code">1000,</span>
+                                                  <span class="country-name">Croatia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://cy.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Cyprus"></span>Cyprus</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Cyprus</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+357 228 85 000</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:info@lanitis-bros.com" rel="nofollow">info@lanitis-bros.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="http://cy.coca-colahellenic.com/" rel="nofollow">https://cy.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Lanitis Bros,
+66 Kyriacos Matsis Ave.,</span>
+                          <span class="locality">Nicosia,</span>
+                                                  <span class="postal-code">2409 Engomi,</span>
+                                                  <span class="country-name">Cyprus</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://cz.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Czech-Republic"></span>Czech Republic</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Czech Republic</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+420 283 01 5111</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:vnejsi-vztahy.cz@cchellenic.com " rel="nofollow">vnejsi-vztahy.cz@cchellenic.com </a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://cz.coca-colahellenic.com/" rel="nofollow">https://cz.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Czech Republic,
+Ceskobrodska 132 9,</span>
+                          <span class="locality">Praha,</span>
+                                                  <span class="postal-code">198 21, </span>
+                                                  <span class="country-name">Czech Republic</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://baltics.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Estonia"></span>Estonia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Estonia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+372 650 31 00</span><br/>
+                                                              <strong>Website:</strong>
+                      <a class="url" href="https://baltics.coca-colahellenic.com" rel="nofollow">https://baltics.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Estonia,
+Mustamae tee 16,</span>
+                          <span class="locality">Tallinn</span>
+                                                  <span class="postal-code">10617, </span>
+                                                  <span class="country-name">Estonia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="http://polnacasa.mk/contact/?lang=en" rel="nofollow"><span class="sprite sprite-Lithuania"></span>Republic of North Macedonia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Republic of North Macedonia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+389 226 11 314</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:pivara.skopje@pivaraskopje.com.mk" rel="nofollow">pivara.skopje@pivaraskopje.com.mk</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="http://www.pivaraskopje.com.mk/" rel="nofollow">http://www.pivaraskopje.com.mk</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Pivara Skopje,
+Str. 808,
+No. 12,</span>
+                          <span class="locality">Skopje,</span>
+                                                  <span class="postal-code">1000,</span>
+                                                  <span class="country-name">Republic of North Macedonia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://gr.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Greece"></span>Greece</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Greece</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+302 106 38 1700</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto: infoline@cchellenic.com" rel="nofollow"> infoline@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="http://gr.coca-colahellenic.com/" rel="nofollow">https://gr.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Greece,
+60 Kifissias ave,</span>
+                          <span class="locality">Athens,</span>
+                                                  <span class="postal-code">151 25 Maroussi,</span>
+                                                  <span class="country-name">Greece</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://hu.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Hungary"></span>Hungary</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Hungary</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+362 450 01 00</span><br/>
+                                                              <strong>Website:</strong>
+                      <a class="url" href="https://hu.coca-colahellenic.com/" rel="nofollow">https://hu.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Hungary,
+Nemedi ut 104,</span>
+                          <span class="locality">Dunaharaszti,</span>
+                                                  <span class="postal-code">H-2330,</span>
+                                                  <span class="country-name">Hungary</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ie.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Ireland"></span>Republic of Ireland</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Republic of Ireland</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+353 188 07 100</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:ioi.communications@cchellenic.com " rel="nofollow">ioi.communications@cchellenic.com </a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://ie.coca-colahellenic.com/" rel="nofollow">https://ie.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Ireland,
+Huntstown Business Park,
+Cappagh Road, Ballycoolin,</span>
+                          <span class="locality">Dublin 11,</span>
+                                                                          <span class="country-name">Ireland</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://it.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Italy"></span>Italy</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Italy</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+390 227 07 71</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:relazioni.esterne@cchellenic.com " rel="nofollow">relazioni.esterne@cchellenic.com </a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://it.coca-colahellenic.com/" rel="nofollow">https://it.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Italia,
+Piazza Indro Montanelli, 30,
+Sesto San Giovanni</span>
+                          <span class="locality">Milano,</span>
+                                                  <span class="postal-code">20099, </span>
+                                                  <span class="country-name">Italy</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="http://coca-colahellenickosovo.com" rel="nofollow"><span class="sprite sprite-Kosovo"></span>Kosovo</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Kosovo</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+383 38 540 690</span><br/>
+                                                              <strong>Website:</strong>
+                      <a class="url" href="http://coca-colahellenickosovo.com" rel="nofollow">http://coca-colahellenickosovo.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Km 5 ,rr. Prishtine- Shkup,</span>
+                          <span class="locality">Prishtine,</span>
+                                                  <span class="postal-code">10000,</span>
+                                                  <span class="country-name">Kosovo</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://baltics.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Latvia"></span>Latvia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Latvia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+371 671 09 999</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:dzerieni.pasutijumi@cchellenic.com" rel="nofollow">dzerieni.pasutijumi@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://baltics.coca-colahellenic.com" rel="nofollow">https://baltics.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Latvia,
+Ulbrokas str. 40,</span>
+                          <span class="locality">Riga,</span>
+                                                  <span class="postal-code">1021 </span>
+                                                  <span class="country-name">Latvia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://baltics.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Lithuania"></span>Lithuania</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Lithuania</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+370 5219 9104</span><br/>
+                                                              <strong>Website:</strong>
+                      <a class="url" href="https://baltics.coca-colahellenic.com" rel="nofollow">https://baltics.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Lithuania,
+Seimyniskiu g. 21B,</span>
+                          <span class="locality">Vilnius, </span>
+                                                  <span class="postal-code">LT-09200,</span>
+                                                  <span class="country-name">Lithuania</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ua.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Moldova"></span>Moldova</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Moldova</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+373 224 70 777</span><br/>
+                                                              <strong>Website:</strong>
+                      <a class="url" href="https://ua.coca-colahellenic.com/" rel="nofollow">https://ua.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Moldova,
+42 Industriala str.,</span>
+                          <span class="locality">Chisinau,</span>
+                                                  <span class="postal-code">2023, </span>
+                                                  <span class="country-name">Republic of Moldova</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://rs.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Montenegro"></span>Montenegro</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Montenegro</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+ 382 814 43 600</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:pr.rs@cchellenic.com" rel="nofollow">pr.rs@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="http://rs.coca-colahellenic.com/" rel="nofollow">http://rs.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Crna Gora,
+Josipa Broza Tita 27,</span>
+                          <span class="locality">Podgorica,</span>
+                                                  <span class="postal-code">81000,</span>
+                                                  <span class="country-name">Montenegro</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ng.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Nigeria"></span>Nigeria</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Nigeria</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+234 127 06 670</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:info.nbc@cchellenic.com " rel="nofollow">info.nbc@cchellenic.com </a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://ng.coca-colahellenic.com/en/contact-us/" rel="nofollow">https://ng.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Nigerian Bottling Company,
+Leventis Building,
+3rd floor, Iddo House,
+Iddo PO Box 159,</span>
+                          <span class="locality">Lagos</span>
+                                                                          <span class="country-name">Nigeria</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ie.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-United-Kingdom"></span>Northern Ireland</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Northern Ireland</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+442 892 64 2000</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:oi.communications@cchellenic.com " rel="nofollow">oi.communications@cchellenic.com </a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://ie.coca-colahellenic.com/" rel="nofollow">https://ie.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Ireland,
+Huntstown Business Park,
+Cappagh Road, Ballycoolin,</span>
+                          <span class="locality">Dublin 11,</span>
+                                                                          <span class="country-name">Ireland</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://pl.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Poland"></span>Poland</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Poland</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+482 251 95 100 / 101</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:infopl@cchellenic.com" rel="nofollow">infopl@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://pl.coca-colahellenic.com" rel="nofollow">https://pl.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Poland,
+ul. Annopol 20,</span>
+                          <span class="locality">Warszawa,</span>
+                                                  <span class="postal-code">03-236, </span>
+                                                  <span class="country-name">Poland</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ro.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Romania"></span>Romania</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Romania</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+402 120 21 400</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:relatiiclienti@cchellenic.com" rel="nofollow">relatiiclienti@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://ro.coca-colahellenic.com" rel="nofollow">https://ro.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Romania,
+Global City Business Park, Building 2,
+10, Bucuresti Nord Str.,</span>
+                          <span class="locality">Voluntari, Ilfov,</span>
+                                                  <span class="postal-code">077190</span>
+                                                  <span class="country-name">Romania</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ru.coca-colahellenic.com/ru/contact-us/" rel="nofollow"><span class="sprite sprite-Russia"></span>Russia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Russia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+7 495 956 95 95</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:Info.RU@cchellenic.com" rel="nofollow">Info.RU@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://ru.coca-colahellenic.com/" rel="nofollow">https://ru.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Eurasia,
+Novoorlovskaya str. 7,</span>
+                          <span class="locality">Moscow,</span>
+                                                  <span class="postal-code">119 633, </span>
+                                                  <span class="country-name">Russia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://rs.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Serbia"></span>Serbia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Serbia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+381 11 30 73 100</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:pr.rs@cchellenic.com " rel="nofollow">pr.rs@cchellenic.com </a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://rs.coca-colahellenic.com/" rel="nofollow">https://rs.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Serbia,
+14-16, Batajnicki Drum str.,</span>
+                          <span class="locality">Zemun,</span>
+                                                  <span class="postal-code">11080,</span>
+                                                  <span class="country-name">Serbia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://cz.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Slovakia"></span>Slovakia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Slovakia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+421 249 26 3111</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:vnejsi-vztahy.cz@cchellenic.com" rel="nofollow">vnejsi-vztahy.cz@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://cz.coca-colahellenic.com" rel="nofollow">https://cz.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Slovakia,
+Tuhovska 1,</span>
+                          <span class="locality">Bratislava 35,</span>
+                                                  <span class="postal-code">83107,</span>
+                                                  <span class="country-name">Slovakia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://si.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Slovenia"></span>Slovenia</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Slovenia</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+386 158 90 400</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:infoslo@cchellenic.com" rel="nofollow">infoslo@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://si.coca-colahellenic.com/" rel="nofollow">https://si.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC Slovenia,
+Motnica 9,</span>
+                          <span class="locality">Trzin,</span>
+                                                  <span class="postal-code">1236,</span>
+                                                  <span class="country-name">Slovenia</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ch.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Switzerland"></span>Switzerland (Headquarters)</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Switzerland (Headquarters)</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+414 483 59 111</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:webmaster@cchellenic.com " rel="nofollow">webmaster@cchellenic.com </a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://ch.coca-colahellenic.com/" rel="nofollow">https://ch.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola HBC AG,
+Turmstrasse 26,</span>
+                          <span class="locality">Zug,</span>
+                                                  <span class="postal-code">6300,</span>
+                                                  <span class="country-name">Switzerland</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+          <li>
+            <a class="country-selector__link" href="https://ua.coca-colahellenic.com/en/contact-us/" rel="nofollow"><span class="sprite sprite-Ukraine"></span>Ukraine</a>
+            <div class="people-contact__grid-item story-feature__phone">
+              <div class="people-contact__grid-item--border">
+                <div class="people-contact__grid-item--inner vcard">
+                  <span class="people-contact__grid-item--label">Contact Details</span>
+                  <h3 class="fn org">Ukraine</h3>
+                  <p>
+                      <strong>Phone:</strong>
+                      <span class="tel">+380 444 90 0707</span><br/>
+                                          <strong>Email:</strong>
+                      <span class="email"><a href="mailto:ccbu@cchellenic.com" rel="nofollow">ccbu@cchellenic.com</a></span><br />
+                                          <strong>Website:</strong>
+                      <a class="url" href="https://ua.coca-colahellenic.com/" rel="nofollow">https://ua.coca-colahellenic.com</a><br />
+                                          <strong>Address: </strong>
+                      <span class="adr">
+                        <span class="street-address">Coca-Cola Beverages Ukraine,
+51st km of St. Petersburg,
+Highway Velyka Dymerka,</span>
+                          <span class="locality">Kyiv,</span>
+                                                  <span class="postal-code">07 400,</span>
+                                                  <span class="country-name">Ukraine</span>
+                      </span>
+                  </p>
+                  <hr>
+                </div>
+              </div>
+            </div>
+
+          </li>
+      </ul>
+  </div>
+  <!--/noindex-->
+
+    <header class="site-header">
+        <div class="header__inner">
+              <div class="header__logo"><a href="https://coca-colahellenic.com/en/"><img src="/media/1007/logo-cchbc.png?anchor=center&amp;mode=crop&amp;quality=80&amp;height=83&amp;rnd=130931192100000000" alt="Coca-Cola Hellenic Bottling Company"></a></div>
+
+
+            <button class="header__menu-icon"><span>Menu</span></button>
+            <button class="header__search-icon"><span>Search</span></button>
+        </div>
+
+          <form action="/en/search/" class="header__search">
+    <input type="search" name="q" placeholder="Enter search terms">
+  </form>
+
+
+        <nav class="header__nav-wrapper">
+            <div class="header__inner">
+                <ul id="navigation" class="header__utilities-nav">
+                    
+                        <li class="header__utilities-nav--stories"><a href="/en/our-stories/"><span>Our stories</span></a></li>
+    <li class="header__utilities-nav--sites"><a href="/en/contact-us/"><span>Market sites</span></a></li>
+    <li class="header__utilities-nav--search"><a href="/en/search/"><span>Search</span></a></li>
+
+                </ul>
+            </div>
+                <div class="header__placeholder"></div>
+    <ul class="header__main-nav">
+            <li class="header__main-nav--home"><a href="/en/">Home</a></li>
+
+            <li class="header__main-nav--stories"><a href="/en/our-stories/">Our stories</a></li>
+
+            <li>
+                <a title=">About us" href="/en/about-us/">About us</a>
+                    <div class="header__sub-nav">
+                        <div class="header__sub-nav-header">
+                            <a class="header__sub-nav--title" href="/en/about-us/">About us</a>
+                            <button class="header__sub-nav--close">Close</button>
+                        </div>
+                        <ul>
+                                <li><a href="/en/about-us/coca-cola-hbc-at-a-glance/">Coca&#8209;Cola HBC at a glance</a></li>
+                                <li><a href="/en/about-us/creating-and-sharing-value/">Creating and sharing value</a></li>
+                                <li><a href="/en/about-us/our-vision-strategy-and-purpose/">Our vision, strategy and purpose</a></li>
+                                <li><a href="/en/about-us/policies/">Policies</a></li>
+                                <li><a href="/en/about-us/corporate-governance/">Corporate governance</a></li>
+                                <li><a href="/en/about-us/business-resilience-and-risk-management/">Business resilience and risk management</a></li>
+                                <li><a href="/en/about-us/history/">History</a></li>
+                                <li><a href="/en/about-us/awards/">Awards</a></li>
+                                <li><a href="/en/about-us/relationship-with-the-coca-cola-company/">Relationship with The Coca&#8209;Cola Company</a></li>
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <a title=">Operations" href="/en/operations/">Operations</a>
+                    <div class="header__sub-nav">
+                        <div class="header__sub-nav-header">
+                            <a class="header__sub-nav--title" href="/en/operations/">Operations</a>
+                            <button class="header__sub-nav--close">Close</button>
+                        </div>
+                        <ul>
+                                <li><a href="/en/operations/sales-and-customers/">Sales and customers</a></li>
+                                <li><a href="/en/operations/markets/">Markets</a></li>
+                                <li><a href="/en/operations/production/">Production</a></li>
+                                <li><a href="/en/operations/supply-chain/">Supply chain</a></li>
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <a title=">Brands" href="/en/brands/">Brands</a>
+                    <div class="header__sub-nav">
+                        <div class="header__sub-nav-header">
+                            <a class="header__sub-nav--title" href="/en/brands/">Brands</a>
+                            <button class="header__sub-nav--close">Close</button>
+                        </div>
+                        <ul>
+                                <li><a href="/en/brands/the-brands-we-sell/">The brands we sell</a></li>
+                                <li><a href="/en/brands/our-commitments/">Our commitments</a></li>
+                                <li><a href="/en/brands/innovation/">Innovation</a></li>
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <a title=">Sustainability" href="/en/sustainability/">Sustainability</a>
+                    <div class="header__sub-nav">
+                        <div class="header__sub-nav-header">
+                            <a class="header__sub-nav--title" href="/en/sustainability/">Sustainability</a>
+                            <button class="header__sub-nav--close">Close</button>
+                        </div>
+                        <ul>
+                                <li><a href="/en/sustainability/sustainability-approach-and-performance/">Sustainability approach and performance</a></li>
+                                <li><a href="/en/sustainability/community/">Community</a></li>
+                                <li><a href="/en/sustainability/health-wellness/">Health & wellness</a></li>
+                                <li><a href="/en/sustainability/environment/">Environment</a></li>
+                                <li><a href="/en/sustainability/partnerships-and-memberships/">Partnerships and memberships</a></li>
+                                <li><a href="/en/sustainability/mission-sustainability/">Mission Sustainability</a></li>
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <a title=">Investors" href="/en/investors/">Investors</a>
+                    <div class="header__sub-nav">
+                        <div class="header__sub-nav-header">
+                            <a class="header__sub-nav--title" href="/en/investors/">Investors</a>
+                            <button class="header__sub-nav--close">Close</button>
+                        </div>
+                        <ul>
+                                <li><a href="/en/investors/understanding-coca-cola-hbc/">Understanding Coca&#8209;Cola HBC</a></li>
+                                <li><a href="/en/investors/2018-integrated-annual-report/">2018 Integrated Annual Report</a></li>
+                                <li><a href="/en/investors/financial-data/">Financial data</a></li>
+                                <li><a href="/en/investors/financial-results-and-presentations/">Financial results and presentations</a></li>
+                                <li><a href="/en/investors/events-presentations/">Events presentations</a></li>
+                                <li><a href="/en/investors/reports/">Reports</a></li>
+                                <li><a href="/en/investors/share-price-and-tools/">Share price and tools</a></li>
+                                <li><a href="/en/investors/debt-investors/">Debt investors</a></li>
+                                <li><a href="/en/investors/shareholder-centre/">Shareholder centre</a></li>
+                                <li><a href="/en/investors/general-meeting/">General meeting</a></li>
+                                <li><a href="/en/investors/financial-calendar/">Financial calendar</a></li>
+                                <li><a href="/en/investors/consensus-estimates/">Consensus estimates</a></li>
+                                <li><a href="/en/investors/equity-analysts/">Equity analysts</a></li>
+                                <li><a href="/en/investors/email-alerts/">Email alerts</a></li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="header__main-nav--selected">
+                <a title=">Media" href="/en/media/">Media</a>
+                    <div class="header__sub-nav">
+                        <div class="header__sub-nav-header">
+                            <a class="header__sub-nav--title" href="/en/media/">Media</a>
+                            <button class="header__sub-nav--close">Close</button>
+                        </div>
+                        <ul>
+                                <li class="header__sub-nav--selected"><a href="/en/media/news/">News</a></li>
+                                <li><a href="/en/media/image-library/">Image library</a></li>
+                                <li><a href="/en/media/video-gallery/">Video gallery</a></li>
+                                <li><a href="/en/media/publications/">Publications</a></li>
+                        </ul>
+                    </div>
+            </li>
+            <li>
+                <a title=">Careers" href="/en/careers/">Careers</a>
+                    <div class="header__sub-nav">
+                        <div class="header__sub-nav-header">
+                            <a class="header__sub-nav--title" href="/en/careers/">Careers</a>
+                            <button class="header__sub-nav--close">Close</button>
+                        </div>
+                        <ul>
+                                <li><a href="/en/careers/why-work-with-us/">Why work with us?</a></li>
+                                <li><a href="/en/careers/business-developers/">Business Developers</a></li>
+                                <li><a href="/en/careers/management-trainees/">Management Trainees</a></li>
+                                <li><a href="/en/careers/leaders/">Leaders</a></li>
+                                <li><a href="/en/careers/professionals/">Professionals</a></li>
+                                <li><a href="/en/careers/our-stories/">Our Stories</a></li>
+                                <li><a href="/en/careers/search-and-apply/">Search and apply</a></li>
+                                <li><a href="/en/careers/join-our-talent-network/">Join our Talent Network</a></li>
+                        </ul>
+                    </div>
+            </li>
+            <li class="header__main-nav--no-menu">
+                <a title=">Contact us" href="/en/contact-us/">Contact us</a>
+            </li>
+    </ul>
+
+        </nav>
+    </header>
+    
+<div class="general-content">
+        <div class="breadcrumbs">
+            <a title="Home" href="/en/">Home</a>
+            <a title="Media" href="/en/media/">Media</a>
+            <a title="News" href="/en/media/news/">News</a>
+    </div>
+
+    <header class="article-header">
+                <h1>News</h1>
+
+
+    </header>
+    <div class="item-listing">
+        <div class="item-listing__wrapper">
+              <div class="item-listing__intro">
+    <p>We’re committed to sharing our business activities in an open and frank way.</p>
+  </div>
+
+            
+
+    <div class="item-listing__filters">
+        <form action="/en/media/news/">
+            <input name="page" type="hidden" value="1" />
+            <h2>Filter by:</h2>
+                    <label for="year" class="item-listing__filters--select">
+                      <select name="year" id="year">
+                            <option value="">All years</option>
+                                                    <option value="2019" >2019</option>
+                            <option value="2018" >2018</option>
+                            <option value="2017" >2017</option>
+                            <option value="2016" >2016</option>
+                            <option value="2015" >2015</option>
+                            <option value="2014" >2014</option>
+                            <option value="2013" >2013</option>
+                            <option value="2012" >2012</option>
+                            <option value="2011" >2011</option>
+                            <option value="2010" >2010</option>
+                            <option value="2009" >2009</option>
+                            <option value="2008" >2008</option>
+                            <option value="2007" >2007</option>
+                            <option value="2006" >2006</option>
+                            <option value="2005" >2005</option>
+                            <option value="2004" >2004</option>
+                            <option value="2003" >2003</option>
+                            <option value="2002" >2002</option>
+                            <option value="2001" >2001</option>
+                      </select>
+                    </label>
+                    <label for="category" class="item-listing__filters--select">
+                      <select name="category" id="category">
+                            <option value="">Any type</option>
+                                                    <option value="2381" >Acquisitions</option>
+                            <option value="2383" >AGM / EGM</option>
+                            <option value="2380" >Board / Management changes</option>
+                            <option value="2387" >Debt</option>
+                            <option value="2386" >Dividend / capital return</option>
+                            <option value="2388" >Events</option>
+                            <option value="4339" >Insider information</option>
+                            <option value="2382" >Other news</option>
+                            <option value="3633" >PDMR</option>
+                            <option value="2385" >Regulatory</option>
+                            <option value="2384" >Results / Reports</option>
+                            <option value="4016" >RNS</option>
+                            <option value="2389" >Sustainability</option>
+                      </select>
+                    </label>
+            <button class="reset-button" type="reset">Reset</button>
+            <button class="filter-button" type="submit">Filter</button>
+        </form>
+    </div>
+
+
+  <p class="item-listing__results">Showing 1-10 of 991 results</p>
+
+
+  <ul class="listing-container">
+      <li>
+        <a href="/en/media/news/the-coca-cola-system-introduces-innovative-keelclip-packaging-technology-on-multipack-cans-in-europe-a-first-for-the-nartd-industry/">
+            <div class="item-content">
+                <h2>The Coca&#8209;Cola System introduces innovative KeelClip™ packaging technology on multipack cans in Europe: a first for the NARTD industry</h2>
+                  <time>Wednesday, November 20, 2019</time>
+                <p>The Coca&#8209;Cola System introduces innovative KeelClip™ packaging technology on multipack cans in Europe: a first for the NARTD industry</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/notification-of-transactions-by-persons-discharging-managerial-responsibilities-pdmrs-19-november-2019/">
+            <div class="item-content">
+                <h2>Notification of transactions by Persons Discharging Managerial Responsibilities (“PDMRs”)</h2>
+                  <time>Tuesday, November 19, 2019</time>
+                <p>The Company has been notified that the following PDMRs acquired ordinary shares of CHF 6.70 each (“Shares”) in the Company on 18 November 2019 through their participation in the Company’s Employee Share Purchase Plan (“ESPP”).</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/publication-of-final-terms-dated-19-november-2019/">
+            <div class="item-content">
+                <h2>Publication of Final Terms dated 19 November 2019</h2>
+                  <time>Tuesday, November 19, 2019</time>
+                <p>Publication of Final Terms dated 19 November 2019</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/coca-cola-hbc-ceo-zoran-bogdanovic-signs-lead-ceo-pledge/">
+            <div class="item-content">
+                <h2>Coca&#8209;Cola HBC CEO, Zoran Bogdanovic signs LEAD CEO Pledge</h2>
+                  <time>Friday, November 15, 2019</time>
+                <p>We’re proud to support the LEAD CEO pledge to accelerate gender parity and drive inclusion.</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/launch-of-issue-of-notes-14-november-2019/">
+            <div class="item-content">
+                <h2>Launch of Issue of Notes</h2>
+                  <time>Thursday, November 14, 2019</time>
+                <p>Launch of Issue of Notes</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/pricing-of-issue-of-notes-14-november-2019/">
+            <div class="item-content">
+                <h2>Pricing of Issue of Notes</h2>
+                  <time>Thursday, November 14, 2019</time>
+                <p>Pricing of Issue of Notes</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/publication-of-supplement-dated-13-november-2019-to-the-base-prospectus-dated-24-april-2019-as-supplemented-on-2-may-2019-and-8-october-2019/">
+            <div class="item-content">
+                <h2>Publication of Supplement dated 13 November 2019 to the Base Prospectus dated 24 April 2019 (as supplemented on 2 May 2019 and 8 October 2019)</h2>
+                  <time>Wednesday, November 13, 2019</time>
+                <p>Publication of Supplement dated 13 November 2019 to the Base Prospectus dated 24 April 2019 (as supplemented on 2 May 2019 and 8 October 2019)</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/third-quarter-2019-trading-update/">
+            <div class="item-content">
+                <h2>Third quarter 2019 trading update </h2>
+                  <time>Wednesday, November 13, 2019</time>
+                <p>SOLID QUARTER DESPITE ADVERSE WEATHER CONDITIONS</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/2019-stakeholder-forum-focusing-on-the-future-of-water-stewardship/">
+            <div class="item-content">
+                <h2>2019 Stakeholder Forum - Focusing on the future of water stewardship</h2>
+                  <time>Monday, November 4, 2019</time>
+                <p>In October, we hosted 35 stakeholders from 20 countries at our Stakeholder forum in Athens to discuss and listen to various viewpoints and recommendations on how to take our water stewardship agenda forward.</p>
+            </div>
+        </a>
+      </li>
+      <li>
+        <a href="/en/media/news/block-listing-six-monthly-return-1-november-2019/">
+            <div class="item-content">
+                <h2>Block listing six monthly return 1 November 2019</h2>
+                  <time>Friday, November 1, 2019</time>
+                <p>Block listing six-monthly return 1 November 2019</p>
+            </div>
+        </a>
+      </li>
+  </ul>
+  <hr>
+  <ol class="pagination">
+    <li class="pagination-btn"><a href="http://coca-colahellenic.com/en/media/news?page=1" data-page-num="1">Prev</a></li>
+      <li>
+1  </li>
+
+      <li>
+      <a href="http://coca-colahellenic.com/en/media/news?page=2" data-page-num="2">2</a>
+  </li>
+  <li>
+      <a href="http://coca-colahellenic.com/en/media/news?page=3" data-page-num="3">3</a>
+  </li>
+  <li>
+      <a href="http://coca-colahellenic.com/en/media/news?page=4" data-page-num="4">4</a>
+  </li>
+  <li class="pagination-break">&hellip;</li>
+
+      <li>
+      <a href="http://coca-colahellenic.com/en/media/news?page=100" data-page-num="100">100</a>
+  </li>
+
+    <li class="pagination-btn"><a href="http://coca-colahellenic.com/en/media/news?page=2" data-page-num="2">Next</a></li>
+  </ol>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+  <div id="crossSiteLinks" class="related-links">
+    <h2>You may also like</h2>
+    <div class="related-links__wrapper owl-carousel owl-theme">
+        <div class="related-links__item">
+          <a href="/en/investors/financial-data/" style="background-image: url('/media/2204/presentations-thumbnail.png?anchor=center&amp;mode=crop&amp;quality=80&amp;width=300&amp;height=300&amp;rnd=131009545470000000')">
+            <span>Financial data</span>
+          </a>
+        </div>
+        <div class="related-links__item">
+          <a href="/en/investors/reports/" style="background-image: url('/media/3561/book-new.jpg?anchor=center&amp;mode=crop&amp;quality=80&amp;width=300&amp;height=300&amp;rnd=131970557060000000')">
+            <span>Reports</span>
+          </a>
+        </div>
+        <div class="related-links__item">
+          <a href="/en/investors/email-alerts/" style="background-image: url('')">
+            <span>Email alerts</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+
+
+    <footer class="site-footer">
+        <div class="footer-wrapper">
+              <div id="navigation" class="footer-links">
+      <strong>Useful pages</strong>
+    <nav class="footer-nav">
+      <ul>
+          <li><a href="/en/glossary/">Glossary</a></li>
+          <li><a href="/en/sitemap/">Sitemap</a></li>
+          <li><a href="/en/about-us/policies/">Policies</a></li>
+          <li><a href="/en/privacy-and-cookie-notice/">Privacy and cookie notice</a></li>
+          <li><a href="/en/terms-of-use/" target="_blank">Terms of use</a></li>
+          <li><a href="/en/accessibility/">Accessibility</a></li>
+          <li><a href="/en/contact-us/">Contact us</a></li>
+          <li><a href="http://www.coca-colahellenic.ethicspoint.com" target="_blank">Speak Up!</a></li>
+      </ul>
+    </nav>
+  </div>
+
+              <nav class="footer-social">
+      <strong>Connect with us</strong>
+    <ul>
+        <li style="background-image: url('/media/1013/icon-linkedin.svg?mode=pad&amp;quality=80&amp;width=35&amp;height=35&amp;rnd=130941540110000000')"><a href="https://www.linkedin.com/company/coca-cola-hbc" target="_blank">LinkedIn</a></li>
+        <li style="background-image: url('/media/1014/icon-mail.svg?mode=pad&amp;quality=80&amp;width=35&amp;height=35&amp;rnd=130931195540000000')"><a href="mailto:Contact.Us@cchellenic.com">Email</a></li>
+        <li style="background-image: url('/media/1326/icon-facebook.svg?mode=pad&amp;quality=80&amp;width=35&amp;height=35&amp;rnd=130952899390000000')"><a href="https://www.facebook.com/cocacolahellenicbc/" target="_blank">https://www.facebook.com/cocacolahellenicbc/</a></li>
+    </ul>
+  </nav>
+
+            <p class="footer-copyright">Copyright &copy; 2019 Coca-Cola Hellenic Bottling Company. All rights reserved.</p>
+        </div>
+    </footer>
+    <script async src="/assets/js/min/scripts.min.js?v=12"></script>
+</body>
+</html>

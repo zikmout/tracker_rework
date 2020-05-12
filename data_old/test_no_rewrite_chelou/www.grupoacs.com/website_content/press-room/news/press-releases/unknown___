@@ -1,0 +1,350 @@
+<html class="mti-inactive" lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="csrf-param" content="_csrf">
+<meta name="csrf-token" content="YwaJuzOHYP9JY-8jXfE0QtjPQCNd2Aw-ZohtemvTC9EGMt38BesYjSo7mWwqsnwsu5s0UjPgb30c2V4qEoRHlA==">
+    <title>Press releases - News - Press room - Grupo ACS</title>
+    <link href="/assets/f1b67bae/css/styles.min.css" rel="stylesheet"><style type="text/css" id="mti_fontface_2005bfef-b305-4b71-88d3-ea503737ffc5">@font-face{
+font-family:"Avenir Next W01";
+ font-style:normal;
+ font-weight:800;
+src:url("https://fast.fonts.net/dv2/14/14c73713-e4df-4dba-933b-057feeac8dd1.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next W04";
+ font-style:normal;
+ font-weight:700;
+src:url("https://fast.fonts.net/dv2/14/91799b0e-0ef8-446e-b274-5509412e1242.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next W01";
+ font-style:italic;
+ font-weight:800;
+src:url("https://fast.fonts.net/dv2/14/eaafcb26-9296-4a57-83e4-4243abc03db7.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next W01";
+ font-style:italic;
+ font-weight:400;
+src:url("https://fast.fonts.net/dv2/14/7377dbe6-f11a-4a05-b33c-bc8ce1f60f84.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next W01";
+ font-style:normal;
+ font-weight:400;
+src:url("https://fast.fonts.net/dv2/14/2cd55546-ec00-4af9-aeca-4a3cd186da53.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next Rounded W01";
+ font-style:normal;
+ font-weight:400;
+src:url("https://fast.fonts.net/dv2/14/ad3c6c4a-3054-4bcc-b0de-596d767c68be.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next Rounded W01";
+ font-style:italic;
+ font-weight:400;
+src:url("https://fast.fonts.net/dv2/14/0dde3abd-8986-4551-8e43-7fffba830a09.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next Rounded W01";
+ font-style:italic;
+ font-weight:100;
+src:url("https://fast.fonts.net/dv2/14/3dcaac00-94fc-4380-8452-8da710a380b4.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next Rounded W01";
+ font-style:normal;
+ font-weight:200;
+src:url("https://fast.fonts.net/dv2/14/5559fceb-87c2-4a44-9925-ad308acec971.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next Rounded W01";
+ font-style:italic;
+ font-weight:200;
+src:url("https://fast.fonts.net/dv2/14/9404e8fa-cb35-4688-bc7d-81a12f593acd.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+@font-face{
+font-family:"Avenir Next Rounded W01";
+ font-style:normal;
+ font-weight:100;
+src:url("https://fast.fonts.net/dv2/14/188b58ca-5489-4e70-8010-7b867980f487.woff2?d44f19a684109620e484157aa690e818a325740899ad3ecc8e06711149f755d82dc30c8e25d36f7df2315c3e96168d5a1e5401f9d2bbf0edd759f0bb0e0b4a3ba2626fddf3430ed62357e53bcefe319328c24fec2a8d9f0da2d44c80f8bd6c3f158b43616e68b3e399d62adadf6be4cbf333929eae0de836e5a84dc1fd6ba3f2a5ac43&projectId=2005bfef-b305-4b71-88d3-ea503737ffc5") format('woff2');}
+</style><script type="text/javascript" src="https://fast.fonts.net/jsapi/core/mt.js"></script><link id="MonoTypeFontApiFontTracker" type="text/css" rel="stylesheet" href="https://fast.fonts.net/t/1.css?apiType=js&amp;projectid=2005bfef-b305-4b71-88d3-ea503737ffc5"></head>
+<body class="site">
+
+<div class="search-window">
+    <form id="search-form" class="search-form" action="/search/" method="post">
+<input type="hidden" name="_csrf" value="YwaJuzOHYP9JY-8jXfE0QtjPQCNd2Aw-ZohtemvTC9EGMt38BesYjSo7mWwqsnwsu5s0UjPgb30c2V4qEoRHlA==">        <div class="close-search"><em class="fa fa-times"></em></div>
+        <label for="search" style="display:none">search</label>
+        <input type="search" id="search" name="search" placeholder="search">
+        <button class="btn amarillo">search</button>
+    </form></div>
+
+<div class="wrap">
+
+    <div class="site-index">
+
+        <div class="cabecera-wrapper">
+
+            <div class="galHead slick-initialized slick-slider slick-dotted"><div class="slick-list"><div class="slick-track" style="opacity: 1; width: 27320px;"><div class="slick-slide" data-slick-index="0" aria-hidden="true" style="width: 1366px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide00"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/69.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/69_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/69.jpg"></div></div></div><div class="slick-slide" data-slick-index="1" aria-hidden="true" style="width: 1366px; position: relative; left: -1366px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide01"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/71.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/71_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/71.jpg"></div></div></div><div class="slick-slide" data-slick-index="2" aria-hidden="true" style="width: 1366px; position: relative; left: -2732px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide02"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/68.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/68_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/68.jpg"></div></div></div><div class="slick-slide" data-slick-index="3" aria-hidden="true" style="width: 1366px; position: relative; left: -4098px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide03"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/70.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/70_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/70.jpg"></div></div></div><div class="slick-slide slick-current slick-active" data-slick-index="4" aria-hidden="false" style="width: 1366px; position: relative; left: -5464px; top: 0px; z-index: 999; opacity: 1;" role="tabpanel" id="slick-slide04"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/60.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/60_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/60.jpg"></div></div></div><div class="slick-slide" data-slick-index="5" aria-hidden="true" style="width: 1366px; position: relative; left: -6830px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide05"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/76.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/76_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/76.jpg"></div></div></div><div class="slick-slide" data-slick-index="6" aria-hidden="true" style="width: 1366px; position: relative; left: -8196px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide06"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/49.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/49_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/49.jpg"></div></div></div><div class="slick-slide" data-slick-index="7" aria-hidden="true" style="width: 1366px; position: relative; left: -9562px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide07"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/72.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/72_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/72.jpg"></div></div></div><div class="slick-slide" data-slick-index="8" aria-hidden="true" style="width: 1366px; position: relative; left: -10928px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide08"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/47.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/47_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/47.jpg"></div></div></div><div class="slick-slide" data-slick-index="9" aria-hidden="true" style="width: 1366px; position: relative; left: -12294px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide09"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/58.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/58_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/58.jpg"></div></div></div><div class="slick-slide" data-slick-index="10" aria-hidden="true" style="width: 1366px; position: relative; left: -13660px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide010"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/57.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/57_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/57.jpg"></div></div></div><div class="slick-slide" data-slick-index="11" aria-hidden="true" style="width: 1366px; position: relative; left: -15026px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide011"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/63.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/63_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/63.jpg"></div></div></div><div class="slick-slide" data-slick-index="12" aria-hidden="true" style="width: 1366px; position: relative; left: -16392px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide012"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/33.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/33_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/33.jpg"></div></div></div><div class="slick-slide" data-slick-index="13" aria-hidden="true" style="width: 1366px; position: relative; left: -17758px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide013"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/35.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/35_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/35.jpg"></div></div></div><div class="slick-slide" data-slick-index="14" aria-hidden="true" style="width: 1366px; position: relative; left: -19124px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide014"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/36.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/36_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/36.jpg"></div></div></div><div class="slick-slide" data-slick-index="15" aria-hidden="true" style="width: 1366px; position: relative; left: -20490px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide015"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/64.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/64_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/64.jpg"></div></div></div><div class="slick-slide" data-slick-index="16" aria-hidden="true" style="width: 1366px; position: relative; left: -21856px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide016"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/39.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/39_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/39.jpg"></div></div></div><div class="slick-slide" data-slick-index="17" aria-hidden="true" style="width: 1366px; position: relative; left: -23222px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide017"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/52.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/52_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/52.jpg"></div></div></div><div class="slick-slide" data-slick-index="18" aria-hidden="true" style="width: 1366px; position: relative; left: -24588px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide018"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/43.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/43_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/43.jpg"></div></div></div><div class="slick-slide" data-slick-index="19" aria-hidden="true" style="width: 1366px; position: relative; left: -25954px; top: 0px; z-index: 998; opacity: 0;" tabindex="-1" role="tabpanel" id="slick-slide019"><div><div class="imgGal" style="width: 100%; display: inline-block;"><img src="/ficheros_editor/cabeceras/1/45.jpg" alt="" data-img-mobile="/ficheros_editor/cabeceras/1/45_mobile.jpg" data-img-desktop="/ficheros_editor/cabeceras/1/45.jpg"></div></div></div></div></div><ul class="slick-dots" style="" role="tablist"><li class="" role="presentation"><button type="button" role="tab" id="slick-slide-control00" aria-controls="slick-slide00" aria-label="1 of 20" tabindex="-1">1</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control01" aria-controls="slick-slide01" aria-label="2 of 20" tabindex="-1">2</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control02" aria-controls="slick-slide02" aria-label="3 of 20" tabindex="-1">3</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control03" aria-controls="slick-slide03" aria-label="4 of 20" tabindex="-1">4</button></li><li class="slick-active" role="presentation"><button type="button" role="tab" id="slick-slide-control04" aria-controls="slick-slide04" aria-label="5 of 20" tabindex="0" aria-selected="true">5</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control05" aria-controls="slick-slide05" aria-label="6 of 20" tabindex="-1">6</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control06" aria-controls="slick-slide06" aria-label="7 of 20" tabindex="-1">7</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control07" aria-controls="slick-slide07" aria-label="8 of 20" tabindex="-1">8</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control08" aria-controls="slick-slide08" aria-label="9 of 20" tabindex="-1">9</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control09" aria-controls="slick-slide09" aria-label="10 of 20" tabindex="-1">10</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control010" aria-controls="slick-slide010" aria-label="11 of 20" tabindex="-1">11</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control011" aria-controls="slick-slide011" aria-label="12 of 20" tabindex="-1">12</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control012" aria-controls="slick-slide012" aria-label="13 of 20" tabindex="-1">13</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control013" aria-controls="slick-slide013" aria-label="14 of 20" tabindex="-1">14</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control014" aria-controls="slick-slide014" aria-label="15 of 20" tabindex="-1">15</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control015" aria-controls="slick-slide015" aria-label="16 of 20" tabindex="-1">16</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control016" aria-controls="slick-slide016" aria-label="17 of 20" tabindex="-1">17</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control017" aria-controls="slick-slide017" aria-label="18 of 20" tabindex="-1">18</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control018" aria-controls="slick-slide018" aria-label="19 of 20" tabindex="-1">19</button></li><li role="presentation"><button type="button" role="tab" id="slick-slide-control019" aria-controls="slick-slide019" aria-label="20 of 20" tabindex="-1">20</button></li></ul></div>
+
+            <header class="head container">
+
+                <div class="row">
+                    <div class="cabecera col-md-12">
+                        <div class="logo col-sm-3 col-md-2" title="ACS">
+                            <a title="main" href="/"></a>
+                        </div>
+
+                        <!-- Menu Desktop -->
+                        <div class="celda menu col-sm-9 col-md-10">
+                            <div class="row">
+                                <div class="contact-lang col-md-5">
+                                    <div class="col-md-8 row enlace-grupo-empresas">
+                                        <a title="ACS Group Directory" href="/acs-group-directory/">
+                                            ACS Group Directory                                        </a>
+                                    </div>
+                                    <div class="searcher desktop" title="search" aria-label="search">
+                                        <div class="icon-search-head"></div>
+                                    </div>
+                                    <a class="icon-mail-yellow" href="/contact/" title="contact"></a>
+                                    <a class="btn es" href="/sala-de-prensa/noticias/notas-de-prensa/">Español</a>                                </div>
+                                                                <div class="info-eco col-md-6">
+                                    <div class="ticker">
+                                                                                <p style="margin-left: 346.25px;">28/04/2020 09:50h /
+                                            Stock price ACS: 21.64                                            <em class="fa fa-caret-up verde" aria-hidden="true"></em> 1.41% /
+                                            IBEX 35: 6,729.30 <em class="fa fa-caret-down rojo" aria-hidden="true"></em>
+                                            -0.04%                                        </p>
+                                                                            </div>
+                                    <div class="fecha">
+                                        28<span class="mes">Apr</span>2020                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <nav class="menu-list">
+                                    <ul><li><a class="link-menu" href="/about-acs/">ABOUT ACS</a><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/about-acs/corporate-strategy/">Corporate strategy</a></li><li><a class="link-submenu" href="/about-acs/organization/management-bodies/board-of-directors/">Management bodies</a></li><li><a class="link-submenu" href="/about-acs/international/">International</a></li></ul></div><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/about-acs/key-data/">Key data</a></li><li><a class="link-submenu" href="/about-acs/our-history/">Our History</a></li></ul></div></div></li><li><a class="link-menu" href="/activities/infrastructure/">ACTIVITIES</a><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/activities/infrastructure/">Infrastructure</a></li><li><a class="link-submenu" href="/activities/industrial-services/">Industrial Services</a></li><li><a class="link-submenu" href="/activities/services/">Services</a></li></ul></div></div></li><li><a class="link-menu" href="/shareholders-investors/the-share/">SHAREHOLDERS &amp; INVESTORS </a><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/shareholders-investors/the-share/stock-exchange-information/">The share</a></li><li><a class="link-submenu" href="/shareholders-investors/fixed-income-issues/">Fixed income issues</a></li><li><a class="link-submenu" href="/shareholders-investors/rating/">Rating</a></li><li><a class="link-submenu" href="/shareholders-investors/annual-report/">Annual report</a></li><li><a class="link-submenu" href="/shareholders-investors/historical-financial-data/audited-financial-statements-interim-financial-sta/">Audited Financial Statements &amp; Interim Financial Statements</a></li><li><a class="link-submenu" href="/shareholders-investors/quarterly-results/">Quarterly results</a></li><li><a class="link-submenu" href="/shareholders-investors/ordinary-general-shareholders-meeting/agenda/">Ordinary general shareholders' meeting</a></li><li><a class="link-submenu" href="https://www.grupoacs.com/ficheros_editor/File/05_Compliance/Pol%C3%ADticas/7_Pol%C3%ADtica%20comunicaci%C3%B3n%20ACS_en.pdf" target="_blank">Communication and contact policy with shareholders, institutional investors and proxy advisors</a></li></ul></div><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/shareholders-investors/investor-day-2019/">Investor Day 2019</a></li><li><a class="link-submenu" href="/shareholders-investors/comunications-cnmv/">Comunications (CNMV)</a></li><li><a class="link-submenu" href="/shareholders-investors/historical-financial-data/historical-facts/">Historical Data </a></li><li><a class="link-submenu" href="/shareholders-investors/historical-financial-data/historical-facts/">Historical financial data</a></li><li><a class="link-submenu" href="/shareholders-investors/financial-calendar/">Financial calendar</a></li><li><a class="link-submenu" href="/shareholders-investors/contact-us/">Contact us</a></li></ul></div></div></li><li><a class="link-menu" href="/corporate-governance/">CORPORATE GOVERNANCE</a><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/corporate-governance/annual-corporate-governance-report/">Annual corporate governance report</a></li><li><a class="link-submenu" href="/about-acs/organization/management-bodies/board-of-directors/">Board of directors</a></li></ul></div></div></li><li><a class="link-menu" href="/compliance/introduction/">COMPLIANCE</a><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/compliance/introduction/">Introduction</a></li><li><a class="link-submenu" href="/compliance/compliance-policies-and-procedures/">Compliance Policies and Procedures</a></li><li><a class="link-submenu" href="/compliance/ethical-channel/">Ethical Channel</a></li><li><a class="link-submenu" href="/compliance/certificates-1/">Certificates</a></li></ul></div></div></li><li><a class="link-menu" href="/corporate-responsibility/csr-strategy/">CORPORATE RESPONSIBILITY</a><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/corporate-responsibility/csr-strategy/">CSR Strategy</a></li><li><a class="link-submenu" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/">The CSR Policy of the ACS Group</a></li><li><a class="link-submenu" href="/corporate-responsibility/rdi/">R&amp;D&amp;I</a></li><li><a class="link-submenu" href="/corporate-responsibility/policies-related-to-the-csr/">Policies related to the CSR</a></li></ul></div><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/corporate-responsibility/awards-recognitions-and-memberships/">Awards, recognitions and memberships</a></li><li><a class="link-submenu" href="/corporate-responsibility/corporate-responsibility-report/">Corporate responsibility report</a></li></ul></div></div></li><li class="active"><a class="link-menu" href="/press-room/news/press-releases/">PRESS ROOM</a><div class="submenu-list"><div class="col-md-6 column"><ul><li class="active"><a class="link-submenu" href="/press-room/news/press-releases/">News</a></li><li><a class="link-submenu" href="/press-room/graphic-material/photolibrary/">Graphic material</a></li></ul></div></div></li><li><a class="link-menu" href="https://www.grupoacs.com/data-protection/general-information/" target="_blank">DATA PROTECTION</a><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/data-protection/general-information/">General Information</a></li><li><a class="link-submenu" href="/data-protection/your-personal-data/">Your personal data</a></li><li><a class="link-submenu" href="/data-protection/forms/">Forms</a></li></ul></div></div></li></ul>                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- Menu Mobile -->
+                        <div class="menuMobile">
+                            <div class="searcher mobile">
+                                <div class="icon-search-head"></div>
+                            </div>
+                            <div class="menuMobile-hamburger desactivated">
+                                <a title="menu hamburger" id="hamburger"><span></span></a>
+                            </div>
+
+                            <div class="menuMobile-menu">
+                                <nav class="menuMobile-list">
+                                    <ul><li><a class="link-menu" href="/about-acs/">ABOUT ACS</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/about-acs/corporate-strategy/">Corporate strategy</a></li><li><a class="link-submenu" href="/about-acs/organization/management-bodies/board-of-directors/">Management bodies</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/about-acs/organization/management-bodies/board-of-directors/">Board of Directors</a></li><li><a class="link-submenu-3" href="/about-acs/organization/management-bodies/board-committees/">Board Committees</a></li><li><a class="link-submenu-3" href="/about-acs/organization/management-bodies/management-committee/">Management Committee</a></li><li><a class="link-submenu-3" href="/about-acs/organization/management-bodies/management-team/">Management team</a></li></ul></div></li><li><a class="link-submenu" href="/about-acs/international/">International</a></li></ul></div><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/about-acs/key-data/">Key data</a></li><li><a class="link-submenu" href="/about-acs/our-history/">Our History</a></li></ul></div></div></li><li><a class="link-menu" href="/activities/infrastructure/">ACTIVITIES</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/activities/infrastructure/">Infrastructure</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/activities/infrastructure/companies/">Companies</a></li><li><a class="link-submenu-3" href="/activities/infrastructure/awarded-contracts/civil-works/">Awarded Contracts </a><div class="submenu-list-4"><ul><li><a class="link-submenu-4" href="/activities/infrastructure/awarded-contracts/civil-works/">Civil works</a></li><li><a class="link-submenu-4" href="/activities/infrastructure/awarded-contracts/building/">Building</a></li><li><a class="link-submenu-4" href="/activities/infrastructure/awarded-contracts/mining/">Mining</a></li></ul></div></li><li><a class="link-submenu-3" href="/activities/infrastructure/companies/">Contact us</a></li></ul></div></li><li><a class="link-submenu" href="/activities/industrial-services/">Industrial Services</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/activities/industrial-services/companies/">Companies</a></li><li><a class="link-submenu-3" href="/activities/industrial-services/awarded-contracts/">Awarded Contracts </a></li><li><a class="link-submenu-3" href="/activities/industrial-services/companies/">Contact us</a></li></ul></div></li><li><a class="link-submenu" href="/activities/services/">Services</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/activities/services/companies/">Companies</a></li><li><a class="link-submenu-3" href="/activities/services/awarded-contracts/">Awarded Contracts </a></li><li><a class="link-submenu-3" href="/activities/services/companies/">Contact us</a></li></ul></div></li></ul></div></div></li><li><a class="link-menu" href="/shareholders-investors/the-share/">SHAREHOLDERS &amp; INVESTORS </a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/shareholders-investors/the-share/stock-exchange-information/">The share</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/shareholders-investors/the-share/stock-exchange-information/">Stock-exchange information</a></li><li><a class="link-submenu-3" href="/shareholders-investors/the-share/dividends/evolution/">Dividends</a><div class="submenu-list-4"><ul><li><a class="link-submenu-4" href="/shareholders-investors/the-share/dividends/evolution/">Evolution</a></li></ul></div></li><li><a class="link-submenu-3" href="/shareholders-investors/the-share/historical-facts/">Historical Facts</a></li><li><a class="link-submenu-3" href="/shareholders-investors/the-share/share-capital/evolution/">Share capital</a><div class="submenu-list-4"><ul><li><a class="link-submenu-4" href="/shareholders-investors/the-share/share-capital/evolution/">Evolution</a></li><li><a class="link-submenu-4" href="/shareholders-investors/the-share/share-capital/significant-shareholders/">Significant shareholders</a></li><li><a class="link-submenu-4" href="/about-acs/organization/management-bodies/board-of-directors/">Shareholdings held by the Board of Directors</a></li></ul></div></li><li><a class="link-submenu-3" href="/shareholders-investors/the-share/analyst-coverage/">Analyst coverage</a></li></ul></div></li><li><a class="link-submenu" href="/shareholders-investors/fixed-income-issues/">Fixed income issues</a></li><li><a class="link-submenu" href="/shareholders-investors/rating/">Rating</a></li><li><a class="link-submenu" href="/shareholders-investors/annual-report/">Annual report</a></li><li><a class="link-submenu" href="/shareholders-investors/historical-financial-data/audited-financial-statements-interim-financial-sta/">Audited Financial Statements &amp; Interim Financial Statements</a></li><li><a class="link-submenu" href="/shareholders-investors/quarterly-results/">Quarterly results</a></li><li><a class="link-submenu" href="/shareholders-investors/ordinary-general-shareholders-meeting/agenda/">Ordinary general shareholders' meeting</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/shareholders-investors/ordinary-general-shareholders-meeting/agenda/">Agenda</a></li><li><a class="link-submenu-3" href="/shareholders-investors/ordinary-general-shareholders-meeting/documents-4/">Documents</a></li><li><a class="link-submenu-3" href="https://www.juntaaccionistas.com/ACS-AccesoTelematico/" target="_blank">Telematic Assistance</a></li><li><a class="link-submenu-3" href="https://www.juntaaccionistas.com/ACS-JE/Inicio.do" target="_blank">Early electronic voting</a></li><li><a class="link-submenu-3" href="https://www.juntaaccionistas.com/foroJuntas/?cue=e2a" target="_blank">Electronic Shareholder's forum</a></li><li><a class="link-submenu-3" href="/shareholders-investors/ordinary-general-shareholders-meeting/resolutions/">Resolutions</a></li><li><a class="link-submenu-3" href="/shareholders-investors/ordinary-general-shareholders-meeting/shareholders-general-meeting-by-laws/">Shareholders' general meeting by-laws</a></li></ul></div></li><li><a class="link-submenu" href="https://www.grupoacs.com/ficheros_editor/File/05_Compliance/Pol%C3%ADticas/7_Pol%C3%ADtica%20comunicaci%C3%B3n%20ACS_en.pdf" target="_blank">Communication and contact policy with shareholders, institutional investors and proxy advisors</a></li></ul></div><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/shareholders-investors/investor-day-2019/">Investor Day 2019</a></li><li><a class="link-submenu" href="/shareholders-investors/comunications-cnmv/">Comunications (CNMV)</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/shareholders-investors/comunications-cnmv/inside-information/">Inside Information</a></li><li><a class="link-submenu-3" href="/shareholders-investors/comunications-cnmv/other-relevant-information/">Other relevant information</a></li><li><a class="link-submenu-3" href="/shareholders-investors/comunications-cnmv/relevant-events/">Relevant Events</a></li></ul></div></li><li><a class="link-submenu" href="/shareholders-investors/historical-financial-data/historical-facts/">Historical Data </a></li><li><a class="link-submenu" href="/shareholders-investors/historical-financial-data/historical-facts/">Historical financial data</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/shareholders-investors/historical-financial-data/audited-financial-statements-interim-financial-sta/">Audited Financial Statements &amp; Interim Financial Statements</a></li><li><a class="link-submenu-3" href="/shareholders-investors/historical-financial-data/historical-facts/">Historical Facts</a></li><li><a class="link-submenu-3" href="/shareholders-investors/historical-financial-data/average-period-of-payment-to-suppliers/">Average period of payment to suppliers</a></li></ul></div></li><li><a class="link-submenu" href="/shareholders-investors/financial-calendar/">Financial calendar</a></li><li><a class="link-submenu" href="/shareholders-investors/contact-us/">Contact us</a></li></ul></div></div></li><li><a class="link-menu" href="/corporate-governance/">CORPORATE GOVERNANCE</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/corporate-governance/annual-corporate-governance-report/">Annual corporate governance report</a></li><li><a class="link-submenu" href="/about-acs/organization/management-bodies/board-of-directors/">Board of directors</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/about-acs/organization/management-bodies/board-of-directors/">Composition</a></li><li><a class="link-submenu-3" href="/about-acs/organization/management-bodies/board-committees/">Board Committees</a></li><li><a class="link-submenu-3" href="/corporate-governance/board-of-directors/rules-of-the-board-of-directors/">Rules of the board of directors</a></li></ul></div></li></ul></div></div></li><li><a class="link-menu" href="/compliance/introduction/">COMPLIANCE</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/compliance/introduction/">Introduction</a></li><li><a class="link-submenu" href="/compliance/compliance-policies-and-procedures/">Compliance Policies and Procedures</a></li><li><a class="link-submenu" href="/compliance/ethical-channel/">Ethical Channel</a></li><li><a class="link-submenu" href="/compliance/certificates-1/">Certificates</a></li></ul></div></div></li><li><a class="link-menu" href="/corporate-responsibility/csr-strategy/">CORPORATE RESPONSIBILITY</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/corporate-responsibility/csr-strategy/">CSR Strategy</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/corporate-responsibility/csr-strategy/the-acs-group-and-the-csr/">The ACS Group and the CSR</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/csr-strategy/project-one/">Project ONE</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/csr-strategy/20-20-plan/">20-20 Plan</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/csr-strategy/list-of-material-aspects/">List of material aspects</a></li></ul></div></li><li><a class="link-submenu" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/">The CSR Policy of the ACS Group</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/the-acs-groups-business-model/">The ACS Group’s business model</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/environment/">Environment</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/the-acs-groups-people/">The ACS Group’s people</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/health-and-safety/">Health and Safety </a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/regulatory-compliance/">Regulatory compliance</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/management-of-the-relationship-with-stakeholders/">Management of the relationship with stakeholders</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/giving-back-to-society/">Giving back to society</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/suppliers-and-contractors/">Suppliers and contractors</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/commitment-to-quality-with-the-customer/">Commitment to quality with the customer</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/tax-information/">Tax Information</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/the-csr-policy-of-the-acs-group/innovation/">Innovation</a></li></ul></div></li><li><a class="link-submenu" href="/corporate-responsibility/rdi/">R&amp;D&amp;I</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/corporate-responsibility/rdi/infrastructure/">Infrastructure</a><div class="submenu-list-4"><ul><li><a class="link-submenu-4" href="/corporate-responsibility/rdi/infrastructure/cases-studies/">Cases studies</a></li></ul></div></li><li><a class="link-submenu-3" href="/corporate-responsibility/rdi/industrial-services/">Industrial Services</a></li><li><a class="link-submenu-3" href="/corporate-responsibility/rdi/services/">Services</a></li></ul></div></li><li><a class="link-submenu" href="/corporate-responsibility/policies-related-to-the-csr/">Policies related to the CSR</a></li></ul></div><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/corporate-responsibility/awards-recognitions-and-memberships/">Awards, recognitions and memberships</a></li><li><a class="link-submenu" href="/corporate-responsibility/corporate-responsibility-report/">Corporate responsibility report</a></li></ul></div></div></li><li class="active"><a class="link-menu" href="/press-room/news/press-releases/">PRESS ROOM</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list"><div class="col-md-6 column"><ul><li class="active"><a class="link-submenu" href="/press-room/news/press-releases/">News</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li class="active"><a class="link-submenu-3" href="/press-room/news/press-releases/">Press releases</a></li></ul></div></li><li><a class="link-submenu" href="/press-room/graphic-material/photolibrary/">Graphic material</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list-3"><ul><li><a class="link-submenu-3" href="/press-room/graphic-material/photolibrary/">Photolibrary</a></li><li><a class="link-submenu-3" href="/press-room/graphic-material/corporate-image/">Corporate image</a></li></ul></div></li></ul></div></div></li><li><a class="link-menu" href="https://www.grupoacs.com/data-protection/general-information/" target="_blank">DATA PROTECTION</a><em class="fa fa-sort-desc" aria-hidden="true"></em><em class="fa fa-times" aria-hidden="true"></em><div class="submenu-list"><div class="col-md-6 column"><ul><li><a class="link-submenu" href="/data-protection/general-information/">General Information</a></li><li><a class="link-submenu" href="/data-protection/your-personal-data/">Your personal data</a></li><li><a class="link-submenu" href="/data-protection/forms/">Forms</a></li></ul></div></div></li></ul>                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </header>
+
+        </div>
+
+        <main class="body-content">
+
+            
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 hidden-sm hidden-xs">
+                <ul class="menu-lateral"><li class="submenu-lateral"><a href="/press-room/news/press-releases/">News</a><ul><em class="fa fa-sort-desc no-function" aria-hidden="true"></em><li class=" active"><a href="/press-room/news/press-releases/">Press releases</a></li></ul></li><li class=""><a href="/press-room/graphic-material/photolibrary/">Graphic material</a></li></ul>            </div>
+            <div class="col-xs-12 col-md-9">
+                <div class="row">
+                                        <div class="col-md-12 hidden-sm hidden-xs"><ul class="breadcrumb non-bullets"><li><a href="/press-room/news/press-releases/">Press room</a></li>
+<li><a href="/press-room/news/press-releases/">News</a></li>
+<li class="active">Press releases</li>
+</ul></div>                                        <div class="titulo-pagina col-xs-12"><h2>Press releases</h2></div>                                        <div class="modulo m_Prensa col-xs-12 col-sm-12 col-md-12 modulo-avanzado">
+<div id="w0" class="list-view panel"><div class="summary">Showing <b>1-10</b> of <b>385</b> items.</div>
+<div class="prensa-items"><div class="col-xs-12 prensa-item" data-key="641">        <div class="row">
+            <div class="col-md-2 prensa-fecha">01-04-2020</div>
+            <div class="col-md-10">
+                <a aria-label="The HOCHTIEF company Nexplore has entered into a unique research partnership with Darmstadt Technical University" title="The HOCHTIEF company Nexplore has entered into a unique research partnership with Darmstadt Technical University" href="/press-room/news/press-releases/the-hochtief-company-nexplore-has-entered-into-a-unique-research-partnership-with-darmstadt-technical-university/">The HOCHTIEF company Nexplore has entered into a unique research partnership with Darmstadt Technical University</a>
+                <p></p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="636">        <div class="row">
+            <div class="col-md-2 prensa-fecha">22-03-2020</div>
+            <div class="col-md-10">
+                <a aria-label="Official statement Decease José María Loizaga
+" title="Official statement Decease José María Loizaga
+" href="/press-room/news/press-releases/official-statement-decease-jose-maria-loizaga/">Official statement Decease José María Loizaga
+</a>
+                <p></p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="630">        <div class="row">
+            <div class="col-md-2 prensa-fecha">11-03-2020</div>
+            <div class="col-md-10">
+                <a aria-label="CIMIC's UGL awarded $180m in rail contracts in NSW and SA
+" title="CIMIC's UGL awarded $180m in rail contracts in NSW and SA
+" href="/press-room/news/press-releases/cimics-ugl-awarded-180m-in-rail-contracts-in-nsw-and-sa/">CIMIC's UGL awarded $180m in rail contracts in NSW and SA
+</a>
+                <p></p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="628">        <div class="row">
+            <div class="col-md-2 prensa-fecha">09-03-2020</div>
+            <div class="col-md-10">
+                <a aria-label="HOCHTIEF Aktiengesellschaft: HOCHTIEF decides to conduct a share buy-back" title="HOCHTIEF Aktiengesellschaft: HOCHTIEF decides to conduct a share buy-back" href="/press-room/news/press-releases/hochtief-aktiengesellschaft-hochtief-decides-to-conduct-a-share-buy-back/">HOCHTIEF Aktiengesellschaft: HOCHTIEF decides to conduct a share buy-back</a>
+                <p></p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="627">        <div class="row">
+            <div class="col-md-2 prensa-fecha">06-03-2020</div>
+            <div class="col-md-10">
+                <a aria-label="Deutsche Börse includes HOCHTIEF in new index for sustainable companies " title="Deutsche Börse includes HOCHTIEF in new index for sustainable companies " href="/press-room/news/press-releases/deutsche-borse-includes-hochtief-in-new-index-for-sustainable-companies/">Deutsche Börse includes HOCHTIEF in new index for sustainable companies </a>
+                <p></p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="624">        <div class="row">
+            <div class="col-md-2 prensa-fecha">02-03-2020</div>
+            <div class="col-md-10">
+                <a aria-label="CIMIC Group company CPB Contractors has been selected by the South Australian Government to deliver three important projects under the Port Wakefield to Port Augusta Regional Projects Alliance (RPA). " title="CIMIC Group company CPB Contractors has been selected by the South Australian Government to deliver three important projects under the Port Wakefield to Port Augusta Regional Projects Alliance (RPA). " href="/press-room/news/press-releases/cimic-group-company-cpb-contractors-has-been-selected-by-the-south-australian-government-to-deliver-three-important-projects-under-the-port-wakefield-to-port-augusta-regional-projects-alliance-rpa/">CIMIC Group company CPB Contractors has been selected by the South Australian Government to deliver three important projects under the Port Wakefield to Port Augusta Regional Projects Alliance (RPA). </a>
+                <p></p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="621">        <div class="row">
+            <div class="col-md-2 prensa-fecha">18-02-2020</div>
+            <div class="col-md-10">
+                <a aria-label="ACS net profit reached € 962 million in 2019, an increase of 5.1%" title="ACS net profit reached € 962 million in 2019, an increase of 5.1%" href="/press-room/news/press-releases/acs-net-profit-reached-962-million-in-2019-an-increase-of-51/">ACS net profit reached € 962 million in 2019, an increase of 5.1%</a>
+                <p>Sales increased by 6.5%, up to € 39,000 million</p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="619">        <div class="row">
+            <div class="col-md-2 prensa-fecha">11-02-2020</div>
+            <div class="col-md-10">
+                <a aria-label="CIMIC Group’s UGL secures $450m in oil &amp; gas maintenance contracts in Australia" title="CIMIC Group’s UGL secures $450m in oil &amp; gas maintenance contracts in Australia" href="/press-room/news/press-releases/cimic-groups-ugl-secures-450m-in-oil-gas-maintenance-contracts-in-australia/">CIMIC Group’s UGL secures $450m in oil &amp; gas maintenance contracts in Australia</a>
+                <p></p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="618">        <div class="row">
+            <div class="col-md-2 prensa-fecha">06-02-2020</div>
+            <div class="col-md-10">
+                <a aria-label="CIMIC’S CPB Contractors selected for two regional road projects
+" title="CIMIC’S CPB Contractors selected for two regional road projects
+" href="/press-room/news/press-releases/cimics-cpb-contractors-selected-for-two-regional-road-projects/">CIMIC’S CPB Contractors selected for two regional road projects
+</a>
+                <p></p>
+            </div>
+        </div>
+        </div>
+<div class="col-xs-12 prensa-item" data-key="616">        <div class="row">
+            <div class="col-md-2 prensa-fecha">23-01-2020</div>
+            <div class="col-md-10">
+                <a aria-label="Update on BICC strategic review and impact on 2019 financial results and dividends" title="Update on BICC strategic review and impact on 2019 financial results and dividends" href="/press-room/news/press-releases/update-on-bicc-strategic-review-and-impact-on-2019-financial-results-and-dividends/">Update on BICC strategic review and impact on 2019 financial results and dividends</a>
+                <p></p>
+            </div>
+        </div>
+        </div></div>
+<div class="panel-footer"><div class="kv-panel-pager"><ul class="pagination"><li class="prev disabled"><span>«</span></li>
+<li class="active"><a href="/site/index?url=press-room%2Fnews%2Fpress-releases%2F&amp;page=1" data-page="0">1</a></li>
+<li><a href="/site/index?url=press-room%2Fnews%2Fpress-releases%2F&amp;page=2" data-page="1">2</a></li>
+<li><a href="/site/index?url=press-room%2Fnews%2Fpress-releases%2F&amp;page=3" data-page="2">3</a></li>
+<li><a href="/site/index?url=press-room%2Fnews%2Fpress-releases%2F&amp;page=4" data-page="3">4</a></li>
+<li><a href="/site/index?url=press-room%2Fnews%2Fpress-releases%2F&amp;page=5" data-page="4">5</a></li>
+<li><a href="/site/index?url=press-room%2Fnews%2Fpress-releases%2F&amp;page=6" data-page="5">6</a></li>
+<li class="next"><a href="/site/index?url=press-room%2Fnews%2Fpress-releases%2F&amp;page=2" data-page="1">»</a></li></ul></div></div></div>
+</div>
+
+                                                        </div>
+            </div>
+        </div>
+    </div>
+
+    
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-1 col-md-2">
+                        <a class="icon-mail-yellow" href="/contact/" title="contact"></a>
+                    </div>
+                    <div class="col-xs-9 col-sm-8 col-md-7">
+                        <div class="menu-footer">
+                            <ul class="non-bullets">
+                                <li>
+                                    <a title="Legal advice" href="/legal-advice/">Legal advice</a>
+                                </li>
+                                <!--li><a title="Site map" href="/site-map/">Site map</a></li-->
+                                <li>
+                                    <a title="ACS Group Directory" href="/acs-group-directory/">ACS Group Directory</a>
+                                </li>
+                                <li>
+                                    <a title="General information" href="/general-information/">General information</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-9 col-xs-push-3 col-sm-2 col-sm-push-0 col-md-3 logo-footer text-right">
+                        <a title="main" href="/"><img alt="ACS" src="/images/logoAcs.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--footer class="footer">
+            <div class="col-sm-12 col-md-12">
+                <div class="col-sm-3 col-md-3">
+                    <a class="icon-mail-yellow" href="/contact/"></a>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <div class="menu-footer">
+                        <ul>
+                            <li>
+                                <a href="/legal-advice/">Legal advice</a>
+                            </li>
+                            <li><a href="/site-map/">Site map</a></li>
+                            <li>
+                                <a href="/acs-group-directory/">ACS Group Directory</a>
+                            </li>
+                            <li>
+                                <a href="/general-information/">General information</a>
+                            </li>
+                            <li><a href="/lopd/">LOPD</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3">
+                    <div class="celda logo col-sm-2 col-md-2">
+                        <a href="/"><img src='/images/logoAcs.svg'/></a>
+                    </div>
+                </div>
+            </div>
+        </footer-->
+
+    </div>
+
+</div>
+
+<script type="text/javascript" async="" src="https://ssl.google-analytics.com/ga.js"></script><script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-37502786-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+
+<script src="//fast.fonts.net/jsapi/2005bfef-b305-4b71-88d3-ea503737ffc5.js"></script>
+<script src="/assets/f1b67bae/js/scripts.min.js"></script>
+<script>var filtro_key = "filter"</script>
+<script>jQuery(function ($) {
+jQuery('#search-form').yiiActiveForm([], []);
+});</script>
+
+</body></html>

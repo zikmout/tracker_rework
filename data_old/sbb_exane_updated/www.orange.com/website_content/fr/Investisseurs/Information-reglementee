@@ -1,0 +1,3186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+                
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="orange.com" name="title">
+
+
+
+        <meta name="ariane" content="orange.com &gt; Information réglementée">
+
+
+    <meta content="Wed, 22 Nov 2017 17:53:48 CET" name="last_modified">
+
+    
+    <meta name="google-site-verification" content="Cdw6tq-Gc1YrbhuLdMsA5jfxZIxtKUxrCfbPgKjzjMA" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="/bundles/orangecomcore/images/static/favicon.ico?2014.11.6.3.2-768-g6397c5953" />
+
+            <link rel="alternate" hreflang="en" href="/en/Investors/Regulated-information" />
+            <link rel="alternate" hreflang="fr" href="/fr/Investisseurs/Information-reglementee" />
+        <meta name="path-string" content="27477/11347/" />
+
+        <meta name="category" content="Corporate" />
+    
+                                                            
+                <title>Information réglementée - orange.com</title>
+    
+            <link rel="stylesheet" href="/css/compiled/all.min.css?2014.11.6.3.2-768-g6397c5953" />    
+                </head>
+<body>
+            <div id="skiplinks-container">
+    <div id="skiplinks">
+        <ul>
+            <li><a href="#orange-mega-menu" class="sr-only" id="skip-menu">aller au menu principal</a></li>
+            <li><a href="#container" class="sr-only">aller au contenu principal</a></li>
+            <li><a href="#search-container" class="sr-only search-link">aller à la recherche</a></li>
+            <li><a href="#footer-top-container" class="sr-only">aller au pied de page</a></li>
+        </ul>
+    </div>
+</div>    
+                
+                        <div id="event-wrapper">
+            <div id="event-background-color" style="background-color: #dddddd;"></div>
+    
+                
+                                        
+                        
+                    <span class="d-none d-md-block" style="background-image: url('/var/orange_site/storage/images/orange.com/investisseurs/information-reglementee/habillage-de-fond/1449360-1-fre-FR/Habillage-de-fond.jpg');"></span>
+            </div>
+            
+            <div id="cookie-container">
+    <div id="cookie">
+        <div class="ezxmltext-field"><p>En poursuivant votre navigation sur ce site, sans modifier le paramétrage de vos cookies, vous acceptez l’utilisation de cookies nous permettant de réaliser des statistiques de visite.<br><a href="/fr/Footer/Mentions-legales/legal/cookies" target="_blank" rel="noopener noreferrer"><span style="color:#F16E00">en savoir plus</span></a></p></div>
+        <span class="close-button icon-delete"></span>
+    </div>
+</div>
+    
+            <div id="new-search">
+    <div id="new-search-container">
+        <form action="/fr/recherche_orange" class="d-flex flex-row flex-nowrap new-search" id="search-bar-form" method="POST">
+            <input type="hidden" name="type-query" value="1" />
+            <label class="sr-only" for="query-term">Recherche</label>
+            <div class="input-group flex-row-reverse">
+                <span class="input-group-btn pl-2 pr-2" id="close-search-container">
+                    <button id="close-search" type="button" class="close" aria-label="Fermer la recherche">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </span>
+                <span class="input-group-btn pl-2 pr-2" id="load-search-container">
+                    <i class="fa fa-refresh fa-spin align-self-center"></i>
+                </span>
+                <input value="" data-autocomplete="/fr/api/algolia_autocomplete/v1?lang=fr" placeholder="Rechercher" id="query-term" name="query-term" type="search" class="pull-md-right form-control border-0" required />
+                <span class="input-group-btn">
+                    <button class="btn btn-default btn-white" type="submit" name="submit">
+                        <span class="sr-only">Rechercher</span>
+                        <span class="icon-search" aria-hidden="true">&nbsp;</span>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <div id="autocomplete-terms"></div>
+    </div>
+</div>
+<div class="search-opacity"></div>
+    
+    
+        <div id="navbar-fixed-container" class="navbar fixed-top" role="banner">
+                            <div id="header-container">
+    <div id="header">
+        <div class="header-social">
+                
+<ul class="social-bar d-none d-md-block" aria-hidden=true>
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class="Suivez-nous-sur-Twitter suivez-nous-sur-twitter"
+        title="Suivez-nous sur Twitter - Ouverture du lien dans un nouvel onglet"
+        href="https://www.twitter.com/orange/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Twitter</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-twitter/843405-9-fre-FR/Suivez-nous-sur-Twitter_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-twitter/1169309-9-fre-FR/Suivez-nous-sur-Twitter_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class="Suivez-nous-sur-Facebook suivez-nous-sur-facebook"
+        title="Suivez-nous sur Facebook - Ouverture du lien dans un nouvel onglet"
+        href="https://www.facebook.com/orange?brandloc=DISABLE"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Facebook</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-facebook/843400-7-fre-FR/Suivez-nous-sur-Facebook_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-facebook/1169290-7-fre-FR/Suivez-nous-sur-Facebook_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class="Suivez-nous-sur-Instagram suivez-nous-sur-instagram"
+        title="Suivez-nous sur Instagram - Ouverture du lien dans un nouvel onglet"
+        href="https://instagram.com/orange"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Instagram</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-instagram/843402-8-fre-FR/Suivez-nous-sur-Instagram_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-instagram/1169299-8-fre-FR/Suivez-nous-sur-Instagram_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class="Suivez-nous-sur-YouTube suivez-nous-sur-youtube"
+        title="Suivez nous sur YouTube - Ouverture du lien dans un nouvel onglet"
+        href="https://www.youtube.com/c/orange"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez nous sur YouTube</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-youtube/1158821-4-fre-FR/Suivez-nous-sur-YouTube_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-youtube/1169371-4-fre-FR/Suivez-nous-sur-YouTube_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class="Suivez-nous-sur-LinkedIn suivez-nous-sur-linkedin"
+        title="Suivez-nous sur LinkedIn - Ouverture du lien dans un nouvel onglet"
+        href="https://www.linkedin.com/company/orange"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur LinkedIn</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-linkedin/843414-10-fre-FR/Suivez-nous-sur-LinkedIn_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-linkedin/1169351-10-fre-FR/Suivez-nous-sur-LinkedIn_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class=" espace"
+        title=" - Ouverture du lien dans un nouvel onglet"
+        href="https://www.orange.com/fr/actualites/2018/Novembre/L-application-Orange-News-Group"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">espace</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/espace/1236832-3-fre-FR/espace_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/espace/1236831-3-fre-FR/espace_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class=" mobile"
+        title=" - Ouverture du lien dans un nouvel onglet"
+        href="https://www.orange.com/fr/actualites/2018/Novembre/L-application-Orange-News-Group"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">mobile</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/mobile/1236899-1-fre-FR/mobile_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/mobile/1236898-1-fre-FR/mobile_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class="Téléchargez-notre-application android"
+        title="Téléchargez notre application - Ouverture du lien dans un nouvel onglet"
+        href="https://play.google.com/store/apps/details?id=com.orange.orangecorporate"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Android</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/android/1237908-11-fre-FR/Android_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/android/1237907-11-fre-FR/Android_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a aria-hidden=true tabindex=-1
+        class="Téléchargez-notre-application apple"
+        title="Téléchargez notre application - Ouverture du lien dans un nouvel onglet"
+        href="https://itunes.apple.com/fr/app/orange-group/id1052616583?mt=8"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Apple</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/apple/1237915-12-fre-FR/Apple_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/apple/1237914-12-fre-FR/Apple_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+    </ul>
+        </div>
+    </div>
+</div>
+            
+            <div id="menu-container">
+    <div id="menu">
+        <nav class="navbar navbar-default">
+            <div class="navbar-container">
+                <div class="container">
+                    <div class="menu-left-column col-6 col-md-9" role="navigation">
+                                                                                                                
+                            <a href="https://www.orange.com/fr/accueil" class="logo gif-logo">
+                                <span class="ezimage-field"><img src="/var/orange_site/storage/images/orange.com/551292-95-fre-FR/orange.com.png?2014.11.6.3.2-768-g6397c5953"         alt="Retour à l&#039;accueil" /></span>
+
+                                                                    <span class="ezimage-field"><img src="/var/orange_site/storage/images/orange.com/1391288-120-fre-FR/orange.com.png?2014.11.6.3.2-768-g6397c5953"         alt="" /></span>
+                                
+                            </a>
+                        
+                                                
+                                                <nav id="menu-access" class="menu-access d-none d-lg-block">
+                            <ul class="nav">
+                                                                    <li class="nav-item">
+                                            
+    
+    
+
+
+
+            <a class="nav-link " id="menu-14625" href="#menu-14625-target">
+            Groupe
+        </a>
+    
+
+
+                                    </li>
+                                                                    <li class="nav-item">
+                                            
+    
+    
+
+
+
+            <a class="nav-link " id="menu-14621" href="#menu-14621-target">
+            Human Inside
+        </a>
+    
+
+
+                                    </li>
+                                                                    <li class="nav-item">
+                                            
+    
+    
+
+
+
+            <a class="nav-link " id="menu-27477" href="#menu-27477-target">
+            Investisseurs
+        </a>
+    
+
+
+                                    </li>
+                                                                    <li class="nav-item">
+                                            
+    
+    
+
+
+    <a class="nav-link entry-14623" href="/fr/Press-Room">
+        Press Room
+    </a>
+
+
+                                    </li>
+                                                            </ul>
+                        </nav>
+                    </div>
+                    <div class="menu-right-column col-6 col-md-3">
+                        <div class="search-bar">
+                            <button type="button" class="search-link" data-bkg="gray" id="search-link">
+                                <span class="text">Rechercher</span>
+                                <span class="glyphicon icon-search" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <button id="menu-hamburger" class="hamburger hamburger--collapse" type="button" aria-label="Menu" aria-controls="menu">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                    <span class="hamburger-title pl-1">menu</span>
+                </button>
+            </div>
+        </nav>
+    </div>
+</div>
+
+
+<div id="orange-mega-menu">
+
+    
+    <nav class="mega-menu">
+        <ul class="navbar-nav">
+                                        <li class="nav-item">
+                        
+    
+    
+
+
+
+                    <a class="nav-link collapsed groupe  first-item-in-menu" href="#menu-14625-target" id="menu-14625-target-col" data-toggle="collapse">
+            Groupe
+        </a>
+
+        <div id="menu-14625-target" class="mega-menu-panel collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                                                
+    
+<li class="nav-item">
+    <a id="menu-36533-target" href="/fr/Groupe/Strategie" title="Notre stratégie : offrir à nos clients une expérience incomparable" class="nav-link">
+        Stratégie
+    </a>
+</li>
+
+                                            
+
+<li class="nav-item">
+    <a id="menu-44607-target" class="nav-link" href="https://www.orange.com/fr/Groupe/Chiffres-cles/Decouvrez-les-chiffres-clefs-du-Groupe-Orange"  title="Chiffres clefs " >
+        Chiffres clefs
+    </a>
+</li>
+
+                                                
+    
+
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-14680-target">
+            Gouvernance
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-14680-target">
+                    Gouvernance
+                </a>
+            </li>
+                                
+    
+<li class="nav-item">
+    <a id="menu-36826-target" href="/fr/Groupe/Gouvernance/La-Gouvernance-d-Orange" title="La Gouvernance d&#039;Orange" class="nav-link">
+        La Gouvernance d'Orange
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-32433-target" href="/fr/Groupe/Gouvernance/Comite-executif" title="Le management du Groupe" class="nav-link">
+        Comité exécutif
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-14485-target" href="/fr/Groupe/Gouvernance/Conseil-d-Administration" title="Conseil d&#039;administration : attributions et composition" class="nav-link">
+        Conseil d'Administration
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-14505-target" href="/fr/Groupe/Gouvernance/Les-Comites" title="Comités spécialisés du conseil d’administration du Groupe " class="nav-link">
+        Les Comités
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-14508-target" href="/fr/Groupe/Gouvernance/Controle-interne" title="Cadre et organisation du contrôle interne d&#039;Orange" class="nav-link">
+        Contrôle interne
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-14509-target" href="/fr/Groupe/Gouvernance/Documentation-gouvernance" title="Documentation gouvernance" class="nav-link">
+        Documentation gouvernance
+    </a>
+</li>
+
+                    </ul>
+    
+
+</li>
+                                                
+    
+    
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-36507-target">
+            Activités
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-36507-target">
+                    Activités
+                </a>
+            </li>
+                                
+    
+<li class="nav-item">
+    <a id="menu-37217-target" href="/fr/Groupe/Activites/Les-reseaux" title="Les réseaux, au cœur des nouveaux usages digitaux" class="nav-link">
+        Les réseaux
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-36844-target" href="/fr/Groupe/Activites/Services-aux-entreprises" title="Services aux entreprises" class="nav-link">
+        Services aux entreprises
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-38046-target" href="/fr/Groupe/Activites/Contenus" title="Orange et les contenus" class="nav-link">
+        Contenus
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-36108-target" href="/fr/Groupe/Activites/Services-financiers" title="Orange révolutionne les services financiers " class="nav-link">
+        Services financiers
+    </a>
+</li>
+
+                    </ul>
+    
+
+</li>
+                                                
+    
+<li class="nav-item">
+    <a id="menu-36735-target" href="/fr/Groupe/Orange-dans-le-monde" title="Orange dans le monde" class="nav-link">
+        Orange dans le monde
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-40382-target" href="/fr/Groupe/Sponsoring" title="Sponsoring" class="nav-link">
+        Sponsoring
+    </a>
+</li>
+
+                                                
+    
+    
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-27475-target">
+            Actionnaires individuels
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-27475-target">
+                    Actionnaires individuels
+                </a>
+            </li>
+                                
+    
+<li class="nav-item">
+    <a id="menu-27400-target" href="/fr/Groupe/Actionnaires-individuels/Cours-de-l-action" title="Cours de l&#039;action Orange - ORA" class="nav-link">
+        Cours de l'action
+    </a>
+</li>
+
+                                
+    
+
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-36453-target">
+            Etre actionnaire
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-36453-target">
+                    Etre actionnaire
+                </a>
+            </li>
+                                
+    
+<li class="nav-item">
+    <a id="menu-36721-target" href="/fr/Groupe/Actionnaires-individuels/Etre-actionnaire/Club-des-actionnaires" title="Découvrir le Club des actionnaires" class="nav-link">
+        Club des actionnaires
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-11965-target" href="/fr/Groupe/Actionnaires-individuels/Etre-actionnaire/Devenir-actionnaire" title="Découvrir les avantages de chaque mode de détention d&#039;actions" class="nav-link">
+        Devenir actionnaire
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-4728-target" href="/fr/Groupe/Actionnaires-individuels/Etre-actionnaire/Actionnariat-salarie" title="Actionnariat salarié " class="nav-link">
+        Actionnariat salarié 
+    </a>
+</li>
+
+                            
+
+<li class="nav-item">
+    <a id="menu-36642-target" class="nav-link" href="/fr/Investisseurs/Action-et-dividende"  title="Dividende " >
+        Dividende
+    </a>
+</li>
+
+                            
+
+<li class="nav-item">
+    <a id="menu-35027-target" class="nav-link" href="/fr/Groupe/Actionnaires-individuels/Etre-actionnaire/agenda-des-actionnaires"  title="Vos rendez-vous " >
+        Vos rendez-vous
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-36737-target" href="/fr/Groupe/Actionnaires-individuels/Etre-actionnaire/Comite-actionnaires" title="Comité actionnaires" class="nav-link">
+        Comité actionnaires
+    </a>
+</li>
+
+                    </ul>
+    
+
+</li>
+                            
+                
+<li class="nav-item">
+    <a id="menu-48114-target" class="nav-link" href="https://guideactionnaire.orange.com/" target="_blank" title="Guide de l&#039;actionnaire  (Ouverture du lien dans un nouvel onglet)" rel="noopener noreferrer">
+        Guide de l'actionnaire
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-15326-target" href="/fr/Groupe/Actionnaires-individuels/Mon-espace-actionnaire" title="Mon espace actionnaire" class="nav-link">
+        Mon espace actionnaire
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-2014-target" href="/fr/Groupe/Actionnaires-individuels/Actualites" title="Actualités" class="nav-link">
+        Actualités
+    </a>
+</li>
+
+                                
+    
+
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-36647-target">
+            Assemblée générale
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-36647-target">
+                    Assemblée générale
+                </a>
+            </li>
+                                
+    
+
+
+<li class="nav-item">
+    <a class="nav-link entry-43433" href="/fr/Groupe/Actionnaires-individuels/Assemblee-generale/Assemblee-generale-2019">
+        Assemblée générale 2019
+    </a>
+
+</li>
+                                
+    
+<li class="nav-item">
+    <a id="menu-33690-target" href="/fr/Groupe/Actionnaires-individuels/Assemblee-generale/Vos-questions-nos-reponses" title="Vos questions, nos réponses" class="nav-link">
+        Vos questions, nos réponses
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-27349-target" href="/fr/Groupe/Actionnaires-individuels/Assemblee-generale/Annees-precedentes" title="Années précédentes" class="nav-link">
+        Années précédentes
+    </a>
+</li>
+
+                            
+                
+<li class="nav-item">
+    <a id="menu-36648-target" class="nav-link" href="https://rai2018.orange.com/fr/" target="_blank" title="Rapport Annuel Intégré  (Ouverture du lien dans un nouvel onglet)" rel="noopener noreferrer">
+        Rapport Annuel Intégré
+    </a>
+</li>
+
+                    </ul>
+    
+
+</li>
+                                
+    
+<li class="nav-item">
+    <a id="menu-5014-target" href="/fr/Groupe/Actionnaires-individuels/Contacts-actionnaires" title="Contacts actionnaires" class="nav-link">
+        Contacts actionnaires
+    </a>
+</li>
+
+                    </ul>
+    
+
+</li>
+                                                
+    
+    
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-27454-target">
+            Collectivités
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-27454-target">
+                    Collectivités
+                </a>
+            </li>
+                                
+    
+
+
+<li class="nav-item">
+    <a class="nav-link entry-45253" href="/fr/Groupe/Collectivites/Paroles-d-Elus2">
+        Paroles d’Elus change de format !
+    </a>
+
+</li>
+                            
+                
+<li class="nav-item">
+    <a id="menu-43343-target" class="nav-link" href="https://collectivites.orange.com/" target="_blank" title="News collectivités  (Ouverture du lien dans un nouvel onglet)" rel="noopener noreferrer">
+        News collectivités
+    </a>
+</li>
+
+                                
+    
+
+
+<li class="nav-item">
+    <a class="nav-link entry-4558" href="/fr/Groupe/Collectivites/Cartes-de-couverture-et-reseaux">
+        Cartes de couverture et réseaux 
+    </a>
+
+</li>
+                                
+    
+
+
+<li class="nav-item">
+    <a class="nav-link entry-38263" href="/fr/Groupe/Collectivites/Reseaux-d-Initiative-Publique">
+        Réseaux d&#039;Initiative Publique
+    </a>
+
+</li>
+                                
+    
+
+
+<li class="nav-item">
+    <a class="nav-link entry-4556" href="/fr/Groupe/Collectivites/Contacts-en-region">
+        Contacts en région
+    </a>
+
+</li>
+                    </ul>
+    
+
+</li>
+                                                
+    
+
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-25017-target">
+            Politique européenne
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-25017-target">
+                    Politique européenne
+                </a>
+            </li>
+                                
+    
+
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-45138-target">
+            Orange à Bruxelles
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-45138-target">
+                    Orange à Bruxelles
+                </a>
+            </li>
+                                
+    
+<li class="nav-item">
+    <a id="menu-45140-target" href="/fr/Groupe/Politique-europeenne/Orange-a-Bruxelles/Orange-a-Bruxelles" title="Orange à Bruxelles" class="nav-link">
+        Orange à Bruxelles
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-45150-target" href="/fr/Groupe/Politique-europeenne/Orange-a-Bruxelles/Evenements-et-interventions-a-Bruxelles" title="Evénements et interventions à Bruxelles" class="nav-link">
+        Evénements et interventions...
+    </a>
+</li>
+
+                    </ul>
+    
+
+</li>
+                            
+
+<li class="nav-item">
+    <a id="menu-36730-target" class="nav-link" href="/fr/live/live-Orange?related_frames=44008"  title="Actualités " >
+        Actualités
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-45251-target" href="/fr/Groupe/Politique-europeenne/Vision-et-positions-d-Orange" title="Vision et positions d’Orange" class="nav-link">
+        Vision et positions d’Orange
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-28520-target" href="/fr/Groupe/Politique-europeenne/Regard-economique" title="L’analyse économique, une clé pour comprendre la règlementation" class="nav-link">
+        Regards économiques
+    </a>
+</li>
+
+                    </ul>
+    
+
+</li>
+                                                
+    
+<li class="nav-item">
+    <a id="menu-38351-target" href="/fr/Groupe/Fondation-Orange" title="La Fondation Orange : agir pour les plus défavorisés" class="nav-link">
+        Fondation Orange
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-37368-target" href="/fr/Groupe/Reporting-extra-financier" title="Reporting extra-financier" class="nav-link">
+        Reporting extra-financier
+    </a>
+</li>
+
+                                    <!--</li>-->
+            </ul>
+        </div>
+    
+
+
+                </li>
+                            <li class="nav-item">
+                        
+    
+    
+
+
+
+                    <a class="nav-link collapsed human inside  first-item-in-menu" href="#menu-14621-target" id="menu-14621-target-col" data-toggle="collapse">
+            Human Inside
+        </a>
+
+        <div id="menu-14621-target" class="mega-menu-panel collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                                                
+    
+<li class="nav-item">
+    <a id="menu-40061-target" href="/fr/Human-Inside/Notre-philosophie" title="#HumanInside" class="nav-link">
+        Notre philosophie
+    </a>
+</li>
+
+                                            
+
+<li class="nav-item">
+    <a id="menu-44457-target" class="nav-link" href="https://www.orange.com/fr/Human-Inside/Mag/Le-Mag"  title="Magazines " >
+        Magazines
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-49213-target" href="/fr/Human-Inside/Notre-engagement-societal" title="Répondre aux enjeux du développement durable" class="nav-link">
+        Notre engagement sociétal
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-48905-target" href="/fr/Human-Inside/Nous-avons-tous-de-grands-pouvoirs.-Nous-avons-tous-de-grandes-responsabilites" title="Nous avons tous de grands pouvoirs. Nous avons tous de grandes responsabilités." class="nav-link">
+        Notre campagne
+    </a>
+</li>
+
+                                                
+    
+
+
+<li class="nav-item">
+
+            <a class="nav-link" href="#menu-44456-target">
+            Préparer le monde de demain
+        </a>
+
+        <ul class="navbar-nav sub">
+            <li class="nav-item">
+                <a class="nav-link back" href="#menu-44456-target">
+                    Préparer le monde de demain
+                </a>
+            </li>
+                                
+    
+<li class="nav-item">
+    <a id="menu-42881-target" href="/fr/Human-Inside/Preparer-le-monde-de-demain/Preparer-le-monde-de-demain" title="Préparer le monde de demain" class="nav-link">
+        Préparer le monde de demain
+    </a>
+</li>
+
+                                
+    
+<li class="nav-item">
+    <a id="menu-42778-target" href="/fr/Human-Inside/Preparer-le-monde-de-demain/Co-innover-avec-Orange" title="Co-innover avec Orange" class="nav-link">
+        Co-innover avec Orange
+    </a>
+</li>
+
+                            
+
+<li class="nav-item">
+    <a id="menu-46535-target" class="nav-link" href="https://www.orange.com/fr/Human-Inside/Preparer-le-monde-de-demain/SH2018/accueil-Show-Hello-2018"  title="Show Hello 2018 " >
+        Show Hello 2018
+    </a>
+</li>
+
+                            
+
+<li class="nav-item">
+    <a id="menu-39974-target" class="nav-link" href="https://www.orange.com/fr/Human-Inside/Preparer-le-monde-de-demain/accueil-Show-Hello-2017"  title="Show Hello 2017 " >
+        Show Hello 2017
+    </a>
+</li>
+
+                    </ul>
+    
+
+</li>
+                                    <!--</li>-->
+            </ul>
+        </div>
+    
+
+
+                </li>
+                            <li class="nav-item">
+                        
+    
+    
+
+
+
+                    <a class="nav-link collapsed investisseurs  first-item-in-menu" href="#menu-27477-target" id="menu-27477-target-col" data-toggle="collapse">
+            Investisseurs
+        </a>
+
+        <div id="menu-27477-target" class="mega-menu-panel collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                                                
+    
+<li class="nav-item">
+    <a id="menu-42993-target" href="/fr/Investisseurs/Pourquoi-investir-chez-Orange" title="Pourquoi investir chez Orange ?" class="nav-link">
+        Investir chez Orange
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-28494-target" href="/fr/Investisseurs/Resultats-et-presentations" title="Résultats et présentations" class="nav-link">
+        Résultats et présentations
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-11347-target" href="/fr/Investisseurs/Information-reglementee" title="Information réglementée" class="nav-link">
+        Information réglementée
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-28464-target" href="/fr/Investisseurs/Action-et-dividende" title="Dividende et capital" class="nav-link">
+        Dividende et capital
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-28558-target" href="/fr/Investisseurs/Dette" title="Dette et notation" class="nav-link">
+        Dette et notation
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-42985-target" href="/fr/Investisseurs/Gouvernance-et-ISR" title="Gouvernance et ISR" class="nav-link">
+        Gouvernance et ISR
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-19493-target" href="/fr/Investisseurs/Consensus" title="Consensus" class="nav-link">
+        Consensus
+    </a>
+</li>
+
+                                                
+    
+<li class="nav-item">
+    <a id="menu-2036-target" href="/fr/Investisseurs/Contacts" title="Contacts et calendrier" class="nav-link">
+        Contacts et calendrier
+    </a>
+</li>
+
+                                    <!--</li>-->
+            </ul>
+        </div>
+    
+
+
+                </li>
+                            <li class="nav-item">
+                        
+    
+    
+
+
+    <a class="nav-link entry-14623" href="/fr/Press-Room">
+        Press Room
+    </a>
+
+
+                </li>
+                    </ul>
+    </nav>
+</div>
+
+<script type="text/javascript">var ENABLE_APRILS_FOOL_FX = false;</script>
+        </div>
+
+    
+                        
+<div id="language-switcher" class="language-switcher" style="display: none;">
+                                            <a hreflang="en" aria-label="english version" href="/en/Investors/Regulated-information">EN</a>
+                                </div>
+
+            
+                        
+            
+            
+                    
+<div id="container" class="container news full_75" role="main">
+
+    <div class="breadcrumb-container">
+            <ul class="breadcrumb pull-left">
+                                                <li class="home">
+                        <a href="https://www.orange.com/fr/" title="Aller à la page d&#039;accueil">
+                            <span class="icon-home"></span>
+                            <span class="sr-only">Aller à la page d&#039;accueil</span>
+                        </a>
+                    </li>
+                                                                                                                                            <li class="active">Information réglementée</li>
+                                                                                </ul>
+        </div>
+    
+    <div class="news-content row">
+    
+        
+
+        <div class="news-title">
+            <h1>
+                            Information réglementée
+                        </h1>
+        </div>
+        
+        
+                    <div class="news-image-titre">
+                <span class="ezimage-field"><img src="/var/orange_site/storage/images/orange.com/investisseurs/information-reglementee/252989-40-fre-FR/Information-reglementee_page-full.jpg?2014.11.6.3.2-768-g6397c5953"         alt="" /></span>
+            </div>
+                
+                
+        <div class="news-documentation">
+            <div class="accordion" id="accordion-doc" role="tablist" aria-multiselectable="true">
+            <div class="card">
+    <div class="card-header" id="heading-42989">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-42989"
+                aria-expanded="false"
+                aria-controls="collapse-42989"
+                role="button">
+                Informations réglementées définies à l’article 221-1 du Règlement Général de l’AMF
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-42989" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-42989">
+        <div class="card-block">
+            
+                            <div class="card">
+    <div class="card-header" id="heading-2758">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-2758"
+                aria-expanded="false"
+                aria-controls="collapse-2758"
+                role="button">
+                Rapports financiers annuels (documents de référence et documents d&#039;enregistrement universels) 
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-2758" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-2758">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52347/1459106/version/1/file/Document%20d%27enregistrement%20universel%202018.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Document d&#039;enregistrement universel 2018
+                        <span class="filesize">(419,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49729/1426701/version/2/file/DDR%202018%20Orange%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Document de référence 2018
+                        <span class="filesize">(10,5 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/46430/1361576/version/8/file/2017%20Doc%20de%20R%C3%A9f%C3%A9rence%20OSA.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Document de référence 2017
+                        <span class="filesize">(6,3 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/42038/1294275/version/2/file/ORANGE_VF_2016.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Document de référence 2016
+                        <span class="filesize">(5,4 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/36161/1131281/version/2/file/Orange%20-%20DDR%202015.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2015
+                        <span class="filesize">(6,3 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/29884/834876/version/3/file/ORANGE_DDR_2014_VF_web.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2014
+                        <span class="filesize">(5,4 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/22778/472244/version/2/file/Orange_DDR%202013_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2013
+                        <span class="filesize">(3,4 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12506/259363/version/2/file/2012%20Doc%20de%20reference.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2012
+                        <span class="filesize">(4 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2907/26687/version/2/file/DDR2011_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2011
+                        <span class="filesize">(4,5 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2908/26689/version/2/file/FranceTlcomDDR2010_150411.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2010
+                        <span class="filesize">(9 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2909/26691/version/2/file/DDR2009completCL28042010_17h06.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2009
+                        <span class="filesize">(6,2 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2910/26693/version/3/file/doc-ref-2008_fr.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2008
+                        <span class="filesize">(3,7 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2912/26697/version/3/file/doc-ref-I-2007_fr.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2007 (tome I)
+                        <span class="filesize">(1,1 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2911/26695/version/3/file/doc-ref-II-2007_fr.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2007 (tome II)
+                        <span class="filesize">(1,2 MB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-2824">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-2824"
+                aria-expanded="false"
+                aria-controls="collapse-2824"
+                role="button">
+                Rapports financiers semestriels
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-2824" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-2824">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/51639/1450781/version/5/file/RFS%202019%20FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2019 (25/07/2019)
+                        <span class="filesize">(1,8 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47803/1379818/version/5/file/Orange%20-%20Rapport%20Financier%20du%201er%20semestre%202018.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2018 (26/07/2018)
+                        <span class="filesize">(2,2 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/43473/1318474/version/4/file/Rapport%20Financier%20Semestriel%202017%20d%27Orange.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2017 (27/07/2017)
+                        <span class="filesize">(1,5 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/38121/1159226/version/4/file/RFS2016_VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2016 (27/07/2016)
+                        <span class="filesize">(1,8 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/31759/947452/version/6/file/Rapport%20financier%20semestriel%202015%20VD.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2015 (28/07/2015) 
+                        <span class="filesize">(1,7 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/24637/542852/version/5/file/RFS%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2014 (31/07/2014) 
+                        <span class="filesize">(1,4 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/14449/281522/version/7/file/2013%2006%20Rapport%20Financier%20Semestriel.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2013 (29/07/2013)
+                        <span class="filesize">(864,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/6215/91085/version/5/file/RFS%20France%20T%C3%A9l%C3%A9com%20S1%202012%20VD.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2012 (26/07/2012)
+                        <span class="filesize">(1,6 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2975/27024/version/4/file/RFSVF29072011.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2011 (29/07/2011)
+                        <span class="filesize">(762,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2976/27026/version/4/file/RFS_29072010_VD.PDF"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2010 (30/07/2010)
+                        <span class="filesize">(542,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2977/27028/version/3/file/Rapport_financier_1er_semestre_2009.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2009 (30/07/2009)
+                        <span class="filesize">(1,3 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2978/27030/version/3/file/Rapport_financier_1er_semestre_2008.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2008 (31/07/2008)
+                        <span class="filesize">(332,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2979/27032/version/4/file/Rapport_financier_1er_semestre_2007.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rapport financier du 1er semestre 2007 (03/08/2007)
+                        <span class="filesize">(451,1 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-2957">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-2957"
+                aria-expanded="false"
+                aria-controls="collapse-2957"
+                role="button">
+                Rapports sur la gouvernance et le contrôle interne
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-2957" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-2957">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47208/1372213/version/2/file/Document%20de%20r%C3%A9f%C3%A9rence%202017%20-%20Table%20de%20concordance%2C%20section%20IV.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Document de référence 2017 - Table de concordance, section IV
+                        <span class="filesize">(67,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/44097/1328805/version/2/file/2016%20Doc%20de%20R%C3%A9f%C3%A9rence%20OSA%20-%20Rapport%20du%20pr%C3%A9sident%20sur%20la%20gouvernance%20et%20le%20Contr%C3%B4le%20interne.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Document de référence 2016 : Table de concordance, section IV
+                        <span class="filesize">(69,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/37014/1142783/version/2/file/Document%20de%20r%C3%A9f%C3%A9rence%202015-Table%20de%20concordance%20IV.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2015 : Table de concordance, section IV
+                        <span class="filesize">(66,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/33839/1094757/version/3/file/ORANGE_DDR_2014_VF_web.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2014 : tables de concordance, section IV
+                        <span class="filesize">(5,4 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/23020/475415/version/3/file/2013%20Doc%20de%20r%C3%A9f%C3%A9rence.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2013 : tables de concordance, section IV
+                        <span class="filesize">(3,4 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12507/259367/version/3/file/2012%20Doc%20de%20reference.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2012 : tables de concordance, section III
+                        <span class="filesize">(4 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3109/27516/version/2/file/DDR%202011_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2011 : tables de concordance, section III
+                        <span class="filesize">(4,5 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3110/27518/version/2/file/FranceTlcomDDR2010_150411.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2010 : tables de concordance, section III
+                        <span class="filesize">(9 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3111/27520/version/2/file/DDR2009completCL28042010_17h06.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2009 : tables de concordance, section III
+                        <span class="filesize">(6,2 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3112/27522/version/3/file/doc-ref-2008_fr.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2008 : tables de concordance, page 463
+                        <span class="filesize">(3,7 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3113/27524/version/3/file/doc-ref-II-2007_fr.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            document de référence 2007, tome II : chapitre VI
+                        <span class="filesize">(1,2 MB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-2766">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-2766"
+                aria-expanded="false"
+                aria-controls="collapse-2766"
+                role="button">
+                Informations relatives au nombre total de droits de vote et d&#039;actions composant le capital social
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-2766" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-2766">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52400/1460120/version/2/file/2019-08_Informations%20nombre%20DDV%20et%20actions.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Nombre d&#039;actions et de droits de vote OSA août 2019
+                        <span class="filesize">(68,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/50569/1436375/version/9/file/2019-06_Informations%20nombre%20DDV%20et%20actions.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Déclaration 2019 sur nombre d&#039;actions et droits de vote (12 juillet 2019)
+                        <span class="filesize">(66,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52832/1465744/version/5/file/2019-09_Informations%20nombre%20DDV%20et%20actions.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Déclaration 2019 sur nombre total d’actions et de droits de vote (17 octobre)
+                        <span class="filesize">(69 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/41073/1278256/version/29/file/2017%2012_Informations%20nombre%20DDV%20et%20actions.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Déclaration 2017 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(71,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/35100/1116311/version/32/file/2016%2012_Informations%20nombre%20DDV%20et%20actions.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Déclaration 2016 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(50,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/28443/622319/version/27/file/Informations%20nombre%20DDV%20et%20actions%2012%202015.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2015 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(46,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/9764/223027/version/55/file/Informations%20re%20nombre%20DDV%20et%20actions%2012%202014.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2014 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(46,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/21175/409877/version/2/file/Informations%20re%20nombre%20DDV%20et%20actions%2012%202013.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2013 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(45,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2916/26707/version/12/file/Informations%20re%20nombre%20DDV%20et%20actions%2012%202012.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2012 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(38 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2924/26745/version/1/file/Informations%20re%20nombre%20DDV%20et%20actions%2012%202011.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2011 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(37,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2918/26712/version/1/file/InformationsrenombreDDVetactions122010.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2010 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(145,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2919/26714/version/1/file/Informations_re_nombre_DDV_et_actions_2009_12.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2009 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(145,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2920/26716/version/1/file/nombre-total-droits-votes-actions2008.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2008 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(38 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2921/26721/version/1/file/nombre-total-droits-votes-actions2007.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration 2007 sur nombre d&#039;actions et droits de vote
+                        <span class="filesize">(145,3 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-11891">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-11891"
+                aria-expanded="false"
+                aria-controls="collapse-11891"
+                role="button">
+                Descriptifs des programmes de rachat d&#039;actions
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-11891" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-11891">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47209/1372217/version/2/file/Descriptif%20du%20programme%20de%20rachat%20d%27actions%202018.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Descriptif du programme de rachat d&#039;actions 2018
+                        <span class="filesize">(76,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/44095/1328797/version/2/file/2016%20Doc%20de%20R%C3%A9f%C3%A9rence%20OSA%20-%20Descriptif%20du%20programme%20de%20rachat%20d%27actions.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Descriptif du programme de rachat d’actions 2017
+                        <span class="filesize">(82,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/37016/1142791/version/2/file/Descriptif%20du%20programe%20de%20rachat%20d%27actions%202016.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            descriptif du programme de rachat d’actions 2016
+                        <span class="filesize">(88,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/32504/960644/version/6/file/Descriptif%20du%20programme%20de%20rachat%20d%27actions%202015%20%28extrait%20DDR%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            descriptif du programme de rachat d&#039;actions extrait du document de référence 2014
+                        <span class="filesize">(45,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/24983/569150/version/1/file/descriptif_du_programme_de_rachat_extrait_ddr_2013.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            descriptif du programme de rachat d&#039;actions extrait du document de référence 2013
+                        <span class="filesize">(99,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12520/259438/version/2/file/sections%2021.1.3%20et%2026.2%20-%20programme%20de%20rachats%20d%20actions%20-%20extrait%20DDR2012.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            descriptif du programme de rachat d&#039;actions extrait du document de référence 2012
+                        <span class="filesize">(49,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12519/259436/version/1/file/sections%2021.1.3%20et%2026.2%20-%20programme%20de%20rachats%20d%20actions%20-%20extrait%20DDR2011.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            descriptif du programme de rachat d&#039;actions extrait du document de référence 2011
+                        <span class="filesize">(54,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12518/259434/version/1/file/sections%2021.1.3%20et%2026.2%20-%20programme%20de%20rachats%20d%20actions%20-%20extrait%20DDR2010.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            descriptif du programme de rachat d&#039;actions extrait du document de référence 2010
+                        <span class="filesize">(44,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12517/259432/version/2/file/sections%2021.1.3%20et%2026.2%20-%20programme%20de%20rachats%20d%20actions%20-%20extrait%20DDR2009.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            descriptif du programme de rachat d&#039;actions extrait du document de référence 2009
+                        <span class="filesize">(60,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12516/259430/version/1/file/CP%202008%2005%20Rachat%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            descriptif du programme de rachat d&#039;actions approuvé par l&#039;assemblée générale mixte du 27 mai 2008
+                        <span class="filesize">(383,3 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-11555">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-11555"
+                aria-expanded="false"
+                aria-controls="collapse-11555"
+                role="button">
+                Communiqués précisant les modalités de mise à disposition de prospectus
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-11555" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-11555">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49738/1426763/version/2/file/2019%2003%2021%20CP%20Publication%20DDR%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication du document de référence 2018
+                        <span class="filesize">(58,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47398/1374512/version/1/file/Communiqu%C3%A9%20de%20mise%20%C3%A0%20disposition%20du%20DAI%20Initateur_2018-06-28.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Communiqué de mise à disposition du DAI Initateur 2018-06-28
+                        <span class="filesize">(336,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47330/1373637/version/1/file/Communiqu%C3%A9%20de%20mise%20%EF%BF%BD%20disposition%20de%20la%20note%20d%27information%202018-06-27.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Communiqué de mise à disposition de la note d&#039;information 2018-06-27
+                        <span class="filesize">(335 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/46436/1361666/version/2/file/2018%2004%2004%20CP%20Publication%20DDR%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication du document de référence 2017
+                        <span class="filesize">(144,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/44093/1328790/version/2/file/2017%2004%2007%20CP%20Publication%20DDR%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication du document de référence 2016
+                        <span class="filesize">(97,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/36628/1137899/version/2/file/CP_Orange_DDR_VF_050416.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication du document de référence 2015
+                        <span class="filesize">(45,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/33841/1094765/version/2/file/2015%2004%2008%20CP%20d%C3%A9p%C3%B4t%20du%20DDR%202014%20FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication du document de référence 2014 (08/04/2015)
+                        <span class="filesize">(45,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/24985/569154/version/2/file/2014%2004%2029%20CP%20publi%20DDR%202013%20-%20extrait%20du%20CP%201Q%202014.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            publication du document de référence 2013 - extrait du communiqué de presse sur l&#039;information financière du 1er trimestre 2014
+                        <span class="filesize">(30,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12165/270792/version/4/file/2013%2003%2028%20Publication%20du%20DDR%202012%20FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            publication du document de référence 2012
+                        <span class="filesize">(46,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12163/270794/version/3/file/2012%2004%2002%20Publication%20du%20DDR%202011.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            publication du document de référence 2011
+                        <span class="filesize">(61,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12161/270811/version/2/file/2011%2004%2005%20Publication%20du%20DDR%202010.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            publication du document de référence 2010
+                        <span class="filesize">(77,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12159/270813/version/2/file/CP%202010%2004%2028%20Publication%20du%20DDR%202009.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            publication du document de référence 2009
+                        <span class="filesize">(61,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12156/270830/version/4/file/CP%202009%2004%2015%20Publication%20du%20DDR%202008.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            publication du document de référence 2008
+                        <span class="filesize">(343,6 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-42981">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-42981"
+                aria-expanded="false"
+                aria-controls="collapse-42981"
+                role="button">
+                Information privilégiée publiée en application de l&#039;article 17 du règlement sur les abus de marché
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-42981" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-42981">
+        <div class="card-block">
+            
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-2860">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-2860"
+                aria-expanded="false"
+                aria-controls="collapse-2860"
+                role="button">
+                Modalités de mise à disposition ou de consultation des documents préparatoires aux assemblées générales
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-2860" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-2860">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47210/1372221/version/3/file/2018%2004%2010%20Assembl%C3%A9e%20G%C3%A9n%C3%A9rale%20du%204%20Mai%202018.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                             Assemblée Générale du 4 Mai 2018
+                        <span class="filesize">(93,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/44090/1328765/version/4/file/2017%2005%2009%20CP%20Publication%20Mise%20%C3%A0%20disposition%20doc%20AG%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Assemblée Générale Mixte du 1er juin 2017
+                        <span class="filesize">(50,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/37026/1143212/version/2/file/2016%2005%2012%20CP%20Mise%20%C3%A0%20disposition%20doc%20AG_du_07_06_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Assemblée Générale Mixte du 7 juin 2016
+                        <span class="filesize">(57,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/30732/928533/version/4/file/2015%2005%2019%20CP%20%20Mise%20%C3%A0%20disposition%20doc%20AG_du_27_05_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            AGM du 27 mai 2015
+                        <span class="filesize">(42,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/24984/569152/version/2/file/2014%2005%2006%20CP%20AGMixte_du_27_05_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            AGM du 27 mai 2014 (06/05/2014) 
+                        <span class="filesize">(52 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12538/259483/version/4/file/2013%2005%2003%20CP%20AGMixte%20du%2028%2005%20FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            AGM du 28 mai 2013 (03/05/2013)
+                        <span class="filesize">(45,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3013/27115/version/3/file/CP2011AGMixtedu070611-Modalitsdemisedispo.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            AGM du 7 juin 2011 (31/05/2011)
+                        <span class="filesize">(28,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12527/259457/version/2/file/CP%202010%2005%2017%20AGMixte%20du%2009%2006%2010%20Modalites%20de%20mise%20a%20dispo.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            AGM du 10 juin 2010 (17/05/2010)
+                        <span class="filesize">(41,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3018/27132/version/2/file/mise_disposition_doc_AG_260509.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            AGM du 26 mai 2009 (12/05/2009)
+                        <span class="filesize">(58,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3021/27138/version/2/file/mise_disposition_doc_AG_270508.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            AGM du 27 mai 2008 (13/05/2008)
+                        <span class="filesize">(41,3 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-44857">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-44857"
+                aria-expanded="false"
+                aria-controls="collapse-44857"
+                role="button">
+                Modification des droits attachés aux actions et aux titres donnant accès a capital
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-44857" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-44857">
+        <div class="card-block">
+            
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-42874">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-42874"
+                aria-expanded="false"
+                aria-controls="collapse-42874"
+                role="button">
+                Déclarations de franchissement de seuil de participation
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-42874" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-42874">
+        <div class="card-block">
+            
+                    </div>
+    </div>
+</div>
+
+                    </div>
+    </div>
+</div>
+
+            <div class="card">
+    <div class="card-header" id="heading-42875">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-42875"
+                aria-expanded="false"
+                aria-controls="collapse-42875"
+                role="button">
+                Autres informations réglementées
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-42875" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-42875">
+        <div class="card-block">
+            
+                            <div class="card">
+    <div class="card-header" id="heading-2832">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-2832"
+                aria-expanded="false"
+                aria-controls="collapse-2832"
+                role="button">
+                Prospectus d&#039;émission et notes d&#039;information
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-2832" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-2832">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52462/1461008/version/2/file/Orange%20Prospectus%20-%20Hybrids-%20FR0013447877%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange Prospectus - Hybrids- FR0013447877 (en anglais)
+                        <span class="filesize">(737,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52279/1457715/version/2/file/Orange%20-%20Final%20Terms%20-%20EUR%201Bn%200.50%25%20due%202032_FR0013444684.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 1Bn 0.50% due 2032_FR0013444684 (en anglais)
+                        <span class="filesize">(231,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52278/1457711/version/2/file/Orange%20-%20Final%20Terms%20-%20EUR%20750M%200.00%25%20due%202026_FR0013444676.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 750M 0.00% due 2026_FR0013444676 (en anglais)
+                        <span class="filesize">(232,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52277/1457707/version/2/file/Orange%20-%20Final%20Terms%20-%20EUR%20750M%201.375%25%20due%202049_FR0013444692.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 750M 1.375% due 2049_FR0013444692 (en anglais)
+                        <span class="filesize">(231,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52276/1457703/version/2/file/Orange%20-%20Final%20Terms%20-%20EUR%20300M%201.20%25%20due%202034%20-%20FR0013433679.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 300M 1.20% due 2034 - FR0013433679 (en anglais)
+                        <span class="filesize">(261,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52275/1457699/version/2/file/Orange%20-%20Final%20terms%20-%20CHF%20100M%200.625%25%20due%20June%202029%20-%20CH0483180961.PDF"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final terms - CHF 100M 0.625% due June 2029 - CH0483180961 (en anglais)
+                        <span class="filesize">(140,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/52274/1457695/version/2/file/Orange%20-%20Final%20terms%20-%20CHF%20400M%200.20%25%20due%20June%202025%20-%20CH0483180953.PDF"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final terms - CHF 400M 0.20% due June 2025 - CH0483180953 (en anglais)
+                        <span class="filesize">(140,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/51741/1451863/version/2/file/EMTN%20Programme%20-%20Supplement%201%20au%20Base%20Prospectus%20du%2026%20juin%202019%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            EMTN Programme - Supplement 1 au Base Prospectus du 26 juin 2019 (en anglais)
+                        <span class="filesize">(420,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/51191/1443721/version/2/file/Orange%20EMTN%20Programme%20%E2%80%93%20Base%20Prospectus%20dated%2026%20June%202019%20.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Programme EMTN – Prospectus de base du 26 juin 2019 
+                        <span class="filesize">(2,1 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/50752/1438226/version/2/file/Orange%20-%20Final%20Terms%20-%20EUR%20300M%201.3420%25%20due%202021%20-%20FR0013421823%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 300M 1.3420% due 2021 - FR0013421823 (en anglais)
+                        <span class="filesize">(207,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/50038/1430264/version/2/file/ORange%20Prospectus%20-%20Hybrides-%20FR0013413887%20%28en%20anglais%29.PDF"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Prospectus - EUR 1Bn 2.375% - FR0013413887 (en anglais)
+                        <span class="filesize">(711,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49590/1425678/version/2/file/EMTN%20Programme%20-%20Suppl%C3%A9ment%202%20au%20Base%20Prospectus%20du%208%20mars%202019%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            EMTN Programme - Supplément 2 au Base Prospectus du 8 mars 2019 (en anglais)
+                        <span class="filesize">(391,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49188/1396802/version/3/file/Orange%20-%20Final%20Terms%20-%20EUR%201.250Bn%201.125%25%20due%202024%20-%20FR0013396512%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 1.250Bn 1.125% due 2024 - FR0013396512 (en anglais)
+                        <span class="filesize">(84,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49189/1396804/version/3/file/Orange%20-%20Final%20Terms%20-%20EUR%201.250Bn%202.00%25%20due%202029%20-%20FR0013396520%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 1.250Bn 2.00% due 2029 - FR0013396520 (en anglais)
+                        <span class="filesize">(83,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49190/1396806/version/3/file/Orange%20-%20Final%20Terms%20-%20EUR%20650m%200.50%25%20due%202022%20-%20FR0013396496%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 650m 0.50% due 2022 - FR0013396496 (en anglais)
+                        <span class="filesize">(84,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49191/1396808/version/3/file/Orange%20-%20Final%20Terms%20-%20GBP%20750m%203.25%25%20due%202032%20-%20FR0013396538%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - GBP 750m 3.25% due 2032 - FR0013396538 (en anglais)
+                        <span class="filesize">(79 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/48749/1390706/version/3/file/Orange%20-Final%20Terms%20-%20EUR%2050M%203.500%25%20due%202038%20-%20XS0917705120.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange -Final Terms - EUR 50M 3.500% due 2038 - XS0917705120 (en anglais)
+                        <span class="filesize">(196 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/48750/1390710/version/2/file/Orange%20-Final%20Terms%20-%20EUR%20150M%203.300%25%20due%202029%20-%20XS0913979190.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange -Final Terms - EUR 150M 3.300% due 2029 - XS0913979190 (en anglais)
+                        <span class="filesize">(268,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/48751/1390714/version/2/file/Orange%20-Final%20Terms%20-%20EUR%2050M%203.220%25%20due%202028%20-%20XS0913837562.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange -Final Terms - EUR 50M 3.220% due 2028 - XS0913837562 (en anglais)
+                        <span class="filesize">(191,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/48503/1387600/version/2/file/Orange%20-Final%20Terms%20-%20EUR%201.2Bn%201.875%25%20due%202030%20-%20FR0013359239%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange -Final Terms - EUR 1.2Bn 1.875% due 2030 - FR0013359239 (en anglais)
+                        <span class="filesize">(315 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/48502/1387596/version/2/file/Orange%20-Final%20Terms%20-%20EUR%20800%201.000%25%20due%202025%20-%20FR0013359197%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange -Final Terms - EUR 800 1.000% due 2025 - FR0013359197 (en anglais)
+                        <span class="filesize">(314,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47874/1380298/version/2/file/EMTN%20Programme%20-%20Supplement%201%20au%20Base%20Prospectus%20du%2026%20juin%202018%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            EMTN Programme - Supplement 1 au Base Prospectus du 26 juin 2018 (en anglais)
+                        <span class="filesize">(416,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47757/1379457/version/4/file/Orange%20-%20Final%20Terms%20-%20NOK%20800M%202.955%25%20due%202028%20-%20FR0013350311%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - NOK 800M 2.955% due 2028 - FR0013350311 (en anglais)
+                        <span class="filesize">(223,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47397/1374510/version/1/file/B%26D_Document%20Autres%20Informations_Initiateur_2018-06-28.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            B&amp;D Document Autres Informations Initiateur 2018-06-28
+                        <span class="filesize">(9 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47342/1373729/version/3/file/Orange%202018%20-%20Base%20Prospectus%20-%20v%20finale%20avec%20visa.PDF"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Programme EMTN – Prospectus de base du 26 juin 2018 (en anglais)
+                        <span class="filesize">(1,7 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47329/1373635/version/1/file/Note%20d%27information%20OPAS%20Network%20Related%20Services%20sur%20Business%20%26%20Decision%20-%2026%20juin%202018.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Note d&#039;information OPAS Network Related Services sur Business &amp; Decision - 26 juin 2018
+                        <span class="filesize">(1 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47146/1371564/version/2/file/Note%20d%27information%20OPAS%20Network%20Related%20Services%20sur%20Business%20%26%20Decision%20-%206%20juin%202018.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Projet de note d’information OPAS Network Related Services sur Business &amp; Decision – 6 juin 2018
+                        <span class="filesize">(871,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/41676/1285734/version/4/file/Orange%20-%20Final%20Terms%20-%20EUR%20750M%200.75%25%20due%202023%20-%20FR0013241536.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 750M 0.75% due 2023 - FR0013241536 (en anglais)
+                        <span class="filesize">(152,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/41677/1285738/version/4/file/Orange%20-%20Final%20Terms%20-%20EUR%20750M%201%25%20due%202025%20-%20XS1408317433.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 750M 1% due 2025 - XS1408317433 (en anglais)
+                        <span class="filesize">(104 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/41679/1285746/version/4/file/Orange%20-%20Final%20Terms%20-%20EUR%20500M%201.50%25%20due%202027%20-%20FR0013241676.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 500M 1.50% due 2027 - FR0013241676 (en anglais)
+                        <span class="filesize">(153,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/41678/1285742/version/4/file/Orange%20-%20Final%20Terms%20-%20EUR%20750M%200.875%25%20due%202027%20-%20FR0013217114.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final Terms - EUR 750M 0.875% due 2027 - FR0013217114 (en anglais)
+                        <span class="filesize">(199,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/46327/1360307/version/2/file/Orange%20-%20Final%20terms%20-%20EUR%201%20billion%201.375%25%20due%202028%20-%20FR0013323870%20%28en%20anglais%29%20.PDF"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final terms - EUR 1 billion 1.375% due 2028 - FR0013323870 (en anglais)
+                        <span class="filesize">(130,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/46313/1360092/version/2/file/Orange%20-%20Final%20terms%20-%20EUR%201%20billion%201.375%25%20due%202030%20-%20FR0013310224%20%28en%20anglais%29%20.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Orange - Final terms - EUR 1 billion 1.375% due 2030 - FR0013310224 (en anglais)
+                        <span class="filesize">(73 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/46283/1359816/version/2/file/EMTN%20Programme%20-%20Suppl%C3%A9ment%202%20au%20Base%20Prospectus%20du%2028%20Juin%202017%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            EMTN Programme - Supplément 2 au Base Prospectus du 28 Juin 2017 (en anglais)
+                        <span class="filesize">(345,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/44160/1329858/version/2/file/EMTN%20Programme%20-%20Supplement%201%20%20au%20Base%20Prospectus%20du%2028%20Juin%202017%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            EMTN Programme - Supplement 1  au Base Prospectus du 28 Juin 2017 (en anglais)
+                        <span class="filesize">(403,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/43348/1316261/version/2/file/Prospectus%20EMTN%20-%20Prospectus%20de%20base%20du%2028%20juin%202017%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Prospectus EMTN - Prospectus de base du 28 juin 2017 (en anglais)
+                        <span class="filesize">(1,9 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/41574/1284819/version/3/file/Prospectus%20EMTN%20-%20Supplement%20n%C2%B02%20au%20Base%20Prospectus%20du%2029%20juin%202016%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Supplément n°2 au Base Prospectus du 29 juin 2016 (en anglais)
+                        <span class="filesize">(283 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/41572/1284813/version/2/file/Prospectus%20EMTN%20-%20Supplement%20n%C2%B01%20au%20Base%20Prospectus%20du%2029%20juin%202016%20%28en%20anglais%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Supplément n°1 au Base Prospectus du 29 juin 2016 (en anglais)
+                        <span class="filesize">(239,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/37872/1156132/version/2/file/Orange%20-%20Base%20Prospectus_v.%20finale%20avec%20visa.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Prospectus EMTN – Prospectus de Base du 29 juin 2016 (en anglais)
+                        <span class="filesize">(1 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/36810/1140681/version/2/file/160429_EMTN%20Supplement%20n2%20au%20BP%20du%2012%20juin%202015.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Programme EMTN – Supplément n°2 au prospectus de base du 12 juin 2015 (en anglais, 29/04/2016)
+                        <span class="filesize">(190,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/35476/1121808/version/3/file/ORP%20Orange%20Ambition%202016%20-%20Note%20d%27op%C3%A9ration%208%20mars%202016.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Note d&#039;information - ORP « Orange Ambition 2016 »
+                        <span class="filesize">(99 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/33175/1085012/version/2/file/EUR%20100%2C000%2C000%20Fixed%20to%20CMS%20-%20Tranche%20Prospectus.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Prospectus d’émission d’obligations portant intérêt à taux fixe puis à taux variable indexé sur l’indice CMS en date du 4 novembre 2015 (en anglais)
+                        <span class="filesize">(382,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/31786/947714/version/3/file/2015%2007%2031%20EMTN%20Supplement%20n1%20au%20BP%20du%2012%20juin%202015%20-%20Version%20finale.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Programme EMTN – Supplément n°1 au prospectus de base du 12 juin 2015 (en anglais, 31/07/2015)
+                        <span class="filesize">(178,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/31440/943288/version/4/file/ORANGE%20SA%20BASE%20PROSPECTUS%20UPDATE%202015%20-%20FINAL.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Prospectus EMTN – Prospectus de base du 12 juin 2015 (en anglais)
+                        <span class="filesize">(862,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/27784/611468/version/2/file/Prospectus%20d%27%C3%A9mission%20d%27obligations%20subordonn%C3%A9es%20perp%C3%A9tuelles%20-%20Septembre%202014.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Prospectus d&#039;émission d&#039;obligations subordonnées perpétuelles - Septembre 2014 (en anglais)
+                        <span class="filesize">(970,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/23019/475413/version/1/file/2014%2005%2014%20ORP%20-%20Cap%27Orange%20note%20d%27information.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Note d&#039;information - ORP Cap&#039;Orange
+                        <span class="filesize">(75,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/21325/411760/version/6/file/Orange_Prospectus_Hybrid%202014.PDF"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Prospectus d&#039;émission d&#039;obligations subordonnées perpétuelles - Janvier 2014 (en anglais)
+                        <span class="filesize">(1 MB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-31998">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-31998"
+                aria-expanded="false"
+                aria-controls="collapse-31998"
+                role="button">
+                Éléments de rémunération des dirigeants mandataires sociaux
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-31998" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-31998">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49458/1399789/version/6/file/190315_CP_Orange_Remun%C3%A9ration_FR_v5.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication des éléments de rémunération variable du président-directeur général et des directeurs généraux délégués (15 mars 2019)
+                        <span class="filesize">(73,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/46104/1357490/version/2/file/180220_CP_Orange_Remun%C3%A9ration_FR_vdef.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication des éléments de rémunération variable du président-directeur général et des directeurs généraux délégués (20 février 2018)
+                        <span class="filesize">(53,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/40362/1268606/version/4/file/161207_CP_LTIP%202016-2018%20VD_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rémunération variable pluriannuelle des dirigeants mandataires sociaux d’Orange (décembre 2016)
+                        <span class="filesize">(56,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/35339/1119504/version/2/file/Publication%20des%20%C3%A9l%C3%A9ments%20de%20r%C3%A9mun%C3%A9ration%20variable%20des%20dirigeants%20mandataires%20sociaux%20%2802%2003%202016%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication des éléments de rémunération variable du présidentdirecteur général et des directeurs généraux délégués (2 mars 2016)
+                        <span class="filesize">(42,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/33768/1093712/version/7/file/2015%2012%2002%20R%C3%A9mun%C3%A9ration%20DGD%20FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication des éléments de rémunération des directeurs généraux délégués d’Orange (02.12.2015)
+                        <span class="filesize">(57,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/33802/1094265/version/3/file/2015%2002%2023%20R%C3%A9mun%C3%A9ration%20dirigeants%20FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Publication des éléments de rémunération du président-directeur général et du directeur général délégué (23.02.2015)
+                        <span class="filesize">(64,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/33803/1094269/version/2/file/20141215_CP_LTIP_FR_v2.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Mise en place d&#039;un LTIP pour les dirigeants mandataires sociaux d&#039;Orange (15.12.2014)
+                        <span class="filesize">(70,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/33804/1094273/version/2/file/Orange%2B-%2BInformations%2Bcompl%C3%A9mentaires%2Bsur%2Bla%2Br%C3%A9mun%C3%A9ration%2Bdes%2Bdirigeants%2Bmandataires%2Bsociaux.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Informations complémentaires sur la rémunération des dirigeants mandataires sociaux (avril 2014)
+                        <span class="filesize">(223,4 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-39862">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-39862"
+                aria-expanded="false"
+                aria-controls="collapse-39862"
+                role="button">
+                Liste des filiales et participations
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-39862" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-39862">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/50007/1429928/version/1/file/P%C3%A9rim%C3%A8tre%20de%20consolidation%20d%27Orange%20SA%20et%20titres%20de%20participation%20au%2031%20....pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Périmètre de consolidation d&#039;Orange SA et titres de participation au 31 décembre 2018
+                        <span class="filesize">(45,2 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-2801">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-2801"
+                aria-expanded="false"
+                aria-controls="collapse-2801"
+                role="button">
+                Mise en oeuvre et bilan du contrat de liquidité
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-2801" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-2801">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/51565/1449993/version/3/file/2019%2007%2018%20CP%20Bilan_Ct_Liquidite_S1_2019%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contrat de liquidité (18/07/2019)
+                        <span class="filesize">(72,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49373/1398623/version/2/file/Mise%20en%20oeuvre%20d%27un%20contrat%20de%20liquidit%C3%A9%20%2814%2002%202019%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Mise en oeuvre d&#039;un contrat de liquidité (14 02 2019)
+                        <span class="filesize">(119,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49125/1396177/version/2/file/2019%2001%2003%20CP%20Bilan_Ct_Liquidite_S2_2018%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contrat de liquidité (03/01/2019)
+                        <span class="filesize">(92,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47668/1377152/version/2/file/2018%2007%2010%20CP%20Bilan_Ct_Liquidite_S1_2018%20VF.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contrat de liquidité (10/07/2018)
+                        <span class="filesize">(92,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47211/1372223/version/2/file/Bilan%20semestriel%20du%20contat%20de%20liquidit%C3%A9%20%2810%2001%202018%29.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contat de liquidité (10 01 2018)
+                        <span class="filesize">(92,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/45148/1344967/version/2/file/2017%2007%2003%20CP%20Bilan_Ct_Liquidite_S2_2017.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contrat de liquidité (03.07.2017)
+                        <span class="filesize">(93,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/45146/1344960/version/2/file/2017%2001%2004%20CP%20Bilan_Ct_Liquidite_S2_2016.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contrat de liquidité (04.01.2017)
+                        <span class="filesize">(51,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/45144/1344953/version/2/file/2016%2007%2004%20CP%20Bilan_Ct_Liquidite_S1_2016.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contrat de liquidité (04.07.2016)
+                        <span class="filesize">(51,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/45142/1344926/version/2/file/2016%2001%2004%20CP%20Bilan_Ct_Liquidite_S2_2015.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contrat de liquidité (04.01.2016)
+                        <span class="filesize">(46,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/32472/960289/version/2/file/2015%2007%2002%20CP%20Bilan_Ct_Liquidite_S1_2015.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Bilan semestriel du contrat de liquidité de la société Orange (2/07/2015)
+                        <span class="filesize">(36,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/29755/833028/version/2/file/2015%2001%2005%20CP%20Bilan_Ct_Liquidite_S2_2014.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (05.01.2015)
+                        <span class="filesize">(37,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/29754/833024/version/2/file/2014%2007%2002%20CP%20Bilan_Ct_Liquidite_S1_2014.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (02.07.2014)
+                        <span class="filesize">(36,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/23109/477461/version/2/file/2014%2001%2006%20CP%20Bilan_Ct_Liquidite_S2_2013.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (31/12/2013)
+                        <span class="filesize">(36,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/14244/279495/version/2/file/130702%20CP%20bilan%20semestriel%20du%20contrat%20de%20liquidite.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (02/07/2013)
+                        <span class="filesize">(38,1 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/19175/339209/version/2/file/2013%2003%2026%20FT%20Emission%20obligataire%20FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (26/03/2013)
+                        <span class="filesize">(62 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/9761/222989/version/3/file/2013%2001%2010%20CP%20Bilan_Ct_Liquidite_S2_2012.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (10/01/2013)
+                        <span class="filesize">(29,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/5930/85420/version/3/file/20120705%20CP%20Bilan_Ct_Liquidite_S1_2012.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (04/07/2012)
+                        <span class="filesize">(30,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2950/26810/version/3/file/20120105CPBilan_Ct_Liquidite_S2_2011.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (05/01/2012)
+                        <span class="filesize">(32,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2951/26820/version/3/file/20110718CPBilan_Ct_Liquidite_S1_2011.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (08/07/2011)
+                        <span class="filesize">(722,3 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12536/259477/version/2/file/2011%2001%2005%20CP%20Bilan_Ct_Liquidite_S2_2010.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (05/01/2011)
+                        <span class="filesize">(721,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2952/26822/version/3/file/CP_2010_06_07_Bilan_Ct_Liquidite_S1_2010.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (06/07/2010)
+                        <span class="filesize">(41,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2953/26832/version/4/file/CP%202010%2001%2005%20Bilan%20Ct%20Liquidite%20S2%202009.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (05/01/2010)
+                        <span class="filesize">(41,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12535/259475/version/2/file/CP_2009_07_02_Bilan_Ct_Liquidite_S1_2009.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (02/07/2009)
+                        <span class="filesize">(52,5 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2954/26834/version/3/file/bilan-semes_070109.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (07/01/2009)
+                        <span class="filesize">(48,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2955/26844/version/3/file/bilan-semes_020708.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (02/07/2008)
+                        <span class="filesize">(568,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2956/26846/version/2/file/bilan-sems_030108.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (03/01/2008)
+                        <span class="filesize">(59,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2957/26848/version/2/file/bilan-semes_030707.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            bilan semestriel du contrat de liquidité (03/07/2007)
+                        <span class="filesize">(510 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/2958/26858/version/3/file/mise_oeuvre_contrat_liquidite.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            mise en oeuvre d&#039;un contrat de liquidité (10/05/2007)
+                        <span class="filesize">(260,7 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-2879">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-2879"
+                aria-expanded="false"
+                aria-controls="collapse-2879"
+                role="button">
+                Déclarations des rachats d&#039;actions
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-2879" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-2879">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49114/1396094/version/2/file/Rachat%20d%27actions%2018-19%20D%C3%A9cembre%202018%20Communiqu%C3%A9%20de%20presse.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rachat d’actions 18-19 Décembre 2018 Communiqué de presse
+                        <span class="filesize">(96,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49115/1396098/version/2/file/Rachat%20d%27actions%2018-19%20D%C3%A9cembre%202018%20D%C3%A9claration%20d%C3%A9taill%C3%A9e.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rachat d’actions 18-19 Décembre 2018 Déclaration détailles
+                        <span class="filesize">(227,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47191/1372052/version/2/file/CP_Orange_RachatActions_FR_110618.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rachat d’actions 31 mai-8 juin 2018 Communiqué de presse
+                        <span class="filesize">(102,8 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/47190/1372048/version/2/file/Rachat%20d%27actions%2031%20mai-08%20juin%202018%20D%C3%A9claration%20d%C3%A9taill%C3%A9e.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Rachat d’actions 31 mai-8 juin 2018 Déclaration détaillée
+                        <span class="filesize">(3,8 MB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12524/259446/version/2/file/CP_FranceTelecom_rachat_actions_03102011_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées 23 au 30 septembre 2011 (03/10/2011)
+                        <span class="filesize">(52,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12523/259444/version/2/file/CP_FranceTelecom_rachat_actions_220911_Fr.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées du 13 au 22 septembre 2011 (22/09/2011)
+                        <span class="filesize">(57,9 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12522/259442/version/2/file/CP_FranceTelecom_rachat_actions_170811_FR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées du 9 au 16 août 2011 (17/08/2011)
+                        <span class="filesize">(58,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/12521/259440/version/1/file/CP_Orange_rachat_actions_300611_fr.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées le 21 juin 2011 (30/06/2011)
+                        <span class="filesize">(133,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3030/27177/version/2/file/100201CPRachatFR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées le 25 janvier 2010 (03/02/2010)
+                        <span class="filesize">(763,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3031/27179/version/1/file/091231CPRachatFR.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées du 21 au 22 décembre 2009 (31/12/2009)
+                        <span class="filesize">(768,4 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3033/27184/version/1/file/declaration_transactions_18-190309.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées du 18 au 19 mars 2009 (26/03/2009)
+                        <span class="filesize">(716,7 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3034/27186/version/2/file/declaration_transactions_22-291208.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées du 22 au 29 décembre 2008 (06/01/2009)
+                        <span class="filesize">(65,6 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/3036/27191/version/1/file/declaration_transactions_20-290307.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            déclaration des transactions sur actions propres réalisées du 20 au 29 mars 2007 (29/03/2007)
+                        <span class="filesize">(643,2 kB)</span></a>
+</div>
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/24555/541989/version/2/file/20140723_CP-ORP%20et%20PRA%20vdef.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Suite au succès de l&#039;offre &quot;Cap&#039;Orange&quot;, le Groupe va céder à ses salariés 16 millions d’actions détenues jusqu’alors en autocontrôle
+                        <span class="filesize">(52,8 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                            <div class="card">
+    <div class="card-header" id="heading-46983">
+        <h5>
+            <a
+                class="collapsed"
+                data-toggle="collapse"
+                data-parent="#accordion-doc"
+                href="#collapse-46983"
+                aria-expanded="false"
+                aria-controls="collapse-46983"
+                role="button">
+                Index de l’égalité femmes-hommes
+            </a>
+        </h5>
+    </div>
+    <div id="collapse-46983" class="accordion-body collapse" role="tabpanel" aria-labelledby="heading-46983">
+        <div class="card-block">
+            
+                            <div class="file">
+    <a target="_blank" href="/fr/content/download/49547/1400632/version/2/file/Index%20de%20l%27%C3%A9galit%C3%A9%20femmes-hommes%20-%20f%C3%A9vrier%202019.pdf"class="ezbinaryfile-field"><span class="sr-only">télécharger le fichier</span><span class="icon icon-pdf-file"></span>
+
+                            Index de l&#039;égalité femmes-hommes - février 2019
+                        <span class="filesize">(62,9 kB)</span></a>
+</div>
+                    </div>
+    </div>
+</div>
+
+                    </div>
+    </div>
+</div>
+
+    </div>
+        </div>
+    </div>
+</div>
+
+    
+                                            
+<div id="highlights-container" class="highlights white">
+        
+        
+                                
+                                
+                                                                                        
+                                                                                        
+                                                                
+    
+    <div id="highlights-header" class="highlights-header">
+        <span class="highlights-header-text">En savoir plus</span>
+    </div>
+    <div id="highlights-slick-carousel" class="highlights-items slick-carousel">
+
+                                            <div class="item slick-carousel-item">
+                
+    
+<div class="item">
+    <div class="card col-12  ">
+        <div class="card-header"></div>
+
+                    <a href="/fr/Investisseurs/Resultats-et-presentations/Folder/Derniers-resultats-consolides" title="Derniers résultats consolidés">
+                                        <span class="ezimage-field"><img src="/var/orange_site/storage/images/orange.com/investisseurs/resultats-et-presentations/folder/derniers-resultats-consolides/786353-242-fre-FR/Derniers-resultats-consolides_grid-landscape.png?2014.11.6.3.2-768-g6397c5953"                         alt=""
+                         class="card-img-top" /></span>
+                            </a>
+        
+        <div class="card-block" style="background-color: #fff;">
+            <a href="/fr/Investisseurs/Resultats-et-presentations/Folder/Derniers-resultats-consolides" title="Derniers résultats consolidés">
+                
+                <div class="card-title">Derniers résultats</div>
+
+                                    <div class="card-text">
+                        Poursuite de la croissance du chiffre d’affaires et de l’EBITDAaL
+                    </div>
+                            </a>
+        </div>
+    </div>
+</div>
+
+            </div>
+                                            <div class="item slick-carousel-item">
+            
+    
+                        
+                
+
+<div class="item">
+    <div class="card col-12  ">
+        <div class="card-header"></div>
+
+                                    <a href="https://rai2018.orange.com/" target="_blank" title="Rapport Annuel Intégré (Ouverture du lien dans un nouvel onglet)" rel="noopener noreferrer">
+                                            <span class="ezimage-field"><img src="/var/orange_site/storage/images/orange.com/actus-courtes-tuiles/investisseurs/rapport-annuel-integre/1346828-5-fre-FR/Rapport-Annuel-Integre_grid-landscape.jpg?2014.11.6.3.2-768-g6397c5953"                         alt=""
+                         class="card-img-top" /></span>
+                                        </a>
+                    
+        <div class="card-block" style="background-color: #fff;">
+                            <a href="https://rai2018.orange.com/" target="_blank" title="Rapport Annuel Intégré (Ouverture du lien dans un nouvel onglet)"  rel="noopener noreferrer">
+            
+            
+            <div class="card-title">Rapport Annuel Intégré</div>
+
+                            <div class="card-text">
+                    Découvrez le Rapport Annuel Intégré d'Orange en 2018
+                </div>
+            
+                            </a>
+                    </div>
+    </div>
+</div>
+
+            </div>
+                                            <div class="item slick-carousel-item">
+                
+    
+<div class="item">
+    <div class="card col-12  ">
+        <div class="card-header"></div>
+
+                    <a href="/fr/Human-Inside/Nous-avons-tous-de-grands-pouvoirs.-Nous-avons-tous-de-grandes-responsabilites" title="Nous avons tous de grands pouvoirs. Nous avons tous de grandes responsabilités.">
+                                        <span class="ezimage-field"><img src="/var/orange_site/storage/images/orange.com/human-inside/nous-avons-tous-de-grands-pouvoirs.-nous-avons-tous-de-grandes-responsabilites/1449522-111-fre-FR/Nous-avons-tous-de-grands-pouvoirs.-Nous-avons-tous-de-grandes-responsabilites_grid-landscape.jpg?2014.11.6.3.2-768-g6397c5953"                         alt=""
+                         class="card-img-top" /></span>
+                            </a>
+        
+        <div class="card-block" style="background-color: #fff;">
+            <a href="/fr/Human-Inside/Nous-avons-tous-de-grands-pouvoirs.-Nous-avons-tous-de-grandes-responsabilites" title="Nous avons tous de grands pouvoirs. Nous avons tous de grandes responsabilités.">
+                
+                <div class="card-title">Notre campagne</div>
+
+                                    <div class="card-text">
+                        La révolution digitale a transformé le monde dans lequel nous vivons. Les innovations ne sont pas en elles-mêmes ...
+                    </div>
+                            </a>
+        </div>
+    </div>
+</div>
+
+            </div>
+        
+        
+    </div>
+    </div>
+
+                        
+            <div id="footer-top-container">
+    <div id="footer-top" class="row">
+                                    <div class="footer-top-column">
+                    
+        
+    
+
+
+
+    
+    <a  href="/fr/Investisseurs/Action-et-dividende/Cours-de-l-action"   class="image-linked-hover" >
+
+        <span class="image ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/cours-de-l-action/1237099-1-fre-FR/cours-de-l-action.png?2014.11.6.3.2-768-g6397c5953"         alt="Cours de l&#039;action" /></span>
+
+                    <span class="image-hover ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/cours-de-l-action/1237100-1-fre-FR/cours-de-l-action.png?2014.11.6.3.2-768-g6397c5953"         alt="Cours de l&#039;action" /></span>
+        
+        <span class="title">Cours de l&#039;action</span>
+    </a>
+
+                </div>
+                            <div class="footer-top-column">
+                    
+        
+    
+                    
+
+
+    
+    <a  href="https://rai2018.orange.com/fr/" title="Rapport annuel (Ouverture du lien dans un nouvel onglet)" target="_blank" class="image-linked-hover" rel="noopener noreferrer">
+
+        <span class="image ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/rapport-annuel/1237244-1-fre-FR/Rapport-annuel.png?2014.11.6.3.2-768-g6397c5953"         alt="Rapport annuel" /></span>
+
+                    <span class="image-hover ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/rapport-annuel/1237245-1-fre-FR/Rapport-annuel.png?2014.11.6.3.2-768-g6397c5953"         alt="Rapport annuel" /></span>
+        
+        <span class="title">Rapport annuel</span>
+    </a>
+
+                </div>
+                            <div class="footer-top-column">
+                    
+        
+    
+
+
+
+    
+    <a  href="/fr/Investisseurs/Resultats-et-presentations/Folder/Derniers-resultats-consolides"   class="image-linked-hover" >
+
+        <span class="image ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/derniers-resultats/1237296-1-fre-FR/Derniers-resultats.png?2014.11.6.3.2-768-g6397c5953"         alt="Derniers résultats" /></span>
+
+                    <span class="image-hover ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/derniers-resultats/1237297-1-fre-FR/Derniers-resultats.png?2014.11.6.3.2-768-g6397c5953"         alt="Derniers résultats" /></span>
+        
+        <span class="title">Derniers résultats</span>
+    </a>
+
+                </div>
+                            <div class="footer-top-column">
+                    
+        
+    
+
+
+
+    
+    <a  href="/fr/Groupe/Actionnaires-individuels/Actualites"   class="image-linked-hover" >
+
+        <span class="image ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/actionnaires-individuels/1237333-6-fre-FR/Actionnaires-individuels.png?2014.11.6.3.2-768-g6397c5953"         alt="Actionnaires individuels" /></span>
+
+                    <span class="image-hover ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/actionnaires-individuels/1237334-6-fre-FR/Actionnaires-individuels.png?2014.11.6.3.2-768-g6397c5953"         alt="Actionnaires individuels" /></span>
+        
+        <span class="title">Actionnaires individuels</span>
+    </a>
+
+                </div>
+                            <div class="footer-top-column">
+                    
+        
+    
+
+
+
+    
+    <a  href="/fr/Footer/Bas-de-footer/Evenements"   class="image-linked-hover" >
+
+        <span class="image ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/calendrier/1237340-1-fre-FR/Calendrier.png?2014.11.6.3.2-768-g6397c5953"         alt="Calendrier" /></span>
+
+                    <span class="image-hover ezimage-field"><img src="/var/orange_site/storage/images/orange.com/footer/calendrier/1237341-1-fre-FR/Calendrier.png?2014.11.6.3.2-768-g6397c5953"         alt="Calendrier" /></span>
+        
+        <span class="title">Calendrier</span>
+    </a>
+
+                </div>
+                        </div>
+</div>
+
+<div id="footer-middle-container">
+    <div id="footer-middle" class="row">
+                    <div class="column col-6 col-lg-3 d-none d-lg-block">
+                                    <div class="column-title">
+                        Le Groupe
+                    </div>
+                                <div class="ezxmltext-field"><ul><li><a href="/fr/Groupe/Strategie" target="_self">Stratégie </a></li><li><a href="/fr/Groupe/Gouvernance/Comite-executif" target="_self">Management </a></li><li><a href="/fr/Human-Inside/Notre-engagement-societal-old/Faire-du-numerique-un-levier-de-progres-pour-tous" target="_self">Engagements</a></li><li><a href="/fr/Human-Inside/Preparer-le-monde-de-demain/Co-innover-avec-Orange" target="_self">Innovation</a></li><li><a href="/fr/Groupe/Actionnaires-individuels/Etre-actionnaire/Devenir-actionnaire" target="_self" title="Actionnaires individuels">Actionnaires individuels</a></li><li><a href="/fr/Investisseurs/Resultats-et-presentations" target="_self">Investisseurs</a></li><li><a href="/fr/Groupe/Activites/Les-reseaux/Documentation/Documentation-reseaux" target="_self">Documentation</a></li><li><a href="/fr/Groupe/Collectivites/Reseaux-d-Initiative-Publique" target="_self">Collectivités locales</a></li></ul></div>
+            </div>
+        
+                    <div class="column col-6 col-lg-3 d-none d-lg-block">
+                                    <div class="column-title">
+                        Autres liens 
+                    </div>
+                                <div class="ezxmltext-field"><ul><li><a href="/fr/autres-sites/Tous-les-sites-du-Groupe" target="_self">Tous les sites du Groupe</a></li><li><a href="/fr/live/live-Orange" target="_self">Toutes les actus</a></li><li><a href="/fr/Groupe/Gouvernance/La-Gouvernance-d-Orange" target="_self">Gouvernance</a></li><li><a href="https://www.youtube.com/c/orange" target="_blank" rel="noopener noreferrer">A voir sur Youtube</a></li><li><a href="/fr/Orange-Podcasts" target="_self">Orange Podcasts</a></li><li><a href="https://mediatheque.orange.com" target="_blank" rel="noopener noreferrer">Médiathèque</a></li><li><a href="https://gallery.orange.com/#v=root" target="_blank" title="gallery.orange.com/#v=root" rel="noopener noreferrer">La Médiathèque RSE</a></li><li><a href="https://www.orange.com/sirius/histoire/fr/accueil" target="_blank" rel="noopener noreferrer">Notre histoire</a></li></ul></div>
+            </div>
+        
+                    <div class="column col-6 col-lg-3 d-none d-lg-block">
+                                    <div class="column-title">
+                        Plus d&#039;activités
+                    </div>
+                                <div class="ezxmltext-field"><ul><li><a href="https://www.orange-business.com/fr" target="_blank" rel="noopener noreferrer">Orange Business Services</a></li><li><a href="https://orange.jobs/" target="_blank" rel="noopener noreferrer">orange.jobs</a></li><li><a href="https://www.fondationorange.com/" target="_blank" rel="noopener noreferrer">Fondation Orange</a></li><li><a href="https://startup.orange.com/" target="_blank" rel="noopener noreferrer">Pour les Start-up</a></li><li><a href="https://hellofuture.orange.com/fr/" target="_blank" title="hellofuture.orange.com/fr/" rel="noopener noreferrer">Hello Future</a></li><li><a href="https://healthcare.orange.com/" target="_blank" rel="noopener noreferrer">Orange Healthcare</a></li><li><a href="https://wholesalefrance.orange.fr" target="_blank" title="Wholesale France (nouvelle fenêtre)" rel="noopener noreferrer">Wholesale France</a></li><li><a href="https://developer.orange.com/" target="_blank" rel="noopener noreferrer">Orange Developer</a></li></ul></div>
+            </div>
+        
+        <div class="column footer-last-content col-6 col-lg-3 d-none d-lg-block">
+                            <div class="column-title">
+                    Dernières actualités
+                </div>
+                                        <ul>
+                                    <li>
+                        
+    
+    
+    
+
+<a href="/fr/actualites/2019/Novembre/Promouvoir-l-entreprenariat-au-feminin" title="Promouvoir l’entreprenariat au féminin" >
+    <span class="title">Promouvoir l’entreprenariat au féminin</span>
+</a>
+                    </li>
+                                    <li>
+                        
+    
+    
+    
+
+<a href="/fr/actualites/2019/Novembre/En-Afrique-nous-encourageons-un-usage-responsable-du-numerique-avec-Better-Internet-for-Kids" title="Pour un usage responsable du numérique en Afrique" >
+    <span class="title">Pour un usage responsable du numérique en Afrique</span>
+</a>
+                    </li>
+                                    <li>
+                        
+    
+    
+    
+
+<a href="/fr/actualites/2019/Octobre/C-est-le-mois-europeen-de-la-cybersecurite" title="Le mois européen de la cybersécurité" >
+    <span class="title">Le mois européen de la cybersécurité</span>
+</a>
+                    </li>
+                                </ul>
+                    </div>
+        <div class="col-12 footer-mobile d-block d-xl-none">
+
+                                                                                                        
+            <div class="footer-social">
+                    
+<ul class="social-bar d-none d-md-block" >
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-Twitter suivez-nous-sur-twitter"
+        title="Suivez-nous sur Twitter - Ouverture du lien dans un nouvel onglet"
+        href="https://www.twitter.com/orange/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Twitter</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-twitter/843405-9-fre-FR/Suivez-nous-sur-Twitter_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-twitter/817524-9-fre-FR/Suivez-nous-sur-Twitter_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-Facebook suivez-nous-sur-facebook"
+        title="Suivez-nous sur Facebook - Ouverture du lien dans un nouvel onglet"
+        href="https://www.facebook.com/orange?brandloc=DISABLE"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Facebook</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-facebook/843400-7-fre-FR/Suivez-nous-sur-Facebook_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-facebook/817426-7-fre-FR/Suivez-nous-sur-Facebook_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-Instagram suivez-nous-sur-instagram"
+        title="Suivez-nous sur Instagram - Ouverture du lien dans un nouvel onglet"
+        href="https://instagram.com/orange"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Instagram</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-instagram/843402-8-fre-FR/Suivez-nous-sur-Instagram_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-instagram/817519-8-fre-FR/Suivez-nous-sur-Instagram_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-LinkedIn suivez-nous-sur-linkedin"
+        title="Suivez-nous sur LinkedIn - Ouverture du lien dans un nouvel onglet"
+        href="https://www.linkedin.com/company/orange"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur LinkedIn</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-linkedin/843414-10-fre-FR/Suivez-nous-sur-LinkedIn_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-linkedin/817539-10-fre-FR/Suivez-nous-sur-LinkedIn_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+    </ul>
+            </div>
+
+                            <div class="separator"></div>
+                <div class="footer-mobile-content">
+                    <div class="ezxmltext-field"><a name="eztoc_1_1_1" id="eztoc_1_1_1"></a><h3 align="center">Téléchargez notre application</h3><table class="default" border="0" cellpadding="2" cellspacing="0" width="100%" style="width:100%;" summary=""><tr><td valign="top" style="vertical-align: top;" align="center"><div class="imagecenter"><a href=https://play.google.com/store/apps/details?id=com.orange.orangecorporate target="_blank"><img src="/var/orange_site/storage/images/googleplay2/1236029-1-fre-FR/Googleplay.jpg" alt="" /></a><div class="caption" style="width: 144px;"></div></div></td><td valign="top" style="vertical-align: top;"><div class="imagecenter"><a href=https://itunes.apple.com/fr/app/orange-group/id1052616583?mt=8 target="_blank"><img src="/var/orange_site/storage/images/appstore2/1236062-1-fre-FR/appstore.jpg" alt="" /></a><div class="caption" style="width: 144px;"></div></div></td></tr></table></div>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+<div id="footer-bottom-container" role="contentinfo">
+    <div id="footer-bottom" class="row">
+        <div class="row legal-notice">
+            <div class="links col-12 col-md-6">
+                                        
+<span class="link"><a href="/fr/Footer/Mentions-legales" title="Infos légales" class="footer-link-page infos-légales">Infos légales</a></span>
+                                        
+<span class="link"><a href="/fr/Footer/Notice-sur-la-Protection-des-Donnees-personnelles" title="Données personnelles" class="footer-link-page données-personnelles">Données personnelles</a></span>
+                                        
+<span class="link"><a href="/fr/Footer/CERT-Orange" title="CERT" class="footer-link-page cert">CERT</a></span>
+                                    
+<span class="link">
+    <a class="footer-link-page" href="/fr/Footer/Nous-sommes-a-votre-ecoute" title="Ouverture du lien dans l&#039;onglet courant" ><span class="ezstring-field">Contacts</span></a>
+</span>
+                                <span class="copyright d-none d-lg-inline-flex">&copy; Orange 2019</span>
+            </div>
+            <div class="footer-social col-12 col-md-6 d-none d-lg-block">
+                    
+<ul class="social-bar d-none d-md-block" >
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-Twitter suivez-nous-sur-twitter"
+        title="Suivez-nous sur Twitter - Ouverture du lien dans un nouvel onglet"
+        href="https://www.twitter.com/orange/"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Twitter</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-twitter/843405-9-fre-FR/Suivez-nous-sur-Twitter_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-twitter/1169309-9-fre-FR/Suivez-nous-sur-Twitter_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-Facebook suivez-nous-sur-facebook"
+        title="Suivez-nous sur Facebook - Ouverture du lien dans un nouvel onglet"
+        href="https://www.facebook.com/orange?brandloc=DISABLE"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Facebook</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-facebook/843400-7-fre-FR/Suivez-nous-sur-Facebook_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-facebook/1169290-7-fre-FR/Suivez-nous-sur-Facebook_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-Instagram suivez-nous-sur-instagram"
+        title="Suivez-nous sur Instagram - Ouverture du lien dans un nouvel onglet"
+        href="https://instagram.com/orange"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur Instagram</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-instagram/843402-8-fre-FR/Suivez-nous-sur-Instagram_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-instagram/1169299-8-fre-FR/Suivez-nous-sur-Instagram_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-YouTube suivez-nous-sur-youtube"
+        title="Suivez nous sur YouTube - Ouverture du lien dans un nouvel onglet"
+        href="https://www.youtube.com/c/orange"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez nous sur YouTube</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-youtube/1158821-4-fre-FR/Suivez-nous-sur-YouTube_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-youtube/1169371-4-fre-FR/Suivez-nous-sur-YouTube_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Suivez-nous-sur-LinkedIn suivez-nous-sur-linkedin"
+        title="Suivez-nous sur LinkedIn - Ouverture du lien dans un nouvel onglet"
+        href="https://www.linkedin.com/company/orange"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Suivez-nous sur LinkedIn</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-linkedin/843414-10-fre-FR/Suivez-nous-sur-LinkedIn_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/suivez-nous-sur-linkedin/1169351-10-fre-FR/Suivez-nous-sur-LinkedIn_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class=" espace"
+        title=" - Ouverture du lien dans un nouvel onglet"
+        href="https://www.orange.com/fr/actualites/2018/Novembre/L-application-Orange-News-Group"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">espace</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/espace/1236832-3-fre-FR/espace_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/espace/1236831-3-fre-FR/espace_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class=" mobile"
+        title=" - Ouverture du lien dans un nouvel onglet"
+        href="https://www.orange.com/fr/actualites/2018/Novembre/L-application-Orange-News-Group"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">mobile</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/mobile/1236899-1-fre-FR/mobile_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/mobile/1236898-1-fre-FR/mobile_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Téléchargez-notre-application android"
+        title="Téléchargez notre application - Ouverture du lien dans un nouvel onglet"
+        href="https://play.google.com/store/apps/details?id=com.orange.orangecorporate"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Android</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/android/1237908-11-fre-FR/Android_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/android/1237907-11-fre-FR/Android_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+            
+    
+
+
+        
+    
+    <li><a 
+        class="Téléchargez-notre-application apple"
+        title="Téléchargez notre application - Ouverture du lien dans un nouvel onglet"
+        href="https://itunes.apple.com/fr/app/orange-group/id1052616583?mt=8"
+        target="_blank"
+        rel="noopener noreferrer">
+        <span class="sr-only">Apple</span>
+                    <img src="/var/orange_site/storage/images/orange.com/socials/apple/1237915-12-fre-FR/Apple_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon-hover" alt=""/>
+                <img src="/var/orange_site/storage/images/orange.com/socials/apple/1237914-12-fre-FR/Apple_social-links.png?2014.11.6.3.2-768-g6397c5953" class="social-icon" alt=""/>
+    </a></li>
+
+    </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+<a id="orange-top" href="#skiplinks-container" class="o-scroll-up" title="Retour en haut de page">
+    <span class="o-scroll-up-text sr-only">Retour en haut de page</span>
+    <span class="o-scroll-up-icon" aria-hidden="true"></span>
+</a>
+    
+                    <script src="/js/compiled/boosted-libs.min.js?2014.11.6.3.2-768-g6397c5953"></script>
+<script src="/js/compiled/libs.min.js?2014.11.6.3.2-768-g6397c5953"></script>
+<script src="/js/compiled/all.min.js?2014.11.6.3.2-768-g6397c5953"></script>
+
+<script src="https://apis.google.com/js/plusone.js"></script>
+<script src="https://apis.google.com/js/client:plusone.js?onload=getGooglePlusShare"></script>
+
+    <script src="/js/compiled/scripts-bottom-router.js?2014.11.6.3.2-768-g6397c5953"></script>
+    
+        <script src="//f1-eu.readspeaker.com/script/5725/ReadSpeaker.js?pids=embhl,exp,dr" type="text/javascript"></script>
+    <script type="text/javascript">
+    <!--
+        window.rsDocReaderConf = {lang: "fr_fr",
+        img_alt: "Ouvrez ce document avec ReadSpeaker docReader" };
+    //-->
+    </script>
+
+        
+                    <script type="text/javascript">
+    (function(a,b,c,d)
+    { a='//tags.tiqcdn.com/utag/orange/corp/prod/utag.js'; b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true; a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a); }
+    )();
+</script>    
+                        
+                    
+</body>
+</html>

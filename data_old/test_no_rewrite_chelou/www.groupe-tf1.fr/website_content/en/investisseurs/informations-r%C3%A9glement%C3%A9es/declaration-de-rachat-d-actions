@@ -1,0 +1,1798 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:article="http://ogp.me/ns/article#"
+  xmlns:book="http://ogp.me/ns/book#"
+  xmlns:profile="http://ogp.me/ns/profile#"
+  xmlns:video="http://ogp.me/ns/video#"
+  xmlns:product="http://ogp.me/ns/product#">
+<head>
+  <link rel="profile" href="http://www.w3.org/1999/xhtml/vocab" />
+  <link rel="alternate" type="application/rss+xml" 
+    title="Groupe TF1 - Communiqués de presse (RSS)" href="/en/rss.xml" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"VgUEU1JWABABXFZXAAcAUg==",licenseKey:"4820c7d252",applicationID:"18757674"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(25),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{l?l-=1:o(s||new UncaughtException(t,e,n),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t,e){var n=e?null:c.now();i("err",[t,n])}var i=t("handle"),a=t(26),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,p="nr@seenError",l=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(13),t(12),"addEventListener"in window&&t(6),c.xhrWrappable&&t(14),d=!0)}s.on("fn-start",function(t,e,n){d&&(l+=1)}),s.on("fn-err",function(t,e,n){d&&!n[p]&&(f(n,p,function(){return!0}),this.thrown=!0,o(n))}),s.on("fn-end",function(){d&&!this.thrown&&l>0&&(l-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(){L++,C=g.hash,this[u]=y.now()}function o(){L--,g.hash!==C&&i(0,!0);var t=y.now();this[h]=~~this[h]+t-this[u],this[d]=t}function i(t,e){E.emit("newURL",[""+g,e])}function a(t,e){t.on(e,function(){this[e]=y.now()})}var s="-start",c="-end",f="-body",u="fn"+s,d="fn"+c,p="cb"+s,l="cb"+c,h="jsTime",m="fetch",v="addEventListener",w=window,g=w.location,y=t("loader");if(w[v]&&y.xhrWrappable){var x=t(10),b=t(11),E=t(8),O=t(6),R=t(13),P=t(7),T=t(14),N=t(9),M=t("ee"),S=M.get("tracer");t(16),y.features.spa=!0;var C,L=0;M.on(u,r),M.on(p,r),M.on(d,o),M.on(l,o),M.buffer([u,d,"xhr-done","xhr-resolved"]),O.buffer([u]),R.buffer(["setTimeout"+c,"clearTimeout"+s,u]),T.buffer([u,"new-xhr","send-xhr"+s]),P.buffer([m+s,m+"-done",m+f+s,m+f+c]),E.buffer(["newURL"]),x.buffer([u]),b.buffer(["propagate",p,l,"executor-err","resolve"+s]),S.buffer([u,"no-"+u]),N.buffer(["new-jsonp","cb-start","jsonp-error","jsonp-end"]),a(T,"send-xhr"+s),a(M,"xhr-resolved"),a(M,"xhr-done"),a(P,m+s),a(P,m+"-done"),a(N,"new-jsonp"),a(N,"jsonp-end"),a(N,"cb-start"),E.on("pushState-end",i),E.on("replaceState-end",i),w[v]("hashchange",i,!0),w[v]("load",i,!0),w[v]("popstate",function(){i(0,L>1)},!0)}},{}],5:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(13),s=t(12),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",p="resource",l="-start",h="-end",m="fn"+l,v="fn"+h,w="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(8),"addEventListener"in window&&t(6);var x=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof x&&(this.bstStart=y.now())}),o.on(v,function(t,e){var n=t[0];n instanceof x&&i("bst",[n,e,this.bstStart,y.now()])}),a.on(m,function(t,e,n){this.bstStart=y.now(),this.bstType=n}),a.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(v,function(t,e){i(w,[e,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+l,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(p)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=i(arguments),e={};o.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return o.emit(n+"start",[t,a],s),s.then(function(t){return o.emit(n+"end",[null,t],s),t},function(t){throw o.emit(n+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(26),a=t(25);e.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,p=s.Response,l=s.fetch,h="prototype",m="nr@context";d&&p&&l&&(a(u,function(t,e){r(d[h],e,f),r(p[h],e,f)}),r(s,"fetch",c),o.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),o.emit(c+"done",[null,e],n)}else o.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),o=t("wrap-function")(r);e.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){function r(t){function e(){c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}function n(){c.emit("jsonp-error",[],p),c.emit("jsonp-end",[],p),t.removeEventListener("load",e,!1),t.removeEventListener("error",n,!1)}var r=t&&"string"==typeof t.nodeName&&"script"===t.nodeName.toLowerCase();if(r){var o="function"==typeof t.addEventListener;if(o){var a=i(t.src);if(a){var u=s(a),d="function"==typeof u.parent[u.key];if(d){var p={};f.inPlace(u.parent,[u.key],"cb-",p),t.addEventListener("load",e,!1),t.addEventListener("error",n,!1),c.emit("new-jsonp",[t.src],p)}}}}}function o(){return"addEventListener"in window}function i(t){var e=t.match(u);return e?e[1]:null}function a(t,e){var n=t.match(p),r=n[1],o=n[3];return o?a(o,e[r]):e[r]}function s(t){var e=t.match(d);return e&&e.length>=3?{key:e[2],parent:a(e[1],window)}:{key:t,parent:window}}var c=t("ee").get("jsonp"),f=t("wrap-function")(c);if(e.exports=c,o()){var u=/[?&](?:callback|cb)=([^&#]+)/,d=/(.*)\.([^.]+)/,p=/^(\w+)(\.|$)(.*)$/,l=["appendChild","insertBefore","replaceChild"];Node&&Node.prototype&&Node.prototype.appendChild?f.inPlace(Node.prototype,l,"dom-"):(f.inPlace(HTMLElement.prototype,l,"dom-"),f.inPlace(HTMLHeadElement.prototype,l,"dom-"),f.inPlace(HTMLBodyElement.prototype,l,"dom-")),c.on("dom-start",function(t){r(t[0])})}},{}],10:[function(t,e,n){var r=t("ee").get("mutation"),o=t("wrap-function")(r),i=NREUM.o.MO;e.exports=r,i&&(window.MutationObserver=function(t){return this instanceof i?new i(o(t,"fn-")):i.apply(this,arguments)},MutationObserver.prototype=i.prototype)},{}],11:[function(t,e,n){function r(t){var e=a.context(),n=s(t,"executor-",e),r=new f(n);return a.context(r).getCtx=function(){return e},a.emit("new-promise",[r,e],e),r}function o(t,e){return e}var i=t("wrap-function"),a=t("ee").get("promise"),s=i(a),c=t(25),f=NREUM.o.PR;e.exports=a,f&&(window.Promise=r,["all","race"].forEach(function(t){var e=f[t];f[t]=function(n){function r(t){return function(){a.emit("propagate",[null,!o],i),o=o||!t}}var o=!1;c(n,function(e,n){Promise.resolve(n).then(r("all"===t),r(!1))});var i=e.apply(f,arguments),s=f.resolve(i);return s}}),["resolve","reject"].forEach(function(t){var e=f[t];f[t]=function(t){var n=e.apply(f,arguments);return t!==n&&a.emit("propagate",[t,!0],n),n}}),f.prototype["catch"]=function(t){return this.then(null,t)},f.prototype=Object.create(f.prototype,{constructor:{value:r}}),c(Object.getOwnPropertyNames(f),function(t,e){try{r[e]=f[e]}catch(n){}}),a.on("executor-start",function(t){t[0]=s(t[0],"resolve-",this),t[1]=s(t[1],"resolve-",this)}),a.on("executor-err",function(t,e,n){t[1](n)}),s.inPlace(f.prototype,["then"],"then-",o),a.on("then-start",function(t,e){this.promise=e,t[0]=s(t[0],"cb-",this),t[1]=s(t[1],"cb-",this)}),a.on("then-end",function(t,e,n){this.nextPromise=n;var r=this.promise;a.emit("propagate",[r,!0],n)}),a.on("cb-end",function(t,e,n){a.emit("propagate",[n,!0],this.nextPromise)}),a.on("propagate",function(t,e,n){this.getCtx&&!e||(this.getCtx=function(){if(t instanceof Promise)var e=a.context(t);return e&&e.getCtx?e.getCtx():this})}),r.toString=function(){return""+f})},{}],12:[function(t,e,n){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],13:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],14:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),p=NREUM.o,l=p.XHR,h=p.MO,m=p.PR,v=p.SI,w="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];e.exports=u;var x=window.XMLHttpRequest=function(t){var e=new l(t);try{u.emit("new-xhr",[e],e),e.addEventListener(w,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(l,x),x.prototype=l.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],15:[function(t,e,n){function r(t){if(!i(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,s=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,n,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,e,n,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:e,ti:n}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var e=!1,n=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,n=!!r.enabled),n)if(t.sameOrigin)e=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return n&&e}var a=t(23),s=t(17);e.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],16:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(d[r],this.listener,!1);e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):i(this,t),n.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[e,n,this.startTime]))}}function o(t,e){var n=c(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=c(e),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(17),f=t(15).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],p=d.length,l=t("id"),h=t(21),m=t(20),v=t(18),w=window.XMLHttpRequest;a.features.xhr=!0,t(14),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,t.addEventListener("load",function(n){i(e,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);n&&n.header&&(e.setRequestHeader("newrelic",n.header),this.dt=n)}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=m(r);i&&(n.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<p;s++)e.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof w&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof w&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){var e,n=t[1]||{};"string"==typeof t[0]?e=t[0]:t[0]&&t[0].url&&(e=t[0].url),e&&(this.parsedOrigin=c(e),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in n)i[a]=n[a];i.headers=new Headers(n.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],17:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];var e=document.createElement("a"),n=window.location,o={};e.href=t,o.port=e.port;var i=e.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=e.hostname||n.hostname,o.pathname=e.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return o.sameOrigin=a&&(!e.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],18:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?o(t.response):"text"===n||"document"===n||""===n||void 0===n?o(t.responseText):void 0}var o=t(20);e.exports=r},{}],19:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[f.now()].concat(s(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(25),s=t(26),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(t,e){u[e]=o(p+e,!0,"api")}),u.addPageAction=o(p+"addPageAction",!0),u.setCurrentRouteName=o(p+"routeName",!0),e.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[f.now(),t,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){h[e]=o(l+e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,e])}},{}],20:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],21:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],22:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,e){var n=t.getEntries();n.length>0&&c("lcp",[n[n.length-1]])}function i(t){if(t instanceof u&&!p){var e,n=Math.round(t.timeStamp);e=n>1e12?Date.now()-n:f.now()-n,p=!0,c("timing",["fi",n,{type:t.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var p=!1,l=["click","keydown","mousedown","pointerdown","touchstart"];l.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],23:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(e=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}e.exports={generateUuid:r,generateCatId:o}},{}],24:[function(t,e,n){function r(t,e){if(!o)return!1;if(t!==o)return!1;if(!e)return!0;if(!i)return!1;for(var n=i.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}e.exports={agent:o,version:i,match:r}},{}],25:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],26:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],27:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function n(n,r,o,i){if(!p.aborted||i){t&&t(n,r,o);for(var a=e(o),s=m(n),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[n]];return d&&d.push([x,n,r,a]),a}}function l(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var g={},y={},x={on:l,addEventListener:l,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(p.aborted=!0,u=p.backlog={})}var s="nr@context",c=t("gos"),f=t(25),u={},d={},p=e.exports=o();p.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!E++){var t=b.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(y,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()+b.offset],null,"api");var n=l.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(25),u=t("ee"),d=t(24),p=window,l=p.document,h="addEventListener",m="attachEvent",v=p.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:v,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-spa-1167.min.js"},x=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=e.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(19),t(22),l[h]?(l[h]("DOMContentLoaded",i,!1),p[h]("load",r,!1)):(l[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(27)},{}],"wrap-function":[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(26),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof n?n(r,a):n||{}}catch(f){p([f,"",[r,a,o],s])}u(e+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],s),d}finally{u(e+"end",[r,a,c],s)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<e.length;c++)s=e[c],a=t[s],r(a)||(t[s]=n(a,f?s+o:o,i,s))}function u(n,r,o){if(!c||e){var i=c;c=!0;try{t.emit(n,r,o,e)}catch(a){p([a,n,r,o])}c=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){p([r])}for(var o in t)s.call(t,o)&&(e[o]=t[o]);return e}function p(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}]},{},["loader",2,16,5,3,4]);</script>
+<link rel="shortcut icon" href="https://www.groupe-tf1.fr/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="description" content="Site Corporate du Groupe TF1. Actualités et communiqués du Groupe TF1 - Offres d&#039;emploi et de stage, politique RH - Informations financières, résultats et rapports" />
+<link rel="canonical" href="https://www.groupe-tf1.fr/en/investisseurs/informations-r%C3%A9glement%C3%A9es/declaration-de-rachat-d-actions" />
+<link rel="shortlink" href="https://www.groupe-tf1.fr/en/investisseurs/informations-r%C3%A9glement%C3%A9es/declaration-de-rachat-d-actions" />
+<meta property="og:image" content="http://www.groupe-tf1.fr/sites/default/files/mediatheque/200x200_icone.jpg" />
+  <title>Groupe TF1 : antennes, contenus, services, chaînes thématiques</title>
+  <link type="text/css" rel="stylesheet" href="https://www.groupe-tf1.fr/sites/default/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.groupe-tf1.fr/sites/default/files/css/css_EwDMqchZ1Eq-ArnfHUR4P-ZWGMdWdZF_FvyRnktvbeQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.groupe-tf1.fr/sites/default/files/css/css_DNcUwSpD4q1q4JcMqxRb-8uHTvdOO8YfexQ6tOEMsQ4.css" media="all" />
+<style>#sliding-popup.sliding-popup-bottom,#sliding-popup.sliding-popup-bottom .eu-cookie-withdraw-banner,.eu-cookie-withdraw-tab{background:#fff;}#sliding-popup.sliding-popup-bottom.eu-cookie-withdraw-wrapper{background:transparent}#sliding-popup .popup-content #popup-text h1,#sliding-popup .popup-content #popup-text h2,#sliding-popup .popup-content #popup-text h3,#sliding-popup .popup-content #popup-text p,#sliding-popup label,#sliding-popup div,.eu-cookie-compliance-secondary-button,.eu-cookie-withdraw-tab{color:#000 !important;}.eu-cookie-withdraw-tab{border-color:#000;}.eu-cookie-compliance-more-button{color:#000 !important;}
+</style>
+<link type="text/css" rel="stylesheet" href="https://www.groupe-tf1.fr/sites/default/files/css/css_zBZHAk93Z_ioGLE3kWdLnAGgC1XVqLuL3sINTtetRk4.css" media="all" />
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <script>document.cookie = 'adaptive_image=' + Math.max(screen.width, screen.height) + '; path=/';</script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_tT6wWwkALPXDuxnnrOrnV-XKPsrRB2ezAXx3NDDp_2U.js"></script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_-QuMzRw8UJc7Whf0qpwlKdNXR4NFxboMpwngY-HZXnQ.js"></script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_0pdPoNR7J_82PRBqi5sR96oBzjqNDtvhDFH2ddJI56s.js"></script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_JfUXCX5DdyDCIlQgx72M4RaZLC4UB5jPiE0KBOmsldM.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-21263798-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_MR8b9lICJ8GAbU_UtyZPlW2cjh2bugk5c_aWPaUq4NY.js"></script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_6d4uvXvc90PvMxchJs3XJhs1-Cvi3M8665DTNrwSiV4.js"></script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_XNWnyoEunFT5yT2Xm0Ss-Zcbo6XJ7kUJbHWyDIhvTq4.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"tf1","theme_token":"-F4w0lbWGcXUrPliUhMNkSZPlaevTgmOmvqHasO_XU0","jquery_version":"1.10","js":{"0":1,"sites\/all\/modules\/contrib\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"sites\/all\/themes\/bootstrap\/js\/bootstrap.js":1,"sites\/all\/themes\/tf1\/js\/search_engine.js":1,"1":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/blazy\/blazy.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.effect.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/contrib\/back_to_top\/js\/back_to_top.js":1,"sites\/all\/modules\/contrib\/lazy\/lazy.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_inline.js":1,"sites\/all\/modules\/contrib\/custom_search\/js\/custom_search.js":1,"sites\/all\/modules\/contrib\/views_load_more\/views_load_more.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"sites\/all\/themes\/bootstrap\/js\/misc\/_progress.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"2":1,"sites\/all\/modules\/custom\/tf1_a11y_tabs\/js\/tf1-a11y-tabs.js":1,"sites\/all\/libraries\/a11y-accordion-tabs\/a11y-accordion-tabs.min.js":1,"sites\/all\/libraries\/jquery.mCustomScrollbar\/jquery.mCustomScrollbar.concat.min.js":1,"sites\/all\/libraries\/jquery.lastlineclass\/jquery.lastlineclass.js":1,"sites\/all\/themes\/tf1\/js\/border_bottom.js":1,"sites\/all\/modules\/contrib\/colorbox_node\/colorbox_node.js":1,"sites\/all\/themes\/tf1\/colorbox_tf1\/colorbox_style.js":1,"sites\/all\/themes\/tf1\/js\/tools.js":1,"sites\/all\/themes\/tf1\/js\/controls.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/affix.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/alert.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/button.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/carousel.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/collapse.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/dropdown.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/modal.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/tooltip.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/popover.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/scrollspy.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/tab.js":1,"sites\/all\/themes\/tf1\/bootstrap\/js\/transition.js":1,"sites\/all\/themes\/bootstrap\/js\/modules\/views\/js\/ajax_view.js":1,"sites\/all\/themes\/bootstrap\/js\/misc\/ajax.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/all\/modules\/contrib\/adaptive_image\/css\/adaptive-image.css":1,"sites\/all\/modules\/contrib\/colorbox_node\/colorbox_node.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/custom\/footer_sitemap\/footer_sitemap.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/scald_file\/scald_file.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/back_to_top\/css\/back_to_top.css":1,"sites\/all\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/taxonomy_access\/taxonomy_access.css":1,"modules\/locale\/locale.css":1,"sites\/all\/modules\/contrib\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"sites\/all\/libraries\/fontello\/css\/fontello.css":1,"sites\/all\/modules\/custom\/tf1_a11y_tabs\/css\/tf1-a11y-tabs.css":1,"sites\/all\/libraries\/jquery.mCustomScrollbar\/jquery.mCustomScrollbar.min.css":1,"sites\/all\/modules\/contrib\/social_media_links\/social_media_links.css":1,"0":1,"sites\/all\/themes\/tf1\/bootstrap\/css\/bootstrap.css":1,"sites\/all\/themes\/tf1\/css\/style-2.css":1,"sites\/all\/themes\/tf1\/css\/footer.css":1,"sites\/all\/themes\/tf1\/colorbox_tf1\/colorbox_style.css":1}},"colorbox":{"transition":"none","speed":"350","opacity":"0.85","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"returnFocus":true,"maxWidth":"1130px","maxHeight":"100%","initialWidth":"62.5%","initialHeight":"100%","fixed":true,"scrolling":true,"mobiledetect":true,"mobiledevicewidth":"319px"},"custom_search":{"form_target":"_self","solr":0},"views":{"ajax_path":"\/en\/views\/ajax","ajaxViews":{"views_dom_id:e5a32118a74dfb1bbe5243e60e4b0170":{"view_name":"declaration_de_rachat_d_actions","view_display_id":"modale","view_args":"","view_path":"investisseurs\/informations-r\u00e9glement\u00e9es\/declaration-de-rachat-d-actions","view_base_path":"investisseurs\/informations-r\u00e9glement\u00e9es\/declaration-de-rachat-d-actions","view_dom_id":"e5a32118a74dfb1bbe5243e60e4b0170","pager_element":0}}},"urlIsAjaxTrusted":{"\/en\/views\/ajax":true,"\/en\/search-results":true},"better_exposed_filters":{"views":{"declaration_de_rachat_d_actions":{"displays":{"modale":{"filters":[]}}}}},"back_to_top":{"back_to_top_button_trigger":"100","back_to_top_button_text":"Back to top","#attached":{"library":[["system","ui"]]}},"eu_cookie_compliance":{"popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":1,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\r\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\r\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\r\n      \u003Cp\u003E\tBy continuing your navigation, you accept the use of cookies for statistical purposes, customization and features for social media.\u00a0\u003Ca href=\u0022\/en\/cookies\u0022\u003ELearn more.\u003C\/a\u003E\u003C\/p\u003E              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\r\n          \u003C\/div\u003E\r\n    \r\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\r\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EX\u003C\/button\u003E\r\n          \u003C\/div\u003E\r\n  \u003C\/div\u003E\r\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info eu-cookie-compliance-banner--default\u0022\u003E\r\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\r\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\r\n                    \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button\u0022\u003ENo, give me more info\u003C\/button\u003E\r\n          \u003C\/div\u003E\r\n    \r\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022\u0022\u003E\r\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-default-button\u0022\u003EX\u003C\/button\u003E\r\n          \u003C\/div\u003E\r\n  \u003C\/div\u003E\r\n\u003C\/div\u003E\r\n","mobile_breakpoint":"768","popup_html_agreed":"\u003Cdiv\u003E\r\n  \u003Cdiv class=\u0022popup-content agreed\u0022\u003E\r\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\r\n      \u003Cp\u003E\tNot Available\u003C\/p\u003E    \u003C\/div\u003E\r\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\r\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button eu-cookie-compliance-hide-button\u0022\u003EHide\u003C\/button\u003E\r\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button eu-cookie-compliance-more-button-thank-you\u0022 \u003EMore info\u003C\/button\u003E\r\n          \u003C\/div\u003E\r\n  \u003C\/div\u003E\r\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/en\/en\/cookies","popup_link_new_window":1,"popup_position":null,"fixed_top_position":false,"popup_language":"en","store_consent":true,"better_support_for_screen_readers":0,"reload_page":0,"domain":"","domain_all_sites":0,"popup_eu_only_js":0,"cookie_lifetime":"100","cookie_session":false,"disagree_do_not_show_popup":0,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003E\u003C\/button\u003E\r\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\r\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\r\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\r\n          \u003C\/div\u003E\r\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\r\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003E\u003C\/button\u003E\r\n    \u003C\/div\u003E\r\n  \u003C\/div\u003E\r\n\u003C\/div\u003E\r\n","withdraw_enabled":false,"withdraw_button_on_info_popup":0,"cookie_categories":[],"enable_save_preferences_button":1,"fix_first_cookie_category":1,"select_all_categories_by_default":0},"googleanalytics":{"trackOutbound":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":1},"colorbox_node":{"width":"62.5%","height":"100%"},"lazy":{"errorClass":"b-error","loadInvisible":false,"offset":100,"saveViewportOffsetDelay":50,"selector":".b-lazy","src":"data-src","successClass":"b-loaded","validateDelay":25},"bootstrap":{"anchorsFix":"0","anchorsSmoothScrolling":"0","formHasError":1,"popoverEnabled":1,"popoverOptions":{"animation":1,"html":0,"placement":"right","selector":"","trigger":"click","triggerAutoclose":1,"title":"","content":"","delay":0,"container":"body"},"tooltipEnabled":1,"tooltipOptions":{"animation":1,"html":0,"placement":"auto left","selector":"","trigger":"hover focus","delay":0,"container":"body"}}});</script>
+</head>
+<body class="html not-front not-logged-in no-sidebars page-investisseurs page-investisseurs-informations-réglementées page-investisseurs-informations-réglementées-declaration-de-rachat-d-actions i18n-en page-view-declaration-de-rachat-d-actions page-view-tag-default page-view-tag-v2 page-view-tag-rapports">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <header id="navbar" role="banner" class="navbar container navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+              <a class="logo navbar-btn pull-left" href="/en" title="Home">
+          <img src="https://www.groupe-tf1.fr/sites/default/files/logo_bleu_0.png" alt="Home" />
+        </a>
+      
+      
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+          </div>
+
+          <div class="navbar-collapse collapse" id="navbar-collapse">
+        <nav role="navigation">
+                                            <div class="region region-navigation">
+    <section id="block-menu-block-2" class="block block-menu-block clearfix">
+
+      
+  <div class="menu-block-wrapper menu-block-2 menu-name-menu-groupe-tf1-v2 parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first expanded menu-mlid-6924 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">Group <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf menu-mlid-6932"><a href="/en/group/who-we-are">Who we are</a></li>
+<li class="leaf menu-mlid-6951"><a href="/en/group/our-activities">Our activities</a></li>
+<li class="last leaf menu-mlid-6945"><a href="/en/group/our-directors">Our management team</a></li>
+</ul></li>
+<li class="expanded menu-mlid-6925 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">CSR commitments <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf menu-mlid-6930"><a href="/en/csr-commitments/csr-policy">CSR Policy</a></li>
+<li class="leaf menu-mlid-6942"><a href="/en/csr-commitments/our-actions">Our actions</a></li>
+<li class="last leaf menu-mlid-6937"><a href="/en/csr-commitments/our-foundations">Our Foundations</a></li>
+</ul></li>
+<li class="expanded menu-mlid-7014 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">Innovation <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf menu-mlid-6957"><a href="/en/innovation/our-approach">Our approach</a></li>
+<li class="last leaf menu-mlid-6933"><a href="/en/innovation/our-accelerator-program">our accelerator program</a></li>
+</ul></li>
+<li class="expanded menu-mlid-6927 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">Investors <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf has-children menu-mlid-6954"><a href="/en/investors/results-and-publications">Results &amp; publications</a></li>
+<li class="leaf menu-mlid-7031"><a href="/en/investissors/regulated-information">Regulated information</a></li>
+<li class="leaf menu-mlid-6950"><a href="/en/investors/results-and-publications#documents">History of results</a></li>
+<li class="leaf has-children menu-mlid-6944"><a href="/en/investors/shareholders">Shareholders</a></li>
+<li class="leaf menu-mlid-6936"><a href="/en/investors/shareholders#ag">General Meetings</a></li>
+<li class="leaf menu-mlid-7032"><a href="/en/investissors/governance">Governance</a></li>
+<li class="last leaf menu-mlid-7034"><a href="/en/investisseurs/colorbox-agenda" data-inner-width="480px" data-inner-height="90%" data-pos-bottom="0" data-pos-right="0" data-classname="agenda" class="colorbox-node">Agenda</a></li>
+</ul></li>
+<li class="expanded menu-mlid-6926 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">Talents <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf menu-mlid-6956"><a href="/en/talents/our-hr-policy">Our hr policy</a></li>
+<li class="last leaf menu-mlid-6946"><a href="/en/talents/join-us">Join us</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-6923"><a href="/en/press">Press</a></li>
+</ul></div>
+
+</section>
+<section id="block-block-25" class="block block-block clearfix">
+
+      
+  <p><a href="#block-social-media-links-social-media-links">Contact</a></p>
+</section>
+<section id="block-locale-language" class="block block-locale clearfix">
+
+      
+  <ul class="language-switcher-locale-url"><li class="fr first"><a href="/fr/investisseurs/informations-r%C3%A9glement%C3%A9es/declaration-de-rachat-d-actions" class="language-link" xml:lang="fr">FR</a></li>
+<li class="en last active"><a href="/en/investisseurs/informations-r%C3%A9glement%C3%A9es/declaration-de-rachat-d-actions" class="language-link active" xml:lang="en">EN</a></li>
+</ul>
+</section>
+<section id="block-views-exp-recherche-page-en" class="block block-views clearfix">
+
+      
+  <form action="/en/search-results" method="get" id="views-exposed-form-recherche-page-en" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-search-api-multi-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_multi_fulltext">
+                  <label for="edit-search-api-multi-fulltext">
+            Recherche          </label>
+                        <div class="views-widget">
+          <img class="input-search-logo" src="/sites/all/themes/tf1/images/loupe.svg" alt="icon-cherche" />
+          <div class="form-item form-item-search-api-multi-fulltext form-type-textfield form-group"><input class="form-control form-text" type="text" id="edit-search-api-multi-fulltext" name="search_api_multi_fulltext" value="" size="30" maxlength="128" /></div>          <img class="input-close-logo" src="/sites/all/themes/tf1/images/close.svg" alt="icon-close">
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <button type="submit" id="edit-submit-recherche" name="" value="New search" class="btn btn-primary form-submit">New search</button>
+    </div>
+      </div>
+</div>
+</div></form>
+</section>
+  </div>
+                  </nav>
+      </div>
+      </div>
+</header>
+<script src="/sites/all/themes/tf1/js/menu.js"></script>
+
+<div class="main-container container">
+    <header role="banner" id="page-header">
+    
+      </header> <!-- /#page-header -->
+
+  <div class="row">
+
+    <section class="col-sm-12">
+                  <a id="main-content" href="#contenu-page" ><span></span></a>
+                    <h1 class="page-header">Weekly disclosure</h1>
+                                                  <a name="contenu-page" id="contenu-page"></a>
+        <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  <div class="view view-declaration-de-rachat-d-actions view-id-declaration_de_rachat_d_actions view-display-id-modale view-dom-id-e5a32118a74dfb1bbe5243e60e4b0170">
+        
+  
+  
+      <div class="view-content">
+      <div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2020  
+</caption>
+      <tbody>
+          <tr class="odd views-row-first views-row-last">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">16-03-2020</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares on 12 March 2020          </td>
+                  <td class="views-field views-field-filesize" >
+            130.34 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/h_10_12032020_-_decl_hebdo_rachat_9_au_13_03_2020_-_v_uk_v2.pdf" target="_blank"
+        type="application/pdf; length=133473">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2019  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">01-04-2019</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares from 25 March to 1 April 2019           </td>
+                  <td class="views-field views-field-filesize" >
+            122.65 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/h_04_010419_-_decl_hebdo_rachat_25_03_au_01_04_2019_-_v_uk.pdf" target="_blank"
+        type="application/pdf; length=125594">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even views-row-last">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">22-03-2019</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares from 14 to 22 March 2019           </td>
+                  <td class="views-field views-field-filesize" >
+            144.25 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/h_03_220319_-_decl_hebdo_rachat_14_au_22_03_2019_-_v_uk_1.pdf" target="_blank"
+        type="application/pdf; length=147717">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2016  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">27-09-2016</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares from 09/19/2016 to 09/23/2016          </td>
+                  <td class="views-field views-field-filesize" >
+            43.97 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/h_10_-_declaration_rachats_uk_19_au_23_09_2016_page_1_et_2.pdf" target="_blank"
+        type="application/pdf; length=45023">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">20-09-2016</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares from 09/12/2016 to 09/16/2016           </td>
+                  <td class="views-field views-field-filesize" >
+            52.67 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/009_-_declaration_uk_rachats_12_09_au_16_09_2016.pdf" target="_blank"
+        type="application/pdf; length=53938">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">12-09-2016</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares from 09/05/2016 to 09/09/2016          </td>
+                  <td class="views-field views-field-filesize" >
+            45.52 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/008_-_declaration_uk_rachats_05_09_au_09_09_2016_1.pdf" target="_blank"
+        type="application/pdf; length=46614">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">13-06-2016</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            11.66 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/005_-_declaration_uk_du_13_juin_2016.pdf" target="_blank"
+        type="application/pdf; length=11936">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">30-05-2016</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            11.81 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/004_-_declaration_uk_du_30_mai_2016.pdf" target="_blank"
+        type="application/pdf; length=12097">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even views-row-last">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">23-05-2016</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            12.09 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/003_-_declaration_uk_du_23_mai_2016_0.pdf" target="_blank"
+        type="application/pdf; length=12377">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">17-05-2016</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.1 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/002_-_declaration_uk_du_17_mai_2016.pdf" target="_blank"
+        type="application/pdf; length=12386">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">12-05-2016</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            11.83 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/001_-_declaration_uk_du_12_mai_2016.pdf" target="_blank"
+        type="application/pdf; length=12117">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2015  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">28-09-2015</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.04 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/007_-_declaration_uk_du_28_septembre_2015.pdf" target="_blank"
+        type="application/pdf; length=12327">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">21-09-2015</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.24 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/006_-_declaration_uk_du_21_septembre_2015.pdf" target="_blank"
+        type="application/pdf; length=12537">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">14-09-2015</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.37 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/005_-_declaration_uk_du_14_septembre_2015.pdf" target="_blank"
+        type="application/pdf; length=12668">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">07-09-2015</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.15 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/004_-_declaration_uk_du_7_septembre_2015.pdf" target="_blank"
+        type="application/pdf; length=12438">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">31-08-2015</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.03 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/003_-_declaration_uk_du_31_aout_2015.pdf" target="_blank"
+        type="application/pdf; length=12317">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">24-08-2015</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            11.93 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/002_-_declaration_uk_du_24_aout_2015.pdf" target="_blank"
+        type="application/pdf; length=12219">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">17-08-2015</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            11.7 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/pdf-financiers/001_-_declaration_uk_du_17_aout_2015.pdf" target="_blank"
+        type="application/pdf; length=11983">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2013  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">01-03-2013</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.88 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_01_march_2013.pdf" target="_blank"
+        type="application/pdf; length=13184">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">18-01-2013</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            15.47 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_18_january_2013.pdf" target="_blank"
+        type="application/pdf; length=15838">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2012  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">29-05-2012</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            12.96 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_29_may_2012.pdf" target="_blank"
+        type="application/pdf; length=13270">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">21-05-2012</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.96 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_21_may_2012.pdf" target="_blank"
+        type="application/pdf; length=13266">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">10-04-2012</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            12.86 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_10_april_2012.pdf" target="_blank"
+        type="application/pdf; length=13170">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">12-03-2012</span>          </td>
+                  <td class="views-field views-field-title" >
+             Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            12.84 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_12_march_2012_1.pdf" target="_blank"
+        type="application/pdf; length=13144">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2011  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">19-12-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            58.51 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_19_december_2011.pdf" target="_blank"
+        type="application/pdf; length=59912">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">21-11-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.39 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_21_november_2011.pdf" target="_blank"
+        type="application/pdf; length=13714">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">10-10-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.52 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_10_october_2011.pdf" target="_blank"
+        type="application/pdf; length=13842">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">26-09-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.56 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_26_september_2011.pdf" target="_blank"
+        type="application/pdf; length=13882">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">19-09-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.54 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_19_september_2011.pdf" target="_blank"
+        type="application/pdf; length=13865">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">12-09-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.66 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_12_september_2011.pdf" target="_blank"
+        type="application/pdf; length=13989">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">05-09-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.42 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_5_september_2011.pdf" target="_blank"
+        type="application/pdf; length=13745">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">29-08-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.72 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_29_august_2011.pdf" target="_blank"
+        type="application/pdf; length=14045">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">22-08-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            58.69 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_22_august_2011.pdf" target="_blank"
+        type="application/pdf; length=60101">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">16-08-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            57.76 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_16_august_2011.pdf" target="_blank"
+        type="application/pdf; length=59148">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">08-08-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+             Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            56.91 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_08_august_2011.pdf" target="_blank"
+        type="application/pdf; length=58278">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">27-06-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            13.43 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_27_june_2011.pdf" target="_blank"
+        type="application/pdf; length=13753">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">20-06-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            13.66 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_20_june_2011.pdf" target="_blank"
+        type="application/pdf; length=13986">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">14-06-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            13.42 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_14_june_2011.pdf" target="_blank"
+        type="application/pdf; length=13746">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">01-06-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+             Monthly disclosure of the total number of shares and voting rights - 31/05/2011          </td>
+                  <td class="views-field views-field-filesize" >
+            16.83 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/may.pdf" target="_blank"
+        type="application/pdf; length=17233">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">28-03-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            13.42 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_28_march_2011.pdf" target="_blank"
+        type="application/pdf; length=13738">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">21-03-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            13.62 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_21_march_2011.pdf" target="_blank"
+        type="application/pdf; length=13944">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">07-03-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            13.37 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_7_march_2011.pdf" target="_blank"
+        type="application/pdf; length=13689">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">02-03-2011</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            13.4 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/disclosure_of_trading_on_2_march_2011.pdf" target="_blank"
+        type="application/pdf; length=13722">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2008  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">09-04-2008</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            40.45 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/nt_-_declaration_hebdomadaires_des_transactions__0.pdf" target="_blank"
+        type="application/pdf; length=41420">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">07-04-2008</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            45.79 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/nt_-_declaration_des_transactions_sur_actions_0.pdf" target="_blank"
+        type="application/pdf; length=46889">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2007  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">07-09-2007</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            59.7 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/nt_communique_mensuel.pdf" target="_blank"
+        type="application/pdf; length=61130">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">16-08-2007</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            35.13 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/16.08.2007.pdf" target="_blank"
+        type="application/pdf; length=35972">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">06-08-2007</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            59.7 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/06.08.2007.pdf" target="_blank"
+        type="application/pdf; length=61130">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2006  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">16-10-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            36.26 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/24_octobre.pdf" target="_blank"
+        type="application/pdf; length=37130">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">09-10-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            38.84 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/9_octobre_1.pdf" target="_blank"
+        type="application/pdf; length=39777">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">09-10-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            38.84 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/9_octobre.pdf" target="_blank"
+        type="application/pdf; length=39777">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">06-10-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            37.09 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/6_octobre.pdf" target="_blank"
+        type="application/pdf; length=37982">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">29-09-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares           </td>
+                  <td class="views-field views-field-filesize" >
+            38.75 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/29_septembre.pdf" target="_blank"
+        type="application/pdf; length=39675">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">07-08-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            31.29 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/7_aout.pdf" target="_blank"
+        type="application/pdf; length=32039">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">17-06-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            37.64 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/17_juillet.pdf" target="_blank"
+        type="application/pdf; length=38544">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">29-05-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            37.46 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/29_mai_2006.pdf" target="_blank"
+        type="application/pdf; length=38364">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">23-05-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            37.46 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/23_mai_2006_1.pdf" target="_blank"
+        type="application/pdf; length=38360">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">23-05-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            37.46 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/23_mai_2006_0.pdf" target="_blank"
+        type="application/pdf; length=38360">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">17-05-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            37.46 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/5_mai_2006_0.pdf" target="_blank"
+        type="application/pdf; length=38360">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">17-05-2006</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            36.65 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/4_mai_2006.pdf" target="_blank"
+        type="application/pdf; length=37533">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2005  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">23-05-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            9.07 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/23052005_0.pdf" target="_blank"
+        type="application/pdf; length=9284">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">17-05-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            9.07 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/17052005_0.pdf" target="_blank"
+        type="application/pdf; length=9285">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">09-05-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            10.03 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/09052005.pdf" target="_blank"
+        type="application/pdf; length=10269">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">26-04-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            12.89 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/26avril.pdf" target="_blank"
+        type="application/pdf; length=13197">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">21-04-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            77.02 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/21042005.pdf" target="_blank"
+        type="application/pdf; length=78873">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">12-04-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            10.96 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/12042005.pdf" target="_blank"
+        type="application/pdf; length=11221">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">06-04-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            10.96 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/6_avril_2005.pdf" target="_blank"
+        type="application/pdf; length=11221">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">18-02-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.73 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/18022005.pdf" target="_blank"
+        type="application/pdf; length=14063">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">18-02-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.73 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/18022005_0.pdf" target="_blank"
+        type="application/pdf; length=14063">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">18-02-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.73 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/18022005_1.pdf" target="_blank"
+        type="application/pdf; length=14063">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">07-02-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            13.47 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/07022005.pdf" target="_blank"
+        type="application/pdf; length=13798">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">31-01-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            14.98 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/31012005.pdf" target="_blank"
+        type="application/pdf; length=15341">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">17-01-2005</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            14.98 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/17012005_0.pdf" target="_blank"
+        type="application/pdf; length=15341">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+<div class="table-responsive">
+<table class="views-table cols-0 table table-hover table-striped" >
+       <caption>
+  
+    2004  
+</caption>
+      <tbody>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">29-11-2004</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            8.73 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/29112004_0.pdf" target="_blank"
+        type="application/pdf; length=8938">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">15-11-2004</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            8.95 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/15112004.pdf" target="_blank"
+        type="application/pdf; length=9160">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-field-date" >
+            <span class="date-display-single">05-11-2004</span>          </td>
+                  <td class="views-field views-field-title" >
+            Disclosure of trading in own shares          </td>
+                  <td class="views-field views-field-filesize" >
+            86.93 KB          </td>
+                  <td >
+            
+<div class="field-fichier-pdf">
+        <a  href="https://www.groupe-tf1.fr/sites/default/files/05112004.pdf" target="_blank"
+        type="application/pdf; length=89017">
+        <span class="file">
+            <img class="file-icon" alt="" title="application/pdf" src="/sites/all/themes/tf1/images/download.png" /> 
+        </span>  
+    </a>
+    </div>          </td>
+              </tr>
+      </tbody>
+</table>
+  </div>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+</section>
+  </div>
+    </section>
+
+  </div>
+</div>
+
+  <footer class="footer container">
+      <div class="region region-footer">
+    <section id="block-block-28" class="block block-block block-logo-block clearfix">
+
+      
+  <a href="/en" title="Groupe TF1"><img class="img-responsive b-lazy" alt="Groupe TF1" title="Groupe TF1" data-src="/sites/all/themes/tf1/images/logo-blanc.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a>
+</section>
+<section id="block-bean-site-nos-autres-sites-replicate" class="block block-bean autres-sites clearfix">
+
+      
+  <div class="entity entity-bean bean-liens-modales tf1-delta-site--nos-autres-sites-replicate clearfix">
+        <div class="content">
+    
+<div class="paragraphs-items paragraphs-items-field-liens paragraphs-items-field-liens-full paragraphs-items-full">
+  
+  <div class="field-liens">
+    <div class="entity entity-paragraphs-item paragraphs-item-lien-modale-bean" data-paragraphs-id="30">
+  <div class="content">
+    
+  <div class="field-titre-lien" >
+    <a rel="nofollow" href="/en/block/site--bloc-nos-autres-sites-repl" data-classname="bloc-modale" class="colorbox-node">
+      <span>Our other websites</span>
+            <span class="arrow"></span>
+      
+    </a>
+  </div>
+  </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
+
+</section>
+<div id="block-social-media-links-social-media-links" class="block block-social-media-links" >
+  <div>
+              <h2 class="block-title">Follow Us</h2>
+            
+      <div class="content" >
+        <ul class="social-media-links platforms inline horizontal"><li  class="linkedin first"><a href="http://www.linkedin.com/company/tf1" title="LinkedIn"><img src="https://www.groupe-tf1.fr/sites/all/modules/custom/messages_sociaux/SVG/linkedin.svg" alt="LinkedIn icon" /></a></li><li  class="twitter last"><a href="http://www.twitter.com/GroupeTF1" title="Twitter"><img src="https://www.groupe-tf1.fr/sites/all/modules/custom/messages_sociaux/SVG/twitter.svg" alt="Twitter icon" /></a></li></ul>      </div>
+  </div>
+</div><section id="block-menu-block-3" class="block block-menu-block clearfix">
+
+        <h2 class="block-title">Sitemap</h2>
+    
+  <div class="menu-block-wrapper menu-block-3 menu-name-menu-groupe-tf1-v2 parent-mlid-0 menu-level-1">
+  <ul class="menu nav"><li class="first expanded menu-mlid-6924 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">Group <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf menu-mlid-6932"><a href="/en/group/who-we-are">Who we are</a></li>
+<li class="leaf menu-mlid-6951"><a href="/en/group/our-activities">Our activities</a></li>
+<li class="last leaf menu-mlid-6945"><a href="/en/group/our-directors">Our management team</a></li>
+</ul></li>
+<li class="expanded menu-mlid-6925 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">CSR commitments <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf menu-mlid-6930"><a href="/en/csr-commitments/csr-policy">CSR Policy</a></li>
+<li class="leaf menu-mlid-6942"><a href="/en/csr-commitments/our-actions">Our actions</a></li>
+<li class="last leaf menu-mlid-6937"><a href="/en/csr-commitments/our-foundations">Our Foundations</a></li>
+</ul></li>
+<li class="expanded menu-mlid-7014 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">Innovation <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf menu-mlid-6957"><a href="/en/innovation/our-approach">Our approach</a></li>
+<li class="last leaf menu-mlid-6933"><a href="/en/innovation/our-accelerator-program">our accelerator program</a></li>
+</ul></li>
+<li class="expanded menu-mlid-6927 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">Investors <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf has-children menu-mlid-6954"><a href="/en/investors/results-and-publications">Results &amp; publications</a></li>
+<li class="leaf menu-mlid-7031"><a href="/en/investissors/regulated-information">Regulated information</a></li>
+<li class="leaf menu-mlid-6950"><a href="/en/investors/results-and-publications#documents">History of results</a></li>
+<li class="leaf has-children menu-mlid-6944"><a href="/en/investors/shareholders">Shareholders</a></li>
+<li class="leaf menu-mlid-6936"><a href="/en/investors/shareholders#ag">General Meetings</a></li>
+<li class="leaf menu-mlid-7032"><a href="/en/investissors/governance">Governance</a></li>
+<li class="last leaf menu-mlid-7034"><a href="/en/investisseurs/colorbox-agenda" data-inner-width="480px" data-inner-height="90%" data-pos-bottom="0" data-pos-right="0" data-classname="agenda" class="colorbox-node">Agenda</a></li>
+</ul></li>
+<li class="expanded menu-mlid-6926 dropdown"><span class="dropdown-toggle nolink" data-toggle="dropdown" tabindex="0">Talents <span class="caret"></span></span><ul class="dropdown-menu"><li class="first leaf menu-mlid-6956"><a href="/en/talents/our-hr-policy">Our hr policy</a></li>
+<li class="last leaf menu-mlid-6946"><a href="/en/talents/join-us">Join us</a></li>
+</ul></li>
+<li class="last leaf menu-mlid-6923"><a href="/en/press">Press</a></li>
+</ul></div>
+
+</section>
+<section id="block-block-24" class="block block-block tf1-bloc-copyright clearfix">
+
+      
+  <div class="tf1-copyright">
+	Copyright © 2020 - TF1 - All rights reserved</div>
+<div class="bottom-access">
+<ul class="clearfix"><li>
+			<a href="/fr/mentions-legales">Legal notices and TOS</a></li>
+<li>
+			<a href="/fr/rgpd">Privacy policy</a></li>
+<li>
+			<a href="/fr/cookies">Cookies policy</a></li>
+<li>
+			<a href="/en/photos-rights-reserved">Copyright</a></li>
+<li>
+			<a href="/en/rss.xml" target="_blank" rel="noreferrer noopener">RSS</a></li>
+</ul></div>
+</section>
+<section id="block-block-23" class="block block-block tf1-bloc-informations clearfix">
+
+        <h2 class="block-title">Request for information</h2>
+    
+  <p>
+	TF1 - Group Communications Department (n°46)<br />
+	1 Quai du Point du Jour<br />
+	92656 Boulogne Cedex</p>
+</section>
+<section id="block-block-21" class="block block-block tf1-bloc-contacts-investisseurs clearfix">
+
+        <h2 class="block-title">Investor contacts</h2>
+    
+  <p>
+	<strong>Philippe DENERY</strong><br />
+	Senior Executive Vice President, Finance and Purchasing</p>
+<p>
+	<strong>Stéphanie LAVAL</strong><br />
+	Head of Financial Communication and Investor Relations</p>
+<p>
+	<a href="mailto:comfi@tf1.fr">comfi@tf1.fr</a></p>
+</section>
+<section id="block-block-26" class="block block-block tf1-bloc-respect-zone clearfix">
+
+      
+  <p>
+	<a href="https://www.respectzone.org/fr" lang="fr" target="_blank" title="Respect Zone" xml:lang="fr" rel="noreferrer noopener" xml:lang="fr"><img alt="Respect Zone" height="45" class="b-lazy" data-src="/sites/all/themes/omegatf1/images/rz2.png" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /></a><br />
+	Partner of <strong>RESPECT ZONE</strong></p>
+</section>
+<section id="block-block-29" class="block block-block clearfix">
+
+      
+  <style>
+<!--/*--><![CDATA[/* ><!--*/
+
+@media screen and (max-width: 1000px) {
+.tf1-bloc-informations {
+
+    grid-column: 3 / 3;
+    grid-row: 2 / 4;
+
+}}
+/*--><!]]>*/
+</style>
+</section>
+  </div>
+  </footer>
+  <script>var eu_cookie_compliance_cookie_name = "";</script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_XDYXRa_bW30lMlnaFpwYoJXjV1NkjHtnJYFfL_BO8Mc.js"></script>
+<script src="https://www.groupe-tf1.fr/sites/default/files/js/js_8fJZBDTWFYpgUHx4OOuHhwGFJSI5-fiToWNYojIdHaM.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.eu01.nr-data.net","licenseKey":"4820c7d252","applicationID":"18757674","transactionName":"MhBSZQoZCBdSUhdeWgtaZUMRVw8KV1QbGUUNBQ==","queueTime":0,"applicationTime":9,"atts":"HldRE0IDGxk=","errorBeacon":"bam.eu01.nr-data.net","agent":""}</script></body>
+</html>

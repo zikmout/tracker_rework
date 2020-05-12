@@ -41,6 +41,24 @@
             <small class="form-text text-muted">Enter as many Keywords as relevant. Type "&lsaquo;MIX&rsaquo;" to use all Keywords already used in this watchlist</small>
           </div>
 
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
+
+          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <center>
+                  <br>
+                  <br>
+                <iframe id="inlineFrameExample"
+                      title="Inline Frame Example"
+                       width="700" height="800"
+                      src="{{ line['target'] }}">
+                  </iframe>
+                </center>
+              </div>
+            </div>
+          </div>
+
           <div id="bagOfMailsContainer" class="mt-2">
             <label for="inputMailingList" id="inputTarget">Email Recipients</label>
             <input type="hidden" class="form-control" name="inputMailingListOld" value="{{ json_encode(line['mailing_list']) }}">
@@ -66,6 +84,7 @@
 <link href="{{ static_url('custom/tagit/jquery.tagit.css') }}" type="text/css" rel="stylesheet">
 <link href="{{ static_url('custom/tagit/tagit.ui-zendesk.css') }}" type="text/css" rel="stylesheet">
 <script>
+
   $(document).ready(function() {
     $("#inputKeywords").tagit({
     fieldName: "inputKeywords"
@@ -77,6 +96,17 @@
     //caseSensitive: false
     //tagLimit
     });
+
+    $('body *').bind('mouseover mouseout', function(event) {
+        if (event.type == 'mouseover') {
+            $(this).data('bgcolor', $(this).css('background-color'));
+            $(this).css('background-color','rgba(255,0,0,.5)');
+        } else {
+            $(this).css('background-color', $(this).data('bgcolor'));
+        }
+        return false;
+    });
+
   });
 </script>
 {% end %}

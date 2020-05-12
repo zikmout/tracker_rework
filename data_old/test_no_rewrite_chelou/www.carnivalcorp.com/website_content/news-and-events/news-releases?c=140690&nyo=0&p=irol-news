@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"37278538"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="News Releases | Carnival Corporation &amp; plc" />
+<meta property="og:site_name" content="Carnival Corporation &amp; plc" />
+<link rel="canonical" href="https://www.carnivalcorp.com/news-and-events/news-releases/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.carnivalcorp.com/news-and-events/news-releases" />
+<meta property="og:title" content="News Releases | Carnival Corporation &amp; plc" />
+<meta property="og:description" content="The Investor Relations website contains information about Carnival Corporation &amp; plc&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" hreflang="en" href="https://www.carnivalcorp.com/news-and-events/news-releases" />
+<link rel="revision" href="https://www.carnivalcorp.com/news-and-events/news-releases" />
+
+    <title>News Releases | Carnival Corporation &amp; plc</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb47771/files/css/css_qN60oAeeiO9vVhqQvUu7Tq_8Rr8AaHZtHyM_Kzjj09A.css?q97jk9" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb47771/files/css/css_bu5HlxXscASzVhbCvc3l-Dn7ZJTX6LAFio6_e_W1Y8Q.css?q97jk9" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans:400,300italic,300,400italic,600,600italic,700,700italic,800,800italic" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb47771/files/css/css_Zy8wJNwyRvTYGktZWux8WLvPMoewORQh5P91IfceGCs.css?q97jk9" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb47771/files/css/css_jRj2daOgX04jX5PUoygvStsT6BvR5a2CTkpSrQExfrE.css?q97jk9" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb47771/files/css/css_CqlDI_pNM2OZ_YAPcGLuhq6mgXVFZ8B9X0G2nj-vhW8.css?q97jk9" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb47771/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+    
+  
+                    <script>var w=window;if(w.performance||w.mozPerformance||w.msPerformance||w.webkitPerformance){var d=document;AKSB=w.AKSB||{},AKSB.q=AKSB.q||[],AKSB.mark=AKSB.mark||function(e,_){AKSB.q.push(["mark",e,_||(new Date).getTime()])},AKSB.measure=AKSB.measure||function(e,_,t){AKSB.q.push(["measure",e,_,t||(new Date).getTime()])},AKSB.done=AKSB.done||function(e){AKSB.q.push(["done",e])},AKSB.mark("firstbyte",(new Date).getTime()),AKSB.prof={custid:"543865",ustr:"",originlat:"0",clientrtt:"47",ghostip:"23.200.87.118",ipv6:true,pct:"10",clientip:"2a01:cb18:8401:2100:fd63:bb32:2d5:c2c0",requestid:"2c54c3f0",region:"20559",protocol:"",blver:14,akM:"",akN:"ae",akTT:"O",akTX:"1",akTI:"2c54c3f0",ai:"505979",ra:"false",pmgn:"",pmgi:"",pmp:"",qc:""},function(e){var _=d.createElement("script");_.async="async",_.src=e;var t=d.getElementsByTagName("script"),t=t[t.length-1];t.parentNode.insertBefore(_,t)}(("https:"===d.location.protocol?"https:":"http:")+"//ds-aksb-a.akamaihd.net/aksb.min.js")}</script>
+                    </head>
+  <body class="body-sidebars-none nir-node nir-node--type-nir-landing-page nir-node--40821 path-node page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#ndq-content">
+        Skip to Main Content
+      </a>
+    </div>
+
+
+
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div hidden>
+	<span id="new-window-0">Link, opens a new tab window</span>
+	<span id="accordion-1">Accordion Control Group Buttons</span>
+	<span id="new-window-2">Opens an external site in a new window</span>
+</div>
+
+<div class="bodyWrap">
+	<header>
+		<div class="toggleMap" role="button" tabindex="0" id="main-menu">
+			<div class="inner">
+				<div class="menu-ico">
+					<div class="topLeft"></div>
+					<div class="topRight"></div>
+					<div class="bottomLeft"></div>
+					<div class="bottomRight"></div>
+				</div>
+				<span class="togText">Menu</span></div>
+		</div>
+		<div class="header-contain">
+			<div class="logosWrap">
+				<div class="logo col-xs-6"><a href="/"><img class="svgImg" src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/carnival-corp-logo.svg" alt="Carnival Corporation logo"/></a></div>
+				<div class="header-brands col-xs-6 invisible">
+
+											
+    
+                  
+      <h2 class="visually-hidden" id="block-brandslogos-menu">Brands Logos</h2>
+    
+
+                    
+
+  <div class="header-brands-slider" tabindex="0">
+
+              
+        <div class="item">
+          <a href="http://www.carnival.com/" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/carnival.png" alt="Carnival Cruises"/>
+          </a>
+
+                            </div>
+              
+        <div class="item">
+          <a href="http://www.costacruise.com/" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/costa.png" alt="Costa"/>
+          </a>
+
+                            </div>
+              
+        <div class="item">
+          <a href="http://www.pocruises.com.au/pages/default.aspx" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/po-au.png" alt="P&amp;O Australia"/>
+          </a>
+
+                            </div>
+              
+        <div class="item">
+          <a href="http://www.pocruises.co.uk/" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/po.png" alt="P&amp;O Cruises"/>
+          </a>
+
+                            </div>
+              
+        <div class="item">
+          <a href="http://www.princess.com/" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/princess2.png" alt="Princess Cruises"/>
+          </a>
+
+                            </div>
+              
+        <div class="item">
+          <a href="http://www.hollandamerica.com/" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/holland.png" alt="Holland America"/>
+          </a>
+
+                            </div>
+              
+        <div class="item">
+          <a href="http://www.aida.de/" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/aida.png" alt="Aida"/>
+          </a>
+
+                            </div>
+              
+        <div class="item">
+          <a href="http://www.cunard.com/" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/cunard.png" alt="Cunard"/>
+          </a>
+
+                            </div>
+              
+        <div class="item">
+          <a href="http://www.seabourn.com/" target="_blank" tabindex="-1">
+            <img src="/sites/g/files/knoqqb47771/themes/site/nir_pid2855/client/images/head-brands-slider/seabourn.png" alt="Seabourn"/>
+          </a>
+
+                            </div>
+      
+  </div>
+  
+
+
+    
+					
+											
+    
+                  
+      <h2 class="visually-hidden" id="block-brandslogos-2-menu">Brands Logos</h2>
+    
+
+                        <ul class="brands-dropdown nav-ul">
+
+              
+        <li class="col-5 brand brand-carnival">
+          <a href="http://www.carnival.com/" target="_blank">Carnival Cruises</a>
+                            </li>
+              
+        <li class="col-5 brand brand-costa">
+          <a href="http://www.costacruise.com/" target="_blank">Costa</a>
+                            </li>
+              
+        <li class="col-5 brand brand-po-au">
+          <a href="http://www.pocruises.com.au/pages/default.aspx" target="_blank">P&amp;O Australia</a>
+                            </li>
+              
+        <li class="col-5 brand brand-po">
+          <a href="http://www.pocruises.co.uk/" target="_blank">P&amp;O Cruises</a>
+                            </li>
+              
+        <li class="col-5 brand brand-princess">
+          <a href="http://www.princess.com/" target="_blank">Princess Cruises</a>
+                            </li>
+              
+        <li class="col-5 brand brand-holland">
+          <a href="http://www.hollandamerica.com/" target="_blank">Holland America</a>
+                            </li>
+              
+        <li class="col-5 brand brand-aida">
+          <a href="http://www.aida.de/" target="_blank">Aida</a>
+                            </li>
+              
+        <li class="col-5 brand brand-cunard">
+          <a href="http://www.cunard.com/" target="_blank">Cunard</a>
+                            </li>
+              
+        <li class="col-5 brand brand-seabourn">
+          <a href="http://www.seabourn.com/" target="_blank">Seabourn</a>
+                            </li>
+          </ul>
+  
+
+
+    
+					
+				</div>
+			</div>
+
+							<div class="top-nav">
+					<nav class="main-nav" role="navigation">
+						<ul>
+							
+
+                  
+          
+
+                    
+              <li>
+          <a href="http://www.worldsleadingcruiselines.com/" target="_blank" rel="">Cruising</a>
+                  </li>
+      
+  
+
+
+    
+
+                  
+          
+
+                    
+              <li>
+          <a href="/corporate-information" target="" rel="" data-drupal-link-system-path="node/40791">Corporate Information</a>
+                  </li>
+      
+  
+
+
+    
+
+                  
+          
+
+                    
+              <li>
+          <a href="/media-center" target="" rel="" data-drupal-link-system-path="node/40796">Media Center</a>
+                  </li>
+      
+  
+
+
+    
+
+                  
+          
+
+                    
+              <li>
+          <a href="/investor-relations" target="" rel="" data-drupal-link-system-path="node/5806">Investor Relations</a>
+                  </li>
+      
+  
+
+
+    
+
+                  
+          
+
+                    
+              <li>
+          <a href="/governance" target="" rel="" data-drupal-link-system-path="node/40801">Governance</a>
+                  </li>
+      
+  
+
+
+    
+
+                  
+          
+
+                    
+              <li>
+          <a href="/sustainability" target="" rel="" data-drupal-link-system-path="node/40806">Sustainability</a>
+                  </li>
+      
+  
+
+
+    
+
+                  
+          
+
+                    
+              <li>
+          <a href="http://www.ocean.com/" target="_blank" rel="">OCEAN</a>
+                  </li>
+      
+  
+
+
+    
+
+                  
+          
+
+                    
+              <li>
+          <a href="/vendors-suppliers" target="" rel="" data-drupal-link-system-path="node/59256">Vendors/Suppliers</a>
+                  </li>
+      
+  
+
+
+    
+						</ul>
+					</nav>
+				</div>
+				<div class="clear"></div>
+					</div>
+	</header>
+
+	<div role="main">
+
+				<div class="hero-header clearfix">
+			<div class="container">
+				<div class="row wds-sub-nav">
+					
+    
+                  
+      <h2 class="visually-hidden" id="block-newsevents-menu">News Events</h2>
+    
+
+                    
+    
+
+              
+                  <div class="col-md-12"><h1>News &amp; Events</h1></div>
+          <div class="col-md-12 clearfix">
+            <ul class="nav-ul l1-nav clearfix">
+        
+                                  
+    
+
+              
+                      <li class="active">
+                <a href="/news-and-events/news-releases" target="" rel="" data-drupal-link-system-path="node/40821">News Releases</a>
+        
+              
+
+                  </li>
+        
+              
+                      <li>
+                <a href="/news-and-events/events-calendar/upcoming" target="" rel="" data-drupal-link-system-path="node/36776">Events Calendar</a>
+        
+              
+
+                  </li>
+        
+              
+                      <li>
+                <a href="/investor-services/email-alerts" target="" rel="" data-drupal-link-system-path="node/5946"> Email Alerts</a>
+        
+              
+
+                  </li>
+        
+      
+
+      
+              
+
+                    </ul>
+          </div>
+        
+      
+
+      
+
+
+    
+				</div>
+			</div>
+		</div>
+	
+
+			<div class="main-wrapper pad-top-50 pad-bottom-50 ">
+			<div class="container main-content">
+				<div id="ndq-content" tabindex="-1" class="ndq-40821">
+					<div class="row">
+
+																			<div class="col-md-12 l-2-page-heading">
+																	<h2>News Releases</h2>
+															</div>
+						
+						<div class="col-md-9 pad-bottom-25">
+							
+							  <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-websitenoticeblock-2" class="block--website-notice-block block--website-notice-block--40821 block--content--website-notice-block block--content--website-notice-block--40821 block--2c229de3-24a9-4cfa-bab5-52a80101c8a0 block--2c229de3-24a9-4cfa-bab5-52a80101c8a0--40821 block block-nir-website-notices block-website-notice-block">
+  
+    
+      
+  </div>
+<div id="block-nir-pid2855-content" class="block--system-main-block block--system-main-block--40821 block--content--system-main-block block--content--system-main-block--40821 block--5aca1e8e-94ae-431b-9cf3-9e5b9cd012c2 block--5aca1e8e-94ae-431b-9cf3-9e5b9cd012c2--40821 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              News Releases
+          </h1>
+    
+
+  <div>
+    
+<div class="panel-display boxton clearfix " >
+
+  <div class="block-region-contentmain"><div class="block--search-form block--search-form--40821 block--contentmain--search-form block--contentmain--search-form--40821 block--faa1c931-ee95-4140-b61c-ad5c04da5963 block--faa1c931-ee95-4140-b61c-ad5c04da5963--40821 block block-nir-search block-search-form">
+  
+    
+      <form data-block-uuid="faa1c931-ee95-4140-b61c-ad5c04da5963" action="/search" method="get" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-query js-form-item-query form-no-label">
+        <input type="search" name="query" size="60" maxlength="128" placeholder="Search" class="form-search required" required="required" aria-required="true" />
+
+        </div>
+<input type="hidden" name="f[0]" value="type:nir_news" />
+<input type="submit" name="op" value="Search" class="button button--primary js-form-submit form-submit" />
+
+</form>
+
+  </div>
+<div class="block--t-date-title block--nir-news__widget block--nir-news__widget--40821 block--contentmain--nir-news__widget block--contentmain--nir-news__widget--40821 block--8270469e-8120-4a0f-93ae-79ca65c3cde4 block--8270469e-8120-4a0f-93ae-79ca65c3cde4--40821 block block-nir-news block-nir-news__widget">
+  
+    
+      <div class="nir-widget">
+    <div class="nir-widget--content">
+          <div class="nir-widget--form">
+        <form data-drupal-selector="widget-form-base" action="/news-and-events/news-releases?c=140690&amp;nyo=0&amp;p=irol-news" method="get" id="widget-form-base" accept-charset="UTF-8">
+  <div class="nir-widgets--field-container js-form-wrapper form-wrapper" data-drupal-selector="edit-9e94094b-field-nir-news-category" id="edit-9e94094b-field-nir-news-category"><div class="js-form-item form-item js-form-type-select form-item-_e94094b-field-nir-news-category-value js-form-item-_e94094b-field-nir-news-category-value">
+      <label for="edit-9e94094b-field-nir-news-category-value">News Category</label>
+        <select class="two-col-field form-select" data-drupal-selector="edit-9e94094b-field-nir-news-category-value" multiple="multiple" name="9e94094b_field_nir_news_category[value][]" id="edit-9e94094b-field-nir-news-category-value"><option value="4076">AIDA Cruises</option><option value="4121">Carnival Australia</option><option value="4061">Carnival Cruise Lines</option><option value="4066">Costa Cruises</option><option value="4071">Cunard</option><option value="4081">Holland America Line</option><option value="4091">P&amp;O Cruises (Australia)</option><option value="4086">P&amp;O Cruises (UK)</option><option value="4096">Princess Cruises</option><option value="4101">Seabourn</option><option value="4056">UK Carnival Corporation &amp; plc</option><option value="4051">US Carnival Corporation &amp; plc</option></select>
+        </div>
+</div>
+<div class="nir-widgets--field-container nir-widgets--field-container--yeartimezone js-form-wrapper form-wrapper" data-drupal-selector="edit-9e94094b-year" id="edit-9e94094b-year"><div class="two-col-field form-item js-form-item js-form-type-select form-type-select form-item-9e94094b-year-value form-item-_e94094b-year-value js-form-item-_e94094b-year-value">
+      <label for="edit-9e94094b-year-value">Year</label>
+        <select data-drupal-selector="edit-9e94094b-year-value" id="edit-9e94094b-year-value" name="9e94094b_year[value]" class="form-select"><option value="_none">None</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option></select>
+        </div>
+</div>
+<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Filter" class="button button--primary js-form-submit form-submit" />
+<input data-drupal-selector="edit-9e94094b-widget-id" type="hidden" name="9e94094b_widget_id" value="9e94094b" />
+<input autocomplete="off" data-drupal-selector="form-fxa-wwxtxxftenqnn4zxkhk-15gfa-nf1gqa0cs-diy" type="hidden" name="form_build_id" value="form-FXa-wWXtxxfteNQnN4zXkhk-15gFA_Nf1gqA0cs_dIY" />
+<input data-drupal-selector="edit-widget-form-base" type="hidden" name="form_id" value="widget_form_base" />
+
+</form>
+
+      </div>
+        <div class="nir-widget--list">
+              <table id="tNews" class="nirtable">
+          <thead>
+            <th>Date</th>
+            <th>Title</th>
+            <th>&nbsp;</th>
+          </thead>
+          <tbody>
+            
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 27, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/disclosure-rights-attached-equity-shares" hreflang="en">DISCLOSURE OF RIGHTS ATTACHED TO EQUITY SHARES</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61291/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 24, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/cunard-extends-pause-voyages" hreflang="en">Cunard Extends Pause to Voyages </a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61286/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 21, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-names-jeffrey-j-gearhart-boards-directors" hreflang="en">Carnival Corporation Names Jeffrey J. Gearhart to Boards of Directors</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61251/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 14, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/princess-cruises-extends-temporary-pause-global-operations" hreflang="en">Princess Cruises Extends Temporary Pause of Global Operations Through June 30 Due to Global COVID-19 Outbreak</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61236/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 14, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/seabourn-extends-pause-global-ship-operations-through-june-30" hreflang="en">Seabourn Extends Pause To Global Ship Operations Through June 30, 2020</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61231/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 14, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-notification-transactions-15" hreflang="en">Carnival Corporation &amp; plc Notification of Transactions of Directors/PDMRS</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61226/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 08, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-announces-closing-11500-first-priority" hreflang="en">Carnival Corporation &amp; plc Announces Closing of 11.500% First-Priority Senior Secured Notes due 2023 and Exercise of Option for 5.75% Convertible Senior Notes due 2023</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61076/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 08, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-plc-voting-rights-and-capital-134" hreflang="en">Carnival Plc - Voting Rights and Capital</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61071/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 07, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-notification-transactions-14" hreflang="en">Carnival Corporation &amp; plc Notification of Transactions of Directors/PDMRS</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61056/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 07, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/results-annual-general-meeting-3" hreflang="en">Results of Annual General Meeting </a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61051/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 06, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-announces-closing-offering-71875000" hreflang="en">Carnival Corporation &amp; plc Announces Closing of Offering of 71,875,000 Shares of Common Stock</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61041/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 06, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-announces-closing-575-convertible" hreflang="en">Carnival Corporation &amp; plc Announces Closing of 5.75% Convertible Senior Notes due 2023</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/61036/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 01, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-announces-pricing-62500000-shares" hreflang="en">Carnival Corporation &amp; plc Announces Pricing of 62,500,000 Shares of Common Stock</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/60996/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Apr 01, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-announces-upsizing-and-pricing-11500" hreflang="en">Carnival Corporation &amp; plc Announces Upsizing and Pricing of 11.500% First-Priority Senior Secured Notes due 2023 and Pricing of 5.75% Senior Convertible Notes due 2023</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/60991/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Mar 31, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-public-offering-common-stock" hreflang="en">Carnival Corporation Public Offering of Common Stock</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/60986/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Mar 31, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-announces-offerings-senior-secured" hreflang="en">Carnival Corporation &amp; plc Announces Offerings of Senior Secured Notes due 2023 and Senior Convertible Notes due 2023</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/60966/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Mar 31, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-announces-offering-common-stock" hreflang="en">Carnival Corporation &amp; plc Announces Offering of Common Stock</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/60961/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Mar 31, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/release-carnival-corporation-plc-amendment-no-1-annual-report" hreflang="en">RELEASE OF CARNIVAL CORPORATION &amp; PLC AMENDMENT NO. 1 TO THE ANNUAL REPORT ON FORM 10-K/A FOR THE YEAR ENDED NOVEMBER 30, 2019</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/60981/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Mar 31, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/carnival-corporation-plc-releases-update-regarding-liquidity" hreflang="en">CARNIVAL CORPORATION &amp; PLC RELEASES UPDATE REGARDING LIQUIDITY, MANAGEMENT&#039;S PLANS AND UPDATES TO 2019 ANNUAL REPORT ON FORM 10-K</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/60971/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+<tr>
+
+      <td class="nir-widget--news--date-time">
+      Mar 30, 2020
+    </td>
+  
+
+  <td>
+    
+                  <div class="nir-widget--news--headline">
+          <a href="/news-releases/news-release-details/seabourn-pause-global-cruise-operations-additional-30-days" hreflang="en">Seabourn To Pause Global Cruise Operations For An Additional 30 Days</a>
+        </div>
+          
+    
+    
+    
+    
+  </td>
+
+
+  <td>
+          <div class="nir-widget--news--addl-formats">
+
+                            <div class="nir-widgets-file-link">
+    <a href="/node/60936/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+        
+      </div>
+    
+      </td>
+</tr>
+          </tbody>
+        </table>
+          </div>
+    <div class="nir-widget--pager">
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h3 id="pagination-heading" class="visually-hidden">Pagination</h3>
+    <ul class="pager__items js-pager__items">
+                                                        <li class="pager__item is-active">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=3" title="Go to page 4">
+            <span class="visually-hidden">
+              Page
+            </span>4</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=4" title="Go to page 5">
+            <span class="visually-hidden">
+              Page
+            </span>5</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=5" title="Go to page 6">
+            <span class="visually-hidden">
+              Page
+            </span>6</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=6" title="Go to page 7">
+            <span class="visually-hidden">
+              Page
+            </span>7</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=7" title="Go to page 8">
+            <span class="visually-hidden">
+              Page
+            </span>8</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=8" title="Go to page 9">
+            <span class="visually-hidden">
+              Page
+            </span>9</a>
+        </li>
+                          <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+                          <li class="pagerIcon pager__item pager__item--next">
+          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+                        <span aria-hidden="true">›</span>
+          </a>
+        </li>
+                          <li class="pagerIcon pager__item pager__item--last">
+          <a href="?c=140690&amp;nyo=0&amp;p=irol-news&amp;page=188" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+                        <span aria-hidden="true">»</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+    </div>
+    <div class="nir-widget--total-results">
+      
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+</div><!-- /.boxton -->
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+						</div>
+
+													<div class="col-md-3">
+
+																	<div class="col-md-12 callout inc-stock">
+										<div class="col-xs-3">
+											<h2>CCL</h2>
+										</div>
+										<div class="col-xs-9"> 											<div class="inc-stock-prices">
+												  <div class="region region-callout-stock">
+    <div id="block-stockquote-3" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--41131 block--callout-stock--market-data-block__stock-quote block--callout-stock--market-data-block__stock-quote--41131 block--eca23794-a881-4b96-a1d7-0d53d932fc36 block--eca23794-a881-4b96-a1d7-0d53d932fc36--41131 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+    
+      <div class='stock-quote__short'>
+    <div class="quote-wrapper">
+                                                                
+          <span data-exchange="">
+            <span class="price"></span>
+          </span>
+
+
+            </div>
+</div>
+  </div>
+<div id="block-stockquote-4" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--41131 block--callout-stock--market-data-block__stock-quote block--callout-stock--market-data-block__stock-quote--41131 block--3cac1c48-ceee-4cd4-931a-916340fc3974 block--3cac1c48-ceee-4cd4-931a-916340fc3974--41131 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+    
+      <div class='stock-quote__short'>
+    <div class="quote-wrapper">
+                                                                
+          <span data-exchange="">
+            <span class="price"></span>
+          </span>
+
+
+                                                                
+          <span data-exchange="">
+            <span class="price"></span>
+          </span>
+
+
+            </div>
+</div>
+  </div>
+
+  </div>
+
+											</div>
+										</div>
+
+										<br clear="all"/>
+										<div class="disclaimer mt-1">Copyright West LLC. <br/> Minimum 15 minutes delayed.</div>
+										<div class="callout-footer"><a href="/stock-performance/stock-quote-chart/quote" class="readmore">View All</a></div>
+									</div>
+								
+								
+
+								
+							</div>
+											</div>
+
+									</div>
+			</div>
+		</div>
+		
+			<div class="brands-footer">
+			<div class="container">
+				<div class="row">
+					  <div class="region region-f-brands">
+    <div id="block-widgetfaqsv2" class="block--faq-brands block--nir-faq__widget block--nir-faq__widget--40821 block--f-brands--nir-faq__widget block--f-brands--nir-faq__widget--40821 block--4f9c07c9-c9c0-4f04-8485-0a08593d7a13 block--4f9c07c9-c9c0-4f04-8485-0a08593d7a13--40821 block block-nir-faq block-nir-faq__widget">
+  
+    
+      <div class="nir-widget">
+    <div class="nir-widget--content">
+        <div class="nir-widget--list">
+              <a href="#" data-open="Show All" data-closed="Hide All" class="nir-faq-widget--accordion-link nir-faq--closed">Show All</a>
+<article role="article" class="clearfix node node--nir-faq--nir-faq-widget-list-accordion node--type-nir-faq node--view-mode-nir-faq-widget-list-accordion">
+
+    
+        
+
+    <div class="brands-slider">
+        
+    <div class="item"><div class="brand-image"><a href="http://www.aida.de/" target="_blank"><img alt="AIDA logo" data-entity-type="file" data-entity-uuid="d72a17a3-ed6f-4a55-8d22-0470787b5dbb" src="/system/files-encrypted/nasdaq_kms/inline-images/07-AIDA_1.png" /></a></div>
+
+<p>AIDA Cruises is one of the fastest growing and commercially most successful tourism businesses in Germany. The company employs about 9,000 people from 40 countries on shore and on board AIDA ships.<br /><br />
+Visit: <a href="http://www.aida.de/" target="_blank"><strong>www.aida.de</strong></a></p></div>
+      
+    <div class="item"><div class="brand-image">
+<div class="inner"><a href="http://www.carnival.com/" target="_blank"><img alt="Carnival Cruises Logo" data-entity-type="file" data-entity-uuid="c87b280c-83ea-4b03-83dd-b247d8252c5f" src="/system/files-encrypted/nasdaq_kms/inline-images/carnival-cruises_3.png" /></a></div>
+</div>
+
+<p>Carnival Cruise Line is the most popular cruise brand in North America and operates 27 ships designed to foster exceptionally fun and memorable vacation experiences at an outstanding value.<br /><br />
+Visit: <a href="http://www.carnival.com/" target="_blank"><strong>www.carnival.com</strong></a></p></div>
+      
+    <div class="item"><div class="brand-image"><a href="http://www.costacruise.com" target="_blank"><img alt="Costa Cruises Logo" data-entity-type="file" data-entity-uuid="a66504f3-c241-47cb-ab09-6bc0f9e99d56" src="/system/files-encrypted/nasdaq_kms/inline-images/Costa_Logo4c.png" /></a></div>
+
+<p>Costa Cruises offer the best in Italian style, hospitality and cuisine aboard the largest fleet in Europe providing dream holidays with the utmost in terms of fun and relaxation.<br /><br />
+Visit: <a href="http://www.costacruise.com/" target="_blank"><strong>www.costacruise.com</strong></a></p></div>
+      
+    <div class="item"><div class="brand-image"><a href="http://www.cunard.com/" target="_blank"><img alt="Cunard Logo" data-entity-type="file" data-entity-uuid="aedfa4d1-2690-4981-968a-d40273184449" src="/system/files-encrypted/nasdaq_kms/inline-images/CUNARDlogoHRZ_colorclear_1.png" /></a></div>
+
+<p>Cunard is the epitome of British refinement for travelers who relish the line's impeccable White Star Service, fine dining, sophisticated adventure, and the legacy of historic voyages and transatlantic travel.<br /><br />
+Visit: <a href="http://www.cunard.com/" target="_blank"><strong>www.cunard.com</strong></a></p></div>
+      
+    <div class="item"><div class="brand-image"><a href="http://www.hollandamerica.com/" target="_blank"><img alt="Holland America Lines Logo" data-entity-type="file" data-entity-uuid="35d4cd0f-3cc2-469b-a314-fb633613f450" src="/system/files-encrypted/nasdaq_kms/inline-images/06-Holland%20America%20Line_1.png" /></a></div>
+
+<p>Holland America Line's premium fleet of 15 spacious, elegant mid-sized ships feature sophisticated five-star dining, extensive entertainment and activities, innovative culinary enrichment programs and compelling worldwide itineraries.<br /><br />
+Visit: <a href="http://www.hollandamerica.com/" target="_blank"><strong>www.hollandamerica.com</strong></a></p></div>
+      
+    <div class="item"><div class="brand-image"><a href="http://www.pocruises.co.uk/" target="_blank"><img alt="P&amp;O Cruises UK logo" data-entity-type="file" data-entity-uuid="3a37a0d1-ada6-4494-a26a-f7f4873a54c4" src="/system/files-encrypted/nasdaq_kms/inline-images/p%26o_3.png" /></a></div>
+
+<p>P&amp;O Cruises (UK) has a fleet of seven ships with a new ship, Britannia, being launched in March 2015; combining genuine service, a sense of occasion and attention to detail; and ensuring passengers have the holiday of a lifetime, every time.<br /><br />
+Visit: <a href="http://www.pocruises.co.uk/" target="_blank"><strong>www.pocruises.co.uk</strong></a></p></div>
+      
+    <div class="item"><div class="brand-image"><a href="http://www.pocruises.com.au/pages/default.aspx" target="_blank"><img alt="P&amp;O_Australia logo" data-entity-type="file" data-entity-uuid="e66383e9-e62e-4bd1-b4ee-063763d8a478" src="/system/files-encrypted/nasdaq_kms/inline-images/P%26O_Australia_logo_3.png" /></a></div>
+
+<p>P&amp;O Cruises (Australia) provides a quintessential holiday experience for Australians and New Zealanders, taking them to some of the world's most idyllic and hard-to-reach places across Asia and the South Pacific.<br /><br />
+Visit: <a href="http://www.pocruises.com.au/pages/default.aspx" target="_blank"><strong>www.pocruises.co.au</strong></a></p></div>
+      
+    <div class="item"><div class="brand-image"><a href="http://www.princess.com/" target="_blank"><img alt="Princess Cruises logo" data-entity-type="file" data-entity-uuid="879bbf0e-07f3-455f-b5ed-e7334df65010" src="/system/files-encrypted/nasdaq_kms/inline-images/Princess_Logo%20%281%29.jpg" /></a></div>
+
+<p>Princess is the world's third largest cruise line based on guest capacity and the company's ships are renowned for their innovative design and wide array of choices in dining, entertainment and amenities.<br /><br />
+Visit: <a href="http://www.princess.com/" target="_blank"><strong>www.princess.com</strong></a></p></div>
+      
+    <div class="item"><div class="brand-image"><a href="http://www.seabourn.com/" target="_blank"><img alt="Seabourn logo" data-entity-type="file" data-entity-uuid="d823c1f9-9ff8-478d-a710-e9627776927e" src="/system/files-encrypted/nasdaq_kms/inline-images/Seabourn_1.png" /></a></div>
+
+<p>Seabourn provides ultraluxury cruising vacations in a unique, small-ship style that focuses on genuine, intuitive service, all-suite accommodations, superb cuisine and unique experiences in destinations worldwide.<br /><br />
+Visit: <a href="http://www.seabourn.com/" target="_blank"><strong>www.seabourn.com</strong></a></p></div>
+  </div>
+
+    
+</article>
+
+          </div>
+    <div class="nir-widget--pager">
+      
+    </div>
+    <div class="nir-widget--total-results">
+      
+    </div>
+  </div>
+</div>
+  </div>
+
+  </div>
+
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+
+
+	<footer>
+		<div class="footer-top-contain">
+			<div class="container">
+				<div class="row">
+
+											<div class="col-md-5 col-sm-8 col-xs-8 footer-email-alerts">
+							  <div class="region region-f-alerts">
+    <div id="block-gbemailalertformfooter" class="block-content--nir-global-block block-content--nir-global-block--41451 block--block-contentc9694d65-9c23-418e-bd91-a39e1c6a63a2 block--block-contentc9694d65-9c23-418e-bd91-a39e1c6a63a2--40821 block--f-alerts--block-content--c9694d65-9c23-418e-bd91-a39e1c6a63a2 block--f-alerts--block-content--c9694d65-9c23-418e-bd91-a39e1c6a63a2--40821 block--f9d03551-9fa9-4572-a796-53b86b420e22 block--f9d03551-9fa9-4572-a796-53b86b420e22--40821 block block-block-content block-block-contentc9694d65-9c23-418e-bd91-a39e1c6a63a2">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><form action="/investor-services/email-alerts" class="ndq-footer-alerts" data-drupal-form-fields="control_AlertEmail">
+<div class="row"><label class="col-sm-3 hidden-xs" for="control_AlertEmail">Email Alerts</label> <span class="col-sm-7 col-xs-8"> <input aria-label="Request Email Alerts" id="control_AlertEmail" name="name" placeholder="Email Address" type="text" value="" /></span> <span class="col-sm-2 col-xs-4"><button aria-label="submit form" class="rndBtn" type="submit"></button></span></div>
+</form>
+</div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+						</div>
+					
+											<div class="col-md-5 hidden-sm hidden-xs">
+							  <div class="region region-f-alerts-intro">
+    <div id="block-gbemailalertsignuptextfooter" class="block-content--nir-global-block block-content--nir-global-block--6051 block--block-contentd82748ff-f085-416e-a34c-e4fca1dd039b block--block-contentd82748ff-f085-416e-a34c-e4fca1dd039b--40821 block--f-alerts-intro--block-content--d82748ff-f085-416e-a34c-e4fca1dd039b block--f-alerts-intro--block-content--d82748ff-f085-416e-a34c-e4fca1dd039b--40821 block--31cffce3-c6de-465e-9073-0c418d239378 block--31cffce3-c6de-465e-9073-0c418d239378--40821 block block-block-content block-block-contentd82748ff-f085-416e-a34c-e4fca1dd039b">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><p>Sign up to receive email alerts whenever Carnival Corporation &amp; plc posts new information to the site. Just enter your email address and click Submit.</p></div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+						</div>
+					
+											<div class="col-md-2 col-sm-4 col-xs-4">
+							
+    
+                  
+      <h2 class="visually-hidden" id="block-socialicons-menu">Social icons</h2>
+    
+
+                              <ul class="nav-ul footer-social">
+    
+              <li class="circular-icon">
+          <a href="https://twitter.com/carnivalplc" target="_blank" rel="" class="icon ndqicon-tw-1-plain">Twitter</a>
+                  </li>
+              <li class="circular-icon">
+          <a href="https://joshleibowitzblog.wordpress.com/" target="_blank" rel="" class="icon ndqicon-blog-large">blog</a>
+                  </li>
+      
+    </ul>
+  
+
+
+    
+						</div>
+									</div>
+			</div>
+		</div>
+
+		<div class="footer-bottom-contain">
+			<div class="container">
+				<div class="row">
+
+											<div class="col-sm-3">
+							
+    
+        
+      <h2 id="block-nir-pid2855-toolkit-menu">Toolkit</h2>
+    
+
+                              <ul class="nav-ul page-tools">
+    
+        <li>
+          <a href="mailto:?body=https://www.carnivalcorp.com/news-and-events/news-releases" rel="" class="ndqicon-mail-1 icon">Email this page</a>
+        </li>
+
+        <li>
+          <a  href="javascript:window.print();" rel="" class="ndqicon-print icon">Print this page</a>
+        </li>
+
+
+                <li class="side-menu__item">
+          <a href="/investor-services/email-alerts" target="" rel="" class="ndqicon-mail-2 icon" data-drupal-link-system-path="node/5946">Email Alerts</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/rss-feed" target="" rel="" class="ndqicon-rss icon" data-drupal-link-system-path="node/41436">RSS feeds</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="https://joshleibowitzblog.wordpress.com/" target="" rel="" class="ndqicon-blog icon">Blog</a>
+                  </li>
+      
+
+    </ul>
+  
+
+
+    
+						</div>
+					
+											<div class="col-sm-3">
+							
+    
+        
+      <h2 id="block-nir-pid2855-quicklinks-menu">Quicklinks</h2>
+    
+
+                              <ul class="nav-ul quicklinks">
+    
+              <li class="side-menu__item">
+          <a href="/corporate-information" target="" rel="" data-drupal-link-system-path="node/40791">Corporate Information</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/media-center" target="" rel="" data-drupal-link-system-path="node/40796">Media Center</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/" target="" rel="" data-drupal-link-system-path="&lt;front&gt;">Investor Relations</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/governance" target="" rel="" data-drupal-link-system-path="node/40801">Governance</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/sustainability" target="" rel="" data-drupal-link-system-path="node/40806">Sustainability</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="http://www.ocean.com/" target="" rel="">OCEAN</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/static-files/f9f28fe2-8e05-4d5b-b292-30d825eeccdc" target="" rel="" data-drupal-link-system-path="static-files/f9f28fe2-8e05-4d5b-b292-30d825eeccdc">Slavery Statement</a>
+                  </li>
+      
+    </ul>
+  
+
+
+    
+						</div>
+					
+											<div class="col-sm-4">
+							  <div class="region region-contacts">
+    <div id="block-gbfootercontactsmap" class="block-content--nir-global-block block-content--nir-global-block--41456 block--block-content68b0e8a8-c5f2-4707-8aeb-a8f0bfb4780f block--block-content68b0e8a8-c5f2-4707-8aeb-a8f0bfb4780f--40821 block--contacts--block-content--68b0e8a8-c5f2-4707-8aeb-a8f0bfb4780f block--contacts--block-content--68b0e8a8-c5f2-4707-8aeb-a8f0bfb4780f--40821 block--1c27cd26-a588-4e88-9576-bf9b176d1218 block--1c27cd26-a588-4e88-9576-bf9b176d1218--40821 block block-block-content block-block-content68b0e8a8-c5f2-4707-8aeb-a8f0bfb4780f">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><h2>Contacts</h2>
+
+<div class="col-xs-4"><img alt="footer-map" data-entity-type="file" data-entity-uuid="27884edc-7526-47fc-a69e-e8f87aa6a9e4" src="/system/files-encrypted/nasdaq_kms/inline-images/footer-map.png" /></div>
+
+<div class="col-xs-8">
+<p>For Carnival Corporation media inquiries and editorial photo requests, please contact:</p>
+
+<p>Roger Frizzell, SVP &amp; Chief Communications Officer, Carnival Corporation &amp; plc<br />
+Email:<a href="mailto:rfrizzell@carnival.com"> rfrizzell@carnival.com</a></p>
+
+<p>For 24-hour media inquiries and access requests, please contact:</p>
+
+<p>(800) 438-6744 ext. 16000<br />
+(305) 599-2600 ext. 16000<br />
+Fax: (305) 406-8630<br />
+Email: <a href="mailto:media@carnival.com">media@carnival.com</a></p>
+</div></div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+						</div>
+									</div>
+			</div>
+		</div>
+
+		<div class="footer-credits-contain">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 footer-credits">
+						<div class="credits">
+							&copy; 2020 Carnival Corporation &amp; plc
+							 | 
+    
+                  
+      <h2 class="visually-hidden" id="block-privacynotice-2-menu">Privacy Notice</h2>
+    
+
+                    
+                <a href="/privacy-notice" target="" rel="" data-drupal-link-system-path="node/41466">Privacy Notice</a>
+                
+  
+
+
+    							<span class="footer-disclaimer">This site is best viewed in the latest version of Internet Explorer or Google Chrome</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+			<nav class="sitemap default-skin" id="sitemap" tabindex="-1" aria-label="Main">
+			<div class="sitemap-inner">
+				<ul class="nav-ul">
+					
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="http://www.worldsleadingcruiselines.com/" target="_blank" rel="">Cruising</a>
+                  </li>
+      
+
+              
+  
+
+
+    
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="/corporate-information" target="" rel="" data-drupal-link-system-path="node/40791">Corporate Information</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/corporate-information/mission-and-history" target="" rel="" data-drupal-link-system-path="node/40836">Vision, Mission &amp; History</a>
+                  </li>
+              
+        <li>
+          <a href="/corporate-information/corporate-timeline" target="" rel="" data-drupal-link-system-path="node/40841">Corporate Timeline</a>
+                  </li>
+              
+        <li>
+          <a href="/corporate-information/board-of-directors" target="" rel="" data-drupal-link-system-path="node/5841">Board of Directors</a>
+                  </li>
+              
+        <li>
+          <a href="/corporate-information/officers-executives" target="" rel="" data-drupal-link-system-path="node/40846">Officers &amp; Executives</a>
+                  </li>
+              
+        <li>
+          <a href="/corporate-information/worlds-leading-cruise-lines" target="" rel="" data-drupal-link-system-path="node/40851">World&#039;s Leading Cruise Lines</a>
+                  </li>
+              
+        <li>
+          <a href="/corporate-information/careers" target="" rel="" data-drupal-link-system-path="node/40856">Careers</a>
+                  </li>
+              
+        <li>
+          <a href="/corporate-information/diversity-inclusion" target="" rel="" data-drupal-link-system-path="node/40861">Diversity &amp; Inclusion</a>
+                  </li>
+              
+        <li>
+          <a href="/corporate-information/community-relations" target="" rel="" data-drupal-link-system-path="node/40866">Community Relations</a>
+                  </li>
+              
+        <li>
+          <a href="/corporate-information/our-brands" target="" rel="" data-drupal-link-system-path="node/40871">Our Brands</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+      
+
+              
+  
+
+
+    
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="/media-center" target="" rel="" data-drupal-link-system-path="node/40796">Media Center</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/media-center/news-releases" target="" rel="" data-drupal-link-system-path="node/40921">News Releases</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/investor-services/email-alerts" target="" rel="" data-drupal-link-system-path="node/5946">Email Alerts</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/media-center/feature-stories" target="" rel="" data-drupal-link-system-path="node/41716">Feature Stories</a>
+                  </li>
+              
+        <li>
+          <a href="/media-center/featured-articles" target="" rel="" data-drupal-link-system-path="node/40936">Background Documents</a>
+                  </li>
+              
+        <li>
+          <a href="/media-center/quick-facts" target="" rel="" data-drupal-link-system-path="node/40941">Quick Facts</a>
+                  </li>
+              
+        <li>
+          <a href="/media-center/media-library/images" target="" rel="" data-drupal-link-system-path="node/40946">Media Library</a>
+                  </li>
+              
+        <li>
+          <a href="/media-center/board-of-directors" target="" rel="" data-drupal-link-system-path="node/41166">Board of Directors</a>
+                  </li>
+              
+        <li>
+          <a href="/media-center/officers-executives" target="" rel="" data-drupal-link-system-path="node/41111">Officers &amp; Executives</a>
+                  </li>
+              
+        <li>
+          <a href="/media-center/media-contacts" target="" rel="" data-drupal-link-system-path="node/40951">Media Contacts</a>
+                  </li>
+              
+        <li>
+          <a href="/media-center/our-brands" target="" rel="" data-drupal-link-system-path="node/5951">Our Brands</a>
+                  </li>
+              
+        <li>
+          <a href="/media-center/in-the-news" target="" rel="" data-drupal-link-system-path="node/52581">In The News</a>
+                  </li>
+              
+        <li>
+          <a href="https://joshleibowitzblog.wordpress.com/" target="_blank" rel="">Blog</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+      
+
+              
+  
+
+
+    
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="/investor-relations" target="" rel="" data-drupal-link-system-path="node/5806">Investor Relations</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/financial-information/annual-reporting" target="" rel="" data-drupal-link-system-path="node/5881">Financial Information</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/financial-information/annual-reporting" target="" rel="" data-drupal-link-system-path="node/5881">Annual Reporting</a>
+                  </li>
+              
+        <li>
+          <a href="/financial-information/quarterly-and-semiannual-reports" target="" rel="" data-drupal-link-system-path="node/5986">Quarterly &amp; Semiannual Reporting</a>
+                  </li>
+              
+        <li>
+          <a href="/financial-information/sec-filings/all" target="" rel="" data-drupal-link-system-path="node/5876">SEC Filings</a>
+                  </li>
+              
+        <li>
+          <a href="/financial-information/webcasts-presentations" target="" rel="" data-drupal-link-system-path="node/32646">Webcasts / Presentations</a>
+                  </li>
+              
+        <li>
+          <a href="/financial-information/credit-ratings-debt" target="" rel="" data-drupal-link-system-path="node/34236">Credit Ratings / Debt</a>
+                  </li>
+              
+        <li>
+          <a href="/financial-information/archived-information" target="" rel="" data-drupal-link-system-path="node/34656">Archived Information</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/stock-performance/stock-quote-chart/quote" target="" rel="" data-drupal-link-system-path="node/5911">Stock Performance</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/stock-performance/stock-quote-chart/quote" target="" rel="" data-drupal-link-system-path="node/5911">Stock Quote / Chart</a>
+                  </li>
+              
+        <li>
+          <a href="/stock-performance/investment-calculator" target="" rel="" data-drupal-link-system-path="node/5926">Investment Calculator</a>
+                  </li>
+              
+        <li>
+          <a href="/stock-performance/historical-lookup" target="" rel="" data-drupal-link-system-path="node/5921">Historical Lookup</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/news-and-events/news-releases" target="" rel="" data-drupal-link-system-path="node/40821">News &amp; Events</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/news-and-events/news-releases" target="" rel="" data-drupal-link-system-path="node/40821">News Releases</a>
+                  </li>
+              
+        <li>
+          <a href="/news-and-events/events-calendar/upcoming" target="" rel="" data-drupal-link-system-path="node/36776">Events Calendar</a>
+                  </li>
+              
+        <li>
+          <a href="/investor-services/email-alerts" target="" rel="" data-drupal-link-system-path="node/5946"> Email Alerts</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/analyst-information/analyst-coverage" target="" rel="" data-drupal-link-system-path="node/35821">Analyst Information</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/analyst-information/analyst-coverage" target="" rel="" data-drupal-link-system-path="node/35821">Analyst Coverage</a>
+                  </li>
+              
+        <li>
+          <a href="/analyst-information/earnings-estimates" target="" rel="" data-drupal-link-system-path="node/5891">Earnings Estimates</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/shareholder-information/shareholder-benefit" target="" rel="" data-drupal-link-system-path="node/36021">Shareholder Information</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/shareholder-information/shareholder-benefit" target="" rel="" data-drupal-link-system-path="node/36021">Shareholder Benefit</a>
+                  </li>
+              
+        <li>
+          <a href="/shareholder-information/dividend-reinvestment-program/carnival-corp" target="" rel="" data-drupal-link-system-path="node/40741">Dividend Reinvestment Program</a>
+                  </li>
+              
+        <li>
+          <a href="/shareholder-information/dividend-split-history/carnival" target="" rel="" data-drupal-link-system-path="node/40746">Dividend/Split History</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/investor-services/email-alerts" target="" rel="" data-drupal-link-system-path="node/5946">Investor Services</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/investor-services/email-alerts" target="" rel="" data-drupal-link-system-path="node/5946">Email Alerts</a>
+                  </li>
+              
+        <li>
+          <a href="/investor-services/investor-faqs" target="" rel="" data-drupal-link-system-path="node/5941">Investor FAQs</a>
+                  </li>
+              
+        <li>
+          <a href="/investor-services/online-investor-kit" target="" rel="" data-drupal-link-system-path="node/5961">Online Investor Kit</a>
+                  </li>
+              
+        <li>
+          <a href="/investor-services/information-request" target="" rel="" data-drupal-link-system-path="node/5966">Information Request</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/investor-relations/contacts" target="" rel="" data-drupal-link-system-path="node/36746">Contacts</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+      
+
+              
+  
+
+
+    
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="/governance" target="" rel="" data-drupal-link-system-path="node/40801">Governance</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/governance/governance-guidelines" target="" rel="" data-drupal-link-system-path="node/41106">Governance Guidelines</a>
+                  </li>
+              
+        <li>
+          <a href="/governance/executive-bios/officers" target="" rel="" data-drupal-link-system-path="node/5846">Executive Bios</a>
+                  </li>
+              
+        <li>
+          <a href="/governance/committee-composition" target="" rel="" data-drupal-link-system-path="node/41116">Committee Composition</a>
+                  </li>
+              
+        <li>
+          <a href="/governance/committee-charters" target="" rel="" data-drupal-link-system-path="node/41121">Committee Charters</a>
+                  </li>
+              
+        <li>
+          <a href="/governance/business-conduct-ethics" target="" rel="" data-drupal-link-system-path="node/41126">Business Conduct &amp; Ethics</a>
+                  </li>
+              
+        <li>
+          <a href="/governance/communicating-with-the-board" target="" rel="" data-drupal-link-system-path="node/41131">Communicating with the Board</a>
+                  </li>
+              
+        <li>
+          <a href="/governance/approach-uk-tax" target="" rel="" data-drupal-link-system-path="node/41136">Our Approach to UK Tax</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+      
+
+              
+  
+
+
+    
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="/sustainability" target="" rel="" data-drupal-link-system-path="node/40806">Sustainability</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/sustainability/sustainability-news" target="" rel="" data-drupal-link-system-path="node/58466">Sustainability News</a>
+                  </li>
+              
+        <li>
+          <a href="/leading-responsibly/health-environment-safety-security-sustainability-policy-governance" target="" rel="" data-drupal-link-system-path="node/41241">Leading Responsibly</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/leading-responsibly/health-environment-safety-security-sustainability-policy-governance" target="" rel="" data-drupal-link-system-path="node/41241">Health, Environment, Safety, Security &amp; Sustainability Policy &amp; Governance</a>
+                  </li>
+              
+        <li>
+          <a href="/leading-responsibly/stakeholder-engagement" target="" rel="" data-drupal-link-system-path="node/41246">Stakeholder Engagement</a>
+                  </li>
+              
+        <li>
+          <a href="/leading-responsibly/ethics-and-compliance" target="" rel="" data-drupal-link-system-path="node/41251">Ethics &amp; Compliance</a>
+                  </li>
+              
+        <li>
+          <a href="/static-files/c7d5a465-8327-482d-a478-5d36b4dc3d07" target="" rel="" data-drupal-link-system-path="static-files/c7d5a465-8327-482d-a478-5d36b4dc3d07"> Business Partner Code of Conduct</a>
+                  </li>
+              
+        <li>
+          <a href="/leading-responsibly/recognition-awards" target="" rel="" data-drupal-link-system-path="node/41261">Recognition &amp; Awards</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="http://carnivalsustainability.com/download-files/2018-carnival-sustainability-performance-summary.pdf" target="" rel="" class="pdf_open">Environmental Performance</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/static-files/026a41ea-e806-4ec9-b221-54a43ba0bc28" target="_blank" rel="" data-drupal-link-system-path="static-files/026a41ea-e806-4ec9-b221-54a43ba0bc28">Climate Change &amp; Air Emissions</a>
+                  </li>
+              
+        <li>
+          <a href="/environmental-performance/waste-management-reduction-reuse-recycling" target="" rel="" data-drupal-link-system-path="node/41226">Waste Management, Reduction, Reuse &amp; Recycling</a>
+                  </li>
+              
+        <li>
+          <a href="/static-files/978148a2-b17d-4eae-82ef-f6d32192aca0" target="" rel="" data-drupal-link-system-path="static-files/978148a2-b17d-4eae-82ef-f6d32192aca0">Energy-Savings Initiatives</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/sustainability/global-impact" target="" rel="" data-drupal-link-system-path="node/54866">Global impact</a>
+                  </li>
+              
+        <li>
+          <a href="/sustainability/sustainable-workforce" target="" rel="" data-drupal-link-system-path="node/41211">Sustainable Workforce</a>
+                  </li>
+              
+        <li>
+          <a href="/sustainability/community-relation" target="" rel="" data-drupal-link-system-path="node/41206">Community Relations</a>
+                  </li>
+              
+        <li>
+          <a href="/transparency-and-reporting/sustainability-reports" target="" rel="" data-drupal-link-system-path="node/41266">Transparency &amp; Reporting</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/transparency-and-reporting/sustainability-reports" target="" rel="" data-drupal-link-system-path="node/41266">Sustainability Reports</a>
+                  </li>
+              
+        <li>
+          <a href="/static-files/536cc08a-e09b-4f28-9551-759ec57142b1" target="" rel="" data-drupal-link-system-path="static-files/536cc08a-e09b-4f28-9551-759ec57142b1">Key Performance Indicators</a>
+                  </li>
+              
+        <li>
+          <a href="/static-files/a3cfd2f3-ed3c-40c7-b598-ba4d5a17b4f7" target="" rel="" data-drupal-link-system-path="static-files/a3cfd2f3-ed3c-40c7-b598-ba4d5a17b4f7">Greenhouse Gas Emission Investory Certification</a>
+                  </li>
+              
+        <li>
+          <a href="/transparency-and-reporting/our-sustainability-journey" target="" rel="" data-drupal-link-system-path="node/41286">Our Sustainability Journey</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+              
+        <li>
+          <a href="/sustainability/contacts" target="" rel="" data-drupal-link-system-path="node/5981">Contacts</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+      
+
+              
+  
+
+
+    
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="http://www.ocean.com/" target="_blank" rel="">OCEAN</a>
+                  </li>
+      
+
+              
+  
+
+
+    
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="/vendors-suppliers" target="" rel="" data-drupal-link-system-path="node/59256">Vendors/Suppliers</a>
+                          
+          <ul>
+    
+
+              
+        <li>
+          <a href="/vendors-suppliers/business-relations" target="" rel="" data-drupal-link-system-path="node/59316">Business Relations</a>
+                  </li>
+              
+        <li>
+          <a href="/vendors-suppliers/third-party-portal" target="" rel="" data-drupal-link-system-path="node/59366">Third Party Privacy, Security &amp; Risk Management Portal</a>
+                  </li>
+      
+
+          </ul>
+    
+  
+                  </li>
+      
+
+              
+  
+
+
+    
+
+                  
+          
+
+                    
+              
+
+              
+        <li class="nav-header">
+          <a href="/privacy-notice" target="" rel="" data-drupal-link-system-path="node/41466">Privacy Notice</a>
+                  </li>
+      
+
+              
+  
+
+
+    
+				</ul>
+			</div>
+		</nav>
+	
+</div>
+  </div>
+
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgclientweb1042";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/40821","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","themeUrl":"sites\/g\/files\/knoqqb47771\/themes\/site\/nir_pid2855","currentQuery":{"c":"140690","nyo":"0","p":"irol-news"}},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/node,core\/drupal.collapse,core\/html5shiv,nir_base\/adobe_omniture,nir_base\/lib,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_faq\/nir_faq_accordion,nir_faq\/nir_faq_widget_accordion,nir_market_data_block\/nir_market_data_block.command,nir_market_data_block\/nir_market_data_block.filterform,nir_market_data_block\/nir_market_data_block.stockQuote,nir_multimedia\/nir_multimedia,nir_pid2855\/override,nir_website_notices\/nir_website_notices.notices,radix_layouts\/radix_layouts,system\/base","theme":"nir_pid2855","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"2ece8c66a267918fc8c08015205532e5e39f13232942032c1957dd675b40953d"}}</script>
+<script src="/sites/g/files/knoqqb47771/files/js/js_VHmRu6nJayZ1YCGTJxzYCmJCYBXLEovkb3ZnrsjihAQ.js"></script>
+
+    <script type="text/javascript">
+/*<![CDATA[*/
+(function() {
+var sz = document.createElement('script'); sz.type = 'text/javascript'; sz.async = true;
+sz.src = '//siteimproveanalytics.com/js/siteanalyze_6029594.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(sz, s);
+})();
+/*]]>*/
+</script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"761e715901","applicationID":"37278538,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH3xCFkBQXGl2ChNQaXZXQg5sd19HWCcUXFlUXUJODkNVW1EAE2VZUVtVC19dVFBHIw5HWHFbRApfXw==","queueTime":0,"applicationTime":1912,"atts":"ShJUF18aSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+    <!--[if lt IE 8]>         <html class=" no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>            <html class=" no-js lt-ie10 lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>            <html class=" no-js lt-ie10 ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=" no-js"> <!--<![endif]--><head>
+      <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b0ca75d22e",applicationID:"1325197"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script>
+  var functionToInit = [];
+</script><script>
+  var initialDeviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if (sessionStorage['switchViewportWidth'] >= 1024 && initialDeviceWidth < 1024) {
+    var switchViewport = 1024;
+  } else if (sessionStorage['switchViewportWidth'] < 1024 && initialDeviceWidth >= 1024) {
+    var switchViewport = 1023;
+  } else if (sessionStorage['switchViewportWidth'] != null) {
+    sessionStorage.removeItem('switchViewportWidth');
+  }
+
+  if (switchViewport) {
+    if (sessionStorage['switchViewportDevice'] == 'ie') {
+      var element;
+      if (navigator.userAgent.match(/Windows NT 6.3; ARM(.+)Touch/)) {
+        element = document.createElement("style");
+        element.appendChild(document.createTextNode("@-ms-viewport{width:" + switchViewport + "px;}"));
+      } else {
+        element = document.createElement("link");
+        element.href = switchViewport >= 1024 ? '/frontend/release_2020-03-2/dist/resources/css/switchToDesktop.css' : '/frontend/release_2020-03-2/dist/resources/css/switchToMobile.css';
+        element.rel = "stylesheet";
+      }
+      document.getElementsByTagName("head")[0].appendChild(element);
+    } else {
+      document.querySelector("meta[name=viewport]").setAttribute('content', 'width=' + switchViewport);
+    }
+  }
+</script>
+
+<title>Ad-Hoc&#x20;News - Infineon Technologies</title>
+<meta property="og:title" content="Ad-Hoc&amp;&#x23;x20&#x3b;News&#x20;-&#x20;Infineon&#x20;Technologies"/>
+<meta name="description" content="">
+<meta property="og:description" content="">
+<meta name="keywords" content="">
+<meta name="area" content="investor"/>
+<link rel="canonical" href="https://www.infineon.com/cms/en/about-infineon/investor/news/adhoc/"/>
+  <meta name="copyright" content="Copyright Infineon Technologies AG - all rights reserved"/>
+<meta name="publisher" content="Infineon Technologies AG"/>
+<meta name="author" content="Infineon Technologies AG"/>
+<meta name="producer" content="virtual identity AG | http://www.virtual-identity.com"/>
+<meta name="leid" content="9fc04cb7-af49-11e3-8192-40f2e90e8d04"/>
+  <link rel="shortcut icon" type="image/ico" href='/frontend/release_2020-03-2/dist/resources/img/favicon.ico'/>
+
+<link rel="stylesheet" href="/frontend/release_2020-03-2/dist/resources/css/ifx.1.css"/>
+    <link rel="stylesheet" href="/frontend/release_2020-03-2/dist/resources/css/ifx.2.css"/>
+  <script nomodule src="/frontend/release_2020-03-2/dist/resources/js/vendor/fetch.umd.js"></script>
+<script nomodule src="/frontend/release_2020-03-2/dist/resources/js/es6.object.polyfills.js"></script>
+<script nomodule src="/frontend/release_2020-03-2/dist/resources/js/vendor/es6.append.polyfill.js"></script>
+<script nomodule src="/frontend/release_2020-03-2/dist/resources/js/es6.nodelist.forEach.polyfill.js"></script>
+<script nomodule src="/frontend/release_2020-03-2/dist/resources/js/customEvents.polyfill.js"></script>
+<script nomodule src="/frontend/release_2020-03-2/dist/resources/js/closest.polyfill.js"></script>
+
+<script src="/frontend/release_2020-03-2/dist/resources/js/scripts.head.all.min.js"></script>
+
+<script type="text/javascript">
+  global.configuration.set('data.staticResourcesBase', '/frontend/release_2020-03-2/dist/resources/');
+  
+  window.preventTrackingOnPage = false;
+</script>
+<!-- get the navigation to breadcrumb object -->
+<script>
+window.dataLayer = window.dataLayer || [];
+window.dataLayer.push({
+  event: "pageMeta",
+  page: {
+    pageInfo: {
+      pageType: "unassigned",
+      language: "en",
+      breadcrumbAllLevels: "About Infineon > Investor > News > Ad-Hoc News",
+      breadcrumbLevel1: "About\x20Infineon",
+      breadcrumbLevel2: "Investor",
+      breadcrumbLevel3: "News",
+      breadcrumbLevel4: "Ad\x2DHoc\x20News",
+      
+    }
+  }
+});
+
+// init global tracking data that the templates can push values in
+window.trackData = window.trackData || {};
+</script><script>
+    var consentCookieName = 'cookie_consent_1';
+    var cookieCustomEventName = 'cookieConsentCheck';
+    var consentCookieExpireDays = 2 * 365 + 1; // 2 years + 2020 is a leap year
+    var googleAnalyticsId = window.location.host.indexOf('infineon.com') > 0 ? 'UA-143787472-1' : 'UA-143787472-2';
+    var cookieConsentCookieModalReady = false;
+
+    if (window.preventTrackingOnPage) {
+        window['ga-disable-' + googleAnalyticsId] = true;
+    } else {
+        var cookiesAlreadyConfirmedMatch = document.cookie.match(new RegExp('(^| )' + consentCookieName + '=([^;]+)'));
+        if (cookiesAlreadyConfirmedMatch) {
+            var cookiesAlreadyConfirmed = cookiesAlreadyConfirmedMatch[2];
+        }
+        if (navigator.cookieEnabled && navigator.doNotTrack != "1" && document.cookie.indexOf(consentCookieName) == -1) {
+            // leave tracking enabled and show the cookie dialog
+            var cookieConsentCheckedEvent = new CustomEvent(cookieCustomEventName, {
+                bubbles: true,
+                detail: {cookieModalCanBeShown: true}
+            });
+            var checkCookieModalIsInitialized = setInterval(function () {
+                if (typeof window.vi.cookieModal === 'function' && cookieConsentCookieModalReady) {
+                    document.dispatchEvent(cookieConsentCheckedEvent);
+                    clearInterval(checkCookieModalIsInitialized);
+                }
+            }, 1000);
+        } else if (cookiesAlreadyConfirmed == 'true') {
+            // leave tracking enabled and don't open cookie modal dialog
+        } else {
+            if (navigator.doNotTrack == '1') {
+                // we need to set cookie_consent cookie to false immediately to prevent GTM to init GoogleAnalytics tracking.
+                // based on vi.helpers.setCookie, but vi.helpers is not available yet
+                var cookieExpireDate = new Date();
+                cookieExpireDate.setTime(cookieExpireDate.getTime() + (consentCookieExpireDays * 24 * 60 * 60 * 1000));
+                document.cookie = consentCookieName + '=false; ' + 'expires=' + cookieExpireDate.toUTCString() + ';domain=;path=/';
+            }
+
+            window['ga-disable-' + googleAnalyticsId] = true;
+            // remove all marketing cookies and disable GA tracking (see below) and hide the cookie dialog"
+            var cookieConsentCheckedEvent = new CustomEvent(cookieCustomEventName, {
+                bubbles: true,
+                detail: {cookieModalCanBeShown: false}
+            });
+            var checkCookieModalIsInitialized = setInterval(function () {
+                if (typeof window.vi.cookieModal === 'function' && cookieConsentCookieModalReady) {
+                    document.dispatchEvent(cookieConsentCheckedEvent);
+                    clearInterval(checkCookieModalIsInitialized);
+                }
+            }, 1000);
+        }
+    }
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w, d, s, l, i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'}); f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KV9T6RC');</script>
+<!-- End Google Tag Manager -->
+</head>
+    <body class="en">
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV9T6RC"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="overall-wrapper">
+      <div id="offcanvas-wrapper" class="site">
+        <div class="article site__content">
+          <nav id="navigation" class="main clearfix visible-xxs visible-xs visible-sm" role="navigation">
+	<ul role="menubar" class="main nav-list">
+	</ul>
+</nav><header class="navbar">
+    <div class="centered">
+      <div itemscope itemtype="http://schema.org/Organization">
+  <a itemprop="url" class="logo" href="/cms/en/">
+    <span class="picture" data-class="img-responsive" data-alt="Infineon Technologies - Semiconductor and System Solutions" data-title="Infineon Technologies" data-itemprop="logo">
+      <img itemprop="logo" src="/frontend/release_2020-03-2/dist/resources/img/logo-desktop-en.png" class="img-responsive"
+          alt="Infineon Technologies - Semiconductor and System Solutions">
+        <span data-src="/frontend/release_2020-03-2/dist/resources/img/logo-mobile-en.png"></span>
+        <span data-src="/frontend/release_2020-03-2/dist/resources/img/logo-mobile-en-2x.png" data-min-dpr="2"></span>
+        <span data-src="/frontend/release_2020-03-2/dist/resources/img/logo-desktop-en.png" data-min-width="1024"></span>
+        <span data-src="/frontend/release_2020-03-2/dist/resources/img/logo-desktop-en-2x.png" data-min-width="1024" data-min-dpr="2"></span>
+    </span>
+  </a>
+</div>
+<button id="offcanvas-nav-trigger" class="btn btn-link navbar-toggle">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="glyphicon glyphicon-menu"></span>
+      </button>
+
+      <form action="/cms/en/search.html" method="get" class="navbar-search" role="search">
+        <input type="hidden" name="view" value="all"/>
+        <fieldset>
+          <input class="search-input typeahead" placeholder="Search" name="term" type="text" data-provide="typeahead" autocomplete="off"
+              data-suggestionsurl="/search/suggestions" data-lang="en"/>
+          <button type="submit" id="offcanvas-search-trigger" class="btn btn-link f0">
+            <span class="glyphicon glyphicon-search"></span>Search</button>
+        </fieldset>
+      </form>
+
+      <nav class="nav">
+        <ul class="first" role="menubar">
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/product/">Products</a>
+            </li>
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/applications/">Applications</a>
+            </li>
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/tools/">Tools</a>
+            </li>
+          <li role="menuitem" class="active blur has-flyout"
+                 aria-haspopup="true" data-flyout="3">
+              <a href="/cms/en/about-infineon/">About Infineon</a>
+            </li>
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/discoveries/">Discoveries</a>
+            </li>
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/careers/">Careers</a>
+            </li>
+          </ul>
+      </nav>
+
+      <nav class="metanav">
+        <ul>
+          <li class="hidden-xxs hidden-xs hidden-sm"><a href="https&#x3a;&#x2f;&#x2f;infineoncommunity.com&#x2f;Newsletter4Engineers&#x3f;src&#x3d;Infineon" target="_blank">Newsletter</a></li>
+          <li class="hidden-xxs hidden-xs hidden-sm"><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;company&#x2f;contacts&#x2f;">Contact</a></li>
+          <li class="hidden-xxs hidden-xs hidden-sm"><a href="&#x2f;cms&#x2f;en&#x2f;product&#x2f;where-to-buy&#x2f;">Where to Buy</a></li>
+          <li class="flyout flyout-right hover  hidden-xxs hidden-xs hidden-sm ">
+    <span>English<b class="caret"></b></span>
+    <ul>
+      <li class="line"></li>
+      <li><a href="/cms/cn/about-infineon/investor/news/adhoc/" class="languagelink">简体中文</a></li>
+      <li><a href="/cms/de/about-infineon/investor/news/adhoc/" class="languagelink">Deutsch</a></li>
+      <li><a href="/cms/jp/about-infineon/investor/news/adhoc/" class="languagelink">日本語</a></li>
+      </ul>
+  </li>
+<li class="flyout login-flyout user-button hover">
+            <span class="my-infineon-label"><span class="flyout-login-label glyphicon glyphicon-user"></span><span class="flyout-login-label flyout-login-label-text hidden-xxs hidden-xs hidden-sm">myInfineon</span><b class="caret"></b></span>
+              <ul>
+                <li class="line"></li>
+                <li class="ifx-login-item"><a class="link ifx-login" href="https://www.infineon.com/sec/login">Login to myInfineon</a></li>
+                <li class="myInfineon-visitorMenu" data-resources="[{paths: ['ts/ifx.visitorMenu.js', 'css/myInfineon.visitorMenu.css']}]"
+                      data-init="(function(element) {
+                          window.vi.ifxVisitorMenu (element, {
+                          template: global.configuration.data.tpl.login.visitorMenu,
+                          loginUrl: configuration.get('myInfineonLoginUrl'),
+                          myInfineonDashboardLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonDashboardLinkUrl')),
+                          myInfineonDashboardLinkLabel: configuration.get('i18n.myInfineonDashboardLinkLabel'),
+                          myInfineonInterestsLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonInterestsLinkUrlWithParam')),
+                          myInfineonInterestsLinkLabel: configuration.get('i18n.myInfineonInterestsLinkLabel'),
+                          myInfineonSubscriptionsLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonSubscriptionsLinkUrlWithParam')),
+                          myInfineonSubscriptionsLinkLabel: configuration.get('i18n.myInfineonSubscriptionsLinkLabel'),
+                          myInfineonProfileLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonProfileLinkUrlWithParam')),
+                          myInfineonProfileLinkLabel: configuration.get('i18n.myInfineonProfileLinkLabel'),
+                          myInfineonLogoutLinkLabel: configuration.get('i18n.myInfineonLogoutLinkLabel'),
+                          hasMyIcpAccess: vi.user.hasMyIcpAccess,
+                          myInfineonCollaborationPlatformLinkLabel: configuration.get('i18n.myInfineonCollaborationPlatformLinkLabel'),
+                          myInfineonCollaborationPlatformLinkUrl: configuration.get('myInfineonCollaborationPlatformLinkUrl'),
+                          myInfineonProductRegistrationLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonProductRegistrationLinkUrlWithParam')),
+                          myInfineonProductRegistrationLinkLabel: configuration.get('i18n.myInfineonProductRegistrationLinkLabel')
+                      });
+                })">
+                </li>
+                <li class="ifx-registration-item"><a class='link ifx-registration' id='registration-link' href='javascript:;'>Register for myInfineon</a></li>
+              </ul>
+            </li>
+          <li>
+              <a href="/cms/en/cart/" class="cart-button">
+                <span class="glyphicon glyphicon-cart"></span><span class="cart-label hidden-xxs hidden-xs hidden-sm">Cart</span>
+              </a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+
+    <div class="flyout flyout-nav" id="flyout-3" role="menu">
+          <div class="centered">
+            <div class="flyout-wrap-table">
+              <div class="flyout-wrap">
+                <div class="col col-left">
+                  <ul>
+                      <li class=""><strong><a
+                          href="/cms/en/about-infineon/company/">Company</a></strong></li>
+                      <li class=""><a
+                              href="/cms/en/about-infineon/company/coronavirus-covid-19/">COVID-19-Update </a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/cypress-acquisition/">Cypress acquisition</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/our-divisions/">Our Divisions</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/management-board/">Management Board</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/supervisory-board/">Supervisory Board</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/find-a-location/">Our Locations</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/purchasing/">Procurement</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/quality/">Quality</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/information-security/">Information Security</a></li>
+                        </ul>
+                  <ul>
+                      <li class=""><strong><a
+                          href="/cms/en/about-infineon/sustainability/">Sustainability</a></strong></li>
+                      <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/environment/">Environment</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/health-and-safety/">Health & Safety</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/business-ethics/">Business Ethics</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/corporate-citizenship/">Corporate Citizenship</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/csr-supply-chain/">CSR Supply Chain</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/human-rights/">Human Rights</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/csr-reporting/">CSR Reporting</a></li>
+                        </ul>
+                  </div>
+                <div class="col">
+                  <ul>
+                      <li class=""><strong><a
+                          href="/cms/en/about-infineon/press/">Press</a></strong></li>
+                      <li class=""><a
+                              href="/cms/en/about-infineon/press/general-information/">General Information</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/press-releases/">Press Releases</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/market-news/">Market News</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/press-kit/">Press Kits</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/media-pool/">Media Pool</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/events/">Events</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/contacts/">Contacts</a></li>
+                        </ul>
+                  <ul>
+                      <li class="active"><strong><a
+                          href="/cms/en/about-infineon/investor/">Investor</a></strong></li>
+                      <li class=""><a
+                              href="/cms/en/about-infineon/investor/infineon-at-a-glance/">Infineon at a Glance</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/news-and-events/">News & Events</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/reports-and-presentations/">Reports & Presentations</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/infineon-share/">Infineon Share</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/fixed-income/">Fixed Income</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/corporate-governance/">Corporate Governance</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/shareholder-service/">Shareholder Service</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/contact/">Contact</a></li>
+                        </ul>
+                  <ul>
+                      <li class=""><strong><a
+                          href="/cms/en/about-infineon/tradeshows-conferences/">Tradeshows & Conferences</a></strong></li>
+                      </ul>
+                  </div>
+                <div class="col media loader">
+                  <strong class="flyout__headline">
+                      <a href="https&#x3a;&#x2f;&#x2f;media.infineon.com" target="_blank">Videos</a></strong>
+                  <div class="media-wrap"></div>
+                </div>
+                <div class="col news loader">
+                  <div class="news-wrap"></div>
+                  <div class="events-wrap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+  <nav class="subnav">
+      <div class="centered">
+        <ul class="clearfix subnav-bg">
+          <li class="second">
+            <a href="/cms/en/about-infineon/investor/">
+              <span>Investor</span>
+            </a>
+          </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/infineon-at-a-glance/">
+                <span>Infineon at a Glance</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/news-and-events/">
+                <span>News & Events</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/reports-and-presentations/">
+                <span>Reports & Presentations</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/infineon-share/">
+                <span>Infineon Share</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/fixed-income/">
+                <span>Fixed Income</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/corporate-governance/">
+                <span>Corporate Governance</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/shareholder-service/">
+                <span>Shareholder Service</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/contact/">
+                <span>Contact</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+  <main class="container-fluid site__main" role="main" id="main-article">
+            <div class="stickyElement-wrapper">
+      <div class="breadcrumb breadcrumb--top stickyElement">
+        <div class="centered">
+          <ul class="vertical-list">
+  <li><a href="/cms/en/">Home</a></li>
+  <li><a href="/cms/en/about-infineon/">About Infineon</a></li>
+          <li><a href="/cms/en/about-infineon/investor/">Investor</a></li>
+          <li><a href="/cms/en/about-infineon/investor/news/">News</a></li>
+          <li><span class="folder">Ad-Hoc News</span></li>
+          </ul>
+</div>
+      </div>
+    </div>
+  <div class="centered">
+                    <div class="row">
+                      <div class="col-sm-3 hidden-xxs hidden-xs hidden-sm">
+                        <ul class="leftnav">
+                          <li><a href="/cms/en/about-infineon/investor/news/press-releases">Press Releases</a></li>
+                          <li><a href="/cms/en/about-infineon/investor/news/market-news">Market News</a></li>
+                          <li class="active"><a href="/cms/en/about-infineon/investor/news/adhoc/">Ad-Hoc News</a></li>
+                          </ul>
+                      </div>
+                    <div class="col-md-9 article">
+                          <div class="row">
+                            <article class="col-md-8">
+                              <div  id="centercontainer" ><section class="header domReload">
+    <h1 >Ad-Hoc News</h1>
+    </section>
+<section >
+    <div class="iframe">
+  <iframe  class="deferred resizeable" src="about:blank" data-secure-src="https://www.dgap.de/link.php?isin=DE0006231004&typ=adhoc&von=19970101&a=10&sprache=en&v=en&" data-src="http://www.dgap.de/link.php?isin=DE0006231004&typ=adhoc&von=19970101&a=10&sprache=en&v=en" seamless allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="width: 100%; height: 1500px; margin-bottom: 13px;" frameborder="0">
+    <p>
+      Unfortunately, your browser does not support embedded frames (iframes): You can view the embedded page <a href="http://www.dgap.de/link.php?isin=DE0006231004&typ=adhoc&von=19970101&a=10&sprache=en&v=en">here</a>.</p>
+  </iframe>
+</div>
+
+</section>
+</div></article>
+                            <aside class="context col-md-4">
+                              <div  id="rightcontainer" class="teasers" ><section class="teaser teaser-contact-form">
+    <h3>Investor Contact</h3>
+	<div class="contact-wrapper clearfix">
+	<div class="message-container" style="display: none;">
+		<div class="message"></div>
+		<span class="glyphicon glyphicon-close close"></span>
+	</div>
+	<form role="form" class="contact clearfix" action="/cms/en/services/ajax/contact.html" data-track-form-name="contact-form">
+		<div style="display: none;">
+			<input type="hidden" name="context" value="contact" />
+			<input type="hidden" name="containerPath" value="/.content/contactform/cf_00002.html" />
+			<input type="hidden" name="path" value="https://www.infineon.com/cms/en/about-infineon/investor/news/adhoc/" />
+		</div>
+		<div class="form-group">
+			<input class="form-control" type="text" value="" name="name" placeholder="Name*">
+		</div>
+	<div class="form-group">
+			<input class="form-control" type="email" value="" name="email" placeholder="E-mail*">
+		</div>
+		<div class="form-group">
+			<textarea class="form-control" rows="3" name="message" placeholder="Your&#x20;question*"></textarea>
+		</div>
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit" disabled="disabled">Send</button>
+			<button class="btn btn-default submitting" disabled="disabled" style="display: none;">Submitting...</button>
+			<span class="webcontactform-mandatory">*Mandatory</span>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	var form_general_error = '<p>Something went wrong!</p><p>Please try again or contact <a href="mailto:support@infineon.com">support@infineon.com</a>.</p>';
+</script></section>
+<section>
+    <div class="content teaser-sidebar">
+	<h3>Order Service</h3>
+
+		<div class="copy">
+					<p><a href="/cms/en/about-infineon/investor/additional-information/order-service/">More information</a></p></div>
+		</div>
+</section>
+<section>
+    <div class="content teaser-sidebar">
+	<a href="https&#x3a;&#x2f;&#x2f;mailings.mexperts.de&#x2f;infineon&#x2f;english.php" class="block-level" target="_blank"><h3>Investor Relations Newsletter<br>„IFX News Ticker”</h3>
+
+		<span class="link more">
+							Click here to subscribe for Infineon press releases and market news</span>
+		</a></div>
+</section>
+<section>
+    <div class="content teaser-sidebar">
+	<h3>RSS News Feed</h3>
+
+		<div class="copy">
+					<p><a href="http://www.presseagentur.com/infineon/feed.php?lang=en" target="_blank">Click here for link to RSS News Feed</a></p></div>
+		</div>
+</section>
+<section class="teaser-sidebar">
+    <h3 >Stock Information</h3>
+    <div class="iframe">
+  <iframe  class="deferred resizeable" src="about:blank" data-secure-src="https://irs.tools.investis.com/Clients/de/infineon2/minichart/Default.aspx?culture=en-US&" data-src="http://irs.tools.investis.com/Clients/de/infineon2/minichart/Default.aspx?culture=en-US" seamless allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="width: 100%; height: 300px; margin-bottom: 13px;" frameborder="0">
+    <p>
+      Unfortunately, your browser does not support embedded frames (iframes): You can view the embedded page <a href="http://irs.tools.investis.com/Clients/de/infineon2/minichart/Default.aspx?culture=en-US">here</a>.</p>
+  </iframe>
+</div>
+
+<a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;investor&#x2f;infineon-share-old&#x2f;" class="link more">Infineon Share</a></section>
+</div></aside>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </main>
+
+          <footer class="footer" data-resources="[{paths: ['js/updateFooter.js'] }]" data-init="(function($elm) {})">
+  <div class="container-fluid">
+    <div id="breadcrumb" style="display:none">
+      Home
+      
+            &gt; About Infineon
+            &gt; Investor
+            &gt; News
+            &gt; Ad-Hoc News</div>
+  <div class="row socialbar-footer">
+              <div class="centered">
+                <span class="followus">Follow us</span>
+                <div class="popup-wrapper">
+			<span class="glyphicon glyphicon-facebook2"></span>
+			<div class="hover-wrapper">
+				<div class="social-popup">
+					<div class="social-popup-arrow"></div>
+					<ul class="channel-list facebook">
+						<li><a href="https&#x3a;&#x2f;&#x2f;www.facebook.com&#x2f;Infineon" data-track-name="socialMediaFollow" target="_blank">Infineon</a></li>
+						<li><a href="https&#x3a;&#x2f;&#x2f;www.facebook.com&#x2f;infineon4engineers" data-track-name="socialMediaFollow" target="_blank">Infineon 4 Engineers</a></li>
+						<li><a href="https&#x3a;&#x2f;&#x2f;www.facebook.com&#x2f;infineoncareer" data-track-name="socialMediaFollow" target="_blank">Infineon Career</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	<a href="https&#x3a;&#x2f;&#x2f;www.linkedin.com&#x2f;company&#x2f;infineon-technologies&#x2f;" data-track-name="socialMediaFollow" target="_blank" title="LinkedIn"><span class="glyphicon glyphicon-linkedin2"></span></a><div class="popup-wrapper">
+			<span class="glyphicon glyphicon-twitter2"></span>
+			<div class="hover-wrapper">
+				<div class="social-popup">
+					<div class="social-popup-arrow"></div>
+					<ul class="channel-list twitter">
+						<li><a href="https&#x3a;&#x2f;&#x2f;twitter.com&#x2f;Infineon" data-track-name="socialMediaFollow" target="_blank">Infineon</a></li>
+						<li><a href="https&#x3a;&#x2f;&#x2f;twitter.com&#x2f;Infineon4Engi" data-track-name="socialMediaFollow" target="_blank">Infineon 4 Engineers</a></li>
+						<li><a href="https&#x3a;&#x2f;&#x2f;twitter.com&#x2f;InfineonCareer" data-track-name="socialMediaFollow" target="_blank">Infineon Career</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	<a href="https&#x3a;&#x2f;&#x2f;www.youtube.com&#x2f;channel&#x2f;UCoTflChMPX0VBFXvXYmcu9w" data-track-name="socialMediaFollow" target="_blank" title="Infineon"><span class="glyphicon glyphicon-youtube1"></span></a></div>
+            </div>
+          <div class="row footer-copyright footer-copyright--center">
+  <div class="centered">
+    <div class="copyright">
+      <p>&copy; 1999 - 2020&nbsp;Infineon Technologies AG</p>
+      <ul class="vertical-list hidden-print">
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;usage-terms&#x2f;">Usage of this website is subject to our Usage Terms</a></li>
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;imprint&#x2f;">Imprint</a></li>
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;company&#x2f;contacts&#x2f;">Contact</a></li>
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;privacy-policy&#x2f;">Privacy Policy</a></li>
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;press&#x2f;general-information&#x2f;glossary&#x2f;">Glossary</a></li>
+        </ul>
+    </div>
+    <div class="copyright copyright--darkFont cn-links">
+      <p>
+        <a href="http&#x3a;&#x2f;&#x2f;www.beian.miit.gov.cn" class="extern" target="_blank">苏ICP备15016286号-1</a> | <a href="http&#x3a;&#x2f;&#x2f;www.beian.gov.cn&#x2f;portal&#x2f;registerSystemInfo&#x3f;recordcode&#x3d;32021402001016" class="iconlink iconlink--psb" target="_blank">苏公网安备 32021402001016号</a> | <a href="&#x2f;cms&#x2f;cn&#x2f;ifwu" class="extern">营业执照</a></p>
+    </div>
+  </div>
+</div>
+<div class="row hidden-print topBtn-overlay-padding">
+  <div class="centered">
+    <div class="switch">
+      <ul class="vertical-list">
+        <li><a href="#" class="hidden-xxs hidden-xs hidden-sm" id="switch-to-mobile">Switch to Mobile Version</a></li>
+        <li><a href="#" class="hidden-lg hidden-md" id="switch-to-desktop">Switch to Desktop Version</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+<div class="cookie-modal__container" data-resources="[{paths: ['ts/cookieConsent/cookieModal.js', 'css/cookieConsent.css']}]"
+      data-init="(function(element) {
+                  window.vi.cookieModal (element, {
+                      template: global.configuration.data.tpl.cookieConsent.cookieModal.intro,
+                      translations: {
+                        headline: 'Use\x20of\x20cookies',
+                        ctaMoreInfo: 'View\x20and\x20change\x20cookie\x20settings',
+                        cta: 'Accept',
+                        cookiesIntro: '\x3Cp\x3EWe\x20would\x20like\x20to\x20use\x20cookies\x20to\x20better\x20understand\x20your\x20use\x20of\x20this\x20website.\x20This\x20enables\x20us\x20to\x20improve\x20your\x20future\x20user\x20experience\x20on\x20our\x20website\x20and\x20to\x20provide\x20you\x20with\x20interest\x2Dbased\x20advertising\x20and\x20tailored\x20content\x20on\x20our\x20website\x20as\x20outside\x20our\x20website\x20by\x20partners.\x20You\x20can\x20change\x20or\x20revoke\x20your\x20cookie\x20settings\x20at\x20any\x20time.\x26nbsp\x3B\x20\x26nbsp\x3B\x20\x26nbsp\x3B\x3C\x2Fp\x3E\x0A\x3Cp\x3E\x3Ca\x20title\x3D\x22Privacy\x20Policy\x22\x20href\x3D\x22\x2Fcms\x2Fen\x2Fabout\x2Dinfineon\x2Fprivacy\x2Dpolicy\x2F\x22\x20target\x3D\x22_blank\x22\x3EPrivacy\x20Policy\x3C\x2Fa\x3E\x26nbsp\x3Band\x26nbsp\x3B\x3Ca\x20href\x3D\x22\x2Fcms\x2Fen\x2Fabout\x2Dinfineon\x2Fimprint\x2F\x22\x20target\x3D\x22_blank\x22\x3EImprint\x3C\x2Fa\x3E\x3C\x2Fp\x3E'
+                      }
+                  });
+                })">
+  </div>
+<div class="cookie-modal__container" data-resources="[{paths: ['ts/cookieConsent/privacyCenter.js', 'css/cookieConsent.css']}]"
+    data-init="(function(element) {
+                    window.vi.privacyCenter (element, {
+                        template: global.configuration.data.tpl.cookieConsent.privacyCenter.intro,
+                        translations: {
+                            headline: 'Use\x20of\x20cookies',
+                            headlineDetails: 'Manage\x20Cookie\x20Preferences',
+                            cta: 'Confirm\x20Selection',
+                            privacyCenterIntro: '',
+                            technicalCookiesHeadline: 'Technically\x20required\x20cookies\x20\x2D\x20always\x20selected\x20by\x20default',
+                            technicalCookiesDescription: '\x3Cp\x3EBy\x20technically\x20required\x20cookies\x20we\x20mean\x20cookies\x20without\x20those\x20the\x20technical\x20provision\x20of\x20the\x20online\x20service\x20cannot\x20be\x20ensured.\x20These\x20include\x20e.g.\x20cookies\x20supporting\x20essential\x20services\x20like\x20a\x20smooth\x20reproduction\x20of\x20video\x20or\x20audio\x20footage.\x20So\x20called\x20\u2018functional\x20cookies\u2019\x20are\x20also\x20assigned\x20belonging\x20to\x20this\x20category.\x20Functional\x20cookies\x20store\x20information\x20in\x20order\x20to\x20provide\x20you\x20comfortable\x20use\x20of\x20our\x20online\x20services\x20\x28e.g.\x20language\x20selection\x29.\x20The\x20legal\x20basis\x20for\x20the\x20processing\x20of\x20personal\x20data\x20by\x20means\x20of\x20cookies\x20of\x20this\x20category\x20is\x20Infineon\u2019s\x20legitimate\x20interest.\x20This\x20includes,\x20among\x20other\x20things,\x20the\x20interest\x20in\x20having\x20a\x20professional\x20external\x20presentation\x20as\x20well\x20as\x20an\x20optimal\x20balancing\x20of\x20the\x20loads\x20on\x20the\x20server\x20due\x20to\x20technical\x20reasons.\x3C\x2Fp\x3E\x0A\x3Cp\x3E\x3Ca\x20title\x3D\x22More\x20details\x22\x20href\x3D\x22\x2Fcms\x2Fen\x2Fabout\x2Dinfineon\x2Fprivacy\x2Dpolicy\x2F\x23cookies\x2Dand\x2Dco\x22\x20target\x3D\x22_blank\x22\x3EMore\x20details\x3C\x2Fa\x3E\x3C\x2Fp\x3E',
+                            trackingCookiesHeadline: 'Performance\x20and\x20marketing\x20cookies',
+                            trackingCookiesDescription: '\x3Cp\x3EBy\x20performance\x20and\x20marketing\x20cookies\x20we\x20mean\x20cookies\x20which\x20are\x20technically\x20not\x20required.\x20We\x20use\x20performance\x20and\x20marketing\x20cookies\x20only\x20if\x20you\x20have\x20given\x20us\x20your\x20prior\x20consent.\x20With\x20such\x20cookies,\x20we\x20collect\x20information\x20about\x20how\x20users\x20interact\x20with\x20our\x20website\x20and\x20which\x20pages\x20have\x20been\x20visited.\x20This\x20helps\x20us\x20to\x20understand\x20user\x20activity\x20on\x20our\x20website\x20on\x20an\x20aggregated\x20as\x20well\x20as\x20on\x20a\x20personal\x20level\x20to\x20provide\x20you\x20relevant\x20content\x20and\x20services.\x3C\x2Fp\x3E\x0A\x3Cp\x3E\x3Ca\x20title\x3D\x22More\x20details\x22\x20href\x3D\x22\x2Fcms\x2Fen\x2Fabout\x2Dinfineon\x2Fprivacy\x2Dpolicy\x2F\x23cookies\x2Dand\x2Dco\x22\x20target\x3D\x22_blank\x22\x3EMore\x20details\x3C\x2Fa\x3E\x3C\x2Fp\x3E'
+                        }
+                    });
+                  })">
+</div></div>
+      </div>
+
+      <script>
+  var navigationPageId = '6c000585-13d5-11e4-b3df-556353e4878f';
+</script>
+
+<script src="/cms/en/services/js/configuration.js?cv=release_2020-03-2/dist/resources"></script>
+  <script>
+  
+  configuration.data.page.language = 'English';
+  
+  configuration.data.page.languages = [
+    
+    '简体中文', 
+    'Deutsch', 
+    '日本語'
+  ];
+  configuration.data.page.languagesHrefs = [
+    
+    '\x2Fcms\x2Fcn\x2Fabout\x2Dinfineon\x2Finvestor\x2Fnews\x2Fadhoc\x2F', 
+    '\x2Fcms\x2Fde\x2Fabout\x2Dinfineon\x2Finvestor\x2Fnews\x2Fadhoc\x2F', 
+    '\x2Fcms\x2Fjp\x2Fabout\x2Dinfineon\x2Finvestor\x2Fnews\x2Fadhoc\x2F'
+  ];
+
+  </script>
+
+<script src="/frontend/release_2020-03-2/dist/resources/js/combined.min.js"></script>
+  </div>
+    
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.eu01.nr-data.net","licenseKey":"b0ca75d22e","agent":"","beacon":"bam.eu01.nr-data.net","applicationTime":3540,"applicationID":"1325197","transactionName":"MhBSZQoZDRdTVxUNVgtaemIoVzQhcBkoKn9KH0NBVxcNCFtaBEtKHAZEVBVXDgtWQQ0BSkoWX1wnEQ0CW1oEC1c6Fl9DCBcRBUZRFgFbFhxEVCceEQtcQAQKXUoBVVwIFAIQV0dOCVgMGx5bCwg=","queueTime":0}</script></body>
+    </html>
+  

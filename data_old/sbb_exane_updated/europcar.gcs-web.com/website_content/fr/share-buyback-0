@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"195299520"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Rachats d&#039;actions | Europcar Groupe SA" />
+<meta property="og:site_name" content="Europcar Groupe SA" />
+<meta property="og:type" content="Site Internet" />
+<meta property="og:title" content="Rachats d&#039;actions | Europcar Groupe SA" />
+<meta property="og:description" content="The Investor Relations website contains information about Europcar Groupe SA&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/g/files/knoqqb22176/files/favicons_0.png" type="image/png" />
+<link rel="alternate" hreflang="en" href="https://europcar.gcs-web.com/share-buyback" />
+<link rel="alternate" hreflang="fr" href="https://europcar.gcs-web.com/fr/share-buyback-0" />
+<link rel="canonical" href="https://europcar.gcs-web.com/fr/share-buyback-0" />
+<link rel="shortlink" href="https://europcar.gcs-web.com/fr/node/8841" />
+<link rel="revision" href="https://europcar.gcs-web.com/fr/share-buyback-0" />
+
+    <title>Rachats d&#039;actions | Europcar Groupe SA</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb22176/files/css/css_99v8ymF_mpzobuOf89FVg3FKhcjKqiwyFOXYVCVBOFg.css?q1ej1d" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb22176/files/css/css_PDRHZqnf7PRU096t7LYGH_QkxCMs5xUMidZCsdrTZv0.css?q1ej1d" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lato:400,400italic,700,300italic" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb22176/files/css/css_lThKqGf0Ju3qPkwSB0YoA_DCFMQPhqfIyln1MjODDyg.css?q1ej1d" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb22176/files/css/css_XqSUy-1H6Fz1lMiSF0lJhgnOOO3XHKLb7ogVg3iX0Ew.css?q1ej1d" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb22176/files/css/css_1jbDlmkaE2-KQzH2KoJH4uLbQXg_v39i7IwY4eQ5B2k.css?q1ej1d" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb22176/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+    
+  </head>
+  <body class="body-sidebars-none nir-node nir-node--type-nir-landing-page nir-node--8841 path-node page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#main-menu">
+        Skip to main navigation
+      </a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="ndq-interior">
+
+  <div class="title-bar" data-responsive-toggle="investor-relations" data-hide-for="medium">
+    <button class="menu-icon" type="button" data-toggle></button>
+    <div class="title-bar-title"></div>
+    <div class="top-bar-center">
+      <a href="/fr"><img src="/sites/g/files/knoqqb22176/themes/site/nir_pid2035/dist/images/EMG-group name_dark backgrounds RGB.png"/></a>
+          </div>
+  </div>
+
+  <div class="top-bar logo-container">
+    <div class="row">
+      <div class="show-for-medium top-bar-center">
+        <a href="/fr"><img src="/sites/g/files/knoqqb22176/themes/site/nir_pid2035/dist/images/EMG-group name_dark backgrounds RGB.png"/></a>
+              </div>
+    </div>
+  </div>
+
+
+  <div class="top-bar" id="investor-relations">
+    <div class="row">
+              <div class="top-bar-left">
+          
+
+
+        
+                              <ul class="menu  vertical medium-horizontal medium-text-left dropdown" data-responsive-menu="drilldown medium-dropdown">
+    
+
+          
+      <li  class="has-submenu">
+
+        <a href="/fr/europcar-at-a-glance/key-figures" target="" rel="" title="Corporate Profile" data-drupal-link-system-path="node/8216">Europcar en Bref</a>
+
+                                <ul class="submenu menu vertical" data-submenu data-responsive-menu="accordion">
+    
+
+          
+      <li >
+
+        <a href="/fr/europcar-at-a-glance/key-figures" target="" rel="" data-drupal-link-system-path="node/8216">Chiffres Clés</a>
+
+        
+      </li>
+          
+      <li >
+
+        <a href="/fr/europcar-at-a-glance/simplified-organization-chart" target="" rel="" data-drupal-link-system-path="node/7971">Organigramme Simplifié</a>
+
+        
+      </li>
+    
+    </ul>
+  
+        
+      </li>
+          
+      <li  class="has-submenu">
+
+        <a href="/fr/share-shareholders/profile" target="" rel="" data-drupal-link-system-path="node/7986">Actions &amp; Actionnaires</a>
+
+                                <ul class="submenu menu vertical" data-submenu data-responsive-menu="accordion">
+    
+
+          
+      <li >
+
+        <a href="/fr/share-shareholders/profile" target="" rel="" data-drupal-link-system-path="node/7986">Fiche D&#039;identité</a>
+
+        
+      </li>
+          
+      <li >
+
+        <a href="/fr/share-shareholders/share-price" target="" rel="" data-drupal-link-system-path="node/7996">Cours de Bourse</a>
+
+        
+      </li>
+          
+      <li >
+
+        <a href="/fr/share-shareholders/shareholding-structure" target="" rel="" data-drupal-link-system-path="node/8006">Structure Actionnariale</a>
+
+        
+      </li>
+          
+      <li >
+
+        <a href="/fr/share-shareholders/dividend" target="" rel="" data-drupal-link-system-path="node/8016">Dividende</a>
+
+        
+      </li>
+          
+      <li >
+
+        <a href="/fr/letter-shareholders" target="" rel="" data-drupal-link-system-path="node/9126">Lettre Aux Actionnaires </a>
+
+        
+      </li>
+    
+    </ul>
+  
+        
+      </li>
+          
+      <li  class="has-submenu">
+
+        <a href="/fr/financing-rating/debt-structure" target="" rel="" data-drupal-link-system-path="node/8026">Financement &amp; Notation</a>
+
+                                <ul class="submenu menu vertical" data-submenu data-responsive-menu="accordion">
+    
+
+          
+      <li >
+
+        <a href="/fr/financing-rating/debt-structure" target="" rel="" data-drupal-link-system-path="node/8026">Structure de la Dette</a>
+
+        
+      </li>
+          
+      <li >
+
+        <a href="/fr/financing-rating/credit-rating" target="" rel="" data-drupal-link-system-path="node/8036">Notation de Crédit</a>
+
+        
+      </li>
+    
+    </ul>
+  
+        
+      </li>
+          
+      <li  class="has-submenu">
+
+        <a href="https://europcar.gcs-web.com/fr/share-buyback-0" target="" rel="">Information réglementé</a>
+
+                                <ul class="submenu menu vertical" data-submenu data-responsive-menu="accordion">
+    
+
+          
+      <li >
+
+        <a href="https://europcar.gcs-web.com/fr/share-buyback-0" target="" rel="">Rachats d&#039;actions</a>
+
+        
+      </li>
+          
+      <li >
+
+        <a href="/fr/nombre-dactions" target="" rel="" data-drupal-link-system-path="node/9636">Nombre d&#039;actions</a>
+
+        
+      </li>
+    
+    </ul>
+  
+        
+      </li>
+          
+      <li  class="has-submenu">
+
+        <a href="/fr/analyst-coverage" target="" rel="" data-drupal-link-system-path="node/5896">Couverture Analystes</a>
+
+                                <ul class="submenu menu vertical" data-submenu data-responsive-menu="accordion">
+    
+
+          
+      <li >
+
+        <a href="/fr/consensus" target="" rel="" data-drupal-link-system-path="node/9546">Consensus</a>
+
+        
+      </li>
+    
+    </ul>
+  
+        
+      </li>
+    
+    </ul>
+  
+
+
+    
+
+        </div>
+            <div class="top-bar-right">
+        <div class="small-12 columns">
+                      <span class="lang">
+              <div class="language-switcher-language-url block--language-blocklanguage-interface block--language-blocklanguage-interface--8841 block--language--language-block--language-interface block--language--language-block--language-interface--8841 block--3742a695-ebdc-4ea5-acbe-3e2e3abd301a block--3742a695-ebdc-4ea5-acbe-3e2e3abd301a--8841 block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
+  
+    
+      
+<a href="/share-buyback" class="language-link" hreflang="en" data-drupal-link-system-path="node/8841">EN</a><a href="/fr/share-buyback-0" class="language-link is-active" hreflang="fr" data-drupal-link-system-path="node/8841">Français</a>
+
+
+  </div>
+
+            </span>
+                    <button data-open="searchModal" type="button" class="button" aria-label="Submit seach entry"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+      <div class="banner watermark">
+      <div class="row">
+        <div class="medium-12 large-12 columns">
+          <ul class="slides">
+            <li class="slide-item">
+                                  <h1>Rachats d'actions</h1>
+                            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="large-12 columns">
+        <div id="ndq-content" class="ndq-8841">
+            <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-nir-pid2035-websitenoticeblock" class="block--website-notice-block block--website-notice-block--8841 block--content--website-notice-block block--content--website-notice-block--8841 block--e93efedd-ce5b-4171-b75d-078da1ddc6f4 block--e93efedd-ce5b-4171-b75d-078da1ddc6f4--8841 block block-nir-website-notices block-website-notice-block">
+  
+    
+      
+  </div>
+<div id="block-nir-pid2035-content" class="block--system-main-block block--system-main-block--8841 block--content--system-main-block block--content--system-main-block--8841 block--f792c2ee-7a08-4b12-b936-43c59120b40a block--f792c2ee-7a08-4b12-b936-43c59120b40a--8841 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              Rachats d&#039;actions
+          </h1>
+    
+
+  <div>
+    
+<div class="panel-display boxton clearfix " >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-contentmain"><div class="views-element-container block--views-blockwidget-assets-widget-assets-ul block--views-blockwidget-assets-widget-assets-ul--8841 block--contentmain--views-block--widget-assets-widget-assets-ul block--contentmain--views-block--widget-assets-widget-assets-ul--8841 block--c4652d68-1130-47bd-9bb4-f023fb956aaa block--c4652d68-1130-47bd-9bb4-f023fb956aaa--8841 block block-views block-views-blockwidget-assets-widget-assets-ul">
+  
+    
+      <div data-block-uuid="c4652d68-1130-47bd-9bb4-f023fb956aaa"><div class="view view-widget-assets view-id-widget_assets view-display-id-widget_assets_ul js-view-dom-id-1ce8697602537bf9e3900f1b55ad74f234e0e6a77cde55443aa456e5f3a03133">
+  
+    
+        <div class="view-filters">
+      <form class="views-exposed-form" data-drupal-selector="views-exposed-form-widget-assets-widget-assets-ul" action="/fr/share-buyback-0" method="get" id="views-exposed-form-widget-assets-widget-assets-ul" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="js-form-item form-item js-form-type-select form-item-field-nir-asset-date-value js-form-item-field-nir-asset-date-value">
+      <label for="edit-field-nir-asset-date-value">Année</label>
+        <select data-drupal-selector="edit-field-nir-asset-date-value" id="edit-field-nir-asset-date-value" name="field_nir_asset_date_value" class="form-select"><option value="" selected="selected">- Any -</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option></select>
+        </div>
+<div class="js-form-item form-item js-form-type-select form-item-items-per-page js-form-item-items-per-page">
+      <label for="edit-items-per-page">Éléments par page</label>
+        <select data-drupal-selector="edit-items-per-page" id="edit-items-per-page" name="items_per_page" class="form-select"><option value="10" selected="selected">10</option><option value="25">25</option><option value="50">50</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-widget-assets" type="submit" id="edit-submit-widget-assets" value="Filtrer" class="button js-form-submit form-submit" />
+<input data-drupal-selector="edit-reset" type="submit" id="edit-reset" name="op" value="Réinitialiser" class="button js-form-submit form-submit" />
+</div>
+
+</div>
+
+</form>
+
+    </div>
+    
+      <div class="view-content">
+      <div class="item-list">
+  
+  <ul>
+
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Share buy-back : from 25 October 2019 to 31 October 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-11-12T12:00:00Z" timezone="America/New_York" class="datetime">November 12, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/92c3adc1-4d67-417b-bde0-a5cce1dab404" type="application/pdf; length=575477" title="Share buy-back_25 Oct until 31 Oct 2019.pdf">Share buy-back : from 25 October 2019 to 31 October 2019</a></span><span class="filesize"> 575.4 KB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 18 avril 2019 au 24 avril 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-04-24T12:00:00Z" timezone="America/New_York" class="datetime">April 24, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/83a83751-22c4-4e15-9f6a-e1db47e3334c" type="application/pdf; length=10407" title="Déclaration Europcar Mobility Group 18042019-24042019 20h30.pdf">Rachat d'actions du 18 avril 2019 au 24 avril 2019</a></span><span class="filesize"> 10.4 KB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 11 avril 2019 au 17 avril 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-04-17T12:00:00Z" timezone="America/New_York" class="datetime">April 17, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/949bd1a5-742c-464f-acb7-4f2246df1e24" type="application/pdf; length=2039958" title="Déclaration Europcar Mobility Group 11042019-17042019 20h30.pdf">Rachat d'actions du 11 avril 2019 au 17 avril 2019</a></span><span class="filesize"> 2 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 4 avril 2019 au 10 avril 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-04-10T12:00:00Z" timezone="America/New_York" class="datetime">April 10, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/7de16779-1283-4ddd-9a7d-55b4dba4396f" type="application/pdf; length=1560426" title="Déclaration Europcar Mobility Group 04042019-10042019.pdf">Rachat d'actions du 4 avril 2019 au 10 avril 2019</a></span><span class="filesize"> 1.5 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 28 mars 2019 au 3 avril 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-04-03T12:00:00Z" timezone="America/New_York" class="datetime">April 3, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/8e40f0bb-f2c7-4486-b7f1-2fb351fa5524" type="application/pdf; length=1496339" title="Déclaration Europcar Mobility Group 28032019-03042019.pdf">Rachat d'actions du 28 mars 2019 au 3 avril 2019</a></span><span class="filesize"> 1.4 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 21 mars 2019 au 27 mars 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-04-01T12:00:00Z" timezone="America/New_York" class="datetime">April 1, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/00b6826e-9822-4bf6-adc8-d3698c4b087f" type="application/pdf; length=1688229" title="Copy of Reporting Europcar Mobility Group 21032019-27032019 (002).pdf">Rachat d'actions du 21 mars 2019 au 27 mars 2019</a></span><span class="filesize"> 1.6 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 14 mars 2019 au 20 mars 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-03-27T12:00:00Z" timezone="America/New_York" class="datetime">March 27, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/b7bc3f5d-9439-4a21-9cbe-0cf0d8e0a58e" type="application/pdf; length=1688744" title="Reporting Europcar Mobility Group 14032019-20032019 (002).pdf">Rachat d'actions du 14 mars 2019 au 20 mars 2019</a></span><span class="filesize"> 1.6 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 7 mars 2019 au 13 mars 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-03-25T12:00:00Z" timezone="America/New_York" class="datetime">March 25, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/82e2d2e9-f8a5-44a0-b884-297817dade68" type="application/pdf; length=1690785" title="Reporting Europcar Mobility Group 07032019-13032019 (002).pdf">Rachat d'actions du 7 mars 2019 au 13 mars 2019</a></span><span class="filesize"> 1.6 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 28 février 2019 au 6 mars 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-03-11T12:00:00Z" timezone="America/New_York" class="datetime">March 11, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/0fbb2136-1e20-4050-93b3-775fa799146e" type="application/pdf; length=923543" title="Reporting Europcar Mobility Group 28022019-06032019.pdf">Rachat d'actions du 28 février 2019 au 6 mars 2019</a></span><span class="filesize"> 923.5 KB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+          <li>
+<article role="article" class="node node--nir-asset--nir-unordered-list node--type-nir-asset node--view-mode-nir-unordered-list two-col-node-alt3">
+  
+  <h3 class="field__item">Rachat d&#039;actions du 21 février 2019 au 27 février 2019</h3>
+
+    <div>
+      <div class="asset-date">
+              
+
+  <span  class="field__item"><time datetime="2019-03-07T12:00:00Z" timezone="America/New_York" class="datetime">March 7, 2019</time>
+</span>
+
+                
+                
+                  </div>
+    
+    <div class="nir-docs">
+      
+      
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="https://europcar.gcs-web.com/static-files/a280454f-fc5a-45f1-a2cc-b98a17ef504b" type="application/pdf; length=227912" title="Reporting Europcar Mobility Group 21022019-27022019.pdf">Rachat d'actions du 21 février 2019 au 27 février 2019</a></span><span class="filesize"> 227.9 KB</span>
+</div>
+
+        </div>
+          </div>
+  
+    </div>
+    
+  </div>
+</article>
+</li>
+    
+  </ul>
+
+</div>
+
+    </div>
+  
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+    <ul class="pager__items js-pager__items">
+                                                        <li class="pager__item is-active">
+                                          <a href="?field_nir_asset_category_target_id%5B4131%5D=4131&amp;field_nir_tags_target_id=All&amp;promote=All&amp;items_per_page=10&amp;page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_nir_asset_category_target_id%5B4131%5D=4131&amp;field_nir_tags_target_id=All&amp;promote=All&amp;items_per_page=10&amp;page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?field_nir_asset_category_target_id%5B4131%5D=4131&amp;field_nir_tags_target_id=All&amp;promote=All&amp;items_per_page=10&amp;page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+        </li>
+                                      <li id="pagerIcon" class="pager__item pager__item--next">
+          <a href="?field_nir_asset_category_target_id%5B4131%5D=4131&amp;field_nir_tags_target_id=All&amp;promote=All&amp;items_per_page=10&amp;page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+                        <span aria-hidden="true">Next</span>
+          </a>
+        </li>
+                          <li id="pagerIcon" class="pager__item pager__item--last">
+          <a href="?field_nir_asset_category_target_id%5B4131%5D=4131&amp;field_nir_tags_target_id=All&amp;promote=All&amp;items_per_page=10&amp;page=2" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+                        <span aria-hidden="true">Dernier</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+  
+          <div class="view-footer">
+          Affichage 1 - 10 sur 24 résultats
+        </div>
+    </div>
+</div>
+
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.boxton -->
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+
+                  </div>
+      </div>
+    </div>
+  
+
+  <div class="row column">
+    <hr>
+  </div>
+
+      <div class="expanded ndq-tools">
+      <div class="row small-up-3 medium-up-6 large-up-6 ">
+        
+
+
+        
+                    
+
+
+
+      
+        <div class="column">
+          <a href="/fr/shareholder-services/email-alerts" class="ndq-tool-icon ndqicon-alerts" title="Alertes Courrier Électronique" aria-label="Alertes Courrier Électronique"></a>
+        </div>
+
+        
+      
+        <div class="column">
+          <a href="/fr/contact" class="ndq-tool-icon ndqicon-feedback-1" title="Contact" aria-label="Contact"></a>
+        </div>
+
+        
+      
+        <div class="column">
+          <a href="/fr/shareholder-services/rss-feeds" class="ndq-tool-icon ndqicon-rss" title="Flux RSS" aria-label="Flux RSS"></a>
+        </div>
+
+        
+      
+
+      <div class="column">
+        <a href="javascript:window.print();" class="ndq-tool-icon ndqicon-print" title="Impression" aria-label="Impression"></a>
+      </div>
+
+      <div class="column">
+        <a href="mailto:?body=https://europcar.gcs-web.com/fr/share-buyback-0" class="ndq-tool-icon ndqicon-mail-1" title="E-mail" aria-label="E-mail"></a>
+      </div>
+
+
+        
+
+  
+
+
+
+    
+
+      </div>
+    </div>
+  
+  <footer>
+    <div class="expanded callout secondary">
+      <div class="row">
+        <div class="small-3 large-3 columns">
+          <a href="/fr"> <img class="thumb_footer" alt="" src="/sites/g/files/knoqqb22176/themes/site/nir_pid2035/dist/images/thumb_footer.png"> </a>
+        </div>
+
+                  
+
+
+        
+                    
+    <div class="small-3 large-3 columns">
+    
+    <ul class="menu vertical">
+
+                      <li class="side-menu__item">
+              <a href="/fr/europcar-at-a-glance/key-figures" target="" rel="" data-drupal-link-system-path="node/8216">Europcar en bref</a>
+                          </li>
+                      <li class="side-menu__item">
+              <a href="/fr/share-shareholders/profile" target="" rel="" data-drupal-link-system-path="node/7986">Action &amp; actionnaires</a>
+                          </li>
+                      <li class="side-menu__item">
+              <a href="/fr/financial-documentation" target="" rel="" data-drupal-link-system-path="node/8086">Information financière</a>
+                          </li>
+          
+      </ul>
+
+        </div>
+  
+
+
+  
+    
+
+
+
+        
+                    
+    <div class="small-3 large-3 columns">
+    
+    <ul class="menu vertical">
+
+                      <li class="side-menu__item">
+              <a href="/fr/presse-et-evenements" target="" rel="" data-drupal-link-system-path="node/5871">Information règlementée</a>
+                          </li>
+                      <li class="side-menu__item">
+              <a href="/fr/agenda" target="" rel="" data-drupal-link-system-path="node/5826">Agenda</a>
+                          </li>
+                      <li class="side-menu__item">
+              <a href="/fr/financing-rating/debt-structure" target="" rel="" data-drupal-link-system-path="node/8026">Financement &amp; notation</a>
+                          </li>
+          
+      </ul>
+
+        </div>
+  
+
+
+  
+    
+
+
+
+        
+                    
+    <div class="small-3 large-3 columns">
+    
+    <ul class="menu vertical">
+
+                      <li class="side-menu__item">
+              <a href="/fr/contact" target="" rel="" data-drupal-link-system-path="node/8056">Contact</a>
+                          </li>
+                      <li class="side-menu__item">
+              <a href="/fr/analyst-coverage" target="" rel="" data-drupal-link-system-path="node/5896">Couverture analystes</a>
+                          </li>
+                      <li class="side-menu__item">
+              <a href="https://europcar-mobility-group.com/" target="_blank" rel="">Europcar Groupe</a>
+                          </li>
+          
+      </ul>
+
+        </div>
+  
+
+
+  
+    
+
+                <br/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="expanded copyright">
+        <div class="small-7 medium-6 columns links">
+                      
+
+
+        
+                              <ul class="menu text-left">
+    
+
+                    <li>
+              <a href="http://www.europcar-group.com/mentions/" target="" rel="">Mentions légales</a>
+            </li>
+             | 
+                              <li>
+              <a href="http://www.europcar-group.com/politique-en-matiere-de-cookies/" target="" rel="">Politique en matière de Cookies</a>
+            </li>
+             | 
+                              <li>
+              <a href="http://www.europcar-group.com/politique-de-confidentialite/" target="" rel="">Politique de Confidentialité</a>
+            </li>
+            
+                  
+
+      </ul>
+
+  
+
+
+    
+
+                  </div>
+        <div class="small-5 medium-6 columns">
+          <ul class="menu float-right text-center">
+            <li class="menu-text">2019 Copyright</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="reveal ndq-modal-reveal" id="searchModal" data-reveal>
+    <h3>Search Investor Relations</h3>
+    <form action="/search" type="post">
+      <input type="search" placeholder="Search" aria-label="Search" name="query">
+      <button type="submit" class="button" aria-label="Submit search entry"></button>
+    </form>
+    <button class="close-button" data-close aria-label="Close modal" type="button"><span aria-hidden="true">&times;</span></button>
+  </div>
+
+</div>
+  </div>
+
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgtrcgeuropcar";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"fr\/","currentPath":"node\/8841","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"fr"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/node,core\/drupal.collapse,core\/html5shiv,nir_base\/adobe_omniture,nir_base\/lib,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_multimedia\/nir_multimedia,nir_pid2035\/override,nir_website_notices\/nir_website_notices.notices,radix_layouts\/radix_layouts,system\/base,views\/views.module","theme":"nir_pid2035","theme_token":null},"ajaxTrustedUrl":{"\/fr\/share-buyback-0":true},"user":{"uid":0,"permissionsHash":"e3a4d5ae913dd195bc1f702e31beafb73fc2d8b27c5feb3207980181b1e76158"}}</script>
+<script src="/sites/g/files/knoqqb22176/files/js/js_2wCKwH-LUl_wU_sg-QcBc1zWA3Py5ZLe6dI0ePWrlWk.js"></script>
+<script src="//tools.euroland.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js"></script>
+<script src="/sites/g/files/knoqqb22176/files/js/js_fDI1KXmurCNt-irbzBfOn50T__lMNygxnQHqIcEcDxI.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+  ga('create', 'UA-62322748-2', 'auto');
+  ga('send', 'pageview');
+</script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"761e715901","applicationID":"195299520,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH0xfCFVfb0VHAD5HUF5cVRFvV1lQWQE+QVpbXV4=","queueTime":0,"applicationTime":506,"atts":"ShJUF18aSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

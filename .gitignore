@@ -53,3 +53,5 @@ celerybeat-schedule
 
 # firefox emulated browser logs
 geckodriver.log
+
+data_old/*

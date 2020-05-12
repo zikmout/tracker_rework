@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="cleartype" content="on">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#000000">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="google-site-verification" content="ZStsxjEfGEj8LewJj_FEZCmJTju92CWOVzt8knECAjI" />
+        <link rel="alternate" href="http://www.iliad.fr/" hreflang="fr-FR" />
+		<link rel="alternate" href="http://www.iliad.fr/fr/" hreflang="fr-FR" />
+		<link rel="alternate" href="http://www.iliad.fr/en/" hreflang="en-US" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+		<link rel="manifest" href="/assets/icons/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+<!-- ADD2HOME -->
+	<script src="/assets/aths.min.js"></script>
+	<link href='/assets/aths.min.css' rel='stylesheet' type='text/css'>
+<!--ICONS-->
+	<link rel="stylesheet" rel='stylesheet' href="/assets/font-awesome.min.css">
+<!--RESET-->
+	<link href='/assets/normalize.min.css' rel='stylesheet' type='text/css'>
+<!--BOILERPLATE-->
+	<link href='/assets/main.min.css' rel='stylesheet' type='text/css'>
+<!--JS LIB-->
+	<script src="/assets/jquery-2.1.4.min.js"></script>
+<!--LOGIC-->
+	<script src="/assets/script.min.js"></script>
+
+	<!--PAINT-->
+	<link rel="stylesheet" type="text/css" href="/assets/style.min.css">
+	<title>Iliad.fr</title>
+	</head>
+	<body><script>var lang="fr";var type="finances"; var year="2019"</script><!--here-->
+<header>
+      <a href="/fr/" id="logo_button">
+        <img src="/assets/images/iliad_logo_6.png" alt="Accueil" title="Accueil"/>
+      </a>
+
+<nav>
+        <ul>
+          <li>
+            <a href="/fr/presse/" class="button  "> 
+              Communiqués de presse &nbsp;
+            </a>
+          </li>
+          <li>
+            <a href="/fr/finances/" class="button selected "> 
+              Communiqués financiers
+            </a>
+          </li>
+
+<li id="langue"><a href="/en/finances/" id="icon_lang" class="button en" >In English</a></li>
+        </ul>
+      </nav>
+</header>
+<div id="main"><h1>Communiqués financiers 2019</h1><ul id="navDate" >
+<li><a href="/fr/finances/2019" class="yearlist selected ">2019</a></li>
+<li><a href="/fr/finances/2018" class="yearlist  ">2018</a></li>
+<li><a href="/fr/finances/2017" class="yearlist  ">2017</a></li>
+<li><a href="/fr/finances/2016" class="yearlist  ">2016</a></li>
+<li><a href="/fr/finances/2015" class="yearlist  ">2015</a></li>
+<li><a href="/fr/finances/2014" class="yearlist  ">2014</a></li>
+<li><a href="/fr/finances/2013" class="yearlist  ">2013</a></li>
+<li><a href="/fr/finances/2012" class="yearlist  ">2012</a></li>
+<li><a href="/fr/finances/2011" class="yearlist  ">2011</a></li>
+<li><a href="/fr/finances/2010" class="yearlist  ">2010</a></li>
+<li><a href="/fr/finances/2009" class="yearlist  ">2009</a></li>
+<li><a href="/fr/finances/2008" class="yearlist  ">2008</a></li>
+<li><a href="/fr/finances/2007" class="yearlist  ">2007</a></li>
+<li><a href="/fr/finances/2006" class="yearlist  ">2006</a></li>
+<li><a href="/fr/finances/2005" class="yearlist  ">2005</a></li>
+<li><a href="/fr/finances/2004" class="yearlist  ">2004</a></li>
+<li><a href="/fr/finances/2003" class="yearlist  ">2003</a></li>
+<li><a href="/fr/finances/2002" class="yearlist  ">2002</a></li>
+</ul>
+
+                                          <ul class="commlist ">
+
+                                               <li>
+ <span class="date _734 _0100 ">  12 nov. 2019</span> <a href="https://channel.royalcast.com/iliaden/#!/iliaden/20191112_1" target="_blank" title="Télécharger le communiqué" id="_3648" >Pour accèder au webcast, cliquez ici.</a></li>
+ <li>
+ <span class="date _734 _0100 ">  12 nov. 2019</span> <a href="/finances/2019/Slideshow_121119_Q3revenues.pdf"  title="Télécharger le communiqué" id="_3658" >Présentation du chiffre d’affaires du 3ème trimestre 2019 (anglais uniquement)</a></li>
+ <li>
+ <span class="date _734 _0100 ">  12 nov. 2019</span> <a href="/finances/2019/CP_121119_CAT3.pdf"  title="Télécharger le communiqué" id="_3666" >Communiqué de presse du chiffre d’affaires 3ème trimestre 2019</a></li>
+ <li>
+ <span class="date _734 _0100 ">  03 sept. 2019</span> <a href="/finances/2019/CP_030919.pdf"  title="Télécharger le communiqué" id="_3618" >Résultats 1er semestre 2019</a></li>
+ <li>
+ <span class="date _734 _0100 ">  01 juil. 2019</span> <a href="/finances/2019/Rachat_actions_010719.pdf"  title="Télécharger le communiqué" id="_3562" >Déclaration des transactions sur actions propres réalisées du 24/06/2019 au 27/06/2019</a></li>
+ <li>
+ <span class="date _734 _0100 ">  24 juin 2019</span> <a href="/finances/2019/Rachat_actions_240619.pdf"  title="Télécharger le communiqué" id="_3560" > Déclaration des transactions sur actions propres réalisées du 17/06/2019 au 21/06/2019</a></li>
+ <li>
+ <span class="date _734 _0100 ">  17 juin 2019</span> <a href="/finances/2019/Rachat_actions_170619.pdf"  title="Télécharger le communiqué" id="_3556" >Déclaration des transactions sur actions propres réalisées du 10/06/2019 au 14/06/2019</a></li>
+ <li>
+ <span class="date _734 _0100 ">  10 juin 2019</span> <a href="/finances/2019/Rachat_actions_100619.pdf"  title="Télécharger le communiqué" id="_3550" >Déclaration des transactions sur actions propres réalisées du 03/06/2019 au 07/06/2019</a></li>
+ <li>
+ <span class="date _734 _0100 ">  03 juin 2019</span> <a href="/finances/2019/Rachat_actions_030619.pdf"  title="Télécharger le communiqué" id="_3544" >Déclaration des transactions sur actions propres réalisées du 27/05/2019 au 31/05/2019 </a></li>
+ <li>
+ <span class="date _734 _0100 ">  27 mai 2019</span> <a href="/finances/2019/Rachat_actions_270519.pdf"  title="Télécharger le communiqué" id="_3539" >Déclaration des transactions sur actions propres réalisées du 20/05/2019 au 24/05/2019</a></li>
+ <li>
+ <span class="date _734 _0100 ">  22 mai 2019</span> <a href="/finances/2019/CP_220519.pdf"  title="Télécharger le communiqué" id="_3530" >Succès d’une émission Schuldscheindarlehen inaugurale de 500 millions d’euros</a></li>
+ <li>
+ <span class="date _734 _0100 ">  20 mai 2019</span> <a href="/finances/2019/Rachat_actions_200519.pdf"  title="Télécharger le communiqué" id="_3524" >Déclaration des transactions sur actions propres réalisées du 14/05/2019 au 16/05/2019    </a></li>
+ <li>
+ <span class="date _734 _0100 ">  15 mai 2019</span> <a href="/finances/2019/Rachat_actions_150519.pdf"  title="Télécharger le communiqué" id="_3522" >Déclaration des transactions sur actions propres réalisées du 08/05/2019 au 13/05/2019 </a></li>
+ <li>
+ <span class="date _734 _0100 ">  07 mai 2019</span> <a href="/finances/2019/CP_070519_CA.pdf"  title="Télécharger le communiqué" id="_3495" >Chiffre d’affaires du 1<sup>er</sup> trimestre 2019</a></li>
+ <li>
+ <span class="date _734 _0100 ">  07 mai 2019</span> <a href="/presse/2019/CP_070519_Tower.pdf"  title="Télécharger le communiqué" id="_3499" >Iliad et Cellnex concluent un partenariat industriel stratégique</a></li>
+ <li>
+ <span class="date _734 _0100 ">  07 mai 2019</span> <a href="/presse/2019/CP_070519_CMD.pdf"  title="Télécharger le communiqué" id="_3503" >Odyssée 2024</a></li>
+ <li>
+ <span class="date _734 _0100 ">  19 mars 2019</span> <a href="/finances/2019/CP_190319.pdf"  title="Télécharger le communiqué" id="_3452" >Résultats 2018</a></li>
+
+                                           </ul>
+
+                                        </div><!-- end Main -->
+	<footer>
+		<a href="/fr/documentation.html" class="☞">Documentation</a>|
+		<a href="/fr/arcep.html">Indicateurs Arcep</a>|
+		<!--<a href="/fr/societes.html">Les sociétés du groupe</a><br/>-->
+		<a href="/fr/glossaire.html">Glossaire</a>|
+		<a href="/fr/info.html">Informations légales</a>|
+		<a href="https://compliance.iliad.fr/">Ethique & conformité</a>|
+		<a href="/fr/donnees-personnelles.html">Données Personnelles</a>
+	</footer></body>
+	</html>
+	

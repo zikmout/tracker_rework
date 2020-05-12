@@ -1,0 +1,2673 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+  
+  
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1,user-scalable=no"/>
+  <title>Resources</title>
+  <meta name="keywords" content="Corporate,Corporate"/>
+  <meta name="description" content="Visit our Resource Center for Amadeus Annual and Quarterly Financial Information for every year since 2013."/>
+  <meta name="template" content="corporate-basic-template"/>
+  <link rel="canonical" href="https://corporate.amadeus.com/en/resources"/>
+  
+    
+    
+  
+
+  
+    <link rel="alternate" hreflang="en" href="https://corporate.amadeus.com/en/resources"/>
+  
+    <link rel="alternate" hreflang="es" href="https://corporate.amadeus.com/es/recursos"/>
+  
+
+  
+  <meta name="contentpath" content="/content/corporate/en/resources"/>
+  <meta property="og:title" content="Resources"/>
+  <meta property="og:site_name" content="Amadeus Corporate Site"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://corporate.amadeus.com/en/resources"/>
+  
+  
+  <meta property="og:description" content="Visit our Resource Center for Amadeus Annual and Quarterly Financial Information for every year since 2013."/>
+
+  
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="Amadeus Corporate Site"/>
+  <meta name="twitter:title" content="Resources"/>
+  <meta name="twitter:description" content="Visit our Resource Center for Amadeus Annual and Quarterly Financial Information for every year since 2013."/>
+  
+
+  
+  
+  
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123327761-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-123327761-3');
+    </script>
+  
+
+  
+
+    
+    
+<link rel="stylesheet" href="/etc/clientlibs/amadeus/commons/dependencies.min.d41d8cd98f00b204e9800998ecf8427e.css" type="text/css">
+<script type="text/javascript" src="/etc.clientlibs/clientlibs/granite/jquery.min.f670cad9b49f6e0179cfb6bd07a99b09.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/amadeus/commons/dependencies.min.ec5eb18fe65f5dca39cb1cbb7d45e0cc.js"></script>
+
+
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/etc/clientlibs/amadeus/commons/all.min.fd390a8bb6e5459d461c56cc33fedbaf.css" type="text/css">
+
+
+
+
+    <script type="application/javascript">
+
+  var Amadeus = Amadeus || {};
+
+  // Initialise Amadeus JS global variables
+  Amadeus.Components = {};
+  Amadeus.Components.SalesKit = {};
+  Amadeus.Constants = {};
+  Amadeus.Constants.isEditMode = false;
+  // Lists
+  Amadeus.Constants.countries = JSON.parse("[{\x22title\x22:\x22Åland\x22,\x22value\x22:\x22AX\x22},{\x22title\x22:\x22Afghanistan\x22,\x22value\x22:\x22AF\x22},{\x22title\x22:\x22Albania\x22,\x22value\x22:\x22AL\x22},{\x22title\x22:\x22Algeria\x22,\x22value\x22:\x22DZ\x22},{\x22title\x22:\x22American Samoa\x22,\x22value\x22:\x22AS\x22},{\x22title\x22:\x22Andorra\x22,\x22value\x22:\x22AD\x22},{\x22title\x22:\x22Angola\x22,\x22value\x22:\x22AO\x22},{\x22title\x22:\x22Anguilla\x22,\x22value\x22:\x22AI\x22},{\x22title\x22:\x22Antartica\x22,\x22value\x22:\x22AQ\x22},{\x22title\x22:\x22Antigua and Barbuda\x22,\x22value\x22:\x22AG\x22},{\x22title\x22:\x22Argentina\x22,\x22value\x22:\x22AR\x22},{\x22title\x22:\x22Armenia\x22,\x22value\x22:\x22AM\x22},{\x22title\x22:\x22Aruba\x22,\x22value\x22:\x22AW\x22},{\x22title\x22:\x22Australia\x22,\x22value\x22:\x22AU\x22},{\x22title\x22:\x22Austria\x22,\x22value\x22:\x22AT\x22},{\x22title\x22:\x22Azerbaijan\x22,\x22value\x22:\x22AZ\x22},{\x22title\x22:\x22Bahamas\x22,\x22value\x22:\x22BS\x22},{\x22title\x22:\x22Bahrain\x22,\x22value\x22:\x22BH\x22},{\x22title\x22:\x22Bangladesh\x22,\x22value\x22:\x22BB\x22},{\x22title\x22:\x22Barbados\x22,\x22value\x22:\x22BRB\x22},{\x22title\x22:\x22Belarus\x22,\x22value\x22:\x22BY\x22},{\x22title\x22:\x22Belgium\x22,\x22value\x22:\x22BE\x22},{\x22title\x22:\x22Belize\x22,\x22value\x22:\x22BZ\x22},{\x22title\x22:\x22Benin\x22,\x22value\x22:\x22BJ\x22},{\x22title\x22:\x22Bermuda\x22,\x22value\x22:\x22BM\x22},{\x22title\x22:\x22Bhutan\x22,\x22value\x22:\x22BT\x22},{\x22title\x22:\x22Bolivia\x22,\x22value\x22:\x22BO\x22},{\x22title\x22:\x22Bonaire\x22,\x22value\x22:\x22BQ\x22},{\x22title\x22:\x22Bosnia and Herzegovina\x22,\x22value\x22:\x22BA\x22},{\x22title\x22:\x22Botswana\x22,\x22value\x22:\x22BW\x22},{\x22title\x22:\x22Bouvet Island\x22,\x22value\x22:\x22BV\x22},{\x22title\x22:\x22Brazil\x22,\x22value\x22:\x22BR\x22},{\x22title\x22:\x22British Indian Ocean Territory\x22,\x22value\x22:\x22IO\x22},{\x22title\x22:\x22British Virgin Islands\x22,\x22value\x22:\x22VG\x22},{\x22title\x22:\x22Brunei\x22,\x22value\x22:\x22BN\x22},{\x22title\x22:\x22Bulgaria\x22,\x22value\x22:\x22BG\x22},{\x22title\x22:\x22Burkina Faso\x22,\x22value\x22:\x22BF\x22},{\x22title\x22:\x22Burundi\x22,\x22value\x22:\x22BI\x22},{\x22title\x22:\x22Cambodia\x22,\x22value\x22:\x22KH\x22},{\x22title\x22:\x22Cameroon\x22,\x22value\x22:\x22CM\x22},{\x22title\x22:\x22Canada\x22,\x22value\x22:\x22CA\x22},{\x22title\x22:\x22Cape Verde\x22,\x22value\x22:\x22CV\x22},{\x22title\x22:\x22Cayman Islands\x22,\x22value\x22:\x22KY\x22},{\x22title\x22:\x22Central African Republic\x22,\x22value\x22:\x22CF\x22},{\x22title\x22:\x22Chad\x22,\x22value\x22:\x22TD\x22},{\x22title\x22:\x22Chile\x22,\x22value\x22:\x22CL\x22},{\x22title\x22:\x22China\x22,\x22value\x22:\x22CN\x22},{\x22title\x22:\x22Christmas Island\x22,\x22value\x22:\x22CX\x22},{\x22title\x22:\x22Cocos (Keeling) Islands\x22,\x22value\x22:\x22CC\x22},{\x22title\x22:\x22Colombia\x22,\x22value\x22:\x22CO\x22},{\x22title\x22:\x22Comoros\x22,\x22value\x22:\x22KM\x22},{\x22title\x22:\x22Cook Islands\x22,\x22value\x22:\x22CK\x22},{\x22title\x22:\x22Costa Rica\x22,\x22value\x22:\x22CR\x22},{\x22title\x22:\x22Croatia\x22,\x22value\x22:\x22HR\x22},{\x22title\x22:\x22Cuba\x22,\x22value\x22:\x22CU\x22},{\x22title\x22:\x22Curacao\x22,\x22value\x22:\x22CW\x22},{\x22title\x22:\x22Cyprus\x22,\x22value\x22:\x22CY\x22},{\x22title\x22:\x22Czech Republic\x22,\x22value\x22:\x22CZ\x22},{\x22title\x22:\x22Democratic Republic of the Congo\x22,\x22value\x22:\x22CD\x22},{\x22title\x22:\x22Denmark\x22,\x22value\x22:\x22DK\x22},{\x22title\x22:\x22Djibouti\x22,\x22value\x22:\x22DJ\x22},{\x22title\x22:\x22Dominica\x22,\x22value\x22:\x22DM\x22},{\x22title\x22:\x22Dominican Republic\x22,\x22value\x22:\x22DO\x22},{\x22title\x22:\x22East Timor\x22,\x22value\x22:\x22TL\x22},{\x22title\x22:\x22Ecuador\x22,\x22value\x22:\x22EC\x22},{\x22title\x22:\x22Egypt\x22,\x22value\x22:\x22EG\x22},{\x22title\x22:\x22El Salvador\x22,\x22value\x22:\x22SV\x22},{\x22title\x22:\x22Equatorial Guinea\x22,\x22value\x22:\x22GQ\x22},{\x22title\x22:\x22Eritrea\x22,\x22value\x22:\x22ER\x22},{\x22title\x22:\x22Estonia\x22,\x22value\x22:\x22EE\x22},{\x22title\x22:\x22Ethiopia\x22,\x22value\x22:\x22ET\x22},{\x22title\x22:\x22Falkland Islands\x22,\x22value\x22:\x22FK\x22},{\x22title\x22:\x22Faroe Islands\x22,\x22value\x22:\x22FO\x22},{\x22title\x22:\x22Fiji\x22,\x22value\x22:\x22FJ\x22},{\x22title\x22:\x22Finland\x22,\x22value\x22:\x22FI\x22},{\x22title\x22:\x22France\x22,\x22value\x22:\x22FR\x22},{\x22title\x22:\x22French Guiana\x22,\x22value\x22:\x22GF\x22},{\x22title\x22:\x22French Polynesia\x22,\x22value\x22:\x22PF\x22},{\x22title\x22:\x22French Southern Territories\x22,\x22value\x22:\x22TF\x22},{\x22title\x22:\x22Gabon\x22,\x22value\x22:\x22GA\x22},{\x22title\x22:\x22Gambia\x22,\x22value\x22:\x22GM\x22},{\x22title\x22:\x22Georgia\x22,\x22value\x22:\x22GE\x22},{\x22title\x22:\x22Germany\x22,\x22value\x22:\x22DE\x22},{\x22title\x22:\x22Ghana\x22,\x22value\x22:\x22GH\x22},{\x22title\x22:\x22Gibraltar\x22,\x22value\x22:\x22GI\x22},{\x22title\x22:\x22Greece\x22,\x22value\x22:\x22GR\x22},{\x22title\x22:\x22Greenland\x22,\x22value\x22:\x22GL\x22},{\x22title\x22:\x22Grenada\x22,\x22value\x22:\x22GD\x22},{\x22title\x22:\x22Guadeloupe\x22,\x22value\x22:\x22GP\x22},{\x22title\x22:\x22Guam\x22,\x22value\x22:\x22GU\x22},{\x22title\x22:\x22Guatemala\x22,\x22value\x22:\x22GT\x22},{\x22title\x22:\x22Guernsey\x22,\x22value\x22:\x22GG\x22},{\x22title\x22:\x22Guinea\x22,\x22value\x22:\x22GN\x22},{\x22title\x22:\x22Guinea\u002DBissau\x22,\x22value\x22:\x22GW\x22},{\x22title\x22:\x22Guyana\x22,\x22value\x22:\x22GY\x22},{\x22title\x22:\x22Haiti\x22,\x22value\x22:\x22HT\x22},{\x22title\x22:\x22Heard Island and McDonald Islands\x22,\x22value\x22:\x22HM\x22},{\x22title\x22:\x22Honduras\x22,\x22value\x22:\x22HN\x22},{\x22title\x22:\x22Hong Kong\x22,\x22value\x22:\x22HK\x22},{\x22title\x22:\x22Hungary\x22,\x22value\x22:\x22HU\x22},{\x22title\x22:\x22Iceland\x22,\x22value\x22:\x22IS\x22},{\x22title\x22:\x22India\x22,\x22value\x22:\x22IN\x22},{\x22title\x22:\x22Indonesia\x22,\x22value\x22:\x22ID\x22},{\x22title\x22:\x22Iraq\x22,\x22value\x22:\x22IQ\x22},{\x22title\x22:\x22Iran\x22,\x22value\x22:\x22IR\x22},{\x22title\x22:\x22Ireland\x22,\x22value\x22:\x22IE\x22},{\x22title\x22:\x22Isle of Man\x22,\x22value\x22:\x22IM\x22},{\x22title\x22:\x22Israel\x22,\x22value\x22:\x22IL\x22},{\x22title\x22:\x22Italy\x22,\x22value\x22:\x22IT\x22},{\x22title\x22:\x22Ivory Coast\x22,\x22value\x22:\x22CI\x22},{\x22title\x22:\x22Jamaica\x22,\x22value\x22:\x22JM\x22},{\x22title\x22:\x22Japan\x22,\x22value\x22:\x22JP\x22},{\x22title\x22:\x22Jersey\x22,\x22value\x22:\x22JE\x22},{\x22title\x22:\x22Jordan\x22,\x22value\x22:\x22JO\x22},{\x22title\x22:\x22Kazakhstan\x22,\x22value\x22:\x22KZ\x22},{\x22title\x22:\x22Kenya\x22,\x22value\x22:\x22KE\x22},{\x22title\x22:\x22Kiribati\x22,\x22value\x22:\x22KI\x22},{\x22title\x22:\x22Kosovo\x22,\x22value\x22:\x22XK\x22},{\x22title\x22:\x22Kuwait\x22,\x22value\x22:\x22KW\x22},{\x22title\x22:\x22Kyrgyzstan\x22,\x22value\x22:\x22KG\x22},{\x22title\x22:\x22Laos\x22,\x22value\x22:\x22LA\x22},{\x22title\x22:\x22Latvia\x22,\x22value\x22:\x22LV\x22},{\x22title\x22:\x22Lebanon\x22,\x22value\x22:\x22LB\x22},{\x22title\x22:\x22Lesotho\x22,\x22value\x22:\x22LS\x22},{\x22title\x22:\x22Liberia\x22,\x22value\x22:\x22LR\x22},{\x22title\x22:\x22Libya\x22,\x22value\x22:\x22LY\x22},{\x22title\x22:\x22Liechtenstein\x22,\x22value\x22:\x22LI\x22},{\x22title\x22:\x22Lithuania\x22,\x22value\x22:\x22LT\x22},{\x22title\x22:\x22Luxembourg\x22,\x22value\x22:\x22LU\x22},{\x22title\x22:\x22Macao\x22,\x22value\x22:\x22MO\x22},{\x22title\x22:\x22Macedonia\x22,\x22value\x22:\x22MK\x22},{\x22title\x22:\x22Madagascar\x22,\x22value\x22:\x22MG\x22},{\x22title\x22:\x22Malawi\x22,\x22value\x22:\x22MW\x22},{\x22title\x22:\x22Malaysia\x22,\x22value\x22:\x22MY\x22},{\x22title\x22:\x22Maldives\x22,\x22value\x22:\x22MV\x22},{\x22title\x22:\x22Mali\x22,\x22value\x22:\x22ML\x22},{\x22title\x22:\x22Malta\x22,\x22value\x22:\x22MT\x22},{\x22title\x22:\x22Marshall Islands\x22,\x22value\x22:\x22MH\x22},{\x22title\x22:\x22Martinique\x22,\x22value\x22:\x22MQ\x22},{\x22title\x22:\x22Mauritania\x22,\x22value\x22:\x22MRT\x22},{\x22title\x22:\x22Mauritius\x22,\x22value\x22:\x22MU\x22},{\x22title\x22:\x22Mayotte\x22,\x22value\x22:\x22YT\x22},{\x22title\x22:\x22Mexico\x22,\x22value\x22:\x22MX\x22},{\x22title\x22:\x22Moldova\x22,\x22value\x22:\x22MD\x22},{\x22title\x22:\x22Monaco\x22,\x22value\x22:\x22MC\x22},{\x22title\x22:\x22Mongolia\x22,\x22value\x22:\x22MN\x22},{\x22title\x22:\x22Montenegro\x22,\x22value\x22:\x22ME\x22},{\x22title\x22:\x22Montserrat\x22,\x22value\x22:\x22MS\x22},{\x22title\x22:\x22Morocco\x22,\x22value\x22:\x22MA\x22},{\x22title\x22:\x22Mozambique\x22,\x22value\x22:\x22MZ\x22},{\x22title\x22:\x22Myanmar (Burma)\x22,\x22value\x22:\x22MM\x22},{\x22title\x22:\x22Namibia\x22,\x22value\x22:\x22NA\x22},{\x22title\x22:\x22Nauru\x22,\x22value\x22:\x22NR\x22},{\x22title\x22:\x22Nepal\x22,\x22value\x22:\x22NP\x22},{\x22title\x22:\x22Netherlands\x22,\x22value\x22:\x22NL\x22},{\x22title\x22:\x22New Caledonia\x22,\x22value\x22:\x22NC\x22},{\x22title\x22:\x22New Zealand\x22,\x22value\x22:\x22NZ\x22},{\x22title\x22:\x22Nicaragua\x22,\x22value\x22:\x22NI\x22},{\x22title\x22:\x22Niger\x22,\x22value\x22:\x22NE\x22},{\x22title\x22:\x22Nigeria\x22,\x22value\x22:\x22NG\x22},{\x22title\x22:\x22Niue\x22,\x22value\x22:\x22NU\x22},{\x22title\x22:\x22Norfolk Island\x22,\x22value\x22:\x22NF\x22},{\x22title\x22:\x22North Korea\x22,\x22value\x22:\x22KP\x22},{\x22title\x22:\x22Northern Mariana Islands\x22,\x22value\x22:\x22MP\x22},{\x22title\x22:\x22Norway\x22,\x22value\x22:\x22NO\x22},{\x22title\x22:\x22Oman\x22,\x22value\x22:\x22OM\x22},{\x22title\x22:\x22Pakistan\x22,\x22value\x22:\x22PK\x22},{\x22title\x22:\x22Palau\x22,\x22value\x22:\x22PW\x22},{\x22title\x22:\x22Palestine\x22,\x22value\x22:\x22PS\x22},{\x22title\x22:\x22Panama\x22,\x22value\x22:\x22PA\x22},{\x22title\x22:\x22Papua New Guinea\x22,\x22value\x22:\x22PG\x22},{\x22title\x22:\x22Paraguay\x22,\x22value\x22:\x22PY\x22},{\x22title\x22:\x22Peru\x22,\x22value\x22:\x22PE\x22},{\x22title\x22:\x22Philippines\x22,\x22value\x22:\x22PH\x22},{\x22title\x22:\x22Pitcairn Islands\x22,\x22value\x22:\x22PN\x22},{\x22title\x22:\x22Poland\x22,\x22value\x22:\x22PL\x22},{\x22title\x22:\x22Portugal\x22,\x22value\x22:\x22PT\x22},{\x22title\x22:\x22Puerto Rico\x22,\x22value\x22:\x22PR\x22},{\x22title\x22:\x22Qatar\x22,\x22value\x22:\x22QA\x22},{\x22title\x22:\x22Réunion\x22,\x22value\x22:\x22RE\x22},{\x22title\x22:\x22Romania\x22,\x22value\x22:\x22RO\x22},{\x22title\x22:\x22Republic of the Congo\x22,\x22value\x22:\x22CD\x22},{\x22title\x22:\x22Russia\x22,\x22value\x22:\x22RU\x22},{\x22title\x22:\x22Rwanda\x22,\x22value\x22:\x22RW\x22},{\x22title\x22:\x22São Tomé and Príncipe\x22,\x22value\x22:\x22ST\x22},{\x22title\x22:\x22Saint Barthélemy\x22,\x22value\x22:\x22BL\x22},{\x22title\x22:\x22Saint Helena\x22,\x22value\x22:\x22SH\x22},{\x22title\x22:\x22Saint Kitts and Nevis \x22,\x22value\x22:\x22KN\x22},{\x22title\x22:\x22Saint Lucia\x22,\x22value\x22:\x22LC\x22},{\x22title\x22:\x22Saint Martin\x22,\x22value\x22:\x22MF\x22},{\x22title\x22:\x22Saint Pierre and Miquelon\x22,\x22value\x22:\x22PM\x22},{\x22title\x22:\x22Saint Vincent and the Grenadines\x22,\x22value\x22:\x22VC\x22},{\x22title\x22:\x22Samoa\x22,\x22value\x22:\x22WS\x22},{\x22title\x22:\x22San Marino\x22,\x22value\x22:\x22SM\x22},{\x22title\x22:\x22Saudi Arabia\x22,\x22value\x22:\x22SA\x22},{\x22title\x22:\x22Senegal\x22,\x22value\x22:\x22SN\x22},{\x22title\x22:\x22Serbia\x22,\x22value\x22:\x22RS\x22},{\x22title\x22:\x22Seychelles\x22,\x22value\x22:\x22SC\x22},{\x22title\x22:\x22Sierra Leone\x22,\x22value\x22:\x22SL\x22},{\x22title\x22:\x22Singapore\x22,\x22value\x22:\x22SG\x22},{\x22title\x22:\x22Sint Maarten\x22,\x22value\x22:\x22SX\x22},{\x22title\x22:\x22Slovakia\x22,\x22value\x22:\x22SK\x22},{\x22title\x22:\x22Slovenia\x22,\x22value\x22:\x22SI\x22},{\x22title\x22:\x22Solomon Islands\x22,\x22value\x22:\x22SB\x22},{\x22title\x22:\x22Somalia\x22,\x22value\x22:\x22SO\x22},{\x22title\x22:\x22South Africa\x22,\x22value\x22:\x22ZA\x22},{\x22title\x22:\x22South Georgia and the South Sandwich Islands\x22,\x22value\x22:\x22GS\x22},{\x22title\x22:\x22South Korea\x22,\x22value\x22:\x22KR\x22},{\x22title\x22:\x22South Sudan\x22,\x22value\x22:\x22SS\x22},{\x22title\x22:\x22Spain\x22,\x22value\x22:\x22ES\x22},{\x22title\x22:\x22Sri Lanka\x22,\x22value\x22:\x22LK\x22},{\x22title\x22:\x22Sudan\x22,\x22value\x22:\x22SD\x22},{\x22title\x22:\x22Suriname\x22,\x22value\x22:\x22SR\x22},{\x22title\x22:\x22Svalbard and Jan Mayen\x22,\x22value\x22:\x22SJ\x22},{\x22title\x22:\x22Swaziland\x22,\x22value\x22:\x22SZ\x22},{\x22title\x22:\x22Sweden\x22,\x22value\x22:\x22SE\x22},{\x22title\x22:\x22Switzerland\x22,\x22value\x22:\x22CH\x22},{\x22title\x22:\x22Syria\x22,\x22value\x22:\x22SY\x22},{\x22title\x22:\x22Taiwan\x22,\x22value\x22:\x22TW\x22},{\x22title\x22:\x22Tajikistan\x22,\x22value\x22:\x22TJ\x22},{\x22title\x22:\x22Tanzania\x22,\x22value\x22:\x22TZ\x22},{\x22title\x22:\x22Thailand\x22,\x22value\x22:\x22TH\x22},{\x22title\x22:\x22Togo\x22,\x22value\x22:\x22TG\x22},{\x22title\x22:\x22Tokelau\x22,\x22value\x22:\x22TK\x22},{\x22title\x22:\x22Tonga\x22,\x22value\x22:\x22TO\x22},{\x22title\x22:\x22Trinidad and Tobago\x22,\x22value\x22:\x22TT\x22},{\x22title\x22:\x22Tunisia\x22,\x22value\x22:\x22TN\x22},{\x22title\x22:\x22Turkey\x22,\x22value\x22:\x22TR\x22},{\x22title\x22:\x22Turkmenistan\x22,\x22value\x22:\x22TM\x22},{\x22title\x22:\x22Turks and Caicos Islands\x22,\x22value\x22:\x22TC\x22},{\x22title\x22:\x22Tuvalu\x22,\x22value\x22:\x22TV\x22},{\x22title\x22:\x22U.S. Minor Outlying Islands\x22,\x22value\x22:\x22UM\x22},{\x22title\x22:\x22U.S. Virgin Islands\x22,\x22value\x22:\x22VI\x22},{\x22title\x22:\x22Uganda\x22,\x22value\x22:\x22UG\x22},{\x22title\x22:\x22Ukraine\x22,\x22value\x22:\x22UA\x22},{\x22title\x22:\x22United Arab Emirates\x22,\x22value\x22:\x22AE\x22},{\x22title\x22:\x22United Kingdom\x22,\x22value\x22:\x22GB\x22},{\x22title\x22:\x22United States\x22,\x22value\x22:\x22US\x22},{\x22title\x22:\x22Uruguay\x22,\x22value\x22:\x22UY\x22},{\x22title\x22:\x22Uzbekistan\x22,\x22value\x22:\x22UZ\x22},{\x22title\x22:\x22Vanuatu\x22,\x22value\x22:\x22VU\x22},{\x22title\x22:\x22Vatican City\x22,\x22value\x22:\x22VA\x22},{\x22title\x22:\x22Venezuela\x22,\x22value\x22:\x22VE\x22},{\x22title\x22:\x22Vietnam\x22,\x22value\x22:\x22VN\x22},{\x22title\x22:\x22Wallis and Futuna\x22,\x22value\x22:\x22WF\x22},{\x22title\x22:\x22Western Sahara\x22,\x22value\x22:\x22EH\x22},{\x22title\x22:\x22Yemen\x22,\x22value\x22:\x22YE\x22},{\x22title\x22:\x22Zambia\x22,\x22value\x22:\x22ZM\x22},{\x22title\x22:\x22Zimbabwe\x22,\x22value\x22:\x22ZW\x22},{\x22title\x22:\x22Micronesia\x22,\x22value\x22:\x22FM\x22}]");
+  Amadeus.Constants.countriesLang = JSON.parse("[{\x22title\x22:\x22USA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22CAN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22AUS\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ALA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22AND\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22ARE\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22AFG\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ATG\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22AIA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ALB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ARM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ANT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22AGO\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ATA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ARG\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22ASM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ATA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ATF\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22AUT\x22,\x22value\x22:\x22de\x22},{\x22title\x22:\x22ABW\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22AZE\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BES\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BIH\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BRB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BGD\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BEL\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22BFA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BGR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BHR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BDI\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22BEN\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22BMU\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BRN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BOL\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22BRA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BHS\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BTN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BVT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BWA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BLM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BLR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22BLZ\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22CAF\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22CCK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22COD\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22COG\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22CHE\x22,\x22value\x22:\x22de\x22},{\x22title\x22:\x22CIV\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22COK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22CHL\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22CMR\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22CHN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22COL\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22CRI\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22CUB\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22CPV\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22CXR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22CYP\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22CZE\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22DEU\x22,\x22value\x22:\x22de\x22},{\x22title\x22:\x22DJI\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22DNK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22DMA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22DOM\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22DZA\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22ECU\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22EST\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22EGY\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ESH\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ERI\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ESP\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22ETH\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22FIN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22FJI\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22FLK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22FSM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22FRO\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22FRA\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22GAB\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22GBR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GRD\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GEO\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GUF\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22GHA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GIB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GRL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GMB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GIN\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22GLP\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22GNQ\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22GRC\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SGS\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GTM\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22GUM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GNB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22GUY\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22HKG\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22HMD\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22HND\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22HRV\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22HTI\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22HUN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22IDN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22IRL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ISR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22IND\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22IOT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22IRQ\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22IRN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ISL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ITA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22JAM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22JOR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22JPN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22KEN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22KGZ\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22KHM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22KIR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22COM\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22KNA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PRK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22KOR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22XKX\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22KWT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22CYM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22KAZ\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LAO\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LBN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LCA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LIE\x22,\x22value\x22:\x22de\x22},{\x22title\x22:\x22LKA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LBR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LSO\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LTU\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LUX\x22,\x22value\x22:\x22de\x22},{\x22title\x22:\x22LVA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22LBY\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MAF\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22MAR\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22MCO\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22MDA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MNE\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MDG\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22MHL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MKD\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MLI\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22MMR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MNG\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MAC\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MNP\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MTQ\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22MRT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MSR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MLT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MUS\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MDV\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MWI\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MEX\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22MYS\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MOZ\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NAM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NCL\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22NER\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22NFK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NGA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NIC\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22NLD\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NOR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NPL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NRU\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NIU\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22NZL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22OMN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PAN\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22PER\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22PYF\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22PNG\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PHL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PAK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22POL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PYF\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22SPM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PCN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PRI\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22PSE\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PRT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PLW\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22PRY\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22QAT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22REU\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22ROM\x22,\x22value\x22:\x22de\x22},{\x22title\x22:\x22SRB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22RUS\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22RWA\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22SAU\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SLB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SYC\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22SDN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SWE\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SGP\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SHN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SVN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SJM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SVK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SLE\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SMR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SEN\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22SOM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SPM\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22SUR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22STP\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SUN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SLV\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22SYR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SWZ\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22SXM\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22TCA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TCD\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22TGO\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22THA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TJK\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TKL\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TKM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TUN\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22TON\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TMP\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TUR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TTO\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TUV\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TWN\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22TZA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22UKR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22UGA\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22UMI\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22URY\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22UZB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22VAT\x22,\x22value\x22:\x22it\x22},{\x22title\x22:\x22VCT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22VEN\x22,\x22value\x22:\x22es\x22},{\x22title\x22:\x22VGB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22VIR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22VNM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22VUT\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22WLF\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22WSM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22YEM\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22MYT\x22,\x22value\x22:\x22fr\x22},{\x22title\x22:\x22YUG\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ZAF\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ZMB\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ZAR\x22,\x22value\x22:\x22en\x22},{\x22title\x22:\x22ZWE\x22,\x22value\x22:\x22en\x22}]");
+  // Current Page information
+  Amadeus.Constants.pageName = "resources";
+  Amadeus.Constants.pagePath = "\/content\/corporate\/en\/resources";
+  Amadeus.Constants.pageTitle = "Resources";
+  Amadeus.Constants.jcrTitle = "Resources";
+  Amadeus.Constants.langCode = "en";
+  Amadeus.Constants.homePageUrl = "\/content\/corporate\/en";
+  Amadeus.Constants.countriesLangPages = {};
+  
+    Amadeus.Constants.countriesLangPages.en = "/content/corporate/en";
+  
+    Amadeus.Constants.countriesLangPages.es = "/content/corporate/es";
+  
+  Amadeus.Constants.languageOptions = {};
+  
+    Amadeus.Constants.languageOptions.en = "English";
+  
+    Amadeus.Constants.languageOptions.es = "Español";
+  
+  Amadeus.Constants.isHomePage = false;
+  Amadeus.Constants.sitename = "Amadeus Corporate Site";
+  Amadeus.Constants.level2Title = "Resources"; //this is page name (solutions, portfolio, insight, etc)
+  Amadeus.Constants.pageType = "\/conf\/amadeus\/corporate\/settings\/wcm\/templates\/corporate\u002Dbasic\u002Dtemplate";
+  Amadeus.Constants.timeStart = Date.now();
+
+  //content-specific section
+  Amadeus.Constants.tags = "corporate,corporate";
+  Amadeus.Constants.insightType = "";
+  Amadeus.Constants.author = "";
+  Amadeus.Constants.theme = "";
+  Amadeus.Constants.themeType = "";
+  Amadeus.Constants.publishDate = "2018\u002D09\u002D04T11:46:12.957+01:00";
+  Amadeus.Constants.topic = "";
+  Amadeus.Constants.country = "";
+  Amadeus.Constants.region = "";
+  Amadeus.Constants.product = "";
+  Amadeus.Constants.productPageName = "Resources";
+  Amadeus.Constants.business = "";
+  Amadeus.Constants.techCategory = "";
+  //industries
+  Amadeus.Constants.industry = "";
+  Amadeus.Constants.industryLevel1 = "";
+  Amadeus.Constants.industryLevel2 = "";
+  Amadeus.Constants.industryLevel3 = "";
+
+
+  // Tealium configuration
+  Amadeus.Constants.isTealiumEnabled = "true";
+  Amadeus.Constants.tealiumUtagCommercialUrl = "\/\/tags.tiqcdn.com\/utag\/amadeus\/ecosystem\/prod\/utag.js";
+  Amadeus.Constants.tealiumUtagCorporateUrl = "\/\/tags.tiqcdn.com\/utag\/amadeus\/corporate\/prod\/utag.js";
+  Amadeus.Constants.tealiumUtagCareersUrl = "\/\/tags.tiqcdn.com\/utag\/amadeus\/careers\/prod\/utag.js";
+  Amadeus.Constants.tealiumUtagT3chUrl = "\/\/tags.tiqcdn.com\/utag\/amadeus\/techevent\/prod\/utag.js";
+  Amadeus.Constants.tealiumUtagSalesKitUrl = "\/\/tags.tiqcdn.com\/utag\/amadeus\/salesplaybook\/prod\/utag.js";
+  Amadeus.Constants.tealiumUtagDigitalGuidelinesUrl = "\/\/tags.tiqcdn.com\/utag\/amadeus\/digital\/prod\/utag.js";
+  Amadeus.Constants.tealiumUtagStartupsUrl = "\/\/tags.tiqcdn.com\/utag\/amadeus\/startups\/qa\/utag.js";
+
+
+  // Eloqua
+  Amadeus.Constants.isEloquaEnabled = "true";
+  // Google services
+  Amadeus.Constants.maxMindLibrary = "\/\/js.maxmind.com\/js\/apis\/geoip2\/v2.1\/geoip2.js";
+
+  //Product / Insights / Events
+  Amadeus.Constants.contentCountry = "";
+  Amadeus.Constants.contentRegion = "";
+  Amadeus.Constants.contentDate = "";
+
+  Amadeus.Constants.availability = "";
+  Amadeus.Constants.includedIn = "";
+  Amadeus.Constants.excludedIn = "";
+  Amadeus.Constants.parentPage = "https:\/\/corporate.amadeus.com\/en";
+
+  //Product
+  Amadeus.Constants.productName = Amadeus.Constants.product;
+  Amadeus.Constants.contentIndustry = "";
+  Amadeus.Constants.contentCategory = "";
+  Amadeus.Constants.contentSubcategory = "";
+  Amadeus.Constants.contentBusinessFunction = "";
+  Amadeus.Constants.contentTopicTechnology = "";
+  Amadeus.Constants.contentTags = Amadeus.Constants.tags;
+  //Product Airlines Specific
+  Amadeus.Constants.filterSubcategory = "";
+  Amadeus.Constants.contentCategoryGroup = "";
+
+  //Solutions
+  Amadeus.Constants.contentCategoryGroup = "";
+  Amadeus.Constants.contentBusinessFunction = "";
+  Amadeus.Constants.contentTopicTechnology = "";
+
+  //Themes
+  Amadeus.Constants.filterTheme = "";
+
+  //Insights
+  Amadeus.Constants.contentAuthor = "";
+
+  //Events
+  Amadeus.Constants.eventDate = "";
+
+  Amadeus.Constants.isCommercial = false;
+  Amadeus.Constants.isCorporate = true;
+  Amadeus.Constants.isCareers = false;
+  Amadeus.Constants.isT3ch = false;
+  Amadeus.Constants.isSaleskit = false;
+  Amadeus.Constants.isDigitalGuidelines = false;
+  Amadeus.Constants.isDigitalGuidelines = false;
+  Amadeus.Constants.isStartups = false;
+
+  // Dynamic Content Loading
+  Amadeus.Constants.containsDynamicContent = false;
+
+  Amadeus.Constants.creditsafeCountries = "DE,FR,GB,IE,NL,BE,SE,NO,LU,US,IT,MX,DK";
+
+  // Eloqua Details Content
+  Amadeus.Constants.eloquaImageId = "266319173";
+
+
+</script>
+
+    
+    
+
+
+
+
+
+  
+  
+
+    
+    
+<link rel="stylesheet" href="/etc/clientlibs/amadeus/corporate/all.min.d41d8cd98f00b204e9800998ecf8427e.css" type="text/css">
+
+
+
+
+
+
+  
+    
+    
+
+    
+    
+
+
+  
+  
+
+  
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/content/dam/amadeus/images/en/icons/favicon/apple-touch-icon.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/content/dam/amadeus/images/en/icons/favicon/favicon-32x32.png"/>
+    <link rel="icon" type="image/png" sizes="16x16" href="/content/dam/amadeus/images/en/icons/favicon/favicon-16x16.png"/>
+    <link rel="manifest" href="/content/dam/amadeus/images/en/icons/favicon/site.webmanifest"/>
+    <link rel="mask-icon" href="/content/dam/amadeus/images/en/icons/favicon/safari-pinned-tab.svg" color="#005eb8"/>
+    <meta name="msapplication-TileColor" content="#005eb8"/>
+    <meta name="theme-color" content="#005eb8"/>
+
+  
+
+  
+  <script type="text/javascript">
+    Amadeus.Constants.pageSelectors = "";
+  </script>
+
+<script type="text/javascript">
+    function getAbsolutePath() {
+    var loc = window.location;
+    var pathName = loc.pathname.substring(0, loc.pathname.lastIndexOf('/') + 1);
+    return loc.href.substring(0, loc.href.length - ((loc.pathname + loc.search + loc.hash).length - pathName.length));
+}
+    var _elqQ = _elqQ || [];
+    var _elqQImg = Amadeus.Constants.eloquaImageId || "";
+    _elqQ.push(['elqSetSiteId', _elqQImg]);
+    _elqQ.push(['elqUseFirstPartyCookie', getAbsolutePath() ]);
+    _elqQ.push(['elqTrackPageView']);    (function() {
+        function async_load() {
+            var s = document.createElement('script'); s.type = 'text/javascript';
+            s.async = true;
+            s.src = '//img06.en25.com/i/elqCfg.min.js';
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        }
+        if(window.addEventListener) window.addEventListener('DOMContentLoaded', async_load, false);
+        else if (window.attachEvent) window.attachEvent('onload', async_load);
+    })();
+  document.write("<img style='display:none; border:0' src='https://s"+_elqQImg+".t.eloqua.com/visitor/v200/svrGP?pps=3&siteid="+_elqQImg+"&ref="+getAbsolutePath()+"' width='1' height='1' alt=''");
+</script>
+
+
+  <link rel="mask-icon" href="/etc/designs/amadeus/corporate/safari-pinned-tab.svg" color="#5bbad5"/>
+  
+    <script type="text/javascript" data-cfasync="false" src="//apps.shareaholic.com/assets/pub/shareaholic.js" data-shr-siteid="811ee7f89b19194d822a0cdce6ac5e09" async="async"></script>
+  
+</head>
+  <body>
+  
+  <div id="anchorTop"></div>
+  <div><div>
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="localised-experience-fragment aem-GridColumn aem-GridColumn--default--12">
+ 
+
+    
+    <!-- Content page -->
+<div>
+  <div>
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="header parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+<div>
+
+<div class="alert alert-warning bg-warning m-0 p-0 d-none js-referal-notification-message" data-referral-messages="[{\x22jcr:primaryType\x22:\x22nt:unstructured\x22,\x22description\x22:\x22The company Traveltainment GmbH has been renamed Amadeus Leisure IT GmbH. The content of the website traveltainment.de can now be found on amadeus.com. Therefore, you have been automatically redirected.\x22,\x22title\x22:\x22Welcome to the website of Amadeus!\x22,\x22ctaIcon\x22:\x22ic_arrow_forward\x22,\x22parameter\x22:\x22traveltainment\x22}]">
+</div>
+
+<script id="referalNotificationMessageTemplate" type="text/x-handlebars-template">
+    <div class="container-fluid">
+        <div class="row no-gutters text-white m-0 w-100">
+            <div class="col-2 col-sm-1 mb-4 mt-4">
+                <svg class="float-right svg--ic_error-dims icon-w-7 icon-h-7" aria-labelledby="svg--ic_check-dims">
+                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_error"></use>
+                </svg>
+            </div>
+            <div class="col-9 col-sm-10 mt-4 mb-4">
+                <p class="pl-2 pl-sm-4 m-0 pl-lg-3 pb-1"><strong class="h3">{{heading}}</strong></p>
+                <p class="small pl-2 pl-sm-4 m-0 pl-lg-3 pb-1">{{description}}</p>
+                <p class="m-0 pb-1 pl-2 pl-lg-3 pl-sm-4">
+                    {{#if ctalink}}
+                    <a target="_blank"
+                       class="btn btn-link text-uppercase text-white p-0 m-0 d-inline-flex align-items-center"
+                       href="{{ctalink}}">
+                        <span class="small">{{ctalabel}}</span>
+                        <svg class="svg--ic_arrow_forward-dims ml-auto svg-icon pl-1" aria-labelledby="ic_arrow_forward">
+                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#{{ctaIcon}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                    </a>
+                    {{/if}}
+                </p>
+            </div>
+            <div class="col-1 pl-md-0 pl-2 my-auto">
+                <a class="cursor-pointer closeAlert">
+                    <svg class="svg--ic_close-dims align-middle icon-w-3 icon-h-3 svg-ico" aria-labelledby="ic_close">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</script></div>
+<div>
+
+
+
+<div class="wayfinder-component alert alert-light alert-dismissible fade px-0 show d-print-none border-bottom" role="alert" style="display: none;" data-componentname="wayfinder" data-error="No country was found." data-cookie-timestamp="2018-11-13T10:34:19.493Z">
+      <button class="close my-2 mx-md-1" type="button" aria-label="Close">
+          <svg class="svg--ic_close-dims align-middle svg-ico" aria-labelledby="ic_close">
+              <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+          </svg>
+      </button>
+      <div class="container py-0">
+        <div class="row no-gutters justify-content-center">
+          <div class="col-10 col-sm-11 mr-2 text-center">
+            <p class="h2 display-4 text-primary" id="wayfinderHeadline" data-new-cookie="Before we continue, we wanted to let you know something has changed">
+                Before we continue, are these settings correct?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid border border-gray border-top-0 border-right-0 border-left-0"></div>
+      <div class="container py-5">
+        <div class="form-row justify-content-center" id="wayfinderFields">
+          <div class="col-md-10">
+            <div class="row justify-content-center">
+                
+                
+                
+                
+                <div class="form-group language col-8 mb-0 col-md-4">
+                    <label class="small">Language</label>
+                    <div class="dropdown custom-select-icon">
+                        <button id="language-select" class="form-control custom-select dropdown-toggle text-secondary" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <label class="my-0" for="language-select" style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: inline-block;"></label>
+                            <input type="hidden" id="languageCode"/>
+                        </button>
+                        <ul class="col-12 dropdown-menu pre-scrollable" role="menu" aria-labelledby="language-select">
+                            
+                                
+                                <li data-value="en" selected="selected" class="dropdown-item text-capitalize">English</li>
+                            
+                                
+                                <li data-value="es" class="dropdown-item text-capitalize">Spanish</li>
+                            
+                        </ul>
+                    </div>
+                </div>
+                
+                
+                
+                
+            </div>
+          </div>
+        </div>
+        <div class="form-row justify-content-center">
+          <div class="col-10 col-md-7 form-text text-muted text-center policy-text">
+              
+<p><p>This website uses cookies to improve user experience. By using our website you consent to all cookies in accordance with our <a href="https://amadeus.com/en/policies/cookies-policy" target="_blank" title="Cookie Policy">Cookie Policy.</a>
+</p>
+<p>To access all <a href="https://amadeus.com/en/local-sites" target="_blank" title="Amadeus local sites">Amadeus local sites click here.</a>
+</p>
+</p>
+
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="col text-center">
+            <button id="updatePreferences" class="btn btn-md btn-primary" aria-label="Continue" data-tealium-track="update-wayfinder-preferences">
+              Continue
+            </button>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+
+
+<div>
+
+<div class="alert alert-warning bg-diagonal-gradient m-0 p-0 d-none languageChangeMessage">
+</div>
+
+<script id="languageChangeMessageTemplate" type="text/x-handlebars-template">
+    <div class="container-fluid">
+        <div class="row no-gutters text-white m-0 w-100">
+            <div class="col-2 col-sm-1 mb-4 mt-4 d-none d-sm-block">
+                <svg class="float-right svg--ic_error-dims icon-w-7 icon-h-7" aria-labelledby="svg--ic_check-dims">
+                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_profile"></use>
+                </svg>
+            </div>
+            <div class="col-11 col-sm-10 mt-4 mb-4 text-white">
+                <p class="pl-2 pl-sm-4 m-0 pl-lg-3 pb-1"><strong class="h3">{{heading}}</strong></p>
+                <p class="small pl-2 pl-sm-4 m-0 pl-lg-3 pb-1">{{description}}</p>
+                <p class="m-0 pb-1 pl-2 pl-lg-3 pl-sm-4">
+					{{#if modal}}
+						<button class="btn btn-inverse btn-personalized mr-2" data-tealium-track="preference-update" >{{modal}}</button>
+					{{/if}}
+					{{#if closemodal}}
+						<button class="btn btn-outline-inverse closeAlert" >{{closemodal}}</button>
+					{{/if}}
+                    {{#if ctalink}}
+                    <a target="_blank" class="btn btn-link text-uppercase text-white p-0 m-0 d-inline-flex align-items-center" href="{{ctalink}}">
+                        <span class="small">{{ctalabel}}</span>
+                        <svg class="svg--ic_arrow_forward-dims ml-auto svg-icon pl-1" aria-labelledby="ic_arrow_forward">
+                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_arrow_forward" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                    </a>
+                    {{/if}}
+                </p>
+            </div>
+            <div class="col-1 pl-md-0 pl-2">
+                <div class="cursor-pointer closeAlert mt-4 mb-4">
+                    <svg class="svg--ic_close-dims align-middle svg-ico" aria-labelledby="ic_close">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</script></div>
+<div class="fixed-bottom" id="messagesArea"></div>
+
+<!-- MAIN NAVIGATION -->
+<header class="navigation position-relative" data-componentname="header" data-componenttitle="Header">
+    <div class="sticky-navigation" style="top: 0;">
+        <nav class="navbar nav-desktop navbar-expand justify-content-between justify-content-md-start" data-transparent="false" data-background-color="rgba(255, 255, 255, 1)">
+            <div class="navbar-nav">
+                <button class="nav-item nav-link btn btn-pacific bg-transparent border-0 d-inline-flex p-0 p-md-1 cursor-pointer" aria-label="Open Menu" onmousedown="return false;" data-target="#menuModal" data-backdrop="static" data-focus="true" data-toggle="modal">
+                <svg style="width: 24px; height: 24px;">
+                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_menu"></use>
+                </svg>
+            </button>
+            </div>
+
+            <!-- LOGO -->
+            <a class="navbar-brand px-2 py-0 mx-2" href="/en">
+                <div class="row no-gutters flex-column flex-md-row align-items-md-baseline align-items-center mt-1 mt-md-0">
+                    <div class="col-auto d-flex">
+                        <span class="sr-only">Amadeus</span>
+                        <svg height="16px" width="120px">
+                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#amadeus_logo"></use>
+                        </svg>
+                    </div>
+                    
+                    
+                    <div class="col-auto d-flex">
+                        <span class="site-name h3 font-amadeus ml-md-2 d-flex d-md-inline-flex mt-1 mt-md-0 mb-0">Corporate</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- MENU ITEMS -->
+            <ul class="navbar-nav d-none d-md-flex mx-auto">
+
+                
+                    
+
+                        <li class="nav-item dropdown mega-dropdown ">
+                            <a href="javascript:;" class="nav-link bg-transparent border-0 d-inline-flex align-items-center" style="cursor: pointer;" id="navbarMegaDropdown" data-toggle="megadropdown" aria-haspopup="true" aria-expanded="false">
+                                Investors
+                                <svg class="ml-1 animatedDropdownIcon" style="width: 1.25rem; height: 1.25rem; margin-top: 0.125rem">
+                                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_down"></use>
+                                </svg>
+                            </a>
+                            <!-- MEGAMENU -->
+                            
+    <div class="dropdown-menu mega-dropdown-menu mega-dropdown-bg bg-transparent w-100 border-0 rounded-0 p-0 m-0" aria-labelledby="navbarMegaDropdown">
+        <div class="container-fluid bg-white px-5 pt-4 pb-7 m-0" id="formbox">
+            
+            
+                <div class="row flex-row list-group list-group-flush">
+                    <span class="col-md-6 col-lg-3">
+                        <a href="/en/investors/annual-general-meeting" class="list-group-item list-group-item-action small border-0 rounded d-inline-flex align-items-center ">
+                            
+                            Annual general meeting
+                        </a>
+                    </span>
+                
+                    <span class="col-md-6 col-lg-3">
+                        <a href="/en/investors/board-of-directors" class="list-group-item list-group-item-action small border-0 rounded d-inline-flex align-items-center ">
+                            
+                            Board of Directors
+                        </a>
+                    </span>
+                
+                    <span class="col-md-6 col-lg-3">
+                        <a href="/en/investors/cnmv-filings" class="list-group-item list-group-item-action small border-0 rounded d-inline-flex align-items-center ">
+                            
+                            CNMV filings
+                        </a>
+                    </span>
+                
+                    <span class="col-md-6 col-lg-3">
+                        <a href="/en/investors/corporate-governance" class="list-group-item list-group-item-action small border-0 rounded d-inline-flex align-items-center ">
+                            
+                            Corporate governance
+                        </a>
+                    </span>
+                
+                    <span class="col-md-6 col-lg-3">
+                        <a href="/en/investors/financial-calendar" class="list-group-item list-group-item-action small border-0 rounded d-inline-flex align-items-center ">
+                            
+                            Financial calendar
+                        </a>
+                    </span>
+                
+                    <span class="col-md-6 col-lg-3">
+                        <a href="/en/investors/financial-information" class="list-group-item list-group-item-action small border-0 rounded d-inline-flex align-items-center ">
+                            
+                            Financial information
+                        </a>
+                    </span>
+                
+                    <span class="col-md-6 col-lg-3">
+                        <a href="/en/investors/share-information" class="list-group-item list-group-item-action small border-0 rounded d-inline-flex align-items-center ">
+                            
+                            Share information
+                        </a>
+                    </span>
+                </div>
+            
+        </div>
+    </div>
+
+                        </li>
+
+                        
+
+
+                    
+                
+                    
+
+                        
+
+                        <li class="nav-item  ">
+                            <a class="nav-link " data-tealium-track="cta-link-click" href="/en/sustainability">Sustainability</a>
+                        </li>
+
+
+                    
+                
+                    
+
+                        
+
+                        <li class="nav-item  ">
+                            <a class="nav-link " data-tealium-track="cta-link-click" href="/en/newsroom">Newsroom</a>
+                        </li>
+
+
+                    
+                
+                    
+
+                        
+
+                        <li class="nav-item  active">
+                            <a class="nav-link d-none d-lg-block" data-tealium-track="cta-link-click" href="/en/resources">Resources</a>
+                        </li>
+
+
+                    
+                
+                    
+
+                        
+
+                        <li class="nav-item  ">
+                            <a class="nav-link d-none d-lg-block" data-tealium-track="cta-link-click" href="/en/about-us">About us</a>
+                        </li>
+
+
+                    
+                
+                    
+
+                        
+
+                        <li class="nav-item  ">
+                            <a class="nav-link d-none d-lg-block" data-tealium-track="cta-link-click" href="/en/contact-us">Contact us</a>
+                        </li>
+
+
+                    
+                
+
+                <!-- Highlighted menu items as button -->
+                
+            </ul>
+            <div class="navbar-nav align-items-center">
+                
+                
+                <a class="nav-item nav-link btn btn-pacific bg-transparent border-0 d-inline-flex p-0 p-md-1" onmousedown="return false;" href="/en/search" aria-label="Search Amadeus">
+                  <svg style="width: 24px; height: 24px;">
+                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_search"></use>
+                  </svg>
+                </a>
+                <button class="icon-user nav-item nav-link btn btn-pacific bg-transparent border-0 rounded-circle d-none d-md-inline-flex  p-0 p-md-1 ml-1 cursor-pointer" id="settingsIcon" onmousedown="return false;" data-tealium-track="preference-update" aria-label="Open Preferences" data-target="#settingsModal" data-backdrop="static" data-focus="true" data-toggle="modal">
+                  <svg style="width: 24px; height: 24px;">
+                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_profile"></use>
+                  </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- SCROLL HEADER -->
+        
+        
+    <div class="scroll-header-component scroll-header-hidden">
+    </div>
+
+
+	    <div class="alert-usermsg">
+		    <div class="content-alert w-100 w-sm-60 w-lg-40">
+				 <div class="alert bg-primary text-white w-100 d-none">
+					<div class="row no-gutters text-white m-0 w-100">
+				           <div class="col-10 text-white">
+				               <h3 class="text-info m-0 pb-1">Success!</h3>
+				               <p class="small m-0 pb-1">Your settings have been successfully updated. Remember that you can change your preferences {{preferences}} in the menu at any time</p>
+				           </div>
+				           <div class="col-2">
+				               <div class="cursor-pointer closeAlert float-right">
+				                   <svg class="svg--ic_close-dims align-middle svg-ico" aria-labelledby="ic_close">
+				                       <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+				                   </svg>
+				               </div>
+				           </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="header-modal">
+ <!-- MENU MODAL -->
+    
+    
+    
+    <div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalTitle" aria-hidden="true">
+        <div class="modal-dialog m-0 mw-100 h-100" role="document">
+            <div class="modal-content bg-transparent h-100">
+                <div class="navbar navbar-expand navbar-dark justify-content-between justify-content-md-start">
+                    <div class="navbar-nav">
+                        <button id="menuModalClose" type="button" class="nav-item nav-link btn btn-info bg-transparent border-0 d-inline-flex p-0 p-md-1 cursor-pointer" data-dismiss="modal" aria-label="Close">
+                            <svg style="width: 24px; height: 24px;">
+                                <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <!-- LOGO -->
+                    <a class="navbar-brand px-2 py-0 ml-2 mr-2 mr-md-auto" href="/">
+                        <div class="row no-gutters flex-column flex-md-row align-items-md-baseline align-items-center mt-1 mt-md-0">
+                            <div class="col-auto d-flex">
+                               <span class="sr-only">Amadeus</span>
+                               <svg height="15.95px" width="120px">
+                                   <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#amadeus_logo"></use>
+                               </svg>
+                            </div>
+                            
+                            <div class="col-auto d-flex">
+                                <span class="h3 text-info font-amadeus ml-md-2 d-flex d-md-inline-flex mt-1 mt-md-0 mb-0">Corporate</span>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="navbar-nav align-items-center">
+                        <span class="nav-item nav-link d-none d-md-block">&nbsp;</span>
+                        
+                        <button id="mobileSettingsModal" class="nav-item nav-link btn btn-info bg-transparent border-0 d-inline-flex p-0 p-md-1 ml-1 d-md-none" data-target="#settingsModal" data-toggle="modal" data-dismiss="modal">
+                          <svg style="width: 24px; height: 24px;">
+                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_profile"></use>
+                          </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="container-fluid d-flex flex-column justify-content-between justify-content-lg-center h-100">
+                    <div class="row d-lg-none align-items-start align-items-md-center" style="flex: 1 0 auto;">
+                        <div class="col">
+                            <nav class="navbar nav-mobile navbar-dark h-100 p-0">
+                                <ul class="navbar-nav text-center w-100">
+                                    <li class="solutions-nav-item h3 nav-item d-md-none mb-3 ">
+                                        <hr class="border-frost my-0"/>
+                                        <a href="#" id="toggleMobileSolutions" class="nav-link d-flex align-items-center w-100 py-3 collapsed" style="cursor: pointer;" data-toggle="collapse" data-target="#solutionsMobileCollapse" aria-expanded="false" role="button">
+                                            <span class="mx-auto">Investors</span>
+                                            
+                                            <svg style="right: 0.5rem; margin-top: 0.125rem" class="animatedDropdownIcon position-absolute">
+                                                <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_down"></use>
+                                            </svg>
+                                        </a>
+                                        <hr class="border-frost mt-0"/>
+                                        <div class="collapse navbar-collapse text-left" id="solutionsMobileCollapse">
+
+                                            <!-- MOBILE SOLUTIONS -->
+                                            <div class="row no-gutters px-3">
+                                                
+                                                <div class="col">
+                                                    <ul class="navbar-nav small flex-column pb-2">
+                                                        <li class="nav-item ">
+                                                            <a class="nav-link text-primary d-inline-flex align-items-center px-0 py-2" href="/en/investors/share-information">
+                                                                Share information
+                                                            </a>
+                                                        </li>
+                                                    
+                                                        <li class="nav-item ">
+                                                            <a class="nav-link text-primary d-inline-flex align-items-center px-0 py-2" href="/en/investors/financial-information">
+                                                                Financial information
+                                                            </a>
+                                                        </li>
+                                                    
+                                                        <li class="nav-item ">
+                                                            <a class="nav-link text-primary d-inline-flex align-items-center px-0 py-2" href="/en/investors/annual-general-meeting">
+                                                                Annual general meeting
+                                                            </a>
+                                                        </li>
+                                                    
+                                                        <li class="nav-item ">
+                                                            <a class="nav-link text-primary d-inline-flex align-items-center px-0 py-2" href="/en/investors/corporate-governance">
+                                                                Corporate governance
+                                                            </a>
+                                                        </li>
+                                                    
+                                                        <li class="nav-item ">
+                                                            <a class="nav-link text-primary d-inline-flex align-items-center px-0 py-2" href="/en/investors/cnmv-filings">
+                                                                CNMV filings
+                                                            </a>
+                                                        </li>
+                                                    
+                                                        <li class="nav-item ">
+                                                            <a class="nav-link text-primary d-inline-flex align-items-center px-0 py-2" href="/en/investors/financial-calendar">
+                                                                Financial calendar
+                                                            </a>
+                                                        </li>
+                                                    
+                                                        <li class="nav-item ">
+                                                            <a class="nav-link text-primary d-inline-flex align-items-center px-0 py-2" href="/en/investors/board-of-directors">
+                                                                Board of Directors
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <hr class="border-frost mb-0"/>
+                                        </div>
+                                    </li>
+                                    
+                                        
+                                    
+                                        <li class="h3 nav-item mb-3 d-md-none ">
+                                            <a class="nav-link" href="/en/sustainability">Sustainability</a>
+                                        </li>
+                                    
+                                        <li class="h3 nav-item mb-3 d-md-none ">
+                                            <a class="nav-link" href="/en/newsroom">Newsroom</a>
+                                        </li>
+                                    
+                                        <li class="h3 nav-item mb-3 d-lg-none mb-md-4 active">
+                                            <a class="nav-link" href="/en/resources">Resources</a>
+                                        </li>
+                                    
+                                        <li class="h3 nav-item mb-3 d-lg-none mb-md-4 ">
+                                            <a class="nav-link" href="/en/about-us">About us</a>
+                                        </li>
+                                    
+                                        <li class="h3 nav-item mb-3 d-lg-none mb-md-4 ">
+                                            <a class="nav-link" href="/en/contact-us">Contact us</a>
+                                        </li>
+                                    
+                                        
+                                    
+                                        
+                                    
+                                        
+                                    
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div id="amadeusSites" class="row justify-content-around mb-2 mb-md-3 mb-lg-9">
+                        <div class="col-12">
+                            <hr class="border-frost mb-5 mb-sm-4 mb-md-7 d-lg-none"/>
+                            <p class="h2 display-4 text-white text-center balance-text mb-4 mb-md-7 mb-lg-8" id="menuModalTitle">Take a trip to other Amadeus sites</p>
+                        </div>
+                        
+                            <div class="col-4 col-xl-3">
+                                <article class="link-collection-item text-center">
+                                    <a href="https://amadeus.com/en" class="d-block no-decoration" data-tealium-track="hamburger-click">
+                                        <div class="link-collection-img d-flex mb-2 text-center site-icon">
+                                            
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+    <title>Amadeus Commercial Icon</title>
+  <path fill="currentColor" d="M19.64 25.54l-3.02 3.02-7.7-2.04a1.86 1.86 0 0 0-2.46.98l-.18.39 6.54 4.47-1.33 1.33a10.85 10.85 0 0 0-2.05 2.57l-1.86-.53a1.2 1.2 0 0 0-1.23 1.98l3.94 3.94a1.2 1.2 0 0 0 .85.35 1.18 1.18 0 0 0 .5-.11 1.19 1.19 0 0 0 .64-1.45l-.54-1.88a10.86 10.86 0 0 0 2.57-2.05l1.33-1.33 4.47 6.53.38-.17a1.87 1.87 0 0 0 1-2.47l-2.05-7.69 3.02-3.02a1.86 1.86 0 0 0 .54-1.38 2.02 2.02 0 0 0-.6-1.38 1.96 1.96 0 0 0-2.76-.06zm2.1 2.11l-3.42 3.43 2.2 8.25c.15.58.07.88-.1 1.07l-4.64-6.78-2.18 2.18a7.63 7.63 0 0 1-2.61 2l-.47.14.8 2.8a.2.2 0 0 1-.32.2L7.06 37a.2.2 0 0 1-.04-.22.2.2 0 0 1 .18-.11.28.28 0 0 1 .08.01l2.78.8.15-.47a7.61 7.61 0 0 1 1.98-2.6l2.19-2.2-6.78-4.63c.19-.17.49-.25 1.07-.1l7.97 2.12.28.08 3.42-3.43a.96.96 0 0 1 1.35.06 1.03 1.03 0 0 1 .3.7.87.87 0 0 1-.24.64zm17.03-13.93a18.23 18.23 0 0 0-1.4-1.75.48.48 0 0 0-.11-.11 17.98 17.98 0 0 0-30.98 8.97A18.12 18.12 0 0 0 6 24a.5.5 0 0 0 1 0 17.16 17.16 0 0 1 .27-3 16.91 16.91 0 0 1 5.92-10.1 4 4 0 0 1 1.25 3.06L14 16.44a3.1 3.1 0 0 0 .8 2.7l2.25 2.98a2.03 2.03 0 0 0 1.63.82 2.07 2.07 0 0 0 .26-.01 2.03 2.03 0 0 0 1.64-1.25l1.88-4.5a1.13 1.13 0 0 1 .49-.44l2.35-1.16a2.21 2.21 0 0 0 .99-3 1.02 1.02 0 0 1-.07-.8 1.06 1.06 0 0 1 .58-.63l1.57-.95a1 1 0 0 1 1.42.43l.83 1.74A2.71 2.71 0 0 0 33 14h1.62a2.98 2.98 0 0 0 2.4-.9c.32.38.63.77.92 1.19a16.89 16.89 0 0 1 2.78 12.7 17.06 17.06 0 0 1-1.21 3.92l-1.28-1.8a2.56 2.56 0 0 0-4.12-.2l-.15.2a1.78 1.78 0 0 1-1.62.64L32 29.7a2.55 2.55 0 0 0-2.86 2.87l.3 2.13a2.5 2.5 0 0 0 1.12 1.76l2.74 1.77A16.9 16.9 0 0 1 24.02 41H24a.5.5 0 0 0-.5.5.53.53 0 0 0 .52.5 18 18 0 0 0 14.75-28.28zM34.63 13h-1.62c-.73 0-1.14-.46-1.5-1.1l-.81-1.7a2 2 0 0 0-2.85-.86l-1.52.92a2.03 2.03 0 0 0-.93 2.77 1.21 1.21 0 0 1-.54 1.65l-2.35 1.15a2.15 2.15 0 0 0-.94.9l-1.9 4.55a1.05 1.05 0 0 1-1.82.23l-2.3-3.04a2.14 2.14 0 0 1-.57-1.86l.45-2.57A5.06 5.06 0 0 0 14 10.29a16.92 16.92 0 0 1 22.36 2.06c-.24.37-.68.67-1.72.66zm-.45 24.6l-3.1-1.99a1.5 1.5 0 0 1-.66-1.06l-.3-2.13a1.55 1.55 0 0 1 1.74-1.74l.36.05a2.77 2.77 0 0 0 2.53-1l.15-.2a1.54 1.54 0 0 1 1.28-.56 1.55 1.55 0 0 1 1.23.7l1.61 2.25a16.96 16.96 0 0 1-4.84 5.68z"/>
+</svg>
+                                            
+                                            
+                                        </div>
+                                        <p class="h3 text-white mb-3">Amadeus.com</p>
+                                        <p class="text-white balance-text d-none d-md-block">We’re creating a more connected travel industry, underpinned by sustainability and long-term investor relations.</p>
+                                    </a>
+                                </article>
+                            </div>
+                        
+                            <div class="col-4 col-xl-3">
+                                <article class="link-collection-item text-center">
+                                    <a href="https://jobs.amadeus.com/" class="d-block no-decoration" data-tealium-track="hamburger-click">
+                                        <div class="link-collection-img d-flex mb-2 text-center site-icon">
+                                            
+                                                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="m29 15.5a.5.5 0 0 1 -.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zm4.17-.5h-2.34a.5.5 0 0 0 0 1h2.34a.5.5 0 0 0 0-1zm2.33 0a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1zm6 .5a.5.5 0 0 1 -.16.36l-3.18 3a.5.5 0 0 1 -.35.14h-13.31v24h6a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1h6v-18h-9.31a.5.5 0 0 1 -.27-.08l-3.19-2a.5.5 0 0 1 0-.84l3.2-2a.5.5 0 0 1 .26-.08h9.31v-9h-13.31a.5.5 0 0 1 -.27-.08l-3.19-2a.5.5 0 0 1 0-.84l3.2-2a.5.5 0 0 1 .26-.08h13.31v-1.5a.5.5 0 0 1 1 0v7.5h13.31a.5.5 0 0 1 .35.14l3.18 3a.5.5 0 0 1 .16.36zm-18-5.5v-3h-13.17l-2.39 1.5 2.4 1.5zm0 14v-3h-9.17l-2.39 1.5 2.4 1.5zm16.77-8.5-2.66-2.5h-13.11v5h13.11z" fill="currentColor"/></svg>
+                                            
+                                            
+                                        </div>
+                                        <p class="h3 text-white mb-3">Careers site</p>
+                                        <p class="text-white balance-text d-none d-md-block">At Amadeus, we’re always on the lookout for talented, passionate people to join our team. Interested? </p>
+                                    </a>
+                                </article>
+                            </div>
+                        
+                            <div class="col-4 col-xl-3">
+                                <article class="link-collection-item text-center">
+                                    <a href="https://developers.amadeus.com/" class="d-block no-decoration" data-tealium-track="hamburger-click">
+                                        <div class="link-collection-img d-flex mb-2 text-center site-icon">
+                                            
+                                                
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+    <title>Amadeus Developers Icon</title>
+  <path fill="currentColor" d="M18 40.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM41 9.31V29.7A1.46 1.46 0 0 1 39.4 31H27.5a2.5 2.5 0 0 0 0 5h9a2.5 2.5 0 0 1 0 5H20.95a3.5 3.5 0 0 1-3.45 3h-5a3.5 3.5 0 0 1 0-7h5a3.5 3.5 0 0 1 3.45 3H36.5a1.5 1.5 0 0 0 0-3h-9a3.5 3.5 0 0 1-2.44-6H8.59A1.46 1.46 0 0 1 7 29.69V9.3A1.46 1.46 0 0 1 8.6 8h30.8A1.46 1.46 0 0 1 41 9.31zM20 40.5a2.5 2.5 0 0 0-2.5-2.5h-5a2.5 2.5 0 0 0 0 5h5a2.5 2.5 0 0 0 2.5-2.5zM8 13h32V9.31c0-.12-.24-.31-.6-.31H8.6c-.36 0-.6.19-.6.31zm32 1H8v15.69c0 .12.24.31.6.31h30.8c.36 0 .6-.19.6-.31zM10 9.96a1 1 0 1 0 1 1 1 1 0 0 0-1-1zm3 .04a1 1 0 1 0 1 1 1 1 0 0 0-1-1zm3 0a1 1 0 1 0 1 1 1 1 0 0 0-1-1zm12.12 15.83a.5.5 0 0 0 .7.05l4-3.5a.5.5 0 0 0 0-.76l-4-3.5a.5.5 0 0 0-.65.76L31.74 22l-3.57 3.12a.5.5 0 0 0-.05.7zm-8.95.05a.5.5 0 0 0 .66-.76L16.26 22l3.57-3.12a.5.5 0 0 0-.66-.76l-4 3.5a.5.5 0 0 0 0 .76zm3.02 1.09a.5.5 0 0 0 .64-.3l3.28-9a.5.5 0 0 0-.94-.34l-3.28 9a.5.5 0 0 0 .3.64z"/>
+</svg>
+                                            
+                                            
+                                        </div>
+                                        <p class="h3 text-white mb-3">Developers site</p>
+                                        <p class="text-white balance-text d-none d-md-block">Eager to create new travel apps? Discover the Amadeus for Developers program and get connected to Amadeus data.</p>
+                                    </a>
+                                </article>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SETTINGS MODAL -->
+    
+    <div class="modal fade" id="settingsModal" data-error="No country was found." tabindex="-1" role="dialog" aria-labelledby="preferencesModalTitle" aria-hidden="true" data-componentname="header" data-componenttitle="Header">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <p class="h2 display-4 text-primary modal-title" id="preferencesModalTitle" data-title="Preferences">Preferences</p>
+                    <button type="button" class="close align-self-stretch cursor-pointer" data-dismiss="modal" id="prefsCloseButton" aria-label="Close">
+                      <span class="d-flex align-self-center" aria-hidden="true">
+                        <svg style="width: 24px; height: 24px;">
+                          <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+                        </svg>
+                      </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="industriesPreferenceContainer" class="row mb-5">
+                        <div class="col">
+                            <p id="preferencesIndustryHeading" class="h3 mb-3">My interests</p>
+                            <div class="dropdown">
+                                <button id="preferencesIndustryButton" class="btn btn-block btn-inverse text-left d-flex justify-content-between align-items-center industry-border" type="button" data-toggle="dropdown" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="preferencesIndustryHeading">
+                                    <span class="d-block">
+                                        <span id="preferredIndustryLabel" class="d-block small text-secondary mb-1">Preferred industry</span>
+                                        <span class="h4 mb-1 filter-title">All</span>
+                                    </span>
+                                    <span class="d-flex">
+                                        <svg class="animatedDropdownIcon">
+                                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_down"></use>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="dropdown-menu w-100 pre-scrollable" role="listbox" aria-labelledby="preferredIndustryLabel" id="preferencesIndustryItems">
+                                    <a class="dropdown-item filter-item active" href="#" role="option" data-name="all" data-title="All" aria-selected="true">All</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="airlines" data-title="Airlines">Airlines</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="airports" data-title="Airports">Airports</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="business-travel-agencies" data-title="Business travel agencies">Business travel agencies</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="corporations" data-title="Corporations">Corporations</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="destination-marketing-organization" data-title="Destinations &amp; DMOs">Destinations &amp; DMOs</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="ground-handlers" data-title="Ground handlers">Ground handlers</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="mobility" data-title="Mobility">Mobility</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="hospitality" data-title="Hospitality">Hospitality</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="online-travel-agencies" data-title="Online travel agencies">Online travel agencies</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="retail-travel-agencies" data-title="Retail travel agencies">Retail travel agencies</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="rail" data-title="Rail">Rail</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="tour-operators" data-title="Tour operators">Tour operators</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="travel-insurance" data-title="Travel insurance">Travel insurance</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="travel-media" data-title="Metasearch &amp; Travel media">Metasearch &amp; Travel media</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="cruise-lines" data-title="Cruise Lines">Cruise Lines</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="consolidators" data-title="Consolidators">Consolidators</a>
+                                    
+                                        <a class="dropdown-item filter-item" href="#" role="option" data-name="small-and-medium-travel-agencies" data-title="Small and medium travel agencies">Small and medium travel agencies</a>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="languageAndLocationPreferenceContainer" class="row mb-3">
+                        <div class="col">
+                            <p class="h3 mb-2">My settings</p>
+                            <div class="row">
+                                <div class="form-group col-12 col-sm-6 language" role="radiogroup" aria-labelledby="inputLanguage">
+                                    <div id="inputLanguage" data-langtotal="2" class="d-block small text-secondary mb-2">Language</div>
+
+                                    
+
+                                    
+                                        <div class="btn-group-toggle" data-toggle="buttons">
+                                            <label class="btn btn-block btn-outline-primary border-0 text-left active">
+                                                <input type="radio" name="preferencesLanguageRadio" value="en" checked="checked"/> English
+                                            </label>
+                                        
+                                            <label class="btn btn-block btn-outline-primary border-0 text-left ">
+                                                <input type="radio" name="preferencesLanguageRadio" value="es"/> Spanish
+                                            </label>
+                                        </div>
+                                    
+
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="myInformationPreferenceContainer" class="row mb-3">
+                        <div class="col">
+                            <p class="h3 mb-3">My information</p>
+                            <div class="row">
+                                <div class="col">
+                                    <a href="https://amadeus.com/en/customers-and-support" class="btn btn-block btn-outline-primary mb-2 mb-lg-0">
+                                        Login to customer area
+                                        <svg class="align-middle svg-ico icon-h-4 icon-w-4">
+                                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_external_link"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            
+                                <div class="col">
+                                    <a href="https://amadeus.com/en/subscription-management" class="btn btn-block btn-outline-primary mb-2 mb-lg-0">
+                                        Manage my subscriptions
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer p-4 border-0 rounded-bottom bg-light justify-content-between">
+                    <div>
+                        <a href="https://amadeus.com/en/policies/privacy-policy" class="customerArea">Privacy Policy</a>
+                    </div>
+                    <div>
+                      <button type="button" id="prefsCancelButton" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" id="prefsUpdateButton" class="btn btn-primary ml-2" data-tealium-track="update-preferences">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+    
+</div>
+</div>
+</div>
+
+
+</div>
+
+    
+</div>
+</div>
+</div>
+    <div><main role="main" class="content-main">
+    <!-- Content page -->
+<div>
+  <div>
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="resources-filter aem-GridColumn aem-GridColumn--default--12"><div class="resources-filter-component d-print-none" data-componentname="resources-filter">
+    <form class="sticky-bar">
+        <section class="container-fluid bg-white border border-secondary border-right-0 border-left-0 px-0">
+            <div class="row no-gutters">
+              <div class="col-10 position-static">
+                <div class="row no-gutters">
+                  <div id="topicsFilter" class="col-12 nav-filter-dropdown filter filter-wide">
+                    
+  <button class="btn btn-block btn-lg btn-inverse h-100 border-0 rounded-0 text-left d-flex justify-content-between align-items-center py-2" type="button" id="topicsFilterButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="d-md-inline-block">
+      <h6 class="mb-0">Topic</h6>
+      <h4 class="mb-0">
+        <span class="filter-title">All</span>
+      </h4>
+    </div>
+    <div class="d-md-inline-block">
+      
+    <div class="d-flex align-items-center">
+        <svg class="svg--ic_keyboard_arrow_up-dims mx-2 align-middle svg-ico btn-arrow-up" aria-labelledby="ic_keyboard_arrow_up73209">
+            <title id="ic_keyboard_arrow_up73209">Arrow up</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_up"></use>
+        </svg>
+        <svg class="svg--ic_keyboard_arrow_down-dims mx-2 align-middle svg-ico btn-arrow-down" aria-labelledby="ic_keyboard_arrow_down99041">
+            <title id="ic_keyboard_arrow_down99041">Arrow down</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_down"></use>
+        </svg>
+    </div>
+
+    </div>
+  </button>
+
+  <div id="topicsFilterItems" class="dropdown-menu w-100 pt-0 pb-0 border-0" aria-labelledby="topicsFilterButton">
+  </div>
+  
+  <script id="topicsTemplate" type="text/x-handlebars-template">
+    <div class="row no-gutters">
+      <div class="col-lg-6 my-5">
+        <h4 class="pl-5">Investor Information</h4>
+        <nav id="topicsFilterInvestorItems" class="nav nav-pills d-flex px-0 px-lg-5 dropdown-item-container">
+          <a class="nav-item filter-item nav-link d-sm-inline-block text-left text-truncate col-12 col-md-6 active"
+            href="#" data-name="all" data-base-name="all" data-title="All" data-type="topics" data-subtype="investor">
+            <span>All</span>
+          </a>
+          {{#each investor}}
+              <a class="nav-item filter-item nav-link d-sm-inline-block text-left text-truncate col-12 col-md-6"
+                  href="#" data-name="{{name}}" data-base-name="{{baseName}}" data-title="{{title}}" data-description="{{description}}" data-type="topics" data-subtype="investor">
+                  <span>{{title}}</span>
+              </a>
+          {{/each}}
+        </nav>
+      </div>
+
+      <div class="col-lg-6 my-5 border border-secondary border-top-0 border-right-0 border-bottom-0 rightsection">
+        <h4 class="pl-5">Corporate Information</h4>
+        <nav id="topicsFilterCorporateItems" class="nav nav-pills d-flex px-0 px-lg-5 dropdown-item-container">
+          <a class="nav-item filter-item nav-link d-sm-inline-block text-left text-truncate col-12 col-md-6 active"
+            href="#" data-name="all" data-base-name="all" data-title="All" data-type="topics" data-subtype="corporate">
+            <span>All</span>
+          </a>
+          {{#each corporate}}
+              <a class="nav-item filter-item nav-link d-sm-inline-block text-left text-truncate col-12 col-md-6"
+                  href="#" data-name="{{name}}" data-base-name="{{baseName}}" data-title="{{title}}" data-description="{{description}}" data-type="topics" data-subtype="corporate">
+                  <span>{{title}}</span>
+              </a>
+          {{/each}}
+        </nav>
+      </div>
+    </div>
+  </script>
+  
+
+                  </div>
+                  
+                  <div class="second-level-filters collapse col-12 position-static d-none">
+                    <div class="row no-gutters">
+                      <div id="categoriesFilter" class="col-12 col-lg border border-secondary border-left-0 border-right-0 border-bottom-0 nav-filter-dropdown filter d-none">
+                        
+  <button class="btn btn-block btn-lg btn-inverse h-100 border-0 rounded-0 text-left d-flex justify-content-between align-items-center py-2" id="categoriesFilterButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="d-md-inline-block">
+      <h6 class="mb-0">Category</h6>
+      <h4 class="mb-0 filter-title">All</h4>
+    </div>
+    <div class="d-md-inline-block">
+      
+    <div class="d-flex align-items-center">
+        <svg class="svg--ic_keyboard_arrow_up-dims mx-2 align-middle svg-ico btn-arrow-up" aria-labelledby="ic_keyboard_arrow_up106494">
+            <title id="ic_keyboard_arrow_up106494">Arrow up</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_up"></use>
+        </svg>
+        <svg class="svg--ic_keyboard_arrow_down-dims mx-2 align-middle svg-ico btn-arrow-down" aria-labelledby="ic_keyboard_arrow_down76289">
+            <title id="ic_keyboard_arrow_down76289">Arrow down</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_down"></use>
+        </svg>
+    </div>
+
+    </div>
+  </button>
+  
+  <div class="dropdown-menu w-100" aria-labelledby="categoriesFilterButton" id="categoriesFilterItems">
+  </div>
+  
+  <script id="categoriesTemplate" type="text/x-handlebars-template">
+    <a class="dropdown-item filter-item active" href="#" role="button" data-name="all" data-base-name="all" data-title="All" data-type="categories">All</a>
+
+	{{#each .}}
+      <a class="dropdown-item filter-item" href="#" role="button" data-name="{{name}}" data-base-name="{{baseName}}" data-title="{{title}}" data-description="{{description}}" data-type="categories">{{title}}</a>
+    {{/each}}
+  </script>
+  
+
+                      </div>
+                      <div id="fiscalFilter" class="col-12 col-lg border border-secondary border-left-0 border-right-0 border-bottom-0 nav-filter-dropdown filter filter-wide d-none">
+                        
+  <button class="btn btn-block btn-lg btn-inverse h-100 border-0 rounded-0 text-left d-flex justify-content-between align-items-center py-2" type="button" id="fiscalFilterButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <div class="d-md-inline-block">
+      <h6 class="mb-0">Fiscal Period</h6>
+      <h4 class="mb-0">
+        <span class="filter-title">All</span>
+      </h4>
+    </div>
+    <div class="d-md-inline-block">
+      
+    <div class="d-flex align-items-center">
+        <svg class="svg--ic_keyboard_arrow_up-dims mx-2 align-middle svg-ico btn-arrow-up" aria-labelledby="ic_keyboard_arrow_up70734">
+            <title id="ic_keyboard_arrow_up70734">Arrow up</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_up"></use>
+        </svg>
+        <svg class="svg--ic_keyboard_arrow_down-dims mx-2 align-middle svg-ico btn-arrow-down" aria-labelledby="ic_keyboard_arrow_down106739">
+            <title id="ic_keyboard_arrow_down106739">Arrow down</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_keyboard_arrow_down"></use>
+        </svg>
+    </div>
+
+    </div>
+  </button>
+
+  <div id="fiscalFilterItems" class="dropdown-menu w-100 pt-0 pb-0 border-0" aria-labelledby="fiscalFilterButton">
+  </div>
+  
+  <script id="fiscalTemplate" type="text/x-handlebars-template">
+    <div class="row no-gutters">
+      <div class="col-lg-6 my-5">
+        <h4 class="pl-5">Fiscal Year</h4>
+        <nav id="fiscalFilterYearItems" class="nav nav-pills d-flex px-0 px-lg-5 dropdown-item-container">
+          <a class="nav-item filter-item nav-link d-sm-inline-block text-left text-truncate col-12 col-md-6 active"
+            href="#" data-name="all" data-base-name="all" data-title="All" data-type="fiscal" data-subtype="year">
+            <span>All</span>
+          </a>
+          {{#each year}}
+              <a class="nav-item filter-item nav-link d-sm-inline-block text-left text-truncate col-12 col-md-6"
+                  href="#" data-name="{{name}}" data-base-name="{{baseName}}" data-title="{{title}}" data-description="{{description}}" data-type="fiscal" data-subtype="year">
+                  <span>{{title}}</span>
+              </a>
+          {{/each}}
+        </nav>
+      </div>
+
+      <div class="col-lg-6 my-5 border border-secondary border-top-0 border-right-0 border-bottom-0 rightsection">
+        <h4 class="pl-5">Fiscal Period</h4>
+        <nav id="fiscalFilterPeriodItems" class="nav nav-pills d-flex px-0 px-lg-5 dropdown-item-container">
+          <a class="nav-item filter-item nav-link d-sm-inline-block text-left text-truncate col-12 col-md-6 active"
+            href="#" data-name="all" data-base-name="all" data-title="All" data-type="fiscal" data-subtype="period">
+            <span>All</span>
+          </a>
+          {{#each period}}
+              <a class="nav-item filter-item nav-link d-sm-inline-block text-left text-truncate col-12 col-md-6"
+                  href="#" data-name="{{name}}" data-base-name="{{baseName}}" data-title="{{title}}" data-description="{{description}}" data-type="fiscal" data-subtype="period">
+                  <span>{{title}}</span>
+              </a>
+          {{/each}}
+        </nav>
+      </div>
+    </div>
+  </script>
+  
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-buttons col-2 border border-secondary border-top-0 border-right-0 border-bottom-0">
+              
+                <label class="btn btn-sm btn-inverse text-primary text-uppercase border-0 rounded-0 m-0 d-flex align-items-center justify-content-center px-1 d-lg-none mt-3 collapsed" role="button" style="background-clip: padding-box;" data-toggle="collapse" data-target=".second-level-filters">
+                  <div class="filter-show d-none d-md-inline-block mr-2">Filter</div>
+                  <svg class="filter-show d-inline-block svg--ic_filter-dims">
+                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_filter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                  </svg>
+                  <div class="filter-hide d-none d-md-inline-block mr-2">Close</div>
+                  <svg class="filter-hide d-inline-block svg--ic_close-dims">
+                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                  </svg>
+                </label>
+              
+                <div class="second-level-filters collapse h-lg-100">
+                  <div class="d-block d-lg-flex justify-content-around h-100">
+                    <label class="sort-filter btn btn-sm btn-inverse text-secondary text-uppercase border-0 rounded-0 m-0 d-flex d-lg-inline-flex align-items-center justify-content-center px-0 pl-2 pr-2" role="button" style="background-clip: padding-box;" id="sortingButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <div class="d-none d-md-inline-block mr-1">Sort</div>
+                      <svg class="d-inline-block svg--ic_sort-dims align-middle svg-ico">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_sort" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                      </svg>
+                    </label>
+                    <div class="dropdown-menu dropdown-menu-right" id="sortingItems" aria-labelledby="sortingButton">
+                      <a class="dropdown-item sorting-item active" href="#" role="button" data-name="date">Date</a>
+                      <a class="dropdown-item sorting-item" href="#" role="button" data-name="alphabetic">A - Z</a>
+                      <a class="dropdown-item sorting-item" href="#" role="button" data-name="reverse">Z - A</a>
+                    </div>
+                  
+                    <label class="reset-filter btn btn-sm btn-inverse text-secondary text-uppercase border-0 rounded-0 m-0 d-flex d-lg-inline-flex align-items-center justify-content-center px-0 pl-2 pr-2" role="button" style="background-clip: padding-box;">
+                      <div class="d-none d-md-inline-block mr-1">Reset</div>
+                      <svg class="d-inline-block svg--ic_reset-dims align-middle svg-ico">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_reset" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                      </svg>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+        </section>
+    </form>
+</div>
+</div>
+<div class="resources-header aem-GridColumn aem-GridColumn--default--12">
+<section class="resources-header-component container-fluid pl-0 pr-0">
+  <div class="row no-gutters">
+    <div class="col-12">
+      <div class="main jumbotron jumbotron-fluid d-flex py-0 mb-0" data-bg="/content/dam/amadeus/images/en/abstract/pattern/close-up-ground.jpg" data-bgsm="/content/dam/amadeus/images/en/abstract/pattern/close-up-ground.jpg.transform/small/img.jpg" data-bgmd="/content/dam/amadeus/images/en/abstract/pattern/close-up-ground.jpg.transform/medium/img.jpg" data-bglg="/content/dam/amadeus/images/en/abstract/pattern/close-up-ground.jpg.transform/large/img.jpg">
+        <div class="overlay d-flex h-100 w-100 py-9 align-items-end opacity-0">
+          <section class="container d-flex flex-column text-white text-shadow w-80 opacity-0">
+            <div class="row mt-auto mb-4 align-items-center">
+              <div class="col">
+                <h3 class="display-3 mb-0" id="resourcesHeaderHeading" data-heading="Resource Center">Resource Center</h3>
+              </div>
+              <div class="col-auto">
+                <div class="badge badge-glass text-white"><span id="resourcesHeaderTotalResults">0</span> <span class="d-none d-md-inline-block">Results</span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col col-md-10 col-lg-8">
+                <p class="lead" id="resourcesHeaderDescription" data-description="Amadeus makes available all Annual and Quarterly Financial Information published since 2013. The documentation from the current year is posted on the corresponding section.">Amadeus makes available all Annual and Quarterly Financial Information published since 2013. The documentation from the current year is posted on the corresponding section.</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+<div class="resources-result aem-GridColumn aem-GridColumn--default--12">
+
+<div class="resources-results-component">
+
+    <div class="container pb-4 mt-9">
+        <div id="resourcesItemsContainer" data-componentname="resources-result" data-componenttitle="Resources Results"></div>
+        <div class="loader my-7"></div>
+        <div class="row justify-content-center d-none resources-footer">
+            <p class="text-muted resources-results-info" data-template="Showing 1 - {1} of {2} other results"></p>
+            <button class="btn-load-more btn btn-light btn-block text-dark" type="button">
+                Load more...
+            </button>
+        </div>
+
+        <div class="no-results col-12 text-center d-none">
+            <p>We&#39;re sorry, it seems like we can&#39;t find any results.</p>
+        </div>
+        <div class="error-call col-12 text-center d-none">
+            <p>Oops, please try again. It looks like we may be experiencing some technical issues.</p>
+        </div>
+    </div>
+
+</div>
+
+<script id="resourcesItemsTemplate" type="text/x-handlebars-template"><div class="row justify-content-center justify-content-md-start" id="resources-results-row-{{rowid}}">
+  {{#each items}}
+    <div class="js-card opacity-0 col-10 col-md-6 col-lg-4 d-flex align-items-stretch pb-5">
+      <article class="card w-100">
+        <div class="card-img-top overflow-hidden" style="height: 8.4rem;">
+          {{#if thumbnail}}
+            <div class="h-100 w-100 image-box" style="background: url('{{thumbnail}}') no-repeat center center / cover;">
+              <div class="h-100 w-100 d-flex justify-content-center align-items-center bg-gray-200">
+                <svg class="text-white" style="width: 5rem; height: 5rem;">
+                  <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#{{icon}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                </svg>
+              </div>
+            </div>
+          {{else}}
+            <div class="h-100 w-100 bg-light d-flex justify-content-center align-items-center image-box">
+              <svg class="text-primary" style="width: 5rem; height: 5rem;">
+                <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#{{icon}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </div>
+          {{/if}}
+        </div>
+        <div class="card-header d-flex justify-content-start align-items-center bg-transparent border-0 pt-4 pt-sm-5 pt-md-4">
+          <time class="small text-secondary">{{formattedDate}}</time><span class="badge badge-sky text-primary ml-3 text-uppercase">{{acronym}}</span>
+        </div>
+        <div class="card-body d-flex align-content-end flex-wrap">
+          <h2 class="card-title text-truncate-multiline-4 w-100">{{name}}</h2>
+          {{#ifCond linkType '===' "ic_download" }}
+            <a class="btn btn-sm btn-link p-0 text-uppercase" href="{{path}}" role="button" download data-tealium-track="card-link-download" data-title="{{name}}">
+              Download
+              <svg class="ml-2 align-middle text-primary" style="width: 1.2rem; height: 1.2rem;">
+                <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#{{linkType}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+          {{else}}
+            <a class="btn btn-sm btn-link p-0 text-uppercase" href="{{path}}" role="button" target="_blank" data-tealium-track="card-link-video" data-title="{{name}}">
+              {{#ifCond linkType '===' "ic_play"}}Play video{{/ifCond}}
+              {{#ifCond linkType '===' "ic_external_link"}}Learn more{{/ifCond}}
+              {{#ifCond linkType '===' "ic_arrow_forward"}}Learn more{{/ifCond}}
+              <svg class="ml-2 align-middle text-primary" style="width: 1.2rem; height: 1.2rem;">
+                <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#{{linkType}}" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+              </svg>
+            </a>
+          {{/ifCond}}
+        </div>
+      </article>
+    </div>
+  {{/each}}
+</div>
+</script>
+</div>
+
+    
+</div>
+</div>
+</div>
+
+</main>
+</div>
+    <div>
+
+
+</div>
+    <footer>
+        <div>
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="localised-experience-fragment aem-GridColumn aem-GridColumn--default--12">
+ 
+
+    
+    <!-- Content page -->
+<div>
+  <div>
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="footer parbase aem-GridColumn aem-GridColumn--default--12">
+
+
+
+
+
+<div class="footer-component" data-componentname="footer" data-componenttitle="Footer" data-preferences-modal-title="Select a language and a location" data-no-location-msg="Enter your location">
+    <div class="py-7">
+        <div class="container">
+            <p class="h2 sr-only">Amadeus footer</p>
+
+            <div class="row justify-content-center mb-7 mb-md-6 d-print-none">
+
+                <div class="col-12 col-md-3 col-lg mb-2 mb-md-0">
+                    <div data-tealium-track="link-list-cta">
+<div class="link-list-component navbar navbar-expand-md flex-column align-items-start p-0">
+    <p class="h5 font-amadeus d-none d-md-block mb-3">Amadeus sites</p>
+    <button class="navbar-toggler text-dark p-0 my-1 w-100 collapsed" data-toggle="collapse" data-target="#link-list-1" aria-controls="link-list-1" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="d-flex align-items-center justify-content-between">
+              <span class="h5 font-amadeus m-0">Amadeus sites</span>
+                  <span class="default-">
+                        <svg class="ico-down ml-2 align-middle svg-ico text-primary icon-w-4 icon-h-4 icon--ic_add-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_add" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                    <svg class="d-none ico-up ml-2 align-middle svg-ico text-primary icon-w-4 icon-h-4 icon--ic_remove-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_remove" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                  </span>
+              </span>
+    </button>
+    <div class="collapse navbar-collapse" id="link-list-1">
+        <ul class="navbar-nav small flex-column">
+            
+
+            <li class="nav-item">
+                <a href="https://amadeus.com/en" target="_blank" class="nav-link d-inline-flex align-items-center px-0 py-1">
+                    Amadeus.com
+                    <svg class="icon text-gray icon-w-4 icon-h-4">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_external_link" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </a>
+            </li>
+        
+            
+
+            <li class="nav-item">
+                <a href="https://jobs.amadeus.com/" target="_blank" class="nav-link d-inline-flex align-items-center px-0 py-1">
+                    Careers
+                    <svg class="icon text-gray icon-w-4 icon-h-4">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_external_link" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+                </div>
+
+                <div class="col-12 col-md-3 col-lg mb-2 mb-md-0">
+                    <div data-tealium-track="link-list-cta">
+<div class="link-list-component navbar navbar-expand-md flex-column align-items-start p-0">
+    <p class="h5 font-amadeus d-none d-md-block mb-3">Information for</p>
+    <button class="navbar-toggler text-dark p-0 my-1 w-100 collapsed" data-toggle="collapse" data-target="#link-list-2" aria-controls="link-list-2" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="d-flex align-items-center justify-content-between">
+              <span class="h5 font-amadeus m-0">Information for</span>
+                  <span class="default-">
+                        <svg class="ico-down ml-2 align-middle svg-ico text-primary icon-w-4 icon-h-4 icon--ic_add-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_add" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                    <svg class="d-none ico-up ml-2 align-middle svg-ico text-primary icon-w-4 icon-h-4 icon--ic_remove-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_remove" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                  </span>
+              </span>
+    </button>
+    <div class="collapse navbar-collapse" id="link-list-2">
+        <ul class="navbar-nav small flex-column">
+            <li class="nav-item">
+                <a href="/en/industry-relations" target="_self" class="nav-link px-0 py-1">
+                    Industry relations
+                </a>
+            </li>
+
+            
+        
+            
+
+            <li class="nav-item">
+                <a href="https://amadeus.com/en/partners" target="_blank" class="nav-link d-inline-flex align-items-center px-0 py-1">
+                    Partners
+                    <svg class="icon text-gray icon-w-4 icon-h-4">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_external_link" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </a>
+            </li>
+        
+            
+
+            <li class="nav-item">
+                <a href="https://amadeus.com/en/travelers" target="_blank" class="nav-link d-inline-flex align-items-center px-0 py-1">
+                    Travelers
+                    <svg class="icon text-gray icon-w-4 icon-h-4">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_external_link" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </a>
+            </li>
+        
+            
+
+            <li class="nav-item">
+                <a href="https://amadeus.com/en/ventures" target="_blank" class="nav-link d-inline-flex align-items-center px-0 py-1">
+                    Ventures
+                    <svg class="icon text-gray icon-w-4 icon-h-4">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_external_link" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+                </div>
+                <div class="col-12 col-md-3 col-lg mb-2 mb-md-0">
+                    <div data-tealium-track="link-list-cta">
+<div class="link-list-component navbar navbar-expand-md flex-column align-items-start p-0">
+    <p class="h5 font-amadeus d-none d-md-block mb-3">Resources</p>
+    <button class="navbar-toggler text-dark p-0 my-1 w-100 collapsed" data-toggle="collapse" data-target="#link-list-3" aria-controls="link-list-3" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="d-flex align-items-center justify-content-between">
+              <span class="h5 font-amadeus m-0">Resources</span>
+                  <span class="default-">
+                        <svg class="ico-down ml-2 align-middle svg-ico text-primary icon-w-4 icon-h-4 icon--ic_add-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_add" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                    <svg class="d-none ico-up ml-2 align-middle svg-ico text-primary icon-w-4 icon-h-4 icon--ic_remove-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_remove" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                  </span>
+              </span>
+    </button>
+    <div class="collapse navbar-collapse" id="link-list-3">
+        <ul class="navbar-nav small flex-column">
+            
+
+            <li class="nav-item">
+                <a href="https://amadeus.com/en/training" target="_blank" class="nav-link d-inline-flex align-items-center px-0 py-1">
+                    Training
+                    <svg class="icon text-gray icon-w-4 icon-h-4">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_external_link" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </a>
+            </li>
+        
+            
+
+            <li class="nav-item">
+                <a href="https://amadeus.com/en/customers-and-support" target="_blank" class="nav-link d-inline-flex align-items-center px-0 py-1">
+                    Customers &amp; Support
+                    <svg class="icon text-gray icon-w-4 icon-h-4">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_external_link" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                </a>
+            </li>
+        
+            <li class="nav-item">
+                <a href="/en/annual-reports" target="_self" class="nav-link px-0 py-1">
+                    Annual reports
+                </a>
+            </li>
+
+            
+        </ul>
+    </div>
+</div>
+</div>
+                </div>
+                <div class="col-12 col-md-3 col-lg mb-2 mb-md-0">
+                    <div data-tealium-track="link-list-cta">
+<div class="link-list-component navbar navbar-expand-md flex-column align-items-start p-0">
+    <p class="h5 font-amadeus d-none d-md-block mb-3">Connect</p>
+    <button class="navbar-toggler text-dark p-0 my-1 w-100 collapsed" data-toggle="collapse" data-target="#link-list-4" aria-controls="link-list-4" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="d-flex align-items-center justify-content-between">
+              <span class="h5 font-amadeus m-0">Connect</span>
+                  <span class="default-">
+                        <svg class="ico-down ml-2 align-middle svg-ico text-primary icon-w-4 icon-h-4 icon--ic_add-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_add" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                    <svg class="d-none ico-up ml-2 align-middle svg-ico text-primary icon-w-4 icon-h-4 icon--ic_remove-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_remove" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                  </span>
+              </span>
+    </button>
+    <div class="collapse navbar-collapse" id="link-list-4">
+        <ul class="navbar-nav small flex-column">
+            <li class="nav-item">
+                <a href="/en/contact-us" target="_self" class="nav-link px-0 py-1">
+                    Contact us
+                </a>
+            </li>
+
+            
+        
+            <li class="nav-item">
+                <a href="/en/contact-us/all-offices" target="_self" class="nav-link px-0 py-1">
+                    Our offices
+                </a>
+            </li>
+
+            
+        </ul>
+    </div>
+</div>
+</div>
+                </div>
+                <div class="col-12 col-sm-8 col-md-6 col-lg mt-4 mt-lg-0">
+                    
+                    
+    <!-- formSubscriptionModal is important as the form knows to submit based on this -->
+    <div id="modalFormId" class="formSubscriptionModal formSubModal modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content" data-info="Footer">
+                <div class="modal-header py-3">
+                    <h2 class="display-4 modal-title text-primary">Subscribe to updates</h2>
+                    <button type="button" class="sformCloseButton close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                
+                <div class="modal-body">
+                  <!-- Content page -->
+<div>
+  <div>
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="form aem-GridColumn aem-GridColumn--default--12">
+
+    <section class="form-component container py-5 text-left">
+        
+
+        <div class="modal fade successModal" tabindex="-1" role="dialog" aria-labelledby="successModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header py-3">
+                <div class="m-auto">
+                    <p class="h2 modal-title text-primary text-center display-4 mx-5">Thank you!</p>
+                </div>
+                <a class="cursor-pointer my-auto" data-dismiss="modal">
+                    <svg class="svg--ic_close-dims align-middle icon-w-4 icon-h-4 svg-ico" aria-labelledby="ic_close">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+                    </svg>
+                </a>
+            </div>
+            <div class="modal-body" style="max-height: calc(100vh - 210px); overflow-y: auto;">
+                <div class="container px-md-9 text-center">
+                    <div class="rounded-circle border border-success px-0 mb-2 d-inline-block" style="border-width: 2px !important;">
+                        <svg class="svg--ic_check-dims icon-w-9 icon-h-9 pt-1 px-1 text-success" aria-labelledby="svg--ic_check-dims">
+                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_check"></use>
+                        </svg>
+                    </div>
+                    <p class="h3 text-success">We’ve received your subscription</p>
+                    <p>We appreciate your interest in Amadeus. You’ll start receiving our latest insights shortly. Remember that you can manage your subscriptions in the preferences area anytime.</p>
+                </div>
+            <hr class="mt-4 mb-0 d-print-none"/>
+		      <div>
+		          <div style="padding-top: 2vh; display: flex;justify-content: center;align-items: center;">
+		          	  <span style="color: #787878;">Share at</span>
+		              
+		              
+		                  <a class="d-md-inline-flex p-0 p-md-1 ml-4" href="http://www.facebook.com/sharer.php?u=https://corporate.amadeus.com/en/resources" target="_blank" onclick="Amadeus.Components.Header.tealiumEvent('Facebook', this);">
+		                      <svg class="svg--ic_facebook_solid-dims icon-h-4 icon-w-4" aria-labelledby="scrollHeader_facebook_outline">
+		                          <title id="scrollHeader_facebook">Facebook</title>
+		                          <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_facebook_solid"></use>
+		                      </svg>
+		                  </a>
+		              
+		              
+		              
+		                  <a class="d-md-inline-flex p-0 p-md-1 ml-4" href="https://twitter.com/share?url=https://corporate.amadeus.com/en/resources" target="_blank" onclick="Amadeus.Components.Header.tealiumEvent('Twitter', this);">
+		                      <svg class="svg--ic_twitter_solid-dims icon-h-4 icon-w-4" aria-labelledby="scrollHeader_twitter_outline">
+		                          <title id="scrollHeader_twitter_outline">Twitter</title>
+		                          <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_twitter_solid"></use>
+		                      </svg>
+		                  </a>
+		              
+		              
+		              
+		                  <a class="d-md-inline-flex p-0 p-md-1 ml-4" href="http://www.linkedin.com/shareArticle?url=https://corporate.amadeus.com/en/resources" target="_blank" onclick="Amadeus.Components.Header.tealiumEvent('LinkedIn', this);">
+		                      <svg class="svg--ic_linkedin_solid-dims icon-h-4 icon-w-4" aria-labelledby="scrollHeader_linkedin_outline">
+		                          <title id="scrollHeader_linkedin_outline">LinkedIn</title>
+		                          <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_linkedin_solid"></use>
+		                      </svg>
+		                  </a>
+		              
+		              
+		              
+		                  <a class="d-md-inline-flex p-0 p-md-1 ml-4" href="mailto:?subject=I%20wanted%20you%20to%20see%20this%20site&amp;body=Check%20out%20this%20site https://corporate.amadeus.com/en/resources" title="Share by Email" onclick="Amadeus.Components.Header.tealiumEvent('Email', this);">
+		                      <svg class="svg--ic_mail_solid-dims icon-h-4 icon-w-4" aria-labelledby="scrollHeader_email-dims">
+		                          <title id="scrollHeader_email-dims">Email</title>
+		                          <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_mail_solid"></use>
+		                      </svg>
+		                  </a>
+		              
+		          </div>
+		       	  
+		      </div>
+				<div class="smart-content-wrapper" data-smart-content-resource="/centerParsys/form" data-smart-content-code="none">
+				   
+				</div>
+		 </div>
+        </div>
+    </div>
+</div>
+        
+        <form action="#" method="post" novalidate enctype="multipart/form-data" data-prefill="noPrefill" data-contacttype="insightsSubscriptionRequest" data-form-id="/content/experience-fragments/commercial/en/forms/subscription/insights-subscription/global-insights-alerts-subscription/jcr:content/centerParsys/form" data-eloqua-id="29" data-eloqua-service="poc" data-componentname="form" data-componenttitle="Form" data-formtype="standard" id="115441">
+            <input value="/content/experience-fragments/commercial/en/forms/subscription/insights-subscription/global-insights-alerts-subscription/jcr:content/centerParsys/form" type="hidden" name="formPath"/>
+            <input value="" type="hidden" name="formStagePath"/>
+            <input value="UTF-8" type="hidden" name="_charset_"/>
+            
+            
+
+            
+                <div class="parbase text">
+<p><div style="text-align: left;">Get the latest Amadeus updates delivered straight to your inbox!</div>
+</p>
+</div>
+
+            
+                <div class="hidden-field base-field">
+
+  <div class="form-group">
+    
+    
+
+
+
+    
+    
+    
+
+
+<input class="js-form-control form-control" type="hidden" name="websiteLanguage1" value="English-American" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;noPrefill&#34;}" data-linkedin-prefill="noPrefill"/>
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+
+</div>
+
+            
+                <div class="hidden-field base-field">
+
+  <div class="form-group">
+    
+    
+
+
+
+    
+    
+    
+
+
+<input class="js-form-control form-control" type="hidden" name="channelSource" value="Website" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;noPrefill&#34;}" data-linkedin-prefill="noPrefill"/>
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+
+</div>
+
+            
+                <div class="hidden-field base-field">
+
+  <div class="form-group">
+    
+    
+
+
+
+    
+    
+    
+
+
+<input class="js-form-control form-control" type="hidden" name="leadSource" value="Website" data-dynamic-parameter="ls" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;noPrefill&#34;}" data-linkedin-prefill="noPrefill" analytics="leadSource"/>
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+
+</div>
+
+            
+                <div class="hidden-field-placement hidden-field base-field">
+
+  <div class="form-group">
+    
+    <input class="js-form-control form-control" type="hidden" name="trafficSource" data-placement="true" data-dynamic-parameter="ts"/>
+
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+
+</div>
+
+            
+                <div class="hidden-field base-field">
+
+  <div class="form-group">
+    
+    
+
+
+
+    
+    
+    
+
+
+<input class="js-form-control form-control" type="hidden" name="TargetExp" data-dynamic-parameter="tg_ex" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;noPrefill&#34;}" data-linkedin-prefill="noPrefill"/>
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+
+</div>
+
+            
+                <div class="hidden-field base-field">
+
+  <div class="form-group">
+    
+    
+
+
+
+    
+    
+    
+
+
+<input class="js-form-control form-control" type="hidden" name="campaignID" data-dynamic-parameter="cid" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;noPrefill&#34;}" data-linkedin-prefill="noPrefill"/>
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+
+</div>
+
+            
+                <div class="hidden-field base-field">
+
+  <div class="form-group">
+    
+    
+
+
+
+    
+    
+    
+
+
+<input class="js-form-control form-control" type="hidden" name="BusinessActivity" value="Global Contact" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;noPrefill&#34;}" data-linkedin-prefill="noPrefill" analytics="organisation"/>
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+
+</div>
+
+            
+                <div class="hidden-field base-field">
+
+  <div class="form-group">
+    
+    
+
+
+
+    
+    
+    
+
+
+<input class="js-form-control form-control" type="hidden" name="termsAccept" value="The information you are submitting here will be processed by Amadeus to send you newsletters and/or alerts. The processing is based on your consent so you can revoke it whenever you decide to. We may combine personal information collected from your navigation with the information provided by you through different channels to provide a target experience to you and to give you the information you may need to understand Amadeus products and services. Before submitting the information please read the Information about the processing of personal information by Amadeus." data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;noPrefill&#34;}" data-linkedin-prefill="noPrefill"/>
+    <div class="invalid-feedback">
+      
+    </div>
+  </div>
+
+</div>
+
+            
+                <div class="columns">
+
+
+
+<!-- for legacy reasons properties.fullWidth was a checkbox previously -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- for legacy reasons properties.fullWidth was a checkbox previously -->
+
+<div class="columns-component ">
+    
+    
+    <div class="row   py- ">
+        
+            <div class="col-md-6 order-md-1 null py- ">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text-field base-field aem-GridColumn aem-GridColumn--default--12">
+
+  
+    
+    
+      <div class="form-group text-left ">
+          <label for="firstName70441" class="small mb-0">
+            
+            
+              <div class="float-left">First Name</div>
+            
+            <span class="float-left text-danger">*</span>
+          </label>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <input class="js-form-control form-control no-validate" id="firstName70441" type="name" name="firstName" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;firstName&#34;}" data-linkedin-prefill="noPrefill" placeholder="Please enter your name" required="required"/>
+
+        <div class="invalid-feedback">
+          Please type your name
+        </div>
+      </div>
+    
+</div>
+
+    
+</div>
+</div>
+        
+            <div class="col-md-6 order-md-2 null py- ">
+
+
+<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
+    
+    <div class="text-field base-field aem-GridColumn aem-GridColumn--default--12">
+
+  
+    
+    
+      <div class="form-group text-left ">
+          <label for="lastName74443" class="small mb-0">
+            
+            
+              <div class="float-left">Last Name</div>
+            
+            <span class="float-left text-danger">*</span>
+          </label>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <input class="js-form-control form-control no-validate" id="lastName74443" type="name" name="lastName" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;lastName&#34;}" data-linkedin-prefill="noPrefill" placeholder="Please enter your last name" required="required"/>
+
+        <div class="invalid-feedback">
+          Please type your last name
+        </div>
+      </div>
+    
+</div>
+
+    
+</div>
+</div>
+        
+    </div>
+
+</div>
+
+</div>
+
+            
+                <div class="text-field base-field">
+
+  
+    
+    
+      <div class="form-group text-left ">
+          <label for="emailAddress91478" class="small mb-0">
+            
+            
+              <div class="float-left">Email address</div>
+            
+            <span class="float-left text-danger">*</span>
+          </label>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <input class="js-form-control form-control " id="emailAddress91478" type="email" name="emailAddress" data-eloqua-prefill="{&#34;type&#34;:&#34;field&#34;,&#34;field&#34;:&#34;emailAddress&#34;}" data-linkedin-prefill="noPrefill" placeholder="name@company.com" required="required" pattern="^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"/>
+
+        <div class="invalid-feedback">
+          Please enter a valid email address
+        </div>
+      </div>
+    
+</div>
+
+            
+                <div class="radio-group-field base-field">
+
+    
+        
+        
+        <div class="form-group text-left radio-group-form-field row container-fluid " role="group" aria-label="insightsAlertContentType193344">
+            <div class="col-12 mb-1 pl-0 ">
+                
+                <div class="pl-0">
+                    <div class="float-left">
+                        <div style="text-align: left;">What type of content would you like to receive?</div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            
+    
+        
+        
+        
+        
+
+        <div class="form-check radio col-12 col-lg-6 col-xl-4 custom-radio custom-control">
+            <input class="js-form-control form-check-input mt-2 custom-radio custom-control-input js-custom-radio-input" type="radio" value="All" name="insightsAlertContentType1" id="insightsAlertContentType193344All" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100261&#34;}" data-linkedin-prefill="noPrefill" checked="checked" analytics="blogSubscription"/>
+            <label for="insightsAlertContentType193344All" class="form-check-label custom-control-label js-custom-radio">
+                All
+            </label>
+        </div>
+    
+        
+        
+        
+        
+
+        <div class="form-check radio col-12 col-lg-6 col-xl-4 custom-radio custom-control">
+            <input class="js-form-control form-check-input mt-2 custom-radio custom-control-input js-custom-radio-input" type="radio" value="Blogs" name="insightsAlertContentType1" id="insightsAlertContentType193344Blogs" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100261&#34;}" data-linkedin-prefill="noPrefill" analytics="blogSubscription"/>
+            <label for="insightsAlertContentType193344Blogs" class="form-check-label custom-control-label js-custom-radio">
+                Only blog posts
+            </label>
+        </div>
+    
+        
+        
+        
+        
+
+        <div class="form-check radio col-12 col-lg-6 col-xl-4 custom-radio custom-control">
+            <input class="js-form-control form-check-input mt-2 custom-radio custom-control-input js-custom-radio-input" type="radio" value="Press releases" name="insightsAlertContentType1" id="insightsAlertContentType193344Press releases" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100261&#34;}" data-linkedin-prefill="noPrefill" analytics="blogSubscription"/>
+            <label for="insightsAlertContentType193344Press releases" class="form-check-label custom-control-label js-custom-radio">
+                Only press releases
+            </label>
+        </div>
+    
+
+            <div class="invalid-feedback">
+                Please select the frequency 
+            </div>
+        </div>
+    
+
+</div>
+
+            
+                <div class="checkbox-group-field base-field">
+
+    
+        
+        
+        
+
+        <div class="form-group row container-fluid text-left checkbox-group-form-field " role="group" aria-label="insightsAlertPreferredTopic1107822">
+            <div class="col-12 mb-1 pl-0 ">
+                
+                
+                    <div class="d-inline-block mb-2">
+                        What topics are you interested in?
+                    </div>
+                    
+                
+
+            </div>
+            
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="All topics" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822All topics" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="All topics" data-linkedin-prefill="noPrefill" checked="checked" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822All topics" class="form-check-label custom-control-label js-custom-checkbox">
+                All topics
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Airlines" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Airlines" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Airlines" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Airlines" class="form-check-label custom-control-label js-custom-checkbox">
+                Airlines
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Airports" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Airports" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Airports" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Airports" class="form-check-label custom-control-label js-custom-checkbox">
+                Airports
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Business Travel Agencies" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Business Travel Agencies" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Business Travel Agencies" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Business Travel Agencies" class="form-check-label custom-control-label js-custom-checkbox">
+                 Business Travel Agencies
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Corporations" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Corporations" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Corporations" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Corporations" class="form-check-label custom-control-label js-custom-checkbox">
+                Corporations
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Destination Marketing Organizations" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Destination Marketing Organizations" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Destination Marketing Organizations" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Destination Marketing Organizations" class="form-check-label custom-control-label js-custom-checkbox">
+                Destination Marketing Organizations
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Ground Handlers" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Ground Handlers" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Ground Handlers" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Ground Handlers" class="form-check-label custom-control-label js-custom-checkbox">
+                Ground Handlers
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Hospitality" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Hospitality" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Hospitality" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Hospitality" class="form-check-label custom-control-label js-custom-checkbox">
+                 Hospitality
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Insurance" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Insurance" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Insurance" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Insurance" class="form-check-label custom-control-label js-custom-checkbox">
+                Insurance
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Metasearch &amp; Travel Media" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Metasearch &amp; Travel Media" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Metasearch &amp; Travel Media" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Metasearch &amp; Travel Media" class="form-check-label custom-control-label js-custom-checkbox">
+                Metasearch &amp; Travel Media
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Mobility" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Mobility" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Mobility" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Mobility" class="form-check-label custom-control-label js-custom-checkbox">
+                Mobility
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Online Travel Agencies" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Online Travel Agencies" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Online Travel Agencies" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Online Travel Agencies" class="form-check-label custom-control-label js-custom-checkbox">
+                Online Travel Agencies
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Retail Travel Agencies" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Retail Travel Agencies" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Retail Travel Agencies" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Retail Travel Agencies" class="form-check-label custom-control-label js-custom-checkbox">
+                Retail Travel Agencies
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Railways" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Railways" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Railways" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Railways" class="form-check-label custom-control-label js-custom-checkbox">
+                Railways
+            </label>
+        </div>
+    
+        
+        
+        
+        
+        
+
+        <div class="form-check checkbox col-12 col-lg-6 col-xl-4 custom-control custom-checkbox">
+            <input class="js-form-control  form-check-input mt-2 custom-checkbox custom-control-input js-custom-checkbox-input" type="checkbox" value="Tour Operators" name="insightsAlertPreferredTopic1[]" id="insightsAlertPreferredTopic1107822Tour Operators" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100263&#34;}" data-eloqua-match-option-value="Tour Operators" data-linkedin-prefill="noPrefill" analytics="topicInterest"/>
+            <label for="insightsAlertPreferredTopic1107822Tour Operators" class="form-check-label custom-control-label js-custom-checkbox">
+                Tour Operators
+            </label>
+        </div>
+    
+
+            
+
+            <div class="invalid-feedback">
+                
+            </div>
+        </div>
+    
+
+</div>
+
+            
+                <div class="radio-group-field base-field">
+
+    
+        
+        
+        <div class="form-group text-left radio-group-form-field row container-fluid " role="group" aria-label="insightsAlertPreferredFrequency1125614">
+            <div class="col-12 mb-1 pl-0 ">
+                
+                <div class="pl-0">
+                    <div class="float-left">
+                        <div style="text-align: left;"><b>How often do you want to receive the updates?</b></div>
+
+                    </div>
+                    
+                </div>
+            </div>
+            
+    
+        
+        
+        
+        
+
+        <div class="form-check radio col-12 col-lg-6 col-xl-4 custom-radio custom-control">
+            <input class="js-form-control form-check-input mt-2 custom-radio custom-control-input js-custom-radio-input" type="radio" value="Daily" name="insightsAlertPreferredFrequency1" id="insightsAlertPreferredFrequency1125614Daily" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100262&#34;}" data-eloqua-match-option-value="Daily" data-linkedin-prefill="noPrefill" checked="checked" analytics="frequency"/>
+            <label for="insightsAlertPreferredFrequency1125614Daily" class="form-check-label custom-control-label js-custom-radio">
+                Daily
+            </label>
+        </div>
+    
+        
+        
+        
+        
+
+        <div class="form-check radio col-12 col-lg-6 col-xl-4 custom-radio custom-control">
+            <input class="js-form-control form-check-input mt-2 custom-radio custom-control-input js-custom-radio-input" type="radio" value="Weekly" name="insightsAlertPreferredFrequency1" id="insightsAlertPreferredFrequency1125614Weekly" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100262&#34;}" data-eloqua-match-option-value="Weekly" data-linkedin-prefill="noPrefill" analytics="frequency"/>
+            <label for="insightsAlertPreferredFrequency1125614Weekly" class="form-check-label custom-control-label js-custom-radio">
+                Weekly
+            </label>
+        </div>
+    
+        
+        
+        
+        
+
+        <div class="form-check radio col-12 col-lg-6 col-xl-4 custom-radio custom-control">
+            <input class="js-form-control form-check-input mt-2 custom-radio custom-control-input js-custom-radio-input" type="radio" value="Monthly" name="insightsAlertPreferredFrequency1" id="insightsAlertPreferredFrequency1125614Monthly" data-eloqua-prefill="{&#34;type&#34;:&#34;additional&#34;,&#34;field&#34;:&#34;100262&#34;}" data-eloqua-match-option-value="Monthly" data-linkedin-prefill="noPrefill" analytics="frequency"/>
+            <label for="insightsAlertPreferredFrequency1125614Monthly" class="form-check-label custom-control-label js-custom-radio">
+                Monthly
+            </label>
+        </div>
+    
+
+            <div class="invalid-feedback">
+                Please select the frequency 
+            </div>
+        </div>
+    
+
+</div>
+
+            
+                <div class="parbase text">
+<p><div style="text-align: left;"><small>The information you are submitting here will be processed by Amadeus to send you newsletters and/or alerts. The processing is based on your consent so you can revoke it whenever you decide to. We may combine personal information collected from your navigation with the information provided by you through different channels to provide a target experience to you and to give you the information you may need to understand Amadeus products and services. Before submitting the information please read <u><a href="https://amadeus.com/en/policies/privacy-policy">the Information about the processing of personal information by Amadeus</a>
+</u>.</small></div>
+</p>
+</div>
+
+            
+
+            <div class="new newpar section aem-Grid-newComponent">
+
+</div>
+
+            <button class="submitButton btn btn-primary btn-block mt-4" type="submit" data-submittext="Submitting" data-text="Send" data-tealium-track="form-submit" disabled>
+                <span class="js-button-loader mr-2 buttonloader align-middle" style="display: none;"></span>
+                <span class="js-button-text align-middle">Send</span>
+            </button>
+        </form>
+
+        
+    <div class="fixed-bottom alert alert-danger bg-danger m-0 p-0 technicalError d-none">
+        <div class="container-fluid">
+            <div class="row no-gutters text-white m-0 w-100">
+                <div class="col-2 col-sm-1 my-auto pl-0 pl-lg-3 pt-4">
+                    <svg class="svg--ic_error-dims icon-w-7 icon-h-7" aria-labelledby="svg--ic_check-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_error"></use>
+                    </svg>
+                </div>
+                <div class="col-9 col-sm-10 mt-4 mb-4">
+                    <p class="lead pl-2 pl-sm-4 m-0 pl-lg-3 pb-1" style="line-height:1.7rem;">Ops, it looks like we are experiencing technical issues at this time.</p>
+                    <p class="smaller pl-2 pl-sm-4 pl-lg-3 pb-0 mb-0">Don&#39;t worry, our experts are working on it - please try again</p>
+                </div>
+                <div class="col-1 pl-md-0 pl-2 my-auto">
+                    <a class="cursor-pointer closeError">
+                        <svg class="svg--ic_close-dims align-middle icon-w-3 icon-h-3 svg-ico" aria-labelledby="ic_close">
+                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    <div class="fixed-bottom alert alert-danger bg-danger m-0 p-0 submissionError d-none">
+        <div class="container-fluid">
+            <div class="row no-gutters text-white m-0 w-100">
+                <div class="col-2 col-sm-1 my-auto pl-0 pl-lg-3 pt-4">
+                    <svg class="svg--ic_error-dims icon-w-7 icon-h-7" aria-labelledby="svg--ic_check-dims">
+                        <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_error"></use>
+                    </svg>
+                </div>
+                <div class="col-9 col-sm-10 mt-4 mb-4">
+                    <p class="lead pl-2 pl-sm-4 m-0 pl-lg-3 pb-1" style="line-height:1.7rem;">Something seems to have gone wrong!</p>
+                    <p class="smaller pl-2 pl-sm-4 pl-lg-3 pb-0 mb-0">Have your details been entered correctly! Please double-check and try again, thanks!</p>
+                </div>
+                <div class="col-1 pl-md-0 pl-2 my-auto">
+                    <a class="cursor-pointer closeError">
+                        <svg class="svg--ic_close-dims align-middle icon-w-3 icon-h-3 svg-ico" aria-labelledby="ic_close">
+                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_close"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        
+    </section>
+
+</div>
+
+    
+</div>
+</div>
+</div>
+
+                </div>
+                <div class="modal-footer w-100 justify-content-between bg-light container">
+                    <div class="row no-gutters w-100">
+                        <div class="col-12 col-lg-8">
+                            <p class="small">We would love to stay in touch with you, but only in ways that you find useful. <a href="https://amadeus.com/en/subscription-management.html">Manage your email preferences here</a>.</p>
+                        </div>
+                        <div class="align-items-center col-12 col-lg-4 d-inline-flex justify-content-around mt-3 mt-lg-0">
+                            <button type="button" class="sformCancelButton btn btn-secondary mx-1" data-dismiss="modal">Cancel</button>
+                            <button type="button" class="sformUpdateButton btn btn-primary mx-1" data-submittext="Submitting..." disabled>
+                                 <span class="js-button-loader mr-2 buttonloader align-middle" style="display: none;"></span>
+                                 Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="successFormModal modal fade" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true"></div>
+
+
+                    
+
+                    <p class="h5 font-amadeus mb-md-2 mb-lg-3">Subscribe to updates</p>
+                    <p class="small text-secondary">Stay up to date with all things Amadeus</p>
+                    <a class="btn btn-outline-primary btn-block" id="sformButton" role="button" href="#social-media" data-tealium-track="news-subscribe" data-subtext="Stay up to date with all things Amadeus">
+                        Subscribe now
+                    </a>
+                </div>
+            </div>
+
+            <hr class="my-0"/>
+            <div class="footer-social d-print-none row align-items-center justify-content-center justify-content-md-between my-6 my-md-5 my-lg-5">
+                <div class="col-auto order-1 order-md-3 mb-5 mb-md-0">
+                    <div class="d-flex align-items-center">
+                        
+    <a class="text-gray d-inline-flex mx-2 mx-sm-3" target="_blank" href="https://www.facebook.com/AmadeusITGroup/" data-tealium-track="footer-social-cta" data-network="Facebook">
+        <svg style="height: 24px; width: 24px;">
+            <title id="ic_facebook">Facebook</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_facebook" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+    </a>
+
+                        
+    <a class="text-gray d-inline-flex mx-2 mx-sm-3" target="_blank" href="https://twitter.com/AmadeusITGroup" data-tealium-track="footer-social-cta" data-network="Twitter">
+        <svg style="height: 24px; width: 24px;">
+            <title id="ic_twitter">Twitter</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_twitter" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+    </a>
+
+                        
+    <a class="text-gray d-inline-flex mx-2 mx-sm-3" target="_blank" href="https://www.linkedin.com/company/amadeus" data-tealium-track="footer-social-cta" data-network="LinkedIn">
+        <svg style="height: 24px; width: 24px;">
+            <title id="ic_linkedin">LinkedIn</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_linkedin" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+    </a>
+
+                        
+    <a class="text-gray d-inline-flex mx-2 mx-sm-3" target="_blank" href="https://www.youtube.com/user/AmadeusITGroup" data-tealium-track="footer-social-cta" data-network="YouTube">
+        <svg style="height: 24px; width: 24px;">
+            <title id="ic_youtube">YouTube</title>
+            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_youtube" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+    </a>
+
+
+                        <a class="btn btn-sm text-uppercase d-inline-flex align-items-center p-0 ml-2 ml-sm-3" href="https://amadeus.com/en/social-media">
+                            See all
+                            <svg class="icon-h-3 icon-w-3">
+                                <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_arrow_forward" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-100 d-sm-none order-2"></div>
+                <div class="col-auto order-3 order-md-1">
+                    <div class="d-flex align-items-center">
+                        <svg class="mr-2 icon-h-3 icon-w-3">
+                            <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_language" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                        </svg>
+                        <button class="btn btn-link d-flex align-items-center p-0 js-preferences" data-tealium-track="preference-update">
+                            <span class="language">
+                                English
+                            </span>
+                            <svg class="locationBar text-info icon-h-3 icon-w-3">
+                                <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#ic_vertical_bar" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                            </svg>
+                            <span class="location">
+                            </span>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+            <hr class="my-0"/>
+            <div class="row align-items-baseline justify-content-lg-between">
+                <div class="col-12 col-lg-auto">
+                    <div class="row align-items-baseline justify-content-center justify-content-md-between mt-6 mt-md-5 mt-lg-4 mb-5 mb-md-4 mb-lg-3">
+                        
+                        <div class="col-auto text-primary pr-lg-0 mb-1 mb-md-0 ">
+                            <a href="/en">
+                                <svg height="12px" width="90px">
+                                    <use xlink:href="/etc/clientlibs/amadeus/commons/site/css/sprites/symbol/icons.svg#amadeus_logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                                <span class="sr-only">Amadeus</span>
+                            </a>
+                        </div>
+                        <div class="w-100 d-md-none"></div>
+                        <div class="col-auto">
+                            <p class="small m-0">© Amadeus IT Group SA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-auto">
+                    <div class="row justify-content-md-between d-print-none">
+                        
+                            <div class="text-center col-6 col-md-auto ">
+                                <a class="small text-secondary d-inline-flex" href="https://amadeus.com/en/policies/amadeus-policies" target="_blank">
+                                    Legal Notices &amp; Privacy
+                                    
+                                </a>
+                            </div>
+                        
+                            <div class="text-center col-6 col-md-auto ">
+                                <a class="small text-secondary d-inline-flex" href="/en/sitemap" target="_blank">
+                                    Sitemap
+                                    
+                                </a>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    
+</div>
+</div>
+</div>
+
+
+</div>
+
+    
+</div>
+</div>
+
+    </footer>
+    <div id="videoModal" class="modal fade">
+    <div class="modal-dialog modal-lg modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header d-none d-md-flex">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="outline: none;">&times;</button>
+            </div>
+            <div class="modal-body p-0 p-md-2">
+                <button type="button" class="close position-absolute d-md-none d-block bg-white rounded-circle-100" style="z-index:1;right: 0px;top: 0px;width: 24px;height: 24px;padding: 0;" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <iframe id="video" width="100%" style="height:50vh;" frameborder="0" wmode="Opaque" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="breakpoint-check d-none"><span class="xs d-block d-sm-inline"></span><span class="sm d-sm-block d-md-inline"></span><span class="md d-md-block d-lg-inline"></span><span class="lg d-lg-block d-xl-inline"></span><span class="xl d-xl-block"></span></div>
+    
+    
+    
+<script type="text/javascript" src="/etc/clientlibs/amadeus/commons/all.min.6e0be7497e2aa0506b11ab40a5916340.js"></script>
+
+
+
+    
+    
+<script type="text/javascript" src="/etc/clientlibs/amadeus/corporate/all.min.75a0fbc4e4f581db230832308d4312bb.js"></script>
+
+
+
+
+<script id="twitter-wjs" type="text/javascript" async defer src="//platform.twitter.com/widgets.js"></script>
+
+  <div id="shareModal"></div>
+  <script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=321505329"></script>
+</body>
+</html>

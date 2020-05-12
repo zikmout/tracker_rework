@@ -15,7 +15,7 @@ requires = [
     'xlrd',
     'celery',
     'cython',
-    'pycld2',
+    # 'pycld2',
     'pdftotext',
     'celery-redbeat',
     'tldextract',

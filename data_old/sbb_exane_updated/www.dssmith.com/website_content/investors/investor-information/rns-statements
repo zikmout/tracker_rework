@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html ng-app="dssmith" data-resize-window lang="en" class="no-js  " prefix="og: http://ogp.me/ns#">
+<head>
+    <!-- Generated 11/27/2019 12:23:29 PM -->
+    <meta charset="utf-8">
+
+    <title>RNS Statements - DS Smith</title>
+
+    <meta name="robots" content="noodp,noydir" />
+    <link rel="canonical" href="https://www.dssmith.com/investors/investor-information/rns-statements" />
+        <link rel="alternate" hreflang="x-default" href="https://www.dssmith.com/investors/investor-information/rns-statements" />
+
+
+
+
+<meta property="og:site_name" content="DSSmith.com Corporate" />
+<meta property="og:title" content="RNS Statements" />
+<meta property="og:type" content="Website" />
+<meta property="og:url" content="https://www.dssmith.com/investors/investor-information/rns-statements" />
+<meta property="og:description" content="" />
+<meta property="og:locale" content="en" />
+
+
+
+<meta property="og:image" content="http://www.dssmith.com/static/gfx/dssmith-og-logo.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="300" />
+<meta property="og:image:height" content="300" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta id="viewport" name="viewport">
+
+    <!--[if lte IE 8]>
+        <link rel="shortcut icon" type="image/x-icon" href="/static/gfx/favicon/favicon-8bit.ico">
+    <![endif]-->
+    <link rel="shortcut icon" type="image/x-icon" href="/static/gfx/favicon/favicon.ico">
+
+    <script type="text/javascript">
+        var isLandscapeMode = false;
+        if (window.orientation === undefined) {
+            if (document.documentElement.clientWidth > document.documentElement.clientHeight) {
+                isLandscapeMode = true;
+            } else {
+
+            }
+        } else {
+            switch (window.orientation) {
+                case -90:
+                case 90:
+                    isLandscapeMode = true;
+                    break;
+                default:
+                    break;
+            }
+        }
+        if (screen.width <= 480 || (screen.height >= 1024 && isLandscapeMode)) {
+            var viewPortTag = document.getElementById('viewport');
+            viewPortTag.setAttribute('name', 'viewport');
+            viewPortTag.setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1');
+        }
+    </script>
+
+<link href="/bundles/css/print?v=vr3TRBL1hCaCFxhdt2PJlAUz5UrZvVTjMaeEHjZ0fZg1" rel="stylesheet" type="text/css" media="print" />
+<link href="/bundles/css/screen?v=oBZU2Yd7bxJMLZHl2Smasr8YL7PCuz4NAMlZcunOUDw1" rel="stylesheet" type="text/css" media="screen" />
+            <script>
+                var _rollbarConfig = {
+                    accessToken: "7d268d04ba9a4728b19a5ddc9d0804ea",
+                    captureIp: "anonymize",
+                    captureUncaught: true,
+                    captureUnhandledRejections: true,
+                    payload: {
+                        environment: "production"
+                    }
+                };
+                // Rollbar Snippet
+                !function (r) { function e(n) { if (o[n]) return o[n].exports; var t = o[n] = { exports: {}, id: n, loaded: !1 }; return r[n].call(t.exports, t, t.exports, e), t.loaded = !0, t.exports } var o = {}; return e.m = r, e.c = o, e.p = "", e(0) }([function (r, e, o) { "use strict"; var n = o(1), t = o(4); _rollbarConfig = _rollbarConfig || {}, _rollbarConfig.rollbarJsUrl = _rollbarConfig.rollbarJsUrl || "https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/2.4.0/rollbar.min.js", _rollbarConfig.async = void 0 === _rollbarConfig.async || _rollbarConfig.async; var a = n.setupShim(window, _rollbarConfig), l = t(_rollbarConfig); window.rollbar = n.Rollbar, a.loadFull(window, document, !_rollbarConfig.async, _rollbarConfig, l) }, function (r, e, o) { "use strict"; function n(r) { return function () { try { return r.apply(this, arguments) } catch (r) { try { console.error("[Rollbar]: Internal error", r) } catch (r) { } } } } function t(r, e) { this.options = r, this._rollbarOldOnError = null; var o = s++; this.shimId = function () { return o }, "undefined" != typeof window && window._rollbarShims && (window._rollbarShims[o] = { handler: e, messages: [] }) } function a(r, e) { if (r) { var o = e.globalAlias || "Rollbar"; if ("object" == typeof r[o]) return r[o]; r._rollbarShims = {}, r._rollbarWrappedError = null; var t = new p(e); return n(function () { e.captureUncaught && (t._rollbarOldOnError = r.onerror, i.captureUncaughtExceptions(r, t, !0), i.wrapGlobals(r, t, !0)), e.captureUnhandledRejections && i.captureUnhandledRejections(r, t, !0); var n = e.autoInstrument; return e.enabled !== !1 && (void 0 === n || n === !0 || "object" == typeof n && n.network) && r.addEventListener && (r.addEventListener("load", t.captureLoad.bind(t)), r.addEventListener("DOMContentLoaded", t.captureDomContentLoaded.bind(t))), r[o] = t, t })() } } function l(r) { return n(function () { var e = this, o = Array.prototype.slice.call(arguments, 0), n = { shim: e, method: r, args: o, ts: new Date }; window._rollbarShims[this.shimId()].messages.push(n) }) } var i = o(2), s = 0, d = o(3), c = function (r, e) { return new t(r, e) }, p = d.bind(null, c); t.prototype.loadFull = function (r, e, o, t, a) { var l = function () { var e; if (void 0 === r._rollbarDidLoad) { e = new Error("rollbar.js did not load"); for (var o, n, t, l, i = 0; o = r._rollbarShims[i++];)for (o = o.messages || []; n = o.shift();)for (t = n.args || [], i = 0; i < t.length; ++i)if (l = t[i], "function" == typeof l) { l(e); break } } "function" == typeof a && a(e) }, i = !1, s = e.createElement("script"), d = e.getElementsByTagName("script")[0], c = d.parentNode; s.crossOrigin = "", s.src = t.rollbarJsUrl, o || (s.async = !0), s.onload = s.onreadystatechange = n(function () { if (!(i || this.readyState && "loaded" !== this.readyState && "complete" !== this.readyState)) { s.onload = s.onreadystatechange = null; try { c.removeChild(s) } catch (r) { } i = !0, l() } }), c.insertBefore(s, d) }, t.prototype.wrap = function (r, e, o) { try { var n; if (n = "function" == typeof e ? e : function () { return e || {} }, "function" != typeof r) return r; if (r._isWrap) return r; if (!r._rollbar_wrapped && (r._rollbar_wrapped = function () { o && "function" == typeof o && o.apply(this, arguments); try { return r.apply(this, arguments) } catch (o) { var e = o; throw e && ("string" == typeof e && (e = new String(e)), e._rollbarContext = n() || {}, e._rollbarContext._wrappedSource = r.toString(), window._rollbarWrappedError = e), e } }, r._rollbar_wrapped._isWrap = !0, r.hasOwnProperty)) for (var t in r) r.hasOwnProperty(t) && (r._rollbar_wrapped[t] = r[t]); return r._rollbar_wrapped } catch (e) { return r } }; for (var u = "log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,captureEvent,captureDomContentLoaded,captureLoad".split(","), f = 0; f < u.length; ++f)t.prototype[u[f]] = l(u[f]); r.exports = { setupShim: a, Rollbar: p } }, function (r, e) { "use strict"; function o(r, e, o) { if (r) { var t; "function" == typeof e._rollbarOldOnError ? t = e._rollbarOldOnError : r.onerror && !r.onerror.belongsToShim && (t = r.onerror, e._rollbarOldOnError = t); var a = function () { var o = Array.prototype.slice.call(arguments, 0); n(r, e, t, o) }; a.belongsToShim = o, r.onerror = a } } function n(r, e, o, n) { r._rollbarWrappedError && (n[4] || (n[4] = r._rollbarWrappedError), n[5] || (n[5] = r._rollbarWrappedError._rollbarContext), r._rollbarWrappedError = null), e.handleUncaughtException.apply(e, n), o && o.apply(r, n) } function t(r, e, o) { if (r) { "function" == typeof r._rollbarURH && r._rollbarURH.belongsToShim && r.removeEventListener("unhandledrejection", r._rollbarURH); var n = function (r) { var o, n, t; try { o = r.reason } catch (r) { o = void 0 } try { n = r.promise } catch (r) { n = "[unhandledrejection] error getting `promise` from event" } try { t = r.detail, !o && t && (o = t.reason, n = t.promise) } catch (r) { t = "[unhandledrejection] error getting `detail` from event" } o || (o = "[unhandledrejection] error getting `reason` from event"), e && e.handleUnhandledRejection && e.handleUnhandledRejection(o, n) }; n.belongsToShim = o, r._rollbarURH = n, r.addEventListener("unhandledrejection", n) } } function a(r, e, o) { if (r) { var n, t, a = "EventTarget,Window,Node,ApplicationCache,AudioTrackList,ChannelMergerNode,CryptoOperation,EventSource,FileReader,HTMLUnknownElement,IDBDatabase,IDBRequest,IDBTransaction,KeyOperation,MediaController,MessagePort,ModalWindow,Notification,SVGElementInstance,Screen,TextTrack,TextTrackCue,TextTrackList,WebSocket,WebSocketWorker,Worker,XMLHttpRequest,XMLHttpRequestEventTarget,XMLHttpRequestUpload".split(","); for (n = 0; n < a.length; ++n)t = a[n], r[t] && r[t].prototype && l(e, r[t].prototype, o) } } function l(r, e, o) { if (e.hasOwnProperty && e.hasOwnProperty("addEventListener")) { for (var n = e.addEventListener; n._rollbarOldAdd && n.belongsToShim;)n = n._rollbarOldAdd; var t = function (e, o, t) { n.call(this, e, r.wrap(o), t) }; t._rollbarOldAdd = n, t.belongsToShim = o, e.addEventListener = t; for (var a = e.removeEventListener; a._rollbarOldRemove && a.belongsToShim;)a = a._rollbarOldRemove; var l = function (r, e, o) { a.call(this, r, e && e._rollbar_wrapped || e, o) }; l._rollbarOldRemove = a, l.belongsToShim = o, e.removeEventListener = l } } r.exports = { captureUncaughtExceptions: o, captureUnhandledRejections: t, wrapGlobals: a } }, function (r, e) { "use strict"; function o(r, e) { this.impl = r(e, this), this.options = e, n(o.prototype) } function n(r) { for (var e = function (r) { return function () { var e = Array.prototype.slice.call(arguments, 0); if (this.impl[r]) return this.impl[r].apply(this.impl, e) } }, o = "log,debug,info,warn,warning,error,critical,global,configure,handleUncaughtException,handleUnhandledRejection,_createItem,wrap,loadFull,shimId,captureEvent,captureDomContentLoaded,captureLoad".split(","), n = 0; n < o.length; n++)r[o[n]] = e(o[n]) } o.prototype._swapAndProcessMessages = function (r, e) { this.impl = r(this.options); for (var o, n, t; o = e.shift();)n = o.method, t = o.args, this[n] && "function" == typeof this[n] && ("captureDomContentLoaded" === n || "captureLoad" === n ? this[n].apply(this, [t[0], o.ts]) : this[n].apply(this, t)); return this }, r.exports = o }, function (r, e) { "use strict"; r.exports = function (r) { return function (e) { if (!e && !window._rollbarInitialized) { r = r || {}; for (var o, n, t = r.globalAlias || "Rollbar", a = window.rollbar, l = function (r) { return new a(r) }, i = 0; o = window._rollbarShims[i++];)n || (n = o.handler), o.handler._swapAndProcessMessages(l, o.messages); window[t] = n, window._rollbarInitialized = !0 } } } }]);
+                // End Rollbar Snippet
+            </script>
+
+    
+
+ 
+
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments);
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-45828162-1', {
+            'cookieDomain': 'dssmith.com',
+            'cookieName': '_ela',        // Cookie name. _gali by default.
+            'duration': 45,              // Cookie duration. 30 seconds by default.
+            'levels': 5                 // Max DOM levels from link to look for element ID. 3 by default.
+        });
+        
+        ga('require', 'displayfeatures');
+        ga('require', 'linkid', 'linkid.js');
+
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+
+            
+        ga('create', 'UA-45828162-39', 'auto', 'dynamicTracker1');
+        ga('set', 'anonymizeIp', true);
+                ga('dynamicTracker1.send', 'pageview');
+                ga('dynamicTracker1.require', 'displayfeatures');
+
+            
+
+    </script>
+    <!-- Start Alexa Certify Javascript -->
+    <script type="text/plain" data-cookieconsent="statistics">
+        _atrk_opts = { atrk_acct: "KagQj1a8wt00or", domain: "dssmith.com", dynamic: true };
+        (function () { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://d31qbv1cthcecs.cloudfront.net/atrk.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(as, s); })();
+    </script>
+    <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=KagQj1a8wt00or" style="display:none" height="1" width="1" alt="" /></noscript>
+    <!-- End Alexa Certify Javascript -->
+
+    <link href="https://unpkg.com/cloudinary-video-player/dist/cld-video-player.min.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/cloudinary-core/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/cloudinary-video-player@1.1.4-edge.4/dist/cld-video-player.min.js" type="text/javascript"></script>
+    <script src="//widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+    <!--Adaptive rating-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/2.6.3/dash.all.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-dash/2.9.2/videojs-dash.min.js"
+            type="text/javascript"></script>
+
+</head>
+<body class="full-width-news-list ">
+    <div class="site-wrapper">
+        
+        <noscript>
+            <iframe src="//www.googletagmanager.com/ns.html?id=GTM-W7TF2H"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-W7TF2H');</script>
+        
+
+        
+
+        
+
+        
+
+<header id="header">
+    <nav id="global-nav" role="navigation">
+    <div class="container">
+        <ul class="unstyled company-nav">
+            <li>
+                <button class="btn" data-toggle-element="next" data-toggle-type="slide">Show menu</button>
+                <ul class="unstyled">
+                    <li class="mobile-site-serch">
+<form action="/search/Quick/" method="post">                            <input class="input input-block-level" name="q" type="text" placeholder="Search website..." />
+                            <input type="submit" class="search-btn" value="" />
+</form>                    </li>
+
+                    <li class="selected"><a href="/">Corporate</a></li>
+
+                        <li><a href="/packaging">Packaging</a></li>
+                        <li><a href="/recycling">Recycling</a></li>
+                        <li><a href="/paper">Paper</a></li>
+                        <li><a href="/plastics">Plastics</a></li>
+                    <li class="small-screen-countries visible-phone"><a href="#" title="Worldwide">Worldwide</a></li>
+                </ul>
+
+            </li>
+        </ul>
+        <ul class="unstyled tools-nav">
+
+                <li class="global-external-login"><a href="https://www.dssmithepack.co.uk/" target="_blank" title="Buy online"><i class="fa fa-shopping-cart fa-lg"></i> Buy online</a></li>
+
+                <li class="stock-ticker"><a href="/investors/investor-information/share-price">3.86 GBP
+     &nbsp;&nbsp;<img src="/static/gfx/icon-stock-up.png" alt="DS Smith Share change indicator">&nbsp;&nbsp;&nbsp;&nbsp;+0.57</a></li>
+
+
+
+            <li class="countries " data-tools-nav-content="#countries-nav"><a href="#countries-nav" title="Worldwide">Worldwide</a></li>
+        </ul>
+    </div>
+</nav>
+    <div class="container">
+    <strong class="logo"><a href="/" title="DS Smith"><img src="/link/a0ae9bc538544258bf919aec5f5a06b6.png" alt="DS Smith Logotype"/>
+</a></strong>
+    <nav id="main-nav" class="main-nav" role="navigation">
+        <ul class="unstyled">
+            <li>
+                <a href="/company" class=""
+                   title="About">About</a>
+            </li><li>
+                <a href="/media" class=""
+                   title="Media">Media</a>
+            </li><li class="selected">
+                <a href="/investors" class=""
+                   title="Investors">Investors</a>
+            </li><li>
+                <a href="/people" class=""
+                   title="People">People</a>
+            </li><li>
+                <a href="/contact" class=""
+                   title="Contact">Contact</a>
+            </li>
+
+            <li class="search"><a href="#" title="Search"><span>Search</span></a></li>
+
+        </ul>
+    </nav>
+    <div id="mobile-nav">
+            <a href="/investors/investor-information" title="Investor Information" class="nav-back"
+               data-stats-metric="action"
+               data-stats-action-category="Page Interactions"
+               data-stats-action-name="Mobile Back Navigation"
+               data-stats-action-label="RNS Statements">Back</a>
+                    <strong>RNS Statements</strong>
+    </div>
+    <div class="mobile-header-links">
+            <div class="mobile-stock-ticker">3.86 GBP
+    &nbsp;&nbsp;<img src="/static/gfx/icon-stock-up.png" alt="DS Smith Share change indicator">&nbsp;&nbsp;+0.57</div>
+
+            <div class="mobile-shopping-cart"><a href="https://www.dssmithepack.co.uk/" target="_blank" title="Buy online"><i class="fa fa-shopping-cart fa-lg"></i>&nbsp;Buy online</a></div>
+
+    </div>
+
+</div>
+    
+
+<div id="main-nav-dropdown">
+    <div class="container">
+        <div class="row dropdown">
+                    <div class="span5">
+                        <h2 class="h1">About</h2>
+<p>We are a leading provider of corrugated packaging and are present in 37 countries, employing over 31,000 people.</p>
+<p>Our story can be traced back to the box-making businesses started in the 1940s by the Smith&nbsp;family in East London. DS Smith originally listed on the London Stock exchange in the late 1950s.</p>
+                    </div>
+                    <nav class="span5 offset2">
+                        <ul class="navigation unstyled">
+                                <li><a href="/company/ds-smith-at-a-glance">At a glance</a></li>
+                                <li><a href="/company/who-we-are">Who we are</a></li>
+                                <li><a href="/company/ellen-macarthur-foundation-partnership">Ellen MacArthur Foundation Partnership</a></li>
+                                <li><a href="/company/offering">Offering</a></li>
+                                <li><a href="/company/strategy">Strategy</a></li>
+                                <li><a href="/company/organisation">Organisation</a></li>
+                                <li><a href="/company/sustainability">Sustainability</a></li>
+                        </ul>
+                    </nav>
+                </div><div class="row dropdown">
+                    <div class="span5">
+                        <h2 class="h1">Media</h2>
+<p>DS Smith's media centre gives access to the latest news, press releases and events within Group as well as Packaging, Recycling, Paper and Plastics divisions.</p>
+<p>If you are a journalist or an editor requiring information about DS Smith, please, use our Media contact page.</p>
+                    </div>
+                    <nav class="span5 offset2">
+                        <ul class="navigation unstyled">
+                                <li><a href="/company/newsroom">Newsroom</a></li>
+                                <li><a href="/media/media-contact">Media contact</a></li>
+                        </ul>
+                    </nav>
+                </div><div class="row dropdown">
+                    <div class="span5">
+                        <h2 class="h1">Investors</h2>
+<p>2018/19 has been another year of good delivery from DS Smith, with substantial progress developing our strategic position in Europe along with further organic growth. We have delivered record return on sales margins of 10.2 per cent alongside continued market share gains and return on capital of 13.6 per cent, in the middle of our target range. We also made the significant acquisition of Europac, which was announced in June 2018 and completed in January 2019.</p>
+                    </div>
+                    <nav class="span5 offset2">
+                        <ul class="navigation unstyled">
+                                <li><a href="/investors/results-and-presentations">Results and Presentations</a></li>
+                                <li><a href="/investors/investor-information">Investor Information</a></li>
+                                <li><a href="/investors/shareholder-information">Shareholder Information</a></li>
+                                <li><a href="/investors/annual-reports">Annual Reports</a></li>
+                                <li><a href="/investors/financial-information">Financial Information</a></li>
+                                <li><a href="/investors/corporate-governance">Corporate governance</a></li>
+                                <li><a href="/investors/our-external-recognitions">Our External Recognitions</a></li>
+                        </ul>
+                    </nav>
+                </div><div class="row dropdown">
+                    <div class="span5">
+                        <h2 class="h1">People</h2>
+<p>DS Smith is made up of a team of over&nbsp; 31,000 employees world-wide across 37 countries. DS Smith offers a wide range of career opportunities. We aim to attract, retain and motivate good people, giving them the power to fulfil their potential.</p>
+<p>For other enquiries about opportunities within DS Smith please email <a href="mailto:recruitment@dssmith.com">recruitment@dssmith.com</a></p>
+                    </div>
+                    <nav class="span5 offset2">
+                        <ul class="navigation unstyled">
+                                <li><a href="/people/careers">Careers</a></li>
+                                <li><a href="/people/management">Management</a></li>
+                                <li><a href="/people/culture">Culture</a></li>
+                        </ul>
+                    </nav>
+                </div><div class="dropdown dropdown-contact">
+    <div class="row">
+        <div class="span4">
+            <h2 class="h1">Contact</h2>
+            <div id="main-nav-dropdown-info-window" class="info-window">
+            </div>
+            <nav role="navigation">
+                <ul class="navigation unstyled">
+                        <li><a href="/contact/get-in-touch">Get in touch</a></li>
+                        <li><a href="/contact/locations">More locations</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+
+        <div class="dropdown-map">
+            <div class="google-map"
+                 data-map-markers-url="/Map/Get/55?language=en"
+                 data-map-start-lat="0"
+                 data-map-start-lng="0"
+                 data-map-zoom-level="4"
+                 data-map-type="custom"
+                 data-map-info-window="#main-nav-dropdown-info-window"
+                 data-map-water-color="#333333"
+                 data-map-land-color="#d1cfcc"
+                 data-map-country-border-color="#e9e9e9"
+                 data-map-fit-bounds="false"></div>
+        </div>
+</div>
+
+
+<form action="/search/Quick/" method="post">            <div class="row dropdown container global-site-search">
+                <div class="span6 offset2">
+                    <input class="input input-block-level" name="q" type="text" placeholder="Search website...">
+                </div>
+                <div class="span2">
+                    <input type="submit" class="btn btn-large btn-block" value="Search">
+                </div>
+            </div>
+</form>    </div>
+</div>
+</header>
+
+
+
+<div class="container">
+                <div class="level-up-nav">
+
+            <nav role="navigation">
+<a href="/investors/investor-information">Investor Information</a>            </nav>
+        </div>
+
+
+    
+    
+
+    <div class="main-content-wrapper">
+        <div class="row">
+            <div class="span4">
+                <nav class="sub-navigation">
+                    <span class="h3">RNS Statements</span>
+                    <form action="/" data-service-url="/investors/investor-information/rns-statements/Filter/" data-service-no-result-message="This filter did not return any result." data-service-error-message="Something went wrong. please reload the page.">
+    <ul class="unstyled navigation navigation-filter">
+            <li><label>Results and Trading Reports <input type="checkbox" value="2632" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Company Announcement - General <input type="checkbox" value="2643" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Executive Changes <input type="checkbox" value="2640" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Holding(s) in Company <input type="checkbox" value="2634" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Mergers, Acquisitions and Disposals <input type="checkbox" value="2698" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Directors Dealings <input type="checkbox" value="3351" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Total Voting Rights <input type="checkbox" value="53272" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Director/PDMR Shareholding <input type="checkbox" value="54084" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Directorate Change <input type="checkbox" value="122452" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Disposal <input type="checkbox" value="155724" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Director Declaration <input type="checkbox" value="60743" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>DS Smith Plc - Pre-close trading statement <input type="checkbox" value="156393" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Block listing Interim Review <input type="checkbox" value="56101" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Final Results <input type="checkbox" value="128513" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Completion of disposal <input type="checkbox" value="159247" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Annual Report and Notice of AGM <input type="checkbox" value="159578" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Trading Statement <input type="checkbox" value="60939" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Result of AGM <input type="checkbox" value="74324" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+            <li><label>Pre-close statement <input type="checkbox" value="164661" data-custom-input="check" class="custom-input" id="#" name="type" ></label></li>
+                    <li class="list-title">
+                <span class="h3 " data-toggle-element="next" data-toggle-type="slide">Year</span>
+                <ul class="unstyled" >
+                        <li><label>2019 <input type="checkbox" value="2019" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2018 <input type="checkbox" value="2018" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2017 <input type="checkbox" value="2017" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2016 <input type="checkbox" value="2016" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2015 <input type="checkbox" value="2015" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2014 <input type="checkbox" value="2014" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2013 <input type="checkbox" value="2013" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2012 <input type="checkbox" value="2012" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2011 <input type="checkbox" value="2011" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2010 <input type="checkbox" value="2010" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2009 <input type="checkbox" value="2009" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2008 <input type="checkbox" value="2008" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2007 <input type="checkbox" value="2007" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2006 <input type="checkbox" value="2006" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                        <li><label>2005 <input type="checkbox" value="2005" data-custom-input="check" class="custom-input" id="#" name="year" ></label></li>
+                </ul>
+            </li>
+    </ul>
+</form>
+
+                </nav>
+            </div>
+            <article class="span7 offset1">
+                
+
+
+<h1 >RNS Statements</h1>
+
+
+            
+<div class="main-content">
+    <ul class="unstyled page-list">
+            <li class="page press-release">
+                <a href="/investors/investor-information/rns-statements/2019/11/directorpdmr-shareholding" title="Director/PDMR Shareholding">
+                    <strong class="h3">RNS <span>Nov 13 2019</span></strong>
+                    <h2>Director/PDMR Shareholding</h2>
+                    <p></p>
+                </a>
+
+                    <ul class="unstyled tag-list">
+                        <li>Tags:&nbsp;&nbsp;</li>
+
+                            <li>
+                                    <strong>RNS</strong>
+                            </li>
+                            <li>
+                                    <strong>Director/PDMR Shareholding</strong>
+                            </li>
+                    </ul>
+            </li>
+            <li class="page press-release">
+                <a href="/investors/investor-information/rns-statements/2019/11/holdings-in-company" title="Holding(s) in Company">
+                    <strong class="h3">RNS <span>Nov 6 2019</span></strong>
+                    <h2>Holding(s) in Company</h2>
+                    <p></p>
+                </a>
+
+                    <ul class="unstyled tag-list">
+                        <li>Tags:&nbsp;&nbsp;</li>
+
+                            <li>
+                                    <strong>RNS</strong>
+                            </li>
+                            <li>
+                                    <strong>Holding(s) in Company</strong>
+                            </li>
+                    </ul>
+            </li>
+            <li class="page press-release">
+                <a href="/investors/investor-information/rns-statements/2019/11/total-voting-rights" title="Total Voting Rights">
+                    <strong class="h3">RNS <span>Nov 1 2019</span></strong>
+                    <h2>Total Voting Rights</h2>
+                    <p></p>
+                </a>
+
+                    <ul class="unstyled tag-list">
+                        <li>Tags:&nbsp;&nbsp;</li>
+
+                            <li>
+                                    <strong>RNS</strong>
+                            </li>
+                            <li>
+                                    <strong>Total Voting Rights</strong>
+                            </li>
+                    </ul>
+            </li>
+            <li class="page press-release">
+                <a href="/investors/investor-information/rns-statements/2019/10/pre-close-statement" title="Pre-close statement">
+                    <strong class="h3">RNS <span>Oct 31 2019</span></strong>
+                    <h2>Pre-close statement</h2>
+                    <p></p>
+                </a>
+
+                    <ul class="unstyled tag-list">
+                        <li>Tags:&nbsp;&nbsp;</li>
+
+                            <li>
+                                    <strong>RNS</strong>
+                            </li>
+                            <li>
+                                    <strong>Pre-close statement</strong>
+                            </li>
+                    </ul>
+            </li>
+            <li class="page press-release">
+                <a href="/investors/investor-information/rns-statements/2019/10/holdings-in-company5" title="Holding(s) in Company">
+                    <strong class="h3">RNS <span>Oct 22 2019</span></strong>
+                    <h2>Holding(s) in Company</h2>
+                    <p></p>
+                </a>
+
+                    <ul class="unstyled tag-list">
+                        <li>Tags:&nbsp;&nbsp;</li>
+
+                            <li>
+                                    <strong>RNS</strong>
+                            </li>
+                            <li>
+                                    <strong>Holding(s) in Company</strong>
+                            </li>
+                    </ul>
+            </li>
+            <li class="page press-release">
+                <a href="/investors/investor-information/rns-statements/2019/10/holdings-in-company4" title="Holding(s) in Company">
+                    <strong class="h3">RNS <span>Oct 8 2019</span></strong>
+                    <h2>Holding(s) in Company</h2>
+                    <p></p>
+                </a>
+
+                    <ul class="unstyled tag-list">
+                        <li>Tags:&nbsp;&nbsp;</li>
+
+                            <li>
+                                    <strong>RNS</strong>
+                            </li>
+                            <li>
+                                    <strong>Holding(s) in Company</strong>
+                            </li>
+                    </ul>
+            </li>
+    </ul>
+</div>
+
+
+            </article>
+        </div>
+    </div>
+    <nav class="pagination">
+        
+    <ul class="unstyled">
+
+        <li class="selected"><a href="/investors/investor-information/rns-statements?Page=0">1</a></li><li><a href="/investors/investor-information/rns-statements?Page=1">2</a></li><li><a href="/investors/investor-information/rns-statements?Page=2">3</a></li><li><a href="/investors/investor-information/rns-statements?Page=3">4</a></li><li>...</li> <li><a href="/investors/investor-information/rns-statements?page=169">170</a></li><li class="next"><a href="/investors/investor-information/rns-statements?page=1"><span>Next page</span>&nbsp;</a></li>
+
+    </ul>
+
+    </nav>
+
+
+<nav class="breadcrumb">
+    <ul class="unstyled">
+            <li><a href="/">DS Smith Corporate</a></li>
+        
+                    <li><a href="/investors">Investors</a></li>
+            <li><a href="/investors/investor-information">Investor Information</a></li>
+            <li class="selected">RNS Statements</li>
+ 
+    </ul>
+</nav>
+
+</div>
+
+
+<footer id="footer">
+    <div class="section clearfix container">
+
+            <a href="/powerofless/" title="The power of Less" class="trademark"
+               data-stats-action-category="Call To Action"
+               data-stats-action-name="Power of Less"
+               data-stats-action-label="Go to page"
+               >The power of Less</a>
+
+        <nav class="main-nav">
+            <ul class="unstyled">
+                <li>
+<a href="/company">About</a>
+                </li><li>
+<a href="/media">Media</a>
+                </li><li class="selected">
+<a href="/investors">Investors</a>
+                </li><li>
+<a href="/people">People</a>
+                </li><li>
+<a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+        <div class="section social-media">
+        <div class="clearfix container">
+            <ul>
+                
+                    <li>
+                        <a href="https://www.linkedin.com/company/ds-smith"
+                           title="linkedin"
+                           data-stats-metric="action"
+                           data-stats-action-category="Social Media"
+                           data-stats-action-name="Follow"
+                           data-stats-action-label="linkedin"
+                           class="linkedin"  target=&#39;_blank&#39;>
+                            <span>linkedin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/dssmithgroup"
+                           title="twitter"
+                           data-stats-metric="action"
+                           data-stats-action-category="Social Media"
+                           data-stats-action-name="Follow"
+                           data-stats-action-label="twitter"
+                           class="twitter"  target=&#39;_blank&#39;>
+                            <span>twitter</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UC-FpLw7Gd2ezzaCZR4vgRPw"
+                           title="youtube"
+                           data-stats-metric="action"
+                           data-stats-action-category="Social Media"
+                           data-stats-action-name="Follow"
+                           data-stats-action-label="youtube"
+                           class="youtube"  target=&#39;_blank&#39;>
+                            <span>youtube</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/dssmith.group"
+                           title="facebook"
+                           data-stats-metric="action"
+                           data-stats-action-category="Social Media"
+                           data-stats-action-name="Follow"
+                           data-stats-action-label="facebook"
+                           class="facebook"  target=&#39;_blank&#39;>
+                            <span>facebook</span>
+                        </a>
+                    </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="section container">
+        <div class="clearfix footer-links container">
+            <nav>
+                
+        <a href="/tools/website-privacy-and-cookies-policy">Terms of Use</a>
+        <a href="/tools/website-privacy-and-cookies-policy">Privacy and Cookies Policy</a>
+        <a href="/people/culture/modern-slavery-statement">Modern Slavery Statement</a>
+        <a href="/people/careers">Careers</a>
+
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="section container copy">
+
+        <span class="container">DS Smith 2019 All rights reserved</span>
+
+
+    </div>
+
+    <div class="section container scroll-to-top">
+        <a href="#" data-scroll-page="html" title="Back to top">Back to top</a>
+    </div>
+
+<div id="tools-nav-dropdown">
+    <div class="container">
+
+        <div id="countries-nav" class="view countries-nav">
+                <span class="h1">DS Smith presence worldwide</span>
+                    <nav class="row">
+                        
+                                <div class="span4">
+                                    <ul class="unstyled navigation" role="navigation">
+                                            <li>
+                                                <strong href="#" title="Australia">
+                                                    <i class="flag-icon flag-icon-au"></i>
+                                                    <span>Australia</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Bosnia-Herzegovina">
+                                                    <i class="flag-icon flag-icon-ba"></i>
+                                                    <span>Bosnia-Herzegovina</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/bs/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="China">
+                                                    <i class="flag-icon flag-icon-cn"></i>
+                                                    <span>China</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                            <li class="">
+                                                                <a href="/china"
+                                                                   title="Plastics">Plastics</a>
+                                                            </li>
+                                                            <li class="">
+                                                                <a href="/china"
+                                                                   title="Packaging">Packaging</a>
+                                                            </li>
+                                                            <li class="country-startpage">
+                                                                <a href="/china"
+                                                                   title="China">China</a>
+                                                            </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Denmark">
+                                                    <i class="flag-icon flag-icon-dk"></i>
+                                                    <span>Denmark</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/da/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="France">
+                                                    <i class="flag-icon flag-icon-fr"></i>
+                                                    <span>France</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/fr/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/fr/packaging" title="Packaging">Packaging</a></li>
+                                                                <li class=""><a href="/fr/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/fr/tecnicarton" title="Tecnicarton">Tecnicarton</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Hungary">
+                                                    <i class="flag-icon flag-icon-hu"></i>
+                                                    <span>Hungary</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/hu/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Lithuania">
+                                                    <i class="flag-icon flag-icon-lt"></i>
+                                                    <span>Lithuania</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/lt/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Morocco">
+                                                    <i class="flag-icon flag-icon-ma"></i>
+                                                    <span>Morocco</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/fr/tecnicarton" title="Tecnicarton">Tecnicarton</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Norway">
+                                                    <i class="flag-icon flag-icon-no"></i>
+                                                    <span>Norway</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Romania">
+                                                    <i class="flag-icon flag-icon-ro"></i>
+                                                    <span>Romania</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/ro/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Slovenia">
+                                                    <i class="flag-icon flag-icon-si"></i>
+                                                    <span>Slovenia</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/sl/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Sweden">
+                                                    <i class="flag-icon flag-icon-se"></i>
+                                                    <span>Sweden</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/sv/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Turkey">
+                                                    <i class="flag-icon flag-icon-tr"></i>
+                                                    <span>Turkey</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/tr/packaging" title="Packaging">Packaging</a></li>
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                </ul>
+                                            </li>
+
+                                    </ul>
+                                </div>
+                                <div class="span4">
+                                    <ul class="unstyled navigation" role="navigation">
+                                            <li>
+                                                <strong href="#" title="Austria">
+                                                    <i class="flag-icon flag-icon-at"></i>
+                                                    <span>Austria</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/atde/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Bulgaria">
+                                                    <i class="flag-icon flag-icon-bg"></i>
+                                                    <span>Bulgaria</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/bg/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/bg/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Croatia">
+                                                    <i class="flag-icon flag-icon-hr"></i>
+                                                    <span>Croatia</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/hr/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/hr/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/hr/ambalaza" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Estonia">
+                                                    <i class="flag-icon flag-icon-ee"></i>
+                                                    <span>Estonia</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/et/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Germany">
+                                                    <i class="flag-icon flag-icon-de"></i>
+                                                    <span>Germany</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/de/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/de/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/de/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Italy">
+                                                    <i class="flag-icon flag-icon-it"></i>
+                                                    <span>Italy</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/it/packaging" title="Packaging">Packaging</a></li>
+                                                                <li class=""><a href="/it/recycling" title="Recycling">Recycling</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Macedonia">
+                                                    <i class="flag-icon flag-icon-mk"></i>
+                                                    <span>Macedonia</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/mk/ambalaza" title="Packaging">Packaging</a></li>
+                                                                <li class=""><a href="/mk/recycling" title="Recycling">Recycling</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Netherlands">
+                                                    <i class="flag-icon flag-icon-nl"></i>
+                                                    <span>Netherlands</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/nl/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/nl/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Poland">
+                                                    <i class="flag-icon flag-icon-pl"></i>
+                                                    <span>Poland</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/pl/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/pl/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Serbia">
+                                                    <i class="flag-icon flag-icon-rs"></i>
+                                                    <span>Serbia</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/sr/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/sr/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="South America">
+                                                    <i class="flag-icon flag-icon-south-america"></i>
+                                                    <span>South America</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/es/plastics" title="Plastics">Plastics</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Switzerland">
+                                                    <i class="flag-icon flag-icon-ch"></i>
+                                                    <span>Switzerland</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/chde/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="United Kingdom">
+                                                    <i class="flag-icon flag-icon-gb"></i>
+                                                    <span>United Kingdom</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/uk/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/uk/packaging" title="Packaging">Packaging</a></li>
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                </ul>
+                                            </li>
+
+                                    </ul>
+                                </div>
+                                <div class="span4">
+                                    <ul class="unstyled navigation" role="navigation">
+                                            <li>
+                                                <strong href="#" title="Belgium">
+                                                    <i class="flag-icon flag-icon-be"></i>
+                                                    <span>Belgium</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/benl/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/benl/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Canada">
+                                                    <i class="flag-icon flag-icon-ca"></i>
+                                                    <span>Canada</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Czech Republic">
+                                                    <i class="flag-icon flag-icon-cz"></i>
+                                                    <span>Czech Republic</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/cs/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Finland">
+                                                    <i class="flag-icon flag-icon-fi"></i>
+                                                    <span>Finland</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/fi/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Greece">
+                                                    <i class="flag-icon flag-icon-gr"></i>
+                                                    <span>Greece</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/el/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Latvia">
+                                                    <i class="flag-icon flag-icon-lv"></i>
+                                                    <span>Latvia</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/lv/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Mexico">
+                                                    <i class="flag-icon flag-icon-mx"></i>
+                                                    <span>Mexico</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/es/plastics" title="Plastics">Plastics</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="New Zealand">
+                                                    <i class="flag-icon flag-icon-nz"></i>
+                                                    <span>New Zealand</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Portugal">
+                                                    <i class="flag-icon flag-icon-pt"></i>
+                                                    <span>Portugal</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/pt/tecnicarton" title="Tecnicarton">Tecnicarton</a></li>
+                                                                <li class=""><a href="/pt/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/pt/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Slovakia">
+                                                    <i class="flag-icon flag-icon-sk"></i>
+                                                    <span>Slovakia</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/sk/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/sk/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Spain">
+                                                    <i class="flag-icon flag-icon-es"></i>
+                                                    <span>Spain</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/es/recycling" title="Recycling">Recycling</a></li>
+                                                                <li class=""><a href="/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/es/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/es/tecnicarton" title="Tecnicarton">Tecnicarton</a></li>
+                                                                <li class=""><a href="/es/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="Thailand">
+                                                    <i class="flag-icon flag-icon-th"></i>
+                                                    <span>Thailand</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <strong href="#" title="United States">
+                                                    <i class="flag-icon flag-icon-us"></i>
+                                                    <span>United States</span>
+                                                </strong>
+                                                <ul class="unstyled">
+                                                                <li class=""><a href="/us/paper" title="Paper">Paper</a></li>
+                                                                <li class=""><a href="/plastics" title="Plastics">Plastics</a></li>
+                                                                <li class=""><a href="/us/packaging" title="Packaging">Packaging</a></li>
+                                                </ul>
+                                            </li>
+
+                                    </ul>
+                                </div>
+                    </nav>
+
+
+        </div>
+        <!--Stock ticker info -->
+        <div id="stock-ticker-nav" class="view ticker-view">
+            <span class="h1">
+            DS Smith Plc Stock </span>
+            <div class="row">
+                <div class="span6">
+                    <p>5 days overview</p>
+                    <img src="/stockchart/" alt="DS Smith SDMS 5 days overview">
+                </div>
+                <div class="span5 offset1">
+                    <span>Last updated 11/27/2019 10:58:00 AM GMT</span>
+                    <table>
+                        <tr>
+                            <td>Price</td>
+                            <td class="text-right">3.86</td>
+                        </tr>
+                        <tr>
+                            <td>Change</td>
+                            <td class="text-right">+0.02</td>
+                        </tr>
+                        <tr>
+                            <td>% Change</td>
+                            <td class="text-right">+0.57</td>
+                        </tr>
+                        <tr>
+                            <td>Bid</td>
+                            <td class="text-right">3.86</td>
+                        </tr>
+                        <tr>
+                            <td>Ask</td>
+                            <td class="text-right">3.86</td>
+                        </tr>
+                        <tr>
+                            <td>Volume</td>
+                            <td class="text-right">555,321</td>
+                        </tr>
+                    </table>
+                        <nav>
+                            <ul class="unstyled navigation">
+                                <li><a href="/investors/investor-information/share-price" title="Detailed Share and Nil Paid Information">Detailed Share and Nil Paid Information</a></li>
+                            </ul>
+                        </nav>
+                </div>
+            </div>
+        </div>
+
+        <!--Global Flyout -->
+        <div id="global-flyout-nav" class="view">
+            
+        </div>
+
+        <!--PDF Basket -->
+
+
+
+
+        <span class="close" title="Close this view">&nbsp;</span>
+    </div>
+</div>
+
+
+</footer>
+
+
+
+
+    </div>
+
+<script src="/bundles/js?v=kUu99kcX3a738ju1rZHo6xu8ItuhhBlOmaQeQbr-9i41"></script>
+            <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3&key=AIzaSyCd5F7QUhN9JBQkYznFdKQ1HItdhEGpTF4&language=en&libraries=geometry&callback=GOOGLEMAPS.InitMap"></script>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="/Static/js/plugins/jquery.captcha.basic.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/bluebird/3.4.5/bluebird.min.js"></script>
+        <script type="text/javascript" src="/static/dist/vendor-plugins-min-0bc600c37e.js"></script>
+        <script type="text/javascript" src="/static/dist/app-min-31ee00d226.js"></script>
+        <script type="text/javascript" src="https://use.fontawesome.com/843298438f.js"></script>
+            <script src='//www.google.com/recaptcha/api.js?onload=initializeCaptchas&render=explicit&hl=en' async defer></script>
+</body>
+</html>

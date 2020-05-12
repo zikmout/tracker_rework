@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="keywords" content="Regulatory news announcements, RNS, investor news" />
+    <meta name="description" content="Access Centrica&#x27;s live regulatory news feed from the London Stock Exchange&#x27;s Regulatory News Service." />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link media="screen" rel="stylesheet" href="/static/css/main.css">
+    <link rel="icon" type="image/png" href="/favicon2019.ico" sizes="32x32" />
+    <title>Regulatory News Announcements | Centrica plc</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5PQGVK');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta name="ROBOTS" content="INDEX, FOLLOW">
+
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Regulatory News Announcements" />
+    <meta property="og:description" content="Access Centrica&#x27;s live regulatory news feed from the London Stock Exchange&#x27;s Regulatory News Service." />
+    <meta property="og:url" content="https://www.centrica.com/investors/regulatory-news-announcements/" />
+    <meta property="og:site_name" content="Centrica Plc" />
+
+    <!-- social media img tags -->
+    <meta property='og:image' content='https://www.centrica.com/static/img/Centrica-fb.jpg' />
+    <meta name='twitter:image' content='https://www.centrica.com/static/img/Centrica-tw.jpg' />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Regulatory News Announcements">
+    <meta name="twitter:description" content="Access Centrica&#x27;s live regulatory news feed from the London Stock Exchange&#x27;s Regulatory News Service.">
+
+
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PQGVK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <header class="main-nav component-template" role="banner">
+        <a href="/" class="logo-main-mobile">Centrica</a>
+
+        <div class="share-ticker">
+            <div class="wrapper">
+                <div class="exchange">LSE</div>
+                <div class="date">10:56</div>
+
+                <div class="shareprice">
+                        <div class="price down">82.04<text>p</text></div>
+                        <div class="percent">-0.44<text>%</text></div>
+                </div>
+            </div>
+        </div>
+
+        <nav role="navigation" class="navigation-wrapper menu" aria-label="Main menu">
+            <button type="button" class="hamburger hamburger--collapse">
+                <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+            </button>
+
+            <ul data-accordion-menu="" class="nav-main nav__subnav-primary multilevel-accordion-menu vertical menu level-1 list-reset" role="menubar" aria-hidden="false">
+                <li class="nav__item"><a href="/" class="logo-main" role="menuitem" aria-haspopup="true">Centrica</a></li>
+                <li class="search-mobile-wrapper">
+                    <div class="search-mobile">
+                        <form action="/site-tools/search/" class="search-content" method="get">
+                            <label for="searchsite"></label>
+                            <input type="text" name="k" value="" class="search-input"
+                                   placeholder="Search" id="searchsite" />
+                            <input type="submit" value="Submit" class="mobile-search-input" /><span class="search--icon"></span>
+
+                        </form>
+                    </div>
+                </li>
+
+                        <li class="nav__item ">
+                            <a class="nav__link" href="/who-we-are/" role="menuitem" aria-haspopup="true">Who We Are</a>
+                                <button class="expand-menu">
+                                    <span class="icon-play_arrow"></span>
+                                </button>
+                                <div class="submenu-wrapper">
+                                    <div class="submenu-wrapper-inner">
+                                        <div class="left-nav-col">
+                                            <h3 class="menu-title heading-h3">Who We Are</h3>
+                                            <p><span>Centrica plc is an international energy services and solutions company.</span></p>
+                                            <p class="text"><a href="/who-we-are/">Visit this section <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                        </div>
+                                        <div class="right-nav-col">
+                                            <ul class="nav__subnav-secondary sub-nav-group" data-test="true" aria-hidden="true" role="menu">
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/who-we-are/our-strategy/">Our Strategy</a>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/who-we-are/values-and-culture/">Values and Culture</a>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/who-we-are/our-code/">Our Code</a>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/who-we-are/our-global-operations/">Our Global Operations</a>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/who-we-are/leadership/">Leadership</a>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/who-we-are/governance/">Governance <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/who-we-are/governance/role-of-the-board/">Role of the Board</a></li>
+                                                                                <li role="menuitem"><a class="" href="/who-we-are/governance/board-committees/">Board Committees</a></li>
+                                                                                <li role="menuitem"><a class="" href="/who-we-are/governance/policies-and-standards/">Policies and Standards</a></li>
+                                                                                <li role="menuitem"><a class="" href="/who-we-are/governance/risk-management/">Risk Management</a></li>
+                                                                                <li role="menuitem"><a class="" href="/who-we-are/governance/stakeholder-engagement/">Stakeholder Engagement</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/who-we-are/contacts/">Contacts</a>
+                                                            </li>
+                                            </ul>
+
+                                            <div class="tout-placeholder">
+
+                                                    <!-- <img src="/image/3100/0/1/300/200/our-code-front-cover-900x570.png" alt="Our Code Front Cover 900X570" /> -->
+                                                    <img src="/media/3100/our-code-front-cover-900x570.png" alt="Our Code Front Cover 900X570" />
+                                                    <h4 class="menu-title heading-h4">Our Code</h4>
+<p><span>Each year, our people undertake mandatory training on </span>Our Code<span> and are required to make a declaration committing to uphold and abide by Our Code.</span></p>                                                        <p class="text"><a href="/who-we-are/our-code/">Read about Our Code <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="nav__item ">
+                            <a class="nav__link" href="/what-we-do/" role="menuitem" aria-haspopup="true">What We Do</a>
+                                <button class="expand-menu">
+                                    <span class="icon-play_arrow"></span>
+                                </button>
+                                <div class="submenu-wrapper">
+                                    <div class="submenu-wrapper-inner">
+                                        <div class="left-nav-col">
+                                            <h3 class="menu-title heading-h3">What We Do</h3>
+                                            
+                                            <p class="text"><a href="/what-we-do/">Visit this section <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                        </div>
+                                        <div class="right-nav-col">
+                                            <ul class="nav__subnav-secondary sub-nav-group" data-test="true" aria-hidden="true" role="menu">
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/what-we-do/centrica-consumer/">Centrica Consumer <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/what-we-do/centrica-consumer/energy-and-servicing/">Energy and Servicing</a></li>
+                                                                                <li role="menuitem"><a class="" href="/what-we-do/centrica-consumer/home-solutions/">Home Solutions</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/what-we-do/centrica-business/">Centrica Business <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem">
+                                                                                    <ul class="nav__subnav-quaternary sub-nav-group">
+                                                                                        <li role="menuitem">
+                                                                                            <a class="" href="/what-we-do/centrica-business/business-services-solutions/">Business Services &amp; Solutions</a>
+                                                                                        </li>
+                                                                                                <li><a href="/what-we-do/centrica-business/business-services-solutions/powering-britain/"><span class="icon icon-Icon_chevron_right1"></span> Powering Britain</a></li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li role="menuitem"><a class="" href="/what-we-do/centrica-business/energy-marketing-trading/">Energy Marketing &amp; Trading</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/what-we-do/exploration-production/">Exploration &amp; Production <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/what-we-do/exploration-production/centrica-storage-limited/">Centrica Storage Limited</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/what-we-do/centrica-innovations/">Centrica Innovations</a>
+                                                            </li>
+                                            </ul>
+
+                                            <div class="tout-placeholder">
+
+                                                    <!-- <img src="/image/3101/0/1/300/200/corporate-factsheet-900x575.png" alt="Corporate Factsheet 900X575" /> -->
+                                                    <img src="/media/3101/corporate-factsheet-900x575.png" alt="Corporate Factsheet 900X575" />
+                                                    <h4 class="menu-title heading-h4"></h4>
+<p>Our corporate factsheet provides an overview of Centrica's business, our portfolio and our Responsible Business Ambitions.</p>                                                        <p class="text"><a href="/media/2589/centrica_corporate_factsheet_august_2019.pdf">Download our corporate factsheet <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="nav__item ">
+                            <a class="nav__link" href="/stories/" role="menuitem" aria-haspopup="true">Stories</a>
+                                <button class="expand-menu">
+                                    <span class="icon-play_arrow"></span>
+                                </button>
+                                <div class="submenu-wrapper">
+                                    <div class="submenu-wrapper-inner">
+                                        <div class="left-nav-col">
+                                            <h3 class="menu-title heading-h3">Stories</h3>
+                                            <p>Our latest thinking, case studies and insights on the issues that matter.</p>
+                                            <p class="text"><a href="/stories/">Visit this section <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                        </div>
+                                        <div class="right-nav-col">
+                                            <ul class="nav__subnav-secondary sub-nav-group" data-test="true" aria-hidden="true" role="menu">
+                                            </ul>
+
+                                            <div class="tout-placeholder">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="nav__item ">
+                            <a class="nav__link" href="/sustainability/" role="menuitem" aria-haspopup="true">Sustainability</a>
+                                <button class="expand-menu">
+                                    <span class="icon-play_arrow"></span>
+                                </button>
+                                <div class="submenu-wrapper">
+                                    <div class="submenu-wrapper-inner">
+                                        <div class="left-nav-col">
+                                            <h3 class="menu-title heading-h3">Sustainability</h3>
+                                            <p>Helping you run your world in more sustainable ways.</p>
+                                            <p class="text"><a href="/sustainability/">Visit this section <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                        </div>
+                                        <div class="right-nav-col">
+                                            <ul class="nav__subnav-secondary sub-nav-group" data-test="true" aria-hidden="true" role="menu">
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/sustainability/our-approach/">Our Approach <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/sustainability/our-approach/governance/">Governance</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/our-approach/un-sustainable-development-goals/">UN Sustainable Development Goals</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/our-approach/materiality-matrix/">Materiality Matrix</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/our-approach/responsible-business-foundations/">Responsible Business Foundations</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/our-approach/taxation/">Taxation</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/our-approach/public-policy/">Public Policy</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/sustainability/responsible-business-ambitions/">Responsible Business Ambitions <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem">
+                                                                                    <ul class="nav__subnav-quaternary sub-nav-group">
+                                                                                        <li role="menuitem">
+                                                                                            <a class="" href="/sustainability/responsible-business-ambitions/customers/">Customers</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/responsible-business-ambitions/climate-change/">Climate Change</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/responsible-business-ambitions/colleagues/">Colleagues</a></li>
+                                                                                <li role="menuitem">
+                                                                                    <ul class="nav__subnav-quaternary sub-nav-group">
+                                                                                        <li role="menuitem">
+                                                                                            <a class="" href="/sustainability/responsible-business-ambitions/communities/">Communities</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/sustainability/performance-reporting/">Performance &amp; Reporting <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/sustainability/performance-reporting/all-reports-data/">All Reports &amp; Data</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/performance-reporting/data-centre/">Data Centre</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/performance-reporting/tcfd/">TCFD</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/performance-reporting/gender-pay-statement/">Gender Pay Statement</a></li>
+                                                                                <li role="menuitem"><a class="" href="/sustainability/performance-reporting/modern-slavery-act-statement/">Modern Slavery Act Statement</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/sustainability/sustainability-contacts/">Sustainability Contacts</a>
+                                                            </li>
+                                            </ul>
+
+                                            <div class="tout-placeholder">
+
+                                                    <!-- <img src="/image/3098/0/1/300/200/our-responsible-ambitions-brochure-front-cover-900x570.png" alt="Our Responsible Ambitions Brochure Front Cover 900X570" /> -->
+                                                    <img src="/media/3098/our-responsible-ambitions-brochure-front-cover-900x570.png" alt="Our Responsible Ambitions Brochure Front Cover 900X570" />
+                                                    <h4 class="menu-title heading-h4">2030 Responsible Business Ambitions</h4>
+<p>Our Ambitions support the UN Sustainable Development Goals and address some of the most challenging issues facing society</p>                                                        <p class="text"><a href="/media/2382/responsible_business_ambitions_summary_2018_may_final.pdf">Download our Ambition 2030 Brochure <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="nav__item ">
+                            <a class="nav__link" href="/media-centre/" role="menuitem" aria-haspopup="true">Media</a>
+                                <button class="expand-menu">
+                                    <span class="icon-play_arrow"></span>
+                                </button>
+                                <div class="submenu-wrapper">
+                                    <div class="submenu-wrapper-inner">
+                                        <div class="left-nav-col">
+                                            <h3 class="menu-title heading-h3">Media</h3>
+                                            <p>Latest news from around our business.</p>
+                                            <p class="text"><a href="/media-centre/">Visit this section <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                        </div>
+                                        <div class="right-nav-col">
+                                            <ul class="nav__subnav-secondary sub-nav-group" data-test="true" aria-hidden="true" role="menu">
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/media-centre/news/">News</a>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/media-centre/media-contacts/">Media Contacts</a>
+                                                            </li>
+                                            </ul>
+
+                                            <div class="tout-placeholder">
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="nav__item active">
+                            <a class="nav__link" href="/investors/" role="menuitem" aria-haspopup="true">Investors</a>
+                                <button class="expand-menu">
+                                    <span class="icon-play_arrow"></span>
+                                </button>
+                                <div class="submenu-wrapper">
+                                    <div class="submenu-wrapper-inner">
+                                        <div class="left-nav-col">
+                                            <h3 class="menu-title heading-h3">Investors</h3>
+                                            <p><span>Information about our business for shareholders, potential investors, and financial analysts.</span></p>
+                                            <p class="text"><a href="/investors/">Visit this section <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                        </div>
+                                        <div class="right-nav-col">
+                                            <ul class="nav__subnav-secondary sub-nav-group" data-test="true" aria-hidden="true" role="menu">
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/investors/centrica-as-an-investment/">Centrica as an Investment <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/investors/centrica-as-an-investment/ownership-profile/">Ownership Profile</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/centrica-as-an-investment/socially-responsible-investing/">Socially Responsible Investing</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/centrica-as-an-investment/principal-risks/">Principal Risks</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/investors/share-price-tools/">Share Price Tools <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/investors/share-price-tools/your-shareholding/">Your Shareholding</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/share-price-tools/comparison-charting/">Comparison Charting</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/share-price-tools/historic-data/">Historic Data</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/investors/results-centre/">Results Centre <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/investors/results-centre/2019-interim-results/">2019 Interim Results</a></li>
+                                                                                <li role="menuitem">
+                                                                                    <ul class="nav__subnav-quaternary sub-nav-group">
+                                                                                        <li role="menuitem">
+                                                                                            <a class="" href="/investors/results-centre/results-reports-and-presentations/">Results, Reports and Presentations</a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li role="menuitem"><a class="" href="/investors/results-centre/annual-report-2018/">Annual Report 2018</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/results-centre/all-annual-reports/">All Annual Reports</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/investors/regulatory-news-announcements/">Regulatory News Announcements <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/investors/regulatory-news-announcements/subscribe-to-rns/">Subscribe to RNS</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/regulatory-news-announcements/remit/">REMIT</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/investors/financial-tools-and-resources/">Financial Tools and Resources <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/investors/financial-tools-and-resources/financial-calendar/">Financial Calendar</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/financial-tools-and-resources/financial-data-analysis/">Financial Data Analysis</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/financial-tools-and-resources/key-performance-indicators/">Key Performance Indicators</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/financial-tools-and-resources/five-year-summary/">Five Year Summary</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/financial-tools-and-resources/historic-share-consolidation/">Share Consolidation</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/investors/shareholder-centre/">Shareholder Centre <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem">
+                                                                                    <ul class="nav__subnav-quaternary sub-nav-group">
+                                                                                        <li role="menuitem">
+                                                                                            <a class="" href="/investors/shareholder-centre/dividends/">Dividends</a>
+                                                                                        </li>
+                                                                                                <li><a href="/investors/shareholder-centre/dividends/dividend-history/"><span class="icon icon-Icon_chevron_right1"></span> Dividend History</a></li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li role="menuitem"><a class="" href="/investors/shareholder-centre/managing-your-shares/">Managing your shares</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/shareholder-centre/annual-general-meeting/">Annual General Meeting</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/shareholder-centre/shareholder-faqs/">Shareholder FAQs</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/shareholder-centre/personal-taxation/">Personal taxation</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/shareholder-centre/american-depositary-receipt-adr/">American Depositary Receipt (ADR)</a></li>
+                                                                                <li role="menuitem"><a class="" href="/investors/shareholder-centre/share-fraudsters/">Share fraudsters</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/investors/credit-investors/">Credit Investors</a>
+                                                            </li>
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/investors/investor-contacts/">Investor Relations Contacts</a>
+                                                            </li>
+                                            </ul>
+
+                                            <div class="tout-placeholder">
+
+                                                    <!-- <img src="/image/3099/0/1/300/200/annual-report-2019-cover-900x570.png" alt="Annual Report 2019 Cover 900X570" /> -->
+                                                    <img src="/media/3099/annual-report-2019-cover-900x570.png" alt="Annual Report 2019 Cover 900X570" />
+                                                    <h4 class="menu-title heading-h4">Annual Report 2018</h4>
+<p>The world of energy is changing and, with our chosen businesses, distinctive propositions and current capabilities, Centrica is well placed to deliver.</p>                                                        <p class="text"><a href="/media/1146/centrica_annual_report_and_accounts_2018.pdf">Download the 2018 Annual Report <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="nav__item ">
+                            <a class="nav__link" href="/careers/" role="menuitem" aria-haspopup="true">Careers</a>
+                                <button class="expand-menu">
+                                    <span class="icon-play_arrow"></span>
+                                </button>
+                                <div class="submenu-wrapper">
+                                    <div class="submenu-wrapper-inner">
+                                        <div class="left-nav-col">
+                                            <h3 class="menu-title heading-h3">Careers</h3>
+                                            <p><span>Find out what your future career could look like.</span></p>
+                                            <p class="text"><a href="/careers/">Visit this section <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                        </div>
+                                        <div class="right-nav-col">
+                                            <ul class="nav__subnav-secondary sub-nav-group" data-test="true" aria-hidden="true" role="menu">
+                                                            <li role="menuitem" class="has-not-children">
+                                                                <a class="" href="/careers/careers-search/">Careers Search</a>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/careers/why-centrica/">Why Centrica <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/careers/why-centrica/our-culture/">Our Culture</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/why-centrica/our-values/">Our Values</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/careers/experienced-hires/">Experienced Hires <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/careers/experienced-hires/business-solutions-services/">Business Services &amp; Solutions</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/experienced-hires/digital-technology-innovation/">Digital, Technology &amp; Innovation</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/experienced-hires/marketing-brand/">Marketing &amp; Brand</a></li>
+                                                                                <li role="menuitem">
+                                                                                    <ul class="nav__subnav-quaternary sub-nav-group">
+                                                                                        <li role="menuitem">
+                                                                                            <a class="" href="/careers/experienced-hires/engineering/">Engineering</a>
+                                                                                        </li>
+                                                                                                <li><a href="/careers/experienced-hires/engineering/contract-roles/"><span class="icon icon-Icon_chevron_right1"></span> Contract roles</a></li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li role="menuitem"><a class="" href="/careers/experienced-hires/energy-marketing-trading/">Energy Marketing &amp; Trading</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/experienced-hires/corporate-functions/">Corporate Functions</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/experienced-hires/customer-service/">Customer Service</a></li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/careers/early-careers/">Early Careers <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem">
+                                                                                    <ul class="nav__subnav-quaternary sub-nav-group">
+                                                                                        <li role="menuitem">
+                                                                                            <a class="" href="/careers/early-careers/graduates/">Graduates</a>
+                                                                                        </li>
+                                                                                                <li><a href="/careers/early-careers/graduates/graduate-roles/"><span class="icon icon-Icon_chevron_right1"></span> Graduate Roles</a></li>
+                                                                                                <li><a href="/careers/early-careers/graduates/meet-our-graduates/"><span class="icon icon-Icon_chevron_right1"></span> Meet Our Graduates</a></li>
+                                                                                                <li><a href="/careers/early-careers/graduates/training-development/"><span class="icon icon-Icon_chevron_right1"></span> Training &amp; Development</a></li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                                <li role="menuitem"><a class="" href="/careers/early-careers/year-in-industry/">Year in Industry</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/early-careers/summer-placements/">Summer Placements</a></li>
+                                                                                <li role="menuitem">
+                                                                                    <ul class="nav__subnav-quaternary sub-nav-group">
+                                                                                        <li role="menuitem">
+                                                                                            <a class="" href="/careers/early-careers/apprenticeships/">Apprenticeships</a>
+                                                                                        </li>
+                                                                                                <li><a href="/careers/early-careers/apprenticeships/customer-service-apprenticeships/"><span class="icon icon-Icon_chevron_right1"></span> Customer service apprenticeships</a></li>
+                                                                                                <li><a href="/careers/early-careers/apprenticeships/movement-to-work/"><span class="icon icon-Icon_chevron_right1"></span> Movement to Work</a></li>
+                                                                                                <li><a href="/careers/early-careers/apprenticeships/trainee-smart-metering-expert/"><span class="icon icon-Icon_chevron_right1"></span> Trainee Smart Metering Expert</a></li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li class="sub-nested has-children" role="menuitem">
+                                                                <a href="/careers/recruitment-information/">Recruitment Information <span class="icon-play_arrow"></span><span class="spacer"></span></a>
+                                                                <button class="expand-menu-secondary">
+                                                                    <span class="icon-play_arrow"></span>
+                                                                </button>
+                                                                <ul class="nav__subnav-tertiary sub-nav-group" role="menu">
+                                                                                <li role="menuitem"><a class="" href="/careers/recruitment-information/application-process/">Application process</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/recruitment-information/log-into-careers/">Log into Careers</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/recruitment-information/recruitment-fraud/">Recruitment fraud</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/recruitment-information/candidate-faqs/">Candidate FAQs</a></li>
+                                                                                <li role="menuitem"><a class="" href="/careers/recruitment-information/subscribe-to-job-alerts/">Subscribe to Job Alerts</a></li>
+                                                                </ul>
+                                                            </li>
+                                            </ul>
+
+                                            <div class="tout-placeholder">
+
+                                                    <!-- <img src="/image/3099/0/1/300/200/annual-report-2019-cover-900x570.png" alt="Annual Report 2019 Cover 900X570" /> -->
+                                                    <img src="/media/3099/annual-report-2019-cover-900x570.png" alt="Annual Report 2019 Cover 900X570" />
+                                                    <h4 class="menu-title heading-h4">Annual Report 2018</h4>
+<p>The world of energy is changing and, with our chosen businesses, distinctive propositions and current capabilities, Centrica is well placed to deliver.</p>                                                        <p class="text"><a href="/media/1146/centrica_annual_report_and_accounts_2018.pdf">Download the 2018 Annual Report <span class="icon icon-Icon_chevron_right1"></span></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </li>
+                <li class="nav__item end">
+                    <a href="#" class="navi-icon search-button">
+                        <span class="icon icon-Icons_search icon-glass"></span>Search
+                    </a>
+                </li>
+                <li class="nav__item end">
+                    <a data-fancybox="app" data-src="#app" href="javascript:;" class="navi-icon">
+                        <span class="icon icon-Icons_global-presence_black_normal icon-map"></span>World Map
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="search-navigation">
+            <div class="module-wrapper">
+                <form action="/site-tools/search/" class="search-content" method="get">
+                    <p>What are you looking for?</p>
+                    <label for="search"></label>
+                    <input type="text" name="k" value="" class="form-input search-input" placeholder="Search" id="search" />
+                    <input type="submit" value="Submit" class="cta cta--ghost" />
+                    <a href="#" class="search-button-close"><span class="icon-Icons_close_outline"></span></a>
+                </form>
+            </div>
+        </div>
+    </header>
+
+
+
+    <main class="main" role="main">
+                <ul class="module-wrapper breadcrumb">
+                            <li><a href="/" class="cta-arrow">Home <span class="icon icon-Icon_chevron_right"></span></a></li>
+                            <li><a href="/investors/" class="cta-arrow">Investors <span class="icon icon-Icon_chevron_right"></span></a></li>
+                    <li><a href="/investors/regulatory-news-announcements/" class="cta-arrow selected truncate-title">Regulatory News Announcements </a></li>
+                </ul>
+
+        
+
+<section class="module-inner">
+
+
+
+
+
+                            <section class="module-wrapper">
+                                <section class="standard-page-header">
+                                    <h2> Regulatory News Announcements</h2>
+                                </section>
+                            </section>
+
+
+
+    <section class="module-wrapper">
+        <div class="iframe-container">
+            <iframe src="https://otp.tools.investis.com/clients/uk/centrica_plc1/rns/regulatory-news.aspx?culture=en-GB" frameborder="0" scrolling="no" width="100%" height="1800"></iframe>
+        </div>
+    </section>
+</section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="footer__bottom">
+            <div class="width-20">
+                <a href="/" class="footer-logo">Centrica</a>     
+                <a href="https://www.comprend.com/inspiration/2019/uk-corporate-websites-embrace-sustainability-content/"
+                   target="_blank" class="footer-wv-logo">webranking comprend</a>
+            </div>
+            <div class="width-25">
+                <h4>Centrica plc is an international energy services and solutions business.</h4>
+                <p>Centrica plc registered office: Millstream, Maidenhead Road, Windsor SL4 5GD, UK Tel: +44 (0)1753 494000</p>
+<p>Registered in England &amp; Wales No 3033654 VAT registration number: GB 684 9667 62</p>
+            </div>
+            <div class="width-15">
+                <h4 class="heading--small">Group websites</h4>
+                <ul class="footer__links">
+                        <li><a href="https://www.britishgas.co.uk" target="_blank"><span class="icon-Icon_external_link"></span> British Gas</a></li>
+                        <li><a href="https://www.bordgaisenergy.ie/" target="_blank"><span class="icon-Icon_external_link"></span> Bord Gais Energy</a></li>
+                        <li><a href="https://www.centricabusinesssolutions.com/" target="_blank"><span class="icon-Icon_external_link"></span> Centrica Business Solutions</a></li>
+                        <li><a href="https://www.hivehome.com/" target="_blank"><span class="icon-Icon_external_link"></span> Centrica Hive</a></li>
+                        <li><a href="https://www.directenergy.com/" target="_blank"><span class="icon-Icon_external_link"></span> Direct Energy</a></li>
+                        <li><a href="https://www.dyno.com/" target="_blank"><span class="icon-Icon_external_link"></span> Dyno Rod</a></li>
+                        <li><a href="https://www.localheroes.com/" target="_blank"><span class="icon-Icon_external_link"></span> Local Heroes</a></li>
+                </ul>
+            </div>
+            <div class="width-20">
+                <h4 class="heading--small">Popular downloads</h4>
+                <ul class="footer__links">
+                        <li><a href="/media/1146/centrica_annual_report_and_accounts_2018.pdf" target="_blank"><span class="icon-Icon_download_small"></span> Annual Report And Accounts 2018</a></li>
+                        <li><a href="/media/2589/centrica_corporate_factsheet_august_2019.pdf" target="_blank"><span class="icon-Icon_download_small"></span> Corporate Factsheet</a></li>
+                        <li><a href="/media/1224/centrica_modern_slavery_act_statement_2018.pdf" target="_blank"><span class="icon-Icon_download_small"></span> Modern Slavery Act</a></li>
+                        <li><a href="/media/1226/our_code.pdf" target="_self"><span class="icon-Icon_download_small"></span> Our Code</a></li>
+                        <li><a href="/media/3633/responsible_business_ambitions_brochure_may_final.pdf" target="_blank"><span class="icon-Icon_download_small"></span> Responsible Business Ambitions Brochure</a></li>
+                        <li><a href="/sustainability/performance-reporting/" target="_self"><span class="icon-Icon_download_small"></span> Performance and Reporting</a></li>
+                </ul>
+            </div>
+            <div class="width-10">
+                <h4 class="heading--small">Stay in touch</h4>
+                <ul class="footer__links">
+                        <li><a href="https://us10.list-manage.com/subscribe?u=322d02f8555e8bb1afe7bc397&amp;id=23313d4e73#" target="_self">Sign up to our newsletter</a></li>
+                        <li><a href="/investors/regulatory-news-announcements/subscribe-to-rns/" target="_self">Subscribe to RNS</a></li>
+                </ul>
+            </div>
+        </div> <!-- end footer__bottom -->
+
+        <div class="footer__social">
+            <div class="width-20"></div>
+            <div class="width-80 sm-links-wrapper">
+                <ul class="sm-links">
+                    <li><a href="https://www.facebook.com/centricaplc" target="_blank"><span class="icon-facebook"></span></a></li>
+                    <li><a href="https://twitter.com/centricaplc" target="_blank"><span class="icon-twitter"></span></a></li>
+                    <li><a href="https://www.linkedin.com/company/centrica/" target="_blank"><span class="icon-linkedin2"></span></a></li>
+                    <li><a href="https://www.instagram.com/centrica_plc/" target="_blank"><span class="icon-instagram"></span></a></li>
+                    <li><a href="http://www.youtube.com/centricaplc" target="_blank"><span class="icon-youtube"></span></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul class="footer__links footer__copyrights">
+            <li class="copyright">&copy; Centrica plc 2019. All rights reserved.</li>
+                <li><a href="/site-tools/site-index/" target="_self">Site Index</a></li>
+                <li><a href="/who-we-are/contacts/" target="_self">Contacts</a></li>
+                <li><a href="/site-tools/privacy-cookies-and-legal-disclaimer/" target="_self">Privacy Cookies and Legal Disclaimer</a></li>
+            <li><a class="optanon-toggle-display">Cookie Settings</a></li>
+        </ul>
+
+    </footer>
+
+
+    <!-- map module -->
+    <section class="module-wrapper two-column-wide fancybox-content" id="app">
+
+        <!-- background map -->
+        <div class="map-section" v-bind:class="currentFilter">
+            <ul class="country-list filters">
+                <li class="filter" v-bind:class="{ active: currentFilter === 'americas' }"
+                    v-on:click="setFilter('americas')">
+                    <div>Canada &amp; USA</div>
+                </li>
+                <li class="filter" v-bind:class="{ active: currentFilter === 'ukroi' }" v-on:click="setFilter('ukroi')">
+                    <div>UK/ROI</div>
+                </li>
+                <li class="filter" v-bind:class="{ active: currentFilter === 'europe' }"
+                    v-on:click="setFilter('europe')">
+                    <div>Europe</div>
+                </li>
+                <li class="filter" v-bind:class="{ active: currentFilter === 'row' }" v-on:click="setFilter('row')">
+                    <div>Rest of the World</div>
+                </li>
+            </ul>
+        </div>
+
+        <transition-group class="projects" name="projects">
+            <div class="mapage" v-if="currentFilter === project.Category || currentFilter === 'ALL'"
+                 v-bind:key="project.Title" v-for="project in projects">
+                <div class="module-wrapper worldwide-numbers -mb-4 -mt-4">
+                    <ul class="share-price sp-financials map-elements">
+                        <li>
+                            <div class="sp-item white-bg">
+                                <h4 class="heading-h3">{{project.Financial_stats.Heading_1}}</h4>
+                                <p class="small-txt">{{project.Financial_stats.Title_1}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sp-item white-bg">
+                                <h4 class="heading-h3">{{project.Financial_stats.Heading_2}}</h4>
+                                <p class="small-txt">{{project.Financial_stats.Title_2}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sp-item white-bg">
+                                <h4 class="heading-h3">{{project.Financial_stats.Heading_3}}</h4>
+                                <p class="small-txt">{{project.Financial_stats.Title_3}}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="sp-item white-bg">
+                                <h4 class="heading-h3">{{project.Financial_stats.Heading_4}}</h4>
+                                <p class="small-txt">{{project.Financial_stats.Title_4}}</p>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </transition-group>
+
+    </section>
+    <!-- end map module -->
+    <!-- polyfills for IE 11 -->
+    <script src="/static/js/polyfills/polyfill.min.js"></script>
+    <script src="/static/js/polyfills/fetch.min.js"></script>
+    <script src="/static/js/polyfills/url-search-params.max.js"></script>
+
+    <script src="/static/js/jquery-3.3.1.min.js"></script>
+    <script src="/static/js/jquery-accessibleMegaMenu.js"></script>
+    <script src="/static/js/libs.min.js"></script>
+    <script src="/static/js/main.js"></script>
+
+    <!-- Map Modal JS (JSON)-->
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                currentFilter: "row",
+                projects: []
+            },
+            created: function created() {
+                var _this = this;
+
+                var apiURL = "/centricaapi/GetWorldMapStats/0/";
+                fetch(apiURL)
+                    .then(function (res) {
+                        return res.json();
+                    })
+                    .then(function (res) {
+                        return (_this.projects = res);
+                    })
+                ["catch"](function (error) {
+                    return console.log(error);
+                });
+            },
+            methods: {
+                setFilter: function setFilter(filter) {
+                    this.currentFilter = filter;
+                },
+                setFilterModal: function setFilterModal(filter) {
+                    this.currentFilterModal = filter;
+                }
+            }
+        });
+
+    </script>
+
+    
+
+
+
+</body>
+</html>

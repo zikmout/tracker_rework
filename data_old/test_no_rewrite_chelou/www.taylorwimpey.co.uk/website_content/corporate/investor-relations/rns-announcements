@@ -1,0 +1,487 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7958602-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-7958602-1');
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W223NL');</script>
+
+    
+<link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+<link rel="manifest" href="/favicons/site.webmanifest">
+<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#c61a41">
+<meta name="apple-mobile-web-app-title" content="Taylor Wimpey">
+<meta name="application-name" content="Taylor Wimpey">
+<meta name="msapplication-TileColor" content="#c61a41">
+<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+<meta name="theme-color" content="#c61a41">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>RNS announcements ‧ Taylor Wimpey</title>
+<link rel="canonical" href="https://www.taylorwimpey.co.uk/corporate/investors/rns-announcements">
+<meta name="description" content="Explore the latest announcements from the London Stock Exchange&#39;s Regulatory News Service." />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Taylor Wimpey" />
+<meta property="og:title" content="RNS announcements ‧ Taylor Wimpey" />
+<meta property="og:description" content="Explore the latest announcements from the London Stock Exchange&#39;s Regulatory News Service." />
+<meta property="og:url" content="https://www.taylorwimpey.co.uk/corporate/investors/rns-announcements" />
+<meta property="og:locale" content="en_UK" />
+<meta property="og:image" content="https://www.taylorwimpey.co.uk/-/twdxmedia/images/national/modules/article-hero/people/male_dining_room.jpg" />
+<meta property="og:image:alt" content="Male customer in his new dining room" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:site" content="@TaylorWimpey" />
+<meta property="twitter:image" content="https://www.taylorwimpey.co.uk/-/twdxmedia/images/national/modules/article-hero/people/male_dining_room.jpg" />
+<meta property="twitter:image:alt" content="Male customer in his new dining room" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Corporate",
+      "item": "https://www.taylorwimpey.co.uk/corporate"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Investors",
+      "item": "https://www.taylorwimpey.co.uk/corporate/investors"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "RNS announcements",
+      "item": "https://www.taylorwimpey.co.uk/corporate/investors/rns-announcements"
+    }
+  ]
+}
+</script>
+
+        <link rel="stylesheet" type="text/css" href="/dist/css/chunk-vendors.eca0ea5e.css" />
+    <link rel="stylesheet" type="text/css" href="/dist/css/app.8114390d.css" />
+
+    
+<meta name="VIcurrentDateTime" content="637236579484974211" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+    
+    
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W223NL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <main>
+        <div class="page-wrapper" id="app">
+            
+
+<brushstroke-sprite></brushstroke-sprite>
+<swoop-sprite></swoop-sprite>
+            <header>
+<masthead-mobile :meta-nav-links-count="5" :primary-nav-links-count="3">
+    <template v-slot:logo>
+        <a class="header-logo__link" href="/">
+            <img src="/-/twdxmedia/images/system/masthead/tw-plc-logo.svg?la=en&amp;mw=200&amp;hash=A1097B81D68D1A711111F399855CB786" alt="Taylor Wimpey plc" />
+        </a>
+    </template>
+
+    <template v-slot:meta-login-link>
+        <masthead-mobile-nav-item link-href="https://www.taylorwimpey.co.uk/my-profile/login?returnUrl=https%3a%2f%2fwww.taylorwimpey.co.uk%2fcorporate%2finvestors%2frns-announcements"
+                                    link-text="Login / Register">
+        </masthead-mobile-nav-item>
+    </template>
+
+    <template v-slot:meta-nav-link-1>
+        <masthead-mobile-nav-item link-href="https://www.taylorwimpey.co.uk/about-us"
+                                    link-text="About us"
+                                    :level="0"
+                                    :has-sub-nav="false"
+                                    req-url="/corporate/investors/rns-announcements">
+        </masthead-mobile-nav-item>
+    </template>
+    <template v-slot:meta-nav-link-2>
+        <masthead-mobile-nav-item link-href="https://www.taylorwimpey.co.uk/careers"
+                                    link-text="Careers"
+                                    :level="0"
+                                    :has-sub-nav="false"
+                                    req-url="/corporate/investors/rns-announcements">
+        </masthead-mobile-nav-item>
+    </template>
+    <template v-slot:meta-nav-link-3>
+        <masthead-mobile-nav-item link-href="/corporate"
+                                    link-text="Corporate"
+                                    :level="0"
+                                    :has-sub-nav="true"
+                                    req-url="/corporate/investors/rns-announcements">
+            <masthead-mobile-nav-item link-href="/corporate/investors"
+                                        link-text="Investors"
+                                        :level="1"
+                                        :has-sub-nav="true"
+                                        req-url="/corporate/investors/rns-announcements">
+                <masthead-mobile-nav-item link-href="/corporate/investors/shareholder-centre"
+                                            link-text="Shareholder centre"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/investors/results-and-reports"
+                                            link-text="Results and reports"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/investors/2019-annual-report"
+                                            link-text="2019 Annual Report"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/investors/financial-calendar"
+                                            link-text="Financial calendar"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/investors/analysts-and-advisors"
+                                            link-text="Analysts and advisors"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/investors/rns-announcements"
+                                            link-text="RNS announcements"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+            </masthead-mobile-nav-item>
+            <masthead-mobile-nav-item link-href="/corporate/sustainability"
+                                        link-text="Sustainability"
+                                        :level="1"
+                                        :has-sub-nav="true"
+                                        req-url="/corporate/investors/rns-announcements">
+                <masthead-mobile-nav-item link-href="/corporate/sustainability/2019-sustainability-review"
+                                            link-text="2019 sustainability review"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/sustainability/our-approach"
+                                            link-text="Our approach"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/sustainability/stakeholders-and-materiality"
+                                            link-text="Stakeholders and materiality"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/sustainability/modern-slavery-act"
+                                            link-text="Modern Slavery Act"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+            </masthead-mobile-nav-item>
+            <masthead-mobile-nav-item link-href="/corporate/our-company"
+                                        link-text="Our company"
+                                        :level="1"
+                                        :has-sub-nav="true"
+                                        req-url="/corporate/investors/rns-announcements">
+                <masthead-mobile-nav-item link-href="/corporate/our-company/about-our-company"
+                                            link-text="About our company"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/our-company/board-of-directors"
+                                            link-text="Board of Directors"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/our-company/group-management-team"
+                                            link-text="Group Management Team"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+                <masthead-mobile-nav-item link-href="/corporate/our-company/governance"
+                                            link-text="Governance"
+                                            :level="2"
+                                            req-url="/corporate/investors/rns-announcements">
+                </masthead-mobile-nav-item>
+            </masthead-mobile-nav-item>
+        </masthead-mobile-nav-item>
+    </template>
+    <template v-slot:meta-nav-link-4>
+        <masthead-mobile-nav-item link-href="https://www.taylorwimpey.co.uk/media-centre/news"
+                                    link-text="News"
+                                    :level="0"
+                                    :has-sub-nav="false"
+                                    req-url="/corporate/investors/rns-announcements">
+        </masthead-mobile-nav-item>
+    </template>
+    <template v-slot:meta-nav-link-5>
+        <masthead-mobile-nav-item link-href="https://www.taylorwimpey.co.uk/inspire-me"
+                                    link-text="Inspire me"
+                                    :level="0"
+                                    :has-sub-nav="false"
+                                    req-url="/corporate/investors/rns-announcements">
+        </masthead-mobile-nav-item>
+    </template>
+
+    <template v-slot:primary-search-link>
+        <masthead-mobile-nav-item link-href="https://www.taylorwimpey.co.uk"
+                                    link-text="Find your home"
+                                    :can-show-search-icon="true">
+        </masthead-mobile-nav-item>
+    </template>
+
+</masthead-mobile>
+
+
+<masthead>
+    <template v-slot:masthead-meta>
+        <masthead-meta :meta-items="5">
+            <template v-slot:logo>
+                <a class="masthead-meta-logo__link" href="/">
+                    <img src="/-/twdxmedia/images/system/masthead/tw-plc-logo.svg?la=en&amp;mw=200&amp;hash=A1097B81D68D1A711111F399855CB786" alt="Taylor Wimpey plc" />
+                </a>
+            </template>
+                <template v-slot:meta-item1>
+                    <masthead-meta-link link-url="https://www.taylorwimpey.co.uk/about-us"
+                                        link-text="About us"
+                                        :is-link-active="false"></masthead-meta-link>
+                </template>
+                <template v-slot:meta-item2>
+                    <masthead-meta-link link-url="https://www.taylorwimpey.co.uk/careers"
+                                        link-text="Careers"
+                                        :is-link-active="false"></masthead-meta-link>
+                </template>
+                <template v-slot:meta-item3>
+                    <masthead-meta-link link-url="/corporate"
+                                        link-text="Corporate"
+                                        :is-link-active="true"></masthead-meta-link>
+                </template>
+                <template v-slot:meta-item4>
+                    <masthead-meta-link link-url="https://www.taylorwimpey.co.uk/media-centre/news"
+                                        link-text="News"
+                                        :is-link-active="false"></masthead-meta-link>
+                </template>
+                <template v-slot:meta-item5>
+                    <masthead-meta-link link-url="https://www.taylorwimpey.co.uk/inspire-me"
+                                        link-text="Inspire me"
+                                        :is-link-active="false"></masthead-meta-link>
+                </template>
+
+            <template v-slot:meta-login-link>
+                <a class="masthead-meta-links-list__link masthead-meta-links-list__link--login" href="https://www.taylorwimpey.co.uk/my-profile/login?returnUrl=https%3a%2f%2fwww.taylorwimpey.co.uk%2fcorporate%2finvestors%2frns-announcements">
+                    <span class="masthead-meta-links-list__link-text">Login / Register</span>
+                </a>
+            </template>
+        </masthead-meta>
+    </template>
+
+
+    <template v-slot:masthead-primary>
+        <masthead-primary :primary-items="3">
+                <template v-slot:primary-search-link>
+                    <li class="masthead-primary-links-list__item masthead-primary-links-list__item--search">
+                        <a class="masthead-primary-links-list__link" href="https://www.taylorwimpey.co.uk/">
+                            <span class="masthead-primary-links-list__link-text">Find your home</span>
+                        </a>
+                    </li>
+                </template>
+
+                <template v-slot:primary-item1>
+                    <masthead-primary-link link-url="/corporate/investors"
+                                           link-text="Investors"
+                                           :is-link-active="true"></masthead-primary-link>
+                </template>
+                <template v-slot:primary-item2>
+                    <masthead-primary-link link-url="/corporate/sustainability"
+                                           link-text="Sustainability"
+                                           :is-link-active="false"></masthead-primary-link>
+                </template>
+                <template v-slot:primary-item3>
+                    <masthead-primary-link link-url="/corporate/our-company"
+                                           link-text="Our company"
+                                           :is-link-active="false"></masthead-primary-link>
+                </template>
+        </masthead-primary>
+    </template>
+
+            <template v-slot:masthead-secondary>
+                <masthead-secondary :secondary-items="6">
+                        <template v-slot:secondary-item1>
+                            <masthead-secondary-link link-url="/corporate/investors/shareholder-centre"
+                                                     link-text="Shareholder centre"
+                                                     :is-link-active="false"></masthead-secondary-link>
+                        </template>
+                        <template v-slot:secondary-item2>
+                            <masthead-secondary-link link-url="/corporate/investors/results-and-reports"
+                                                     link-text="Results and reports"
+                                                     :is-link-active="false"></masthead-secondary-link>
+                        </template>
+                        <template v-slot:secondary-item3>
+                            <masthead-secondary-link link-url="/corporate/investors/2019-annual-report"
+                                                     link-text="2019 Annual Report"
+                                                     :is-link-active="false"></masthead-secondary-link>
+                        </template>
+                        <template v-slot:secondary-item4>
+                            <masthead-secondary-link link-url="/corporate/investors/financial-calendar"
+                                                     link-text="Financial calendar"
+                                                     :is-link-active="false"></masthead-secondary-link>
+                        </template>
+                        <template v-slot:secondary-item5>
+                            <masthead-secondary-link link-url="/corporate/investors/analysts-and-advisors"
+                                                     link-text="Analysts and Advisors"
+                                                     :is-link-active="false"></masthead-secondary-link>
+                        </template>
+                        <template v-slot:secondary-item6>
+                            <masthead-secondary-link link-url="/corporate/investors/rns-announcements"
+                                                     link-text="RNS announcements"
+                                                     :is-link-active="true"></masthead-secondary-link>
+                        </template>
+                </masthead-secondary>
+            </template>
+</masthead>
+
+
+                <div id="content_screen_reader">
+                    
+    <landing-page-hero>
+    <template v-slot:parent-cta>
+            <a href="/corporate/investors"
+               class="cta-btn cta-btn--parent">
+                Investors
+            </a>
+    </template>
+    <template v-slot:overline>
+        Investors
+    </template>
+    <template v-slot:title>
+        RNS Announcements
+    </template>
+    <template v-slot:standfirst>
+        
+    </template>
+    <template v-slot:image>
+        <img src="/-/twdxmedia/images/national/modules/article-hero/people/male_dining_room.jpg?h=1200&amp;w=1800&amp;la=en&amp;hash=01800E41954A9479D80A2E7A778B4818" aria-hidden="true" alt="Male customer in his new dining room" />
+    </template>
+    <template v-slot:cta>
+    </template>
+</landing-page-hero>
+
+                </div>
+            </header>
+            
+
+
+
+<section class="rich-text module column-container column-container--contained">
+  <div class="col">
+    <div class="content-container">
+      <div class="resp-container" style="position: relative; overflow: hidden; padding-top: 1500px;">
+        <iframe src="https://otp.tools.investis.com/clients/uk/taylor_wimpey1/rns/regulatory-news.aspx?culture=en-GB" class="resp-iframe" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; border: 0px;"></iframe>
+      </div>
+    </div>
+  </div>
+</section><!-- no JavaScript Component model -->
+            <cookie-messaging cookie-policy-cookie-key="cookiePolicyCookieKey" 
+                  cookie-policy-cookie-status="cookiePolicyCookieStatus">
+    <template v-slot:content>
+        We use cookies to improve your experience and enable certain functionality. You may delete or block cookies from this site, but parts may not work. By clicking any link on this page you are giving your consent for cookies to be placed on your device.
+    </template>
+    <template v-slot:moreinfo>
+        <a href="https://www.taylorwimpey.co.uk/cookie-policy" title="Read More" >Read More</a>
+    </template>
+    <template v-slot:accept>Accept</template>
+</cookie-messaging>
+            <breadcrumbs :crumb-count="4">
+
+    <template v-slot:crumb1>
+        <a class="crumb_link" href="/" >Home</a>
+    </template>
+    <template v-slot:crumb2>
+        <a class="crumb_link" href="/corporate" >Corporate</a>
+    </template>
+    <template v-slot:crumb3>
+        <a class="crumb_link" href="/corporate/investors" >Investors</a>
+    </template>
+    <template v-slot:crumb4>
+        <a class="crumb_link--active" aria-current=page>RNS announcements</a>
+    </template>
+</breadcrumbs>
+
+                <footer-component :link-groups="4" :images="4">
+            <template v-slot:links1>
+
+<a href="https://www.taylorwimpey.co.uk/buying-with-us" class="footer-links-block__link" >            <span>Buying with us</span>
+</a><a href="https://www.taylorwimpey.co.uk/in-your-area" class="footer-links-block__link" >            <span>In your area</span>
+</a><a href="https://www.taylorwimpey.co.uk/customer-service" class="footer-links-block__link" >            <span>Customer service</span>
+</a><a href="https://www.taylorwimpey.co.uk/get-in-touch" class="footer-links-block__link" >            <span>Get in touch</span>
+</a>            <span></span>
+            <span></span>
+            </template>
+            <template v-slot:links2>
+
+<a href="https://www.taylorwimpey.co.uk/about-us" class="footer-links-block__link" >            <span>About us</span>
+</a><a href="https://www.taylorwimpey.co.uk/careers" class="footer-links-block__link" >            <span>Careers</span>
+</a><a href="/corporate" class="footer-links-block__link" >            <span>Corporate</span>
+</a><a href="https://www.taylorwimpey.co.uk/media-centre/news" class="footer-links-block__link" >            <span>News</span>
+</a><a href="https://www.taylorwimpey.co.uk/inspire-me" class="footer-links-block__link" >            <span>Inspire me</span>
+</a>            </template>
+            <template v-slot:links3>
+
+<a href="https://www.taylorwimpey.co.uk/buying-with-us/special-offers" class="footer-links-block__link" >            <span>Special offers</span>
+</a><a href="https://www.taylorwimpey.co.uk/buying-with-us/special-offers/help-to-buy-calculator" class="footer-links-block__link" >            <span>Help to Buy calculator</span>
+</a><a href="https://www.taylorwimpey.co.uk/buying-with-us/buying-guides" class="footer-links-block__link" >            <span>Buying guides</span>
+</a><a href="https://www.taylorwimpey.co.uk/buying-with-us/our-homes" class="footer-links-block__link" >            <span>Our homes</span>
+</a><a href="https://www.taylorwimpey.co.uk/strategic-land-and-planning" class="footer-links-block__link" >            <span>Strategic land</span>
+</a>            </template>
+            <template v-slot:links4>
+
+<a href="https://www.taylorwimpey.co.uk/sitemap" class="footer-links-block__link" >            <span>Sitemap</span>
+</a><a href="https://www.taylorwimpey.co.uk/accessibility" class="footer-links-block__link" >            <span>Accessibility</span>
+</a><a href="https://www.taylorwimpey.co.uk/corporate/sustainability/modern-slavery-act" class="footer-links-block__link" >            <span>Modern Slavery Act</span>
+</a><a href="https://www.taylorwimpey.co.uk/privacy-policy" class="footer-links-block__link" >            <span>Privacy policy</span>
+</a><a href="https://www.taylorwimpey.co.uk/terms-of-use" class="footer-links-block__link" >            <span>Terms of use</span>
+</a>            </template>
+
+        <template v-slot:image1>
+<a href="https://www.taylorwimpeycentrallondon.co.uk/" class="link--plain" rel="noopener noreferrer" target="_blank" title="Taylor Wimpey Central London" ><img data-src="/-/twdxmedia/images/system/footer-icons/tw-central-london-logo.svg?la=en&amp;mw=404&amp;hash=CACD023509C11D2E622E3C9FAD32EDD0" alt="TW Central London" /></a>        </template>
+        <template v-slot:image2>
+<a href="https://taylorwimpeyspain.com/" class="link--plain" rel="noopener noreferrer" target="_blank" title="Taylor Wimpey Spain" ><img data-src="/-/twdxmedia/images/system/footer-icons/tw-espana-logo.svg?la=en&amp;mw=404&amp;hash=C341F0A9DA667DE298D8522F48CA0C6F" alt="TW Espana" /></a>        </template>
+        <template v-slot:image3>
+<a href="http://www.nhbc.co.uk/" class="link--plain" rel="noopener noreferrer" target="_blank" title="NHBC" ><img data-src="/-/twdxmedia/images/system/footer-icons/logo-nhbc.svg?la=en&amp;mw=404&amp;hash=EDB4080ED0F90944EA610D333A8AA7BB" alt="Logo NHBC" /></a>        </template>
+        <template v-slot:image4>
+        </template>
+    </footer-component>
+
+        </div>
+
+        
+
+<script type="text/javascript">
+    window.referenceData = {};
+        window.referenceData.pageTheme = {"colourHex":"3B1953","colourOpacity":"63","backgroundColour":"Black","imageOpacity":"36","textTheme":"Light","name":"Purple","path":"/sitecore/content/TaylorWimpey/Global/Themes/Purple","id":"45738c6b-1608-465b-82a6-1d0b539afeb7","templateId":"51b96527-a7cb-464d-9370-1f92edb69e8c","displayName":"","url":"/taylorwimpey/global/themes/purple","lastModified":"2020-03-24T10:34:56","unPublished":false};
+</script>
+        <script type="text/javascript">
+
+    window.__appInsightsKey = 'c0694d01-cc59-45df-b7e1-560ea4dbd00e';
+</script>
+
+    <script type="text/javascript" src="/dist/js/chunk-vendors.aa48dff2.js"></script>
+    <script type="text/javascript" src="/dist/js/app.988ded61.js"></script>
+
+
+    </main>
+</body>
+</html>

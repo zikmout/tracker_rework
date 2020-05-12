@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: http://ogp.me/ns#">
+<head>
+  <!-- Google Tag Manager -->                                                                       
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':                                              
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.
+src= '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+ })(window,document,'script','dataLayer','GTM-KMXBRWQ');</script>                                                  
+ <!-- End Google Tag Manager -->  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Covivio EN">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.covivio.eu/app/themes/digitas-theme/dist/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://www.covivio.eu/app/themes/digitas-theme/dist/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://www.covivio.eu/app/themes/digitas-theme/dist/images/favicon-16x16.png">
+  <link rel="mask-icon" href="https://www.covivio.eu/app/themes/digitas-theme/dist/images/safari-pinned-tab.svg" color="#283897">
+  <link rel="shortcut icon" href="https://www.covivio.eu/app/themes/digitas-theme/dist/images/favicon-16x16.ico">
+  <meta name="theme-color" content="#283897">
+  <meta name="google-site-verification" content="HptBSJQhrOq8E78UlypRE7bFHoT4HFNf-pQwqMmN2ek" />
+  <link rel="alternate" href="https://www.covivio.eu/en/finance/financial-activities/releases/" hreflang="en_US" />
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="pingback" href="https://www.covivio.eu/en/xmlrpc.php">
+  <title>Financial releases - Covivio (Ex Foncière des régions)</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v7.7.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Retrouvez les informations immobilières, financières et les résultats financiers 2018 de Covivio"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://www.covivio.eu/en/finance/financial-activities/releases/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Financial releases - Covivio (Ex Foncière des régions)" />
+<meta property="og:description" content="Retrouvez les informations immobilières, financières et les résultats financiers 2018 de Covivio" />
+<meta property="og:url" content="https://www.covivio.eu/en/finance/financial-activities/releases/" />
+<meta property="og:site_name" content="Covivio EN" />
+<meta property="og:image" content="https://www.covivio.eu/app/uploads/2018/09/header_twitter-5.jpg" />
+<meta property="og:image:secure_url" content="https://www.covivio.eu/app/uploads/2018/09/header_twitter-5.jpg" />
+<meta property="og:image:width" content="1500" />
+<meta property="og:image:height" content="500" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Retrouvez les informations immobilières, financières et les résultats financiers 2018 de Covivio" />
+<meta name="twitter:title" content="Financial releases - Covivio (Ex Foncière des régions)" />
+<meta name="twitter:image" content="https://www.covivio.eu/app/uploads/2018/09/header_twitter-5.jpg" />
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Covivio EN &raquo; Feed" href="https://www.covivio.eu/en/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Covivio EN &raquo; Comments Feed" href="https://www.covivio.eu/en/comments/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.covivio.eu\/en\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='wp-block-library-css'  href='https://www.covivio.eu/en/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='cookie-notice-front-css'  href='https://www.covivio.eu/app/plugins/cookie-notice/css/front.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='digitas-styles-css'  href='https://www.covivio.eu/app/themes/digitas-theme/dist/styles/main.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='js_composer_front-css'  href='https://www.covivio.eu/app/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://www.covivio.eu/en/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://www.covivio.eu/en/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var cnArgs = {"ajaxurl":"https:\/\/www.covivio.eu\/en\/wp-admin\/admin-ajax.php","hideEffect":"fade","onScroll":"no","onScrollOffset":"100","cookieName":"cookie_notice_accepted","cookieValue":"TRUE","cookieTime":"2592000","cookiePath":"","cookieDomain":"","redirection":"","cache":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.covivio.eu/app/plugins/cookie-notice/js/front.min.js'></script>
+<script type='text/javascript' src='https://www.covivio.eu/app/themes/understrap/js/popper.min.js'></script>
+<link rel='https://api.w.org/' href='https://www.covivio.eu/en/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.covivio.eu/en/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.covivio.eu/en/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.0.7" />
+<link rel='shortlink' href='https://www.covivio.eu/en/?p=814' />
+<link rel="alternate" type="application/json+oembed" href="https://www.covivio.eu/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.covivio.eu%2Fen%2Ffinance%2Ffinancial-activities%2Freleases%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.covivio.eu/en/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.covivio.eu%2Fen%2Ffinance%2Ffinancial-activities%2Freleases%2F&#038;format=xml" />
+<link rel="alternate" hreflang="fr" href="https://www.covivio.eu/fr/finance/actualites-financieres/communiques-financiers/" title="FR" />
+<link rel="alternate" hreflang="en" href="https://www.covivio.eu/en/finance/financial-activities/releases/" title="EN" />
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="https://www.covivio.eu/app/plugins/js_composer/assets/css/vc_lte_ie9.min.css" media="screen"><![endif]--><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>
+</head>
+
+<body class="page-template page-template-archive-reports page-template-archive-reports-php page page-id-814 page-child parent-pageid-664 covivio-en group-blog wpb-js-composer js-comp-ver-5.4.7 vc_responsive">
+
+  <!-- Google Tag Manager -->                                                                      
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KMXBRWQ"                                   
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>                                      
+ <!-- End Google Tag Manager -->
+  <div id="page">
+
+    <!-- Desktop NAV -->
+    <nav id="MenuTop">
+      <div class="ml-auto menu-top-container">
+        <div id="top-nav" class="menu-top-nav-container"><ul id="menu-top-nav" class="navbar-nav"><li id="menu-item-634"><a href="https://www.covivio.eu/en/"><span>Profil</span></a></li>
+<li id="menu-item-635" class="active"><a href="https://www.covivio.eu/en/finance/"><span>Finance</span></a></li>
+<li id="menu-item-7079"><a href="https://www.covivio.eu/en/csr-innovation/"><span>CSR & Innovation</span></a></li>
+<li id="menu-item-636"><a href="https://www.covivio.eu/en/careers/"><span>Careers</span></a></li>
+<li id="menu-item-633"><a href="https://www.covivio.eu/en/press/"><span>Press</span></a></li>
+</ul></div>        <div class="top-nav-right">
+          <ul class="navbar-nav">
+                        <li class="search">
+              
+<form method="get" id="searchform" action="https://www.covivio.eu/en/" role="search">
+	<div class="input-group">
+		<div class="icon-search-input"></div>
+		<input class="field form-control search-input" id="s" name="s" type="text" value=""
+			placeholder="Search">
+
+		<input class="submit btn btn-primary search-submit" id="searchsubmit" name="submit" type="submit"
+			value="Search">
+	</div>
+</form>
+              <div class="search-icon icon-search"></div>
+            </li>
+                        <li class="language">
+              <span class="language-text">EN</span>
+              <div class="icon-arrow"></div>
+              <ul class="sub-language">
+                <li>
+                  <a href="https://www.covivio.eu/fr/finance/actualites-financieres/communiques-financiers/" title="FR">FR</a>                </li>
+              </ul>
+            </li>
+                    </ul>
+        </div>
+      </div>
+    </nav><!-- .site-navigation -->
+
+    <nav id="navbar" class="navbar">
+      <div class="navbar-top-menu-bar">
+        <a class="navbar-brand" href="https://www.covivio.eu/en/">
+                      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/logo-digitas-sticky.png" alt="Covivio EN" />
+                  </a>
+        <div class="menu-finance-menu-container"><ul id="menu-finance-menu" class="top-menu-main"><li id="menu-item-675" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children"><a href="https://www.covivio.eu/en/finance/financial-activities/"><span data-hover="Financial activities">Financial activities</span></a>
+<div class="sub-menu">
+<ul class="submenu-container">
+	<li id="menu-item-777" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-activities/calendar/"><span>Financial calendar</span></a></li>
+	<li id="menu-item-816" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-activities/releases/"><span>Financial press releases</span></a></li>
+	<li id="menu-item-1269" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-activities/documentation/"><span>Documentation</span></a></li>
+	<li id="menu-item-4205" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-activities/webcasts/"><span>Webcasts</span></a></li>
+	<li id="menu-item-1281" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-activities/regulated-information/"><span>Regulated information</span></a></li>
+</ul>
+</div>
+</li>
+<li id="menu-item-674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.covivio.eu/en/finance/financial-strategy/"><span data-hover="Financial strategy">Financial strategy</span></a>
+<div class="sub-menu">
+<ul class="submenu-container">
+	<li id="menu-item-813" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-strategy/bond/"><span>Bond</span></a></li>
+	<li id="menu-item-1052" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-strategy/capital-increase/"><span>Capital increase</span></a></li>
+	<li id="menu-item-1238" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-strategy/takeover-bid/"><span>Public offer</span></a></li>
+	<li id="menu-item-2586" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-strategy/fusion-avec-beni-stabili/"><span>Merger with Beni Stabili</span></a></li>
+	<li id="menu-item-4177" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/financial-strategy/beni-stabili-archives/"><span>Beni Stabili archives</span></a></li>
+</ul>
+</div>
+</li>
+<li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/"><span data-hover="Investors and shareholders">Investors and shareholders</span></a>
+<div class="sub-menu">
+<ul class="submenu-container">
+	<li id="menu-item-1286" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/action/"><span>Share</span></a></li>
+	<li id="menu-item-3587" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/analysts/"><span>Analysts</span></a></li>
+	<li id="menu-item-1267" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/dividend/"><span>Dividend</span></a></li>
+	<li id="menu-item-1491" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/general-meetings/"><span>General meetings</span></a></li>
+	<li id="menu-item-1271" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/letters/"><span>Letter to shareholders</span></a></li>
+	<li id="menu-item-1275" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/registered-shareholders/"><span>Registered shareholders</span></a></li>
+	<li id="menu-item-3215" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/covivio-gdpr-policy/"><span>GDPR Policy</span></a></li>
+</ul>
+</div>
+</li>
+<li id="menu-item-672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children"><a href="https://www.covivio.eu/en/finance/indicators/"><span data-hover="Indicators">Indicators</span></a>
+<div class="sub-menu">
+<ul class="submenu-container">
+	<li id="menu-item-1268" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/indicators/key-figures/"><span>Key figures</span></a></li>
+	<li id="menu-item-2222" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/indicators/epra-indicators/"><span>EPRA Indicators</span></a></li>
+	<li id="menu-item-1296" class="col ">
+      <img src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/icon-arrow-right-red.png" alt="icon-arrow-right-red" /><a href="https://www.covivio.eu/en/finance/indicators/highlights/"><span>Highlights</span></a></li>
+</ul>
+</div>
+</li>
+</ul></div>      </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <nav id="MenuTopMobile">
+      <a class="logo-mobile" href="https://www.covivio.eu/en/">
+                  <img class="logo-mobile" src="https://www.covivio.eu/app/themes/digitas-theme/dist/images/logo-digitas-sticky.png" alt="Covivio EN" />
+              </a>
+      <div class="top-nav-right">
+        <ul>
+                    <li class="search">
+            
+<form method="get" id="searchform" action="https://www.covivio.eu/en/" role="search">
+	<div class="input-group">
+		<div class="icon-search-input"></div>
+		<input class="field form-control search-input" id="s" name="s" type="text" value=""
+			placeholder="Search">
+
+		<input class="submit btn btn-primary search-submit" id="searchsubmit" name="submit" type="submit"
+			value="Search">
+	</div>
+</form>
+            <div class="search-icon icon-search"></div>
+          </li>
+                      <li class="language">
+              <span class="language-text">EN</span>
+              <div class="icon-arrow"></div>
+              <ul class="sub-language">
+                <li>
+                  <a href="https://www.covivio.eu/fr/finance/actualites-financieres/communiques-financiers/" title="FR">FR</a>                </li>
+              </ul>
+            </li>
+                    <li class="burger">
+            <div class="icon-burger"></div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="navbarMobile">
+      <div class="menu-burger-menu-container"><ul id="menu-burger-menu" class="top-menu-main"><li id="menu-item-2028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-has-children menu-item-2028"><a href="https://www.covivio.eu/en/">Profil</a>
+<ul class="sub-menu">
+	<li id="menu-item-2240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2240"><a href="https://www.covivio.eu/en/profil/strategy/">Strategy</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2241"><a href="https://www.covivio.eu/en/profil/strategy/vision/">Vision</a></li>
+		<li id="menu-item-2245" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2245"><a href="https://www.covivio.eu/en/profil/strategy/key-figures/">Key figures</a></li>
+		<li id="menu-item-2254" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2254"><a href="https://www.covivio.eu/en/profil/strategy/governance/">Governance</a></li>
+		<li id="menu-item-2251" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2251"><a href="https://www.covivio.eu/en/profil/strategy/publication/">Publication</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2255"><a href="https://www.covivio.eu/en/profil/activites/">Activities</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2256"><a href="https://www.covivio.eu/en/profil/activites/living-real-estate/">Living real property</a></li>
+		<li id="menu-item-2258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2258"><a href="https://www.covivio.eu/en/profil/activites/expertises/">Areas of Expertise</a></li>
+		<li id="menu-item-2257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2257"><a href="https://www.covivio.eu/en/profil/activites/services/">Services</a></li>
+		<li id="menu-item-8301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8301"><a href="https://www.covivio.eu/en/art-and-real-estate/">Art and Real estate</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2259"><a href="https://www.covivio.eu/en/profil/projects/">Projects</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2263"><a href="https://www.covivio.eu/en/profil/projects/assets/">European portfolio</a></li>
+		<li id="menu-item-2264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2264"><a href="https://www.covivio.eu/en/profil/projects/b-and-b/">B&#038;B Hotels – Europe</a></li>
+		<li id="menu-item-8607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8607"><a href="https://www.covivio.eu/en/profil/projects/belaia-coeur-dorly-france/">Belaïa – Cœur d’Orly – France</a></li>
+		<li id="menu-item-8635" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8635"><a href="https://www.covivio.eu/en/profil/projects/carre-suffren-paris-15th-arrondissement-france/">Carré Suffren – Paris 15th arrondissement – France</a></li>
+		<li id="menu-item-8633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8633"><a href="https://www.covivio.eu/en/profil/projects/cb21-paris-la-defense-france/">CB21 – Paris La Défense – France</a></li>
+		<li id="menu-item-2266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2266"><a href="https://www.covivio.eu/en/profil/projects/spain/">Hotels – Spain</a></li>
+		<li id="menu-item-2269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2269"><a href="https://www.covivio.eu/en/profil/projects/iro-chatillon-france/">IRO – Châtillon, France</a></li>
+		<li id="menu-item-2265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2265"><a href="https://www.covivio.eu/en/profil/projects/meininger/">Meininger hotels – Europe</a></li>
+		<li id="menu-item-2273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2273"><a href="https://www.covivio.eu/en/profil/projects/residential-germany/">Residential – Germany</a></li>
+		<li id="menu-item-2272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2272"><a href="https://www.covivio.eu/en/profil/projects/silex2/">Silex 2 – Lyon, France</a></li>
+		<li id="menu-item-2274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2274"><a href="https://www.covivio.eu/en/profil/projects/symbiosis/">Symbiosis – Italy</a></li>
+		<li id="menu-item-2275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2275"><a href="https://www.covivio.eu/en/profil/projects/the-sign/">The Sign – Italy</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2277"><a href="https://www.covivio.eu/en/profil/highlights/">Highlights</a></li>
+	<li id="menu-item-2278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2278"><a href="https://www.covivio.eu/en/profil/experts-views/">Experts views</a></li>
+</ul>
+</li>
+<li id="menu-item-2029" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current_page_ancestor menu-item-has-children menu-item-2029"><a href="https://www.covivio.eu/en/finance/">Finance</a>
+<ul class="sub-menu">
+	<li id="menu-item-2280" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-2280"><a href="https://www.covivio.eu/en/finance/financial-activities/">Financial activities</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2282" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2282"><a href="https://www.covivio.eu/en/finance/financial-activities/calendar/">Financial calendar</a></li>
+		<li id="menu-item-2283" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-814 current_page_item menu-item-2283 active "><a href="https://www.covivio.eu/en/finance/financial-activities/releases/">Financial press releases</a></li>
+		<li id="menu-item-2281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2281"><a href="https://www.covivio.eu/en/finance/financial-activities/documentation/">Documentation</a></li>
+		<li id="menu-item-4204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4204"><a href="https://www.covivio.eu/en/finance/financial-activities/webcasts/">Webcasts</a></li>
+		<li id="menu-item-2303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2303"><a href="https://www.covivio.eu/en/finance/financial-activities/regulated-information/">Regulated information</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2284" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2284"><a href="https://www.covivio.eu/en/finance/financial-strategy/">Financial strategy</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2285"><a href="https://www.covivio.eu/en/finance/financial-strategy/bond/">Bond</a></li>
+		<li id="menu-item-2286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2286"><a href="https://www.covivio.eu/en/finance/financial-strategy/capital-increase/">Capital increase</a></li>
+		<li id="menu-item-2306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2306"><a href="https://www.covivio.eu/en/finance/financial-strategy/takeover-bid/">Public offer</a></li>
+		<li id="menu-item-2587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2587"><a href="https://www.covivio.eu/en/finance/financial-strategy/fusion-avec-beni-stabili/">Merger with Beni Stabili</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2289" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2289"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/">Investors and shareholders</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2290" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2290"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/action/">Share</a></li>
+		<li id="menu-item-3586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3586"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/analysts/">Analysts</a></li>
+		<li id="menu-item-2291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2291"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/dividend/">Dividend</a></li>
+		<li id="menu-item-2292" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2292"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/general-meetings/">General meetings</a></li>
+		<li id="menu-item-2298" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2298"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/letters/">Letter to shareholders</a></li>
+		<li id="menu-item-2308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2308"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/registered-shareholders/">Registered shareholders</a></li>
+		<li id="menu-item-3214" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3214"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/covivio-gdpr-policy/">Covivio GDPR Policy</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2299" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2299"><a href="https://www.covivio.eu/en/finance/indicators/">Indicators</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2302" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2302"><a href="https://www.covivio.eu/en/finance/indicators/key-figures/">Key figures</a></li>
+		<li id="menu-item-2300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2300"><a href="https://www.covivio.eu/en/finance/indicators/epra-indicators/">EPRA Indicators</a></li>
+		<li id="menu-item-2301" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2301"><a href="https://www.covivio.eu/en/finance/indicators/highlights/">Highlights</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-7137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7137"><a href="https://www.covivio.eu/en/csr-innovation/">CSR &#038; Innovation</a>
+<ul class="sub-menu">
+	<li id="menu-item-7139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7139"><a href="https://www.covivio.eu/en/csr-innovation/innovation/">Innovation</a>
+	<ul class="sub-menu">
+		<li id="menu-item-7143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7143"><a href="https://www.covivio.eu/en/csr-innovation/innovation/innovation-strategy/">Innovation Strategy</a></li>
+		<li id="menu-item-7141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7141"><a href="https://www.covivio.eu/en/csr-innovation/innovation/covivio-proptech/">Covivio Proptech</a></li>
+		<li id="menu-item-7145" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7145"><a href="https://www.covivio.eu/en/csr-innovation/innovation/collaborative-innovation/">Collaborative innovation</a></li>
+	</ul>
+</li>
+	<li id="menu-item-7147" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-7147"><a href="https://www.covivio.eu/en/csr-innovation/csr/">CSR</a>
+	<ul class="sub-menu">
+		<li id="menu-item-7155" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7155"><a href="https://www.covivio.eu/en/csr-innovation/csr/csr-strategy/">CSR Strategy</a></li>
+		<li id="menu-item-7153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7153"><a href="https://www.covivio.eu/en/csr-innovation/csr/sustainable-building/">Sustainable Building</a></li>
+		<li id="menu-item-7151" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7151"><a href="https://www.covivio.eu/en/csr-innovation/csr/stakeholders/">Stakeholders</a></li>
+		<li id="menu-item-7149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7149"><a href="https://www.covivio.eu/en/csr-innovation/csr/csr-indicators/">CSR Indicators</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2705" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2705"><a href="https://www.covivio.eu/en/careers/">Careers</a>
+<ul class="sub-menu">
+	<li id="menu-item-2309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2309"><a href="https://www.covivio.eu/en/careers/identity/">Identity</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2310" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2310"><a href="https://www.covivio.eu/en/careers/identity/values/">Values</a></li>
+		<li id="menu-item-2311" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2311"><a href="https://www.covivio.eu/en/careers/identity/engagements/">Responsible commitments</a></li>
+		<li id="menu-item-2312" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2312"><a href="https://www.covivio.eu/en/careers/identity/quality-of-life-at-work/">Quality of life at work</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2314" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2314"><a href="https://www.covivio.eu/en/careers/careers/">Careers</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2315" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2315"><a href="https://www.covivio.eu/en/careers/careers/360-operator/">A 360° operator</a></li>
+		<li id="menu-item-2316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2316"><a href="https://www.covivio.eu/en/careers/careers/carrers-mapping/">Mapping of Covivio’s lines of business</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2317" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2317"><a href="https://www.covivio.eu/en/careers/careers-and-mobility/">Careers-and-mobility</a>
+	<ul class="sub-menu">
+		<li id="menu-item-2318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2318"><a href="https://www.covivio.eu/en/careers/careers-and-mobility/european-careers/">European Mobility</a></li>
+		<li id="menu-item-2319" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2319"><a href="https://www.covivio.eu/en/careers/careers-and-mobility/careers-management-and-trainings/">Career management and training</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2320" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2320"><a href="https://www.covivio.eu/en/careers/join-us/">Join us</a></li>
+</ul>
+</li>
+<li id="menu-item-2031" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-2031"><a href="https://www.covivio.eu/en/press/">Press</a>
+<ul class="sub-menu">
+	<li id="menu-item-2323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2323"><a href="https://www.covivio.eu/en/press/press-release/">Press release</a></li>
+	<li id="menu-item-2325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2325"><a href="https://www.covivio.eu/en/press/studies/">Studies</a></li>
+	<li id="menu-item-2327" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2327"><a href="https://www.covivio.eu/en/press/publication/">Publications</a></li>
+</ul>
+</li>
+</ul></div>    </nav>
+
+<section id="archive-reports">
+	<div class="archive-reports-title">
+		<div class="row">
+			<div class="col-12">
+				<h1 class="digitas-template">Financial press releases</h1>
+			</div>
+		</div>
+	</div>
+						<div class="archive-reports-dates angle-up angle-up-white">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<ul>
+								<li>
+									<a href="https://www.covivio.eu/en/finance/financial-activities/releases/?year=2019" class="active">2019</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+												<div class="archive-reports">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<h2>Financial results</h2>
+								</div>
+																	<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/bb-hotels-and-covivio-sign-deal-boosting-bb-hotels-growth-in-poland/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/11/BB_Pologne-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/11/BB_Pologne-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">18-11-2019</p>
+													<h3 class="archive-reports-report-title">
+														B&B Hotels and Covivio sign deal boosting B&B Hotels’ growth in Poland													</h3>
+													<p class="archive-reports-report-text">
+														 A deal that will double B&amp;B Hotels’ capacity in&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/covivio-inaugurates-the-first-meininger-hotel-in-france/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/11/MEININGER-VINC-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/11/MEININGER-VINC-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">13-11-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio inaugurates the first MEININGER hotel in France													</h3>
+													<p class="archive-reports-report-text">
+														 Today, Covivio and MEININGER inaugurate the first hotel of&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/activity-at-end-september-2019-10-8-growth-in-revenue/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/10/PrincipeAmedeo®DiegoDePol-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/10/PrincipeAmedeo®DiegoDePol-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">24-10-2019</p>
+													<h3 class="archive-reports-report-title">
+														Activity at end-September 2019: 10.8% growth in revenue													</h3>
+													<p class="archive-reports-report-text">
+														Strong revenue growth Revenue of €775 million and revenue Group&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/covivio-is-ramping-up-its-digital-transformation/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/10/Transformation-digitale-Covivio-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/10/Transformation-digitale-Covivio-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">22-10-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio is ramping up its digital transformation													</h3>
+													<p class="archive-reports-report-text">
+														 Covivio, a European real estate operator, has launched its&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/appointment-of-daniel-frey-and-marcus-bartenstein-to-head-covivios-management-in-germany/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/10/Berlin©Linus-Lintner-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/10/Berlin©Linus-Lintner-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">21-10-2019</p>
+													<h3 class="archive-reports-report-title">
+														Appointment of Daniel Frey and Marcus Bartenstein to head Covivio's management in Germany													</h3>
+													<p class="archive-reports-report-text">
+														 Covivio's activities in Germany will be run by Daniel&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/covivio-strengthens-its-presence-in-bordeaux-metropole-with-the-cite-numerique/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/10/Covivio-Cite-Numerique-Bordeaux-Begles-271_Crédit-Olivier-Ouadah-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/10/Covivio-Cite-Numerique-Bordeaux-Begles-271_Crédit-Olivier-Ouadah-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">03-10-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio strengthens its presence in Bordeaux Metropole with the Cité Numérique													</h3>
+													<p class="archive-reports-report-text">
+														 Covering an area of nearly 25,000 m², the Cité&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/covivio-sells-the-green-corner-building-in-saint-denis/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/09/Green-Corner-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/09/Green-Corner-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">18-09-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio sells the Green Corner building in Saint-Denis													</h3>
+													<p class="archive-reports-report-text">
+														 Covivio announces the disposal of the Green Corner building&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/covivio-successfully-issues-its-second-green-bond-of-euro-500-million-at-12-years-with-a-1-125-pourcent-coupon/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/09/Silex2_vue-socle_-©-Asylum_Ma-Architectes-web-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/09/Silex2_vue-socle_-©-Asylum_Ma-Architectes-web-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">10-09-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio successfully issues its second Green Bond of €500 million at 12 years with a 1.125% coupon													</h3>
+													<p class="archive-reports-report-text">
+														 Covivio has successfully issued today its second Green Bond&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/extra-financiale-rating-covivio-receives-the-best-score-in-vigeo-eiris-corporate-rating-and-is-ranked-first-in-its-sector/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/09/Principe-Amedeo-30min-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/09/Principe-Amedeo-30min-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">05-09-2019</p>
+													<h3 class="archive-reports-report-title">
+														Extra-financial rating: Covivio receives the best score (A1+) in Vigeo-Eiris' Corporate Rating and is ranked 1st in its sector													</h3>
+													<p class="archive-reports-report-text">
+														 Covivio has obtained the maximum score of A1+ for&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/pride-in-working-for-the-company-support-for-the-strategy-confidence-in-the-management-etc-covivio-gives-the-floor-to-its-teams/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/09/covivio-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/09/covivio-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">05-09-2019</p>
+													<h3 class="archive-reports-report-title">
+														Pride in working for the company, support for the strategy, confidence in the management, etc. Covivio gives the floor to its teams													</h3>
+													<p class="archive-reports-report-text">
+														 For the third time, Covivio measured the level of&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/2019-first-half-financial-resultsincreasing-pipeline/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/07/Covivio-Art-And-Co-Paris-335-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/07/Covivio-Art-And-Co-Paris-335-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">23-07-2019</p>
+													<h3 class="archive-reports-report-title">
+														2019 first-half financial results:Increasing pipeline...													</h3>
+													<p class="archive-reports-report-text">
+														"Covivio ends this half-year well on the way to its&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/first-quarter-2019-steady-asset-rotation-and-revenue-growth/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/04/Steel2-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/04/Steel2-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">24-04-2019</p>
+													<h3 class="archive-reports-report-title">
+														First quarter 2019: Steady asset rotation and revenue growth													</h3>
+													<p class="archive-reports-report-text">
+														Steady asset rotation Launch of a new building on Symbiosis&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/press/2018-annual-results/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/02/alexanderplatz-project-covivio-credit-sauerbruch-hutton-luxigon-1-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/02/alexanderplatz-project-covivio-credit-sauerbruch-hutton-luxigon-1-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">20-02-2019</p>
+													<h3 class="archive-reports-report-title">
+														2018 Annual results: transformation and performance													</h3>
+													<p class="archive-reports-report-text">
+														"This first year under the new Covivio identity completes our&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																	</div>
+							</div>
+																<div class="archive-reports-grey-cta">
+										<a class="btn-digitas-orange" href="http://www.covivio.eu/en/finance/precedent-releases/">See the previous press releases</a>
+									</div>
+															</div>
+											<div class="archive-reports-grey angle-up angle-up-grey">
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<h2>Financial and real estate information</h2>
+								</div>
+																	<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/the-sign-in-milan-pre-letting-of-16000-m%c2%b2-to-ntt-data/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/07/The-Sign-Copyright-Progetto-CMR-Massimo-Roj-Architects-2-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/07/The-Sign-Copyright-Progetto-CMR-Massimo-Roj-Architects-2-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">24-07-2019</p>
+													<h3 class="archive-reports-report-title">
+														The Sign in Milan: pre-letting of 16,000 m² to NTT Data													</h3>
+													<p class="archive-reports-report-text">
+														Covivio announces the signing of a preliminary agreement with NTT&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/covivio-expands-its-hotel-presence-in-france/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/07/Mercure-Gare-de-Lyon-Paris-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/07/Mercure-Gare-de-Lyon-Paris-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">01-07-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio expands its hotel presence in France													</h3>
+													<p class="archive-reports-report-text">
+														 Covivio, through its subsidiary Covivio Hotels, has acquired from&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/dividend-payment-in-shares-chosen-by-82-7-of-shares/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/06/Covivio-Locaux-30-Kleber-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/06/Covivio-Locaux-30-Kleber-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">03-06-2019</p>
+													<h3 class="archive-reports-report-title">
+														Dividend payment in shares chosen by 82.7% of shares													</h3>
+													<p class="archive-reports-report-text">
+														At the end of the fiscal year period, open from&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/covivio-wins-the-international-reinventing-cities-competition-with-its-vitae-project-located-in-milan/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/05/Reiventing-cities-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/05/Reiventing-cities-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">22-05-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio wins the international Reinventing Cities competition with its “Vitae” project located in Milan													</h3>
+													<p class="archive-reports-report-text">
+														Milan, 22 mai 2019 – Covivio has won the Reinventing&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/covivios-flow-building-in-montrouge-fully-let/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/05/FLOW-FACADE-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/05/FLOW-FACADE-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">07-05-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio's Flow building in Montrouge fully let													</h3>
+													<p class="archive-reports-report-text">
+														Covivio announced the signing of a rental agreement with EDVANCE&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/agreement-for-the-disposal-of-e263-5m-portfolio-in-italy-and-launch-of-a-new-20000-m%c2%b2-building-in-symbiosis-milan/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/04/Symbiosis-nord-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/04/Symbiosis-nord-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">22-04-2019</p>
+													<h3 class="archive-reports-report-title">
+														Agreement for the disposal of €263.5M portfolio in Italy and launch of a new 20,000 m² building in Symbiosis, Milan													</h3>
+													<p class="archive-reports-report-text">
+														With those two Italian transactions, Covivio crystallizes the value creation&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/assemblee-generale-de-covivio-approbation-de-loption-de-paiement-du-dividende-en-actions-2/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/04/Covivio-Art-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/04/Covivio-Art-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">17-04-2019</p>
+													<h3 class="archive-reports-report-title">
+														Covivio General Meeting: Approval of the scrip dividend option													</h3>
+													<p class="archive-reports-report-text">
+														Scrip dividend option During the General Meeting of 17 April&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/sp-upgrades-the-rating-of-covivio-to-bbb-outlook-stable/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/04/kleber-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/04/kleber-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">16-04-2019</p>
+													<h3 class="archive-reports-report-title">
+														S&P upgrades the rating of Covivio to BBB+, outlook Stable													</h3>
+													<p class="archive-reports-report-text">
+														The rating agency S&amp;P has announced the upgrade of the&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/announces-a-new-partnership-with-the-lifestyle-brand-room-mate/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/04/LIFESTYLE-306x200.jpg" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/04/LIFESTYLE-306x200.jpg" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">01-04-2019</p>
+													<h3 class="archive-reports-report-title">
+														Announces a new partnership with the lifestyle brand Room Mate													</h3>
+													<p class="archive-reports-report-text">
+														As a leading investor in hotel properties in Europe, Covivio&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/solvay-chooses-silex%c2%b2-in-the-lyon-part-dieu-district-to-install-its-teams/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/01/pict1-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/01/pict1-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">29-01-2019</p>
+													<h3 class="archive-reports-report-title">
+														Solvay chooses Silex² in the Lyon Part-Dieu district to install its teams													</h3>
+													<p class="archive-reports-report-text">
+														Covivio has announced the signing of a rental agreement with&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																		<div class="col-12 col-md-4">
+										<div class="archive-reports-report">
+											<a href="https://www.covivio.eu/en/reports/realisation-de-la-fusion-absorption-de-beni-stabili-par-covivio/">
+												<img src="https://www.covivio.eu/app/plugins/lazy-load/images/1x1.trans.gif" data-lazy-src="https://www.covivio.eu/app/uploads/2019/01/Piazza-San-Fedele-1-306x200.png" width="306" height="200" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt><noscript><img width="306" height="200" src="https://www.covivio.eu/app/uploads/2019/01/Piazza-San-Fedele-1-306x200.png" class="attachment-digitas-archive-report size-digitas-archive-report wp-post-image" alt="" /></noscript>													<p class="archive-reports-report-date">07-01-2019</p>
+													<h3 class="archive-reports-report-title">
+														Completion of the merger of Beni Stabili into Covivio													</h3>
+													<p class="archive-reports-report-text">
+														The merger of Beni Stabili, Italian subsidiary of Covivio, into&hellip;													</p>
+													<div class="archive-reports-report-link link"></div>
+												</a>
+											</div>
+										</div>
+																	</div>
+							</div>
+																<div class="archive-reports-grey-cta">
+										<a class="btn-digitas-orange" href="http://www.covivio.eu/en/finance/precedent-releases/">See the previous press releases</a>
+									</div>
+															</div>
+															</section>
+		<script>
+		jQuery( document ).ready(function() {
+			var n = jQuery( ".archive-reports-grey-cta" ).length;
+			if(n > 1){
+				jQuery( ".archive-reports-grey-cta" ).eq(0).hide();
+			}
+		});
+		</script>
+
+				<div id="wrapper-footer">
+		    <div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-12">
+															<ul class="profil footer-menu">
+							    	<li id="nav_menu-2" class="widget widget_nav_menu"><a href="#" class="widgettitle">Profil</a><div class="menu-profil-menu-container"><ul id="menu-profil-menu" class="menu"><li id="menu-item-653" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-653"><a href="https://www.covivio.eu/en/profil/strategy/">Strategy</a>
+<ul class="sub-menu">
+	<li id="menu-item-658" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-658"><a href="https://www.covivio.eu/en/profil/strategy/vision/">Vision</a></li>
+	<li id="menu-item-656" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-656"><a href="https://www.covivio.eu/en/profil/strategy/key-figures/">Key figures</a></li>
+	<li id="menu-item-654" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-654"><a href="https://www.covivio.eu/en/profil/strategy/governance/">Governance</a></li>
+	<li id="menu-item-2089" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2089"><a href="https://www.covivio.eu/en/profil/strategy/publication/">Publication</a></li>
+</ul>
+</li>
+<li id="menu-item-652" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-652"><a href="https://www.covivio.eu/en/profil/activites/">Activities</a>
+<ul class="sub-menu">
+	<li id="menu-item-708" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-708"><a href="https://www.covivio.eu/en/profil/activites/living-real-estate/">Living real property</a></li>
+	<li id="menu-item-1192" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1192"><a href="https://www.covivio.eu/en/profil/activites/services/">Services</a></li>
+	<li id="menu-item-710" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-710"><a href="https://www.covivio.eu/en/profil/activites/expertises/">Areas of Expertise</a></li>
+	<li id="menu-item-8303" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8303"><a href="https://www.covivio.eu/en/art-and-real-estate/">Art and Real estate</a></li>
+</ul>
+</li>
+<li id="menu-item-651" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-651"><a href="https://www.covivio.eu/en/profil/projects/">Projects</a>
+<ul class="sub-menu">
+	<li id="menu-item-712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-712"><a href="https://www.covivio.eu/en/profil/projects/assets/">European portfolio</a></li>
+	<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-713"><a href="https://www.covivio.eu/en/profil/projects/b-and-b/">B&#038;B Hotels – Europe</a></li>
+	<li id="menu-item-8609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8609"><a href="https://www.covivio.eu/en/profil/projects/belaia-coeur-dorly-france/">Belaïa – Cœur d’Orly – France</a></li>
+	<li id="menu-item-8631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8631"><a href="https://www.covivio.eu/en/profil/projects/carre-suffren-paris-15th-arrondissement-france/">Carré Suffren – Paris 15th arrondissement – France</a></li>
+	<li id="menu-item-8629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8629"><a href="https://www.covivio.eu/en/profil/projects/cb21-paris-la-defense-france/">CB21 – Paris La Défense – France</a></li>
+	<li id="menu-item-8661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8661"><a href="https://www.covivio.eu/en/profil/projects/hotels-united-kingdom/">Hotels – United Kingdom</a></li>
+	<li id="menu-item-715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-715"><a href="https://www.covivio.eu/en/profil/projects/iro-chatillon-france/">IRO – Châtillon, France</a></li>
+	<li id="menu-item-717" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-717"><a href="https://www.covivio.eu/en/profil/projects/meininger/">Meininger hotels – Europe</a></li>
+	<li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="https://www.covivio.eu/en/profil/projects/residential-germany/">Residential – Germany</a></li>
+	<li id="menu-item-721" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-721"><a href="https://www.covivio.eu/en/profil/projects/silex2/">Silex 2 – Lyon, France</a></li>
+	<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723"><a href="https://www.covivio.eu/en/profil/projects/symbiosis/">Symbiosis – Italy</a></li>
+	<li id="menu-item-724" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-724"><a href="https://www.covivio.eu/en/profil/projects/the-sign/">The Sign – Italy</a></li>
+	<li id="menu-item-8225" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8225"><a href="https://www.covivio.eu/en/profil/projects/vitae-italy/">Vitae – Italy</a></li>
+</ul>
+</li>
+<li id="menu-item-649" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-649"><a href="https://www.covivio.eu/en/profil/highlights/">Highlights</a></li>
+<li id="menu-item-650" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-650"><a href="https://www.covivio.eu/en/profil/experts-views/">Experts views</a></li>
+</ul></div></li>							    </ul>
+													</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+															<ul class="finance footer-menu">
+							    	<li id="nav_menu-3" class="widget widget_nav_menu"><a href="#" class="widgettitle">Finance</a><div class="menu-finance-menu-container"><ul id="menu-finance-menu-1" class="menu"><li id="menu-item-675" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-675"><a href="https://www.covivio.eu/en/finance/financial-activities/">Financial activities</a>
+<ul class="sub-menu">
+	<li id="menu-item-777" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-777"><a href="https://www.covivio.eu/en/finance/financial-activities/calendar/">Financial calendar</a></li>
+	<li id="menu-item-816" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-814 current_page_item menu-item-816 active "><a href="https://www.covivio.eu/en/finance/financial-activities/releases/">Financial press releases</a></li>
+	<li id="menu-item-1269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1269"><a href="https://www.covivio.eu/en/finance/financial-activities/documentation/">Documentation</a></li>
+	<li id="menu-item-4205" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4205"><a href="https://www.covivio.eu/en/finance/financial-activities/webcasts/">Webcasts</a></li>
+	<li id="menu-item-1281" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1281"><a href="https://www.covivio.eu/en/finance/financial-activities/regulated-information/">Regulated information</a></li>
+</ul>
+</li>
+<li id="menu-item-674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-674"><a href="https://www.covivio.eu/en/finance/financial-strategy/">Financial strategy</a>
+<ul class="sub-menu">
+	<li id="menu-item-813" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-813"><a href="https://www.covivio.eu/en/finance/financial-strategy/bond/">Bond</a></li>
+	<li id="menu-item-1052" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1052"><a href="https://www.covivio.eu/en/finance/financial-strategy/capital-increase/">Capital increase</a></li>
+	<li id="menu-item-1238" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1238"><a href="https://www.covivio.eu/en/finance/financial-strategy/takeover-bid/">Public offer</a></li>
+	<li id="menu-item-2586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2586"><a href="https://www.covivio.eu/en/finance/financial-strategy/fusion-avec-beni-stabili/">Merger with Beni Stabili</a></li>
+	<li id="menu-item-4177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4177"><a href="https://www.covivio.eu/en/finance/financial-strategy/beni-stabili-archives/">Beni Stabili archives</a></li>
+</ul>
+</li>
+<li id="menu-item-673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-673"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/">Investors and shareholders</a>
+<ul class="sub-menu">
+	<li id="menu-item-1286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1286"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/action/">Share</a></li>
+	<li id="menu-item-3587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3587"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/analysts/">Analysts</a></li>
+	<li id="menu-item-1267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1267"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/dividend/">Dividend</a></li>
+	<li id="menu-item-1491" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1491"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/general-meetings/">General meetings</a></li>
+	<li id="menu-item-1271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1271"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/letters/">Letter to shareholders</a></li>
+	<li id="menu-item-1275" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1275"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/registered-shareholders/">Registered shareholders</a></li>
+	<li id="menu-item-3215" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3215"><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/covivio-gdpr-policy/">GDPR Policy</a></li>
+</ul>
+</li>
+<li id="menu-item-672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-672"><a href="https://www.covivio.eu/en/finance/indicators/">Indicators</a>
+<ul class="sub-menu">
+	<li id="menu-item-1268" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1268"><a href="https://www.covivio.eu/en/finance/indicators/key-figures/">Key figures</a></li>
+	<li id="menu-item-2222" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2222"><a href="https://www.covivio.eu/en/finance/indicators/epra-indicators/">EPRA Indicators</a></li>
+	<li id="menu-item-1296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1296"><a href="https://www.covivio.eu/en/finance/indicators/highlights/">Highlights</a></li>
+</ul>
+</li>
+</ul></div></li>							    </ul>
+													</div>
+			    	</div>
+					<div class="row">
+						<div class="col-sm-6">
+															<ul class="carriere footer-menu">
+							    	<li id="nav_menu-4" class="widget widget_nav_menu"><a href="#" class="widgettitle">Careers</a><div class="menu-careers-menu-container"><ul id="menu-careers-menu" class="menu"><li id="menu-item-693" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-693"><a href="https://www.covivio.eu/en/careers/identity/">Identity</a>
+<ul class="sub-menu">
+	<li id="menu-item-1114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1114"><a href="https://www.covivio.eu/en/careers/identity/values/">Values</a></li>
+	<li id="menu-item-1120" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1120"><a href="https://www.covivio.eu/en/careers/identity/engagements/">Responsible commitments</a></li>
+	<li id="menu-item-1137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1137"><a href="https://www.covivio.eu/en/careers/identity/quality-of-life-at-work/">Quality of life at work</a></li>
+</ul>
+</li>
+<li id="menu-item-692" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-692"><a href="https://www.covivio.eu/en/careers/careers/">Careers</a>
+<ul class="sub-menu">
+	<li id="menu-item-1139" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1139"><a href="https://www.covivio.eu/en/careers/careers/360-operator/">A 360° operator</a></li>
+	<li id="menu-item-1153" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1153"><a href="https://www.covivio.eu/en/careers/careers/carrers-mapping/">Mapping of Covivio’s lines of business</a></li>
+</ul>
+</li>
+<li id="menu-item-691" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-691"><a href="https://www.covivio.eu/en/careers/careers-and-mobility/">Careers and mobility</a>
+<ul class="sub-menu">
+	<li id="menu-item-1173" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1173"><a href="https://www.covivio.eu/en/careers/careers-and-mobility/european-careers/">European Mobility</a></li>
+	<li id="menu-item-1181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1181"><a href="https://www.covivio.eu/en/careers/careers-and-mobility/careers-management-and-trainings/">Career management and training</a></li>
+</ul>
+</li>
+<li id="menu-item-690" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-690"><a href="https://www.covivio.eu/en/careers/join-us/">Join us</a></li>
+</ul></div></li>							    </ul>
+													</div>
+						<div class="col-sm-6">
+															<ul class="presse footer-menu">
+							    	<li id="nav_menu-5" class="widget widget_nav_menu"><a href="#" class="widgettitle">Press</a><div class="menu-press-menu-container"><ul id="menu-press-menu" class="menu"><li id="menu-item-1917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1917"><a href="https://www.covivio.eu/en/press/press-release/">Press release</a></li>
+<li id="menu-item-697" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-697"><a href="https://www.covivio.eu/en/press/studies/">Studies</a></li>
+<li id="menu-item-2086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2086"><a href="https://www.covivio.eu/en/press/publication/">Publications</a></li>
+</ul></div></li>							    </ul>
+													</div>
+			    	</div>
+				</div>
+		    </div>
+		   	<div class="footer-bottom">
+				<div class="container">
+			    	<div class="row align-items-center">
+												<div class="col-xs-12 col-md-4 col-lg-6">
+							<p>Created by Covivio, 30, Avenue Kléber 75016 Paris, France.<br />
+<a href="http://www.covivio.eu/en/imprint/">Imprint</a> &#8211;<a href="https://www.covivio.eu/en/sitemap/"> Sitemap &#8211; </a><a href="https://www.covivio.eu/en/finance/investors-and-shareholders/covivio-gdpr-policy/">GDPR Policy</a></p>
+						</div>
+																<div class="col-xs-12 col-md-8 col-lg-6">
+						    <div class="footer-bottom-nav-icon">
+								<ul class="footer-social">
+																		<li>
+										<a href="http://www.covivio.eu/en/contact-3/">
+											<div class="icon-contact"></div>
+											<span>Contact</span>
+										</a>
+									</li>
+																																							<li>
+												<a href="https://www.youtube.com/channel/UCsAFXuXerD8IPnjABc4EVLw" target="_blank">
+													<div class="icon-youtube"></div>
+												</a>
+											</li>
+																																								<li>
+												<a href="https://www.linkedin.com/company/covivio1/" target="_blank">
+													<div class="icon-linkedin"></div>
+												</a>
+											</li>
+																																								<li>
+												<a href="https://twitter.com/covivio_" target="_blank">
+													<div class="icon-twitter"></div>
+												</a>
+											</li>
+																																								<li>
+												<a href="https://www.instagram.com/covivio/" target="_blank">
+													<div class="icon-instagram"></div>
+												</a>
+											</li>
+																											</ul>
+						    </div>
+							</div>
+							    		</div>
+				</div>
+		    </div>
+		</div>
+		<!-- #wrapper-footer -->
+		<script type='text/javascript'>
+/* <![CDATA[ */
+var closetext = "Close overlay";
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.covivio.eu/app/themes/digitas-theme/dist/scripts/vendors.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var baseurl = "https:\/\/www.covivio.eu\/en";
+var ajaxurl = "https:\/\/www.covivio.eu\/en\/wp-admin\/admin-ajax.php";
+var ajaxurltwitter = "https:\/\/www.covivio.eu\/app\/plugins\/dlbi-digitas-vc-widget\/ajax\/twitter.php";
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.covivio.eu/app/themes/digitas-theme/dist/scripts/main.min.js'></script>
+<script type='text/javascript' src='https://www.covivio.eu/app/plugins/dlbi-digitas-vc-widget/dist/scripts/widgets.min.js'></script>
+<script type='text/javascript' src='https://www.covivio.eu/app/plugins/lazy-load/js/jquery.sonar.min.js'></script>
+<script type='text/javascript' src='https://www.covivio.eu/app/plugins/lazy-load/js/lazy-load.js'></script>
+<script type='text/javascript' src='https://www.covivio.eu/en/wp-includes/js/wp-embed.min.js'></script>
+
+			<div id="cookie-notice" role="banner" class="cn-bottom bootstrap" style="color: #fff; background-color: #000;"><div class="cookie-notice-container"><span id="cn-notice-text">We use cookies to ensure that we give you the best experience on our website. If you continue to use this site we will assume that you are happy with it.</span><a href="#" id="cn-accept-cookie" data-cookie-set="accept" class="cn-set-cookie button bootstrap">Ok</a><a href="https://www.covivio.eu/en/imprint/" target="_blank" id="cn-more-info" class="cn-more-info button bootstrap">Read more</a>
+				</div>
+			</div>	</body>
+</html>

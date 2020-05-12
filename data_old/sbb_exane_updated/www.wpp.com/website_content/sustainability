@@ -1,0 +1,1355 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js" prefix="og: http://ogp.me/ns#">
+
+<head>
+
+    
+
+    
+    <meta charset="utf-8">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+<title>Sustainability | WPP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Learn more about WPP&#39;s positive long-term contribution to society and the environment." />
+<meta name="keywords" content="WPP, WPP Group plc, Annual Report, corporate governance, remuneration, sustainability" />
+<meta property="og:title" content="Sustainability | WPP" /><meta property="og:description" content="Learn more about WPP&#39;s positive long-term contribution to society and the environment." /><meta property="og:url" content="https://www.wpp.com/sustainability" />
+<meta name="twitter:title" content="Sustainability | WPP" /><meta name="twitter:description" content="Learn more about WPP&#39;s positive long-term contribution to society and the environment." />
+
+    <script>
+        (function (H) {
+            H.className = H.className.replace(/\bno-js\b/, 'js');
+        })(document.documentElement)
+    </script>
+    <link href="/assets/css/build/style.min.css?modified=20200317085044" media="all" rel="stylesheet" type="text/css"></link>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#083c64">
+    <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/assets/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    
+<meta name="google-site-verification" content="VdTvWRb2qKcCptn2hh9fou-32DlxJlSUsJR15kimC5o" />
+<style>.landing-header--contact a {color:white!important}</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-376521-1"></script>
+<script>
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+var analytics = getCookie("analytics-cookies");
+
+if (analytics === "yes") {
+	//ga
+	(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date(); a = s.createElement(o),
+		m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+	ga('create', 'UA-376521-1', 'auto');
+	ga('send', 'pageview');
+	
+	//tag manager
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-376521-1');
+} 
+
+//ga_clicks.js
+if (typeof jQuery != 'undefined') {
+    jQuery(document).ready(function ($) {
+        var filetypes = /\.(zip|exe|dmg|pdf|doc.*|xls.*|ppt.*|mp3|txt|rar|wma|mov|avi|wmv|flv|wav)$/i;
+        var baseHref = '';
+        if (jQuery('base').attr('href') != undefined) baseHref = jQuery('base').attr('href');
+
+        jQuery('a').on('click', function (event) {
+            var el = jQuery(this);
+            var track = true;
+            var href = (typeof (el.attr('href')) != 'undefined') ? el.attr('href') : "";
+            var isThisDomain = href.match(document.domain.split('.').reverse()[1] + '.' + document.domain.split('.').reverse()[0]);
+            if (!href.match(/^javascript:/i)) {
+                var elEv = []; elEv.value = 0, elEv.non_i = false;
+                if (href.match(/^mailto\:/i)) {
+                    elEv.category = "email";
+                    elEv.action = "click";
+                    elEv.label = href.replace(/^mailto\:/i, '');
+                    elEv.loc = href;
+                }
+                else if (href.match(filetypes)) {
+                    var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+                    elEv.category = "download";
+                    elEv.action = "click-" + extension[0];
+                    elEv.label = href.replace(/ /g, "-");
+                    elEv.loc = baseHref + href;
+                }
+                else if (href.match(/^https?\:/i) && !isThisDomain) {
+                    elEv.category = "external";
+                    elEv.action = "click";
+                    elEv.label = href.replace(/^https?\:\/\//i, '');
+                    elEv.non_i = true;
+                    elEv.loc = href;
+                }
+                else if (href.match(/^tel\:/i)) {
+                    elEv.category = "telephone";
+                    elEv.action = "click";
+                    elEv.label = href.replace(/^tel\:/i, '');
+                    elEv.loc = href;
+                }
+                else track = false;
+
+                if (track) {
+                    //ga.push(['_trackEvent', elEv.category.toLowerCase(), elEv.action.toLowerCase(), elEv.label.toLowerCase(), elEv.value, elEv.non_i]);
+                  
+                    ga('send', 'event', elEv.category.toLowerCase(), elEv.action.toLowerCase(), elEv.label.toLowerCase(), elEv.value, elEv.non_i);
+
+                    if (el.attr('target') == undefined || el.attr('target').toLowerCase() != '_blank') {
+                        setTimeout(function () { location.href = elEv.loc; }, 400);
+                        return false;
+                    }
+                }
+            }
+        });
+    });
+} 
+</script>    
+<meta name="VIcurrentDateTime" content="637236528401485871" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+</head>
+
+<body class="landing-page">
+    
+<header id="js-site-header" class="site-header">
+    <div class="container-single">
+        <div class="row">
+            <div class="col-xs-2 col-lg-9 col-lg-push-3 u-col-right site-header__nav-col">
+                <nav id="js-main-nav" class="main-nav">
+                    <ul id="js-main-nav__list" class="main-nav__list">
+            <li class="main-nav__list-item  ">
+                <a href="/about" target="" class="main-nav__link main-nav__link--next js-main-nav__link--next">About</a>
+
+                <div class="sub-menu">
+                    <div class="sub-menu__links-col">
+                        <ul class="sub-menu__list">
+                            <li class="sub-menu__list-item sub-menu__list-item--top">
+                                <a href="/about" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">ABOUT</a>
+                            </li>
+                            <li class="sub-menu__list-item sub-menu__list-item--overview">
+                                <a href="/about" class="sub-menu__link">About home</a>
+                            </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/about/who-we-are" target="" class="sub-menu__link  ">Who we are</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/about/at-a-glance" target="" class="sub-menu__link  ">At a glance</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/about/our-offer" target="" class="sub-menu__link  ">Our offer</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/contacts#tab-companies" target="" class="sub-menu__link  ">Our companies</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/about/our-leadership" target="" class="sub-menu__link  sub-menu__link--next js-main-nav__link--next">Our leadership</a>
+                                        <div class="sub-menu sub-menu--level2">
+                                            <ul class="sub-menu__list">
+                                                <li class="sub-menu__list-item sub-menu__list-item--top">
+                                                    <a href="/about" target="" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">About</a>
+                                                </li>
+                                                <li class="sub-menu__list-item sub-menu__list-item--back">
+                                                    <a href="/about/our-leadership" target="" class="sub-menu__link sub-menu__link--back js-sub-menu__link--back">OUR LEADERSHIP</a>
+                                                </li>
+                                                <li class="sub-menu__list-item sub-menu__list-item sub-menu__list-item--overview">
+                                                    <a href="/about/our-leadership" target="" class="sub-menu__link">Our leadership home</a>
+                                                </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/about/our-leadership/the-wpp-board" target=""class="sub-menu__link  ">The WPP Board</a>
+
+                                                    </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/about/our-leadership/executive-committee" target=""class="sub-menu__link  ">Executive Committee</a>
+
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/about/our-people" target="" class="sub-menu__link  ">Our people</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/about/our-history" target="" class="sub-menu__link  ">Our history</a>
+                                </li>
+                        </ul>
+                    </div>
+                        <div class="sub-menu-hotspots">
+                            <p class="tag">
+                                <strong>Latest</strong>
+                            </p>
+
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/wpp-iq/the-host-cities-perspective---the-impact-of-covid-19-on-sporting-events" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/wpp-iq/2020/host-cities-perspective-300x169.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="Host-cities-perspective-300x169">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">The host cities’ perspective: the impact of COVID-19 on sporting events</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            
+        </div>
+    </article>
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/wpp-iq/qsrs-in-the-age-of-covid-19" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/wpp-iq/2020/qsrs-300x169.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="QSRs 300x169">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">QSRs in the age of COVID-19</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            
+        </div>
+    </article>
+                        </div>
+                </div>
+            </li>
+            <li class="main-nav__list-item  ">
+                <a href="/investors" target="" class="main-nav__link main-nav__link--next js-main-nav__link--next">Investors</a>
+
+                <div class="sub-menu">
+                    <div class="sub-menu__links-col">
+                        <ul class="sub-menu__list">
+                            <li class="sub-menu__list-item sub-menu__list-item--top">
+                                <a href="/investors" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">INVESTORS</a>
+                            </li>
+                            <li class="sub-menu__list-item sub-menu__list-item--overview">
+                                <a href="/investors" class="sub-menu__link">Investors home</a>
+                            </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/investors/financial-releases" target="" class="sub-menu__link  ">Financial releases</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/investors/regulatory-news" target="" class="sub-menu__link  ">Regulatory news</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/investors/share-price" target="" class="sub-menu__link  ">Share price</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/investors/results-presentations-and-reports" target="" class="sub-menu__link  ">Results, presentations and reports</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/investors/shareholder-centre" target="" class="sub-menu__link  sub-menu__link--next js-main-nav__link--next">Shareholder centre</a>
+                                        <div class="sub-menu sub-menu--level2">
+                                            <ul class="sub-menu__list">
+                                                <li class="sub-menu__list-item sub-menu__list-item--top">
+                                                    <a href="/investors" target="" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">Investors</a>
+                                                </li>
+                                                <li class="sub-menu__list-item sub-menu__list-item--back">
+                                                    <a href="/investors/shareholder-centre" target="" class="sub-menu__link sub-menu__link--back js-sub-menu__link--back">SHAREHOLDER CENTRE</a>
+                                                </li>
+                                                <li class="sub-menu__list-item sub-menu__list-item sub-menu__list-item--overview">
+                                                    <a href="/investors/shareholder-centre" target="" class="sub-menu__link">Shareholder centre home</a>
+                                                </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/shareholder-centre/shareholder-meetings" target=""class="sub-menu__link  sub-menu__link--next js-main-nav__link--next">Shareholder meetings</a>
+                                                            <div class="sub-menu sub-menu--level2">
+                                                                <ul class="sub-menu__list">
+                                                                    <li class="sub-menu__list-item sub-menu__list-item--top">
+                                                                        <a href="/investors" target="" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">Investors</a>
+                                                                    </li>
+
+
+                                                                    <li class="sub-menu__list-item sub-menu__list-item--back">
+                                                                        <a href="/investors/shareholder-centre/shareholder-meetings" target="" class="sub-menu__link sub-menu__link--back js-sub-menu__link--back">SHAREHOLDER MEETINGS</a>
+                                                                    </li>
+                                                                    <li class="sub-menu__list-item sub-menu__list-item sub-menu__list-item--overview">
+                                                                        <a href="/investors/shareholder-centre/shareholder-meetings" target="" class="sub-menu__link">Shareholder meetings home</a>
+                                                                    </li>
+                                                                        <li class="sub-menu__list-item">
+                                                                            <a href="/investors/shareholder-centre/shareholder-meetings/wpp-agm-2019" target="" class="sub-menu__link ">WPP Annual General Meeting 2019</a>
+                                                                        </li>
+                                                                        <li class="sub-menu__list-item">
+                                                                            <a href="/investors/shareholder-centre/shareholder-meetings/historical-agms" target="" class="sub-menu__link ">Historical AGMs</a>
+                                                                        </li>
+                                                                </ul>
+                                                            </div>
+
+                                                    </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/shareholder-centre/dividends" target=""class="sub-menu__link  ">Dividends</a>
+
+                                                    </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/shareholder-centre/credit-ratings" target=""class="sub-menu__link  ">Credit ratings</a>
+
+                                                    </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/shareholder-centre/share-ownership" target=""class="sub-menu__link  ">Share ownership</a>
+
+                                                    </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/shareholder-centre/research-coverage" target=""class="sub-menu__link  ">Research coverage</a>
+
+                                                    </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/shareholder-centre/sec-filings" target=""class="sub-menu__link  ">SEC filings</a>
+
+                                                    </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/shareholder-centre/stabilisation-at-fca" target=""class="sub-menu__link  ">Stabilisation at FCA</a>
+
+                                                    </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/shareholder-centre/faqs" target=""class="sub-menu__link  ">Share owner FAQs</a>
+
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/investors/calendar-and-events" target="" class="sub-menu__link  sub-menu__link--next js-main-nav__link--next">Calendar and events</a>
+                                        <div class="sub-menu sub-menu--level2">
+                                            <ul class="sub-menu__list">
+                                                <li class="sub-menu__list-item sub-menu__list-item--top">
+                                                    <a href="/investors" target="" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">Investors</a>
+                                                </li>
+                                                <li class="sub-menu__list-item sub-menu__list-item--back">
+                                                    <a href="/investors/calendar-and-events" target="" class="sub-menu__link sub-menu__link--back js-sub-menu__link--back">CALENDAR AND EVENTS</a>
+                                                </li>
+                                                <li class="sub-menu__list-item sub-menu__list-item sub-menu__list-item--overview">
+                                                    <a href="/investors/calendar-and-events" target="" class="sub-menu__link">Calendar and events home</a>
+                                                </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/investors/calendar-and-events/previous-events" target=""class="sub-menu__link  ">Previous events</a>
+
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/investors/corporate-governance" target="" class="sub-menu__link  ">Corporate governance</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/Contacts#tab-0" target="" class="sub-menu__link  ">Investor contacts</a>
+                                </li>
+                        </ul>
+                    </div>
+                        <div class="sub-menu-hotspots">
+                            <p class="tag">
+                                <strong>Latest</strong>
+                            </p>
+
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/news/2020/02/2019-preliminary-results" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/press-releases/kantar-transaction-2019-300x169.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="Kantar-Transaction-2019-300x169">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">2019 Preliminary Results</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            &nbsp;
+        </div>
+    </article>
+
+
+<div class="sub-menu-hotspots__col sub-menu-hotspots__col--top">
+    <p class="tag">
+        <strong>Share price</strong>
+    </p>
+    <div class="sub-menu-hotspots__share-price">
+        <p class="sub-menu-hotspots__stock-exchange">LSE</p>
+        <p class="sub-menu-hotspots__share-value">570.80p</p>
+        <p class="sub-menu-hotspots__share-change">+25.80</p>
+    </div>
+    <div class="sub-menu-hotspots__share-price">
+        <p class="sub-menu-hotspots__stock-exchange">NYSE</p>
+        <p class="sub-menu-hotspots__share-value">$35.65</p>
+        <p class="sub-menu-hotspots__share-change">+1.67</p>
+    </div>
+    <p class="sub-menu-hotspots__share-delay">Data is delayed by 15 minutes</p>
+</div>                        </div>
+                </div>
+            </li>
+            <li class="main-nav__list-item main-nav__list-item--active ">
+                <a href="/sustainability" target="" class="main-nav__link main-nav__link--next js-main-nav__link--next">Sustainability</a>
+
+                <div class="sub-menu">
+                    <div class="sub-menu__links-col">
+                        <ul class="sub-menu__list">
+                            <li class="sub-menu__list-item sub-menu__list-item--top">
+                                <a href="/sustainability" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">SUSTAINABILITY</a>
+                            </li>
+                            <li class="sub-menu__list-item sub-menu__list-item--overview">
+                                <a href="/sustainability" class="sub-menu__link">Sustainability home</a>
+                            </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/sustainability/sustainability-and-our-strategy" target="" class="sub-menu__link  ">Sustainability and our strategy</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/sustainability/sustainability-in-action" target="" class="sub-menu__link  ">Sustainability in action</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/sustainability/sustainability-reporting-centre" target="" class="sub-menu__link  ">Sustainability reporting centre</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/sustainability/policies-and-resources" target="" class="sub-menu__link  ">Policies and resources</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/sustainability/modern-slavery-act-statement" target="" class="sub-menu__link  ">Modern Slavery Act statement</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/Contacts#tab-1" target="" class="sub-menu__link  ">Sustainability contacts</a>
+                                </li>
+                        </ul>
+                    </div>
+                        <div class="sub-menu-hotspots">
+                            <p class="tag">
+                                <strong>Resources</strong>
+                            </p>
+
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/sustainability/sustainability-report-2018" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/sustainability/wpp-sustainability-report-2018-300x169.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="WPP-Sustainability-Report-2018-300x169">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">Sustainability Report 2018</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            &nbsp;
+        </div>
+    </article>
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/sustainability/sustainability-in-action" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/sustainability/wpp-sustainability-in-action-300x169.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="WPP-Sustainability-in-action-300x169">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">Sustainability in action</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            &nbsp;
+        </div>
+    </article>
+                        </div>
+                </div>
+            </li>
+            <li class="main-nav__list-item  ">
+                <a href="/media" target="" class="main-nav__link main-nav__link--next js-main-nav__link--next">Media</a>
+
+                <div class="sub-menu">
+                    <div class="sub-menu__links-col">
+                        <ul class="sub-menu__list">
+                            <li class="sub-menu__list-item sub-menu__list-item--top">
+                                <a href="/media" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">MEDIA</a>
+                            </li>
+                            <li class="sub-menu__list-item sub-menu__list-item--overview">
+                                <a href="/media" class="sub-menu__link">Media home</a>
+                            </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/media/all-news" target="" class="sub-menu__link  ">Press releases</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/media/media-library" target="" class="sub-menu__link  ">Media library</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/Contacts#tab-2" target="" class="sub-menu__link  ">Media contacts</a>
+                                </li>
+                        </ul>
+                    </div>
+                        <div class="sub-menu-hotspots">
+                            <p class="tag">
+                                <strong>Latest</strong>
+                            </p>
+
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/news/2020/03/update-re-covid-19" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/press-releases/bloomberg-gei-300x169/wpp-appoints-sandrine-dufour-to-the-board-300x169/covid.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="Update re COVID-19">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">Update re COVID-19</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            
+        </div>
+    </article>
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/news/2020/01/wpp-appoints-sandrine-dufour-to-the-board" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/press-releases/bloomberg-gei-300x169/wpp-appoints-sandrine-dufour-to-the-board-300x169.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="WPP-appoints-Sandrine-Dufour-to-the-Board-300x169">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">WPP appoints Sandrine Dufour to the Board</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            
+        </div>
+    </article>
+                        </div>
+                </div>
+            </li>
+            <li class="main-nav__list-item  ">
+                <a href="/careers" target="" class="main-nav__link main-nav__link--next js-main-nav__link--next">Careers</a>
+
+                <div class="sub-menu">
+                    <div class="sub-menu__links-col">
+                        <ul class="sub-menu__list">
+                            <li class="sub-menu__list-item sub-menu__list-item--top">
+                                <a href="/careers" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">CAREERS</a>
+                            </li>
+                            <li class="sub-menu__list-item sub-menu__list-item--overview">
+                                <a href="/careers" class="sub-menu__link">Careers home</a>
+                            </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/careers/developing-talent" target="" class="sub-menu__link  ">Developing talent</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/careers/inclusive-workplaces" target="" class="sub-menu__link  ">Inclusive workplaces</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/about/our-people" target="" class="sub-menu__link  ">Our people</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/careers/interns-apprentices-and-fellows" target="" class="sub-menu__link  sub-menu__link--next js-main-nav__link--next">Interns, apprentices and fellows</a>
+                                        <div class="sub-menu sub-menu--level2">
+                                            <ul class="sub-menu__list">
+                                                <li class="sub-menu__list-item sub-menu__list-item--top">
+                                                    <a href="/careers" target="" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">Careers</a>
+                                                </li>
+                                                <li class="sub-menu__list-item sub-menu__list-item--back">
+                                                    <a href="/careers/interns-apprentices-and-fellows" target="" class="sub-menu__link sub-menu__link--back js-sub-menu__link--back">INTERNS, APPRENTICES AND FELLOWS</a>
+                                                </li>
+                                                <li class="sub-menu__list-item sub-menu__list-item sub-menu__list-item--overview">
+                                                    <a href="/careers/interns-apprentices-and-fellows" target="" class="sub-menu__link">Interns, apprentices and fellows home</a>
+                                                </li>
+                                                    <li class="sub-menu__list-item">
+                                                        <a href="/careers/wpp-fellowships/health" target=""class="sub-menu__link  ">WPP Health Fellowship</a>
+
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/Contacts#tab-3" target="" class="sub-menu__link  ">Careers contacts</a>
+                                </li>
+                        </ul>
+                    </div>
+                        <div class="sub-menu-hotspots">
+                            <p class="tag">
+                                <strong>Resources</strong>
+                            </p>
+
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/sustainability/sustainability-report-2018" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/sustainability/wpp-sustainability-report-2018-300x169.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="WPP-Sustainability-Report-2018-300x169">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">Sustainability Report 2018</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            &nbsp;
+        </div>
+    </article>
+
+
+    <div class="sub-menu-hotspots__col">
+        <a href="/-/media/project/wpp/files/sustainability/wpp-uk-gender-pay-gap-report-2018.pdf" class="sub-menu-hotspots__link">
+            <img src="/-/media/project/wpp/images/careers/wpp-gender-pay-gap-report-2018.png?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="WPP-Gender-Pay-Gap-Report-2018">
+        </a>
+        <a class="link-download sub-menu-hotspots__link-download" href="/-/media/project/wpp/files/sustainability/wpp-uk-gender-pay-gap-report-2018.pdf" style="color: #000000">
+            UK Gender Pay Gap Report 2018 <em class="sub-menu-hotspots__download-size">PDF 1.2MB</em>
+        </a>
+    </div>
+                        </div>
+                </div>
+            </li>
+            <li class="main-nav__list-item  main-nav__list-item--orange u-text-no-transform">
+                <a href="/wpp-iq" target="" class="main-nav__link main-nav__link--next js-main-nav__link--next">WPP iQ</a>
+
+                <div class="sub-menu">
+                    <div class="sub-menu__links-col">
+                        <ul class="sub-menu__list">
+                            <li class="sub-menu__list-item sub-menu__list-item--top">
+                                <a href="/wpp-iq" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">WPP IQ</a>
+                            </li>
+                            <li class="sub-menu__list-item sub-menu__list-item--overview">
+                                <a href="/wpp-iq" class="sub-menu__link">WPP iQ home</a>
+                            </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/wpp-iq/list?category=Communications" target="" class="sub-menu__link  ">Communications</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/wpp-iq/list?category=Experience" target="" class="sub-menu__link  ">Experience</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/wpp-iq/list?category=Commerce" target="" class="sub-menu__link  ">Commerce</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/wpp-iq/list?category=Technology%20and%20innovation" target="" class="sub-menu__link  ">Technology &amp; data</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/wpp-iq/list" target="" class="sub-menu__link  ">View all</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/wpp-iq#newsletter" target="" class="sub-menu__link  ">Subscribe</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/the-bullmore-collection" target="" class="sub-menu__link  ">The Bullmore Collection</a>
+                                </li>
+                        </ul>
+                    </div>
+                        <div class="sub-menu-hotspots">
+                            <p class="tag">
+                                <strong>LATEST</strong>
+                            </p>
+
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/wpp-iq/will-covid-19-accelerate-living-more-sustainably" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/wpp-iq/2020/sustainablility-covid-19.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="Sustainablility-COVID-19">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">Will COVID-19 accelerate living more sustainably?</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            &nbsp;
+        </div>
+    </article>
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/wpp-iq/owning-your-digital-present-and-future" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/wpp-iq/2020/own-your-own-digital-future.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="Own-your-own-digital-future">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">Owning your digital present and future</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            
+        </div>
+    </article>
+                        </div>
+                </div>
+            </li>
+            <li class="main-nav__list-item  ">
+                <a href="/featured/work" target="" class="main-nav__link main-nav__link--next js-main-nav__link--next">Work</a>
+
+                <div class="sub-menu">
+                    <div class="sub-menu__links-col">
+                        <ul class="sub-menu__list">
+                            <li class="sub-menu__list-item sub-menu__list-item--top">
+                                <a href="/featured/work" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">WORK</a>
+                            </li>
+                            <li class="sub-menu__list-item sub-menu__list-item--overview">
+                                <a href="/featured/work" class="sub-menu__link">Work home</a>
+                            </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="" target="" class="sub-menu__link  "></a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="" target="" class="sub-menu__link  "></a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="" target="" class="sub-menu__link  "></a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="" target="" class="sub-menu__link  "></a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="" target="" class="sub-menu__link  "></a>
+                                </li>
+                        </ul>
+                    </div>
+                        <div class="sub-menu-hotspots">
+                            <p class="tag">
+                                <strong>Latest</strong>
+                            </p>
+
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/featured/work/mindshare---tommys-midwife-voice-skill" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/wpp-iq/mega-nav/mindshare-tommys.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="Mindshare-Tommys">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">Mindshare: Tommy’s Midwife Voice Skill</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            
+        </div>
+    </article>
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/featured/work/wavemaker---public-health-england-coronavirus-whatapp-information" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/wpp-iq/mega-nav/wavemaker-whatsapp-300x169.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="Wavemaker-WhatsApp-300x169">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">Wavemaker: Public Health England Coronavirus WhatsApp Information Service</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            &nbsp;
+        </div>
+    </article>
+                        </div>
+                </div>
+            </li>
+            <li class="main-nav__list-item  ">
+                <a href="/contacts" target="" class="main-nav__link main-nav__link--next js-main-nav__link--next">Contacts</a>
+
+                <div class="sub-menu">
+                    <div class="sub-menu__links-col">
+                        <ul class="sub-menu__list">
+                            <li class="sub-menu__list-item sub-menu__list-item--top">
+                                <a href="/contacts" class="sub-menu__link sub-menu__link--top js-sub-menu__link--top">CONTACTS</a>
+                            </li>
+                            <li class="sub-menu__list-item sub-menu__list-item--overview">
+                                <a href="/contacts" class="sub-menu__link">Contacts home</a>
+                            </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/contacts/offices" target="" class="sub-menu__link  ">Offices</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/contacts/investors" target="" class="sub-menu__link  ">Investors</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/contacts/sustainability" target="" class="sub-menu__link  ">Sustainability</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/contacts/media" target="" class="sub-menu__link  ">Media</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/contacts/careers" target="" class="sub-menu__link  ">Careers</a>
+                                </li>
+                                <li class="sub-menu__list-item">
+                                    <a href="/contacts/companies" target="" class="sub-menu__link  ">Companies</a>
+                                </li>
+                        </ul>
+                    </div>
+                        <div class="sub-menu-hotspots">
+                            <p class="tag">
+                                <strong>Get in touch</strong>
+                            </p>
+
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/contacts" class="sub-menu-hotspots__link" target="">
+                <img src="/-/media/project/wpp/images/map/wpp-colour-illustrated-logo/wpp_logo_blue.jpg?width=300&amp;height=169" class="sub-menu-hotspots__hotspot-img" alt="WPP logo in blue">
+                    </a>
+        <div class="sub-menu-hotspots__address">
+            
+        </div>
+    </article>
+
+
+    <article class="sub-menu-hotspots__col">
+        <a href="/contacts" class="sub-menu-hotspots__link" target="">
+                            <h2 class="sub-menu-hotspots__article-heading" style="color: #000000">WPP plc</h2>
+        </a>
+        <div class="sub-menu-hotspots__address">
+            <p>Sea Containers <br />
+18 Upper Ground<br />
+London, SE1 9GL</p>
+<p>Tel: +44 (0)20 7282 4600<br />
+Email: <a rel="noopener noreferrer" href="mailto:enquiries@wpp.com" target="_blank">enquiries@wpp.com</a></p>
+        </div>
+    </article>
+                        </div>
+                </div>
+            </li>
+
+</ul>
+
+
+                    <button id="js-site-header__search-btn" class="site-header__search-btn">
+                        <span class="site-header__search-icon"></span>
+                        <span class="u-hidden-visibly">Search</span>
+                    </button>
+                </nav>
+            </div>
+
+            <div class="col-xs-8 col-lg-3 col-lg-pull-9 u-col-left site-header__logo-col">
+                <a href="/" class="site-header__logo-link">
+                    <img src="https://www.wpp.com/assets/img/WPP-logo.svg" alt="WPP logo" class="site-header__logo">
+                </a>
+            </div>
+
+            <div class="col-xs-2 col-lg-1 site-header__mobile-menu-col">
+                <button id="js-site-header__mobile-menu-btn" class="site-header__mobile-menu-btn">
+                    <span id="js-site-header__mobile-menu-icon" class="site-header__mobile-menu-icon"></span>
+                    <span class="u-hidden-visibly">Menu</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    
+
+</header>
+
+
+
+
+
+    <div class="page-wrapper">
+        <main class="site-main">
+            
+
+<section class="c-search c-main-search container" id="main-search-json" pagination-limit=10 json-url="https://www.wpp.com/api/1.0/search/aggregate">
+
+    <!--	Preloader	-->
+    <div class="preloader search">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+    </div>
+    <!--	END Preloader	-->
+
+    <div class="row">
+        <div class="col-xs-12  col-xl-8 col-xl-offset-2">
+            <div class="c-search__close" id="js-search-close">X</div>
+
+            <form class="c-search__search-bar" id="search-form-main">
+                <input id="search-form-main__input" type="search" title="search field" name="terms" placeholder="Start typing to search"
+                       data-bind="value: SearchQuery, event: { change: TriggerSearch}, valueUpdate: 'keyup'" autocomplete="off">
+                <button id="search-submit-main" type="submit" class="link-internal white">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-xl-8 col-xl-offset-2">
+			
+			<!-- ko if: ErrorCode -->
+				<div class="c-search__noresult">
+					<p data-bind="html: ErrorCode"></p>
+				</div>
+			<!-- /ko -->
+		
+            <div class="c-search__suggestion">
+                <div class="c-search__suggestion--columns c-search__suggestion--columns-quick-links u-hidden-sm-down" style="display: none;" data-bind="visible: (SearchQuery().length < 3)">
+
+
+                    <div class="row">
+                        <div class="col-sm-4 populated">
+                            <h2 class="tag"><strong>Quick Links</strong></h2>
+                            <ul>
+                                        <li><a href="/about" class="link-internal white">About</a></li>
+                                        <li><a href="/investors" class="link-internal white">Investors</a></li>
+                                        <li><a href="/sustainability" class="link-internal white">Sustainability</a></li>
+                                        <li><a href="/media" class="link-internal white">Media</a></li>
+                                        <li><a href="/careers" class="link-internal white">Careers</a></li>
+                                        <li><a href="/featured" class="link-internal white">Featured</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="c-search__suggestion--columns c-search__suggestion--columns-predictive u-hidden-sm-down" style="display: none;">
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="c-search__suggestion--full-width c-search__suggestion--full-width-first u-clearfix">
+
+                                <div class="col-xs-12 col-sm-3 search-content">
+                                    <h2 class="tag">
+                                        <strong>Pages</strong>
+                                    </h2>
+                                    <ul data-bind="foreach: Result">
+                                        <li data-bind="if: $data.Category == 'Page'">
+                                            <a data-bind="attr: {href: $data.PageUrl}, text: $data.Title" class="link-internal white"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-3 search-content">
+                                    <h2 class="tag">
+                                        <strong>Press Releases</strong>
+                                    </h2>
+                                    <ul data-bind="foreach: Result">
+                                        <li data-bind="if: $data.Category == 'Press Release'">
+                                            <a data-bind="attr: {href: $data.PageUrl}, text: $data.Title" class="link-internal white"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="col-xs-12 col-sm-3 search-content">
+                                    <h2 class="tag u-text-no-transform">
+                                        <strong>WPP iQ</strong>
+                                    </h2>
+                                    <ul data-bind="foreach: Result">
+                                        <li data-bind="if: $data.Category == 'WPP iQ'">
+                                            <a data-bind="attr: {href: $data.PageUrl}, text: $data.Title" class="link-internal white"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-sm-3 search-content">
+                                    <h2 class="tag">
+                                        <strong>Work</strong>
+                                    </h2>
+                                    <ul data-bind="foreach: Result">
+                                        <li data-bind="if: $data.Category == 'Work'">
+                                            <a data-bind="attr: {href: $data.PageUrl}, text: $data.Title" class="link-internal white"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="c-search__suggestion-group u-hidden-sm-down" style="display: none;">
+                    <div class="row" data-bind="foreach: Result">
+                        <div class="col-xs-12" data-bind="if: $data.Category == 'Company'">
+                            <div class="c-search__suggestion--full-width u-clearfix">
+
+                                <div class="col-xs-3 search-img" data-bind="if:$data.ImageUrl">
+                                    <img data-bind="attr: { src: $data.ImageUrl }" src="" alt="-">
+                                </div>
+                                <div class="col-xs-9 col-md-8 col-lg-6 search-content">
+                                    <h5 data-bind="if:$data.Title">
+                                        <strong data-bind="text: Title"></strong>
+                                    </h5>
+
+                                    <small data-bind="if:$data.BodyText">
+                                        <p data-bind="html: BodyText"></p>
+                                    </small>
+                                    <span data-bind="if: KeyCompany == true">
+                                        <a class="link-internal white" data-bind="if:$data.PageUrl, attr: {href: PageUrl}">View profile</a>
+                                        <a class="link-external white" data-bind="if:$data.CompanyWebsiteUrl, attr: {href: CompanyWebsiteUrl}" target="_blank">Visit website</a>
+                                    </span>
+                                    <span data-bind="if: KeyCompany == false && CompanyWebsiteUrl">
+                                        <a class="link-external white" data-bind="attr: {href: CompanyWebsiteUrl}" target="_blank">Visit website</a>
+                                    </span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+            
+<div class="container-single">
+    <div class="row">
+        <div class="col-xs-12 col-lg-3 u-col-left">
+            
+        </div>
+        <div class="col-xs-12 col-sm-8 col-lg-8 col-xl-8 col-sm-offset-2 col-md-offset-2 col-lg-offset-0 u-text-wrapper">
+            
+
+
+
+
+
+
+
+    <h1 class="page-title u-hidden">
+        <strong></strong>
+    </h1>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="lazyLoad lazyLoad--nomargin">
+    <section class="landing-header landing-header--basic" style="background-color: #070a08">
+        <!--    Preloader   -->
+        <div class="preloader">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+        <!--    END Preloader   -->
+        <div class="landing-header__media-wrapper">
+            <picture class="landing-header__image">
+                <source media="(min-width: 1920px)" srcset="/-/media/project/wpp/images/green-yellow_pattern2.jpg?width=2568&amp;height=650 768w">
+                <source media="(min-width: 768px)" srcset="/-/media/project/wpp/images/green-yellow_pattern2.jpg?width=1580&amp;height=400 768w">
+                <source media="(min-width: 0px)" srcset="/-/media/project/wpp/images/green-yellow_pattern2.jpg?width=1185&amp;height=300 400w">
+                <img src="" data-source="/-/media/project/wpp/images/green-yellow_pattern2.jpg?width=1580&amp;height=400" alt="Abstract logo render">
+            </picture>
+        </div>
+
+        <div class="landing-header__content-wrapper">
+            <div class="landing-header__left">
+                <h1 class="landing-header__title-main" style="color: ">
+                    <strong>
+Sustainability                    </strong>
+                </h1>
+                <div class="landing-header__title-sub">
+                    At WPP we aim to make a positive long-term contribution to society and the environment. We advise clients on sustainability issues &ndash; helping them to create brands with purpose and to embed sustainability into products, marketing and communications &ndash; and we take action in our business to improve our own performance.
+                </div>                    <a class="landing-header__cta" target="" href="/sustainability/sustainability-report-2018"><span class="arrow-icon">&#8594;</span>Read our Sustainability Report 2018 summary</a>
+            </div>
+            <div class="landing-header__right">
+                <blockquote class="landing-header__quote" style="color: ">
+                        <em class="pre-quote">&#8220;</em>
+<span>Great marketing can be a powerful tool for <strong>change<em class="post-quote" style="color: "></em></strong></span>                                            <div class="author">
+                                <p class="name">
+                                    Andrea Harris
+                                </p>
+                                <p class="caption">Group Chief Counsel and Head of Sustainability</p>
+                        </div>
+                </blockquote>
+            </div>
+        </div>
+            <div class="c-story-panel-1__horizontal-gradient c-story-panel-1__"></div>
+    </section>
+
+
+</div>
+
+
+<div class="container c-split-panel theme-secondary full-width" style="background-color: ">
+    <div class="row ">
+
+
+
+
+<div class="col-xs-12 col-md-6 c-split-panel__text">
+    <h3 class="theme-primary" style="color:#15266D;"><strong>Pro bono campaigns</strong></h3>
+    <p><p><span class="intro">Our award-winning pro bono campaigns help to bring about positive change on social and environmental issues.</span></p>
+<p><a href="/sustainability/-/media/project/wpp/files/sustainability/sustainability-report-2018/wpp-sustainability-report-2018-social-investment.pdf" class="link-download" target="_blank">Social investment <em>PDF 3MB</em></a></p></p>
+</div>
+
+
+
+
+<div class="col-xs-12 col-md-6 c-split-panel__img">
+<img src="/-/media/project/wpp/images/sustainability/aacd-sustainability-report-case-study.jpg?h=1445&amp;w=2568&amp;la=en&amp;hash=515CD3C6C9923E2F4BF191DE418164EDB4DC3320" class="c-figure-2__img" alt="AACD-Sustainability-Report-Case-Study" /></div>    </div>
+</div>
+
+<div class="container c-split-panel theme-secondary full-width" style="background-color: ">
+    <div class="row ">
+
+
+
+
+<div class="col-xs-12 col-md-6 c-split-panel__img">
+<img src="/-/media/project/wpp/images/sustainability/wpp-sustainability-in-action-unilever2.jpg?h=800&amp;w=1500&amp;la=en&amp;hash=D84FA21B31D48A95D92C393A0CFEC8DCEB1A5B3D" class="c-figure-2__img" alt="Unilever" /></div>
+
+
+
+<div class="col-xs-12 col-md-6 c-split-panel__text">
+    <h3 class="theme-primary" style="color:#15266D;"><strong>Sustainability in action</strong></h3>
+    <p><p><span class="intro">How we work on sustainability in our business and with our clients and stakeholders.</span></p>
+<p><a href="/sustainability/sustainability-in-action" class="link-internal" target="_self">Find out more</a></p></p>
+</div>
+    </div>
+</div>
+
+<section class="c-resource container theme-secondary" style="background-color: rgba(0, 0, 0, 0.1);">
+    <div class="row c-resource__row ">
+
+            <div class="col-xs-12 col-lg-10 col-xl-8 c-resource__pdfs">
+                <p class="tag"><strong>Resources</strong></p>
+
+                <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 c-resource__item">
+                                <a href="/-/media/project/wpp/files/investors/2019/wpp-annual-report-2018-pdf.pdf">
+                                    <picture>
+                                        <source media="(min-width: 1921px)" srcset="/-/media/project/wpp/images/annual-report-2018/wpp-annual-report-2019.jpg?width=120&amp;height=160 200w" sizes="200px">
+                                        <source media="(min-width: 0px)" srcset="/-/media/project/wpp/images/annual-report-2018/wpp-annual-report-2019.jpg?width=95&amp;height=120 150w" sizes="150px">
+                                        <img src="/-/media/project/wpp/images/annual-report-2018/wpp-annual-report-2019.jpg?width=95&amp;height=120" />
+                                    </picture>
+                                </a>
+                            <a class="link-download" href="/-/media/project/wpp/files/investors/2019/wpp-annual-report-2018-pdf.pdf">
+                                <strong>Annual Report 2018</strong> <br>
+                                <em>PDF 11.8 MB</em>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 c-resource__item">
+                                <a href="/-/media/project/wpp/files/sustainability/sustainability-report-2018/wpp-sustainability-report-2018.pdf">
+                                    <picture>
+                                        <source media="(min-width: 1921px)" srcset="/-/media/project/wpp/images/sustainability/sustainability-report-2018-2019.jpg?width=120&amp;height=160 200w" sizes="200px">
+                                        <source media="(min-width: 0px)" srcset="/-/media/project/wpp/images/sustainability/sustainability-report-2018-2019.jpg?width=95&amp;height=120 150w" sizes="150px">
+                                        <img src="/-/media/project/wpp/images/sustainability/sustainability-report-2018-2019.jpg?width=95&amp;height=120" />
+                                    </picture>
+                                </a>
+                            <a class="link-download" href="/-/media/project/wpp/files/sustainability/sustainability-report-2018/wpp-sustainability-report-2018.pdf">
+                                <strong>WPP Sustainability Report 2018</strong> <br>
+                                <em>PDF 7.1 MB</em>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 c-resource__item">
+                                <a href="/-/media/project/wpp/files/sustainability/modern_slavery_statement_signed_2018.pdf">
+                                    <picture>
+                                        <source media="(min-width: 1921px)" srcset="/-/media/project/wpp/images/modernslaverystatement_signed-1.jpg?width=120&amp;height=160 200w" sizes="200px">
+                                        <source media="(min-width: 0px)" srcset="/-/media/project/wpp/images/modernslaverystatement_signed-1.jpg?width=95&amp;height=120 150w" sizes="150px">
+                                        <img src="/-/media/project/wpp/images/modernslaverystatement_signed-1.jpg?width=95&amp;height=120" />
+                                    </picture>
+                                </a>
+                            <a class="link-download" href="/-/media/project/wpp/files/sustainability/modern_slavery_statement_signed_2018.pdf">
+                                <strong>Modern Slavery Act statement</strong> <br>
+                                <em>PDF 183.3 KB</em>
+                            </a>
+                        </div>
+                </div>
+            </div>
+
+
+
+    </div>
+
+</section>
+
+
+
+
+
+<style>.lazyLoad{margin-top: 60px;}</style>
+
+        </main>
+
+<div class="c-overlay-box">
+    <div class="c-overlay-box__inner">
+        <span class="c-overlay-box__close js-overlay-box__close">Close message</span>
+        <div class="c-overlay-box__content">
+            <h1>Privacy Policy</h1>
+            <p>
+                We have updated our Privacy Notice for this website. Please
+                <a class="js-overlay-box__close" href="/Privacy-policy">review our Privacy Policy</a>.
+            </p>
+            <p>
+                <a class="button js-overlay-box__close" href="/Privacy-policy">Go to Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="cookie-bar">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-xs-12 col-md-3 col-lg-3">
+                <p><strong>Use of cookies on WPP.com</strong><br><br><p>This website uses cookies, some of which are necessary for the operation of the website and some of which are optional and designed to improve your experience. Using this tool will set a cookie to remember your preferences. You can review the cookies we use <a href="/cookies">here</a>.&nbsp;</p><br><br><a class="button" href="javascript:void(0)" id="cookie-bar-close">Save and close</a></p>
+            </div>
+
+            <div class="col-xs-12 col-md-3 col-lg-3">
+                <div class="cookie-enable col-xs-10 disabled" style="opacity: 1;">
+                    <label for="necessary-checkbox" class="col-xs-6">
+                        <strong>Necessary cookies</strong>
+                    </label>
+                    <div class="col-xs-6">
+                        <label class="switch switch--hidden">
+                            <input type="checkbox" id="necessary-checkbox" disabled="disabled" checked="checked" />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <p>These cookies are essential so that you can move around the website and use its features. Without these cookies, services you have asked for cannot be provided.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-3 col-lg-3">
+                <div class="cookie-enable col-xs-10" style="opacity: 1;">
+                    <label for="functional-checkbox" class="col-xs-6">
+                        <strong>Functional cookies</strong>
+                    </label>
+                    <div class="col-xs-6">
+                        <label class="switch ">
+                            <input type="checkbox" id="functional-checkbox" checked />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <p>These cookies allow the website to remember choices you make, provide enhanced, more personal features and to help provide services you have requested, such as watching a video.</p>
+            </div>
+
+            <div class="col-xs-12 col-md-3 col-lg-3">
+                <div class="cookie-enable col-xs-10" style="opacity: 1;">
+                    <label for="analytics-checkbox" class="col-xs-6">
+                        <strong>Performance cookies</strong>
+                    </label>
+                    <div class="col-xs-6">
+                        <label class="switch ">
+                            <input type="checkbox" id="analytics-checkbox" />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <p>These cookies help to improve the performance of <a href="https://www.wpp.com">WPP.com</a> by collecting and reporting information about how you use the website.</p>
+            </div>
+
+        </div>
+    </div>
+</div>    </div>
+
+    
+
+<footer class="site-footer">
+    <div class="container-single">
+        <div class="row">
+            
+
+            <div class="col-xs-12 col-lg-9 site-footer__nav-col">
+                <button id="js-site-footer__expand-btn" class="button button--expand site-footer__expand-btn">Useful links</button>
+
+                <div id="js-footer-nav" class="row footer-nav u-slide-up">
+                    
+                        <div class="col-xs-12 col-lg-4 u-col-left">
+                            <ul class="footer-nav__list">
+                                        <li class="footer-nav__list-item">
+                                            <a href="/privacy-policy" class="footer-nav__link " target="">
+                                                Privacy policy
+                                            </a>
+                                        </li>
+                                        <li class="footer-nav__list-item">
+                                            <a href="/terms-and-conditions" class="footer-nav__link " target="">
+                                                Terms &amp; conditions
+                                            </a>
+                                        </li>
+                                        <li class="footer-nav__list-item">
+                                            <a href="/cookies" class="footer-nav__link " target="">
+                                                Cookies
+                                            </a>
+                                        </li>
+                                        <li class="footer-nav__list-item">
+                                            <a href="/accessibility" class="footer-nav__link " target="">
+                                                Accessibility
+                                            </a>
+                                        </li>
+                                        <li class="footer-nav__list-item">
+                                            <a href="" class="footer-nav__link " target="">
+                                                
+                                            </a>
+                                        </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-lg-4 ">
+                            <ul class="footer-nav__list">
+                                        <li class="footer-nav__list-item">
+                                            <a href="/sustainability/modern-slavery-act-statement" class="footer-nav__link " target="">
+                                                Modern Slavery Act statement
+                                            </a>
+                                        </li>
+                                        <li class="footer-nav__list-item">
+                                            <a href="/site-map" class="footer-nav__link " target="">
+                                                Sitemap
+                                            </a>
+                                        </li>
+                                        <li class="footer-nav__list-item">
+                                            <a href="/contacts" class="footer-nav__link " target="">
+                                                Contacts
+                                            </a>
+                                        </li>
+                                        <li class="footer-nav__list-item">
+                                            <a href="/about/right-to-speak" class="footer-nav__link " target="">
+                                                Right to Speak
+                                            </a>
+                                        </li>
+
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-lg-4 ">
+                            <ul class="footer-nav__list">
+                                        <li class="footer-nav__list-item">
+                                            <a href="/about/faqs" class="footer-nav__link " target="">
+                                                FAQs
+                                            </a>
+                                        </li>
+                                        <li class="footer-nav__list-item">
+                                            <a href="https://inside.wpp.com/forms/login.aspx" class="footer-nav__link link-external" target="_blank">
+                                                WPP intranet
+                                            </a>
+                                        </li>
+
+                            </ul>
+                        </div>
+                </div>
+            </div>
+
+            <div class="col-xs-12 col-lg-3 u-col-right site-footer__right-col">
+                <ul class="c-social-profiles">
+                        <li class="c-social-profiles__list-item">
+                            <a href="https://www.facebook.com/WPP/" class="c-social-profiles__link c-social-profiles__link--facebook" target="_blank">
+                                <span class="c-social-profiles__icon"></span>
+                                <span class="u-hidden-visibly">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="c-social-profiles__list-item">
+                            <a href="https://twitter.com/wpp" class="c-social-profiles__link c-social-profiles__link--twitter" target="_blank">
+                                <span class="c-social-profiles__icon"></span>
+                                <span class="u-hidden-visibly">Twitter</span>
+                            </a>
+                        </li>
+                        <li class="c-social-profiles__list-item">
+                            <a href="https://www.instagram.com/wpp/" class="c-social-profiles__link c-social-profiles__link--instagram" target="_blank">
+                                <span class="c-social-profiles__icon"></span>
+                                <span class="u-hidden-visibly">Instagram</span>
+                            </a>
+                        </li>
+                        <li class="c-social-profiles__list-item">
+                            <a href="https://www.linkedin.com/company/wpp/" class="c-social-profiles__link c-social-profiles__link--linkedin" target="_blank">
+                                <span class="c-social-profiles__icon"></span>
+                                <span class="u-hidden-visibly">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="c-social-profiles__list-item">
+                            <a href="https://www.youtube.com/wpp" class="c-social-profiles__link c-social-profiles__link--youtube" target="_blank">
+                                <span class="c-social-profiles__icon"></span>
+                                <span class="u-hidden-visibly">YouTube</span>
+                            </a>
+                        </li>
+                </ul>
+
+                <p>&copy; WPP plc 1999-2020</p>
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+</footer>
+
+    <script src="/assets/js/build/script.min.js?modified=20200317085044"></script>
+
+    <script type="text/javascript">
+        function deleteAllCookies() {
+            var cookies = document.cookie.split(";");
+
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                var eqPos = cookie.indexOf("=");
+                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/;domain=www.wpp.com";
+            }
+        }
+    </script>
+</body>
+</html>

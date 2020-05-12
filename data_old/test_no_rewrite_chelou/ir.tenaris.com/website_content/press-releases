@@ -1,0 +1,2657 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"35893545"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Press Releases | Tenaris" />
+<meta property="og:site_name" content="Tenaris" />
+<link rel="canonical" href="https://ir.tenaris.com/press-releases/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://ir.tenaris.com/press-releases" />
+<meta property="og:title" content="Press Releases | Tenaris" />
+<meta property="og:description" content="The Investor Relations website contains information about Tenaris&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/g/files/knoqqb49371/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://ir.tenaris.com/press-releases" />
+<link rel="revision" href="https://ir.tenaris.com/press-releases" />
+
+    <title>Press Releases | Tenaris</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb49371/files/css/css_8zWKN6qWWUtDIuPxDLTytXs0iepG3wRB9x86fVDdjDc.css?q7iscb" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb49371/files/css/css_-30fVfjuxBvPcIuimins9d8TT9o7RONdXC82yAOlgVE.css?q7iscb" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb49371/files/css/css_Q39SFp2SIl4Ip7R2tlcCmt4g0o_g4nKmGIrIHOQkavI.css?q7iscb" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb49371/files/css/css_v1QuwLsTVbKA-XJuO72EaPAy3049PY7X-NutT1vkTp0.css?q7iscb" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb49371/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="//www.googletagmanager.com/gtag/js?id=UA-11903647-9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-11903647-9');
+</script>
+
+  </head>
+  <body class="body-sidebars-none nir-node nir-node--type-nir-landing-page nir-node--5816 path-node page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#main-menu">
+        Skip to main navigation
+      </a>
+    </div>
+    
+          
+
+<div id="app">
+  <div data-component="app-root">
+
+    <section class="custom-cursor" data-component="custom-cursor" data-index="exclude">
+      <div class="cursor" data-cursor-container="">
+        <!-- partial: Components/PageComponents/DragCursor Feb 24, 09:45:10  -->
+        <div class="drag-cursor" data-component="drag-cursor" data-cursor="drag">
+          <!-- partial: Components/General/Icon Feb 24, 09:45:10  --><span class="drag-cursor-icon icon" data-component="icon" data-icon="chevron-left"></span> <!-- / Components/General/Icon -->
+          <!-- partial: Components/General/Icon Feb 24, 09:45:10  --><span class="drag-cursor-icon icon" data-component="icon" data-icon="chevron-right"></span> <!-- / Components/General/Icon -->
+        </div><!-- / Components/PageComponents/DragCursor -->
+        <!-- partial: Components/PageComponents/InfoCursor Feb 24, 17:59:05  -->
+        <div class="info-cursor" data-component="info-cursor" data-cursor="video">
+          <p class="info-cursor-text global-button">OPEN VIDEO</p>
+        </div><!-- / Components/PageComponents/InfoCursor -->
+        <!-- partial: Components/PageComponents/InfoCursor Feb 24, 17:59:05  -->
+        <div class="info-cursor" data-component="info-cursor" data-cursor="scroll">
+          <p class="info-cursor-text global-button">SCROLL DOWN</p>
+        </div><!-- / Components/PageComponents/InfoCursor -->
+      </div>
+    </section><!-- / Components/PageComponents/CustomCursor -->
+
+
+    <section data-component="modal" class="modal">
+      <span class="modal-overlay" modal-overlay></span>
+      <div class="modal-type-vimeo" modal-type-vimeo>
+        <section data-component="modal-vimeo" class="modal-vimeo">
+          <button class="modal-close-button" modal-close-button>
+            <span class="modal-close-icon icon" data-component="icon" data-icon="close"></span>
+          </button>
+          <div class="modal-vimeo-iframe" vimeo-modal-iframe-wrapper></div>
+        </section>
+      </div>
+    </section>
+
+    <header data-component="site-header" class="site-header">
+      <nav data-component="site-navigation" class="site-navigation" data-scroll-component>
+        <div class="content-wrapper">
+          <div class="navigation-content">
+
+            <!-- First level navigation -->
+                          <div class="navigation-column column-main-nav" data-column-main-nav>
+                
+
+                  
+      <h3 class="visually-hidden" id="block-mainnav-menu">Main Nav</h3>
+    
+
+                        <ul class="main-navigation-list" main-navigation-list>
+
+
+              <li class="main-navigation-item " main-navigation-item>
+          
+          <button type="button" class="main-navigation-button global-title-04" main-navigation-button main-navigation-index="0">
+            Products &amp; Services
+          </button>
+
+                            </li>
+              <li class="main-navigation-item " main-navigation-item>
+          
+          <button type="button" class="main-navigation-button global-title-04" main-navigation-button main-navigation-index="1">
+            About us
+          </button>
+
+                            </li>
+              <li class="main-navigation-item " main-navigation-item>
+          
+          <button type="button" class="main-navigation-button global-title-04" main-navigation-button main-navigation-index="2">
+            Sustainability
+          </button>
+
+                            </li>
+              <li class="main-navigation-item investors-nav" main-navigation-item>
+          
+          <button type="button" class="main-navigation-button global-title-04" main-navigation-button main-navigation-index="3">
+            Investors
+          </button>
+
+                            </li>
+              <li class="main-navigation-item " main-navigation-item>
+          
+          <button type="button" class="main-navigation-button global-title-04" main-navigation-button main-navigation-index="4">
+            Careers
+          </button>
+
+                            </li>
+              <li class="main-navigation-item " main-navigation-item>
+          
+          <button type="button" class="main-navigation-button global-title-04" main-navigation-button main-navigation-index="5">
+            Newsroom
+          </button>
+
+                            </li>
+              <li class="main-navigation-item " main-navigation-item>
+          
+          <button type="button" class="main-navigation-button global-title-04" main-navigation-button main-navigation-index="6">
+            Contact us
+          </button>
+
+                            </li>
+      
+    </ul>
+  
+
+
+    
+              </div>
+            
+
+            <!-- Second level navigation -->
+            <div class="navigation-column column-secondary-nav" data-column-secondary-nav>
+              <ul class="secondary-navigation-list" secondary-navigation-list secondary-navigation-index="0">
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <button type="button" class="secondary-navigation-button global-button"
+                          secondary-navigation-button secondary-navigation-index="0">
+                    <span class="secondary-navigation-link-copy">OCTG</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="elipsis"><svg xmlns="http://www.w3.org/2000/svg"><g fill="#373C41" fill-rule="evenodd"><circle cx="1.5" cy="1.5" r="1.5"></circle><circle cx="7.5" cy="1.5" r="1.5"></circle><circle cx="13.5" cy="1.5" r="1.5"></circle></g></svg></span>
+                  </button>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/rig-direct/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="1">
+                    <span class="secondary-navigation-link-copy">Rig Direct&#174;</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/offshore-line-pipe/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="2">
+                    <span class="secondary-navigation-link-copy">Offshore Line Pipe</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/onshore-line-pipe/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="3">
+                    <span class="secondary-navigation-link-copy">Onshore Line Pipe</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/artificial-lift/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="4">
+                    <span class="secondary-navigation-link-copy">ArtificIal Lift</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/coiled-tubing/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="5">
+                    <span class="secondary-navigation-link-copy">Coiled Tubing</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/power-generation/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="6">
+                    <span class="secondary-navigation-link-copy">Power Generation</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/hydrocarbon-processing/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="7">
+                    <span class="secondary-navigation-link-copy">Hydrocarbon Processing</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/industrial-and-mechanical/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="8">
+                    <span class="secondary-navigation-link-copy">Industrial and Mechanical</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/automotive/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="9">
+                    <span class="secondary-navigation-link-copy">Automotive</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/products-and-services/qhse-certifications/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="10">
+                    <span class="secondary-navigation-link-copy">QHSE Certifications</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+              </ul>
+              <ul class="secondary-navigation-list" secondary-navigation-list secondary-navigation-index="1">
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/about-us/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="0">
+                    <span class="secondary-navigation-link-copy">Who We Are</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/about-us/leadership/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="1">
+                    <span class="secondary-navigation-link-copy">Leadership</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+              </ul>
+              <ul class="secondary-navigation-list" secondary-navigation-list secondary-navigation-index="2">
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/sustainability/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="0">
+                    <span class="secondary-navigation-link-copy">Sustaining Values</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/sustainability/health-and-safety/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="1">
+                    <span class="secondary-navigation-link-copy">Health &amp; Safety</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/sustainability/environment/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="2">
+                    <span class="secondary-navigation-link-copy">Environment</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <button type="button" class="secondary-navigation-button global-button"
+                          secondary-navigation-button secondary-navigation-index="3">
+                    <span class="secondary-navigation-link-copy">Innovation</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="elipsis"><svg xmlns="http://www.w3.org/2000/svg"><g fill="#373C41" fill-rule="evenodd"><circle cx="1.5" cy="1.5" r="1.5"></circle><circle cx="7.5" cy="1.5" r="1.5"></circle><circle cx="13.5" cy="1.5" r="1.5"></circle></g></svg></span>
+                  </button>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <button type="button" class="secondary-navigation-button global-button"
+                          secondary-navigation-button secondary-navigation-index="4">
+                    <span class="secondary-navigation-link-copy">Community Relations</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="elipsis"><svg xmlns="http://www.w3.org/2000/svg"><g fill="#373C41" fill-rule="evenodd"><circle cx="1.5" cy="1.5" r="1.5"></circle><circle cx="7.5" cy="1.5" r="1.5"></circle><circle cx="13.5" cy="1.5" r="1.5"></circle></g></svg></span>
+                  </button>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/sustainability/governance-and-ethics/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="5">
+                    <span class="secondary-navigation-link-copy">Governance &amp; ethics</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="secondary-navigation-list" secondary-navigation-list secondary-navigation-index="3">
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="0">
+                    <span class="secondary-navigation-link-copy">Overview</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="/financial-and-sustainability-reports/reports" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="2">
+                    <span class="secondary-navigation-link-copy">Reports</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="/press-releases" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="3">
+                    <span class="secondary-navigation-link-copy">Press Releases</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="/events-and-presentations" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="6">
+                    <span class="secondary-navigation-link-copy">Events &amp; Presentations</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="/stock-information/stock-quote-and-chart" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="4">
+                    <span class="secondary-navigation-link-copy">Stock</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/sustainability/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="5">
+                    <span class="secondary-navigation-link-copy">Sustainability</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="/sp/informacion-corporativa" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="8">
+                    <span class="secondary-navigation-link-copy">Secci&#243;n en Espa&#241;ol</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="secondary-navigation-list" secondary-navigation-list secondary-navigation-index="4">
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/careers/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="0">
+                    <span class="secondary-navigation-link-copy">Working at Tenaris</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/careers/starting-your-career/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="1">
+                    <span class="secondary-navigation-link-copy">Starting Your Career</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/careers/professionals/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="2">
+                    <span class="secondary-navigation-link-copy">Professionals</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/careers/manufacturing-jobs/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="3">
+                    <span class="secondary-navigation-link-copy">Manufacturing Jobs</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/careers/tenarisuniversity/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="4">
+                    <span class="secondary-navigation-link-copy">TenarisUniversity</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+              </ul>
+              <ul class="secondary-navigation-list" secondary-navigation-list secondary-navigation-index="5">
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/newsroom/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="0">
+                    <span class="secondary-navigation-link-copy">Latest News</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+              </ul>
+              <ul class="secondary-navigation-list" secondary-navigation-list secondary-navigation-index="6">
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/contact/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="0">
+                    <span class="secondary-navigation-link-copy">Get in Touch</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/contact/tenaris-around-the-world/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="1">
+                    <span class="secondary-navigation-link-copy">Tenaris Around the World</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+                <li class="secondary-navigation-item" secondary-navigation-item>
+                  <a href="https://www.tenaris.com/en/contact/licensees-network/" class="secondary-navigation-link global-button" secondary-navigation-link
+                     secondary-navigation-index="2">
+                    <span class="secondary-navigation-link-copy">Licensees Network</span>
+                    <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+
+
+            <!-- Third level navigation -->
+            <div class="navigation-column column-tertiary-nav" data-column-tertiary-nav>
+              <ul class="tertiary-navigation-list" tertiary-navigation-list secondary-navigation-index="0">
+                <li class="tertiary-navigation-item" tertiary-navigation-item>
+
+                  <div class="main-navigation-image-wrapper">
+                    <span class="main-navigation-image-overlay"></span>
+                    <span class="main-navigation-image center-background-image" style="background-image:url(/sites/g/files/knoqqb49371/themes/site/nir_pid2319/dist/images/nav/product.jpg)" main-navigation-image></span>
+                                      </div>
+
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <button type="button" class="secondary-navigation-button global-button"
+                              secondary-navigation-index="0" secondary-navigation-button
+                              data-mobile-button="true">
+                        <span class="secondary-navigation-link-copy">OCTG</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="elipsis"><svg xmlns="http://www.w3.org/2000/svg"><g fill="#373C41" fill-rule="evenodd"><circle cx="1.5" cy="1.5" r="1.5"></circle><circle cx="7.5" cy="1.5" r="1.5"></circle><circle cx="13.5" cy="1.5" r="1.5"></circle></g></svg></span>
+
+
+
+                      </button>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="0">
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">View All OCTG</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/unconventional/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Unconventional</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/deepwater/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Deepwater</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/shallow-water/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Shallow water</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/hp-ht-deep-wells/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">HP/HT &amp; deep wells</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/horizontal-extended-reach-wells/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Horizontal &amp; Extended Reach Wells</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/casing-while-drilling/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Casing While Drilling</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/geothermal/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Geothermal</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/thermal-sagd-css/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Thermal (SAGD &amp; CSS)</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/mature-fields/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Mature fields</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/products-and-services/octg/workstrings/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Workstrings</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/rig-direct/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="1">
+                        <span class="secondary-navigation-link-copy">Rig Direct&#174;</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="1">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/offshore-line-pipe/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="2">
+                        <span class="secondary-navigation-link-copy">Offshore Line Pipe</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="2">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/onshore-line-pipe/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="3">
+                        <span class="secondary-navigation-link-copy">Onshore Line Pipe</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="3">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/artificial-lift/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="4">
+                        <span class="secondary-navigation-link-copy">ArtificIal Lift</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="4">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/coiled-tubing/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="5">
+                        <span class="secondary-navigation-link-copy">Coiled Tubing</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="5">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/power-generation/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="6">
+                        <span class="secondary-navigation-link-copy">Power Generation</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="6">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/hydrocarbon-processing/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="7">
+                        <span class="secondary-navigation-link-copy">Hydrocarbon Processing</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="7">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/industrial-and-mechanical/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="8">
+                        <span class="secondary-navigation-link-copy">Industrial and Mechanical</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="8">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/automotive/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="9">
+                        <span class="secondary-navigation-link-copy">Automotive</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="9">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/products-and-services/qhse-certifications/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="10">
+                        <span class="secondary-navigation-link-copy">QHSE Certifications</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="0" tertiary-navigation-index="10">
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="tertiary-navigation-list" tertiary-navigation-list secondary-navigation-index="1">
+                <li class="tertiary-navigation-item" tertiary-navigation-item>
+
+                  <div class="main-navigation-image-wrapper">
+                    <span class="main-navigation-image-overlay"></span>
+
+                    <span class="main-navigation-image center-background-image"
+                          style="background-image:url(/sites/g/files/knoqqb49371/themes/site/nir_pid2319/dist/images/nav/about.jpg)" main-navigation-image></span>
+                  </div>
+
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/about-us/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="0">
+                        <span class="secondary-navigation-link-copy">Who We Are</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="1" tertiary-navigation-index="0">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/about-us/leadership/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="1">
+                        <span class="secondary-navigation-link-copy">Leadership</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="1" tertiary-navigation-index="1">
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="tertiary-navigation-list" tertiary-navigation-list secondary-navigation-index="2">
+                <li class="tertiary-navigation-item" tertiary-navigation-item>
+
+                  <div class="main-navigation-image-wrapper">
+                    <span class="main-navigation-image-overlay"></span>
+
+                    <span class="main-navigation-image center-background-image"
+                          style="background-image:url(/sites/g/files/knoqqb49371/themes/site/nir_pid2319/dist/images/nav/sustainability.jpg)" main-navigation-image></span>
+                  </div>
+
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/sustainability/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="0">
+                        <span class="secondary-navigation-link-copy">Sustaining Values</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="2" tertiary-navigation-index="0">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/sustainability/health-and-safety/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="1">
+                        <span class="secondary-navigation-link-copy">Health &amp; Safety</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="2" tertiary-navigation-index="1">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/sustainability/environment/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="2">
+                        <span class="secondary-navigation-link-copy">Environment</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="2" tertiary-navigation-index="2">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <button type="button" class="secondary-navigation-button global-button"
+                              secondary-navigation-index="3" secondary-navigation-button
+                              data-mobile-button="true">
+                        <span class="secondary-navigation-link-copy">Innovation</span>
+                        $<span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="elipsis"><svg xmlns="http://www.w3.org/2000/svg"><g fill="#373C41" fill-rule="evenodd"><circle cx="1.5" cy="1.5" r="1.5"></circle><circle cx="7.5" cy="1.5" r="1.5"></circle><circle cx="13.5" cy="1.5" r="1.5"></circle></g></svg></span>
+
+
+
+                      </button>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="2" tertiary-navigation-index="3">
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/sustainability/innovation/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">How We Innovate</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/sustainability/innovation/dopeless-technology/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Dopeless&#174; technology</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <button type="button" class="secondary-navigation-button global-button"
+                              secondary-navigation-index="4" secondary-navigation-button
+                              data-mobile-button="true">
+                        <span class="secondary-navigation-link-copy">Community Relations</span>
+                        $<span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="elipsis"><svg xmlns="http://www.w3.org/2000/svg"><g fill="#373C41" fill-rule="evenodd"><circle cx="1.5" cy="1.5" r="1.5"></circle><circle cx="7.5" cy="1.5" r="1.5"></circle><circle cx="13.5" cy="1.5" r="1.5"></circle></g></svg></span>
+
+
+
+                      </button>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="2" tertiary-navigation-index="4">
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/sustainability/community/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Community</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                      <li class="tertiary-navigation-content-item" tertiary-navigation-content-item>
+                        <a href="https://www.tenaris.com/en/sustainability/community/education/" class="tertiary-navigation-link global-button">
+                          <span class="tertiary-navigation-link-copy">Education</span>
+                          <span class="tertiary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/sustainability/governance-and-ethics/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="5">
+                        <span class="secondary-navigation-link-copy">Governance &amp; ethics</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="2" tertiary-navigation-index="5">
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="tertiary-navigation-list" tertiary-navigation-list secondary-navigation-index="3">
+                <li class="tertiary-navigation-item" tertiary-navigation-item>
+
+                  <div class="main-navigation-image-wrapper">
+                    <span class="main-navigation-image-overlay"></span>
+
+                    <span class="main-navigation-image center-background-image"
+                          style="background-image:url(/sites/g/files/knoqqb49371/themes/site/nir_pid2319/dist/images/nav/ir.jpg)" main-navigation-image></span>
+                  </div>
+
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="0">
+                        <span class="secondary-navigation-link-copy">Overview</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="3" tertiary-navigation-index="0">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="/financial-and-sustainability-reports/reports" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="1">
+                        <span class="secondary-navigation-link-copy">Reports</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="3" tertiary-navigation-index="1">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="/press-releases" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="3">
+                        <span class="secondary-navigation-link-copy">Press Releases</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="3" tertiary-navigation-index="3">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="/events-and-presentations" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="6">
+                        <span class="secondary-navigation-link-copy">Events &amp; Presentations</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="3" tertiary-navigation-index="6">
+                    </ul>
+                  </div>
+
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="/stock-information/stock-quote-and-chart" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="4">
+                        <span class="secondary-navigation-link-copy">Stock</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="3" tertiary-navigation-index="4">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/sustainability/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="5">
+                        <span class="secondary-navigation-link-copy">Sustainability</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="3" tertiary-navigation-index="5">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="/sp/informacion-corporativa" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="8">
+                        <span class="secondary-navigation-link-copy">Secci&#243;n en Espa&#241;ol</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="3" tertiary-navigation-index="8">
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="tertiary-navigation-list" tertiary-navigation-list secondary-navigation-index="4">
+                <li class="tertiary-navigation-item" tertiary-navigation-item>
+
+                  <div class="main-navigation-image-wrapper">
+                    <span class="main-navigation-image-overlay"></span>
+
+                    <span class="main-navigation-image center-background-image"
+                          style="background-image:url(/sites/g/files/knoqqb49371/themes/site/nir_pid2319/dist/images/nav/career.jpg)" main-navigation-image></span>
+                  </div>
+
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/careers/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="0">
+                        <span class="secondary-navigation-link-copy">Working at Tenaris</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="4" tertiary-navigation-index="0">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/careers/starting-your-career/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="1">
+                        <span class="secondary-navigation-link-copy">Starting Your Career</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="4" tertiary-navigation-index="1">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/careers/professionals/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="2">
+                        <span class="secondary-navigation-link-copy">Professionals</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="4" tertiary-navigation-index="2">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/careers/manufacturing-jobs/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="3">
+                        <span class="secondary-navigation-link-copy">Manufacturing Jobs</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="4" tertiary-navigation-index="3">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/careers/tenarisuniversity/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="4">
+                        <span class="secondary-navigation-link-copy">TenarisUniversity</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="4" tertiary-navigation-index="4">
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="tertiary-navigation-list" tertiary-navigation-list secondary-navigation-index="5">
+                <li class="tertiary-navigation-item" tertiary-navigation-item>
+
+                  <div class="main-navigation-image-wrapper">
+                    <span class="main-navigation-image-overlay"></span>
+
+                    <span class="main-navigation-image center-background-image"
+                          style="background-image:url(/sites/g/files/knoqqb49371/themes/site/nir_pid2319/dist/images/nav/newsroom.jpg)" main-navigation-image></span>
+                  </div>
+
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/newsroom/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="0">
+                        <span class="secondary-navigation-link-copy">Latest News</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="5" tertiary-navigation-index="0">
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <ul class="tertiary-navigation-list" tertiary-navigation-list secondary-navigation-index="6">
+                <li class="tertiary-navigation-item" tertiary-navigation-item>
+
+                  <div class="main-navigation-image-wrapper">
+                    <span class="main-navigation-image-overlay"></span>
+
+                    <span class="main-navigation-image center-background-image"
+                          style="background-image:url(/sites/g/files/knoqqb49371/themes/site/nir_pid2319/dist/images/nav/contact.jpg)" main-navigation-image></span>
+                  </div>
+
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/contact/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="0">
+                        <span class="secondary-navigation-link-copy">Get in Touch</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="6" tertiary-navigation-index="0">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/contact/tenaris-around-the-world/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="1">
+                        <span class="secondary-navigation-link-copy">Tenaris Around the World</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="6" tertiary-navigation-index="1">
+                    </ul>
+                  </div>
+                  <div>
+                    <div class="mobile-secondary-navigation-title-wrapper">
+                      <a href="https://www.tenaris.com/en/contact/licensees-network/" class="secondary-navigation-link global-button"
+                         secondary-navigation-index="2">
+                        <span class="secondary-navigation-link-copy">Licensees Network</span>
+                        <span class="secondary-navigation-link-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+
+
+
+                      </a>
+                    </div>
+                    <ul class="tertiary-navigation-content" tertiary-navigation-content
+                        secondary-navigation-index="6" tertiary-navigation-index="2">
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+
+          <div class="navigation-button-wrapper">
+                            <div class="region region-datasheet-m">
+    
+
+                  
+      <h3 class="visually-hidden" id="block-datasheets-2-menu">Datasheets</h3>
+    
+
+                        <div class="text-button text-button-dark-gray-filled" data-component="text-button">
+
+              <a href="http://dcp.tenaris.com/" target="_blank"  class="button-link" data-no-cursor>
+          <span class="button-copy global-button">Datasheets</span>
+          <div class="button-icon-wrapper">
+            <span class="button-icon icon" data-component="icon" data-icon="arrow"></span>
+          </div>
+        </a>
+        <span class="button-background"></span>
+
+                  
+      
+    </div>
+  
+
+
+    
+  </div>
+
+            
+            <div class="text-button" data-component="text-button">
+              <a href="https://www.tenaris.com/en/search/" target=""  class="button-link" data-no-cursor>
+                <span class="button-copy global-button">Search</span>
+                <div class="button-icon-wrapper">
+                  <span class="button-icon icon" data-component="icon" data-icon="search"></span>
+                </div>
+              </a>
+              <span class="button-background"></span>
+            </div>
+          </div>
+
+                      
+
+                  
+      <h3 class="visually-hidden" id="block-socialicons-menu">Social icons</h3>
+    
+
+                              <ul data-block-uuid="42fddc6a-f5c5-4819-90f2-98fd7d891d32" class="navigation-social-media-list">
+    
+              <li class="social-media-item">
+
+          <a href="https://www.instagram.com/tenaris" target="_blank" rel="" class="social-media-link">
+            <span class="social-media-icon icon" data-component="icon" data-icon="instagram"></span>
+          </a>
+
+                            </li>
+              <li class="social-media-item">
+
+          <a href="https://www.facebook.com/TenarisEvents/posts/" target="_blank" rel="" class="social-media-link">
+            <span class="social-media-icon icon" data-component="icon" data-icon="facebook"></span>
+          </a>
+
+                            </li>
+              <li class="social-media-item">
+
+          <a href="https://twitter.com/tenaris" target="_blank" rel="" class="social-media-link">
+            <span class="social-media-icon icon" data-component="icon" data-icon="twitter"></span>
+          </a>
+
+                            </li>
+              <li class="social-media-item">
+
+          <a href="https://www.youtube.com/user/tenaris" target="_blank" rel="" class="social-media-link">
+            <span class="social-media-icon icon" data-component="icon" data-icon="youtube"></span>
+          </a>
+
+                            </li>
+              <li class="social-media-item">
+
+          <a href="https://www.linkedin.com/company/tenaris" target="_blank" rel="" class="social-media-link">
+            <span class="social-media-icon icon" data-component="icon" data-icon="linkedin"></span>
+          </a>
+
+                            </li>
+      
+    </ul>
+  
+
+
+    
+                  </div>
+      </nav>
+
+
+
+      <div class="header-wrapper" header-main-wrapper>
+        <span class="header-wrapper-background"></span>
+        <div class="menu-back-wrapper">
+          <div class="menu-back-container">
+            <button class="menu-back-button" data-menu-back-button>
+              <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </button>
+            <span class="menu-page-title global-title-04" data-page-name></span>
+          </div>
+        </div>
+
+        <div class="logo-and-section-wrapper">
+          <h1 class="logo">
+            <a href="https://www.tenaris.com/en" class="logo-link">
+              <span class="logo-icon icon" data-component="icon" data-icon="logo"></span>
+              <span class="logo-icon-filled icon" data-component="icon" data-icon="logo-filled"></span>
+            </a>
+          </h1>
+          <div class="section-title">
+            <span class="section-title-line"></span>
+            <span class=" section-title-copy global-body-03">Investors</span>
+          </div>
+        </div>
+
+        <nav class="navigation">
+                      
+
+                  
+      <h3 class="visually-hidden" id="block-datasheets-menu">Datasheets</h3>
+    
+
+                    
+                <a href="http://dcp.tenaris.com/" target="" rel="" class="navigation-link global-button">Datasheets</a>
+                
+  
+
+
+    
+          
+                        <div class="region region-stock-sh">
+    <div id="block-stockquote-2" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--15956 block--stock-sh--market-data-block__stock-quote block--stock-sh--market-data-block__stock-quote--15956 block--d8632398-0230-4fe4-af2c-ca650f08e02d block--d8632398-0230-4fe4-af2c-ca650f08e02d--15956 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+    
+      <div class='stock-quote stock-quote__short'>
+    <div class="quote-wrapper">
+                                                                            :
+                                              </a>
+            </div>
+</div>
+
+
+
+  </div>
+
+  </div>
+
+          
+          <div class="search-wrapper">
+            <form id="head-search" action="https://www.tenaris.com/en/search/" class="is-hidden">
+              <input type="text" class="search-input global-body-03 is-active" name="search" placeholder="Search" search-url="https://www.tenaris.com/en/search/" search-input />
+            </form>
+            <button type="button" class="search-button" search-button>
+              <span class="search-icon icon" data-component="icon" data-icon="search"><svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg"><path d="M16.411 16.579l-4.515-4.695a6.36 6.36 0 0 0 1.865-4.503A6.388 6.388 0 0 0 7.381 1 6.388 6.388 0 0 0 1 7.38a6.388 6.388 0 0 0 6.38 6.381 6.351 6.351 0 0 0 4.067-1.468L15.973 17m-8.592-3.846A5.78 5.78 0 0 1 1.608 7.38 5.78 5.78 0 0 1 7.38 1.608a5.78 5.78 0 0 1 5.773 5.773 5.78 5.78 0 0 1-5.773 5.773z" stroke="currentColor"></path></svg></span>
+              <span class="arrow-icon is-hidden icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </button>
+          </div>
+
+          <button type="button" class="menu-button" header-menu-button>
+            <div class="menu-line-wrapper">
+              <span class="menu-line-top"></span>
+              <span class="menu-line-middle"></span>
+              <span class="menu-line-bottom"></span>
+            </div>
+          </button>
+        </nav>
+
+      </div>
+
+      <span class="sitemap-object" data-sitemap="[
+
+
+    {&quot;name&quot;:&quot;Products &amp; Services&quot;,&quot;image&quot;:&quot;/media/451itbms/navigation-01.jpg?anchor=center&amp;mode=crop&amp;rnd=132168290967300000&quot;,&quot;url&quot;:null,&quot;secondary-navigation&quot;:[{&quot;name&quot;:&quot;OCTG&quot;,&quot;image&quot;:null,&quot;url&quot;:null,&quot;tertiary-navigation&quot;:[{&quot;name&quot;:&quot;View All OCTG&quot;,&quot;url&quot;:&quot;/en/products-and-services/octg/&quot;},{&quot;name&quot;:&quot;Unconventionals&quot;,&quot;url&quot;:&quot;/en/products-and-services/octg/unconventional/&quot;},{&quot;name&quot;:&quot;Conventionals&quot;,&quot;url&quot;:&quot;&quot;},{&quot;name&quot;:&quot;Deepwater&quot;,&quot;url&quot;:&quot;&quot;},{&quot;name&quot;:&quot;Shallow Water&quot;,&quot;url&quot;:&quot;&quot;},{&quot;name&quot;:&quot;HP/HT Wells&quot;,&quot;url&quot;:&quot;&quot;},{&quot;name&quot;:&quot;Casing While Drilling&quot;,&quot;url&quot;:&quot;&quot;},{&quot;name&quot;:&quot;Horizontal &amp; Extended Reach Wells&quot;,&quot;url&quot;:&quot;#&quot;},{&quot;name&quot;:&quot;Thermal&quot;,&quot;url&quot;:&quot;&quot;},{&quot;name&quot;:&quot;Geothermal&quot;,&quot;url&quot;:&quot;&quot;},{&quot;name&quot;:&quot;Workstrings&quot;,&quot;url&quot;:&quot;&quot;}]},{&quot;name&quot;:&quot;Rig Direct&#174;&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/rig-direct/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Offshore Line Pipe&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/offshore-line-pipe/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Onshore Line Pipe&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/onshore-line-pipe/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Artifical Lift&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/sucker-rods/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Coiled Tubing&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/coiled-tubing/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Power Generation&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/power-generation/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Hydrocarbon Processing&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/hydrocarbon-processing/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Industrial and Mechanical&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/industrial-and-mechanical/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Automotive&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/automotive/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;QHSE Certifications&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/products-and-services/qhse-certifications/&quot;,&quot;tertiary-navigation&quot;:[]}]},
+
+
+    {&quot;name&quot;:&quot;About us&quot;,&quot;image&quot;:&quot;/media/11gdlc0b/navigation-02.jpg?anchor=center&amp;mode=crop&amp;rnd=132168290908630000&quot;,&quot;url&quot;:null,&quot;secondary-navigation&quot;:[{&quot;name&quot;:&quot;Who We Are&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/about-us/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Leadership&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/about-us/leadership/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Business Ethics&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/about-us/business-ethics/&quot;,&quot;tertiary-navigation&quot;:[]}]},
+
+
+    {&quot;name&quot;:&quot;Sustainability&quot;,&quot;image&quot;:&quot;/media/e5bf2lg3/navigation-03.jpg?anchor=center&amp;mode=crop&amp;rnd=132182836382870000&quot;,&quot;url&quot;:null,&quot;secondary-navigation&quot;:[{&quot;name&quot;:&quot;Sustaining Values&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/sustainability/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Health &amp; Safety&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/sustainability/health-and-safety/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Environment&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/sustainability/environment/&quot;,&quot;tertiary-navigation&quot;:[]},
+
+    {&quot;name&quot;:&quot;Innovation&quot;,&quot;image&quot;:null,&quot;url&quot;:null,&quot;tertiary-navigation&quot;:[
+    {&quot;name&quot;:&quot;Innovation&quot;,&quot;url&quot;:&quot;&quot;},
+    {&quot;name&quot;:&quot;Dopeless&quot;,&quot;url&quot;:&quot;/en/sustainability/innovation/dopeless-technology/&quot;},
+    {&quot;name&quot;:&quot;Automation&quot;,&quot;url&quot;:&quot;&quot;},
+    {&quot;name&quot;:&quot;Advance Metallurgy&quot;,&quot;url&quot;:&quot;&quot;},
+    {&quot;name&quot;:&quot;String Design&quot;,&quot;url&quot;:&quot;&quot;}
+    ]},
+
+    {&quot;name&quot;:&quot;Community Relations&quot;,&quot;image&quot;:null,&quot;url&quot;:null,&quot;tertiary-navigation&quot;:[{&quot;name&quot;:&quot;Education&quot;,&quot;url&quot;:&quot;/en/community/education/&quot;},{&quot;name&quot;:&quot;Arts&quot;,&quot;url&quot;:&quot;&quot;},{&quot;name&quot;:&quot;Sports&quot;,&quot;url&quot;:&quot;&quot;}]}]},
+
+{&quot;name&quot;:&quot;Investors&quot;,&quot;image&quot;:&quot;/media/z4gdw2e2/navigation-07.jpg?anchor=center&amp;mode=crop&amp;rnd=132247893470230000&quot;,&quot;url&quot;:null,&quot;secondary-navigation&quot;:[{&quot;name&quot;:&quot;Overview&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/investor-relations&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Reports&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/financial-and-sustainability-reports/reports&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Press Releases&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/press-releases&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Events &amp; Presentations&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/events-and-presentations&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Stock&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/stock-information/stock-quote-and-chart&quot;,&quot;tertiary-navigation&quot;:[]},
+
+
+    {&quot;name&quot;:&quot;Sustainability&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Events &amp; Presentations&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Analyst Coverage&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Secci&#243;n en Espa&#241;ol&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;&quot;,&quot;tertiary-navigation&quot;:[]}]},
+
+    {&quot;name&quot;:&quot;Careers&quot;,&quot;image&quot;:&quot;/media/3teb1n4v/navigation-04.jpg?anchor=center&amp;mode=crop&amp;rnd=132168290943430000&quot;,&quot;url&quot;:null,&quot;secondary-navigation&quot;:[{&quot;name&quot;:&quot;Working at Tenaris&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/careers/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Manufacturing Jobs&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/careers/manufacturing-jobs/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Starting Your Career&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/careers/starting-your-career/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Professionals&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/careers/professionals/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;TenarisUniversity&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/careers/tenaris-university/&quot;,&quot;tertiary-navigation&quot;:[]}]},{&quot;name&quot;:&quot;Media&quot;,&quot;image&quot;:&quot;/media/l5rnzivz/navigation-06.jpg?anchor=center&amp;mode=crop&amp;rnd=132168290926730000&quot;,&quot;url&quot;:null,&quot;secondary-navigation&quot;:[{&quot;name&quot;:&quot;Media Kit&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/media/media-kit/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;News Listing&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/media/news/&quot;,&quot;tertiary-navigation&quot;:[]}]},{&quot;name&quot;:&quot;Contact us&quot;,&quot;image&quot;:&quot;/media/kgtpdsrf/navigation-05.jpg?anchor=center&amp;mode=crop&amp;rnd=132168290928770000&quot;,&quot;url&quot;:null,&quot;secondary-navigation&quot;:[{&quot;name&quot;:&quot;Get in Touch&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/contact/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Tenaris Around the World&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/contact/tenaris-around-the-world/&quot;,&quot;tertiary-navigation&quot;:[]},{&quot;name&quot;:&quot;Licensees Network&quot;,&quot;image&quot;:null,&quot;url&quot;:&quot;/en/contact/licensees-network/&quot;,&quot;tertiary-navigation&quot;:[]}]}]"></span>
+
+    </header>
+
+
+
+    <section data-component="simple-hero" class="simple-hero" data-scroll-component>
+      <div class="simple-hero-wrapper">
+        <div class="hero-background-wrapper">
+          <span class="background-overlay"></span>
+          <span class="background-image"></span>
+        </div>
+        <div class="hero-content">
+          <div class="content-wrapper">
+            <span class="hero-content-line" simple-hero-line></span>
+            <div class="hero-content-title-mask">
+              <div class="hero-content-title global-title-02" simple-hero-title>
+                                  Press Releases
+                              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+          <section data-component="" class="has-white-background idm-nav-wrapper">
+        <div class="content-wrapper" data-content-wrapper="">
+          <div class="idm-nav-toggle"><a href="/" class="toggle">&#9776; IR Menu</a></div>
+          <nav class="idm-nav idm-nav-h" role="navigation">
+            
+
+                  
+      <h3 class="visually-hidden" id="block-irnav-menu">IR Nav</h3>
+    
+
+                              <ul data-block-uuid="81e4bad4-a960-483a-9c8f-b9ddecd98bbc" class="idm-menu">
+    
+
+              
+        <li class="idm-menu-item">
+          <a href="/investor-relations" target="" rel="" title="Corporate Profile" data-drupal-link-system-path="node/5806">Overview</a>
+                  </li>
+              
+        <li class="idm-menu-item has-children">
+          <a href="/financial-and-sustainability-reports/reports" target="" rel="" data-drupal-link-system-path="node/5881">Financial and Sustainability Reports</a>
+                                    <ul class="idm-menu idm-sub-menu">
+    
+
+              
+        <li class="idm-menu-item">
+          <a href="/financial-and-sustainability-reports/reports" target="" rel="" data-drupal-link-system-path="node/5881">Reports</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/financial-and-sustainability-reports/quarterly-results" data-drupal-link-system-path="node/5986">Quarterly Results</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/financial-and-sustainability-reports/sec-filings" data-drupal-link-system-path="node/5876">SEC Filings</a>
+                  </li>
+      
+    </ul>
+  
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/press-releases" data-drupal-link-system-path="node/5816" class="is-active">Press Releases</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/events-and-presentations" target="" rel="" data-drupal-link-system-path="node/5826">Events &amp; Presentations</a>
+                  </li>
+              
+        <li class="idm-menu-item has-children">
+          <a href="/stock-information/stock-quote-and-chart" target="" rel="" data-drupal-link-system-path="node/5916">Stock</a>
+                                    <ul class="idm-menu idm-sub-menu">
+    
+
+              
+        <li class="idm-menu-item">
+          <a href="/stock-information/stock-quote-and-chart" target="" rel="" data-drupal-link-system-path="node/5916">Stock Quote &amp; Chart</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/stock-information/investment-calculator" data-drupal-link-system-path="node/5926">Investment Calculator</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/stock-information/dividend-history" data-drupal-link-system-path="node/5931">Dividend History</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/stock-information/adr-program" target="" rel="" data-drupal-link-system-path="node/12831">ADR Program</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/analyst-coverage" data-drupal-link-system-path="node/5896">Analyst Coverage</a>
+                  </li>
+      
+    </ul>
+  
+                  </li>
+              
+        <li class="idm-menu-item has-children">
+          <a href="https://www.tenaris.com/en/sustainability/" target="_new" rel="">Sustainability</a>
+                                    <ul class="idm-menu idm-sub-menu">
+    
+
+              
+        <li class="idm-menu-item">
+          <a href="https://www.tenaris.com/en/sustainability/" target="_new" rel="">Sustaining Values </a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="https://www.tenaris.com/en/sustainability/health-and-safety/" target="_new" rel="">Health &amp; Safety </a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="https://www.tenaris.com/en/sustainability/environment/" target="_new" rel="">Environment </a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="https://www.tenaris.com/en/sustainability/innovation/" target="_new" rel="">Innovation </a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="https://www.tenaris.com/en/sustainability/community/" target="_new" rel="">Community Relations </a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="https://www.tenaris.com/en/sustainability/governance-and-ethics/" target="_new" rel="">Governance &amp; ethics </a>
+                  </li>
+      
+    </ul>
+  
+                  </li>
+              
+        <li class="idm-menu-item has-children">
+          <a href="/sp/informacion-corporativa" target="" rel="" data-drupal-link-system-path="node/14916">Sección en Español</a>
+                                    <ul class="idm-menu idm-sub-menu">
+    
+
+              
+        <li class="idm-menu-item">
+          <a href="/sp/informacion-corporativa" target="" rel="" data-drupal-link-system-path="node/14916">Información Corporativa</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/sp/informes-anuales" target="" rel="" data-drupal-link-system-path="node/14921">Informes Anuales</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/sp/informe-semestral" target="" rel="" data-drupal-link-system-path="node/14926">Informe Semestral</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/sp/comunicados-de-prensa" target="" rel="" data-drupal-link-system-path="node/14931">Comunicados de Prensa</a>
+                  </li>
+              
+        <li class="idm-menu-item">
+          <a href="/sp/estados-financieros" target="" rel="" data-drupal-link-system-path="node/14936">Estados Financieros</a>
+                  </li>
+      
+    </ul>
+  
+                  </li>
+      
+    </ul>
+  
+
+
+    
+          </nav>
+        </div>
+      </section>
+    
+
+          <section id="inner-page" class="complex-search main-padding has-white-background">
+        <div class="content-wrapper">
+
+          <div id="ndq-content" class="ndq-5816">
+              <div class="region region-content">
+    <div id="block-nir-pid2319-websitenoticeblock" class="block--website-notice-block block--website-notice-block--5816 block--content--website-notice-block block--content--website-notice-block--5816 block--4c0e78c6-da0c-44a1-9274-4dd727358033 block--4c0e78c6-da0c-44a1-9274-4dd727358033--5816 block block-nir-website-notices block-website-notice-block">
+  
+    
+      
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-nir-pid2319-content" class="block--system-main-block block--system-main-block--5816 block--content--system-main-block block--content--system-main-block--5816 block--743d594b-abba-4795-978c-7691880809dc block--743d594b-abba-4795-978c-7691880809dc--5816 block block-system block-system-main-block" data-component="block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              Press Releases
+          </h1>
+    
+
+  <div>
+    
+
+<div class="block-region-contentmain"><div class="block--releases block--nir-news__widget block--nir-news__widget--5816 block--contentmain--nir-news__widget block--contentmain--nir-news__widget--5816 block--0a1c719c-36bd-43a2-b14e-5cedb590b44e block--0a1c719c-36bd-43a2-b14e-5cedb590b44e--5816 block block-nir-news block-nir-news__widget" data-component="block">
+  
+    
+      <section class="card-gallery has-colorful-lines">
+    <div class="nir-widget--content">
+          <div class="nir-widget--form">
+        <form data-drupal-selector="widget-form-base" action="/press-releases" method="get" id="widget-form-base" accept-charset="UTF-8">
+  <div class="nir-widgets--field-container nir-widgets--field-container--yeartimezone js-form-wrapper form-wrapper" data-drupal-selector="edit-b05b09c3-year" id="edit-b05b09c3-year"><div class="two-col-field form-item js-form-item js-form-type-select form-type-select form-item-b05b09c3-year-value js-form-item-b05b09c3-year-value">
+      <label for="edit-b05b09c3-year-value">Year</label>
+        <select data-drupal-selector="edit-b05b09c3-year-value" id="edit-b05b09c3-year-value" name="b05b09c3_year[value]" class="form-select"><option value="_none">None</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option></select>
+        </div>
+</div>
+<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Filter" class="button button--primary js-form-submit form-submit" />
+<input data-drupal-selector="edit-b05b09c3-widget-id" type="hidden" name="b05b09c3_widget_id" value="b05b09c3" />
+<input autocomplete="off" data-drupal-selector="form-7o7w7vurtjclmdwxrfdcs1vgymmk0bgsviefnfljgeq" type="hidden" name="form_build_id" value="form-7o7W7VuRtjclmdwXrFDcs1vgYMmK0bgSVieFnfLjgEQ" />
+<input data-drupal-selector="edit-widget-form-base" type="hidden" name="form_id" value="widget_form_base" />
+
+</form>
+
+      </div>
+        <div class="nir-widget--list">
+              <ul class="card-article-list">
+          
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/tenaris-temporarily-suspends-operations-certain-us-facilities" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          13 / 04 / 2020
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> Tenaris Temporarily Suspends Operations at certain U.S. Facilities</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            LUXEMBOURG , April 13, 2020 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE and Mexico : TS and MTA Italy: TEN) announced that, in response to an adverse scenario of declining oil and gas prices, unprecedented oversupply in the oil market, and operational restrictions originated by the COVID-19 crisis, the
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/tenaris-postpones-annual-general-meeting-shareholders" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          25 / 03 / 2020
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> Tenaris Postpones Annual General Meeting of Shareholders</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            LUXEMBOURG , March 25, 2020 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE and Mexico : TS and MTA Italy: TEN) announced today that, in light of the current uncertainty around the extent and timing of the future spread of COVID-19, the imposition or relaxation of protective measures adopted in response to
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/tenaris-announces-2019-fourth-quarter-and-annual-results" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          19 / 02 / 2020
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> Tenaris Announces 2019 Fourth Quarter and Annual Results</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            The financial and operational information contained in this press release is based on audited consolidated financial statements presented in U.S. dollars and prepared in accordance with International Financial Reporting Standards as issued by the International Accounting Standard Board and adopted
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/tenariss-board-directors-provides-full-support-its-chairman-and" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          14 / 02 / 2020
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> Tenaris’s Board of Directors Provides Full Support to its Chairman and Chief Executive Officer and two other Directors</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            LUXEMBOURG , Feb. 14, 2020 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Mexico : TS and MTA Italy: TEN) today issued the following statement: Tenaris has been advised that the Italian court overseeing the investigation into alleged improper payments made in Brazil for the supposed benefit of Confab
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/tenaris-completes-acquisition-ipsco-tubulars-tmk" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          02 / 01 / 2020
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> Tenaris completes acquisition of IPSCO Tubulars from TMK</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            LUXEMBOURG , Jan. 02, 2020 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Mexico : TS and MTA Italy: TEN) announced today the completion of its previously announced acquisition of IPSCO Tubulars, Inc. , a U.S. manufacturer of steel pipe, from PAO TMK.  The acquisition price was determined on a cash-free,
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/us-department-justice-clears-tenariss-acquisition-ipsco-tubulars" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          17 / 12 / 2019
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> U.S. Department of Justice clears Tenaris’s acquisition of IPSCO Tubulars from TMK</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            LUXEMBOURG , Dec. 17, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Mexico : TS and MTA Italy: TEN) announced today that the U.S. Department of Justice (DOJ) has closed its investigation of Tenaris’s proposed acquisition of IPSCO Tubulars, Inc. from PAO TMK, a Russian company and manufacturer of
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/tenaris-announces-2019-third-quarter-results" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          30 / 10 / 2019
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> Tenaris Announces 2019 Third Quarter Results</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            The financial and operational information contained in this press release is based on unaudited consolidated condensed interim financial statements presented in U.S. dollars and prepared in accordance with International Financial Reporting Standards as issued by the International Accounting
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/delisting-tenariss-shares-argentina-become-effective-october-11" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          19 / 09 / 2019
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> Delisting of Tenaris’s shares in Argentina to become effective on October 11, 2019</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            LUXEMBOURG , Sept. 19, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Buenos Aires and Mexico : TS and MTA Italy: TEN) (“Tenaris”, ﻿or the “Company”) announced today that the Argentine National Securities Commission ( Comisión Nacional de Valores , or “CNV”) has authorized the delisting of the
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+
+
+<li class="card-article-item" data-type card-gallery-item style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+  <a href="/news-releases/news-release-details/tenaris-announces-2019-second-quarter-results" class="item-link">
+
+
+    <div class="item-wrapper">
+      <span class="item-line"></span>
+
+              <span class="item-date global-body-05">
+          31 / 07 / 2019
+        </span>
+      
+              <div class="card-wrapper-title mb-1" card-wrapper-title>
+          <h2 class="item-title global-subtitle-01" card-item-title> Tenaris Announces 2019 Second Quarter Results</h2>
+        </div>
+      
+              <div class="item-description-wrapper" card-wrapper-description>
+          <div class="item-description global-body-03" card-item-description="">
+            The financial and operational information contained in this press release is based on unaudited consolidated condensed interim financial statements presented in U.S. dollars and prepared in accordance with International Financial Reporting Standards as issued by the International Accounting
+          </div>
+        </div>
+      
+      <div class="item-cta tablet-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+      
+      <div class="item-cta global-button">
+        <span class="cta-copy">View Article</span>
+        <span class="cta-icon icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+      </div>
+
+
+
+      
+      
+      
+      
+      
+    </div>
+  </a>
+</li>
+
+        </ul>
+          </div>
+    <div class="nir-widget--pager">
+        <div class="complex-search-pagination" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+
+                        
+                                <span class="global-body-03 is-active">
+                                          <a href="?page=0" title="Current page" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </span>
+              <span class="global-body-03">
+                                          <a href="?page=1" title="Go to page 2" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </span>
+              <span class="global-body-03">
+                                          <a href="?page=2" title="Go to page 3" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+        </span>
+              <span class="global-body-03">
+                                          <a href="?page=3" title="Go to page 4" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Page
+            </span>4</a>
+        </span>
+              <span class="global-body-03">
+                                          <a href="?page=4" title="Go to page 5" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Page
+            </span>5</a>
+        </span>
+              <span class="global-body-03">
+                                          <a href="?page=5" title="Go to page 6" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Page
+            </span>6</a>
+        </span>
+              <span class="global-body-03">
+                                          <a href="?page=6" title="Go to page 7" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Page
+            </span>7</a>
+        </span>
+              <span class="global-body-03">
+                                          <a href="?page=7" title="Go to page 8" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Page
+            </span>8</a>
+        </span>
+              <span class="global-body-03">
+                                          <a href="?page=8" title="Go to page 9" class="pagination-total-items  global-body-03">
+            <span class="visually-hidden">
+              Page
+            </span>9</a>
+        </span>
+                          <span class="pagination-total-items global-body-03 pager__item--ellipsis" role="presentation">&hellip;</span>
+                            <a href="?page=1" title="Go to next page" rel="next" class="pagination-next-cta ">
+            <span class="visually-hidden">Next page</span>
+            <span class="cta-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+          </a>
+                  
+  </div>
+
+    </div>
+    <div class="nir-widget--total-results">
+      Displaying 1 - 9 of 217
+    </div>
+  </div>
+</section>
+  </div>
+</div>
+
+<!-- /.boxton -->
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+
+                      </div>
+
+        </div>
+      </section>
+    
+
+        
+
+        
+
+        
+
+
+          <section data-component="cta-highlight" class="cta-highlight main-padding" data-scroll-component>
+        
+
+                  
+      <h3 class="visually-hidden" id="block-irtools-menu">IR Tools</h3>
+    
+
+                    
+
+
+        
+                      <div class="content-wrapper">
+              <div class="cta-hightlight-wrapper ">
+
+          
+                          
+
+
+        
+          
+            <div class="cta-card-wrapper">
+              <div class="cta-card" cta-highlight-card>
+                <h5 class="cta-tagline global-button global-underline-subtitle">INVESTOR CONTACT</h5>
+                <div class="cta-title-wrapper">
+                  <h3 class="cta-title">Contact Us</h3>
+                  <a href="/tools/contact-us" target="" class="cta-link">
+                    <span class="cta-copy global-button">Email</span>
+                    <span class="cta-arrow icon" data-component="icon" data-icon="cta-arrow"><svg viewBox="0 0 56 37" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M23.673 30.442c3.246 3.704 7.995 6.04 13.285 6.04h0c9.784 0 17.715-7.988 17.715-17.84 0-9.853-7.931-17.84-17.715-17.84-5.278 0-10.017 2.325-13.262 6.014" stroke="currentColor" stroke-dasharray="1,2"></path><path fill="currentColor" fill-rule="nonzero" d="M36.177 13.748l4.309 4.421H.72v.662h39.766l-4.31 4.421.457.468 5.087-5.22-5.087-5.22z"></path></g></svg></span>
+                  </a>
+                </div>
+                <span class="colored-border"></span>
+              </div>
+            </div>
+          
+          
+                  
+          
+            <div class="cta-card-wrapper">
+              <div class="cta-card" cta-highlight-card>
+                <h5 class="cta-tagline global-button global-underline-subtitle">STAY UP TO DATE</h5>
+                <div class="cta-title-wrapper">
+                  <h3 class="cta-title">Email Alerts</h3>
+                  <a href="/tools/email-alert-subscription" target="" class="cta-link">
+                    <span class="cta-copy global-button">SIGN UP</span>
+                    <span class="cta-arrow icon" data-component="icon" data-icon="cta-arrow"><svg viewBox="0 0 56 37" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M23.673 30.442c3.246 3.704 7.995 6.04 13.285 6.04h0c9.784 0 17.715-7.988 17.715-17.84 0-9.853-7.931-17.84-17.715-17.84-5.278 0-10.017 2.325-13.262 6.014" stroke="currentColor" stroke-dasharray="1,2"></path><path fill="currentColor" fill-rule="nonzero" d="M36.177 13.748l4.309 4.421H.72v.662h39.766l-4.31 4.421.457.468 5.087-5.22-5.087-5.22z"></path></g></svg></span>
+                  </a>
+                </div>
+                <span class="colored-border"></span>
+              </div>
+            </div>
+          
+          
+                  
+
+
+  
+          
+                        </div>
+            </div>
+                  
+                      <div class="content-wrapper">
+              <div class="cta-hightlight-wrapper cta-highlight-thirds">
+
+          
+                          
+
+
+        
+          
+            <div class="cta-card-wrapper">
+              <div class="cta-card" cta-highlight-card>
+                <h5 class="cta-tagline global-button global-underline-subtitle">INVESTOR RESOURCE</h5>
+                <div class="cta-title-wrapper">
+                  <h3 class="main-title global-title-04">Printed Materials</h3>
+                  <a href="/tools/printed-materials" target="" class="cta-link">
+                    <span class="cta-copy global-button"></span>
+                    <span class="cta-arrow icon" data-component="icon" data-icon="cta-arrow"><svg viewBox="0 0 56 37" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M23.673 30.442c3.246 3.704 7.995 6.04 13.285 6.04h0c9.784 0 17.715-7.988 17.715-17.84 0-9.853-7.931-17.84-17.715-17.84-5.278 0-10.017 2.325-13.262 6.014" stroke="currentColor" stroke-dasharray="1,2"></path><path fill="currentColor" fill-rule="nonzero" d="M36.177 13.748l4.309 4.421H.72v.662h39.766l-4.31 4.421.457.468 5.087-5.22-5.087-5.22z"></path></g></svg></span>
+                  </a>
+                </div>
+                <span class="raspberry-border"></span>
+              </div>
+            </div>
+          
+          
+                  
+          
+            <div class="cta-card-wrapper">
+              <div class="cta-card" cta-highlight-card>
+                <h5 class="cta-tagline global-button global-underline-subtitle">INVESTOR RESOURCE</h5>
+                <div class="cta-title-wrapper">
+                  <h3 class="main-title global-title-04">RSS News Feed</h3>
+                  <a href="/tools/rss-news-feed" target="" class="cta-link">
+                    <span class="cta-copy global-button"></span>
+                    <span class="cta-arrow icon" data-component="icon" data-icon="cta-arrow"><svg viewBox="0 0 56 37" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M23.673 30.442c3.246 3.704 7.995 6.04 13.285 6.04h0c9.784 0 17.715-7.988 17.715-17.84 0-9.853-7.931-17.84-17.715-17.84-5.278 0-10.017 2.325-13.262 6.014" stroke="currentColor" stroke-dasharray="1,2"></path><path fill="currentColor" fill-rule="nonzero" d="M36.177 13.748l4.309 4.421H.72v.662h39.766l-4.31 4.421.457.468 5.087-5.22-5.087-5.22z"></path></g></svg></span>
+                  </a>
+                </div>
+                <span class="green-border"></span>
+              </div>
+            </div>
+          
+          
+                  
+          
+            <div class="cta-card-wrapper">
+              <div class="cta-card" cta-highlight-card>
+                <h5 class="cta-tagline global-button global-underline-subtitle">INVESTOR RESOURCE</h5>
+                <div class="cta-title-wrapper">
+                  <h3 class="main-title global-title-04">Privacy Statement</h3>
+                  <a href="/static-files/d9513c85-ba12-4e85-bc7a-0413d7b9b527" target="_blank" class="cta-link">
+                    <span class="cta-copy global-button"></span>
+                    <span class="cta-arrow icon" data-component="icon" data-icon="cta-arrow"><svg viewBox="0 0 56 37" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M23.673 30.442c3.246 3.704 7.995 6.04 13.285 6.04h0c9.784 0 17.715-7.988 17.715-17.84 0-9.853-7.931-17.84-17.715-17.84-5.278 0-10.017 2.325-13.262 6.014" stroke="currentColor" stroke-dasharray="1,2"></path><path fill="currentColor" fill-rule="nonzero" d="M36.177 13.748l4.309 4.421H.72v.662h39.766l-4.31 4.421.457.468 5.087-5.22-5.087-5.22z"></path></g></svg></span>
+                  </a>
+                </div>
+                <span class="blue-border"></span>
+              </div>
+            </div>
+          
+          
+                  
+
+
+  
+          
+                        </div>
+            </div>
+                  
+
+
+  
+
+
+    
+      </section>
+    
+
+
+
+    <footer data-component="site-footer" class="site-footer secondary-padding" data-scroll-component>
+      <div class="content-wrapper">
+        <div class="footer-main-navigation">
+          <span class="footer-main-navigation-line" site-footer-line></span>
+
+          <div class="cta-module-wrapper" site-footer-cta-wrapper>
+                          <div class="cta-module">
+                  <div class="region region-f-cta-1">
+    <div id="block-gbfooterexploretenarishydrillperformance" class="block-content--nir-global-block block-content--nir-global-block--16671 block--block-contentb1d49277-69cd-4131-828f-2fa8dac41ff9 block--block-contentb1d49277-69cd-4131-828f-2fa8dac41ff9--5816 block--f-cta-1--block-content--b1d49277-69cd-4131-828f-2fa8dac41ff9 block--f-cta-1--block-content--b1d49277-69cd-4131-828f-2fa8dac41ff9--5816 block--fe6d5481-d5ea-4057-a8e0-9caf910dd70d block--fe6d5481-d5ea-4057-a8e0-9caf910dd70d--5816 block block-block-content block-block-contentb1d49277-69cd-4131-828f-2fa8dac41ff9">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><h2 class="cta-title global-subtitle-01">Explore TenarisHydrill performance</h2>
+
+<p class="cta-description global-body-01">Combine pipe size and weight to view premium connection options and performance data.</p></div>
+      
+</div>
+      
+  </div>
+
+
+                  
+      <h3 class="visually-hidden" id="block-datasheets-3-menu">Datasheets</h3>
+    
+
+                        <div class="cta-button text-button " data-component="text-button">
+
+              <a href="http://dcp.tenaris.com/" target="" rel="" class="button-link" data-no-cursor="">
+          <span class="button-copy global-button">Datasheets</span>
+          <div class="button-icon-wrapper">
+            <span class="button-icon icon" data-icon="arrow" data-component="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 11"><path fill="currentColor" d="M 9.042 0.493 l 4.631 4.658 H 0 v 0.698 h 13.673 l -4.63 4.658 l 0.49 0.493 L 15 5.5 L 9.532 0 Z" /></svg></span>
+          </div>
+        </a>
+        <span class="button-background"></span>
+
+                
+    </div>
+  
+
+
+    
+  </div>
+
+              </div>
+            
+                          <div class="cta-module">
+                  <div class="region region-f-cta-2">
+    <div id="block-gbfooterheretohelpyou" class="block-content--nir-global-block block-content--nir-global-block--6086 block--block-content7e4308d4-78f7-4fb8-b231-69335eedad33 block--block-content7e4308d4-78f7-4fb8-b231-69335eedad33--5816 block--f-cta-2--block-content--7e4308d4-78f7-4fb8-b231-69335eedad33 block--f-cta-2--block-content--7e4308d4-78f7-4fb8-b231-69335eedad33--5816 block--2efe6536-d9ce-4fc8-9291-eebf1e4c13ca block--2efe6536-d9ce-4fc8-9291-eebf1e4c13ca--5816 block block-block-content block-block-content7e4308d4-78f7-4fb8-b231-69335eedad33">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><h2 class="cta-title global-subtitle-01">Here to help you</h2>
+
+<p class="cta-description global-body-01">Any questions? Get in touch. We'd love to hear from you.</p></div>
+      
+</div>
+      
+  </div>
+
+
+                  
+      <h3 class="visually-hidden" id="block-btncontactus-menu">btn Contact Us</h3>
+    
+
+                    
+
+              <div class="header-cta text-button text-button-light-gray-outline" data-component="text-button">
+          <a href="https://www.tenaris.com/en/contact/" target="" rel="" class="button-link" data-no-cursor="">
+            <span class="button-copy global-button">Contact Us</span>
+          </a>
+          <span class="button-background"></span>
+        </div>
+                          
+
+  
+
+
+    
+  </div>
+
+              </div>
+                      </div>
+
+
+          <div class="main-navigation-wrapper" site-footer-main-navigation>
+                          <nav class="navigation-module">
+                
+
+                  
+      <h3 class="visually-hidden" id="block-productsservices-menu">Products Services</h3>
+    
+
+                    
+                          <h2 class="navigation-title global-subtitle-01">Products &amp; Services</h2>
+        
+
+                      
+                          <a href="https://www.tenaris.com/en/products-and-services/octg/" class="navigation-link global-button">
+              <span class="navigation-copy">OCTG</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+                          <a href="https://www.tenaris.com/en/products-and-services/rig-direct/" class="navigation-link global-button">
+              <span class="navigation-copy">Rig Direct</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+                          <a href="https://www.tenaris.com/en/products-and-services/offshore-line-pipe/" class="navigation-link global-button">
+              <span class="navigation-copy">Offshore Line Pipe</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+                          <a href="https://www.tenaris.com/en/products-and-services/onshore-line-pipe/" class="navigation-link global-button">
+              <span class="navigation-copy">Onshore Line Pipe</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+                          <a href="https://www.tenaris.com/en/products-and-services/artificial-lift/" class="navigation-link global-button">
+              <span class="navigation-copy">Artificial Lift</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+                          <a href="https://www.tenaris.com/en/products-and-services/coiled-tubing/" class="navigation-link global-button">
+              <span class="navigation-copy">Coiled Tubing</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+                          <a href="https://www.tenaris.com/en/products-and-services/power-generation/" class="navigation-link global-button">
+              <span class="navigation-copy">Power Generation</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+                          <a href="https://www.tenaris.com/en/products-and-services/industrial-and-mechanical/" class="navigation-link global-button">
+              <span class="navigation-copy">Industrial &amp; Mechanical</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+                          <a href="https://www.tenaris.com/en/products-and-services/automotive/" class="navigation-link global-button">
+              <span class="navigation-copy">Automotive</span>
+              <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+            </a>
+        
+
+        
+      
+  
+        
+      
+  
+
+
+    
+              </nav>
+            
+                          <nav class="navigation-module">
+                
+
+                  
+      <h3 class="visually-hidden" id="block-mainfooternav-menu">Main Footer Nav</h3>
+    
+
+                    
+              <a href="https://www.tenaris.com/en/about-us/" class="navigation-link main-navigation global-subtitle-01">
+          <span class="navigation-copy">About us</span>
+          <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+        </a>
+
+                  </li>
+              <a href="https://www.tenaris.com/en/sustainability/" class="navigation-link main-navigation global-subtitle-01">
+          <span class="navigation-copy">Sustainability</span>
+          <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+        </a>
+
+                  </li>
+              <a href="/index.php/investor-relations" class="navigation-link main-navigation global-subtitle-01">
+          <span class="navigation-copy">Investors</span>
+          <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+        </a>
+
+                  </li>
+              <a href="https://www.tenaris.com/en/careers/" class="navigation-link main-navigation global-subtitle-01">
+          <span class="navigation-copy">Careers</span>
+          <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+        </a>
+
+                  </li>
+              <a href="https://www.tenaris.com/en/newsroom/" class="navigation-link main-navigation global-subtitle-01">
+          <span class="navigation-copy">Newsroom</span>
+          <span class="navigation-arrow icon" data-component="icon" data-icon="arrow"><svg viewBox="0 0 15 11" xmlns="http://www.w3.org/2000/svg"><path d="M9.042.493l4.631 4.658H0v.698h13.673l-4.63 4.658.49.493L15 5.5 9.532 0z" fill="currentColor"></path></svg></span>
+        </a>
+
+                  </li>
+      
+  
+
+
+    
+              </nav>
+                      </div>
+        </div>
+
+        <div class="footer-secondary-navigation">
+          <div class="secondary-navigation-wrapper" site-footer-secondary-navigation>
+                          <nav class="social-media-module">
+                
+
+                  
+      <h3 class="visually-hidden" id="block-socialicons-2-menu">Social icons</h3>
+    
+
+                    
+      
+                <a href="https://www.instagram.com/tenaris" target="_blank" rel="" class="social-media-link">
+          <span class="social-media-icon icon" data-component="icon" data-icon="instagram"><svg viewBox="0 0 19 19" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor"><path d="M13.063 0H5.936A5.938 5.938 0 0 0 0 5.938v7.125A5.938 5.938 0 0 0 5.938 19h7.125A5.938 5.938 0 0 0 19 13.062V5.939A5.938 5.938 0 0 0 13.062 0zm4.156 13.063a4.16 4.16 0 0 1-4.157 4.156H5.939a4.16 4.16 0 0 1-4.157-4.157V5.939A4.16 4.16 0 0 1 5.938 1.78h7.125a4.16 4.16 0 0 1 4.156 4.157v7.125z"></path><path d="M9.361 5a4.361 4.361 0 1 0 0 8.723 4.361 4.361 0 0 0 0-8.723zm0 7.087A2.73 2.73 0 0 1 6.635 9.36a2.729 2.729 0 0 1 2.726-2.726 2.729 2.729 0 0 1 2.726 2.726 2.73 2.73 0 0 1-2.726 2.726z"></path><circle cx="14.25" cy="4.75" r="1"></circle></g></svg></span>
+        </a>
+
+        
+
+        
+                          
+                <a href="https://www.facebook.com/TenarisEvents/posts/" target="_blank" rel="" class="social-media-link">
+          <span class="social-media-icon icon" data-component="icon" data-icon="facebook"><svg viewBox="0 0 11 21" xmlns="http://www.w3.org/2000/svg"><path d="M10.607.147v3.241H8.68c-1.51 0-1.793.725-1.793 1.768v2.32h3.597l-.478 3.635H6.887v9.318H3.131V11.11H0V7.477h3.13V4.8C3.13 1.694 5.034 0 7.809 0c1.326 0 2.468.098 2.8.147z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
+        </a>
+
+        
+
+        
+                          
+                <a href="https://twitter.com/tenaris" target="_blank" rel="" class="social-media-link">
+          <span class="social-media-icon icon" data-component="icon" data-icon="twitter"><svg viewBox="0 0 20 16" xmlns="http://www.w3.org/2000/svg"><path d="M19.348 1.866a8.525 8.525 0 0 1-1.989 2.05c.013.172.013.344.013.516 0 5.242-3.99 11.282-11.283 11.282-2.246 0-4.333-.65-6.089-1.78.32.037.626.05.958.05 1.853 0 3.56-.627 4.923-1.695a3.972 3.972 0 0 1-3.708-2.75c.246.037.491.061.749.061.356 0 .712-.049 1.043-.135a3.966 3.966 0 0 1-3.18-3.891v-.05a3.994 3.994 0 0 0 1.793.504A3.963 3.963 0 0 1 .81 2.725c0-.736.197-1.411.54-2a11.271 11.271 0 0 0 8.177 4.149 4.476 4.476 0 0 1-.098-.909A3.964 3.964 0 0 1 13.394 0c1.142 0 2.173.479 2.897 1.252a7.807 7.807 0 0 0 2.517-.957 3.955 3.955 0 0 1-1.743 2.185 7.95 7.95 0 0 0 2.283-.614z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
+        </a>
+
+        
+
+        
+                          
+                <a href="https://www.youtube.com/user/tenaris" target="_blank" rel="" class="social-media-link">
+          <span class="social-media-icon icon" data-component="icon" data-icon="youtube"><svg viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg"><path d="M8.729 10.583l5.942-3.07-5.942-3.106v6.176zM11 0c4.628 0 7.698.221 7.698.221.43.05 1.375.05 2.21.933 0 0 .675.663.871 2.185C22.012 5.12 22 6.9 22 6.9v1.67s.012 1.78-.22 3.56c-.197 1.51-.872 2.186-.872 2.186-.835.871-1.78.871-2.21.92 0 0-3.07.234-7.698.234-5.72-.05-7.476-.221-7.476-.221-.492-.086-1.596-.062-2.431-.933 0 0-.675-.675-.872-2.186-.233-1.78-.22-3.56-.22-3.56V6.9s-.013-1.78.22-3.56c.197-1.522.872-2.185.872-2.185C1.928.27 2.873.27 3.303.221 3.303.221 6.372 0 11 0z" fill="currentColor" fill-rule="evenodd"></path></svg></span>
+        </a>
+
+        
+
+        
+                          
+                <a href="https://www.linkedin.com/company/tenaris" target="_blank" rel="" class="social-media-link">
+          <span class="social-media-icon icon" data-component="icon" data-icon="linkedin"><svg xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" fill-rule="evenodd" d="M3.805 16.5H.281V5.818h3.524V16.5zM2.041 4.36C.914 4.36 0 3.482 0 2.421 0 1.361.914.5 2.041.5c1.127 0 2.041.86 2.041 1.921 0 1.06-.914 1.94-2.04 1.94zM16.996 16.5H13.48v-5.2c0-1.24-.026-2.829-1.832-2.829-1.833 0-2.113 1.347-2.113 2.74V16.5H6.013V5.818h3.38v1.457h.05c.47-.84 1.62-1.725 3.334-1.725C16.344 5.55 17 7.76 17 10.632V16.5h-.004z"></path></svg></span>
+        </a>
+        
+
+        
+                          
+  
+
+
+    
+              </nav>
+            
+                          <nav class="secondary-navigation">
+                
+
+                  
+      <h3 class="visually-hidden" id="block-legalnav-menu">Legal Nav</h3>
+    
+
+                    
+                <a href="https://www.tenaris.com/en/legal/" target="" rel="" class="secondary-navigation-link global-button">Terms and conditions</a>
+
+                          <a href="https://www.tenaris.com/en/contact/" target="" rel="" class="secondary-navigation-link global-button">FAQ</a>
+
+                
+  
+
+
+    
+              </nav>
+                      </div>
+
+          <div class="secondary-navigation-wrapper" site-footer-secondary-navigation>
+            <div class="copyright-content">
+              <p class="copyright-copy global-body-05">
+                Copyright &#169; 2003-2020 Tenaris. All rights reserved.
+              </p>
+              <a href="https://www.tenaris.com/en/" class="footer-logo">
+                <span class="logo-icon icon" data-component="icon" data-icon="logo"><svg viewBox="0 0 144 35" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor" fill-rule="evenodd"><path d="M33.986 9.702v5.147h6.664v19.375h5.56V14.85h6.666V9.702z"></path><path d="M54.946 22.914c.174-.764.348-1.597 1.075-2.396a3.685 3.685 0 0 1 2.708-1.178c.936 0 1.944.345 2.6 1.005.765.796.902 1.805 1.01 2.569h-7.393zm8.675 4.648c-.659 1.283-1.665 3.192-4.58 3.192-2.88 0-4.164-2.255-4.13-4.51h12.942c-.068-2.048-.207-5.587-2.567-8.12-2.324-2.497-5.448-2.602-6.524-2.602-7.145 0-9.298 5.62-9.298 9.992 0 5.936 3.781 9.37 9.161 9.37 2.914 0 5.273-1.11 6.835-2.569.936-.865 1.562-1.768 2.186-2.705l-4.025-2.048zm11.845-9.819c.522-.553.868-.971 1.807-1.422a8.826 8.826 0 0 1 3.295-.66c1.078 0 2.29.209 3.228.73 1.908 1.004 2.393 2.635 2.393 5.446v12.387h-5.308v-10.2c0-1.632-.035-2.222-.243-2.707-.415-.972-1.352-1.388-2.393-1.388-2.811 0-2.811 2.254-2.811 4.509v9.786H70.09V16.147h5.376v1.596M99.1 25.55c-.034 1.875-.104 3.54-1.872 4.65-.557.346-1.18.589-1.841.589-1.25 0-2.012-.971-2.012-1.84 0-1.388 1.389-1.908 2.29-2.254L99.1 25.55zm-4.858-4.301c.139-.661.45-2.118 2.811-2.118 1.908 0 1.978 1.388 2.047 2.221v.97c-2.254.417-5.69 1.043-7.147 1.667-1.491.624-3.817 2.289-3.817 5.204 0 2.534 1.77 5.516 5.932 5.516 2.673 0 4.199-1.144 5.553-2.15v1.665h5.24c-.418-.623-.523-.903-.523-2.845V20.831c0-4.684-5.377-5.204-7.597-5.204-2.119 0-4.27.279-5.934 1.595-1.63 1.284-1.805 2.776-1.909 4.027h5.344zm18.298-3.261c1.179-1.008 2.461-1.807 5.237-2.084v4.72l-1.768.277c-2.568.452-3.332.832-3.332 3.121v10.203h-5.344V16.078h5.206v1.91m7.289-4.165h5.273v-4.13h-5.273v4.13zm0 20.402h5.273V16.079h-5.273v18.146zm9.797-6.108c1.458 1.424 3.26 2.499 5.275 2.499 1.282 0 3.226-.417 3.226-1.77 0-.624-.382-.867-.695-1.041-.798-.416-2.046-.521-3.086-.694a20.236 20.236 0 0 1-2.43-.555c-1.11-.312-2.22-.763-3.019-1.56-.797-.8-1.353-2.048-1.353-3.403 0-2.982 2.568-6.072 7.633-6.072 4.268 0 6.837 1.841 8.084 2.708l-3.296 3.053c-1.7-1.318-3.296-1.804-4.544-1.804-2.084 0-2.567.832-2.567 1.353 0 1.042 1.143 1.248 2.88 1.56 3.644.662 7.876 1.631 7.876 5.936 0 4.267-4.303 6.348-8.572 6.348-5.031 0-7.634-2.43-8.777-3.503l3.365-3.055M0 24.582h27.322v-.845H0zm0-9.732h27.322V9.7H0zM0 3.254h27.322V1.966H0zm0 19.334h27.322V21.3H0zM0 7.41h27.322V4.834H0zm0 12.312h27.322v-2.576H0zM0 .901h27.322V.06H0z"></path></g></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+          <section data-component="gdpr-banner" class="gdpr-banner" data-scroll-component data-index="exclude">
+          <div class="region region-gdpr">
+    <div id="block-gbgdprdisclaimer" class="block-content--nir-global-block block-content--nir-global-block--6036 block--block-content02ca42e7-2569-47f6-8ef0-c867058e9ca6 block--block-content02ca42e7-2569-47f6-8ef0-c867058e9ca6--5816 block--gdpr--block-content--02ca42e7-2569-47f6-8ef0-c867058e9ca6 block--gdpr--block-content--02ca42e7-2569-47f6-8ef0-c867058e9ca6--5816 block--d9cc2c80-ef26-4ab9-988b-9889d397d66b block--d9cc2c80-ef26-4ab9-988b-9889d397d66b--5816 block block-block-content block-block-content02ca42e7-2569-47f6-8ef0-c867058e9ca6">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="content-wrapper">
+<div class="gdpr-banner-copy global-body-03">
+<p>Our Site uses cookies. By using our Site (through any device) you agree that these rules on use of cookies apply. Further information on these cookies can be found in the <a href="https://www.tenaris.com/en/legal/" target="_new">Terms &amp; Conditions</a>.</p>
+</div>
+
+<div banner-gdpr-button="" class="gdpr-banner-button">
+<div class="text-button text-button-dark-gray-filled    " data-component="text-button"><button class="button-link" data-no-cursor="" type="button"><span class="button-copy global-button">yes, I accept</span></button><span class="button-background"></span></div>
+</div>
+</div>
+</div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+      </section>
+    
+  </div>
+</div>
+  
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgtenarissa";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5816","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/node,core\/drupal.collapse,core\/html5shiv,nir_base\/adobe_omniture,nir_base\/lib,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_market_data_block\/nir_market_data_block.command,nir_market_data_block\/nir_market_data_block.filterform,nir_market_data_block\/nir_market_data_block.stockQuote,nir_multimedia\/nir_multimedia,nir_pid2319\/override,nir_website_notices\/nir_website_notices.notices,radix_layouts\/radix_layouts,system\/base","theme":"nir_pid2319","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"cba0f2cb69a7db6b395c32b368f3e9403e5054ecd8268836d19a0c7d289eb17a"}}</script>
+<script src="/sites/g/files/knoqqb49371/files/js/js_yW71xTqSPp3-AW-Oqd2vV1o5HBS0HzZvNy985klUnlc.js"></script>
+
+    
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"761e715901","applicationID":"35893545,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH3xCFkBQXGl2ChNQaXZXQg5sd19HWCcUXFlUXUJODkNVW1EAE2VZUVtVC19dVFBHIw5HWHFbRApfXw==","queueTime":0,"applicationTime":477,"atts":"ShJUF18aSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

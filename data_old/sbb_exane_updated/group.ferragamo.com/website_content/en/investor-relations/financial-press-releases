@@ -1,0 +1,66 @@
+<html lang="it"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ferragamo - Homepage</title>
+
+    <!-- Url dell versioni di questa pagine tradotte nelle varie lingue 
+    Vedi anche: https://support.google.com/webmasters/answer/189077?hl=it 
+    -->
+    <link rel="alternate" hreflang="it" href="http://es.example.com/url-a-questa-pagina-in-italiano">
+    <link rel="alternate" hreflang="es" href="http://es.example.com/url-a-questa-pagina-in-inglese">
+
+    <!-- Stylesheet -->
+    <link href="/sir/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/sir/js/lib/FlexSlider/flexslider.css" rel="stylesheet">
+    <link href="/sir/css/style.css" rel="stylesheet">
+  
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/lib/html5shiv-3.7.0.js"></script>
+      <script src="js/lib/respond-1.4.2.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body class="template-404">
+  
+    <div class="container">        
+      <div class="col-sm-10 col-sm-offset-1 text-center">
+              
+        <p class="logo">
+          <a href="/"><img src="/sir/img/logo.png"></a> 
+        </p>
+        
+        <p class="a">
+          Sorry, the page you were looking for doesn't exist<br>
+          or has been removed
+        </p>
+
+        <p class="b">
+          Please select your language to continue on <span class="nowrap">Salvatore Ferragamo Group</span>
+        </p>
+
+        <p class="c">
+          <a href="/">ITALIANO</a><br>
+          <a href="/en">ENGLISH</a>
+        </p>
+
+      </div>
+    </div>
+    
+    <!-- JavaScript
+    ================================================== -->
+    
+    <script src="/sir/js/lib/jquery-1.11.0.min.js"></script>
+    <script src="/sir/js/lib/bootstrap.min.js"></script>
+
+  
+
+
+	
+	
+</body></html>

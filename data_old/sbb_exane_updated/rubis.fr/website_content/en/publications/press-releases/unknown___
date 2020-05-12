@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+	<title>Rubis - Infrastructure for energy storage and distribution</title>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta content="" name="description">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"f594ed4255",applicationID:"395375013"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="authenticity_token" name="csrf-param">
+	<meta content="aWUrjoWj8busFlMmbsbMJTaxWnuULUV8yPdTE5E9M2sSzHy+qQ7wThdB16EDd6uV5wspHIK1TviZ1Z4gcUV4iA==" name="csrf-token">
+
+	<script>
+	 var locale = 'en';
+	</script>
+
+	
+                <!-- Copyright (c) 2000-2016 etracker GmbH. All rights reserved. -->
+                <!-- This material may not be reproduced, displayed, modified or distributed -->
+                <!-- without the express prior written permission of the copyright holder. -->
+                <!-- etracker tracklet 4.1 -->
+                <script id="trcs" type="text/javascript">
+                    var et_pagename = "Press Releases_EN";
+                    var et_areas = "Shop ";
+                    var et_url = "https%3A%2F%2Frubis.fr%2Fen%2Fpublications%2Fpress-releases%2F?";
+                    // var et_tval = "";
+                    // var et_tonr = "";
+                    // var et_tsale = 0;
+                    // var et_basket = "";
+                    // var et_cust = 0;
+                </script>
+                <script id="_etLoader" type="text/javascript" charset="UTF-8" data-respect-dnt="true" data-secure-code="39xJ23" src="//static.etracker.com/code/e.js"></script>
+                <!-- etracker tracklet 4.1 end -->
+
+            
+<!-- This site is optimized with the Yoast SEO plugin v12.4 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://rubis.fr/en/publications/press-releases/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Press Releases - Rubis" />
+<meta property="og:url" content="https://rubis.fr/en/publications/press-releases/" />
+<meta property="og:site_name" content="Rubis" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Press Releases - Rubis" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://rubis.fr/en/#website","url":"https://rubis.fr/en/","name":"Rubis","potentialAction":{"@type":"SearchAction","target":"https://rubis.fr/en/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://rubis.fr/en/publications/press-releases/#webpage","url":"https://rubis.fr/en/publications/press-releases/","inLanguage":"en-US","name":"Press Releases - Rubis","isPartOf":{"@id":"https://rubis.fr/en/#website"},"datePublished":"2017-11-17T17:05:38+00:00","dateModified":"2019-10-04T09:05:10+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel="stylesheet" href="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/css/rubis.css?ver=16147356525">
+<link rel="stylesheet" href="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/css/rubis-addon.css?ver=16147356525">
+<script src="https://player.vimeo.com/api/player.js?ver=4.9.6"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/js/rubis.js?ver=0b0baacb7d85238c98b84505ee2c5e9a"></script>
+<link rel="alternate" href="https://rubis.fr/fr/publications/communiques/" hreflang="fr" />
+<link rel="alternate" href="https://rubis.fr/en/publications/press-releases/" hreflang="en" />
+<link rel="shortcut icon" href="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/img/favicon.ico">
+	
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="999e4fa6-7e40-4f56-982b-5491c41a38ad" data-blockingmode="auto" type="text/javascript">
+	</script>
+
+
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="navbar navbar-default yamm">
+					<div class="logo">
+						<a href="https://rubis.fr/en/"><img src="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/img/logo-rubis.png" alt="Rubis"></a>
+					</div>
+					<div class="navbar-header">
+						<button class="navbar-toggle" data-target="#navbar-collapse-grid" data-toggle="collapse" type="button"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+					</div>
+					<div class="header-functions">
+						<div class="search">
+							<form accept-charset="UTF-8" action="https://rubis.fr/en/" method="get">
+								<input id="q" name="s" type="text"> <button type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+						<div class="accessibility">
+							<a class="minustext" href=""><span class="little-a">a</span> <i class="fa fa-minus-circle"></i></a> <a class="plustext" href=""><i class="fa fa-plus-circle"></i> <span class="big-a">a</span></a>
+						</div>
+						<div class="language">
+							<ul>
+								<li><a href="https://rubis.fr/fr/publications/communiques/">FR</a></li><li class="active"><a href="https://rubis.fr/en/publications/press-releases/">EN</a></li>							</ul>
+						</div>
+					</div>
+
+					<div class="navbar-collapse collapse" id="navbar-collapse-grid">
+	<ul class="nav navbar-nav" id="top-menu">
+					<li class="dropdown non-active yamm-fw">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Group</a>
+				<ul class="dropdown-menu">
+					<li>
+						<div class="col-md-4">
+							<div class="block-menu-container">
+								<div class="title">
+									<span class="bg-color-menu">Group</span>
+								</div>
+								<ul class="submenu">
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/group/activities-and-strategy/"><i class="fa fa-pie-chart"></i>Activities and Strategy</a>
+																					</li>
+																			<li class="non-active">
+																							<div class="dropdown auto-dropdown">
+																						<a href="https://rubis.fr/en/group/corporate-governance/"><i class="fa fa-sitemap"></i>Corporate Governance</a>
+																							<ul aria-labelledby="gouvernement-entreprise" class="dropdown-menu second-level">
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/group/corporate-governance/the-rubis-limited-partnership/">The Rubis Limited Partnership</a>
+													</li>
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/group/corporate-governance/rubis-management/">Rubis’  Management</a>
+													</li>
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/group/corporate-governance/supervisory-board/">Supervisory   Board</a>
+													</li>
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/group/corporate-governance/compensation-and-appointments-committee/">Compensation and Appointments Committee</a>
+													</li>
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/group/corporate-governance/accounts-and-risk-monitoring-committee/">Accounts and Risk Monitoring Committee</a>
+													</li>
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/group/corporate-governance/french-corporate-governance-code/">French Corporate Governance Code</a>
+													</li>
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/group/corporate-governance/rubis-by-laws/">Rubis’      By-laws</a>
+													</li>
+																									</ul>
+												</div>																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/group/rubis-worldwide/"><i class="fa fa-globe"></i>Rubis Worldwide</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/group/history/"><i class="fa fa-history"></i>Writing History</a>
+																					</li>
+																	</ul>
+							</div>
+						</div>
+
+						
+
+
+	<div class='col-md-8'>
+		<div class='block-menu-container'>
+			<div class='title title-col-8'>
+				<span class='bg-color-menu'>Editorial</span>
+			</div>
+			<div class='editorial'>
+				<p>« The will to undertake, the Corporate Commitment »</p>
+<p>The resolve to undertake is about creating, acting and moving forward together, a resolve whose end purpose is all part of the development of an industrial and human adventure. More than just a slogan, these are 2 fundamental principles of a very strong corporate culture that places people at the center of the organization.</p>
+			</div>
+		</div>
+	</div>
+
+
+
+					</li>
+				</ul>
+			</li>
+					<li class="dropdown non-active yamm-fw">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Finance</a>
+				<ul class="dropdown-menu">
+					<li>
+						<div class="col-md-4">
+							<div class="block-menu-container">
+								<div class="title">
+									<span class="bg-color-menu">Finance</span>
+								</div>
+								<ul class="submenu">
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/finance/key-figures/"><i class="fa fa-info-circle"></i>Key Figures</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/finance/analyst-coverage/"><i class="fa fa-dashboard"></i>Analyst Coverage</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/finance/consolidated-financial-statements/"><i class="fa fa-bar-chart"></i>Consolidated Financial Statements</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/finance/financial-calendar/"><i class="fa fa-calendar-o"></i>Financial Calendar</a>
+																					</li>
+																	</ul>
+							</div>
+						</div>
+
+						
+
+
+			<div class="col-md-4 bordered-menu">
+			<div class="block-menu-container">
+				<div class="title">
+					<span class="bg-color-menu">Business and Strategy</span>
+				</div>
+				<a class="menu-image" href="https://rubis.fr/media/2019/09/00-strategy_uk-25-september-2019.pdf" target="_blank">
+					<img src="https://rubis.fr/media/2019/09/rubis-strategy-september19-uk-354x199.jpg" alt="">
+				</a>
+				<a class="btn-menu" href="https://rubis.fr/media/2019/09/00-strategy_uk-25-september-2019.pdf" target="_blank">Download</a>
+			</div>
+		</div>
+	
+
+
+					</li>
+				</ul>
+			</li>
+					<li class="dropdown active yamm-fw">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Publications</a>
+				<ul class="dropdown-menu">
+					<li>
+						<div class="col-md-4">
+							<div class="block-menu-container">
+								<div class="title">
+									<span class="bg-color-menu">Publications</span>
+								</div>
+								<ul class="submenu">
+																			<li class="active">
+																						<a href="https://rubis.fr/en/publications/press-releases/"><i class="fa fa-newspaper-o"></i>Press Releases</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/publications/financial-results/"><i class="fa fa-line-chart"></i>Financial Results</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/publications/financial-reports/"><i class="fa fa-pie-chart"></i>Financial Reports</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/publications/webcast-2/"><i class="fa fa-file-text-o"></i>Webcast</a>
+																					</li>
+																	</ul>
+							</div>
+						</div>
+
+						
+
+
+		<div class="col-md-4">
+		<div class="block-menu-container">
+						<iframe src="//irpages2.eqs.com/websites/rubissca/English/6020/press-releases.html?iframe=true" width="100%" height="196" style="border:0"></iframe>
+					</div>
+	</div>
+
+		<div class="col-md-4 bordered-menu">
+		<div class="block-menu-container">
+			<div class="title">
+				<span class="bg-color-menu">Half-Year Results 2019</span>
+			</div>
+			<a class="menu-image" href="https://rubis.fr/media/2019/09/resultats-semestriels-2019-_uk.pdf" target="_blank">
+				<img src="https://rubis.fr/media/2019/09/resultats-semestriels-2019-_uk_v01-1-334x250.jpg" alt="">
+			</a>
+			<a class="btn-menu" href="https://rubis.fr/media/2019/09/resultats-semestriels-2019-_uk.pdf" target="_blank">Download</a>
+		</div>
+	</div>
+
+
+
+					</li>
+				</ul>
+			</li>
+					<li class="dropdown non-active yamm-fw">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">Shareholders</a>
+				<ul class="dropdown-menu">
+					<li>
+						<div class="col-md-4">
+							<div class="block-menu-container">
+								<div class="title">
+									<span class="bg-color-menu">Shareholders</span>
+								</div>
+								<ul class="submenu">
+																			<li class="non-active">
+																							<div class="dropdown auto-dropdown">
+																						<a href="https://rubis.fr/en/shareholders/the-rubis-share/"><i class="fa fa-check-circle-o"></i>The Rubis Share</a>
+																							<ul aria-labelledby="gouvernement-entreprise" class="dropdown-menu second-level">
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/shareholders/the-rubis-share/stock-market-performance/">Stock Market Performance</a>
+													</li>
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/shareholders/the-rubis-share/dividend/">Dividend</a>
+													</li>
+																									<li class="non-active">
+														<a href="https://rubis.fr/en/shareholders/the-rubis-share/shareholders/">Shareholders</a>
+													</li>
+																									</ul>
+												</div>																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/shareholders/become-shareholder/"><i class="fa fa-info-circle"></i>Become Shareholder</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/shareholders/general-assembly/"><i class="fa fa-gavel"></i>General Meeting</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/shareholders/insider-trading-rules/"><i class="fa fa-leaf"></i>Insider Trading Rules</a>
+																					</li>
+																	</ul>
+							</div>
+						</div>
+
+						
+
+
+	<div class='col-md-4 bordered-menu'>
+		<div class='block-menu-container'>
+			<div class='title'><span class='bg-color-menu'>Share price</span></div>
+			<iframe src="//charts3.equitystory.com/teaser-teaser1/rubissca/English" width="100%" height="150" style="border:0"></iframe>
+			<a class="btn-menu" href="https://rubis.fr/fr/actionnaires/laction-rubis/?y=">Share performance</a>
+		</div>
+	</div>
+		<div class='col-md-4'>
+		<div class='block-menu-container'>
+			<div class='title'><span class='bg-color-menu'>General Meeting</span></div>
+			<div class='event-menu'>
+				<div class='icon-date'><i class='fa fa-calendar-check-o'></i></div>
+				<div class='date'>
+					06|11|2019					<i class='fa fa-clock-o'></i>14:00				</div>
+				<div class='place'>
+					<i class='fa fa-map-marker'></i> Salons Hoche - 9, avenue Hoche - 75008 Paris				</div>
+				<a class="btn-menu" href="https://rubis.fr/fr/actionnaires/assemblee-generale/?y=2019">Read more</a>
+			</div>
+		</div>
+	</div>
+
+
+
+					</li>
+				</ul>
+			</li>
+					<li class="dropdown non-active yamm-fw">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">CSR</a>
+				<ul class="dropdown-menu">
+					<li>
+						<div class="col-md-4">
+							<div class="block-menu-container">
+								<div class="title">
+									<span class="bg-color-menu">CSR</span>
+								</div>
+								<ul class="submenu">
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/csr/rubis-csr-approach/"><i class="fa fa-lightbulb-o"></i>Rubis' CSR Approach</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/csr/rubis-sponsorship-activities/"><i class="fa fa-picture-o"></i>Rubis' Sponsorship Activities</a>
+																					</li>
+																			<li class="non-active">
+																						<a href="https://rubis.fr/en/csr/rubis-mecenat/"><i class="fa fa-"></i>Rubis mécénat</a>
+																					</li>
+																	</ul>
+							</div>
+						</div>
+
+						
+
+
+			<div class="col-md-4 bordered-menu">
+			<div class="block-menu-container">
+				<div class="title">
+					<span class="bg-color-menu">CSR Report (Registration document)</span>
+				</div>
+				<a class="menu-image" href="https://rubis.fr/media/2019/05/brochure-rse-uk.pdf" target="_blank">
+					<img src="https://rubis.fr/media/2019/05/rub2018_rseen_vignette-1-177x250.jpg" alt="">
+				</a>
+				<a class="btn-menu" href="https://rubis.fr/media/2019/05/brochure-rse-uk.pdf" target="_blank">Download</a>
+			</div>
+		</div>
+			<div class="col-md-4 bordered-menu">
+			<div class="block-menu-container">
+				<div class="title">
+					<span class="bg-color-menu">Code of ethics</span>
+				</div>
+				<a class="menu-image" href="https://rubis.fr/media/2017/12/rubis_csr_code-of-ethics_en.pdf" target="_blank">
+					<img src="https://rubis.fr/media/2017/12/rubis_csr_code-of-ethics_en-178x250.jpg" alt="">
+				</a>
+				<a class="btn-menu" href="https://rubis.fr/media/2017/12/rubis_csr_code-of-ethics_en.pdf" target="_blank">Download</a>
+			</div>
+		</div>
+	
+
+
+					</li>
+				</ul>
+			</li>
+			</ul>
+</div>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<main role="main">
+
+		<div class="container-fluid" id="red-line">
+			Infrastructure for energy storage and distribution		</div>
+
+					<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12 head-image">
+						<img src="https://rubis.fr/media/2017/12/rubis-publications-bandeau-communiques.jpg" width="1680" height="190" alt="">
+					</div>
+				</div>
+			</div>
+		
+<style>iframe { width: 100%; }.container{padding-left:0;padding-right:0}</style>
+<div class="container page-shadow">
+
+	<script src="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/js/easyXDM-2.4.19.3.min.js"></script>
+	<div id="embedded_1308409563" class="eqs-iframe-tools"><div class="eqs-iframe-throbber"></div></div>
+	<script>
+		(function(global) {
+			var transport = new easyXDM.Socket({
+				remote: 'https://rubis.irtools.eqs.com/websites/rubissca/English/6000/financial-news.html',
+				container: 'embedded_1308409563',
+				onMessage: function(message, origin) {
+					this.container.getElementsByTagName('iframe')[0].style.height = message + 'px';
+					this.container.getElementsByTagName('iframe')[0].scrolling = 'no';
+					this.container.getElementsByClassName('eqs-iframe-throbber')[0].style.display = 'none';
+				}
+			});
+		})();
+	</script>
+
+</div>
+
+
+
+	<footer>
+		<div class="container">
+			<div class="row no-gutter">
+				<div class="col-lg-6 col-md-12 col-sm-12 publications-container">
+					<div class="title">
+						Publications					</div>
+					<div class="publications-list">
+
+													<div class='publication'>
+								<a href='https://rubis.fr/media/2019/09/resultats-semestriels-2019-_uk.pdf' target='_blank'>
+								<div class='image'><img src="https://rubis.fr/media/2019/09/resultats-semestriels-2019-_uk_v01-1-334x250.jpg" alt=""></div>
+								<div class='title'>
+									Half-Year Results 2019								</div></a>
+							</div>
+													<div class='publication'>
+								<a href='https://rubis.fr/media/2019/09/rfs_2019-en-web.pdf' target='_blank'>
+								<div class='image'><img src="https://rubis.fr/media/2019/09/rub2018_rfs_en_couv_r-181x250.jpg" alt=""></div>
+								<div class='title'>
+									2019 Half-year Financial Reports								</div></a>
+							</div>
+													<div class='publication'>
+								<a href='https://rubis.fr/media/epaper/2018-annual-report/#page=1' target='_blank'>
+								<div class='image'><img src="https://rubis.fr/media/2019/04/image-ddr-2018-uk-724x1024-178x250.jpg" alt=""></div>
+								<div class='title'>
+									2018 Registration Document								</div></a>
+							</div>
+													<div class='publication'>
+								<a href='https://rubis.fr/media/2019/03/ppt-resultats-annuels-2018_uk_v02.pdf' target='_blank'>
+								<div class='image'><img src="https://rubis.fr/media/2019/03/vignette-annual-results-v2-334x250.jpg" alt=""></div>
+								<div class='title'>
+									2018 Annual Results								</div></a>
+							</div>
+													<div class='publication'>
+								<a href='https://rubis.fr/media/2018/03/ppt-resultats-annuels-2017_uk.pdf' target='_blank'>
+								<div class='image'><img src="https://rubis.fr/media/2018/03/rubis_annuels-results-2017_en-674x505-334x250.jpg" alt=""></div>
+								<div class='title'>
+									2017 Annual Results								</div></a>
+							</div>
+													<div class='publication'>
+								<a href='https://rubis.fr/media/2017/12/rubis-_annual-results-2016_en.pdf' target='_blank'>
+								<div class='image'><img src="https://rubis.fr/media/2017/12/rubis-_annual-results-2016_en-334x250.jpg" alt=""></div>
+								<div class='title'>
+									2016 Annual Results								</div></a>
+							</div>
+													<div class='publication'>
+								<a href='https://rubis.fr/media/2017/12/rubis-_annual-results-2015_en.pdf' target='_blank'>
+								<div class='image'><img src="https://rubis.fr/media/2017/12/rubis-_annual-results-2015_en-334x250.jpg" alt=""></div>
+								<div class='title'>
+									2015 Annual Results								</div></a>
+							</div>
+						
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="title">
+						Most viewed pages					</div>
+					<ul class="popular-pages">
+													<li>
+								<a href="https://rubis.fr/en/group/activities-and-strategy/"><i class="fa fa-angle-right"></i> Activities and Strategy</a>
+							</li>
+													<li>
+								<a href="https://rubis.fr/en/group/rubis-worldwide/"><i class="fa fa-angle-right"></i> Rubis Worldwide</a>
+							</li>
+													<li>
+								<a href="https://rubis.fr/en/publications/financial-reports/"><i class="fa fa-angle-right"></i> Financial Reports</a>
+							</li>
+													<li>
+								<a href="https://rubis.fr/en/publications/financial-results/"><i class="fa fa-angle-right"></i> Financial Results</a>
+							</li>
+													<li>
+								<a href="https://rubis.fr/en/finance/key-figures/"><i class="fa fa-angle-right"></i> Key Figures</a>
+							</li>
+											</ul>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-6 subsidiary">
+					<div class="rubis-terminal">
+						<a href="http://www.rubis-terminal.com/en/" target="_blank">
+							<img src="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/img/footer-rubis-terminal.png" alt="Rubis Terminal">
+						</a>
+					</div>
+					<div class="rubis-energie">
+						<a href="http://www.rubisenergie.com/" target="_blank">
+							<img src="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/img/footer-rubis-energie.png" alt="Rubis Energie">
+						</a>
+					</div>
+					<div class="rubis-mecenat">
+						<a href="http://www.rubismecenat.fr/en/" target="_blank">
+							<img src="https://rubis.fr/wp-content/themes/rubis.16147356525/assets/img/footer-rubis-mecenat.png" alt="Rubis Mecenat">
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<ul class="legal">
+					<li>
+						<a data-target="#contact" data-toggle="modal" href="#">Contacts</a>
+					</li>
+					<li>
+						<a data-target="#legal" data-toggle="modal" href="#">Legal Notice</a>
+					</li>
+					<!--<li>
+						<a data-target="#dpn" data-toggle="modal" href="#">Data Privacy Notice</a>
+					</li>-->
+					<li>
+						<a href="https://www.info-financiere.fr/pages/recherche/?sort=uin_dat_amf&q=rubis" target="_blank">Regulated Information</a>
+					</li>
+					<li>
+						© 2019 Rubis
+					</li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+	<div aria-hidden="true" aria-labelledby="video" class="modal fade" id="contact" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span> <span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Contacts</h4>
+				</div>
+				<div class="modal-body">
+					<div class="content">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<h2>Headquarters</h2>
+<p>46, rue Boissière<br />
+75116 Paris</p>
+<p>Tel : +33 (0)1 44 17 95 95<br />
+E-mail : rubis@rubis.fr</p>
+<h2>Shareholders Contact</h2>
+<p>CACEIS CORPORATE TRUST<br />
+14, rue Rouget-de-Lisle<br />
+92862 Issy-les-Moulineaux Cedex 09</p>
+<p><strong>Become a shareholder</strong><br />
+E-mail : ct-contact@caceis.com<br />
+Tel. : + 33 (0)1 57 78 34 44</p>
+<p><strong>General meeting</strong><br />
+E-mail : ct-assemblees@caceis.com<br />
+Tel. : + 33 (0) 1 57 78 32 32</p>
+<p><strong>Others</strong><br />
+E-mail : rubis@rubis.fr</p>
+<h2>Press Relation / Investors</h2>
+<p>E-mail : communication@rubis.fr<br />
+Tel. : + 33 (0) 1 45 01 99 51</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="video" class="modal fade" id="legal" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span> <span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Legal Notice</h4>
+				</div>
+				<div class="modal-body">
+					<div class="content">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<p>Last updated: October 21<sup>st</sup>, 2019</p>
+<h2>Identification</h2>
+<p>Publisher: RUBIS SCA, hereinafter the “Company”<br />
+Partnership Limited by Shares with capital of 125,123,037.50 euros<br />
+Registered office: 46, rue Boissière – 75116 Paris, France<br />
+Paris Trade and Companies Register 784 393 530<br />
+LEI code: 969500MGFIKUGLTC9742<br />
+Intra-Community VAT number: FR 81784393530<br />
+Tel.: +33 (0)1 44 17 95 95<br />
+Director of publication: Mr Jacques Riou</p>
+<p>Technical design of the website: EQS Group SAS<br />
+Limited liability company with capital of €1,000.00<br />
+Registered office: 3 rue Tronchet – 75008 Paris, France<br />
+Paris Trade and Companies Register 830 942 785<br />
+Intra-Community VAT number: FR 50830942785<br />
+Tel.: +33 (0)1 43 14 85 10</p>
+<p>Website host: EQS Group AG<br />
+Registered office: Karlstrasse 47 –  D-80333 Munich, Allemagne<br />
+Tel.: +49 (0) 89 210298-0<br />
+Fax: +49 (0) 89 210298-49<br />
+Email: <a href="mailto:contact@eqs.com">contact@eqs.com</a></p>
+<h2>Purpose of the website and updates</h2>
+<p>The purpose of the www.rubis.fr website is to provide information on the activities and results of the Company and the companies it controls, either directly or indirectly within the meaning of French law, to any interested person (hereinafter the “User”). The website, including these terms and conditions, may be updated at any time.</p>
+<h2>Intellectual property</h2>
+<p>Information and documents available on the website (including any text, images, photographs, videos, sounds, databases, company names, logos, products and trademarks) are either the exclusive property of the Company or one of the companies it controls, or are subject to rights of use, reproduction and representation or copyright. Unless expressly authorized by the Company, any reproduction, representation or use is prohibited.<br />
+Copyright of images reproduced on the website:<br />
+© Cyprien Clément-Delmas<br />
+© Gilles Dacquin<br />
+© Rubis Group photo library</p>
+<h2>RSS feed</h2>
+<p>The User can access the information available on the website via an RSS feed. The use of this right is granted by the Company for individual and non-commercial purposes, on the condition that the website’s URL is clearly mentioned.</p>
+<h2>Personal information and the protection of privacy and cookies</h2>
+<p>Rubis may need to collect your personal data to respond to your inquiry. All data collected are intended for the use of Rubis and his partners. The latter are contractually obligated to keep your personal data confidential and secure and they are required to use your personal data solely for the needs of the tasks entrusted to them. Rubis undertakes not to sell, rent or trade your personal data to third parties.</p>
+<p>In accordance with the applicable legislation, you may exercise their right to access, modify, rectify or delete your personal data.</p>
+<p>In order to provide you with the better service, Rubis collects statistics data and audience measurement from the website.</p>
+<p>To enable statistical analysis, the website provider uses the services of etracker GmbH, installing cookies (small text files stored by the Internet browser on the user&#8217;s device).</p>
+<p>The data generated with etracker is processed and stored by etracker only on the basis of art. 6 of the General Regulations on Data Protection. You can choose not to accept cookies. However, the non-installation of a cookie may limit some of the features of the website. Information on how to configure the browser may be obtained at the following address: <a href="https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser">https://www.cnil.fr/fr/cookies-les-outils-pour-les-maitriser</a></p>
+<h2>Disclaimer</h2>
+<p>The Company disclaims all liability:<br />
+• in the event of any vagueness, inaccuracy or omission in the information or materials provided on the website, including the data links (hyperlinks, etc.) used by the website or referring to it;<br />
+• in the event of damage, direct or indirect, whatever the cause, origin, nature or consequences, resulting from access to the website or the inability to access it, its use of or reliance upon information or a document obtained directly or indirectly from the website (none of which in any way constitute a solicitation to invest, a commercial approach or a public offering of financial instruments).</p>
+<p>&nbsp;</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div aria-hidden="true" aria-labelledby="video" class="modal fade" id="dpn" role="dialog" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button class="close" data-dismiss="modal" type="button"><span aria-hidden="true">×</span> <span class="sr-only">Close</span></button>
+					<h4 class="modal-title">Data Privacy Notice</h4>
+				</div>
+				<div class="modal-body">
+					<div class="content">
+						<div class="row">
+							<div class="col-md-10 col-md-offset-1">
+								<p>testen</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<!-- ftin: 244:1.77 -->
+
+<!-- 244,1.773 -->
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"f594ed4255","applicationID":"395375013","transactionName":"YVJaZxRWV0ZSURBfDlgYeVASXlZbHEYBWxFaVkxWS0dLUEBBFlMNU1ZLVhU=","queueTime":0,"applicationTime":1773,"atts":"TRVZEVxMREg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

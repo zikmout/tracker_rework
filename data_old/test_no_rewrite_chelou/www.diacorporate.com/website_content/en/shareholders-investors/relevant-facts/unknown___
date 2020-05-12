@@ -1,0 +1,549 @@
+<!--[if !IE 6]><?xml version="1.0" encoding="UTF-8"?><![endif]-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" xml:lang="es">
+	<head>
+		<title>DIA Corporate</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE7" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="author" content="Desarrollado con webControl CMS por Intermark Tecnologías"/>
+<meta name="copyright" content="Copyright 2013 DIA Corporate"/>
+<meta http-equiv="Content-Language" content="es"/>
+<meta name="title" content="DIA Corporate"/>
+<meta name="generator" content="Descripción DIA Corporate"/>
+<meta name="distribution" content="global"/>
+<meta name="revisit" content="1 day" />
+<meta name="robots" content="all" />
+
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+<meta name="description" content="Desarrollado con webControl CMS"/> 
+		<meta name="geo.region" content="ES-O"/> 
+		<meta name="google-site-verification" content="8z-6PnsOQ8cnd9cKnH7ZsSQKL3SpBFpgH9zlVMaDlt8"/> 
+		<meta name="googlebot" content="index,follow,noarchive"/> 
+		<meta name="keywords" content=""/> 
+		<meta name="language" content="spanish"/> 
+		<meta name="robots" content="INDEX,FOLLOW"/> 
+		<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+	
+	
+	
+	
+	<link href="/combined.css?id=8461884b171a60c"  media="all" type="text/css" rel="stylesheet" />
+
+		
+		<link href="/combined.css?id=5b710dd0171a60c"  media="all" type="text/css" rel="stylesheet" />
+	<script type="text/javascript" src="/combined.js?id=eeb341a4171a60c" charset="utf-8"></script>
+
+	<link href="/combined.css?id=3ffcad5b171a60c"  media="all" type="text/css" rel="stylesheet" />
+
+		<link href="/combined.css?id=661e3992171a60c"  media="all" type="text/css" rel="stylesheet" />
+	<!--[if lte IE 8]>
+	<meta http-equiv="X-UA-Compatible" content="IE=IE8" />
+<![endif]-->
+
+<!-- Hack para el explorer 6 - Ancho maximo	-->
+<!--[if IE 6]>
+	<style type="text/css" media="screen">
+		.dimensioncuerpo{margin:0;width:expression((this.parentElement.offsetWidth - (parseInt(this.parentElement.currentStyle.paddingLeft)+parseInt(this.parentElement.currentStyle.paddingRight)+parseInt(this.parentElement.currentStyle.borderLeftWidth)+parseInt(this.parentElement.currentStyle.borderRightWidth))) > ( Math.round((56*(screen.deviceXDPI?screen.deviceXDPI:96)/72)*parseInt(document.body.currentStyle.fontSize)) + (parseInt(this.currentStyle.marginLeft)+parseInt(this.currentStyle.marginRight)+parseInt(this.currentStyle.paddingLeft)+parseInt(this.currentStyle.paddingRight)+parseInt(this.currentStyle.borderLeftWidth)+parseInt(this.currentStyle.borderRightWidth))) ? "58.7em":"auto")}
+	</style>
+<![endif]-->
+
+<!-- Hack IE 6-8 para compatibilidad css3 -->
+<!--[if lte IE 8]>
+	<style type="text/css" media="screen">
+@charset "UTF-8";
+/* css para aplicar CSS3 a IE */ 
+
+.txtdest2 .cajatxt, .imgtxtdest .txtdest2 .cajatxt, .infonot .descargar a, .form_tipo0 input, .form_tipo1 input, 
+.form_tipo2 input, .form_tipo0 textarea, .form_tipo1 textarea, .form_tipo2 textarea, .grafico, #a_hechosrelevantesdest .tit div, #a_noticiadest .tit div{position:relative}
+
+#n1 li.menu-on .menuhover, #n2, #compas, .forma, #a_infofinanciera h2 span, .forma .destacado img, .forma .destacado p, 
+.txtdest2 .cajatxt, .imgtxtdest .txtdest2 .cajatxt, .txtdest2.tipo2 p strong, #resultados, .form_tipo0 input, .form_tipo1 input, 
+.form_tipo2 input, .form_tipo0 textarea, .form_tipo1 textarea, .form_tipo2 textarea, 
+.infonot .descargar a, .grafico, .grafico .barra, .forma .destacado.tipo2 p a, .forma .destacado2 img, .subhome .forma, #a_hechosrelevantesdest .tit div, #a_noticiadest .tit div, .enlaceshist a, .contenthist div{behavior: url('/ie-css3.htc')}
+
+</style><![endif]-->
+<!--[if gt IE 8]><!-->
+			<link href="/public/css/portal/responsive.css" media="all" type="text/css" rel="stylesheet" />
+		<!--<![endif]-->
+		
+		<link href="/public/css/portal/impresion.css" media="print" type="text/css" rel="stylesheet" />
+	</head>
+	<body xml:lang="es" id="contenedorcuerpo" class="bodysubhome">
+		<p class="mensaje"><a href="#recurso" accesskey="2">Saltar navegación. Ir directamente al contenido principal (Tecla de acceso S)</a></p>
+		
+		<div class="cabecera">
+			<div class="dimensioncuerpo"><div class="cuerpo">
+				<span id="ver-menu"><img src="/public/img/comun/icono/verMenu.png" alt="Ver menú" /></span>
+	<h1 class="logo"><a href="http://www.diacorporate.com/es/"><span><img src="/public/img/comun/portal/logoEmpresa.png" alt="DIA Corporate" /></span></a></h1>
+	<div class="visible-phone"><div id="cotizacioncab">
+	<script type="text/javascript">
+			// <![CDATA[
+				document.write('<iframe id="iframe_cotizacion_2" allowtransparency="allowtransparency" src="https://tools.euroland.com/tools/ticker/scrolling/?companycode=es-dia&amp;lang=es-es" height="25" frameborder="0" width="100%" scrolling="no">');
+				document.write('<p><a href="https://tools.euroland.com/tools/ticker/scrolling/?companycode=es-dia&amp;lang=es-es">Información sobre la cotización de DIA</a></p>');
+				document.write('</iframe>');
+			// ]]>
+		</script>
+		<noscript>
+			<p><a href="https://tools.euroland.com/tools/ticker/scrolling/?companycode=es-dia&amp;lang=es-es">Información sobre la cotización de DIA</a></p>
+		</noscript>
+	</div></div>
+			</div></div>
+		</div>
+		
+		<div class="grupo-head">
+			<span id="cerrar-menu"><img src="/public/img/comun/icono/cerrarMenu.png" alt="Cerrar menú"></span>
+			<span id="volver-menu"></span>
+			
+			<div id="nav"><div class="bloquenav">
+				<div class="dimensioncuerpo"><div class="cuerpo">
+					<span class="mensaje">Comienza Menú Principal</span>
+<ul id="n1">
+				<li id="menu1" class="pmcon primero">
+							<a   href="https://www.diacorporate.com/es/nosotros/">Nosotros</a>
+		<ul class="n2">
+			<li class="pmsin primero">
+							<a   href="https://www.diacorporate.com/es/nosotros/principios-empresariales/">Principios Empresariales</a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/nosotros/codigo-etico/">Código ético</a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/nosotros/historia/">Historia</a>
+		</li>
+					<li class="pmsin ultimo">
+							<a   href="http://www.diacorporate.com/es/nosotros/empresas-dia/">Empresas DIA</a>
+		</li>
+					</ul>
+	</li>
+					<li id="menu2" class="pmcon">
+							<a   href="https://www.diacorporate.com/es/cliente/">Cliente</a>
+		<ul class="n2">
+			<li class="pmsin primero">
+							<a   href="https://www.diacorporate.com/es/cliente/tiendas-y-marcas/">Tiendas y marcas</a>
+		</li>
+					<li class="pmsin ultimo">
+							<a   href="https://www.diacorporate.com/es/cliente/franquicias-dia/">Franquicias</a>
+		</li>
+					</ul>
+	</li>
+					<li id="menu3" class="pmcon">
+							<a   href="https://www.diacorporate.com/es/rsc/">RSC</a>
+		<ul class="n2">
+			<li class="pmsin primero">
+							<a   href="https://www.diacorporate.com/es/rsc/politica-de-rsc/">Política de RSC</a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/rsc/grupos-de-interes/">Grupos de interés</a>
+		</li>
+					<li class="pmsin ultimo">
+							<a   href="https://www.diacorporate.com/es/rsc/accion-social/">Acción social</a>
+		</li>
+					</ul>
+	</li>
+					<li id="menu4" class="pmcon">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/">Gobierno Corporativo </a>
+		<ul class="n2">
+			<li class="pmsin primero">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/politicas-corporativas/">Políticas Corporativas</a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/estatutos-y-reglamentos/">Estatutos y reglamentos</a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/consejo-de-administracion/">Consejo de Administración</a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/comisiones-del-consejo/">Comisiones del Consejo</a>
+		</li>
+					<li class="pmsin ultimo">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/comite-de-direccion/">Comité Ejecutivo</a>
+		</li>
+					</ul>
+	</li>
+					<li id="menu5" class="pmcon">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/">Accionistas</a>
+		<ul class="n2">
+			<li class="pmcon primero">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/informacion-financiera/">Información financiera</a>
+		<ul class="n3">
+			<li class="pmsin primero">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/informacion-financiera/participaciones/">Participaciones</a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/informacion-financiera/dividendos-y-amortizaciones/">Dividendos y amortizaciones</a>
+		</li>
+					<li class="pmsin ultimo">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/informacion-financiera/informes-anuales/">Informes Anuales</a>
+		</li>
+					</ul>
+	</li>
+					<li class="pmsin">
+							<a rel="external"  href="https://www.diacorporate.com/es/accionistas-e-inversores/ampliacion-de-capital/">Ampliación de Capital</a>
+		</li>
+					<li class="pmsin">
+							<a   href="http://www.diacorporate.com/es/accionistas-e-inversores/oferta-publica-de-adquisicion-de-valores-opa/">Oferta Pública de Adquisición de Valores (OPA) </a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/renta-fija-y-rating/">Renta Fija y Rating</a>
+		</li>
+					<li class="pmsin">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/informacion-de-la-cnmv/">Información de la CNMV</a>
+		</li>
+					<li class="pmcon">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/junta-de-accionistas/">Junta de Accionistas</a>
+		<ul class="n3">
+			<li class="pmsin primero">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/junta-de-accionistas/junta-extraordinaria-accionistas-octubre-2019/">Junta Extraordinaria Accionistas Octubre 2019</a>
+		</li>
+					<li class="pmsin ultimo">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/junta-de-accionistas/ultimas-juntas/">Últimas Juntas</a>
+		</li>
+					</ul>
+	</li>
+					<li class="pmsin ultimo">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/agenda-del-inversor/">Agenda del inversor</a>
+		</li>
+					</ul>
+	</li>
+					<li id="menu6" class="pmcon ultimo">
+							<a   href="https://www.diacorporate.com/es/prensa/">Prensa</a>
+		<ul class="n2">
+			<li class="pmsin primero ultimo">
+							<a   href="https://www.diacorporate.com/es/prensa/noticias/">Noticias</a>
+		</li>
+					</ul>
+	</li>
+					</ul>
+		<span class="mensaje">Fin del Menú Principal</span></div></div> <!-- fin dimensioncuerpo y cuerpo -->
+			</div></div>	
+			<div id="header">
+				<div class="dimensioncuerpo"><div class="cuerpo">
+					<div class="agrupa">
+						<p class="mensaje">Secci&oacute;n de idiomas</p>
+			<ul id="idioma">
+					<li class="primero">
+								<strong>ESP</strong>
+							</li>
+						<li class="">
+								<!-- Cambio de idioma contextos -->
+								<a href="https://www.diacorporate.com/en/">
+										ENG</a>
+								</li>
+						</ul>
+			<p class="mensaje">Fin de la secci&oacute;n de idiomas</p>
+	<div class="hidden-phone"><div id="cotizacioncab">
+	<script type="text/javascript">
+			// <![CDATA[
+				document.write('<iframe id="iframe_cotizacion_2" allowtransparency="allowtransparency" src="https://tools.euroland.com/tools/ticker/scrolling/?companycode=es-dia&amp;lang=es-es" height="25" frameborder="0" width="100%" scrolling="no">');
+				document.write('<p><a href="https://tools.euroland.com/tools/ticker/scrolling/?companycode=es-dia&amp;lang=es-es">Información sobre la cotización de DIA</a></p>');
+				document.write('</iframe>');
+			// ]]>
+		</script>
+		<noscript>
+			<p><a href="https://tools.euroland.com/tools/ticker/scrolling/?companycode=es-dia&amp;lang=es-es">Información sobre la cotización de DIA</a></p>
+		</noscript>
+	</div></div>
+					</div>
+					<p class="twitter">
+	<a href="https://twitter.com/DIA_Group" rel="external" title="Síguenos en Twitter @DIA_Group" >Síguenos en Twitter @DIA_Group</a>
+</p>
+<p class="instagram">
+	<a href="https://www.instagram.com/dia_corp" rel="external" title="Síguenos en Instagram dia_corp" >Síguenos en Instagram dia_corp</a>
+</p>
+<form id="buscadorGeneralForm" method="post" action="/es/buscadorGeneral.do?csrfToken=6F8A5EFC35E00764422380665BAECE15"><div>
+		<input type="hidden" name="tiposBusqueda" value="C|M|D" /><label for="textobusqueda">
+			<input type="text" name="textoBusqueda" id="textobusqueda" value="Buscar" />
+		</label>
+		<input type="submit" accesskey="4" id="botonbuscador" class="buscar" value="Buscar" />
+	</div>
+</form><p class="mensaje">Secci&oacute;n de utilidades</p>
+	<ul id="utilidades">
+		<li>
+			<a href="https://www.diacorporate.com/es/" accesskey="1">Inicio</a></li>
+		<li class="">
+					<a  href="https://www.diacorporate.com/es/contacto/" accesskey="9">
+							Contacto</a>
+						</li>
+				
+			<li class="ultimo">
+					<a  href="https://www.diacorporate.com/es/mapa-web/" accesskey="3">
+							Mapa web</a>
+						</li>
+				
+			<li class="twitter">
+			<a href="https://twitter.com/DIA_Group" rel="external" title="Síguenos en Twitter @DIA_Group" >Síguenos en Twitter @DIA_Group</a>
+		</li>
+		<li class="instagram">
+			<a href="https://www.instagram.com/dia_corp" rel="external" title="Síguenos en Instagram dia_corp" >Síguenos en Instagram dia_corp</a>
+		</li>
+	</ul>
+	<p class="mensaje">Fin de la secci&oacute;n de utilidades</p>
+</div></div> <!-- fin dimensioncuerpo y cuerpo -->
+			</div>
+			
+		</div>
+		
+		<div id="section">
+			<div class="dimensioncuerpo"><div class="cuerpo">
+				<p class="mensaje">Comienza el contenido principal</p>
+				<div id="recurso">
+					<div id="a_error404">
+	<div id="errorejecucion">
+		<h2>Página no encontrada</h2>
+		<p>No se puede mostrar la página que ha solicitado.</p>
+		<p>Le sugerimos una de las siguientes acciones</p>
+		<ul class="errorlista tipo1">
+			<li><a href="https://www.diacorporate.com/es/contacto/">Contacte con nosotros</a></li>
+			<li><a href="https://www.diacorporate.com/es/mapa-web/">Acceda al mapa web</a></li>
+			<li><a href="https://www.diacorporate.com/es/">Acceda a la página de inicio</a></li>
+		</ul>
+	</div>
+</div></div>
+				<p class="mensaje">Fin del contenido principal</p>
+				<div id="navinf">
+				<div class="logos-pie owl-carousel">
+					<div><a href="https://www.dia.es/" title="Ir al enlace"><img src="https://www.diacorporate.com/public/img/comun/portal/logoPie1.gif" alt="" /></a></div>
+					<div><a href="https://www.minipreco.pt/" title="Ir al enlace"><img src="https://www.diacorporate.com/public/img/comun/portal/logoPie8.gif" alt="" /></a></div>
+					<div><a href="https://www.laplazadedia.es/" title="Ir al enlace"><img src="https://www.diacorporate.com/public/img/comun/portal/logoPie12.gif" alt="" /></a></div>
+					<div><a href="https://www.clarel.es/" title="Ir al enlace"><img src="https://www.diacorporate.com/public/img/comun/portal/logoPie5.gif" alt="" /></a></div>
+</div>
+				<div id="menu-pie">
+					<div class="item-menu">
+							<h2>
+								<a   href="https://www.diacorporate.com/es/nosotros/">Nosotros</a>
+		</h2>
+							<div class="hide-with-script"><ul id="sub_menu1">
+			<li class="submenu pmsin primero">
+							<a   href="https://www.diacorporate.com/es/nosotros/principios-empresariales/">Principios Empresariales</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/nosotros/codigo-etico/">Código ético</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/nosotros/historia/">Historia</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="http://www.diacorporate.com/es/nosotros/empresas-dia/">Empresas DIA</a>
+		</li>
+					</ul>
+	</div>
+						</div>
+					<div class="item-menu">
+							<h2>
+								<a   href="https://www.diacorporate.com/es/cliente/">Cliente</a>
+		</h2>
+							<div class="hide-with-script"><ul id="sub_menu2">
+			<li class="submenu pmsin primero">
+							<a   href="https://www.diacorporate.com/es/cliente/tiendas-y-marcas/">Tiendas y marcas</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/cliente/franquicias-dia/">Franquicias</a>
+		</li>
+					</ul>
+	</div>
+						</div>
+					<div class="item-menu">
+							<h2>
+								<a   href="https://www.diacorporate.com/es/rsc/">RSC</a>
+		</h2>
+							<div class="hide-with-script"><ul id="sub_menu3">
+			<li class="submenu pmsin primero">
+							<a   href="https://www.diacorporate.com/es/rsc/politica-de-rsc/">Política de RSC</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/rsc/grupos-de-interes/">Grupos de interés</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/rsc/accion-social/">Acción social</a>
+		</li>
+					</ul>
+	</div>
+						</div>
+					<div class="item-menu">
+							<h2>
+								<a   href="https://www.diacorporate.com/es/gobierno-corporativo/">Gobierno Corporativo </a>
+		</h2>
+							<div class="hide-with-script"><ul id="sub_menu4">
+			<li class="submenu pmsin primero">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/politicas-corporativas/">Políticas Corporativas</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/estatutos-y-reglamentos/">Estatutos y reglamentos</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/consejo-de-administracion/">Consejo de Administración</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/comisiones-del-consejo/">Comisiones del Consejo</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/gobierno-corporativo/comite-de-direccion/">Comité Ejecutivo</a>
+		</li>
+					</ul>
+	</div>
+						</div>
+					<div class="item-menu">
+							<h2>
+								<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/">Accionistas</a>
+		</h2>
+							<div class="hide-with-script"><ul id="sub_menu5">
+			<li class="submenu pmcon primero">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/informacion-financiera/">Información financiera</a>
+		</li>
+					<li class="submenu pmsin">
+							<a rel="external"  href="https://www.diacorporate.com/es/accionistas-e-inversores/ampliacion-de-capital/">Ampliación de Capital</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="http://www.diacorporate.com/es/accionistas-e-inversores/oferta-publica-de-adquisicion-de-valores-opa/">Oferta Pública de Adquisición de Valores (OPA) </a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/renta-fija-y-rating/">Renta Fija y Rating</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/informacion-de-la-cnmv/">Información de la CNMV</a>
+		</li>
+					<li class="submenu pmcon">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/junta-de-accionistas/">Junta de Accionistas</a>
+		</li>
+					<li class="submenu pmsin">
+							<a   href="https://www.diacorporate.com/es/accionistas-e-inversores/agenda-del-inversor/">Agenda del inversor</a>
+		</li>
+					</ul>
+	</div>
+						</div>
+					<div class="item-menu">
+							<h2>
+								<a   href="https://www.diacorporate.com/es/prensa/">Prensa</a>
+		</h2>
+							<div class="hide-with-script"><ul id="sub_menu6">
+			<li class="submenu pmsin primero">
+							<a   href="https://www.diacorporate.com/es/prensa/noticias/">Noticias</a>
+		</li>
+					</ul>
+	</div>
+						</div>
+					</div>
+			</div>
+		</div></div> <!-- fin dimensioncuerpo y cuerpo -->
+		</div><!-- fin section -->
+		
+		<div id="footer">
+	<div class="dimensioncuerpo">
+		<div class="cuerpo">
+			<div class="seccion1">
+				<p>&copy;&#160;Copyright 2013 DIA Corporate</p>
+				<p>Conforme <acronym title="World Wide Web Consortium" xml:lang="en">W3C</acronym>: 
+					<a href="http://validator.w3.org/check/referer "><acronym title="Extensible Hypertext Markup Language" xml:lang="en">XHTML</acronym> 1.0</a> | 
+					<a href="http://jigsaw.w3.org/css-validator/check/referer"><acronym title="Cascading Style Sheets" xml:lang="en">CSS</acronym> 2.1</a> | 
+					<a href="http://www.w3.org/WAI/WCAG1AA-Conformance"><acronym title="Iniciativa de accesibilidad web - Doble A" xml:lang="es">WAI 'AA</acronym></a> |
+					<a href="/es/aviso-legal/">Aviso legal</a> |
+								<a href="/es/accesibilidad/">Accesibilidad</a> |
+								<a href="/es/politica-de-cookies/">Política de cookies</a> |
+								</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="/combined.js?id=227ffc3c171a60c" charset="utf-8"></script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript" src="/combined.js?id=ff5f3386171a60c" charset="utf-8"></script>
+	<!-- ********************************
+		SCRIPT PARA QUE EL IE INTERPRETE LOS MEDIA QUERIES (<=IE8)
+	 ************************************* -->
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="/public/plugin/mediaQueries/css3-mediaqueries.js" charset="UTF-8"></script>
+	<![endif]-->
+<script type="text/javascript" src="/public/plugin/tooltip/js/jquery-ui-1.9.2.custom.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="/public/plugin/oembed/js/jquery.oembed.js" charset="utf-8"></script>
+<script type="text/javascript" src="/public/media/mediaelement/mediaelement-and-player.min.js" charset="utf-8"></script>
+			<script type="text/javascript" src="/combined.js?id=1d4a03b3171a60c" charset="utf-8"></script>
+			<script type="text/javascript" src="https://www.diacorporate.com/validacion.jsp" charset="utf-8"></script>
+
+<script type="text/javascript"> 
+//<![CDATA[
+
+    var bCancel = false; 
+
+    function validateBuscadorGeneralForm(form) { 
+        if (bCancel) { 
+            return true; 
+        } else { 
+            var formValidationResult; 
+            formValidationResult = validateRequired(form) && validateMinLength(form) && validateFilterXSS(form); 
+            return (formValidationResult); 
+        } 
+    } 
+
+    function buscadorGeneralForm_required () { 
+     this.a0 = new Array("textobusqueda", "<span>Texto</span> es obligatorio.", new Function ("varName", "this.minlength='3';  return this[varName];"));
+    } 
+
+    function buscadorGeneralForm_minlength () { 
+     this.a0 = new Array("textobusqueda", "<span>Texto</span> no puede ser menor de 3 caracteres.", new Function ("varName", "this.minlength='3';  return this[varName];"));
+    } 
+
+    function buscadorGeneralForm_filterXSS () { 
+     this.a0 = new Array("textobusqueda", "Texto contiene caracteres no válidos.", new Function ("varName", "this.minlength='3';  return this[varName];"));
+    } 
+
+
+//]]>
+</script>
+
+<!--[if gt IE 8]><!--> 
+<script type="text/javascript" src="/public/js/portal/portal-responsive.js" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+	$(window).load(responsive.inicializar);
+</script>
+<!--<![endif]--><script type="text/javascript" src="/combined.js?id=81b69174171a60c" charset="utf-8"></script>
+<!-- Google Analytics -->
+<script type="text/javascript" charset="utf-8">
+//<![CDATA[
+	var aceptacionCookie = $.cookie('cookiesDisclosureCount');
+	if((aceptacionCookie >= '1') && !(window.location.href.indexOf('#directive') > -1)) {
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-27619602-1']);
+		_gaq.push(['_trackPageview']);
+		_gaq.push (['_gat._anonymizeIp']);
+	
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	}
+// ]]>
+</script></body>
+</html>

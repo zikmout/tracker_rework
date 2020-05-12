@@ -1,0 +1,2580 @@
+
+
+	<!-- PREPROD: /system/modules/com.ntt.snam.responsive/elements/template-commons.jsp -->
+
+
+
+
+<!DOCTYPE html>
+
+
+
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/system/modules/com.ntt.snam.responsive/resources/assets/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-startup-image" href="/system/modules/com.ntt.snam.responsive/resources/assets/favicon/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="Snam">
+    <link rel="icon" type="image/png" sizes="32x32" href="/system/modules/com.ntt.snam.responsive/resources/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/system/modules/com.ntt.snam.responsive/resources/assets/favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="/system/modules/com.ntt.snam.responsive/resources/assets/favicon/safari-pinned-tab.svg" color="#00447a">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#00447a">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#00447a">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#00447a">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#00447a">
+    <title>Share buyback</title>
+    <meta name="description" content=''>
+    <!-- all css -->
+    <script type="text/javascript" src="/ruxitagentjs_ICA2SVfgjoqru_10189200420175514.js" data-dtconfig="app=46d19228606be9b5|featureHash=ICA2SVfgjoqru|rdnt=1|uxrgce=1|bp=2|cuc=xrudmiqw|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|dpvc=1|lastModification=1588060129856|dtVersion=10189200420175514|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA2SVfgjoqru_10189200420175514.js|reportUrl=/rb_dbcc685e-ca5a-424d-9188-76003a08b747|rid=RID_-1841991296|rpid=1926221309|domain=snam.it"></script><link rel="stylesheet" href="/system/modules/com.ntt.snam.responsive/resources/assets/css/bootstrap.min.css">   
+    <link rel="stylesheet" href="/system/modules/com.ntt.snam.responsive/resources/assets/css/style-new.min.css">
+    <link rel="stylesheet" href="/export/sites/snam-rp/repository/css/extraResponsive.min.css">
+    <link rel="stylesheet" href="/system/modules/com.ntt.snam.responsive/resources/assets/css/print.css" media="print">  
+    <!-- all js vendor library -->
+  
+    <!-- ADOBE -->
+	<script src="//assets.adobedtm.com/35e1e3a158adeecea9ba76a23eea2b3137996670/satelliteLib-888dfd0588762392045a1b3322343392c74a2952.js"></script>
+	<script src="/export/system/modules/com.ntt.snam.responsive/resources/assets/js/vendor/jquery-1.11.3.min.js"></script>
+</head>
+
+
+
+<body class="body en" >
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+<!-- GOOGLE CHARTS -->
+	<script src="/export/system/modules/com.ntt.snam.responsive/resources/assets/js/charts/loader.js"></script>
+
+
+    <div class="mainWrapper">
+        <!--Inclusione configurazione sito con header-->
+	
+
+
+
+
+
+
+
+<!--desktop-->
+
+<!--1 - 09:57:28 953
+-->
+
+
+
+<!-- box cookie bar INGLESE -->
+<div class="sectionRow section--cookieBar j-cookieLaw" style="display: none;">
+      <div class="wrapperRow cf">
+          <div class="mobPadd">
+	
+		<h3>CONSENT TO USE OF COOKIES ON INITIAL ACCESS TO THE WEB SITE WWW.SNAM.IT</h3>
+
+		<p>Snam uses cookies as part of this site to ensure an excellent browsing experience.
+		This site also uses third-party cookies.
+		The cookies used cannot identify the user.
+		For more information about the cookies used and how to delete them, <a href="/en/utilities/disclaimer.html">click here</a>.
+		By continuing to browse this site, you consent to the use of cookies.
+		
+		<div class="pull-right">
+             <a href="javascript:;" class="moreLink j-closeCookie">Close</a>
+        </div>
+		
+		</div>
+	</div>
+</div>
+<!-- /wrapper_cookie_bar -->
+
+
+
+
+<section class="userLogged">
+ 	<div class="wrapperRow mobPadd">
+ 		
+        			
+					<a href="/en/alert/login.jsp">Login</a> &nbsp; 
+					<a class="profileLink" href="/en/alert/login.jsp"><span class="icon icon-user">&nbsp;</span></a>
+					
+					
+                    		
+	</div>
+</section>
+
+<section class="header">
+
+            <header class="header header_new sectionRow" role="banner">              
+              <div class="wrapperRow cf">
+				<div class="servicesBarHeader cf">
+                      						
+                        <nav class="servicesBar">
+							
+                            <div class="servicesBarLeft">
+                                <!-- other site link -->
+                                <div class="siteLink">
+                                    <div class="siteLink__label">snam websites</div>
+                                    <div class="siteLink__window">
+                                    	<div class="siteLink__label">snam websites</div>
+					<a class="siteLink__close" href="javascript:;">CLOSE</a>
+	                                    <ul class="wrapper navbar-nav">
+	                                        <li><a class="siteLink__btn" target="_blank" title="" href="https://fornitori.snam.it/tamtamy/home.action?lang=ti_it"></a></li>
+	                                        <li><a class="siteLink__btn" target="_blank" title="" href="http://immobiliare.snam.it/"></a></li>
+	                                        <!--
+	                                        <li><a class="siteLink__btn" target="_blank" title="Global Solutions" href="#">Snam Global Solution</a></li>
+	                                        <li><a class="siteLink__btn" target="_blank" title="Fondazione" href="#">Snam Fondazione</a></li>
+	                                        -->
+	                                        			
+	                                    </ul>
+                                    </div>
+                                </div>
+                            </div><!-- /servicesBarLeft -->
+                            <div class="servicesBarRight">
+                                <!-- search form  -->
+                                <div class="searchFormDesktop">
+                                    <div class="searchFormDesktop__wrapperInn">
+
+                                        <form id="searchForm" action='/en/utilities/search_results.html'
+                                        method="get" onsubmit="setSearchString();" class="searchForm">
+                                            <div class="hint_input" id="hintString"></div>
+
+                                            <input class="searchForm__input" placeholder="search in this site" 
+                                            		type="search" name="keyword" autocomplete="off" id="searchString">
+                                            <input class="searchForm__submit hidden" type="submit" value="Cerca">
+                                            <span id="searchImage" class="searchForm__icon icon icon-search"></span>
+                                        </form>
+										
+										
+										
+                                    </div> 
+
+									<!-- POP UP RESULTS -->
+									<div style="display:none" id="hints">
+									
+										
+												
+														<div id="hintTitle" class="hint_title"><span>hints</span>
+												
+
+														<a class="hints__close" title="chiudi suggerimenti ricerca" href="#" 
+														onmouseover="disableCloseHint();" onmouseout="enableCloseHint();" onclick="closeAndHideSearch(); return false;">
+														<img title="chiudi" alt="chiudi" border="0" src="/export/sites/snam-rp/shared/i/btn_close_hint.gif"/></a>
+														</div>
+														<ul id="hintResults">
+														<li></li>
+														</ul>
+														<ul id="previewResults">
+
+
+														<li></li>
+														</ul>
+													
+									</div>
+									<!-- POP UP RESULTS -->
+									
+									<script  type="text/javascript">
+										$(document).ready(function(){
+										initSearchAndHint( "searchForm", '/en/utilities/results_asyoutype.xml ', "en");
+										//initSearchAndHint( "searchForm", '/it/utilita/results_asyoutype.xml', "en");
+										})
+									</script>
+									<script  type="text/javascript">	
+										function setSearchString(){
+											if(document.getElementById("searchString").value == 'cerca nel sito' ){
+												document.getElementById("searchString").value = '';
+											}
+											document.getElementById("searchForm").submit();
+										}
+									</script>
+									
+										</div>
+									
+									
+									<ul class="wrapper navbar-nav">
+										<li class="servicesBar__item">
+											
+												<a href="/en/webform/feedback.html" class=""><span class="icon icon-contact"></span></a>
+											
+										</li>
+									</ul>
+									 <div class="wrapper navbar-nav">
+										<div class="listSelectStyle languageSwitch">
+											<div class="listSelectStyle__listWrap">
+												<span class="listSelectStyle__selection" style="text-transform: uppercase;">en</span>
+												<ul class="listSelectStyle__list">
+													<li><a title="passa alla lingua italiana" href="/locale-redirect.jsp?currentUri=/en/Investor_Relations/Shareholders/share_buyback/index.html&loc=it">IT</a></li>
+													<li><a title="switch to english" href="/locale-redirect.jsp?currentUri=/en/Investor_Relations/Shareholders/share_buyback/index.html&loc=en">EN</a></li>
+												</ul>
+											</div>
+										</div>
+									</div> <!-- /wrapper navbar-nav -->
+									
+								</div> <!-- /servicesBarRight -->
+						
+                        </nav>
+                    </div>
+					<!-- SNAM Logo Corporate -->
+					<a class="navbar-brand" href='/en/index.html'><img height="100" src="/repository/img/HEADER/SNAM-logo-1.svg"></a>
+					<!-- [mobile-only] .headerMobile -->
+                    <div class="headerMobile cf">
+                        <a class="hamburger snamPrimaryNav-toggle">
+                            <span class="sr-only">Open navigation</span>
+                            <span class="hamburger__icon"></span>
+                        </a>
+                        <ul class="languageMobile">
+                            
+							
+                            <li><a  title="passa alla lingua italiana" href="/locale-redirect.jsp?currentUri=/en/Investor_Relations/Shareholders/share_buyback/index.html&loc=it" onclick="">IT</a></li>
+                            
+                            <li><a  class="active" title="passa alla lingua italiana" href="/locale-redirect.jsp?currentUri=/en/Investor_Relations/Shareholders/share_buyback/index.html&loc=en" onclick="">EN</a></li>
+                        </ul>
+                        <div class="searchFormMobile">
+                            <span class="searchForm__icon icon icon-search"></span>
+                            <div class="searchFormMobile__wrapperInn">
+                                <form class="searchForm" action='/en/utilities/search_results.html'
+                                        method="get" onsubmit="setSearchString();">
+                                    <input class="searchForm__submit hidden" type="submit" value="Cerca">
+                                    <input class="searchForm__input" placeholder="Cosa vuoi cercare ?" type="search" name="keyword" id="search">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.headerMobile -->
+               	
+                </div>
+             
+		<div class="siteNavigation cf">
+			<nav class="navbar navbar-snam" role="navigation">
+				<!-- navigazione globale -->
+				<div id="snam-primary-navbar">
+					<ul class="snam-primary-nav">
+							
+								
+								
+								
+								
+									<li class="primaryNavList__li clr_about">
+										<a class="primaryNavList__item" title="ABOUT US" href="/en/about-us/">ABOUT US</a>
+										                                        
+									</li>
+									
+								
+							
+								
+								
+								
+								
+									<li class="primaryNavList__li clr_sistema_gas">
+										<a class="primaryNavList__item" title="NATURAL GAS" href="/en/Natural-gas/">NATURAL GAS</a>
+										                                        
+									</li>
+									
+								
+							
+								
+								
+								
+								
+									<li class="primaryNavList__li clr_governance">
+										<a class="primaryNavList__item" title="GOVERNANCE & CONDUCT" href="/en/governance-conduct/">GOVERNANCE & CONDUCT</a>
+										                                        
+									</li>
+									
+								
+							
+								
+								
+								
+								
+									<li class="primaryNavList__li clr_sostenibilita">
+										<a class="primaryNavList__item" title="SUSTAINABILITY" href="/en/Sustainability/">SUSTAINABILITY</a>
+										                                        
+									</li>
+									
+								
+							
+								
+								
+								
+								
+									<li class="primaryNavList__li clr_">
+										<a class="primaryNavList__item" title="BUSINESS & SERVICES" href="/en/business-service/">BUSINESS & SERVICES</a>
+										                                        
+									</li>
+									
+								
+							
+								
+								
+								
+								
+									<li class="primaryNavList__li clr_persone">
+										<a class="primaryNavList__item" title="PEOPLE" href="/en/people/">PEOPLE</a>
+										                                        
+									</li>
+									
+								
+							
+								
+								
+								
+								
+									<li class="primaryNavList__li clr_media">
+										<a class="primaryNavList__item" title="MEDIA" href="/en/Media/">MEDIA</a>
+										                                        
+									</li>
+									
+								
+							
+								
+								
+								
+								
+									<li class="primaryNavList__li clr_investor">
+										<a class="primaryNavList__item" title="INVESTOR RELATIONS" href="/en/Investor_Relations/">INVESTOR RELATIONS</a>
+										                                        
+									</li>
+									
+								
+							
+								
+						</ul>
+			
+						<div class="extraNavigationMobile">
+							<ul class="nav navbar-nav snam-utility-nav">
+								<li class="itemClass">
+								
+									<a title="MAIL ALERT" href="/en/alert/login.jsp">
+										<!-- <img src="/system/modules/com.ntt.snam.responsive/resources/assets/images/ico/icona_alert.png"/> -->
+									MAIL ALERT</a>                      
+								
+									<a title="RSS AND PODCAST" href="/en/utilities/rss/index.html">
+										<!-- <img src="/system/modules/com.ntt.snam.responsive/resources/assets/images/ico/icona_alert.png"/> -->
+									RSS AND PODCAST</a>                      
+								
+									<a title="DOCUMENTS" href="/en/utilities/general-archive/index.html">
+										<!-- <img src="/system/modules/com.ntt.snam.responsive/resources/assets/images/ico/icona_alert.png"/> -->
+									DOCUMENTS</a>                      
+								
+									<a title="GLOSSARY" href="/en/utilities/Glossary/index.html">
+										<!-- <img src="/system/modules/com.ntt.snam.responsive/resources/assets/images/ico/icona_alert.png"/> -->
+									GLOSSARY</a>                      
+								
+									<a title="FAQ" href="/en/Investor_Relations/FAQ/index.html">
+										<!-- <img src="/system/modules/com.ntt.snam.responsive/resources/assets/images/ico/icona_alert.png"/> -->
+									FAQ</a>                      
+								         
+								</li>                                           
+							</ul>
+						</div>	
+				</div>
+			</nav>
+		</div>
+        </header>
+</section>
+
+	<!-- SUB-HEADER-CANALI - INIZIO -->		
+	
+		
+	<!-- SUB-HEADER-CANALI - FINE -->
+			
+
+
+
+
+
+
+	
+
+
+
+
+<section class="sectionRow section--UtilityTop">
+    <div class="wrapperRow"><ul class="nav navbar-nav breadcrumbs">
+			
+				  <li><a href="/en/index.html" title="Home">Home</a></li>
+				<li><a href="/en/Investor_Relations/">Investor Relations</a></li>
+				   <li><a href="/en/Investor_Relations/Shareholders/">Shareholders</a></li>
+				   <li><a href="/en/Investor_Relations/Shareholders/share_buyback/">Share buyback</a></li>
+				   
+
+			</ul>
+			<div class="commandIcon">
+            <a href="#" class="btn-share" title="condividi"><span class="icon icon-share-light"></span></a>
+            <span class="btn-setting">
+			<span class="icon icon-setting"></span>
+            <ul class="commandList">
+                <li class="commandList__item"><a href="javascript:window.print()" title="stampa pagina">Stampa<span class="icon icon-print"></span></a></li>
+                <li class="commandList__item"><a href="#" class="jqbookmark" title="salva preferito">Salva<span class="icon icon-save"></span></a></li>
+                <li class="commandList__item"><a href="" title="lascia un commento">Commenta<span class="icon icon-comment"></span></a></li>
+            </ul>
+            </span>
+        </div>
+    </div>
+</section>
+		
+        <section class="main_interna  clr_investor">
+            <section class="sidebar">
+                
+
+  
+	<div class="internalNavigation cf">
+	<!-- wrapper secondaryMenu -->
+	<section class="sectionRow secondaryMenuRow">
+	<div class="wrapperRow" role="contentinfo">
+	<!-- box secondo livello -->
+	<div class="secondaryMenuBox pull-left">
+		<!-- [btn-mobile] per chiudere menu secondo livello -->
+		<a class="menuMobileBack__btn" href="#"><span class="glyphicon glyphicon-chevron-left"></span></a>
+		<!-- voce attiva di primo livello // stesso valore di a.primaryNavList__item -->
+		<header class="item__header">
+			<a href="/en/Investor_Relations/">Investor Relations</a>
+		</header>
+		<!-- navigazione secondo livello -->
+		
+		
+		<ul class="nav snam-secondary-nav" id="investor-relations">
+			<li class="" data-submenu-id="strategy"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Strategy/" title="Strategy">Strategy<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Strategy/">Strategy</a></header><ul class="nav snam-tertiary-nav" id="strategymenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Growth Drivers" href="/en/Investor_Relations/Strategy/Grow-drivers/">Growth Drivers<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="International Strategy" href="/en/Investor_Relations/Strategy/International-strategy/">International Strategy<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Company targets and achievements" href="/en/Investor_Relations/Strategy/Company-targets/">Company targets and achievements<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Outlook" href="/en/Investor_Relations/Strategy/predictable-management-evolution/">Outlook<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Snam: reasons for investments" href="/en/Investor_Relations/Strategy/Snam-reasons-for-investments/">Snam: reasons for investments<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Regulation" href="/en/Investor_Relations/Strategy/regulation/">Regulation<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="snam-share"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Snam-Stock/" title="Snam Share">Snam Share<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Snam-Stock/">Snam Share</a></header><ul class="nav snam-tertiary-nav" id="snam-sharemenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Share graph and quotes" href="/en/Investor_Relations/Snam-Stock/Indexes-quotations/">Share graph and quotes<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Dividend" href="/en/Investor_Relations/Snam-Stock/Dividend/">Dividend<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Market Capitalization" href="/en/Investor_Relations/Snam-Stock/Market-capitalization/">Market Capitalization<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Share key figures" href="/en/Investor_Relations/Snam-Stock/Share-key-figures/">Share key figures<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Indexes" href="/en/Investor_Relations/Snam-Stock/Financial-Indices/">Indexes<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Total return calculator" href="/en/Investor_Relations/Snam-Stock/Total-return-calculator/">Total return calculator<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Snam Peers" href="/en/Investor_Relations/Snam-Stock/peers/">Snam Peers<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="analysts-coverage"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Analysts-coverage/" title="Analysts coverage">Analysts coverage<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Analysts-coverage/">Analysts coverage</a></header></div></li><li class="" data-submenu-id="main-financial-data"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Main-financial-data/" title="Main Financial data">Main Financial data<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Main-financial-data/">Main Financial data</a></header><ul class="nav snam-tertiary-nav" id="main-financial-datamenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Financial Highlights" href="/en/Investor_Relations/Main-financial-data/Financial-highlights/">Financial Highlights<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Interactive financial - Reporting center" href="/en/Investor_Relations/Main-financial-data/Interactive-financial-reporting-center/">Interactive financial - Reporting center<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="debt-and-credit-rating"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/debt_credit_rating/" title="Debt and credit rating">Debt and credit rating<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/debt_credit_rating/">Debt and credit rating</a></header><ul class="nav snam-tertiary-nav" id="debt-and-credit-ratingmenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Debt management" href="/en/Investor_Relations/debt_credit_rating/debt_management.html">Debt management<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Credit Rating" href="/en/Investor_Relations/debt_credit_rating/credit_rating.html">Credit Rating<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Bond issuances" href="/en/Investor_Relations/debt_credit_rating/debt_programmes.html">Bond issuances<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Key debt ratios" href="/en/Investor_Relations/debt_credit_rating/key_debt_ratios.html">Key debt ratios<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="EMTN programme" href="/en/Investor_Relations/debt_credit_rating/emtn_programme.html">EMTN programme<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Euro Commercial Paper programme" href="/en/Investor_Relations/debt_credit_rating/ecp_programme.html">Euro Commercial Paper programme<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Climate action bond" href="/en/Investor_Relations/debt_credit_rating/climate_action_bond.html">Climate action bond<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="risk-management"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Risk-management/" title="Risk management">Risk management<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Risk-management/">Risk management</a></header><ul class="nav snam-tertiary-nav" id="risk-managementmenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Snam’s enterprise risk management process" href="/en/Investor_Relations/Risk-management/enterprise_risk_management_process/">Snam’s enterprise risk management process<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Main risks" href="/en/Investor_Relations/Risk-management/main_risks/">Main risks<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="reports"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Reports/" title="Reports">Reports<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Reports/">Reports</a></header><ul class="nav snam-tertiary-nav" id="reportsmenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Annual Reports" href="/en/Investor_Relations/Reports/Annual_Reports/">Annual Reports<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Interim Reports" href="/en/Investor_Relations/Reports/Interim_Reports/">Interim Reports<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="presentations"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Presentations/" title="Presentations">Presentations<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Presentations/">Presentations</a></header></div></li><li class="" data-submenu-id="press-releases"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/financial_press_releases/" title="Press releases">Press releases<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/financial_press_releases/">Press releases</a></header></div></li><li class="openSubMenu" data-submenu-id="shareholders"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Shareholders/" title="Shareholders">Shareholders<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Shareholders/">Shareholders</a></header><ul class="nav snam-tertiary-nav" id="shareholdersmenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Flaggings" href="/en/Investor_Relations/Shareholders/Flaggings/">Flaggings<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Shareholdings" href="/en/Investor_Relations/Shareholders/Investments/">Shareholdings<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class="itemActive"><a class="tertiaryNavList__itemLink" title="Share buyback" href="/en/Investor_Relations/Shareholders/share_buyback/">Share buyback<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Shareholders' agreements" href="/en/Investor_Relations/Shareholders/Shareholders_agreements/">Shareholders' agreements<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="investors-publications"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/investors_publications/" title="Investors publications">Investors publications<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/investors_publications/">Investors publications</a></header><ul class="nav snam-tertiary-nav" id="investors-publicationsmenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Fact Book" href="/en/Investor_Relations/investors_publications/fact_book/">Fact Book<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="The Snam Shareholder" href="/en/Investor_Relations/investors_publications/shareholders-guide/">The Snam Shareholder<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Il Metanino" href="/en/Investor_Relations/investors_publications/Metanino/">Il Metanino<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Publications archive" href="/en/Investor_Relations/investors_publications/publications_archive.html">Publications archive<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="bondholders"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/bondholders/" title="Bondholders">Bondholders<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/bondholders/">Bondholders</a></header><ul class="nav snam-tertiary-nav" id="bondholdersmenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Bondholders meeting" href="/en/Investor_Relations/bondholders/bondholders_meeting/">Bondholders meeting<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Minutes and documents" href="/en/Investor_Relations/bondholders/Verbali_documenti.html">Minutes and documents<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="governance-model"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/governance_model/" title="Governance Model">Governance Model<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/governance_model/">Governance Model</a></header></div></li><li class="" data-submenu-id="financial-calendar"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Financial-Calendar/" title="Financial Calendar">Financial Calendar<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Financial-Calendar/">Financial Calendar</a></header><ul class="nav snam-tertiary-nav" id="financial-calendarmenuID"><li class=""><a class="tertiaryNavList__itemLink" title="2020" href="/en/Investor_Relations/Financial-Calendar/2020/">2020<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2019" href="/en/Investor_Relations/Financial-Calendar/2019/">2019<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2018" href="/en/Investor_Relations/Financial-Calendar/2018/">2018<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2017" href="/en/Investor_Relations/Financial-Calendar/2017/">2017<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2016" href="/en/Investor_Relations/Financial-Calendar/2016/">2016<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2015" href="/en/Investor_Relations/Financial-Calendar/2015/">2015<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2014" href="/en/Investor_Relations/Financial-Calendar/2014/">2014<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2013" href="/en/Investor_Relations/Financial-Calendar/2013/">2013<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2012" href="/en/Investor_Relations/Financial-Calendar/2012/">2012<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2011" href="/en/Investor_Relations/Financial-Calendar/2011/">2011<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2010" href="/en/Investor_Relations/Financial-Calendar/2010/">2010<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2009" href="/en/Investor_Relations/Financial-Calendar/2009/">2009<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2008" href="/en/Investor_Relations/Financial-Calendar/2008/">2008<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2007" href="/en/Investor_Relations/Financial-Calendar/2007/">2007<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2006" href="/en/Investor_Relations/Financial-Calendar/2006/">2006<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2005" href="/en/Investor_Relations/Financial-Calendar/2005/">2005<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2004" href="/en/Investor_Relations/Financial-Calendar/2004/">2004<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2003" href="/en/Investor_Relations/Financial-Calendar/2003/">2003<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="2002" href="/en/Investor_Relations/Financial-Calendar/2002/">2002<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="investor-kit"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/Investor-Kit/" title="Investor Kit">Investor Kit<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/Investor-Kit/">Investor Kit</a></header></div></li><li class="" data-submenu-id="faq"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/FAQ/" title="Faq">Faq<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/FAQ/">Faq</a></header><ul class="nav snam-tertiary-nav" id="faqmenuID"><li class=""><a class="tertiaryNavList__itemLink" title="Generic" href="/en/Investor_Relations/FAQ/generic/">Generic<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Institutionals" href="/en/Investor_Relations/FAQ/Institutionals/">Institutionals<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Socially Responsible" href="/en/Investor_Relations/FAQ/social/">Socially Responsible<span class="glyphicon glyphicon-chevron-right"></span></a></li><li class=""><a class="tertiaryNavList__itemLink" title="Bondholders" href="/en/Investor_Relations/FAQ/bondholders/">Bondholders<span class="glyphicon glyphicon-chevron-right"></span></a></li></ul></div></li><li class="" data-submenu-id="contacts"><a class="secondaryNavList__itemLink" href="/en/Investor_Relations/contacts/" title="Contacts">Contacts<span class="icon icon-arrow-right"></span></a><div class="tertiaryMenu"><header class="item__header item__header--inv"><a href="/en/Investor_Relations/contacts/">Contacts</a></header></div></li>
+		</ul>
+	</div>
+	</div>
+	</section>
+	</div>
+  
+  
+                
+		
+		
+			
+
+
+	<div class="blockContact cf">
+	<div class="blockContact__inn">
+		
+			<div class="simpleTitle">
+				<h3>Contacts</h3>
+			</div>
+			<div class="blockContact__item">
+				<span class="bulletSquare"></span>
+				<p class="indentation">Ph. +39 02.3703.7272</p>
+<p class="indentation">E-mail: 
+<a href="mailto:investor.relations@snam.it">
+<u>investor.relations@snam.it</u>
+</a></p>
+			</div>
+		
+	</div>
+</div>
+
+<!-- Begin banner box -->
+
+<!-- End banner box -->
+
+		
+            </section>
+            
+            <section class="contentPage">
+                
+	                <!-- titlePage -->
+	                <div class="sectionRow titlePage">
+	                    <h1 class="titlePage__el">Share buyback</h1>
+	                </div>
+
+	                <div class="sectionRow section--introText">
+	                    <!-- block introText -->
+	                    <div class="block contentCMS">
+	                       	
+							
+							
+	                    </div>
+	                    
+	                </div>
+	                
+	                
+		        <div class="sectionRow section--downloadFile">
+		        <div class="downloadDocuments">
+		        	<ul class="documentsList">
+				
+
+
+
+
+
+
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_Febbraio_2020.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">5/3/2020</span><br/>
+				<span class="docItem__description">3F Attachment - February 2020 </span>				
+				<span class="docItem__size">433Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/5/3/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_Febbraio_2020.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-02.03.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/3/2020</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1327Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/3/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-02.03.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-26.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">26/2/2020</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1827Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/26/2/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-26.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-19.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">19/2/2020</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1154Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/19/2/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-19.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-12.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">12/2/2020</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">539Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/12/2/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-12.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_gennaio_2020.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">6/2/2020</span><br/>
+				<span class="docItem__description">3F Attachment - January 2020</span>				
+				<span class="docItem__size">564Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/6/2/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_gennaio_2020.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-05.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">5/2/2020</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">643Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/5/2/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-05.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-29.01.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">29/1/2020</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">652Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/29/1/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-29.01.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-22.01.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">22/1/2020</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">745Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/22/1/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-22.01.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_dicembre_2019.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">9/1/2020</span><br/>
+				<span class="docItem__description">3F Attachment – December 2019</span>				
+				<span class="docItem__size">555Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/9/1/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_dicembre_2019.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-08.01.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">8/1/2020</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">868Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/8/1/2020">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2020/PR_Share-buyback-report-08.01.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2019/PR_Share-buyback-report-27.12.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">27/12/2019</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">998Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/27/12/2019">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2019/PR_Share-buyback-report-27.12.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_dicembre_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">7/1/2019</span><br/>
+				<span class="docItem__description">3F Attachment – December 2018</span>				
+				<span class="docItem__size">395Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/7/1/2019">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_dicembre_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_21.12.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">21/12/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">576Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/21/12/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_21.12.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_14.12.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">14/12/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">736Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/14/12/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_14.12.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_06.12.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">6/12/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">980Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/6/12/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_06.12.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_novembre_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">5/12/2018</span><br/>
+				<span class="docItem__description">3F Attachment – November 2018</span>				
+				<span class="docItem__size">446Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/5/12/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_novembre_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_30.11.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">30/11/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1228Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/30/11/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_30.11.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_21.11.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">21/11/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">995Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/21/11/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_21.11.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_09.11.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">9/11/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">890Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/9/11/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_09.11.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_ottobre_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">6/11/2018</span><br/>
+				<span class="docItem__description">3F Attachment – October 2018</span>				
+				<span class="docItem__size">444Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/6/11/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_ottobre_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_05.11.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">5/11/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">921Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/5/11/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_05.11.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_26.10.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">26/10/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1127Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/26/10/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_26.10.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_19.10.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">19/10/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1080Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/19/10/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_19.10.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_10.10.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">10/10/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1213Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/10/10/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_10.10.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/20181002-PR_Share_buyback.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/10/2018</span><br/>
+				<span class="docItem__description">Snam to continue with share buyback</span>				
+				<span class="docItem__size">449Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/10/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/20181002-PR_Share_buyback.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_agosto_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">6/9/2018</span><br/>
+				<span class="docItem__description">3F Attachment – August 2018</span>				
+				<span class="docItem__size">407Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/6/9/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_agosto_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_31.08.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">31/8/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">528Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/31/8/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_31.08.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_27.08.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">27/8/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1072Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/27/8/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_27.08.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_20.08ENG.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">20/8/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1028Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/20/8/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_20.08ENG.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_10.08.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">10/8/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">852Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/10/8/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_10.08.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_luglio_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/8/2018</span><br/>
+				<span class="docItem__description">3F Attachment – July 2018</span>				
+				<span class="docItem__size">411Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/8/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_luglio_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_02.08.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/8/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares and on the buyback programme</span>				
+				<span class="docItem__size">634Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/8/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_02.08.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_27.07.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">27/7/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">528Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/27/7/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_27.07.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_20.07.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">20/7/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">550Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/20/7/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_20.07.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_13.07.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">13/7/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">633Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/13/7/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_13.07.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_giugno_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">9/7/2018</span><br/>
+				<span class="docItem__description">3F Attachment – June 2018</span>				
+				<span class="docItem__size">362Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/9/7/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_giugno_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_09.07.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">9/7/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">999Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/9/7/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_09.07.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_29.06.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">29/06/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">768Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/29/06/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_29.06.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_22.06.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">22/06/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1443Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/22/06/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_22.06.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_1806.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">18/06/2018</span><br/>
+				<span class="docItem__description">Snam starts a share buyback program</span>				
+				<span class="docItem__size">465Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/18/06/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_1806.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_aprile_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">3/5/2018</span><br/>
+				<span class="docItem__description">3F Attachment – April 2018</span>				
+				<span class="docItem__size">361Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/3/5/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_aprile_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_23.04.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">23/4/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">537Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/23/4/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_23.04.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_marzo_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">4/4/2018</span><br/>
+				<span class="docItem__description">3F Attachment – March 2018</span>				
+				<span class="docItem__size">361Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/4/4/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_marzo_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_30.03.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">30/03/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">542Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/30/03/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_30.03.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_23.03.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">23/3/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">706Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/23/3/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_23.03.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_09.03.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">9/3/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">663Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/9/3/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_09.03.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_02.03.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/3/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">399Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/3/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_02.03.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_febbraio_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/3/2018</span><br/>
+				<span class="docItem__description">3F Attachment – February 2018</span>				
+				<span class="docItem__size">361Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/3/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_febbraio_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_23.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">23/2/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">214Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/23/2/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_23.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_09.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">9/2/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">464Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/9/2/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_09.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_02.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/2/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">2624Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/2/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_02.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_gennaio_2018.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/2/2018</span><br/>
+				<span class="docItem__description">3F Attachment – January 2018</span>				
+				<span class="docItem__size">412Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/2/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_gennaio_2018.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_26.01.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">26/1/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">697Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/26/1/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_26.01.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_19.01.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">19/1/2018</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">650Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/19/1/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/PR_Share_buyback_report_19.01.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/20180112-PR_Share_buyback.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">12/1/2018</span><br/>
+				<span class="docItem__description">Snam to continue with share buyback programme</span>				
+				<span class="docItem__size">91Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/12/1/2018">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2018/20180112-PR_Share_buyback.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_luglio_2017.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">3/8/2017</span><br/>
+				<span class="docItem__description">3F Attachment – July 2017</span>				
+				<span class="docItem__size">277Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/3/8/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_luglio_2017.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_28.07.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">28/7/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">135Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/28/7/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_28.07.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_21.07.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">21/7/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">306Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/21/7/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_21.07.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_14.07.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">14/7/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">294Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/14/7/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_14.07.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_07.07.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">7/7/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">352Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/7/7/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_07.07.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_giugno_2017.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">3/7/2017</span><br/>
+				<span class="docItem__description">3F Attachment – June 2017</span>				
+				<span class="docItem__size">278Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/3/7/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_giugno_2017.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_marzo_2017.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">5/4/2017</span><br/>
+				<span class="docItem__description">3F Attachment – March 2017</span>				
+				<span class="docItem__size">279Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/5/4/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_marzo_2017.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_31.03.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">31/3/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">151Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/31/3/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_31.03.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_24_03_17.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">24/3/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">270Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/24/3/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_24_03_17.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_17_03_17.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">17/3/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">962Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/17/3/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_17_03_17.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_10.03.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">10/3/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">705Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/10/3/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_10.03.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_febbraio_2017.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">3/3/2017</span><br/>
+				<span class="docItem__description">3F Attachment – February 2017</span>				
+				<span class="docItem__size">277Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/3/3/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_febbraio_2017.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_03_03_17.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">3/3/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">477Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/3/3/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_03_03_17.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_24_02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">24/2/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">676Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/24/2/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_24_02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_17.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">17/2/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1316Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/17/2/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_17.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_09.02.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">9/2/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1332Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/9/2/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_09.02.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_gennaio_2017.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">3/2/2017</span><br/>
+				<span class="docItem__description">3F Attachment – January 2017</span>				
+				<span class="docItem__size">279Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/3/2/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_gennaio_2017.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_and_update_of_share_buyback_program_31_01.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">31/1/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares and update of the share buyback program</span>				
+				<span class="docItem__size">974Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/31/1/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_and_update_of_share_buyback_program_31_01.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_27.01.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">27/1/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1319Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/27/1/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_27.01.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_20_01_17.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">20/1/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">791Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/20/1/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_20_01_17.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_13_01_17.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">13/1/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">960Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/13/1/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_13_01_17.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_dicembre_2016.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">3/1/2017</span><br/>
+				<span class="docItem__description">3F Attachment – December 2016</span>				
+				<span class="docItem__size">277Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/3/1/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_dicembre_2016.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_03_01_17.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">3/1/2017</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">280Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/3/1/2017">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2017/PR_Share_buyback_report_03_01_17.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_buyback_report_23_12_16.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">23/12/2016</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">521Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/23/12/2016">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_buyback_report_23_12_16.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_buyback_report_16_12_16.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">16/12/2016</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1060Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/16/12/2016">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_buyback_report_16_12_16.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_buyback_report_and_update_of_share_buyback_program.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">7/12/2016</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares and update of the share buyback program</span>				
+				<span class="docItem__size">886Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/7/12/2016">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_buyback_report_and_update_of_share_buyback_program.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_02_12_16.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">5/12/2016</span><br/>
+				<span class="docItem__description">3F Attachment – November 2016</span>				
+				<span class="docItem__size">44Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/5/12/2016">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/file/investor_relations/azionariato/buyback/Allegato_3F_-_02_12_16.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_share_buyback_report_2_12_2016.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">2/12/2016</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1013Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/2/12/2016">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_share_buyback_report_2_12_2016.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_buyback_report_25_11_2016.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">25/11/2016</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1667Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/25/11/2016">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_buyback_report_25_11_2016.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_share_buyback_report.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">16/11/2016</span><br/>
+				<span class="docItem__description">Report on the purchase of treasury shares</span>				
+				<span class="docItem__size">1307Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/16/11/2016">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_share_buyback_report.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+				<li class="docItem  cf">
+				<a class="docItem__link" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_Buyback.pdf" target="_blank">
+				<span class="icon icon-pdf"></span>
+				<span class="docItem__title">7/11/2016</span><br/>
+				<span class="docItem__description">Snam starts a share buyback program</span>				
+				<span class="docItem__size">93Kb</span>
+				</a>
+				<!--
+					<a class="docItem__linkAlternativeDownload" href="http://dropbox.com/snam/7/11/2016">
+	                                    <span class="icon icon-dropbox"></span>
+	                                </a>
+                                -->
+                                <a class="docItem__linkDownload" target="_blank" href="/export/sites/snam-rp/repository/ENG_file/Media/Press_releases/2016/PR_Share_Buyback.pdf">
+                                    <span class="icon icon-download_doc"></span>
+                                </a>
+                                </li>
+
+			
+
+				</ul>
+			</div>
+		        </div>
+	                
+			
+	 		
+	 		
+                
+                
+                	                	                	
+                						
+				
+				
+				
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                         
+                
+               
+                
+			
+                <!-- End section tab -->
+
+              
+            </section>
+        </section>
+        	
+<!-- Thu Mar 05 10:53:24 CET 2020 -->
+<section class="sectionRow section--utilityBottom">
+            <div class="wrapperRow cf">
+                <!--<a class="pageAlert" href="#"><span class="glyphicon glyphicon-exclamation-sign"></span> Page Alert</a>-->
+                
+                
+
+ 
+        <a class="pageAlert" href="#"><span class="glyphicon glyphicon-exclamation-sign"></span> Page Alert</a>      
+	
+
+
+                                 
+                <div class="lastUpdateBox">
+                    <span class="glyphicon glyphicon-time"></span> updated
+                    <br>05 March 2020 - 10:53 CET
+                </div>
+            </div>
+        </section>
+
+       <!--INLCUSIONE PAGE ALERT-->
+       
+
+
+
+<!-- footer_new.jsp -->
+
+
+
+
+
+
+<section class="footer">
+            <!-- Begin Footer -->
+
+	<footer class="footer sectionRow" role="contentinfo">
+                <div class="footerPrimary cf">
+                    <div class="wrapperRow">
+                        <div class="itemGrid--3item">
+                            <div class="footerPrimary__itemCol">
+                                <div class="itemCol__inn">
+                                    <div class="itemCol__header cf">
+                                        <img class="icon-SNAM-logo" height="100" src="/repository/img/HEADER/SNAM-logo-1.svg" />
+                                        <span class="snam-payoff"></span>
+                                    
+				    </div>
+                                    <div class="itemCol__content">
+                                        <div class="footerSelect">
+										
+																		
+                                        </div>
+
+
+                                        <p class="footerPrimary__biotext"><p>Snam is one of the world’s leading energy infrastructure operators and one of the largest Italian listed companies in terms of market capitalization. <a href="/en/about-us/" target="_self">&gt;&gt;&gt;</a></p>
+<p>For the transmission and storage of regulated information, the Company uses the speaker system eMarket SDIR and the storage mechanism eMarket STORAGE available at <a title="Emarket Storage" href="http://www.emarketstorage.com/home/homepage.en.htm">www.emarketstorage.com</a> managed by Spafid Connect S.p.A., with registered office at Foro Buonaparte 10, Milan</p></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footerPrimary__itemCol">
+                                <div class="itemCol__inn">
+                                
+                                
+                                    <div class="itemCol__title">
+                                        SITEMAP
+                                    </div>
+                                
+                                    <div class="itemCol__content">
+                                    
+                                        <ul class="nav navbar-nav snam-primary-nav">
+
+
+
+                                        
+                                        
+                                        
+                                         
+                                        
+                                            <li class="primaryNavList__li clr_about">
+                                                <a class="primaryNavList__item" title="ABOUT US" href="/en/about-us/">ABOUT US</a>
+                                            </li>
+                                        
+                                        
+                                        
+                                        
+                                         
+                                        
+                                            <li class="primaryNavList__li clr_sistema_gas">
+                                                <a class="primaryNavList__item" title="NATURAL GAS" href="/en/Natural-gas/">NATURAL GAS</a>
+                                            </li>
+                                        
+                                        
+                                        
+                                        
+                                         
+                                        
+                                            <li class="primaryNavList__li clr_governance">
+                                                <a class="primaryNavList__item" title="GOVERNANCE & CONDUCT" href="/en/governance-conduct/">GOVERNANCE & CONDUCT</a>
+                                            </li>
+                                        
+                                        
+                                        
+                                        
+                                         
+                                        
+                                            <li class="primaryNavList__li clr_sostenibilita">
+                                                <a class="primaryNavList__item" title="SUSTAINABILITY" href="/en/Sustainability/">SUSTAINABILITY</a>
+                                            </li>
+                                        
+                                        
+                                        
+                                        
+                                         
+                                        
+                                            <li class="primaryNavList__li clr_">
+                                                <a class="primaryNavList__item" title="BUSINESS & SERVICES" href="/en/business-service/">BUSINESS & SERVICES</a>
+                                            </li>
+                                        
+                                        
+                                        
+                                        
+                                         
+                                        
+                                            <li class="primaryNavList__li clr_persone">
+                                                <a class="primaryNavList__item" title="PEOPLE" href="/en/people/">PEOPLE</a>
+                                            </li>
+                                        
+                                        
+                                        
+                                        
+                                         
+                                        
+                                            <li class="primaryNavList__li clr_media">
+                                                <a class="primaryNavList__item" title="MEDIA" href="/en/Media/">MEDIA</a>
+                                            </li>
+                                        
+                                        
+                                        
+                                        
+                                         
+                                        
+                                            <li class="primaryNavList__li clr_investor">
+                                                <a class="primaryNavList__item" title="INVESTOR RELATIONS" href="/en/Investor_Relations/">INVESTOR RELATIONS</a>
+                                            </li>
+                                        
+                                        
+                                        </ul>
+                                        
+                                        
+                                        
+										
+													
+                                        <ul class="nav navbar-nav snam-utility-nav">
+
+
+
+
+
+                                        
+                                            <li class="itemClass">
+                                                <a title="MAIL ALERT" href="/en/alert/login.jsp">
+                                                	
+							MAIL ALERT
+						</a>
+                                            </li>
+                                        
+                                            <li class="itemClass">
+                                                <a title="RSS AND PODCAST" href="/en/utilities/rss/index.html">
+                                                	
+							RSS AND PODCAST
+						</a>
+                                            </li>
+                                        
+                                            <li class="itemClass">
+                                                <a title="GLOSSARY" href="/en/utilities/Glossary/index.html">
+                                                	
+							GLOSSARY
+						</a>
+                                            </li>
+                                        
+                                            <li class="itemClass">
+                                                <a title="FAQ" href="/en/Investor_Relations/FAQ/index.html">
+                                                	
+							FAQ
+						</a>
+                                            </li>
+                                        
+                                            <li class="itemClass">
+                                                <a title="DOCUMENTS" href="/en/utilities/general-archive/index.html">
+                                                	
+							DOCUMENTS
+						</a>
+                                            </li>
+                                        
+                                            <li class="itemClass">
+                                                <a title="MAPS" href="/en/utilities/site-map.html">
+                                                	
+							MAPS
+						</a>
+                                            </li>
+                                        
+                                        </ul>
+
+
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="footerPrimary__itemCol">
+<div class="itemCol__inn">
+<div class="itemCol__title">WEBSITES AND SOCIAL NETWORKS</div>
+<div class="itemCol__content">
+<ul class="socialLinks">
+    <li class="itemClass"><a target="_blank" href="https://fornitori.snam.it/tamtamy/home.action?lang=ti_it"><b>SUPPLIER<br />
+    PORTAL</b></a></li>
+    <li class="itemClass"><a target="_blank" href="https://immobiliare.snam.it/"><b>PROPERTY DISPOSAL</b></a></li>
+    <li class="itemClass"><a target="_blank" href="#">&nbsp;</a></li>
+    <li class="itemClass"><a target="_blank" href="#">&nbsp;</a></li>
+    <li class="itemClass"><a target="_blank" href="https://twitter.com/snam">Twitter</a></li>
+    <li class="itemClass"><a target="_blank" href="https://www.facebook.com/pages/Snam-Social-Lab/1378877355727167">Facebook</a></li>
+    <li class="itemClass"><a target="_blank" href="https://www.youtube.com/user/snamchannel">Youtube</a></li>
+    <li class="itemClass"><a target="_blank" href="https://www.flickr.com/photos/snamchannel/">Flickr</a></li>
+    <li class="itemClass"><a target="_blank" href="https://www.instagram.com/snamchannel/">Instagram</a></li>
+    <li class="itemClass"><a target="_blank" href="https://www.linkedin.com/company/snam-s-p-a-/">Linkedin</a></li>
+    <li class="itemClass"><a target="_blank" href="http://www.slideshare.net/grupposnam">Slideshare</a></li>
+    <li class="itemClass"><a target="_blank" href="https://it.wikipedia.org/wiki/Snam">Wikipedia</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footerSecondary cf">
+                    <div class="wrapperRow">
+                        <ul class="legalLink">
+
+                        
+                            <li><a href="/en/utilities/accessibility.html">Accessibility</a></li>
+                        
+                            <li><a href="/en/utilities/disclaimer.html"> Privacy Legal </a></li>
+                        
+                            <li><a href="/en/utilities/legal-disclaimer.html">Legal disclaimer</a></li>
+                        
+                            <li><a href="/en/utilities/help.html"> Help </a></li>
+                        
+                            <li><a href="/en/utilities/personnel-access.html">Personnel access</a></li>
+                        
+                            <li><a href="/en/utilities/company-information.html"> Company Information</a></li>
+                        
+                        </ul>
+
+                        <span class="copyright">© 2020 Snam SPA - Partita IVA: 13271390158</span>
+                    </div>
+                </div>
+            </footer>
+       </section>
+
+<!--piw-cms-p-frontend1-2-->
+
+
+
+	</div>
+
+
+
+<!-- Begin Overlay (per i vari popup) -->
+        <section class="overlayWindow overlayFullPage" style="display: none">
+            <!-- per overlay che ricoprono tutta la pagina -->
+            <!-- popup Condividi -->
+            <div class="overlay overlay--share" style="display: none">
+                <div class="overlay__inn">
+                    <div class="overlay__header">
+                        <a class="overlay__close" href="#" rel="overlayWindow"><span class="glyphicon glyphicon-remove"></span></a>
+                        <div class="overlay__title">Condividi</div>
+                    </div>
+                    <div class="overlay__content">
+                        <ul class="socialList row text-center">
+                            <li class="col-xs-6 col-md-3">
+                                <a class="icoSprt-facebook" onclick="window.open('http://www.facebook.com/sharer.php?u='+encodeURIComponent(window.location.href)+'&amp;t='+window.document.title,'fbshare','height=500,width=600,scrollbars=1'); return false;" href="#">
+                                    <span class="icon icon-facebook_cb"><span class="path1"></span><span class="path2"></span></span>
+                                    Facebook</a>
+                            </li>
+                            <li class="col-xs-6 col-md-3">
+                                <a class="icoSprt-delicious" title="save on del.icio.us" onclick="window.open('http://del.icio.us/post?url='+encodeURIComponent(window.location.href)+'&amp;t='+window.document.title,'deliciousshare','height=500,width=600,scrollbars=1'); return false;" href="#">
+                                    <span class="icon icon-delicius_cb"><span class="path1"></span><span class="path2"></span></span>
+                                    Del.icio.us</a>
+                            </li>
+                            <li class="col-xs-6 col-md-3">
+                                <a class="icoSprt-twitter" title="share on twitter" onclick="window.open('https://twitter.com/share?url='+encodeURIComponent(window.location.href)+'&amp;t='+window.document.title,'twittershare','height=500,width=600,scrollbars=1'); return false;" href="#">
+                                    <span class="icon icon-twitter_cb"><span class="path1"></span><span class="path2"></span></span>
+                                    Twitter</a>
+                            </li>
+                            <li class="col-xs-6 col-md-3">
+                                <a class="icoSprt-google" title="condividi su Google+" onclick="window.open('https://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk='+encodeURIComponent(window.location.href)+'&amp;t='+window.document.title,'twittershare','height=500,width=600,scrollbars=1'); return false;" href="#">
+                                    <span class="icon icon-googleplus_cb"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+                                    Google+</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="overlay__footer">
+                        <a class="btn btn--alt popup__close" href="#" rel="overlayWindow">Chiudi</a>
+                    </div>
+                </div>
+            </div>
+            
+            
+
+     
+<div class="overlay overlay--pageAlert" style="display: none">
+	<div class="overlay__inn">
+	<!-- INIZIO POPUPSHARE -->
+	<div class="overlay__header">
+	<a class="overlay__close" href="#" rel="overlayWindow"><span class="glyphicon glyphicon-remove"></span></a>
+	<div class="overlay__title">Page Alert</div>
+	</div>
+	<div class="overlay__content">
+	To subscribe this page you have to <a href="/en/alert/login.jsp">login</a>
+	</div>
+	<div class="overlay__footer">
+	<a class="btn btn--alt popup__close" href="#" rel="overlayWindow">Close</a>
+	</div>
+	<!-- FINE POPUPSHARE -->
+	</div>
+</div>
+	
+
+ 
+      
+
+
+
+
+  
+
+
+
+            <!-- popup Page Alert -->
+            <!--<div class="overlay overlay--pageAlert" style="display: none">
+                <div class="overlay__inn">
+                    <div class="overlay__header">
+                        <a class="overlay__close" href="#" rel="overlayWindow"><span class="glyphicon glyphicon-remove"></span></a>
+                        <div class="overlay__title">Page Alert</div>
+                    </div>
+                    <div class="overlay__content">
+                        <p>Per sottoscrivere questa pagina devi prima effettuare il <a href="http://www.snam.it/it/alert/login.jsp">login</a></p>
+                    </div>
+                    <div class="overlay__footer">
+                        <a class="btn btn--alt popup__close" href="#" rel="overlayWindow">Chiudi</a>
+                    </div>
+                </div>
+            </div>-->
+            <!-- popup Generico -->
+            <div class="overlay overlay--genetic" style="display: none">
+                <div class="overlay__inn">
+                    <div class="overlay__header">
+                        <a class="overlay__close" href="#" rel="overlayWindow"><span class="glyphicon glyphicon-remove"></span></a>
+                        <div class="overlay__title">Titolo del popup</div>
+                    </div>
+                    <div class="overlay__content">
+                        <!-- // contenuto HTML del popup editabile da CMS // -->
+                    </div>
+                    <div class="overlay__footer">
+                        <a class="btn btn--alt popup__close" href="#" rel="overlayWindow">Chiudi</a>
+                        <a class="btn" href="#">Procedi</a>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay overlay--costoTrasporto" style="display: none">
+                <div class="overlay__inn">
+                    <div class="overlay__header">
+                        <a class="overlay__close" rel="overlayWindow"><span class="glyphicon glyphicon-remove"></span></a>
+                        <div class="overlay__title"></div>
+                    </div>
+                    <div class="overlay__content">
+                        <!-- // contenuto HTML del popup editabile da CMS // -->
+                    </div>
+                    <div class="overlay__footer">
+                        <a class="btn btn--alt popup__close" rel="overlayWindow">Close</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Overlay (per i vari popup) -->
+
+
+	<!-- PREPROD: /system/modules/com.ntt.snam.responsive/elements/template-commons.jsp -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="/export/system/modules/com.ntt.snam.responsive/resources/assets/js/vendor/bootstrap.min.js"></script>	
+    	<script src="/export/system/modules/com.ntt.snam.responsive/resources/assets/js/plugins.min.js"></script>   
+    	<script src="/export/system/modules/com.ntt.snam.responsive/resources/assets/js/app.min.js"></script> 	
+    		
+		<!-- ADOBE -->
+		<script type="text/javascript">_satellite.pageBottom();</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

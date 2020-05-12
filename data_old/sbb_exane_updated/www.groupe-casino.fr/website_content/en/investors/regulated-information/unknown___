@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<title>Regulated information - Groupe Casino</title>
+
+<!-- This site is optimized with the Yoast SEO plugin v12.5.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://www.groupe-casino.fr/en/investors/regulated-information/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:locale:alternate" content="fr_FR" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Regulated information - Groupe Casino" />
+<meta property="og:url" content="https://www.groupe-casino.fr/en/investors/regulated-information/" />
+<meta property="og:site_name" content="Groupe Casino" />
+<meta property="og:image" content="https://www.groupe-casino.fr/wp-content/uploads/2018/04/Information-reglementee-AMF.png" />
+<meta property="og:image:secure_url" content="https://www.groupe-casino.fr/wp-content/uploads/2018/04/Information-reglementee-AMF.png" />
+<meta property="og:image:width" content="655" />
+<meta property="og:image:height" content="434" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Regulated information - Groupe Casino" />
+<meta name="twitter:image" content="https://www.groupe-casino.fr/wp-content/uploads/2018/04/Information-reglementee-AMF.png" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://www.groupe-casino.fr/en/#website","url":"https://www.groupe-casino.fr/en/","name":"Groupe Casino","potentialAction":{"@type":"SearchAction","target":"https://www.groupe-casino.fr/en/?s={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.groupe-casino.fr/en/investors/regulated-information/#primaryimage","url":"https://www.groupe-casino.fr/wp-content/uploads/2018/04/Information-reglementee-AMF.png","width":655,"height":434},{"@type":"WebPage","@id":"https://www.groupe-casino.fr/en/investors/regulated-information/#webpage","url":"https://www.groupe-casino.fr/en/investors/regulated-information/","inLanguage":"en-US","name":"Regulated information - Groupe Casino","isPartOf":{"@id":"https://www.groupe-casino.fr/en/#website"},"primaryImageOfPage":{"@id":"https://www.groupe-casino.fr/en/investors/regulated-information/#primaryimage"},"datePublished":"2018-04-06T17:48:26+00:00","dateModified":"2019-10-24T08:32:59+00:00"}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//ajax.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Groupe Casino &raquo; Feed" href="https://www.groupe-casino.fr/en/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Groupe Casino &raquo; Comments Feed" href="https://www.groupe-casino.fr/en/comments/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.0';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-29615434-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-29615434-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/www.groupe-casino.fr\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<link rel='stylesheet' id='wp-block-library-css'  href='https://www.groupe-casino.fr/wp-includes/css/dist/block-library/style.min.css?ver=5.2.4' type='text/css' media='all' />
+<link rel='stylesheet' id='cookie-law-info-css'  href='https://www.groupe-casino.fr/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-public.css?ver=1.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='cookie-law-info-gdpr-css'  href='https://www.groupe-casino.fr/wp-content/plugins/cookie-law-info/public/css/cookie-law-info-gdpr.css?ver=1.8.2' type='text/css' media='all' />
+<link rel='stylesheet' id='twoobl_main_style-css'  href='https://www.groupe-casino.fr/wp-content/themes/groupecasino/assets/css/base.css?ver=1.0' type='text/css' media='all' />
+<script>if (document.location.protocol != "https:") {document.location = document.URL.replace(/^http:/i, "https:");}</script><script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/www.groupe-casino.fr","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://www.groupe-casino.fr/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.0'></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js?ver=2.2.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var Cli_Data = {"nn_cookie_ids":[],"cookielist":[]};
+var log_object = {"ajax_url":"https:\/\/www.groupe-casino.fr\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script>window.jQuery || document.write('<script src="https://www.groupe-casino.fr/wp-content/themes/groupecasino/assets/js/jquery-2.2.4.min.js"><\/script>')</script>
+<script type='text/javascript' src='https://www.groupe-casino.fr/wp-content/plugins/cookie-law-info/public/js/cookie-law-info-public.js?ver=1.8.2'></script>
+<link rel='https://api.w.org/' href='https://www.groupe-casino.fr/wp-json/' />
+<link rel="alternate" type="application/json+oembed" href="https://www.groupe-casino.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.groupe-casino.fr%2Fen%2Finvestors%2Fregulated-information%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://www.groupe-casino.fr/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.groupe-casino.fr%2Fen%2Finvestors%2Fregulated-information%2F&#038;format=xml" />
+<link rel="alternate" href="https://www.groupe-casino.fr/investisseurs/information-reglementee/" hreflang="fr" />
+<link rel="alternate" href="https://www.groupe-casino.fr/en/investors/regulated-information/" hreflang="en" />
+<link href="https://www.groupe-casino.fr/wp-content/themes/groupecasino/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+<link rel="image_src" href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/Information-reglementee-AMF-150x150.png" />
+		<script type="text/javascript">
+			var cli_flush_cache=2;
+		</script>
+			<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto:300,400,500,700" rel="stylesheet">
+</head>
+
+<body data-rsssl=1 class="page page-child parent-pageid-18420">
+<div id="playground">
+
+	<div id="topbar" class="hidden-xs">
+		<div class="container">
+			<div id="left-top">
+				<div class="droop top-element">
+					<div id="menu-enseignes">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">Our banners</a>
+						<ul class="dropdown-menu">
+							<li><a href="http://www.assai.com.br/" target="_blank">Assaí</a></li><li><a href="https://www.casasbahia.com.br/" target="_blank">Casas Bahia</a></li><li><a href="http://www.casino-cafeteria.fr/" target="_blank">Casino Cafétéria</a></li><li><a href="http://www.casino-proximite.fr/enseigne/casino-shop" target="_blank">Casino Shop</a></li><li><a href="https://supercasino.fr" target="_blank">Casino Supermarchés</a></li><li><a href="http://www.carulla.com/" target="_blank">Carulla</a></li><li><a href="http://www.coeurdeble.fr/" target="_blank">Coeur de blé</a></li><li><a href="https://www.devoto.com.uy/aindex.aspx" target="_blank">Devoto</a></li><li><a href="http://www.disco.com.uy/" target="_blank">Disco</a></li><li><a href="https://www.exito.com/" target="_blank">Éxito</a></li><li><a href="https://www.extra.com.br/" target="_blank">Extra</a></li><li><a href="https://www.franprix.fr/" target="_blank">Franprix</a></li><li><a href="https://geantcasino.fr" target="_blank">Géant Casino</a></li><li><a href="http://www.casino.fr/" target="_blank">Hyper Casino</a></li><li><a href="https://www.jumbo-score.com/" target="_blank">Jumbo Score</a></li><li><a href="https://www.leaderprice.fr/" target="_blank">Leader Price</a></li><li><a href="https://www.leaderprice.fr/" target="_blank">Leader Price Express</a></li><li><a href="https://www.libertadsa.com.ar/" target="_blank">Libertad</a></li><li><a href="https://www.extra.com.br/" target="_blank">Mini Mercado Extra</a></li><li><a href="https://www.paodeacucar.com/" target="_blank">Minuto Pão de Açúcar</a></li><li><a href="https://www.monoprix.fr/" target="_blank">Monop'</a></li><li><a href="https://www.monoprix.fr/" target="_blank">Monoprix</a></li><li><a href="https://naturalia.fr/" target="_blank">Naturalia</a></li><li><a href="https://www.paodeacucar.com/" target="_blank">Pão de Açúcar</a></li><li><a href="https://www.pontofrio.com.br/" target="_blank">Pontofrio</a></li><li><a href="http://www.restaurant-alabonneheure.fr/" target="_blank">Restaurant à la bonne heure</a></li><li><a href="https://www.jumbo-score.com/" target="_blank">Score </a></li><li><a href="https://www.spar.fr/" target="_blank">Spar</a></li><li><a href="http://www.superinter.com.co/" target="_blank">Super Inter</a></li><li><a href="http://www.surtimax.com.co/" target="_blank">Surtimax</a></li><li><a href="https://www.vival.fr/" target="_blank">Vival by Casino</a></li>						</ul>
+					</div>
+				</div>
+
+				<div class="droop top-element">
+					<div id="menu-langues">
+												<a href="#" class="dropdown-toggle" data-toggle="dropdown">en</a>
+						<ul class="dropdown-menu">
+							<li class="fr-FR"><a hreflang="fr-FR" lang="fr-FR" href="https://www.groupe-casino.fr/investisseurs/information-reglementee/">Français</a></li>						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div id="right-top">
+				<div id="topbar-menu">
+					<div id="nav_menu-11" class="widget"><div class="menu-menu-top-en-container"><ul id="menu-menu-top-en" class="menu"><li id="menu-item-18790" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18790"><a href="https://www.groupe-casino.fr/en/customers/">Customers</a></li>
+<li id="menu-item-18791" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18791"><a href="https://www.groupe-casino.fr/en/careers/our-group-spirit/">Candidates</a></li>
+<li id="menu-item-18792" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18792"><a href="https://www.groupe-casino.fr/en/announcements/">Journalists</a></li>
+<li id="menu-item-18793" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18793"><a href="https://www.groupe-casino.fr/en/investors/">Investors</a></li>
+</ul></div></div>				</div>
+
+				<div>
+					<ul class="social">
+	<li><a href="https://www.youtube.com/channel/UCQoU3pViNy4mcv6VeJ-iuyQ?"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="svgicon svg-youtube" aria-hidden="true"> <path d="M35.68,13.6a6.92,6.92,0,0,0-1.27-3.18A4.58,4.58,0,0,0,31.2,9.07C26.72,8.75,20,8.75,20,8.75h0s-6.72,0-11.2.32a4.58,4.58,0,0,0-3.21,1.36A6.92,6.92,0,0,0,4.32,13.6,48.39,48.39,0,0,0,4,18.78v2.43a48.39,48.39,0,0,0,.32,5.18,6.92,6.92,0,0,0,1.27,3.18,5.43,5.43,0,0,0,3.53,1.37c2.56.25,10.88.32,10.88.32s6.72,0,11.2-.33a4.58,4.58,0,0,0,3.21-1.36,6.92,6.92,0,0,0,1.27-3.18A48.46,48.46,0,0,0,36,21.21V18.78A48.46,48.46,0,0,0,35.68,13.6Zm-19,10.55v-9l8.65,4.51Z"/></svg></a></li><li><a href="https://twitter.com/groupe_casino"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="svgicon svg-twitter" aria-hidden="true"> <path d="M36,10.08a13.12,13.12,0,0,1-3.77,1,6.58,6.58,0,0,0,2.89-3.63,13.15,13.15,0,0,1-4.17,1.59,6.57,6.57,0,0,0-11.19,6A18.64,18.64,0,0,1,6.23,8.2a6.57,6.57,0,0,0,2,8.77,6.54,6.54,0,0,1-3-.82s0,.05,0,.08a6.57,6.57,0,0,0,5.27,6.44,6.58,6.58,0,0,1-3,.11,6.57,6.57,0,0,0,6.13,4.56,13.17,13.17,0,0,1-8.15,2.81A13.36,13.36,0,0,1,4,30.05,18.58,18.58,0,0,0,14.06,33c12.08,0,18.68-10,18.68-18.68q0-.43,0-.85A13.34,13.34,0,0,0,36,10.08Z"/></svg></a></li><li><a href="https://www.linkedin.com/company/groupe-casino"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="svgicon svg-linkedin" aria-hidden="true"> <path d="M33.63,4H6.36A2.34,2.34,0,0,0,4,6.31V33.69A2.34,2.34,0,0,0,6.36,36H33.63A2.34,2.34,0,0,0,36,33.69V6.31A2.34,2.34,0,0,0,33.63,4ZM13.49,31.27H8.74V16h4.75ZM11.12,13.91a2.75,2.75,0,1,1,2.75-2.75A2.75,2.75,0,0,1,11.12,13.91ZM31.27,31.27H26.53V23.84c0-1.77,0-4-2.47-4s-2.85,1.93-2.85,3.92v7.55H16.47V16H21v2.09h.06a5,5,0,0,1,4.49-2.47c4.8,0,5.69,3.16,5.69,7.28Z"/></svg></a></li><li><a href="https://www.acce-o.fr/client/casino_services"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.01 30.01" class="svgicon svg-rs" aria-hidden="true"> <g> <path d="M10.37,0a12.59,12.59,0,0,1,5.37,1.08A10.46,10.46,0,0,1,18.86,3.4,12.1,12.1,0,0,1,21.21,7,10.51,10.51,0,0,1,22,10.26a13.7,13.7,0,0,1-.29,3.5,9.6,9.6,0,0,1-1.58,3.47c-.45.67-.91,1.33-1.32,2a4.8,4.8,0,0,0-.68,2.23A16.06,16.06,0,0,1,18,23.54a5.94,5.94,0,0,1-1.08,2.68,8.61,8.61,0,0,1-4.25,3.37A7.54,7.54,0,0,1,9.85,30a8.24,8.24,0,0,1-3.1-.66,7.81,7.81,0,0,1-3.54-3.11,3.45,3.45,0,0,1-.59-1.41,2.74,2.74,0,0,1,5.09-1.76,3.15,3.15,0,0,0,.76.94,1.94,1.94,0,0,0,1.26.46,3.06,3.06,0,0,0,1-.05,2.85,2.85,0,0,0,1.47-1.09,1.83,1.83,0,0,0,.38-1.13,12.06,12.06,0,0,1,.73-4.2,14.54,14.54,0,0,1,1.63-3l.67-1a4.51,4.51,0,0,0,.81-2,5.55,5.55,0,0,0-.18-2.74A5.88,5.88,0,0,0,13.33,6a5,5,0,0,0-1.77-.46,5.68,5.68,0,0,0-1.93.06A5.66,5.66,0,0,0,7.05,7.05a5.77,5.77,0,0,0-1.63,3,2.79,2.79,0,0,1-2.5,2.15A2.73,2.73,0,0,1,0,9.64a2.53,2.53,0,0,1,.06-.77,11.24,11.24,0,0,1,2-4.46A11,11,0,0,1,8.78.18,9.9,9.9,0,0,1,10.37,0Z"/> <path d="M9.83,19a.46.46,0,0,1-.07-.07L7.3,16.46a3.33,3.33,0,0,1-1-2.07A3.7,3.7,0,0,1,9,10.31a3.6,3.6,0,0,1,4.41,2.51l0,.1a3.55,3.55,0,0,1-.95,3.46C11.61,17.26,10.73,18.12,9.83,19Z"/> </g></svg></a></li></ul>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="mobile-top" class="visible-xs-block">
+		<div class="clearfix">
+			<div id="mob-title" class="col-xs-8 text-left">
+				<a href="https://www.groupe-casino.fr/en/" title="Groupe Casino">
+										<img src="https://www.groupe-casino.fr/wp-content/themes/groupecasino/assets/img/logo-mono-white.svg" alt=""/>
+				</a>
+			</div>
+			<div class="js-slideout-toggle visible-xs-block col-xs-4"><span></span></div>		</div>
+	</div>
+
+	<header id="top" class="hidden-xs" role="banner">
+		<div class="container">
+
+			<div class="row">
+
+				<div id="header-logo" class="col-sm-2 col-md-3 hidden-xs">
+					<a class="brand" href="https://www.groupe-casino.fr/en/" title="Groupe Casino">
+						<img src="https://www.groupe-casino.fr/wp-content/themes/groupecasino/assets/img/logo.svg" alt="Groupe Casino" />
+						<div class="hidden">Bienvenue sur le site du Groupe Casino</div>
+					</a>
+				</div>
+
+
+				<div id="header-menu" class="col-sm-10 col-md-9">
+
+					<div id="cours-bourse">
+						<span>Share price</span><span>42,54&euro;</span><span class="down">-0,61%</span>					</div>
+
+					<nav id="nav-main" role="navigation" class="nav-main  hidden-xs">
+						<div>
+							<ul id="menu-principal-en" class="nav nav-pills"><li id="menu-item-18071" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18071"><a href="https://www.groupe-casino.fr/en/group/">Group</a>
+<ul class="sub-menu">
+	<li id="menu-item-18359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18359"><a href="https://www.groupe-casino.fr/en/group/presentation/">Presentation</a></li>
+	<li id="menu-item-18360" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18360"><a href="https://www.groupe-casino.fr/en/group/activities/">Banners and activities</a></li>
+	<li id="menu-item-18361" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18361"><a href="https://www.groupe-casino.fr/en/group/governance/">Governance</a></li>
+	<li id="menu-item-18362" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18362"><a href="https://www.groupe-casino.fr/en/group/key-figures/">Key figures</a></li>
+	<li id="menu-item-23596" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23596"><a target="_blank" rel="noopener noreferrer" href="http://www.histoire.groupe-casino.fr/en/">History</a></li>
+</ul>
+</li>
+<li id="menu-item-18075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18075"><a href="https://www.groupe-casino.fr/en/news/">News</a></li>
+<li id="menu-item-25543" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25543"><a href="https://www.groupe-casino.fr/en/category/non-classe-en/innovation/">Innovation</a></li>
+<li id="menu-item-18364" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18364"><a href="https://www.groupe-casino.fr/en/commitments/">Commitments</a>
+<ul class="sub-menu">
+	<li id="menu-item-18456" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18456"><a href="https://www.groupe-casino.fr/en/commitments/thrive-at-work/">Thrive at work</a></li>
+	<li id="menu-item-18457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18457"><a href="https://www.groupe-casino.fr/en/commitments/consume-better/">Consume better</a></li>
+	<li id="menu-item-18458" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18458"><a href="https://www.groupe-casino.fr/en/commitments/produce-better/">Produce better</a></li>
+	<li id="menu-item-18365" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18365"><a href="https://www.groupe-casino.fr/en/commitments/preserve/">Preserve</a></li>
+	<li id="menu-item-18366" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18366"><a href="https://www.groupe-casino.fr/en/commitments/share/">Share</a></li>
+</ul>
+</li>
+<li id="menu-item-18459" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-18459"><a href="https://www.groupe-casino.fr/en/investors/">Investors</a>
+<ul class="sub-menu">
+	<li id="menu-item-22446" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22446"><a href="https://www.groupe-casino.fr/en/investors/agenda/">Financial agenda</a></li>
+	<li id="menu-item-22443" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22443"><a href="https://www.groupe-casino.fr/en/investors/financials-informations/">Financial information</a></li>
+	<li id="menu-item-18462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18462"><a href="https://www.groupe-casino.fr/en/investors/casino-share/">Casino share</a></li>
+	<li id="menu-item-18463" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18463"><a href="https://www.groupe-casino.fr/en/investors/shareholders/">Shareholders</a></li>
+	<li id="menu-item-22445" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-18436 current_page_item menu-item-22445"><a href="https://www.groupe-casino.fr/en/investors/regulated-information/" aria-current="page">Regulated information</a></li>
+</ul>
+</li>
+<li id="menu-item-18471" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18471"><a href="https://www.groupe-casino.fr/en/announcements/">Press</a></li>
+<li id="menu-item-18699" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18699"><a href="https://www.groupe-casino.fr/en/careers/our-group-spirit/">Talents</a>
+<ul class="sub-menu">
+	<li id="menu-item-18478" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18478"><a href="https://www.groupe-casino.fr/en/careers/our-group-spirit/">Our Group spirit</a></li>
+	<li id="menu-item-18477" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18477"><a href="https://www.groupe-casino.fr/en/careers/education-and-mobility/">Education and mobility</a></li>
+	<li id="menu-item-18476" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18476"><a href="https://www.groupe-casino.fr/en/careers/diversity/">Diversity</a></li>
+	<li id="menu-item-18475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18475"><a href="https://www.groupe-casino.fr/en/careers/caring-management/">Managerial Culture</a></li>
+	<li id="menu-item-25392" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25392"><a target="_blank" rel="noopener noreferrer" href="https://recrutement.groupe-casino.fr/">Our offers</a></li>
+</ul>
+</li>
+</ul>							<div class="bt-search"></div>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+	</header>
+
+	<div id="sticky" class="stickmenu nav-main menu-sticky hidden-xs">
+		<div class="container">
+			<a class="brand" href="https://www.groupe-casino.fr/en/" title="Groupe Casino">
+				<img src="https://www.groupe-casino.fr/wp-content/themes/groupecasino/assets/img/logo.svg" alt="Groupe Casino" />
+				<div class="hidden">Bienvenue sur le site du Groupe Casino</div>
+			</a>
+			<div class="stick-menu">
+				<ul id="menu-principal-en-1" class="nav nav-pills"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18071"><a href="https://www.groupe-casino.fr/en/group/">Group</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18359"><a href="https://www.groupe-casino.fr/en/group/presentation/">Presentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18360"><a href="https://www.groupe-casino.fr/en/group/activities/">Banners and activities</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18361"><a href="https://www.groupe-casino.fr/en/group/governance/">Governance</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18362"><a href="https://www.groupe-casino.fr/en/group/key-figures/">Key figures</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23596"><a target="_blank" rel="noopener noreferrer" href="http://www.histoire.groupe-casino.fr/en/">History</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18075"><a href="https://www.groupe-casino.fr/en/news/">News</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-25543"><a href="https://www.groupe-casino.fr/en/category/non-classe-en/innovation/">Innovation</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18364"><a href="https://www.groupe-casino.fr/en/commitments/">Commitments</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18456"><a href="https://www.groupe-casino.fr/en/commitments/thrive-at-work/">Thrive at work</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18457"><a href="https://www.groupe-casino.fr/en/commitments/consume-better/">Consume better</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18458"><a href="https://www.groupe-casino.fr/en/commitments/produce-better/">Produce better</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18365"><a href="https://www.groupe-casino.fr/en/commitments/preserve/">Preserve</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18366"><a href="https://www.groupe-casino.fr/en/commitments/share/">Share</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-18459"><a href="https://www.groupe-casino.fr/en/investors/">Investors</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22446"><a href="https://www.groupe-casino.fr/en/investors/agenda/">Financial agenda</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22443"><a href="https://www.groupe-casino.fr/en/investors/financials-informations/">Financial information</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18462"><a href="https://www.groupe-casino.fr/en/investors/casino-share/">Casino share</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18463"><a href="https://www.groupe-casino.fr/en/investors/shareholders/">Shareholders</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-18436 current_page_item menu-item-22445"><a href="https://www.groupe-casino.fr/en/investors/regulated-information/" aria-current="page">Regulated information</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18471"><a href="https://www.groupe-casino.fr/en/announcements/">Press</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-18699"><a href="https://www.groupe-casino.fr/en/careers/our-group-spirit/">Talents</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18478"><a href="https://www.groupe-casino.fr/en/careers/our-group-spirit/">Our Group spirit</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18477"><a href="https://www.groupe-casino.fr/en/careers/education-and-mobility/">Education and mobility</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18476"><a href="https://www.groupe-casino.fr/en/careers/diversity/">Diversity</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18475"><a href="https://www.groupe-casino.fr/en/careers/caring-management/">Managerial Culture</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-25392"><a target="_blank" rel="noopener noreferrer" href="https://recrutement.groupe-casino.fr/">Our offers</a></li>
+</ul>
+</li>
+</ul>			</div>
+			<div class="bt-search"></div>
+		</div>
+	</div>
+		<div id="wrap" >
+
+		<div id="white-bloc"></div>
+				
+		<div class="container" role="document">
+
+			
+<div class="row">
+
+	<div id="main" class="col-sm-9 col-sm-push-3" role="main">
+
+		<div class="entry-header bloc-blanc">
+			<h1 class="title h1"><span>Regulated information</span></h1>
+		</div>
+
+		<div class="bloc-blanc">
+
+							<div class="entry-content main-content clearfix">
+					<div class="panel-group" id="collapse_a01f-e7bb"><div class="panel panel-default">    <div class="panel-heading" role="tab" id="heading_citem_7a4d-0162">        <h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" aria-controls="heading_citem_7a4d-0162" data-parent="#collapse_a01f-e7bb" href="#citem_7a4d-0162">Registration Document</a>        </h4>    </div>    <div id="citem_7a4d-0162" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading_citem_7a4d-0162">        <div class="panel-body">
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/07/DDR_VA_2018.pdf">2018</a></li>
+<li><a href="https://www.groupe-casino.fr/en/wp-content/uploads/sites/2/2018/06/CASINO_DRF_2017_GB.pdf">2017</a></li>
+<li><a href="https://www.groupe-casino.fr/en/wp-content/uploads/sites/2/2014/01/Document-de-reference-EN.pdf">2016</a></li>
+<li><a href="https://www.groupe-casino.fr/en/wp-content/uploads/sites/2/2017/03/CASINO_DRF_2015_VA.pdf">2015</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/1604_CASINO_DRF_2014_MEL.pdf">2014</a></li>
+<li><a href="https://www.groupe-casino.fr/en/wp-content/uploads/sites/2/2017/03/2013-Casino-DDR-VDEF-VA.pdf">2013</a></li>
+</ul>
+        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading" role="tab" id="heading_citem_c310-5f32">        <h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" aria-controls="heading_citem_c310-5f32" data-parent="#collapse_a01f-e7bb" href="#citem_c310-5f32">Annual financial report</a>        </h4>    </div>    <div id="citem_c310-5f32" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading_citem_c310-5f32">        <div class="panel-body">
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/03/Casino-Group-Financial-report.pdf">2018</a></li>
+<li><a href="https://www.groupe-casino.fr/fr/wp-content/uploads/sites/5/2018/06/Annual-Financial-Report-2017.pdf">2017</a></li>
+<li><a href="https://www.groupe-casino.fr/en/wp-content/uploads/sites/2/2017/03/Annual-Financial-Report-2016.pdf">2016</a></li>
+<li><a href="https://www.groupe-casino.fr/en/wp-content/uploads/sites/2/2017/03/2015-Annual-Financial-Report.pdf">2015</a></li>
+<li><a href="https://www.groupe-casino.fr/en/wp-content/uploads/sites/2/2017/03/Rapport-financier-FY-2014_EN-VDEF.pdf">2014</a></li>
+</ul>
+        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading" role="tab" id="heading_citem_88c5-d441">        <h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" aria-controls="heading_citem_88c5-d441" data-parent="#collapse_a01f-e7bb" href="#citem_88c5-d441">Interim financial report</a>        </h4>    </div>    <div id="citem_88c5-d441" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading_citem_88c5-d441">        <div class="panel-body">
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/08/2019-Interim-Financial-Report.pdf">2019</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/08/Interim-financial-report-H1-2018.pdf">2018</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/Financial-Report-Half-Year-2017.pdf">2017</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/H1-2016-consolidated-financial-statements.pdf">2016</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/2014-Interim-Financial-Statement.pdf">2014</a></li>
+</ul>
+        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading" role="tab" id="heading_citem_708f-8c13">        <h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" aria-controls="heading_citem_708f-8c13" data-parent="#collapse_a01f-e7bb" href="#citem_708f-8c13">Alternative performance indicators</a>        </h4>    </div>    <div id="citem_708f-8c13" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading_citem_708f-8c13">        <div class="panel-body">
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/09/Indicateurs-non-gaap-VA-2019.pdf">H1 2019</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/04/Groupe-Casino-Indicateurs-non-gaap.pdf">FY 2018</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/07/Group-Casino-H1-2018-Alternative-performance-indicators.pdf">H1 2018</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/07/Group-Casino-FY-2017-Alternative-performance-indicators.pdf">FY 2017</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/Groupe-Casino-FY-2016-Alternative-performance-indicators.pdf">H1 2017</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/EN-Groupe-Casino-Juin-2017-Indicateurs-non-gaap.pdf">FY 2016</a></li>
+</ul>
+        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading" role="tab" id="heading_citem_e77a-5cb0">        <h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" aria-controls="heading_citem_e77a-5cb0" data-parent="#collapse_a01f-e7bb" href="#citem_e77a-5cb0">Operations on shares</a>        </h4>    </div>    <div id="citem_e77a-5cb0" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading_citem_e77a-5cb0">        <div class="panel-body">
+<p><em>Cancellation of shares</em></p>
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/06/CGP-Cancellation-of-shares-13.06.2019.pdf">June 13, 2019</a></li>
+<li><a style="color: #002715; outline: 0px;" href="https://www.groupe-casino.fr/wp-content/uploads/2018/07/CGP-Cancellation-of-shares-25.07.2018.pdf">July 25, 2018</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/07/CGP-Cancellation-of-shares-15.05.2018.pdf">May 15, 2018</a></li>
+</ul>
+        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading" role="tab" id="heading_citem_cea0-2bf5">        <h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" aria-controls="heading_citem_cea0-2bf5" data-parent="#collapse_a01f-e7bb" href="#citem_cea0-2bf5">Release of Inside information</a>        </h4>    </div>    <div id="citem_cea0-2bf5" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading_citem_cea0-2bf5">        <div class="panel-body">
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/05/Communication-from-Casino-following-announcement-from-Rallye-QA.pdf">Communication from Casino following announcement from Rallye / Q&amp;A</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/05/Casino_communication_following_rallye_annoucement.pdf">Casino communication following Rallye announcement</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/11/2018-11-13-PR-2018-Interim-dividend.pdf">2018 interim dividend</a></li>
+<li><a href="https://www.groupe-casino.fr/casino-rejects-the-bernstein-estimates-related-to-operations-with-its-franchisees/">Casino rejects the Bernstein estimates related to operations with its franchisees</a></li>
+<li><a href="https://www.groupe-casino.fr/en/?post_type=communique&amp;p=16078">Announcement of international partnership between Ocado Solutions and Groupe Casino</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/2018-19-02-PR-Monoprix-enters-into-exclusive-negotiations-to-acquire-Sarenza.pdf">Casino Group: Monoprix announces entering into exclusive negotiations to acquire Sarenza</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/2018-26-03-PR-Amazon-and-Monoprix-join-forces-to-innovate-on-behalf-of-Prime-Now-customers.pdf">Amazon and Monoprix join forces to innovate on behalf of Prime Now customers</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/Auchan-Retail-and-Casino-Group-enter-into-exclusive-talks-to-build-a-global-strategic-partnership_.pdf">Casino Group: Auchan Retail and Casino Group enter into exclusive talks to build a global strategic partnership for their food and non-food purchases</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/2017-11-10-PR-Interim-dividend.pdf">Interim dividend – 2017 11 10</a></li>
+</ul>
+        </div>    </div></div><div class="panel panel-default">    <div class="panel-heading" role="tab" id="heading_citem_8e65-28c7">        <h4 class="panel-title"><a class="accordion-toggle collapsed" data-toggle="collapse" aria-controls="heading_citem_8e65-28c7" data-parent="#collapse_a01f-e7bb" href="#citem_8e65-28c7">Availability of documents </a>        </h4>    </div>    <div id="citem_8e65-28c7" class="panel-collapse collapse " role="tabpanel" aria-labelledby="heading_citem_8e65-28c7">        <div class="panel-body">
+<p><em>Preparatory documents for the ordinary and extraordinary sharholders’ meeting</em></p>
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/04/CGP20-20Avaibility20of20preparatory20documents20for20the20ordinary20and20extraordinary20Shareholders27Meeting20of20May207202019.pdf">2019</a></li>
+<li><a href="https://www.groupe-casino.fr/en/wp-content/uploads/sites/2/2018/04/CGP-Avaibility-of-preparatory-documents-for-the-ordinary-and-extraordinary-ShareholdersMeeting-of-May-15-2018.pdf">2018</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/04/CGP-Avaibility-of-preparatory-documents-for-the-ordinary-and-extraordinary-ShareholdersMeeting-of-May-5-2017-Vdef.pdf">2017</a></li>
+</ul>
+<p><em>Documents for the ordinary and extraordinary sharholders’ meeting</em></p>
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/05/Release-of-information-at-the-2019-Annual-General-Meeting-of-the-Casino-Guichard-Perrachon-Group.pdf">2019</a></li>
+</ul>
+<p><em>Financial results presentations</em></p>
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/09/2018-09-03-PR-Release-of-the-amended-2018-HY-Presentation.pdf">Release of the amended 2018 HY Presentation &#8211; 09/03</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/08/2018-24-08-PR-Release-of-the-amended-2018-HY-Presentation-1.pdf">Release of the amended 2018 HY Presentation</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/08/2018-30-07-PR-Release-of-the-amended-2018-HY-Presentation.pdf">Release of the amended 2018 HY Presentation</a></li>
+</ul>
+<p><em>Financial reports</em></p>
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/07/2018-07-26-PR-Release-of-the-H1-2018-financial-report.pdf">H1 2018 financial report</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/10/2017-27-07-PR-Release-of-H1-2017-financial-report.pdf">H1 2017 financial report</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/10/2016-08-04-PR-Release-of-the-H1-2016-Consolidated-Financial-Statements.pdf">H1 2016 financial report</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/10/PR-Release-of-the-half-year-2015-Consolidated-Financial-Statments.pdf">H1 2015 financial report</a></li>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2018/10/2014-03-12-PR-Release-of-the-half-year-2014-Consolidated-Financial-Statements.pdf">H1 2014 financial report</a></li>
+</ul>
+<p><em>Other documents</em></p>
+<ul>
+<li><a href="https://www.groupe-casino.fr/wp-content/uploads/2019/10/2019-10-24-PR-Release-of-the-lender-presentation.pdf">Release of the lender presentation</a></li>
+</ul>
+        </div>    </div></div></div>
+
+					
+										
+										
+				</div>
+
+				<div class="ax-share">
+	<div class="addthis_sharing_toolbox"></div>
+</div>
+
+											
+		</div>
+
+	</div>
+
+	<aside id="sidebar" class="col-sm-3 col-sm-pull-9 hidden-xs" role="complementary">
+	<div class="axome_menu_pages"><div id="widget_axomemenu_1" class="widget widget_axomemenu clearfix"><span class="title widget-title h3">Investors</span><ul class="axome_menu_sidebar menu"><li class="page_item page-item-3576"><a href="https://www.groupe-casino.fr/en/investors/agenda/">Financial agenda</a></li>
+<li class="page_item page-item-18427"><a href="https://www.groupe-casino.fr/en/investors/financials-informations/">Financial information</a></li>
+<li class="page_item page-item-18428 page_item_has_children"><a href="https://www.groupe-casino.fr/en/investors/casino-share/">Casino share</a>
+<ul class='children'>
+	<li class="page_item page-item-19873"><a href="https://www.groupe-casino.fr/en/investors/casino-share/dividends-and-taxation-2/">Dividends and taxation</a></li>
+	<li class="page_item page-item-19849"><a href="https://www.groupe-casino.fr/en/investors/casino-share/share-information/">Share information</a></li>
+	<li class="page_item page-item-19866"><a href="https://www.groupe-casino.fr/en/investors/casino-share/organizational-chart/">Organizational chart</a></li>
+</ul>
+</li>
+<li class="page_item page-item-18433 page_item_has_children"><a href="https://www.groupe-casino.fr/en/investors/shareholders/">Shareholders</a>
+<ul class='children'>
+	<li class="page_item page-item-18872"><a href="https://www.groupe-casino.fr/en/investors/shareholders/be-a-shareholder/">Be a shareholder</a></li>
+	<li class="page_item page-item-18894 page_item_has_children"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-meeting/">Shareholder&#8217;s meeting</a>
+	<ul class='children'>
+		<li class="page_item page-item-24690"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-meeting/electronic-notice/">Electronic notice</a></li>
+		<li class="page_item page-item-18925"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-meeting/how-to-participate-and-e-notice/">How to participate and e-notice</a></li>
+		<li class="page_item page-item-18996"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-meeting/former-years/">Former years</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-5892"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-consultative-committee/">Shareholders&#8217; consultative committee</a></li>
+</ul>
+</li>
+<li class="page_item page-item-18436 current_page_item"><a href="https://www.groupe-casino.fr/en/investors/regulated-information/" aria-current="page">Regulated information</a></li>
+</ul><script>(function($){$(document).ready(function(){$('.axome_menu_sidebar .page-item-7762 a').attr('target', '_blank');$('.axome_menu_sidebar .page-item-17451 a').attr('target', '_blank');});})(window.jQuery);</script></div></div></aside>
+
+</div>
+
+		</div>
+	</div>
+
+	<footer id="colophon" role="contentinfo">
+
+		<div id="social-footer" class="container">
+			<div>
+				<span>Follow us</span>
+				<ul class="social">
+	<li><a href="https://www.youtube.com/channel/UCQoU3pViNy4mcv6VeJ-iuyQ?"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="svgicon svg-youtube" aria-hidden="true"> <path d="M35.68,13.6a6.92,6.92,0,0,0-1.27-3.18A4.58,4.58,0,0,0,31.2,9.07C26.72,8.75,20,8.75,20,8.75h0s-6.72,0-11.2.32a4.58,4.58,0,0,0-3.21,1.36A6.92,6.92,0,0,0,4.32,13.6,48.39,48.39,0,0,0,4,18.78v2.43a48.39,48.39,0,0,0,.32,5.18,6.92,6.92,0,0,0,1.27,3.18,5.43,5.43,0,0,0,3.53,1.37c2.56.25,10.88.32,10.88.32s6.72,0,11.2-.33a4.58,4.58,0,0,0,3.21-1.36,6.92,6.92,0,0,0,1.27-3.18A48.46,48.46,0,0,0,36,21.21V18.78A48.46,48.46,0,0,0,35.68,13.6Zm-19,10.55v-9l8.65,4.51Z"/></svg></a></li><li><a href="https://twitter.com/groupe_casino"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="svgicon svg-twitter" aria-hidden="true"> <path d="M36,10.08a13.12,13.12,0,0,1-3.77,1,6.58,6.58,0,0,0,2.89-3.63,13.15,13.15,0,0,1-4.17,1.59,6.57,6.57,0,0,0-11.19,6A18.64,18.64,0,0,1,6.23,8.2a6.57,6.57,0,0,0,2,8.77,6.54,6.54,0,0,1-3-.82s0,.05,0,.08a6.57,6.57,0,0,0,5.27,6.44,6.58,6.58,0,0,1-3,.11,6.57,6.57,0,0,0,6.13,4.56,13.17,13.17,0,0,1-8.15,2.81A13.36,13.36,0,0,1,4,30.05,18.58,18.58,0,0,0,14.06,33c12.08,0,18.68-10,18.68-18.68q0-.43,0-.85A13.34,13.34,0,0,0,36,10.08Z"/></svg></a></li><li><a href="https://www.linkedin.com/company/groupe-casino"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" class="svgicon svg-linkedin" aria-hidden="true"> <path d="M33.63,4H6.36A2.34,2.34,0,0,0,4,6.31V33.69A2.34,2.34,0,0,0,6.36,36H33.63A2.34,2.34,0,0,0,36,33.69V6.31A2.34,2.34,0,0,0,33.63,4ZM13.49,31.27H8.74V16h4.75ZM11.12,13.91a2.75,2.75,0,1,1,2.75-2.75A2.75,2.75,0,0,1,11.12,13.91ZM31.27,31.27H26.53V23.84c0-1.77,0-4-2.47-4s-2.85,1.93-2.85,3.92v7.55H16.47V16H21v2.09h.06a5,5,0,0,1,4.49-2.47c4.8,0,5.69,3.16,5.69,7.28Z"/></svg></a></li><li><a href="https://www.acce-o.fr/client/casino_services"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.01 30.01" class="svgicon svg-rs" aria-hidden="true"> <g> <path d="M10.37,0a12.59,12.59,0,0,1,5.37,1.08A10.46,10.46,0,0,1,18.86,3.4,12.1,12.1,0,0,1,21.21,7,10.51,10.51,0,0,1,22,10.26a13.7,13.7,0,0,1-.29,3.5,9.6,9.6,0,0,1-1.58,3.47c-.45.67-.91,1.33-1.32,2a4.8,4.8,0,0,0-.68,2.23A16.06,16.06,0,0,1,18,23.54a5.94,5.94,0,0,1-1.08,2.68,8.61,8.61,0,0,1-4.25,3.37A7.54,7.54,0,0,1,9.85,30a8.24,8.24,0,0,1-3.1-.66,7.81,7.81,0,0,1-3.54-3.11,3.45,3.45,0,0,1-.59-1.41,2.74,2.74,0,0,1,5.09-1.76,3.15,3.15,0,0,0,.76.94,1.94,1.94,0,0,0,1.26.46,3.06,3.06,0,0,0,1-.05,2.85,2.85,0,0,0,1.47-1.09,1.83,1.83,0,0,0,.38-1.13,12.06,12.06,0,0,1,.73-4.2,14.54,14.54,0,0,1,1.63-3l.67-1a4.51,4.51,0,0,0,.81-2,5.55,5.55,0,0,0-.18-2.74A5.88,5.88,0,0,0,13.33,6a5,5,0,0,0-1.77-.46,5.68,5.68,0,0,0-1.93.06A5.66,5.66,0,0,0,7.05,7.05a5.77,5.77,0,0,0-1.63,3,2.79,2.79,0,0,1-2.5,2.15A2.73,2.73,0,0,1,0,9.64a2.53,2.53,0,0,1,.06-.77,11.24,11.24,0,0,1,2-4.46A11,11,0,0,1,8.78.18,9.9,9.9,0,0,1,10.37,0Z"/> <path d="M9.83,19a.46.46,0,0,1-.07-.07L7.3,16.46a3.33,3.33,0,0,1-1-2.07A3.7,3.7,0,0,1,9,10.31a3.6,3.6,0,0,1,4.41,2.51l0,.1a3.55,3.55,0,0,1-.95,3.46C11.61,17.26,10.73,18.12,9.83,19Z"/> </g></svg></a></li></ul>
+			</div>
+		</div>
+
+		<div id="footer-menus" class="container">
+			<div id="nav_menu-7" class="widget widget_nav_menu col-sm-6 col-md-3"><span class="title">Group</span><div class="menu-footer1-en-container"><ul id="menu-footer1-en" class="menu"><li id="menu-item-21255" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21255"><a href="https://www.groupe-casino.fr/en/group/presentation/">Presentation</a></li>
+<li id="menu-item-21256" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21256"><a href="https://www.groupe-casino.fr/en/group/activities/">Banners and activities</a></li>
+<li id="menu-item-21258" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21258"><a href="https://www.groupe-casino.fr/en/group/key-figures/">Key figures</a></li>
+<li id="menu-item-21257" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21257"><a href="https://www.groupe-casino.fr/en/group/governance/">Governance</a></li>
+<li id="menu-item-21259" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21259"><a href="https://www.groupe-casino.fr/en/group/history/">History</a></li>
+</ul></div></div><div id="nav_menu-8" class="widget widget_nav_menu col-sm-6 col-md-3"><span class="title">Commitments</span><div class="menu-footer2-en-container"><ul id="menu-footer2-en" class="menu"><li id="menu-item-21260" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21260"><a href="https://www.groupe-casino.fr/en/commitments/thrive-at-work/">Thrive at work</a></li>
+<li id="menu-item-21261" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21261"><a href="https://www.groupe-casino.fr/en/commitments/consume-better/">Consume better</a></li>
+<li id="menu-item-21262" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21262"><a href="https://www.groupe-casino.fr/en/commitments/produce-better/">Produce better</a></li>
+<li id="menu-item-21263" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21263"><a href="https://www.groupe-casino.fr/en/commitments/preserve/">Preserve</a></li>
+<li id="menu-item-21264" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21264"><a href="https://www.groupe-casino.fr/en/commitments/share/">Share</a></li>
+</ul></div></div><div id="nav_menu-9" class="widget widget_nav_menu col-sm-6 col-md-3"><span class="title">Investors</span><div class="menu-footer3-en-container"><ul id="menu-footer3-en" class="menu"><li id="menu-item-21269" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21269"><a href="https://www.groupe-casino.fr/en/investors/agenda/">Financial agenda</a></li>
+<li id="menu-item-21265" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21265"><a href="https://www.groupe-casino.fr/en/investors/financials-informations/">Financial information</a></li>
+<li id="menu-item-21266" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21266"><a href="https://www.groupe-casino.fr/en/investors/casino-share/">Casino share</a></li>
+<li id="menu-item-21267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21267"><a href="https://www.groupe-casino.fr/en/investors/shareholders/">Shareholders</a></li>
+<li id="menu-item-21268" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-18436 current_page_item menu-item-21268"><a href="https://www.groupe-casino.fr/en/investors/regulated-information/" aria-current="page">Regulated information</a></li>
+</ul></div></div><div id="nav_menu-10" class="widget widget_nav_menu col-sm-6 col-md-3"><span class="title">Careers</span><div class="menu-footer4-en-container"><ul id="menu-footer4-en" class="menu"><li id="menu-item-21270" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21270"><a href="https://www.groupe-casino.fr/en/careers/our-group-spirit/">Our Group spirit</a></li>
+<li id="menu-item-21271" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21271"><a href="https://www.groupe-casino.fr/en/careers/education-and-mobility/">Education and mobility</a></li>
+<li id="menu-item-21272" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21272"><a href="https://www.groupe-casino.fr/en/careers/diversity/">Diversity</a></li>
+<li id="menu-item-21273" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21273"><a href="https://www.groupe-casino.fr/en/careers/caring-management/">Managerial Culture</a></li>
+<li id="menu-item-21274" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21274"><a href="https://www.groupe-casino.fr/en/careers/our-offers/">Our Offers</a></li>
+</ul></div></div>		</div>
+
+		<div id="footer-footer" class="container">
+			<div id="text-4" class="widget widget_text clearfix">			<div class="textwidget"><p><a href="#">Legal mentions</a> | <a href="https://www.cnil.fr/fr/cookies-traceurs-que-dit-la-loi">Cookie Policy</a> | <a href="https://www.groupe-casino.fr/en/contact-us/">Contact</a> | <a href="https://www.groupe-casino.fr/en/announcements/">Presse</a></p>
+</div>
+		</div>		</div>
+	</footer>
+
+</div>
+
+<div id="navmob"><div><div id="cours-bourse-mob"></div><div id="search-mob"><form role="search" method="get" action="https://www.groupe-casino.fr/en/"><input type="text" value="" name="s" placeholder="Search" /><button type="submit"></button></form></div><div id="nav_menu-13" class="widget widget_nav_menu clearfix"><div class="menu-mobile-en-container"><ul id="menu-mobile-en" class="menu"><li id="menu-item-22565" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-22565"><a href="https://www.groupe-casino.fr/en/">Home</a></li>
+<li id="menu-item-22566" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22566"><a href="https://www.groupe-casino.fr/en/group/">Group</a>
+<ul class="sub-menu">
+	<li id="menu-item-22567" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22567"><a href="https://www.groupe-casino.fr/en/group/presentation/">Presentation</a></li>
+	<li id="menu-item-22568" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22568"><a href="https://www.groupe-casino.fr/en/group/activities/">Banners and activities</a>
+	<ul class="sub-menu">
+		<li id="menu-item-22569" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22569"><a href="https://www.groupe-casino.fr/en/group/activities/countries/">Banners</a>
+		<ul class="sub-menu">
+			<li id="menu-item-22570" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22570"><a href="https://www.groupe-casino.fr/en/group/activities/countries/argentina/">Argentina</a></li>
+			<li id="menu-item-22571" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22571"><a href="https://www.groupe-casino.fr/en/group/activities/countries/brazil/">Brazil</a></li>
+			<li id="menu-item-22572" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22572"><a href="https://www.groupe-casino.fr/en/group/activities/countries/colombia/">Colombia</a></li>
+			<li id="menu-item-22573" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22573"><a href="https://www.groupe-casino.fr/en/group/activities/countries/france/">France</a></li>
+			<li id="menu-item-22574" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22574"><a href="https://www.groupe-casino.fr/en/group/activities/countries/indian-ocean/">Indian Ocean</a></li>
+			<li id="menu-item-22575" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22575"><a href="https://www.groupe-casino.fr/en/group/activities/countries/uruguay-2/">Uruguay</a></li>
+		</ul>
+</li>
+		<li id="menu-item-22576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22576"><a href="https://www.groupe-casino.fr/en/group/activities/e-commerce/">E-commerce</a></li>
+		<li id="menu-item-22577" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22577"><a href="https://www.groupe-casino.fr/en/group/activities/commerce-et-immobilier-en/">Property strategy</a></li>
+		<li id="menu-item-22578" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22578"><a href="https://www.groupe-casino.fr/en/group/activities/partenariats-commerciaux-en/">International partnerships</a></li>
+		<li id="menu-item-22579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22579"><a href="https://www.groupe-casino.fr/en/group/activities/green-yellow/">Energy</a></li>
+	</ul>
+</li>
+	<li id="menu-item-22580" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22580"><a href="https://www.groupe-casino.fr/en/group/governance/">Governance</a>
+	<ul class="sub-menu">
+		<li id="menu-item-22581" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22581"><a href="https://www.groupe-casino.fr/en/group/governance/board-of-directors/">Board of Directors</a></li>
+		<li id="menu-item-22582" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22582"><a href="https://www.groupe-casino.fr/en/group/governance/group-executive-committee/">Senior management – Executive committee</a></li>
+		<li id="menu-item-22583" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22583"><a href="https://www.groupe-casino.fr/en/group/governance/documentation-and-information/">Documentation and information</a></li>
+	</ul>
+</li>
+	<li id="menu-item-22584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22584"><a href="https://www.groupe-casino.fr/en/group/key-figures/">Key figures</a></li>
+	<li id="menu-item-22585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22585"><a href="https://www.groupe-casino.fr/en/group/history/">History</a></li>
+</ul>
+</li>
+<li id="menu-item-22588" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22588"><a href="https://www.groupe-casino.fr/en/news/">News</a></li>
+<li id="menu-item-22587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22587"><a href="https://www.groupe-casino.fr/en/commitments/">Commitments</a>
+<ul class="sub-menu">
+	<li id="menu-item-22589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22589"><a href="https://www.groupe-casino.fr/en/commitments/thrive-at-work/">Thrive at work</a>
+	<ul class="sub-menu">
+		<li id="menu-item-22590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22590"><a href="https://www.groupe-casino.fr/en/commitments/thrive-at-work/garantir-legalite-femmes-hommes-en/">Ensuring equality between men and women</a></li>
+		<li id="menu-item-22591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22591"><a href="https://www.groupe-casino.fr/en/commitments/thrive-at-work/promoting-diversity/">Promoting Diversity</a></li>
+		<li id="menu-item-22593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22593"><a href="https://www.groupe-casino.fr/en/commitments/thrive-at-work/management-bienveillant-en/">Managerial Culture</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-22594" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22594"><a href="https://www.groupe-casino.fr/en/commitments/consume-better/">Consume better</a>
+<ul class="sub-menu">
+	<li id="menu-item-22595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22595"><a href="https://www.groupe-casino.fr/en/commitments/consume-better/responsible-products/">Propose more responsible products</a></li>
+	<li id="menu-item-22596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22596"><a href="https://www.groupe-casino.fr/en/commitments/consume-better/nutritional-balance/">Nutritional balance</a></li>
+	<li id="menu-item-22597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22597"><a href="https://www.groupe-casino.fr/en/commitments/consume-better/quality/">Quality</a></li>
+	<li id="menu-item-22598" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22598"><a href="https://www.groupe-casino.fr/en/commitments/consume-better/combating-food-waste/">Combating food waste</a></li>
+</ul>
+</li>
+<li id="menu-item-22599" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22599"><a href="https://www.groupe-casino.fr/en/commitments/produce-better/">Produce better</a>
+<ul class="sub-menu">
+	<li id="menu-item-22600" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22600"><a href="https://www.groupe-casino.fr/en/commitments/produce-better/promoting-local-producers-and-supporting-agricultural-sectors/">Promoting local producers and supporting agricultural chains</a></li>
+	<li id="menu-item-22601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22601"><a href="https://www.groupe-casino.fr/en/commitments/produce-better/casino-group-policy-for-animal-welfare/">Casino Group policy for animal welfare</a></li>
+	<li id="menu-item-22602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22602"><a href="https://www.groupe-casino.fr/en/commitments/produce-better/ameliorer-la-chaine-dapprovisionnement-en/">Improving the supply chain</a></li>
+	<li id="menu-item-22603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22603"><a href="https://www.groupe-casino.fr/en/commitments/produce-better/responsible-fishing/">Responsible fishing</a></li>
+</ul>
+</li>
+<li id="menu-item-22604" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22604"><a href="https://www.groupe-casino.fr/en/commitments/preserve/">Preserve</a>
+<ul class="sub-menu">
+	<li id="menu-item-22605" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22605"><a href="https://www.groupe-casino.fr/en/commitments/preserve/reducing-greenhouse-gas-emissions/">Reducing greenhouse gas emissions</a></li>
+	<li id="menu-item-22606" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22606"><a href="https://www.groupe-casino.fr/en/commitments/preserve/improving-energy-efficiency/">Improving energy efficiency</a></li>
+	<li id="menu-item-22607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22607"><a href="https://www.groupe-casino.fr/en/commitments/preserve/recovering-waste/">Recovering waste</a></li>
+	<li id="menu-item-22608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22608"><a href="https://www.groupe-casino.fr/en/commitments/preserve/palm-oil-policy/">Fighting against deforestation</a></li>
+</ul>
+</li>
+<li id="menu-item-22609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22609"><a href="https://www.groupe-casino.fr/en/commitments/share/">Share</a>
+<ul class="sub-menu">
+	<li id="menu-item-22610" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22610"><a href="https://www.groupe-casino.fr/en/commitments/share/acting-with-foundations/">Acting with Foundations</a></li>
+	<li id="menu-item-22611" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22611"><a href="https://www.groupe-casino.fr/en/commitments/share/agir-pour-lemploi-des-jeunes-defavorises-en/">Acting for the employment of underpriviledged youth</a></li>
+	<li id="menu-item-22612" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22612"><a href="https://www.groupe-casino.fr/en/commitments/share/agir-pour-les-plus-demunis-en/">Acting to help the most needy in society</a></li>
+</ul>
+</li>
+<li id="menu-item-22613" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor current-menu-ancestor current-menu-parent current-page-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-22613"><a href="https://www.groupe-casino.fr/en/investors/">Investors</a>
+<ul class="sub-menu">
+	<li id="menu-item-22614" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22614"><a href="https://www.groupe-casino.fr/en/investors/agenda/">Financial agenda</a></li>
+	<li id="menu-item-22615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22615"><a href="https://www.groupe-casino.fr/en/investors/financials-informations/">Financial information</a></li>
+	<li id="menu-item-22617" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22617"><a href="https://www.groupe-casino.fr/en/investors/casino-share/">Casino share</a>
+	<ul class="sub-menu">
+		<li id="menu-item-22619" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22619"><a href="https://www.groupe-casino.fr/en/dividends-and-taxation/">Dividends and taxation</a></li>
+		<li id="menu-item-22620" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22620"><a href="https://www.groupe-casino.fr/en/investors/casino-share/share-information/">Share information</a></li>
+		<li id="menu-item-22621" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22621"><a href="https://www.groupe-casino.fr/en/investors/casino-share/organizational-chart/">Organizational chart</a></li>
+	</ul>
+</li>
+	<li id="menu-item-22616" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22616"><a href="https://www.groupe-casino.fr/en/investors/shareholders/">Shareholders</a>
+	<ul class="sub-menu">
+		<li id="menu-item-22624" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22624"><a href="https://www.groupe-casino.fr/en/investors/shareholders/be-a-shareholder/">Be a shareholder</a></li>
+		<li id="menu-item-22622" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22622"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-meeting/">2018 Shareholder&#8217;s meeting</a>
+		<ul class="sub-menu">
+			<li id="menu-item-22625" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22625"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-meeting/how-to-participate-and-e-notice/">How to participate and e-notice</a></li>
+			<li id="menu-item-22626" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22626"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-meeting/former-years/">Former years</a></li>
+		</ul>
+</li>
+		<li id="menu-item-22623" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22623"><a href="https://www.groupe-casino.fr/en/investors/shareholders/shareholders-consultative-committee/">Shareholders&#8217; consultative committee</a></li>
+	</ul>
+</li>
+	<li id="menu-item-22618" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-18436 current_page_item menu-item-22618"><a href="https://www.groupe-casino.fr/en/investors/regulated-information/" aria-current="page">Regulated information</a></li>
+</ul>
+</li>
+<li id="menu-item-22627" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22627"><a href="https://www.groupe-casino.fr/en/announcements/">Press</a></li>
+<li id="menu-item-22628" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-22628"><a href="https://www.groupe-casino.fr/en/careers/">Careers</a>
+<ul class="sub-menu">
+	<li id="menu-item-22629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22629"><a href="https://www.groupe-casino.fr/en/careers/our-group-spirit/">Our Group spirit</a></li>
+	<li id="menu-item-22630" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22630"><a href="https://www.groupe-casino.fr/en/careers/education-and-mobility/">Education and mobility</a></li>
+	<li id="menu-item-22631" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22631"><a href="https://www.groupe-casino.fr/en/careers/diversity/">Diversity</a></li>
+	<li id="menu-item-22632" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22632"><a href="https://www.groupe-casino.fr/en/careers/caring-management/">Managerial Culture</a></li>
+	<li id="menu-item-22633" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22633"><a href="https://www.groupe-casino.fr/en/careers/our-offers/">Our Offers</a></li>
+</ul>
+</li>
+</ul></div></div></div></div><div id="recherche">
+	<span class="search-close"></span>
+	<div>
+		<form role="search" method="get" id="searchform" action="https://www.groupe-casino.fr/en/">
+			<label class="sr-only" for="s">Search for:</label>
+			<div>
+				<input type="text" value="" name="s" id="s" placeholder="Search" />
+				<span class="bouton">
+					<button type="submit" id="searchsubmit"></button>
+				</span>
+			</div>
+			<span class="help">
+				Hit enter to search or ESC to close			</span>
+		</form>
+	</div>
+</div>
+<div id="cookie-law-info-bar"><span>En poursuivant la navigation sur ce site, vous acceptez l'utilisation de cookies pour améliorer votre navigation. Vous pourrez toujours modifier vos préférences.<a  data-cli_action="accept" id="cookie_action_close_header"  class="medium cli-plugin-button cli-plugin-main-button cookie_action_close_header cli_action_button" style="display:inline-block; ">Accepter</a>  <a  id="cookie_action_close_header_reject" target="_blank"  class="medium cli-plugin-button cli-plugin-main-button cookie_action_close_header_reject cli_action_button"  data-cli_action="reject">Fermer</a> <a href='https://www.groupe-casino.fr/politique-de-confidentialite/' id="CONSTANT_OPEN_URL" target="_blank"  class="cli-plugin-main-link"  style="display:inline-block;" >Découvrir</a></span></div><div id="cookie-law-info-again" style="display:none;"><span id="cookie_hdr_showagain">Privacy & Cookies Policy</span></div><div class="cli-modal" id="cliSettingsPopup" tabindex="-1" role="dialog" aria-labelledby="cliSettingsPopup" aria-hidden="true">
+  <div class="cli-modal-dialog" role="document">
+    <div class="cli-modal-content cli-bar-popup">
+      <button type="button" class="cli-modal-close" id="cliModalClose">
+        <svg class="" viewBox="0 0 24 24"><path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path><path d="M0 0h24v24h-24z" fill="none"></path></svg>
+      </button>
+      <div class="cli-modal-body">
+        <div class="cli-container-fluid cli-tab-container">
+    <div class="cli-row">
+        <div class="cli-col-12 cli-align-items-stretch cli-px-0">
+            <div class="cli-privacy-overview">
+                                                   
+                <div class="cli-privacy-content">
+                    <div class="cli-privacy-content-text"></div>
+                </div>
+                <a class="cli-privacy-readmore" data-readmore-text="Show more" data-readless-text="Show less"></a>            </div>
+        </div>  
+        <div class="cli-col-12 cli-align-items-stretch cli-px-0 cli-tab-section-container">
+            <div class="cli-tab-section cli-privacy-tab">
+                <div class="cli-tab-header">
+                    <a class="cli-nav-link cli-settings-mobile" >
+                                            </a>
+                </div>
+                <div class="cli-tab-content">
+                    <div class="cli-tab-pane cli-fade">
+                        <p></p>
+                    </div>
+                </div>
+
+            </div>
+              
+                            <div class="cli-tab-section">
+                    <div class="cli-tab-header">
+                        <a class="cli-nav-link cli-settings-mobile" data-target="necessary" data-toggle="cli-toggle-tab" >
+                            Necessary 
+                        </a>
+                    
+                    <span class="cli-necessary-caption">Always Enabled</span>                     </div>
+                    <div class="cli-tab-content">
+                        <div class="cli-tab-pane cli-fade" data-id="necessary">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+              
+                       
+        </div>
+    </div> 
+</div> 
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cli-modal-backdrop cli-fade cli-settings-overlay"></div>
+<div class="cli-modal-backdrop cli-fade cli-popupbar-overlay"></div>
+<script type="text/javascript">
+  /* <![CDATA[ */
+  cli_cookiebar_settings='{"animate_speed_hide":"500","animate_speed_show":"500","background":"#fff","border":"#444","border_on":false,"button_1_button_colour":"#000","button_1_button_hover":"#000000","button_1_link_colour":"#fff","button_1_as_button":true,"button_1_new_win":false,"button_2_button_colour":"#333","button_2_button_hover":"#292929","button_2_link_colour":"#444","button_2_as_button":false,"button_2_hidebar":false,"button_3_button_colour":"#000","button_3_button_hover":"#000000","button_3_link_colour":"#fff","button_3_as_button":true,"button_3_new_win":true,"button_4_button_colour":"#000","button_4_button_hover":"#000000","button_4_link_colour":"#fff","button_4_as_button":true,"font_family":"inherit","header_fix":false,"notify_animate_hide":true,"notify_animate_show":false,"notify_div_id":"#cookie-law-info-bar","notify_position_horizontal":"right","notify_position_vertical":"bottom","scroll_close":false,"scroll_close_reload":false,"accept_close_reload":false,"reject_close_reload":false,"showagain_tab":true,"showagain_background":"#fff","showagain_border":"#000","showagain_div_id":"#cookie-law-info-again","showagain_x_position":"100px","text":"#000","show_once_yn":false,"show_once":"10000","logging_on":false,"as_popup":false,"popup_overlay":true,"bar_heading_text":"","cookie_bar_as":"banner","popup_showagain_position":"bottom-right","widget_position":"left"}';
+  /* ]]> */
+</script><script type='text/javascript' src='https://www.groupe-casino.fr/wp-content/themes/groupecasino/assets/js/scripts.js?ver=1.0'></script>
+<script type='text/javascript' src='https://www.groupe-casino.fr/wp-includes/js/wp-embed.min.js?ver=5.2.4'></script>
+<script type="text/javascript">(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=en; expires=" + expirationDate.toUTCString() + "; path=/";
+			}());</script>
+<script>
+	var addthis_config = addthis_config||{};
+	addthis_config.pubid = 'ra-4f71809436257cfe';
+	addthis_config.data_track_clickback = false;
+	addthis_config.data_track_addressbar = false;
+
+	var addthisScript = document.createElement('script');
+	addthisScript.setAttribute('src', 'https://s7.addthis.com/js/300/addthis_widget.js#domready=1');
+	document.body.appendChild(addthisScript);
+</script>
+
+
+</body>
+</html>
+<!-- *´¨)
+     ¸.•´¸.•*´¨) ¸.•*¨)
+     (¸.•´ (¸.•` ¤ Comet Cache is Fully Functional ¤ ´¨) -->
+
+<!-- Cache File Version Salt:       n/a -->
+
+<!-- Cache File URL:                https://www.groupe-casino.fr/en/investors/regulated-information/ -->
+<!-- Cache File Path:               /cache/comet-cache/cache/https/www-groupe-casino-fr/en/investors/regulated-information.html -->
+
+<!-- Cache File Generated Via:      HTTP request -->
+<!-- Cache File Generated On:       Nov 27th, 2019 @ 11:22 am UTC -->
+<!-- Cache File Generated In:       0.23754 seconds -->
+
+<!-- Cache File Expires On:         Nov 27th, 2019 @ 11:37 am UTC -->
+<!-- Cache File Auto-Rebuild On:    Nov 27th, 2019 @ 11:37 am UTC -->

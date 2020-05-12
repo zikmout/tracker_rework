@@ -1,0 +1,934 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9]>    <html class="no-js ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head profile="http://www.w3.org/1999/xhtml/vocab">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="shortcut icon" href="https://www.biomerieux.com/sites/corporate/files/favicon_25.ico" type="image/vnd.microsoft.icon" />
+<meta name="generator" content="Drupal 7 (https://www.drupal.org)" />
+<link rel="canonical" href="https://www.biomerieux.com/en/finance" />
+<link rel="shortlink" href="https://www.biomerieux.com/en/node/2686" />
+<meta property="og:site_name" content="bioMérieux Corporate Website" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.biomerieux.com/en/finance" />
+<meta property="og:title" content="Finance" />
+  <title>Finance | bioMérieux Corporate Website</title>
+  <meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,width=device-width">
+  <link type="text/css" rel="stylesheet" href="https://www.biomerieux.com/sites/corporate/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.biomerieux.com/sites/corporate/files/css/css_04oyjIQnjAhO-iLqopLgQLqyAsXxXZxM_6LB-c4hAjA.css" media="screen" />
+<style type="text/css" media="print">
+<!--/*--><![CDATA[/*><!--*/
+#sb-container{position:relative;}#sb-overlay{display:none;}#sb-wrapper{position:relative;top:0;left:0;}#sb-loading{display:none;}
+
+/*]]>*/-->
+</style>
+<link type="text/css" rel="stylesheet" href="https://www.biomerieux.com/sites/corporate/files/css/css_TeB4fnFsVfIwhrKd_I2Ias7SeeLnJPMdtFCT90S8RXI.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.biomerieux.com/sites/corporate/files/css/css_Uz8vOs_6Te_XupZOshaqJdELYGlyJ4SQjzPgAB8H33Y.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.biomerieux.com/sites/corporate/files/css/css_c9GCTUNJH9fTvK9SSIENz42t9R5WAe5Rsjqeptce8fo.css" media="all" />
+  <script type="text/javascript" src="https://www.biomerieux.com/sites/corporate/files/js/js_EebRuRXFlkaf356V0T2K_8cnUVfCKesNTxdvvPSEhCM.js"></script>
+<script type="text/javascript" src="https://www.biomerieux.com/sites/corporate/files/js/js_Nklruyb-wKfJ5DHyhpvr12zLsLuxt-zuQDWa8o_uC_Y.js"></script>
+<script type="text/javascript" src="https://www.biomerieux.com/sites/corporate/files/js/js_kM-oAQbmG2EXzr49UjrjoYHO1WYckypBM-z6jjxEhpc.js"></script>
+<script type="text/javascript" src="https://www.biomerieux.com/sites/corporate/files/js/js_C25tdjW4T5m-QxQto7O-xqXJp4i4amZEP9Kl5QjieaI.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-1028149-1", {"cookieDomain":"auto"});ga("require", "linkid", "linkid.js");ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var switchTo5x = false;var useFastShare = true;
+//--><!]]>
+</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+if (typeof stLight !== 'undefined') { stLight.options({"publisher":"dr-c7ffb4b8-5e21-d20c-7954-5a37ad18f199","version":"4x","lang":"en"}); }
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.biomerieux.com/sites/corporate/files/js/js_bQNWnzbIIJmJ907AccP82bU2RJuF9L7Q1nZZ_uzxqCQ.js"></script>
+<script type="text/javascript" src="https://www.biomerieux.com/sites/corporate/files/js/js_HLd4ZxfPp2NAcsn8hYOuhE4KD0SlT2ojBidqYbp7h6g.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+Shadowbox.path = "/sites/corporate/libraries/shadowbox";
+Shadowbox.init(Drupal.settings.shadowbox,function(){
+    jQuery(document).ready(function(){
+      setTimeout(function(){jQuery(document).trigger('shadowbox-ready');},0)
+    });
+});
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"corporate","theme_token":"e1bSL56TBQl0biGTtYF2Ll9DYGywQjr86yAvH_A4zog","jquery_version":"1.10","js":{"0":1,"sites\/all\/modules\/extlink_extra\/extlink_extra.js":1,"1":1,"2":1,"3":1,"4":1,"5":1,"6":1,"7":1,"8":1,"9":1,"10":1,"11":1,"12":1,"sites\/all\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/libraries\/jwplayer\/jwplayer.js":1,"sites\/corporate\/libraries\/shadowbox\/shadowbox.js":1,"sites\/all\/modules\/shadowbox\/shadowbox_auto.js":1,"sites\/all\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/jquery_update\/replace\/misc\/jquery.form.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/jquery_update\/js\/jquery_update.js":1,"profiles\/webfactory\/modules\/biomerieux\/biomerieux_directory_blocks\/biomerieux_directory_blocks.js":1,"sites\/all\/modules\/extlink\/extlink.js":1,"sites\/all\/modules\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"13":1,"14":1,"http:\/\/w.sharethis.com\/button\/buttons.js":1,"15":1,"misc\/autocomplete.js":1,"sites\/all\/modules\/views\/js\/ajax_view.js":1,"sites\/corporate\/themes\/corporate\/js\/owl-carousel\/owl.carousel.min.js":1,"sites\/corporate\/themes\/corporate\/js\/script.js":1,"sites\/corporate\/themes\/corporate\/js\/investors.js":1,"16":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/corporate\/libraries\/shadowbox\/shadowbox.css":1,"0":1,"sites\/corporate\/modules\/biomerieux\/biomerieux_carousel\/css\/biomerieux_carousel.css":1,"profiles\/webfactory\/modules\/biomerieux\/biomerieux_directory_blocks\/biomerieux_directory_blocks.css":1,"sites\/corporate\/modules\/biomerieux\/biomerieux_pressreleases\/css\/jquery.bxslider.min.css":1,"sites\/corporate\/modules\/biomerieux\/biomerieux_pressreleases\/css\/bx.css":1,"sites\/all\/modules\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"sites\/all\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/deploy\/css\/deploy.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/i18n_menu_overview\/css\/i18n_menu_overview.css":1,"sites\/all\/modules\/scald\/modules\/fields\/mee\/css\/editor-global.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/scald\/modules\/providers\/scald_flash\/scald_flash.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/workflow\/workflow_admin_ui\/workflow_admin_ui.css":1,"sites\/all\/modules\/extlink\/extlink.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/search\/apachesolr_autocomplete\/apachesolr_autocomplete.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"public:\/\/css\/menu_icons.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"sites\/all\/modules\/print\/print_ui\/css\/print_ui.theme.css":1,"modules\/locale\/locale.css":1,"sites\/corporate\/themes\/corporate\/css\/bio.css":1,"sites\/corporate\/themes\/corporate\/css\/investors.css":1,"sites\/corporate\/themes\/corporate\/css\/bootstrap_grid.css":1,"sites\/corporate\/themes\/corporate\/css\/owl-carousel\/owl.carousel.custom.min.css":1,"sites\/corporate\/themes\/corporate\/css\/owl-carousel\/owl.theme.default.min.css":1}},"shadowbox":{"animate":true,"animateFade":true,"animSequence":"wh","auto_enable_all_images":0,"auto_gallery":0,"autoplayMovies":true,"continuous":false,"counterLimit":10,"counterType":"default","displayCounter":true,"displayNav":true,"enableKeys":true,"fadeDuration":0.35,"handleOversize":"resize","handleUnsupported":"link","initialHeight":160,"initialWidth":320,"language":"en","modal":false,"overlayColor":"#000","overlayOpacity":0.8,"resizeDuration":0.55,"showMovieControls":true,"slideshowDelay":0,"viewportPadding":20,"useSizzle":false,"ext":{"img":["png","jpg","jpeg","gif","bmp"],"swf":["swf"],"flv":["flv","mp4"],"qt":["dv","mov","moov","movie"],"wmp":["asf","wm","wmv"],"qtwmp":["avi","mpg","mpeg"]},"players":["img","flv"]},"better_exposed_filters":{"views":{"documents_search":{"displays":{"reference_documents":{"filters":[]}}},"right_column":{"displays":{"other_link_right_column":{"filters":[]},"right_column":{"filters":[]}}},"splashscreen":{"displays":{"block_1":{"filters":[]}}}}},"views":{"ajax_path":"\/en\/views\/ajax","ajaxViews":{"views_dom_id:e664c61273ea312e50c02a56602e580f":{"view_name":"splashscreen","view_display_id":"block_1","view_args":"","view_path":"node\/2686","view_base_path":null,"view_dom_id":"e664c61273ea312e50c02a56602e580f","pager_element":0},"views_dom_id:9d1122d1becf0644f94766882ce6bae4":{"view_name":"splashscreen","view_display_id":"block_1","view_args":"","view_path":"node\/2686","view_base_path":null,"view_dom_id":"9d1122d1becf0644f94766882ce6bae4","pager_element":0},"views_dom_id:52eace7fe8bd1451d6eea04c1b6f10bd":{"view_name":"splashscreen","view_display_id":"block_1","view_args":"","view_path":"node\/2686","view_base_path":null,"view_dom_id":"52eace7fe8bd1451d6eea04c1b6f10bd","pager_element":0}}},"urlIsAjaxTrusted":{"\/en\/views\/ajax":true,"\/en\/finance":true},"extlink":{"extTarget":0,"extClass":0,"extLabel":"(link is external)","extImgClass":0,"extIconPlacement":0,"extSubdomains":1,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":{"value":"  \u003Ch2\u003EYou are leaving the  [site:name] website\u003C\/h2\u003E\r\n  \u003Cp\u003EYou are being directed to a third-party website:\u003C\/p\u003E\r\n  \u003Cp\u003E\u003Cstrong\u003E[extlink:external-url]\u003C\/strong\u003E\u003C\/p\u003E\r\n  \u003Cp\u003EThis link is provided for your convenience. Please note that this third-party website is not controlled by [site:name] or subject to our privacy policy.\u003C\/p\u003E\r\n  \u003Cp\u003EThank you for visiting our site. We hope your visit was informative and enjoyable.\u003C\/p\u003E\r\n\r\n  \u003Cdiv class=\u0022extlink-extra-actions\u0022\u003E\r\n      \u003Cdiv class=\u0022extlink-extra-back-action\u0022\u003E\u003Ca title=\u0022Cancel\u0022 href=\u0022[extlink:back-url]\u0022\u003ECancel\u003C\/a\u003E\u003C\/div\u003E\r\n      \u003Cdiv class=\u0022extlink-extra-go-action\u0022\u003E\u003Ca class=\u0022ext-override\u0022 title=\u0022Go to link\u0022 href=\u0022[extlink:external-url]\u0022\u003EGo to link\u003C\/a\u003E\u003C\/div\u003E\r\n  \u003C\/div\u003E\r\n  \u003Cbr\/\u003E\u003Cbr\/\u003E\r\n  [extlink:timer]\r\n  ","format":"full_html"},"mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"extlink_extra":{"extlink_alert_type":"","extlink_alert_timer":"0","extlink_alert_url":"\/en\/now-leaving","extlink_cache_fix":0,"extlink_exclude_warning":"","extlink_508_fix":0,"extlink_508_text":" [external link]","extlink_url_override":0,"extlink_url_params":{"external_url":null,"back_url":null}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"}});
+//--><!]]>
+</script>
+  <script src="/sites/corporate/themes/corporate/js/modernizr-2.6.2.min.js"></script>
+  <script>
+	// Edit to suit your needs.
+	var ADAPT_CONFIG = {
+            // Where is your CSS?
+            path: '/sites/corporate/themes/corporate/css/assets/',
+
+            // false = Only run once, when page first loads.
+            // true = Change on window resize and page tilt.
+            dynamic: false,
+	
+            // First range entry is the minimum.
+            // Last range entry is the maximum.
+            // Separate ranges by "to" keyword.
+            range: [
+                '0px = 960_16_col.css'
+            ]
+	};
+	
+	if(debug){
+		ADAPT_CONFIG.dynamic = true;
+        ADAPT_CONFIG.range = [
+            '0px    to 759px  = mobile.css',
+            '759px  to 975px  = 720.css',
+            '975px            = 960_16_col.css'
+        ];
+	}
+        
+    // only responsive for mobile
+    if (biomerieux.isMobile.any() && !debug) {
+        ADAPT_CONFIG.dynamic = true;
+        ADAPT_CONFIG.range = [
+            '0px    to 759px  = mobile.css',
+            '759px  to 975px  = 720.css',
+            '975px            = 960_16_col.css'
+        ];
+    }
+	</script>
+	<script src="/sites/corporate/themes/corporate/js/adapt.min.js"></script>
+<meta name="google-site-verification" content="Du7Xz3ePeZ6KLII4rW2Lg3noYjUFrnULOD9VXzxqNmg" />
+</head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-2686 node-type-master-page i18n-en" >
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div id="page-wrapper" >
+    <div id="page" >
+        <div id="main-wrapper">
+            <div class="main-background-color">
+                <div id="main" class="container_16">
+                    <!-- BEGIN header -->
+                    <div id="header" class="without-secondary-menu clearfix container_16">
+  <!-- BEGIN desktop header -->
+  <div class="header-desktop">
+          <a href="/en" title="Home" rel="home" id="logo">
+        <img src="https://www.biomerieux.com/sites/corporate/files/biomerieux-logo-corporate.png" alt="Home" />
+      </a>
+        <div class="region region-top-content">
+      <ul>
+        <li>
+<div id="block-locale-language" class="block">
+<ul class="language-switcher-locale-url"><li class="en first active"><a href="/en/finance" class="language-link active" xml:lang="en" title="Finance">en</a></li>
+<li class="fr last"><a href="/fr/finance" class="language-link" xml:lang="fr" title="Finance">fr</a></li>
+</ul></div>
+</li><li class="last">
+<div class="block block-search contextual-links-region" id="block-search-form">
+    <form action="/en/finance" method="post" id="search-block-form--3" accept-charset="UTF-8"><div><div class="search-form-div">
+      <h2 class="element-invisible">Search form</h2>
+    <button class="search-submit-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path class="svg-path" d="M5.917 9.667a3.745 3.745 0 0 1-3.75-3.75 3.745 3.745 0 0 1 3.75-3.75 3.745 3.745 0 0 1 3.75 3.75 3.745 3.745 0 0 1-3.75 3.75zm5 0h-.659l-.233-.225a5.393 5.393 0 0 0 1.308-3.525 5.417 5.417 0 1 0-5.416 5.416 5.393 5.393 0 0 0 3.525-1.308l.225.233v.659l4.166 4.158 1.242-1.242z"/></svg>
+    </button>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--6">Search </label>
+ <input title="Enter the terms you wish to search for." placeholder="Search..." type="text" id="edit-search-block-form--6" name="search_block_form" value="" size="15" maxlength="128" class="form-text form-autocomplete" /><input type="hidden" id="edit-search-block-form--6-autocomplete" value="https://www.biomerieux.com/index.php?q=en/apachesolr_autocomplete_callback/apachesolr_search_page%3Acore_search" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--3"><input type="submit" id="edit-submit--3" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-jmQbSJ-Cupm7W7-vFBWm8QKAc5m7CbazE3TeMMq76EY" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form></div>
+</li>      </ul>
+    </div>
+  </div>
+      <div id="main-menu" class="navigation grid_16 desktop">
+      <nav>
+        <h2 class="element-invisible">Main menu</h2>
+        <ul id="main-menu-links" class="links clearfix"><li class="1653 first"><a href="/en/our-company">About us</a><div class="nav-layer type1">
+    <div class="shad">
+        <div class="border">
+            <div class="content"><ul><li><a href="/en/our-mission"><img src="https://www.biomerieux.com/sites/corporate/files/styles/menu_overlay/public/menu_icons/menu_icon_1708.png?itok=tQ2e_WG9"/>Our mission</a></li><li><a href="/en/facts-figures"><img src="https://www.biomerieux.com/sites/corporate/files/styles/menu_overlay/public/menu_icons/menu_icon_834.png?itok=3fQ-XHcb"/>Facts & Figures</a></li><li><a href="/en/our-strategy"><img src="https://www.biomerieux.com/sites/corporate/files/styles/menu_overlay/public/menu_icons/menu_icon_836.png?itok=ZWhJVD0O"/>Our Strategy</a></li><li><a href="/en/executive-committee"><img src="https://www.biomerieux.com/sites/corporate/files/styles/menu_overlay/public/menu_icons/menu_icon_2167.png?itok=vuw7Mjn9"/>Corporate Governance/ Executive Committee</a></li><li><a href="/en/biomerieux-worldwide"><img src="https://www.biomerieux.com/sites/corporate/files/styles/menu_overlay/public/menu_icons/menu_icon_1709.png?itok=FtBsXWv6"/>bioMérieux Worldwide</a></li><li><a href="/en/our-history"><img src="https://www.biomerieux.com/sites/corporate/files/styles/menu_overlay/public/menu_icons/menu_icon_838.png?itok=OfJbU2F9"/>Our History</a></li><li><a href="/en/innovation"><img src="https://www.biomerieux.com/sites/corporate/files/styles/menu_overlay/public/menu_icons/menu_icon_1747.jpg?itok=lb-kvrNb"/>Innovation</a></li><li><a href="/en/institut-merieux"><img src="https://www.biomerieux.com/sites/corporate/files/styles/menu_overlay/public/menu_icons/menu_icon_840.jpg?itok=p5SDkOHW"/>Institut Mérieux</a></li></ul> <div class="push">
+                                            <div class="bloc bloc_button hp"><div class="field field-name-field-richmenu-block field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"> <p><a href="https://www.biomerieux.com/sites/corporate/files/biomerieux_annual_report_2018.pdf" target="_blank"><img alt="" class="media-image" height="316" style="width: 153px; height: 188px;" width="258" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/biomerieux-annual-report-2018_0.jpg" /></a></p>
+ </div></div></div>     </div>
+                                        </div></div>
+       </div>
+   </div>
+   <div class="shad_bot">
+   </div></li>
+<li class="812"><a href="/en/corporate-responsibility">Responsibility</a>  <div class="nav-layer type3">
+                            <div class="shad">
+                                <div class="border">
+                                    <div class="content"><ul><li><a href="/en/our-commitments">Our commitments</a></li><li><a href="/en/responsibility-to-society">Responsibility to society</a></li><li><a href="/en/responsibility-our-workforce">Responsibility to our workforce</a></li><li><a href="/en/responsibility-environment">Responsibility to the environment</a></li></ul><ul><li><a href="/en/ethics-compliance">Ethics & Compliance</a></li><li><a href="/en/sustainable-and-socially-inclusive-purchasing">Sustainable and socially inclusive purchasing</a></li><li><a href="/en/global-compact">Global Compact</a></li><li><a href="/en/internal-audit">Internal Audit & Risks</a></li></ul>                 <div class="push"><div class="field field-name-field-richmenu-block field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"> <ul>
+<li><img alt="" class="media-image" height="71" width="160" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/styles/large/public/fondation.png?itok=vQmoAaMH" /><a href="/en/promoting-access-diagnostics">FONDATION MÉRIEUX</a></li>
+<li><a href="/en/our-employees-success"><img alt="" class="media-image" height="71" width="160" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/styles/large/public/reussite-collab-small.png?itok=BlUNp4JL" />OUR EMPLOYEE&#39;S SUCCESS</a></li>
+</ul>
+ </div></div></div>                 </div>              </div>
+                                </div>
+                            </div>
+                            <div class="shad_bot">
+                            </div>
+                        </div></li>
+<li class="817"><a href="/en/products-solutions">Solutions</a>  <div class="nav-layer type3">
+                            <div class="shad">
+                                <div class="border">
+                                    <div class="content"><ul><li><a href="https://www.biomerieux-diagnostics.com/">Clinical Solutions</a></li><li><a href="https://www.biomerieux-industry.com">Industry Solutions</a></li><li><a href="/en/product-quality-and-safety">Product Quality & Safety</a></li></ul><ul><li><a href="/en/customer-service">Customer Service</a></li><li><a href="/en/cybersecurity-data-privacy">Cybersecurity & data privacy</a></li><li><a href="http://www.biomerieux.com/techlib">Technical Library</a></li></ul>                 <div class="push"><div class="field field-name-field-richmenu-block field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"> <ul>
+<li><a href="/en/clinical-solutions"><img alt="" class="media-image" height="71" width="160" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/styles/large/public/clinical-small.png?itok=I3qUOlA4" /></a><a href="/en/clinical-solutions">CLINICAL SOLUTIONS</a></li>
+<li><a href="/en/industry-solutions"><img alt="" class="media-image" height="71" width="160" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/styles/large/public/industry-small.png?itok=HcO46FkH" /></a><a href="/en/industry-solutions">INDUSTRY SOLUTIONS</a></li>
+</ul>
+ </div></div></div>                 </div>              </div>
+                                </div>
+                            </div>
+                            <div class="shad_bot">
+                            </div>
+                        </div></li>
+<li class="813"><a href="/en/expertise">Expertise</a><div class="nav-layer type2">
+                        <div class="shad">
+                            <div class="border">
+                                <div class="content"><ul><li><a href="/en/importance-diagnostics">The importance of diagnostics</a><ul><li><a href="/en/clinical-diagnostics">Clinical diagnostics</a></li><li><a href="/en/industrial-microbiological-control-0">Industrial Microbiological Control</a></li></ul></li><li><a href="/en/clinical-diagnostics-applications">Clinical applications</a><ul><li><a href="/en/infectious-diseases">Infectious diseases</a></li><li><a href="/en/antimicrobial-resistance-and-healthcare-associated-infections">Antimicrobial resistance and Healthcare-associated infections</a></li><li><a href="/en/cardiovascular-emergencies">Cardiovascular Emergencies</a></li><li><a href="/en/personalized-medicine-0">Personalized medicine</a></li></ul></li><li><a href="/en/industrial-applications">Industrial applications</a><ul><li><a href="/en/agri-food-sector">Agri-food sector</a></li><li><a href="/en/biopharma-cosmetics-sectors">Biopharma & cosmetics sectors</a></li></ul></li><li><a href="/en/our-technologies-systems-and-services">Our technologies, systems and services</a><ul><li><a href="/en/microbiology">Microbiology</a></li><li><a href="/en/molecular-biology">Molecular Biology</a></li><li><a href="/en/immunoassays-0">Immunoassays</a></li><li><a href="/en/laboratory-efficiency">Laboratory efficiency</a></li></ul></li><li><a href="/en/scientific-publications">Scientific publications</a><ul><li><a href="/en/clinical-microbiology-scientific-publications">Clinical Microbiology</a></li><li><a href="/en/immunoassays-publications">Immunoassays</a></li><li><a href="/en/molecular-biology-publications">Molecular Biology</a></li><li><a href="/en/industrial-microbiology">Industrial Microbiology</a></li></ul></li><li><a href="/en/glossary-scientific-terms">Glossary of Scientific Terms</a></li></ul>         </div>
+                            </div>
+                        </div>
+                        <div class="shad_bot">
+                        </div>
+                    </div></li>
+<li class="3620"><a href="/en/education">Education</a><div class="nav-layer type2">
+                        <div class="shad">
+                            <div class="border">
+                                <div class="content"><ul><li><a href="/en/antimicrobial-resistance-antimicrobial-stewardship">Antimicrobial Resistance / Antimicrobial Stewardship </a><ul><li><a href="/en/antimicrobial-resistance-antimicrobial-stewardship-webinars">Webinars</a></li><li><a href="/en/antimicrobial-resistance-antimicrobial-stewardship-educational-materials">Educational Materials</a></li><li><a href="/en/antimicrobial-resistance-antimicrobial-stewardship-external-resources">External Resources</a></li></ul></li><li><a href="/en/sepsis-bloodstream-infections">Sepsis / Bloodstream Infections</a><ul><li><a href="/en/sepsis-bloodstream-infections-webinars">Webinars</a></li><li><a href="/en/sepsis-bloodstream-infections-educational-materials">Educational Materials</a></li><li><a href="/en/sepsis-bloodstream-infections-external-resources">External Resources</a></li></ul></li><li><a href="/en/educational-booklets">Educational booklets</a></li></ul>         </div>
+                            </div>
+                        </div>
+                        <div class="shad_bot">
+                        </div>
+                    </div></li>
+<li class="3630 active"><a href="/en/finance" class="active">Investors</a>  <div class="nav-layer type3">
+                            <div class="shad">
+                                <div class="border">
+                                    <div class="content"><ul><li><a href="/en/stock-market-information">The bioMérieux Share</a></li><li><a href="/en/content/calendar-publications">Publications</a></li><li><a href="/en/content/regulated-information">Regulated Information</a></li></ul><ul><li><a href="/en/governance">Governance</a></li><li><a href="/en/general-shareholders-meeting">Shareholder area</a></li></ul>                 <div class="push"><div class="field field-name-field-richmenu-block field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"> <ul>
+<li><a href="/en/content/registration-documents"><img alt="" class="media-image" height="71" width="160" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/styles/large/public/urd_2019.jpg?itok=Wr4hsjT3" />UNIVERSAL REGISTRATION DOCUMENT</a></li>
+<li><a href="/en/our-commitments"><img alt="" class="media-image" height="71" width="160" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/styles/large/public/csr.jpg?itok=yNRUkpHA" />CORPORATE SOCIAL RESPONSIBILITY</a></li>
+</ul>
+ </div></div></div>                 </div>              </div>
+                                </div>
+                            </div>
+                            <div class="shad_bot">
+                            </div>
+                        </div></li>
+<li class="816"><a href="/en/news-media">Newsroom</a>  <div class="nav-layer type3">
+                            <div class="shad">
+                                <div class="border">
+                                    <div class="content"><ul><li><a href="/en/news">Press Releases</a></li><li><a href="/en/events-1">Corporate calendar</a></li></ul><ul><li><a href="/en/media-center">Media Center</a></li><li><a href="/en/about-biomerieux">About bioMérieux</a></li></ul>                 <div class="push"><div class="field field-name-field-richmenu-block field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"> <ul>
+<li><a href="/en/2019-financial-results"><img alt="" src="/sites/corporate/files/styles/large/public/CP.jpg?itok=yT6zMeM-" style="border-style: solid; border-color: currentcolor; width: 160px; height: 71px;" typeof="foaf:Image" width="160" height="71" /></a><a href="https://www.biomerieux.com/en/first-quarter-2020-business-review">First-Quarter 2020 Business Review</a></li>
+<li><a href="/en/press-contacts"><img alt="" src="/sites/corporate/files/biomerieux_campus_de_letoile_menu.png" style="border-style: solid; border-color: currentcolor; width: 160px; height: 71px;" typeof="foaf:Image" width="160" height="71" />PRESS CONTACTS</a></li>
+</ul>
+ </div></div></div>                 </div>              </div>
+                                </div>
+                            </div>
+                            <div class="shad_bot">
+                            </div>
+                        </div></li>
+<li class="815 last"><a href="/en/careers">Careers</a>  <div class="nav-layer type3">
+                            <div class="shad">
+                                <div class="border">
+                                    <div class="content"><ul><li><a href="/en/sharing-our-vision">Sharing our vision</a></li><li><a href="/en/joining-biomerieux">Joining bioMérieux</a></li><li><a href="/en/learning-development-and-growth">Learning, development and growth</a></li></ul><ul><li><a href="/en/well-being-work">Well-being at work</a></li><li><a href="/en/embracing-diversity-and-inclusion-0">Embracing Diversity and Inclusion</a></li></ul>                 <div class="push"><div class="field field-name-field-richmenu-block field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even"> <ul>
+<li><a href="/en/sharing-our-vision"><img alt="" class="media-image" height="71" width="160" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/styles/large/public/vision-small.png?itok=5i0cq5zH" />SHARING OUR VISION</a></li>
+<li><a href="/en/job-profiles"><img alt="" class="media-image" height="71" width="160" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/files/styles/large/public/metiers-small.png?itok=A4j-duHk" />JOB PROFILES</a></li>
+</ul>
+ </div></div></div>                 </div>              </div>
+                                </div>
+                            </div>
+                            <div class="shad_bot">
+                            </div>
+                        </div></li>
+</ul>
+      </nav>
+    </div>
+    <!-- END desktop header -->
+
+  <!-- BEGIN mobile header -->
+  <div class="header-mobile">
+          <a href="/en" title="Home" rel="home" id="logo">
+        <img src="https://www.biomerieux.com/sites/corporate/files/biomerieux-logo-corporate.png" alt="Home" />
+      </a>
+        <nav id="nav-menu-mobile" >
+      <button class="toggle-mobile-search-button">
+        <svg id="icon-search" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 25 15"><g><g><path class="svg-path" d="M5.917 9.667a3.745 3.745 0 0 1-3.75-3.75 3.745 3.745 0 0 1 3.75-3.75 3.745 3.745 0 0 1 3.75 3.75 3.745 3.745 0 0 1-3.75 3.75zm5 0h-.659l-.233-.225a5.393 5.393 0 0 0 1.308-3.525 5.417 5.417 0 1 0-5.416 5.416 5.393 5.393 0 0 0 3.525-1.308l.225.233v.659l4.166 4.158 1.242-1.242z"/></g></g></svg>
+        <svg id="icon-close-search" viewBox="0 0 25 32">
+          <path class="path1" d="M23.179 23.607q0 0.714-0.5 1.214l-2.429 2.429q-0.5 0.5-1.214 0.5t-1.214-0.5l-5.25-5.25-5.25 5.25q-0.5 0.5-1.214 0.5t-1.214-0.5l-2.429-2.429q-0.5-0.5-0.5-1.214t0.5-1.214l5.25-5.25-5.25-5.25q-0.5-0.5-0.5-1.214t0.5-1.214l2.429-2.429q0.5-0.5 1.214-0.5t1.214 0.5l5.25 5.25 5.25-5.25q0.5-0.5 1.214-0.5t1.214 0.5l2.429 2.429q0.5 0.5 0.5 1.214t-0.5 1.214l-5.25 5.25 5.25 5.25q0.5 0.5 0.5 1.214z"></path>
+        </svg>
+      </button>
+      <button class="mobile-menu-toggle-button" >
+        <svg id="icon-bars" viewBox="0 0 27 32">
+          <path class="path1" d="M27.429 24v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 14.857v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804zM27.429 5.714v2.286q0 0.464-0.339 0.804t-0.804 0.339h-25.143q-0.464 0-0.804-0.339t-0.339-0.804v-2.286q0-0.464 0.339-0.804t0.804-0.339h25.143q0.464 0 0.804 0.339t0.339 0.804z"></path>
+        </svg>
+        <svg id="icon-close" viewBox="0 0 25 32">
+          <path class="path1" d="M23.179 23.607q0 0.714-0.5 1.214l-2.429 2.429q-0.5 0.5-1.214 0.5t-1.214-0.5l-5.25-5.25-5.25 5.25q-0.5 0.5-1.214 0.5t-1.214-0.5l-2.429-2.429q-0.5-0.5-0.5-1.214t0.5-1.214l5.25-5.25-5.25-5.25q-0.5-0.5-0.5-1.214t0.5-1.214l2.429-2.429q0.5-0.5 1.214-0.5t1.214 0.5l5.25 5.25 5.25-5.25q0.5-0.5 1.214-0.5t1.214 0.5l2.429 2.429q0.5 0.5 0.5 1.214t-0.5 1.214l-5.25 5.25 5.25 5.25q0.5 0.5 0.5 1.214z"></path>
+        </svg>
+      </button>
+    </nav>
+    <div class="mobile-menu-container">
+      <ul class="menu"><li class="first expanded"><a href="/en/our-company" class="menu_icon menu-1653">About us</a><ul class="menu"><li class="first leaf"><a href="/en/our-mission" class="menu_icon menu-1708">Our mission</a></li>
+<li class="leaf"><a href="/en/facts-figures" class="menu_icon menu-834">Facts &amp; Figures</a></li>
+<li class="leaf"><a href="/en/our-strategy" class="menu_icon menu-836">Our Strategy</a></li>
+<li class="collapsed"><a href="/en/executive-committee" class="menu_icon menu-2167">Corporate Governance/ Executive Committee</a></li>
+<li class="leaf"><a href="/en/biomerieux-worldwide" class="menu_icon menu-1709" title="">bioMérieux Worldwide</a></li>
+<li class="collapsed"><a href="/en/our-history" class="menu_icon menu-838" title="">Our History</a></li>
+<li class="collapsed"><a href="/en/innovation" class="menu_icon menu-1747">Innovation</a></li>
+<li class="last leaf"><a href="/en/institut-merieux" class="menu_icon menu-840">Institut Mérieux</a></li>
+</ul></li>
+<li class="expanded"><a href="/en/corporate-responsibility">Responsibility</a><ul class="menu"><li class="first leaf"><a href="/en/our-commitments">Our commitments</a></li>
+<li class="collapsed"><a href="/en/responsibility-to-society">Responsibility to society</a></li>
+<li class="collapsed"><a href="/en/responsibility-our-workforce">Responsibility to our workforce</a></li>
+<li class="collapsed"><a href="/en/responsibility-environment">Responsibility to the environment</a></li>
+<li class="collapsed"><a href="/en/ethics-compliance" class="menu_icon menu-904">Ethics &amp; Compliance</a></li>
+<li class="leaf"><a href="/en/sustainable-and-socially-inclusive-purchasing">Sustainable and socially inclusive purchasing</a></li>
+<li class="leaf"><a href="/en/global-compact">Global Compact</a></li>
+<li class="last leaf"><a href="/en/internal-audit">Internal Audit &amp; Risks</a></li>
+</ul></li>
+<li class="expanded"><a href="/en/products-solutions">Solutions</a><ul class="menu"><li class="first leaf"><a href="https://www.biomerieux-diagnostics.com/" title="" target="_blank">Clinical Solutions</a></li>
+<li class="leaf"><a href="https://www.biomerieux-industry.com" title="" target="_blank">Industry Solutions</a></li>
+<li class="collapsed"><a href="/en/product-quality-and-safety">Product Quality &amp; Safety</a></li>
+<li class="collapsed"><a href="/en/customer-service">Customer Service</a></li>
+<li class="leaf"><a href="/en/cybersecurity-data-privacy">Cybersecurity &amp; data privacy</a></li>
+<li class="last leaf"><a href="http://www.biomerieux.com/techlib" title="" target="_blank">Technical Library</a></li>
+</ul></li>
+<li class="expanded"><a href="/en/expertise">Expertise</a><ul class="menu"><li class="first collapsed"><a href="/en/importance-diagnostics">The importance of diagnostics</a></li>
+<li class="collapsed"><a href="/en/clinical-diagnostics-applications">Clinical applications</a></li>
+<li class="collapsed"><a href="/en/industrial-applications">Industrial applications</a></li>
+<li class="collapsed"><a href="/en/our-technologies-systems-and-services">Our technologies, systems and services</a></li>
+<li class="collapsed"><a href="/en/scientific-publications">Scientific publications</a></li>
+<li class="last leaf"><a href="/en/glossary-scientific-terms">Glossary of Scientific Terms</a></li>
+</ul></li>
+<li class="expanded"><a href="/en/education">Education</a><ul class="menu"><li class="first collapsed"><a href="/en/antimicrobial-resistance-antimicrobial-stewardship">Antimicrobial Resistance / Antimicrobial Stewardship </a></li>
+<li class="collapsed"><a href="/en/sepsis-bloodstream-infections">Sepsis / Bloodstream Infections</a></li>
+<li class="last collapsed"><a href="/en/educational-booklets">Educational booklets</a></li>
+</ul></li>
+<li class="expanded"><a href="/en/finance" class="active">Investors</a><ul class="menu"><li class="first collapsed"><a href="/en/stock-market-information">The bioMérieux Share</a></li>
+<li class="collapsed"><a href="/en/content/calendar-publications">Publications</a></li>
+<li class="leaf"><a href="/en/content/regulated-information">Regulated Information</a></li>
+<li class="collapsed"><a href="/en/governance">Governance</a></li>
+<li class="last collapsed"><a href="/en/general-shareholders-meeting">Shareholder area</a></li>
+</ul></li>
+<li class="expanded"><a href="/en/news-media">Newsroom</a><ul class="menu"><li class="first leaf"><a href="/en/news" title="">Press Releases</a></li>
+<li class="collapsed"><a href="/en/events-1">Corporate calendar</a></li>
+<li class="collapsed"><a href="/en/media-center">Media Center</a></li>
+<li class="last leaf"><a href="/en/about-biomerieux">About bioMérieux</a></li>
+</ul></li>
+<li class="last expanded"><a href="/en/careers">Careers</a><ul class="menu"><li class="first leaf"><a href="/en/sharing-our-vision">Sharing our vision</a></li>
+<li class="collapsed"><a href="/en/joining-biomerieux">Joining bioMérieux</a></li>
+<li class="collapsed"><a href="/en/learning-development-and-growth">Learning, development and growth</a></li>
+<li class="leaf"><a href="/en/well-being-work">Well-being at work</a></li>
+<li class="last leaf"><a href="/en/embracing-diversity-and-inclusion-0">Embracing Diversity and Inclusion</a></li>
+</ul></li>
+</ul>      <ul>
+        <li>
+<div id="block-locale-language" class="block">
+<ul class="language-switcher-locale-url"><li class="en first active"><a href="/en/finance" class="language-link active" xml:lang="en" title="Finance">en</a></li>
+<li class="fr last"><a href="/fr/finance" class="language-link" xml:lang="fr" title="Finance">fr</a></li>
+</ul></div>
+</li>      </ul>
+    </div>
+    <ul class="mobile-search-form-container">
+      <li class="last">
+<div class="block block-search contextual-links-region" id="block-search-form">
+    <form action="/en/finance" method="post" id="search-block-form--3" accept-charset="UTF-8"><div><div class="search-form-div">
+      <h2 class="element-invisible">Search form</h2>
+    <button class="search-submit-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><path class="svg-path" d="M5.917 9.667a3.745 3.745 0 0 1-3.75-3.75 3.745 3.745 0 0 1 3.75-3.75 3.745 3.745 0 0 1 3.75 3.75 3.745 3.745 0 0 1-3.75 3.75zm5 0h-.659l-.233-.225a5.393 5.393 0 0 0 1.308-3.525 5.417 5.417 0 1 0-5.416 5.416 5.393 5.393 0 0 0 3.525-1.308l.225.233v.659l4.166 4.158 1.242-1.242z"/></svg>
+    </button>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--6">Search </label>
+ <input title="Enter the terms you wish to search for." placeholder="Search..." type="text" id="edit-search-block-form--6" name="search_block_form" value="" size="15" maxlength="128" class="form-text form-autocomplete" /><input type="hidden" id="edit-search-block-form--6-autocomplete" value="https://www.biomerieux.com/index.php?q=en/apachesolr_autocomplete_callback/apachesolr_search_page%3Acore_search" disabled="disabled" class="autocomplete" />
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--3"><input type="submit" id="edit-submit--3" name="op" value="Search" class="form-submit" /></div><input type="hidden" name="form_build_id" value="form-jmQbSJ-Cupm7W7-vFBWm8QKAc5m7CbazE3TeMMq76EY" />
+<input type="hidden" name="form_id" value="search_block_form" />
+</div>
+</div></form></div>
+</li>    </ul>
+  </div>
+  <!-- END mobile header -->
+</div>
+   
+                    <!-- END header -->
+                    <div id="visuel">
+                        <div class="carousel">
+                            <img src="https://www.biomerieux.com/sites/corporate/files/styles/original/public/finance.png?itok=i9GOzdQ7">
+                        </div>
+                    </div>
+                </div><!-- /main -->
+            </div>
+            <!-- breadcrumb -->
+            <div id="breadcrumb">
+                <h2 class="element-invisible">You are here</h2>
+                                    <div class="container_16">
+                        <div class="grid_16">
+                            <div id="share">
+                                <div><span class="print_html"><a href="https://www.biomerieux.com/en/print/2686" title="Display a printer-friendly version of this page." class="print-page" onclick="window.open(this.href); return false" rel="nofollow"><img class="print-icon" typeof="foaf:Image" src="https://www.biomerieux.com/sites/corporate/themes/corporate/images/pictos/share_print.png" width="21px" height="20px" alt="Printer-friendly version" title="Printer-friendly version" /></a></span><div class="sharethis-wrapper"><span st_url="https://www.biomerieux.com/en/finance" st_title="Finance" class="st_email"></span>
+<span st_url="https://www.biomerieux.com/en/finance" st_title="Finance" class="st_facebook"></span>
+<span st_url="https://www.biomerieux.com/en/finance" st_title="Finance" class="st_twitter" st_via="" st_username=""></span>
+<span st_url="https://www.biomerieux.com/en/finance" st_title="Finance" class="st_linkedin" st_via="" st_username=""></span>
+</div></div>                            </div>
+                            <div class="breadcrumb">
+                                <ul><li><a href="/en">Home</a></li><li class="last">Finance</li></ul>                            </div>
+                        </div>
+                    </div>
+                            </div>
+            <!-- fin breadcrumb -->
+            <!-- debut main content -->
+            <div id="main_bis" class="container_16">
+                <a id="main-content"></a>
+                                    <div id="sidebar-first" class="column sidebar grid_4">
+                        <div class="section">
+                            <div class="region region-sidebar-first">
+                                <div id="block-system-navigation" class="block block-system contextual-links-region block-menu">
+                                    <!--  contenu du menu de navigation Sidebar_first -->
+                                    <a href="/en/finance" class="active"><span class="h2">Investors</span></a><div class="content">
+<ul class="menu clearfix">
+<li id="" class="3637 first"><a href="/en/stock-market-information">The bioMérieux Share</a><ul>
+<li class="3637 first"><a href="/en/stock-market-information">Stock Market Information</a></li><li class="3637"><a href="/en/historic-chart">Historic Chart</a></li><li class="3637"><a href="/en/analysts-coverage">Analysts Coverage</a></li><li class="3637 last"><a href="/en/analysts-consensus">Analysts Consensus</a></li></ul></li><li id="" class="3643"><a href="/en/content/calendar-publications">Publications</a><ul>
+<li class="3643 first"><a href="/en/content/calendar-publications">Calendar</a></li><li class="3643"><a href="/en/content/press-releases">Press Releases</a></li><li class="3643"><a href="/en/presentations">Presentations</a></li><li class="3643"><a href="/en/content/annual-report">Annual Reports</a></li><li class="3643 last"><a href="/en/content/registration-documents">Universal Registration Documents</a></li></ul></li><li id="" class="3650"><a href="/en/content/regulated-information">Regulated Information</a></li><li id="" class="3689"><a href="/en/governance">Governance</a><ul>
+<li class="3689 first"><a href="/en/status">Status</a></li><li class="3689 last"><a href="/en/board-charter">Board Charter</a></li></ul></li><li id="" class="4853 last"><a href="/en/general-shareholders-meeting">Shareholder area</a><ul>
+<li class="4853 first"><a href="/en/general-shareholders-meeting">General Shareholders&#039; Meeting</a></li><li class="4853"><a href="/en/participating-general-shareholders-meeting">Participating In The General Shareholder&#039;s Meeting</a></li><li class="4853"><a href="/en/dividends">Dividends</a></li><li class="4853 last"><a href="/en/crossing-thresholds">Crossing the Thresholds</a></li></ul></li></ul>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="content" class="column clearfix grid_12">
+                                                                                                                                                                                              <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <h1 class="visuallyhidden">Finance</h1>
+<div class='grid_12 alpha  omega  blocmp' >
+   <div class='content blue1'>
+               <img class='left' src='https://www.biomerieux.com/sites/corporate/files/styles/masterpage_block_intro/public/adobestock_90649332.jpeg?itok=s_cmOjOS' alt='' >
+                        <p><span style="font-size:14px;"><strong>bioMérieux fully mobilized against COVID-19 epidemic</strong></span></p>
+<p><span style="font-size:14px;"><strong>Organic growth of 20.8% in the first quarter</strong></span></p>
+<p><big class="big">Sustained by a sharp sales increase for molecular biology product lines, driven by exceptional demand for respiratory tests.&nbsp;</big><span style="font-size: 1.2em;">Negative impact expected from the slowdown in routine laboratory business, but only minor effects observed so far.&nbsp;</span><span style="font-size: 1.2em;">2020 objectives withdrawn due to a lack of visibility on all the consequences of the global health crisis.</span></p>
+        </div>
+</div>
+
+<div class='grid_4 alpha  blocimg' style='background:url(https://www.biomerieux.com/sites/corporate/files/styles/masterpage_block_image1/public/calendar_1.png?itok=3gG4-1yi) no-repeat center top;' >
+   <div class='content blue1'>
+        <span class='theme'>Calendar</span>
+                <div class='txt'>
+            <p> <a href="/en/content/calendar-publications">Upcoming Events&nbsp; ...&nbsp; &nbsp; and Investor Relations historic</a>
+ </p>
+            <div class="ellipsis">&nbsp;</div>
+       </div>
+          </div>
+</div>
+
+<div class='grid_4 blocimg' style='background:url(https://www.biomerieux.com/sites/corporate/files/styles/masterpage_block_image1/public/ddr_0.png?itok=gaohnhVg) no-repeat center top;' >
+   <div class='content blue1'>
+        <span class='theme'>New</span>
+                <div class='txt'>
+            <p> <a href="/en/content/registration-documents">2019 URD ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; The Universal Registration Document is the comprehensive document for investors</a>
+ </p>
+            <div class="ellipsis">&nbsp;</div>
+       </div>
+          </div>
+</div>
+
+<div class='grid_4 omega  blocimg' style='background:url(https://www.biomerieux.com/sites/corporate/files/styles/masterpage_block_image1/public/csr_0.png?itok=2yWKjQf4) no-repeat center top;' >
+   <div class='content blue1'>
+        <span class='theme'>CSR</span>
+                <div class='txt'>
+            <p> <a href="/en/our-commitments">Vision and Commitment</a>
+ </p>
+            <div class="ellipsis">&nbsp;</div>
+       </div>
+          </div>
+</div>
+
+<div class='grid_4 alpha  blocimg' style='background:url(https://www.biomerieux.com/sites/corporate/files/styles/masterpage_block_image1/public/stock.png?itok=tQnOCaUh) no-repeat center top;' >
+   <div class='content blue1'>
+        <span class='theme'>bioMérieux share</span>
+                <div class='txt'>
+            <p> <a href="/en/historic-chart">See chart history on&nbsp;share&nbsp;performance</a>
+ </p>
+            <div class="ellipsis">&nbsp;</div>
+       </div>
+          </div>
+</div>
+
+<div class='grid_4 blocimg' style='background:url(https://www.biomerieux.com/sites/corporate/files/styles/masterpage_block_image1/public/press-release_0.png?itok=EqcZLJiC) no-repeat center top;' >
+   <div class='content blue1'>
+        <span class='theme'>Press Releases</span>
+                <div class='txt'>
+            <p> <a href="/en/news">What&#39;s new? ...&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Read our Press Releases</a>
+ </p>
+            <div class="ellipsis">&nbsp;</div>
+       </div>
+          </div>
+</div>
+
+<div class='grid_4 omega  blocimg' style='background:url(https://www.biomerieux.com/sites/corporate/files/styles/masterpage_block_image1/public/contact_new_0.png?itok=78aBB0WY) no-repeat center top;' >
+   <div class='content blue1'>
+        <span class='theme'>Contact us</span>
+                <div class='txt'>
+            <p> <a href="/en/contact">Need help?</a>
+ </p>
+            <div class="ellipsis">&nbsp;</div>
+       </div>
+          </div>
+</div>
+  </div>
+</div>
+  </div>
+                                            </div>
+                </div><!-- fin main content -->
+            </div><!-- /main-wrapper -->
+            <!-- BEGIN footer -->
+            <div id="footer-wrapper">     
+	<div id="footer-blocks" class="clearfix">
+		<div class="footer-blocks container_16">
+	    <div class="region region-footer">
+	      <div id="block-system-powered-by" class="block block-system">
+	        <div class="content">
+            <div class='footer-flex-top'>
+              <div class="grid_9">
+  <div id="block-biomerieux-social-biomerieux-social" class="block block-biomerieux-social">
+    <div class="content">
+      <!-- BEGIN Twitter  -->
+<div class="bloc block-tw">
+    <a href="https://twitter.com/biomerieux" target="_blank" title="Follow us on Twitter">
+        <span class="ico"></span>
+    </a>
+</div>
+<!-- END Twitter  -->
+<!-- BEGIN Linkedin -->
+<div class="bloc block-li">
+    <a href="https://www.linkedin.com/company/biomerieux" target="_blank" title="Follow us on LinkedIn">
+        <span class="ico"></span>
+    </a>
+</div>
+<!-- END Linkedin  -->
+<!-- BEGIN Facebook -->
+<div class="bloc block-fb">
+    <a href="http://www.facebook.com/biomerieux" target="_blank" title="Like us on Facebook">
+        <span class="ico"></span>
+    </a>
+</div>
+<!-- END Facebook -->
+
+<!-- BEGIN Instagram -->
+<div class="bloc block-insta">
+    <a href="https://www.instagram.com/life.at.biomerieux/" target="_blank" title="Follow us on Instagram">
+        <span class="ico"></span>
+    </a>
+</div>
+<!-- END Instagram -->
+
+<!-- BEGIN Youtube -->
+<div class="bloc block-yt last">
+    <a href="http://www.youtube.com/biomerieuxTV" target="_blank" title="Discover our Youtube channel">
+        <span class="ico"></span>
+    </a>
+</div>
+<!-- END Youtube -->
+    </div>
+  </div>
+</div>              <div class='site-slogan-footer'>
+                <b>Pioneering diagnostics</b>              </div>
+            </div>
+            <div class='footer-flex-middle'>
+              <button id="worldwide" class='pill-box-button'> bioMérieux Worldwide <span class='footer-arrow'> > </span> </button>
+              <button id="directory" class='pill-box-button'> Our Specific Websites <span class='footer-arrow'> > </span> </button>
+              <button id="communities" class='pill-box-button'> Our communities <span class='footer-arrow'> > </span> </button>
+            </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<div id="footer">
+	  <div class="footer container_16">
+			<div class="region region-footer-links">
+			  <div class="footer-links grid_16">
+					<ul class="links inline clearfix real-links"><li><a href="/en/legal-notice">Legal Notice</a></li>
+<li><a href="/en/personal-information-and-privacy">Privacy</a></li>
+<li><a href="/en/cookie-policy">Cookie Policy</a></li>
+<li><a href="/en/content/contact-us">Contact</a></li>
+</ul>
+<ul class="links inline clearfix creds-and-site"> <li class="last">Copyright 2020 bioMérieux SA</li>
+<li class="site">biomerieux.com</li></ul>
+	      </div>
+		  </div>
+		</div>
+  </div>
+  <!--Creates the popup body-->
+  <div class="popup-overlay">
+<!--Creates the popup content-->
+   <div class="popup-content first">
+     <li class="first map">
+<div id="block-biomerieux-directory-blocks-biomerieux-block-worldwide" class="block block-biomerieux-directory-blocks">
+  <div class="content">
+    <a id="button-worldwide-link" href="javascript:void(0);">bioMérieux Worldwide<span class="footer-arrow"> > </span></a>    <div id="wwmap">
+    
+    <div class='view-global-presence' style='background:url("https://www.biomerieux.com/sites/corporate/files/styles/biomerieux_worldwide_map/public/map.png?itok=odk00TTv") no-repeat scroll 0 center transparent;padding-top:65px;' >
+        <a class="biobutton" href="/en/biomerieux-worldwide"><span><span>Discover all our locations</span></span></a>    </div> 
+    
+    <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://survey.biomerieux.com/f/1138086/aa34/en/view-country-website/www.biomerieux.com">here</a>.</p>
+</body></html>
+</div>
+  </div>
+</div>
+</li>    </div>
+    <div class="popup-content second">
+      <li class="list">
+<div id="block-biomerieux-directory-blocks-biomerieux-block-websites" class="block block-biomerieux-directory-blocks">
+  <div class="content">
+    <a id="button-specific-link" href="javascript:void(0);">Our Specific Websites<span class="footer-arrow"> > </span></a>    <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://survey.biomerieux.com/f/1138086/aa34/en/view-business-website/www.biomerieux.com">here</a>.</p>
+</body></html>
+  </div>
+</div>
+</li>   </div>
+   <div class="popup-content third">
+     <li class="list communities">
+<div id="block-menu-menu-communities-menu" class="pill-box-button block block-menu">
+  <a href="javascript:void(0);">Our communities<span class='footer-arrow'> > </span></a>
+    <ul class="list"><li class="menu-642 first"><a href="https://www.mybiomerieux.com" title="" target="_blank">mybiomerieux.com</a></li>
+</ul>
+</div>
+</li> 
+    </div>
+  <!--popup's close button-->
+  </div>
+</div>            <!-- END footer -->  
+        </div><!-- page -->
+    </div><!-- page-wrapper -->
+</div>
+  <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+                    jQuery(document).ready(function() {
+                        if(jQuery('div.video-player').length){
+                            jQuery('div.video-player').each(function(){
+                                var id = jQuery(this).attr('id');
+                                var video_url = jQuery(this).data('file');
+                                var video_image = jQuery(this).data('image');
+                                var video_width = jQuery(this).data('width');
+                                var video_height = jQuery(this).data('height');
+
+                                var jwconf = {
+                                    file: video_url,
+                                    skin: '/sites/all/libraries/jwplayer/skins/newtubedark/newtubedark.zip',
+                                    modes: [
+                                        {type: 'html5'},
+                                        {type: 'flash', src: '/sites/all/libraries/jwplayer/player.swf'},
+                                        {type: 'download'}
+                                    ]
+                                    ,image: video_image
+                                };
+
+                                if (video_height && video_width) {
+                                    jwconf.height = video_height;
+                                    jwconf.width = video_width;
+                                }
+
+                                jwplayer(id).setup(jwconf);
+
+                                if(jQuery.browser.msie && parseInt(jQuery.browser.version)<9 ){
+                                    jwplayer(id).onBeforePlay(function(){
+                                        document.title = 'Investors | bioMérieux Corporate Website';
+                                    });
+                                    document.title = 'Investors | bioMérieux Corporate Website';
+                                }
+                            });
+                        }
+                    });
+	 
+//--><!]]>
+</script>
+<script type="text/javascript" src="https://www.biomerieux.com/sites/corporate/files/js/js_AZ9y0PShar4GyPuQUcAgecHmIwX4TUOo0HFPa06mnF0.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#followers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/twitter',
+                    success: function(data) {
+                        if(data && data.followers_count) {
+                            if(data.followers_count < 2){
+                                text = 'follower';
+                            }
+                            else {
+                                text = 'followers';
+                            }
+                            jQuery('#followers').html(data.followers_count+' '+text);
+                        }
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#likers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/facebook',
+                    success: function(data) {
+                        if ( data && data.likes ) {
+                            if(data.likes < 2){
+                                text = 'friend';
+                            }
+                            else {
+                                text = 'friends';
+                            }
+                            jQuery('#likers').html(data.likes+' '+text);
+                        }
+
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#followers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/linkedin',
+                    success: function(data) {
+                        if(data && data.followers_count) {
+                            if(data.followers_count < 2){
+                                text = 'follower';
+                            }
+                            else {
+                                text = 'followers';
+                            }
+                            jQuery('#followers').html(data.followers_count+' '+text);
+                        }
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#followers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/twitter',
+                    success: function(data) {
+                        if(data && data.followers_count) {
+                            if(data.followers_count < 2){
+                                text = 'follower';
+                            }
+                            else {
+                                text = 'followers';
+                            }
+                            jQuery('#followers').html(data.followers_count+' '+text);
+                        }
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#likers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/facebook',
+                    success: function(data) {
+                        if ( data && data.likes ) {
+                            if(data.likes < 2){
+                                text = 'friend';
+                            }
+                            else {
+                                text = 'friends';
+                            }
+                            jQuery('#likers').html(data.likes+' '+text);
+                        }
+
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#followers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/linkedin',
+                    success: function(data) {
+                        if(data && data.followers_count) {
+                            if(data.followers_count < 2){
+                                text = 'follower';
+                            }
+                            else {
+                                text = 'followers';
+                            }
+                            jQuery('#followers').html(data.followers_count+' '+text);
+                        }
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#followers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/twitter',
+                    success: function(data) {
+                        if(data && data.followers_count) {
+                            if(data.followers_count < 2){
+                                text = 'follower';
+                            }
+                            else {
+                                text = 'followers';
+                            }
+                            jQuery('#followers').html(data.followers_count+' '+text);
+                        }
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#likers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/facebook',
+                    success: function(data) {
+                        if ( data && data.likes ) {
+                            if(data.likes < 2){
+                                text = 'friend';
+                            }
+                            else {
+                                text = 'friends';
+                            }
+                            jQuery('#likers').html(data.likes+' '+text);
+                        }
+
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#followers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/linkedin',
+                    success: function(data) {
+                        if(data && data.followers_count) {
+                            if(data.followers_count < 2){
+                                text = 'follower';
+                            }
+                            else {
+                                text = 'followers';
+                            }
+                            jQuery('#followers').html(data.followers_count+' '+text);
+                        }
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#followers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/twitter',
+                    success: function(data) {
+                        if(data && data.followers_count) {
+                            if(data.followers_count < 2){
+                                text = 'follower';
+                            }
+                            else {
+                                text = 'followers';
+                            }
+                            jQuery('#followers').html(data.followers_count+' '+text);
+                        }
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#likers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/facebook',
+                    success: function(data) {
+                        if ( data && data.likes ) {
+                            if(data.likes < 2){
+                                text = 'friend';
+                            }
+                            else {
+                                text = 'friends';
+                            }
+                            jQuery('#likers').html(data.likes+' '+text);
+                        }
+
+                    }
+                });
+            }
+//--><!]]>
+</script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+
+            if(jQuery('#followers').length){
+                jQuery.ajax({
+                    url: '/en/rest/social_proxy/linkedin',
+                    success: function(data) {
+                        if(data && data.followers_count) {
+                            if(data.followers_count < 2){
+                                text = 'follower';
+                            }
+                            else {
+                                text = 'followers';
+                            }
+                            jQuery('#followers').html(data.followers_count+' '+text);
+                        }
+                    }
+                });
+            }
+//--><!]]>
+</script>
+ <script type="text/javascript">
+piAId = '150271';
+piCId = '8858';
+piHostname = 'pi.pardot.com';
+
+(function() {
+ function async_load(){
+  var s = document.createElement('script'); s.type = 'text/javascript';
+  s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+  var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+ }
+ if(window.attachEvent) { window.attachEvent('onload', async_load); }
+ else { window.addEventListener('load', async_load, false); }
+})();
+</script>
+</body>
+</html>

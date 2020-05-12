@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+<meta name="Nucleus-Monitoring-Meta-Tag" content="Nucleus-Monitoring-Meta-Tag">
+<meta charset="utf-8" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/ageas/favicon.ico" type="image/vnd.microsoft.icon" />
+<title>Newsroom | Ageas</title>
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/ajax-progress.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/align.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/autocomplete-loading.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/fieldgroup.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/container-inline.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/clearfix.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/details.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/hidden.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/item-list.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/js.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/nowrap.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/position-container.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/progress.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/reset-appearance.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/resize.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/sticky-header.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-counter.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-counters.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-general-info.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tabledrag.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tablesort.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tree-child.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/views/views.module.css?q9au3i" />
+<link rel="stylesheet" media="all" href="/themes/ageas/assets/css/app.css?q9au3i" />
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+<link rel="apple-touch-icon" sizes="180x180" href="/themes/ageas/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/themes/ageas/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/themes/ageas/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="256x256" href="/themes/ageas/android-chrome-256x256.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/themes/ageas/favicon-16x16.png">
+<link rel="manifest" href="/themes/ageas/manifest.json">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/themes/ageas/mstile-150x150.png">
+<meta name="theme-color" content="#ffffff">
+<script>
+        dataLayer = [];
+    </script>
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KDRCSN');</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+</head>
+<body class="section-newsroom path-newsroom">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDRCSN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<a href="#main-content" class="visually-hidden focusable">
+Skip to main content
+</a>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+<div class="site-container">
+<header class="site-header">
+<div class="color-line">
+<div class="color-line__item color-line__item--purple"></div>
+<div class="color-line__item color-line__item--pink"></div>
+<div class="color-line__item color-line__item--orange"></div>
+<div class="color-line__item color-line__item--yel"></div>
+<div class="color-line__item color-line__item--green"></div>
+<div class="color-line__item color-line__item--blue"></div>
+<div class="color-line__item color-line__item--purple"></div>
+<div class="color-line__item color-line__item--pink"></div>
+<div class="color-line__item color-line__item--orange"></div>
+<div class="color-line__item color-line__item--yel"></div>
+<div class="color-line__item color-line__item--green"></div>
+<div class="color-line__item color-line__item--blue"></div>
+</div>
+<div class="region region--header-top">
+<div class="region__inner">
+<div id="block-theshare" class="block block--ageas-blocks block--the-share">
+<div class="exchange-index js-exchange-index is-hide is-invisible">
+<a href="/investors/share" class="exchange-index__title">The share</a>
+<span class="exchange-index__date js-exchange-date"></span>
+<span class="exchange-index__text">/&nbsp;BRU&nbsp;:</span>
+<span class="exchange-index__value js-exchange-value"></span>
+</div>
+</div>
+<nav role="navigation" aria-labelledby="block-header-navigation-menu" id="block-header-navigation" class="block block--navigation block--navigation--header">
+<h2 class="visually-hidden" id="block-header-navigation-menu">Header navigation (lvl1)</h2>
+<ul class="menu">
+<li class="menu__item menu__item--collapsed">
+<a href="/contact/general-contact"><span>Contact</span></a>
+</li>
+</ul>
+</nav>
+<div class="language-switcher-language-url block block--language block--language-blocklanguage-interface" id="block-languageswitcher" role="navigation" data-toggle="">
+<ul class="links"><li hreflang="en" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" class="en is-active"><a href="/newsroom?share_buy_back=false&amp;s=buy" class="language-link is-active" hreflang="en" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" data-unique-id="en--2">EN</a></li><li hreflang="fr" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" class="fr"><a href="/fr/newsroom?share_buy_back=false&amp;s=buy" class="language-link" hreflang="fr" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" data-unique-id="fr--2">FR</a></li><li hreflang="nl" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" class="nl"><a href="/nl/newsroom?share_buy_back=false&amp;s=buy" class="language-link" hreflang="nl" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" data-unique-id="nl--2">NL</a></li></ul>
+</div>
+<div id="searchheader" class="block--views-exposed-filter-blockglobal-search-global-search-page" ref="searchheader">
+<form action="/search" method="get" accept-charset="UTF-8" :class="{ 'is-active':openForm }">
+<div class="form-item">
+<input class="form-text" type="text" name="s" value="" size="30" maxlength="128" autocomplete="off" @keyup="debounceSearch" v-model="searchModel" />
+</div>
+<div class="form-actions">
+<button type="submit" value="Search" class="form-submit">Search</button>
+</div>
+</form>
+<a href="/search" class="searchheader__toggler" @click.prevent.stop="toggleForm"></a>
+<div class="searchheader" :class="{ 'is-active':openForm }">
+<my-index :app-id="searchApiId" :api-key="searchApiKey" index-name="prod_quick_link" :query-parameters="queryParams" :auto-search="false" :query="valueForQuery" ref="quickLinkIndex">
+<my-results inline-template ref="quickLinkResult">
+<div class="searchheader__results results results--quicklink" :class="{ 'is-active':show && hasResults }">
+<h3><span>Quick link</span></h3>
+<div class="results__content">
+<div class="results__result" v-for="result in results" :key="result.objectID">
+<a :href="result.url">#{ result.title }</a>
+</div>
+</div>
+</div>
+</my-results>
+</my-index>
+<my-index :app-id="searchApiId" :api-key="searchApiKey" index-name="prod_suggestions" :query-parameters="queryParams" :auto-search="false" :query="valueForQuery" ref="suggestionsIndex">
+<my-results inline-template ref="suggestionsResult">
+<div class="searchheader__results results results--suggestion" :class="{ 'is-active':show && hasResults }">
+<h3><span>Suggestions</span></h3>
+<div class="results__content">
+<div class="results__result" v-for="result in results" :key="result.objectID">
+<a :href="result.url">#{ result.title }</a>
+</div>
+</div>
+</div>
+</my-results>
+</my-index>
+</div>
+</div>
+<div id="block-followus-header" class="block block--ageas-blocks block--follow-us">
+<h6 class="block__title"><span class="block__title__text">Follow us</span></h6><ul class="social-list"><li class="social-list__item"><a href="https://www.facebook.com/AgeasGroup" class="social-list__item__link icon-facebook" title="Facebook" target="_blank" data-unique-id=""></a></li><li class="social-list__item"><a href="https://twitter.com/AgeasGroup" class="social-list__item__link icon-twitter" title="Twitter" target="_blank" data-unique-id="__2"></a></li><li class="social-list__item"><a href="https://www.linkedin.com/company/ageas" class="social-list__item__link icon-linkedin" title="Linkedin" target="_blank" data-unique-id="__3"></a></li></ul>
+</div>
+</div>
+</div>
+<div class="region region--header">
+<div class="region__inner">
+<div id="block-ageas-branding" class="block block--system block--system-branding-block">
+<a href="/" title="Ageas - Home" rel="home">
+<img src="/themes/ageas/logo.svg" alt="Home" />
+</a>
+</div>
+<div id="block-burgermenu" class="block block--ageas-blocks block--burger-menu">
+<a class="searchlink" href="/search"><span>Search</span></a>
+<a href="#" class="burger__link js-mobile-navigation-link"><span class="burger__text">Menu</span><span class="icon-menu burger__icon"></span></a>
+</div>
+<nav role="navigation" aria-labelledby="block-main-navigation-lvl1-menu" id="block-main-navigation-lvl1" class="block--navigation--main--lvl1 block block--navigation block--navigation--main">
+<h2 class="visually-hidden" id="block-main-navigation-lvl1-menu">Main navigation (lvl1)</h2>
+<ul class="menu">
+<li class="menu__item">
+<a href="/node/1"><span>Home</span></a>
+</li>
+<li class="menu__item menu__item--collapsed">
+<a href="/about/company"><span>About us</span></a>
+</li>
+<li class="menu__item menu__item--collapsed">
+<a href="/investors/investors-home"><span>Investors</span></a>
+</li>
+<li class="menu__item menu__item--active-trail">
+<a href="/newsroom"><span>Newsroom</span></a>
+</li>
+<li class="menu__item">
+<a href="/careers"><span>Careers</span></a>
+</li>
+</ul>
+</nav>
+<div id="block-clubnotification" class="block block--ageas-club block--club-notification">
+<a href="/ageas-club/home" class="ageas-club__link js-ageas-club" data-last-updated="1543831087" data-unique-id="ageas-club">ageas club</a>
+</div>
+</div>
+</div>
+<div class="region region--mobile-navigation">
+<div class="region__inner">
+<nav role="navigation" aria-labelledby="block-mainnavigation-mobile-menu" id="block-mainnavigation-mobile" class="block block--navigation block--navigation--main">
+<h2 class="visually-hidden" id="block-mainnavigation-mobile-menu">Main navigation</h2>
+<ul class="menu">
+<li class="menu__item">
+<a href="/node/1"><span>Home</span></a>
+</li>
+<li class="menu__item menu__item--collapsed">
+<a href="/about/company"><span>About us</span></a>
+</li>
+<li class="menu__item menu__item--collapsed">
+<a href="/investors/investors-home"><span>Investors</span></a>
+</li>
+<li class="menu__item menu__item--active-trail">
+<a href="/newsroom"><span>Newsroom</span></a>
+</li>
+<li class="menu__item">
+<a href="/careers"><span>Careers</span></a>
+</li>
+</ul>
+</nav>
+<nav role="navigation" aria-labelledby="block-headernavigation-mobile-menu" id="block-headernavigation-mobile" class="block block--navigation block--navigation--header">
+<h2 class="visually-hidden" id="block-headernavigation-mobile-menu">Header</h2>
+<ul class="menu">
+<li class="menu__item menu__item--collapsed">
+<a href="/contact/general-contact"><span>Contact</span></a>
+</li>
+</ul>
+</nav>
+<div id="block-clubnotification-mobile" class="block block--ageas-club block--club-notification">
+<a href="/ageas-club/home" class="ageas-club__link js-ageas-club" data-last-updated="1543831087" data-unique-id="ageas-club--2">ageas club</a>
+</div>
+<div id="block-followus-mobile" class="block block--ageas-blocks block--follow-us">
+<h6 class="block__title"><span class="block__title__text">Follow us</span></h6><ul class="social-list"><li class="social-list__item"><a href="https://www.facebook.com/AgeasGroup" class="social-list__item__link icon-facebook" title="Facebook" target="_blank" data-unique-id="__4"></a></li><li class="social-list__item"><a href="https://twitter.com/AgeasGroup" class="social-list__item__link icon-twitter" title="Twitter" target="_blank" data-unique-id="__5"></a></li><li class="social-list__item"><a href="https://www.linkedin.com/company/ageas" class="social-list__item__link icon-linkedin" title="Linkedin" target="_blank" data-unique-id="__6"></a></li></ul>
+</div>
+<nav role="navigation" aria-labelledby="block-footer-mobile-menu" id="block-footer-mobile" class="block block--navigation block--navigation--footer">
+<h2 class="visually-hidden" id="block-footer-mobile-menu">Footer</h2>
+<ul class="menu">
+<li class="menu__item">
+<a href="/legal/privacy-statement"><span>Privacy</span></a>
+</li>
+<li class="menu__item">
+<a href="/legal/cookie-statement"><span>Cookies</span></a>
+</li>
+<li class="menu__item">
+<a href="/legal/disclaimer"><span>Disclaimer</span></a>
+</li>
+<li class="menu__item">
+<a href="/sitemap"><span>Sitemap</span></a>
+</li>
+<li class="menu__item">
+<a href="/glossary"><span>Glossary</span></a>
+</li>
+</ul>
+</nav>
+<div class="language-switcher-language-url block block--language block--language-blocklanguage-interface" id="block-languageswitcher-mobile" role="navigation" data-toggle="">
+<ul class="links"><li hreflang="en" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" class="en is-active"><a href="/newsroom?share_buy_back=false&amp;s=buy" class="language-link is-active" hreflang="en" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" data-unique-id="en">EN</a></li><li hreflang="fr" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" class="fr"><a href="/fr/newsroom?share_buy_back=false&amp;s=buy" class="language-link" hreflang="fr" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" data-unique-id="fr">FR</a></li><li hreflang="nl" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" class="nl"><a href="/nl/newsroom?share_buy_back=false&amp;s=buy" class="language-link" hreflang="nl" data-drupal-link-query="{&quot;s&quot;:&quot;buy&quot;,&quot;share_buy_back&quot;:&quot;false&quot;}" data-drupal-link-system-path="newsroom" data-unique-id="nl">NL</a></li></ul>
+</div>
+</div>
+</div>
+</header>
+<div class="region region--help">
+<div class="region__inner">
+<div data-drupal-messages-fallback class="hidden"></div>
+</div>
+</div>
+<main class="site-main" role="main">
+<a id="main-content" tabindex="-1"></a>
+<div class="region region--content-top">
+<div class="region__inner">
+<div class="views-element-container block block--views block--views-blocksection-headers-block-section-header" id="block-views-block-section-headers-block-section-header">
+<div>
+<div role="article" class="section-newsroom section-header node node--type-section-header node--view-mode-teaser" about="/node/33">
+<div class="section-header__inner">
+<div class="section-header__title-wrapper">
+<div class="section-header__label-wrapper">
+<p class="section-header__label">ageas</p>
+</div>
+<h2 class="section-header__title" title="Newsroom">Newsroom</h2>
+</div>
+<div class="section-header__content-wrapper">
+<picture class="section-header__image-wrapper js-object-fit">
+<source media="(min-width: 768px)" srcset="https://www.ageas.com/sites/default/files/styles/header_large/public/header/image/newsroom.jpg?h=838f0b76&amp;itok=eddssAGK" />
+<source srcset="https://www.ageas.com/sites/default/files/styles/header_small/public/header/image/newsroom.jpg?h=838f0b76&amp;itok=94VQQxGE">
+<img src="https://www.ageas.com/sites/default/files/styles/header_small/public/header/image/newsroom.jpg?h=838f0b76&amp;itok=94VQQxGE" class="section-header__image" />
+</picture>
+<div class="node__content section-header__content">
+<h3 class="section-header__subtitle">Quarterly results</h3>
+<p class="section-header__description">Discover our
+financial performance</p>
+<div class="section-header__cta field field--name-field-header-cta-link field--type-link field--label-hidden field__item"><a href="/investors/quarterly-results" data-unique-id="see-all">See all</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="content-wrapper">
+<div class="region region--content">
+<div class="region__inner">
+<section class="newsroom" id="newsroom" v-cloak>
+<div class="newsroom__inner">
+<div class="newsroom__form js-newsroom-filter-form">
+<my-index :app-id="searchApiId" :api-key="searchApiKey" index-name="prod_newsroom_item" :query-parameters="queryParams" :query="valueForQuery" ref="quickLinkIndex">
+<div class="newsroom__filter">
+<div class="newsroom__search-bar">
+<input class="form-search" type="search" name="search" value="" size="60" maxlength="128" autocomplete="off" @keyup="debounceSearch" v-model="searchModel" />
+<label for="edit-search" v-show="searchModel === ''"><span><strong>Search</strong> in the Newsroom</span></label>
+<button type="submit" class="form-submit">Search</button>
+</div>
+<div class="newsroom__filters-block">
+<div class="newsroom__filters-block__header">
+<h3 class="newsroom__filters-title"><a href="javascript:void(0)" @click.prevent.stop="toggleMobileShowFilter">Filters</a></h3>
+</div>
+<div class="newsroom__filters-block__group" :class="{ 'is-dropped':mobileShowFilter }">
+<my-hierarchical-refinement-list separator=" > " order-separator="::" attribute-name="newsroom_type_translated" :limit="50" :sort-by="['name:asc']" inline-template>
+<fieldset class="fieldgroup" v-if="show">
+<div class="fieldset-wrapper">
+<div class="form-checkboxes">
+<div class="checkbox-group" v-for="facet in hierarchicalFacetValues" :key="facet.name" :class="facet.isRefined ? 'is-active' : ''" v-if="facet.name !== 'Share buy-back'">
+<div v-if="facet.type === 'facet'">
+<input type="checkbox" class="form-checkbox" v-model="facet.isRefined" @change="toggleRefinement(facet)" :name="facet.name" :value="facet.name" :id="facet.name" />
+<label :for="facet.name" class="option"><span>#{facet.realName} <small>#{facet.count}</small></span></label>
+</div>
+<div v-if="facet.type === 'facetGroup'">
+<input type="checkbox" class="form-checkbox" v-model="facet.isGroupRefined" @change="toggleSublevelRefinement(facet)" :name="facet.name" :value="facet.name" :id="facet.name" />
+<label :for="facet.name" class="option"><span>#{facet.realName} <small>#{facet.count}</small></span></label>
+<div class="newsroom__sub-filter" v-for="subFacet in facet.facets" :key="subFacet.name" :class="subFacet.isRefined ? 'is-active' : ''" v-if="subFacet.name !== 'Share buy-back'">
+<input type="checkbox" class="form-checkbox" v-model="subFacet.isRefined" @change="toggleRefinement(subFacet)" :name="subFacet.name" :value="subFacet.name" :id="subFacet.name" />
+<label :for="subFacet.name" class="option"><span>#{subFacet.realName} <small>#{subFacet.count}</small></span></label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</fieldset>
+</my-hierarchical-refinement-list>
+<hr>
+<div class="input__group">
+<div class="input__group__label">Show share buy-backs ?</div>
+<div class="checkbox-group--switch">
+<div class="block-switch" :class="{ 'is-active':displayShareBuyBack }" @click.prevent.stop="customToggleShareBuyBack">
+<input type="checkbox" name="share_buy_back" id="share_buy_back" class="form-checkbox toggle toggle-flat" value="true" :checked="displayShareBuyBack" />
+<label for="share_buy_back" data-on="YES" data-off="NO"></label>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="newsroom__filters-block">
+<div class="newsroom__filters-block__header">
+<h3 class="newsroom__filters-title"><a href="javascript:void(0)" @click.prevent.stop="toggleMobileShowYears">Years</a></h3>
+</div>
+<div class="newsroom__filters-block__group" :class="{ 'is-dropped':mobileShowYears }">
+<my-refinement-list attribute-name="year" :limit="50" inline-template :sort-by="['name:desc']">
+<fieldset class="fieldgroup fieldgroup--expand" v-if="show">
+<div class="fieldset-wrapper">
+<div class="form-checkboxes">
+<div class="checkbox-group" v-for="(facet, index) in facetValues" :key="facet.name" :class="!yearPlusShow && index > 5 ? 'is-hide' : ''">
+<input type="checkbox" class="form-checkbox" v-model="facet.isRefined" @change="toggleRefinement(facet)" :name="facet.name" :value="facet.name" :id="facet.name" />
+<label :for="facet.name" class="option"><span>#{facet.name} <small>#{facet.count}</small></span></label>
+</div>
+</div>
+</div>
+</fieldset>
+</my-refinement-list>
+<div class="input__group">
+<a href="javascript:void(0)" @click.prevent.stop="toggleYearPlus">
+<span v-if="yearPlusShow">Less</span>
+<span v-else>More</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="newsroom__container  js-newsroom-container">
+<div class="newsroom__resume">
+<span class="newsroom__resume__title">Results</span>
+<span class="newsroom__resume__count">
+<span>#{ totalResults }</span> <span>result(s)</span>
+</span>
+<div class="newsroom__resume__display">
+<a class="display__list" :class="{ 'is-active':display === 'list' }" @click.prevent.stop="changeDisplay('list')" href="javascript:void(0)"></a>
+<a class="display__grid" :class="{ 'is-active':display === 'grid' }" @click.prevent.stop="changeDisplay('grid')" href="javascript:void(0)"></a>
+</div>
+</div>
+<my-results separator=" > " order-separator="::" :display="display" :stack="true" inline-template ref="newsroomResult">
+<div class="newsroom__results--container block--newsroom-results__content" :class="'display-' + display">
+<div role="article" v-for="result in results" :key="result.objectID" :class="'node--type-newsroom-item newsroom-type-' + computeType(result.newsroom_type)">
+<a class="newsroom-item__icon icon-pdf-invert" :href="result.attachements_url" v-if="result.attachements_url && !result.field_news_video_url"></a>
+<a class="newsroom-item__icon icon-pdf-invert" :href="result.field_pdf_link" v-else-if="result.field_pdf_link && !result.field_news_video_url"></a>
+<a class="newsroom-item__icon icon-arrow-empty" @click.prevent.stop="openVideoModal(result.field_news_video_url)" :href="result.field_news_video_url" v-else-if="result.field_news_video_url"></a>
+<a class="newsroom-item__icon icon-file-news" :href="result.url" v-else></a>
+<div class="newsroom-item__content">
+<h4 class="newsroom-item__type">#{ result.newsroom_type_name }</h4>
+<div class="newsroom-item__center-video" v-if="result.field_news_picture_url">
+<a @click.prevent.stop="openVideoModal(result.field_news_video_url)" :href="result.field_news_video_url" v-if="result.field_news_video_url">
+<img :src="result.field_news_picture_url" alt="" />
+</a>
+<span class="image-alone" v-else>
+<img :src="result.field_news_picture_url" alt="" />
+</span>
+</div>
+<div class="newsroom-item__center-title-text">
+<h3 class="node__title" v-if="result.field_news_video_url"> <a :href="result.url">#{ result.title|slice(15) }</a>
+</h3>
+<span v-else-if="result.attachements_url"> <h3 class="node__title">
+<a :href="result.url">#{ result.title|slice(62) }</a>
+</h3>
+<p class="newsroom-item__publication-date">#{ result.date }</p>
+</span>
+<h3 class="node__title" v-else> <a :href="result.url">#{ result.title|slice(110) }</a>
+<p class="newsroom-item__publication-date date--list">#{ result.date }</p>
+</h3>
+</div>
+<div class="newsroom-item__content__footer">
+<a :href="result.attachements_url" target="_blank" class="file tooltip__container" v-if="result.attachements_url && !result.field_news_video_url">
+<span class="tooltip__content">#{ result.attachements_title }</span>
+<span class="link__icon"></span>
+<span class="link__type-size-label">#{ result.attachements_url|extention }<br>
+<span class="link__type-size-label__text">Download</span>
+</span>
+</a>
+<a :href="result.field_pdf_link" target="_blank" class="file tooltip__container" v-else-if="result.field_pdf_link && !result.field_news_video_url">
+<span class="tooltip__content">#{ result.field_pdf_title }</span>
+<span class="link__icon pdf"></span>
+<span class="link__type-size-label">PDF<br>
+<span class="link__type-size-label__text">Download</span>
+</span>
+</a>
+<span class="footer__standart" v-else>
+<a :href="result.url" class="newsroom-item__more">Read More</a>
+<p class="newsroom-item__publication-date">#{ result.date }</p>
+</span>
+</div>
+</div>
+</div>
+</div>
+</my-results>
+<div class="noresults" v-show="totalResults === 0">
+No results<br /><br />
+<button type="reset" class="ais-clear" @click.prevent.stop="clear"><span>Clear search filters</span></button>
+</div>
+<div class="loadmore" v-observe-visibility="loadMore" v-show="showloader">
+<span>Loading more...</span>
+</div>
+</div>
+<va-set-parameters inline-template><div></div></va-set-parameters>
+</my-index>
+</div>
+</div>
+<div class="video-wrapper js-vue-videowrapper" :class="{ 'is-active':showVideoModal }">
+<video class="video js-vue-video" :src="videoModalUrl" controls>
+<source :src="videoModalUrl" type="mp4" />
+Your browser cannot play HTML5 videos.
+</video>
+<a href="" @click.prevent.stop="closeVideoModal" class="video__icon icon-cross-circle"></a>
+</div>
+</section>
+<script src="https://polyfill.io/v2/polyfill.min.js?features=IntersectionObserver"></script>
+</div>
+</div>
+</div>
+</main>
+<footer class="site-footer" role="contentinfo">
+<div class="region region--footer">
+<div class="region__inner">
+<div id="block-logolarge" class="block block--ageas-blocks block--logo-large">
+<picture class="responsive-image">
+<source media="(min-width: 768px)" srcset="/themes/ageas/assets/images/logo-large.jpg" />
+<source srcset="/themes/ageas/assets/images/logo-large-mobile.jpg">
+<img src="/themes/ageas/assets/images/logo-large-mobile.jpg" class="responsive-image__image" />
+</picture>
+</div>
+<div id="block-slogan" class="block block--ageas-blocks block--slogan">
+<p class="slogan">Supporter of your life</p>
+</div>
+<div id="block-streetaddress" class="block block--ageas-blocks block--address">
+<h6 class="block__title"><span class="block__title__text">AGEAS SA/NV</span></h6><address class="address">Rue du Marquis 1 boîte 7/ </br> Markiesstraat 1 box 7, </br> 1000 Brussels, Belgium</address>
+</div>
+<div id="block-followus-footer" class="block block--ageas-blocks block--follow-us">
+<h6 class="block__title"><span class="block__title__text">Follow us</span></h6><ul class="social-list"><li class="social-list__item"><a href="https://www.facebook.com/AgeasGroup" class="social-list__item__link icon-facebook" title="Facebook" target="_blank" data-unique-id=""></a></li><li class="social-list__item"><a href="https://twitter.com/AgeasGroup" class="social-list__item__link icon-twitter" title="Twitter" target="_blank" data-unique-id="__2"></a></li><li class="social-list__item"><a href="https://www.linkedin.com/company/ageas" class="social-list__item__link icon-linkedin" title="Linkedin" target="_blank" data-unique-id="__3"></a></li></ul>
+</div>
+</div>
+</div>
+<div class="region region--footer-bottom">
+<div class="region__inner">
+<div id="block-copyright" class="block block--ageas-blocks block--copyright">
+Copyright Ageas 2020
+</div>
+<nav role="navigation" aria-labelledby="block-footer-navigation-menu" id="block-footer-navigation" class="block block--navigation block--navigation--footer">
+<h2 class="visually-hidden" id="block-footer-navigation-menu">Footer navigation</h2>
+<ul class="menu">
+<li class="menu__item">
+<a href="/legal/privacy-statement"><span>Privacy</span></a>
+</li>
+<li class="menu__item">
+<a href="/legal/cookie-statement"><span>Cookies</span></a>
+</li>
+<li class="menu__item">
+<a href="/legal/disclaimer"><span>Disclaimer</span></a>
+</li>
+<li class="menu__item">
+<a href="/sitemap"><span>Sitemap</span></a>
+</li>
+<li class="menu__item">
+<a href="/glossary"><span>Glossary</span></a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</footer>
+</div>
+<div class="video-wrapper js-video-wrapper">
+<video class="video js-video" controls>
+<source src="" type="" />
+Your browser cannot play HTML5 videos.
+</video>
+<a href="" class="video__icon icon-cross-circle js-video-close"></a>
+</div>
+</div>
+<script type="text/javascript">
+
+        // DATALAYER GOOGLE TAG MANAGER
+        // ----------------------------
+
+        var language = 'en';
+        var contactName = 'newsroom';
+
+        if(typeof view_pageName != 'undefined')
+            window.pageName = view_pageName;
+
+        else
+            window.pageName = 'AGEAS:newsroom';
+
+        function getResponsive(){
+            var width = window.innerWidth;
+            var breakpoint;
+            if(width >= 0 && width <= 767){
+                breakpoint = 'mobile';
+            }else if(width >= 768 && width <= 1024){
+                breakpoint = 'tablet';
+            }else {
+                breakpoint = 'desktop';
+            }
+            return breakpoint;
+        }
+
+        if (dataLayer) {
+          dataLayer.push({
+            'pageName' : window.pageName,
+            'language' : language,
+            'template_responsive': getResponsive(),
+            'section' : 'newsroom'
+          });
+        }
+
+    </script>
+
+<div class="cookiebar js-cookiebar">
+<div class="cookiebar__wrapper">
+<div class="cookiebar__inner">
+<div class="cookiebar__content">
+We use cookies to give you the best online experience. By using our website you agree to our use of cookies in accordance with our <a href="/legal/cookie-statement" target="_blank">cookie statement</a>. <a href="#js-cookie-manager"> </a>
+</div>
+<a class="cookiebar__close js-cookiebar-close">
+<span>I agree</span>
+</a>
+</div>
+</div>
+</div>
+<div class="cookie-manager js-cookie-manager">
+<div class="cookie-manager__container">
+<div class="cookie-manager__overlay js-ageas-cm-close"></div>
+<div class="cookie-manager__content">
+
+<div class="cookie-manager__header">
+<a href="#" class="js-ageas-cm-close"></a>
+<div class="cookie-manager__header__titles">
+<h5>Cookies on AGEAS websites</h5>
+<h4>Manage your preferences</h4>
+</div>
+</div>
+
+
+<div class="cookie-manager__intro">
+<p>We use cookies to optimise your user experience, offer you personalised information based on your interests, and allow you to share and interact with your social media contacts and watch videos directly on our websites.</p>
+<p>This page provides information about the nature of the cookies that may be used on AGEAS websites. Indicate below if you accept all types of cookies or if you wish to adjust your preferences.</p>
+<p>Also consult our <a>Cookie Policy</a> and our <a " legal privacy">Privacy Notice</a>.</p>
+</div>
+
+
+<div class="cookie-manager__option">
+<img src="/themes/ageas/assets/images/cookie-manager/browser.png" alt="">
+<div class="cookie-manager__option__texts">
+<h6>Optimize user experience</h6>
+<p>To make your experience on our websites as smooth as possible, we use technical, functional and anonymized analytical cookies. </p>
+<p>You cannot refuse these cookies from this page as they are essential to guarantee you the best user experience.</p>
+<p><a href="#" class="js-txt-reveal" data-reveal=".read-more-optimise">Read more</a></p>
+<p class="read-more-optimise is-hide">We use technical and functional cookies to remember choices and selections that you have made during previous visits. They prevent you from having to set your preferences again every time.Without these cookies, some (parts of) our sites may not work (properly) and (some of the) services you have asked for may not be able to be provided. In addition, we use anonymized analytical cookies to keep track on how you and other users browse our websites to help us creating better flows, producing more interesting content, etc.</p>
+<p class="read-more-optimise is-hide">These analytical cookies do not store any personal information. For an overview of the cookies belonging to this category, consult our <a>Cookie Policy</a>.</p>
+<p class="read-more-optimise is-hide">To opt-out from these cookies, you can always disable them in your browser settings. Be aware that some functionalities of our websites may not function properly. For information on how to set up your browser preferences, please refer to the documentation of the manufacturer of your browser.</p>
+</div>
+<div class="cookie-manager__option__buttons">
+<div>
+<input type="radio" id="ux_on" class="js-ux-on" name="ux" value="true" />
+<label for="ux_on">Yes</label>
+<input type="radio" id="ux_off" class="js-ux-off" name="ux" value="false" />
+<label for="ux_off">No</label>
+</div>
+</div>
+</div>
+<div class="cookie-manager__option">
+<img src="/themes/ageas/assets/images/cookie-manager/clipboard.png" alt="">
+<div class="cookie-manager__option__texts">
+<h6>Enable customer profiling</h6>
+<p>To make your experience on our websites and our advertisements for our products as relevant as possible, we track your browsing and click behavior and incorporate it in your customer profile.</p>
+<p>Do you accept customer profiling cookies on the AGEAS websites?</p>
+<p><a href="#" class="js-txt-reveal" data-reveal=".read-more-tracking">Read more</a></p>
+<p class="read-more-tracking is-hide">These cookies monitor your click and surfing behavior on our sites (e.g. the visited pages, articles viewed or clicked on,...) and enable us to personalize the touchpoints that you have with our brands. The content and advertising of our products you see on our sites and in any other advertisement will be matched with your needs, interests and preferences.</p>
+<p class="read-more-tracking is-hide">These cookies will not be used to present you advertisements regarding products and services offered by third parties. For an overview of the cookies belonging to this category, consult our <a>Cookie Policy</a>.</p>
+</div>
+<div class="cookie-manager__option__buttons">
+<div>
+<input type="radio" id="gtmga_on" class="js-gtmga-on" name="gtmga" value="true" />
+<label for="gtmga_on">Yes</label>
+<input type="radio" id="gtmga_off" class="js-gtmga-off" name="gtmga" value="false" />
+<label for="gtmga_off">No</label>
+</div>
+</div>
+</div>
+<div class="cookie-manager__option">
+<img src="/themes/ageas/assets/images/cookie-manager/cloud.png" alt="">
+<div class="cookie-manager__option__texts">
+<h6>Share data with third parties</h6>
+<p>Do you accept that AGEAS websites use cookies offered by third parties which enable the sharing of your data with third parties?</p>
+<p><a href="#" class="js-txt-reveal" data-reveal=".read-more-third-parties">Read more</a></p>
+<p class="read-more-third-parties is-hide">To allow you to share and interact on social media or see videos from our websites, we make use of plug-ins offered by third parties. These plug-ins are fully controlled by third parties and might be used to collect data and information on your browsing behavior for direct marketing purposes, analytics or market research by such third parties, even if you do not use these functionalities but merely visit our websites. AGEAS has no control on how these third parties manage these cookies and the data collected through these cookies. </p>
+<p class="read-more-third-parties is-hide">We therefore recommend that you read the privacy notice and cookie policy of these third parties to know more about how these third parties use your personal data and cookies. For an overview of the cookies belonging to this category, consult our <a>Cookie Policy</a>.</p>
+</div>
+<div class="cookie-manager__option__buttons">
+<div>
+<input type="radio" id="others_on" class="js-others-on" name="others" value="true" />
+<label for="others_on">Yes</label>
+<input type="radio" id="others_off" class="js-others-off" name="others" value="false" />
+<label for="others_off">No</label>
+</div>
+</div>
+</div>
+
+
+<div class="cookie-manager__footer">
+<p>The consent you are giving is valid for all <a>AGEAS websites</a></a></p>
+<button type="button" class="js-ageas-cm-save">Save my preferences</button>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<script src="https://cdn.cookielaw.org/langswitch/21428ac2-3c14-4071-b682-12887a185199.js" type="text/javascript" charset="UTF-8"></script>
+<script type="text/javascript">
+      function OptanonWrapper() { }
+      </script>
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"newsroom","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","currentQuery":{"s":"buy","share_buy_back":"false"}},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"ageas":{"algolia":{"app_id":"MID166XDP6","searchApiKey":"286f8465dbe694acb3535beaeb5d2f84"},"env":"prod"},"user":{"uid":0,"permissionsHash":"d149886e6d1b669f99e66a7b7b3881e76208fd51884956b762d0cd0887b35cf5"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.4.1"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.0"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.8.5"></script>
+<script src="/sites/default/files/languages/en_ZmUSosYzL2ydtpIV-88sgyZMwc7gVHWjC45zpyZJWXg.js?q9au3i"></script>
+<script src="/core/misc/drupal.js?v=8.8.5"></script>
+<script src="/core/misc/drupal.init.js?v=8.8.5"></script>
+<script src="/core/misc/progress.js?v=8.8.5"></script>
+<script src="/themes/ageas/assets/scripts/app.js?v=1.9.3"></script>
+<script src="/themes/ageas/assets/scripts/es6.js?v=1.9.3"></script>
+<script src="/themes/ageas/js/drupal-connect.js?v=1.9.3"></script>
+</body>
+</html>

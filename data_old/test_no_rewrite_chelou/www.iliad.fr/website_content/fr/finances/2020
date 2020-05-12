@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta http-equiv="cleartype" content="on">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#000000">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="google-site-verification" content="ZStsxjEfGEj8LewJj_FEZCmJTju92CWOVzt8knECAjI" />
+        <link rel="alternate" href="http://www.iliad.fr/" hreflang="fr-FR" />
+		<link rel="alternate" href="http://www.iliad.fr/fr/" hreflang="fr-FR" />
+		<link rel="alternate" href="http://www.iliad.fr/en/" hreflang="en-US" />
+
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+		<link rel="manifest" href="/assets/icons/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+<!-- ADD2HOME -->
+	<script src="/assets/aths.min.js"></script>
+	<link href='/assets/aths.min.css' rel='stylesheet' type='text/css'>
+<!--ICONS-->
+	<link rel="stylesheet" rel='stylesheet' href="/assets/font-awesome.min.css">
+<!--RESET-->
+	<link href='/assets/normalize.min.css' rel='stylesheet' type='text/css'>
+<!--BOILERPLATE-->
+	<link href='/assets/main.min.css' rel='stylesheet' type='text/css'>
+<!--JS LIB-->
+	<script src="/assets/jquery-2.1.4.min.js"></script>
+<!--LOGIC-->
+	<script src="/assets/script.min.js"></script>
+
+	<!--PAINT-->
+	<link rel="stylesheet" type="text/css" href="/assets/style.min.css">
+	<title>Iliad.fr</title>
+	</head>
+	<body><script>var lang="fr";var type="finances"; var year="2020"</script><!--here-->
+<header>
+      <a href="/fr/" id="logo_button">
+        <img src="/assets/images/iliad_logo_6.png" alt="Accueil" title="Accueil"/>
+      </a>
+
+<nav>
+        <ul>
+          <li>
+            <a href="/fr/presse/" class="button  "> 
+              Communiqués de presse &nbsp;
+            </a>
+          </li>
+          <li>
+            <a href="/fr/finances/" class="button selected "> 
+              Communiqués financiers
+            </a>
+          </li>
+
+<li id="langue"><a href="/en/finances/" id="icon_lang" class="button en" >In English</a></li>
+        </ul>
+      </nav>
+</header>
+<div id="main"><h1>Communiqués financiers 2020</h1><ul id="navDate" >
+<li><a href="/fr/finances/2020" class="yearlist selected ">2020</a></li>
+<li><a href="/fr/finances/2019" class="yearlist  ">2019</a></li>
+<li><a href="/fr/finances/2018" class="yearlist  ">2018</a></li>
+<li><a href="/fr/finances/2017" class="yearlist  ">2017</a></li>
+<li><a href="/fr/finances/2016" class="yearlist  ">2016</a></li>
+<li><a href="/fr/finances/2015" class="yearlist  ">2015</a></li>
+<li><a href="/fr/finances/2014" class="yearlist  ">2014</a></li>
+<li><a href="/fr/finances/2013" class="yearlist  ">2013</a></li>
+<li><a href="/fr/finances/2012" class="yearlist  ">2012</a></li>
+<li><a href="/fr/finances/2011" class="yearlist  ">2011</a></li>
+<li><a href="/fr/finances/2010" class="yearlist  ">2010</a></li>
+<li><a href="/fr/finances/2009" class="yearlist  ">2009</a></li>
+<li><a href="/fr/finances/2008" class="yearlist  ">2008</a></li>
+<li><a href="/fr/finances/2007" class="yearlist  ">2007</a></li>
+<li><a href="/fr/finances/2006" class="yearlist  ">2006</a></li>
+<li><a href="/fr/finances/2005" class="yearlist  ">2005</a></li>
+<li><a href="/fr/finances/2004" class="yearlist  ">2004</a></li>
+<li><a href="/fr/finances/2003" class="yearlist  ">2003</a></li>
+<li><a href="/fr/finances/2002" class="yearlist  ">2002</a></li>
+</ul>
+
+                                          <ul class="commlist ">
+
+                                               <li>
+ <span class="date _734 _0100 ">  17 mars 2020</span> <a href="/finances/2020/CP_170320.pdf"  title="Télécharger le communiqué" id="_3801" >Communiqué de presse Résultats 2019</a></li>
+
+                                           </ul>
+
+                                        </div><!-- end Main -->
+	<footer>
+		<a href="/fr/documentation.html" class="☞">Documentation</a>|
+		<a href="/fr/arcep.html">Indicateurs Arcep</a>|
+		<!--<a href="/fr/societes.html">Les sociétés du groupe</a><br/>-->
+		<a href="/fr/glossaire.html">Glossaire</a>|
+		<a href="/fr/info.html">Informations légales</a>|
+		<a href="https://compliance.iliad.fr/">Ethique & conformité</a>|
+		<a href="/fr/donnees-personnelles.html">Données Personnelles</a>
+	</footer></body>
+	</html>
+	

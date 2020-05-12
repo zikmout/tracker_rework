@@ -1,0 +1,538 @@
+
+
+            <!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="ie lt-ie9 lt-ie8 lt-ie7 iframe-page"> <![endif]-->
+<!--[if IE 7]>         <html class="ie lt-ie9 lt-ie8 ie7 iframe-page"> <![endif]-->
+<!--[if IE 8]>         <html class="ie lt-ie9 ie8 iframe-page"> <![endif]-->
+<!--[if IE 9]>         <html class="ie ie9 iframe-page"> <![endif]-->
+<!--[if gt IE 9]>-->
+<html class="iframe-page">
+<!--<![endif]-->
+<head>
+<script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "url": "https://sse.com",
+        "logo": "https://sse.com/assets/images/SSE-LOGO-hires.png",
+        "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+44 345 026 2658",
+        "contactType": "customer service"
+        }],
+        "sameAs": "https://www.youtube.com/user/sseplc",
+        "sameAs": "https://twitter.com/SSE"
+        }
+    </script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"67f7fd583e","applicationID":"8612619","transactionName":"YVVTZUMCCkdVWxVdDVgfcGJhTABRUlkUWBYYUUJBSQ==","queueTime":0,"applicationTime":49,"ttGuid":"207BA6B58D5A3A6","agent":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"67f7fd583e",applicationID:"8612619"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+
+    <!-- Meta Data -->
+<title>Regulatory news | SSE</title>
+<meta name="description" content=""/>
+<meta name="keywords" content="SSE;PLC;INVESTORS;INVESTOR;DIVIDEND;REPORTS;" />
+
+
+<!-- GeoLocation Meta -->
+
+
+    
+
+<!--[if gt IE 8]><!--> 
+<link rel="stylesheet" type="text/css" href="/assets/css/responsive.less?v=1.0.0.0" />
+<!--<![endif]-->
+
+<!--[if (lt IE 9) & (!IEMobile)]>
+<link rel="stylesheet" href="/assets/css/ie78.less">
+<![endif]-->
+
+
+<script>
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style");
+        msViewportStyle.appendChild(
+            document.createTextNode(
+                "@-ms-viewport{width:auto!important}"
+            )
+        );
+        document.getElementsByTagName("head")[0].
+            appendChild(msViewportStyle);
+    }
+</script>
+
+
+<link rel="icon" type="image/ico" href="/assets/icons/favicon.ico" />
+<link rel="shortcut icon" type="image/x-icon" href="/assets/icons/favicon.ico" />
+
+<!-- For third-generation iPad with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/icons/apple-touch-icon-144x144-precomposed.png">
+<!-- For iPhone with high-resolution Retina display: -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/icons/apple-touch-icon-114x114-precomposed.png">
+<!-- For first- and second-generation iPad: -->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/icons/apple-touch-icon-72x72-precomposed.png">
+<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+<link rel="apple-touch-icon-precomposed" href="/assets/icons/apple-touch-icon-precomposed.png">
+
+<!-- stop SKYPE formatting telephone numbers -->
+<meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+
+<!-- For the Windows 8 Start Screen -->
+<meta name="application-name" content="sse.com"/> 
+<meta name="msapplication-TileColor" content="#FFFFFF"/> 
+<meta name="msapplication-TileImage" content="/assets/icons/ms-tile-icon-144x144.png" />
+
+<script type="text/javascript">
+    /* set the html tag to have a javascript class to hide all the dynamic stuff */
+    document.getElementsByTagName("html")[0].className += " js";
+</script>
+
+    <script src="/bundles/jquery/?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+
+
+    
+
+    
+    
+
+</head>
+
+<body class="">
+    
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-M9KKJH" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-M9KKJH');
+    </script>
+    <div class="outer-wrapper">
+        <div class="page-wrapper">
+            <div class="mobile-nav">
+                <div class="site-nav">
+    <div class="site-nav-inner">
+        <div class="header-nav">
+
+            <div class="sub-nav-container">
+                <ul class="sub-nav">
+        
+                        <li class="back  selected">
+                            <a data-nodeid="1698" data-pagehref="/investors/" href="/investors/" class="back-button" title="INVESTORS">&nbsp;</a>
+                            <a href="/investors/regulatorynews/" class="current-button">
+                                Regulatory news
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="/investors/regulatorynews/policyonmarketspeculation/">Policy on market speculation</a>
+
+                        </li>
+                        <li class="">
+                            <a href="/investors/regulatorynews/rns-alerts/">RNS Alerts</a>
+
+                        </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+            </div>
+            
+            <!--[if IE 6]>
+                <div class="ie6warn">
+    <p>You are using Internet Explorer 6 (or lower).  This browser is over 10 years old and is no longer capable of displaying modern webpages correctly.</p>
+    <p>While this site should still be functional, you will experience various issues with colours and positions</p>
+    <p>If possible, you should use one of the browsers the site is optimised for (Desktop or Mobile versions of Internet Explorer 9+ and recent versions of Chrome, Firefox, Opera or Safari)</p>
+</div>
+            <![endif]-->
+
+                <form class="cookie-notice" method="POST">
+        <div class="cookie-notice-inner">
+        <legend>Cookie Policy</legend>
+            <a href="#" class="close">Close</a>
+            <div class="cookie-text">
+                <p>We use cookies to give you the best possible online experience. If you continue, we'll assume you are happy for your web browser to receive all cookies from our website. See our cookie policy for more information on cookies and how to manage them.</p>
+            </div>
+            <div>
+                <input type="submit" value="Close" class="button close-btn" />
+            </div>
+        </div>
+    </form>
+    
+    
+            <div class="header">
+    <div class="flex flex--large">
+        <div class="main-nav">
+        <ul>
+            <li class="mobile-menu">
+                <a href="https://sse.com/">
+                    <em class="menu-icon"></em>&nbsp;
+                </a>
+            </li>
+            <li class="sse-logo">
+                <a href="https://sse.com/">
+                    SSE
+                </a>
+            </li>
+
+                <li><a href="/aboutus/" class="main-link  has-mega-menu"><span>ABOUT US</span></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-wrapper">
+                                <div class="mega-menu-content">
+                                        <h2 class="mega-menu-title">
+                                            Find out more about SSE
+                                        </h2>
+                                                                            <img src="/ImageGen.ashx?image=/media/538554/aboutus_megamenu_onshoreconstruction.jpg&width=300&compression=70"/>
+
+                                        <div class="rich-text-panel">
+                                            <p>SSE is a UK-listed energy company with operations and investments across the UK and Ireland. It is primarily a developer (which includes being a builder), an operator and an owner of low-carbon energy assets and businesses, with a strategic focus on regulated electricity networks and renewable energy. More broadly, SSE is involved in the generation, transmission, distribution and supply of electricity, the production, storage, distribution and supply of gas and in the provision of energy-related services.</p>
+                                        </div>
+                                </div>
+                                    <div class="mega-menu-links">
+                                        <h2 class="mega-menu-title">At a glance</h2>
+                                        <div class="mega-menu-sub-nav">
+        <ul>
+                <li><a href="/aboutus/what-we-stand-for/">What we stand for</a></li>       
+                <li><a href="/aboutus/our-heritage/">Our Heritage</a></li>       
+                <li><a href="/aboutus/ourteam/">Our team</a></li>       
+                <li><a href="/aboutus/for-a-better-world-of-energy/">For a better world of energy</a></li>       
+        </ul>
+</div>
+                                    </div>
+                            </div>
+                        </div>
+                </li>       
+                <li><a href="/whatwedo/" class="main-link  has-mega-menu"><span>WHAT WE DO</span></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-wrapper">
+                                <div class="mega-menu-content">
+                                        <h2 class="mega-menu-title">
+                                            Building a Better World of Energy
+                                        </h2>
+                                                                            <img src="/ImageGen.ashx?image=/media/538601/whatwedo_megamenu_transmission.jpg&width=300&compression=70"/>
+
+                                        <div class="rich-text-panel">
+                                            <p>SSE is involved in the generation, transmission, distribution and supply of electricity, in the production, storage, distribution and supply of gas and in other energy services. The bulk of SSE’s operating profit comes from regulated electricity networks and renewable sources of energy, and it is these businesses that are at the core of the Group’s low-carbon strategy.</p>
+<p><strong>Renewables</strong><br /> SSE has consolidated the development and operation of all its renewables assets in the Gb and Ireland under a single management in a business known as SSE Renewables.</p>
+<p class="highlight-txt"><strong>Networks</strong><br /> SSE’s wholly-owned economically-regulated electricity transmission and distribution businesses are collectively known as Scottish and Southern Electricity Networks (SSEN) and it holds a one-third stake in the gas distribution company, SGN. </p>
+<p><strong>Complementary businesses</strong><br /> Flexible <strong>thermal</strong> generation complements the growth of variable wind and solar, business-to-business in the UK and Ireland, and business-to-<strong>customer</strong> operations provide a valuable route to market, <strong>market</strong>-orientated activity like energy trading and gas storage balances risk and <strong>SSE Enterprise</strong> is creating opportunities in distributed energy and facilitating the electrification of transport.</p>
+                                        </div>
+                                </div>
+                                    <div class="mega-menu-links">
+                                        <h2 class="mega-menu-title">At a glance</h2>
+                                        <div class="mega-menu-sub-nav">
+        <ul>
+                <li><a href="/whatwedo/sse-renewables/">SSE Renewables</a></li>       
+                <li><a href="/whatwedo/electricitytransmission/">Transmission</a></li>       
+                <li><a href="/whatwedo/electricitydistribution/">Distribution</a></li>       
+                <li><a href="/whatwedo/sse-thermal/">SSE Thermal</a></li>       
+                <li><a href="/whatwedo/customers/">Customers</a></li>       
+                <li><a href="/whatwedo/sse-enterprise/">SSE Enterprise</a></li>       
+                <li><a href="/whatwedo/markets/">Markets</a></li>       
+                <li><a href="/whatwedo/ourprojectsandassets/">Our projects and assets</a></li>       
+                <li><a href="/whatwedo/playing-our-part-in-the-coronavirus-fight/">Playing our part in the coronavirus fight.</a></li>       
+        </ul>
+</div>
+                                    </div>
+                            </div>
+                        </div>
+                </li>       
+                <li><a href="/sustainability/" class="main-link  has-mega-menu"><span>SUSTAINABILITY</span></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-wrapper">
+                                <div class="mega-menu-content">
+                                        <h2 class="mega-menu-title">
+                                            Creating value for shareholders and society
+                                        </h2>
+                                                                            <img src="/ImageGen.ashx?image=/media/538656/beingresponsible_megamenu_stronelairg.jpg&width=300&compression=70"/>
+
+                                        <div class="rich-text-panel">
+                                            <p>SSE’s vision is to be a leading energy provider in a low-carbon world. To achieve this we have set four fundamental goals for 2030 which put sustainability at heart of SSE’s business strategy. These goals aren’t just important to SSE, they matter to everyone – that’s why they are directly linked to the United Nations Sustainable Development Goals.</p>
+<p>Find out more about how we are building a better world of energy for the future in this section of the website.</p>
+                                        </div>
+                                </div>
+                                    <div class="mega-menu-links">
+                                        <h2 class="mega-menu-title">At a glance</h2>
+                                        <div class="mega-menu-sub-nav">
+        <ul>
+                <li><a href="/sustainability/our-2030-goals/">Our 2030 Goals</a></li>       
+                <li><a href="/sustainability/environment/">Environment</a></li>       
+                <li><a href="/sustainability/social/">Social</a></li>       
+                <li><a href="/sustainability/economic/">Economic</a></li>       
+                <li><a href="/sustainability/do-no-harm/">Do No Harm</a></li>       
+                <li><a href="/sustainability/reporting-and-policy/">Reporting and Policy</a></li>       
+                <li><a href="/sustainability/networks-ownership/">Networks Ownership</a></li>       
+        </ul>
+</div>
+                                    </div>
+                            </div>
+                        </div>
+                </li>       
+                <li><a href="/communities/" class="main-link  has-mega-menu"><span>COMMUNITIES</span></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-wrapper">
+                                <div class="mega-menu-content">
+                                        <h2 class="mega-menu-title">
+                                            Investing in Communities
+                                        </h2>
+                                                                            <img src="/ImageGen.ashx?image=/media/538685/community_megamenu_pic1.jpg&width=300&compression=70"/>
+
+                                        <div class="rich-text-panel">
+                                            <p>SSE is committed to supporting the communities in which we live and work. We understand we must contribute positively to this society by being an active contributor to the communities that we are part of.</p>
+<p>This section of our website provides examples and case studies of how we serve the communities we operate in.</p>
+                                        </div>
+                                </div>
+                                    <div class="mega-menu-links">
+                                        <h2 class="mega-menu-title">At a glance</h2>
+                                        <div class="mega-menu-sub-nav">
+        <ul>
+                <li><a href="/communities/about-us/">About us</a></li>       
+                <li><a href="/communities/eligibility/">Eligibility</a></li>       
+                <li><a href="/communities/acknowledgingyourgrant/">Current grant holders</a></li>       
+                <li><a href="/communities/fundlocations/">Fund locations</a></li>       
+                <li><a href="/communities/sustainablefund/">Sustainable Development Fund</a></li>       
+                <li><a href="/communities/communityinvestmentannualreview/">Community Investment Review</a></li>       
+                <li><a href="/communities/communitytrust/">Electrical connections help</a></li>       
+                <li><a href="/communities/bethedifference/">Be the difference</a></li>       
+        </ul>
+</div>
+                                    </div>
+                            </div>
+                        </div>
+                </li>       
+                <li><a href="/investors/" class="main-link  has-mega-menu"><span>INVESTORS</span></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-wrapper">
+                                <div class="mega-menu-content">
+                                        <h2 class="mega-menu-title">
+                                            Our strategy
+                                        </h2>
+                                                                            <img src="/ImageGen.ashx?image=/media/97321/EmployeeForMenu.jpg&width=300&compression=70"/>
+
+                                        <div class="rich-text-panel">
+                                            <p>SSE aims to create value for shareholders from being a developer, an operator and an owner of energy-related assets and businesses through the transition to a decarbonised energy system.</p>
+                                        </div>
+                                </div>
+                                    <div class="mega-menu-links">
+                                        <h2 class="mega-menu-title">At a glance</h2>
+                                        <div class="mega-menu-sub-nav">
+        <ul>
+                <li><a href="/investors/shareholderservices/">Shareholder services and contacts</a></li>       
+                <li><a href="/investors/dividendsandourscripscheme/">Dividends and our Scrip scheme</a></li>       
+                <li><a href="/investors/reportsandresults/">Financial Results</a></li>       
+                <li><a href="/investors/investment-case/">Investment Case</a></li>       
+                <li><a href="/investors/financial-calendar/">Financial Calendar</a></li>       
+                <li><a href="/investors/regulatorynews/">Regulatory news</a></li>       
+                <li><a href="/investors/adrs/">ADRs</a></li>       
+                <li><a href="/investors/share-repurchase-programme/">Share repurchase programme</a></li>       
+                <li><a href="/investors/institutionalinvestorsandanalysis/">Institutional investors and analysts</a></li>       
+                <li><a href="/investors/debt-investors/">Debt Investors</a></li>       
+        </ul>
+</div>
+                                    </div>
+                            </div>
+                        </div>
+                </li>       
+                <li><a href="/careers/" class="main-link  has-mega-menu"><span>CAREERS</span></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-wrapper">
+                                <div class="mega-menu-content">
+                                        <h2 class="mega-menu-title">
+                                            Why you should join SSE
+                                        </h2>
+                                                                            <img src="/ImageGen.ashx?image=/media/82479/workerformenu.jpg&width=300&compression=70"/>
+
+                                        <div class="rich-text-panel">
+                                            <p style="text-align: left;">Our staff tell us there are lots of good reasons to work at SSE. It’s not possible to include them all, but we’ve highlighted a few of the key ones in this section. <br /><br />As part of our Happier goal and our commitment to being a Great Place to Work, we’ve spent some time over the last few years improving our employee benefits.</p>
+<p style="text-align: left;"><a style="text-align: center;" href="http://www.ssejobs.co.uk/">Search through all of our current vacancies</a></p>
+                                        </div>
+                                </div>
+                                    <div class="mega-menu-links">
+                                        <h2 class="mega-menu-title">At a glance</h2>
+                                        <div class="mega-menu-sub-nav">
+        <ul>
+                <li><a href="/careers/whyjoinsse/">Why join SSE?</a></li>       
+                <li><a href="/careers/benefits-and-development/">Benefits and Development</a></li>       
+                <li><a href="/careers/inclusion-@-sse/">Inclusion @ SSE</a></li>       
+                <li><a href="/careers/apprentices-and-trainees/">Apprentices and Trainees</a></li>       
+                <li><a href="/careers/graduate-development-programmes/">Graduate Development Programmes</a></li>       
+                <li><a href="/careers/customerservice/">Customer Service</a></li>       
+        </ul>
+</div>
+                                    </div>
+                            </div>
+                        </div>
+                </li>       
+                <li><a href="/newsandviews/" class="main-link  "><span>NEWS &amp; VIEWS</span></a>
+                </li>       
+            
+
+            <li class="social-icon linkedin-icon">
+                <a href="https://www.linkedin.com/company/sse-plc" title="Follow us on linkedin">
+                    LinkedIn
+                </a>
+            </li>
+            <li class="social-icon twitter-icon">
+                <a href="https://twitter.com/SSE" title="Follow us on twitter">
+                    Twitter
+                </a>
+            </li>
+            <li class="social-icon vimeo-icon">
+                <a href="http://vimeo.com/sseplc" title="Follow us on vimeo">
+                    Vimeo
+                </a>
+            </li>
+            
+        </ul>
+</div>
+
+    </div>
+</div>
+    
+            
+
+            <div class="flex" id="pageContent">
+                
+
+
+<div class="flex flex--large">
+    <div class="page-with-section-nav">
+        <div class="section-nav">
+            <div class="container">
+                
+<ul class="">
+        
+            <li class="back selected">
+                <a href="/investors/" class="back-button" title="INVESTORS">&nbsp;</a>
+                <a href="/investors/regulatorynews/" class="current-button">
+                    Regulatory news
+                </a>
+            </li>
+
+        <li class="">
+            <a href="/investors/regulatorynews/policyonmarketspeculation/">
+                Policy on market speculation
+            </a>
+        </li>
+        <li class="">
+            <a href="/investors/regulatorynews/rns-alerts/">
+                RNS Alerts
+            </a>
+        </li>
+</ul>
+
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="breadcrumbs">
+                <ul>
+        <li>
+            <a href="https://sse.com/"><span>SSE.com</span></a>
+        </li>
+        <li>
+            <a href="https://sse.com/investors/"><span>INVESTORS</span></a>
+        </li>
+        <li>
+            <a href="https://sse.com/investors/regulatorynews/"><span>Regulatory news</span></a>
+        </li>
+</ul>
+            </div>
+            <div class="main-content">
+                    
+                <div class="content">
+                    
+                    <div class="page-intro">
+                            <h1 class="page-title">Regulatory news</h1>
+
+                        
+                    </div>
+                    
+                        <div id="iframe" class="investis-iframe external-web">
+                            <script language="javascript" type="text/javascript">
+                                var _iframeURL = 'https://otp.tools.investis.com/clients/uk/scottish_southern_energy1/rns/regulatory-news.aspx?culture=en-GB&amp;parenturl=https%3A%2F%2Fsse.com%2Finvestors%2Fregulatorynews%2F';
+                                var _iframeURLHeight = 500;
+                            </script>
+                            <noscript>
+                                <iframe frameborder="0" width="100%" allowtransparency="true" marginheight="0" marginwidth="0" class="externalwebIFrame" id="ExternalWebContentExternalIFrame" height="1000" src="https://otp.tools.investis.com/clients/uk/scottish_southern_energy1/rns/regulatory-news.aspx?culture=en-GB&amp;parenturl=https%3A%2F%2Fsse.com%2Finvestors%2Fregulatorynews%2F" ></iframe>
+                            </noscript>
+                        </div>
+
+                    <div class="page-components">
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="sub-content">
+                <div class="content">
+<div class="component search">
+    <div class="component-content search-inner">
+        <h2 class="search-header">
+            <span class="icon">Search</span>
+        </h2>
+        <form action="/search/" method="GET">
+            <div class="search-field">
+                <input type="text" name="usterms" id="usterms" />    
+                <div class="search-cta">
+                    <button type="submit" value="Search" class="search-button"><img src="/assets/images/icon-button-arrow.png" alt="Search"/></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+            </div>
+
+            
+        </div>
+        <div class="footer">
+    <div class="flex">
+        <div class="copyright"><a class="sse-logo" href="https://sse.com/">SSE</a> <span class="text">Copyright SSE &copy; 2020</span></div>
+        <div class="footer-nav">
+    <div class="footer-nav-internal">
+            <ul>
+                    <li><a href="/contactus/">Contact Us</a></li>
+                    <li><a href="/media/">Media</a></li>
+                    <li><a href="/potential-suppliers/">Potential suppliers</a></li>
+                    <li><a href="/privacy-notice/">Privacy Notice</a></li>
+                    <li><a href="/cookie-policy/">Cookie Policy </a></li>
+                    <li><a href="/sitemap/">SiteMap</a></li>
+            </ul>
+    </div>
+</div>
+    </div>
+</div>
+    </div>
+
+    <script src="/bundles/app/?v=DUhlqH42U0Qz7NQBgynkGSLvY_N3rXKxjQWQKYehbnE1"></script>
+
+    <script type="text/javascript" src="//use.typekit.net/znt3hqv.js"></script>
+    <script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+    
+    <script src="/bundles/iframe/?v=MlGFAoMD64yvDrpYRYyfHfXjVHAkj3hlc_5ak4Y0Z3o1"></script>
+
+
+
+
+</body>
+</html>
+

@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html lang="en" class="no-touch lt-ie9 no-js"> <![endif]-->
+<!--[if IE 9]><html lang="en" class="no-touch lt-ie10 no-js"> <![endif]-->
+<!--[if gt IE 9]> <!--><html lang="en" class="no-touch no-js"> <!--<![endif]-->
+<head>
+  <title>Capital, articles of association, Internal Regulations, disclosure of share buy-back transactions | Air Liquide</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"82e9bf6f57",applicationID:"51792015"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/ld+json">
+{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"name":"Investors","@id":"https:\/\/www.airliquide.com\/investors"}},{"@type":"ListItem","position":2,"item":{"name":"Governance","@id":"https:\/\/www.airliquide.com\/investors\/governance"}}]}
+</script><link href="https://www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" rel="alternate" hreflang="en" />
+<link href="https://www.airliquide.com/fr/investisseurs/capital-statuts-reglement-interieur-declaration-transactions-actions-propres" rel="alternate" hreflang="fr" />
+<meta name="description" content="Please find here the Capital, the Company&#039;s articles of association, the Internal Regulations of the Board of Directors and the disclosures of share buy-back transactions." />
+<link rel="canonical" href="https://www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" />
+<link rel="shortlink" href="https://www.airliquide.com/node/8596" />
+<meta property="og:site_name" content="Air Liquide" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" />
+<meta property="og:title" content="Capital, articles of association, Internal Regulations, disclosure of share buy-back transactions" />
+<meta property="og:description" content="Please find here the Capital, the Company&#039;s articles of association, the Internal Regulations of the Board of Directors and the disclosures of share buy-back transactions." />
+<meta property="og:updated_time" content="2020-03-02T17:44:55+01:00" />
+<meta property="og:image" content="https://www.airliquide.com/sites/airliquide.com/files/2017/01/26/capital-articles-banner-mobile.jpg" />
+<meta property="og:image:secure_url" content="https://www.airliquide.com/sites/airliquide.com/files/2017/01/26/capital-articles-banner-mobile.jpg" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="https://www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" />
+<meta name="twitter:title" content="Capital, articles of association, Internal Regulations, disclosure of" />
+<meta name="twitter:description" content="Please find here the Capital, the Company&#039;s articles of association, the Internal Regulations of the Board of Directors and the disclosures of share buy-back transactions." />
+<meta name="twitter:image" content="https://www.airliquide.com/sites/airliquide.com/files/2017/01/26/capital-articles-banner-mobile.jpg" />
+<meta property="article:published_time" content="2015-03-12T21:03:03+01:00" />
+<meta property="article:modified_time" content="2020-03-02T17:44:55+01:00" />
+<meta name="google-site-verification" content="_2fK_J2uVPYZXRksRDxhSxjbJkSlxMfw7fKopEAands" />
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-57x57.png?v=2">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-60x60.png?v=2">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-72x72.png?v=2">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-76x76.png?v=2">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-114x114.png?v=2">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-120x120.png?v=2">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-144x144.png?v=2">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-152x152.png?v=2">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/apple-touch-icon-180x180.png?v=2">
+  <link rel="icon" type="image/png" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/favicon-32x32.png?v=2" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/favicon-194x194.png?v=2" sizes="194x194">
+  <link rel="icon" type="image/png" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/favicon-96x96.png?v=2" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/android-chrome-192x192.png?v=2" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/favicon-16x16.png?v=2" sizes="16x16">
+  <link rel="manifest" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/manifest.json?v=2">
+  <link rel="shortcut icon" href="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/favicon.ico?v=2">
+  <meta name="msapplication-TileColor" content="#375f9b">
+  <meta name="msapplication-TileImage" content="https://www.airliquide.com/sites/all/themes/custom/airliquide/favicon/mstile-144x144.png?v=2">
+  <meta name="theme-color" content="#375f9b">
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">      <meta name="viewport" content="width=device-width, initial-scale=1">    <link rel="stylesheet" href="https://www.airliquide.com/sites/airliquide.com/files/css/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" />
+<link rel="stylesheet" href="https://www.airliquide.com/sites/airliquide.com/files/css/css_IjVDL-ZVE5VXwAMiNOtvj8kUoE0ESNenqVTFGzGmD7g.css" />
+<link rel="stylesheet" href="https://www.airliquide.com/sites/airliquide.com/files/css/css_TRi6Q_0CvjUcVYeoVh3OdVw2EkoWT9SenMBP5hrJOx4.css" />
+<link rel="stylesheet" href="https://www.airliquide.com/sites/airliquide.com/files/css/css_QITTRsC_RF8q45SCrKzC7YHzOZOthyB03EwWZiDCUt0.css" />
+<link rel="stylesheet" href="https://www.airliquide.com/sites/airliquide.com/files/css/css_5V68jgY2VoU6vAt5ScPAbU2uKwDNyJzOWtfCdV71cmA.css" />
+<link rel="stylesheet" href="https://www.airliquide.com/sites/airliquide.com/files/css/css_-x49VS0kuLmIWtXjWqNt8hfOasEt92E6ZwvFx9TCCTM.css" media="print" />
+      <script src="https://www.airliquide.com/sites/airliquide.com/files/js/js_SZqM4RXl3_UbBFVEbRyIgedbF8SNRLI94WRnw_2U3HM.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='/sites/all/modules/contrib/jquery_update/replace/jquery/1.10/jquery.min.js'>\x3C/script>")</script>
+<script src="https://www.airliquide.com/sites/airliquide.com/files/js/js_dWhBODswdXXk1M5Z5nyqNfGljmqwxUwAK9i6D0YSDNs.js"></script>
+<script src="https://www.airliquide.com/sites/airliquide.com/files/js/js_Fox5y8ZVz2LEIhbUuuipt23eFwKPlO9wkJKYSqWtHac.js"></script>
+<script>window.cookieConfig = { ALCrisisCommCookieDuration: 3600 }</script>
+<script>window.CKEDITOR_BASEPATH = '/sites/all/libraries/ckeditor/'</script>
+<script src="https://www.airliquide.com/sites/airliquide.com/files/js/js_IvlzSIZn36jsqakUF-KMjuwjgqRxkndP5jqZf0Twif4.js"></script>
+<script src="https://www.airliquide.com/sites/airliquide.com/files/js/js_8kF2KsvjdN-3InPcPW7tDoU4hAqzOre49MoIh2TYr1I.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"airliquide_corporate_theme","theme_token":"EqFly9Bo8-hIAZewudt_MyYv6QgGIN4wWaftNDXhuKE","js":{"sites\/all\/modules\/custom\/air_liquide_spec\/js\/euCookieCompliance.js":1,"sites\/all\/themes\/custom\/airliquide\/js\/app.js":1,"sites\/all\/themes\/custom\/airliquide\/js\/modals.js":1,"https:\/\/www.airliquide.com\/sites\/airliquide.com\/files\/google_tag\/en\/google_tag.script.js":1,"\/\/ajax.googleapis.com\/ajax\/libs\/jquery\/1.10.2\/jquery.min.js":1,"0":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/custom\/air_liquide_spec\/js\/languageBrowserDetection.js":1,"sites\/all\/libraries\/chosen\/chosen.jquery.min.js":1,"1":1,"2":1,"sites\/all\/modules\/contrib\/lang_dropdown\/lang_dropdown.js":1,"sites\/all\/modules\/custom\/air_liquide_spec\/js\/search.js":1,"sites\/all\/modules\/contrib\/chosen\/chosen.js":1,"sites\/all\/themes\/custom\/airliquide\/js\/libs\/modernizr.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/libraries\/chosen\/chosen.css":1,"sites\/all\/modules\/contrib\/chosen\/css\/chosen-drupal.css":1,"sites\/all\/modules\/custom\/air_liquide_csharing\/styles.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/contrib\/office_hours\/office_hours.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/patched\/easychart\/plugins\/css\/plugin.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"sites\/all\/modules\/contrib\/rate\/rate.css":1,"sites\/all\/themes\/custom\/airliquide\/layouts\/al_content_page\/al-content-page.css":1,"sites\/all\/modules\/contrib\/lang_dropdown\/lang_dropdown.css":1,"sites\/all\/themes\/contrib\/mothership\/mothership\/css-drupalcore\/contextual.css":1,"sites\/all\/themes\/custom\/airliquide\/css\/styles.css":1,"sites\/all\/themes\/custom\/airliquide\/css\/drupal-styles.css":1,"sites\/all\/themes\/custom\/airliquide\/css\/print.css":1}},"language":"en","air_liquide_spec":{"domain":"www.airliquide.com","language_redirections":{"en":"https:\/\/www.airliquide.com\/investors\/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions","fr":"https:\/\/www.airliquide.com\/fr\/investisseurs\/capital-statuts-reglement-interieur-declaration-transactions-actions-propres"},"default_language":"en","disclaimers":{"leaving_website":"You are about to leave www.airliquide.com and will be redirected to an external website. Air Liquide does not exercise any editorial control over the information published on this site, its access is under your sole responsibility. Also, we recommend that you read the terms and conditions of use of this site before consultation."}},"urlIsAjaxTrusted":{"\/search":true,"\/investors\/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions":true},"airliquide_cookie_compliance":{"domain":"www.airliquide.com","popup_link":"\/cookie-policy"},"chosen":{"selector":"body.page-admin select:visible\nbody.page-node-edit select:visible\nbody.page-node-add select:visible","minimum_single":20,"minimum_multiple":20,"minimum_width":200,"options":{"allow_single_deselect":false,"disable_search":false,"disable_search_threshold":0,"search_contains":false,"placeholder_text_multiple":"Choose some options","placeholder_text_single":"Choose an option","no_results_text":"No results match","inherit_select_classes":true}},"gmap":{"library":"\/sites\/all\/themes\/custom\/airliquide\/js\/plugins\/jquery.gmap.js"},"password":{"strengthTitle":"Password compliance:"},"type":"setting"});</script>
+    <!--[if IE]>
+  <script
+    src="https://www.airliquide.com/sites/all/themes/custom/airliquide/js/libs/excanvas.js"></script>
+  <![endif]-->
+</head>
+<body id="air-liquide" class="node-type-business-standard-page - tpl-sidebar tpl-sidebar-left i18n-en"  >
+<noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG8MLS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="site-container">
+  <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  <header class="hnav js-header hnav--worldwide">
+  
+  <div class="header--worldwide__cookies is-hidden" id="cookie-popup">
+  <div class="row">
+    <div class="cell-12">
+      <div id="popup-text" class="rte">
+        <p>We use cookies to improve your browsing experience and help us improve our websites. By continuing to use our website, you agree to our use of such cookies.</p>
+      </div>
+      <div id="popup-buttons">
+        <button type="button" class="agree-button js-cookie-close">Agree</button>
+        <button type="button" class="find-more-button">Learn more</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="hnav__main">
+    <div class="row">
+      <div class="cell-12">
+        <a href="/" class="hnav__m-brand">
+          <img src="/sites/all/themes/custom/airliquide/images/air-liquide-creative-oxygen.svg" width="105" height="25" alt="Air Liquide" title="Air Liquide">
+        </a>
+        <div class="hnav__utils">
+          
+  <div class="hnav__utils-item">
+      <a href="/group/where-we-operate" class="hnav__links">Air Liquide worldwide</a>    <form class="hnav__form hnav__form--bigger">
+  <span class="hnav__form-current js-current-country">Please select</span>
+  <select class="hnav__select js-country-select js-select-url">
+    <option value="">Please select</option>
+          <option value="0" data-url="https://www.airliquide.com/fr/algerie">Algeria</option>
+          <option value="1" data-url="https://www.airliquide.com/angola">Angola</option>
+          <option value="2" data-url="https://www.airliquide.com/fr/antilles-guyane">Antilles</option>
+          <option value="3" data-url="https://www.airliquide.com/argentina">Argentina</option>
+          <option value="4" data-url="https://www.airliquide.com/australia">Australia</option>
+          <option value="5" data-url="https://www.airliquide.com/austria">Austria</option>
+          <option value="6" data-url="https://www.airliquide.com/bahrain">Bahrain</option>
+          <option value="7" data-url="https://www.airliquide.com/belgium">Belgium</option>
+          <option value="8" data-url="https://www.airliquide.com/benin">Benin</option>
+          <option value="9" data-url="https://www.airliquide.com/botswana">Botswana</option>
+          <option value="10" data-url="http://www.airliquide.com/brazil">Brazil</option>
+          <option value="11" data-url="http://www.airliquide.com/brunei">Brunei</option>
+          <option value="12" data-url="https://www.airliquide.com/bulgaria">Bulgaria</option>
+          <option value="13" data-url="https://www.airliquide.com/burkina-faso">Burkina Faso</option>
+          <option value="14" data-url="https://www.airliquide.com/cameroon">Cameroon</option>
+          <option value="15" data-url="https://www.airliquide.com/canada">Canada</option>
+          <option value="16" data-url="https://www.airliquide.com/chile">Chile</option>
+          <option value="17" data-url="https://www.airliquide.com/colombia">Colombia</option>
+          <option value="18" data-url="https://www.airliquide.com/congo">Congo</option>
+          <option value="19" data-url="https://www.airliquide.com/czech-republic">Czech Republic</option>
+          <option value="20" data-url="https://www.airliquide.com/denmark">Denmark</option>
+          <option value="21" data-url="https://www.airliquide.com/dominican-republic">Dominican Republic</option>
+          <option value="22" data-url="https://www.airliquide.com/egypt">Egypt</option>
+          <option value="23" data-url="https://www.airliquide.com/finland">Finland</option>
+          <option value="24" data-url="https://www.airliquide.com/fr/france">France</option>
+          <option value="25" data-url="https://www.airliquide.com/fr/antilles-guyane">French Guiana</option>
+          <option value="26" data-url="https://www.airliquide.com/gabon">Gabon</option>
+          <option value="27" data-url="https://www.airliquide.com/germany">Germany</option>
+          <option value="28" data-url="https://www.airliquide.com/ghana">Ghana</option>
+          <option value="29" data-url="https://www.airliquide.com/greece">Greece</option>
+          <option value="30" data-url="https://www.airliquide.com/india">India</option>
+          <option value="31" data-url="https://www.airliquide.com/indonesia">Indonesia</option>
+          <option value="32" data-url="https://www.airliquide.com/ireland">Ireland</option>
+          <option value="33" data-url="https://www.airliquide.com/italy">Italy</option>
+          <option value="34" data-url="https://www.airliquide.com/ivory-coast">Ivory Coast</option>
+          <option value="35" data-url="https://www.airliquide.com/japan">Japan</option>
+          <option value="36" data-url="https://www.airliquide.com/kazakhstan">Kazakhstan</option>
+          <option value="37" data-url="https://www.airliquide.com/south-korea">Korea</option>
+          <option value="38" data-url="https://www.airliquide.com/kuwait">Kuwait</option>
+          <option value="39" data-url="https://www.airliquide.com/luxemburg">Luxembourg</option>
+          <option value="40" data-url="https://www.airliquide.com/madagascar">Madagascar</option>
+          <option value="41" data-url="https://www.airliquide.com/china">Mainland China</option>
+          <option value="42" data-url="https://www.airliquide.com/malaysia">Malaysia</option>
+          <option value="43" data-url="https://www.airliquide.com/mali">Mali</option>
+          <option value="44" data-url="https://www.airliquide.com/mexico">Mexico</option>
+          <option value="45" data-url="https://www.airliquide.com/fr/maroc">Morocco</option>
+          <option value="46" data-url="https://www.airliquide.com/mozambique">Mozambique</option>
+          <option value="47" data-url="https://www.airliquide.com/namibia">Namibia</option>
+          <option value="48" data-url="https://www.airliquide.com/netherlands">Netherlands</option>
+          <option value="49" data-url="https://www.airliquide.com/new-zealand">New Zealand</option>
+          <option value="50" data-url="https://www.airliquide.com/nigeria">Nigeria</option>
+          <option value="51" data-url="https://www.airliquide.com/norway">Norway</option>
+          <option value="52" data-url="https://www.airliquide.com/oman">Oman</option>
+          <option value="53" data-url="https://www.airliquide.com/paraguay">Paraguay</option>
+          <option value="54" data-url="https://www.airliquide.com/philippines">Philippines</option>
+          <option value="55" data-url="http://www.airliquide.com/poland">Poland</option>
+          <option value="56" data-url="https://www.airliquide.com/portugal">Portugal</option>
+          <option value="57" data-url="https://www.airliquide.com/qatar">Qatar</option>
+          <option value="58" data-url="https://www.airliquide.com/romania">Romania</option>
+          <option value="59" data-url="http://www.airliquide.com/russia">Russia</option>
+          <option value="60" data-url="https://www.airliquide.com/saudi-arabia">Saudi Arabia</option>
+          <option value="61" data-url="https://www.airliquide.com/fr/senegal">Senegal</option>
+          <option value="62" data-url="https://www.airliquide.com/singapore">Singapore</option>
+          <option value="63" data-url="https://www.airliquide.com/slovakia">Slovakia</option>
+          <option value="64" data-url="https://www.airliquide.com/south-africa">South Africa</option>
+          <option value="65" data-url="https://www.airliquide.com/spain">Spain</option>
+          <option value="66" data-url="https://www.airliquide.com/swaziland">Swaziland</option>
+          <option value="67" data-url="https://www.airliquide.com/sweden">Sweden</option>
+          <option value="68" data-url="https://www.airliquide.com/switzerland">Switzerland</option>
+          <option value="69" data-url="http://www.airliquide.com/taiwan">Taïwan</option>
+          <option value="70" data-url="https://www.airliquide.com/thailand">Thailand</option>
+          <option value="71" data-url="https://www.airliquide.com/togo">Togo</option>
+          <option value="72" data-url="http://www.airliquide.com/trinidad-and-tobago">Trinidad and Tobago</option>
+          <option value="73" data-url="https://www.airliquide.com/tunisia">Tunisia</option>
+          <option value="74" data-url="https://www.airliquide.com/turkey">Turkey</option>
+          <option value="75" data-url="https://www.airliquide.com/ukraine">Ukraine</option>
+          <option value="76" data-url="https://www.airliquide.com/united-arab-emirates">United Arab Emirates</option>
+          <option value="77" data-url="https://www.airliquide.com/united-kingdom">United Kingdom</option>
+          <option value="78" data-url="https://www.airliquide.com/usa">United States of America</option>
+          <option value="79" data-url="https://www.airliquide.com/uruguay">Uruguay</option>
+          <option value="80" data-url="http://www.airliquide.com/vietnam">Vietnam</option>
+      </select>
+</form>
+</div>
+<div class="hnav__utils-item">
+  <form class="lang_dropdown_form language_content hnav__form" id="lang_dropdown_form_language_content" action="/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" method="post" accept-charset="UTF-8"> <select class="lang-dropdown-select-element hnav__select js-switch-lang" id="lang-dropdown-select-language_content" name="lang_dropdown_select"><option value="en" selected="selected">English</option><option value="fr">Français</option></select>
+<input type="hidden" name="en" value="/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" />
+<input type="hidden" name="fr" value="/fr/investisseurs/capital-statuts-reglement-interieur-declaration-transactions-actions-propres" />
+<noscript><div>
+<button id="edit-submit" name="op" value="Go" type="submit" class="form-submit">Go</button>
+  
+</div></noscript><input type="hidden" name="form_build_id" value="form-6otl7IE9KRs9YZyRUDZ7O5AizbWqMyGXLzJ-NfazCI4" />
+<input type="hidden" name="form_id" value="lang_dropdown_form" />
+</form></div>
+<div class="hnav__utils-item">
+  <a href="#" class="hnav__utils-search js-header-search">
+    <span class="hnav__utils-search-text">Search</span>
+    <svg width="13" height="12" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor" fill-rule="evenodd"><path d="M5.5 1.644A3.86 3.86 0 0 0 1.644 5.5 3.86 3.86 0 0 0 5.5 9.356 3.86 3.86 0 0 0 9.356 5.5 3.86 3.86 0 0 0 5.5 1.644M5.5 11A5.507 5.507 0 0 1 0 5.5C0 2.467 2.467 0 5.5 0S11 2.467 11 5.5C11 8.532 8.533 11 5.5 11M10.99 9a5.843 5.843 0 0 1-.99 1.018L11.993 12 13 11l-2.01-2z"/></g></svg>
+  </a>
+</div>
+          <div class="hnav__utils-item visible-m">
+            <button type="button" class="hnav__burger js-nav-toggle">
+              <span class="hnav__burger-text">
+                <svg id="Layer_1" width="20" height="20" style="enable-background:new 0 0 64 64;" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <g><g id="Navicon" transform="translate(330.000000, 232.000000)"><polygon class="st0" id="Fill-19" points="-321.8,-219 -274.3,-219 -274.3,-212.7 -321.8,-212.7    "/><polygon class="st0" id="Fill-20" points="-321.8,-203.2 -274.3,-203.2 -274.3,-196.8 -321.8,-196.8    "/><polygon class="st0" id="Fill-21" points="-321.8,-187.3 -274.3,-187.3 -274.3,-181 -321.8,-181    "/></g></g>
+                </svg>
+              </span>
+              <span class="hnav__burger-text --inactive">
+                <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 512 512" enable-background="new 0 0 512 512" xml:space="preserve">
+                  <g>
+                    <g>
+                      <path fill="#010101" d="M142.9,98.6l-45.3,45.3L210.7,257L97.6,370.1l45.3,45.3L301.3,257L142.9,98.6z M414.4,143.9l-45.3-45.3
+                        l-90.4,90.6l45.3,45.3L414.4,143.9z M278.6,324.9l90.5,90.5l45.3-45.3l-90.5-90.5L278.6,324.9z"/>
+                    </g>
+                  </g>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+          <div class="hidden-sd">
+        <div class="row">
+          
+  <div class="cell-6">
+  <div class="hnav__bloc hnav__bloc--left">
+    <a href="/" class="hnav__brand">
+      <img src="/sites/all/themes/custom/airliquide/images/air-liquide-creative-oxygen.svg" width="190" height="76" alt="Air Liquide" title="Air Liquide">    </a>
+    <ul class="hnav__bloc-list"><li class="hnav__bloc-list__item"><a href="/group" class="hnav__bloc-list__href js-submenu-trigger" data-submenu="7416">Group</a></li>
+<li class="hnav__bloc-list__item"><a href="/businesses" class="hnav__bloc-list__href js-submenu-trigger" data-submenu="6876">Businesses</a></li>
+<li class="hnav__bloc-list__item"><a href="/magazine" title="" class="hnav__bloc-list__href js-submenu-trigger" data-submenu="13741">Magazine</a></li>
+</ul>  </div>
+</div>
+
+<div class="cell-6">
+  <div class="hnav__bloc hnav__bloc--right">
+    <ul class="hnav__bloc-list"><li class="hnav__bloc-list__item"><a href="/shareholders" class="hnav__bloc-list__href js-submenu-trigger" data-submenu="7256">Shareholders</a></li>
+<li class="hnav__bloc-list__item"><a href="/investors" class="hnav__bloc-list__href js-submenu-trigger" data-submenu="10261">Investors</a></li>
+<li class="hnav__bloc-list__item"><a href="https://en.media.airliquide.com/" title="" class="hnav__bloc-list__href js-submenu-trigger" data-submenu="13156">Media</a></li>
+<li class="hnav__bloc-list__item"><a href="/careers" class="hnav__bloc-list__href js-submenu-trigger" data-submenu="13426">Careers</a></li>
+</ul>  </div>
+</div>
+        </div>
+      </div>
+      </div>
+  
+  <div class="hnav__sub js-submenu-container">
+  <div class="hnav__nav js-submenu" data-submenu="7416">
+              <div class="hnav__nav-bloc hnav__nav-bloc--big"><ul class="hnav__list"><li class="hnav__list-item js-submenu-item"><span class="hnav__list-href js-submenu-toggle">Who we are <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/group/profile" class="hnav__list-href js-submenu-deep-toggle">Profile</a></li><li class="hnav__list-item"><a href="/group/key-figures" title="" class="hnav__list-href js-submenu-deep-toggle">Key figures</a></li><li class="hnav__list-item js-submenu-subitem"><a href="/group/governance" title="" class="hnav__list-href js-submenu-deep-toggle">Governance <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/group/executive-committee" class="hnav__list-href">Executive Committee</a></li><li class="hnav__list-item"><a href="/group/board-directors" class="hnav__list-href">Board of Directors</a></li></ul></li><li class="hnav__list-item"><a href="/group/our-history" title="" class="hnav__list-href js-submenu-deep-toggle">Our history</a></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/group/what-we-do" title="" class="hnav__list-href js-submenu-toggle">What we do <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/group/glance" class="hnav__list-href js-submenu-deep-toggle">At a glance</a></li><li class="hnav__list-item"><a href="/group/large-industries" class="hnav__list-href js-submenu-deep-toggle">Large Industries</a></li><li class="hnav__list-item"><a href="/group/industrial-merchant" title="Whether you are an independent craftsman or a multinational, optimize your long-term performance thanks to our Industrial Merchant’s customized solutions." class="hnav__list-href js-submenu-deep-toggle">Industrial Merchant</a></li><li class="hnav__list-item"><a href="/group/healthcare" title="Today Air Liquide is a recognized leader in the medical gases, home healthcare, hygiene products and healthcare specialty ingredients." class="hnav__list-href js-submenu-deep-toggle">Healthcare</a></li><li class="hnav__list-item"><a href="/group/electronics" title="In the digital and new energy era, Air Liquide is the preferred partner of semiconductor, flat screen, and solar cell manufacturers" class="hnav__list-href js-submenu-deep-toggle">Electronics</a></li><li class="hnav__list-item"><a href="/group/engineering-construction" title="Engineering and Construction at Air Liquide has the vocation to roll out state of the art production units." class="hnav__list-href js-submenu-deep-toggle">Engineering & Construction</a></li><li class="hnav__list-item"><a href="/group/global-markets-technologies" class="hnav__list-href js-submenu-deep-toggle">Global Markets & Technologies</a></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/group/our-strategy" title="" class="hnav__list-href js-submenu-toggle">Our strategy <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/group/strategy" class="hnav__list-href js-submenu-deep-toggle">Strategy</a></li><li class="hnav__list-item js-submenu-subitem"><span class="hnav__list-href js-submenu-deep-toggle">Three trends, source of growth <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/group/energy-and-environmental-transition" title="" class="hnav__list-href">Energy and environmental transition</a></li><li class="hnav__list-item"><a href="/group/changes-healthcare" class="hnav__list-href">Changes in healthcare</a></li><li class="hnav__list-item"><a href="/group/digitization" title="" class="hnav__list-href">Digitization</a></li></ul></li><li class="hnav__list-item"><a href="/group/network-organization" title="Air Liquide stays connected to local markets through its network of four hubs and a base in Paris." class="hnav__list-href js-submenu-deep-toggle">A network organization</a></li><li class="hnav__list-item"><a href="/group/neos-company-program" class="hnav__list-href js-submenu-deep-toggle">NEOS: our company program</a></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/group/our-innovation-approach" class="hnav__list-href js-submenu-toggle">Innovation <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item js-submenu-subitem"><a href="/group/research-development" class="hnav__list-href js-submenu-deep-toggle">Research & Development <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/group/centers-expertise" class="hnav__list-href">Centers of expertise</a></li><li class="hnav__list-item"><a href="/group/scientific-partnerships-excellence" class="hnav__list-href">Scientific partnerships of excellence</a></li></ul></li><li class="hnav__list-item"><a href="/group/digital-transformation-strategy" class="hnav__list-href js-submenu-deep-toggle">Digital transformation</a></li><li class="hnav__list-item"><a href="/group/i-lab" class="hnav__list-href js-submenu-deep-toggle">i-Lab</a></li><li class="hnav__list-item js-submenu-subitem"><a href="/group/global-markets-and-technologies" class="hnav__list-href js-submenu-deep-toggle">New markets & Technologies <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/group/maritime-logistics" class="hnav__list-href">Maritime logistics</a></li></ul></li><li class="hnav__list-item"><a href="/group/aliad-venture-capital" class="hnav__list-href js-submenu-deep-toggle">Air Liquide Venture Capital</a></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/group/sustainable-development" class="hnav__list-href js-submenu-toggle">Sustainable development <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/group/safety-our-first-priority" class="hnav__list-href js-submenu-deep-toggle">Safety</a></li><li class="hnav__list-item js-submenu-subitem"><a href="/group/ethics" title="With approximately 66,000 employees worldwide, Air Liquide has structured its approach to ensure that its rules of conduct are shared by everyone." class="hnav__list-href js-submenu-deep-toggle">Ethics <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/group/groups-principles-action" class="hnav__list-href">Group&#039;s Principles of action</a></li></ul></li><li class="hnav__list-item"><a href="/group/climate-air-quality" class="hnav__list-href js-submenu-deep-toggle">Climate & Air quality</a></li><li class="hnav__list-item js-submenu-subitem"><a href="/group/stakeholders" class="hnav__list-href js-submenu-deep-toggle">Stakeholders <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/group/sustainable-procurement" title="Air Liquide expects its suppliers to daily respect the Group’s ethical principles." class="hnav__list-href">Sustainable procurement</a></li><li class="hnav__list-item"><a href="/group/working-public-authorities" title="Strict ethical rules governs Air Liquide’s interactions with public authorities. Discover the Group’s “Public Affaires” policy." class="hnav__list-href">Working with the public authorities</a></li><li class="hnav__list-item"><a href="/group/air-liquide-foundation" title="Since its creation, the Air Liquide Foundation supports 264 projects in about 50 countries." class="hnav__list-href">Air Liquide Foundation</a></li></ul></li><li class="hnav__list-item"><a href="/group/ratings" title="The Air Liquide commitment to sustainable development is regularly rewarded. Find out more about the Group&#039;s recognition." class="hnav__list-href js-submenu-deep-toggle">Ratings</a></li></ul></li><li class="hnav__list-item"><a href="/group/where-we-operate" title="" class="hnav__list-href js-submenu-toggle">Where we operate</a></li><li class="hnav__list-item"><a href="/group/group-publications" class="hnav__list-href js-submenu-toggle">Group publications</a></li></ul></div>
+              <div class="hnav__nav-bloc hnav__nav-bloc--infos"><h2 class="hnav__bloc-title">Group</h2>        <p class="hnav__inter">Quick Access</p>
+    <ul class="hnav__quicklist">
+                                                                                                                                                                                                                                          <li class="hnav__quicklist-item"><a href="/group/executive-committee" class="hnav__quicklist-href">Executive Committee <i class="icon icon-next"></i></a></li>
+                                <li class="hnav__quicklist-item"><a href="/media/2019-annual-report" class="hnav__quicklist-href">2019 Annual Report <i class="icon icon-next"></i></a></li>
+                                <li class="hnav__quicklist-item"><a href="/investors/2019-universal-registration-document" class="hnav__quicklist-href">2019 Universal Registration Document <i class="icon icon-next"></i></a></li>
+                                </ul>
+  </div>
+            </div><div class="hnav__nav js-submenu" data-submenu="6876">
+              <div class="hnav__nav-bloc hnav__nav-bloc--big"><ul class="hnav__list"><li class="hnav__list-item js-submenu-item"><a href="/industry" class="hnav__list-href js-submenu-toggle">Industry <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/industry/presentation" title="Air Liquide serves more than 1 million customers in industry, from multinational corporations to independent craftsmen, in more than 80 countries." class="hnav__list-href js-submenu-deep-toggle">Presentation</a></li><li class="hnav__list-item js-submenu-subitem"><span class="hnav__list-href js-submenu-deep-toggle">Markets <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/industry/aeronautics" title="Learn more about Air Liquide’s gas solutions to help the aeronautics industry build the lighter, more eco-friendly aircraft of tomorrow." class="hnav__list-href">Aeronautics</a></li><li class="hnav__list-item"><a href="/industry/automotive" title="Air Liquide supports the automotive industry with solutions for raw materials production, heat treatment, welding, emissions testing and more." class="hnav__list-href">Automotive</a></li><li class="hnav__list-item"><a href="/industry/beverage" class="hnav__list-href">Beverage</a></li><li class="hnav__list-item"><a href="/industry/chemicals" title="Air Liquide offers reliable, customized gas solutions. We are part of the process of creating everyday products and we work to make chemicals safer and more efficient." class="hnav__list-href">Chemicals</a></li><li class="hnav__list-item"><a href="/industry/construction" title="Air Liquide helps the construction industry meet demands for more infrastructure with reliable gas solutions for cutting, welding and concrete hardening." class="hnav__list-href">Construction</a></li><li class="hnav__list-item"><a href="/industry/electronics-manufacturing" class="hnav__list-href">Electronics manufacturing</a></li><li class="hnav__list-item"><a href="/industry/food" title="Air Liquide helps food manufacturers to produce products ranging from fruit and poultry to ready-to-eat meals in a cost-effective and environmental manner." class="hnav__list-href">Food</a></li><li class="hnav__list-item"><a href="/industry/glass" title="Discover how Air Liquide provides advanced oxy-combustion technologies to the glass industry for greater efficiency and lower greenhouse gas emissions." class="hnav__list-href">Glass</a></li><li class="hnav__list-item"><a href="/industry/metals" title="Air Liquide is a long-term partner to the metal industry. Find out how our solutions make customers more efficient and sustainable." class="hnav__list-href">Metals</a></li><li class="hnav__list-item"><a href="/industry/metal-fabrication" title="For all metal fabrication needs, Air Liquide provides gases, services, expertise and global capabilities to transform raw materials into finished products." class="hnav__list-href">Metal fabrication</a></li><li class="hnav__list-item"><a href="/industry/oil-gas" class="hnav__list-href">Oil &amp; Gas</a></li><li class="hnav__list-item"><a href="/industry/pharma-biotech" title="For the pharma &amp; biotech industry, Air Liquide provides manufacturing support with high purity gas solutions that comply with four major world pharmacopeias." class="hnav__list-href">Pharma &amp; Biotech</a></li><li class="hnav__list-item"><a href="/industry/photonics" title="Air Liquide is contributing to the production of new technologies based on light (photon), making progress in areas as diverse as medicine, airport security and laser-based manufacturing." class="hnav__list-href">Photonics</a></li><li class="hnav__list-item"><a href="/industry/professionals-craftsmen" class="hnav__list-href">Professionals &amp; Craftsmen</a></li><li class="hnav__list-item"><a href="/industry/space" title="Air Liquide’s unique expertise in space cryogenics has made a major contributor to space exploration for more than 50 years." class="hnav__list-href">Space</a></li><li class="hnav__list-item"><a href="/industry/waste-water-management" title="For industrial actors looking to recycling and waste treatment solutions, Air Liquide supplies the necessary gas technologies." class="hnav__list-href">Waste &amp; Water management</a></li></ul></li><li class="hnav__list-item js-submenu-subitem"><span class="hnav__list-href js-submenu-deep-toggle">Processes <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/industry/analysis-and-quality-control" title="Air Liquide offers three leading brands for customers in need of specialty gas solutions for analysis and quality control, no matter their industry." class="hnav__list-href">Analysis and quality control</a></li><li class="hnav__list-item"><a href="/industry/blanketing" title="Air Liquide draws on its long-standing expertise in industrial gases to offer the very best in blanketing solutions for customers in need of inert gases." class="hnav__list-href">Blanketing</a></li><li class="hnav__list-item"><a href="/industry/carbonation" class="hnav__list-href">Carbonation</a></li><li class="hnav__list-item"><a href="/industry/desulfurization" class="hnav__list-href">Desulfurization</a></li><li class="hnav__list-item"><a href="/industry/gasification" class="hnav__list-href">Gasification</a></li><li class="hnav__list-item"><a href="/industry/freezing-chilling" title="Air Liquide’s freezing and chilling gas solutions help manufacturers stay flexible while preserving food quality." class="hnav__list-href">Freezing &amp; Chilling</a></li><li class="hnav__list-item"><a href="/industry/heat-treatment" title="Air Liquide provides clients with the gas solutions and expertise for heat treatment of raw materials, including steel, copper, titanium, alloys and more." class="hnav__list-href">Heat treatment</a></li><li class="hnav__list-item"><a href="/industry/industrial-cryogenics" title="Air Liquide 100 year’s expertise in cryogenics puts it on the front end of the industry. Find out more." class="hnav__list-href">Industrial cryogenics</a></li><li class="hnav__list-item"><a href="/industry/modified-atmosphere-packaging" class="hnav__list-href">Modified atmosphere packaging</a></li><li class="hnav__list-item"><a href="/industry/oxy-combustion" title="Air Liquide supports the metallurgy and glass industries in improving energy efficiency and reducing emissions through oxy-combustion. Find out how." class="hnav__list-href">Oxy-combustion</a></li><li class="hnav__list-item"><a href="/industry/petrochemical-synthesis" class="hnav__list-href">Petrochemical synthesis</a></li><li class="hnav__list-item"><a href="/industry/water-treatment" title="Air Liquide leverages the power of its oxygen-based ASPAL solutions to help private and public industrial actors treat and reuse all types of waters. Learn more." class="hnav__list-href">Water treatment</a></li><li class="hnav__list-item"><a href="/industry/welding-cutting" title="Welding and cutting gases have been at the heart of Air Liquide’s offer for over 100 years. Find out how our premium gases can be tailor fit to client needs." class="hnav__list-href">Welding &amp; Cutting</a></li></ul></li><li class="hnav__list-item"><a href="/industry/supply-modes" title="From basic needs to full process support, Air Liquide knows that reliable gas supply is crucial to its customers’ operations." class="hnav__list-href js-submenu-deep-toggle">Supply modes</a></li><li class="hnav__list-item"><a href="/industry/services" class="hnav__list-href js-submenu-deep-toggle">Services</a></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/healthcare" class="hnav__list-href js-submenu-toggle">Healthcare <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/healthcare/changing-care-with-you" title="As a major world player in home healthcare, an expert in chronic disease follow up at home, and supplier of medical gases and hygiene products to hospitals, we strive to build an efficient and virtuous healthcare system for all." class="hnav__list-href js-submenu-deep-toggle">Presentation</a></li><li class="hnav__list-item js-submenu-subitem"><span class="hnav__list-href js-submenu-deep-toggle">Our expertise <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/healthcare/home-healthcare" class="hnav__list-href">Home healthcare</a></li><li class="hnav__list-item"><a href="/healthcare/hospital-care" class="hnav__list-href">Hospital care</a></li><li class="hnav__list-item"><a href="/healthcare/hygiene" title="We contribute to patient safety by providing a wide range of disinfectants for the medical environment and are a European leader in hospital disinfection." class="hnav__list-href">Hygiene</a></li><li class="hnav__list-item"><a href="/healthcare/healthcare-specialty-ingredients" title="Through our subsidiary SEPPIC, Air Liquide Healthcare designs and supplies healthcare specialty ingredients for the vaccine, pharmaceutical, nutrition and cosmetics sectors." class="hnav__list-href">Healthcare specialty ingredients</a></li></ul></li><li class="hnav__list-item js-submenu-subitem"><a href="/healthcare/our-research-development" class="hnav__list-href js-submenu-deep-toggle">Our R&D <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/healthcare/creative-research-fund" class="hnav__list-href">CREATivE research fund</a></li><li class="hnav__list-item"><a href="/healthcare/co-innovation-approach" class="hnav__list-href">Co-innovation approach</a></li></ul></li><li class="hnav__list-item js-submenu-subitem"><span class="hnav__list-href js-submenu-deep-toggle">Diseases <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/healthcare/chronic-obstructive-pulmonary-disease" class="hnav__list-href">Chronic obstructive pulmonary disease</a></li><li class="hnav__list-item"><a href="/healthcare/obstructive-sleep-apnea" title="Sleep Apnea is characterized by brief and repeated interruptions in breathing. Our primary concern is patient comfort and compliance with CPAP therapy." class="hnav__list-href">Obstructive sleep apnea</a></li><li class="hnav__list-item"><a href="/healthcare/chronic-respiratory-failure" class="hnav__list-href">Chronic respiratory failure</a></li><li class="hnav__list-item"><a href="/healthcare/diabetes" class="hnav__list-href">Diabetes</a></li><li class="hnav__list-item"><a href="/healthcare/pulmonary-arterial-hypertension" class="hnav__list-href">Pulmonary arterial hypertension</a></li><li class="hnav__list-item"><a href="/healthcare/pain" class="hnav__list-href">Pain</a></li></ul></li><li class="hnav__list-item js-submenu-subitem"><span class="hnav__list-href js-submenu-deep-toggle">Public health challenges <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/healthcare/aging-population" class="hnav__list-href">Aging population</a></li><li class="hnav__list-item"><a href="/healthcare/rise-chronic-diseases" class="hnav__list-href">Rise in chronic diseases</a></li><li class="hnav__list-item"><a href="/healthcare/urbanization-and-lifestyle-changes" class="hnav__list-href">Urbanization and lifestyle changes</a></li><li class="hnav__list-item"><a href="/healthcare/reinventing-hospital" class="hnav__list-href">Reinventing the hospital</a></li></ul></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/electronics" class="hnav__list-href js-submenu-toggle">Electronics <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/electronics/presentation" class="hnav__list-href js-submenu-deep-toggle">Presentation</a></li><li class="hnav__list-item"><a href="/electronics/markets" class="hnav__list-href js-submenu-deep-toggle">Markets</a></li><li class="hnav__list-item"><a href="/electronics/our-offer" class="hnav__list-href js-submenu-deep-toggle">Our offer</a></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/engineering-construction" title="Air Liquide Engineering &amp; Construction serves a wide range of industrial customers by providing them the processing facility technology and solutions they need for their operations." class="hnav__list-href js-submenu-toggle">Engineering & Construction <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/engineering-construction/presentation" title="Air Liquide Engineering &amp; Construction serves a wide range of industrial customers by providing them the processing facility technology and solutions they need for their operations." class="hnav__list-href js-submenu-deep-toggle">Presentation</a></li><li class="hnav__list-item"><a href="/engineering-construction/our-expertise" title="With three-fold expertise in engineering, procurement and construction, Air Liquide Engineering &amp; Construction is a one-stop shop for our customers’ processing facility needs." class="hnav__list-href js-submenu-deep-toggle">Our expertise</a></li><li class="hnav__list-item"><a href="/engineering-construction/our-technologies" title="For a wide range of industries in need of gas technologies and production facilities, Air Liquide Engineering &amp; Construction provides expertise in engineering and construction." class="hnav__list-href js-submenu-deep-toggle">Our technologies</a></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/science-new-energies" class="hnav__list-href js-submenu-toggle">Science & New energies <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/science-new-energies/presentation" class="hnav__list-href js-submenu-deep-toggle">Presentation</a></li><li class="hnav__list-item js-submenu-subitem"><span class="hnav__list-href js-submenu-deep-toggle">Large projects <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/science-new-energies/iter" class="hnav__list-href">ITER</a></li><li class="hnav__list-item"><a href="/science-new-energies/cern-lhc" title="Find out more about the liquid helium handling system designed by Air Liquide for the Large Hadron Collider, the world&#039;s most powerful particle accelerator." class="hnav__list-href">CERN – LHC</a></li></ul></li><li class="hnav__list-item js-submenu-subitem"><span class="hnav__list-href js-submenu-deep-toggle">New energies <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-secondary"><li class="hnav__list-item"><a href="/science-new-energies/hydrogen-energy" class="hnav__list-href">Hydrogen energy</a></li><li class="hnav__list-item"><a href="/science-new-energies/biogas-bio-ngv" class="hnav__list-href">Biogas &amp; Bio-NGV</a></li><li class="hnav__list-item"><a href="/science/refrigerated-transportation" class="hnav__list-href">Refrigerated transportation</a></li></ul></li><li class="hnav__list-item"><a href="/science-new-energies/laboratories-research-centers" class="hnav__list-href js-submenu-deep-toggle">Laboratories & research centers</a></li></ul></li></ul></div>
+              <div class="hnav__nav-bloc hnav__nav-bloc--infos"><h2 class="hnav__bloc-title">Businesses</h2></div>
+            </div><div class="hnav__nav js-submenu" data-submenu="13741">
+              <div class="hnav__nav-bloc hnav__nav-bloc--big"><ul class="hnav__list"><li class="hnav__list-item"><a href="/magazine/industry-future" title="" class="hnav__list-href js-submenu-toggle">Industry of the future</a></li><li class="hnav__list-item"><a href="/magazine/healthcare" title="" class="hnav__list-href js-submenu-toggle">Healthcare</a></li><li class="hnav__list-item"><a href="/magazine/energy-transition" title="" class="hnav__list-href js-submenu-toggle">Energy transition</a></li><li class="hnav__list-item"><a href="/magazine/customer-experience" title="" class="hnav__list-href js-submenu-toggle">Customer experience</a></li><li class="hnav__list-item"><a href="/magazine/digitization" title="" class="hnav__list-href js-submenu-toggle">Digitization</a></li><li class="hnav__list-item"><a href="/magazine/open-innovation" title="" class="hnav__list-href js-submenu-toggle">Open innovation</a></li><li class="hnav__list-item"><a href="/magazine/science" title="" class="hnav__list-href js-submenu-toggle">Science</a></li></ul></div>
+              <div class="hnav__nav-bloc hnav__nav-bloc--infos"><h2 class="hnav__bloc-title">Magazine</h2></div>
+            </div><div class="hnav__nav js-submenu" data-submenu="7256">
+              <div class="hnav__nav-bloc hnav__nav-bloc--big"><ul class="hnav__list"><li class="hnav__list-item"><a href="/shareholders/stock-share" title="" class="hnav__list-href js-submenu-toggle">Stock & Share: shareholders' mag</a></li><li class="hnav__list-item"><a href="/shareholders/become-shareholder" class="hnav__list-href js-submenu-toggle">Become a shareholder</a></li><li class="hnav__list-item js-submenu-item"><span class="hnav__list-href js-submenu-toggle">Follow the Air Liquide share <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/shareholders/air-liquide-share-price-live" title="Track the Air Liquide share price live" class="hnav__list-href js-submenu-deep-toggle">Share price live</a></li><li class="hnav__list-item"><a href="/shareholders/share-price-simulator" title="" class="hnav__list-href js-submenu-deep-toggle">Share price simulator</a></li><li class="hnav__list-item"><a href="/shareholders/share-ownership" title="The Air Liquide balanced shareholder breakdown is divided equally between individual shareholders and institutional investors. This structure provides the Group with great stability." class="hnav__list-href js-submenu-deep-toggle">Share ownership</a></li></ul></li><li class="hnav__list-item js-submenu-item"><span title="" class="hnav__list-href js-submenu-toggle">Factsheets <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/shareholders/air-liquide-share" class="hnav__list-href js-submenu-deep-toggle">Understanding the stock market</a></li><li class="hnav__list-item"><a href="/shareholders/stock-orders" class="hnav__list-href js-submenu-deep-toggle">Stock orders</a></li><li class="hnav__list-item"><a href="/shareholders/shareholding-options" title="Which should you opt for: direct registered, intermediary registered or bearer shares? Air Liquide explains the features specific to each of these different shareholding options." class="hnav__list-href js-submenu-deep-toggle">Shareholding options</a></li><li class="hnav__list-item"><a href="/shareholders/registering-shares" class="hnav__list-href js-submenu-deep-toggle">Registering shares</a></li><li class="hnav__list-item"><a href="/shareholders/loyalty-bonus" title="Air Liquide rewards its registered shareholders. Becoming a registered shareholder before December 31, 2015 means you will receive the loyalty bonus from 2018 onwards." class="hnav__list-href js-submenu-deep-toggle">Loyalty bonus</a></li><li class="hnav__list-item"><a href="/shareholders/personal-online-account" class="hnav__list-href js-submenu-deep-toggle">Personal online Account</a></li><li class="hnav__list-item"><a href="/shareholders/capital-gains" title="What is a capital gain? Air Liquide explains everything you need to know about how it is calculated and taxed." class="hnav__list-href js-submenu-deep-toggle">Capital gains</a></li><li class="hnav__list-item"><a href="/shareholders/free-shares" title="Air Liquide knows how to reward its shareholders. In addition to the dividend, the Group also returns a proportion of its profits to them in the form of free shares." class="hnav__list-href js-submenu-deep-toggle">Free share attribution</a></li><li class="hnav__list-item"><a href="/shareholders/dividend" title="At Air Liquide, around 50% of Group net profit is distributed to shareholders in dividend payments." class="hnav__list-href js-submenu-deep-toggle">Dividend</a></li><li class="hnav__list-item"><a href="/shareholders/taxation" class="hnav__list-href js-submenu-deep-toggle">Taxation</a></li><li class="hnav__list-item"><a href="/shareholders/passing-shares" title="Passing on Air Liquide shares is a good way to add value to your family’s savings. Find out more about the inheritance options." class="hnav__list-href js-submenu-deep-toggle">Passing on shares</a></li></ul></li><li class="hnav__list-item"><a href="/shareholders/shareholders-communication-committee" title="At Air Liquide, the Shareholders&#039; Communication Committee is a contributor to Group projects. Find out more about the committee members and how to join them." class="hnav__list-href js-submenu-toggle">Shareholders' Communication Committee</a></li><li class="hnav__list-item"><a href="/shareholders/annual-general-meeting" class="hnav__list-href js-submenu-toggle">Annual General Meeting</a></li><li class="hnav__list-item"><a href="/shareholders/agenda" class="hnav__list-href js-submenu-toggle">Agenda</a></li><li class="hnav__list-item js-submenu-item"><a href="/shareholders/media-library" class="hnav__list-href js-submenu-toggle">Media library <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/shareholders/forms" class="hnav__list-href js-submenu-deep-toggle">Forms</a></li></ul></li><li class="hnav__list-item"><a href="/shareholders/contact-us" title="The 28 advisors of the Air Liquide Shareholder Services are here to help and guide you through every aspect of share ownership." class="hnav__list-href js-submenu-toggle">Contact us</a></li></ul></div>
+              <div class="hnav__nav-bloc hnav__nav-bloc--infos"><h2 class="hnav__bloc-title">Shareholders</h2>                <a href="https://www.actionairliquide.com/authv2/login.input.action?request_locale=en" class="hnav__nav-btn">Access your Account <svg width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="1.5" d="M1.274 1.167L6.19 6.083 1.274 11"/><path stroke="#FFF" fill="#D8D8D8" d="M7.5 6.5H2.881v-1H7.5z"/></g></svg></a><a href="/node/1941" class="hnav__nav-btn">Open a share Account <svg width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="1.5" d="M1.274 1.167L6.19 6.083 1.274 11"/><path stroke="#FFF" fill="#D8D8D8" d="M7.5 6.5H2.881v-1H7.5z"/></g></svg></a>              <p class="hnav__inter">Quick Access</p>
+    <ul class="hnav__quicklist">
+                                                                                                                                                                                                                                          <li class="hnav__quicklist-item"><a href="/shareholders/2020-annual-general-meeting" class="hnav__quicklist-href">2020 Annual General Meeting <i class="icon icon-next"></i></a></li>
+                                <li class="hnav__quicklist-item"><a href="https://airliquide.publispeak.com/invitation-to-our-general-meeting-2020/page/1/" class="hnav__quicklist-href">Invitation to our General Meeting <i class="icon icon-next"></i></a></li>
+                                <li class="hnav__quicklist-item"><a href="/shareholders/forms" class="hnav__quicklist-href">Forms <i class="icon icon-next"></i></a></li>
+                                <li class="hnav__quicklist-item"><a href="/shareholders/contact-us" class="hnav__quicklist-href">Contact us <i class="icon icon-next"></i></a></li>
+                                </ul>
+  </div>
+            </div><div class="hnav__nav js-submenu" data-submenu="10261">
+              <div class="hnav__nav-bloc hnav__nav-bloc--big"><ul class="hnav__list"><li class="hnav__list-item"><a href="/investors/agenda" class="hnav__list-href js-submenu-toggle">Agenda</a></li><li class="hnav__list-item"><a href="/investors/documents-presentations" class="hnav__list-href js-submenu-toggle">Documents & Presentations</a></li><li class="hnav__list-item"><a href="/investors/vara-consensus" class="hnav__list-href js-submenu-toggle">Vara consensus</a></li><li class="hnav__list-item js-submenu-item"><span class="hnav__list-href js-submenu-toggle">Investing in Air Liquide <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/investors/air-liquide-glance" title="Discover Air Liquide’s investor key figures for the latest fiscal year available." class="hnav__list-href js-submenu-deep-toggle">Air Liquide at a glance</a></li><li class="hnav__list-item"><a href="/investors/long-term-investment" title="We believe in perennial shareholding and promote a culture of long-term investment through transparent investor relations." class="hnav__list-href js-submenu-deep-toggle">A long-term investment</a></li><li class="hnav__list-item"><a href="/investors/shareprice-performance" title="" class="hnav__list-href js-submenu-deep-toggle">Shareprice performance</a></li></ul></li><li class="hnav__list-item js-submenu-item"><span class="hnav__list-href js-submenu-toggle">Credit investor <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/investors/credit-investor-presentation" class="hnav__list-href js-submenu-deep-toggle">Credit investor presentation</a></li><li class="hnav__list-item"><a href="/investors/financing-tools" class="hnav__list-href js-submenu-deep-toggle">Financing tools</a></li><li class="hnav__list-item"><a href="/investors/bond-issues" class="hnav__list-href js-submenu-deep-toggle">Bond issues</a></li><li class="hnav__list-item"><a href="/investors/credit-ratings" class="hnav__list-href js-submenu-deep-toggle">Credit ratings</a></li><li class="hnav__list-item"><a href="/investors/air-liquide-finance" class="hnav__list-href js-submenu-deep-toggle">Air Liquide Finance</a></li></ul></li><li class="hnav__list-item js-submenu-item"><a href="/investors/governance" title="Air Liquide is committed to maintaining the highest standards of Corporate and Internal governance to ensure transparency and confidence of our stakeholders in the company" class="hnav__list-href js-submenu-toggle">Governance <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/investors/corporate-officers-remuneration-regulated-commitments" class="hnav__list-href js-submenu-deep-toggle">Corporate officers remuneration and regulated commitments</a></li><li class="hnav__list-item"><a href="/investors/board-committees" class="hnav__list-href js-submenu-deep-toggle">Board committees</a></li><li class="hnav__list-item"><a href="/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" class="hnav__list-href js-submenu-deep-toggle">Capital and articles of association, Internal Regulations, disclosure of share buy-back transactions</a></li></ul></li><li class="hnav__list-item"><a href="http://www.worldreginfo.com/rd/idefault2.asp?id_language=2&amp;uid={51E56587-3928-4D83-AF48-DC9D93B03A55}}&amp;h=0" title="Access to the archives of our regulated information" class="hnav__list-href js-submenu-toggle">Regulated information</a></li><li class="hnav__list-item js-submenu-item"><a href="/investors/contact-us" title="We invite you to stay in contact with our dedicated Investors Relations team for any and all questions you might have concerning investing in Air Liquide." class="hnav__list-href js-submenu-toggle">Contact us <i class="icon icon-next"></i></a><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/investors/frequently-asked-questions-faq" title="For answers to frequently asked questions regarding investing in Air Liquide, learn more here." class="hnav__list-href js-submenu-deep-toggle">Frequently asked questions (FAQ)</a></li></ul></li></ul></div>
+              <div class="hnav__nav-bloc hnav__nav-bloc--infos"><h2 class="hnav__bloc-title">Investors</h2>        <p class="hnav__inter">Quick Access</p>
+    <ul class="hnav__quicklist">
+                                                                                                                                                                                                                                          <li class="hnav__quicklist-item"><a href="/investors/first-quarter-2020-revenue" class="hnav__quicklist-href">First Quarter 2020 Revenue <i class="icon icon-next"></i></a></li>
+                                <li class="hnav__quicklist-item"><a href="/investors/2019-universal-registration-document" class="hnav__quicklist-href">2019 Universal Registration Document <i class="icon icon-next"></i></a></li>
+                                <li class="hnav__quicklist-item"><a href="https://en.media.airliquide.com/news" class="hnav__quicklist-href">Group's latest press releases <i class="icon icon-next"></i></a></li>
+                                </ul>
+  </div>
+            </div><div class="hnav__nav js-submenu" data-submenu="13156">
+              <div class="hnav__nav-bloc hnav__nav-bloc--big"><ul class="hnav__list"><li class="hnav__list-item"><a href="https://en.media.airliquide.com/news" title="" class="hnav__list-href js-submenu-toggle">Press releases & News</a></li></ul></div>
+              <div class="hnav__nav-bloc hnav__nav-bloc--infos"><h2 class="hnav__bloc-title">Media</h2></div>
+            </div><div class="hnav__nav js-submenu" data-submenu="13426">
+              <div class="hnav__nav-bloc hnav__nav-bloc--big"><ul class="hnav__list"><li class="hnav__list-item"><a href="/careers/job-offers" title="" class="hnav__list-href js-submenu-toggle">Job offers</a></li><li class="hnav__list-item"><a href="/careers/i-choose-air-liquide" class="hnav__list-href js-submenu-toggle">I choose Air Liquide</a></li><li class="hnav__list-item js-submenu-item"><span class="hnav__list-href js-submenu-toggle">Careers at Air Liquide <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/careers/our-hr-vision" class="hnav__list-href js-submenu-deep-toggle">Our HR vision</a></li><li class="hnav__list-item"><a href="/careers/ethics-and-safety" class="hnav__list-href js-submenu-deep-toggle">Ethics and safety</a></li><li class="hnav__list-item"><a href="/careers/diversity" class="hnav__list-href js-submenu-deep-toggle">Diversity</a></li></ul></li><li class="hnav__list-item js-submenu-item"><span class="hnav__list-href js-submenu-toggle">You at Air Liquide <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/careers/customize-your-career" class="hnav__list-href js-submenu-deep-toggle">Customize your career</a></li><li class="hnav__list-item"><a href="/careers/learning-development" class="hnav__list-href js-submenu-deep-toggle">Learning for development</a></li><li class="hnav__list-item"><a href="/careers/employee-benefits" class="hnav__list-href js-submenu-deep-toggle">Employee benefits</a></li></ul></li><li class="hnav__list-item js-submenu-item"><span class="hnav__list-href js-submenu-toggle">Students <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/careers/campus-relations" class="hnav__list-href js-submenu-deep-toggle">Campus relations</a></li><li class="hnav__list-item"><a href="/careers/summer-school" class="hnav__list-href js-submenu-deep-toggle">Summer School</a></li><li class="hnav__list-item"><a href="/careers/internships-and-apprenticeships" class="hnav__list-href js-submenu-deep-toggle">Internships and apprenticeships</a></li><li class="hnav__list-item"><a href="/careers/college-ingenieurs-mba" class="hnav__list-href js-submenu-deep-toggle">Collège des Ingénieurs MBA</a></li></ul></li><li class="hnav__list-item js-submenu-item"><span class="hnav__list-href js-submenu-toggle">Graduates <i class="icon icon-next"></i></span><ul class="hnav__sublist js-submenu-primary"><li class="hnav__list-item"><a href="/careers/international-volunteer-program" class="hnav__list-href js-submenu-deep-toggle">International Volunteer Program</a></li><li class="hnav__list-item"><a href="/careers/allex-program" class="hnav__list-href js-submenu-deep-toggle">ALLEX program</a></li></ul></li></ul></div>
+              <div class="hnav__nav-bloc hnav__nav-bloc--infos"><h2 class="hnav__bloc-title">Careers</h2>                <a href="/careers/job-offers" class="hnav__nav-btn">Find our job offers <svg width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="1.5" d="M1.274 1.167L6.19 6.083 1.274 11"/><path stroke="#FFF" fill="#D8D8D8" d="M7.5 6.5H2.881v-1H7.5z"/></g></svg></a><a href="/careers/apply?jobId=PDMFK026203F3VBQBV7LOQW0B-250&langCode=en_US" class="hnav__nav-btn">Spontaneous application <svg width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="1.5" d="M1.274 1.167L6.19 6.083 1.274 11"/><path stroke="#FFF" fill="#D8D8D8" d="M7.5 6.5H2.881v-1H7.5z"/></g></svg></a>          </div>
+            </div></div>
+  <div class="hnav__search">
+    <div class="row">
+      <div class="cell-12">
+        
+  <form class="hnav__search-form js-search-form" action="/search" method="get" id="views-exposed-form-search-panel-pane-1" accept-charset="UTF-8"><button class="hnav__search-button hnav__search-button--submit form-submit" id="edit-submit-search" name="" value="" type="submit"><svg width="16" height="15" viewBox="0 0 13 12" xmlns="http://www.w3.org/2000/svg"><g fill="currentColor" fill-rule="evenodd"><path d="M5.5 1.644A3.86 3.86 0 0 0 1.644 5.5 3.86 3.86 0 0 0 5.5 9.356 3.86 3.86 0 0 0 9.356 5.5 3.86 3.86 0 0 0 5.5 1.644M5.5 11A5.507 5.507 0 0 1 0 5.5C0 2.467 2.467 0 5.5 0S11 2.467 11 5.5C11 8.532 8.533 11 5.5 11M10.99 9a5.843 5.843 0 0 1-.99 1.018L11.993 12 13 11l-2.01-2z"/></g></svg></button>
+                 <input class="hnav__search-field js-search-field" placeholder="Search on airliquide.com" type="text" id="edit-s" name="s" value="" size="30" maxlength="128" />
+      <button class="hnav__search-button hnav__search-button--close js-search-reset"><i class="icon icon-close"></i></button></form>      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="nm js-nav-mobile">
+  <ul class="nm__list"><li class="nm__list-item"><a href="/group" class="nm__list-href js-nav-trigger" data-sub="7416">Group <i class="icon icon-next"></i></a></li>
+<li class="nm__list-item"><a href="/businesses" class="nm__list-href js-nav-trigger" data-sub="6876">Businesses <i class="icon icon-next"></i></a></li>
+<li class="nm__list-item"><a href="/magazine" title="" class="nm__list-href js-nav-trigger" data-sub="13741">Magazine <i class="icon icon-next"></i></a></li>
+<li class="nm__list-item"><a href="/shareholders" class="nm__list-href js-nav-trigger" data-sub="7256">Shareholders <i class="icon icon-next"></i></a></li>
+<li class="nm__list-item"><a href="/investors" class="nm__list-href js-nav-trigger" data-sub="10261">Investors <i class="icon icon-next"></i></a></li>
+<li class="nm__list-item"><a href="https://en.media.airliquide.com/" title="" class="nm__list-href js-nav-trigger" data-sub="13156">Media <i class="icon icon-next"></i></a></li>
+<li class="nm__list-item"><a href="/careers" class="nm__list-href js-nav-trigger" data-sub="13426">Careers <i class="icon icon-next"></i></a></li>
+</ul><div class="nm__mid js-nav-container" data-sub="7416">
+          <div class="nm__content js-nav-content" data-sub="7416">
+            <div class="nm__mid-head">
+              <button type="button" class="nm__back js-nav-back" data-back="default">
+                <i class="icon icon-prev"></i>Back
+              </button>
+              <div class="nm__mid-content">
+                <h2 class="nm__title">Group</h2><a href="/group" class="nm__direct-link">View</a>
+              </div>
+            </div>
+            <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/who-we-are" class="nm__mid-href js-nav-trigger" data-sub="10181">Who we are <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/what-we-do" title="" class="nm__mid-href js-nav-trigger" data-sub="10191">What we do <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/our-strategy" title="" class="nm__mid-href js-nav-trigger" data-sub="9991">Our strategy <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/our-innovation-approach" class="nm__mid-href js-nav-trigger" data-sub="55576">Innovation <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/sustainable-development" class="nm__mid-href js-nav-trigger" data-sub="55736">Sustainable development <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/where-we-operate" title="" class="nm__mid-href">Where we operate</a></li>
+<li class="nm__mid-item"><a href="/group/group-publications" class="nm__mid-href">Group publications</a></li>
+</ul>
+          </div><div class="nm__content js-nav-content" data-sub="10181">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="7416"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Who we are</h2><a href="/group/who-we-are" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/profile" class="nm__mid-href">Profile</a></li>
+<li class="nm__mid-item"><a href="/group/key-figures" title="" class="nm__mid-href">Key figures</a></li>
+<li class="nm__mid-item"><a href="/group/governance" title="" class="nm__mid-href js-nav-trigger" data-sub="54166">Governance <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/our-history" title="" class="nm__mid-href">Our history</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="54166">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10181"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Governance</h2><a href="/group/governance" title="" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/executive-committee" class="nm__mid-href">Executive Committee</a></li><li class="nm__mid-item"><a href="/group/board-directors" class="nm__mid-href">Board of Directors</a></li></ul></div><div class="nm__content js-nav-content" data-sub="10191">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="7416"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">What we do</h2><a href="/group/what-we-do" title="" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/glance" class="nm__mid-href">At a glance</a></li>
+<li class="nm__mid-item"><a href="/group/large-industries" class="nm__mid-href">Large Industries</a></li>
+<li class="nm__mid-item"><a href="/group/industrial-merchant" title="Whether you are an independent craftsman or a multinational, optimize your long-term performance thanks to our Industrial Merchant’s customized solutions." class="nm__mid-href">Industrial Merchant</a></li>
+<li class="nm__mid-item"><a href="/group/healthcare" title="Today Air Liquide is a recognized leader in the medical gases, home healthcare, hygiene products and healthcare specialty ingredients." class="nm__mid-href">Healthcare</a></li>
+<li class="nm__mid-item"><a href="/group/electronics" title="In the digital and new energy era, Air Liquide is the preferred partner of semiconductor, flat screen, and solar cell manufacturers" class="nm__mid-href">Electronics</a></li>
+<li class="nm__mid-item"><a href="/group/engineering-construction" title="Engineering and Construction at Air Liquide has the vocation to roll out state of the art production units." class="nm__mid-href">Engineering &amp; Construction</a></li>
+<li class="nm__mid-item"><a href="/group/global-markets-technologies" class="nm__mid-href">Global Markets &amp; Technologies</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="9991">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="7416"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Our strategy</h2><a href="/group/our-strategy" title="" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/strategy" class="nm__mid-href">Strategy</a></li>
+<li class="nm__mid-item"><a href="/group/three-trends-source-growth" class="nm__mid-href js-nav-trigger" data-sub="54171">Three trends, source of growth <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/network-organization" title="Air Liquide stays connected to local markets through its network of four hubs and a base in Paris." class="nm__mid-href">A network organization</a></li>
+<li class="nm__mid-item"><a href="/group/neos-company-program" class="nm__mid-href">NEOS: our company program</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="54171">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="9991"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Three trends, source of growth</h2><a href="/group/three-trends-source-growth" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/energy-and-environmental-transition" title="" class="nm__mid-href">Energy and environmental transition</a></li><li class="nm__mid-item"><a href="/group/changes-healthcare" class="nm__mid-href">Changes in healthcare</a></li><li class="nm__mid-item"><a href="/group/digitization" title="" class="nm__mid-href">Digitization</a></li></ul></div><div class="nm__content js-nav-content" data-sub="55576">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="7416"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Innovation</h2><a href="/group/our-innovation-approach" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/research-development" class="nm__mid-href js-nav-trigger" data-sub="15351">Research &amp; Development <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/digital-transformation-strategy" class="nm__mid-href">Digital transformation</a></li>
+<li class="nm__mid-item"><a href="/group/i-lab" class="nm__mid-href">i-Lab</a></li>
+<li class="nm__mid-item"><a href="/group/global-markets-and-technologies" class="nm__mid-href js-nav-trigger" data-sub="15356">New markets &amp; Technologies <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/aliad-venture-capital" class="nm__mid-href">Air Liquide Venture Capital</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="15351">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="55576"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Research & Development</h2><a href="/group/research-development" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/centers-expertise" class="nm__mid-href">Centers of expertise</a></li><li class="nm__mid-item"><a href="/group/scientific-partnerships-excellence" class="nm__mid-href">Scientific partnerships of excellence</a></li></ul></div><div class="nm__content js-nav-content" data-sub="15356">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="55576"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">New markets & Technologies</h2><a href="/group/global-markets-and-technologies" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/maritime-logistics" class="nm__mid-href">Maritime logistics</a></li></ul></div><div class="nm__content js-nav-content" data-sub="55736">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="7416"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Sustainable development</h2><a href="/group/sustainable-development" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/safety-our-first-priority" class="nm__mid-href">Safety</a></li>
+<li class="nm__mid-item"><a href="/group/ethics" title="With approximately 66,000 employees worldwide, Air Liquide has structured its approach to ensure that its rules of conduct are shared by everyone." class="nm__mid-href js-nav-trigger" data-sub="10161">Ethics <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/climate-air-quality" class="nm__mid-href">Climate &amp; Air quality</a></li>
+<li class="nm__mid-item"><a href="/group/stakeholders" class="nm__mid-href js-nav-trigger" data-sub="51171">Stakeholders <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/group/ratings" title="The Air Liquide commitment to sustainable development is regularly rewarded. Find out more about the Group&#039;s recognition." class="nm__mid-href">Ratings</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="10161">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="55736"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Ethics</h2><a href="/group/ethics" title="With approximately 66,000 employees worldwide, Air Liquide has structured its approach to ensure that its rules of conduct are shared by everyone." class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/groups-principles-action" class="nm__mid-href">Group&#039;s Principles of action</a></li></ul></div><div class="nm__content js-nav-content" data-sub="51171">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="55736"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Stakeholders</h2><a href="/group/stakeholders" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/group/sustainable-procurement" title="Air Liquide expects its suppliers to daily respect the Group’s ethical principles." class="nm__mid-href">Sustainable procurement</a></li><li class="nm__mid-item"><a href="/group/working-public-authorities" title="Strict ethical rules governs Air Liquide’s interactions with public authorities. Discover the Group’s “Public Affaires” policy." class="nm__mid-href">Working with the public authorities</a></li><li class="nm__mid-item"><a href="/group/air-liquide-foundation" title="Since its creation, the Air Liquide Foundation supports 264 projects in about 50 countries." class="nm__mid-href">Air Liquide Foundation</a></li></ul></div>
+          <div class="nm__foot">        <p class="nm__foot-inter">Quick Access</p>
+    <ul class="nm__foot-list">
+                                                                                                                                                                                                                                          <li class="nm__foot-item"><a href="/group/executive-committee" class="nm__foot-href">Executive Committee <i class="icon icon-next"></i></a></li>
+                                <li class="nm__foot-item"><a href="/media/2019-annual-report" class="nm__foot-href">2019 Annual Report <i class="icon icon-next"></i></a></li>
+                                <li class="nm__foot-item"><a href="/investors/2019-universal-registration-document" class="nm__foot-href">2019 Universal Registration Document <i class="icon icon-next"></i></a></li>
+                                </ul>
+  
+</div>
+        </div><div class="nm__mid js-nav-container" data-sub="6876">
+          <div class="nm__content js-nav-content" data-sub="6876">
+            <div class="nm__mid-head">
+              <button type="button" class="nm__back js-nav-back" data-back="default">
+                <i class="icon icon-prev"></i>Back
+              </button>
+              <div class="nm__mid-content">
+                <h2 class="nm__title">Businesses</h2><a href="/businesses" class="nm__direct-link">View</a>
+              </div>
+            </div>
+            <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/industry" class="nm__mid-href js-nav-trigger" data-sub="12341">Industry <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/healthcare" class="nm__mid-href js-nav-trigger" data-sub="10206">Healthcare <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/electronics" class="nm__mid-href js-nav-trigger" data-sub="17631">Electronics <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/engineering-construction" title="Air Liquide Engineering &amp; Construction serves a wide range of industrial customers by providing them the processing facility technology and solutions they need for their operations." class="nm__mid-href js-nav-trigger" data-sub="11286">Engineering &amp; Construction <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/science-new-energies" class="nm__mid-href js-nav-trigger" data-sub="12451">Science &amp; New energies <i class="icon icon-next"></i></a></li>
+</ul>
+          </div><div class="nm__content js-nav-content" data-sub="12341">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="6876"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Industry</h2><a href="/industry" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/industry/presentation" title="Air Liquide serves more than 1 million customers in industry, from multinational corporations to independent craftsmen, in more than 80 countries." class="nm__mid-href">Presentation</a></li>
+<li class="nm__mid-item"><a href="/industry/markets" class="nm__mid-href js-nav-trigger" data-sub="12351">Markets <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/industry/processes" class="nm__mid-href js-nav-trigger" data-sub="12356">Processes <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/industry/supply-modes" title="From basic needs to full process support, Air Liquide knows that reliable gas supply is crucial to its customers’ operations." class="nm__mid-href">Supply modes</a></li>
+<li class="nm__mid-item"><a href="/industry/services" class="nm__mid-href">Services</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="12351">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="12341"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Markets</h2><a href="/industry/markets" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/industry/aeronautics" title="Learn more about Air Liquide’s gas solutions to help the aeronautics industry build the lighter, more eco-friendly aircraft of tomorrow." class="nm__mid-href">Aeronautics</a></li><li class="nm__mid-item"><a href="/industry/automotive" title="Air Liquide supports the automotive industry with solutions for raw materials production, heat treatment, welding, emissions testing and more." class="nm__mid-href">Automotive</a></li><li class="nm__mid-item"><a href="/industry/beverage" class="nm__mid-href">Beverage</a></li><li class="nm__mid-item"><a href="/industry/chemicals" title="Air Liquide offers reliable, customized gas solutions. We are part of the process of creating everyday products and we work to make chemicals safer and more efficient." class="nm__mid-href">Chemicals</a></li><li class="nm__mid-item"><a href="/industry/construction" title="Air Liquide helps the construction industry meet demands for more infrastructure with reliable gas solutions for cutting, welding and concrete hardening." class="nm__mid-href">Construction</a></li><li class="nm__mid-item"><a href="/industry/electronics-manufacturing" class="nm__mid-href">Electronics manufacturing</a></li><li class="nm__mid-item"><a href="/industry/food" title="Air Liquide helps food manufacturers to produce products ranging from fruit and poultry to ready-to-eat meals in a cost-effective and environmental manner." class="nm__mid-href">Food</a></li><li class="nm__mid-item"><a href="/industry/glass" title="Discover how Air Liquide provides advanced oxy-combustion technologies to the glass industry for greater efficiency and lower greenhouse gas emissions." class="nm__mid-href">Glass</a></li><li class="nm__mid-item"><a href="/industry/metals" title="Air Liquide is a long-term partner to the metal industry. Find out how our solutions make customers more efficient and sustainable." class="nm__mid-href">Metals</a></li><li class="nm__mid-item"><a href="/industry/metal-fabrication" title="For all metal fabrication needs, Air Liquide provides gases, services, expertise and global capabilities to transform raw materials into finished products." class="nm__mid-href">Metal fabrication</a></li><li class="nm__mid-item"><a href="/industry/oil-gas" class="nm__mid-href">Oil &amp; Gas</a></li><li class="nm__mid-item"><a href="/industry/pharma-biotech" title="For the pharma &amp; biotech industry, Air Liquide provides manufacturing support with high purity gas solutions that comply with four major world pharmacopeias." class="nm__mid-href">Pharma &amp; Biotech</a></li><li class="nm__mid-item"><a href="/industry/photonics" title="Air Liquide is contributing to the production of new technologies based on light (photon), making progress in areas as diverse as medicine, airport security and laser-based manufacturing." class="nm__mid-href">Photonics</a></li><li class="nm__mid-item"><a href="/industry/professionals-craftsmen" class="nm__mid-href">Professionals &amp; Craftsmen</a></li><li class="nm__mid-item"><a href="/industry/space" title="Air Liquide’s unique expertise in space cryogenics has made a major contributor to space exploration for more than 50 years." class="nm__mid-href">Space</a></li><li class="nm__mid-item"><a href="/industry/waste-water-management" title="For industrial actors looking to recycling and waste treatment solutions, Air Liquide supplies the necessary gas technologies." class="nm__mid-href">Waste &amp; Water management</a></li></ul></div><div class="nm__content js-nav-content" data-sub="12356">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="12341"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Processes</h2><a href="/industry/processes" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/industry/analysis-and-quality-control" title="Air Liquide offers three leading brands for customers in need of specialty gas solutions for analysis and quality control, no matter their industry." class="nm__mid-href">Analysis and quality control</a></li><li class="nm__mid-item"><a href="/industry/blanketing" title="Air Liquide draws on its long-standing expertise in industrial gases to offer the very best in blanketing solutions for customers in need of inert gases." class="nm__mid-href">Blanketing</a></li><li class="nm__mid-item"><a href="/industry/carbonation" class="nm__mid-href">Carbonation</a></li><li class="nm__mid-item"><a href="/industry/desulfurization" class="nm__mid-href">Desulfurization</a></li><li class="nm__mid-item"><a href="/industry/gasification" class="nm__mid-href">Gasification</a></li><li class="nm__mid-item"><a href="/industry/freezing-chilling" title="Air Liquide’s freezing and chilling gas solutions help manufacturers stay flexible while preserving food quality." class="nm__mid-href">Freezing &amp; Chilling</a></li><li class="nm__mid-item"><a href="/industry/heat-treatment" title="Air Liquide provides clients with the gas solutions and expertise for heat treatment of raw materials, including steel, copper, titanium, alloys and more." class="nm__mid-href">Heat treatment</a></li><li class="nm__mid-item"><a href="/industry/industrial-cryogenics" title="Air Liquide 100 year’s expertise in cryogenics puts it on the front end of the industry. Find out more." class="nm__mid-href">Industrial cryogenics</a></li><li class="nm__mid-item"><a href="/industry/modified-atmosphere-packaging" class="nm__mid-href">Modified atmosphere packaging</a></li><li class="nm__mid-item"><a href="/industry/oxy-combustion" title="Air Liquide supports the metallurgy and glass industries in improving energy efficiency and reducing emissions through oxy-combustion. Find out how." class="nm__mid-href">Oxy-combustion</a></li><li class="nm__mid-item"><a href="/industry/petrochemical-synthesis" class="nm__mid-href">Petrochemical synthesis</a></li><li class="nm__mid-item"><a href="/industry/water-treatment" title="Air Liquide leverages the power of its oxygen-based ASPAL solutions to help private and public industrial actors treat and reuse all types of waters. Learn more." class="nm__mid-href">Water treatment</a></li><li class="nm__mid-item"><a href="/industry/welding-cutting" title="Welding and cutting gases have been at the heart of Air Liquide’s offer for over 100 years. Find out how our premium gases can be tailor fit to client needs." class="nm__mid-href">Welding &amp; Cutting</a></li></ul></div><div class="nm__content js-nav-content" data-sub="10206">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="6876"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Healthcare</h2><a href="/healthcare" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/healthcare/changing-care-with-you" title="As a major world player in home healthcare, an expert in chronic disease follow up at home, and supplier of medical gases and hygiene products to hospitals, we strive to build an efficient and virtuous healthcare system for all." class="nm__mid-href">Presentation</a></li>
+<li class="nm__mid-item"><a href="/healthcare/our-expertise" class="nm__mid-href js-nav-trigger" data-sub="10216">Our expertise <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/healthcare/our-research-development" class="nm__mid-href js-nav-trigger" data-sub="11256">Our R&amp;D <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/healthcare/diseases" class="nm__mid-href js-nav-trigger" data-sub="10431">Diseases <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/healthcare/public-health-challenges" class="nm__mid-href js-nav-trigger" data-sub="19166">Public health challenges <i class="icon icon-next"></i></a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="10216">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10206"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Our expertise</h2><a href="/healthcare/our-expertise" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/healthcare/home-healthcare" class="nm__mid-href">Home healthcare</a></li><li class="nm__mid-item"><a href="/healthcare/hospital-care" class="nm__mid-href">Hospital care</a></li><li class="nm__mid-item"><a href="/healthcare/hygiene" title="We contribute to patient safety by providing a wide range of disinfectants for the medical environment and are a European leader in hospital disinfection." class="nm__mid-href">Hygiene</a></li><li class="nm__mid-item"><a href="/healthcare/healthcare-specialty-ingredients" title="Through our subsidiary SEPPIC, Air Liquide Healthcare designs and supplies healthcare specialty ingredients for the vaccine, pharmaceutical, nutrition and cosmetics sectors." class="nm__mid-href">Healthcare specialty ingredients</a></li></ul></div><div class="nm__content js-nav-content" data-sub="11256">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10206"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Our R&D</h2><a href="/healthcare/our-research-development" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/healthcare/creative-research-fund" class="nm__mid-href">CREATivE research fund</a></li><li class="nm__mid-item"><a href="/healthcare/co-innovation-approach" class="nm__mid-href">Co-innovation approach</a></li></ul></div><div class="nm__content js-nav-content" data-sub="10431">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10206"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Diseases</h2><a href="/healthcare/diseases" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/healthcare/chronic-obstructive-pulmonary-disease" class="nm__mid-href">Chronic obstructive pulmonary disease</a></li><li class="nm__mid-item"><a href="/healthcare/obstructive-sleep-apnea" title="Sleep Apnea is characterized by brief and repeated interruptions in breathing. Our primary concern is patient comfort and compliance with CPAP therapy." class="nm__mid-href">Obstructive sleep apnea</a></li><li class="nm__mid-item"><a href="/healthcare/chronic-respiratory-failure" class="nm__mid-href">Chronic respiratory failure</a></li><li class="nm__mid-item"><a href="/healthcare/diabetes" class="nm__mid-href">Diabetes</a></li><li class="nm__mid-item"><a href="/healthcare/pulmonary-arterial-hypertension" class="nm__mid-href">Pulmonary arterial hypertension</a></li><li class="nm__mid-item"><a href="/healthcare/pain" class="nm__mid-href">Pain</a></li></ul></div><div class="nm__content js-nav-content" data-sub="19166">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10206"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Public health challenges</h2><a href="/healthcare/public-health-challenges" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/healthcare/aging-population" class="nm__mid-href">Aging population</a></li><li class="nm__mid-item"><a href="/healthcare/rise-chronic-diseases" class="nm__mid-href">Rise in chronic diseases</a></li><li class="nm__mid-item"><a href="/healthcare/urbanization-and-lifestyle-changes" class="nm__mid-href">Urbanization and lifestyle changes</a></li><li class="nm__mid-item"><a href="/healthcare/reinventing-hospital" class="nm__mid-href">Reinventing the hospital</a></li></ul></div><div class="nm__content js-nav-content" data-sub="17631">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="6876"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Electronics</h2><a href="/electronics" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/electronics/presentation" class="nm__mid-href">Presentation</a></li>
+<li class="nm__mid-item"><a href="/electronics/markets" class="nm__mid-href">Markets</a></li>
+<li class="nm__mid-item"><a href="/electronics/our-offer" class="nm__mid-href">Our offer</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="11286">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="6876"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Engineering & Construction</h2><a href="/engineering-construction" title="Air Liquide Engineering &amp; Construction serves a wide range of industrial customers by providing them the processing facility technology and solutions they need for their operations." class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/engineering-construction/presentation" title="Air Liquide Engineering &amp; Construction serves a wide range of industrial customers by providing them the processing facility technology and solutions they need for their operations." class="nm__mid-href">Presentation</a></li>
+<li class="nm__mid-item"><a href="/engineering-construction/our-expertise" title="With three-fold expertise in engineering, procurement and construction, Air Liquide Engineering &amp; Construction is a one-stop shop for our customers’ processing facility needs." class="nm__mid-href">Our expertise</a></li>
+<li class="nm__mid-item"><a href="/engineering-construction/our-technologies" title="For a wide range of industries in need of gas technologies and production facilities, Air Liquide Engineering &amp; Construction provides expertise in engineering and construction." class="nm__mid-href">Our technologies</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="12451">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="6876"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Science & New energies</h2><a href="/science-new-energies" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/science-new-energies/presentation" class="nm__mid-href">Presentation</a></li>
+<li class="nm__mid-item"><a href="/science-new-energies/large-projects" class="nm__mid-href js-nav-trigger" data-sub="48596">Large projects <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/science-new-energies/new-energies" class="nm__mid-href js-nav-trigger" data-sub="48591">New energies <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/science-new-energies/laboratories-research-centers" class="nm__mid-href">Laboratories &amp; research centers</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="48596">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="12451"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Large projects</h2><a href="/science-new-energies/large-projects" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/science-new-energies/iter" class="nm__mid-href">ITER</a></li><li class="nm__mid-item"><a href="/science-new-energies/cern-lhc" title="Find out more about the liquid helium handling system designed by Air Liquide for the Large Hadron Collider, the world&#039;s most powerful particle accelerator." class="nm__mid-href">CERN – LHC</a></li></ul></div><div class="nm__content js-nav-content" data-sub="48591">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="12451"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">New energies</h2><a href="/science-new-energies/new-energies" class="nm__direct-link">View</a>
+            </div>
+          </div><ul class="nm__mid-list"><li class="nm__mid-item"><a href="/science-new-energies/hydrogen-energy" class="nm__mid-href">Hydrogen energy</a></li><li class="nm__mid-item"><a href="/science-new-energies/biogas-bio-ngv" class="nm__mid-href">Biogas &amp; Bio-NGV</a></li><li class="nm__mid-item"><a href="/science/refrigerated-transportation" class="nm__mid-href">Refrigerated transportation</a></li></ul></div>
+          <div class="nm__foot">
+</div>
+        </div><div class="nm__mid js-nav-container" data-sub="13741">
+          <div class="nm__content js-nav-content" data-sub="13741">
+            <div class="nm__mid-head">
+              <button type="button" class="nm__back js-nav-back" data-back="default">
+                <i class="icon icon-prev"></i>Back
+              </button>
+              <div class="nm__mid-content">
+                <h2 class="nm__title">Magazine</h2><a href="/magazine" title="" class="nm__direct-link">View</a>
+              </div>
+            </div>
+            <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/magazine/industry-future" title="" class="nm__mid-href">Industry of the future</a></li>
+<li class="nm__mid-item"><a href="/magazine/healthcare" title="" class="nm__mid-href">Healthcare</a></li>
+<li class="nm__mid-item"><a href="/magazine/energy-transition" title="" class="nm__mid-href">Energy transition</a></li>
+<li class="nm__mid-item"><a href="/magazine/customer-experience" title="" class="nm__mid-href">Customer experience</a></li>
+<li class="nm__mid-item"><a href="/magazine/digitization" title="" class="nm__mid-href">Digitization</a></li>
+<li class="nm__mid-item"><a href="/magazine/open-innovation" title="" class="nm__mid-href">Open innovation</a></li>
+<li class="nm__mid-item"><a href="/magazine/science" title="" class="nm__mid-href">Science</a></li>
+</ul>
+          </div>
+          <div class="nm__foot"></div>
+        </div><div class="nm__mid js-nav-container" data-sub="7256">
+          <div class="nm__content js-nav-content" data-sub="7256">
+            <div class="nm__mid-head">
+              <button type="button" class="nm__back js-nav-back" data-back="default">
+                <i class="icon icon-prev"></i>Back
+              </button>
+              <div class="nm__mid-content">
+                <h2 class="nm__title">Shareholders</h2><a href="/shareholders" class="nm__direct-link">View</a>
+              </div>
+            </div>
+            <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/shareholders/stock-share" title="" class="nm__mid-href">Stock &amp; Share: shareholders&#039; mag</a></li>
+<li class="nm__mid-item"><a href="/shareholders/become-shareholder" class="nm__mid-href">Become a shareholder</a></li>
+<li class="nm__mid-item"><a href="/shareholders/follow-air-liquide-share" class="nm__mid-href js-nav-trigger" data-sub="55976">Follow the Air Liquide share <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/shareholders/being-air-liquide-shareholder" title="" class="nm__mid-href js-nav-trigger" data-sub="7351">Factsheets <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/shareholders/shareholders-communication-committee" title="At Air Liquide, the Shareholders&#039; Communication Committee is a contributor to Group projects. Find out more about the committee members and how to join them." class="nm__mid-href">Shareholders&#039; Communication Committee</a></li>
+<li class="nm__mid-item"><a href="/shareholders/annual-general-meeting" class="nm__mid-href">Annual General Meeting</a></li>
+<li class="nm__mid-item"><a href="/shareholders/agenda" class="nm__mid-href">Agenda</a></li>
+<li class="nm__mid-item"><a href="/shareholders/media-library" class="nm__mid-href js-nav-trigger" data-sub="17356">Media library <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/shareholders/contact-us" title="The 28 advisors of the Air Liquide Shareholder Services are here to help and guide you through every aspect of share ownership." class="nm__mid-href">Contact us</a></li>
+</ul>
+          </div><div class="nm__content js-nav-content" data-sub="55976">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="7256"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Follow the Air Liquide share</h2><a href="/shareholders/follow-air-liquide-share" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/shareholders/air-liquide-share-price-live" title="Track the Air Liquide share price live" class="nm__mid-href">Share price live</a></li>
+<li class="nm__mid-item"><a href="/shareholders/share-price-simulator" title="" class="nm__mid-href">Share price simulator</a></li>
+<li class="nm__mid-item"><a href="/shareholders/share-ownership" title="The Air Liquide balanced shareholder breakdown is divided equally between individual shareholders and institutional investors. This structure provides the Group with great stability." class="nm__mid-href">Share ownership</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="7351">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="7256"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Factsheets</h2><a href="/shareholders/being-air-liquide-shareholder" title="" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/shareholders/air-liquide-share" class="nm__mid-href">Understanding the stock market</a></li>
+<li class="nm__mid-item"><a href="/shareholders/stock-orders" class="nm__mid-href">Stock orders</a></li>
+<li class="nm__mid-item"><a href="/shareholders/shareholding-options" title="Which should you opt for: direct registered, intermediary registered or bearer shares? Air Liquide explains the features specific to each of these different shareholding options." class="nm__mid-href">Shareholding options</a></li>
+<li class="nm__mid-item"><a href="/shareholders/registering-shares" class="nm__mid-href">Registering shares</a></li>
+<li class="nm__mid-item"><a href="/shareholders/loyalty-bonus" title="Air Liquide rewards its registered shareholders. Becoming a registered shareholder before December 31, 2015 means you will receive the loyalty bonus from 2018 onwards." class="nm__mid-href">Loyalty bonus</a></li>
+<li class="nm__mid-item"><a href="/shareholders/personal-online-account" class="nm__mid-href">Personal online Account</a></li>
+<li class="nm__mid-item"><a href="/shareholders/capital-gains" title="What is a capital gain? Air Liquide explains everything you need to know about how it is calculated and taxed." class="nm__mid-href">Capital gains</a></li>
+<li class="nm__mid-item"><a href="/shareholders/free-shares" title="Air Liquide knows how to reward its shareholders. In addition to the dividend, the Group also returns a proportion of its profits to them in the form of free shares." class="nm__mid-href">Free share attribution</a></li>
+<li class="nm__mid-item"><a href="/shareholders/dividend" title="At Air Liquide, around 50% of Group net profit is distributed to shareholders in dividend payments." class="nm__mid-href">Dividend</a></li>
+<li class="nm__mid-item"><a href="/shareholders/taxation" class="nm__mid-href">Taxation</a></li>
+<li class="nm__mid-item"><a href="/shareholders/passing-shares" title="Passing on Air Liquide shares is a good way to add value to your family’s savings. Find out more about the inheritance options." class="nm__mid-href">Passing on shares</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="17356">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="7256"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Media library</h2><a href="/shareholders/media-library" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/shareholders/forms" class="nm__mid-href">Forms</a></li>
+</ul></div>
+          <div class="nm__foot">                <a href="https://www.actionairliquide.com/authv2/login.input.action?request_locale=en" class="hnav__nav-btn">Access your Account <svg width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="1.5" d="M1.274 1.167L6.19 6.083 1.274 11"/><path stroke="#FFF" fill="#D8D8D8" d="M7.5 6.5H2.881v-1H7.5z"/></g></svg></a><a href="/node/1941" class="hnav__nav-btn">Open a share Account <svg width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="1.5" d="M1.274 1.167L6.19 6.083 1.274 11"/><path stroke="#FFF" fill="#D8D8D8" d="M7.5 6.5H2.881v-1H7.5z"/></g></svg></a>              <p class="nm__foot-inter">Quick Access</p>
+    <ul class="nm__foot-list">
+                                                                                                                                                                                                                                          <li class="nm__foot-item"><a href="/shareholders/2020-annual-general-meeting" class="nm__foot-href">2020 Annual General Meeting <i class="icon icon-next"></i></a></li>
+                                <li class="nm__foot-item"><a href="https://airliquide.publispeak.com/invitation-to-our-general-meeting-2020/page/1/" class="nm__foot-href">Invitation to our General Meeting <i class="icon icon-next"></i></a></li>
+                                <li class="nm__foot-item"><a href="/shareholders/forms" class="nm__foot-href">Forms <i class="icon icon-next"></i></a></li>
+                                <li class="nm__foot-item"><a href="/shareholders/contact-us" class="nm__foot-href">Contact us <i class="icon icon-next"></i></a></li>
+                                </ul>
+  
+</div>
+        </div><div class="nm__mid js-nav-container" data-sub="10261">
+          <div class="nm__content js-nav-content" data-sub="10261">
+            <div class="nm__mid-head">
+              <button type="button" class="nm__back js-nav-back" data-back="default">
+                <i class="icon icon-prev"></i>Back
+              </button>
+              <div class="nm__mid-content">
+                <h2 class="nm__title">Investors</h2><a href="/investors" class="nm__direct-link">View</a>
+              </div>
+            </div>
+            <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/investors/agenda" class="nm__mid-href">Agenda</a></li>
+<li class="nm__mid-item"><a href="/investors/documents-presentations" class="nm__mid-href">Documents &amp; Presentations</a></li>
+<li class="nm__mid-item"><a href="/investors/vara-consensus" class="nm__mid-href">Vara consensus</a></li>
+<li class="nm__mid-item"><a href="/investors/investing-air-liquide" class="nm__mid-href js-nav-trigger" data-sub="10266">Investing in Air Liquide <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/investors/credit-investor" class="nm__mid-href js-nav-trigger" data-sub="11091">Credit investor <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/investors/governance" title="Air Liquide is committed to maintaining the highest standards of Corporate and Internal governance to ensure transparency and confidence of our stakeholders in the company" class="nm__mid-href js-nav-trigger" data-sub="11086">Governance <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="http://www.worldreginfo.com/rd/idefault2.asp?id_language=2&amp;uid={51E56587-3928-4D83-AF48-DC9D93B03A55}}&amp;h=0" title="Access to the archives of our regulated information" class="nm__mid-href">Regulated information</a></li>
+<li class="nm__mid-item"><a href="/investors/contact-us" title="We invite you to stay in contact with our dedicated Investors Relations team for any and all questions you might have concerning investing in Air Liquide." class="nm__mid-href js-nav-trigger" data-sub="11076">Contact us <i class="icon icon-next"></i></a></li>
+</ul>
+          </div><div class="nm__content js-nav-content" data-sub="10266">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10261"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Investing in Air Liquide</h2><a href="/investors/investing-air-liquide" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/investors/air-liquide-glance" title="Discover Air Liquide’s investor key figures for the latest fiscal year available." class="nm__mid-href">Air Liquide at a glance</a></li>
+<li class="nm__mid-item"><a href="/investors/long-term-investment" title="We believe in perennial shareholding and promote a culture of long-term investment through transparent investor relations." class="nm__mid-href">A long-term investment</a></li>
+<li class="nm__mid-item"><a href="/investors/shareprice-performance" title="" class="nm__mid-href">Shareprice performance</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="11091">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10261"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Credit investor</h2><a href="/investors/credit-investor" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/investors/credit-investor-presentation" class="nm__mid-href">Credit investor presentation</a></li>
+<li class="nm__mid-item"><a href="/investors/financing-tools" class="nm__mid-href">Financing tools</a></li>
+<li class="nm__mid-item"><a href="/investors/bond-issues" class="nm__mid-href">Bond issues</a></li>
+<li class="nm__mid-item"><a href="/investors/credit-ratings" class="nm__mid-href">Credit ratings</a></li>
+<li class="nm__mid-item"><a href="/investors/air-liquide-finance" class="nm__mid-href">Air Liquide Finance</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="11086">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10261"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Governance</h2><a href="/investors/governance" title="Air Liquide is committed to maintaining the highest standards of Corporate and Internal governance to ensure transparency and confidence of our stakeholders in the company" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/investors/corporate-officers-remuneration-regulated-commitments" class="nm__mid-href">Corporate officers remuneration and regulated commitments</a></li>
+<li class="nm__mid-item"><a href="/investors/board-committees" class="nm__mid-href">Board committees</a></li>
+<li class="nm__mid-item"><a href="/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" class="nm__mid-href">Capital and articles of association, Internal Regulations, disclosure of share buy-back transactions</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="11076">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="10261"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Contact us</h2><a href="/investors/contact-us" title="We invite you to stay in contact with our dedicated Investors Relations team for any and all questions you might have concerning investing in Air Liquide." class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/investors/frequently-asked-questions-faq" title="For answers to frequently asked questions regarding investing in Air Liquide, learn more here." class="nm__mid-href">Frequently asked questions (FAQ)</a></li>
+</ul></div>
+          <div class="nm__foot">        <p class="nm__foot-inter">Quick Access</p>
+    <ul class="nm__foot-list">
+                                                                                                                                                                                                                                          <li class="nm__foot-item"><a href="/investors/first-quarter-2020-revenue" class="nm__foot-href">First Quarter 2020 Revenue <i class="icon icon-next"></i></a></li>
+                                <li class="nm__foot-item"><a href="/investors/2019-universal-registration-document" class="nm__foot-href">2019 Universal Registration Document <i class="icon icon-next"></i></a></li>
+                                <li class="nm__foot-item"><a href="https://en.media.airliquide.com/news" class="nm__foot-href">Group's latest press releases <i class="icon icon-next"></i></a></li>
+                                </ul>
+  
+</div>
+        </div><div class="nm__mid js-nav-container" data-sub="13156">
+          <div class="nm__content js-nav-content" data-sub="13156">
+            <div class="nm__mid-head">
+              <button type="button" class="nm__back js-nav-back" data-back="default">
+                <i class="icon icon-prev"></i>Back
+              </button>
+              <div class="nm__mid-content">
+                <h2 class="nm__title">Media</h2><a href="https://en.media.airliquide.com/" title="" class="nm__direct-link">View</a>
+              </div>
+            </div>
+            <ul class="nm__mid-list"><li class="nm__mid-item"><a href="https://en.media.airliquide.com/news" title="" class="nm__mid-href">Press releases &amp; News</a></li>
+</ul>
+          </div>
+          <div class="nm__foot">
+</div>
+        </div><div class="nm__mid js-nav-container" data-sub="13426">
+          <div class="nm__content js-nav-content" data-sub="13426">
+            <div class="nm__mid-head">
+              <button type="button" class="nm__back js-nav-back" data-back="default">
+                <i class="icon icon-prev"></i>Back
+              </button>
+              <div class="nm__mid-content">
+                <h2 class="nm__title">Careers</h2><a href="/careers" class="nm__direct-link">View</a>
+              </div>
+            </div>
+            <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/careers/job-offers" title="" class="nm__mid-href">Job offers</a></li>
+<li class="nm__mid-item"><a href="/careers/i-choose-air-liquide" class="nm__mid-href">I choose Air Liquide</a></li>
+<li class="nm__mid-item"><a href="/careers/careers-air-liquide" class="nm__mid-href js-nav-trigger" data-sub="13431">Careers at Air Liquide <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/careers/you-air-liquide" class="nm__mid-href js-nav-trigger" data-sub="13451">You at Air Liquide <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/careers/students" class="nm__mid-href js-nav-trigger" data-sub="13471">Students <i class="icon icon-next"></i></a></li>
+<li class="nm__mid-item"><a href="/careers/graduates" class="nm__mid-href js-nav-trigger" data-sub="13501">Graduates <i class="icon icon-next"></i></a></li>
+</ul>
+          </div><div class="nm__content js-nav-content" data-sub="13431">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="13426"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Careers at Air Liquide</h2><a href="/careers/careers-air-liquide" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/careers/our-hr-vision" class="nm__mid-href">Our HR vision</a></li>
+<li class="nm__mid-item"><a href="/careers/ethics-and-safety" class="nm__mid-href">Ethics and safety</a></li>
+<li class="nm__mid-item"><a href="/careers/diversity" class="nm__mid-href">Diversity</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="13451">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="13426"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">You at Air Liquide</h2><a href="/careers/you-air-liquide" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/careers/customize-your-career" class="nm__mid-href">Customize your career</a></li>
+<li class="nm__mid-item"><a href="/careers/learning-development" class="nm__mid-href">Learning for development</a></li>
+<li class="nm__mid-item"><a href="/careers/employee-benefits" class="nm__mid-href">Employee benefits</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="13471">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="13426"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Students</h2><a href="/careers/students" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/careers/campus-relations" class="nm__mid-href">Campus relations</a></li>
+<li class="nm__mid-item"><a href="/careers/summer-school" class="nm__mid-href">Summer School</a></li>
+<li class="nm__mid-item"><a href="/careers/internships-and-apprenticeships" class="nm__mid-href">Internships and apprenticeships</a></li>
+<li class="nm__mid-item"><a href="/careers/college-ingenieurs-mba" class="nm__mid-href">Collège des Ingénieurs MBA</a></li>
+</ul></div><div class="nm__content js-nav-content" data-sub="13501">
+          <div class="nm__mid-head">
+            <button type="button" class="nm__back js-nav-back" data-back="13426"><i class="icon icon-prev"></i>Back</button>
+            <div class="nm__mid-content">
+              <h2 class="nm__title">Graduates</h2><a href="/careers/graduates" class="nm__direct-link">View</a>
+            </div>
+          </div>
+          <ul class="nm__mid-list"><li class="nm__mid-item"><a href="/careers/international-volunteer-program" class="nm__mid-href">International Volunteer Program</a></li>
+<li class="nm__mid-item"><a href="/careers/allex-program" class="nm__mid-href">ALLEX program</a></li>
+</ul></div>
+          <div class="nm__foot">                <a href="/careers/job-offers" class="hnav__nav-btn">Find our job offers <svg width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="1.5" d="M1.274 1.167L6.19 6.083 1.274 11"/><path stroke="#FFF" fill="#D8D8D8" d="M7.5 6.5H2.881v-1H7.5z"/></g></svg></a><a href="/careers/apply?jobId=PDMFK026203F3VBQBV7LOQW0B-250&langCode=en_US" class="hnav__nav-btn">Spontaneous application <svg width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path stroke="currentColor" stroke-width="1.5" d="M1.274 1.167L6.19 6.083 1.274 11"/><path stroke="#FFF" fill="#D8D8D8" d="M7.5 6.5H2.881v-1H7.5z"/></g></svg></a>          
+</div>
+        </div></div>
+
+<a class="[ scroll-indicator btn--back-top ] is-hidden js-back-to-top" href="#">
+  <i class="icon icon-back-to-top"></i>
+</a>
+<a class="[ scroll-indicator btn--scroll-down ] is-hidden js-scroll-down" href="#">
+  <i class="icon icon-arrow-down"></i>
+</a>
+
+  <div class="[ sharers ] js-sharers">
+  <div class="sharers__inner">
+    <ul class="list--share">
+      <li class="list__item">
+        <a class="text-zoom__link js-text-zoom-btn js-text-zoom-in" href="#">
+          <i class="icon icon-zoom-in"></i>
+        </a>
+      </li>
+      <li class="list__item">
+        <a class="text-zoom__link js-text-zoom-btn js-text-zoom-out" href="#">
+          <i class="icon icon-zoom-out"></i>
+        </a>
+      </li>
+              <li class="list__item">
+          <a href="https://www.airliquide.com/group/contact-us"><i class="icon icon-contact"></i></a>        </li>
+                  <li class="list__item">
+        <a href="#" class="js-print">
+          <i class="icon icon-print"></i>
+        </a>
+      </li>
+              <li class="list__item list__item--trigger">
+          <a href="#">
+            <i class="icon icon-share"></i>
+          </a>
+          <div class="service-links"><strong>Share</strong><ul><li class="first"><a href="https://twitter.com/intent/tweet?text=Capital%2C%20articles%20of%20association%2C%20Internal%20Regulations%2C%20disclosure%20of%20share%20buy-back%20transactions&amp;url=https%3A//www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" target="_blank" rel="nofollow"><i class="icon icon-social-twitter"></i></a></li>
+<li><a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A//www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" target="_blank" rel="nofollow"><i class="icon icon-social-linkedin"></i></a></li>
+<li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" target="_blank" rel="nofollow"><i class="icon icon-social-facebook"></i></a></li>
+<li><a href="https://plus.google.com/share?url=https%3A//www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions" target="_blank" rel="nofollow"><i class="icon icon-social-google"></i></a></li>
+<li class="last"><a href="mailto:?body=https%3A//www.airliquide.com/investors/capital-articles-association-internal-regulations-disclosure-share-buy-back-transactions&amp;subject=I%27d%20like%20to%20share%20a%20link%20with%20you" target="_blank" rel="nofollow"><i class="icon icon-mail"></i></a></li>
+</ul></div>        </li>
+          </ul>
+  </div>
+</div>
+<section class="[ breadcrumb breadcrumb--select ] js-breadcrumb is-hidden-m is-hidden-mt">
+  <div class="row">
+    <div class="cell-12">
+      <ul class="breadcrumb__list"><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/investors" class="breadcrumb__link" itemprop="url"><span itemprop="title">Investors</span></a></li><li><i class="icon icon-breadcrumb size7"></i></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/investors/governance" class="breadcrumb__link" itemprop="url"><span itemprop="title">Governance</span></a></li><li><i class="icon icon-breadcrumb size7"></i></li><li><span class="[ dropdown dropdown--nowrap dropdown--highlight size12 ] breadcrumb__link">Capital and articles of association, Internal Regulations, disclosure of share buy-back transactions<div class="dropdown__wrapper"><a href="/investors/corporate-officers-remuneration-regulated-commitments" class="dropdown__link breadcrumb__link">Corporate officers remuneration and regulated commitments</a><a href="/investors/board-committees" class="dropdown__link breadcrumb__link">Board committees</a></div></span></li></ul>    </div>
+  </div>
+</section>
+
+
+
+
+    <section class="al-highlight-section">
+    <div class="row">
+        <div class="cell-12">
+          
+
+
+        </div>
+    </div>
+  </section>
+
+  <section class="[ subheader subheader--cover ] [ cover cover--middle cover--mobile ]">
+    <img alt="Capital, articles of association, Internal Regulations" title="Capital, articles of association, Internal Regulations" data-srcset="https://www.airliquide.com/sites/airliquide.com/files/styles/mobile_cover_page/public/2017/01/26/capital-articles-banner-mobile.jpg?itok=7aXWLUIu, https://www.airliquide.com/sites/airliquide.com/files/styles/retina_cover_page/public/2017/01/26/capital-articles-banner-mobile.jpg?itok=1rY7Fk8T 320w, https://www.airliquide.com/sites/airliquide.com/files/styles/web_page_cover/public/2017/01/26/capital-articles-banner.jpg?itok=A6DMzKAS 576w" alt="" class="cover__picture"><noscript><img alt="Capital, articles of association, Internal Regulations" title="Capital, articles of association, Internal Regulations" src="https://www.airliquide.com/sites/airliquide.com/files/styles/web_page_cover/public/2017/01/26/capital-articles-banner.jpg?itok=A6DMzKAS" class="cover__picture"></noscript>    <div class="cover__wrapper">
+      <div class="cover__table">
+        <div class="cover__content subheader__content">
+          <div class="row">
+            <div class="cell-12">
+              <div class="[ title title--cover ] [ media media--nomobile ]">
+                <div class="media__right">
+                  
+
+          <h1 class="heading-1 c-white">Capital, articles of association, Internal Regulations</h1>      
+
+
+          <p class="teasing-1 c-white">And disclosure of share buy-back transactions</p>      
+                                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="sticky-nav" class="[ menu menu--sticky ]">
+    <div class="menu--sticky__sticky js-sticky-anchors">
+      <div class="row">
+        <div class="cell-12">
+          <div class="menu--sticky__wrapper menu--sticky__expand js-menu-sticky__expand float-left">
+                          
+
+<nav class="[ nav nav--anchors ] float-left is-hidden-mt">
+      <ul>
+          <li><a href="#a4bb92bce0" class="nav__item link-font js-anchor">Capital</a></li>
+          <li><a href="#a0774920b0" class="nav__item link-font js-anchor">The articles of association</a></li>
+          <li><a href="#a28f320840" class="nav__item link-font js-anchor">Internal regulations of the Board of Directors</a></li>
+          <li><a href="#a643e99410" class="nav__item link-font js-anchor">Disclosures of share buy-back transactions</a></li>
+    </ul>  </nav>
+
+                                  </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="wrapper">
+  <section class="[ panel ] b-icono js-panel-intro">
+    <div class="row">
+      <div class="cell-10 centered trailer-st">
+        
+
+          <p class="teasing-2 c-white">Please find here the Capital, the Company's articles of association, the Internal Regulations of the Board of Directors and the disclosures of share buy-back transactions.</p>      
+      </div>
+    </div>
+  </section>
+
+  <div class="row tpl-sidebar__row">
+    <div class="cell-11 prepend-1 js-sticky-reference js-text-zoom">
+              
+
+            <span id="a4bb92bce0"></span>        <section class="[ panel ] b-white">
+    <div class="row row--break-tablet">
+      <div class="cell-12">
+                  <div class="rte rte--padded">
+                      <h2 class="heading-2 trailer-small">Capital</h2>                            <p>Capital as of February 10, 2020:</p>
+
+<ul><li>2,602,235,812.00 euros</li>
+	<li>Divided into 473,133,784​ fully paid-up shares with a par value of 5.50 euros each</li>
+</ul>                </div>
+              </div>
+    </div>
+  </section>
+            <span id="a0774920b0"></span>        <section class="[ panel ] b-white panel--notop">
+    <div class="row row--break-tablet">
+      <div class="cell-12">
+                  <div class="rte rte--padded">
+                      <h2 class="heading-2 trailer-small">The articles of association</h2>                            <ul><li><a href="https://www.airliquide.com/sites/airliquide.com/files/2020/03/02/statuts-de-la-societe-air-liquide-fevrier-2020.pdf" target="_blank" rel="noreferrer noopener">Download the articles of association (in French only)</a></li>
+	<li><a href="https://www.airliquide.com/sites/airliquide.com/files/2020/03/02/parution-balo-bulletin-annonces-legales-obligatoires-fevrier-2020.pdf" target="_blank" rel="noreferrer noopener">New share capital as published in the BALO (in French only)</a></li>
+</ul>                </div>
+              </div>
+    </div>
+  </section>
+            <span id="a28f320840"></span>        <section class="[ panel ] b-white panel--notop">
+    <div class="row row--break-tablet">
+      <div class="cell-12">
+                  <div class="rte rte--padded">
+                      <h2 class="heading-2 trailer-small">Internal regulations of the Board of Directors</h2>                            <p><a href="https://www.airliquide.com/sites/airliquide.com/files/2018/10/02/internal-regulations-of-the-board-of-directors-september-2018.pdf" target="_blank" rel="noreferrer noopener">Download the internal regulations</a></p>
+                </div>
+              </div>
+    </div>
+  </section>
+            <span id="a643e99410"></span>        <section class="[ panel ] b-white panel--notop">
+    <div class="row row--break-tablet">
+      <div class="cell-12">
+                  <div class="rte rte--padded">
+                      <h2 class="heading-2 trailer-small">Disclosures of share buyback transactions</h2>                            <ul><li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2020/03/02/air-liquide-contract-share-buyback-march-2020.pdf.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - March 2, 2020</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2020/02/11/air_liquide_-_contract_share_buyback_february_2020.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - February 12, 2020</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2019/07/31/air-liquide-update-liquidity-contract-31-july-2019.pdf" target="_blank" rel="noreferrer noopener">Update of the Liquidity Contract - July 31, 2019</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2019/05/03/share-buy-back-programs-03-may-2019.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - May 5, 2019</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2019/04/12/share-buy-back-programs-12-march-2019.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - March 12, 2019</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2019/04/12/share-buy-back-programs-26-march-2018.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - March 26, 2018</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2019/04/12/share-buy-back-programs-16-february-2018.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - February 16, 2018</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2019/04/12/share-buy-back-programs-28-april-2017.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - April 28, 2017</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/2019/04/12/share-buy-back-programs-16-february-2017.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - February 16, 2017</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/share_buy-back_programs_18_february_2015.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - February 18, 2015</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/share_buy-back_programs_19_february_2014.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - February 19, 2014</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/sites/airliquide.com/files/share_buy-back_programs_22_february_2013.pdf" target="_blank" rel="noreferrer noopener">Share buyback program - February 22, 2013</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20856/download?token=fYV1KlRO" target="_blank" rel="noreferrer noopener">Share buyback program - May 7, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20851/download?token=bzb3f_y0" target="_blank" rel="noreferrer noopener">Share buyback program - April 30, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20846/download?token=3Jh5T7W8" target="_blank" rel="noreferrer noopener">Share buyback program - April 23, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20811/download?token=9DyKqtxs" target="_blank" rel="noreferrer noopener">Share buyback program - April 16, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20796/download?token=FapKcrP1" target="_blank" rel="noreferrer noopener">Share buyback program - April 10, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20786/download?token=3zD5WTR2" target="_blank" rel="noreferrer noopener">Share buyback program - April 2, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20781/download?token=71BfNjK1" target="_blank" rel="noreferrer noopener">Share buyback program - March 26, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20771/download?token=1E-KTq7l" target="_blank" rel="noreferrer noopener">Share buyback program - March 19, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20766/download?token=g-KA7C5b" target="_blank" rel="noreferrer noopener">Share buyback program - March 12, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20756/download?token=4QX_mSFI" target="_blank" rel="noreferrer noopener">Share buyback program - February 27, 2012</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20751/download?token=YMik7eDw" target="_blank" rel="noreferrer noopener">Share buyback program - April 28, 2011</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20746/download?token=UbH3oZMb" target="_blank" rel="noreferrer noopener">Share buyback program - April 18, 2011</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20736/download?token=MGow_O5N" target="_blank" rel="noreferrer noopener">Share buyback program - April 11, 2011</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20731/download?token=OxZpC8RX" target="_blank" rel="noreferrer noopener">Share buyback program - March 28, 2011</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20726/download?token=-j_f-x1g" target="_blank" rel="noreferrer noopener">Share buyback program - March 21, 2011</a></p>
+	</li>
+	<li>
+		<p><a href="https://www.airliquide.com/file/20721/download?token=FTKVurXI" target="_blank" rel="noreferrer noopener">Share buyback program - March 14, 2011</a></p>
+	</li>
+</ul>                </div>
+              </div>
+    </div>
+  </section>
+
+          </div>
+  </div>
+
+  </section>
+
+  
+
+<section class="[ subfooter subfooter--prevnext ] b-white">
+  <div class="related prevnext--icon">
+          <div class="prevnext__header b-icono align-center">
+                <h2 class="heading-5 c-white">Governance</h2>
+      </div>
+        <div class="row">
+      <div class="cell-12 align-center">
+        <div class="related prevnext--icon">
+          <ul class="prevnext--icon__inner">
+                          <li class="prevnext--icon__item prevnext--icon__item--prev">
+                <a href="/investors/board-committees#content">
+      <i class="icon icon-prev"></i>
+      <span class="heading-3" data-clamp="1">Board committees</span>
+  <span class="c-font prevnext--icon__desc" data-clamp="2"></span>
+</a>
+              </li>
+            
+            <li class="prevnext--icon__item prevnext--icon__item--next">
+              <a href="/investors/corporate-officers-remuneration-regulated-commitments#content">
+        <i class="icon icon-next"></i>
+    <span class="heading-3" data-clamp="1">Corporate officers remuneration and regulated commitments</span>
+  <span class="c-font prevnext--icon__desc" data-clamp="2"></span>
+</a>
+            </li>
+          </ul>
+                      <div class="prevnext--icon__separator"></div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="[ footer footer--worldwide ] js-footer-worldwide footer-v3">
+  <div class="row footer--worldwide__main">
+    <div class="cell-4 middle">
+      <a href="/" class="footer--worldwide__logo">
+        <img src="/sites/all/themes/custom/airliquide/images/air-liquide-creative-oxygen.svg" class="picture" width="162" height="52" alt="Air Liquide" title="Air Liquide">
+      </a>
+      
+  <p class="footer-left-intro">A world leader in gases, technologies and services for Industry and Health, Air Liquide is present in 80 countries with approximately 67,000 employees and serves more than 3.7 million customers and patients. Oxygen, nitrogen and hydrogen are essential small molecules for life, matter and energy. They embody Air Liquide’s scientific territory and have been at the core of the company’s activities since its creation in 1902.</p>
+    </div>
+    <div class="cell-4 prepend-2 middle">
+      
+  <div class="footer--worldwide__country">
+    <span class="heading-5 c-title trailer-micro">Air Liquide worldwide</span>
+    <div class="custom-select custom-select--inline">
+        <select class="form__field form__select js-select-url">
+            <option value="">Please select</option>
+                        <option value="0" data-url="https://www.airliquide.com/fr/algerie">Algeria</option>
+                        <option value="1" data-url="https://www.airliquide.com/angola">Angola</option>
+                        <option value="2" data-url="https://www.airliquide.com/fr/antilles-guyane">Antilles</option>
+                        <option value="3" data-url="https://www.airliquide.com/argentina">Argentina</option>
+                        <option value="4" data-url="https://www.airliquide.com/australia">Australia</option>
+                        <option value="5" data-url="https://www.airliquide.com/austria">Austria</option>
+                        <option value="6" data-url="https://www.airliquide.com/bahrain">Bahrain</option>
+                        <option value="7" data-url="https://www.airliquide.com/belgium">Belgium</option>
+                        <option value="8" data-url="https://www.airliquide.com/benin">Benin</option>
+                        <option value="9" data-url="https://www.airliquide.com/botswana">Botswana</option>
+                        <option value="10" data-url="http://www.airliquide.com/brazil">Brazil</option>
+                        <option value="11" data-url="http://www.airliquide.com/brunei">Brunei</option>
+                        <option value="12" data-url="https://www.airliquide.com/bulgaria">Bulgaria</option>
+                        <option value="13" data-url="https://www.airliquide.com/burkina-faso">Burkina Faso</option>
+                        <option value="14" data-url="https://www.airliquide.com/cameroon">Cameroon</option>
+                        <option value="15" data-url="https://www.airliquide.com/canada">Canada</option>
+                        <option value="16" data-url="https://www.airliquide.com/chile">Chile</option>
+                        <option value="17" data-url="https://www.airliquide.com/colombia">Colombia</option>
+                        <option value="18" data-url="https://www.airliquide.com/congo">Congo</option>
+                        <option value="19" data-url="https://www.airliquide.com/czech-republic">Czech Republic</option>
+                        <option value="20" data-url="https://www.airliquide.com/denmark">Denmark</option>
+                        <option value="21" data-url="https://www.airliquide.com/dominican-republic">Dominican Republic</option>
+                        <option value="22" data-url="https://www.airliquide.com/egypt">Egypt</option>
+                        <option value="23" data-url="https://www.airliquide.com/finland">Finland</option>
+                        <option value="24" data-url="https://www.airliquide.com/fr/france">France</option>
+                        <option value="25" data-url="https://www.airliquide.com/fr/antilles-guyane">French Guiana</option>
+                        <option value="26" data-url="https://www.airliquide.com/gabon">Gabon</option>
+                        <option value="27" data-url="https://www.airliquide.com/germany">Germany</option>
+                        <option value="28" data-url="https://www.airliquide.com/ghana">Ghana</option>
+                        <option value="29" data-url="https://www.airliquide.com/greece">Greece</option>
+                        <option value="30" data-url="https://www.airliquide.com/india">India</option>
+                        <option value="31" data-url="https://www.airliquide.com/indonesia">Indonesia</option>
+                        <option value="32" data-url="https://www.airliquide.com/ireland">Ireland</option>
+                        <option value="33" data-url="https://www.airliquide.com/italy">Italy</option>
+                        <option value="34" data-url="https://www.airliquide.com/ivory-coast">Ivory Coast</option>
+                        <option value="35" data-url="https://www.airliquide.com/japan">Japan</option>
+                        <option value="36" data-url="https://www.airliquide.com/kazakhstan">Kazakhstan</option>
+                        <option value="37" data-url="https://www.airliquide.com/south-korea">Korea</option>
+                        <option value="38" data-url="https://www.airliquide.com/kuwait">Kuwait</option>
+                        <option value="39" data-url="https://www.airliquide.com/luxemburg">Luxembourg</option>
+                        <option value="40" data-url="https://www.airliquide.com/madagascar">Madagascar</option>
+                        <option value="41" data-url="https://www.airliquide.com/china">Mainland China</option>
+                        <option value="42" data-url="https://www.airliquide.com/malaysia">Malaysia</option>
+                        <option value="43" data-url="https://www.airliquide.com/mali">Mali</option>
+                        <option value="44" data-url="https://www.airliquide.com/mexico">Mexico</option>
+                        <option value="45" data-url="https://www.airliquide.com/fr/maroc">Morocco</option>
+                        <option value="46" data-url="https://www.airliquide.com/mozambique">Mozambique</option>
+                        <option value="47" data-url="https://www.airliquide.com/namibia">Namibia</option>
+                        <option value="48" data-url="https://www.airliquide.com/netherlands">Netherlands</option>
+                        <option value="49" data-url="https://www.airliquide.com/new-zealand">New Zealand</option>
+                        <option value="50" data-url="https://www.airliquide.com/nigeria">Nigeria</option>
+                        <option value="51" data-url="https://www.airliquide.com/norway">Norway</option>
+                        <option value="52" data-url="https://www.airliquide.com/oman">Oman</option>
+                        <option value="53" data-url="https://www.airliquide.com/paraguay">Paraguay</option>
+                        <option value="54" data-url="https://www.airliquide.com/philippines">Philippines</option>
+                        <option value="55" data-url="http://www.airliquide.com/poland">Poland</option>
+                        <option value="56" data-url="https://www.airliquide.com/portugal">Portugal</option>
+                        <option value="57" data-url="https://www.airliquide.com/qatar">Qatar</option>
+                        <option value="58" data-url="https://www.airliquide.com/romania">Romania</option>
+                        <option value="59" data-url="http://www.airliquide.com/russia">Russia</option>
+                        <option value="60" data-url="https://www.airliquide.com/saudi-arabia">Saudi Arabia</option>
+                        <option value="61" data-url="https://www.airliquide.com/fr/senegal">Senegal</option>
+                        <option value="62" data-url="https://www.airliquide.com/singapore">Singapore</option>
+                        <option value="63" data-url="https://www.airliquide.com/slovakia">Slovakia</option>
+                        <option value="64" data-url="https://www.airliquide.com/south-africa">South Africa</option>
+                        <option value="65" data-url="https://www.airliquide.com/spain">Spain</option>
+                        <option value="66" data-url="https://www.airliquide.com/swaziland">Swaziland</option>
+                        <option value="67" data-url="https://www.airliquide.com/sweden">Sweden</option>
+                        <option value="68" data-url="https://www.airliquide.com/switzerland">Switzerland</option>
+                        <option value="69" data-url="http://www.airliquide.com/taiwan">Taïwan</option>
+                        <option value="70" data-url="https://www.airliquide.com/thailand">Thailand</option>
+                        <option value="71" data-url="https://www.airliquide.com/togo">Togo</option>
+                        <option value="72" data-url="http://www.airliquide.com/trinidad-and-tobago">Trinidad and Tobago</option>
+                        <option value="73" data-url="https://www.airliquide.com/tunisia">Tunisia</option>
+                        <option value="74" data-url="https://www.airliquide.com/turkey">Turkey</option>
+                        <option value="75" data-url="https://www.airliquide.com/ukraine">Ukraine</option>
+                        <option value="76" data-url="https://www.airliquide.com/united-arab-emirates">United Arab Emirates</option>
+                        <option value="77" data-url="https://www.airliquide.com/united-kingdom">United Kingdom</option>
+                        <option value="78" data-url="https://www.airliquide.com/usa">United States of America</option>
+                        <option value="79" data-url="https://www.airliquide.com/uruguay">Uruguay</option>
+                        <option value="80" data-url="http://www.airliquide.com/vietnam">Vietnam</option>
+                    </select>
+    </div>
+</div>
+
+<ul class="list list--double"><li><a href="https://encyclopedia.airliquide.com/" title="" class="link-arial link-default" target="_blank">Gas encyclopedia</a></li><li><a href="/safety-data-sheets" class="link-arial link-default">Safety data sheets (SDS)</a></li><li><a href="https://www.fondationairliquide.com/en" title="" class="link-arial link-default" target="_blank">Air Liquide Foundation</a></li><li><a href="/group/contact-us" title="" class="link-arial link-default">Contact us</a></li></ul>    </div>
+    <div class="cell-2 top">
+      
+  <p class="heading-5 trailer-small c-title">Connect with us</p>
+<ul class="list list--inline list--social">
+      <li class="list__item"><a href="https://www.linkedin.com/company/airliquide" title="Find Air Liquide on LinkedIn" class="link-font" target="_blank"><i class="icon icon-social-linkedin"></i></a></li>
+      <li class="list__item"><a href="https://www.youtube.com/user/AirLiquideCorp" title="Find Air Liquide on YouTube" class="link-font" target="_blank"><i class="icon icon-social-youtube"></i></a></li>
+      <li class="list__item"><a href="https://www.facebook.com/AirLiquide" title="Find Air Liquide on Facebook" class="link-font" target="_blank"><i class="icon icon-social-facebook"></i></a></li>
+      <li class="list__item"><a href="https://twitter.com/AirLiquideGroup" title="Find Air Liquide on Twitter" class="link-font" target="_blank"><i class="icon icon-social-twitter"></i></a></li>
+  </ul>
+
+    </div>
+  </div>
+
+  <div class="row footer--worldwide__footer">
+    <div class="cell-12">
+      <hr class="trailer-micro">
+      <div class="clearfix trailer-micro">
+        <div class="float-left">
+          <p>&copy; Air Liquide 2020</p>
+        </div>
+        <div class="float-right">
+          
+  <ul class="list list--inline"><li class="list__item"><a href="/legal-notice" title="" class="link-arial link-default">Legal notice</a></li><li class="list__item"><a href="/cookie-policy" title="" class="link-arial link-default">Cookie policy</a></li><li class="list__item"><a href="/credits" title="" class="link-arial link-default">Credits</a></li><li class="list__item"><a href="/sitemap" title="" class="link-arial link-default">Sitemap</a></li></ul>        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+<div id="modal-video" class="modal modal--video js-modal js-modal-video">
+  <div class="modal--video__close js-modal-close"><i class="icon c-white icon-close"></i></div>
+  <div class="modal__wrapper js-modal-wrapper">
+  </div>
+</div>
+<div id="modal-find-offer" class="modal modal--find-offer js-modal">
+  <div class="modal__wrapper js-modal-wrapper">
+  </div>
+</div><script src="https://www.airliquide.com/sites/airliquide.com/files/js/js_9jt99dCvz6iOWiEj9aDWJaKbkGVSFMbMtMES2BMCG3k.js"></script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"82e9bf6f57","applicationID":"51792015","transactionName":"YFJQMkoEVxFVUENQW1kYcwVMDFYMG0NWXlFoWlMIWQJcEGtdWF1RaEFbA086SQNTVg==","queueTime":0,"applicationTime":819,"atts":"TBVTRAIeRB8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

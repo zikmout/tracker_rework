@@ -1,0 +1,2556 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+
+    
+    
+
+
+    
+
+    
+    
+    <script type="text/javascript">
+            window.digitalData = window.digitalData || [];
+            window.digitalData = [{
+                page: {
+                    pageInfo: {
+                        internalVisit: "false",
+                        pageName: "Ricerca",
+                        pageLanguage: "en-IT",
+                        magazine: "",
+                        editorialEni: "",
+                        userGoogleTags: "",
+                        env: "prod"
+                    }
+                }
+            }];
+    </script>
+
+    
+    <script type="text/javascript">
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','digitalData', 'GTM-T5QGTJ2');
+    </script>
+
+
+    
+    
+
+<link href="/assets/favicons/android-icon-192x192.png" sizes="192x192" type="image/png" rel="icon"/>
+
+
+<link href="/assets/favicons/favicon-16x16.png" sizes="16x16" type="image/png" rel="icon"/>
+
+
+<link href="/assets/favicons/favicon-32x32.png" sizes="32x32" type="image/png" rel="icon"/>
+
+
+<link href="/assets/favicons/favicon-96x96.png" sizes="96x96" type="image/png" rel="icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-57x57.png" sizes="57x57" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-60x60.png" sizes="60x60" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-114x114.png" sizes="114x114" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-120x120.png" sizes="120x120" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-180x180.png" sizes="180x180" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-72x72.png" sizes="72x72" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-76x76.png" sizes="76x76" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-144x144.png" sizes="144x144" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-152x152.png" sizes="152x152" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-167x167.png" sizes="167x167" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon.png" sizes="180x180" rel="apple-touch-icon"/>
+
+
+<link href="/assets/favicons/apple-touch-icon-precomposed.png" rel="apple-touch-icon-precomposed"/>
+
+
+<link color="#333333" href="/assets/favicons/safari-pinned-tab.svg" rel="mask-icon"/>
+
+
+<meta name="msapplication-TileImage"/>
+
+
+    
+    <title>* Eni Answers</title>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    
+    
+    <meta name="template" content="search"/>
+    <meta content="#fed300" name="theme-color"/>
+    <meta content="#fed300" name="msapplication-TileColor"/>
+    <link rel="manifest" href="/manifest.json"/>
+
+    
+    
+    
+
+    
+    
+        
+            <link rel="alternate" hreflang="en-IT" href="https://www.eni.com/en-IT/search.html?question=*&tab=press-release"/>
+        
+    
+        
+            <link rel="alternate" hreflang="it-IT" href="https://www.eni.com/it-IT/ricerca.html?question=*&tab=press-release"/>
+        
+    
+
+    <base href="/"/>
+
+    
+    
+<meta name="og:title" content="* Eni Answers"/>
+
+
+
+
+<meta name="twitter:card" content="summary"/>
+
+    
+    <link rel="stylesheet" href="/assets/css/style.css"/>
+    <script src="/assets/js/decoderWorker.min.js"></script>
+    <script src="/assets/js/encoderWorker.min.js"></script>
+    <script src="/assets/js/recorder.min.js"></script>
+    <script src="/assets/js/waveWorker.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+    
+    
+    
+
+</head>
+    <body>
+
+        
+
+        
+            
+
+
+
+            <!--suppress XmlDuplicatedId -->
+
+
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5QGTJ2" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    
+
+
+
+<div class="main-container search-page  ">
+
+    
+
+    
+    
+        
+<button type="button" class="btn fab-search-mobile" data-toggle="modal" data-backdrop="false" data-target="#mobileSearchModal">
+    <span class="icon-search-small"></span>
+</button>
+
+
+
+<div class="modal" id="mobileSearchModal" tabindex="-1" role="dialog" aria-labelledby="mobileSearchModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+        
+        
+
+        
+        <div class="modal-content " style="background-image:url(/assets/images/default/menu-mobile-bg.svg);">
+            <div class="modal-header">
+                <div class="eni-focus-area">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="icon-close-small"></span>
+                    </button>
+
+                    <form class="eni-search-modal-form" id="#searchFormModal" action="/en-IT/search.html">
+                        <span class="eni-search-modal-search-icon icon-search-small" id="search-icon"></span>
+                        <input class="form-control eni-search-modal-input" type="search" name="question" placeholder="Do you want to know more? Ask a question" aria-label="Eni.com Search" required/>
+<!--                        <button type="button" class="eni-search-modal-vocal-search">-->
+<!--                            <span class="icon-microphone-small"></span>-->
+<!--                        </button>-->
+                        <button class="close-icon eni-search-modal-clear" type="reset"></button>
+                        
+                        <input type="hidden" name="onlytab" value="true"/>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="vocal-search">
+                    <h1 class="text-center">Voice search</h1>
+                    <div class="speaker-container not-animated">
+                        <ul class="speaker-graphic ">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div class="button-container">
+                        <button class="btn btn-vocal-search"><span class="icon-microphone-small"></span></button>
+                    </div>
+                    <button class="eni-search-modal-abort-vocal-search btn text-center w-100 font-weight-bold cursor-pointer btn-exit" type="button">Cancel
+                    </button>
+                </div>
+                <div class="eni-focus-area search-links">
+                    <h2></h2>
+                    <ul class="suggestions">
+                        
+                    </ul>
+                    <h2></h2>
+                    <ul class="suggestions">
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+    
+    
+
+    
+    
+        <!--suppress XmlDuplicatedId -->
+
+
+
+
+
+
+
+<header class="eni-header header-light header-search  
+                  animated" id="eni-header-internal" data-upload-url="/en-IT/search.vocal.html">
+
+    <div class="eni-header-bg">
+        
+        <section class="eni-pre-header sticky" id="eni-pre-header">
+            <div class="eni-focus-area">
+
+                
+                <div class="eni-logo-container">
+                    <a href="/en-IT/home.html">
+                        <img src="/assets/images/default/logo-eni-com-dark.svg" alt="Eni Logo" class="eni-logo"/>
+                    </a>
+                </div>
+                <span class="logo-background"> </span>
+
+                
+                <nav class="eni-preheader-menu-container">
+
+                    <ul class="eni-separated-preheader-menu">
+                        <li class="eni-menu-element ">
+                            <a href="/en-IT/contacts.html">Contacts</a>
+                        </li>
+                    
+                        <li class="eni-menu-element ">
+                            <a href="/en-IT/publications.html">Publications</a>
+                        </li>
+                    
+                        <li class="eni-menu-element ">
+                            <a href="/en-IT/global-presence.html">Global Presence</a>
+                        </li>
+                    </ul>
+
+                    <ul class="eni-iconed-preheader-menu">
+                        
+                        
+                        
+                            <li class="eni-menu-element" id="preheader-menu-our-channels-btn">
+                                <a class="our-channel-btn-anchor">
+                                    <span class="icon icon-channels-small"></span>
+                                    <span class="eni-menu-text">Our Channel</span>
+                                </a>
+                            </li>
+                        
+                        
+                    </ul>
+
+                    
+                    <div class="eni-preheader-lang-prof">
+                        <div class="dropdown eni-preheader-language-dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="eni-preheader-language-dropdown-button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                en
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="eni-preheader-language-dropdown-button">
+                                <a class="dropdown-item eni-preheader-lang-dropdown selected" href="/en-IT/search.html?question=*&tab=press-release">EN</a>
+<a class="dropdown-item eni-preheader-lang-dropdown " href="/it-IT/ricerca.html?question=*&tab=press-release">IT</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="eni-user-login">
+                        
+                    </div>
+
+                    
+                    <ul class="preheader-menu-mobile">
+                        <li class="d-inline-block">
+                            
+                            
+                                <button class="preheader-menu-mobile-btn" id="preheader-menu-mobile-our-channels-btn">
+                                    <span class="icon-channels-small"></span>
+                                </button>
+                            
+                        </li>
+                        <li class="d-inline-block">
+                            <button class="preheader-menu-mobile-btn preheader-menu-mobile-menu-mobile-btn">
+                                <span class="icon-hamburger"></span>
+                            </button>
+                        </li>
+                    </ul>
+                </nav>
+
+                
+            </div>
+        </section>
+
+        
+        
+        
+            <section class="our-channel-panel">
+                <div class="eni-channels">
+                    <button class="btn icon-close-small" id="close-our-channels-btn" type="button"></button>
+                    <h2>Our Channels</h2>
+                    <ul>
+                        
+                        
+                            
+                                <li><a href="https://www.enistation.com/" title="Enistation" target="_blank">
+                                    <span class="icon-link-small"></span>Enistation</a>
+                                </li>
+                            
+                        
+                            
+                                <li><a href="https://multicard.eni.com/multicard/en_IT/homepage.page" title="Multicard" target="_blank">
+                                    <span class="icon-link-small"></span>Multicard</a>
+                                </li>
+                            
+                        
+                            
+                                <li><a href="https://versalis.eni.com/irj/portal/anonymous?guest_user=anon_en" title="Versalis" target="_blank">
+                                    <span class="icon-link-small"></span>Versalis</a>
+                                </li>
+                            
+                        
+                            
+                                <li><a href="https://www.eni.com/enirewind/it_IT/home.page" title="Eni Rewind" target="_blank">
+                                    <span class="icon-link-small"></span>Eni Rewind</a>
+                                </li>
+                            
+                        
+                    </ul>
+                    
+                </div>
+
+                <div class="channel-labels">
+                    
+                        <div class="channel-label">
+                            <div class="img-container">
+                                
+                                <picture>
+                                    <source media="(min-width: 768px)" srcset="/assets/images/logo/Img_oil_Our_channel.jpg.rend.400.200.jpg"/>
+                                    <img class="image" src="/assets/images/logo/Img_oil_Our_channel.jpg.rend.360.150.jpg" alt="Img_oil_Our_channel.jpg" title="Img_oil_Our_channel.jpg"/>
+                                </picture>
+                            </div>
+                            <div class="category"><span class="dash yellow-line"></span>enioilproducts
+                            </div>
+                            
+                                <h3><a href="https://oilproducts.eni.com/en_GB/" target="_blank">Your business, our energy</a></h3>
+                            
+                            
+                            <p>Produtcs and solutions for business and customers Italy and abroad</p>
+                        </div>
+                    
+                        <div class="channel-label">
+                            <div class="img-container">
+                                
+                                <picture>
+                                    <source media="(min-width: 768px)" srcset="/assets/images/logo/Img_enjoy_Our_channel.jpg.rend.400.200.jpg"/>
+                                    <img class="image" src="/assets/images/logo/Img_enjoy_Our_channel.jpg.rend.360.150.jpg" alt="Img_enjoy_Our_channel.jpg" title="Img_enjoy_Our_channel.jpg"/>
+                                </picture>
+                            </div>
+                            <div class="category"><span class="dash yellow-line"></span>ENJOY
+                            </div>
+                            
+                                <h3><a href="https://enjoy.eni.com/en" target="_blank">Get around town easily</a></h3>
+                            
+                            
+                            <p> Live the city with Eni&#39;s car-sharing service</p>
+                        </div>
+                    
+                </div>
+            </section>
+        
+        
+        <div class="eni-header-always-visible-container " id="eni-header-always-visible-container">
+            
+            <section class="eni-searchbar-container">
+                <div class="eni-focus-area ">
+
+                    <div class="eni-searchbar-util">
+                        <div class="eni-searchbar-middle">
+                            <div class="input-group eni-searchbar">
+                                <form class="eni-searchbar-header-form" id="#searchFormHeader" action="/en-IT/search.html">
+                                    <span class="eni-searchbar-header-icon icon-search-small" id="search-icon"></span>
+                                    <input class="form-control eni-searchbar-header-input" type="search" name="question" placeholder="Do you want to know more? Ask a question" aria-label="Eni.com Search" required/>
+<!--                                    <button type="button" class="eni-searchbar-vocal-search">-->
+<!--                                        <span class="icon-microphone-small"></span>-->
+<!--                                    </button>-->
+                                    <button class="close-icon eni-searchbar-header-clear" type="reset"></button>
+                                    
+                                    <input type="hidden" name="tab" value="press-release"/>
+                                    <input type="hidden" name="onlytab" value="true"/>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <div class="eni-searchbar-bottom">
+                        <div class="carousel-container search-header-carousel eni-tab-container">
+
+                            <div class="owl-carousel">
+                                
+                            
+                                <a href="/en-IT/search.html?question=*&tab=press-release&onlytab=true" class="eni-tab active">Press Releases</a>
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section class="eni-header-firstlevel">
+
+                <div class="eni-focus-area d-inline-block">
+
+                    
+                    <nav class="eni-firstlevel-world-menu-container">
+                        <ul class="eni-firstlevel-world-menu">
+                            <li class="eni-firstlevel-world-menu-listitem eni-menu-element ">
+                                <a href="/en-IT/home.html">Home</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    
+                    <nav class="eni-firstlevel-explore-menu-container">
+
+                        <div class="eni-firstlevel-explore-menu-wrapper">
+                            <ul class="eni-firstlevel-explore-menu">
+
+                                
+                                
+
+
+                                
+                                <li class="eni-firstlevel-explore-menu-listitem eni-firstlevel-explore-menu-listitem-explore-action eni-menu-element">
+                                    <button id="explore-button" class="btn btn-link explore-button" type="button">
+                                        <span>Explore</span>
+                                    </button>
+                                </li>
+
+                            </ul>
+
+                            <div class="eni-firstlevel-explore-menu-wrapper-shadow-left"></div>
+                            <div class="eni-firstlevel-explore-menu-wrapper-shadow-right"></div>
+                            <div class="paddles">
+                                <button class="left-paddle paddle icon-arrow-left hidden"></button>
+                                <button class="right-paddle paddle icon-arrow-right hidden"></button>
+                            </div>
+
+                        </div>
+
+
+                        <button id="explore-button-external" class="btn btn-link explore-button" type="button">
+                            <span>Explore</span>
+                            <div class="icon-add-small icon-container"></div>
+                        </button>
+                    </nav>
+
+
+                    
+                    <nav class="eni-firstlevel-right-menu-container">
+                        <ul class="eni-firstlevel-right-menu">
+                            <li class="eni-menu-element ">
+                                <a href="/en-IT/investors.html">
+                                    <div class="icon-bar-graph-small icon-container"></div>
+                                    <span class="eni-menu-text">Investors</span>
+                                </a>
+                            </li>
+                        
+                            <li class="eni-menu-element ">
+                                <a href="/en-IT/media.html">
+                                    <div class="icon-media-menu icon-container"></div>
+                                    <span class="eni-menu-text">Media</span>
+                                </a>
+                            </li>
+                        
+                            <li class="eni-menu-element ">
+                                <a href="/en-IT/careers.html">
+                                    <div class="icon-careers-menu icon-container"></div>
+                                    <span class="eni-menu-text">Careers</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </section>
+
+            
+            
+
+            
+            
+        </div>
+    </div>
+</header>
+
+
+<div class="modal fade eni-modal" id="myEniModal" tabindex="-1" role="dialog" aria-labelledby="myEniModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="icon-close-small"></span>
+                </button>
+                <h4 class="modal-title" id="myEniModalTitle">Go to myeni</h4>
+            </div>
+            <div class="modal-body">
+                
+                    <a href="https://basic.eni.it/up-password/LoginUp-Password.jsp?TARGET2=https://myeni.eni.com/en_IT" target="_self" title="Access with password" class="myeni-access">
+                        <div class="icon-container">
+                            <span class="icon-svg-multicolor padlock-dark"></span>
+                        </div>
+                        <div class="text">Access with password</div>
+                    </a>
+                
+                
+                    <a href="https://fastlogon.eni.it/Redirector/redirector.aspx?TARGET2=https://myeni.eni.com/en_IT" target="_self" title="Rapid Access" class="myeni-rapid-access">
+                        <div class="icon-container">
+                            <span class="icon-svg-multicolor login-dark"></span>
+                        </div>
+                        <div class="text">Rapid Access</div>
+                    </a>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div id="main-wrapper" class="main-wrapper ">
+            
+
+<aside class="enicom-explore" style="display: none;">
+    <div class="explore-menu-title">
+        <span class="explore-menu-title-text">Explore</span>
+    </div>
+    <span id="explore-menu-btn-close" class="icon-close-small"></span>
+    <div class="explore-scroll">
+        <div class="eni-focus-area ">
+            <div class="row cards-container principal-cards-container w-100 mx-0">
+                <div class="explore-menu-card-wrapper">
+                    <div class="explore-menu-card " data-id="page-993141400" data-title="Who we are" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2f attivita\2f cover-strategia-upstream-modello-esplorativo.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2f attivita\2f cover-strategia-upstream-modello-esplorativo.jpg.rend.640.480.jpg);">
+                        <div class="explore-menu-card-container">
+                            <span class="icon-added-to-menu"></span>
+                            <span class="added-to-menu-message">Added to your menu</span>
+                            <span class="removed-from-menu-message">Removed from your menu</span>
+                            <button class="btn add-remove-btn">
+                                <span class="icon-svg-multicolor add-filled"></span>
+                                <span class="icon-remove-small"></span>
+                                <small class="add-to-menu">Add <span>to your menu</span></small>
+                                <small class="remove-from-menu">Remove</small>
+                            </button>
+                            <a class="explore-card-link" href="/en-IT/about-us.html" title="Who we are" target="_self">
+                                <h3><span>Who we are</span></h3>
+                            </a>
+                            <span class="icon-card icon-arrow-right-small"></span>
+                        </div>
+                    </div>
+                </div>
+<div class="explore-menu-card-wrapper">
+                    <div class="explore-menu-card " data-id="page-1332252242" data-title="Operations" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2f attivita\2fgreen-data-notte.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2f attivita\2fgreen-data-notte.jpg.rend.640.480.jpg);">
+                        <div class="explore-menu-card-container">
+                            <span class="icon-added-to-menu"></span>
+                            <span class="added-to-menu-message">Added to your menu</span>
+                            <span class="removed-from-menu-message">Removed from your menu</span>
+                            <button class="btn add-remove-btn">
+                                <span class="icon-svg-multicolor add-filled"></span>
+                                <span class="icon-remove-small"></span>
+                                <small class="add-to-menu">Add <span>to your menu</span></small>
+                                <small class="remove-from-menu">Remove</small>
+                            </button>
+                            <a class="explore-card-link" href="/en-IT/operations.html" title="Operations" target="_self">
+                                <h3><span>Operations</span></h3>
+                            </a>
+                            <span class="icon-card icon-arrow-right-small"></span>
+                        </div>
+                    </div>
+                </div>
+<div class="explore-menu-card-wrapper">
+                    <div class="explore-menu-card " data-id="page-1919782578" data-title="Just Transition" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2fvision\2f cover-vision.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2fvision\2f cover-vision.jpg.rend.640.480.jpg);">
+                        <div class="explore-menu-card-container">
+                            <span class="icon-added-to-menu"></span>
+                            <span class="added-to-menu-message">Added to your menu</span>
+                            <span class="removed-from-menu-message">Removed from your menu</span>
+                            <button class="btn add-remove-btn">
+                                <span class="icon-svg-multicolor add-filled"></span>
+                                <span class="icon-remove-small"></span>
+                                <small class="add-to-menu">Add <span>to your menu</span></small>
+                                <small class="remove-from-menu">Remove</small>
+                            </button>
+                            <a class="explore-card-link" href="/en-IT/just-transition.html" title="Just Transition" target="_self">
+                                <h3><span>Just Transition</span></h3>
+                            </a>
+                            <span class="icon-card icon-arrow-right-small"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="w-100 eni-topic-format-container ">
+                <div class="row">
+                    <div class="w-50 float-left">
+                        <button id="category-topic" class="btn btn-category text-white active">Topic</button>
+                    </div>
+                    <div class="w-50 float-left">
+                        <button id="category-format" class="btn btn-category text-white">Format</button>
+                    </div>
+                </div>
+
+                
+                <div class="row cards-container topic-container mx-0">
+
+                    <div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card " data-id="page-1208079984" data-title="Circular economy" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2f economia-circolare\2f cover-economia-circolare.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2f economia-circolare\2f cover-economia-circolare.jpg.rend.640.480.jpg);">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Topic added to your menu</span>
+                                <span class="removed-from-menu-message">Topic removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/circular-economy.html" title="Circular economy" target="_self">
+                                    <h3><span>Circular economy</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card " data-id="page-301552089" data-title="Global energy scenarios" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2fscenari-energetici\2f abo-articoli\2f cover-industria-intelligente.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2fscenari-energetici\2f abo-articoli\2f cover-industria-intelligente.jpg.rend.640.480.jpg);">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Topic added to your menu</span>
+                                <span class="removed-from-menu-message">Topic removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/global-energy-scenarios.html" title="Global energy scenarios" target="_self">
+                                    <h3><span>Global energy scenarios</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card " data-id="page-1814370186" data-title="Scientific Research" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2f canali\2fmedia\2fstorie\2f cover-ricerca-transizione-energetica.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2f canali\2fmedia\2fstorie\2f cover-ricerca-transizione-energetica.jpg.rend.640.480.jpg);">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Topic added to your menu</span>
+                                <span class="removed-from-menu-message">Topic removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/scientific-research.html" title="Scientific Research" target="_self">
+                                    <h3><span>Scientific Research</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card " data-id="page-1615818953" data-title="Technologies" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2f canali\2fmedia\2fstorie\2f cover-topic-tecnologie.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2f canali\2fmedia\2fstorie\2f cover-topic-tecnologie.jpg.rend.640.480.jpg);">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Topic added to your menu</span>
+                                <span class="removed-from-menu-message">Topic removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/technologies.html" title="Technologies" target="_self">
+                                    <h3><span>Technologies</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card " data-id="page-1646261072" data-title="Low Carbon" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2flow-carbon\2f cover-green-is-the-new-black-new.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2flow-carbon\2f cover-green-is-the-new-black-new.jpg.rend.640.480.jpg);">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Topic added to your menu</span>
+                                <span class="removed-from-menu-message">Topic removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/low-carbon.html" title="Low Carbon" target="_self">
+                                    <h3><span>Low Carbon</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card " data-id="page-551622355" data-title="Sustainable mobility" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2f canali\2fmedia\2fstorie\2f cover-topic-mobilita-sostenibile.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2f canali\2fmedia\2fstorie\2f cover-topic-mobilita-sostenibile.jpg.rend.640.480.jpg);">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Topic added to your menu</span>
+                                <span class="removed-from-menu-message">Topic removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/sustainable-mobility.html" title="Sustainable mobility" target="_self">
+                                    <h3><span>Sustainable mobility</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card " data-id="page-1450085293" data-title="Smart Home" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2f canali\2fmedia\2fstorie\2f cover-topic-smart-home.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2f canali\2fmedia\2fstorie\2f cover-topic-smart-home.jpg.rend.640.480.jpg);">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Topic added to your menu</span>
+                                <span class="removed-from-menu-message">Topic removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/smart-home.html" title="Smart Home" target="_self">
+                                    <h3><span>Smart Home</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card " data-id="page-2082730428" data-title="Digital Transformation" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2fvision\2f cover-trasformazione-digitale.jpg.rend.640.480.jpg);background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(\2f assets\2fimages\2ftopic\2fvision\2f cover-trasformazione-digitale.jpg.rend.640.480.jpg);">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Topic added to your menu</span>
+                                <span class="removed-from-menu-message">Topic removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/digital-transformation.html" title="Digital Transformation" target="_self">
+                                    <h3><span>Digital Transformation</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <div class="row cards-container format-container mx-0 hidden">
+
+                    <div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card format-card " data-id="page-339008591" data-title="Video" style="">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Format added to your menu</span>
+                                <span class="removed-from-menu-message">Format removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/video.html" title="Video" target="_self">
+                                    <h3><span>Video</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card format-card " data-id="page-1488606824" data-title="Podcast" style="">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Format added to your menu</span>
+                                <span class="removed-from-menu-message">Format removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/podcast.html" title="Podcast" target="_self">
+                                    <h3><span>Podcast</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card format-card " data-id="page-1561166824" data-title="Focus" style="">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Format added to your menu</span>
+                                <span class="removed-from-menu-message">Format removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/focus.html" title="Focus" target="_self">
+                                    <h3><span>Focus</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card format-card " data-id="page-1327662823" data-title="Stories" style="">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Format added to your menu</span>
+                                <span class="removed-from-menu-message">Format removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/stories.html" title="Stories" target="_self">
+                                    <h3><span>Stories</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card format-card " data-id="page-492704918" data-title="Photogallery" style="">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Format added to your menu</span>
+                                <span class="removed-from-menu-message">Format removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/photogallery.html" title="Photogallery" target="_self">
+                                    <h3><span>Photogallery</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+<div class="explore-menu-card-wrapper">
+                        <div class="explore-menu-card format-card " data-id="page-1437349209" data-title="Eni Tv" style="">
+                            <div class="explore-menu-card-container">
+                                <span class="icon-added-to-menu"></span>
+                                <span class="added-to-menu-message">Format added to your menu</span>
+                                <span class="removed-from-menu-message">Format removed from your menu</span>
+                                <button class="btn add-remove-btn">
+                                    <span class="icon-svg-multicolor add-filled"></span>
+                                    <span class="icon-remove-small"></span>
+                                    <small class="add-to-menu">Add <span>to your menu</span></small>
+                                    <small class="remove-from-menu">Remove</small>
+                                </button>
+                                <a class="explore-card-link" href="/en-IT/eni-tv.html" title="Eni Tv" target="_self">
+                                    <h3><span>Eni Tv</span></h3>
+                                </a>
+                                <span class="icon-card icon-arrow-right-small"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+            
+
+
+
+
+
+
+
+
+
+    
+    
+        
+
+
+
+
+    <section class="search-template-filters eni-filters-fbe">
+        <div class="eni-focus-area">
+
+            
+
+            
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="eni-filters">
+                            <div class="calendar filter calendar-from " data-filter="data-date-from" data-filter-type="calendar" data-language="eng" data-target-container=".search-results-container" data-target-element-class=".search-result">
+                                <input type="text" class="datepicker" placeholder="From"/>
+                                <span class="icon-calendar-filter"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="eni-filters">
+                            <div class="calendar filter calendar-to " data-filter="data-date-to" data-filter-type="calendar" data-target-container=".search-results-container" data-target-element-class=".search-result" data-language="eng">
+                                <input type="text" class="datepicker" placeholder="To"/>
+                                <span class="icon-calendar-filter"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="eni-filters">
+                            <div class="dropdown filter " data-filter="data-country" data-filter-type="dropdown" data-target-element-class=".search-result">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownCountry" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Country
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownCountry">
+                                    <button type="button" class="dropdown-item active" data-country="all">Country</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Algeria">Algeria</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Angola">Angola</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Argentina">Argentina</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Australia">Australia</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Croatia">Croatia</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Egypt">Egypt</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Ghana">Ghana</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Indonesia">Indonesia</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Iraq">Iraq</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Italy">Italy</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Kazakhstan">Kazakhstan</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Kenya">Kenya</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Libya">Libya</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Mexico">Mexico</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Mozambique">Mozambique</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Nigeria">Nigeria</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Norway">Norway</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Oman">Oman</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Pakistan">Pakistan</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Republic of the Congo">Republic of the Congo</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Russia">Russia</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Saudi Arabia">Saudi Arabia</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Tunisia">Tunisia</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="United Arab Emirates">United Arab Emirates</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="United States">United States</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-country="Vietnam">Vietnam</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12">
+                        <div class="eni-filters">
+                            <div class="dropdown filter" data-filter="data-Category" data-filter-type="dropdown" data-target-element-class=".search-result">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownTouchpoint" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownTouchpoint">
+                                    <button type="button" class="dropdown-item active" data-category="all">Category</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Board of director&#39;s communications">Board of director&#39;s communications</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Business meetings and agreements">Business meetings and agreements</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Chemicals">Chemicals</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Comments from Eni&#39;s spokesperson">Comments from Eni&#39;s spokesperson</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Countries and Territories">Countries and Territories</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Environmental services">Environmental services</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Financial news, results and Strategic Plan">Financial news, results and Strategic Plan</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Midstream">Midstream</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Refining and Marketing">Refining and Marketing</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Research and development">Research and development</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Sustainability">Sustainability</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Training and careers">Training and careers</button>
+                                    
+                                        <button type="button" class="dropdown-item " data-category="Upstream">Upstream</button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="eni-filters">
+                            <div class="checkbox filter" data-filter="data-price-sensitive" data-filter-type="dropdown" data-target-element-class=".search-result">
+                                <label class="checkbox-container">Price sensitive
+                                    <input type="checkbox" class="filter-checkbox-input"/>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-reset-right">
+                        <div class="eni-filters">
+                            <div class="reset-filters-container">
+                                <a href="/en-IT/search.html?question=*&tab=press-release&onlytab=true" title="Reset search filters" class="btn btn-reset-filters" rel="nofollow">
+                                    <span class="icon icon-reset"></span>Reset search filters
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+            
+
+            
+        </div>
+    </section>
+
+
+
+<div class="search-results-container">
+
+    
+    
+
+    
+    
+
+    
+    <section class="search-results eni-focus-area">
+        <div class="eni-widget">
+            
+            <div>
+                <span class="font-weight-bold">1114</span> results
+            </div>
+            
+        </div>
+    </section>
+
+    
+    
+        
+
+    
+
+    
+    
+    
+
+    
+    
+    
+
+    <section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Financial news, results and Strategic Plan</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/eni-first-quarter-2020-results.html" title="Eni: first quarter 2020 results" class="content-title">
+                                
+                                Eni: first quarter 2020 results
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">24 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-first-quarter-2020-results.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-first-quarter-2020-results.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Financial news, results and Strategic Plan</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/board-directors-approves-bond-issue.html" title="Eni: Board of Directors approves bond issue" class="content-title">
+                                
+                                Eni: Board of Directors approves bond issue
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">23 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/board-directors-approves-bond-issue.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/board-directors-approves-bond-issue.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Financial news, results and Strategic Plan</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/company-senior-managers.html" title="Eni’s CEO defers 50% of his long-term incentive until 2021. Company senior managers do the same." class="content-title">
+                                
+                                Eni’s CEO defers 50% of his long-term incentive until 2021. Company senior managers do the same.
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">23 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/company-senior-managers.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/company-senior-managers.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Financial news, results and Strategic Plan</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/eni-sec-closes-its-investigation-in-nigeria-and-congo-matters.html" title="Eni: SEC closes its investigation in Nigeria and Congo matters" class="content-title">
+                                
+                                Eni: SEC closes its investigation in Nigeria and Congo matters
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">22 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-sec-closes-its-investigation-in-nigeria-and-congo-matters.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-sec-closes-its-investigation-in-nigeria-and-congo-matters.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Board of director&#39;s communications</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/filed-slates-renewal-corporate-bodies.html" title="Eni: filed the slates of Ministry of Economy and Finance for the renewal of the corporate bodies" class="content-title">
+                                
+                                Eni: filed the slates of Ministry of Economy and Finance for the renewal of the corporate bodies
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">21 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/filed-slates-renewal-corporate-bodies.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/filed-slates-renewal-corporate-bodies.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Business meetings and agreements</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/filed-slates-institutional-investors.html" title="Eni: filed the slates of Institutional Investors for the renewal of the corporate bodies" class="content-title">
+                                
+                                Eni: filed the slates of Institutional Investors for the renewal of the corporate bodies
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">18 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/filed-slates-institutional-investors.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/filed-slates-institutional-investors.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Sustainability</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/eni-italian-red-cross.html" title="Eni’s employees donate over 600,000 euros to the Italian Red Cross" class="content-title">
+                                
+                                Eni’s employees donate over 600,000 euros to the Italian Red Cross
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">10 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-italian-red-cross.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-italian-red-cross.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Research and development</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/cs-eni-hpc5-coronavirus.html" title="Eni&#39;s HPC5 supercomputer contributes to Coronavirus research" class="content-title">
+                                
+                                Eni&#39;s HPC5 supercomputer contributes to Coronavirus research
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            The supercomputing infrastructure will support researchers in virus analysis</p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/cs-eni-hpc5-coronavirus.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/cs-eni-hpc5-coronavirus.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Sustainability</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/eni-stands-with-italy-the-company-supports-local-health-facilities-fight-against-coronavirus.html" title="Eni stands with Italy: the company supports local health facilities in fight against Coronavirus" class="content-title">
+                                
+                                Eni stands with Italy: the company supports local health facilities in fight against Coronavirus
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">07 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-stands-with-italy-the-company-supports-local-health-facilities-fight-against-coronavirus.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-stands-with-italy-the-company-supports-local-health-facilities-fight-against-coronavirus.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Business meetings and agreements</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/eni-cdp-industria.html" title="Eni-CDP Industria: slate of candidates for Statutory Auditors and proposals for Saipem Shareholders’ Meeting" class="content-title">
+                                
+                                Eni-CDP Industria: slate of candidates for Statutory Auditors and proposals for Saipem Shareholders’ Meeting
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item text-uppercase">03 April
+                                2020
+                            </div>
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-cdp-industria.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/eni-cdp-industria.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Financial news, results and Strategic Plan</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/04/annual-report-on-form-20-f-2019.html" title="Annual Report on Form 20-F 2019" class="content-title">
+                                
+                                Annual Report on Form 20-F 2019
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            </p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/annual-report-on-form-20-f-2019.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/04/annual-report-on-form-20-f-2019.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+<section class="editorial-content-list">
+
+        
+        <div class="eni-focus-area">
+            <div class="eni-widget">
+
+                <div class="band d-lg-flex flex-row  press-release">
+
+
+                    <div class="img-box">
+
+                        
+                        
+                        
+
+                        
+                        
+
+                        <span class="icon-svg-multicolor icon-newspaper-small"></span>
+                    </div>
+
+
+                    <div class="content-box">
+
+                        <div class="content-type d-flex align-items-center">
+                            <i class="dash yellow-line"></i>
+                            <span class="content-type-text text-uppercase">press release</span>
+                        </div>
+
+                        <div class="pre-title text-uppercase">
+                            <span>Environmental services</span>
+                        </div>
+
+                        
+                        <h3>
+                            <a x-cq-linkchecker="valid" href="https://www.eni.com/en-IT/media/press-release/2020/03/eni-starts-commercial-production-at-badamsha-wind-farm-site-in-kazakhstan.html" title="Eni starts commercial production at Badamsha Wind Farm site in Kazakhstan" class="content-title">
+                                
+                                Eni starts commercial production at Badamsha Wind Farm site in Kazakhstan
+                            </a>
+                        </h3>
+                        
+
+                        
+                        <p class="content-description">
+                            Eni, through its local renewable subsidiary ArmWind LLP, started the commercial production of the Badamsha Wind Farm located in North-West Kazakhstan, in the Aktobe Region. Badamsha Wind Farm has a capacity of 48 MW and will provide the Region with an annual power generation of about 198 GWh, with an overall CO2 saving of 172,000 tons per year.</p>
+                        
+
+
+                        <div class="content-detail">
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            
+
+                            
+                            <div class="content-detail-item">
+                                <button class="btn btn-share d-none d-lg-block" data-url="https://www.eni.com/en-IT/media/press-release/2020/03/eni-starts-commercial-production-at-badamsha-wind-farm-site-in-kazakhstan.html">
+                                    <i class="icon-share-small"></i>
+                                </button>
+                                <button type="button" class="btn btn-share d-lg-none" data-toggle="modal" data-target="#shareModal" data-url="https://www.eni.com/en-IT/media/press-release/2020/03/eni-starts-commercial-production-at-badamsha-wind-farm-site-in-kazakhstan.html">
+                                    <span class="icon-share-small"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        
+    </section>
+
+
+    <div class="paginator-full-backend">
+
+        <div class="tt-paginator-container">
+            <a x-cq-linkchecker="valid" class="ttpaginator-prev icon-arrow-left disabled" disabled="disabled"></a>
+            <div class="pages">
+                <a href="/en-IT/search.html?question=*&tab=press-release&page=0&onlytab=true" class="current" data-value="1">1</a>
+                
+            
+                <a href="/en-IT/search.html?question=*&tab=press-release&page=1&onlytab=true" data-value="2">2</a>
+                
+            
+                <a href="/en-IT/search.html?question=*&tab=press-release&page=2&onlytab=true" data-value="3">3</a>
+                
+            
+                <a href="/en-IT/search.html?question=*&tab=press-release&page=3&onlytab=true" data-value="4">4</a>
+                
+            
+                <a href="/en-IT/search.html?question=*&tab=press-release&page=4&onlytab=true" data-value="5">5</a>
+                
+            
+                
+                <a disabled="disabled">...</a>
+            
+                <a href="/en-IT/search.html?question=*&tab=press-release&page=92&onlytab=true" data-value="93">93</a>
+                
+            </div>
+            <a x-cq-linkchecker="valid" href="/en-IT/search.html?question=*&tab=press-release&page=1&onlytab=true" class="ttpaginator-next icon-arrow-right "></a>
+        </div>
+
+    </div>
+
+    
+
+
+    
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+        
+            
+        
+    
+
+
+
+
+
+    
+
+    
+    
+
+    
+    
+
+
+
+
+
+        </div>
+        
+
+<footer>
+    <div class="eni-focus-area ">
+        <div class="row py-3">
+            <div class="col-12">
+                <img src="/assets/images/default/logo-eni-footer.png" alt="Eni Logo" title="Eni Logo" class="logo-eni-footer"/>
+            </div>
+        </div>
+    </div>
+    <div class="footer-description-enicom">
+        <div class="eni-focus-area ">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-12 col-sm-12 bg-gray">
+                    
+                        
+                        <p class="mb-4">We are an energy company.
+We concretely support a just energy transition, with the objective of preserving our planet and promoting an efficient and sustainable access to energy for all. Our work is based on passion and innovation, on our unique strengths and skills, on the equal dignity of each person, recognizing diversity as a key value for human development, on the responsibility, integrity and transparency of our actions. We believe in the value of long term partnerships with the countries and communities where we operate, bringing long-lasting prosperity for all.
+<br /><a href="https://eni.com/en-IT/about-us.html" style="color: rgb(255,255,255);"><b>Find out more</b></a></p>
+                    
+                        <strong>Registered Head Office</strong>
+                        <p class="mb-4">Piazzale Enrico Mattei,1
+00144 Rome, Italy</p>
+                    
+                        <strong>Branches</strong>
+                        <p class="mb-4">Via Emilia, 1
+and
+Piazza Ezio Vanoni, 1
+20097 San Donato Milanese, Milan, Italy</p>
+                    
+                        <strong>Company Share Capital</strong>
+                        <p class="mb-4">€ 4.005.358.876,00 paid up</p>
+                    
+                        <strong>Rome Company Register</strong>
+                        <p class="mb-4">00484960588</p>
+                    
+                        <strong>Tax Identification Number</strong>
+                        <p class="mb-4">VAT Number 00905811006</p>
+                    
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 ">
+                    <h6 class="text-uppercase text-yellow-eni">ENI ON SOCIAL MEDIA</h6>
+                    <div class="row text-white pb-5 eni-social">
+                        <div class="col pt-3"><a class="icon-twitter" href="https://twitter.com/eni" title="Twitter" target="_blank"></a></div>
+                        <div class="col pt-3"><a class="icon-youtube" href="https://www.youtube.com/user/enivideochannel" title="You Tube" target="_blank"></a></div>
+                        <div class="col pt-3"><a class="icon-linkedin" href="https://www.linkedin.com/company/eni/" title="Linkedin" target="_blank"></a></div>
+                        <div class="col pt-3"><a class="icon-instagram" href="https://www.instagram.com/eni/" title="Instagram" target="_blank"></a></div>
+                        <div class="col pt-3"><a class="icon-facebook" href="https://www.facebook.com/EniItalia" title="Facebook" target="_blank"></a></div>
+                    </div>
+
+                    <h6 class="text-uppercase text-yellow-eni">POLICIES</h6>
+                    <div class="row text-white pb-5">
+                        <div class="col-12">
+                            
+                            <ul class="p-0 text-white">
+                                
+                                    <li class="d-inline-block mt-3">
+                                        <a href="/en-IT/terms-and-conditions.html" title="Terms and Conditions" target="_self">Terms and Conditions</a>
+                                    </li>
+                                
+                                    <li class="d-inline-block mt-3">
+                                        <a href="/en-IT/privacy.html" title="Privacy policy" target="_self">Privacy policy</a>
+                                    </li>
+                                
+                                    <li class="d-inline-block mt-3">
+                                        <a href="/en-IT/cookies.html" title="Cookie policy" target="_self">Cookie policy</a>
+                                    </li>
+                                
+                                    <li class="d-inline-block mt-3">
+                                        <a href="/en-IT/reserved-area.html" title="Info Reserved Area" target="_self">Info Reserved Area</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h6 class="text-uppercase text-yellow-eni">OTHER LINKS</h6>
+                    <div class="row text-white">
+                        <div class="col-12">
+                            
+                            <ul class="p-0 text-white">
+                                
+                                    <li class="d-inline-block mt-3"><a href="/en-IT/calendar.html" title="Calendar" target="_self">Calendar</a>
+                                    </li>
+                                
+                                    <li class="d-inline-block mt-3"><a href="/en-IT/contacts.html" title="Contact us" target="_self">Contact us</a>
+                                    </li>
+                                
+                                    <li class="d-inline-block mt-3"><a href="https://eniremit.eni.com/umm-power" title="Remit" target="_blank">Remit</a>
+                                    </li>
+                                
+                                    <li class="d-inline-block mt-3"><a href="https://esupplier.eni.com/PFU_en_US/home.page" title="enieSupplier" target="_blank">enieSupplier</a>
+                                    </li>
+                                
+                                    <li class="d-inline-block mt-3"><a href="https://www.eni.com/assets/documents/Slavery-and-Human-Trafficking-Statement-2018.pdf" title="Modern Slavery Statement" target="_blank">Modern Slavery Statement</a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+            
+<div id="eni-cookie-banner">
+    <div class="eni-focus-area">
+        <h3>This website uses cookies</h3>
+        <p class="cookie-description">This website uses cookies to show you adverts and offer you services customised according to the preferences you have shown while browsing online. For further information please refer to our cookie policy.</p>
+        <div class="cta-container">
+            <div class="btn-container">
+                <button type="button" class="btn eni-btn confirm">Accept</button>
+                <button type=" button" class="btn eni-btn refuse outline">Reject</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+        
+    
+
+    
+    
+        
+
+
+
+
+
+<div class="modal fade eni-modal" id="ModalDocumentDisclaimer" tabindex="-1" role="dialog" aria-labelledby="ModalDocumentDisclaimerTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="eni-focus-area">
+            <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true" class="icon-close-small"></span>
+                </button>
+                <div class="modal-header">
+                    <h4 class="modal-title">Disclaimer</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="scroll-area">
+                        <p>THIS WEBSITE (AND THE INFORMATION CONTAINED HEREIN) DOES NOT CONTAIN OR CONSTITUTE AN OFFER OF SECURITIES FOR SALE, OR SOLICITATION OF AN OFFER TO PURCHASE SECURITIES OR IS NOT FOR RELEASE, PUBLICATION OR DISTRIBUTION, DIRECTLY OR INDIRECTLY, IN OR INTO THE UNITED STATES (INCLUDING ITS TERRITORIES AND POSSESSIONS, ANY STATE OF THE UNITED STATES AND THE DISTRICT OF COLUMBIA) OR FOR THE ACCOUNT OR BENEFIT OF ANY U.S. PERSON AS THAT TERM IS DEFINED IN THE SECURITIES ACT (A &quot;<b>U.S. PERSON</b>&quot;), AUSTRALIA, CANADA, JAPAN OR SOUTH AFRICA OR ANY OTHER JURISDICTION WHERE SUCH AN OFFER OR SOLICITATION WOULD REQUIRE THE APPROVAL OF LOCAL AUTHORITIES OR OTHERWISE BE UNLAWFUL (THE &quot;<b>OTHER COUNTRIES</b>&quot;). THE SECURITIES REFERRED TO HEREIN HAVE NOT BEEN AND WILL NOT BE REGISTERED UNDER THE U.S. SECURITIES ACT OF 1933, AS AMENDED (THE &quot;SECURITIES ACT&quot;), OR PURSUANT TO THE CORRESPONDING REGULATIONS IN FORCE IN AUSTRALIA, CANADA, JAPAN, SOUTH AFRICA OR THE “OTHER COUNTRIES” AND MAY NOT BE OFFERED OR SOLD IN THE UNITED STATES OR TO A U.S. PERSON UNLESS THE SECURITIES ARE REGISTERED UNDER THE SECURITIES ACT, OR AN EXEMPTION FROM THE REGISTRATION REQUIREMENTS OF THE SECURITIES ACT IS AVAILABLE. NO PUBLIC OFFERING OF SUCH SECURITIES IS INTENDED TO BE MADE IN THE UNITED STATES, AUSTRALIA, CANADA, JAPAN OR IN THE “OTHER COUNTRIES.”</p>
+<p><b>In any Member State of the European Economic Area (&quot;EEA&quot;), the information contained in this website is only directed at and may only be communicated to persons who are &quot;qualified investors&quot; (&quot;Qualified Investors&quot;) within the meaning of Article 2(e) of Regulation (EU) 2017/1129 (the &quot;Prospectus Regulation&quot;).</b></p>
+<p><b>The information to which this website gives access is directed only at persons (i) who are persons falling within Article 49(2)(a) to (d) (&quot;high net worth companies, unincorporated associations etc.&quot;) of the Financial Services and Markets Act 2000 (Financial Promotion) Order 2005 (the &quot;Order&quot;) or (ii) who have professional experience in matters relating to investments falling within Article 19(5) of the Order or (iii) to whom it may otherwise lawfully be communicated (all such persons together being referred to as &quot;relevant persons&quot;). Any investment or investment activity to which this communication relates is only available to relevant persons and will be engaged in only with relevant persons, or in the EEA, with Qualified Investors. Any person who is not a relevant person, a Qualified Investor or otherwise permitted under applicable law or regulation to access the information, should not act or rely on the information contained herein.</b></p>
+<p> </p>
+<p style="text-align: center;"><b>Confirmation of Understanding and Acceptance of Disclaimer</b></p>
+<p><b>These materials are for informational purposes only and are not directed to, nor are they intended for, access by persons located or resident in the United States, Australia, Canada, Japan or South Africa or any of the Other Countries. I certify that:</b></p>
+<ol>
+<li><b>I am not resident of, or located in, the United States, Australia, Canada, Japan or South Africa or any of the Other Countries or I am not a U.S. Person; or</b></li>
+<li><b>If I am a resident of, or located in, the EEA, I am a Qualified Investor within the meaning of Article 2(e) of the Prospectus Regulation; or</b></li>
+<li><b>If I am a resident of, or located in, the United Kingdom, I am a Qualified Investor and a relevant person.<br />
+</b></li>
+</ol>
+<p><b>I have read and understood the disclaimer set out above. I understand that it may affect my rights. I agree to be bound by its terms and I am permitted under applicable law and regulations to proceed to the following parts of this website.</b></p>
+<p><b><i>WARNING: the above certification constitutes a &quot;self-certification&quot; pursuant to Decree of the President of the Italian Republic No. 445 of 28 December 2000. False certifications are punishable by law.</i></b></p>
+
+                    </div>
+                    <label id="disclaimer-terms" class="checkbox-container">
+                        <input type="checkbox"/>
+                        <span class="checkbox-label">I agree</span>
+                        <span class="checkmark"></span>
+                    </label>
+                    <a class="eni-btn" target="_blank" id="link-disclaimer">Download PDF</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+    
+</div>
+
+
+
+    <aside class="eni-menu-mobile pushy pushy-right">
+
+    <div class="float-left close-container">
+        <button class="icon-close-small menu-mobile-close-btn"></button>
+    </div>
+
+    <nav class="float-left menu-container pushy-content">
+        <ul class="primary-menu">
+            <li>
+                <a href="/en-IT/home.html" title="Home" target="_self"><span class="menu-label">Home</span></a>
+            </li>
+            <li>
+                <a href="/en-IT/investors.html" title="Investors" target="_self"><span class="menu-label">Investors</span></a>
+            </li>
+<li>
+                <a href="/en-IT/media.html" title="Media" target="_self"><span class="menu-label">Media</span></a>
+            </li>
+<li>
+                <a href="/en-IT/careers.html" title="Careers" target="_self"><span class="menu-label">Careers</span></a>
+            </li>
+
+            
+        </ul>
+        <ul class="secondary-menu">
+            <li>
+                <a href="/en-IT/contacts.html" title="Contacts" target="_self"><span class="menu-label">Contacts</span></a>
+            </li>
+        
+            <li>
+                <a href="/en-IT/publications.html" title="Publications" target="_self"><span class="menu-label">Publications</span></a>
+            </li>
+        
+            <li>
+                <a href="/en-IT/global-presence.html" title="Global Presence" target="_self"><span class="menu-label">Global Presence</span></a>
+            </li>
+        </ul>
+        <ul class="change-language">
+            <li class="d-inline-block active">
+                <a href="/en-IT/search.html?question=*&tab=press-release" title="Ricerca" target="_self">EN</a>
+            </li>
+        
+            <li class="d-inline-block ">
+                <a href="/it-IT/ricerca.html?question=*&tab=press-release" title="Ricerca" target="_self">IT</a>
+            </li>
+        </ul>
+        
+        
+        <img src="/assets/images/default/menu-mobile-bg.svg" alt="menu-mobile-bg.svg" class="eni-logo-bg"/>
+    </nav>
+
+</aside>
+
+
+<div id="share-dropdown" class="eni-social-list" style="display:none;" data-share-url="">
+    <ul class="p-0 m-0">
+        <li>
+            <button class="btn btn-share btn-social" data-share-social="facebook">
+                <div class="icon-container"><span class="icon-facebook"></span></div>
+                Facebook
+            </button>
+        </li>
+        <li>
+            <button class="btn btn-share btn-social" data-share-social="linkedin">
+                <div class="icon-container"><span class="icon-linkedin"></span></div>
+                Linkedin
+            </button>
+        </li>
+        <li>
+            <button class="btn btn-share btn-social" data-share-social="twitter">
+                <div class="icon-container"><span class="icon-twitter"></span></div>
+                Twitter
+            </button>
+        </li>
+        <li>
+            <button class="btn btn-share btn-social" data-share-social="mail">
+                <div class="icon-container"><span class="icon-mail"></span></div>
+                Mail
+            </button>
+        </li>
+        <li>
+            <button id="copyDropdownBtn" class="btn btn-share btn-social btn-copy-url">
+                <div class="icon-container"><span class="icon-link-small"></span></div>
+                Copy link
+            </button>
+        </li>
+    </ul>
+</div>
+
+
+<div class="toast modal-content" data-delay="2000">
+    <p class="m-0">link copied</p>
+</div>
+<div class="modal fade eni-social-list-modal eni-modal" id="shareModal" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span class="icon-close-small" aria-hidden="true"></span>
+        </button>
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body border-none p-0">
+                <ul class="pl-0 m-0">
+                    <li>
+                        <button class="btn btn-share btn-social" data-share-social="facebook">
+                            <div class="icon-container"><span class="icon-facebook"></span></div>
+                            Facebook
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-share btn-social" data-share-social="linkedin">
+                            <div class="icon-container"> <span class="icon-linkedin"></span></div>
+                            Linkedin
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-share btn-social" data-share-social="twitter">
+                            <div class="icon-container"> <span class="icon-twitter"></span></div>
+                            Twitter
+                        </button>
+                    </li>
+                    <li>
+                        <button class="btn btn-share btn-social" data-share-social="mail">
+                            <div class="icon-container"> <span class="icon-mail"></span></div>
+                            Mail
+                        </button>
+                    </li>
+                    <li>
+                        <button id="copyModalBtn" class="btn btn-share btn-social btn-copy-url">
+                            <div class="icon-container"> <span class="icon-link-small"></span> </div>
+                            Copy link
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+            
+    
+    <script type="text/javascript" src="/assets/js/vendor.min.js"></script>
+
+<script type="text/javascript" src="/assets/js/app.min.js"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?client=gme-enispa&callback=initMap"></script>
+<script async defer src='https://www.google.com/recaptcha/api.js'></script>
+
+
+
+<script type="text/javascript" src="//gamma.euroland.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js"></script>
+    
+
+    
+
+
+            
+
+        
+
+    </body>
+</html>
+

@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"cf9c9b7368",applicationID:"144454099"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Results and publications | Korian" />
+<link rel="canonical" href="https://www.korian.com/en/results-and-publications" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/korian/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://www.korian.com/en/results-and-publications" />
+<link rel="alternate" hreflang="fr" href="https://www.korian.com/fr/resultats-et-publications" />
+<link rel="revision" href="/en/results-and-publications" />
+
+    <title>Results and publications | Korian</title>
+    <link rel="stylesheet" href="/sites/default/files/css/css_sQaOFWsTHGuAtvU6jtnBGu9FDY3HQJw6nag2JLC7gGo.css?q6eu58" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_r54rHu2EJPOeaRazV8SgmUnZT3BU5sF4RiagF-0d3bE.css?q6eu58" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_Gh69ildh02koc2mgKen8U6Y7Dy0_qqu2SuJT4XlPwfI.css?q6eu58" media="all" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+                    <link rel="apple-touch-icon" sizes="180x180" href="/themes/custom/korian/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/korian/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/korian/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/themes/custom/korian/images/favicons/site.webmanifest">
+    <link rel="shortcut icon" href="/themes/custom/korian/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-config" content="/themes/custom/korian/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+      </head>
+  <body class="anonymous path--node page--page page-type--pages-investisseurs">
+        <a href="#main" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<div class="layout--site layout--with-sidebar">
+
+  <div class="sticky-header">
+  
+    <header id="site-header" class="layout--header site-header" role="banner">
+      <div class="site-header-left">
+                          
+
+
+   
+    <div class="layout--region region region-header-left">
+  
+          
+
+
+
+
+<div id="block-korian-branding" class="block block-system block-system-branding-block block-korian-branding">
+
+        
+        <a href="/en" title="Korian.com - Back to home" rel="home" class="site-logo">
+      <img src="/themes/custom/korian/logo.svg" alt="Korian" />
+    </a>
+        <div class="site-info">
+              <div class="site-name">
+          <a href="/en" title="Home" rel="home">Korian</a>
+        </div>
+                    <div class="site-slogan">in caring hands</div>
+          </div>
+  
+</div>
+
+    
+   
+    </div>
+  
+
+              </div>
+      <div class="site-header-right">
+                <div class="region-header-mobile">
+          <button id="open-search" class="icon icon--search-blue"></button>
+          <button id="open-menu" class="icon icon--menu-blue"></button>
+        </div>
+                          
+
+
+   
+    <div class="layout--region region region-header-right">
+  
+          
+
+
+
+
+<div class="language-switcher-language-url block block-language block-language-blocklanguage-interface block-language-switcher" id="block-language-switcher" role="navigation">
+
+        
+      
+
+  <ul class="links"><li hreflang="en" data-drupal-link-system-path="node/20" class="en is-active"><a href="/en/results-and-publications" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/20">en</a></li><li hreflang="fr" data-drupal-link-system-path="node/20" class="fr"><a href="/fr/resultats-et-publications" class="language-link" hreflang="fr" data-drupal-link-system-path="node/20">fr</a></li></ul>
+
+
+
+
+  
+</div>
+<nav role="navigation" aria-labelledby="block-shortcuts-menu" id="block-shortcuts" class="block block-menu navigation menu--shortcuts">
+            
+    <div class="visually-hidden block-title" id="block-shortcuts-menu">Raccourcis</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/investors" target="_self" class="icon icon--finance-blue" title="Section investisseurs Korian" data-drupal-link-system-path="node/18">Investors</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.presse-korian.com/en" target="_blank" class="icon icon--presse-blue" title="Press Korian">Press</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    
+   
+    </div>
+  
+
+                                  
+
+
+   
+    <div class="layout--region region region-search">
+  
+          
+
+
+
+<div id="block-koriansearchbarblock" class="block block-korian-base block-korian-search-block block-koriansearchbarblock color--none">
+    <div class="block-inner fondation-inner">
+
+        
+    <form class="korian-search-form form--korian-search-form" data-drupal-selector="korian-search-form" action="/en/results-and-publications" method="post" id="korian-search-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-search form-item-search form-no-label">
+        <input data-drupal-selector="edit-search" type="text" id="edit-search" name="search" value="" size="60" maxlength="128" placeholder="Search" class="form-text" />
+
+        </div>
+<div class="form-actions js-form-wrapper form-wrapper" data-drupal-selector="edit-actions" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search" class="button js-form-submit form-submit" />
+</div>
+<input autocomplete="off" data-drupal-selector="form-2ukr4kjsq1naz-ytyeyensmlauta-yn9rjlyi8rngqs" type="hidden" name="form_build_id" value="form-2uKR4kjsQ1NaZ_ytyEyensMlAuta_YN9RJlyi8rNGQs" />
+<input data-drupal-selector="edit-korian-search-form" type="hidden" name="form_id" value="korian_search_form" />
+
+</form>
+
+
+  </div></div>
+
+    
+   
+    </div>
+  
+
+              </div>
+    </header>
+
+        <section class="layout--menu">
+      <div class="layout--wrapper korian-menu">
+        
+
+
+   
+    <div class="layout--region region region-menu">
+  
+          <nav role="navigation" aria-labelledby="block-korian-main-menu-menu" id="block-korian-main-menu" class="block block-menu navigation menu--main">
+            
+    <div class="visually-hidden block-title" id="block-korian-main-menu-menu">Main navigation</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/en/our-solutions" target="_self" data-drupal-link-system-path="node/21">Our solutions</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/long-term-care-nursing-homes" target="_self" data-drupal-link-system-path="node/22">Long-term care nursing homes</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/specialised-clinics" data-drupal-link-system-path="node/23">Specialised clinics</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/assisted-living-facilities-shared-housing" target="_self" data-drupal-link-system-path="node/24">Assisted living facilities &amp; shared housing</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/home-care-and-support-services" target="_self" data-drupal-link-system-path="node/25">Home care &amp; support services</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/en/group" target="_self" data-drupal-link-system-path="node/26">Our Group</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/our-strategy" target="_self" data-drupal-link-system-path="node/27">Our strategy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/korian-approach" target="_self" data-drupal-link-system-path="node/28">The Korian approach</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/our-organisation" target="_self" data-drupal-link-system-path="node/29">Our organisation</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/our-publications" data-drupal-link-system-path="node/75">Our publications</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/en/our-jobs" target="_self" data-drupal-link-system-path="node/279">Our jobs</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/why-work-korian" target="_self" data-drupal-link-system-path="node/30">Why work at Korian ?</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/training-and-career-development" target="_self" data-drupal-link-system-path="node/32">Training and career development</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="hidden-desktop menu-item">
+        <a href="/en/investors" target="_self" class="hidden-desktop" data-drupal-link-system-path="node/18">Finance</a>
+              </li>
+                <li class="fondation menu-item">
+        <a href="http://fondation-korian.com" target="_blank" class="fondation">KORIAN Foundation</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    
+   
+    </div>
+  
+
+      </div>
+    </section>
+    
+        <div class="layout--submenu">
+      
+
+
+   
+    <div class="layout--region region region-submenu">
+  
+          
+
+
+
+<div id="block-korian-submenu-block" class="block block-korian-base block-korian-submenu-block color--none">
+    <div class="block-inner fondation-inner">
+
+        
+    <div class="menu-toggle"><span class="menu-toggle-title">Direct access to:</span></div>
+              <ul class="color--blue menu">
+                    <li class="menu-item menu-item--active-trail">
+        <a href="/en/results-and-publications" target="_self" data-drupal-link-system-path="node/20" class="is-active">Results and publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/governance" data-drupal-link-system-path="node/378">Governance</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/regulated-information" target="_self" data-drupal-link-system-path="node/19">Regulated information</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/esg" target="_self" data-drupal-link-system-path="node/35">ESG</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/shareholders" target="_self" data-drupal-link-system-path="node/36">Shareholders</a>
+              </li>
+        </ul>
+  
+
+
+
+  </div></div>
+
+    
+   
+    </div>
+  
+
+    </div>
+    
+        <div class="layout--anchors">
+      
+
+
+   
+    <div class="layout--region region region-anchors">
+  
+          
+
+
+
+<div class="sticky block block-korian-base block-korian-anchors-block block-korian-anchors-menu color--none" id="block-korian-anchors-menu">
+    <div class="block-inner fondation-inner">
+
+        
+    <div class="anchorsmenu__wrapper color--blue hidden"><div id="anchorsmenu" class="anchorsmenu"></div></div>
+
+  </div></div>
+
+    
+   
+    </div>
+  
+
+    </div>
+    
+    
+  </div>
+  
+  
+    <div class="layout--quicklinks sticky">
+    
+
+
+   
+    <div class="layout--region region region-quicklinks">
+  
+          <nav role="navigation" aria-labelledby="block-accesrapideen-menu" id="block-accesrapideen" class="block block-menu navigation menu--acces-rapide-en">
+            
+    <div class="visually-hidden block-title" id="block-accesrapideen-menu">Liens d&#039;accès rapide EN</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/find-facility" target="_self" class="icon icon--house-blue quick-link--light" data-drupal-link-system-path="node/280">Find a facility</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/apply" target="_self" class="icon icon--job quick-link--dark" data-drupal-link-system-path="node/281">Apply</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    
+   
+    </div>
+  
+
+  </div>
+  
+  <main class="layout--main" role="main">
+
+        <a id="main" tabindex="-1" class="noflex"></a>
+
+        <div class="layout--content">
+      
+
+
+   
+    <div class="layout--region region region-content">
+  
+          
+
+
+
+
+<div id="block-korian-content" class="block block-system block-system-main-block block-korian-content">
+
+        
+      
+
+                
+      
+
+
+<article role="article" about="/en/results-and-publications" typeof="schema:WebPage" class="node node--type-page node--view-mode-full color--blue">
+
+      
+      
+      <div class="node__content">
+            
+
+        
+      <div class="items">
+  
+  
+
+
+
+
+<section class="contained layout--section section section--wysiwyg section--view-mode--default">
+
+        
+      
+<div class="clearfix text-formatted field-wysiwyg text-long">
+
+        
+  
+            <div><h2 class="editor_h2">Results and publications</h2>
+</div>
+      
+  
+</div>
+
+  
+</section>
+
+
+
+
+
+<section class="contained layout--section section section--block section--view-mode--default">
+
+        
+      
+
+        
+  
+  <div class="views-element-container">
+  
+
+  <div class="view view-publications view-id-publications view-display-id-block_publications js-view-dom-id-adf209248b0874399bfee6816cae82f4653fd650a0914b4fa6ec05fc838673eb">
+
+          
+            
+          
+        
+      <div class="view-filters select2buttons slider">
+      <form class="views-exposed-form form--views-exposed-form-publications-block-publications" data-drupal-selector="views-exposed-form-publications-block-publications" action="/en/results-and-publications" method="get" id="views-exposed-form-publications-block-publications" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="js-form-item form-item js-form-type-select form-type-select js-form-item-year form-item-year">
+      <label for="edit-year">Year</label>
+        <select data-drupal-selector="edit-year" id="edit-year" name="year" class="form-select"><option value="284" selected="selected">2020</option><option value="267">2019</option><option value="155">2018</option><option value="153">2017</option><option value="151">2016</option><option value="150">2015</option><option value="156">2014</option><option value="157">2013</option><option value="154">2012</option><option value="158">2011</option><option value="159">2010</option><option value="160">2009</option><option value="161">2008</option><option value="162">2007</option><option value="163">2006</option><option value="All">- Any -</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-publications" type="submit" id="edit-submit-publications" value="Appliquer" class="button js-form-submit form-submit" />
+</div>
+
+</div>
+
+</form>
+
+    </div>
+      
+              
+                  <div class="view-content">
+          
+<div class="views-table__wrapper">
+    <input type="checkbox" id="switch__full-year-2019" class="toggle" />
+  <label for="switch__full-year-2019" class="views-table-title">Full year 2019</label>
+
+  <table class="cols-0 views-table">
+                  <caption>
+        </caption>
+                  <tbody>
+              <tr>
+                                                                                                        <td class="views-field views-field-created">28-02-2020            </td>
+                                                                                                        <td class="views-field views-field-name">Annual financial statements 2019 and statutory auditors’ report - In French            </td>
+                                                                                                        <td class="views-field views-field-field-media-file"><div class="media-download-link ">
+<i class="icon icon--download-navy"></i>&nbsp;<span class="extension"><a href="https://www.korian.com/sites/default/files/documents/Comptes%20annuels%202019%20avec%20rapport%20des%20CACs_0.pdf">pdf</a></span>&nbsp;<span class="size">(6.62 MB)<span class="arrow">&gt;</span></span>
+</div>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td class="views-field views-field-created">28-02-2020            </td>
+                                                                                                        <td class="views-field views-field-name">Consolidated financial statements 2019 and statutory auditors’ report - In French            </td>
+                                                                                                        <td class="views-field views-field-field-media-file"><div class="media-download-link ">
+<i class="icon icon--download-navy"></i>&nbsp;<span class="extension"><a href="https://www.korian.com/sites/default/files/documents/Comptes%20consolid%C3%A9s%202019%20avec%20rapport%20des%20CACs_0.pdf">pdf</a></span>&nbsp;<span class="size">(22.18 MB)<span class="arrow">&gt;</span></span>
+</div>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td class="views-field views-field-created">28-02-2020            </td>
+                                                                                                        <td class="views-field views-field-name">2019 Annual results presentation            </td>
+                                                                                                        <td class="views-field views-field-field-media-file"><div class="media-download-link ">
+<i class="icon icon--download-navy"></i>&nbsp;<span class="extension"><a href="https://www.korian.com/sites/default/files/documents/Korian%20-%20RA_27022020_momentys_DEF_WEB.pdf">pdf</a></span>&nbsp;<span class="size">(3.21 MB)<span class="arrow">&gt;</span></span>
+</div>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td class="views-field views-field-created">27-02-2020            </td>
+                                                                                                        <td class="views-field views-field-name">Annual results 2019: Korian benefits from the success of its diversified and local growth model            </td>
+                                                                                                        <td class="views-field views-field-field-media-file"><div class="media-download-link ">
+<i class="icon icon--download-navy"></i>&nbsp;<span class="extension"><a href="https://www.korian.com/sites/default/files/documents/27.02.2020%20Annual%20results_PR_EN_FOR%20RELEASE_2.pdf">pdf</a></span>&nbsp;<span class="size">(558.31 KB)<span class="arrow">&gt;</span></span>
+</div>            </td>
+                  </tr>
+          </tbody>
+  </table>
+</div>
+
+<div class="views-table__wrapper">
+    <input type="checkbox" id="switch__other-documents" class="toggle" />
+  <label for="switch__other-documents" class="views-table-title">Other documents</label>
+
+  <table class="cols-0 views-table">
+                  <caption>
+        </caption>
+                  <tbody>
+              <tr>
+                                                                                                        <td class="views-field views-field-created">03-04-2020            </td>
+                                                                                                        <td class="views-field views-field-name">Annual General Meeting postponed            </td>
+                                                                                                        <td class="views-field views-field-field-media-file"><div class="media-download-link ">
+<i class="icon icon--download-navy"></i>&nbsp;<span class="extension"><a href="https://www.korian.com/sites/default/files/documents/03.04.2020%20Annual%20General%20Meeting%20postponed_FOR%20RELEASE.pdf">pdf</a></span>&nbsp;<span class="size">(56.81 KB)<span class="arrow">&gt;</span></span>
+</div>            </td>
+                  </tr>
+              <tr>
+                                                                                                        <td class="views-field views-field-created">17-01-2020            </td>
+                                                                                                        <td class="views-field views-field-name">Financial communication agenda 2020            </td>
+                                                                                                        <td class="views-field views-field-field-media-file"><div class="media-download-link ">
+<i class="icon icon--download-navy"></i>&nbsp;<span class="extension"><a href="https://www.korian.com/sites/default/files/documents/16.01.2020%20Financial%20communication%20agenda%202020.pdf">pdf</a></span>&nbsp;<span class="size">(79.37 KB)<span class="arrow">&gt;</span></span>
+</div>            </td>
+                  </tr>
+          </tbody>
+  </table>
+</div>
+
+        </div>
+          
+                  
+                                      
+  </div>
+</div>
+
+  
+
+  
+</section>
+
+
+
+
+
+<section class="contained layout--section section section--wysiwyg section--view-mode--default">
+
+        
+      
+<div class="clearfix text-formatted field-wysiwyg text-long">
+
+        
+  
+            <div><h2 class="editor_h2">Financial press releases</h2>
+</div>
+      
+  
+</div>
+
+  
+</section>
+
+
+
+
+
+<section class="contained layout--section section section--block section--view-mode--default">
+
+        
+      
+
+        
+  
+  <div class="views-element-container">
+  
+
+  <div class="view view-presentations view-id-presentations view-display-id-block_related js-view-dom-id-bc0565e41b0052f04664fa4852f683da3a4eb0e1a9001588818ffb05b44a976f">
+
+          
+            
+          
+        
+              
+              
+                  <div class="view-content">
+              <div class="views-row">
+
+
+
+<div class="media document media--view-mode--teaser">
+
+      
+  
+
+    
+
+          <div class="media__content">
+  
+<div class="created">
+
+        
+  
+            <div>25-02-2020</div>
+      
+  
+</div>
+
+<div class="name string">
+
+        
+  
+            <div>Korian invests in start-up Move in Med to develop coordinated care pathways  </div>
+      
+  
+</div>
+
+<div class="field-media-file file">
+
+        
+  
+            <div>
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://www.korian.com/sites/default/files/documents/25.02.2020_PR%20MIM_ENG_FOR%20RELEASE.pdf" type="application/pdf; length=335392">25.02.2020_PR MIM_ENG_FOR RELEASE.pdf</a></span>
+</div>
+      
+  
+</div>
+
+    </div>
+  
+    
+</div>
+</div>
+    <div class="views-row">
+
+
+
+<div class="media document media--view-mode--teaser">
+
+      
+  
+
+    
+
+          <div class="media__content">
+  
+<div class="created">
+
+        
+  
+            <div>25-02-2020</div>
+      
+  
+</div>
+
+<div class="name string">
+
+        
+  
+            <div>Korian announces the acquisition of 5 Santé Group, a key player in the treatment of chronic diseases</div>
+      
+  
+</div>
+
+<div class="field-media-file file">
+
+        
+  
+            <div>
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://www.korian.com/sites/default/files/documents/25.02.2020_PR%205%20sant%C3%A9%20ENG_FOR%20RELEASE.pdf" type="application/pdf; length=100095">25.02.2020_PR 5 santé ENG_FOR RELEASE.pdf</a></span>
+</div>
+      
+  
+</div>
+
+    </div>
+  
+    
+</div>
+</div>
+
+        </div>
+          
+                                          
+  </div>
+</div>
+
+  
+
+
+        
+  
+    <p class="text-align-right">
+    <span class="editor_button"><a href="/en/presentations">All financial press releases</a></span>
+  </p>
+
+  
+
+  
+</section>
+
+      </div>
+  
+
+        </div>
+  
+          </article>
+
+    
+            
+  
+  
+</div>
+
+    
+   
+    </div>
+  
+
+    </div>
+    
+          <aside class="layout--sidebar" role="complementary">
+        
+ 
+  
+
+
+   
+<div class="layout--region region region-sidebar sticky">
+
+          
+
+
+
+<div class="block block-korian-base block-korian-action-block block-korianactionblock-en color--blue" id="block-korianactionblock-en">
+      <div class="block-icons">
+      
+<div class="icons">
+  <div class="icons-wrapper">
+    
+
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 85 42.6" style="enable-background:new 0 0 85 42.6;" xml:space="preserve" width="80"
+     height="60"
+     class="color--blue icon--svg">
+<style type="text/css">
+</style>
+  <path class="colorize" d="M63.7,42.6H21.3C9.5,42.6,0,32.9,0,21.3V0h63.7C75.5,0,85,9.5,85,21.3C85,32.9,75.5,42.6,63.7,42.6"/>
+</svg>
+    
+
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Calque_1"
+   data-name="Calque 1"
+   viewBox="0 0 26.6 22.8" style="enable-background:new 0 0 26.6 22.8;"
+   version="1.1"
+   sodipodi:docname="Action Korian.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   width="35"
+   height="35"
+   class="icon-ontop color--white icon--svg">
+  <g>
+    <path style="fill:#FFFFFF;" d="M20.6,7c0.1,5.4,0.2,8.9,0.3,14.3v1.3c-7.5-0.1-12.2-0.1-19.7-0.2l-0.6-0.2C0.8,16.8,0.9,12.1,1,6.7
+		"/>
+    <path style="fill:#003D58;" d="M1.2,0.4L1.2,0.4c0-0.1,0-0.2,0-0.3c0,0,0-0.1-0.5-0.1L0.3,0C0.2,0,0.1,0.2,0.1,0.5
+		C0,3.4,0,4.6,0,6.3c0,0.9,0,1.9,0,3.3l0.1,12.6c0,0.2,0.1,0.3,0.2,0.4s0.3,0.2,0.4,0.2l0,0l25.6-0.1c0.1,0,0.3,0,0.3-0.5
+		c0-0.3-0.2-0.4-0.2-0.4L1.2,21.6v-0.2V9.5c0-1.3,0-2.3,0-3.1c0-1.7,0-2.8-0.1-5.5L1.2,0.4z"/>
+    <path style="fill:#003D58;" d="M9.4,16.7c-0.3,0-0.5-0.1-0.8-0.5c-0.9-1.2-1.3-1.8-2.1-3.1c-0.1-0.2-0.2-0.4-0.4-0.6
+		c-0.2-0.4-0.5-0.7-0.7-1.1c-0.7,0.5-1.4,1-2,1.6c-0.5,0.4-1.1,0.9-1.9,1.6c-0.2,0.2-0.5,0.1-0.7-0.1S0.7,14,0.9,13.8
+		c0.8-0.6,1.4-1.1,1.9-1.5c0.7-0.6,1.5-1.2,2.3-1.7c0.2-0.1,0.4-0.2,0.6-0.1c0.3,0,0.7,0.7,1.2,1.5c0.1,0.2,0.2,0.4,0.4,0.6
+		c0.8,1.3,1.2,1.8,2,3c0.1,0.2,0.2,0.2,0.2,0.2s0.1-0.1,0.2-0.1c0.5-0.3,0.9-0.6,1.4-0.9c0.9-0.7,1.6-1.2,2.6-1.9
+		c0.2-0.1,0.5-0.1,0.6,0l1.8,1.7l8.3-7.8c0.2-0.2,0.5-0.2,0.7,0s0.2,0.5,0,0.7l-8.6,8.1c-0.2,0.2-0.5,0.2-0.7,0l-1.9-1.7
+		c-0.8,0.5-1.4,1-2.1,1.5c-0.5,0.5-1.1,0.9-1.8,1.2C9.7,16.7,9.6,16.7,9.4,16.7z"/>
+  </g>
+</svg>
+  </div>
+</div>
+    </div>
+    <div class="block-inner fondation-inner">
+
+            <div class="block-title">
+        <div>
+                      <div class="js-form-item form-item js-form-type-item form-type-item js-form-item- form-item- form-no-label">
+        Korian Share
+        </div>
+
+                  </div>
+      </div>
+      
+    <div class="korian-action"><p class="korian-action__title">Live stock</p><p class="korian-action__date"><span class="korian-action__date_days">28/04/2020</span><span class="korian-action__date_time">10:04 (Paris)</span></p><p class="korian-action__stock"><span class="price">29.02&euro;</span><span class="icon icon--fleche-blue icon--fleche-negative"></span><span class="var">-2.03&#37;</span></p></div><a href="/en/share-price-and-form" class="button">See stock description</a>
+
+  </div></div>
+
+
+
+
+<div id="block-documentdereference" class="korian-media-block block block-block-content block-block-content3dedc6ad-1736-474a-a921-eac65a8c3b5c block-documentdereference color--limon">
+      <div class="block-icons">
+      
+<div class="icons">
+  <div class="icons-wrapper">
+    
+
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 85 42.6" style="enable-background:new 0 0 85 42.6;" xml:space="preserve" width="80"
+     height="60"
+     class="color--limon icon--svg">
+<style type="text/css">
+</style>
+  <path class="colorize" d="M63.7,42.6H21.3C9.5,42.6,0,32.9,0,21.3V0h63.7C75.5,0,85,9.5,85,21.3C85,32.9,75.5,42.6,63.7,42.6"/>
+</svg>
+    
+
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Calque_1"
+   data-name="Calque 1"
+   version="1.1"
+   width="35"
+   height="35"
+   class="icon-ontop color--white icon--svg"
+   viewBox="0 0 29.6 27" style="enable-background:new 0 0 29.6 27;" xml:space="preserve">
+<title>Board picto2</title>
+  <g>
+    <path style="fill:#FFFFFF;" d="M12,20c0,0-9.2,2.5-10-6.5c0,0-0.6-5.9,6.4-5.8C8.4,7.7,8,2.5,15,2s8.4,3.1,8.7,8.6
+		c0,0,5.8-1.5,5.9,4.9c0,0,0.9,4.5-10.7,4.8L12,20z"/>
+    <g>
+      <path style="fill:#003D58;" d="M20,20.8c-0.4,0-0.7,0-1.1,0c-0.2,0-0.4,0-0.6-0.1c-0.2,0-0.4-0.1-0.5-0.1
+			c-0.3,0.1-0.6-0.1-0.7-0.5c-0.1-0.3,0.1-0.6,0.4-0.7s0.7,0,1,0.1c0.1,0,0.3,0.1,0.5,0.1c1.2,0,2.3,0,3.5-0.1
+			c3.3-0.2,4.8-1.2,5-3.1c0.2-1.9,0.4-4.1-1.1-5.4c-1-0.9-3.3-1.1-3.8-0.6c-0.2,0.2-0.6,0.3-0.8,0c-0.1-0.1-0.2-0.2-0.2-0.4
+			c-0.1-0.6-0.1-1.3,0-1.9c0-0.3,0-0.6,0-0.9c-0.1-1.4-0.5-2.7-1.3-3.8c-1.7-1.8-4.2-2.6-6.6-2.3c-2,0.2-3.8,1.2-5.1,2.7
+			c-1,1-1.9,2.4-1.5,3c0.1,0.2,0.1,0.5,0,0.7C6.9,7.8,6.6,7.9,6.4,7.8C5.3,7.5,4,8.1,2.5,9.6c-0.9,0.9-1.4,2.1-1.4,3.3
+			c0.2,1.9,1.1,3.6,2.6,4.9c1.6,1.5,4.1,1.5,6.4,1.4h0.4c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.3,0.6-0.6,0.6h-0.4c-2.5,0-5.2,0-7.2-1.8
+			C1.2,17.3,0.2,15.2,0,13c0-1.6,0.6-3.1,1.7-4.2c1.4-1.5,2.8-2.2,4-2.2c0-1.4,1.4-3,1.9-3.5c1.5-1.7,3.6-2.7,5.8-3
+			c2.9-0.4,5.7,0.6,7.7,2.7c0.9,1.3,1.5,2.8,1.6,4.4c0,0.4,0,0.8,0,1.1s0,0.6,0,0.9c1.6-0.3,3.2,0,4.4,1c1.9,1.7,1.7,4.4,1.5,6.3
+			c-0.3,3.9-4.6,4.1-6.1,4.2C21.7,20.8,20.8,20.8,20,20.8z"/>
+      <path style="fill:#003D58;" d="M14.2,26.3L14.2,26.3c-0.3,0-0.6-0.3-0.6-0.6l0,0v-2.1c0-1.4,0-2.9,0-3.7v-8.3
+			c0-0.3,0.3-0.6,0.6-0.6s0.6,0.3,0.6,0.6V20c0,0.8,0,2.3,0,3.7v2.1C14.7,26.1,14.5,26.3,14.2,26.3z"/>
+      <path style="fill:#003D58;" d="M14.2,27c-0.1,0-0.2,0-0.3-0.1c-0.6-0.4-1.1-0.8-1.6-1.3s-1-0.9-1.5-1.2c-0.3-0.2-0.4-0.5-0.2-0.8
+			s0.5-0.4,0.8-0.2l0,0c0.6,0.4,1.2,0.8,1.7,1.3c0.4,0.3,0.7,0.6,1.1,0.9c0.2-0.2,0.4-0.5,0.7-0.7c0.7-0.8,1.5-1.5,2.4-2.1
+			c0.3-0.1,0.6,0,0.8,0.3c0.1,0.3,0,0.6-0.3,0.7c-0.8,0.5-1.4,1.1-2,1.8c-0.4,0.4-0.7,0.8-1.1,1.1C14.5,26.9,14.3,27,14.2,27z"/>
+    </g>
+  </g>
+</svg>
+  </div>
+</div>
+    </div>
+    <div class="block-inner fondation-inner">
+
+            <div class="block-title">
+        <div>
+                      
+<div class="field-title string">
+
+        
+  
+            <div>Reference document</div>
+      
+  
+</div>
+
+                  </div>
+      </div>
+      
+    
+
+        
+      <div class="items">
+  
+  
+
+
+
+<div class="media document media--view-mode--teaser">
+
+      
+  
+
+    
+<div class="field-media-image image">
+
+        
+  
+            <div>  <img src="/sites/default/files/styles/teaser/public/2020-01/Doc%20de%20ref%20VA%20ok.jpg?itok=4FiV817m" width="560" height="260" alt="Document de référence VA" typeof="foaf:Image" class="image-style-teaser" />
+
+
+</div>
+      
+  
+</div>
+
+
+          <div class="media__content">
+  
+<div class="created">
+
+        
+  
+            <div>25-06-2018</div>
+      
+  
+</div>
+
+<div class="name string">
+
+        
+  
+            <div>Download the 2018 edition</div>
+      
+  
+</div>
+
+<div class="field-media-file file">
+
+        
+  
+            <div>
+<span class="file file--mime-application-pdf file--application-pdf"> <a href="https://www.korian.com/sites/default/files/documents/Korian_DDR2018_UK_WEB_0_0.pdf" type="application/pdf; length=9637619">Korian_DDR2018_UK_WEB_0.pdf</a></span>
+</div>
+      
+  
+</div>
+
+    </div>
+  
+    
+</div>
+
+      </div>
+  
+
+
+  </div></div>
+
+
+
+
+<div id="block-capitalmarketsday2019" class="korian-wysiwyg-block block block-block-content block-block-content249085f3-97bc-4eee-90aa-9afbd7b7100d block-capitalmarketsday2019 color--blue">
+      <div class="block-icons">
+      
+<div class="icons">
+  <div class="icons-wrapper">
+    
+
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 85 42.6" style="enable-background:new 0 0 85 42.6;" xml:space="preserve" width="80"
+     height="60"
+     class="color--blue icon--svg">
+<style type="text/css">
+</style>
+  <path class="colorize" d="M63.7,42.6H21.3C9.5,42.6,0,32.9,0,21.3V0h63.7C75.5,0,85,9.5,85,21.3C85,32.9,75.5,42.6,63.7,42.6"/>
+</svg>
+    
+
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="35"
+   height="35"
+   class="icon-ontop color--white icon--svg" viewBox="0 0 17 26.7" style="enable-background:new 0 0 17 26.7;" xml:space="preserve">
+<title>Board picto2</title>
+  <g>
+    <path style="fill:#FFFFFF;" d="M4.5,11.2l-2.7,1.2L1,14.8l-0.6,6l2.8,0.9l-0.1,4.7c0,0,9.5-1.2,10.3-0.8l0.2-6.7l0.8,6.8l2.3,0.6
+		v-5.2l-0.7-6l-1.1-3.2l-2-0.9l-2.1-0.7l-1,0.8L7.6,11l-1-0.5L4.5,11.2z"/>
+    <path style="fill:#003D58;" d="M3.1,26.7c-0.1,0-0.2,0-0.2-0.1c-0.2-0.2-0.2-0.2-0.1-4.3V22c0-0.2,0.2-0.4,0.4-0.3l0,0
+		c0.2,0,0.4,0.2,0.3,0.4v0.3c0,1.3-0.1,2.9-0.1,3.6c1.4-0.3,2.9-0.4,4.4-0.5l3.1-0.2c0.6,0,1.2-0.1,1.7-0.1c0.2,0,0.4,0,0.5,0
+		c0-0.7,0-2.5,0-3.9c0-4.5,0-4.5,0.2-4.7c0.1-0.1,0.2-0.1,0.3-0.1c0.4,0,0.5,0.4,0.6,1.7c0.1,0.7,0.2,1.8,0.3,3
+		c0.1,1.7,0.2,3.5,0.3,4.1l1.6,0.4c0-1.2,0-4-0.2-6.7c-0.4-5.3-1.2-6.5-1.5-6.8l-3.8-1.4c-1.3,0.7-2.9,0.8-4.2,0.1
+		c-0.7,0.2-3.1,1-4,1.2c-1.1,0.3-1.4,4.1-1.7,6.6c-0.1,0.6-0.1,1.3-0.2,1.8c0,0.2-0.2,0.3-0.4,0.3s-0.3-0.2-0.3-0.4
+		c0.1-0.5,0.1-1.2,0.2-1.8c0.4-4,0.8-6.8,2.2-7.2c1.1-0.3,4.2-1.3,4.2-1.3c0.2,0,0.3,0,0.4,0.1c1.1,0.5,2.3,0.5,3.4-0.1
+		c0.1-0.2,0.3-0.2,0.4-0.2l4,1.5H15c2.3,1.6,2,14.5,2,14.6c0,0.1-0.1,0.2-0.1,0.3c-0.1,0.1-0.2,0.1-0.3,0.1l-2.3-0.5
+		c-0.2,0-0.3-0.2-0.3-0.3c0-0.9-0.1-1.9-0.2-2.8c0,2.8,0,2.8-0.2,2.9c-0.1,0.1-0.2,0.1-0.3,0.1c0,0,0,0-0.1,0c-0.2,0-0.5,0-0.8,0
+		c-0.5,0-1.1,0-1.7,0.1l-3.1,0.2C6.2,26.2,4.7,26.4,3.1,26.7L3.1,26.7z M13.4,25.2L13.4,25.2z"/>
+    <path style="fill:#003D58;" d="M6.8,22.9c-1.2-0.1-2.4-0.3-3.5-0.7c-1.1-0.3-2.2-0.6-3.2-1.1C0,20.9,0,20.8,0,20.7
+		c0-0.2,0.2-0.3,0.4-0.3l0,0c0.1,0,0.2,0.1,0.2,0.1c0.7,0.4,5.4,1.7,6.3,1.6H7c0.3,0,1,0,1.2-0.3c0.1-0.2,0.1-0.4,0-0.5
+		S7.8,21.1,7.5,21c-2.9-1.2-4.4-2-4.4-2.8c0-0.2,0.2-0.4,0.4-0.3c0.2,0,0.4,0.2,0.3,0.4l0,0c0.1,0.3,1.4,1.1,3.9,2.1
+		c0.9,0.4,1,0.4,1,0.6c0.2,0.4,0.2,0.9,0,1.3C8.2,23,7.1,22.9,6.8,22.9C7,22.8,6.9,22.9,6.8,22.9z M0.7,20.8L0.7,20.8z M0.7,20.8
+		L0.7,20.8z"/>
+    <path style="fill:#003D58;" d="M7.8,0.9c-3.4,0.9-2.5,8.3,1,7.8C12.8,8.1,11.9,0.2,7.8,0.9c-0.5,0-0.7-0.8-0.2-0.8
+		c5.1-0.8,6.5,8.4,1.6,9.4c-4.7,0.9-6-8.2-1.6-9.4C7.8,0,8,0.1,8.1,0.4C8.1,0.6,8,0.8,7.8,0.9"/>
+    <path style="fill:#003D58;" d="M10.2,6.6c-0.8,0.8-2,1-3,0.5c-0.5-0.2-0.1-1,0.4-0.7c0.7,0.3,1.5,0.2,2-0.4
+		C10,5.7,10.5,6.3,10.2,6.6"/>
+  </g>
+</svg>
+  </div>
+</div>
+    </div>
+    <div class="block-inner fondation-inner">
+
+            <div class="block-title">
+        <div>
+                      
+<div class="field-title string">
+
+        
+  
+            <div>CAPITAL MARKETS DAY : 09/20/19</div>
+      
+  
+</div>
+
+                  </div>
+      </div>
+      
+    
+<div class="clearfix text-formatted body text-with-summary">
+
+        
+  
+            <div><p><img alt="Capital Markets day 2019" data-entity-type="file" data-entity-uuid="b5036973-5248-4787-850e-92e7dd6e554a" src="/sites/default/files/inline-images/capital-market-day2019.jpg" /><br />
+ </p>
+<p><strong><a href="https://www.korian.com/sites/default/files/documents/20.09.2019%20Capital%20Market%20Day_EN_Diffusion.pdf" target="_blank">Download the Press Release</a></strong></p>
+<p><strong><a href="https://www.korian.com/sites/default/files/documents/20.09.2019%20Capital%20Markets%20Day_Presentation_1.pdf" target="_blank">Link to the presentation</a></strong></p>
+<p><strong><a href="https://www.korian.com/sites/default/files/documents/20.09.2019%20Capital%20Market%20Day_Acc%C3%A8s%20Webcast%20FR%20et%20EN_0.pdf" target="_blank">Link to the webcast</a></strong></p>
+<p><strong><a href="https://www.korian.com/sites/default/files/documents/Korian%20_%20Capital%20Markets%20Day%20EN%202019%20-%2020%20September%202019.pdf" title="Transcript English">Download the transcript</a></strong></p>
+</div>
+      
+  
+</div>
+
+
+  </div></div>
+
+
+
+
+<div id="block-blocnewsletterfinanciere" class="korian-wysiwyg-block block block-block-content block-block-contentae9c06fc-0486-429a-8eb7-1cb47bbd95a4 block-blocnewsletterfinanciere color--green">
+      <div class="block-icons">
+      
+<div class="icons">
+  <div class="icons-wrapper">
+    
+
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 85 42.6" style="enable-background:new 0 0 85 42.6;" xml:space="preserve" width="80"
+     height="60"
+     class="color--green icon--svg">
+<style type="text/css">
+</style>
+  <path class="colorize" d="M63.7,42.6H21.3C9.5,42.6,0,32.9,0,21.3V0h63.7C75.5,0,85,9.5,85,21.3C85,32.9,75.5,42.6,63.7,42.6"/>
+</svg>
+    
+
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Calque_1"
+   data-name="Calque 1"
+   version="1.1"
+   sodipodi:docname="icon_email.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   width="35"
+   height="35"
+   class="icon-ontop color--white icon--svg"
+  viewBox="0 0 21.7 20.9" style="enable-background:new 0 0 21.7 20.9;" xml:space="preserve">
+  <title>Board picto2</title>
+  <g>
+    <path style="fill:#FFFFFF;" d="M17.5,9.9c0.1-5.1,0.1-3.1,0.2-8.2l-0.4-0.2c-4.8,0-7.9-0.1-12.8-0.1v1.2C4.6,7.1,4.6,5.7,4.7,9
+		c0,0.4,0,0.8,0,1.3L7.9,12l3.2,1.9l5.2-3.4L17.5,9.9z"/>
+    <g>
+      <path style="fill:#003D58;" d="M3.4,9.3L3.4,9.3c-0.3,0-0.5-0.2-0.5-0.5c0-0.5,0-1.4,0-2.1c0-0.5,0-1,0-1.3c0-0.6,0-1.2,0-1.7
+			C3,2.7,3,1.8,3,0.8V0.1h0.5c0.5,0,1,0,1.5,0c0.2,0,0.4,0,0.6,0C6.9,0,8.2,0,9.4,0h0.7c1.7,0,3.2,0.1,4.7,0.2
+			c0.7,0.1,1.3,0.1,2,0.1h0.8c0.3,0,0.5,0.2,0.5,0.5s-0.2,0.5-0.5,0.5l0,0h-0.8c-0.7,0-1.4,0-2.1-0.1C13.2,1.1,11.7,1,10,1H9.4
+			C8.2,1,6.9,1,5.7,1.1c-0.2,0-0.4,0-0.6,0c-0.4,0-0.7,0-1.1,0.1C4,2,4,2.8,4,3.7c0,0.6,0,1.2,0,1.7c0,0.3,0,0.8,0,1.3
+			c0,0.8,0,1.6,0,2.1C3.9,9.1,3.6,9.3,3.4,9.3z"/>
+      <path style="fill:#003D58;" d="M17.8,9.7c-0.3,0-0.5-0.2-0.5-0.5c0-1,0-1.9,0.1-2.9c0-0.6,0-1.2,0-1.7c0-0.8,0-1.6-0.1-2.5
+			c0-0.2-0.1-0.3-0.1-0.5l-0.1-0.3c0-0.3,0.1-0.5,0.4-0.6c0.3,0,0.5,0.1,0.6,0.4v0.3c0,0.2,0.1,0.4,0.1,0.5c0.1,0.9,0.1,1.7,0.1,2.6
+			c0,0.6,0,1.2,0,1.7c0,1-0.1,1.9-0.1,2.9C18.3,9.4,18.1,9.7,17.8,9.7L17.8,9.7z"/>
+      <path style="fill:#003D58;" d="M18.1,20.9c-0.4,0-0.7,0-1.2,0c-2.3-0.2-4.4-0.2-6.8-0.2c-0.8,0-1.6,0-2.4,0c-1.3,0-2.7,0-4.1,0
+			c-0.3,0-0.6,0-0.8,0c-0.8,0-1.6,0.1-2.3,0H0v-0.6c-0.1-0.8,0-2.8,0-4.1c0-0.5,0-0.9,0-1.2c0-0.5,0-0.9,0-1.3c0-0.7,0-1.3,0-2
+			c0-1,0-1.4,0-2.1C0,9,0,8.4,0,8c0-0.1,0-0.2,0-0.3s0-0.2,0-0.3V6.8l0.4-0.1C0.7,6.6,1,6.5,1.3,6.3c0.2-0.1,0.3-0.2,0.5-0.2
+			c0.5-0.2,1-0.5,1.4-0.7c0.2-0.1,0.5-0.1,0.7,0.2C4,5.7,3.9,6,3.7,6.2C3.2,6.5,2.6,6.7,2.1,7C2,7,1.8,7.1,1.7,7.2
+			C1.5,7.3,1.2,7.4,1,7.5v0.1C1,7.7,1,7.8,1,8c0,0.4,0,0.9,0,1.3c0,0.7,0,1.2,0,2.1c0,0.8,0,1.4,0,2.1c0,0.4,0,0.9,0,1.4
+			c0,0.3,0,0.7,0,1.2c0,1.2,0,2.8,0,3.8c0.6,0,1.2,0,1.8,0c0.3,0,0.6,0,0.9,0c1.4,0,2.8,0,4.1,0c0.8,0,1.5,0,2.3,0
+			c2.3,0,4.6,0,6.9,0.2c0.7,0,1.5,0,2.2,0c0.4,0,0.8,0,1.3,0c0.1-1.3,0-3.5,0-4.7V15c0-0.5,0-0.9,0-1.4c0-0.6,0-1.3,0-2
+			c0-1,0-1.5,0-2.2c0-0.4,0-0.9,0-1.3c0-0.1,0-0.2,0-0.2c0-0.1,0-0.2,0-0.4c-0.1-0.2,0-0.5,0.2-0.7l0,0c0.3-0.1,0.6,0,0.7,0.2
+			c0.1,0.3,0.1,0.6,0.1,0.9c0,0.1,0,0.1,0,0.2c0,0.4,0,1,0,1.4c0,0.7,0,1.1,0,2.1c0,0.8,0,1.4,0,2.1c0,0.4,0,0.9,0,1.3v0.4
+			c0,1.4,0,4.1-0.1,5.2V21l-0.6,0.1c-0.6,0-1.1,0-1.6,0C18.9,20.9,18.5,20.9,18.1,20.9z"/>
+      <path style="fill:#003D58;" d="M0.6,20.7c-0.3,0-0.5-0.2-0.5-0.5c0-0.1,0-0.2,0.1-0.3c0.4-0.6,1.4-1.7,2.2-2.6
+			c0.5-0.6,1-1.1,1.2-1.4c0.6-0.8,1.3-1.6,1.9-2.5C5.6,13.2,5.8,13,6,12.8c0.3-0.4,0.6-0.8,0.9-1.2c0.1-0.2,0.4-0.3,0.7-0.2
+			c0.2,0.1,0.3,0.4,0.2,0.7c-0.3,0.5-0.6,0.9-1,1.4c-0.2,0.2-0.3,0.4-0.4,0.6c-0.6,0.9-1.3,1.7-1.9,2.5c-0.3,0.3-0.7,0.9-1.3,1.5
+			c-0.8,0.9-1.7,2-2.1,2.5C0.9,20.6,0.8,20.7,0.6,20.7z"/>
+      <path style="fill:#003D58;" d="M10.8,14.6c-0.1,0-0.3-0.1-0.4-0.2c-0.2-0.2-0.5-0.4-0.8-0.5c-0.2-0.1-0.4-0.2-0.5-0.3
+			c-0.4-0.3-0.9-0.6-1.4-0.9l-0.3-0.2C7,12.3,6.7,12,6.3,11.7c-0.2-0.2-0.5-0.3-0.7-0.5c-0.4-0.3-0.9-0.6-1.3-0.8
+			C3.8,10,3.1,9.6,2.5,9.1c-0.7-0.5-1.4-1-2.1-1.5C0.1,7.5,0,7.2,0.1,6.9c0.1-0.2,0.4-0.3,0.7-0.2c0.8,0.5,1.5,1,2.2,1.5
+			c0.6,0.4,1.2,0.9,1.9,1.2c0.4,0.3,0.9,0.6,1.3,0.8c0.2,0.2,0.5,0.3,0.7,0.5c0.3,0.2,0.7,0.5,1,0.7l0.3,0.2
+			c0.5,0.3,0.9,0.6,1.4,0.9c0.1,0.1,0.3,0.2,0.5,0.3c0.4,0.2,0.7,0.4,1,0.7c0.2,0.2,0.2,0.5-0.1,0.7C11.1,14.5,10.9,14.6,10.8,14.6
+			L10.8,14.6z"/>
+      <path style="fill:#003D58;" d="M10.8,14.6c-0.3,0-0.5-0.2-0.5-0.5c0-0.1,0-0.2,0.1-0.3c0.3-0.3,0.6-0.6,1-0.7
+			c0.2-0.1,0.3-0.2,0.5-0.3c0.5-0.3,0.9-0.6,1.4-0.9l0.3-0.2c0.4-0.2,0.7-0.5,1-0.7c0.2-0.2,0.5-0.4,0.7-0.5
+			c0.4-0.3,0.9-0.6,1.3-0.8c0.6-0.4,1.3-0.8,1.9-1.2L19,8c0.4-0.3,0.7-0.5,1.1-0.8l0,0C19.9,7.1,19.7,7,19.5,7
+			c-0.6-0.3-1.2-0.6-1.8-0.9c-0.2-0.2-0.3-0.5-0.1-0.7c0.1-0.2,0.4-0.3,0.7-0.1c0.5,0.3,1.1,0.6,1.7,0.9c0.1,0.1,0.3,0.1,0.5,0.2
+			c0.8,0.3,1.2,0.5,1.2,0.9v0.3L21,8.1c-0.4,0.3-0.9,0.5-1.3,0.9l-0.4,0.3c-0.6,0.5-1.3,0.9-1.9,1.3c-0.4,0.3-0.9,0.5-1.3,0.8
+			c-0.2,0.2-0.5,0.3-0.7,0.5c-0.4,0.3-0.7,0.5-1.1,0.8L14,12.9c-0.5,0.3-0.9,0.6-1.4,0.9c-0.2,0.1-0.4,0.2-0.5,0.3
+			c-0.3,0.1-0.5,0.3-0.8,0.5C11.1,14.5,11,14.6,10.8,14.6z"/>
+      <path style="fill:#003D58;" d="M20.8,20.9c-0.1,0-0.2,0-0.3-0.1c-0.4-0.4-0.7-0.8-1-1.3c-0.1-0.1-0.2-0.3-0.3-0.4
+			c-0.6-0.9-1.3-1.7-1.9-2.5l-0.1-0.1c-0.6-0.7-1.3-1.6-1.9-2.5c-0.1-0.1-0.3-0.3-0.4-0.6c-0.4-0.4-0.7-0.9-1-1.4
+			c-0.1-0.2,0-0.5,0.2-0.7c0.2-0.1,0.5,0,0.7,0.2c0.3,0.4,0.6,0.8,0.9,1.2c0.2,0.2,0.4,0.5,0.5,0.6c0.6,0.9,1.3,1.7,1.9,2.5l0.1,0.1
+			c0.7,0.8,1.3,1.7,1.9,2.6c0.1,0.1,0.2,0.3,0.3,0.4c0.2,0.4,0.5,0.7,0.8,1c0.2,0.2,0.2,0.5,0.1,0.7C21.1,20.8,21,20.9,20.8,20.9
+			L20.8,20.9z"/>
+    </g>
+  </g>
+</svg>
+  </div>
+</div>
+    </div>
+    <div class="block-inner fondation-inner">
+
+            <div class="block-title">
+        <div>
+                      
+<div class="field-title string">
+
+        
+  
+            <div>Investor relations contact</div>
+      
+  
+</div>
+
+                  </div>
+      </div>
+      
+    
+<div class="clearfix text-formatted body text-with-summary">
+
+        
+  
+            <div><p><img alt="NL" data-entity-type="file" data-entity-uuid="b7494f82-efd7-45ac-9304-c514a05ce0a9" height="215" src="/sites/default/files/inline-images/visuelNL-en1.jpg" width="440" /></p>
+<p>To join the shareholder community, <strong><a href="http://kori.staging.maecia.com/sites/default/files/documents/Korian_Formulaire-Abonnement_interactif.pdf" target="_blank">register here</a></strong>.</p>
+<p>If you have a question, <strong>please send us an e-mail to <a href="mailto:finance@korian.fr">finance@korian.fr</a></strong></p>
+<p> </p>
+</div>
+      
+  
+</div>
+
+
+  </div></div>
+
+
+
+
+<div id="block-agendafinancier" class="korian-view-block block block-block-content block-block-content9ab87e6c-ec4c-4b34-86ec-bd4082375cd1 block-agendafinancier color--orange">
+      <div class="block-icons">
+      
+<div class="icons">
+  <div class="icons-wrapper">
+    
+
+
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 85 42.6" style="enable-background:new 0 0 85 42.6;" xml:space="preserve" width="80"
+     height="60"
+     class="color--orange icon--svg">
+<style type="text/css">
+</style>
+  <path class="colorize" d="M63.7,42.6H21.3C9.5,42.6,0,32.9,0,21.3V0h63.7C75.5,0,85,9.5,85,21.3C85,32.9,75.5,42.6,63.7,42.6"/>
+</svg>
+    
+
+
+<svg
+  version="1.1"
+  id="Calque_1"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xml:space="preserve"
+  x="0px" y="0px"
+  width="35"
+  height="35"
+  class="icon-ontop color--white icon--svg"
+  viewBox="0 0 27 27.8" style="enable-background:new 0 0 27 27.8;" xml:space="preserve">
+<title>Board picto2</title>
+  <g>
+    <path style="fill:#FFFFFF;" d="M26.6,6.7c0.1,6.9,0.2,11.3,0.3,18.2v1.6c-8.9-0.1-14.5-0.1-23.4-0.2l-0.7-0.2
+		c0.1-7,0.2-12.9,0.3-19.8"/>
+    <g>
+      <g>
+        <path style="fill:#003D58;" d="M23.1,2.2v-1c0-0.5-0.4-1-1-1h-0.8c-0.5,0-1,0.4-1,1v1h-6.2v-1c0-0.5-0.4-1-1-1h-0.8
+				c-0.5,0-1,0.4-1,1v1h-6v-1c0-0.5-0.4-1-1-1H3.5c-0.5,0-1,0.4-1,1v1.1C1.2,2.5,0.2,3.6,0.2,5v19.7c0,1.5,1.3,2.8,2.8,2.8h19.8
+				c1.5,0,2.8-1.3,2.8-2.8V5C25.6,3.6,24.5,2.4,23.1,2.2z M21.1,1.2c0-0.1,0.1-0.2,0.2-0.2l0,0h0.8c0.1,0,0.2,0.1,0.2,0.2l0,0V4
+				c0,0.1-0.1,0.2-0.2,0.2h-0.8c-0.1,0-0.2-0.1-0.2-0.2V1.2z M12.2,1.2c0-0.1,0.1-0.2,0.2-0.2l0,0h0.8c0.1,0,0.2,0.1,0.2,0.2l0,0V4
+				c0,0.1-0.1,0.2-0.2,0.2l0,0h-0.8c-0.1,0-0.2-0.1-0.2-0.2l0,0V1.2z M3.3,1.2C3.3,1.1,3.4,1,3.5,1l0,0h0.8c0.1,0,0.2,0.1,0.2,0.2
+				l0,0V4c0,0.1-0.1,0.2-0.2,0.2H3.5C3.4,4.2,3.3,4.1,3.3,4l0,0V1.2z M2.6,3v1c0,0.5,0.4,1,1,1h0.8c0.5,0,1-0.4,1-1V3h6.2v1
+				c0,0.5,0.4,1,1,1h0.8c0.5,0,1-0.4,1-1V3h6.2v1c0,0.5,0.4,1,1,1h0.8c0.5,0,1-0.4,1-1V3c1,0.2,1.7,1,1.7,2v3.5H1V5
+				C1,4,1.6,3.2,2.6,3z M22.8,26.8H3c-1.1,0-2.1-0.9-2.1-2.1V9.3h23.9v15.5C24.8,25.9,23.9,26.8,22.8,26.8L22.8,26.8L22.8,26.8z"/>
+        <path style="fill:#003D58;" d="M22.8,27.8H3c-1.7,0-3-1.4-3-3V5c0-1.4,1-2.6,2.3-2.9V1.2C2.3,0.5,2.9,0,3.5,0h0.8
+				C5,0,5.5,0.5,5.5,1.2V2h5.7V1.2c0-0.7,0.5-1.2,1.2-1.2h0.8c0.7,0,1.2,0.5,1.2,1.2V2h5.7V1.2c0-0.7,0.5-1.2,1.2-1.2h0.8
+				c0.7,0,1.2,0.5,1.2,1.2V2c1.4,0.3,2.5,1.5,2.5,3v19.7C25.8,26.4,24.4,27.8,22.8,27.8z M3.5,0.5c-0.4,0-0.7,0.3-0.7,0.7v1.1
+				c0,0.1-0.1,0.2-0.2,0.2C1.4,2.7,0.5,3.8,0.5,5v19.7c0,1.4,1.1,2.6,2.6,2.6h19.7c1.4,0,2.6-1.1,2.6-2.6V5c0-1.3-1-2.4-2.3-2.5
+				c-0.1,0-0.2-0.1-0.2-0.2v-1c0-0.4-0.3-0.7-0.7-0.7l0,0h-0.8c-0.4,0-0.7,0.3-0.7,0.7l0,0v1c0,0.1-0.1,0.2-0.2,0.2l0,0h-6.2
+				c-0.1,0-0.2-0.1-0.2-0.2v-1c0-0.4-0.3-0.7-0.7-0.7h-0.8c-0.4,0-0.7,0.3-0.7,0.7l0,0v1c0,0.1-0.1,0.2-0.2,0.2l0,0H5.3
+				c-0.1,0-0.2-0.1-0.2-0.2l0,0v-1c0-0.4-0.3-0.7-0.7-0.7l0,0L3.5,0.5z M22.8,27H3c-1.3,0-2.3-1-2.3-2.3V9.3c0-0.1,0.1-0.2,0.2-0.2
+				l0,0h23.9c0.1,0,0.2,0.1,0.2,0.2l0,0v15.5C25.1,26,24,27,22.8,27L22.8,27z M1.2,9.5v15.2c0,1,0.8,1.8,1.8,1.8h19.7
+				c1,0,1.8-0.8,1.8-1.8V9.5H1.2z M24.8,8.8H1c-0.1,0-0.2-0.1-0.2-0.2l0,0V5c0-1.1,0.7-2,1.8-2.2c0.1,0,0.1,0,0.2,0
+				c0.1,0,0.1,0.1,0.1,0.2v1c0,0.4,0.3,0.7,0.7,0.7l0,0h0.8c0.4,0,0.7-0.3,0.7-0.7l0,0V3c0-0.1,0.1-0.2,0.2-0.2l0,0h6.2
+				c0.1,0,0.2,0.1,0.2,0.2v1c0,0.4,0.3,0.7,0.7,0.7l0,0h0.8C13.6,4.7,14,4.4,14,4l0,0V3c0-0.1,0.1-0.2,0.2-0.2l0,0h6.2
+				c0.1,0,0.2,0.1,0.2,0.2l0,0v1c0,0.4,0.3,0.7,0.7,0.7l0,0h0.8c0.4,0,0.7-0.3,0.7-0.7l0,0V3c0-0.1,0-0.1,0.1-0.2
+				c0.1,0,0.1-0.1,0.2-0.1C24.2,2.9,25,3.8,25,5v3.6C25.1,8.7,25,8.8,24.8,8.8L24.8,8.8L24.8,8.8z M1.2,8.3h23.4V5
+				c0-0.8-0.5-1.5-1.3-1.7V4c0,0.7-0.5,1.2-1.2,1.2h-0.8c-0.7,0-1.2-0.5-1.2-1.2V3.2h-5.7V4c0,0.7-0.5,1.2-1.2,1.2h-0.8
+				c-0.7,0-1.2-0.5-1.2-1.2V3.2H5.5V4c0,0.7-0.5,1.2-1.2,1.2H3.5C2.9,5.2,2.3,4.6,2.3,4V3.3C1.6,3.6,1.2,4.3,1.2,5V8.3z M22.1,4.4
+				h-0.8c-0.3,0-0.5-0.2-0.5-0.5V1.2c0-0.3,0.2-0.5,0.5-0.5h0.8c0.3,0,0.5,0.2,0.5,0.5V4C22.6,4.2,22.4,4.4,22.1,4.4L22.1,4.4z
+				 M21.3,1.2L21.3,1.2V4h0.8V1.2H21.3z M13.2,4.4h-0.8C12.2,4.4,12,4.2,12,4V1.2c0-0.3,0.2-0.5,0.5-0.5h0.8c0.3,0,0.5,0.2,0.5,0.5
+				V4C13.7,4.2,13.5,4.4,13.2,4.4L13.2,4.4z M12.4,1.2V4h0.8V1.2H12.4z M4.3,4.4H3.5C3.3,4.4,3.1,4.2,3.1,4V1.2
+				c0-0.3,0.2-0.5,0.5-0.5h0.8c0.3,0,0.5,0.2,0.5,0.5V4C4.8,4.2,4.6,4.4,4.3,4.4L4.3,4.4z M3.5,1.2L3.5,1.2V4h0.8V1.2H3.5z"/>
+      </g>
+      <g>
+        <polygon style="fill:#003D58;" points="12.9,21.4 5.8,14.3 5.3,14.8 12.9,22.4 20.5,14.8 20,14.3 			"/>
+        <path style="fill:#003D58;" d="M12.9,22.6c-0.1,0-0.1,0-0.2-0.1L5.1,15c0,0-0.1-0.1-0.1-0.2c0-0.1,0-0.1,0.1-0.2l0.5-0.5
+				c0.1-0.1,0.2-0.1,0.3,0l6.9,6.9l6.9-6.9c0.1-0.1,0.2-0.1,0.3,0l0.5,0.5c0.1,0.1,0.1,0.2,0,0.3l-7.6,7.6
+				C13,22.6,13,22.6,12.9,22.6z M5.6,14.8l7.3,7.3l7.3-7.3L20,14.6l-6.9,6.9c-0.1,0.1-0.2,0.1-0.3,0l-6.9-6.9L5.6,14.8z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+  </div>
+</div>
+    </div>
+    <div class="block-inner fondation-inner">
+
+            <div class="block-title">
+        <div>
+                      
+<div class="field-title string">
+
+        
+  
+            <div>Financial agenda</div>
+      
+  
+</div>
+
+                  </div>
+      </div>
+      
+    
+
+        
+  
+    <div  class="block-link"><a href="/en/korian-group-financial-calendar" rel="nofollow">See upcoming financial events </a></div>
+
+  
+
+
+  </div></div>
+
+    
+   
+    </div>
+  
+
+      </aside>
+    
+  </main>
+
+    <section class="layout--after-content" role="contentinfo">
+    <div class="layout--wrapper">
+      
+
+
+   
+  <div class="layout--region region region-after-content color--blue">
+
+          
+    
+   
+    </div>
+  
+
+    </div>
+  </section>
+  
+  
+    <section class="layout--prefooter" role="contentinfo">
+    <div class="layout--wrapper">
+      
+
+
+   
+    <div class="layout--region region region-prefooter">
+  
+          <nav role="navigation" aria-labelledby="block-footer-quick-links-menu" id="block-footer-quick-links" class="block block-menu navigation menu--footer-quick-links">
+      
+    <div id="block-footer-quick-links-menu" class="block-title">Quick links</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/group" target="_self" data-drupal-link-system-path="node/26">Who we are</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/our-solutions" target="_self" data-drupal-link-system-path="node/21">Our solutions</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/korian-approach" target="_self" data-drupal-link-system-path="node/28">The Korian approach</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footer-business-menu" id="block-footer-business" class="block block-menu navigation menu--footer-business">
+      
+    <div id="block-footer-business-menu" class="block-title">Jobs</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/our-jobs" target="_self" data-drupal-link-system-path="node/279">Work at Korian</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/training-and-career-development" target="_self" data-drupal-link-system-path="node/32">Training and career development</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://kori.staging.maecia.com/en/apply" target="_self">Apply</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footerpresseanglais-menu" id="block-footerpresseanglais" class="block block-menu navigation menu--footer---presse---anglais">
+      
+    <div id="block-footerpresseanglais-menu" class="block-title">Press</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://www.presse-korian.com/en/groupe/" target="_blank">Press releases</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.presse-korian.com/en/contact/" target="_blank">Press contact</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footer-finance-menu" id="block-footer-finance" class="block block-menu navigation menu--footer-finance">
+      
+    <div id="block-footer-finance-menu" class="block-title">Finance</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item menu-item--active-trail">
+        <a href="/en/results-and-publications" target="_self" data-drupal-link-system-path="node/20" class="is-active">Results and publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/regulated-information" target="_self" data-drupal-link-system-path="node/19">Regulated information</a>
+              </li>
+                <li class="menu-item">
+        <a href="/en/investors" target="_self" data-drupal-link-system-path="node/18">Investors and shareholders relations</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footer-contact-menu" id="block-footer-contact" class="block block-menu navigation menu--footer-contact">
+      
+    <div id="block-footer-contact-menu" class="block-title">Contact</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/find-facility" target="_self" data-drupal-link-system-path="node/280">Find a facility</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    
+   
+    </div>
+  
+
+    </div>
+  </section>
+  
+    <footer class="layout--footer site-footer" role="contentinfo">
+    
+
+
+   
+    <div class="layout--region region region-footer-left">
+  
+     
+  <nav role="navigation" aria-labelledby="block-korian-footer-menu" id="block-korian-footer" class="block block-menu navigation menu--footer">
+            
+    <div class="visually-hidden block-title" id="block-korian-footer-menu">Menu pied de page</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/legal-notice" target="_self" data-drupal-link-system-path="node/39">Legal Notice</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+
+
+
+<div class="language-switcher-language-url block block-language block-language-blocklanguage-interface block-language-switcher-footer" id="block-language-switcher-footer" role="navigation">
+
+        
+      
+
+  <ul class="links"><li hreflang="en" data-drupal-link-system-path="node/20" class="en is-active"><a href="/en/results-and-publications" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/20">en</a></li><li hreflang="fr" data-drupal-link-system-path="node/20" class="fr"><a href="/fr/resultats-et-publications" class="language-link" hreflang="fr" data-drupal-link-system-path="node/20">fr</a></li></ul>
+
+
+
+
+  
+</div>
+
+  <div class="copyright-text">&copy; 2020 Korian</div>
+
+   
+    </div>
+  
+
+    
+
+
+   
+    <div class="layout--region region region-footer-right">
+  
+          <nav role="navigation" aria-labelledby="block-footercontact-menu" id="block-footercontact" class="block block-menu navigation menu--footer-contact">
+      
+    <div id="block-footercontact-menu" class="block-title">Contact :</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/en/find-facility" target="_self" data-drupal-link-system-path="node/280">Find a facility</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-footer-social-menu" id="block-footer-social" class="block block-menu navigation menu--footer-social">
+      
+    <div id="block-footer-social-menu" class="block-title">Follow us:</div>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="https://www.youtube.com/user/KORIAN2006" target="_blank" class="icon icon--social-youtube">YouTube</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://twitter.com/korian" target="_blank" class="icon icon--social-twitter">Twitter</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.linkedin.com/company/groupekorian" target="_blank" class="icon icon--social-linkedin">LinkedIn</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.facebook.com/Korian/" target="_blank" rel="https://www.facebook.com/Korian/" class="icon icon--social-facebook">Facebook</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+    
+   
+    </div>
+  
+
+  </footer>
+  
+</div>
+      
+
+
+<div id="disclaimer" class="layout--disclaimer disclaimer"><div class="disclaimer__wrapper"><div class="disclaimer__inner"><div class="disclaimer__header"><button class="close"><svg 
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+  id="Capa_1" x="0px" y="0px" viewBox="0 0 180.607 180.607" 
+  style="enable-background:new 0 0 180.607 180.607;" xml:space="preserve"
+  width="40"
+  height="40"
+  class="svg--close icon--svg"><path class="colorize" d="M180.607,10.607l-79.696,79.697l79.696,79.697L170,180.607l-79.696-79.696l-79.696,79.696L0,170.001l79.696-79.697L0,10.607  L10.607,0.001l79.696,79.696L170,0.001L180.607,10.607z" /><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg></button></div><div class="disclaimer__content"><p><strong><span class="editor_featured">Disclaimer</span></strong></p><p>Access to the information available in the following pages may be restricted in certain countries by applicable laws and regulations. Persons who are physically located in those jurisdictions and who would like to access the information available in the following pages must inform themselves about and observe such restrictions.</p><p><strong><span class="editor_featured">France</span></strong></p><p>The information available in the following pages may be freely accessed by French residents who are physically located in France.</p><p><strong><span class="editor_featured">European Economic Area and United Kingdom</span></strong></p><p>With respect to each Member State of the European Economic Area (other than France) and the United Kingdom (the “<b>Relevant Member State</b>”) governed by Regulation (UE) 2017/1129 (the “<b>Prospectus Regulation</b>”), the information available in the following pages is directed only at qualified investors as defined in Article 2 (e) of the Prospectus Regulation. </p><p>These restrictions with respect to any Relevant Member State apply in addition to any other restrictions which may be applicable in the Relevant Member State who is governed by the Prospectus Regulation.</p><p><strong><span class="editor_featured">United Kingdom</span></strong></p><p>The information available in the following pages is directed only at persons who (i) are outside the United Kingdom, (ii) are “investment professionals” falling within Article 19(5) of the Financial Services and Markets Act 2000 (Financial Promotion) Order 2005 (as amended) (the “Order”), (iii) are persons falling within Article 49(2)(a) to (d) (“high net worth companies, unincorporated associations etc.”) of the Order or (iv) are other persons to whom an invitation or inducement to engage in investment activity (within the meaning of the Financial Services and Markets Act 2000) in connection with the issue or sale of any securities may otherwise lawfully be communicated or caused to be communicated (all such persons in (i), (ii), (iii) and (iv) together being referred to as “<b>Relevant Persons</b>”).</p><p>The information available in the following pages is directed only at Relevant Persons and must not be acted on or relied on by persons who are not Relevant Persons. Any investment or investment activity to which the information available in the following pages relates is available only to Relevant Persons and will be engaged in only with Relevant Persons.</p><p><strong><span class="editor_featured">United States</span></strong></p><p>The information available in the following pages does not constitute an offer to sell, nor a solicitation of offers to purchase or subscribe for, securities in the United States. The securities referred to therein have not been, and will not be, registered under the U.S. Securities Act of 1933, as amended (the “<b>Securities Act</b>”), and may not be offered or sold within the United States absent registration or an applicable exemption from the registration requirements of the Securities Act. Korian does not intend to register any offering of securities in the United States or to conduct a public offering in the United States.</p><p><strong><span class="editor_featured">Canada, Australia and Japan</span></strong></p><p>The information available in the following pages may not be accessed by persons located in Canada, Australia or Japan.</p><p><strong><span class="editor_featured">Other Countries</span></strong></p><p>All persons residing outside of France and outside of the United States, Canada, Japan and Australia who wish to access the documents contained on this website should first ensure that they are not subject to local laws or regulations that prohibit or restrict their right to access this website, or require registration or approval for any acquisition of securities by them. No such registration or approval has been obtained in France or outside France. Korian assumes no responsibility if there is a violation of applicable law and regulations by any person.</p><p>By accessing to the information available in the following pages, you confirm that you are in compliance, and agree to comply, with the restrictions described above.</p></div><div class="disclaimer__footer"><div class="disclaimer__error hidden"><p class="disclaimer-error">The information that you have provided does not allow you to access to the information available in the following pages.</p></div><div class="disclaimer__actions"><button class="yes">I confirm</button><span>/</span><button class="no">I do not confirm</button></div></div></div></div></div>  
+  <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KHL8WT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script> (function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-KHL8WT');</script><!-- End Google Tag Manager -->
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"node\/20","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/base,classy\/file,classy\/messages,core\/html5shiv,core\/normalize,korian\/base,korian\/block,korian\/block.anchorsmenu,korian\/block.branding,korian\/block.language,korian\/block.search,korian\/block.submenu,korian\/disclaimer,korian\/media,korian\/node.full,korian\/node.page,korian\/page.sidebar,korian\/section,korian\/view.presentations,korian\/view.publications,paragraphs\/drupal.paragraphs.unpublished,system\/base,views\/views.ajax,views\/views.module","theme":"korian","theme_token":null},"ajaxTrustedUrl":{"\/en\/results-and-publications":true,"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"views":{"ajax_path":"\/en\/views\/ajax","ajaxViews":{"views_dom_id:bc0565e41b0052f04664fa4852f683da3a4eb0e1a9001588818ffb05b44a976f":{"view_name":"presentations","view_display_id":"block_related","view_args":"142","view_path":"\/en\/results-and-publications","view_base_path":null,"view_dom_id":"bc0565e41b0052f04664fa4852f683da3a4eb0e1a9001588818ffb05b44a976f","pager_element":0,"viewsreference":{"data":{"limit":"2","title":null,"pager":"some","argument":"142","offset":null},"enabled_settings":{"limit":"limit","pager":"pager","argument":"argument"}}},"views_dom_id:adf209248b0874399bfee6816cae82f4653fd650a0914b4fa6ec05fc838673eb":{"view_name":"publications","view_display_id":"block_publications","view_args":"145","view_path":"\/en\/results-and-publications","view_base_path":null,"view_dom_id":"adf209248b0874399bfee6816cae82f4653fd650a0914b4fa6ec05fc838673eb","pager_element":0,"viewsreference":{"data":{"argument":"145","pager":"full","offset":null,"limit":"","title":null},"enabled_settings":{"limit":"limit","pager":"pager","argument":"argument"}}}}},"korian":{"breakpoints":{"korian.mobile":"(max-width: 991px)","korian.wide":"screen and (min-width: 992px)"},"contact_us":"\u003Ca href=\u0022tel:\/\/+33800977977\u0022 target=\u0022_blank\u0022\u003E\r\n  \u003Cspan class=\u0022phone\u0022\u003E0800 977 977\u003C\/span\u003E\r\n  \u003Cspan class=\u0022text\u0022\u003EFree call and service\u003C\/span\u003E\r\n\u003C\/a\u003E"},"user":{"uid":0,"permissionsHash":"16f12aef80cfd801be46550824e5c7d0429613d22438b0e3f6046c9bd138137a"}}</script>
+<script src="/sites/default/files/js/js_xM6bjw6px2MfhKhGePkYJlMlRQUiQWx3PUwySiuWubE.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js"></script>
+<script src="/sites/default/files/js/js_iI4s-4aWK1ET-D6Vd6cXm5rm8bQdcwGruznIMFw398I.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js"></script>
+<script src="/sites/default/files/js/js_m1v7TybXOECFRD8UGSK-p2NbFPHVemoXVkvY1ebzlPA.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script src="/sites/default/files/js/js_ZvCKq7EEPyvMmbbZw0AyujQBzkEAzmp5v8dgWPs3jMk.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"cf9c9b7368","applicationID":"144454099","transactionName":"bl0GNRBYXEYEUxFQXVcXJQIWUF1bSnQXTEJYVDgiDUtXaSNfF1Ruf1cWDCBMW1kBVRcUDEtdCgUHS2JZBFMAUV1VXAETJFZAWCRTEVBdVw==","queueTime":0,"applicationTime":310,"atts":"QhoFQ1hCT0g=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

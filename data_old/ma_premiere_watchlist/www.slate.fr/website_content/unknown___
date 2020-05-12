@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:og="http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700" rel="stylesheet">
+
+    <link rel="shortcut icon" href="https://www.slate.fr/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://www.slate.fr/apple-touch-icon.png" />
+  <link rel="alternate" type="application/rss+xml" title="Slate.fr" href="/rss.xml" />
+
+  <link rel="stylesheet" href="/sites/all/themes/slatefr/styles/main.css?v=75">
+
+  
+      <link rel="canonical" href="http://www.slate.fr/" />
+  <meta name="robots" content="index,follow" />  
+  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+  <title>Slate.fr - Culture, politique, économie, tech, sciences, santé</title>
+  <meta name="description" content="Slate.fr est le magazine en ligne de référence. Analyses, enquêtes et commentaires sur l'actualité dans les domaines société, économiques, politiques, technologiques, scientifiques et culturels." />
+      <!-- Quantcast Choice. Consent Manager Tag -->
+  <script type="text/javascript" async=true>
+    var elem = document.createElement('script');
+    elem.src = 'https://quantcast.mgr.consensu.org/cmp.js';
+    elem.async = true;
+    elem.type = "text/javascript";
+    var scpt = document.getElementsByTagName('script')[0];
+    scpt.parentNode.insertBefore(elem, scpt);
+    (function() {
+      var gdprAppliesGlobally = false;
+      function addFrame() {
+        if (!window.frames['__cmpLocator']) {
+          if (document.body) {
+            var body = document.body,
+                iframe = document.createElement('iframe');
+            iframe.style = 'display:none';
+            iframe.name = '__cmpLocator';
+            body.appendChild(iframe);
+          } else {
+            // In the case where this stub is located in the head,
+            // this allows us to inject the iframe more quickly than
+            // relying on DOMContentLoaded or other events.
+            setTimeout(addFrame, 5);
+          }
+        }
+      }
+      addFrame();
+      function cmpMsgHandler(event) {
+        var msgIsString = typeof event.data === "string";
+        var json;
+        if(msgIsString) {
+          json = event.data.indexOf("__cmpCall") != -1 ? JSON.parse(event.data) : {};
+        } else {
+          json = event.data;
+        }
+        if (json.__cmpCall) {
+          var i = json.__cmpCall;
+          window.__cmp(i.command, i.parameter, function(retValue, success) {
+            var returnMsg = {"__cmpReturn": {
+              "returnValue": retValue,
+              "success": success,
+              "callId": i.callId
+            }};
+            event.source.postMessage(msgIsString ?
+            JSON.stringify(returnMsg) : returnMsg, '*');
+          });
+        }
+      }
+      window.__cmp = function (c) {
+        var b = arguments;
+        if (!b.length) {
+          return __cmp.a;
+        }
+        else if (b[0] === 'ping') {
+          b[2]({"gdprAppliesGlobally": gdprAppliesGlobally,
+            "cmpLoaded": false}, true);
+        } else if (c == '__cmp')
+          return false;
+        else {
+          if (typeof __cmp.a === 'undefined') {
+            __cmp.a = [];
+          }
+          __cmp.a.push([].slice.apply(b));
+        }
+      }
+      window.__cmp.gdprAppliesGlobally = gdprAppliesGlobally;
+      window.__cmp.msgHandler = cmpMsgHandler;
+      if (window.addEventListener) {
+        window.addEventListener('message', cmpMsgHandler, false);
+      }
+      else {
+        window.attachEvent('onmessage', cmpMsgHandler);
+      }
+    })();
+    window.__cmp('init', {
+      'Language': 'fr',
+      'Initial Screen Title Text': 'Le respect de votre vie privée est notre priorité',
+      'Initial Screen Reject Button Text': 'Je refuse',
+      'Initial Screen Accept Button Text': 'J&#039;accepte',
+      'Initial Screen Purpose Link Text': 'Afficher toutes les utilisations prévues',
+      'Purpose Screen Title Text': 'Le respect de votre vie privée est notre priorité',
+      'Purpose Screen Body Text': 'Vous pouvez configurer vos réglages et choisir comment vous souhaitez que vos données personnelles soient utilisées en fonction des objectifs ci-dessous. Vous pouvez configurer les réglages de manière indépendante pour chaque partenaire. Vous trouverez une description de chacun des objectifs sur la façon dont nos partenaires et nous-mêmes utilisons vos données personnelles.',
+      'Purpose Screen Vendor Link Text': 'Afficher la liste complète des partenaires',
+      'Purpose Screen Cancel Button Text': 'Annuler',
+      'Purpose Screen Save and Exit Button Text': 'Enregistrer et quitter',
+      'Vendor Screen Title Text': 'Le respect de votre vie privée est notre priorité',
+      'Vendor Screen Body Text': 'Vous pouvez configurer vos réglages indépendamment pour chaque partenaire listé ci-dessous. Afin de faciliter votre décision, vous pouvez développer la liste de chaque entreprise pour voir à quelles fins il utilise les données. Dans certains cas, les entreprises peuvent révéler qu&#039;elles utilisent vos données sans votre consentement, en fonction de leurs intérêts légitimes. Vous pouvez cliquer sur leurs politiques de confidentialité pour obtenir plus d&#039;informations et pour vous désinscrire.',
+      'Vendor Screen Accept All Button Text': 'J&#039;accepte tout',
+      'Vendor Screen Reject All Button Text': 'Je refuse tout',
+      'Vendor Screen Purposes Link Text': 'Revenir aux objectifs',
+      'Vendor Screen Cancel Button Text': 'Annuler',
+      'Vendor Screen Save and Exit Button Text': 'Enregistrer et quitter',
+      'Initial Screen Body Text': 'Nos partenaires et nous-mêmes utilisent différentes technologies, telles que les cookies, pour personnaliser les contenus et les publicités, proposer des fonctionnalités sur les réseaux sociaux et analyser le trafic. Merci de cliquer sur le bouton ci-dessous pour donner votre accord. Vous pouvez changer d’avis et modifier vos choix à tout moment',
+      'Initial Screen Body Text Option': 1,
+      'Publisher Name': 'Slate.fr',
+      'Publisher Logo': 'http://www.slate.fr/sites/all/themes/slatefr/static/svg/slate-fr-purple.svg',
+      'Min Days Between UI Displays': 24,
+      'Publisher Purpose IDs': [1,2,3,4,5],
+      'Consent Scope': 'service',
+      'UI Layout': 'banner',
+      'No Option': false,
+      'Display Persistent Consent Link': false
+    });
+  </script>
+  <!-- End Quantcast Choice. Consent Manager Tag -->
+  <link rel="stylesheet" href="/sites/all/modules/custom/slate_pub/css/quantcast.css?v=2">
+
+  <script type="text/javascript" id="optidigital-ad-init" async config='{"adUnit": "/21685585667/slate.fr/home"}' src="//scripts.static-od.com/setup/?site=slate"></script>
+  
+    
+  <meta property="og:title" content="Slate.fr - Culture, politique, économie, tech, sciences, santé" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="http://www.slate.fr/" />
+  <meta property="og:image" content="http://www.slate.fr/sites/all/themes/slatefr/static/images/placeholder_share.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:description" content="Slate.fr est le magazine en ligne de référence. Analyses, enquêtes et commentaires sur l'actualité dans les domaines société, économiques, politiques, technologiques, scientifiques et culturels." />
+  <meta property="og:site_name" content="Slate.fr" />
+  <meta property="fb:admins" content="587894481" />
+    <meta property="fb:app_id" content="331756046878771" />
+  <meta property="fb:pages" content="77978221232" />
+    <meta property="og:type" content="website" />
+  
+  <meta property="twitter:account_id" content="20224969" />
+  <meta name="twitter:site" content="@Slatefr" />
+  <meta name="twitter:domain" content="Slate.fr" />
+  <meta name="twitter:title" content="Slate.fr - Culture, politique, économie, tech, sciences, santé" />
+  <meta name="twitter:description" content="Slate.fr est le magazine en ligne de référence. Analyses, enquêtes et commentaires sur l'actualité dans les domaines société, économiques, politiques, technologiques, scientifiques et culturels." />
+  <meta name="twitter:image:src" content="http://www.slate.fr/sites/all/themes/slatefr/static/images/placeholder_share.png" />
+  <meta name="twitter:url" content="http://www.slate.fr/" />
+    <meta name="twitter:card" content="summary" />
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Slate.fr",
+    "url": "http://www.slate.fr",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "http://www.slate.fr/search?mot-cle={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": "Slate.fr",
+    "url": "http://www.slate.fr",
+    "logo": "http://www.slate.fr/sites/all/themes/slatefr/static/images/logo-square.png",
+    "sameAs": [
+      "https://www.facebook.com/SlateFrance/",
+      "https://twitter.com/slatefr",
+      "https://fr.linkedin.com/company/slate-fr",
+      "https://www.youtube.com/c/slatefr",
+      "https://www.instagram.com/slatefrance/"
+    ]
+  }
+  </script>
+    
+  <script src="//a.mailmunch.co/app/v1/site.js" id="mailmunch-script" data-mailmunch-site-id="481164" async="async"></script>
+  
+  </head>
+<body>
+  
+  <div class="app">
+  <div class="layout layout--home">
+        <div class="ad banner">
+<div id="optidigital-adslot-Billboard_1" style="display:none;" class="Billboard_1"></div></div>
+<div class="une-container grid-container">
+  <div class="article-une">
+    <div class="article-une__inner">
+      <a href="/story/189852/confinement-pause-reconfort-feel-good-9">
+        <div class="article-une__cover-wrapper">
+          <div class="cover-container">
+            <img class="article-une__cover cover fit lazyload parallax-enable" data-speed="1" data-full-src="/sites/default/files/styles/1060x523/public/photo-1565660761890-0ecd9606690f.jpeg" alt="Pause réconfort #9: cinq minutes pour oublier l&#039;actualité ">
+          </div>
+          <div class="sharing-layer">
+            <div class="sharing__container">
+              <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189852%2Fconfinement-pause-reconfort-feel-good-9" class="sharing__btn">
+                <div class="icon icon--fb">
+                  <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+                </div>
+              </button>
+              <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189852%2Fconfinement-pause-reconfort-feel-good-9&text=Pause+re%CC%81confort+%239%3A+cinq+minutes+pour+oublier+l%27actualite%CC%81+&via=slatefr" class="sharing__btn">
+                <div class="icon icon--twitter">
+                  <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="article-une__content col-sm-10 col-sm-offset-1">
+                <h1 class="content__title"><a href="/story/189852/confinement-pause-reconfort-feel-good-9">Pause réconfort #9: cinq minutes pour oublier l'actualité </a></h1>
+        <p class="content__chapo">Vous en avez marre des news? On est là pour vous détendre.</p>
+        <p class="article-infos">
+          <span class="categorie"> Culture —</span>                              <span class="author">Anaïs Bordages</span>
+                     et           <span class="author">Marie Telling</span>
+                              <span class="separator"> —</span> 26 avril 2020          <span class="separator"> —</span> Temps de lecture : 5 min</p>      </div>
+    </div>
+  </div>
+</div>
+<div class="mise-en-avant-container">
+  <div class="row grid-container">
+    <div class="col-auto col-md-8 article-list-container">
+      <div class="article-list article-list--mise-en-avant">
+        <div class="article-list__inner grid-container">
+          <a href="/story/189807/tiger-king-joe-exotic-libertariens-laissez-faire-politique">
+            <div class="article-list__cover-wrapper">
+              <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/695x390/public/capture_decran_2020-04-24_a_10_0.png" alt="«Tiger King»: à quoi ressemble (vraiment) le royaume des libertariens aux États-Unis?">
+              <div class="sharing-layer">
+                <div class="sharing__container">
+                  <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189807%2Ftiger-king-joe-exotic-libertariens-laissez-faire-politique" class="sharing__btn">
+                    <div class="icon icon--fb">
+                      <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+                    </div>
+                  </button>
+                  <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189807%2Ftiger-king-joe-exotic-libertariens-laissez-faire-politique&text=%C2%ABTiger+King%C2%BB%3A+%C3%A0+quoi+ressemble+%28vraiment%29+le+royaume+des+libertariens+aux+%C3%89tats-Unis%3F&via=slatefr" class="sharing__btn">
+                    <div class="icon icon--twitter">
+                      <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </a>
+          <div class="article-list__content">
+            <p class="content__title"><a href="/story/189807/tiger-king-joe-exotic-libertariens-laissez-faire-politique">«Tiger King»: à quoi ressemble (vraiment) le royaume des libertariens aux États-Unis?</a></p>
+            <p class="content__chapo">S'il y a une idée qui constitue le socle de cette idéologie protéiforme, c'est celle du laissez-faire.</p>
+            <p class="article-infos">
+              <span class="categorie"> Politique —</span>                                          <span class="author">Ariane Nicolas</span>
+                                          <span class="separator"> —</span> 26 avril 2020              <span class="separator"> —</span> Temps de lecture : 9 min            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <aside class="col-md-4 col-300">
+      <div class="ad-container ad-container--aside ad-container--no-background">
+        <div id="optidigital-adslot-HalfpageAd_1" style="display:none;" class="HalfpageAd_1"></div>      </div>
+    </aside>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189864/restaurants-bistrots-brasseries-reouverture-crise-covid-19">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/1_153.jpg" alt="Rendez-nous nos restaurants, nos bistrots et nos brasseries!">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189864%2Frestaurants-bistrots-brasseries-reouverture-crise-covid-19" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189864%2Frestaurants-bistrots-brasseries-reouverture-crise-covid-19&text=Rendez-nous+nos+restaurants%2C+nos+bistrots+et+nos+brasseries%21&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189864/restaurants-bistrots-brasseries-reouverture-crise-covid-19">Rendez-nous nos restaurants, nos bistrots et nos brasseries!</a></p>
+      <p class="content__chapo">Le bistrot français n'est pas la panacée, mais la privation de sorties gourmandes à des additions acceptables ajoute au mal-être, à la difficulté de vivre.</p>
+      <p class="article-infos">
+                <span class="categorie"> Boire & manger</span>         —
+                        <span class="author">Nicolas de Rabaudy</span>
+                                        <span class="separator"> —</span> 26 avril 2020        <span class="separator"> —</span> Temps de lecture : 8 min      </p>
+    </div>
+  </div>
+</div>
+<div class="relance-article-portfolio">
+  <a class="relance-article-inner" href="/grand-format/une-semaine-dans-le-monde-en-7-photos-189786">
+    <div class="relance-article-cover-wrapper">
+      <img class="relance-article-cover cover fit parallax-enable lazyload" data-speed="1" data-full-src="/sites/default/files/styles/1680x840/public/000_1qo8d5_0.jpg" alt="Une semaine dans le monde en 7 photos">
+    </div>
+    <div class="relance-article-content">
+      <div class="content-top">
+        <div class="portfolio-icon">
+          <div class="icon-circle"></div>
+          <div class="icon-camera"></div>
+        </div>
+        <div class="portfolio-label">
+          <span class="label">Grand Format</span>
+        </div>
+      </div>
+      <div class="content-bottom">
+        <div class="bar"></div>
+        <p class="relance-article-title">Une semaine dans le monde en 7 photos</p>
+        <p class="article-infos">Par
+                              <span class="author"> Fanny Arlandis</span>
+                    <span class="separator"> —</span> Publié le 25 avril 2020</p>
+      </div>
+    </div>
+  </a>
+</div><div id="optidigital-adslot-Content_1" style="display:none;" class="Content_1"></div><div id="optidigital-adslot-Mobile_Pos1" style="display:none;" class="Mobile_Pos1"></div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189996/premier-mort-cause-meteorite-bien-plus-age-iraq-inde-sciences">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/horizon-cloud-sky-sun-sunrise-sunset-1332469-pxhere.com_.jpg" alt="Le premier mort à cause d’une météorite est bien plus âgé qu’on ne le croit">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189996%2Fpremier-mort-cause-meteorite-bien-plus-age-iraq-inde-sciences" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189996%2Fpremier-mort-cause-meteorite-bien-plus-age-iraq-inde-sciences&text=Le+premier+mort+%C3%A0+cause+d%E2%80%99une+m%C3%A9t%C3%A9orite+est+bien+plus+%C3%A2g%C3%A9+qu%E2%80%99on+ne+le+croit&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189996/premier-mort-cause-meteorite-bien-plus-age-iraq-inde-sciences">Le premier mort à cause d’une météorite est bien plus âgé qu’on ne le croit</a></p>
+      <p class="content__chapo">Des chercheurs ont découvert des documents officiels attestant d'une frappe mortelle en Irak en 1888.</p>
+      <p class="article-infos">
+                <span class="categorie"> Sciences</span>                                <span class="separator"> —</span> 26 avril 2020        <span class="separator"> —</span> Temps de lecture : 2 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189993/facebook-plus-centaine-groupes-pronent-seconde-guerre-civile-americaine-coronavirus-confinement">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/000_1qt3ea.jpg" alt="Sur Facebook, plus d’une centaine de groupes prônent une seconde guerre civile américaine">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189993%2Ffacebook-plus-centaine-groupes-pronent-seconde-guerre-civile-americaine-coronavirus-confinement" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189993%2Ffacebook-plus-centaine-groupes-pronent-seconde-guerre-civile-americaine-coronavirus-confinement&text=Sur+Facebook%2C+plus+d%E2%80%99une+centaine+de+groupes+pr%C3%B4nent+une+seconde+guerre+civile+am%C3%A9ricaine&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189993/facebook-plus-centaine-groupes-pronent-seconde-guerre-civile-americaine-coronavirus-confinement">Sur Facebook, plus d’une centaine de groupes prônent une seconde guerre civile américaine</a></p>
+      <p class="content__chapo">Ces groupes se sont renforcés avec la pandémie de Covid-19. </p>
+      <p class="article-infos">
+                <span class="categorie"> Tech & internet</span>                                <span class="separator"> —</span> 26 avril 2020        <span class="separator"> —</span> Temps de lecture : 2 min      </p>
+    </div>
+  </div>
+</div>
+<section class="crossing-block relance-three-items">
+  <div class="crossing-block__inner">
+    <div class="crossing-block__title">
+      <h2 class="crossing-block-title">Podcasts</h2>
+    </div>
+    <div class="crossing-block__link">
+      <a class="link" href="/podcasts/">Tous les podcasts</a>
+    </div>
+    <div class="slider-container">
+      <div class="crossing-block__content slides">
+                <div class="podcast-card slide col-sm-4">
+          <a class="podcast-card__inner" href="/podcast/189963/chine-usa-russie-monde-apres-covid-19-pire-que-celui-davant-le-monde-devant-soi-29">
+            <div class="podcast-card__cover-wrapper">
+              <div class="cover-container">
+                <img class="podcast-card__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x405/public/000_sc2pv_1.jpg" alt="Chine, USA, Russie... le monde d&#039;après le Covid-19 sera-t-il pire que celui d&#039;avant?">
+              </div>
+              <div class="podcast-card__layer"></div>
+            </div>
+            <div class="podcast-card__share">
+              <div class="sharing-layer">
+                <div class="sharing__container">
+                  <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fpodcast%2F189963%2Fchine-usa-russie-monde-apres-covid-19-pire-que-celui-davant-le-monde-devant-soi-29" class="sharing__btn">
+                    <div class="icon icon--fb">
+                      <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+                    </div>
+                  </button>
+                  <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fpodcast%2F189963%2Fchine-usa-russie-monde-apres-covid-19-pire-que-celui-davant-le-monde-devant-soi-29&text=Chine%2C+USA%2C+Russie...+le+monde+d%27apr%C3%A8s+le+Covid-19+sera-t-il+pire+que+celui+d%27avant%3F&via=slatefr" class="sharing__btn">
+                    <div class="icon icon--twitter">
+                      <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="podcast-card__content">
+              <div class="content__duration">
+                <div class="icon icon--play-circle icon--big">
+                  <img src="/sites/all/themes/slatefr/static/svg/icon-play-circle.svg" alt="Ecouter le podcast" />
+                </div>
+                <!--<span class="duration">25 min</span>-->
+              </div>
+              <p class="content__card-title">Chine, USA, Russie... le monde d'après le Covid-19 sera-t-il pire que celui d'avant?</p>
+              <p class="content__card-date">24 avril 2020</p>
+            </div>
+            <div class="podcast-card__bottom">
+              <span class="content__card-podcast">Le monde devant soi</span>
+            </div>
+          </a>
+        </div>
+                <div class="podcast-card slide col-sm-4">
+          <a class="podcast-card__inner" href="/podcast/189885/cette-place-de-belle-mere-imposer-difficile-vivre-cest-complique-48">
+            <div class="podcast-card__cover-wrapper">
+              <div class="cover-container">
+                <img class="podcast-card__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x405/public/kelli-mcclintock-5wtuk6ve-kk-unsplash_2_0.jpg" alt="Cette place de belle-mère qu&#039;on m&#039;impose est difficile à vivre">
+              </div>
+              <div class="podcast-card__layer"></div>
+            </div>
+            <div class="podcast-card__share">
+              <div class="sharing-layer">
+                <div class="sharing__container">
+                  <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fpodcast%2F189885%2Fcette-place-de-belle-mere-imposer-difficile-vivre-cest-complique-48" class="sharing__btn">
+                    <div class="icon icon--fb">
+                      <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+                    </div>
+                  </button>
+                  <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fpodcast%2F189885%2Fcette-place-de-belle-mere-imposer-difficile-vivre-cest-complique-48&text=Cette+place+de+belle-m%C3%A8re+qu%27on+m%27impose+est+difficile+%C3%A0+vivre&via=slatefr" class="sharing__btn">
+                    <div class="icon icon--twitter">
+                      <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="podcast-card__content">
+              <div class="content__duration">
+                <div class="icon icon--play-circle icon--big">
+                  <img src="/sites/all/themes/slatefr/static/svg/icon-play-circle.svg" alt="Ecouter le podcast" />
+                </div>
+                <!--<span class="duration">25 min</span>-->
+              </div>
+              <p class="content__card-title">Cette place de belle-mère qu'on m'impose est difficile à vivre</p>
+              <p class="content__card-date">23 avril 2020</p>
+            </div>
+            <div class="podcast-card__bottom">
+              <span class="content__card-podcast">C'est compliqué</span>
+            </div>
+          </a>
+        </div>
+                <div class="podcast-card slide col-sm-4">
+          <a class="podcast-card__inner" href="/podcast/189837/coronavirus-priver-series-preferees-peak-tv-15">
+            <div class="podcast-card__cover-wrapper">
+              <div class="cover-container">
+                <img class="podcast-card__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x405/public/testcolor3.jpg" alt="Le coronavirus va-t-il nous priver de nos séries préférées?">
+              </div>
+              <div class="podcast-card__layer"></div>
+            </div>
+            <div class="podcast-card__share">
+              <div class="sharing-layer">
+                <div class="sharing__container">
+                  <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fpodcast%2F189837%2Fcoronavirus-priver-series-preferees-peak-tv-15" class="sharing__btn">
+                    <div class="icon icon--fb">
+                      <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+                    </div>
+                  </button>
+                  <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fpodcast%2F189837%2Fcoronavirus-priver-series-preferees-peak-tv-15&text=Le+coronavirus+va-t-il+nous+priver+de+nos+s%C3%A9ries+pr%C3%A9f%C3%A9r%C3%A9es%3F&via=slatefr" class="sharing__btn">
+                    <div class="icon icon--twitter">
+                      <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="podcast-card__content">
+              <div class="content__duration">
+                <div class="icon icon--play-circle icon--big">
+                  <img src="/sites/all/themes/slatefr/static/svg/icon-play-circle.svg" alt="Ecouter le podcast" />
+                </div>
+                <!--<span class="duration">25 min</span>-->
+              </div>
+              <p class="content__card-title">Le coronavirus va-t-il nous priver de nos séries préférées?</p>
+              <p class="content__card-date">22 avril 2020</p>
+            </div>
+            <div class="podcast-card__bottom">
+              <span class="content__card-podcast">Peak TV</span>
+            </div>
+          </a>
+        </div>
+              </div>
+    </div>
+  </div>
+</section><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189990/dizaines-pasteurs-americains-minimisaient-pandemie-morts-coronavirus-confinement">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/063_1167751571.jpg" alt="Des dizaines de pasteurs américains qui minimisaient la pandémie sont morts">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189990%2Fdizaines-pasteurs-americains-minimisaient-pandemie-morts-coronavirus-confinement" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189990%2Fdizaines-pasteurs-americains-minimisaient-pandemie-morts-coronavirus-confinement&text=Des+dizaines+de+pasteurs+am%C3%A9ricains+qui+minimisaient+la+pand%C3%A9mie+sont+morts&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189990/dizaines-pasteurs-americains-minimisaient-pandemie-morts-coronavirus-confinement">Des dizaines de pasteurs américains qui minimisaient la pandémie sont morts</a></p>
+      <p class="content__chapo">Une trentaine de représentants pentecôtistes sont morts durant la pandémie. Pourtant, les messes continuent.</p>
+      <p class="article-infos">
+                <span class="categorie"> Monde</span>                                <span class="separator"> —</span> 25 avril 2020        <span class="separator"> —</span> Temps de lecture : 2 min      </p>
+    </div>
+  </div>
+</div>
+<div id="optidigital-adslot-Mobile_Pos2" style="display:none;" class="Mobile_Pos2"></div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189987/presque-moitie-comptes-tweetent-sur-coronavirus-seraient-robots">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/000_1qs18f.jpg" alt="Presque la moitié des comptes qui tweetent sur le coronavirus seraient des robots">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189987%2Fpresque-moitie-comptes-tweetent-sur-coronavirus-seraient-robots" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189987%2Fpresque-moitie-comptes-tweetent-sur-coronavirus-seraient-robots&text=Presque+la+moiti%C3%A9+des+comptes+qui+tweetent+sur+le+coronavirus+seraient+des+robots&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189987/presque-moitie-comptes-tweetent-sur-coronavirus-seraient-robots">Presque la moitié des comptes qui tweetent sur le coronavirus seraient des robots</a></p>
+      <p class="content__chapo">L’OMS a qualifié la vague de fake news autour du Covid-19 «d’infodémie».</p>
+      <p class="article-infos">
+                <span class="categorie"> Tech & internet</span>                                <span class="separator"> —</span> 25 avril 2020        <span class="separator"> —</span> Temps de lecture : 2 min      </p>
+    </div>
+  </div>
+</div>
+<article class="relance-article-podcast">
+  <a class="relance-article__inner" href="/podcast/189963/chine-usa-russie-monde-apres-covid-19-pire-que-celui-davant-le-monde-devant-soi-29">
+    <div class="relance-article__cover-wrapper">
+      <img class="relance-article__cover cover fit parallax-enable lazyload" data-speed="1" data-full-src="/sites/default/files/styles/1680x500/public/000_sc2pv_1.jpg" alt="Chine, USA, Russie... le monde d&#039;après le Covid-19 sera-t-il pire que celui d&#039;avant?">
+      <div class="relance-article__layer"></div>
+    </div>
+    <div class="relance-article__content grid-container">
+      <span class="content__podcast">Le monde devant soi</span>
+      <div class="content__duration">
+        <div class="icon icon--sound-circle icon--big">
+          <img src="/sites/all/themes/slatefr/static/svg/icon-play-circle.svg" alt="Ecouter le podcast" />
+        </div>
+        <!--<span class="duration">25 min</span>-->
+      </div>
+      <p class="content__title">Chine, USA, Russie... le monde d'après le Covid-19 sera-t-il pire que celui d'avant?</p>
+      <p class="content__date">24 avril 2020</p>
+    </div>
+  </a>
+</article><div id="optidigital-adslot-Content_2" style="display:none;" class="Content_2"></div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189897/comment-ecrire-productivite-ecriture-dix-conseils">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/neonbrand-ak5c5vtch5e-unsplash.jpg" alt="Dix conseils pour surmonter l&#039;angoisse de la page blanche">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189897%2Fcomment-ecrire-productivite-ecriture-dix-conseils" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189897%2Fcomment-ecrire-productivite-ecriture-dix-conseils&text=Dix+conseils+pour+surmonter+l%27angoisse+de+la+page+blanche&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189897/comment-ecrire-productivite-ecriture-dix-conseils">Dix conseils pour surmonter l'angoisse de la page blanche</a></p>
+      <p class="content__chapo">Après avoir compris la nature du blocage, il faut mettre en place un rituel sacré.</p>
+      <p class="article-infos">
+                <span class="categorie"> Culture</span>         —
+                        <span class="author">Quora</span>
+                                        <span class="separator"> —</span> 25 avril 2020        <span class="separator"> —</span> Temps de lecture : 5 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/societe/la-semaine-imaginaire/edouard-philippe-pandemie-covid-19-confinement">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/semaine_imaginaire_edouard_philippe.jpg" alt="La semaine imaginaire d&#039;Édouard Philippe ">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fsociete%2Fla-semaine-imaginaire%2Fedouard-philippe-pandemie-covid-19-confinement" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fsociete%2Fla-semaine-imaginaire%2Fedouard-philippe-pandemie-covid-19-confinement&text=La+semaine+imaginaire+d%27%C3%89douard+Philippe+&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/societe/la-semaine-imaginaire/edouard-philippe-pandemie-covid-19-confinement">La semaine imaginaire d'Édouard Philippe </a></p>
+      <p class="content__chapo">Chaque samedi, Louison se met dans la peau d'une personnalité qui a fait l'actu et imagine son journal de bord.</p>
+      <p class="article-infos">
+                <span class="categorie"> Politique</span>         —
+                        <span class="author">Louison</span>
+                                        <span class="separator"> —</span> 25 avril 2020        <span class="separator"> —</span> Temps de lecture : 4 min      </p>
+    </div>
+  </div>
+</div>
+<div id="optidigital-adslot-Mobile_Pos3" style="display:none;" class="Mobile_Pos3"></div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189951/pandemie-prenoms-bebes-covid-bryant-corona-lockdown-etat-civil-loi-france">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/baba_0.jpg" alt="«Covid Bryant» ou «Corona», des nouveaux prénoms donnés en pleine pandémie">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189951%2Fpandemie-prenoms-bebes-covid-bryant-corona-lockdown-etat-civil-loi-france" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189951%2Fpandemie-prenoms-bebes-covid-bryant-corona-lockdown-etat-civil-loi-france&text=%C2%ABCovid+Bryant%C2%BB+ou+%C2%ABCorona%C2%BB%2C+des+nouveaux+pr%C3%A9noms+donn%C3%A9s+en+pleine+pand%C3%A9mie&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189951/pandemie-prenoms-bebes-covid-bryant-corona-lockdown-etat-civil-loi-france">«Covid Bryant» ou «Corona», des nouveaux prénoms donnés en pleine pandémie</a></p>
+      <p class="content__chapo">Pourquoi chercher plus loin?</p>
+      <p class="article-infos">
+                <span class="categorie"> Parents & enfants</span>                                <span class="separator"> —</span> 25 avril 2020        <span class="separator"> —</span> Temps de lecture : 2 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article relance-article-dessin">
+  <div class="row relance-article-dessin__inner grid-container">
+    <a href="/story/189936/pessin-fumer-tue-moins">
+      <div class="relance-article-dessin__cover-wrapper">
+        <img class="relance-article-dessin__cover cover lazyload" data-full-src="/sites/default/files/styles/1060x523/public/fumer_tue.moins_.jpg" alt="Fumer tue... moins">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189936%2Fpessin-fumer-tue-moins" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189936%2Fpessin-fumer-tue-moins&text=Fumer+tue...+moins&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </a>
+    <div class="relance-article-dessin__content col-sm-10 col-sm-offset-1">
+      <p class="content__title"><a href="/story/189936/pessin-fumer-tue-moins">Fumer tue... moins</a></p>
+      <p class="content__chapo"></p>
+      <p class="article-infos">
+        <span class="categorie"> Santé —</span>        <span class="author"> Pessin</span>
+        <span class="separator"> —</span> Publié le 23 avril 2020</p>
+    </div>
+  </div>
+</div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189954/covid-19-nicotine-fumeurs-protection-risques-sanitaires-danger-essais-cliniques-pitie-salpetriere">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/daniele-levis-pelusi-arf1hjehlha-unsplash.jpg" alt="Covid-19: les nouvelles et paradoxales vertus de la nicotine">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189954%2Fcovid-19-nicotine-fumeurs-protection-risques-sanitaires-danger-essais-cliniques-pitie-salpetriere" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189954%2Fcovid-19-nicotine-fumeurs-protection-risques-sanitaires-danger-essais-cliniques-pitie-salpetriere&text=Covid-19%3A+les+nouvelles+et+paradoxales+vertus+de+la+nicotine&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189954/covid-19-nicotine-fumeurs-protection-risques-sanitaires-danger-essais-cliniques-pitie-salpetriere">Covid-19: les nouvelles et paradoxales vertus de la nicotine</a></p>
+      <p class="content__chapo">Les personnes qui fument du tabac semblent moins atteintes que la moyenne, mais ces espoirs thérapeutiques laissent redouter de nouveaux risques sanitaires.
+
+</p>
+      <p class="article-infos">
+                <span class="categorie"> Santé</span>         —
+                        <span class="author">Jean-Yves Nau</span>
+                                        <span class="separator"> —</span> 25 avril 2020        <span class="separator"> —</span> Temps de lecture : 5 min      </p>
+    </div>
+  </div>
+</div>
+<section class="crossing-block relance-three-items korii">
+  <div class="crossing-block__inner">
+    <div class="crossing-block__title">
+      <h2 class="crossing-block-title">À lire sur <a href="https://korii.slate.fr/" target="_blank"><img src="/sites/all/themes/slatefr/static/svg/korii-white.svg" alt="korii." /></a></h2>
+    </div>
+    <div class="slider-container">
+      <div class="crossing-block__content slides">
+                <div class="article-card article-card--episode slide col-sm-4">
+          <div class="article-card__inner">
+            <a href="https://korii.slate.fr/et-caetera/coup-dur-pour-airbus-et-boeing-amazon-et-decroissance-uber-et-deliveroo-en-peril-lhebdo">
+              <div class="article-card__cover-wrapper">
+                <div class="cover-container">
+                  <img class="article-card__cover cover fit parallax-enable lazyload" data-full-src="/sites/default/files/styles/330x188/public/korii/recap26042020.jpg" alt="Coup dur pour Airbus et Boeing, Amazon et la décroissance, Uber et Deliveroo en péril, l&#039;hebdo de korii.">
+                </div>
+              </div>
+            </a>
+            <div class="article-card__content">
+              <p class="content__title"><a href="https://korii.slate.fr/et-caetera/coup-dur-pour-airbus-et-boeing-amazon-et-decroissance-uber-et-deliveroo-en-peril-lhebdo">Coup dur pour Airbus et Boeing, Amazon et la décroissance, Uber et Deliveroo en péril, l'hebdo de korii.</a></p>
+              <p class="article-infos article-infos--card">Dix articles à lire pour briller en société, même confinée.</p>
+            </div>
+          </div>
+        </div>
+                <div class="article-card article-card--episode slide col-sm-4">
+          <div class="article-card__inner">
+            <a href="https://korii.slate.fr/et-caetera/recherche-vaccin-panviral-arnm-prevention-prochaine-pandemie-financements">
+              <div class="article-card__cover-wrapper">
+                <div class="cover-container">
+                  <img class="article-card__cover cover fit parallax-enable lazyload" data-full-src="/sites/default/files/styles/330x188/public/korii/national-cancer-institute-1fvqup-xayq-unsplash.jpg" alt="Il est déjà temps de se préparer à la prochaine pandémie">
+                </div>
+              </div>
+            </a>
+            <div class="article-card__content">
+              <p class="content__title"><a href="https://korii.slate.fr/et-caetera/recherche-vaccin-panviral-arnm-prevention-prochaine-pandemie-financements">Il est déjà temps de se préparer à la prochaine pandémie</a></p>
+              <p class="article-infos article-infos--card">Le monde n'était pas prêt pour l'irruption d'un danger tel que le Covid-19. Il aurait pourtant pu l'être.</p>
+            </div>
+          </div>
+        </div>
+                <div class="article-card article-card--episode slide col-sm-4">
+          <div class="article-card__inner">
+            <a href="https://korii.slate.fr/et-caetera/youtubeuses-confinement-vlogs-beaute-morning-routine-normes-genre">
+              <div class="article-card__cover-wrapper">
+                <div class="cover-container">
+                  <img class="article-card__cover cover fit parallax-enable lazyload" data-full-src="/sites/default/files/styles/330x188/public/korii/alan-ko-yjnm4hukb1a-unsplash.jpg" alt="Que font les YouTubeuses beauté de leur confinement?">
+                </div>
+              </div>
+            </a>
+            <div class="article-card__content">
+              <p class="content__title"><a href="https://korii.slate.fr/et-caetera/youtubeuses-confinement-vlogs-beaute-morning-routine-normes-genre">Que font les YouTubeuses beauté de leur confinement?</a></p>
+              <p class="article-infos article-infos--card">Partager leurs séances de sport, de maquillage ou de travail domestique les aide à surmonter l'épreuve.</p>
+            </div>
+          </div>
+        </div>
+              </div>
+    </div>
+  </div>
+</section><div id="optidigital-adslot-Mobile_Pos4" style="display:none;" class="Mobile_Pos4"></div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189783/culture-docu-serie-netflix-tiger-king-au-royaume-des-fauves">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/capture_decran_2020-04-21_a_14.png" alt="«Tiger King», pas un personnage pour rattraper l&#039;autre">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189783%2Fculture-docu-serie-netflix-tiger-king-au-royaume-des-fauves" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189783%2Fculture-docu-serie-netflix-tiger-king-au-royaume-des-fauves&text=%C2%ABTiger+King%C2%BB%2C+pas+un+personnage+pour+rattraper+l%27autre&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189783/culture-docu-serie-netflix-tiger-king-au-royaume-des-fauves">«Tiger King», pas un personnage pour rattraper l'autre</a></p>
+      <p class="content__chapo">Très populaire sur les réseaux, «Au Royaume des Fauves (Tiger King)» est un divertissement précieux en période de confinement. </p>
+      <p class="article-infos">
+                <span class="categorie"> Culture</span>         —
+                        <span class="author">Caroline Ernesty</span>
+                                        <span class="separator"> —</span> 24 avril 2020        <span class="separator"> —</span> Temps de lecture : 5 min      </p>
+    </div>
+  </div>
+</div>
+<div id="optidigital-adslot-Content_3" style="display:none;" class="Content_3"></div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189960/covid-19-parler-vieillesse-personnes-agees-autres-individus-humanite-langage">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/chuttersnap-8i423frmwjm-unsplash.jpg" alt="On parle très mal des vieilles et des vieux, c&#039;est même le gros malaise">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189960%2Fcovid-19-parler-vieillesse-personnes-agees-autres-individus-humanite-langage" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189960%2Fcovid-19-parler-vieillesse-personnes-agees-autres-individus-humanite-langage&text=On+parle+tr%C3%A8s+mal+des+vieilles+et+des+vieux%2C+c%27est+m%C3%AAme+le+gros+malaise&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189960/covid-19-parler-vieillesse-personnes-agees-autres-individus-humanite-langage">On parle très mal des vieilles et des vieux, c'est même le gros malaise</a></p>
+      <p class="content__chapo">On a rarement autant discuté de la vieillesse que pendant l'épidémie de Covid-19. Sans surprise, la manière dont on l'évoque est une honte.</p>
+      <p class="article-infos">
+                <span class="categorie"> Égalités</span>         —
+                        <span class="author">Titiou Lecoq</span>
+                                        <span class="separator"> —</span> 24 avril 2020        <span class="separator"> —</span> Temps de lecture : 4 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189906/podcasts-psychologiques-sante-mentale">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/malte-wingen-pdx_a_82obo-unsplash_1.jpg" alt="Les podcasts sur la psychologie et la santé mentale">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189906%2Fpodcasts-psychologiques-sante-mentale" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189906%2Fpodcasts-psychologiques-sante-mentale&text=Les+podcasts+sur+la+psychologie+et+la+sant%C3%A9+mentale&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189906/podcasts-psychologiques-sante-mentale">Les podcasts sur la psychologie et la santé mentale</a></p>
+      <p class="content__chapo">Avec ou sans le confinement, vous ressentez peut-être parfois le besoin d'analyser vos émotions.</p>
+      <p class="article-infos">
+                <span class="categorie"> Santé</span>         —
+                        <span class="author">Constance Daulon</span>
+                                        <span class="separator"> —</span> 24 avril 2020        <span class="separator"> —</span> Temps de lecture : 3 min      </p>
+    </div>
+  </div>
+</div>
+<section class="crossing-block relance-newsletter">
+  <div class="crossing-block__inner">
+    <div class="crossing-block__title">
+      <p class="crossing-block-title">Newsletters</p>
+    </div>
+    <div class="slider-container">
+      <div class="crossing-block__content slides">
+        <div class="newsletter-block slide">
+          <div class="newsletter-block__inner">
+            <p class="newsletter-title">La quotidienne <br />de Slate</p>
+            <p class="newsletter-description">Une sélection personnalisée des articles de Slate tous les matins dans votre boîte mail.</p>
+            <div>
+              <form action="//slate.us11.list-manage.com/subscribe/post?u=22e9f19b5e27265bddef2006d&id=7d463ddc99" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate class="validate newsletter-form">
+                <div class="mc-field-group newsletter-form__input">
+                  <input type="email" value="" name="EMAIL" class="required email">
+                  <label for="mce-EMAIL">Votre e-mail</label>
+                </div>
+                <div class="newsletter-form__submit">
+                  <button type="submit" name="subscribe">S’abonner</button>
+                </div>
+                <div class="clear">
+                  <div class="response" style="display:none"></div>
+                  <div class="response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_22e9f19b5e27265bddef2006d_7d463ddc99" tabindex="-1" value="">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter-block slide">
+          <div class="newsletter-block__inner">
+            <p class="newsletter-title">La kotiidienne <br />de <span style="color:#FFCC00">korii.</span></p>
+            <p class="newsletter-description">Retrouvez chaque matin le meilleur des articles de korii, le site biz et tech par Slate.</p>
+            <div>
+              <form action="//slate.us11.list-manage.com/subscribe/post?u=22e9f19b5e27265bddef2006d&amp;id=bcc0e283b6" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate class="validate newsletter-form">
+                <div class="mc-field-group newsletter-form__input">
+                  <input type="email" value="" name="EMAIL" class="required email">
+                  <label for="mce-EMAIL">Votre e-mail</label>
+                </div>
+                <div class="newsletter-form__submit">
+                  <button type="submit" name="subscribe">S’abonner</button>
+                </div>
+                <div class="clear">
+                  <div class="response" style="display:none"></div>
+                  <div class="response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_22e9f19b5e27265bddef2006d_bcc0e283b6" tabindex="-1" value="">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter-block slide">
+          <div class="newsletter-block__inner">
+            <p class="newsletter-title">Slate x Titiou</p>
+            <p class="newsletter-description">Tous les vendredis matin, l’humeur de Titiou Lecoq et sa sélection du meilleur des internets.</p>
+            <div>
+              <form action="//slate.us11.list-manage.com/subscribe/post?u=22e9f19b5e27265bddef2006d&amp;id=d7bb8be269" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate class="validate newsletter-form">
+                <div class="mc-field-group newsletter-form__input">
+                  <input type="email" value="" name="EMAIL" class="required email">
+                  <label for="mce-EMAIL">Votre e-mail</label>
+                </div>
+                <div class="newsletter-form__submit">
+                  <button type="submit" name="subscribe">S’abonner</button>
+                </div>
+                <div class="clear">
+                  <div class="response" style="display:none"></div>
+                  <div class="response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_22e9f19b5e27265bddef2006d_d7bb8be269" tabindex="-1" value="">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="newsletter-block slide">
+          <div class="newsletter-block__inner">
+            <p class="newsletter-title">Peak TV x Slate</p>
+            <p class="newsletter-description">Un mercredi sur deux, Anaïs Bordages et Marie Telling vous recommandent les meilleures séries du moment.</p>
+            <div>
+              <form action="https://twitter.us19.list-manage.com/subscribe/post?u=53faa0424b78214321182c5d8&amp;id=20fdbe5256" method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate class="validate newsletter-form">
+                <div class="mc-field-group newsletter-form__input">
+                  <input type="email" value="" name="EMAIL" class="required email">
+                  <label for="mce-EMAIL">Votre e-mail</label>
+                </div>
+                <div class="newsletter-form__submit">
+                  <button type="submit" name="subscribe">S’abonner</button>
+                </div>
+                <div class="clear">
+                  <div class="response" style="display:none"></div>
+                  <div class="response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;">
+                  <input type="text" name="b_53faa0424b78214321182c5d8_20fdbe5256" tabindex="-1" value="">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section><div id="optidigital-adslot-Mobile_Pos5" style="display:none;" class="Mobile_Pos5"></div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189942/coree-du-nord-kim-jong-un-rumeurs-operation-cardiaque-succession">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/kim_8.jpg" alt="Qui dirigera la Corée du Nord si Kim Jong-un meurt? ">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189942%2Fcoree-du-nord-kim-jong-un-rumeurs-operation-cardiaque-succession" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189942%2Fcoree-du-nord-kim-jong-un-rumeurs-operation-cardiaque-succession&text=Qui+dirigera+la+Cor%C3%A9e+du+Nord+si+Kim+Jong-un+meurt%3F+&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189942/coree-du-nord-kim-jong-un-rumeurs-operation-cardiaque-succession">Qui dirigera la Corée du Nord si Kim Jong-un meurt? </a></p>
+      <p class="content__chapo">Selon plusieurs sources, le chef suprême nord-coréen aurait subi une opération cardiaque.</p>
+      <p class="article-infos">
+                <span class="categorie"> Monde</span>                                <span class="separator"> —</span> 24 avril 2020        <span class="separator"> —</span> Temps de lecture : 2 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189939/covid-19-france-allemagne-pourquoi-moins-de-morts-qui-raison">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/000_1qo6gn_1.jpg" alt="Parcs bondés à Berlin contre rues désertes à Paris: qui a raison?">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189939%2Fcovid-19-france-allemagne-pourquoi-moins-de-morts-qui-raison" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189939%2Fcovid-19-france-allemagne-pourquoi-moins-de-morts-qui-raison&text=Parcs+bond%C3%A9s+%C3%A0+Berlin+contre+rues+d%C3%A9sertes+%C3%A0+Paris%3A+qui+a+raison%3F&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189939/covid-19-france-allemagne-pourquoi-moins-de-morts-qui-raison">Parcs bondés à Berlin contre rues désertes à Paris: qui a raison?</a></p>
+      <p class="content__chapo">[TRIBUNE] Française habitant en Allemagne depuis près de dix ans et travaillant dans le domaine de la santé, Celia Maury tente de répondre à la question qu'ici, tout le monde se pose sur la gestion de l'épidémie de Covid-19.</p>
+      <p class="article-infos">
+                <span class="categorie"> Société</span>         —
+                        <span class="author">Celia Maury</span>
+                                        <span class="separator"> —</span> 24 avril 2020        <span class="separator"> —</span> Temps de lecture : 21 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189816/covid-19-confinement-argentine-denonciation-voisins-numero-gratuit-134">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/000_1qn3oy.jpg" alt="En Argentine, le gouvernement encourage la dénonciation pour faire respecter le confinement">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189816%2Fcovid-19-confinement-argentine-denonciation-voisins-numero-gratuit-134" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189816%2Fcovid-19-confinement-argentine-denonciation-voisins-numero-gratuit-134&text=En+Argentine%2C+le+gouvernement+encourage+la+d%C3%A9nonciation+pour+faire+respecter+le+confinement&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189816/covid-19-confinement-argentine-denonciation-voisins-numero-gratuit-134">En Argentine, le gouvernement encourage la dénonciation pour faire respecter le confinement</a></p>
+      <p class="content__chapo">Le numéro gratuit instauré au nom de la participation citoyenne pour lutter contre le Covid-19 a déjà reçu 56.296 appels.</p>
+      <p class="article-infos">
+                <span class="categorie"> Monde</span>         —
+                        <span class="author">Fabien Palem</span>
+                                        <span class="separator"> —</span> 24 avril 2020        <span class="separator"> —</span> Temps de lecture : 7 min      </p>
+    </div>
+  </div>
+</div>
+<section class="crossing-block relance-three-items">
+  <div class="crossing-block__inner">
+    <div class="crossing-block__title">
+      <h2 class="crossing-block-title">Séries</h2>
+    </div>
+    <div class="slider-container">
+      <div class="crossing-block__content slides">
+                <div class="article-card article-card--episode slide col-sm-4">
+          <div class="article-card__inner">
+            <a href="/societe/la-semaine-imaginaire/edouard-philippe-pandemie-covid-19-confinement">
+              <div class="article-card__cover-wrapper">
+                <div class="cover-container">
+                  <img class="article-card__cover cover fit parallax-enable lazyload" data-full-src="/sites/default/files/styles/330x188/public/semaine_imaginaire_edouard_philippe.jpg" alt="La semaine imaginaire d&#039;Édouard Philippe ">
+                </div>
+                <div class="sharing-layer">
+                  <div class="sharing__container">
+                    <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fsociete%2Fla-semaine-imaginaire%2Fedouard-philippe-pandemie-covid-19-confinement" class="sharing__btn">
+                      <div class="icon icon--fb">
+                        <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+                      </div>
+                    </button>
+                    <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fsociete%2Fla-semaine-imaginaire%2Fedouard-philippe-pandemie-covid-19-confinement&text=La+semaine+imaginaire+d%27%C3%89douard+Philippe+&via=slatefr" class="sharing__btn">
+                      <div class="icon icon--twitter">
+                        <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="article-card__content">
+              <p class="content__subtitle">La semaine imaginaire - Épisode 8</p>
+              <p class="content__title"><a href="/societe/la-semaine-imaginaire/edouard-philippe-pandemie-covid-19-confinement">La semaine imaginaire d'Édouard Philippe </a></p>
+              <p class="article-infos article-infos--card">Par
+                                                <span class="author">Louison</span>
+                                <span class="reading-time"> Temps de lecture : 4 min</span>              </p>
+            </div>
+          </div>
+        </div>
+                <div class="article-card article-card--episode slide col-sm-4">
+          <div class="article-card__inner">
+            <a href="/story/189780/culture/koronavirus/episode-7-liberte-egalite-beyonce">
+              <div class="article-card__cover-wrapper">
+                <div class="cover-container">
+                  <img class="article-card__cover cover fit parallax-enable lazyload" data-full-src="/sites/default/files/styles/330x188/public/capture_deecran_2020-04-20_ae_15.png" alt="#LibertéÉgalitéBeyoncé">
+                </div>
+                <div class="sharing-layer">
+                  <div class="sharing__container">
+                    <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189780%2Fculture%2Fkoronavirus%2Fepisode-7-liberte-egalite-beyonce" class="sharing__btn">
+                      <div class="icon icon--fb">
+                        <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+                      </div>
+                    </button>
+                    <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189780%2Fculture%2Fkoronavirus%2Fepisode-7-liberte-egalite-beyonce&text=%23Libert%C3%A9%C3%89galit%C3%A9Beyonc%C3%A9&via=slatefr" class="sharing__btn">
+                      <div class="icon icon--twitter">
+                        <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="article-card__content">
+              <p class="content__subtitle">Koronavirus - Épisode 7</p>
+              <p class="content__title"><a href="/story/189780/culture/koronavirus/episode-7-liberte-egalite-beyonce">#LibertéÉgalitéBeyoncé</a></p>
+              <p class="article-infos article-infos--card">Par
+                                                <span class="author">Julien Suaudeau</span>
+                                <span class="reading-time"> Temps de lecture : 13 min</span>              </p>
+            </div>
+          </div>
+        </div>
+                <div class="article-card article-card--episode slide col-sm-4">
+          <div class="article-card__inner">
+            <a href="/culture/films-cinema-coronavirus-covid-19-video-a-la-demande-ocs-netflix-cinetek-filmotv-episode-4">
+              <div class="article-card__cover-wrapper">
+                <div class="cover-container">
+                  <img class="article-card__cover cover fit parallax-enable lazyload" data-full-src="/sites/default/files/styles/330x188/public/jodie-foster-contact.png" alt="Les films à voir sur LaCinetek pendant votre confinement">
+                </div>
+                <div class="sharing-layer">
+                  <div class="sharing__container">
+                    <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fculture%2Ffilms-cinema-coronavirus-covid-19-video-a-la-demande-ocs-netflix-cinetek-filmotv-episode-4" class="sharing__btn">
+                      <div class="icon icon--fb">
+                        <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+                      </div>
+                    </button>
+                    <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fculture%2Ffilms-cinema-coronavirus-covid-19-video-a-la-demande-ocs-netflix-cinetek-filmotv-episode-4&text=Les+films+%C3%A0+voir+sur+LaCinetek+pendant+votre+confinement&via=slatefr" class="sharing__btn">
+                      <div class="icon icon--twitter">
+                        <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+                      </div>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <div class="article-card__content">
+              <p class="content__subtitle">COVIDéo Club - Épisode 4</p>
+              <p class="content__title"><a href="/culture/films-cinema-coronavirus-covid-19-video-a-la-demande-ocs-netflix-cinetek-filmotv-episode-4">Les films à voir sur LaCinetek pendant votre confinement</a></p>
+              <p class="article-infos article-infos--card">Par
+                                                <span class="author">Thomas Messias</span>
+                                <span class="reading-time"> Temps de lecture : 6 min</span>              </p>
+            </div>
+          </div>
+        </div>
+              </div>
+    </div>
+  </div>
+</section><div id="optidigital-adslot-Content_4" style="display:none;" class="Content_4"></div><div id="optidigital-adslot-Mobile_Pos6" style="display:none;" class="Mobile_Pos6"></div><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189819/youtubeurs-pro-armes-extreme-droite-france-formations">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/croisade.jpg" alt="Des YouTubeurs d&#039;extrême droite proposent des formations à la guerre">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189819%2Fyoutubeurs-pro-armes-extreme-droite-france-formations" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189819%2Fyoutubeurs-pro-armes-extreme-droite-france-formations&text=Des+YouTubeurs+d%27extr%C3%AAme+droite+proposent+des+formations+%C3%A0+la+guerre&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189819/youtubeurs-pro-armes-extreme-droite-france-formations">Des YouTubeurs d'extrême droite proposent des formations à la guerre</a></p>
+      <p class="content__chapo">Une poignée de comptes pro-armes appelant à «se préparer» à de nouvelles «croisades» cumulent des centaines de milliers d'abonnements.</p>
+      <p class="article-infos">
+                <span class="categorie"> Société</span>         —
+                        <span class="author">Maxime Macé</span>
+                 et         <span class="author">Pierre Plottu</span>
+                                        <span class="separator"> —</span> 24 avril 2020        <span class="separator"> —</span> Temps de lecture : 6 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/boire-manger/top-chef-2020-les-recaps/saison-11-episode-10">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/capture_decran_2020-04-23_a_12.png" alt="«Top Chef» saison 11, épisode 10: le récap en GIF, en acceng du Sud et en quarantaine">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fboire-manger%2Ftop-chef-2020-les-recaps%2Fsaison-11-episode-10" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fboire-manger%2Ftop-chef-2020-les-recaps%2Fsaison-11-episode-10&text=%C2%ABTop+Chef%C2%BB+saison+11%2C+%C3%A9pisode+10%3A+le+r%C3%A9cap+en+GIF%2C+en+acceng+du+Sud+et+en+quarantaine&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/boire-manger/top-chef-2020-les-recaps/saison-11-episode-10">«Top Chef» saison 11, épisode 10: le récap en GIF, en acceng du Sud et en quarantaine</a></p>
+      <p class="content__chapo">Cette semaine, du chocolat dans des poissons de toutes sortes et des zistes d'agrumes, oui, on a bien dit des zistes.</p>
+      <p class="article-infos">
+                <span class="categorie"> Boire & manger</span>         —
+                        <span class="author">Anaïs Bordages</span>
+                 et         <span class="author">Marie Telling</span>
+                                        <span class="separator"> —</span> 23 avril 2020        <span class="separator"> —</span> Temps de lecture : 10 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189795/internet-pandemie-covid-19-reseaux-sociaux-influenceurs-economie-chute-revenus-publicite-hausse-audience">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/appapap.jpg" alt="Le Covid-19 bouleverse l&#039;économie des influenceurs ">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189795%2Finternet-pandemie-covid-19-reseaux-sociaux-influenceurs-economie-chute-revenus-publicite-hausse-audience" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189795%2Finternet-pandemie-covid-19-reseaux-sociaux-influenceurs-economie-chute-revenus-publicite-hausse-audience&text=Le+Covid-19+bouleverse+l%27%C3%A9conomie+des+influenceurs+&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189795/internet-pandemie-covid-19-reseaux-sociaux-influenceurs-economie-chute-revenus-publicite-hausse-audience">Le Covid-19 bouleverse l'économie des influenceurs </a></p>
+      <p class="content__chapo">Si sur les réseaux sociaux le sourire et la bonne humeur restent de mise, en coulisses, les stars d'Instagram ou de YouTube s'inquiètent de l'effondrement de leurs revenus. </p>
+      <p class="article-infos">
+                <span class="categorie"> Tech & internet</span>                                <span class="separator"> —</span> 23 avril 2020        <span class="separator"> —</span> Temps de lecture : 2 min      </p>
+    </div>
+  </div>
+</div>
+<section class="crossing-block relance-auteurs crossing-block--pink">
+  <div class="crossing-block__inner">
+    <div class="crossing-block__title">
+      <h2 class="crossing-block-title">Signatures</h2>
+    </div>
+    <div class="slider-container">
+      <div class="crossing-block__content slides">
+                <a class="slide auteur" href="/source/1029/titiou-lecoq">
+          <div class="auteur__avatar">
+            <img class="lazyload" data-full-src="/sites/default/files/styles/177x177/public/portrait-lecoq.png" alt="Titiou Lecoq">
+          </div>
+          <span class="auteur__prenom">Titiou</span>
+          <span class="auteur__nom">Lecoq</span>
+        </a>
+                <a class="slide auteur" href="/source/5231/jean-laurent-cassely">
+          <div class="auteur__avatar">
+            <img class="lazyload" data-full-src="/sites/default/files/styles/177x177/public/portrait-cassely.png" alt="Jean-Laurent Cassely">
+          </div>
+          <span class="auteur__prenom">Jean-Laurent</span>
+          <span class="auteur__nom">Cassely</span>
+        </a>
+                <a class="slide auteur" href="/source/86325/gael-brustier">
+          <div class="auteur__avatar">
+            <img class="lazyload" data-full-src="/sites/default/files/styles/177x177/public/portrait-brustier.png" alt="Gaël Brustier">
+          </div>
+          <span class="auteur__prenom">Gaël</span>
+          <span class="auteur__nom">Brustier</span>
+        </a>
+                <a class="slide auteur" href="/source/63/eric-le-boucher">
+          <div class="auteur__avatar">
+            <img class="lazyload" data-full-src="/sites/default/files/styles/177x177/public/portrait-leboucher.png" alt="Eric Le Boucher">
+          </div>
+          <span class="auteur__prenom">Eric</span>
+          <span class="auteur__nom">Le Boucher</span>
+        </a>
+                <a class="slide auteur" href="/source/28527/jean-marc-proust">
+          <div class="auteur__avatar">
+            <img class="lazyload" data-full-src="/sites/default/files/styles/177x177/public/portrait-proust.png" alt="Jean-Marc Proust">
+          </div>
+          <span class="auteur__prenom">Jean-Marc</span>
+          <span class="auteur__nom">Proust</span>
+        </a>
+                <a class="slide auteur" href="/source/19483/nadia-daam">
+          <div class="auteur__avatar">
+            <img class="lazyload" data-full-src="/sites/default/files/styles/177x177/public/portrait-daam.png" alt="Nadia Daam">
+          </div>
+          <span class="auteur__prenom">Nadia</span>
+          <span class="auteur__nom">Daam</span>
+        </a>
+              </div>
+    </div>
+  </div>
+</section><div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189804/cinema-la-clef-paris-confinement-revival-projections">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/projnuitduchasseur-0487.jpg" alt="La Clef, cinéma fermé qui projette des films sur le toit pendant le confinement">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189804%2Fcinema-la-clef-paris-confinement-revival-projections" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189804%2Fcinema-la-clef-paris-confinement-revival-projections&text=La+Clef%2C+cin%C3%A9ma+ferm%C3%A9+qui+projette+des+films+sur+le+toit+pendant+le+confinement&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189804/cinema-la-clef-paris-confinement-revival-projections">La Clef, cinéma fermé qui projette des films sur le toit pendant le confinement</a></p>
+      <p class="content__chapo">C'est la seule salle de Paris à montrer des films à un public depuis le 17 mars. Une opération exemplaire des multiples tentatives pour garder active la présence du cinéma dans la cité.</p>
+      <p class="article-infos">
+                <span class="categorie"> Culture</span>         —
+                        <span class="author">Jean-Michel Frodon</span>
+                                        <span class="separator"> —</span> 23 avril 2020        <span class="separator"> —</span> Temps de lecture : 3 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189825/vie-entreprise-teletravail-confinement-mal-dos-bonne-posture-etirements">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/slate_5.jpg" alt="Le mal de dos n&#039;est pas une fatalité, même en télétravail">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189825%2Fvie-entreprise-teletravail-confinement-mal-dos-bonne-posture-etirements" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189825%2Fvie-entreprise-teletravail-confinement-mal-dos-bonne-posture-etirements&text=Le+mal+de+dos+n%27est+pas+une+fatalit%C3%A9%2C+m%C3%AAme+en+t%C3%A9l%C3%A9travail&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189825/vie-entreprise-teletravail-confinement-mal-dos-bonne-posture-etirements">Le mal de dos n'est pas une fatalité, même en télétravail</a></p>
+      <p class="content__chapo">Position inconfortable, tensions, stress: travailler de chez soi peut déclencher des douleurs musculaires, heureusement évitables. </p>
+      <p class="article-infos">
+                <span class="categorie"> Santé</span>                                <span class="separator"> —</span> 23 avril 2020        <span class="separator"> —</span> Temps de lecture : 2 min      </p>
+    </div>
+  </div>
+</div>
+<div class="article article-list">
+  <div class="row article-list__inner grid-container">
+    <div class="article-list__cover-wrapper col-sm-4">
+      <a href="/story/189867/covid-19-confinement-reouverture-ecoles-savoirs-recherches-exemples-pays">
+        <img class="article-list__cover cover fit lazyload" data-full-src="/sites/default/files/styles/330x188/public/000_1qn1n0.jpg" alt="Des pistes pour rouvrir les écoles en pleine crise du Covid-19">
+        <div class="sharing-layer">
+          <div class="sharing__container">
+            <button data-share="fb" data-url="https://www.facebook.com/share.php?u=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189867%2Fcovid-19-confinement-reouverture-ecoles-savoirs-recherches-exemples-pays" class="sharing__btn">
+              <div class="icon icon--fb">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-fb.svg" alt="Partager sur Facebook" />
+              </div>
+            </button>
+            <button data-share="tw" data-url="https://twitter.com/intent/tweet?url=http%3A%2F%2Fwww.slate.fr%2Fstory%2F189867%2Fcovid-19-confinement-reouverture-ecoles-savoirs-recherches-exemples-pays&text=Des+pistes+pour+rouvrir+les+%C3%A9coles+en+pleine+crise+du+Covid-19&via=slatefr" class="sharing__btn">
+              <div class="icon icon--twitter">
+                <img src="/sites/all/themes/slatefr/static/svg/icon-twitter.svg" alt="Partager sur Twitter" />
+              </div>
+            </button>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="article-list__content col-sm-8">
+      <p class="content__title"><a href="/story/189867/covid-19-confinement-reouverture-ecoles-savoirs-recherches-exemples-pays">Des pistes pour rouvrir les écoles en pleine crise du Covid-19</a></p>
+      <p class="content__chapo">Les établissements scolaires «n'ouvriront pas partout le 11 mai», a déclaré le Premier ministre ce dimanche 19 avril. Pour réfléchir aux scénarios possibles, regards sur les avancées d'autres pays.</p>
+      <p class="article-infos">
+                <span class="categorie"> Parents & enfants</span>         —
+                        <span class="author">Didier Jourdan</span>
+                                        <span class="separator"> —</span> 23 avril 2020        <span class="separator"> —</span> Temps de lecture : 8 min      </p>
+    </div>
+  </div>
+</div>
+
+<div class="spinner-wrapper">
+  <svg class="spinner" viewBox="0 0 50 50">
+    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+  </svg>
+</div>
+
+<div class="grid-container load-more">
+  <button class="btn-load-more">
+    <span class="btn__text">Voir plus d’articles</span>
+  </button>
+</div>
+
+<section class="dossiers-container">
+    <div class="dossiers dossiers--partenaires">
+  <div class="dossiers__inner grid-container">
+    <p class="dossiers__title">Partenaires</p>
+    <div class="dossiers__items slider-container">
+      <div class="row slides">
+        <div class="dossier-item col-4 slide" style="border-color: #FFCC00;">
+          <img class="item__logo" src="/sites/all/themes/slatefr/static/svg/korii.svg" alt="korii.">
+          <nav class="item__articles">
+                        <a class="article__link" href="https://korii.slate.fr/et-caetera/coup-dur-pour-airbus-et-boeing-amazon-et-decroissance-uber-et-deliveroo-en-peril-lhebdo" target="_blank">
+              <span class="link__time" style="color: #FFCC00;">8:13</span>Coup dur pour Airbus et Boeing, Amazon et la décroissance, Uber et Deliveroo en péril, l'hebdo de korii.            </a>
+                        <a class="article__link" href="https://korii.slate.fr/et-caetera/recherche-vaccin-panviral-arnm-prevention-prochaine-pandemie-financements" target="_blank">
+              <span class="link__time" style="color: #FFCC00;">7:55</span>Il est déjà temps de se préparer à la prochaine pandémie            </a>
+                        <a class="article__link" href="https://korii.slate.fr/et-caetera/youtubeuses-confinement-vlogs-beaute-morning-routine-normes-genre" target="_blank">
+              <span class="link__time" style="color: #FFCC00;">8:07</span>Que font les YouTubeuses beauté de leur confinement?            </a>
+                      </nav>
+        </div>
+        <div class="dossier-item col-4 slide" style="border-color: #D3923E;">
+          <img class="item__logo" src="/sites/all/themes/slatefr/static/images/global/partenaires/slateafrique@2x.png" alt="SlateAfrique">
+          <nav class="item__articles">
+                        <a class="article__link" href="http://www.slateafrique.com/1040001/rdc-le-gourou-arrete-%3F-kinshasa-transfere-dans-un-centre-pyschiatrique" target="_blank">
+              <span class="link__time" style="color: #D3923E;">22:51</span>RDC: le gourou arrêté            </a>
+                        <a class="article__link" href="http://www.slateafrique.com/1039998/angola-lentreprise-petroliere-publique-commence-%3F-vendre-ses-actifs-dans-des-societes" target="_blank">
+              <span class="link__time" style="color: #D3923E;">18:51</span>Angola: l'entreprise pétrolière publique commence            </a>
+                        <a class="article__link" href="http://www.slateafrique.com/1039995/afrique-du-sud-le-port-du-masque-obligatoire-%3F-partir-du-1er-mai" target="_blank">
+              <span class="link__time" style="color: #D3923E;">18:51</span>Afrique du Sud: le port du masque obligatoire            </a>
+                      </nav>
+        </div>
+        <div class="dossier-item col-4 slide" style="border-color: #38528D;">
+          <img class="item__logo" src="/sites/all/themes/slatefr/static/images/global/partenaires/telos@2x.png" alt="Telos">
+          <nav class="item__articles">
+                        <a class="article__link" href="https://www.telos-eu.com/fr/societe/covid-19-le-premier-ennemi-declare-de-la-generatio.html" target="_blank">
+              <span class="link__time" style="color: #D3923E;">9:59</span>COVID-19, le premier ennemi déclaré de la génération inoxydable            </a>
+                        <a class="article__link" href="https://www.telos-eu.com/fr/politique-francaise-et-internationale/les-americains-et-les-inegalites.html" target="_blank">
+              <span class="link__time" style="color: #D3923E;">16:09</span>Les Américains et les inégalités            </a>
+                        <a class="article__link" href="https://www.telos-eu.com/fr/societe/covid-19-un-grand-egalisateur-devant-la-mort.html" target="_blank">
+              <span class="link__time" style="color: #D3923E;">16:40</span>Covid-19, un grand égalisateur devant la mort?            </a>
+                      </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<script src="/sites/all/themes/slatefr/scripts/vendors/jquery.min.js"></script>
+<script src="/sites/all/themes/slatefr/scripts/inf-scroll.js?v=3"></script>
+<script>
+    next_data_url = '/home/next/1';
+</script>
+<script>initPaginator();</script>
+<script src="/sites/all/themes/slatefr/scripts/share.js?v=2"></script>  </div>
+  <footer class="footer-main">
+  <a class="slate-logo" href="/">
+    <img src="/sites/all/themes/slatefr/static/svg/slate-fr.svg" alt="Slate.fr" />
+  </a>
+  <nav class="footer__links">
+    <a class="footer__link" href="https://www.slate.com" target="_blank">Slate.com</a>
+    <a class="footer__link" href="https://www.slateafrique.com" target="_blank">Slate&nbsp;Afrique</a>
+    <a class="footer__link" href="/contacts/">Contacts</a>
+    <a class="footer__link" href="/qui-sommes-nous/">Qui sommes-nous</a>
+    <a class="footer__link" href="/story/28817/mentions-legales">Mentions légales</a>
+    <a class="footer__link" href="javascript:void(0)" onclick="window.__cmp('displayConsentUi')">Gestion des données personnelles</a>
+  </nav>
+  <nav class="footer__socials">
+    <span class="socials__title">Suivez-nous :</span>
+    <div class="social-links">
+      <a class="social-link" href="https://www.facebook.com/SlateFrance/" target="_blank">
+        <div class="icon icon--fb icon--circle"></div>
+      </a>
+      <a class="social-link" href="https://twitter.com/slatefr" target="_blank">
+        <div class="icon icon--twitter icon--circle"></div>
+      </a>
+      <a class="social-link" href="https://www.youtube.com/channel/UC1yLBhh8eDSPm-_Hgz8AvNA" target="_blank">
+        <div class="icon icon--youtube icon--circle"></div>
+      </a>
+      <a class="social-link" href="https://www.instagram.com/slatefrance/" target="_blank">
+        <div class="icon icon--instagram icon--circle"></div>
+      </a>
+    </div>
+  </nav>
+</footer></div>
+<header class="header ">
+  <button class="header-menu-icon">
+    <div class="menu-icon-bars">
+      <div class="menu-icon-bar"></div>
+      <div class="menu-icon-bar"></div>
+      <div class="menu-icon-bar"></div>
+    </div>
+  </button>
+  <nav class="categories-navigation">
+    <a class="link-categorie" href="/">Magazine</a>
+    <a class="link-categorie" href="/podcasts/">Podcasts</a>
+    <a class="link-categorie" href="/grand-format/">Grands Formats</a>
+  </nav>
+  <a class="slate-logo" href="/">
+        <div class="slate-logo__fr purple"></div>
+        <img src="/sites/all/themes/slatefr/static/svg/slate-purple.svg" alt="Slate.fr" />
+      </a>
+    <div class="header-right-part">
+            <a class="newsletters" href="/newsletters/">
+      <span class="label">Newsletters</span>
+      <div class="icon icon--mail purple"></div>
+    </a>
+    <span class="separator"></span>
+        <div class="btns">
+      <button class="btn btn--search u-reset-btn">
+        <div class="icon icon--search purple"></div>
+      </button>
+      <button class="btn btn--close-search u-reset-btn">
+        <div class="icon icon--cross">
+          <span class="icon__bar"></span>
+          <span class="icon__bar"></span>
+        </div>
+      </button>
+    </div>
+    <span class="separator"></span>
+    <a href="https://korii.slate.fr/" target="_blank" class="korii-logo"><img src="/sites/all/themes/slatefr/static/svg/korii.svg" height="18" width="auto" alt="korii." /></a>
+  </div>
+  </header><div class="main-menu-container">
+  <div class="layer--dark layer"></div>
+  <div class="layer--light layer col-md-4"></div>
+  <div class="row main-menu__inner">
+    <div class="col-md-4 main-menu__navigation">
+      <button class="navigation__close-btn">
+        <div class="icon icon--cross">
+          <span class="icon__bar"></span>
+          <span class="icon__bar"></span>
+        </div>
+        <span class="label">Fermer</span>
+      </button>
+      <ul class="navigation__inner vs" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+        <li class="navigation__link">
+          <a href="/">Accueil</a>
+        </li>
+        <li class="navigation__link navigation__link--hover navigation__link--current" itemprop="name">
+          <a itemprop="url" href="/monde/" name="monde">Monde</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/societe/" name="societe">Société</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/politique/" name="politique">Politique</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/economie/" name="economie">Économie</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/culture/" name="culture">Culture</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/tech-internet/" name="internet">Tech & internet</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/medias/" name="medias">Médias</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/egalites/" name="egalites">Égalités</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/enfants/" name="enfants">Parents & enfants</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/boire-manger/" name="bien-manger">Boire & manger</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/sciences/" name="science">Sciences</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/sante/" name="sante">Santé</a>
+        </li>
+        <li class="navigation__link navigation__link--hover" itemprop="name">
+          <a itemprop="url" href="/sports/" name="sports">Sports</a>
+        </li>
+        <li class="navigation__separator"></li>
+        <li class="navigation__link" itemprop="name">
+          <a itemprop="url" href="/grand-format/">Grands formats</a>
+        </li>
+        <li class="navigation__separator"></li>
+        <li class="navigation__link" itemprop="name">
+          <a itemprop="url" href="/podcasts/">Podcasts</a>
+        </li>
+        <li class="navigation__separator"></li>
+        <li class="navigation__link">
+          <a href="/newsletters/">Newsletters</a>
+        </li>
+        <li class="navigation__separator"></li>
+        <li class="navigation__link">
+          <a href="https://korii.slate.fr/" target="_blank"><img src="/sites/all/themes/slatefr/static/svg/korii.svg" height="20" width="auto" alt="korii." /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-auto main-menu__feed">
+      <div class="feed__inner vs"></div>
+    </div>
+  </div>
+</div>
+  
+<script type="text/javascript">
+var initWallpaper = function() {
+  document.body.classList.add('skin');
+  document.body.classList.add('skin-opti');
+  window.scrollTo(0,0);
+}
+</script>
+
+<!-- Google Analytics -->
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-7229822-2', 'auto', {
+  'cookieExpires': 31560000
+});
+ga('set', 'anonymizeIp', true);
+ga('send', 'pageview');
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+
+<!-- comScore -->
+<script>
+var _comscore = _comscore || [];
+_comscore.push({ c1: "2", c2: "14078442" });
+(function() {
+  var s = document.createElement("script"), el = document.getElementsByTagName("script")[0];
+  s.async = true;
+  s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+  el.parentNode.insertBefore(s, el);
+})();
+</script>
+<noscript>
+  <img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=14078442&amp;cv=2.0&amp;cj=1" alt="" />
+</noscript>
+
+<!-- estat/mediametrie -->
+<script>
+function _eStat_Whap_loaded_func () {
+ eStatWhap.serial("800000207056");
+ eStatWhap.send();
+}
+(function() {
+  var myscript = document.createElement('script');
+  myscript.src = ('https:' == document.location.protocol ? 'https://' :
+  'http://') + 'w.estat.com/js/whap.js';
+  myscript.setAttribute('async', 'true');
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(myscript, s);
+})();
+</script>
+
+<!-- Nuggad -->
+<script defer>
+var nugg4Rubicon = "";
+var nuggrid = encodeURIComponent(top.location.href);
+var nuggscr = document.createElement('script');
+nuggscr.type = 'text/javascript';
+nuggscr.src = '//lpm-slate.nuggad.net/rc?nuggn=617480748&nuggsid=108575044&nuggrid='+nuggrid+'';
+var n = document.getElementsByTagName('script')[0];
+n.parentNode.insertBefore(nuggscr, n);
+</script>
+
+<!-- Quantcast -->
+<script>
+var _qevents = _qevents || [];
+(function() {
+  var elem = document.createElement('script');
+  elem.src = (document.location.protocol == "https:" ? "https://secure" : "http://edge") + ".quantserve.com/quant.js";
+  elem.async = true;
+  elem.type = "text/javascript";
+  var scpt = document.getElementsByTagName('script')[0];
+  scpt.parentNode.insertBefore(elem, scpt);
+})();
+_qevents.push({qacct:"p-wmHYJbTCYsARY"});
+</script>
+<noscript>
+<div style="display:none;">
+  <img src="//pixel.quantserve.com/pixel/p-wmHYJbTCYsARY.gif" border="0" height="1" width="1" alt="Quantcast"/>
+</div>
+</noscript>
+
+<!-- Impactify -->
+<script>
+window.impactifyTag = window.impactifyTag || [];
+impactifyTag.push({
+  "appId": "slate.fr",
+  "format": "screen",
+  "style": "impact",
+  "onNoAd": function(){},
+  "onReady": function(api){
+    top.myImpactifyApi = api;
+  }
+});
+(function(d, s, id) {
+  var js, ijs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://ad.impactify.io/static/ad/tag.js';
+  ijs.parentNode.insertBefore(js, ijs);
+
+  if(typeof window.orientation !== "undefined" || navigator.userAgent.indexOf('IEMobile') !== -1) {
+    const taboolaDiv = document.querySelector('.bottom-content');
+    let observer = new IntersectionObserver((entries, self) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          top.myImpactifyApi.close();
+          self.disconnect();
+        }
+      });
+    });
+    observer.observe(taboolaDiv);
+  }
+}(document, 'script', 'impactify-sdk'));
+</script>
+
+
+
+  <script src="/sites/all/themes/slatefr/scripts/vendors/tweenmax.min.js"></script>
+  <script src="/sites/all/themes/slatefr/scripts/main.js?v=14"></script>
+  </body>
+</html>

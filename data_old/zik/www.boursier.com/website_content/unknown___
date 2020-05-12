@@ -1,0 +1,4080 @@
+
+
+ 
+<!DOCTYPE html>
+<html lang="fr" class="">
+<head>
+	<!-- 90 -->
+	<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+		<meta name="HandheldFriendly" content="true">
+		<script> var isResponsive = true; </script>
+	<meta name="apple-itunes-app" content="app-id=325643675, affiliate-data=affId=1194513">
+	<meta http-equiv="content-language" content="fr">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="theme-color" content="#35424f" />
+	<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+	<meta name="twitter:dnt" content="on">
+
+	<title>Bourse : cours, cotations des actions et conseils boursiers sur les titres - Cotation en temps r&eacute;el</title>
+	<script type="text/javascript">
+		window.baseDomain = 'https://www.boursier.com';
+		window.ssoKeys = { "FB": '396473187066093', "LI": '772sq6ivh22rxn', "TW" : 'AIhzceHmPiDqWdCwo2vcA' };
+	</script>
+
+	<!-- tag Analytics -->
+	
+<script type="text/javascript">
+<!--
+
+	function __tcvarsCreate() {
+		//TC Declared Variables
+		var tc_vars = {};
+
+	
+		tc_vars.content_id = '';
+		tc_vars.custom1 = '';
+		tc_vars.custom2 = '';
+		tc_vars.custom3 = '';
+		tc_vars.custom4 = '';
+		tc_vars.custom5 = '';
+		tc_vars.custom6 = '';
+		tc_vars.error = '200';
+		tc_vars.search_page = 'Index';
+		tc_vars.content_level1 = 'Home';
+		tc_vars.content_level2 = '';
+		tc_vars.content_label = '';
+		tc_vars.content_class = 'Index';
+	
+
+		return tc_vars;
+	}
+
+
+	//-->
+</script>
+
+	<script src="//cdn-static.boursier.com/e/di/cmp.js?20200421"></script>
+<script type="deferred/javascript" src="/Scripts/dfp.positions.js"></script>
+<script src="//cdn.hubvisor.io/wrapper/01BYK28ENND8X5G8K0AJ2DPK7E/hubvisor.js" onerror="hubvisorErrorHandler" async></script><!-- DFP > All --><script type="deferred/javascript" src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" async></script>
+
+<!-- Begin tagcommander  -->
+<script type="deferred/javascript" src="//cdn-static.boursier.com/e/tc/a_boursier.js?v1&20200421" async></script>
+<!--  end tagcommander -->
+<link rel="manifest" href="/manifest.json">
+
+
+	<!-- Styles -->
+	
+	<link href="/Content/css?v=7bTYQLir3cTfl5ARJZM81Qb0_50A2y68tb24GVYuwQA1" rel="stylesheet"/>
+
+
+	<link rel="search" type="application/opensearchdescription+xml" href="/syndication/recherche" title="Boursier.com" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="image_src" href="/Content/img/logo.png" />
+
+		<link rel="stylesheet" href="/ui/css/global.css?637213497880000000" />
+		<link rel="stylesheet" href="/ui/css/quizz-resultats.css?637171861220000000" />
+		<link href="/UI/css/colorbox.css" rel="stylesheet" type="text/css" />
+		<link href="/ui/css/modal.css?637171861220000000" rel="stylesheet" type="text/css" />
+<link href="/Content/migrate?v=-61F0tCSUnAmbO0Oy57tgQ05wbHcj2k5_V__SdG3UOE1" rel="stylesheet"/>
+	<!-- V5 -->
+	<link href="/UI/v5/bundle?v=es0NkSSI8yIEs-yDNyBTl0HdE42uMLUAtIuUITPbues1" rel="stylesheet"/>
+
+	<!-- V5 -->
+
+	<!-- Scripts -->
+	<script src="/bundles/jquery?v=s6LHZm33GCIH8eutynJ9FM_yTzIbKEVHC3z-sBRx1uI1"></script>
+
+	<script src="/bundles/Bootstrap/js?v=RKZehS2z70rY7zIJ8lfj7V4jT1pO4Segdbwy8N5DHBo1"></script>
+
+	<script src="/Scripts/js?v=va5gbMDNxfYvV40C3PTOiFCZyL6mNF6IKAzSgRQhWtY1"></script>
+
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+	<script src="/scripts/html5shiv.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]><script type="text/javascript">$('html').addClass('BIE9'); </script><![endif]-->
+<!--[if IE 8]><script type="text/javascript">$('html').addClass('IE8'); </script><![endif]-->
+<!--[if IE 7]><script type="text/javascript">$('html').addClass('IE7'); </script><![endif]-->
+
+	<meta name="description" content="&amp;#9733;&amp;#9733;&amp;#9733;Bourse&amp;#9733;&amp;#9733;&amp;#9733; Cours de Bourse et conseils boursiers en ligne : Boursier.com propose des informations et recommandations pour bien investir et g&#233;rer son portefeuille en fonction de l&#39;actualit&#233; boursi&#232;re de la Bourse de Paris (CAC40) et de New York (Nasdaq, Dow Jones)" />
+<script type="text/javascript"> Boursier.html.applyRefresh(240); </script>
+	
+	
+	
+
+
+
+	<script type="text/javascript">
+		(function (h) { h.className = h.className.replace('no-', '') })(document.documentElement);
+	</script>
+</head>
+
+<body class="home" id="content">
+    <div class="admin" id="home-link-admin" data-ajax-href="/ajax/master/administration"></div>
+    <div id="modal-message" data-ajax-href="/ajax/master/popinmessage"></div>
+
+    <div class="search-overlay" id="search-overlay"></div>
+    <div class="connection-overlay" id="connection-overlay"></div>
+
+
+    
+
+
+<div id="overall">
+
+	<div data-id="infos-boursier_panel" id="infos-boursier_panel" class="init stuck">
+		
+		<div class="bg">
+			<div id="headerblock" class="dyn" data-ajax-href="/navigation/header" data-ajax-success="initSlider"></div>
+		</div>
+	</div>
+
+	<header data-id="header" class="page-head">
+		<!-- Top -->
+		<div id="logo-user_tools">
+			<div class="wrapper">
+				<span class="ico-burger toggle-button" data-toggle-element="#main-menu #infos-boursier_panel #form-search.visible .sub-menu--connected__wrapper.visible .ico-burger #user_menu.visible" data-toggle-class="visible">
+					<span></span>
+				</span>
+				<div class="logo">
+					<a href="/" title="Actualité financière – Cours de Bourse en temps réel, Conseils – Boursier.com">
+							<h1>Bourse</h1>
+					</a>
+				</div>
+
+				<span class="search-toggle toggle-button" data-toggle-element="#form-search .sub-menu--connected__wrapper.visible #user_menu.visible" data-toggle-class="visible">
+					<span class="icon2016-search"></span>
+				</span>
+
+				<form action="/recherche/synthese" method="post" id="form-search">
+					
+					<input type="text" class="form-text" name="q" required>
+					<button type="submit" name="sa" class="icon2016-search" value="&nbsp;"></button>
+					<input name="cx" type="hidden" value="008493178372379324166:oczdasvhbii">
+				</form>
+				<!-- connecté / déconnecté -->
+
+				<div id="box-connection" data-ajax-href="/user/connection" data-ajax-success="BC.AJAX.initHeaderConnection"></div>
+
+			</div><!-- /wrapper -->
+		</div><!-- /Top -->
+		<!-- /m-infos -->
+		<div class="sub-menu--connected__wrapper">
+			<div class="wrapper">
+				<nav role="navigation">
+					<ul class="sub-menu--connected__list">
+						<li class="sub-menu--connected__list-item"><a href="/membres/mes-infos/coordonnees" rel="nofollow">Mes infos</a></li>
+						<li class="sub-menu--connected__list-item hidedesktop"><a href="/membres/listes/consulter/">Mes listes</a></li>
+						<li class="sub-menu--connected__list-item hidedesktop"><a href="/membres/portefeuilles/consulter/">Mes portefeuilles</a></li>
+						<li class="sub-menu--connected__list-item"><a href="/membres/mes-infos/profil" rel="nofollow">Mon profil forum</a></li>
+						<li class="sub-menu--connected__list-item"><a href="/membres/mes-infos/newsletters" rel="nofollow">Mes newsletters</a></li>
+						<li class="sub-menu--connected__list-item">
+							<a class="btn-more premium" href="/membres/abonnement?utm_source=boursier&amp;utm_medium=boutonmenuprofil&amp;utm_campaign=privileges" target="_blank" rel="nofollow">
+								<span class="bt-label">M'abonner aux conseils Privilèges</span>
+							</a>
+						</li>
+						<li class="sub-menu--connected__list-item">
+							<a onclick="return confirm('Etes-vous sûr de vouloir vous déconnecter ?')" href="/membres/inscription/deconnexion">D&eacute;connexion</a>
+						</li>
+					</ul>
+
+					<span class="toggle-button toggle-on-scroll icon2016 icon2016-close" data-toggle-element=".sub-menu--connected__wrapper" data-toggle-class="visible"></span>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Menu -->
+
+
+
+
+<div id="main-menu">
+	<ul id="burger-menu" class="toggle-desktop toggleit vertical menu modern" data-pane-index="0">
+		<li class="burger-menu__item accueil">
+			
+			<a href="/" class="main-menu accueil">
+				Accueil
+			</a>
+		</li>
+
+		<li class="burger-menu__item cotations">
+			<a class="main-menu">
+				Bourse
+			</a>
+			<ul class="vertical menu ssmenus-secondary">
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Cours de A à Z</a>
+					<ul class="vertical menu">
+						<li><a href="/actions/paris?marketId=99">Paris - SRD</a></li>
+						<li><a href="/actions/paris?marketId=-1&amp;indexId=39991">Paris - CAC40</a></li>
+						<li><a href="/actions/paris?marketId=8">Paris - Euronext Growth</a></li>
+						<li><a href="/actions/paris?marketId=9">Paris - Euronext Access</a></li>
+						<li><a href="/actions/new-york">New York</a></li>
+						<li><span class="gothere L1f4a42cb464f49c21f41c1c3c543484843c2 ">Bruxelles</span></li>
+						<li><span class="gothere L1f4a42cb464f49c21f4a4ec2cb43c14b4a4e ">Amsterdam</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Palmarès</a>
+
+					<ul class="vertical menu">
+						<li><a href="/palmares/paris">Paris</a></li>
+						<li><span class="gothere L1fc04a484e4ac143c21f4943cc1ec64fc147 ">New York</span></li>
+						<li><span class="gothere L1fc04a484e4ac143c21f41c1c3c543484843c2 ">Bruxelles</span></li>
+						<li><span class="gothere L1fc04a484e4ac143c21f4a4ec2cb43c14b4a4e ">Amsterdam</span></li>
+						<li><span class="gothere L1f4a42cb464f49c21f44c14a4942431e424fcb4343c21ecc4a48481ec2cbc14343cb ">Fran&#231;aises &#224; New York</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Le coin du Trader</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1fc04a484e4ac143c21fc44f48c34e43c21e4a494fc14e4ac3c5 ">Volumes anormaux</span></li>
+						<li><span class="gothere L1fc04a484e4ac143c21fc44a4843c3c1c21e4843c21ec048c3c21e4342454a494c4343c2 ">Volumes importants</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Cotations</a>
+					<ul class="vertical menu">
+						<li><a href="/indices">Indices</a></li>
+						<li><a href="/devises">Devises</a></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Matières Premières</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1f4e4acb4643c143c21ec0c1434e4643c143c21f424fc3c1c21f41c14349cb1e35b220202026242c2c2b202618bcb11945cb4e48 ">Brent</span></li>
+						<li><span class="gothere L1f4e4acb4643c143c21ec0c1434e4643c143c21f424fc3c1c21f4f4942431e4b1e4fc11e35bb202020212c2b2c20212418b2b51945cb4e48 ">Once d&#39;Or</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Vidéos</a>
+                    <ul class="vertical menu">
+                        <li><span class="gothere L1fc4464b434fc21f4e4ac1424543c2 ">Point des march&#233;s</span></li>
+                        <li><span class="gothere L1fc4464b434fc21fc04f4b424ac2cbc21e43c3c14fc0432a1e414fc3c1c243 ">Podcasts Europe1 Bourse</span></li>
+                        <li><span class="gothere L1fc4464b434fc21f4149c01ec04ac146414ac21e434ac2c6 ">BNP Paribas Easy</span></li>
+                    </ul>
+				</li>
+			</ul>
+		</li>
+
+		<li class="burger-menu__item actualites">
+			<a class="main-menu">
+				Actualités
+			</a>
+
+			<ul class="vertical menu ssmenus-secondary">
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Bourse</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1f4a4c43494b4a1e414fc3c1c24643c11f ">Agenda</span></li>
+						<li><span class="gothere L1f46494b464243c21f4a42cbc34a4846cb43c21f4943ccc21f424a421e2b201eb4312020202223202020202518b4311945cb4e48 ">Point des march&#233;s</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f4ac446c21e41c14f4743c1c2 ">Recos Analystes</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f44c14a4942431f ">France</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f43cb4acbc21ec34946c21f ">Etats-Unis</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f43c3c14fc0431f ">Europe</span></li>
+						<li><span class="gothere L1f4649cbc14f4bc342cb464f49c2 ">Introductions - IPO</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21fc24e4a48481e4e464b1e424ac0c2 ">Small&amp;Mid Caps</span></li>
+					</ul>
+				</li>
+
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Economie</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f43424f494f4e4643 ">Economie</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f4e4a42c14f43424f494f4e4643 ">Macro Economie</span></li>
+						<li><span class="gothere L1f4b43c446c243c21f4a42cbc34a4846cb43c21f4943ccc2 ">Devises</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21fc143c3cb43c1c2 ">Reuters</span></li>
+						<li><span class="gothere L1f42c1c6c0cb4f1e4e4f49494a4643c21f4a42cbc34a4846cb43c2 ">Crypto-monnaies</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f4c4a4843c14643c2 ">Galeries Photos</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Editorial</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f4943ccc21e4bc31e4d4fc3c1 ">Fil info du jour</span></a></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21fc1c34e43c3c1c2 ">Rumeurs</span></li>
+						<li><span class="gothere L1f4a42cbc34a4846cb43c21f4649cb43c1c44643ccc2 ">Interviews</span></li>
+						<li><span class="gothere L1f4b4fc2c24643c1c2 ">Dossiers</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Secteurs</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1fc24342cb43c3c1c21f46494bc3c2cbc14643 ">Industrie</span></li>
+						<li><span class="gothere L1fc24342cb43c3c1c21fc243c1c4464243c2 ">Services</span></li>
+						<li><span class="gothere L1fc24342cb43c3c1c21f424f4e4ec34946424acb464f49 ">Communication</span></li>
+						<li><span class="gothere L1fc24342cb43c3c1c21f4446494a494243 ">Banque / Finance</span></li>
+						<li><span class="gothere L1fc24342cb43c3c1c2 ">Tous les secteurs</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Matières Premières</a>
+
+					<ul class="vertical menu">
+						<li><span class="gothere L1f4e4acb4643c143c21ec0c1434e4643c143c21f424fc3c1c21f41c14349cb1e35b220202026242c2c2b202618bcb11945cb4e48 ">Brent</span></li>
+						<li><span class="gothere L1f4e4acb4643c143c21ec0c1434e4643c143c21f424fc3c1c21f4f4942431e4b1e4fc11e35bb202020212c2b2c20212418b2b51945cb4e48 ">Once d&#39;Or</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Elections</a>
+					<ul class="vertical menu">
+                        <li><span class="gothere L1f43484342cb464f49c21f4ec349464246c04a4843c2 ">Actualit&#233;s des Municipales</span></li>
+                        <li><span class="gothere L1f43484342cb464f49c21fc0c143c2464b4349cb4643484843 ">Actualit&#233;s de la Pr&#233;sidentielle</span></li>
+					</ul>
+					<a class="secondary-link top--margin">Résultats</a>
+                    <ul class="vertical menu">
+                        <li><span class="gothere L1f43484342cb464f49c21f4ec349464246c04a4843c21fc143c2c348cb4acbc21e21202120 ">R&#233;sultats Municipales 2020</span></li>
+                        <li><span class="gothere L1f43484342cb464f49c21fc0c143c2464b4349cb46434848431fc143c2c348cb4acbc21e21202a2c ">R&#233;sultats Pr&#233;sidentielle 2017</span></li>
+                    </ul>
+				</li>
+			</ul>
+		</li>
+
+		<li class="burger-menu__item crypto">
+			<a class="main-menu" href="/crypto-monnaies/actualites">
+				Crypto
+			</a>
+		</li>
+
+		<li class="burger-menu__item placements">
+			<a class="main-menu">
+				OPCVM
+			</a>
+			<ul class="vertical menu ssmenus-secondary">
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">SICAV-FCP</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1f4fc042c44e1f ">Accueil</span></li>
+						<li><span class="gothere L1f4fc042c44e1fc04a484e4ac143c21f ">Palmar&#232;s</span></li>
+						<li><span class="gothere L1f4fc042c44e1fc143424543c14245431f ">Recherche</span></li>
+						<li><span class="gothere L1f4fc042c44e1fc246424ac41ec243484342cb2a2020 ">Select 100</span></li>
+						<li><span class="gothere L1fcbc14a424743c1c2 ">Trackers</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Actualités</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1f4fc042c44e1f4a42cbc34a4846cb43c21f4943ccc21f ">Actualit&#233;s</span></li>
+						<li><span class="gothere L1f4fc042c44e1f4a42cbc34a4846cb43c21f424f49c2434648c21f ">Conseils SICAV</span></li>
+						<li><span class="gothere L1f4fc042c44e1f4a42cbc34a4846cb43c21f4649cb43c1c44643ccc21f ">Interviews g&#233;rants</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Vidéos</a>
+                    <ul class="vertical menu">
+                        <li><span class="gothere L1f4fc042c44e1fc4464b434fc21f4446494a4942431ec143c2c04f49c24a4148431e43424f44461e4649c443c2cb46c2c2434e4349cbc2 ">Ecofi ISR</span></li>
+                    </ul>
+				</li>
+			</ul>
+		</li>
+
+		<li class="burger-menu__item pdbourse">
+			<a class="main-menu">
+				Dérivés
+			</a>
+			<ul class="vertical menu ssmenus-secondary">
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">Produits</a>
+
+					<ul class="vertical menu">
+						<li><span class="gothere L1fc0c14f4bc346cbc21e4b431e414fc3c1c2431fc143424543c1424543 ">Palmar&#232;s Produits de Bourse</span></li>
+						<li><a href="/produits-de-bourse/warrants/recherche">Warrants</a></li>
+						<li><a href="/produits-de-bourse/turbos/recherche">Turbos</a></li>
+						<li><span class="gothere L1fc0c14f4bc346cbc21e4b431e414fc3c1c2431f4243c1cb464446424acbc21e4843c44643c11fc143424543c1424543 ">Certificats Levier</span></li>
+						<li><span class="gothere L1fc0c14f4bc346cbc21e4b431e414fc3c1c2431f4243c1cb464446424acbc21e4649c443c2cb46c2c2434e4349cb1fc143424543c1424543 ">Certificats Investissements</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link" data-index="4">Conseils</a>
+
+					<ul class="vertical menu">
+						<li><span class="gothere L1fc0c14f4bc346cbc21e4b431e414fc3c1c2431f4a42cbc34a4846cb43c21f424f49c2434648c2 ">Conseils Produits de bourse</span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link" data-index="5">Statistiques</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1fc0c14f4bc346cbc21e4b431e414fc3c1c2431fc2cb4acb46c2cb46cac343c21fc44ac1464acb464f491f ">Palmar&#232;s</span></li>
+						<li><span class="gothere L1fc0c14f4bc346cbc21e4b431e414fc3c1c2431fc2cb4acb46c2cb46cac343c21f424ac046cb4ac3c51e4342454a494c43c21f ">Les plus &#233;chang&#233;s</span></li>
+						<li><span class="gothere L1fc0c14f4bc346cbc21e4b431e414fc3c1c2431fc2cb4acb46c2cb46cac343c21f424ac046cb4ac3c51e4342454a494c43c21e434e43cbcb43c3c1c21f ">Par &#233;metteur</span></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+
+		<li class="burger-menu__item cfd">
+			<a class="main-menu" href="/cfd-bourse">
+				CFD
+			</a>
+		</li>
+
+		<li class="burger-menu__item">
+			<a class="main-menu">
+				Patrimoine
+			</a>
+			<ul class="vertical menu ssmenus-secondary">
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link">L'argent et vous</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L45cbcbc0c22d1f1f4ac14c4349cb19414fc3c1c24643c119424f4e1f" target="_blank">Accueil</span></li>
+						<li><span class="gothere L45cbcbc0c22d1f1f4ac14c4349cb19414fc3c1c24643c119424f4e1fcac34fcb464b464349" target="_blank">Quotidien</span></li>
+						<li><a href="https://argent.boursier.com/immobilier" target="_blank">Immobilier</a></li>
+						<li><a href="https://argent.boursier.com/impots" target="_blank">Impôts</a></li>
+						<li><a href="https://argent.boursier.com/epargne" target="_blank">Epargne</a></li>
+						<li><span class="gothere L45cbcbc0c22d1f1f4ac14c4349cb19414fc3c1c24643c119424f4e1fc04ac2c2464f49" target="_blank">Passion</span></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+
+		<li class="burger-menu__item learning">
+			<a class="main-menu">
+				Learning
+			</a>
+			<ul class="vertical menu ssmenus-secondary">
+				<li class="ssmenu__title--secondary">
+					<a href="" class="secondary-link toe" data-index="2">Boursier.com Learning</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1f4cc3464b43 toe">Accueil</span></li>
+						<li><span class="gothere L1f4cc3464b431f4b4341c3cb43c11e43491e414fc3c1c243 toe">Novice</span></li>
+						<li><span class="gothere L1f4cc3464b431fc2431ec043c1444342cb464f494943c11e43491e414fc3c1c243 toe">Avanc&#233;</span></li>
+						<li><span class="gothere L1f4cc3464b431f4b43c4434946c11ecbc14a4b43c11e43491e414fc3c1c243 toe">Expert</span></li>
+						<li><span class="gothere L1f4cc3464b431fcb43484342454ac14c434e4349cb toe">Guides Bourse Gratuits</span></li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+
+		<li class="burger-menu__item forums">
+			<a class="main-menu">
+				Forum
+			</a>
+			<ul class="vertical menu ssmenus-secondary">
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link" data-index="0">Réactions sur...</a>
+					<ul class="vertical menu">
+						<li><span class="gothere L1f444fc1c34e ">Toute l&#39;actualit&#233;</span></li>
+						<li><span class="gothere L1f444fc1c34e1f4a42cbc34a4846cb43c21f414fc3c1c243 ">Bourse, Finance</span></li>
+						<li><span class="gothere L1f444fc1c34e1f4a42cbc34a4846cb43c21f4c434943c14a4843c2 ">Actualit&#233; G&#233;n&#233;rale</span></li>
+						<li><span class="gothere L1f444fc1c34e1f4a42cbc34a4846cb43c21f43424f494f4e4643 ">Economie</span></li>
+						<li><span class="gothere L1f444fc1c34e1f4a42cbc34a4846cb43c21f4649cb43c1c44643ccc2 ">Interviews</span></li>
+					</ul>
+				</li>
+
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link" data-index="1">Thématiques</a>
+
+					<ul class="vertical menu">
+						<li><span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f4a494a48c6c2431ecb4342454946cac343 ">Analyse Technique</span></li>
+						<li><span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f4649cbc14f4bc342cb464f491e414fc3c1c243 ">Introductions en Bourse</span></li>
+						<li><span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f4b4341c3cb43c1 ">D&#233;butant en Bourse</span></li>
+						<li><span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f43424f494f4e4643 ">Economie</span></li>
+						<li><span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f464e4e4f4146484643c11ec0484a42434e4349cb ">Immobilier, Patrimoine, OPCVM</span></li>
+						<li><span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f4146c2cbc14fcb ">Le Bistrot du Boursier</span></li>
+					</ul>
+				</li>
+
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link" data-index="0">Sujets les plus commentés</a>
+
+					<ul class="vertical menu">
+							<li><span class="gothere L1f444fc1c34e1fc44a4843c3c144c11f43c3c14fc0484ac24e4a1f43c3c14fc0484ac24e4a1ec44a1ec0c348c243c11e4621262220262b1945cb4e48">Europlasma va pulser. <span class="icon2016-comment-1">2745</span></span></li>
+							<li><span class="gothere L1f444fc1c34e1f4a42cbc34a4846cb43c21f4c434943c14a4843c21fc04ac146c21e491e4a1e4ac342c3491e4348434e4349cb1e444a42cbc343481ec2c3c11ec3491e484643491e4349cbc1431e424fc4464b1e2a261e43cb1ec3491e484a414f1e4b431eccc3454a491e462220202a262a1945cb4e48">Paris n&#39;a &quot;aucun &#233;l&#233;ment factuel&quot; sur un lien entre COVID-19 et un labo de Wuhan <span class="icon2016-comment-1">109</span></span></li>
+							<li><span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f43424f494f4e46431f4b43424f49444649434e4349cb1ec0c14f4cc143c2c246441e4b4a49c21e2b1ec2434e4a464943c21e4a1ec04ac1cb46c11e4bc31e2a2a1e4e4a461e4e4a42c14f491e462126262622211945cb4e48">D&#233;confinement progressif dans 4 semaines, &#224; partir du 11 mai (Macron) <span class="icon2016-comment-1">73</span></span></li>
+							<li><span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f4146c2cbc14fcb1fc4464848434943c3c4431e484a1e4c4ac1434949431e494fc3c443484843c21ecb4349c2464f49c21e4ac0c143c21ec3491e4a4242464b4349cb1e4b431e4e4fcb4f1e46222020212b251945cb4e48">Villeneuve-la-Garenne : nouvelles tensions apr&#232;s un accident de moto <span class="icon2016-comment-1">62</span></span></li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary">
+
+					<a class="secondary-link" data-index="0">Valeurs actives</a>
+
+					<ul class="vertical menu">
+							<li>
+								<span class="gothere L1f4a42cb464f49c21f444fc1c34e1f494fc44a42c6cb1eb43120202a2022262c21222118b4311945cb4e48 ">Novacyt</span>
+							</li>
+							<li>
+								<span class="gothere L1f4a42cb464f49c21f444fc1c34e1fc44f48cb4a48464a1eb43120202a2a26262323252518b4311945cb4e48 ">Voltalia</span>
+							</li>
+							<li>
+								<span class="gothere L1f4a42cb464f49c21f444fc1c34e1f424a421e2b201eb4312020202223202020202518b4311945cb4e48 ">CAC 40</span>
+							</li>
+							<li>
+								<span class="gothere L1f4a42cb464f49c21f444fc1c34e1f43c3c14fc0484ac24e4a1eb43120202020202b2b252a2018b4311945cb4e48 ">Europlasma</span>
+							</li>
+							<li>
+								<span class="gothere L1f4a42cb464f49c21f444fc1c34e1f4649494acb431ec0454ac14e4a1eb43120202a2022222a2b212a18b4311945cb4e48 ">Innate Pharma</span>
+							</li>
+							<li>
+								<span class="gothere L1f4a42cb464f49c21f444fc1c34e1f41464fc2c64943c51eb43120202a2a20202326222218b4311945cb4e48 ">Biosynex</span>
+							</li>
+							<li>
+								<span class="gothere L1f4a42cb464f49c21f444fc1c34e1f4b4fcc1e4d4f4943c21e46494bc3c2cbc1464a481e33322124202324242a202b251833321945cb4e48 ">Dow Jones Industrial</span>
+							</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+
+		<li class="burger-menu__item privileges">
+			<a class="premium main-menu" data-index="0">Privilèges</a>
+			<ul class="vertical menu ssmenus-secondary">
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link" data-index="1">Articles</a>
+
+					<ul class="vertical menu">
+						<li><span class="gothere L1fc0c146c44648434c43c2 ">Accueil Privil&#232;ges</span></li>
+						<li><span class="gothere L1fc0c146c44648434c43c21f424f49c2434648c21fc143424f1e4bc31e4d4fc3c11f2a ">La Reco du Jour</span></li>
+						<li><span class="gothere L1fc0c146c44648434c43c21f424f49c2434648c21f4a42cb464f49c21f2a ">Conseils Actions</span></li>
+						<li><span class="gothere L1fc0c146c44648434c43c21f4649444fc14e4acb464f49c21f43c54248c3c246c443c21f2a ">Infos Exclusives</span></li>
+					</ul>
+				</li>
+
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link" data-index="2">Opportunités</a>
+
+
+					<ul class="vertical menu">
+						<li class="mag-premium">
+							<span class="gothere L1fc0c146c44648434c43c21f4b4fcc49484f4a4b1f4fc0c04fc1cbc34946cb43c21f484ac2cb1fc04b44">N°1235 - le 14/04/2020</span>
+							<img alt="Lettre Opportunités Bourse" src="/UI/v5/images/core/menu-premium_mag-cover.png" />
+							<span class="gothere L1fc0c146c44648434c43c21f4b4fcc49484f4a4b1f4fc0c04fc1cbc34946cb43c21f484ac2cb1fc04b44 btn-more premium">
+								<span class="bt-label">Télécharger</span>
+							</span>
+						</li>
+					</ul>
+				</li>
+
+				<li class="ssmenu__title--secondary">
+					<a class="secondary-link" data-index="3">Portefeuilles</a>
+
+					<ul class="vertical menu">
+						<li class="portfolio">
+										<span class="gothere L1fc0c146c44648434c43c21fc04fc1cb434443c346484843c21f4b43444349c24644">
+				<span class="indice-title">
+					Perf. depuis le 10/11/1991
+				</span>
+				<strong class="indice-box">
+					<span class="s-btn iconm-defensif">
+						D&#233;fensif
+						<b class="up">+391,83%</b>
+					</span>
+					<span class="indice">Indice CAC 40 <span class="up">+158,95%</span></span>
+				</strong>
+			</span>
+
+										<span class="gothere L1fc0c146c44648434c43c21fc04fc1cb434443c346484843c21f43cac346484641c143">
+				<span class="indice-title">
+					Perf. depuis le 30/06/2001
+				</span>
+				<strong class="indice-box">
+					<span class="s-btn iconm-equilibre">
+						Equilibr&#233;
+						<b class="up">+194,02%</b>
+					</span>
+					<span class="indice">Indice CAC 40 <span class="down">-19,34%</span></span>
+				</strong>
+			</span>
+
+										<span class="gothere L1fc0c146c44648434c43c21fc04fc1cb434443c346484843c21f4bc6494a4e46cac343">
+				<span class="indice-title">
+					Perf. depuis le 02/12/2015
+				</span>
+				<strong class="indice-box">
+					<span class="s-btn iconm-dynamique">
+						Dynamique
+						<b class="up">+24,00%</b>
+					</span>
+					<span class="indice">Indice CAC 40 <span class="down">-10,16%</span></span>
+				</strong>
+			</span>
+
+
+							<span class="btn-more premium gothere L1fc0c146c44648434c43c21fc04fc1cb434443c346484843c2">
+								<span class="bt-label">Découvrez nos 3 portefeuilles</span>
+								<span class="bt-icon icon2016-right-small"></span>
+							</span>
+						</li>
+					</ul>
+				</li>
+				<li class="ssmenu__title--secondary shortlist-donnees">
+					<a class="secondary-link" data-index="0">données boursières</a>
+					<ul class="vertical menu">
+						<li>
+							<a class="secondary-link" data-index="1">Données boursières</a>
+							<ul class="vertical menu">
+								<li><span class="gothere L1fc0c146c44648434c43c21f4649444fc14e4acb464f49c21f4a42454acbc21e4649c2464b43c1c21f2a ">Achats des Insiders</span></li>
+								<li><span class="gothere L1fc0c146c44648434c43c21f4649444fc14e4acb464f49c21fc44a4843c3c1c21e4fc0434a414843c2 ">Valeurs Op&#233;ables</span></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<span class="btn-close icon2016-close" id="close-menu"></span>
+</div>
+
+		<script>
+			(function () {
+				var active = "accueil";
+				$("#burger-menu li[class~=" + active + "] a").addClass("on");
+			})();
+		</script>
+		<!-- /Menu -->
+
+		<div class="quick-menu toggle-desktop">
+			<a data-target="highlight" class="active">A la une</a>
+			<a data-target="live">Fil info</a>
+			<a data-target="mychoice">Listes/PF</a>
+			<a data-target="privileges">Privileges</a>
+		</div>
+
+	</header><!-- /Header -->
+
+		<div id="banner-wrapper">
+			<div id="banner">
+				<div>
+					<!-- Generic > Mega Bannière --><div id="ad-anx-banner">
+</div>
+				</div>
+			</div><!-- /.banner -->
+		</div><!-- /#banner-wrapper -->
+
+	<!-- barre d'indices [ a mettre "V5/_LayoutHeaderMarket" ] -->
+	
+	<!-- Contenu de la page -->
+
+
+	 
+
+
+
+
+
+
+	
+
+<div data-id="date-breadcrumb" id="date-breadcrumb">
+	<div class="wrapper">
+		<time datetime="2020-04-21T10:27:45">Mardi 21 avril 2020, 10h27 |</time>
+		<a href="/agenda-boursier/0/" class="daily-schedule"><strong>L'agenda du jour</strong> <span class="icon2016-agenda"></span></a>
+	</div>  	 	
+</div>
+
+	<section id="actus">
+		<div class="wrapper">
+			<div id="row_1">
+				<div class="custom-grid grid-12">
+					<div class="cg cg-3 cg-medium-half cg-small-full">
+						 
+						
+<div id="headlines" data-target="highlight">
+				<article id="une" class="dr-mid-full ">
+					<a href="/actualites/news/le-cac40-de-nouveau-dans-le-rouge-vif-821106.html">
+						<h2 class="h1">Le CAC40 de nouveau dans le rouge vif</h2>
+
+						<div class="visual-wrapper focus-image">
+							<img class="visual" src="//cdn-static.boursier.com/illustrations/photos/500/taureaucasse.jpg" alt="Le CAC40 de nouveau dans le rouge vif" />
+						</div>
+
+						<div class="data">
+							<p>
+								Sous l'influence du marché pétrolier, secoué hier soir!  <span class="icon2016-comment-1">2</span> 							</p>
+						</div>
+					</a>
+				</article>
+				<article class="content ">
+					<a href="/actualites/news/fdj-publie-un-chiffre-d-affaires-trimestriel-en-baisse-de-1-821086.html">
+						<div class="visual-wrapper">
+							<img class="visual" src="//cdn-static.boursier.com/illustrations/photos/200/illustration-fdj-francaise-jeux.jpg" alt="&lt;b&gt;FDJ&lt;/b&gt; publie un chiffre d&#39;affaires trimestriel en baisse de 1%" />
+						</div>
+
+						<div class="data">
+							<h2 class="h3"><b>FDJ</b> publie un chiffre d'affaires trimestriel en baisse de 1%</h2>
+							<p>
+								La Française des Jeux a enregistré des mises en recul de 5%, à 4,1 milliards d'euros 							</p>
+						</div>
+					</a>
+				</article>
+				<article class="content ">
+					<a href="/actualites/news/danone-publie-une-croissance-de-ses-ventes-de-3-7-en-donnees-comparables-au-t1-821082.html">
+						<div class="visual-wrapper">
+							<img class="visual" src="//cdn-static.boursier.com/illustrations/photos/200/usine1.jpg" alt="&lt;b&gt;Danone&lt;/b&gt; publie une croissance de ses ventes de 3,7% en donn&#233;es comparables au T1" />
+						</div>
+
+						<div class="data">
+							<h2 class="h3"><b>Danone</b> publie une croissance de ses ventes de 3,7% en données comparables au T1</h2>
+							<p>
+								Le groupe retire ses objectifs pour l'année 2020 							</p>
+						</div>
+					</a>
+				</article>
+				<article class="content ">
+					<a href="/actualites/reuters/rome-prevoit-une-contraction-de-8-du-pib-en-2020-242853.html">
+						<div class="visual-wrapper">
+							<img class="visual" src="//cdn-static.boursier.com/illustrations/feeds/reuters/rome-prevoit-une-contraction-de-8-du-pib-en-2020-small.jpg" alt="Rome pr&#233;voit une contraction de 8% du PIB en 2020" />
+						</div>
+
+						<div class="data">
+							<h2 class="h3">Rome prévoit une contraction de 8% du PIB en 2020</h2>
+							<p>
+								L'Italie s'attend à enregistrer une contraction de son économie de l'ordre de 8% cette année, une prévision qui reflète les retombées de la crise sanitaire liée au coronavirus 							</p>
+						</div>
+					</a>
+				</article>
+				<article class="content priv">
+					<a href="/actualites/interviews/nous-esperons-une-commercialisation-fin-mai-pour-notre-traitement-anti-covid-19-par-uv-5124.html">
+						<div class="visual-wrapper">
+							<img class="visual" src="//cdn-static.boursier.com/illustrations/photos/200/biouv-lunel.jpg" alt="&lt;i&gt;&quot;Nous esp&#233;rons une commercialisation fin mai pour notre traitement anti Covid-19 par UV&quot;&lt;/i&gt;" />
+						</div>
+
+						<div class="data">
+							<h2 class="h3"><i>"Nous espérons une commercialisation fin mai pour notre traitement anti Covid-19 par UV"</i></h2>
+							<p>
+								Interview de Benoît Gillmann, PDG de Bio-UV Group. 							</p>
+						</div>
+					</a>
+				</article>
+	<div class="quick-menu toggle-desktop">
+		<a data-target="live" class="btn-more">
+			<span class="bt-label">Accédez au fil info</span>
+			<span class="bt-icon icon2016-right-small"></span>
+		</a>
+	</div>
+</div>
+
+							
+									<div class="box ads"><!-- Generic > Investisseur --><div id="ad-anx-partner-button">
+</div></div>
+								
+<div id="tips" data-target="highlight">
+	<h2>A ne pas manquer</h2>
+		<ul class="hot-news">
+				<li>
+					<a href="/actions/actualites/news/idi-l-anr-par-action-s-eleve-a-64-82-euros-821103.html">
+						IDI&nbsp;: l'ANR par action s'élève à 64,82 euros
+					</a>
+				</li>
+				<li>
+					<a href="/actualites/news/aerien-virgin-australia-placee-sous-administration-volontaire-821099.html">
+						<b>Aérien</b>&nbsp;: Virgin Australia placée sous 'administration volontaire'
+					</a>
+				</li>
+				<li>
+					<a href="/actions/actualites/news/patrimoine-commerce-a-annule-un-mois-de-loyer-a-toutes-ses-enseignes-fermees-821097.html">
+						<b>Patrimoine & Commerce</b> a annulé un mois de loyer à toutes ses enseignes fermées
+					</a>
+				</li>
+				<li>
+					<a href="/actualites/news/dossier-special-transmettre-a-ses-enfants-730874.html">
+						<b>Dossier spécial</b>&nbsp;: transmettre à ses enfants
+					</a>
+				</li>
+		</ul>
+</div>
+
+
+
+						
+
+						
+						
+							<div id="morningAdvice" class="col col-12 w-background" data-target="highlight" data-href="child">
+								<h2>Le dernier conseil Bourse</h2>
+
+								<h3>
+									Danone&nbsp;: des trimestriels de qualité
+
+									<small>
+										Ce matin à 10h24
+									</small>
+								</h3>
+
+								<p>
+									Ventes. Dans le contexte de crise sanitaire que tout le monde connaît, Danone affiche des ventes trimestrielles en progression de 3,7% à données ...
+								</p>
+
+								<a href="/actions/actualites/conseils/danone-des-trimestriels-de-qualite-42679.html" class="btn-more btn-self border premium">
+									<span class="bt-label">Voir le conseil</span>
+									<span class="bt-icon icon2016-right-small"></span>
+								</a>
+							</div>
+						
+						
+
+					</div>
+					<div class="cg cg-2 cg-medium-half cg-small-full border" id="actu-wrapper">
+								<div data-id="listing-home" id="listing-home" data-target="live">
+		<div class="outer">
+			<div class="title-link">
+				<h2 class="title">Fil info</h2>
+				<a href="/actualites/news-du-jour" class="btn-more">
+					<span class="bt-label">Tout le fil</span>
+					<span class="bt-icon icon2016-right-small"></span>
+				</a>
+			</div>
+
+			<div class="news-list">
+				<div class="item-wrapper" ss-container>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T10:26:00">10h26</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/la-crise-du-coronavirus-frappe-durement-les-avocats-43729.html">La crise du coronavirus frappe durement les avocats</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/la-crise-du-coronavirus-frappe-durement-les-avocats-43729.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/avocat-justice.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="La crise du coronavirus frappe durement les avocats" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-conseils priv">
+							<time class="date" datetime="2020-04-21T10:24:00">10h24</time>
+							<div class="data">
+									<a href="/actions/actualites/conseils/des-trimestriels-de-qualite-42679.html">
+
+										<span class="text">
+											<strong>Danone</strong>&nbsp;: des trimestriels de qualité
+										</span>
+									</a>												</div>
+								<span class="iconm-lock"></span>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-21T10:17:00">10h17</time>
+							<div class="data">
+									<a href="/actualites/news/restez-informes-de-l-actualite-avec-notre-offre-a-1-euro-le-premier-mois-suivez-minute-par-minute-les-conseils-de-nos-specialistes-818547.html">
+
+										<span class="text">
+											Restez informés de l'actualité avec notre offre à 1 euro le premier mois, suivez minute par minute les conseils de nos spécialistes.
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T10:00:00">10h00</time>
+							<div class="data">
+									<a href="/actions/actualites/news/groupe-psa-recule-malgre-un-trimestre-plus-solide-qu-anticipe-821091.html">
+
+										<span class="text">
+											<b>Groupe PSA</b>&nbsp;: recule malgré un trimestre plus solide qu'anticipé
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T10:00:00">10h00</time>
+							<div class="data">
+									<a href="/actualites/news/scpi-la-collecte-repart-de-plus-belle-en-avril-821108.html">
+
+										<span class="text">
+											SCPI&nbsp;: la collecte repart de plus belle en Avril
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T09:55:00">09h55</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/coronavirus-280-000-volontaires-pour-aller-travailler-dans-les-champs-43726.html">Coronavirus&nbsp;: 280.000 volontaires pour aller travailler dans les champs</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/coronavirus-280-000-volontaires-pour-aller-travailler-dans-les-champs-43726.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/agriculteur-producteur-revenus-bruno-le-maire.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Coronavirus : 280.000 volontaires pour aller travailler dans les champs" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T09:55:00">09h55</time>
+							<div class="data">
+									<a href="/actions/actualites/news/edf-se-rejouit-de-la-decision-du-conseil-d-etat-sur-les-contrats-arenh-821109.html">
+
+										<span class="text">
+											<b>EDF</b> se réjouit de la décision du conseil d'état sur les contrats ARENH
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T09:52:00">09h52</time>
+							<div class="data">
+									<a href="/actualites/reuters/nouveaux-incidents-cette-nuit-en-banlieue-parisienne-242859.html">
+
+										<span class="text">
+											Nouveaux incidents cette nuit en banlieue parisienne
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T09:35:00">09h35</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/coronavirus-moins-de-6-des-francais-touches-d-ici-le-11-mai-43727.html">Coronavirus&nbsp;: moins de 6% des Français touchés d'ici le 11 mai&nbsp;?</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/coronavirus-moins-de-6-des-francais-touches-d-ici-le-11-mai-43727.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/coronavirus-3-microscope.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Coronavirus : moins de 6% des Fran&#231;ais touch&#233;s d&#39;ici le 11 mai ?" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T09:31:04">09h31</time>
+							<div class="data">
+									<a href="/actualites/reuters/periode-incertaine-en-vue-avec-des-points-d-entree-selon-bnp-paribas-wealth-management-242866.html">
+
+										<span class="text">
+											Période incertaine en vue avec des points d'entrée, selon BNP Paribas Wealth Management
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-21T09:30:00">09h30</time>
+							<div class="data">
+									<a href="/indices/actualites/news/ouverture-paris-le-cac40-recule-de-2-821106.html">
+
+										<span class="text">
+											<b>Ouverture Paris</b>&nbsp;: le CAC40 recule de 2%
+ <span class="icon2016-comment-1">2</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T09:29:00">09h29</time>
+							<div class="data">
+									<a href="/actions/actualites/news/infotel-eximium-monte-au-capital-821107.html">
+
+										<span class="text">
+											<b>Infotel</b>&nbsp;: Eximium monte au capital
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T09:28:00">09h28</time>
+							<div class="data">
+									<a href="/actions/actualites/news/danone-tente-de-resister-apres-une-publication-plutot-solide-821105.html">
+
+										<span class="text">
+											<b>Danone</b> tente de résister après une publication plutôt solide
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T09:16:00">09h16</time>
+							<div class="data">
+									<a href="/actions/actualites/news/europcar-nouvelle-chute-821104.html">
+
+										<span class="text">
+											<b>Europcar</b>&nbsp;: nouvelle chute
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T09:11:00">09h11</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/covid-19-le-groupe-casino-offre-2-millions-de-masques-aux-personnels-soignants-43725.html">COVID-19&nbsp;: Le groupe Casino offre 2 millions de masques aux personnels soignants</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/covid-19-le-groupe-casino-offre-2-millions-de-masques-aux-personnels-soignants-43725.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/coronavirus-masques.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="COVID-19 : Le groupe Casino offre 2 millions de masques aux personnels soignants" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T09:11:00">09h11</time>
+							<div class="data">
+									<a href="/actualites/reuters/usa-2020-la-campagne-de-joe-biden-s-intensifie-collecte-de-fonds-record-en-mars-242861.html">
+
+										<span class="text">
+											USA 2020&nbsp;: La campagne de Joe Biden s'intensifie, collecte de fonds record en mars
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T09:08:00">09h08</time>
+							<div class="data">
+									<a href="/actualites/news/dispositif-denormandie-quels-sont-les-nouveaux-travaux-eligibles-820650.html">
+
+										<span class="text">
+											Dispositif Denormandie&nbsp;: quels sont les nouveaux travaux éligibles&nbsp;?
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T09:07:07">09h07</time>
+							<div class="data">
+									<a href="/actualites/reuters/psa-l-epidemie-pese-sur-le-t1-objectif-de-marge-maintenu-242863.html">
+
+										<span class="text">
+											PSA: L'épidémie pèse sur le T1, objectif de marge maintenu
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T09:05:00">09h05</time>
+							<div class="data">
+									<a href="/actualites/reuters/la-bourse-de-tokyo-finit-en-baisse-de-pres-de-2-242862.html">
+
+										<span class="text">
+											La Bourse de Tokyo finit en baisse de près de 2%
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-21T09:02:00">09h02</time>
+							<div class="data">
+									<a href="/actualites/news/le-cac40-debute-en-baisse-de-1-34-821102.html">
+
+										<span class="text">
+											<b>Le CAC40 débute en baisse de 1,34%</b>
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:59:00">08h59</time>
+							<div class="data">
+									<a href="/actions/actualites/news/idi-l-anr-par-action-s-eleve-a-64-82-euros-821103.html">
+
+										<span class="text">
+											IDI&nbsp;: l'ANR par action s'élève à 64,82 euros
+ <span class="icon2016-comment-1">2</span> 										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T08:59:00">08h59</time>
+							<div class="data">
+									<a href="/actualites/reuters/danone-1er-trimestre-dope-par-des-effets-de-stockage-incertitudes-pour-la-suite-242864.html">
+
+										<span class="text">
+											Danone&nbsp;: 1er trimestre dopé par des effets de stockage, incertitudes pour la suite
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:58:00">08h58</time>
+							<div class="data">
+									<a href="/actions/actualites/news/schneider-electric-renonce-a-l-augmentation-de-capital-dediee-aux-salaries-821100.html">
+
+										<span class="text">
+											<b>Schneider Electric</b> renonce à l'augmentation de capital dédiée aux salariés
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:57:00">08h57</time>
+							<div class="data">
+									<a href="/actualites/news/aerien-virgin-australia-placee-sous-administration-volontaire-821099.html">
+
+										<span class="text">
+											<b>Aérien</b>&nbsp;: Virgin Australia placée sous 'administration volontaire'
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-21T08:50:00">08h50</time>
+							<div class="data">
+									<a href="/actions/actualites/news/air-liquide-investit-200-me-a-taiwan-821098.html">
+
+										<span class="text">
+											<b>Air Liquide</b> investit 200 ME à Taiwan
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:45:00">08h45</time>
+							<div class="data">
+									<a href="/actions/actualites/news/patrimoine-commerce-a-annule-un-mois-de-loyer-a-toutes-ses-enseignes-fermees-821097.html">
+
+										<span class="text">
+											<b>Patrimoine & Commerce</b> a annulé un mois de loyer à toutes ses enseignes fermées
+ <span class="icon2016-comment-1">1</span> 										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T08:43:49">08h43</time>
+							<div class="data">
+									<a href="/actualites/reuters/les-valeurs-a-suivre-a-paris-et-en-europe-242865.html">
+
+										<span class="text">
+											Les valeurs à suivre à Paris et en Europe
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-21T08:39:00">08h39</time>
+							<div class="data">
+									<a href="/actualites/news/marches-des-avis-d-analystes-821096.html">
+
+										<span class="text">
+											<b>Marchés&nbsp;: des avis d'analystes</b>
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T08:33:00">08h33</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/coronavirus-disney-s-attend-a-un-arret-tres-prolonge-de-ses-parcs-dans-le-monde-43720.html">Coronavirus&nbsp;: Disney s'attend à un "arrêt très prolongé" de ses parcs dans le monde</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/coronavirus-disney-s-attend-a-un-arret-tres-prolonge-de-ses-parcs-dans-le-monde-43720.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/disneyland.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Coronavirus : Disney s&#39;attend &#224; un &quot;arr&#234;t tr&#232;s prolong&#233;&quot; de ses parcs dans le monde" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:33:00">08h33</time>
+							<div class="data">
+									<a href="/actions/actualites/news/total-l-assemblee-generale-a-huis-clos-821095.html">
+
+										<span class="text">
+											<b>Total</b>&nbsp;: l'Assemblée générale à huis-clos
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-21T08:30:00">08h30</time>
+							<div class="data">
+									<a href="/indices/actualites/news/preouverture-paris-le-cac40-sous-le-choc-de-l-evolution-du-petrole-cette-nuit-821093.html">
+
+										<span class="text">
+											<b>Préouverture Paris</b>&nbsp;: le CAC40 sous le choc de l'évolution du pétrole cette nuit
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-conseils priv">
+							<time class="date" datetime="2020-04-21T08:27:00">08h27</time>
+							<div class="data">
+									<a href="/actions/actualites/conseils/fausse-note-boursiere-42678.html">
+
+										<span class="text">
+											<strong>NRJ Group</strong>&nbsp;: fausse note boursière
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd-dark.png" alt="Small&Mid Cap">
+									</a>												</div>
+								<span class="iconm-lock"></span>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:26:00">08h26</time>
+							<div class="data">
+									<a href="/actions/actualites/news/orange-peu-de-risque-a-moyen-terme-at-756838.html">
+
+										<span class="text">
+											<b>Orange</b>&nbsp;: peu de risque à moyen terme (AT)
+ <span class="icon2016-comment-1">48</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:25:00">08h25</time>
+							<div class="data">
+									<a href="/actions/actualites/news/claranova-constate-une-forte-hausse-de-l-utilisation-de-ses-applications-freeprints-821094.html">
+
+										<span class="text">
+											<b>Claranova</b> constate une forte hausse de l'utilisation de ses applications FreePrints
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:22:00">08h22</time>
+							<div class="data">
+									<a href="/actions/actualites/news/stmicroelectronics-les-signaux-haussiers-sont-intacts-at-756881.html">
+
+										<span class="text">
+											<b>STMicroelectronics</b>&nbsp;: les signaux haussiers sont intacts (AT)
+ <span class="icon2016-comment-1">1</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:16:00">08h16</time>
+							<div class="data">
+									<a href="/actualites/news/dossier-special-transmettre-a-ses-enfants-730874.html">
+
+										<span class="text">
+											<b>Dossier spécial</b>&nbsp;: transmettre à ses enfants
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:16:00">08h16</time>
+							<div class="data">
+									<a href="/actions/actualites/news/air-france-klm-attendre-un-test-du-support-at-756776.html">
+
+										<span class="text">
+											<b>Air France KLM</b>&nbsp;: attendre un test du support (AT)
+ <span class="icon2016-comment-1">17</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:10:00">08h10</time>
+							<div class="data">
+									<a href="/actions/actualites/news/nanobiotix-fait-le-point-face-a-la-crise-covid-19-821092.html">
+
+										<span class="text">
+											<b>Nanobiotix</b> fait le point face à la crise Covid-19
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:06:00">08h06</time>
+							<div class="data">
+									<a href="/actions/actualites/news/visiomed-8-millions-de-masques-commandes-par-les-autorites-francaises-821090.html">
+
+										<span class="text">
+											<b>Visiomed</b>&nbsp;: 8 millions de masques commandés par les autorités françaises
+ <span class="icon2016-comment-1">4</span> 										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:03:00">08h03</time>
+							<div class="data">
+									<a href="/actions/actualites/news/cgg-attendre-un-test-du-support-at-770094.html">
+
+										<span class="text">
+											<b>CGG</b>&nbsp;: attendre un test du support (AT)
+ <span class="icon2016-comment-1">3</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T08:02:00">08h02</time>
+							<div class="data">
+									<a href="/actions/actualites/news/quadient-nouvelles-mesures-de-soutien-821089.html">
+
+										<span class="text">
+											<b>Quadient</b>&nbsp;: nouvelles mesures de soutien
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news priv">
+							<time class="date" datetime="2020-04-21T08:00:00">08h00</time>
+							<div class="data">
+									<a href="/actualites/news/tableau-de-bord-indices-calendrier-et-brokers-821088.html">
+
+										<span class="text">
+											<b>Tableau de Bord&nbsp;: Indices, calendrier et brokers</b>
+										</span>
+									</a>												</div>
+								<span class="iconm-lock"></span>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-21T07:57:00">07h57</time>
+							<div class="data">
+									<a href="/actions/actualites/news/fdj-publie-un-chiffre-d-affaires-en-baisse-de-1-a-0-5-mde-au-t1-821086.html">
+
+										<span class="text">
+											<b>FDJ</b> publie un chiffre d'affaires en baisse de 1%, à 0,5 MdE au T1
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:49:00">07h49</time>
+							<div class="data">
+									<a href="/actions/actualites/news/valbiotis-disposait-de-8-me-de-tresorerie-fin-2019-821084.html">
+
+										<span class="text">
+											<b>Valbiotis</b> disposait de 8 ME de Trésorerie fin 2019
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:48:00">07h48</time>
+							<div class="data">
+									<a href="/actions/actualites/news/plastic-omnium-le-chiffre-d-affaires-consolide-s-etablit-a-2-029-me-au-1er-trimestre-821085.html">
+
+										<span class="text">
+											<b>Plastic Omnium</b>&nbsp;: le chiffre d'affaires consolidé s'établit à 2.029 ME au 1er trimestre
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:44:00">07h44</time>
+							<div class="data">
+									<a href="/actions/actualites/news/carrefour-la-tendance-baissiere-peut-reprendre-at-756796.html">
+
+										<span class="text">
+											<b>Carrefour</b>&nbsp;: la tendance baissière peut reprendre (AT)
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:43:00">07h43</time>
+							<div class="data">
+									<a href="/actions/actualites/news/gensight-la-situation-nette-de-tresorerie-s-etablit-a-12-8-me-821083.html">
+
+										<span class="text">
+											GenSight&nbsp;: la situation nette de trésorerie s'établit à 12,8 ME
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:38:00">07h38</time>
+							<div class="data">
+									<a href="/actions/actualites/news/renault-retour-possible-sur-les-supports-at-756837.html">
+
+										<span class="text">
+											<b>Renault</b>&nbsp;: retour possible sur les supports (AT)
+ <span class="icon2016-comment-1">30</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-21T07:37:00">07h37</time>
+							<div class="data">
+									<a href="/actions/actualites/news/danone-croissance-des-ventes-de-3-7-en-donnees-comparables-au-t1-821082.html">
+
+										<span class="text">
+											<b>Danone</b>&nbsp;: croissance des ventes de 3,7% en données comparables au T1
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:37:00">07h37</time>
+							<div class="data">
+									<a href="/actions/actualites/news/lagardere-precisions-en-vue-de-l-ag-821101.html">
+
+										<span class="text">
+											<b>Lagardere</b>&nbsp;: précisions en vue de l'AG
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:34:00">07h34</time>
+							<div class="data">
+									<a href="/actions/actualites/news/edf-attendre-un-test-du-support-at-756851.html">
+
+										<span class="text">
+											<b>EDF</b>&nbsp;: attendre un test du support (AT)
+ <span class="icon2016-comment-1">2</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:32:00">07h32</time>
+							<div class="data">
+									<a href="/actions/actualites/news/psa-groupe-attendre-un-test-du-support-at-756816.html">
+
+										<span class="text">
+											<b>PSA Groupe</b>&nbsp;: attendre un test du support (AT)
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:32:00">07h32</time>
+							<div class="data">
+									<a href="/actions/actualites/news/geneuro-nomme-le-dr-david-leppert-en-qualite-de-directeur-medical-821081.html">
+
+										<span class="text">
+											GeNeuro nomme le Dr. David Leppert en qualité de Directeur Médical
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T07:31:00">07h31</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/coronavirus-15-millions-d-euros-pour-l-acces-a-l-education-numerique-en-france-43723.html">Coronavirus&nbsp;: 15 millions d'euros pour l'accès à l'éducation numérique en France</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/coronavirus-15-millions-d-euros-pour-l-acces-a-l-education-numerique-en-france-43723.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/coronavirus-ecole-maison.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Coronavirus : 15 millions d&#39;euros pour l&#39;acc&#232;s &#224; l&#39;&#233;ducation num&#233;rique en France" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:30:00">07h30</time>
+							<div class="data">
+									<a href="/actions/actualites/news/vallourec-attendre-un-test-du-support-at-756798.html">
+
+										<span class="text">
+											<b>Vallourec</b>&nbsp;: attendre un test du support (AT)
+ <span class="icon2016-comment-1">24</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:25:00">07h25</time>
+							<div class="data">
+									<a href="/indices/actualites/news/marches-l-asie-rechute-821080.html">
+
+										<span class="text">
+											<b>Marchés</b>&nbsp;: l'Asie rechute
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:16:00">07h16</time>
+							<div class="data">
+									<a href="/actualites/galeries/coronavirus-les-secteurs-qui-souffrent-le-plus-349,3467.html">
+
+										<span class="text">
+											Coronavirus&nbsp;: les secteurs qui souffrent le plus...
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:16:00">07h16</time>
+							<div class="data">
+									<a href="/actions/actualites/news/jcdecaux-renforce-sa-liquidite-et-ameliore-sa-flexibilite-financiere-821079.html">
+
+										<span class="text">
+											<b>JCDecaux</b> renforce sa liquidité et améliore sa flexibilité financière
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:12:00">07h12</time>
+							<div class="data">
+									<a href="/actions/actualites/news/erytech-pharma-fait-le-point-sur-l-etude-pivot-de-phase-3-dans-le-cancer-du-pancreas-metastatique-821078.html">
+
+										<span class="text">
+											<b>Erytech Pharma</b> fait le point sur l'étude pivot de phase 3 dans le cancer du pancréas métastatique
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T07:10:00">07h10</time>
+							<div class="data">
+									<a href="/indices/actualites/news/nasdaq-composite-le-mouvement-reste-haussier-at-756885.html">
+
+										<span class="text">
+											<b>Nasdaq Composite</b>&nbsp;: le mouvement reste haussier (AT)
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T07:09:00">07h09</time>
+							<div class="data">
+									<a href="/actualites/reuters/rome-prevoit-une-contraction-de-8-du-pib-en-2020-242853.html">
+
+										<span class="text">
+											Rome prévoit une contraction de 8% du PIB en 2020
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T06:51:00">06h51</time>
+							<div class="data">
+									<a href="/actualites/reuters/pas-de-precisions-sur-le-partage-des-couts-du-report-des-jeux-olympiques-242860.html">
+
+										<span class="text">
+											Pas de précisions sur le partage des coûts du report des Jeux Olympiques
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T06:40:00">06h40</time>
+							<div class="data">
+									<a href="/indices/actualites/news/dow-jones-industrial-le-mouvement-reste-haussier-at-756756.html">
+
+										<span class="text">
+											<b>Dow Jones Industrial</b>&nbsp;: le mouvement reste haussier (AT)
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T06:30:00">06h30</time>
+							<div class="data">
+									<a href="/actualites/news/agenda-a-suivre-aujourd-hui-sur-les-marches-financiers-821077.html">
+
+										<span class="text">
+											Agenda&nbsp;: à suivre aujourd'hui sur les marchés financiers
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T06:20:00">06h20</time>
+							<div class="data">
+									<a href="/indices/actualites/news/cac-40-l-analyse-ne-suggere-pas-de-baisse-a-moyen-terme-at-756755.html">
+
+										<span class="text">
+											<b>CAC 40</b>&nbsp;: l'analyse ne suggère pas de baisse à moyen terme (AT)
+ <span class="icon2016-comment-1">8</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T06:00:00">06h00</time>
+							<div class="data">
+									<a href="/devises/actualites/news/eur-usd-retour-possible-sur-les-supports-at-756760.html">
+
+										<span class="text">
+											<b>EUR/USD</b>&nbsp;: retour possible sur les supports (AT)
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T05:47:00">05h47</time>
+							<div class="data">
+									<a href="/actualites/reuters/la-france-depasse-le-cap-des-20-000-morts-liees-au-nouveau-coronavirus-242855.html">
+
+										<span class="text">
+											La France dépasse le cap des 20.000 morts liées au nouveau coronavirus
+ <span class="icon2016-comment-1">18</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T05:39:00">05h39</time>
+							<div class="data">
+									<a href="/actualites/news/l-epargne-salariale-a-poursuivi-sa-progression-en-2019-820770.html">
+
+										<span class="text">
+											L'épargne salariale a poursuivi sa progression en 2019
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T05:33:00">05h33</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/coronavirus-le-patron-de-virgin-atlantic-appelle-a-l-aide-43724.html">Coronavirus&nbsp;: le patron de Virgin Atlantic appelle à l'aide</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/coronavirus-le-patron-de-virgin-atlantic-appelle-a-l-aide-43724.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/virgin-atlantic-compagnie-aerienne-branson.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Coronavirus : le patron de Virgin Atlantic appelle &#224; l&#39;aide" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T05:32:00">05h32</time>
+							<div class="data">
+									<a href="/actualites/galeries/emploi-et-logement-quelles-sont-les-villes-les-plus-attractives-en-france-342,6842.html">
+
+										<span class="text">
+											Emploi et logement, quelles sont les villes les plus attractives en France&nbsp;?
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T05:10:00">05h10</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/coronavirus-les-banquiers-en-manque-de-remerciements-43722.html">Coronavirus&nbsp;: les banquiers en manque de remerciements</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/coronavirus-les-banquiers-en-manque-de-remerciements-43722.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/banques-propositions-directive-commission-europeenne-fonds-propres-bale-trois.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Coronavirus : les banquiers en manque de remerciements" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T01:50:00">01h50</time>
+							<div class="data">
+									<a href="/actualites/news/finances-personnelles-pensez-a-consulter-nos-fiches-pratiques-717898.html">
+
+										<span class="text">
+											<b>Finances personnelles</b>&nbsp;: pensez à consulter nos fiches pratiques&nbsp;!
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T01:21:00">01h21</time>
+							<div class="data">
+									<a href="/actualites/reuters/les-cours-du-petrole-s-effondrent-le-baril-de-brut-us-en-territoire-negatif-242846.html">
+
+										<span class="text">
+											Les cours du pétrole s'effondrent, le baril de brut US en territoire négatif
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-21T01:02:00">01h02</time>
+							<div class="data">
+									<a href="/actualites/news/immobilier-tout-savoir-sur-le-pret-a-taux-zero-ptz-en-2020-812508.html">
+
+										<span class="text">
+											<b>Immobilier</b>&nbsp;: tout savoir sur le Prêt à Taux Zéro (PTZ) en 2020
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T00:51:00">00h51</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/evenementiel-15-milliards-d-euros-evapores-rien-qu-en-france-43717.html">Evénementiel&nbsp;: 15 milliards d'euros évaporés rien qu'en France&nbsp;!</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/evenementiel-15-milliards-d-euros-evapores-rien-qu-en-france-43717.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/stade-vide-coronavirus.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Ev&#233;nementiel : 15 milliards d&#39;euros &#233;vapor&#233;s rien qu&#39;en France !" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-21T00:46:00">00h46</time>
+							<div class="data">
+									<a href="/actualites/reuters/ibm-retire-ses-previsions-pour-2020-242858.html">
+
+										<span class="text">
+											IBM retire ses prévisions pour 2020
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-21T00:03:00">00h03</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/entreprises-le-gouvernement-annonce-le-report-des-echeances-fiscales-du-mois-de-mai-43702.html">Entreprises&nbsp;: le gouvernement annonce le report des échéances fiscales du mois de mai</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/entreprises-le-gouvernement-annonce-le-report-des-echeances-fiscales-du-mois-de-mai-43702.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/darmanin.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Entreprises : le gouvernement annonce le report des &#233;ch&#233;ances fiscales du mois de mai" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-macroeconomie hot">
+							<time class="date" datetime="2020-04-20T23:20:00">20/04</time>
+							<div class="data">
+									<a href="/actualites/macroeconomie/les-cours-du-petrole-tombent-en-terrain-negatif-821060.html">
+
+										<span class="text">
+											<b>Les cours du pétrole tombent en terrain négatif&nbsp;!</b>
+ <span class="icon2016-comment-1">8</span> 										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T23:05:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/ibm-resultats-mitiges-avec-le-covid-19-821076.html">
+
+										<span class="text">
+											<b>IBM</b>&nbsp;: résultats mitigés avec le Covid-19
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-20T23:00:39">20/04</time>
+							<div class="data">
+									<a href="/actualites/reuters/wall-street-en-nette-baisse-apres-la-chute-des-cours-du-brut-242857.html">
+
+										<span class="text">
+											Wall Street en nette baisse après la chute des cours du brut
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T22:38:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/poxel-deux-etudes-mettent-en-evidence-le-profil-de-securite-et-de-tolerance-favorable-de-l-imeglimine-821075.html">
+
+										<span class="text">
+											Poxel&nbsp;: deux études mettent en évidence le profil de sécurité et de tolérance favorable de l'Imeglimine
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-20T22:31:00">20/04</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/coronavirus-pas-de-retour-a-la-normale-des-transports-le-11-mai-selon-pecresse-43714.html">Coronavirus&nbsp;: pas de "retour à la normale des transports" le 11 mai, selon Pécresse</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/coronavirus-pas-de-retour-a-la-normale-des-transports-le-11-mai-selon-pecresse-43714.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/metro-recharge-pass-navigo-en-ligne-web.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Coronavirus : pas de &quot;retour &#224; la normale des transports&quot; le 11 mai, selon P&#233;cresse" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T22:30:00">20/04</time>
+							<div class="data">
+									<a href="/indices/actualites/news/cloture-de-wall-street-en-berne-le-petrole-chute-sous-zero-821062.html">
+
+										<span class="text">
+											<b>Clôture de Wall Street</b>&nbsp;: en berne, le pétrole chute sous zéro&nbsp;!
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news hot">
+							<time class="date" datetime="2020-04-20T22:19:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/coronavirus-le-management-de-technicolor-reduit-son-salaire-821074.html">
+
+										<span class="text">
+											<b>Coronavirus</b>&nbsp;: le management de <b>Technicolor</b> réduit son salaire
+ <span class="icon2016-comment-1">1</span> 										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T21:43:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/total-gabon-reduit-ses-depenses-d-exploitation-et-investissements-mais-maintient-son-dividende-821063.html">
+
+										<span class="text">
+											<b>Total Gabon</b>&nbsp;: réduit ses dépenses d'exploitation et investissements, mais maintient son dividende
+ <span class="icon2016-comment-1">1</span> 										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T21:32:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/natixis-mise-a-jour-financiere-suite-a-la-cession-des-29-5-de-coface-821061.html">
+
+										<span class="text">
+											<b>Natixis</b>&nbsp;: mise à jour financière suite à la cession des 29,5% de Coface
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-reuters">
+							<time class="date" datetime="2020-04-20T20:35:27">20/04</time>
+							<div class="data">
+									<a href="/actualites/reuters/vivendi-passe-outre-les-recommandations-et-augmente-son-dividende-de-20-242856.html">
+
+										<span class="text">
+											Vivendi passe outre les recommandations et augmente son dividende de 20%
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-20T20:34:00">20/04</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/tourisme-pas-de-vacances-lointaines-pour-les-francais-cet-ete-43713.html">Tourisme&nbsp;: pas de vacances lointaines pour les Français cet été&nbsp;?</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/tourisme-pas-de-vacances-lointaines-pour-les-francais-cet-ete-43713.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/olonne.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Tourisme : pas de vacances lointaines pour les Fran&#231;ais cet &#233;t&#233; ?" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T20:15:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/wedia-confirme-son-plan-de-marche-et-son-dividende-821059.html">
+
+										<span class="text">
+											Wedia confirme son plan de marche et son dividende
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T20:07:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/groupe-bel-reduction-du-dividende-821050.html">
+
+										<span class="text">
+											<b>Groupe Bel</b>&nbsp;: réduction du dividende
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T20:00:00">20/04</time>
+							<div class="data">
+									<a href="/indices/actualites/news/wall-street-hesite-le-petrole-wti-s-effondre-proche-de-zero-821057.html">
+
+										<span class="text">
+											<b>Wall Street</b> hésite, le pétrole WTI s'effondre proche de zéro...
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T19:58:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/coronavirus-comment-mercialys-traverse-la-crise-821056.html">
+
+										<span class="text">
+											<b>Coronavirus</b>&nbsp;: comment Mercialys traverse la crise&nbsp;?
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-economie">
+							<time class="date" datetime="2020-04-20T19:53:00">20/04</time>
+							<div class="data">
+									<div class="text-media">
+										<div class="text">
+											<a href="/actualites/economie/zoos-et-cirques-le-gouvernement-renforce-ses-mesures-de-soutien-43719.html">Zoos et cirques&nbsp;: le gouvernement renforce ses mesures de soutien</a>
+										</div>
+										<div class="media ">
+											<a href="/actualites/economie/zoos-et-cirques-le-gouvernement-renforce-ses-mesures-de-soutien-43719.html">
+												<img width="90" class="visual ea_image" src="//cdn-static.boursier.com/illustrations/photos/100/animaux-cirque.jpg" data-ea-parsed="true" data-ea-dsp="a" alt="Zoos et cirques : le gouvernement renforce ses mesures de soutien" />
+											</a>
+										</div>
+									</div>									
+							</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T19:44:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/verimatrix-repense-sa-solution-de-securite-vcas-pour-le-dvb-821058.html">
+
+										<span class="text">
+											Verimatrix repense sa solution de sécurité VCAS pour le DVB
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T19:35:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/mercialys-3-1-de-croissance-organique-au-1er-trimestre-821055.html">
+
+										<span class="text">
+											<b>Mercialys</b>&nbsp;: 3,1% de croissance organique au 1er trimestre
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T19:27:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/st-dupont-reporte-la-publication-de-son-chiffre-d-affaires-821054.html">
+
+										<span class="text">
+											ST Dupont reporte la publication de son chiffre d'affaires
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T19:21:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/adocia-annonce-la-tenue-de-son-assemblee-generale-annuelle-821051.html">
+
+										<span class="text">
+											Adocia annonce la tenue de son assemblée générale annuelle
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T19:13:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/sodexo-place-un-emprunt-obligataire-de-1-5-mde-821052.html">
+
+										<span class="text">
+											<b>Sodexo</b> place un emprunt obligataire de 1,5 MdE
+										</span>
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T19:08:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/noxxon-annonce-la-conversion-complete-des-bons-de-souscription-d-actions-d-acuitas-821053.html">
+
+										<span class="text">
+											Noxxon annonce la conversion complète des bons de souscription d'actions d'Acuitas
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+						<div class="item item--type-news">
+							<time class="date" datetime="2020-04-20T19:05:00">20/04</time>
+							<div class="data">
+									<a href="/actions/actualites/news/kalray-la-crise-sanitaire-conduit-a-decaler-les-objectifs-821038.html">
+
+										<span class="text">
+											Kalray&nbsp;: la crise sanitaire conduit à décaler les objectifs
+										</span>
+											<img class="icon partner-icon" src="/Content/img/ico-snmd.png" alt="Small&Mid Cap">
+									</a>												</div>
+						</div>
+				</div>
+				<a href="/actualites/news-du-jour" class="btn-more">
+					<span class="bt-label">Tout le fil</span>
+					<span class="bt-icon icon2016-right-small"></span>
+				</a>
+			</div>			
+		</div>
+
+	</div>
+
+						<div class="section-separator"></div>
+						<div data-id="liste-pf" id="liste-pf" data-target="mychoice">
+							<div class="outer">
+								<div data-script="mode=sync;autosize=false;defaut=0" class="tabs">
+									<h2 class="tab on">
+										<a href="#" class="title">Mes listes</a>
+									</h2>
+									<h2 class="tab">
+										<a href="#" class="title">Mes portefeuilles</a>
+									</h2>
+								</div>
+								<div class="tabs-content">
+									<div style="display: block;">
+										<div id="block-mes-listes" class="block-mes-listes-home" data-ajax-href="/ajax/membres/listes/ajaxmylist"></div>
+									</div>
+									<div style="display: none;">
+										<div id="block-mon-portefeuille" class="block-mes-listes-home" data-ajax-href="/ajax/membres/portefeuilles/ajaxmyportfolio"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="cg cg-2 right">
+						<div class="no-sticky courtier" id="courtiers-pave">
+							<div class="courtier-block">
+								<!-- Generic > Vignette 1 --><div id="ad-anx-sidebar1">
+</div><!-- Generic > Vignette 2 --><div id="ad-anx-sidebar2">
+</div><!-- Generic > Vignette 3 --><div id="ad-anx-sidebar3">
+</div><!-- Generic > Vignette LMNP -->
+<a data-vendor="c:google" href="https://argent.boursier.com/immobilier/services/decouvrez-le-dispositif-lmnp-2019-2020-41.html?xtor=AD-4-[hpcoldroite]" target="_blank"><img src="https://cdn-static.boursier.com/illustrations/campaigns/btn-investir-retraite-300x66-3.png" alt="" width="300" height="66" style="width:300px !important; height:66px !important" border="0" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="sticky-container" data-sticky-container>
+								<div class="box courtier stickyads sticky" id="partner-ads" data-sticky data-anchor="actus-ads">
+									<div class="stack">
+										<!-- Generic > Pavé 1 --><div id="ad-anx-mpu1">
+</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="custom-grid">
+					<div class="cg full cg-small-full">
+						<div data-id="subscription" id="subscription" class="toggleit cg-full">
+	<div class="col col-12 medium-12">
+		<a href="/membres/abonnement?utm_source=boursier&amp;utm_medium=bannierehp&amp;utm_campaign=privileges" target="_blank" rel="nofollow">
+			<p>
+				Testez les performances de
+				nos <b>conseils boursiers</b>
+			</p>
+
+			<span class="price"><strong>1</strong><span>€</span> le 1er mois</span>
+			<span class="btn-more premium">S'abonner</span>
+		</a>
+	</div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+<section data-target="highlight" id="actu-gerants" class="grid-12">
+	<div class="wrapper">
+		<h2><a href="/opcvm/">OPCVM : L'actu des sociétés de gestion</a></h2>
+		<div class="row">
+			<div class="grid-12 week__fund bottom--margin" style="display: block;">
+				
+
+			</div>
+
+			<div id="opcvm-wrapper" class="top--margin">
+				<div class="custom-grid">
+					<div class="cg cg-3 cg-medium-half cg-small-full">
+							<h3 class="title-border">L'interview de gerant</h3>
+							<a href="/opcvm/actualites/interviews/axel-champeil-pdg-de-champeil-et-gerant-de-portefeuille-5122.html">
+								<div class="profil">
+									<div class="media">
+										<img src="//cdn-static.boursier.com/illustrations/interviews/200/champeil-champeil.jpg" alt="Axel Champeil">
+									</div>
+									<p class="text">
+										<strong class="h3 name">Axel Champeil</strong>
+										
+										 PDG de Champeil et gérant de portefeuille
+									</p>
+								</div>
+
+								<div class="citations">
+									<blockquote>
+										<span class="quote">“</span>
+										Les valeurs de qualité, mais aussi 2 paris plus risqués...
+									</blockquote>
+								</div>
+							</a>
+							<div class="news-list">
+								<a href="/opcvm/actualites/interviews/" class="btn-more">
+									<span class="bt-label">Plus d'interviews de Gérants</span>
+									<span class="bt-icon icon2016-right-small"></span>
+								</a>
+							</div>
+							<div class="home--conseil conseil">
+								<h3 class="title-border">Le conseil de la semaine</h3>
+								<div class="news-list">
+											<div class="items">
+												<div class="item ">
+													<time class="date" datetime="2020-04-16T14:23:00">
+														16/04
+													</time>
+													<div class="data">
+														<a href="/opcvm/actualites/conseils/la-sicav-de-la-semaine-claresco-foncier-valor-42668.html">
+															La Sicav de la semaine&nbsp;: Claresco Foncier Valor
+														</a>
+													</div>
+												</div>
+											</div>
+											<a href="/opcvm/actualites/conseils/" class="btn-more">
+												<span class="bt-label">Plus de conseils</span>
+												<span class="bt-icon icon2016-right-small"></span>
+											</a>
+								</div>
+							</div>
+					</div>
+
+					<div class="cg cg-2 cg-medium-half cg-small-full border one">
+						<div class="outer">
+							<div class="news-list">
+								<h3 class="title-border">Actualités OPCVM</h3>
+									<div class="items">
+											<div class="item ">
+												<time class="date" datetime="2020-04-20T12:13:00">20/04</time>
+												<div class="data"><a href="/opcvm/actualites/generales/herbert-smith-freehills-nomination-821012.html">Herbert Smith Freehills&nbsp;: nomination</a></div>
+											</div>
+											<div class="item ">
+												<time class="date" datetime="2020-04-20T11:34:00">20/04</time>
+												<div class="data"><a href="/opcvm/actualites/generales/groupama-am-renouvelle-le-label-isr-pour-deux-de-ses-fonds-historiques-821003.html">Groupama AM renouvelle le label ISR pour deux de ses fonds historiques</a></div>
+											</div>
+											<div class="item ">
+												<time class="date" datetime="2020-04-20T11:01:00">20/04</time>
+												<div class="data"><a href="/opcvm/actualites/generales/egis-nomination-de-laurent-germain-au-poste-de-dg-820997.html">Egis&nbsp;: nomination de Laurent Germain au poste de DG</a></div>
+											</div>
+											<div class="item ">
+												<time class="date" datetime="2020-04-20T09:48:00">20/04</time>
+												<div class="data"><a href="/opcvm/actualites/generales/bnpp-am-2-etf-thematiques-adoptent-des-indices-responsables-820992.html">BNPP AM&nbsp;: 2 ETF thématiques adoptent des indices responsables</a></div>
+											</div>
+											<div class="item ">
+												<time class="date" datetime="2020-04-20T08:40:00">20/04</time>
+												<div class="data"><a href="/opcvm/actualites/generales/sofinnova-partners-annonce-le-troisieme-investissement-de-son-fonds-italien-820982.html">Sofinnova Partners annonce le troisième investissement de son fonds italien</a></div>
+											</div>
+									</div>
+
+								<a href="/opcvm/actualites/news/" class="btn-more">
+									<span class="bt-label">Plus d’actualités</span>
+									<span class="bt-icon icon2016-right-small"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="cg cg-2 right sticky-container" data-sticky-container>
+						<div class="box courtier stickyads sticky" id="opcvm-ads" data-sticky data-anchor="opcvm-ads">
+							<div class="stack">
+								<!-- Generic > Pavé 2 --><div id="ad-anx-mpu2">
+</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="grid-12 week__fund top--margin" style="display: block;">
+				
+
+			</div>
+
+			<div class="top--margin">
+				<div class="wrapper opcvm--push">
+					<div class="w-background">
+						<p>
+							Retrouvez le palmarès OPCVM et les performances des fonds
+						</p>
+						<a href="/opcvm/" class="btn-more btn-self">
+							<span class="bt-label">Découvrez la <br /> rubrique OPCVM</span>
+							<span class="bt-icon icon2016-right-small"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+	
+
+	<section class="grid-12" data-target="highlight">
+        <div class="wrapper">
+            <div class="row">
+                <div class="custom-grid">
+					<div class="cg full cg-small-full">
+                        
+					    
+
+
+<section data-id="rumeurs-marches" data-target="highlight" id="rumeurs-marches" class="grid-12 top-bordered">
+		<div class="col col-6 small-12">
+			<h2>Rumeurs des marchés</h2>
+
+			<article class="quick-actu">
+				<a href="/actions/actualites/rumeurs/lagardere-nouvelle-flambee-marc-ladreit-de-lacharriere-et-vincent-bollore-au-capital-820775.html">
+					<div class="media">
+						<img src="//cdn-static.boursier.com/illustrations/photos/300/illustration-groupe-lagardere-portrait-arnauuud.jpg" alt="Lagard&#232;re : nouvelle flamb&#233;e, Marc Ladreit de Lacharri&#232;re et Vincent Bollor&#233; au capital ?">
+					</div>
+					<div class="text">
+						<h3><b>Lagardère</b>&nbsp;: nouvelle flambée, Marc Ladreit de Lacharrière et Vincent Bolloré au capital&nbsp;?</h3>
+
+						<p>
+							Lagardère reste recherché...
+						</p>
+					</div>
+				</a>
+			</article>
+
+			<a href="/actualites/rumeurs" class="btn-more">
+				<span class="bt-label">Toutes les rumeurs</span>
+				<span class="bt-icon icon2016-right-small"></span>
+			</a>
+		</div>
+			<div class="col col-6 middle small-12">
+			<h2>Introductions</h2>
+			<div class="news-list">
+				<div class="items items-introduction items-introduction--home">
+
+						<div class="item status status-error">
+							<time class="date" datetime="2020-03-04T00:00:00">04/03</time>
+							<div class="data">
+								<a href="/introductions/societe/nacon-FR0013482791,FR.html" title="Nacon - MR - Compartiment B" class="toe">
+									<b>Nacon</b> <br /> MR - Compartiment B
+								</a>
+							</div>
+							<span class="status">Effectuée</span>
+						</div>
+						<div class="item status status-error">
+							<time class="date" datetime="2020-02-18T00:00:00">18/02</time>
+							<div class="data">
+								<a href="/introductions/societe/paulic-meunerie-FR0013479730,FR.html" title="Paulic Meunerie - Euronext Growth" class="toe">
+									<b>Paulic Meunerie</b> <br /> Euronext Growth
+								</a>
+							</div>
+							<span class="status">Effectuée</span>
+						</div>
+						<div class="item status status-error">
+							<time class="date" datetime="2020-02-10T00:00:00">10/02</time>
+							<div class="data">
+								<a href="/introductions/societe/munic-FR0013462231,FR.html" title="Munic - Euronext Growth" class="toe">
+									<b>Munic</b> <br /> Euronext Growth
+								</a>
+							</div>
+							<span class="status">Effectuée</span>
+						</div>
+						<div class="item status status-error">
+							<time class="date" datetime="2019-12-04T00:00:00">04/12</time>
+							<div class="data">
+								<a href="/introductions/societe/mare-nostrum-FR0013400835,FR.html" title="Mare Nostrum - Euronext Growth" class="toe">
+									<b>Mare Nostrum</b> <br /> Euronext Growth
+								</a>
+							</div>
+							<span class="status">Effectuée</span>
+						</div>
+						<div class="item status status-error">
+							<time class="date" datetime="2019-11-21T00:00:00">21/11</time>
+							<div class="data">
+								<a href="/introductions/societe/francaise-des-jeux-FR0013451333,FR.html" title="Fran&#231;aise des Jeux - MR - Compartiment A" class="toe">
+									<b>Française des Jeux</b> <br /> MR - Compartiment A
+								</a>
+							</div>
+							<span class="status">Effectuée</span>
+						</div>
+				</div>
+				<a href="/introductions" class="btn-more">
+					<span class="bt-label">Plus de conseils</span>
+					<span class="bt-icon icon2016-right-small"></span>
+				</a>
+			</div>
+		</div>
+
+</section>
+						
+
+<div data-id="small-mid" data-target="highlight" id="small-mid">
+	<div class="row">
+		<h2 class="title-img top-bordered">
+			L’actu des small&miD caps
+			<img src="/UI/v5/images/core/logo-s-and-mid.jpg" alt="Actualités des Small&Mid Caps">
+		</h2>
+		<div class="custom-grid">
+				<div class="cg cg-3 cg-medium-half cg-small-full">
+					<div class="news-list communiques">
+						<h3 class="title-border">Communiqués</h3>
+						<div class="items">
+								<div class="item">
+									<time class="date" datetime="2020-03-31T18:00:00">31/03</time>
+									<div class="data">
+										<a href="/actions/actualites/news/samse-resultats-annuels-2019-819660.html">
+											<div class="media">
+												<img class="" src="https://logos.cofisem.fr/FR0000060071.jpg" onerror="fix(this)">
+											</div>
+											<p>Samse&nbsp;: résultats annuels 2019</p>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<time class="date" datetime="2020-03-30T09:25:00">30/03</time>
+									<div class="data">
+										<a href="/actions/actualites/news/delfingen-industry-resultats-annuels-2019-819522.html">
+											<div class="media">
+												<img class="" src="https://logos.cofisem.fr/FR0000054132.jpg" onerror="fix(this)">
+											</div>
+											<p>Delfingen Industry&nbsp;: Résultats annuels 2019</p>
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<time class="date" datetime="2020-03-26T15:26:00">26/03</time>
+									<div class="data">
+										<a href="/actions/actualites/news/ashler-manson-annonce-un-chiffre-daffaires-2019-de-2-m-en-croissance-de-plus-de-30-819305.html">
+											<div class="media">
+												<img class="" src="https://logos.cofisem.fr/FR0012968485.jpg" onerror="fix(this)">
+											</div>
+											<p>ASHLER & MANSON annonce un chiffre d’affaires 2019 de 2 M€ en croissance de plus de 30%</p>
+										</a>
+									</div>
+								</div>
+						</div>
+						<a href="/actualites/communiques-de-presse" class="btn-more">
+							<span class="bt-label">Plus de communiqués</span>
+							<span class="bt-icon icon2016-right-small"></span>
+						</a>
+					</div>
+				</div>
+							<div class="cg cg-2 cg-medium-half cg-small-full border one">
+					<div class="outer">
+						<div class="news-list">
+						<h3 class="title-border">Actualités</h3>
+						<div class="items">
+								<div class="item">
+									<time class="date" datetime="2020-04-21T09:29:00">09h29</time>
+									<div class="data">
+										<a href="/actions/actualites/news/infotel-eximium-monte-au-capital-821107.html">
+											<b>Infotel</b> : Eximium monte au capital
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<time class="date" datetime="2020-04-21T09:16:00">09h16</time>
+									<div class="data">
+										<a href="/actions/actualites/news/europcar-nouvelle-chute-821104.html">
+											<b>Europcar</b> : nouvelle chute
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<time class="date" datetime="2020-04-21T08:59:00">08h59</time>
+									<div class="data">
+										<a href="/actions/actualites/news/idi-l-anr-par-action-s-eleve-a-64-82-euros-821103.html">
+											IDI : l'ANR par action s'élève à 64,82 euros
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<time class="date" datetime="2020-04-21T08:45:00">08h45</time>
+									<div class="data">
+										<a href="/actions/actualites/news/patrimoine-commerce-a-annule-un-mois-de-loyer-a-toutes-ses-enseignes-fermees-821097.html">
+											<b>Patrimoine & Commerce</b> a annulé un mois de loyer à toutes ses enseignes fermées
+										</a>
+									</div>
+								</div>
+								<div class="item">
+									<time class="date" datetime="2020-04-21T08:26:00">08h26</time>
+									<div class="data">
+										<a href="/actions/actualites/news/quadient-attendre-un-test-du-support-at-756801.html">
+											<b>Quadient</b> : attendre un test du support (AT)
+										</a>
+									</div>
+								</div>
+						</div>
+						<a href="/actualites/small-mid-caps" class="btn-more">
+							<span class="bt-label">Plus d’actualités</span>
+							<span class="bt-icon icon2016-right-small"></span>
+						</a>
+					</div>
+					</div>
+				</div>
+		</div>
+	</div>
+
+</div>
+
+						
+
+						
+
+
+<div data-id="produit-bourse" data-target="highlight" id="produit-bourse">
+	<div class="wrapper">
+		<div class="row">
+			<div class="col col-12 medium-12 sm">
+					<div class="col col-7 small-12">
+						<div class="news-list">
+							<h2>Conseils produits de bourse</h2>
+							<div class="items">
+									<div class="item ">
+										<time class="date" datetime="2020-04-08T13:05:00">08/04</time>
+										<div class="data"><a href="/produits-de-bourse/actualites/conseils/vivendi-deja-gagne-42651.html">Vivendi&nbsp;: déjà gagné&nbsp;!</a></div>
+									</div>
+									<div class="item ">
+										<time class="date" datetime="2020-04-06T13:41:00">06/04</time>
+										<div class="data"><a href="/produits-de-bourse/actualites/conseils/vivendi-dans-le-bon-tempo-42644.html">Vivendi&nbsp;: dans le bon tempo&nbsp;?</a></div>
+									</div>
+									<div class="item ">
+										<time class="date" datetime="2020-03-31T08:29:00">31/03</time>
+										<div class="data"><a href="/produits-de-bourse/actualites/conseils/total-fois-quatre-42625.html">Total&nbsp;: fois quatre&nbsp;!</a></div>
+									</div>
+									<div class="item ">
+										<time class="date" datetime="2020-03-25T08:19:00">25/03</time>
+										<div class="data"><a href="/produits-de-bourse/actualites/conseils/total-toujours-ca-de-pris-42609.html">Total&nbsp;: toujours ça de pris&nbsp;!</a></div>
+									</div>
+									<div class="item ">
+										<time class="date" datetime="2020-03-16T08:29:00">16/03</time>
+										<div class="data"><a href="/produits-de-bourse/actualites/conseils/put-cac40-fois-2-42584.html">Put CAC40&nbsp;: fois 2</a></div>
+									</div>
+							</div>
+							<a href="/produits-de-bourse/actualites/conseils" class="btn-more">
+								<span class="bt-label">Plus de conseils</span>
+								<span class="bt-icon icon2016-right-small"></span>
+							</a>
+						</div>
+					</div>
+				<div class="col col-5 small-12">
+					<div class="partenaire-bourse border-box">
+						<div class="inner">
+							<h3>
+								Nos partenaires
+								<span>produits de bourse</span>
+							</h3>
+							<a href="https://www.produitsdebourse.bnpparibas.fr/" target="_blank"><img src="/UI/v5/images/files/partenaire-01.jpg" alt="Produits de Bourse BNP Paribas"/></a>
+							<a href="https://bourse.societegenerale.fr/" target="_blank"><img src="/UI/v5/images/files/partenaire-02.jpg" alt="Produits de Bourse Société Générale" /></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+						
+
+
+
+<div data-id="patrimoine" data-target="highlight" id="patrimoine">
+	<div class="patrimoine-title_wrapper top-bordered">
+		<h2>Patrimoine</h2>
+
+		<ul class="patrimoine-link_list">
+			<li>
+				<a href="https://argent.boursier.com">Accueil</a>
+			</li>
+			<li>
+				<a href="https://argent.boursier.com/quotidien">Quotidien</a>
+			</li>
+			<li>
+				<a href="https://argent.boursier.com/immobilier">Immobilier</a>
+			</li>
+			<li>
+				<a href="https://argent.boursier.com/impots">Impôts</a>
+			</li>
+			<li>
+				<a href="https://argent.boursier.com/epargne">Epargne</a>
+			</li>
+			<li>
+				<a href="https://argent.boursier.com/passion">Passion</a>
+			</li>
+		</ul>
+	</div>
+	
+		<div class="list-items">
+				<article class="item col small-12">
+					<div class="media">
+						<a href="https://argent.boursier.com/immobilier/actualites/pas-de-veritable-reprise-du-marche-immobilier-avant-2021-selon-les-notaires-5909.html" target="_blank">
+							<img alt="Pas de v&#233;ritable reprise du march&#233; immobilier avant 2021 selon les notaires" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/toits.jpg" onerror="fix(this)">
+						</a>
+					</div>
+
+					<div class="text col small-12">
+						<a href="https://argent.boursier.com/immobilier" target="_blank" class="category">
+							Immobilier
+						</a>
+
+						<a href="https://argent.boursier.com/immobilier/actualites/pas-de-veritable-reprise-du-marche-immobilier-avant-2021-selon-les-notaires-5909.html" target="_blank">
+							<h3>Pas de véritable reprise du marché immobilier avant 2021 selon les notaires</h3>
+							<p>
+								Les notaires pensent que les fondamentaux positifs du marché immobilier vont sûrement être mis à rude épreuve...
+							</p>
+						</a>
+					</div>
+				</article>
+				<article class="item col small-12">
+					<div class="media">
+						<a href="https://argent.boursier.com/immobilier/actualites/coronavirus-les-francais-tablent-sur-une-baisse-des-prix-de-l-immobilier-5908.html" target="_blank">
+							<img alt="Coronavirus : les Fran&#231;ais tablent sur une baisse des prix de l&#39;immobilier" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/cles.jpg" onerror="fix(this)">
+						</a>
+					</div>
+
+					<div class="text col small-12">
+						<a href="https://argent.boursier.com/immobilier" target="_blank" class="category">
+							Immobilier
+						</a>
+
+						<a href="https://argent.boursier.com/immobilier/actualites/coronavirus-les-francais-tablent-sur-une-baisse-des-prix-de-l-immobilier-5908.html" target="_blank">
+							<h3>Coronavirus&nbsp;: les Français tablent sur une baisse des prix de l'immobilier</h3>
+							<p>
+								Le scénario d'un repli progressif des prix est privilégié par 55% des futurs acquéreurs, selon une étude. Mais seuls 2 % d'entre eux ont renoncé à leur projet immobilier.
+							</p>
+						</a>
+					</div>
+				</article>
+				<article class="item col small-12">
+					<div class="media">
+						<a href="https://argent.boursier.com/immobilier/actualites/barnes-sattend-a-une-forte-baisse-de-prix-des-logements-neufs-a-new-york-5907.html" target="_blank">
+							<img alt="Barnes s’attend &#224; une forte baisse de prix des logements neufs &#224; New York" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/new-york-manhattan.jpg" onerror="fix(this)">
+						</a>
+					</div>
+
+					<div class="text col small-12">
+						<a href="https://argent.boursier.com/immobilier" target="_blank" class="category">
+							Immobilier
+						</a>
+
+						<a href="https://argent.boursier.com/immobilier/actualites/barnes-sattend-a-une-forte-baisse-de-prix-des-logements-neufs-a-new-york-5907.html" target="_blank">
+							<h3>Barnes s’attend à une forte baisse de prix des logements neufs à New York</h3>
+							<p>
+								Depuis début avril, les agents immobiliers ont le statut de travailleurs essentiels à New York.
+							</p>
+						</a>
+					</div>
+				</article>
+		</div>
+		<div class="col col-8 small-12">
+			<div class="more-suggestions">
+				<ul>
+						<li>
+							<a href="https://argent.boursier.com/impots" class="category">Impôts</a> <span class="separator"></span>
+							<a href="https://argent.boursier.com/impots/actualites/top-depart-pour-la-declaration-des-revenus-5906.html">Top départ pour la déclaration des revenus</a>
+						</li>
+						<li>
+							<a href="https://argent.boursier.com/immobilier" class="category">Immobilier</a> <span class="separator"></span>
+							<a href="https://argent.boursier.com/immobilier/analyses/dans-quel-etat-va-se-relever-le-marche-immobilier-5905.html">Dans quel état va se relever le marché immobilier&nbsp;?</a>
+						</li>
+						<li>
+							<a href="https://argent.boursier.com/epargne" class="category">Epargne</a> <span class="separator"></span>
+							<a href="https://argent.boursier.com/epargne/actualites/assurance-vie-attention-a-la-clause-beneficiaire-signee-sous-curatelle-5904.html">Assurance-vie&nbsp;: attention à la clause bénéficiaire signée sous curatelle</a>
+						</li>
+						<li>
+							<a href="https://argent.boursier.com/immobilier" class="category">Immobilier</a> <span class="separator"></span>
+							<a href="https://argent.boursier.com/immobilier/actualites/les-diagnostics-immobiliers-reprennent-dabord-dans-des-logements-vides-5903.html">Les diagnostics immobiliers reprennent d’abord dans des logements vides</a>
+						</li>
+						<li>
+							<a href="https://argent.boursier.com/epargne" class="category">Epargne</a> <span class="separator"></span>
+							<a href="https://argent.boursier.com/epargne/actualites/la-hausse-de-collecte-du-livret-a-inquiete-le-gouvernement-5902.html">La hausse de collecte du Livret A inquiète le gouvernement</a>
+						</li>
+				</ul>
+				<a href="https://argent.boursier.com" class="btn-more">
+					<span class="bt-label">Plus d'actus patrimoine</span>
+					<span class="bt-icon icon2016-right-small"></span>
+				</a>
+			</div>
+		</div>
+	<div class="col col-4 small-12">
+			<div class="fiche">
+				<div class="inner">
+					<h3>Fiches pratiques</h3>
+
+					<span class="icon2016-file"></span>
+					<ul>
+							<li>
+								<a href="https://argent.boursier.com/immobilier/fiches-pratiques/location-meublee-attention-aux-formalites-3068.html">
+									<strong class="category">Immobilier</strong>
+									Location meublée&nbsp;: attention aux formalités&nbsp;!
+								</a>
+							</li>
+							<li>
+								<a href="https://argent.boursier.com/impots/fiches-pratiques/mini-abus-de-droit-quels-enjeux-5848.html">
+									<strong class="category">Impôts</strong>
+									« Mini abus de droit »&nbsp;: quels enjeux&nbsp;?
+								</a>
+							</li>
+					</ul>
+					<a href="https://argent.boursier.com/fiches-pratiques" class="btn-more btn-white top--margin">
+						<span class="bt-label">Toutes les fiches</span>
+						<span class="bt-icon icon2016-right-small"></span>
+					</a>
+				</div>
+
+			</div>
+	</div>
+</div>
+
+						
+
+
+	<div data-target="highlight" id="economie">
+		<div class="wrapper">
+			<div class="row">
+				<h2>Économie</h2>
+
+				<div class="col col-12 medium-12">
+					<div class="list-items">
+							<article class="item col small-12">
+								<div class="media">
+									<a href="/actualites/economie/la-crise-du-coronavirus-frappe-durement-les-avocats-43729.html">
+										<img alt="La crise du coronavirus frappe durement les avocats" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/avocat-justice.jpg" onerror="fix(this)" />
+									</a>
+								</div>
+
+								<div class="text">
+									<a href="/actualites/economie/la-crise-du-coronavirus-frappe-durement-les-avocats-43729.html">
+										<h3>La crise du coronavirus frappe durement les avocats</h3>
+										<p>
+											Déjà secoués par la grève contre la réforme des retraites en début d'année, ils sont nombreux à avoir renoncé à se payer pour traverser la crise.
+										</p>
+									</a>
+								</div>
+							</article>
+							<article class="item col small-12">
+								<div class="media">
+									<a href="/actualites/economie/coronavirus-280-000-volontaires-pour-aller-travailler-dans-les-champs-43726.html">
+										<img alt="Coronavirus&amp;nbsp;: 280.000 volontaires pour aller travailler dans les champs" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/agriculteur-producteur-revenus-bruno-le-maire.jpg" onerror="fix(this)" />
+									</a>
+								</div>
+
+								<div class="text">
+									<a href="/actualites/economie/coronavirus-280-000-volontaires-pour-aller-travailler-dans-les-champs-43726.html">
+										<h3>Coronavirus&nbsp;: 280.000 volontaires pour aller travailler dans les champs</h3>
+										<p>
+											"Ces gens-là sont là pour aider à la cueillette, à ramasser il ne s'agit pas de faire du travail technique", a précise le ministre de l'Agriculture qui avait lancé un appel aux Français sans activité pour soutenir les agriculteurs.
+										</p>
+									</a>
+								</div>
+							</article>
+							<article class="item col small-12">
+								<div class="media">
+									<a href="/actualites/economie/coronavirus-moins-de-6-des-francais-touches-d-ici-le-11-mai-43727.html">
+										<img alt="Coronavirus&amp;nbsp;: moins de 6% des Fran&#231;ais touch&#233;s d&#39;ici le 11 mai&amp;nbsp;?" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/coronavirus-3-microscope.jpg" onerror="fix(this)" />
+									</a>
+								</div>
+
+								<div class="text">
+									<a href="/actualites/economie/coronavirus-moins-de-6-des-francais-touches-d-ici-le-11-mai-43727.html">
+										<h3>Coronavirus&nbsp;: moins de 6% des Français touchés d'ici le 11 mai&nbsp;?</h3>
+										<p>
+											La proportion de personnes ayant déjà été contaminées serait plus élevée en Ile-de-France (12,3%) et dans le Grand Est (11,8%) - deux des régions les plus touchées par l'épidémie.
+										</p>
+									</a>
+								</div>
+							</article>
+							<article class="item col small-12">
+								<div class="media">
+									<a href="/actualites/economie/covid-19-le-groupe-casino-offre-2-millions-de-masques-aux-personnels-soignants-43725.html">
+										<img alt="COVID-19&amp;nbsp;: Le groupe Casino offre 2 millions de masques aux personnels soignants" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/coronavirus-masques.jpg" onerror="fix(this)" />
+									</a>
+								</div>
+
+								<div class="text">
+									<a href="/actualites/economie/covid-19-le-groupe-casino-offre-2-millions-de-masques-aux-personnels-soignants-43725.html">
+										<h3>COVID-19&nbsp;: Le groupe Casino offre 2 millions de masques aux personnels soignants</h3>
+										<p>
+											Cette opération va permettre, d'ici la fin du mois d'avril, de livrer 2 millions de masques chirurgicaux à plusieurs établissements hospitaliers et organismes publics répartis sur tout le territoire national...
+										</p>
+									</a>
+								</div>
+							</article>
+							<article class="item col small-12">
+								<div class="media">
+									<a href="/actualites/economie/coronavirus-disney-s-attend-a-un-arret-tres-prolonge-de-ses-parcs-dans-le-monde-43720.html">
+										<img alt="Coronavirus&amp;nbsp;: Disney s&#39;attend &#224; un &quot;arr&#234;t tr&#232;s prolong&#233;&quot; de ses parcs dans le monde" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/disneyland.jpg" onerror="fix(this)" />
+									</a>
+								</div>
+
+								<div class="text">
+									<a href="/actualites/economie/coronavirus-disney-s-attend-a-un-arret-tres-prolonge-de-ses-parcs-dans-le-monde-43720.html">
+										<h3>Coronavirus&nbsp;: Disney s'attend à un "arrêt très prolongé" de ses parcs dans le monde</h3>
+										<p>
+											Le géant du divertissement espère ainsi économiser quelque 500 millions de dollars par mois dans ses parcs à thème et ses hôtels, fermés depuis un mois.
+										</p>
+									</a>
+								</div>
+							</article>
+							<article class="item col small-12">
+								<div class="media">
+									<a href="/actualites/economie/coronavirus-15-millions-d-euros-pour-l-acces-a-l-education-numerique-en-france-43723.html">
+										<img alt="Coronavirus&amp;nbsp;: 15 millions d&#39;euros pour l&#39;acc&#232;s &#224; l&#39;&#233;ducation num&#233;rique en France" width="90" src="//cdn-static.boursier.com/illustrations/photos/200/coronavirus-ecole-maison.jpg" onerror="fix(this)" />
+									</a>
+								</div>
+
+								<div class="text">
+									<a href="/actualites/economie/coronavirus-15-millions-d-euros-pour-l-acces-a-l-education-numerique-en-france-43723.html">
+										<h3>Coronavirus&nbsp;: 15 millions d'euros pour l'accès à l'éducation numérique en France</h3>
+										<p>
+											De quoi distribuer du matériel informatique et de connexion aux élèves des quartiers n'ayant pas les outils nécessaires pour le suivi éducatif à distance, explique le ministère de l'Education.
+										</p>
+									</a>
+								</div>
+							</article>
+						<a href="/actualites/economie" class="btn-more">
+							<span class="bt-label">Plus d'actualités économie</span>
+							<span class="bt-icon icon2016-right-small"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					</div>
+					<div class="cg cg-2 right sticky-container" data-sticky-container>
+						<div class="box courtier stickyads sticky stuck-until-end" id="partner-ads2" data-sticky data-anchor="patrimoine-ads">
+							<div class="stack">
+								<!-- Generic > Pavé 3 --><div id="ad-anx-mpu3">
+</div>
+							</div>
+						</div>
+					</div>
+				 </div>
+			</div>
+		</div>
+	</section>
+
+	
+
+<section data-target="privileges" id="privileges" class="grid-12">
+	<div class="wrapper">
+		<div class="row">
+			<h2 class="extratitle">Privilèges</h2>
+
+			<div class="custom-grid">
+				<div class="cg cg-2 cg-medium-half cg-small-full border one bright">
+					<div class="outer">
+						<div class="palmares">
+							<h3 class="title-border">Nos dernières performances</h3>
+							<table class="table">
+								<thead>
+									<tr>
+										<th></th>
+										<th class="value-row tl">Valeur</th>
+										<th class="tr">Perf.</th>
+										<th class="tr">Achat</th>
+									</tr>
+								</thead>
+								<tbody>
+										<tr>
+											<td class="priv"><time class="date" datetime="2020-04-15T14:54:00">15/04</time></td>
+
+											<td class="caps-uppercase">
+												<a href="/actions/actualites/conseils/wendel-gains-en-poche-42663.html">
+													<span class="toe">
+														Wendel
+													</span>
+												</a>
+											</td>
+											<td class="tr">
+												<b class="up">
+													+26,03%
+												</b>
+											</td>
+											<td class="tr">18/03</td>
+
+										</tr>
+										<tr>
+											<td class="priv"><time class="date" datetime="2020-04-14T17:12:00">14/04</time></td>
+
+											<td class="caps-uppercase">
+												<a href="/actions/actualites/conseils/kaufman-and-broad-50-depuis-le-20-mars-42660.html">
+													<span class="toe">
+														Kaufman and Broad
+													</span>
+												</a>
+											</td>
+											<td class="tr">
+												<b class="up">
+													+54,39%
+												</b>
+											</td>
+											<td class="tr">20/03</td>
+
+										</tr>
+										<tr>
+											<td class="priv"><time class="date" datetime="2020-04-07T16:49:00">07/04</time></td>
+
+											<td class="caps-uppercase">
+												<a href="/actions/actualites/conseils/chargeurs-un-rebond-rapide-42647.html">
+													<span class="toe">
+														Chargeurs
+													</span>
+												</a>
+											</td>
+											<td class="tr">
+												<b class="up">
+													+34,00%
+												</b>
+											</td>
+											<td class="tr">13/03</td>
+
+										</tr>
+										<tr>
+											<td class="priv"><time class="date" datetime="2020-04-01T16:13:00">01/04</time></td>
+
+											<td class="caps-uppercase">
+												<a href="/actions/actualites/conseils/biosynex-le-titre-s-envole-42630.html">
+													<span class="toe">
+														Biosynex
+													</span>
+												</a>
+											</td>
+											<td class="tr">
+												<b class="up">
+													+407,84%
+												</b>
+											</td>
+											<td class="tr">06/02</td>
+
+										</tr>
+										<tr>
+											<td class="priv"><time class="date" datetime="2020-03-31T08:29:00">31/03</time></td>
+
+											<td class="caps-uppercase">
+												<a href="/produits-de-bourse/actualites/conseils/total-fois-quatre-42625.html">
+													<span class="toe">
+														Call Warrant  : TOTAL
+													</span>
+												</a>
+											</td>
+											<td class="tr">
+												<b class="up">
+													+295,00%
+												</b>
+											</td>
+											<td class="tr">13/03</td>
+
+										</tr>
+								</tbody>
+
+
+							</table>
+						</div>
+
+						<div class="portes-feuilles">
+							<h3 class="title-border">Nos portefeuilles</h3>
+
+							<table class="table">
+								<tr>
+									<th></th>
+									<th class="tr">Perf.</th>
+									<th class="tr">CAC 40</th>
+								</tr>
+								<tr>
+
+									<td>
+										<a href="/privileges/portefeuilles/defensif" class="perf">
+											<span class="s-btn iconm-defensif">
+												D&#233;fensif
+											</span>
+										</a>
+									</td>
+									<td class="tr">
+										<b class="up">
+											+391,83%
+										</b>
+									</td>
+									<td class="tr">
+										<span class="up">
+											+158,95%
+										</span>
+									</td>
+								</tr>
+								<tr>
+
+									<td>
+										<a href="/privileges/portefeuilles/equilibre" class="perf">
+											<span class="s-btn iconm-equilibre">
+												Equilibr&#233;
+											</span>
+										</a>
+									</td>
+									<td class="tr">
+										<b class="up">
+											+194,02%
+										</b>
+									</td>
+									<td class="tr">
+										<span class="down">
+											-19,34%
+										</span>
+									</td>
+								</tr>
+								<tr>
+
+									<td>
+										<a href="/privileges/portefeuilles/dynamique" class="perf">
+											<span class="s-btn iconm-dynamique">
+												Dynamique
+											</span>
+										</a>
+									</td>
+									<td class="tr">
+										<b class="up">
+											+24,00%
+										</b>
+									</td>
+									<td class="tr">
+										<span class="down">
+											-10,16%
+										</span>
+									</td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div class="cg cg-3 cg-medium-half cg-small-full">
+					<div class="news-list">
+						<h3 class="title-border">Conseils boursiers</h3>
+						<div class="items">
+								<div class="item priv">
+									<time class="date" datetime="2020-04-21T10:24:00">10h24</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/danone-des-trimestriels-de-qualite-42679.html">
+											Danone&nbsp;: des trimestriels de qualité
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-20T11:52:00">20/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/fnac-darty-une-situation-financiere-renforcee-42677.html">
+											Fnac Darty&nbsp;: une situation financière renforcée
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-20T10:18:00">20/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/beneteau-quelle-reponse-face-a-la-crise-42676.html">
+											Beneteau&nbsp;: quelle réponse face à la crise&nbsp;?
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-17T16:38:00">17/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/electro-power-systems-a-acheter-ou-a-jeter-42674.html">
+											Electro Power Systems&nbsp;: à acheter ou à jeter&nbsp;?
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-17T12:25:00">17/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/maisons-du-monde-un-bon-ticket-pour-jouer-l-apres-crise-42673.html">
+											Maisons du Monde&nbsp;: un bon ticket pour jouer l'après-crise
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-17T10:19:00">17/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/orange-un-repli-qui-contraste-avec-le-reste-du-secteur-42671.html">
+											Orange&nbsp;: un repli qui contraste avec le reste du secteur
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-16T17:09:00">16/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/lagardere-bataille-rangee-en-vue-42669.html">
+											Lagardere&nbsp;: bataille rangée en vue&nbsp;?
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-16T11:51:00">16/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/claranova-un-repli-justifie-42667.html">
+											Claranova&nbsp;: Un repli justifié&nbsp;?
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-16T10:27:00">16/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/suez-un-bon-niveau-d-intervention-42666.html">
+											Suez&nbsp;: un bon niveau d'intervention
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+								<div class="item priv">
+									<time class="date" datetime="2020-04-15T16:24:00">15/04</time>
+									<div class="data">
+										<a href="/actions/actualites/conseils/sii-on-fait-quoi-apres-la-baisse-du-titre-42664.html">
+											SII&nbsp;: on fait quoi après la baisse du titre&nbsp;?
+										</a>
+
+									</div>
+									<span class="iconm-lock"></span>
+								</div>
+						</div>
+							<div class="book">
+								<a class="number" href="/privileges">
+									Découvrez la lettre <br /> &nbsp; Opportunités <span>n°</span><strong>1235</strong>
+									<br />
+									<b>du 14/04/2020</b>
+								</a>
+								<a class="cover" href="/privileges/download/opportunites/last/pdf">
+									<img alt="Lettre Opportunités Bourse" src="/UI/v5/images/core/premium_mag-cover.png" />
+
+								</a>
+							</div>
+						<a href="/privileges" class="btn-more premium">
+							<span class="bt-label">Accueil <span>Privilèges</span></span>
+							<span class="bt-icon icon2016-right-small"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	
+	<section data-id="paroles-dirigeant" data-target="highlight" id="paroles-dirigeant" class="w-background grid-12">
+		<div class="wrapper">
+			<div class="row">
+				<h2>Paroles de dirigeant</h2>
+				<div class="col col-8 medium-12">
+					<a href="/actions/actualites/interviews/benoit-gillmann-pdg-de-bio-uv-group-5124.html">
+						<div class="col col-8 small-12">
+							<div class="profil">
+									<time class="date" datetime="2020-04-20T20:00:00">
+										20/04
+									</time>
+									<p class="text">
+										<strong class="h2 name">
+											Benoît Gillmann
+										</strong>
+										<b> PDG de Bio-UV Group</b>
+									</p>
+							</div>
+
+							<div class="citations">
+								<div class="media">
+									<img src="//cdn-static.boursier.com/illustrations/interviews/200/gillmann-biouv.jpg" alt="Beno&#238;t Gillmann">
+								</div>
+								<blockquote>
+									<span class="quote">“</span>
+									Nous visons une commercialisation fin mai pour notre traitement anti Covid-19 par UV“
+								</blockquote>
+							</div>
+						</div>
+					</a>
+					<div class="col col-4 small-12">
+						<div class="other-ceo">
+							<div class="items">
+									<div class="item">
+										<a href="/actions/actualites/interviews/mathieu-coutier-president-du-directoire-d-akwel-5123.html">
+											<div class="media">
+												<img src="//cdn-static.boursier.com/illustrations/interviews/100/coutier-akwel.jpg" alt="Mathieu Coutier,  Pr&#233;sident du directoire d&#39;AKWEL">
+											</div>
+											<p class="text">
+												<b>Mathieu Coutier</b>,  Président du directoire d'AKWEL
+											</p>
+										</a>
+									</div>
+									<div class="item">
+										<a href="/actions/actualites/interviews/patrick-morineau-pdg-de-clio-blue-5120.html">
+											<div class="media">
+												<img src="//cdn-static.boursier.com/illustrations/interviews/100/morineau-clio.jpg" alt="Patrick Morineau,  PDG de Clio Blue">
+											</div>
+											<p class="text">
+												<b>Patrick Morineau</b>,  PDG de Clio Blue
+											</p>
+										</a>
+									</div>
+									<div class="item">
+										<a href="/actions/actualites/interviews/larry-abensur-pdg-de-biosynex-5118.html">
+											<div class="media">
+												<img src="//cdn-static.boursier.com/illustrations/interviews/100/larry-abensur_pdg-de-biosynex.jpg" alt="Larry Abensur,  PDG de Biosynex">
+											</div>
+											<p class="text">
+												<b>Larry Abensur</b>,  PDG de Biosynex
+											</p>
+										</a>
+									</div>
+									<div class="item">
+										<a href="/actions/actualites/interviews/sebastien-martin-directeur-administratif-et-financier-de-claranova-5116.html">
+											<div class="media">
+												<img src="//cdn-static.boursier.com/illustrations/interviews/100/martin-claranova.jpg" alt="S&#233;bastien Martin,  Directeur Administratif et Financier de Claranova">
+											</div>
+											<p class="text">
+												<b>Sébastien Martin</b>,  Directeur Administratif et Financier de Claranova
+											</p>
+										</a>
+									</div>
+							</div>
+							<a href="/actualites/interviews" class="btn-more">
+								<span class="bt-label">Toutes Les interviews</span>
+								<span class="bt-icon icon2016-right-small"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="col col-4"></div>
+			</div>
+		</div>
+	</section>
+
+
+		<section data-id="point-marches" data-target="highlight" id="point-marches" class="w-background grid-12">
+		<div class="wrapper">
+			<div class="row">
+				<h2>
+					Le point des marchés
+				</h2>
+
+				<div data-href="child"  class="col col-8 medium-12">
+					<div class="col col-6 small-12">
+						<a href="/videos/marches/cloture-le-cac-40-finit-en-hausse-de-0-65-13760.html" data-vid-media="https://cdn-media.boursier.com/videos/2020/04/720p-cr-202004201800.mp4" id="vid-player4">
+							<div class="media">
+								<img src="//cdn-static.boursier.com/illustrations/webcasts/2020/04/640x360-cr-202004201800.jpg" alt="Cl&#244;ture : le CAC 40 finit en hausse de 0,65%" />
+							</div>
+						</a>
+					</div>
+					<div class="col col-6 middle small-12">
+						<article class="quick-actu">
+								<div class="text">
+									<h3>Clôture&nbsp;: le CAC 40 finit en hausse de 0,65%</h3>
+									<p>
+										Le CAC 40 termine en hausse de 0,6% à 4.528 points, dans une séance de forte volatilité. L'indice phare est parvenu à résister à Wall Street, plombé notamment par une nouvelle chute des cours du pétrole.
+									</p>
+								</div>
+						</article>
+						<a href="/videos/marches" class="btn-more">
+							<span class="bt-label">Tous les points des marchés</span>
+							<span class="bt-icon icon2016-right-small"></span>
+						</a>
+					</div>
+				</div>
+				<div class="col col-4 right"></div>
+			</div>
+		</div>
+	</section>
+
+	
+
+	<section class="grid-12">
+		<div class="wrapper">
+            <div class="row">
+                <div class="col col-8 medium-12">
+					
+
+
+
+<section data-id="devises" data-target="highlight" id="devises" class="grid-12 top-bordered top--margin">
+	<h2>
+		Devises
+	</h2>
+	<div class="col col-12 medium-12">
+		<div class="col col-6 small-12">
+			<div class="tax-change border-box">
+				<div class="inner">
+					<h3>Taux de change</h3>
+
+					<div class="items">
+								<div class="item">
+									<span class="ico-devise icon2016-eur"></span>
+									<span class="icomn-arrow"></span>
+									<span class="ico-devise icon2016-usd"></span>
+									<span class="name">EUR/USD</span>
+									<b class="down">-0,39%</b>
+									<span class="last">1,083</span>
+								</div>
+								<div class="item">
+									<span class="ico-devise icon2016-eur"></span>
+									<span class="icomn-arrow"></span>
+									<span class="ico-devise icon2016-jpy"></span>
+									<span class="name">EUR/JPY</span>
+									<b class="down">-0,58%</b>
+									<span class="last">116,278</span>
+								</div>
+								<div class="item">
+									<span class="ico-devise icon2016-eur"></span>
+									<span class="icomn-arrow"></span>
+									<span class="ico-devise icon2016-gbp"></span>
+									<span class="name">EUR/GBP</span>
+									<b class="up">+0,06%</b>
+									<span class="last">0,874</span>
+								</div>
+								<div class="item">
+									<span class="ico-devise icon2016-eur"></span>
+									<span class="icomn-arrow"></span>
+									<span class="ico-devise icon2016-chf"></span>
+									<span class="name">EUR/CHF</span>
+									<b class="down">-0,04%</b>
+									<span class="last">1,051</span>
+								</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="news-list">
+				<div class="items">
+					<div class="item">
+						<a href="/devises#txc">
+							<span class="bt-icon icon2016-right-small"></span>
+							<span class="bt-label">Tableau des devises</span>
+						</a>
+					</div>
+					<div class="item">
+						<a href="/devises#convert">
+							<span class="bt-icon icon2016-right-small"></span>
+							<span class="bt-label">Convertisseurs</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col col-6 middle small-12">
+				<article class="quick-actu">
+					<a href="/devises/actualites/news/devises-la-livre-sterling-baisse-boris-johnson-en-soins-intensifs-820139.html">
+							<div class="media"><img src="//cdn-static.boursier.com/illustrations/photos/500/billet-livre-sterling-devise-grande-bretagne.jpg" alt="&lt;b&gt;Devises&lt;/b&gt;&amp;nbsp;: la livre sterling baisse, Boris Johnson en soins intensifs"></div>
+						<h3><b>Devises</b>&nbsp;: la livre sterling baisse, Boris Johnson en soins intensifs</h3>
+						<p>
+							Atteint du coronavirus et hospitalisé depuis dimanche, le Premier ministre britannique a été transféré lundi soir dans une unité de soins intensifs après une aggravation de son état.
+						</p>
+					</a>
+				</article>
+			<a href="/devises/actualites/news" class="btn-more">
+				<span class="bt-label">Toute l'actualité des devises</span>
+				<span class="bt-icon icon2016-right-small"></span>
+			</a>
+		</div>
+	</div>
+
+</section>
+				</div>
+
+				<div class="col col-4">
+					
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	
+<section data-id="news-forum" data-target="highlight" id="news-forum" class="w-background grid-12">
+	<div class="wrapper">
+		<div class="custom-grid">
+			<div class="cg cg-3 cg-medium-half cg-small-full">
+				<h2>Top 5 news</h2>
+				<ul data-script="mode=sync;defaut=0" class="filter tabs">
+					<li class="tab on"><a href="#" class="title">Les plus lus</a></li>
+					<li class="tab"><a href="#" class="title">Les + commentés</a></li>
+				</ul>
+				<div class="tabs-content">
+
+					<div class="news-list">
+							<div class="items">
+										<div class="item">
+											<span class="top">1.</span>
+											<div class="data">
+												<a href="/indices/actualites/news/preouverture-paris-le-cac40-sous-le-choc-de-l-evolution-du-petrole-cette-nuit-821093.html"><b>Préouverture Paris</b>&nbsp;: le CAC40 sous le choc de l'évolution du pétrole cette nuit</a>
+											</div>
+										</div>
+										<div class="item">
+											<span class="top">2.</span>
+											<div class="data">
+												<a href="/actualites/economie/entreprises-le-gouvernement-annonce-le-report-des-echeances-fiscales-du-mois-de-mai-43702.html">Entreprises&nbsp;: le gouvernement annonce le report des échéances fiscales du mois de mai</a>
+											</div>
+										</div>
+										<div class="item">
+											<span class="top">3.</span>
+											<div class="data">
+												<a href="/indices/actualites/news/marches-l-asie-rechute-821080.html"><b>Marchés</b>&nbsp;: l'Asie rechute</a>
+											</div>
+										</div>
+										<div class="item">
+											<span class="top">4.</span>
+											<div class="data">
+												<a href="/actualites/economie/coronavirus-disney-s-attend-a-un-arret-tres-prolonge-de-ses-parcs-dans-le-monde-43720.html">Coronavirus&nbsp;: Disney s'attend à un "arrêt très prolongé" de ses parcs dans le monde</a>
+											</div>
+										</div>
+										<div class="item">
+											<span class="top">5.</span>
+											<div class="data">
+												<a href="/actions/actualites/news/fdj-publie-un-chiffre-d-affaires-en-baisse-de-1-a-0-5-mde-au-t1-821086.html"><b>FDJ</b> publie un chiffre d'affaires en baisse de 1%, à 0,5 MdE au T1</a>
+											</div>
+										</div>
+							</div>
+					</div>
+
+					<div class="news-list">
+							<div class="items">
+										<div class="item">
+											<span class="top">1.</span>
+											<div class="data">
+												<a href="/actions/actualites/news/total-cede-0-48-747403.html">
+													<b>Total</b> cède 0,48%
+														<span class="icon2016-comment-1">118</span>
+												</a>
+											</div>
+										</div>
+										<div class="item">
+											<span class="top">2.</span>
+											<div class="data">
+												<a href="/actualites/reuters/paris-n-a-aucun-element-factuel-sur-un-lien-entre-covid-19-et-un-labo-de-wuhan-242791.html">
+													Paris n'a "aucun élément factuel" sur un lien entre COVID-19 et un labo de Wuhan
+														<span class="icon2016-comment-1">108</span>
+												</a>
+											</div>
+										</div>
+										<div class="item">
+											<span class="top">3.</span>
+											<div class="data">
+												<a href="/actions/actualites/news/orange-peu-de-risque-a-moyen-terme-at-756838.html">
+													<b>Orange</b>&nbsp;: peu de risque à moyen terme (AT)
+														<span class="icon2016-comment-1">48</span>
+												</a>
+											</div>
+										</div>
+										<div class="item">
+											<span class="top">4.</span>
+											<div class="data">
+												<a href="/actualites/reuters/france-moins-de-1-000-malades-en-reanimation-dans-les-hopitaux-de-l-aphp-242771.html">
+													France&nbsp;: Moins de 1.000 malades en réanimation dans les hôpitaux de l'APHP
+														<span class="icon2016-comment-1">45</span>
+												</a>
+											</div>
+										</div>
+										<div class="item">
+											<span class="top">5.</span>
+											<div class="data">
+												<a href="/actualites/reuters/la-france-veut-eviter-la-discrimination-par-l-age-pour-le-deconfinement-242808.html">
+													La France veut éviter la discrimination par l'âge pour le déconfinement
+														<span class="icon2016-comment-1">41</span>
+												</a>
+											</div>
+										</div>
+							</div>
+					</div>
+
+				</div>
+			</div>
+			<div class="cg cg-2 cg-medium-half cg-small-full border one white">
+				<div class="outer">
+					<h2>Forum boursier.com</h2>
+					<ul class="filter tabs" data-script="mode=sync;defaut=0">
+						<li class="tab on"><a href="#" class="title">Top valeur</a></li>
+						<li class="tab"><a href="#" class="title">A la une</a></li>
+					</ul>
+
+					<div class="tabs-content">
+						<div class="news-list gauje">
+							<div class="items">
+										<div class="item">
+											<div class="data">
+												<a href="/actions/forum/novacyt-FR0010397232,FR.html">Novacyt</a>
+												<strong class="rank r-10">10</strong>
+											</div>
+										</div>
+										<div class="item">
+											<div class="data">
+												<a href="/actions/forum/voltalia-FR0011995588,FR.html">Voltalia</a>
+												<strong class="rank r-8">8</strong>
+											</div>
+										</div>
+										<div class="item">
+											<div class="data">
+												<a href="/actions/forum/cac-40-FR0003500008,FR.html">CAC 40</a>
+												<strong class="rank r-5">5</strong>
+											</div>
+										</div>
+										<div class="item">
+											<div class="data">
+												<a href="/actions/forum/europlasma-FR0000044810,FR.html">Europlasma</a>
+												<strong class="rank r-3">3</strong>
+											</div>
+										</div>
+										<div class="item">
+											<div class="data">
+												<a href="/actions/forum/innate-pharma-FR0010331421,FR.html">Innate Pharma</a>
+												<strong class="rank r-3">3</strong>
+											</div>
+										</div>
+										<div class="item">
+											<div class="data">
+												<a href="/actions/forum/biosynex-FR0011005933,FR.html">Biosynex</a>
+												<strong class="rank r-3">3</strong>
+											</div>
+										</div>
+										<div class="item">
+											<div class="data">
+												<a href="/actions/forum/dow-jones-industrial-US2605661048,US.html">Dow Jones Industrial</a>
+												<strong class="rank r-3">3</strong>
+											</div>
+										</div>
+							</div>
+						</div>
+
+						<div class="news-list">
+							<div class="items">
+										<div class="item">
+											<div class="data">
+												<span class="gothere L1f444fc1c34e1fcb45434e4acb46cac3431f43424f494f4e46431fc14643491e4b431e42454fcac34a49cb1e4a1e424f49cbc14f4843c11e4843c21e42454f4e43c3c1c21ec243484f491e431e4e4a42c14f491e46212c222420231945cb4e48">
+													"Rien de choquant" à contrôler les chômeurs, selon E. Macron
+													<span class="icon2016-comment-1">68</span>
+											</span>
+										</div>
+									</div>
+										<div class="item">
+											<div class="data">
+												<span class="gothere L1f444fc1c34e1f4a42cbc34a4846cb43c21f414fc3c1c2431f42c1c6c0cb4f4e4f49494a4643c21e48431ec4434943cdc343484a1ec443c3cb1e42c14343c11ec24f491ec0c14fc0c1431e4146cb424f46491ec043cbc14f1e46212c222424211945cb4e48">
+													Cryptomonnaies&nbsp;: le Venezuela veut créer son propre bitcoin, 'Petro'
+													<span class="icon2016-comment-1">17</span>
+											</span>
+										</div>
+									</div>
+										<div class="item">
+											<div class="data">
+												<span class="gothere L1f444fc1c34e1f4a42cbc34a4846cb43c21f414fc3c1c2431f43cb1ec2461e48431e4146cb424f46491e49431ec44a484a46cb1ec14643491e4bc31ecb4fc3cb1e46212c22242a251945cb4e48">
+													Et si le Bitcoin ne valait rien du tout&nbsp;?
+													<span class="icon2016-comment-1">29</span>
+											</span>
+										</div>
+									</div>
+										<div class="item">
+											<div class="data">
+												<span class="gothere L1f444fc1c34e1f4a42cbc34a4846cb43c21f414fc3c1c2431f42c1c6c0cb4f4e4f49494a4643c21e48431ec1434cc3484acb43c3c11e414fc3c1c24643c11e46c2c14a43484643491ec443c3cb1ec14a4b4643c11e4843c21ec24f424643cb43c21e48464343c21e4ac31e4146cb424f46491e46212c222325211945cb4e48">
+													Cryptomonnaies&nbsp;: le régulateur boursier israélien veut radier les sociétés liées au Bitcoin
+													<span class="icon2016-comment-1">5</span>
+											</span>
+										</div>
+									</div>
+							</div>
+						</div>
+					</div>
+					<a href="/membres/inscription?utm_source=boursier&amp;utm_medium=inscription-pop-up&amp;utm_content=inscription&amp;utm_campaign=membership">
+						<img src="/UI/v5/images/core/signin-forums.jpg" alt="Inscription Forum Bourse" />
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+	
+<section data-id="galerie" data-target="highlight" id="galerie" class="w-background grid-12">
+	<div class="wrapper">
+		<div class="row">
+			<h2>
+				<span class="icomn-camera"></span>
+				Galerie photo
+			</h2>
+			<div class="col col-8 medium-12 quick-actu">
+					<div class="col col-6 small-12">
+						<div class="media"><a href="/actualites/galeries/coronavirus-les-secteurs-qui-souffrent-le-plus-349,3467.html"><img src="//cdn-static.boursier.com/illustrations/photos/300/starbucks-machine-cafe-dosette-verismo.jpg" alt="Coronavirus&amp;nbsp;: les secteurs qui souffrent le plus..." /></a></div>
+					</div>
+					<div class="col col-6 middle small-12">
+						<h3>Coronavirus&nbsp;: les secteurs qui souffrent le plus...</h3>
+						<p>
+							Alors que l'Organisation mondiale de la santé (OMS) évoque une "très grave menace pour le monde", l’épidémie en cours porte un coup sévère à l'économie mondiale. Magasins désertés, vols annulés, usines au ralenti... Voici les secteurs qui souffrent le plus...
+						</p>
+						<a href="/actualites/galeries" class="btn-more">
+							<span class="bt-label">Toutes les galeries photos</span>
+							<span class="bt-icon icon2016-right-small"></span>
+						</a>
+					</div>
+			</div>
+			<div class="col col-4 right"></div>
+		</div>
+	</div>
+</section>
+
+
+
+	<section class="grid-12" id="sponsored">
+		<div class="wrapper">
+			<div class="row">
+				<!-- OutBrain - Accueil --><div class="OUTBRAIN" data-src="https://www.boursier.com/" data-widget-id="SF_1"></div><script type="text/javascript" async="async" src="//widgets.outbrain.com/outbrain.js"></script>
+			</div>
+		</div>
+	</section>
+
+
+
+	<div class="clear"></div>
+	<script type="application/ld+json">
+{
+   "@context": "http://schema.org",
+   "@type": "WebSite",
+   "url": "https://www.boursier.com/",
+   "potentialAction": {
+     "@type": "SearchAction",
+     "target": "https://www.boursier.com/recherche?hs={q}",
+     "query-input": "required name=q"
+   }
+}
+</script>
+
+
+
+
+</div><!-- /#overall -->
+
+
+<script>
+	(function (h) { h.className = h.className.replace('no-', '') })(document.documentElement);
+</script>
+
+<script>
+	initSlider = function () {
+		const htmlClass = document.getElementsByTagName('html')
+		const bodyClass = document.getElementsByClassName('home');
+		const bodyMobile = document.getElementsByClassName('mobile');
+		const perfBarActive = document.getElementsByClassName('perfBar');
+		const dressClass = document.getElementsByClassName('dress');
+		const overall = document.getElementById('overall');
+
+		const openInfosBoursier = document.getElementById('toggle-infos-panel');
+		const infosBoursier = document.getElementById('infos-boursier');
+		const indexCompact = document.getElementById('indexes-compact');
+
+		const slider = $("#infos-boursier.slick-slider");
+
+		const scrolly_table = document.getElementsByClassName('scrolly-table');
+
+		const st = window.pageYOffset || document.documentElement.scrollTop;
+		const closeLimiter = 70;
+
+		const tablet = htmlClass[0].offsetWidth <= 999;
+
+		slider.on('init', function () {
+			$('#infos-boursier_panel .loading').fadeOut(500, function () {
+				$('#infos-boursier_panel').removeClass('init');
+				
+				if (!bodyMobile[0] && !tablet && st < closeLimiter) {
+					htmlClass[0].classList.add('perfBar');
+				}
+				else
+				{
+					htmlClass[0].classList.remove('perfBar');
+				}
+			});
+		});
+
+		slider.slick({
+			dots: false,
+			arrows: true,
+			speed: 300,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			slide: ".ib-box",
+			infinite: false,
+			variableWidth: true,
+
+			responsive: [
+				{
+					breakpoint: 1180,
+					settings: {
+						slidesToShow: 2,
+						slidesToScroll: 1,
+						variableWidth: false
+
+					}
+				},
+				{
+					breakpoint: 930,
+					settings: {
+						slidesToShow: 1,
+						slidesToScroll: 1,
+						variableWidth: false
+
+					}
+				},
+				{
+					breakpoint: 640,
+					vertical: true,
+					verticalSwiping: false,
+					settings: {
+						slidesToShow: 3,
+						slidesToScroll: 3
+						//dots: true
+					}
+				}
+			]
+		});
+
+		function myFunction() {
+			if (perfBarActive[0]) {
+				// common rules
+				infosBoursier.style.display = "block";
+				indexCompact.style.display = "none";
+
+				openInfosBoursier.classList.add("open");
+			}
+			if (perfBarActive[0] && bodyMobile[0]) {
+				openInfosBoursier.classList.remove("open");				
+			}
+			//else {
+
+			//	infosBoursier.style.display = "none";
+			//	indexCompact.style.display = "block";
+
+			//	openInfosBoursier.classList.remove("open");
+			//}
+		}
+
+		myFunction();
+
+		openInfosBoursier.addEventListener("click", function (e) {
+			e.preventDefault();
+			e.stopPropagation();
+
+			const st = window.pageYOffset || document.documentElement.scrollTop;
+
+			if (perfBarActive[0]) {
+				htmlClass[0].classList.remove('perfBar');
+			} else {
+				htmlClass[0].classList.add('perfBar');
+			}
+		});
+
+		window.addEventListener('scroll', function () {
+			const st = window.pageYOffset || document.documentElement.scrollTop;
+			
+			if (!bodyMobile[0] && !tablet) {				
+				if (st > closeLimiter) {
+					htmlClass[0].classList.remove('perfBar');
+				} else if (!perfBarActive[0] && st < 80) {
+					htmlClass[0].classList.add('perfBar');
+				} else {
+
+				}
+			}
+		});
+
+
+		if (typeof (Storage) !== "undefined") {
+			var scrollyTable = localStorage.getItem("scrollyTable");
+
+			if (scrollyTable === "on") {
+
+				for (var i = 0; i < scrolly_table.length; i++) {
+					scrolly_table[i].classList.add('on');
+				}
+			}
+		}
+
+		if (!$('html').hasClass('mobile')) {
+			$('#indexes-full .name').not('span').parent().parent().on('mouseenter', function (e) {
+				e.preventDefault();
+
+				var _thisParent = $(this).parent().parent();
+				var _redirection = $(this).find('a').attr('href');
+				var _imgPath = $(this).find('a').attr('data-tooltip-img');
+
+				$('.tooltips img').attr('src', _imgPath);
+				$('.tooltips a').attr('href', _redirection);
+
+				$('#indexes-full table').removeClass('active');
+				_thisParent.addClass('active');
+
+			});
+		}
+
+		// TODO: meme code que InitOnglets() ???
+		$('.tabs').each(function () {
+
+			// Scope
+			var $this = $(this), // ul.tabs courrant,
+				$tabs = $('> .tab', $this), // liste des onglets
+				$cont = $this.next('div.tabs-content:eq(0)'), // conteneur associe au ul.tabs
+				id = this.id || null,
+				cooki = $.cookie(id),
+				param = $this.attr('data-script') ? nw.tools.paramToObj($this.attr('data-script')) : {}, // parametres des onglets
+				i = 0,
+				setup = {
+					currentClass: 'on', // class utilisee sur un onglet actif
+					disabledClass: 'off', // class utilisee sur un onglet desactive
+					nbTabs: $tabs.length, // nombre  d'onglets
+					url: '', // variable temporaire pour les chemins ajax
+					index: 0, // variable temporaire pour l'index des onglets
+					defaut: (param.defaut === 0) ? 0 : param.defaut || 'undefined',
+					mode: param.mode || 'none', // mode async|sync|img|form|none
+					event: param.event || 'click', // event click|over
+					autoSize: param.autosize ? true : false // la taille des onglets adaptee au conteneur
+				},
+			// Applique la class "setup.curCla" lors du click sur un onglet (via son index)
+				switchTab = function (index) {
+					$tabs
+							.filter('.' + setup.currentClass).removeClass(setup.currentClass).end()
+							.filter(':eq(' + index + ')').addClass(setup.currentClass);
+				},
+
+			// Affiche le contenu
+				switchContent = function (params) {
+					if (setup.mode === 'async' && params.url !== '') {
+						$cont.empty();
+						$.ajax({
+							url: params.url,
+							success: function (data) {
+								$cont.removeClass('box b-error').html(data);
+								switchTab(setup.index);
+								nw.tools.stopLoading($cont);
+							},
+							error: function () {
+								$cont.addClass('box b-error').html(' D&eacute;sol&eacute;, une erreur est survenue.');
+								nw.tools.stopLoading($cont);
+							}
+						});
+					}
+					else if (setup.mode === 'sync') {
+						$cont.children('div:not(.tabs-content-visible)').css({ visibility: 'hidden', height: 0 }).filter(':eq(' + params.index + ')').css({ visibility: 'visible', height: '' });
+					}
+					else if (setup.mode === 'img') {
+						//$cont.find('img').attr('src', '');
+						$cont.find('img').attr('src', params.url);
+					}
+				};
+
+			param.start = param.start | 0; // Pour gestion des onglet graph si suppression d'intraday (mode "img" uniquement)
+
+			// Ajuste la taille des onglets si demandé
+			//if (setup.autoSize) {mode=sync;autosize=true;defaut=0
+			//	$this.addClass('autosize');
+			//	var charTot = 0, // nombre total de caractere
+			//		charTab = $tabs.map(function() {
+			//			var len = $.trim($('> .btn', this).text()).length;
+			//			charTot += len;
+			//			return len;
+			//		}), // tableau : nombre de caractere par onglet
+			//		sizeTot = $this.width(), // taille total du conteneur
+			//		sizeNew = 0,
+			//		sizeRedux = sizeTot - 20 * charTab.length; // on reserve de la place pour les marges
+
+			//	//$tabs.each(function(i) {
+			//		//var size = Math.floor((sizeRedux * charTab[i]) / charTot);
+			//		//$(this).width(size);
+			//		//sizeNew += size;
+			//	//});
+
+			//	// Comble la différence de taille
+			//	var diff = sizeTot - sizeNew,
+			//		part = Math.ceil(diff / charTab.length);
+
+			//	for (i = 0; diff > 0; i++) {
+			//		var next = Math.min(diff, part),
+			//			cible = $tabs.filter(':eq(' + i + ')');
+			//		cible.width(cible.width() + next);
+			//		diff -= next;
+			//	}
+			//}
+
+			// Recupere le cookie et change la valeur par defaut
+			if (cooki) {
+				setup.defaut = Math.max(0, cooki - param.start);
+			}
+
+			// Affiche l'onglet par defaut
+			if (typeof setup.defaut != 'undefined' && setup.defaut > -1) {
+				switchTab(setup.defaut);
+			}
+
+			// Onglet desactive
+			$this.delegate('.tab.' + setup.disabledClass, setup.event, function () { return false; });
+
+			// Mode Asynchrone
+			if (setup.mode === 'async') {
+
+				// Affiche le contenu par defaut
+				/*
+				if ( typeof setup.defaut != 'undefined' && setup.defaut > -1) {
+				setup.url = nw.tools.paramToObj($this.find('> .tab:eq(' + setup.defaut + ')').find('a').attr('data-script')).url;
+				switchContent({ url: setup.url });
+				}
+				*/
+
+				// Affiche le contenu Ã  l'événement
+				$this.delegate('.tab:not(.' + setup.disabledClass + ')', setup.event, function (event) {
+					var $li = $(this);
+					setup.index = $this.find('.tab').index($li);
+					setup.url = nw.tools.paramToObj($li.find('a').attr('data-script')).url;
+					switchTab(setup.index);
+					switchContent({ url: setup.url });
+					return false;
+				});
+
+			}
+
+				// Mode Synchrone
+			else if (setup.mode === 'sync') {
+
+				// Affiche le contenu par defaut
+				if (typeof setup.defaut != 'undefined' && setup.defaut > -1) {
+					switchContent({ index: setup.defaut });
+				}
+
+				// Affiche le contenu Ã  l'événement
+				$this.delegate('.tab:not(.' + setup.disabledClass + ')', setup.event, function (event) {
+					var $li = $(this);
+					setup.index = $this.find('.tab').index($li);
+					switchTab(setup.index);
+					switchContent({ index: setup.index });
+					if (id) {
+						$.cookie(id, setup.index, { expires: 365, path: '/' })
+					}
+					return false;
+				});
+			}
+
+				// Mode Switch Image
+			else if (setup.mode === 'img') {
+				if (!cooki && setup.defaut === 'undefined') {
+					setup.defaut = 0;
+					switchTab(setup.defaut);
+				}
+
+				// Affiche le contenu par defaut
+				if (typeof setup.defaut != 'undefined' && setup.defaut > -1) {
+					setup.url = nw.tools.paramToObj($this.find('> .tab:eq(' + setup.defaut + ')').find('a').attr('data-script')).url;
+					switchContent({ url: setup.url });
+				}
+
+				// Affiche le contenu Ã  l'événement
+				$this.delegate('.tab:not(.' + setup.disabledClass + ')', setup.event, function (event) {
+					var $li = $(this),
+						$a = $li.find('a');
+					setup.index = $this.find('.tab').index($li);
+					setup.url = nw.tools.paramToObj($a.attr('data-script')).url;
+					switchTab(setup.index);
+					switchContent({ url: setup.url });
+					if (id) {
+						//$.cookie(id, setup.index, { expires: 365, path: '/' });
+						$.cookie(id, (setup.index + param.start), { expires: 365, path: '/' });
+
+					}
+					return false;
+				});
+			}
+
+				// Mode Formulaire
+			else if (setup.mode === 'form') {
+
+				var $form = $this.parents('form:eq(0)'),
+					name = nw.tools.paramToObj($this.attr('data-script')).name;
+
+				// Submit le form Ã  l'événement
+				$this.delegate('.tab:not(.' + setup.disabledClass + ')', setup.event, function (event) {
+					var $li = $(this),
+						$a = $li.find('a'),
+						val = nw.tools.paramToObj($a.attr('data-script')).val;
+
+					if (!$('input[name="' + name + '"]', $form).length) {
+						$form.append('<input type="hidden" name="' + name + '" value="' + val + '" />');
+					}
+					$form.find('input[name="' + name + '"]').val(val).end().submit();
+					return false;
+				});
+			}
+		});
+	}
+</script>
+
+
+    <!--Donut#E9180E1A5C10BD8B81F0D0F332B1F85A0F35C39615EEF35AE231FDB2F58961F6E4C0F372AF90371F9AE441A910B87247FDC9C320C92590CABA624A27749DC6C9DAEE4EA70EB1A2FA6E9599E3BDFD383D60A8F0AA082BC019C6DD4C76CCE91A2A67664379EB3EC7FCAB757822EAC0F3E633D708140BC48D2280D5A3968F27068E9A0D3AE591176348D7F41BE130FF82A9010CD3813BD3323917FDDD450154444DE7607DA00B7B14CCD7A0E559FDD5705EEB094C3A8DF0ADC104959A0F8B768F8755684F5085CEB3691153BD1ADE7001E8DAF86047AF238803CECADB28BBFEB82A0C871819497CC6B91311A02B00A807FDEFA89E30DB3C320455416FBEC467B4A82DC8F7777C22CA9C3BEF048F86F634649D6AA7D6B41CFA5B08196D991F119ED7345F3476A88A3B22D0150EDE0CE8A0FED3E73AB9FE0345F3E16EB352249DF57B30A5F0F75A9797079937FD978008BDF35E33542975F292843FB595BEC7BA4A2CF309B1A6696F269A0C4B361199D38A2B1E61B5CA7B3209F73E25656BBA57BDCE4D4F4087ADB18E6DEB3A480685DA756036D951DCD034C19995998D81CCB7AD7AFBD938B00164841D8A03E28BC68D188797B54CE3BF299F74A98AA581E4D506E69A10DB5A608A1DAC0EDD64D928F2A1675C816B45C641D828C0D2E62A067C22320382193CD3BD4F1AED18A8DAF6ABE9989986D38091CD131D7146399E4EE8D0551E210E8003EF352672379D7DBF33D651DB435641#-->
+<section id="pub-footer">
+	<div class="wrapper">
+		<div>
+			<span class="title">Contenus</span>
+			<p>Média, banque, société de gestion : affichez les informations de Boursier.com sur votre site et apportez toute l'expertise de nos journalistes à votre audience.</p>
+			<a class="btn-more" href="/syndication" title="En savoir plus">
+				<span class="bt-label">En savoir plus</span>
+				<span class="bt-icon icon2016-more"></span>
+			</a>
+		</div>
+		<hr />
+		<div>
+			<span class="title">Publicité</span>
+			<p>Communiquez auprès de notre audience principalement masculine et CSP+, <b>1,3 million</b> d’internautes par mois</p>
+			<a class="btn-more" href="https://medias.lesechosleparisien.fr/boursier-com/" title="En savoir plus">
+				<span class="bt-label">En savoir plus</span>
+				<span class="bt-icon icon2016-more"></span>
+			</a>
+		</div>
+		
+	</div>
+</section>
+
+<footer id="footer" class="page-footer grid-12">
+	<div class="wrapper">
+		<div class="social">
+			<ul>
+
+				<li class="facebook">
+					<a href="http://www.facebook.com/boursiercom" target="_blank" title="Facebook"><span class="icon2016-facebook"></span></a>
+				</li>
+				<li class="twitter">
+					<a href="https://twitter.com/#!/Boursier_com" target="_blank" title="Twitter"><span class="icon2016-twitter"></span></a>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Rubriques -->
+		<div id="categories">
+			<div class="row">
+				<div class="col col-2">
+
+					<h3>Bourse</h3>
+					<nav>
+						<ul>
+							<li><a href="/actions/paris?marketId=99">Cours de A &#224; Z</a></li>
+							<!--
+						-->
+							<li><a href="/palmares/paris">Palmar&#232;s</a></li>
+							<!--
+						-->
+							<li><a href="/indices">Indices</a></li>
+							<!--
+						-->
+							<li><a href="/devises">Devises</a></li>
+							<!--
+						-->
+							<li><a href="/matieres-premieres/cours/brent-XC0009677409,GB.html">Brent</a></li>
+							<li><a href="/crypto-monnaies/actualites">Crypto-monnaies</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col col-3">
+					<h3>Actualités</h3>
+					<nav>
+                        <ul>
+                            <li><a href="/actualites/news-du-jour">Actualit&#233;s du jour</a></li>
+                            <!--
+    -->
+                            <li><a href="/videos/marches">Point des march&#233;s</a></li>
+                            <!--
+    -->
+                            <li><a href="/actualites/galeries">Galeries photos</a></li>
+                            <!--
+    -->
+                            <li><a href="/actualites/economie">Economie</a></li>
+                            <!--
+    -->
+                            <li><a href="/actualites/macroeconomie">Macro-economie</a></li>
+                            <!--
+    -->
+                            <li><a href="/secteurs">Actualit&#233;s par secteur</a></li>
+                            <!--
+    -->
+                            <li><a href="/elections/municipales/resultats-2020">Résultats Municipales 2020</a></li>
+                            <!--
+    -->
+                            <li><a href="/elections/presidentielle/resultats-2017">Résultats Présidentielle 2017</a></li>
+                            <!--
+    -->
+                            <li><a href="/elections/legislatives/resultats-2017">Résultats Législatives 2017</a></li>
+                        </ul>
+					</nav>
+				</div>
+				<div class="col col-3">
+					<h3>Placements / Produits</h3>
+					<nav>
+						<ul>
+							<li><a href="/opcvm/">OPCVM</a></li>
+							<!--
+						-->
+							<li><a href="/produits-de-bourse/recherche">Produits de Bourse</a></li>
+							<!--
+						-->
+							<li><a href="/produits-de-bourse/actualites/conseils">Conseils</a></li>
+							<!--
+						-->
+							<li><a href="/produits-de-bourse/actualites/news">Actualit&#233;s</a></li>
+							<!--
+						-->
+							<li><a href="/produits-de-bourse/statistiques/variation/">Palmar&#232;s</a></li>
+							<!--
+						-->
+							
+						</ul>
+					</nav>
+				</div>
+				<div class="col col-2">
+					<h3 class="premium">Privilèges</h3>
+					<nav>
+						<ul>
+							<li>
+								<a href="/membres/abonnement?utm_source=boursier&amp;utm_medium=boutonnavabo&amp;utm_campaign=privileges">S'abonner</a>
+							</li>
+							<!--
+						-->
+							<li><a href="/privileges/conseils/reco-du-jour/1">Reco du jour</a></li>
+							<!--
+						-->
+							<li><a href="/privileges/conseils/actions/1">Conseils Actions</a></li>
+							<!--
+						-->
+							<li><a href="/privileges/portefeuilles">Portefeuilles types</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="col col-2">
+					<h3>Services</h3>
+					<nav>
+
+						<ul>
+							<li>
+								<span class="crypt" data-target="self" data-link="L3NlcnZpY2VzL2luZm9ybWF0aW9ucy9xdWktc29tbWVzLW5vdXM=">Qui sommes-nous ?</span>
+							</li><!--
+				
+			
+							--><li>
+								<span class="crypt" data-target="self" data-link="L3NlcnZpY2VzL3B1YmxpY2l0ZQ==">Publicité</span>
+							</li><!--
+				
+							--><li>
+								<span class="crypt" data-target="self" data-link="L2FpZGUvZmFx">Aide</span>
+							</li><!--
+							-->
+							
+<li class="colophon__item">
+	<a class="crypt" target="_self" href="/services/informations/mentions-legales">Mentions légales</a>
+</li>
+
+<li class="colophon__item">
+	<a class="crypt" target="_self" href="/services/informations/conditions-generales">CGU/CGV</a>
+</li>
+
+<li class="colophon__item">
+	<a class="crypt" target="_self" href="/services/informations/politique-confidentialite">Politique de confidentialité</a>
+</li>
+
+<li class="colophon__item">
+	<a class="crypt" target="_self" href="/services/informations/cookies">Charte cookies</a>
+</li>
+
+							<!--
+							--><li>
+								<script>BC.mailto("service-clients", "boursier.com", "Signaler un contenu illicite")</script>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+				
+			</div>
+		</div> <!-- /Rubriques -->
+		<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				<div class="logo"><a href="/" title="Actualité financière – Cours de Bourse en temps réel, Conseils – Boursier.com"><span>Bourse</span></a></div>
+				<p>&copy; Copyright 1998-2020 Boursier.com. Tous droits réservés. Site édité par Investir Publications.</p>
+			</div>
+		</div> <!-- /Copyright -->
+		<!-- Partenaires -->
+		<div id="affiliates" class="row-fluid">
+			<div class="container">
+				<div>
+					<ul>
+						<li><span data-link="aHR0cDovL3d3dy5ib3Vyc2llci5jb20v" class="crypt">Boursier.com</span></li>
+						<li><span data-link="aHR0cHM6Ly9hcmdlbnQuYm91cnNpZXIuY29tLw==" class="crypt">L'Argent &amp; Vous</span></li>
+					</ul>
+					<span id="ad-7clefs" data-link="L21lbWJyZXMvYWJvbm5lbWVudD91dG1fc291cmNlPWJvdXJzaWVyJnV0bV9tZWRpdW09Ym91dG9uaGF1dGFibyZ1dG1fY2FtcGFpZ249cHJpdmlsZWdlcw==" class="ad-7clefs crypt">Nos conseils boursiers pour 1€/mois</span>
+				</div>
+			</div>
+		</div> <!-- /Partenaires -->
+		<!-- Modal -->
+		<!-- /Modal -->
+
+	</div>
+
+	<div id="modals2"></div>
+</footer><!-- /Footer -->
+
+
+<div id="modals-connexion"></div>
+<!--EndDonut-->
+    
+    <div id="connectionInfo" data-ajax-href="/ajax/master/headersubscribe"></div>
+
+    <script src="/bundles/jqueryval?v=pRzqn4QaBnW_W_VVXqHdGcHB33TkLj2ijGjPZe_z0t41"></script>
+
+    <script src="/Scripts/js/bottom?v=3CkVoVynBKv6DZRe5E8CIiJRNL8o6FArFtZ4wE4Z1o01"></script>
+
+<script src="/Scripts/js/video?v=5FlWDFNz3G7XJqr8pgoGcuIXAkoqTPpTBR_ueRq0RUQ1"></script>
+    
+	
+	
+
+
+
+    <!-- Tags -->
+    <script src="/script/track?url=%2F"></script>
+<script>if (window.BC && window.BC.tracker) { BC.tracker.run(); }</script>
+<!-- Begin tagcommander  -->
+
+<script type="deferred/javascript" src="//cdn-static.boursier.com/e/tc/au_boursier.js?20200421"></script>
+<noscript><iframe src="//redirect451.tagcommander.com/utils/noscript.php?id=3&mode=iframe" width="1" height="1"></iframe></noscript>
+<!--  end tagcommander -->
+
+    
+    
+    <!-- OneSignal - All --><script type="didomi/javascript" src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" data-vendor="c:onesignal-4VMWFzzM" async></script><script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "fa400081-63b8-4a86-82e4-d572ffbb20f8",
+    });
+  });
+</script><!-- AB Tasty - Boursier --><script type="didomi/javascript" data-vendor="c:ab-tasty">
+               (function (i, s, o, g, r, a, m) {
+               i[r] = i[r] || [], i["abtiming"] = 1 * new Date();
+               a = s.createElement(o),
+               m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+               })(window, document, "script", "//try.abtasty.com/5f299eba7ea5694e0ffd74138f01004a.js", "_abtasty");
+</script>
+</body>
+
+</html>
+

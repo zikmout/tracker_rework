@@ -1,0 +1,3443 @@
+<!doctype html>
+<!--[if IE 7 ]><html class="ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]><html class="ie8" lang="en"><![endif]-->
+<!--[if IE 9 ]><html class="ie9" lang="en"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
+  <head>
+<meta charset="utf-8" /><title>Umicore - Share buy-back</title><meta name="viewport" content="width=device-width, initial-scale=1" /><meta name="description" content="2020    Number of shares bought back % of total shares Average price (&euro;) Highest price (&euro;) Lowest price (&euro;)   1,200,000 0.487% 38.03 40.59 35.34        Date of acquisition   Number of shares   % of total shares   Average price (&euro;)   Hi" /><meta property="og:title" content="Share buy-back" /><meta property="og:description" content="2020    Number of shares bought back % of total shares Average price (&euro;) Highest price (&euro;) Lowest price (&euro;)   1,200,000 0.487% 38.03 40.59 35.34        Date of acquisition   Number of shares   % of total shares   Average price (&euro;)   Hi" /><meta property="og:image" content="" /><meta property="og:url" content="https://www.umicore.com/en/investors/share-information/share-buy-back/" /><meta property="og:type" content="website" /><meta property="twitter:widgets:csp" content="on" /><meta property="twitter:card" content="summary" /><meta property="twitter:title" content="Share buy-back" /><meta property="twitter:description" content="2020    Number of shares bought back % of total shares Average price (&euro;) Highest price (&euro;) Lowest price (&euro;)   1,200,000 0.487% 38.03 40.59 35.34        Date of acquisition   Number of shares   % of total shares   Average price (&euro;)   Hi" /><meta property="twitter:image" content="" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,700" type="text/css" /><link rel="stylesheet" href="/css/main.rebranded.min.css?1586265682" type="text/css" /><!--[if lt IE 9]><script src="/js/lib/html5shiv.js?1474283286"></script><![endif]--><script>(function(d) {
+                            var config = {
+                              kitId: 'obu3bwd',
+                              scriptTimeout: 3000,
+                              async: true
+                            },
+                            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+                          })(document);</script><script>var base = "/";</script><script>var lang = "en";</script><script>var currentPage = "https://www.umicore.com/en/investors/share-information/share-buy-back/";</script><script>var baseurl = "https://www.umicore.com";</script><script>var gaId = "UA-56754319-1";</script><script>var gtmId = "GTM-PRWGRQX";</script>  </head>
+  <body class="channel-standardpage en">
+<div id="main-container" class="has-breadcrumbs">
+    <header>
+        <div class="wrapper clear">
+            <a id="header-logo-holder" href="/en/"><img src="/img/rebranding/logos/umicore.png?1533735847" id="header-logo" width="127" height="43" alt="" /></a>                        <nav id="main-nav">
+                <ul class="main-navigation">
+                    <li class="hasSubnav flyout">
+                        <a class="none" href="/en/industries/">Industries</a>                        <div>
+                            <div class="sub-nav-sub-links">
+                                <script>
+                                    // Load this script immediately so it is available in the DOM without waiting for
+                                    // external dependencies.
+                                    function setFlyOutMouseState(state) { window.mouseState = state; }
+                                    function handleFlyOutSubPane(string, action) {
+                                        switch (action) {
+                                            case 'show':
+                                                if (typeof jQuery === 'undefined') {
+                                                    var element = document.querySelector('li[data-srcid="' + string + '"]');
+                                                    var subList = document.querySelector('ul[data-srcid="' + string + '-block"]');
+                                                    var preview = document.querySelector('img[data-srcid="' + string + '-image"]');
+                                                    element.style.display = 'block';
+                                                    preview.style.display = 'inline-block';
+                                                    subList.style.display = 'inline-block';
+                                                    element.parentNode.style.display = 'block';
+                                                } else {
+                                                    $('ul.subpane:not(.always-show) li').hide();
+                                                    $('ul.subpane').show();
+                                                    $('ul.subpane li[data-srcid="' + string + '"]').show();
+                                                    $('ul.subpane ul[data-srcid="' + string + '-block"]').show();
+                                                    $('ul.subpane ul[data-srcid="' + string + '-block"] li').show();
+                                                    $('ul.subpane img[data-srcid="' + string + '-image"]').show();
+                                                }
+                                                break;
+                                            case 'hide':
+                                                if (window.mouseState && window.mouseState === 'inside') {
+                                                    return;
+                                                } else {
+                                                    var element = document.querySelector('li[data-srcid="' + string + '"]');
+                                                    var subList = document.querySelector('ul[data-srcid="' + string + '-block"]');
+                                                    var preview = document.querySelector('img[data-srcid="' + string + '-image"]');
+                                                    element.style.display = 'none';
+                                                    preview.style.display = 'none';
+                                                    subList.style.display = 'none';
+                                                    element.parentNode.style.display = 'none';
+                                                }
+                                                break;
+                                        }
+                                    }
+                                </script>
+                                                                                                                                            <a class="none" data-target="Energy" onmouseleave="setTimeout(function() {handleFlyOutSubPane('Energy', 'hide')}, 5)" onmouseenter="setTimeout(function() {handleFlyOutSubPane('Energy', 'show')}, 4)" href="/en/industries/energy/">Energy</a>                                                                                                                                            <a class="none" data-target="Automotive" onmouseleave="setTimeout(function() {handleFlyOutSubPane('Automotive', 'hide')}, 5)" onmouseenter="setTimeout(function() {handleFlyOutSubPane('Automotive', 'show')}, 4)" href="/en/industries/automotive/">Automotive</a>                                                                                                                                            <a class="none" data-target="Recycling " onmouseleave="setTimeout(function() {handleFlyOutSubPane('Recycling ', 'hide')}, 5)" onmouseenter="setTimeout(function() {handleFlyOutSubPane('Recycling ', 'show')}, 4)" href="/en/industries/recycling/">Recycling </a>                                                                                                                                            <a class="none" data-target="Chemicals" onmouseleave="setTimeout(function() {handleFlyOutSubPane('Chemicals', 'hide')}, 5)" onmouseenter="setTimeout(function() {handleFlyOutSubPane('Chemicals', 'show')}, 4)" href="/en/industries/chemicals/">Chemicals</a>                                                                                                                                            <a class="none" data-target="Manufacturing" onmouseleave="setTimeout(function() {handleFlyOutSubPane('Manufacturing', 'hide')}, 5)" onmouseenter="setTimeout(function() {handleFlyOutSubPane('Manufacturing', 'show')}, 4)" href="/en/industries/manufacturing/">Manufacturing</a>                                                                                                                                            <a class="none" data-target="Optics and displays" onmouseleave="setTimeout(function() {handleFlyOutSubPane('Optics and displays', 'hide')}, 5)" onmouseenter="setTimeout(function() {handleFlyOutSubPane('Optics and displays', 'show')}, 4)" href="/en/industries/optics-and-displays/">Optics and displays</a>                                                                                                                                            <a class="none" data-target="Precious metals" onmouseleave="setTimeout(function() {handleFlyOutSubPane('Precious metals', 'hide')}, 5)" onmouseenter="setTimeout(function() {handleFlyOutSubPane('Precious metals', 'show')}, 4)" href="/en/industries/precious-metals/">Precious metals</a>                                                                                                                                            <a class="none" data-target="Electronics" onmouseleave="setTimeout(function() {handleFlyOutSubPane('Electronics', 'hide')}, 5)" onmouseenter="setTimeout(function() {handleFlyOutSubPane('Electronics', 'show')}, 4)" href="/en/industries/electronics/">Electronics</a>                                
+                                                                                                <ul onmouseenter="setFlyOutMouseState('inside')" onmouseleave="setTimeout(function() {setFlyOutMouseState('outside')}, 2)" class="subpane">
+                                                                                <li data-srcid="Energy" class="blue light active">
+                                                <div class="clear">
+                                                    <div class="flyout-industry-image">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 590 377&quot;%3E%3C/svg%3E" data-srcid="Energy-image" width="590" height="377" alt="" data-src="/storage/main/energy-r.png?1464971434" class="lazyload" />                                                    </div>
+                                                    <ul data-srcid="Energy-block">
+                                                        <li><a href="/en/industries/energy/rechargeable-battery-materials/">Rechargeable battery materials for electrified mobility and portable electronics</a></li><li><a href="/en/industries/energy/electro-optic-materials/">Germanium substrates for space & terrestrial photovoltaics</a></li><li><a href="/en/industries/energy/cobalt-specialty-materials/">Cobalt and nickel compounds as precursors for Rechargeable Battery Materials</a></li><li><a href="/en/industries/energy/automotive/">Stationary emissions control catalysts for power generation</a></li><li><a href="/en/industries/energy/jewellery-industrial-metals/">High conductivity materials such as copper, silver, silver alloys and composites for battery interconnects and tab stock</a></li>                                                    </ul>
+                                                </div>
+                                            </li>
+                                                                                    <li data-srcid="Automotive" class="violet ">
+                                                <div class="clear">
+                                                    <div class="flyout-industry-image">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 854 376&quot;%3E%3C/svg%3E" data-srcid="Automotive-image" width="854" height="376" alt="" data-src="/storage/main/automotive-r.png?1464971175" class="lazyload" />                                                    </div>
+                                                    <ul data-srcid="Automotive-block">
+                                                        <li><a href="/en/industries/automotive/automotive/">Emission control catalysts for cleaner air</a></li><li><a href="/en/industries/automotive/cobalt-specialty-materials/">Recycling of end-of-life rechargeable batteries</a></li><li><a href="/en/industries/automotive/rechargeable-battery-materials/">Rechargeable battery materials for electrified mobility </a></li><li><a href="/en/industries/automotive/precious-metals-refining/">Recycling of catalysts to recover precious metals</a></li><li><a href="/en/industries/automotive/cobalt-specialty-materials/">Cobalt compounds for better tires</a></li><li><a href="/en/industries/automotive/cobalt-specialty-materials/">Cobalt & nickel compounds to remove impurities from petroleum</a></li><li><a href="/en/industries/automotive/automotive/">Emissions control catalysts for marine engines</a></li><li><a href="/en/industries/automotive/jewellery-industrial-metals/">Specialty composite materials for automotive electro-mechanical assemblies, sensors and connectors</a></li>                                                    </ul>
+                                                </div>
+                                            </li>
+                                                                                    <li data-srcid="Recycling " class="green ">
+                                                <div class="clear">
+                                                    <div class="flyout-industry-image">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 152 285&quot;%3E%3C/svg%3E" data-srcid="Recycling -image" width="152" height="285" alt="" data-src="/storage/main/Sustainability_visual_flyout-V3.png?1479208708" class="lazyload" />                                                    </div>
+                                                    <ul data-srcid="Recycling -block">
+                                                        <li><a href="/en/industries/recycling/precious-metals-refining/">Recovery of precious & specialty metals</a></li><li><a href="/en/industries/recycling/cobalt-specialty-materials/">Recycling of end-of-life rechargeable batteries</a></li><li><a href="/en/industries/recycling/electro-optic-materials/">Recycling germanium from electro-optic materials</a></li><li><a href="/en/industries/recycling/jewellery-industrial-metals/">Recycling jewelry for re-use of precious metals</a></li><li><a href="/en/industries/recycling/cobalt-specialty-materials/">Recycling of cobalt out of spent catalyst and Tungsten Carbide recycling side flows </a></li><li><a href="/en/industries/recycling/automotive/">Stationary emissions control catalysts for waste incineration & recycling </a></li>                                                    </ul>
+                                                </div>
+                                            </li>
+                                                                                    <li data-srcid="Chemicals" class="purple ">
+                                                <div class="clear">
+                                                    <div class="flyout-industry-image">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 601 391&quot;%3E%3C/svg%3E" data-srcid="Chemicals-image" width="601" height="391" alt="" data-src="/storage/main/chemicals-r2.png?1464972847" class="lazyload" />                                                    </div>
+                                                    <ul data-srcid="Chemicals-block">
+                                                        <li><a href="/en/industries/chemicals/precious-metals-refining/">Recycling industrial catalysts</a></li><li><a href="/en/industries/chemicals/cobalt-specialty-materials/">Nickel chemicals used in surface treatment applications</a></li><li><a href="/en/industries/chemicals/precious-metals-chemistry/">Precious metals chemicals & catalysts</a></li><li><a href="/en/industries/chemicals/precious-metals-chemistry/">High potency active pharmaceutical ingredients</a></li><li><a href="/en/industries/chemicals/automotive/">Stationary emissions control catalysts for chemical plants</a></li>                                                    </ul>
+                                                </div>
+                                            </li>
+                                                                                    <li data-srcid="Manufacturing" class="blue ">
+                                                <div class="clear">
+                                                    <div class="flyout-industry-image">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 908 434&quot;%3E%3C/svg%3E" data-srcid="Manufacturing-image" width="908" height="434" alt="" data-src="/storage/main/manufacturing-r.png?1512054451" class="lazyload" />                                                    </div>
+                                                    <ul data-srcid="Manufacturing-block">
+                                                        <li><a href="/en/industries/manufacturing/cobalt-specialty-materials/">Cobalt and pre-alloyed powders for stone and concrete cutting tools</a></li><li><a href="/en/industries/manufacturing/cobalt-specialty-materials/">Cobalt and nickel compounds for the production of colors used in ceramics</a></li><li><a href="/en/industries/manufacturing/cobalt-specialty-materials/">Cobalt as chemical to ensure fast drying of paints</a></li><li><a href="/en/industries/manufacturing/automotive/">Stationary emissions control catalysts for steel mills, glass production, carbon black manufacturing and paper mills</a></li>                                                    </ul>
+                                                </div>
+                                            </li>
+                                                                                    <li data-srcid="Optics and displays" class="orange dark ">
+                                                <div class="clear">
+                                                    <div class="flyout-industry-image">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 1144 744&quot;%3E%3C/svg%3E" data-srcid="Optics and displays-image" width="1144" height="744" alt="" data-src="/storage/main/eom-r2.png?1464973038" class="lazyload" />                                                    </div>
+                                                    <ul data-srcid="Optics and displays-block">
+                                                        <li><a href="/en/industries/optics-and-displays/electro-optic-materials/">Optical lenses for clearer night vision & thermal imaging</a></li><li><a href="/en/industries/optics-and-displays/precious-metals-chemistry/">Catalysts for TFT & organic LED displays</a></li>                                                    </ul>
+                                                </div>
+                                            </li>
+                                                                                    <li data-srcid="Precious metals" class="yellow ">
+                                                <div class="clear">
+                                                    <div class="flyout-industry-image">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 813 447&quot;%3E%3C/svg%3E" data-srcid="Precious metals-image" width="813" height="447" alt="" data-src="/storage/main/preciousmetals-2-centered.png?1479219277" class="lazyload" />                                                    </div>
+                                                    <ul data-srcid="Precious metals-block">
+                                                        <li><a href="/en/industries/precious-metals/precious-metals-refining/">Recycling and recovering precious & specialty metals</a></li><li><a href="/en/industries/precious-metals/precious-metals-management/">Physical delivery and price-hedging of precious metals</a></li><li><a href="/en/industries/precious-metals/jewellery-industrial-metals/">Precious metals for jewelry and industrial applications</a></li><li><a href="/en/industries/precious-metals/jewellery-industrial-metals/">Electrical contact materials made from precious metal alloys and composites</a></li>                                                    </ul>
+                                                </div>
+                                            </li>
+                                                                                    <li data-srcid="Electronics" class="orange light ">
+                                                <div class="clear">
+                                                    <div class="flyout-industry-image">
+                                                    <img src="data:image/svg+xml,%3Csvg xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 781 416&quot;%3E%3C/svg%3E" data-srcid="Electronics-image" width="781" height="416" alt="" data-src="/storage/main/electronics-r.png?1464971477" class="lazyload" />                                                    </div>
+                                                    <ul data-srcid="Electronics-block">
+                                                        <li><a href="/en/industries/electronics/rechargeable-battery-materials/">Rechargeable battery materials for portable electronics</a></li><li><a href="/en/industries/electronics/precious-metals-refining/">Recycling and recovering precious & specialty metals</a></li><li><a href="/en/industries/electronics/electro-optic-materials/">Thin film coatings for semiconductors</a></li><li><a href="/en/industries/electronics/electroplating/">Electroplating solutions for technical and decorative applications</a></li>                                                    </ul>
+                                                </div>
+                                            </li>
+                                                                       </ul>
+                            </div>
+
+                        </div>
+                    </li><li class="hasSubnav" >
+                            <a class="none" href="/en/about/">About</a>                                                            <div>
+                                <div class="sub-nav-sub-links">
+                                    <ul class="subpane always-show entry-95">
+                                                                                                                                                                            <li><div>                                                <a class="none hasSubnav" href="/en/about/about-umicore/">About Umicore</a>                                                                                                                                                    <ul>
+                                                                                                                <li><a class="none" href="/en/about/about-umicore/sustainability/">Sustainability </a></li>
+                                                                                                                <li><a class="none" href="/en/about/about-umicore/innovation/">Innovation</a></li>
+                                                                                                            </ul>
+                                                                                                </div></li>                                                                                                                                                                                                                            <li><div>                                                <a class="none hasSubnav" href="/en/about/history/">History</a>                                                                                                    <ul>
+                                                        <li><a class="none" href="/en/about/history/#background">The background story</a></li>
+                                                        <li><a class="none" href="/en/about/history/#beginning">Where it all began</a></li>
+                                                        <li><a class="none" href="/en/about/history/#borders">Crossing borders</a></li>
+                                                        <li><a class="none" href="/en/about/history/#puzzle">The pieces of the puzzle</a></li>
+                                                        <li><a class="none" href="/en/about/history/#decade">A defining decade</a></li>
+                                                        <li><a class="none" href="/en/about/history/#today">Today</a></li>
+                                                    </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                            <a class="none" href="/en/about/elements/">From Ag to Zn</a>                                                                                                                                                </div></li>                                                                                                                                                                                                                            <li><div>                                                <a class="none hasSubnav" href="/en/about/the-umicore-way/">The Umicore Way</a>                                                                                                                                                    <ul>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#materialsforabetterlife">Materials for a better life</a></li>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#customers">Customers</a></li>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#values">Values</a></li>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#employees">Employees</a></li>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#shareholders">Shareholders</a></li>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#environment">Environment</a></li>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#society">Society</a></li>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#organisation">Organisation</a></li>
+                                                                                                                <li><a class="none" href="/en/about/the-umicore-way/#businessintegrity">Business integrity</a></li>
+                                                                                                            </ul>
+                                                                                                </div></li>                                                                                                                                                                    </ul>
+                                </div>
+                                    </div>
+                                                    </li><li class="hasSubnav" >
+                            <a class="none" href="/en/cases/">Cases</a>                                                            <div>
+                                <div class="sub-nav-sub-links">
+                                    <ul class="subpane always-show entry-2554">
+                                                                                                                                                                                                                            <li><a class="none" href="/en/cases/sustainable-procurement-framework-for-cobalt/">Sustainable Procurement Framework for Cobalt</a></li>
+                                                                                                                                                                                                                                                                            <li><a class="none" href="/en/cases/hoboken/">Hoboken expansion</a></li>
+                                                                                                                                                                                                                                                                            <li><a class="none" href="/en/cases/horizon-2020/">Horizon 2020</a></li>
+                                                                                                                                                                                                                                                                            <li><a class="none" href="/en/cases/powered-by-umicore-2018/">Powered by Umicore 2018</a></li>
+                                                                                                                                                                                                                                                                            <li><a class="none" href="/en/cases/mahindra-racing/">Mahindra Racing</a></li>
+                                                                                                                                                                                                                                                                            <li><a class="none" href="/en/cases/formula-e/">Formula E</a></li>
+                                                                                                                                                                    </ul>
+                                </div>
+                                    </div>
+                                                    </li><li class="hasSubnav" >
+                            <a class="none" href="/en/media/">Media</a>                                                            <div>
+                                <div class="sub-nav-sub-links">
+                                    <ul class="subpane always-show entry-2517">
+                                                                                                                                                                            <li><a class="none" href="/en/media/press/">Press Releases</a></li>                                                <li><a class="none" href="/en/media/media/">Media Gallery</a></li>
+                                                                                                                                                                                                                                                                            <li><a class="none" href="/en/media/discover/">Discover all stories</a></li>
+                                                                                                                                                                                                                                                                            <li><a class="none" href="/en/media/topics-of-interest/">Topics of interest</a></li>
+                                                                                                                                                                    </ul>
+                                </div>
+                                    </div>
+                                                    </li><li class="hasSubnav" >
+                            <a class="none" href="/en/investors/">Investors</a>                                                            <div>
+                                <div class="sub-nav-sub-links">
+                                    <ul class="subpane always-show entry-527">
+                                                                                                                                                                                                                            <li><div>                                                <a class="none" href="/en/investors/financial-calendar/">Financial calendar</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a class="none hasSubnav" href="/en/investors/financial-data/">Financial data</a>                                                                                                    <ul>
+                                                                                                                                                                                                                                        <li>
+                                                                <a class="none" href="/en/investors/financial-data/key-figures/">Key Figures</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/financial-data/income-statement/">Income Statement</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/financial-data/balance-sheet/">Balance Sheet</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/financial-data/cash-flow/">Cash Flow</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/financial-data/glossary/">Glossary</a>                                                            </li>
+                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a class="none" href="/en/investors/share-price/">Share price</a>                                                                                                </div></li>                                                                                                                                                                                                                                                                                                                            <li><div>                                                <a class="none hasSubnav" href="/en/investors/news-results/">News & Results</a>                                                                                                    <ul>
+                                                                                                                                                                                                                                        <li>
+                                                                <a class="none" href="/en/investors/news-results/full-year-results-2019-webcast/">Full year results 2019 webcast</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a target="_blank" class="none" href="http://annualreport.umicore.com/">Annual reports</a>                                                            </li>
+                                                                                                                                                                                <li><a class="none" href="/en/investors/news-results/press-releases/">Press Releases</a></li>                                                            <li>
+                                                                <a class="none" href="/en/investors/news-results/presentations/">Presentations</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/cases/horizon-2020/">Capital Markets Day 2015</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/cases/capital-markets-day-2018/">Capital Markets Day 2018</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/news-results/results/">Results</a>                                                            </li>
+                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a class="none" href="/en/investors/fact-sheet/">Fact sheet</a>                                                                                                </div></li>                                                                                                                                                                                                                                                                                                                            <li><div>                                                <a class="none hasSubnav" href="/en/investors/share-information/">Share information</a>                                                                                                    <ul>
+                                                                                                                                                                                                                                        <li>
+                                                                <a class="none" href="/en/investors/share-information/analyst-research-and-consensus/">Analyst research and consensus</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/share-information/dividend-information/">Dividend information</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/share-information/shareholder-structure/">Shareholder structure</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/share-information/share-buy-back/">Share buy-back</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/share-information/data-per-share/">Data per share</a>                                                            </li>
+                                                                                                                                                                                                                                            <li>
+                                                                <a class="none" href="/en/investors/share-information/old-shares/">Old shares</a>                                                            </li>
+                                                                                                                                                                        </ul>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a class="none" href="/en/investors/investment-case/">Why invest in Umicore</a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <a class="none" href="/en/investors/shareholder-meetings/">Shareholder Meetings</a>                                                                                                </div></li>                                                                                                                                                                                                                    </ul>
+                                </div>
+                                    </div>
+                                                    </li><li class="hasSubnav" >
+                            <a class="none" href="/en/governance/">Governance</a>                                                            <div>
+                                <div class="sub-nav-sub-links">
+                                    <ul class="subpane always-show entry-2553">
+                                                                                                                                                                                                                            <li class="governance"><div>                                                <a class="none hasSubnav" href="/en/governance/">Governance</a>                                                                                                    <ul>
+                                                                                                                    <li><a class="none" href="/en/governance/board-of-directors/">Board of Directors</a></li>
+                                                                                                                    <li><a class="none" href="/en/governance/executive-committee/">Executive Committee</a></li>
+                                                                                                                    <li><a class="none" href="/en/governance/corporate-governance-charter/">Corporate Governance Charter</a></li>
+                                                                                                                    <li><a class="none" href="/en/governance/supervision-and-compliance/">Supervision and compliance</a></li>
+                                                                                                                    <li><a class="none" href="/en/governance/articles-of-association/">Articles of Association</a></li>
+                                                                                                                    <li><a class="none" href="/en/governance/code-of-conduct/">Code of Conduct</a></li>
+                                                                                                                    <li><a class="none" href="/en/governance/shareholder-rights/">Shareholder Rights</a></li>
+                                                                                                            </ul>
+                                                                                                </div></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </ul>
+                                </div>
+                                    </div>
+                                                    </li><li class="hasSubnav" >
+                            <a class="none" href="/en/careers/">Careers</a>                                                            <div>
+                                <div class="sub-nav-sub-links">
+                                    <ul class="subpane always-show entry-2136">
+                                                                                                                                                                                                                                <li><a class="none" href="/en/careers/">Find a career</a></li>
+                                                                                                                                                    <li><div>
+                                                        <a class="none hasSubnav" href="/en/careers/working-at-umicore/">Working at Umicore</a>                                                        <ul>
+                                                                                                                            <li><a class="none" href="/en/careers/working-at-umicore/why-umicore/">Why Umicore</a></li>
+                                                                                                                            <li><a class="none" href="/en/careers/working-at-umicore/what-we-do/">What we do</a></li>
+                                                                                                                            <li><a class="none" href="/en/careers/working-at-umicore/what-you-could-do/">What you could do</a></li>
+                                                                                                                            <li><a class="none" href="/en/careers/working-at-umicore/what-we-value/">What we value</a></li>
+                                                                                                                    </ul>
+                                                    </div></li>
+                                                                                                                                                                                                                                                                                                                                                                                <li><a class="none" href="/en/careers/testimonials/">Testimonials</a></li>
+                                                                                                                                                                                                                    </ul>
+                                </div>
+                                    </div>
+                                                    </li><li  >
+                            <a class="none" href="/en/contact/">Contact</a>                                                    </li>                </ul>
+                <ul class="social-icons">
+                    <li class="search">
+                        <a href="#" class="shplingsearch" data-search-path="/en/search/" data-action="/en/search/" data-autocomplete="/en/api/search/autocomplete/" data-placeholder="Keywords" data-text-all-results="Show all results" data-text-no-results="Your search did not return any results, please try again"><img src="/img/rebranding/search-icon.png?1533735847" width="22" height="22" alt="" /></a>
+                    </li>
+                </ul>
+                <a href="#mobile-menu" class="toggle-mobile-menu"><span class="icon-navicon"></span></a>
+        </nav>
+        </div>
+            </header>
+    <main>
+        <div class="breadcrumb-lang-container">
+	<div id="breadcrumb-container" class="padding">
+    <ul class="breadcrumb">
+      <li>
+          <a href="/en/">Home</a>
+      </li>
+      <li class="separator">&gt;</li>
+                  <li>
+          <a href="/en/investors/">Investors</a>
+      </li>
+              <li class="separator">&gt;</li>
+                        <li>
+          <a href="/en/investors/share-information/">Share-information</a>
+      </li>
+              <li class="separator">&gt;</li>
+                        <li>
+          <a href="/en/investors/share-information/share-buy-back/">Share buy-back</a>
+      </li>
+                      </ul>
+	</div>
+</div>
+        <div class="wrapper">
+            <div>
+                <div class="white gradient page">
+  <div class="wrap padding multilanguage-page" id="top">
+      <div class="content table-text">
+          <h1 class="green">Share buy-back</h1>
+          <h2>2020</h2>
+<table>
+<tbody>
+<tr>
+<td>Number of shares bought back</td>
+<td>% of total shares</td>
+<td>Average price (&euro;)</td>
+<td>Highest price (&euro;)</td>
+<td>Lowest price (&euro;)</td>
+</tr>
+<tr>
+<td><strong>1,200,000</strong></td>
+<td><strong>0.487%</strong></td>
+<td><strong>38.03</strong></td>
+<td><strong>40.59</strong></td>
+<td><strong>35.34</strong></td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Date of acquisition</strong></p>
+</td>
+<td>
+<p><strong>Number of shares</strong></p>
+</td>
+<td>
+<p><strong>% of total shares</strong></p>
+</td>
+<td>
+<p><strong>Average price (&euro;)</strong></p>
+</td>
+<td>
+<p><strong>Highest price (&euro;)</strong></p>
+</td>
+<td>
+<p><strong>Lowest price (&euro;)</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>02/03/2020</strong></p>
+</td>
+<td>
+<p>229,504</p>
+</td>
+<td>
+<p>0.093%</p>
+</td>
+<td>
+<p>38.30</p>
+</td>
+<td>
+<p>39.19</p>
+</td>
+<td>
+<p>37.38</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>03/03/2020</strong></p>
+</td>
+<td>
+<p>84,039</p>
+</td>
+<td>
+<p>0.034%</p>
+</td>
+<td>
+<p>39.39</p>
+</td>
+<td>
+<p>40.00</p>
+</td>
+<td>
+<p>39.06</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>04/03/2020</strong></p>
+</td>
+<td>
+<p>170,253</p>
+</td>
+<td>
+<p>0.069%</p>
+</td>
+<td>
+<p>39.86</p>
+</td>
+<td>
+<p>40.59</p>
+</td>
+<td>
+<p>39.10</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>05/03/2020</strong></p>
+</td>
+<td>
+<p>122,000</p>
+</td>
+<td>
+<p>0.050%</p>
+</td>
+<td>
+<p>38.96</p>
+</td>
+<td>
+<p>40.30</p>
+</td>
+<td>
+<p>38.33</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>06/03/2020</strong></p>
+</td>
+<td>
+<p>185,206</p>
+</td>
+<td>
+<p>0.075%</p>
+</td>
+<td>
+<p>38.34</p>
+</td>
+<td>
+<p>39.13</p>
+</td>
+<td>
+<p>37.36</p>
+</td>
+</tr>
+<tr>
+<td><strong>09/03/2020</strong></td>
+<td>
+<p>225,000</p>
+</td>
+<td>
+<p>0.091%</p>
+</td>
+<td>
+<p>36.21</p>
+</td>
+<td>
+<p>37.07</p>
+</td>
+<td>
+<p>35.34</p>
+</td>
+</tr>
+<tr>
+<td><strong>10/03/2020</strong></td>
+<td>92,000</td>
+<td>0.037%</td>
+<td>37.12</td>
+<td>38.28</td>
+<td>36.04</td>
+</tr>
+<tr>
+<td><strong>11/03/2020</strong></td>
+<td>91,998</td>
+<td>0.037%</td>
+<td>36.26</td>
+<td>37.29</td>
+<td>35.65</td>
+</tr>
+</tbody>
+</table>
+<h2>2019</h2>
+<table>
+<tbody>
+<tr>
+<td>Number of shares bought back</td>
+<td>% of total shares</td>
+<td>Average price (&euro;)</td>
+<td>Highest price (&euro;)</td>
+<td>Lowest price (&euro;)</td>
+</tr>
+<tr>
+<td>1,275,871</td>
+<td>0.52%</td>
+<td>35.45</td>
+<td>39.17</td>
+<td>33.25</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<table>
+<tbody>
+<tr>
+<td>
+<p><strong>Date of acquisition</strong></p>
+</td>
+<td>
+<p><strong>Number of shares</strong></p>
+</td>
+<td>
+<p><strong>% of total shares</strong></p>
+</td>
+<td>
+<p><strong>Average price (&euro;)</strong></p>
+</td>
+<td>
+<p><strong>Highest price (&euro;)</strong></p>
+</td>
+<td>
+<p><strong>Lowest price (&euro;)</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>11/02/2019</strong></p>
+</td>
+<td>
+<p>180,000</p>
+</td>
+<td>
+<p>0.07%</p>
+</td>
+<td>
+<p>33.61</p>
+</td>
+<td>
+<p>34.10</p>
+</td>
+<td>
+<p>33.25</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>12/02/2019</strong></p>
+</td>
+<td>
+<p>175,000</p>
+</td>
+<td>
+<p>0.07%</p>
+</td>
+<td>
+<p>34.46</p>
+</td>
+<td>
+<p>34.89</p>
+</td>
+<td>
+<p>33.42</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>13/02/2019</strong></p>
+</td>
+<td>
+<p>200,000</p>
+</td>
+<td>
+<p>0.08%</p>
+</td>
+<td>
+<p>35.10</p>
+</td>
+<td>
+<p>35.78</p>
+</td>
+<td>
+<p>34.66</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>14/02/2019</strong></p>
+</td>
+<td>
+<p>134,201</p>
+</td>
+<td>
+<p>0.05%</p>
+</td>
+<td>
+<p>35.06</p>
+</td>
+<td>
+<p>35.44</p>
+</td>
+<td>
+<p>34.65</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>15/02/2019</strong></p>
+</td>
+<td>
+<p>100,000</p>
+</td>
+<td>
+<p>0.04%</p>
+</td>
+<td>
+<p>35.27</p>
+</td>
+<td>
+<p>35.83</p>
+</td>
+<td>
+<p>34.70</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>18/02/2019</strong></p>
+</td>
+<td>
+<p>80,000</p>
+</td>
+<td>
+<p>0.03%</p>
+</td>
+<td>
+<p>36.01</p>
+</td>
+<td>
+<p>36.32</p>
+</td>
+<td>35.50</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>19/02/2019</strong></td>
+<td>
+<p>60,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>35.66</p>
+</td>
+<td>
+<p>36.07</p>
+</td>
+<td>35.43</td>
+</tr>
+<tr>
+<td>
+<p><strong>20/02/2019</strong></p>
+</td>
+<td>
+<p>50,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>36.46</p>
+</td>
+<td>
+<p>36.96</p>
+</td>
+<td>35.68</td>
+</tr>
+<tr>
+<td><strong>21/02/2019</strong></td>
+<td>
+<p>50,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>36.43</p>
+</td>
+<td>
+<p>36.84</p>
+</td>
+<td>36.25</td>
+</tr>
+<tr>
+<td>
+<p><strong>22/02/2019</strong></p>
+</td>
+<td>
+<p>41,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>36.73</p>
+</td>
+<td>
+<p>36.91</p>
+</td>
+<td>36.33</td>
+</tr>
+<tr>
+<td>
+<p><strong>25/02/2019</strong></p>
+</td>
+<td>
+<p>53,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>36.65</td>
+<td>
+<p>36.82</p>
+</td>
+<td>36.57</td>
+</tr>
+<tr>
+<td>26/02/2019</td>
+<td>40,000</td>
+<td>0.02%</td>
+<td>37.37</td>
+<td>37.72</td>
+<td>36.43</td>
+</tr>
+<tr>
+<td>27/02/2019</td>
+<td>37,500</td>
+<td>0.02%</td>
+<td>37.52</td>
+<td>37.93</td>
+<td>37.13</td>
+</tr>
+<tr>
+<td>28/02/2019</td>
+<td>39,170</td>
+<td>0.02%</td>
+<td>37.85</td>
+<td>38.15</td>
+<td>37.48</td>
+</tr>
+<tr>
+<td>01/03/2019</td>
+<td>36,000</td>
+<td>0.01%</td>
+<td>38.98</td>
+<td>39.17</td>
+<td>38.16</td>
+</tr>
+</tbody>
+</table>
+<h2>&nbsp;</h2>
+<h2>2018<br /><br /></h2>
+<table>
+<tbody>
+<tr>
+<th>
+<p>Number of shares bought back*</p>
+</th>
+<th>% of total shares</th>
+<th>Average price (&euro;)</th>
+<th>Highest price (&euro;)</th>
+<th>Lowest price (&euro;)</th>
+</tr>
+<tr>
+<td>1,958,988</td>
+<td>0.80%</td>
+<td>49.67</td>
+<td>53.32</td>
+<td>47.05</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td>
+<p>Date of acquisition</p>
+</td>
+<td>
+<p>Number of shares</p>
+</td>
+<td>
+<p>% of total shares</p>
+</td>
+<td>
+<p>Average price (&euro;)</p>
+</td>
+<td>
+<p>Highest price (&euro;)</p>
+</td>
+<td>
+<p>Lowest price (&euro;)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>28/05/2018</p>
+</td>
+<td>
+<p>27,500</p>
+</td>
+<td>
+<p>0.01%</p>
+</td>
+<td>
+<p>48.14</p>
+</td>
+<td>
+<p>48.45</p>
+</td>
+<td>
+<p>47.90</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>29/05/2018</p>
+</td>
+<td>
+<p>80,000</p>
+</td>
+<td>
+<p>0.03%</p>
+</td>
+<td>
+<p>47.34</p>
+</td>
+<td>
+<p>47.93</p>
+</td>
+<td>
+<p>47.05</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>30/05/2018</p>
+</td>
+<td>
+<p>52,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>49.14</p>
+</td>
+<td>
+<p>49.99</p>
+</td>
+<td>
+<p>47.71</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>31/05/2018</p>
+</td>
+<td>
+<p>85,000</p>
+</td>
+<td>
+<p>0.03%</p>
+</td>
+<td>
+<p>48.67</p>
+</td>
+<td>
+<p>49.89</p>
+</td>
+<td>
+<p>48.38</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>01/06/2018</p>
+</td>
+<td>
+<p>75,000</p>
+</td>
+<td>
+<p>0.03%</p>
+</td>
+<td>
+<p>49.27</p>
+</td>
+<td>
+<p>49.60</p>
+</td>
+<td>
+<p>48.64</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>04/06/2018</p>
+</td>
+<td>
+<p>65,500</p>
+</td>
+<td>
+<p>0.03%</p>
+</td>
+<td>
+<p>49.61</p>
+</td>
+<td>
+<p>50.00</p>
+</td>
+<td>
+<p>48.87</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>05/06/2018</p>
+</td>
+<td>
+<p>90,000</p>
+</td>
+<td>
+<p>0.04%</p>
+</td>
+<td>
+<p>50.27</p>
+</td>
+<td>
+<p>50.96</p>
+</td>
+<td>
+<p>49.71</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>06/06/2018</p>
+</td>
+<td>
+<p>80,000</p>
+</td>
+<td>
+<p>0.03%</p>
+</td>
+<td>
+<p>49.80</p>
+</td>
+<td>
+<p>50.12</p>
+</td>
+<td>
+<p>49.37</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>07/06/2018</p>
+</td>
+<td>
+<p>55,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>50.29</p>
+</td>
+<td>
+<p>50.70</p>
+</td>
+<td>
+<p>50.14</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>08/06/2018</p>
+</td>
+<td>
+<p>53,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>49.61</p>
+</td>
+<td>
+<p>49.91</p>
+</td>
+<td>
+<p>49.12</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>11/06/2018</p>
+</td>
+<td>
+<p>40,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>49.80</p>
+</td>
+<td>
+<p>49.97</p>
+</td>
+<td>
+<p>49.42</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>12/06/2018</p>
+</td>
+<td>
+<p>35,000</p>
+</td>
+<td>
+<p>0.01%</p>
+</td>
+<td>
+<p>49.82</p>
+</td>
+<td>
+<p>50.02</p>
+</td>
+<td>
+<p>49.58</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>13/06/2018</p>
+</td>
+<td>
+<p>48,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>50.95</p>
+</td>
+<td>
+<p>51.20</p>
+</td>
+<td>
+<p>49.86</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>14/06/2018</p>
+</td>
+<td>
+<p>56,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>50.74</p>
+</td>
+<td>
+<p>51.12</p>
+</td>
+<td>
+<p>50.16</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>15/06/2018</p>
+</td>
+<td>
+<p>125,000</p>
+</td>
+<td>
+<p>0.05%</p>
+</td>
+<td>
+<p>51.53</p>
+</td>
+<td>
+<p>53.32</p>
+</td>
+<td>
+<p>50.54</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>18/06/2018</p>
+</td>
+<td>
+<p>60,998</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>50.29</p>
+</td>
+<td>
+<p>51.06</p>
+</td>
+<td>
+<p>49.89</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>19/06/2018</p>
+</td>
+<td>
+<p>71,000</p>
+</td>
+<td>
+<p>0.03%</p>
+</td>
+<td>
+<p>49.82</p>
+</td>
+<td>
+<p>50.16</p>
+</td>
+<td>
+<p>49.16</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>20/06/2018</p>
+</td>
+<td>
+<p>100,000</p>
+</td>
+<td>
+<p>0.04%</p>
+</td>
+<td>
+<p>49.68</p>
+</td>
+<td>
+<p>50.38</p>
+</td>
+<td>
+<p>49.41</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>21/06/2018</p>
+</td>
+<td>
+<p>92,000</p>
+</td>
+<td>
+<p>0.04%</p>
+</td>
+<td>
+<p>49.53</p>
+</td>
+<td>
+<p>50.00</p>
+</td>
+<td>
+<p>49.29</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>22/06/2018</p>
+</td>
+<td>
+<p>60,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>49.31</p>
+</td>
+<td>
+<p>49.79</p>
+</td>
+<td>
+<p>49.04</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>25/06/2018</p>
+</td>
+<td>
+<p>55,000</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>48.44</p>
+</td>
+<td>
+<p>49.34</p>
+</td>
+<td>
+<p>48.11</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>26/06/2018</p>
+</td>
+<td>
+<p>53,990</p>
+</td>
+<td>
+<p>0.02%</p>
+</td>
+<td>
+<p>49.04</p>
+</td>
+<td>
+<p>49.61</p>
+</td>
+<td>
+<p>48.22</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>27/06/2018</p>
+</td>
+<td>
+<p>90,000</p>
+</td>
+<td>
+<p>0.04%</p>
+</td>
+<td>
+<p>49.27</p>
+</td>
+<td>
+<p>49.65</p>
+</td>
+<td>
+<p>48.47</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>28/06/2018</p>
+</td>
+<td>
+<p>130,000</p>
+</td>
+<td>
+<p>0.05%</p>
+</td>
+<td>
+<p>48.70</p>
+</td>
+<td>
+<p>49.60</p>
+</td>
+<td>
+<p>48.16</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>29/06/2018</p>
+</td>
+<td>
+<p>109,000</p>
+</td>
+<td>
+<p>0.04%</p>
+</td>
+<td>
+<p>49.21</p>
+</td>
+<td>
+<p>49.67</p>
+</td>
+<td>
+<p>48.90</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>01/08/2018</p>
+</td>
+<td>
+<p>90,000</p>
+</td>
+<td>
+<p>0.04%</p>
+</td>
+<td>
+<p>51.11</p>
+</td>
+<td>
+<p>51.84</p>
+</td>
+<td>
+<p>49.66</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>02/08/2018</p>
+</td>
+<td>
+<p>80,000</p>
+</td>
+<td>
+<p>0.03%</p>
+</td>
+<td>
+<p>50.84</p>
+</td>
+<td>
+<p>51.26</p>
+</td>
+<td>
+<p>50.42</p>
+</td>
+</tr>
+</tbody>
+</table>
+<h2>&nbsp;</h2>
+<p>On 8 February 2018 Umicore placed 22,400,000 new shares with institutional and other investors through an accelerated bookbuild conducted under private placement exemptions. The new shares represented 10% of the number of outstanding shares prior to the transaction (224,000,000). On 12 February 2018 the new shares were admitted to trading on Euronext Brussels. As a result, as from that day, the total number of shares outstanding amounts to 246,400,000.</p>
+<p></p>
+<table>
+<tbody>
+<tr>
+<th>
+<p>Number of shares bought back*</p>
+</th>
+<th>% of total shares</th>
+<th>Average price (&euro;)</th>
+<th>Highest price (&euro;)</th>
+<th>Lowest price (&euro;)</th>
+</tr>
+<tr>
+<td>414,365</td>
+<td>0.37%</td>
+<td>52.63</td>
+<td>70.75</td>
+<td>48.19</td>
+</tr>
+</tbody>
+</table>
+<p><em>* Period before share split: 1/01/2017 - 13/10/2017</em></p>
+<p></p>
+<table>
+<tbody>
+<tr>
+<th>Date of acquisition</th>
+<th>Number of shares</th>
+<th>Average price (&euro;)</th>
+<th>Highest price (&euro;)</th>
+<th>Lowest price (&euro;)</th>
+</tr>
+<tr>
+<td>17/02/2017</td>
+<td>25,000</td>
+<td>49.34</td>
+<td>49.80</td>
+<td>48.99</td>
+</tr>
+<tr>
+<td>20/02/2017</td>
+<td>25,000</td>
+<td>49.82</td>
+<td>50.17</td>
+<td>49.16</td>
+</tr>
+<tr>
+<td>21/02/2017</td>
+<td>30,000</td>
+<td>50.65</td>
+<td>50.94</td>
+<td>50.17</td>
+</tr>
+<tr>
+<td>22/02/2017</td>
+<td>33,000</td>
+<td>50.71</td>
+<td>51.00</td>
+<td>50.44</td>
+</tr>
+<tr>
+<td>23/02/2017</td>
+<td>30,000</td>
+<td>50.39</td>
+<td>50.71</td>
+<td>50.17</td>
+</tr>
+<tr>
+<td>24/02/2017</td>
+<td>10,000</td>
+<td>50.10</td>
+<td>50.52</td>
+<td>49.88</td>
+</tr>
+<tr>
+<td>27/02/2017</td>
+<td>20,000</td>
+<td>49.96</td>
+<td>50.17</td>
+<td>49.67</td>
+</tr>
+<tr>
+<td>28/02/2017</td>
+<td>25,000</td>
+<td>49.73</td>
+<td>50.21</td>
+<td>49.59</td>
+</tr>
+<tr>
+<td>01/03/2017</td>
+<td>25,000</td>
+<td>50.04</td>
+<td>50.30</td>
+<td>49.71</td>
+</tr>
+<tr>
+<td>02/03/2017</td>
+<td>30,000</td>
+<td>49.11</td>
+<td>50.38</td>
+<td>48.60</td>
+</tr>
+<tr>
+<td>03/03/2017</td>
+<td>30,000</td>
+<td>48.67</td>
+<td>48.90</td>
+<td>48.19</td>
+</tr>
+<tr>
+<td>06/03/2017</td>
+<td>25,000</td>
+<td>48.53</td>
+<td>48.28</td>
+<td>48.78</td>
+</tr>
+<tr>
+<td>07/03/2017</td>
+<td>30,000</td>
+<td>49.06</td>
+<td>49.29</td>
+<td>48.46</td>
+</tr>
+<tr>
+<td>14/03/2017</td>
+<td>10,000</td>
+<td>50.49</td>
+<td>50.50</td>
+<td>50.45</td>
+</tr>
+<tr>
+<td>15/03/2017</td>
+<td>1,000</td>
+<td>50.59</td>
+<td>50.62</td>
+<td>50.33</td>
+</tr>
+<tr>
+<td>14/09/2017</td>
+<td>7,000</td>
+<td>67.25</td>
+<td>67.55</td>
+<td>66.85</td>
+</tr>
+<tr>
+<td>15/09/2017</td>
+<td>11</td>
+<td>66.90</td>
+<td>66.90</td>
+<td>66.90</td>
+</tr>
+<tr>
+<td>18/09/2017</td>
+<td>1,509</td>
+<td>67.20</td>
+<td>67.20</td>
+<td>67.18</td>
+</tr>
+<tr>
+<td>19/09/2017</td>
+<td>2,816</td>
+<td>67.39</td>
+<td>67.40</td>
+<td>67.36</td>
+</tr>
+<tr>
+<td>20/09/2017</td>
+<td>246</td>
+<td>67.40</td>
+<td>67.40</td>
+<td>67.40</td>
+</tr>
+<tr>
+<td>21/09/2017</td>
+<td>10,000</td>
+<td>67.70</td>
+<td>68.30</td>
+<td>67.00</td>
+</tr>
+<tr>
+<td>22/09/2017</td>
+<td>12,429</td>
+<td>67.46</td>
+<td>67.80</td>
+<td>67.13</td>
+</tr>
+<tr>
+<td>25/09/2017</td>
+<td>7,000</td>
+<td>68.02</td>
+<td>68.16</td>
+<td>67.52</td>
+</tr>
+<tr>
+<td>26/09/2017</td>
+<td>5,091</td>
+<td>68.72</td>
+<td>68.90</td>
+<td>68.24</td>
+</tr>
+<tr>
+<td>27/09/2017</td>
+<td>7,000</td>
+<td>68.53</td>
+<td>68.90</td>
+<td>68.31</td>
+</tr>
+<tr>
+<td>28/09/2017</td>
+<td>4,737</td>
+<td>68.98</td>
+<td>69.51</td>
+<td>68.51</td>
+</tr>
+<tr>
+<td>29/09/2017</td>
+<td>5,172</td>
+<td>69.66</td>
+<td>69.90</td>
+<td>69.43</td>
+</tr>
+<tr>
+<td>02/10/2017</td>
+<td>2,354</td>
+<td>70.69</td>
+<td>70.75</td>
+<td>70.52</td>
+</tr>
+</tbody>
+</table>
+<h2>2015</h2>
+<table>
+<tbody>
+<tr>
+<th>Number of shares</th>
+<th>% of total shares</th>
+<th>Average price (&euro;)</th>
+<th>Highest price (&euro;)</th>
+<th>Lowest price (&euro;)</th>
+</tr>
+<tr>
+<td>920,000</td>
+<td>0.82%</td>
+<td>36.36</td>
+<td>40.50</td>
+<td>33.01</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<th>Date of acquisition</th>
+<th>Number of shares</th>
+<th>Average price (&euro;)</th>
+<th>Highest price (&euro;)</th>
+<th>Lowest price (&euro;)</th>
+</tr>
+<tr>
+<td>03/08/2015</td>
+<td>20,000</td>
+<td>39.50</td>
+<td>40.50</td>
+<td>39.12</td>
+</tr>
+<tr>
+<td>04/08/2015</td>
+<td>20,000</td>
+<td>39.52</td>
+<td>40.05</td>
+<td>38.95</td>
+</tr>
+<tr>
+<td>05/08/2015</td>
+<td>20,000</td>
+<td>39.75</td>
+<td>40.06</td>
+<td>39.58</td>
+</tr>
+<tr>
+<td>06/08/2015</td>
+<td>20,000</td>
+<td>39.42</td>
+<td>39.68</td>
+<td>39.17</td>
+</tr>
+<tr>
+<td>07/08/2015</td>
+<td>20,000</td>
+<td>38.66</td>
+<td>39.44</td>
+<td>38.41</td>
+</tr>
+<tr>
+<td>10/08/2015</td>
+<td>20,000</td>
+<td>38.84</td>
+<td>39.00</td>
+<td>38.57</td>
+</tr>
+<tr>
+<td>11/08/2015</td>
+<td>21,000</td>
+<td>38.45</td>
+<td>39.23</td>
+<td>37.99</td>
+</tr>
+<tr>
+<td>12/08/2015</td>
+<td>24,000</td>
+<td>36.91</td>
+<td>37.90</td>
+<td>36.66</td>
+</tr>
+<tr>
+<td>13/08/2015</td>
+<td>25,000</td>
+<td>37.66</td>
+<td>38.04</td>
+<td>37.25</td>
+</tr>
+<tr>
+<td>14/08/2015</td>
+<td>20,000</td>
+<td>37.89</td>
+<td>38.07</td>
+<td>37.60</td>
+</tr>
+<tr>
+<td>17/08/2015</td>
+<td>20,000</td>
+<td>38.05</td>
+<td>38.48</td>
+<td>37.83</td>
+</tr>
+<tr>
+<td>18/08/2015</td>
+<td>20,000</td>
+<td>37.88</td>
+<td>38.15</td>
+<td>37.74</td>
+</tr>
+<tr>
+<td>19/08/2015</td>
+<td>25,000</td>
+<td>37.13</td>
+<td>37.69</td>
+<td>36.75</td>
+</tr>
+<tr>
+<td>20/08/2015</td>
+<td>20,000</td>
+<td>36.63</td>
+<td>37.06</td>
+<td>36.37</td>
+</tr>
+<tr>
+<td>21/08/2015</td>
+<td>25,000</td>
+<td>36.02</td>
+<td>36.52</td>
+<td>35.45</td>
+</tr>
+<tr>
+<td>24/08/2015</td>
+<td>35,000</td>
+<td>34.17</td>
+<td>34.85</td>
+<td>33.30</td>
+</tr>
+<tr>
+<td>25/08/2015</td>
+<td>25,000</td>
+<td>35.40</td>
+<td>36.03</td>
+<td>34.63</td>
+</tr>
+<tr>
+<td>26/08/2015</td>
+<td>25,000</td>
+<td>35.05</td>
+<td>35.91</td>
+<td>34.59</td>
+</tr>
+<tr>
+<td>27/08/2015</td>
+<td>20,000</td>
+<td>35.50</td>
+<td>35.70</td>
+<td>35.29</td>
+</tr>
+<tr>
+<td>28/08/2015</td>
+<td>25,000</td>
+<td>35.49</td>
+<td>35.90</td>
+<td>35.15</td>
+</tr>
+<tr>
+<td>31/08/2015</td>
+<td>20,000</td>
+<td>35.63</td>
+<td>35.90</td>
+<td>35.49</td>
+</tr>
+<tr>
+<td>01/09/2015</td>
+<td>25,000</td>
+<td>34.76</td>
+<td>35.40</td>
+<td>34.42</td>
+</tr>
+<tr>
+<td>02/09/2015</td>
+<td>20,000</td>
+<td>35.43</td>
+<td>36.06</td>
+<td>34.84</td>
+</tr>
+<tr>
+<td>03/09/2015</td>
+<td>20,000</td>
+<td>35.85</td>
+<td>36.25</td>
+<td>35.43</td>
+</tr>
+<tr>
+<td>04/09/2015</td>
+<td>20,000</td>
+<td>35.90</td>
+<td>36.11</td>
+<td>35.71</td>
+</tr>
+<tr>
+<td>07/09/2015</td>
+<td>20,000</td>
+<td>36.06</td>
+<td>35.90</td>
+<td>36.33</td>
+</tr>
+<tr>
+<td>08/09/2015</td>
+<td>20,000</td>
+<td>36.82</td>
+<td>37.22</td>
+<td>36.65</td>
+</tr>
+<tr>
+<td>09/09/2015</td>
+<td>20,000</td>
+<td>37.31</td>
+<td>37.56</td>
+<td>37.17</td>
+</tr>
+<tr>
+<td>10/09/2015</td>
+<td>20,000</td>
+<td>36.96</td>
+<td>37.30</td>
+<td>36.74</td>
+</tr>
+<tr>
+<td>11/09/2015</td>
+<td>20,000</td>
+<td>36.60</td>
+<td>36.97</td>
+<td>36.35</td>
+</tr>
+<tr>
+<td>14/09/2015</td>
+<td>10,000</td>
+<td>36.75</td>
+<td>36.91</td>
+<td>36.69</td>
+</tr>
+<tr>
+<td>15/09/2015</td>
+<td>25,000</td>
+<td>36.37</td>
+<td>36.80</td>
+<td>36.00</td>
+</tr>
+<tr>
+<td>16/09/2015</td>
+<td>15,000</td>
+<td>37.14</td>
+<td>37.41</td>
+<td>36.79</td>
+</tr>
+<tr>
+<td>17/09/2015</td>
+<td>15,000</td>
+<td>37.01</td>
+<td>37.38</td>
+<td>36.76</td>
+</tr>
+<tr>
+<td>18/09/2015</td>
+<td>20,000</td>
+<td>36.08</td>
+<td>36.80</td>
+<td>35.62</td>
+</tr>
+<tr>
+<td>22/09/2015</td>
+<td>25,000</td>
+<td>35.26</td>
+<td>36.83</td>
+<td>34.80</td>
+</tr>
+<tr>
+<td>23/09/2015</td>
+<td>15,000</td>
+<td>34.80</td>
+<td>35.05</td>
+<td>34.34</td>
+</tr>
+<tr>
+<td>24/09/2015</td>
+<td>20,000</td>
+<td>33.96</td>
+<td>34.71</td>
+<td>33.43</td>
+</tr>
+<tr>
+<td>25/09/2015</td>
+<td>20,000</td>
+<td>34.81</td>
+<td>35.03</td>
+<td>34.57</td>
+</tr>
+<tr>
+<td>28/09/2015</td>
+<td>25,000</td>
+<td>33.69</td>
+<td>34.72</td>
+<td>33.15</td>
+</tr>
+<tr>
+<td>29/09/2015</td>
+<td>25,000</td>
+<td>33.78</td>
+<td>34.03</td>
+<td>33.01</td>
+</tr>
+<tr>
+<td>30/09/2015</td>
+<td>20,000</td>
+<td>34.39</td>
+<td>34.61</td>
+<td>33.81</td>
+</tr>
+<tr>
+<td>01/10/2015</td>
+<td>15,000</td>
+<td>34.90</td>
+<td>35.46</td>
+<td>34.36</td>
+</tr>
+<tr>
+<td>02/10/2015</td>
+<td>15,000</td>
+<td>34.64</td>
+<td>35.16</td>
+<td>34.04</td>
+</tr>
+</tbody>
+</table>
+<h2>&nbsp;</h2>
+<h2>2014</h2>
+<table>
+<tbody>
+<tr>
+<th>Number of shares</th>
+<th>% of total shares</th>
+<th>Average price (&euro;)</th>
+<th>Highest price (&euro;)</th>
+<th>Lowest price (&euro;)</th>
+</tr>
+<tr>
+<td>2,029,345</td>
+<td>1.81</td>
+<td>35.53</td>
+<td>38.24</td>
+<td>29.96</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<th>Date of acquisition</th>
+<th>Number of shares</th>
+<th>Average price (&euro;)</th>
+<th>Highest price (&euro;)</th>
+<th>Lowest price (&euro;)</th>
+</tr>
+<tr>
+<td>02/01/2014</td>
+<td>15,000</td>
+<td>33.51</td>
+<td>34.10</td>
+<td>33.36</td>
+</tr>
+<tr>
+<td>03/01/2014</td>
+<td>15,000</td>
+<td>33.65</td>
+<td>33.82</td>
+<td>33.34</td>
+</tr>
+<tr>
+<td>07/02/2014</td>
+<td>20,000</td>
+<td>33.06</td>
+<td>33.53</td>
+<td>32.81</td>
+</tr>
+<tr>
+<td>10/02/2014</td>
+<td>20,000</td>
+<td>33.23</td>
+<td>33.52</td>
+<td>32.96</td>
+</tr>
+<tr>
+<td>11/02/2014</td>
+<td>20,000</td>
+<td>33.39</td>
+<td>33.61</td>
+<td>33.10</td>
+</tr>
+<tr>
+<td>12/02/2014</td>
+<td>20,000</td>
+<td>33.80</td>
+<td>34.12</td>
+<td>33.62</td>
+</tr>
+<tr>
+<td>13/02/2014</td>
+<td>20,000</td>
+<td>33.54</td>
+<td>33.84</td>
+<td>33.36</td>
+</tr>
+<tr>
+<td>14/02/2014</td>
+<td>20,000</td>
+<td>33.95</td>
+<td>34.25</td>
+<td>33.71</td>
+</tr>
+<tr>
+<td>18/02/2014</td>
+<td>30,000</td>
+<td>34.31</td>
+<td>34.44</td>
+<td>34.16</td>
+</tr>
+<tr>
+<td>19/02/2014</td>
+<td>30,000</td>
+<td>34.53</td>
+<td>34.66</td>
+<td>34.34</td>
+</tr>
+<tr>
+<td>20/02/2014</td>
+<td>20,000</td>
+<td>34.27</td>
+<td>34.42</td>
+<td>34.09</td>
+</tr>
+<tr>
+<td>21/02/2014</td>
+<td>20,000</td>
+<td>34.59</td>
+<td>34.82</td>
+<td>34.40</td>
+</tr>
+<tr>
+<td>24/02/2014</td>
+<td>20,000</td>
+<td>34.71</td>
+<td>34.90</td>
+<td>34.60</td>
+</tr>
+<tr>
+<td>25/02/2014</td>
+<td>20,000</td>
+<td>35.28</td>
+<td>35.55</td>
+<td>34.68</td>
+</tr>
+<tr>
+<td>26/02/2014</td>
+<td>20,000</td>
+<td>35.33</td>
+<td>35.71</td>
+<td>35.13</td>
+</tr>
+<tr>
+<td>27/02/2014</td>
+<td>20,000</td>
+<td>35.25</td>
+<td>35.55</td>
+<td>34.86</td>
+</tr>
+<tr>
+<td>28/02/2014</td>
+<td>20,000</td>
+<td>35.32</td>
+<td>35.77</td>
+<td>34.98</td>
+</tr>
+<tr>
+<td>03/03/2014</td>
+<td>20,000</td>
+<td>35.83</td>
+<td>35.93</td>
+<td>35.34</td>
+</tr>
+<tr>
+<td>04/03/2014</td>
+<td>20,000</td>
+<td>36.07</td>
+<td>36.35</td>
+<td>35.78</td>
+</tr>
+<tr>
+<td>05/03/2014</td>
+<td>20,000</td>
+<td>36.03</td>
+<td>36.23</td>
+<td>35.86</td>
+</tr>
+<tr>
+<td>06/03/2014</td>
+<td>20,000</td>
+<td>36.10</td>
+<td>36.27</td>
+<td>35.90</td>
+</tr>
+<tr>
+<td>07/03/2014</td>
+<td>20,000</td>
+<td>35.83</td>
+<td>36.19</td>
+<td>35.57</td>
+</tr>
+<tr>
+<td>10/03/2014</td>
+<td>20,000</td>
+<td>35.42</td>
+<td>35.73</td>
+<td>35.20</td>
+</tr>
+<tr>
+<td>11/03/2014</td>
+<td>20,000</td>
+<td>35.58</td>
+<td>35.83</td>
+<td>35.20</td>
+</tr>
+<tr>
+<td>12/03/2014</td>
+<td>20,000</td>
+<td>35.27</td>
+<td>35.51</td>
+<td>35.10</td>
+</tr>
+<tr>
+<td>13/03/2014</td>
+<td>20,000</td>
+<td>35.21</td>
+<td>35.62</td>
+<td>34.85</td>
+</tr>
+<tr>
+<td>14/03/2014</td>
+<td>20,000</td>
+<td>34.85</td>
+<td>35.10</td>
+<td>34.51</td>
+</tr>
+<tr>
+<td>17/03/2014</td>
+<td>20,000</td>
+<td>35.11</td>
+<td>35.26</td>
+<td>34.74</td>
+</tr>
+<tr>
+<td>18/03/2014</td>
+<td>20,000</td>
+<td>35.62</td>
+<td>36.00</td>
+<td>34.95</td>
+</tr>
+<tr>
+<td>19/03/2014</td>
+<td>20,000</td>
+<td>35.59</td>
+<td>35.88</td>
+<td>35.27</td>
+</tr>
+<tr>
+<td>20/03/2014</td>
+<td>20,000</td>
+<td>35.64</td>
+<td>35.90</td>
+<td>35.26</td>
+</tr>
+<tr>
+<td>21/03/2014</td>
+<td>20,000</td>
+<td>35.88</td>
+<td>35.99</td>
+<td>35.73</td>
+</tr>
+<tr>
+<td>24/03/2014</td>
+<td>20,000</td>
+<td>35.59</td>
+<td>36.17</td>
+<td>35.30</td>
+</tr>
+<tr>
+<td>25/03/2014</td>
+<td>20,000</td>
+<td>35.84</td>
+<td>35.99</td>
+<td>35.33</td>
+</tr>
+<tr>
+<td>26/03/2014</td>
+<td>20,000</td>
+<td>36.27</td>
+<td>36.48</td>
+<td>36.00</td>
+</tr>
+<tr>
+<td>27/03/2014</td>
+<td>20,000</td>
+<td>36.30</td>
+<td>36.49</td>
+<td>35.90</td>
+</tr>
+<tr>
+<td>28/03/2014</td>
+<td>20,000</td>
+<td>36.86</td>
+<td>36.99</td>
+<td>36.60</td>
+</tr>
+<tr>
+<td>31/03/2014</td>
+<td>15,000</td>
+<td>36.99</td>
+<td>37.20</td>
+<td>36.65</td>
+</tr>
+<tr>
+<td>01/04/2014</td>
+<td>15,000</td>
+<td>36.97</td>
+<td>37.12</td>
+<td>36.63</td>
+</tr>
+<tr>
+<td>02/04/2014</td>
+<td>15,000</td>
+<td>37.14</td>
+<td>37.25</td>
+<td>36.97</td>
+</tr>
+<tr>
+<td>03/04/2014</td>
+<td>15,000</td>
+<td>37.37</td>
+<td>37.66</td>
+<td>37.00</td>
+</tr>
+<tr>
+<td>04/04/2014</td>
+<td>15,000</td>
+<td>37.82</td>
+<td>38.04</td>
+<td>37.40</td>
+</tr>
+<tr>
+<td>07/04/2014</td>
+<td>15,000</td>
+<td>37.69</td>
+<td>37.81</td>
+<td>37.44</td>
+</tr>
+<tr>
+<td>08/04/2014</td>
+<td>15,000</td>
+<td>38.02</td>
+<td>38.22</td>
+<td>37.61</td>
+</tr>
+<tr>
+<td>09/04/2014</td>
+<td>15,000</td>
+<td>38.05</td>
+<td>38.23</td>
+<td>37.97</td>
+</tr>
+<tr>
+<td>10/04/2014</td>
+<td>15,000</td>
+<td>37.67</td>
+<td>38.24</td>
+<td>37.38</td>
+</tr>
+<tr>
+<td>11/04/2014</td>
+<td>15,000</td>
+<td>37.04</td>
+<td>37.30</td>
+<td>36.83</td>
+</tr>
+<tr>
+<td>14/04/2014</td>
+<td>15,000</td>
+<td>37.36</td>
+<td>37.60</td>
+<td>36.78</td>
+</tr>
+<tr>
+<td>15/04/2014</td>
+<td>15,000</td>
+<td>37.24</td>
+<td>37.74</td>
+<td>36.93</td>
+</tr>
+<tr>
+<td>16/04/2014</td>
+<td>15,000</td>
+<td>37.48</td>
+<td>37.67</td>
+<td>37.25</td>
+</tr>
+<tr>
+<td>17/04/2014</td>
+<td>15,000</td>
+<td>37.53</td>
+<td>37.76</td>
+<td>37.22</td>
+</tr>
+<tr>
+<td>22/04/2014</td>
+<td>15,000</td>
+<td>37.65</td>
+<td>37.91</td>
+<td>37.32</td>
+</tr>
+<tr>
+<td>23/04/2014</td>
+<td>15,000</td>
+<td>37.68</td>
+<td>37.83</td>
+<td>37.43</td>
+</tr>
+<tr>
+<td>24/04/2014</td>
+<td>15,000</td>
+<td>37.51</td>
+<td>37.78</td>
+<td>37.14</td>
+</tr>
+<tr>
+<td>25/04/2014</td>
+<td>15,000</td>
+<td>37.47</td>
+<td>37.60</td>
+<td>37.14</td>
+</tr>
+<tr>
+<td>05/05/2014</td>
+<td>20,000</td>
+<td>34.19</td>
+<td>34.32</td>
+<td>33.97</td>
+</tr>
+<tr>
+<td>06/05/2014</td>
+<td>20,000</td>
+<td>34.05</td>
+<td>34.31</td>
+<td>33.90</td>
+</tr>
+<tr>
+<td>07/05/2014</td>
+<td>20,000</td>
+<td>34.07</td>
+<td>34.19</td>
+<td>33.97</td>
+</tr>
+<tr>
+<td>08/05/2014</td>
+<td>20,000</td>
+<td>34.18</td>
+<td>34.45</td>
+<td>34.00</td>
+</tr>
+<tr>
+<td>09/05/2014</td>
+<td>20,000</td>
+<td>34.22</td>
+<td>34.45</td>
+<td>34.04</td>
+</tr>
+<tr>
+<td>12/05/2014</td>
+<td>20,000</td>
+<td>34.68</td>
+<td>34.82</td>
+<td>34.46</td>
+</tr>
+<tr>
+<td>13/05/2014</td>
+<td>20,000</td>
+<td>34.70</td>
+<td>34.88</td>
+<td>34.57</td>
+</tr>
+<tr>
+<td>14/05/2014</td>
+<td>20,000</td>
+<td>34.83</td>
+<td>34.99</td>
+<td>34.62</td>
+</tr>
+<tr>
+<td>15/05/2014</td>
+<td>20,000</td>
+<td>34.54</td>
+<td>34.89</td>
+<td>34.29</td>
+</tr>
+<tr>
+<td>16/05/2014</td>
+<td>20,000</td>
+<td>34.39</td>
+<td>34.56</td>
+<td>34.03</td>
+</tr>
+<tr>
+<td>19/05/2014</td>
+<td>20,000</td>
+<td>34.57</td>
+<td>34.78</td>
+<td>34.45</td>
+</tr>
+<tr>
+<td>20/05/2014</td>
+<td>20,000</td>
+<td>34.58</td>
+<td>34.73</td>
+<td>34.48</td>
+</tr>
+<tr>
+<td>21/05/2014</td>
+<td>10,000</td>
+<td>34.57</td>
+<td>34.70</td>
+<td>34.35</td>
+</tr>
+<tr>
+<td>22/05/2014</td>
+<td>10,000</td>
+<td>34.69</td>
+<td>35.03</td>
+<td>34.50</td>
+</tr>
+<tr>
+<td>23/05/2014</td>
+<td>10,000</td>
+<td>34.79</td>
+<td>34.95</td>
+<td>34.53</td>
+</tr>
+<tr>
+<td>26/05/2014</td>
+<td>10,000</td>
+<td>35.05</td>
+<td>35.15</td>
+<td>34.96</td>
+</tr>
+<tr>
+<td>27/05/2014</td>
+<td>10,000</td>
+<td>35.19</td>
+<td>35.32</td>
+<td>35.02</td>
+</tr>
+<tr>
+<td>28/05/2014</td>
+<td>10,000</td>
+<td>35.27</td>
+<td>35.37</td>
+<td>35.14</td>
+</tr>
+<tr>
+<td>29/05/2014</td>
+<td>10,000</td>
+<td>35.43</td>
+<td>35.52</td>
+<td>35.26</td>
+</tr>
+<tr>
+<td>30/05/2014</td>
+<td>10,000</td>
+<td>35.30</td>
+<td>35.44</td>
+<td>35.15</td>
+</tr>
+<tr>
+<td>02/06/2014</td>
+<td>10,000</td>
+<td>35.18</td>
+<td>35.45</td>
+<td>35.04</td>
+</tr>
+<tr>
+<td>03/06/2014</td>
+<td>10,000</td>
+<td>34.74</td>
+<td>35.20</td>
+<td>34.61</td>
+</tr>
+<tr>
+<td>04/06/2014</td>
+<td>10,000</td>
+<td>34.42</td>
+<td>34.76</td>
+<td>34.11</td>
+</tr>
+<tr>
+<td>05/06/2014</td>
+<td>10,000</td>
+<td>34.46</td>
+<td>34.61</td>
+<td>34.33</td>
+</tr>
+<tr>
+<td>06/06/2014</td>
+<td>10,000</td>
+<td>34.22</td>
+<td>34.44</td>
+<td>34.09</td>
+</tr>
+<tr>
+<td>09/06/2014</td>
+<td>10,000</td>
+<td>34.31</td>
+<td>34.43</td>
+<td>34.20</td>
+</tr>
+<tr>
+<td>10/06/2014</td>
+<td>10,000</td>
+<td>34.26</td>
+<td>34.50</td>
+<td>34.18</td>
+</tr>
+<tr>
+<td>11/06/2014</td>
+<td>10,000</td>
+<td>34.30</td>
+<td>34.41</td>
+<td>34.19</td>
+</tr>
+<tr>
+<td>12/06/2014</td>
+<td>10,000</td>
+<td>34.15</td>
+<td>34.26</td>
+<td>34.06</td>
+</tr>
+<tr>
+<td>13/06/2014</td>
+<td>10,000</td>
+<td>34.16</td>
+<td>34.22</td>
+<td>34.06</td>
+</tr>
+<tr>
+<td>16/06/2014</td>
+<td>10,000</td>
+<td>34.30</td>
+<td>34.76</td>
+<td>34.20</td>
+</tr>
+<tr>
+<td>17/06/2014</td>
+<td>10,000</td>
+<td>34.42</td>
+<td>34.52</td>
+<td>34.23</td>
+</tr>
+<tr>
+<td>18/06/2014</td>
+<td>10,000</td>
+<td>34.47</td>
+<td>34.80</td>
+<td>34.27</td>
+</tr>
+<tr>
+<td>19/06/2014</td>
+<td>10,000</td>
+<td>34.53</td>
+<td>34.77</td>
+<td>34.42</td>
+</tr>
+<tr>
+<td>20/06/2014</td>
+<td>10,000</td>
+<td>34.67</td>
+<td>34.80</td>
+<td>34.52</td>
+</tr>
+<tr>
+<td>23/06/2014</td>
+<td>10,000</td>
+<td>34.59</td>
+<td>34.73</td>
+<td>34.47</td>
+</tr>
+<tr>
+<td>24/06/2014</td>
+<td>10,000</td>
+<td>34.84</td>
+<td>35.06</td>
+<td>34.59</td>
+</tr>
+<tr>
+<td>25/06/2014</td>
+<td>10,000</td>
+<td>34.38</td>
+<td>34.58</td>
+<td>34.21</td>
+</tr>
+<tr>
+<td>26/06/2014</td>
+<td>10,000</td>
+<td>34.22</td>
+<td>34.36</td>
+<td>34.05</td>
+</tr>
+<tr>
+<td>27/06/2014</td>
+<td>10,000</td>
+<td>33.99</td>
+<td>34.33</td>
+<td>33.84</td>
+</tr>
+<tr>
+<td>04/08/2014</td>
+<td>15,000</td>
+<td>35.70</td>
+<td>35.99</td>
+<td>35.43</td>
+</tr>
+<tr>
+<td>05/08/2014</td>
+<td>15,000</td>
+<td>35.67</td>
+<td>36.19</td>
+<td>35.38</td>
+</tr>
+<tr>
+<td>06/08/2014</td>
+<td>15,000</td>
+<td>35.69</td>
+<td>35.97</td>
+<td>35.14</td>
+</tr>
+<tr>
+<td>07/08/2014</td>
+<td>15,000</td>
+<td>35.77</td>
+<td>36.29</td>
+<td>35.54</td>
+</tr>
+<tr>
+<td>08/08/2014</td>
+<td>15,000</td>
+<td>35.60</td>
+<td>35.79</td>
+<td>35.29</td>
+</tr>
+<tr>
+<td>11/08/2014</td>
+<td>15,000</td>
+<td>35.77</td>
+<td>35.96</td>
+<td>35.52</td>
+</tr>
+<tr>
+<td>12/08/2014</td>
+<td>15,000</td>
+<td>35.41</td>
+<td>35.78</td>
+<td>35.16</td>
+</tr>
+<tr>
+<td>13/08/2014</td>
+<td>15,000</td>
+<td>36.12</td>
+<td>36.28</td>
+<td>35.76</td>
+</tr>
+<tr>
+<td>14/08/2014</td>
+<td>15,000</td>
+<td>36.53</td>
+<td>36.73</td>
+<td>36.06</td>
+</tr>
+<tr>
+<td>15/08/2014</td>
+<td>15,000</td>
+<td>36.54</td>
+<td>36.86</td>
+<td>36.17</td>
+</tr>
+<tr>
+<td>18/08/2014</td>
+<td>15,000</td>
+<td>36.67</td>
+<td>36.89</td>
+<td>36.57</td>
+</tr>
+<tr>
+<td>19/08/2014</td>
+<td>15,000</td>
+<td>36.64</td>
+<td>36.79</td>
+<td>36.55</td>
+</tr>
+<tr>
+<td>20/08/2014</td>
+<td>15,000</td>
+<td>36.58</td>
+<td>36.64</td>
+<td>36.43</td>
+</tr>
+<tr>
+<td>21/08/2014</td>
+<td>15,000</td>
+<td>36.61</td>
+<td>36.80</td>
+<td>36.53</td>
+</tr>
+<tr>
+<td>22/08/2014</td>
+<td>15,000</td>
+<td>36.85</td>
+<td>36.93</td>
+<td>36.60</td>
+</tr>
+<tr>
+<td>25/08/2014</td>
+<td>15,000</td>
+<td>36.40</td>
+<td>36.80</td>
+<td>36.13</td>
+</tr>
+<tr>
+<td>26/08/2014</td>
+<td>15,000</td>
+<td>36.86</td>
+<td>37.08</td>
+<td>36.35</td>
+</tr>
+<tr>
+<td>27/08/2014</td>
+<td>15,000</td>
+<td>37.15</td>
+<td>37.22</td>
+<td>37.00</td>
+</tr>
+<tr>
+<td>28/08/2014</td>
+<td>15,000</td>
+<td>36.67</td>
+<td>36.85</td>
+<td>36.58</td>
+</tr>
+<tr>
+<td>29/08/2014</td>
+<td>15,000</td>
+<td>36.77</td>
+<td>36.83</td>
+<td>36.69</td>
+</tr>
+<tr>
+<td>01/09/2014</td>
+<td>15,000</td>
+<td>36.38</td>
+<td>36.51</td>
+<td>36.20</td>
+</tr>
+<tr>
+<td>02/09/2014</td>
+<td>15,000</td>
+<td>36.43</td>
+<td>36.57</td>
+<td>36.29</td>
+</tr>
+<tr>
+<td>03/09/2014</td>
+<td>15,000</td>
+<td>36.81</td>
+<td>36.91</td>
+<td>36.62</td>
+</tr>
+<tr>
+<td>04/09/2014</td>
+<td>10,000</td>
+<td>36.92</td>
+<td>37.07</td>
+<td>36.75</td>
+</tr>
+<tr>
+<td>05/09/2014</td>
+<td>10,000</td>
+<td>36.76</td>
+<td>36.98</td>
+<td>36.69</td>
+</tr>
+<tr>
+<td>08/09/2014</td>
+<td>8,000</td>
+<td>36.49</td>
+<td>36.63</td>
+<td>36.26</td>
+</tr>
+<tr>
+<td>09/09/2014</td>
+<td>8,000</td>
+<td>36.29</td>
+<td>36.36</td>
+<td>36.23</td>
+</tr>
+<tr>
+<td>10/09/2014</td>
+<td>8,000</td>
+<td>36.28</td>
+<td>36.37</td>
+<td>36.15</td>
+</tr>
+<tr>
+<td>11/09/2014</td>
+<td>8,000</td>
+<td>36.12</td>
+<td>36.41</td>
+<td>35.92</td>
+</tr>
+<tr>
+<td>12/09/2014</td>
+<td>8,000</td>
+<td>36.17</td>
+<td>36.26</td>
+<td>36.10</td>
+</tr>
+<tr>
+<td>15/09/2014</td>
+<td>8,000</td>
+<td>35.94</td>
+<td>36.02</td>
+<td>35.87</td>
+</tr>
+<tr>
+<td>16/09/2014</td>
+<td>8,000</td>
+<td>35.97</td>
+<td>36.11</td>
+<td>35.86</td>
+</tr>
+<tr>
+<td>17/09/2014</td>
+<td>8,000</td>
+<td>36.51</td>
+<td>36.63</td>
+<td>36.40</td>
+</tr>
+<tr>
+<td>18/09/2014</td>
+<td>8,000</td>
+<td>36.55</td>
+<td>36.63</td>
+<td>36.47</td>
+</tr>
+<tr>
+<td>19/09/2014</td>
+<td>8,000</td>
+<td>36.60</td>
+<td>36.82</td>
+<td>36.39</td>
+</tr>
+<tr>
+<td>22/09/2014</td>
+<td>8,000</td>
+<td>36.25</td>
+<td>36.47</td>
+<td>36.00</td>
+</tr>
+<tr>
+<td>23/09/2014</td>
+<td>8,000</td>
+<td>35.99</td>
+<td>36.40</td>
+<td>35.82</td>
+</tr>
+<tr>
+<td>24/09/2014</td>
+<td>8,000</td>
+<td>35.86</td>
+<td>36.13</td>
+<td>35.61</td>
+</tr>
+<tr>
+<td>25/09/2014</td>
+<td>8,000</td>
+<td>35.97</td>
+<td>36.24</td>
+<td>35.56</td>
+</tr>
+<tr>
+<td>26/09/2014</td>
+<td>8,000</td>
+<td>35.42</td>
+<td>35.58</td>
+<td>35.32</td>
+</tr>
+<tr>
+<td>16/10/2014</td>
+<td>4,345</td>
+<td>29.98</td>
+<td>29.98</td>
+<td>29.96</td>
+</tr>
+</tbody>
+</table>
+<h2>&nbsp;</h2>
+<h2>2013</h2>
+<table>
+<tbody>
+<tr>
+<th>Number of shares</th>
+<th>% of total shares</th>
+<th>Average price (&euro;)</th>
+<th>Highest price (&euro;)</th>
+<th>Lowest price (&euro;)</th>
+</tr>
+<tr>
+<td>2,437,385</td>
+<td>2.03%</td>
+<td>34.75</td>
+<td>38.15</td>
+<td>31.27</td>
+</tr>
+</tbody>
+</table>
+<p></p>      </div>
+            <div class="download-multilanguage links">
+<a href="/en/investors/share-information/share-buy-back?lang=en">English</a><a href="/en/investors/share-information/share-buy-back?lang=fr">French</a><a href="/en/investors/share-information/share-buy-back?lang=nl">Dutch</a></div>  </div>
+  <div class="sub-footer padding">
+	<div class="cols-2-1">
+		<div>
+			<div class="white padding contact-box">
+				<h3 class="green">For all investment related questions please contact</h3>
+				<div class="blocks-2">
+                                        <div class="contact-press"><span class="name blue">Evelien Goovaerts</span>
+						<span>Head of Investor Relations</span>						<span><a href="mailto:investorrelations@eu.umicore.com">investorrelations@eu.umicore.com</a></span>						<span>Tel. +32 2 227 78 38</span>																																			</div>
+					                    <div class="contact-press"><span class="name blue">Eva Behaeghe</span>
+						<span>Investor Relations Manager</span>						<span><a href="mailto:investorrelations@eu.umicore.com">investorrelations@eu.umicore.com</a></span>						<span>Tel. +32 2 227 70 68</span>																																			</div>
+					                    <div class="contact-press"><span class="name blue">Aurélie Bultynck</span>
+						<span>Investor Relations Manager</span>						<span><a href="mailto:investorrelations@eu.umicore.com">investorrelations@eu.umicore.com</a></span>						<span>Tel. +32 2 227 74 34</span>																																			</div>
+									</div>
+			</div>
+			<div class="grey-light padding" id="follow-us-container">
+				<h3 class="black no-margin">Follow us</h3>
+				<a class="icon-rss" id="rss" href="/en/investors/press.xml"></a>				<a href="https://twitter.com/umicoregroup" taget="_blank" id="twitter" class="icon-twitter"></a>
+				<a href="" class="btn blue subscribe-media">Subscribe<span class="icon-arrow_r icon"></span></a>
+			</div>
+		</div><div class="last-child">
+			<div class="stock-data padding white share-price-async">
+                <h3 class="black" id="stock-quote-date">Stock quote <span class="date">--/--/---- --:--</span></h3>
+				<p class="price no-margin">--.--- EUR</p>
+	            <p class="var-j-1">--.-- %</p>
+				<a href="/en/investors/share-price/" class="read-more blue no-margin">More info<span class="icon-arrow_r icon"></span></a>
+			</div>
+			<div class="report badge green padding">
+				<h3 class="white">Annual report</h3>
+				<a href="https://annualreport.umicore.com" class="download link white" target="_blank">Visit report<span class="icon-arrow_r icon"></span></a>
+			</div>
+		</div>
+	</div>
+</div></div>
+</div>
+</div>
+</main>
+
+
+
+<footer>
+    <div class="wrapper">
+        <div class="clear">
+            <div class="col-33">
+                <h3>Business Units</h3>
+                <ul>
+                    <li><span class="footer-subheader">Catalysis</span>
+                        <ul>
+                            <li><a href="http://www.umicore.com/en/bu/automotive">Automotive Catalysts </a></li><li><a href="http://www.umicore.com/en/bu/precious-metals-chemistry">Precious Metals Chemistry</a></li>                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><span class="footer-subheader">Energy &amp; Surface Technologies</span>
+                        <ul>
+                            <li><a href="http://www.umicore.com/en/bu/rechargeable-battery-materials">Rechargeable Battery Materials</a></li><li><a href="http://www.umicore.com/en/bu/electro-optic-materials">Electro-Optic Materials</a></li><li><a href="http://www.umicore.com/en/bu/electroplating">Electroplating</a></li><li><a href="http://www.umicore.com/en/bu/cobalt-specialty-materials">Cobalt & Specialty Materials</a></li>                        </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li><span class="footer-subheader">Sales offices</span>
+                        <ul>
+                            <li>
+                                <a href="http://www.umicore.com/en/ums">Umicore Marketing Services</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-33">
+                <h3>&nbsp;</h3>
+                <ul>
+                    <li><span class="footer-subheader">Recycling</span>
+                        <ul>
+                            <li><a href="http://www.umicore.com/en/bu/precious-metals-refining">Precious Metals Refining</a></li><li><a href="http://www.umicore.com/en/bu/precious-metals-management">Precious Metals Management</a></li><li><a href="http://www.umicore.com/en/bu/jewellery-industrial-metals">Jewelry & Industrial Metals</a></li>                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-33">
+                <h3>Find a career in:</h3>
+                <div class="careers-footer">
+                    <a href="http://www.umicore.be/nl/jobs/" target="_blank">
+                        <img src="/img/country-outline-belgium.svg">
+                        <span>Belgium</span>
+                    </a><a href="http://www.umicore.de/de/karriere/" target="_blank">
+                        <img src="/img/country-outline-germany.svg">
+                        <span>Germany</span>
+                    </a><a href="http://www.umicore.com/en/careers/" target="_blank">
+                        <img src="/img/country-outline-globe.svg">
+                        <span>World</span>
+                    </a>
+                </div>
+                <h3>REGIONAL WEBSITES</h3>
+                <div class="clear regional-websites">
+                    <div class="col-50"><a href="http://www.umicore.be" target="_blank">Belgium</a></div>
+                    <div class="col-50"><a href="http://www.umicore.de" target="_blank">Germany</a></div>
+                    <div class="col-50"><a href="http://www.umicore.com.br" target="_blank">Brazil</a></div>
+                    <div class="col-50"><a href="http://www.umicore.cn" target="_blank">China</a></div>
+                    <div class="col-50"><a href="http://www.umicore.jp" target="_blank">Japan</a></div>
+                    <div class="col-50"><a href="http://www.umicore.fr" target="_blank">France</a></div>
+                    <div class="col-50"><a href="http://www.umicore.kr" target="_blank">Korea</a></div>
+                    <div class="col-50"><a href="http://www.umicore.co.th" target="_blank">Thailand</a></div>
+                </div>
+                <a href="http://www.umicore.com" class="button short visit-group" style="background-image:url(/img/rebranding/button-short-bg.png);">visit our group website</a>
+            </div>
+        </div>
+
+        <div class="disclaimer clear">
+            <div class="social-links">
+                <ul>
+                                            <li><a target="_blank" href="https://twitter.com/UmicoreGroup"><img src="/img/rebranding/twitter-share.png"></a></li>
+                                                                <li><a target="_blank" href="https://www.linkedin.com/company/umicore"><img src="/img/rebranding/in-share.png"></a></li>
+                                                                <li><a target="_blank" href="https://www.facebook.com/Umicore"><img src="/img/rebranding/fb-share.png"></a></li>
+                        <li><a target="_blank" href="https://www.youtube.com/user/umicore"><img src="/img/rebranding/social-youtube.png"></a></li>
+                                    </ul>
+            </div>
+            <a href="http://www.umicore.com/en/terms-of-use/">Terms of Use</a>
+            <a href="/en/privacy-and-cookie-policy/">Privacy and Cookie Notice</a>
+            <a href="http://www.umicore.com/general-terms-conditions">General Terms & Conditions </a>                                    <a href="/storage/main/umicore-sustainable-procurement-charter-2017.pdf" title="storage/main/umicore-sustainable-procurement-charter-2017.pdf" target="_blank">Sustainable Procurement Charter</a>            <a href="http://www.umicore.com/en/supplier-zone/">Supplier Zone</a>
+            <a href="#" class="cookie-settings">Cookie Settings</a>
+        </div>
+    </div>
+</footer>
+    
+    
+        <div class="cookiebanner ">
+
+    <div class="banner">
+
+        <div class="inner">
+
+            <form method="POST" action="https://www.umicore.com/en/accept-cookies/">
+                
+                <div class="header"><img src="/img/umicore-logo-2017.png" alt="Umicore logo"></div>
+                    
+                <div class="body body-intro">
+
+    <p>Umicore uses certain monitoring and tracking technologies such as cookies. These technologies are used in order to maintain, provide and improve our services on an ongoing basis, and in order to provide our web visitors with a better experience.</p>
+<p>By clicking on the button accept you agree to the use of these cookies while using the website. For further information regarding how we use cookies and other tracking technologies, please see section 10 of our website <a href="http://www.umicore.com/en/privacy-and-cookie-policy/" target="_blank" rel="noopener">privacy notice</a>.&nbsp;</p>
+</div>
+
+<div class="body body-settings">
+    
+    <div class="cookie-type cookie-type-necessary">
+
+        <div class="col-left">
+            <input type="checkbox"
+                name="necessary"
+                checked
+                class="checkbox-switch"
+                data-on="On"
+                data-off="Off">
+        </div>
+
+        <div class="col-right">
+            <h3 class="cookie-type-title">Necessary Cookies (required)</h3>
+            <div>
+                Necessary cookies are essential and help you navigate our website. This helps to support security and basic functionality and are necessary for the proper operation of our website, so if you block these cookies we can't guarantee your use or the security during your visit.             </div>
+        </div>
+
+    </div>
+
+    <div class="cookie-type">
+        
+        <div class="col-left">
+            <input type="checkbox"
+                name="analytics"
+                                class="checkbox-switch"
+                data-on="On"
+                data-off="Off">
+        </div>
+
+        <div class="col-right">
+            <h3 class="cookie-type-title">Performance cookies</h3>
+            <div>
+                Cookies that help us to understand the behaviour of users of our website. This allows us to continuously improve our website to provide the best information in support of our project aims. These cookies are also used to help us understand how effective our website is. For instance these cookies tell us which pages visitors go to most often and if they get error messages from web pages.             </div>
+        </div>
+
+    </div>
+        
+    <div class="cookie-type">
+        
+        <div class="col-left">
+            <input type="checkbox"
+                name="tracking"
+                                class="checkbox-switch"
+                data-on="On"
+                data-off="Off">
+        </div>
+
+        <div class="col-right">
+            <h3 class="cookie-type-title">Targeting Cookies</h3>
+            <div>
+                Cookies that deliver content to you based on your interests, which are assumed from your browsing history.  Most Targeting Cookies track users via their IP address and, thus, may collect some Personal Data.  Personal Data collected by Targeting Cookies may be shared with third-parties, such as advertisers.            </div>
+        </div>
+
+    </div>
+
+</div>
+                <div class="footer footer-intro">
+    
+    <button type="button" class="btn btn-accept-all">Accept all</button>
+
+    <button type="button" class="btn btn-settings">Change settings</button>
+
+</div>
+
+<div class="footer footer-settings">
+    
+    <button type="button" class="btn btn-back">Return</button>
+
+    <button type="button" class="btn btn-accept">Accept</button>
+
+</div>                
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+    
+
+</div>
+<nav id="mobile-menu">
+    <ul>
+        <li><a href="/en/">Home</a></li>
+
+        <!-- industries -->
+                        <li><span>Industries</span>
+        <ul>
+        	<li><a href="/en/industries/">Industries</a>        				<li>
+					<span>Energy</span>
+											<ul>
+							<li><a href="/en/industries/energy/">Energy</a></li>
+															<li><a href="/en/industries/energy/rechargeable-battery-materials/">Rechargeable battery materials for electrified mobility and portable electronics</a></li>
+																<li><a href="/en/industries/energy/electro-optic-materials/">Germanium substrates for space & terrestrial photovoltaics</a></li>
+																<li><a href="/en/industries/energy/cobalt-specialty-materials/">Cobalt and nickel compounds as precursors for Rechargeable Battery Materials</a></li>
+																<li><a href="/en/industries/energy/automotive/">Stationary emissions control catalysts for power generation</a></li>
+																<li><a href="/en/industries/energy/jewellery-industrial-metals/">High conductivity materials such as copper, silver, silver alloys and composites for battery interconnects and tab stock</a></li>
+														</ul>
+									</li>
+						<li>
+					<span>Automotive</span>
+											<ul>
+							<li><a href="/en/industries/automotive/">Automotive</a></li>
+															<li><a href="/en/industries/automotive/automotive/">Emission control catalysts for cleaner air</a></li>
+																<li><a href="/en/industries/automotive/cobalt-specialty-materials/">Recycling of end-of-life rechargeable batteries</a></li>
+																<li><a href="/en/industries/automotive/rechargeable-battery-materials/">Rechargeable battery materials for electrified mobility </a></li>
+																<li><a href="/en/industries/automotive/precious-metals-refining/">Recycling of catalysts to recover precious metals</a></li>
+																<li><a href="/en/industries/automotive/cobalt-specialty-materials/">Cobalt compounds for better tires</a></li>
+																<li><a href="/en/industries/automotive/cobalt-specialty-materials/">Cobalt & nickel compounds to remove impurities from petroleum</a></li>
+																<li><a href="/en/industries/automotive/automotive/">Emissions control catalysts for marine engines</a></li>
+																<li><a href="/en/industries/automotive/jewellery-industrial-metals/">Specialty composite materials for automotive electro-mechanical assemblies, sensors and connectors</a></li>
+														</ul>
+									</li>
+						<li>
+					<span>Recycling </span>
+											<ul>
+							<li><a href="/en/industries/recycling/">Recycling </a></li>
+															<li><a href="/en/industries/recycling/precious-metals-refining/">Recovery of precious & specialty metals</a></li>
+																<li><a href="/en/industries/recycling/cobalt-specialty-materials/">Recycling of end-of-life rechargeable batteries</a></li>
+																<li><a href="/en/industries/recycling/electro-optic-materials/">Recycling germanium from electro-optic materials</a></li>
+																<li><a href="/en/industries/recycling/jewellery-industrial-metals/">Recycling jewelry for re-use of precious metals</a></li>
+																<li><a href="/en/industries/recycling/cobalt-specialty-materials/">Recycling of cobalt out of spent catalyst and Tungsten Carbide recycling side flows </a></li>
+																<li><a href="/en/industries/recycling/automotive/">Stationary emissions control catalysts for waste incineration & recycling </a></li>
+														</ul>
+									</li>
+						<li>
+					<span>Chemicals</span>
+											<ul>
+							<li><a href="/en/industries/chemicals/">Chemicals</a></li>
+															<li><a href="/en/industries/chemicals/precious-metals-refining/">Recycling industrial catalysts</a></li>
+																<li><a href="/en/industries/chemicals/cobalt-specialty-materials/">Nickel chemicals used in surface treatment applications</a></li>
+																<li><a href="/en/industries/chemicals/precious-metals-chemistry/">Precious metals chemicals & catalysts</a></li>
+																<li><a href="/en/industries/chemicals/precious-metals-chemistry/">High potency active pharmaceutical ingredients</a></li>
+																<li><a href="/en/industries/chemicals/automotive/">Stationary emissions control catalysts for chemical plants</a></li>
+														</ul>
+									</li>
+						<li>
+					<span>Manufacturing</span>
+											<ul>
+							<li><a href="/en/industries/manufacturing/">Manufacturing</a></li>
+															<li><a href="/en/industries/manufacturing/cobalt-specialty-materials/">Cobalt and pre-alloyed powders for stone and concrete cutting tools</a></li>
+																<li><a href="/en/industries/manufacturing/cobalt-specialty-materials/">Cobalt and nickel compounds for the production of colors used in ceramics</a></li>
+																<li><a href="/en/industries/manufacturing/cobalt-specialty-materials/">Cobalt as chemical to ensure fast drying of paints</a></li>
+																<li><a href="/en/industries/manufacturing/automotive/">Stationary emissions control catalysts for steel mills, glass production, carbon black manufacturing and paper mills</a></li>
+														</ul>
+									</li>
+						<li>
+					<span>Optics and displays</span>
+											<ul>
+							<li><a href="/en/industries/optics-and-displays/">Optics and displays</a></li>
+															<li><a href="/en/industries/optics-and-displays/electro-optic-materials/">Optical lenses for clearer night vision & thermal imaging</a></li>
+																<li><a href="/en/industries/optics-and-displays/precious-metals-chemistry/">Catalysts for TFT & organic LED displays</a></li>
+														</ul>
+									</li>
+						<li>
+					<span>Precious metals</span>
+											<ul>
+							<li><a href="/en/industries/precious-metals/">Precious metals</a></li>
+															<li><a href="/en/industries/precious-metals/precious-metals-refining/">Recycling and recovering precious & specialty metals</a></li>
+																<li><a href="/en/industries/precious-metals/precious-metals-management/">Physical delivery and price-hedging of precious metals</a></li>
+																<li><a href="/en/industries/precious-metals/jewellery-industrial-metals/">Precious metals for jewelry and industrial applications</a></li>
+																<li><a href="/en/industries/precious-metals/jewellery-industrial-metals/">Electrical contact materials made from precious metal alloys and composites</a></li>
+														</ul>
+									</li>
+						<li>
+					<span>Electronics</span>
+											<ul>
+							<li><a href="/en/industries/electronics/">Electronics</a></li>
+															<li><a href="/en/industries/electronics/rechargeable-battery-materials/">Rechargeable battery materials for portable electronics</a></li>
+																<li><a href="/en/industries/electronics/precious-metals-refining/">Recycling and recovering precious & specialty metals</a></li>
+																<li><a href="/en/industries/electronics/electro-optic-materials/">Thin film coatings for semiconductors</a></li>
+																<li><a href="/en/industries/electronics/electroplating/">Electroplating solutions for technical and decorative applications</a></li>
+														</ul>
+									</li>
+				</ul>
+		</li>
+		
+                        <li>
+                            <span>About</span>
+                <ul>
+                    <li><a href="/en/about/">About</a></li>
+                                    <li>
+                                                <span>About Umicore</span>
+                        <ul>
+                        <li><a href="/en/about/about-umicore/">About Umicore</a></li>
+                                                    <li>
+                                                            <a href="/en/about/about-umicore/sustainability/">Sustainability </a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/about-umicore/innovation/">Innovation</a>                                                        </li>
+                                                </ul>
+                                            </li>
+                                    <li>
+                                                    <a href="/en/about/history/">History</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/about/elements/">From Ag to Zn</a>                                            </li>
+                                    <li>
+                                                <span>The Umicore Way</span>
+                        <ul>
+                        <li><a href="/en/about/the-umicore-way/">The Umicore Way</a></li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#materialsforabetterlife">Materials for a better life</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#customers">Customers</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#values">Values</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#employees">Employees</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#shareholders">Shareholders</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#environment">Environment</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#society">Society</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#organisation">Organisation</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/about/the-umicore-way/#businessintegrity">Business integrity</a>                                                        </li>
+                                                </ul>
+                                            </li>
+                                                </ul>
+                    </li>
+                        <li>
+                            <span>Cases</span>
+                <ul>
+                    <li><a href="/en/cases/">Cases</a></li>
+                                    <li>
+                                                    <a href="/en/cases/sustainable-procurement-framework-for-cobalt/">Sustainable Procurement Framework for Cobalt</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/cases/hoboken/">Hoboken expansion</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/cases/horizon-2020/">Horizon 2020</a>                                            </li>
+                                    <li>
+                                                <span>Powered by Umicore 2018</span>
+                        <ul>
+                        <li><a href="/en/cases/powered-by-umicore-2018/">Powered by Umicore 2018</a></li>
+                                                    <li>
+                                                            <a href="/en/cases/powered-by-umicore-2018/emotorsports-cologne/">eMotorsports Cologne</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/cases/powered-by-umicore-2018/uantwerp-solar-boat-team/">UAntwerp Solar Boat Team</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/cases/powered-by-umicore-2018/formula-electric-belgium/">Formula Electric Belgium</a>                                                        </li>
+                                                </ul>
+                                            </li>
+                                    <li>
+                                                    <a href="/en/cases/mahindra-racing/">Mahindra Racing</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/cases/formula-e/">Formula E</a>                                            </li>
+                                                </ul>
+                    </li>
+                        <li>
+                            <span>Media</span>
+                <ul>
+                    <li><a href="/en/media/">Media</a></li>
+                                    <li>
+                                                    <a href="/en/media/media/">Media Gallery</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/media/discover/">Discover all stories</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/media/topics-of-interest/">Topics of interest</a>                                            </li>
+                                                </ul>
+                    </li>
+                        <li>
+                            <span>Investors</span>
+                <ul>
+                    <li><a href="/en/investors/">Investors</a></li>
+                                    <li>
+                                                    <a href="/en/investors/financial-calendar/">Financial calendar</a>                                            </li>
+                                    <li>
+                                                <span>Financial data</span>
+                        <ul>
+                        <li><a href="/en/investors/financial-data/">Financial data</a></li>
+                                                    <li>
+                                                            <a href="/en/investors/financial-data/key-figures/">Key Figures</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/financial-data/income-statement/">Income Statement</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/financial-data/balance-sheet/">Balance Sheet</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/financial-data/cash-flow/">Cash Flow</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/financial-data/glossary/">Glossary</a>                                                        </li>
+                                                </ul>
+                                            </li>
+                                    <li>
+                                                    <a href="/en/investors/share-price/">Share price</a>                                            </li>
+                                    <li>
+                                                <span>News & Results</span>
+                        <ul>
+                        <li><a href="/en/investors/news-results/">News & Results</a></li>
+                                                    <li>
+                                                            <a href="/en/investors/news-results/full-year-results-2019-webcast/">Full year results 2019 webcast</a>                                                        </li>
+                                                    <li>
+                                                            <a target="_" href="http://annualreport.umicore.com/">Annual report</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/news-results/presentations/">Presentations</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/cases/horizon-2020/">Capital Markets Day 2015</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/cases/capital-markets-day-2018/">Capital Markets Day 2018</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/news-results/results/">Results</a>                                                        </li>
+                                                </ul>
+                                            </li>
+                                    <li>
+                                                    <a href="/en/investors/fact-sheet/">Fact sheet</a>                                            </li>
+                                    <li>
+                                                <span>Share information</span>
+                        <ul>
+                        <li><a href="/en/investors/share-information/">Share information</a></li>
+                                                    <li>
+                                                            <a href="/en/investors/share-information/analyst-research-and-consensus/">Analyst research and consensus</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/share-information/dividend-information/">Dividend information</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/share-information/shareholder-structure/">Shareholder structure</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/share-information/share-buy-back/">Share buy-back</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/share-information/data-per-share/">Data per share</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/investors/share-information/old-shares/">Old shares</a>                                                        </li>
+                                                </ul>
+                                            </li>
+                                    <li>
+                                                    <a href="/en/investors/investment-case/">Why invest in Umicore</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/investors/shareholder-meetings/">Shareholder Meetings</a>                                            </li>
+                                                </ul>
+                    </li>
+                        <li>
+                            <span>Governance</span>
+                <ul>
+                    <li><a href="/en/governance/">Governance</a></li>
+                                    <li>
+                                                    <a href="/en/governance/board-of-directors/">Board of Directors</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/governance/executive-committee/">Executive Committee</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/governance/corporate-governance-charter/">Corporate Governance Charter</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/governance/supervision-and-compliance/">Supervision and compliance</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/governance/articles-of-association/">Articles of Association</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/governance/code-of-conduct/">Code of Conduct</a>                                            </li>
+                                    <li>
+                                                    <a href="/en/governance/shareholder-rights/">Shareholder Rights</a>                                            </li>
+                                                </ul>
+                    </li>
+                        <li>
+                            <span>Careers</span>
+                <ul>
+                    <li><a href="/en/careers/">Careers</a></li>
+                                    <li>
+                                                <span>Working at Umicore</span>
+                        <ul>
+                        <li><a href="/en/careers/working-at-umicore/">Working at Umicore</a></li>
+                                                    <li>
+                                                            <a href="/en/careers/working-at-umicore/why-umicore/">Why Umicore</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/careers/working-at-umicore/what-we-do/">What we do</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/careers/working-at-umicore/what-you-could-do/">What you could do</a>                                                        </li>
+                                                    <li>
+                                                            <a href="/en/careers/working-at-umicore/what-we-value/">What we value</a>                                                        </li>
+                                                </ul>
+                                            </li>
+                                    <li>
+                                                    <a href="/en/careers/testimonials/">Testimonials</a>                                            </li>
+                                                </ul>
+                    </li>
+                        <li>
+                            <a href="/en/contact/">Contact</a>                    </li>
+            </ul>
+</nav>
+
+<script>window.fw=(window.fw||{});window.fw.settings=(window.fw.settings||{});window.fw.settings.base="\/";window.fw.settings.current="https:\/\/www.umicore.com\/en\/investors\/share-information\/share-buy-back\/";window.fw.settings.language="en";window.fw.settings.now=1588061109;</script><script>window.fw=(window.fw||{});window.fw.settings=(window.fw.settings||{});window.fw.settings.project="main";window.fw.settings.fullPath="\/en\/investors\/share-information\/share-buy-back\/";</script><script src="/js/lib/jquery-1.12.4.min.js?1586248789"></script><script src="/js/lib/jquery-ui-1.10.3.min.js?1586248789"></script><script src="/js/main.min.js?1586265683"></script><script src="/js/webanalytics.js?1512985664"></script><script>waSendID(ga, true);</script>  </body>
+</html>

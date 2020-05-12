@@ -1,0 +1,1919 @@
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+    <head>
+        
+<!-- BEGIN LivePerson Monitor. -->
+        <script type="text/javascript"> window.lpTag=window.lpTag||{};if(typeof window.lpTag._tagCount==='undefined'){window.lpTag={site:'33532066'||'',section:lpTag.section||'',autoStart:lpTag.autoStart===false?false:true,ovr:lpTag.ovr||{},_v:'1.6.0',_tagCount:1,protocol:'https:',events:{bind:function(app,ev,fn){lpTag.defer(function(){lpTag.events.bind(app,ev,fn);},0);},trigger:function(app,ev,json){lpTag.defer(function(){lpTag.events.trigger(app,ev,json);},1);}},defer:function(fn,fnType){if(fnType==0){this._defB=this._defB||[];this._defB.push(fn);}else if(fnType==1){this._defT=this._defT||[];this._defT.push(fn);}else{this._defL=this._defL||[];this._defL.push(fn);}},load:function(src,chr,id){var t=this;setTimeout(function(){t._load(src,chr,id);},0);},_load:function(src,chr,id){var url=src;if(!src){url=this.protocol+'//'+((this.ovr&&this.ovr.domain)?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site;}var s=document.createElement('script');s.setAttribute('charset',chr?chr:'UTF-8');if(id){s.setAttribute('id',id);}s.setAttribute('src',url);document.getElementsByTagName('head').item(0).appendChild(s);},init:function(){this._timing=this._timing||{};this._timing.start=(new Date()).getTime();var that=this;if(window.attachEvent){window.attachEvent('onload',function(){that._domReady('domReady');});}else{window.addEventListener('DOMContentLoaded',function(){that._domReady('contReady');},false);window.addEventListener('load',function(){that._domReady('domReady');},false);}if(typeof(window._lptStop)=='undefined'){this.load();}},start:function(){this.autoStart=true;},_domReady:function(n){if(!this.isDom){this.isDom=true;this.events.trigger('LPT','DOM_READY',{t:n});}this._timing[n]=(new Date()).getTime();},vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],ev:lpTag.ev||[]};lpTag.init();}else{window.lpTag._tagCount+=1;} </script>
+        <!-- END LivePerson Monitor. -->
+        <!-- Google Tag Manager -->
+        <script>
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window, document, 'script', 'dataLayer', 'GTM-5BTM43C');
+        </script>
+        <!-- End Google Tag Manager -->
+        
+
+
+
+        <meta charset="utf-8"/>
+        <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+        <title>United Utilities - Latest financial news</title>
+        <meta name="description" content="United Utilities - Latest financial news"/>
+        <meta name="keywords" content="United Utilities, United Utilities Group PLC, United Utilities Water Limited, United utilities financial news, united utilities investors, " />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	    <meta name="format-detection" content="telephone=no"/>
+        <link href="/assets/styles/main.css?build=2.515.0.0" rel="stylesheet"/>
+        <script src="/js/dev/lib/modernizr.js?build=2.515.0.0"></script>
+        <script src="/js/dev/vendor/angular.min.js?build=2.515.0.0"></script>
+        <script src="/js/dev/mando/logic/localStorage-polyfill.js"></script>
+        <script>
+            /*! grunt-grunticon Stylesheet Loader - v2.1.6 | https://github.com/filamentgroup/grunticon | (c) 2015 Scott Jehl, Filament Group, Inc. | MIT license. */
+            !function () { function e(e, n, t) { "use strict"; var o = window.document.createElement("link"), r = n || window.document.getElementsByTagName("script")[0], a = window.document.styleSheets; return o.rel = "stylesheet", o.href = e, o.media = "only x", r.parentNode.insertBefore(o, r), o.onloadcssdefined = function (e) { for (var n, t = 0; t < a.length; t++) a[t].href && a[t].href === o.href && (n = !0); n ? e() : setTimeout(function () { o.onloadcssdefined(e) }) }, o.onloadcssdefined(function () { o.media = t || "all" }), o } function n(e, n) { e.onload = function () { e.onload = null, n && n.call(e) }, "isApplicationInstalled" in navigator && "onloadcssdefined" in e && e.onloadcssdefined(n) } !function (t) { var o = function (r, a) { "use strict"; if (r && 3 === r.length) { var i = t.navigator, c = t.document, s = t.Image, d = !(!c.createElementNS || !c.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect || !c.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image", "1.1") || t.opera && -1 === i.userAgent.indexOf("Chrome") || -1 !== i.userAgent.indexOf("Series40")), l = new s; l.onerror = function () { o.method = "png", o.href = r[2], e(r[2]) }, l.onload = function () { var t = 1 === l.width && 1 === l.height, i = r[t && d ? 0 : t ? 1 : 2]; t && d ? o.method = "svg" : t ? o.method = "datapng" : o.method = "png", o.href = i, n(e(i), a) }, l.src = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==", c.documentElement.className += " grunticon" } }; o.loadCSS = e, o.onloadCSS = n, t.grunticon = o }(this), function (e, n) { "use strict"; var t = n.document, o = "grunticon:", r = function (e) { if (t.attachEvent ? "complete" === t.readyState : "loading" !== t.readyState) e(); else { var n = !1; t.addEventListener("readystatechange", function () { n || (n = !0, e()) }, !1) } }, a = function (e) { return n.document.querySelector('link[href$="' + e + '"]') }, i = function (e) { var n, t, r, a, i, c, s = {}; if (n = e.sheet, !n) return s; t = n.cssRules ? n.cssRules : n.rules; for (var d = 0; d < t.length; d++) r = t[d].cssText, a = o + t[d].selectorText, i = r.split(");")[0].match(/US\-ASCII\,([^"']+)/), i && i[1] && (c = decodeURIComponent(i[1]), s[a] = c); return s }, c = function (e) { var n, r, a, i; a = "data-grunticon-embed"; for (var c in e) { i = c.slice(o.length); try { n = t.querySelectorAll(i) } catch (s) { continue } r = []; for (var d = 0; d < n.length; d++) null !== n[d].getAttribute(a) && r.push(n[d]); if (r.length) for (d = 0; d < r.length; d++) r[d].innerHTML = e[c], r[d].style.backgroundImage = "none", r[d].removeAttribute(a) } return r }, s = function (n) { "svg" === e.method && r(function () { c(i(a(e.href))), "function" == typeof n && n() }) }; e.embedIcons = c, e.getCSS = a, e.getIcons = i, e.ready = r, e.svgLoadedCallback = s, e.embedSVG = s }(grunticon, this) }();
+            grunticon(["/assets/icons/output/icons.data.svg.css", "/assets/icons/output/icons.data.png.css", "/assets/icons/output/icons.fallback.css"], grunticon.svgLoadedCallback);
+
+        </script>
+        <script type = "text/javascript" >
+            var serviceUrl = "//api.reciteme.com/asset/js?key=";
+            var serviceKey = "2ae6c0d78c6ae1b9ccd3d89192d479bba9f75eb2";
+            var options = {
+                PlayerControls: {
+                    Tooltip: {
+                        position: "right"
+                    }
+                },
+                Tracker: {
+                    Ga: {
+                        enabled: true,
+                        trackerName: 'gtm4'
+                    }
+                }
+            };  // Options can be added as needed
+            var autoLoad = false;
+            var enableFragment = "#reciteEnable";
+            var loaded = [], frag = !1; window.location.hash === enableFragment && (frag = !0); function loadScript(c, b) { var a = document.createElement("script"); a.type = "text/javascript"; a.readyState ? a.onreadystatechange = function () { if ("loaded" == a.readyState || "complete" == a.readyState) a.onreadystatechange = null, void 0 != b && b() } : void 0 != b && (a.onload = function () { b() }); a.src = c; document.getElementsByTagName("head")[0].appendChild(a) } function _rc(c) { c += "="; for (var b = document.cookie.split(";"), a = 0; a < b.length; a++) { for (var d = b[a]; " " == d.charAt(0) ;) d = d.substring(1, d.length); if (0 == d.indexOf(c)) return d.substring(c.length, d.length) } return null } function loadService(c) { for (var b = serviceUrl + serviceKey, a = 0; a < loaded.length; a++) if (loaded[a] == b) return; loaded.push(b); loadScript(serviceUrl + serviceKey, function () { "function" === typeof _reciteLoaded && _reciteLoaded(); "function" == typeof c && c(); Recite.load(options); Recite.Event.subscribe("Recite:load", function () { Recite.enable() }) }) } "true" == _rc("Recite.Persist") && loadService(); (autoLoad && "false" != _rc("Recite.Persist") || frag) && loadService();
+        </script>
+        <noscript>
+            <link href="/Static/assets/icons/output/icons.fallback.css?build=2.515.0.0" rel="stylesheet">
+        </noscript>
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-touch-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-touch-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-touch-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-touch-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-touch-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon-180x180.png">
+        <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32">
+        <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-194x194.png" sizes="194x194">
+        <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96">
+        <link rel="icon" type="image/png" href="/assets/img/favicon/android-chrome-192x192.png" sizes="192x192">
+        <link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16">
+        <link rel="manifest" href="/assets/img/favicon/manifest.json">
+        <link rel="mask-icon" href="/assets/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/assets/img/favicon/mstile-144x144.png">
+        <meta name="msapplication-config" content="/assets/img/favicon/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+    <script type="text/javascript">var appInsights=window.appInsights||function(config){function t(config){i[config]=function(){var t=arguments;i.queue.push(function(){i[config].apply(i,t)})}}var i={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",r,f;setTimeout(function(){var t=u.createElement(o);t.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(t)});try{i.cookie=u.cookie}catch(y){}for(i.queue=[],r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)t("track"+r.pop());return t("set"+s),t("clear"+s),t(h+a),t(c+a),t(h+v),t(c+v),t("flush"),config.disableExceptionTracking||(r="onerror",t("_"+r),f=e[r],e[r]=function(config,t,u,e,o){var s=f&&f(config,t,u,e,o);return s!==!0&&i["_"+r](config,t,u,e,o),s}),i}({instrumentationKey:"dcbc077f-61d6-45da-9786-a4d5a5e56ce7",sdkExtension:"a"});window.appInsights=appInsights;appInsights.queue&&appInsights.queue.length===0&&appInsights.trackPageView();</script></head>
+    <body ng-app="angular-app" id="corporate">   
+<!-- Google Tag Manager (noscript) -->
+        <noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5BTM43C"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 824735896;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/824735896/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+        
+
+        <div class="o-wrapper">
+			<ul class="c-accessmenu">
+				<li><a href="#main-content" class="js-access" accesskey="s">Skip to content</a></li>
+				<li><a href="#main-navigation" class="js-access">Skip to menu</a></li>
+			</ul>
+
+            <div class="c-cookie js-cookie">
+                <p>
+                    We use cookies on our website. By continuing to browse our website, you are agreeing to our cookies. <a href="/privacy/cookies/">Find out more about our cookies</a> <span class="c-cookie__separator">|</span> <button type="button" class="c-cookie__btn js-cookie-btn"><span>Close</span> <span class="icon-close-light"></span></button>
+                </p>
+            </div>
+<nav class="c-navigation js-navigation" role="navigation" data-type="dropdown">
+    <div class="o-wrapper__inner">
+        <a class="c-navigation__logo" href="/corporate/">
+            <img src="/assets/img/uu-logo.jpg" alt="Go to United Utilities Corporate Home Page" />
+        </a>
+
+        <div class="c-navigation-menu__mobile-actions">
+            <a class="c-navigation-menu__mobile-search" href="javascript:void(0)" data-toggle="search">
+                <span>
+                    <span class="c-navigation__search-text">Search</span>
+                    <span class="ss-search c-navigation__search-icon"></span>
+                </span>
+                <span class="c-navigation__mobile-search-close">
+                    <span class="c-navigation__mobile-search-close-text">Close</span>
+                    <span class="c-navigation__mobile-search-close-icon"></span>
+                </span>
+            </a>
+
+            <button class="c-navigation__mobile-menu-btn" data-toggle="button" data-target=".c-navigation__menu" type="button">
+                <span>
+                    <span class="c-navigation__mobile-menu-text">Menu</span>
+                    <span class="c-navigation__mobile-menu-icon">
+                        <span class="c-navigation__mobile-menu-line--top"></span>
+                        <span class="c-navigation__mobile-menu-line--middle"></span>
+                        <span class="c-navigation__mobile-menu-line--bottom"></span>
+                    </span>
+                </span>
+                <span class="c-navigation__mobile-menu-close">
+                    <span class="c-mobile-menu-close-text">Close</span>
+                    <span class="c-mobile-menu-close-icon"></span>
+                </span>
+            </button>
+        </div>
+
+        <div class="c-navigation__menu js-navigation__menu">
+            <ul id="main-navigation" class="c-navigation__list" tabindex="-1">
+                ﻿
+
+    <li class="c-navigation__item--dropdown">
+
+        <span class="c-navigation__link--dropdown">
+            <a class="c-navigation-menu__link" href="/corporate/about-us/"> About us</a>
+                <button class="c-navigation-menu__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="dropdown-1"><span class="visually-hidden">Toggle sub menu</span></button>
+        </span>
+
+                <div class="c-navigation__dropdown-menu" id="dropdown-1">
+
+                    <div class="o-wrapper__inner">
+
+                        <div class="c-navigation__dropdown-menu__title">
+                            <span>About us</span>
+                        </div>
+
+                        <ul class="c-navigation__dropdown-menu__inner">
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/about-us/what-we-do/">What we do</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-1"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-1">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/what-we-do/our-vision/">
+                            Our purpose, vision and strategy
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/what-we-do/our-business-model/">
+                            Our Business Model
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/what-we-do/water-cycle/">
+                            Water cycle
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/what-we-do/water-supply-and-wastewater/">
+                            Water supply and wastewater
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/what-we-do/bioresources/">
+                            Bioresources
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/about-us/governance/">Governance</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-2"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-2">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/governance/our-board/">
+                            Our board
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/governance/our-executive-team/">
+                            Our executive team
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/governance/our-regulators/">
+                            Our regulators
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/governance/suppliers/">
+                            Suppliers
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/governance/business-principles/">
+                            Business principles
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/about-us/performance/">Performance</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-3"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-3">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/performance/annual-performance-reports-2020-25/">
+                            Annual Performance Reports 2015-20
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/performance/assuring-our-performance-2015-20/">
+                            Assuring our performance 2015-20
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/performance/performance-201015/">
+                            Performance 2010/15
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/performance/discover-water/">
+                            Discover water
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/performance/yourvoice/">
+                            YourVoice
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/about-us/our-future-plans/">Our Future Plans</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-4"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-4">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/our-future-plans/listening-to-our-customers/">
+                            Listening to our customers
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/our-future-plans/our-proposed-business-plan/">
+                            Our proposed business plan
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/our-future-plans/Our-current-business-plan/">
+                            Our current business plan
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/our-future-plans/looking-to-the-future/">
+                            Looking to the future
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/our-future-plans/water-resources/">
+                            Water Resources
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/about-us/innovation-lab/">Innovation Lab</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-5"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-5">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/innovation-lab/meet-our-finalists/">
+                            Meet out Innovation Lab finalists
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/innovation-lab/gallery/">
+                            Pitch day gallery
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/innovation-lab/2019-Categories/">
+                            2019 Categories
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/about-us/innovation-lab/look-back-at-2018/">
+                            Look back at 2018
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+    </li>
+    <li class="c-navigation__item--dropdown">
+
+        <span class="c-navigation__link--dropdown">
+            <a class="c-navigation-menu__link" href="/corporate/investors/"> Investors</a>
+                <button class="c-navigation-menu__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="dropdown-2"><span class="visually-hidden">Toggle sub menu</span></button>
+        </span>
+
+                <div class="c-navigation__dropdown-menu" id="dropdown-2">
+
+                    <div class="o-wrapper__inner">
+
+                        <div class="c-navigation__dropdown-menu__title">
+                            <span>Investors</span>
+                        </div>
+
+                        <ul class="c-navigation__dropdown-menu__inner">
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/investors/financial-news/latest-financial-news/">Financial news</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-6"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-6">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/financial-news/latest-financial-news/">
+                            Latest financial news
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/financial-news/2018-financial-news/">
+                            2018 financial news
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/financial-news/2017-financial-news/">
+                            2017 financial news
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/financial-news/2016-financial-news/">
+                            2016 financial news
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/financial-news/2015-financial-news/">
+                            2015 financial news
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/investors/shareholders/">Shareholders</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-7"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-7">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/shareholders/dividends/">
+                            Dividends
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/shareholders/annual-general-meeting/">
+                            Annual general meeting
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/shareholders/share-price/">
+                            Share price
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/shareholders/shareholder-information/">
+                            Shareholder information
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/shareholders/corporate-governance/">
+                            Corporate governance
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/investors/Reports-and-presentations/">Reports and presentations</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-8"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-8">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/Reports-and-presentations/annual-reports/">
+                            Annual reports
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/Reports-and-presentations/financial-information/">
+                            Financial information
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/Reports-and-presentations/full-and-half-year-results/">
+                            Full and half year results
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/Reports-and-presentations/company-reports/">
+                            Company reports
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/investors/credit-investors/">Credit investors</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-9"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-9">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/credit-investors/credit-investor-contact/">
+                            Credit investor contact
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/credit-investors/debt-issuance/">
+                            Debt issuance programmes
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/credit-investors/credit-investor-news/">
+                            Credit investor news
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/credit-investors/long-term-public-debt-issues/">
+                            Long term public debt issues
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/investors/credit-investors/ratings/">
+                            Ratings
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+    </li>
+    <li class="c-navigation__item--dropdown">
+
+        <span class="c-navigation__link--dropdown">
+            <a class="c-navigation-menu__link" href="/corporate/responsibility/"> Responsibility</a>
+                <button class="c-navigation-menu__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="dropdown-3"><span class="visually-hidden">Toggle sub menu</span></button>
+        </span>
+
+                <div class="c-navigation__dropdown-menu" id="dropdown-3">
+
+                    <div class="o-wrapper__inner">
+
+                        <div class="c-navigation__dropdown-menu__title">
+                            <span>Responsibility</span>
+                        </div>
+
+                        <ul class="c-navigation__dropdown-menu__inner">
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/our-approach/">Our approach</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-10"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-10">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/our-approach/materiality/">
+                            Materiality
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/our-approach/cr-reporting/">
+                            CR reporting
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/our-approach/cr-governance/">
+                            CR governance
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/our-approach/human-rights/">
+                            Human rights
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/our-approach/cr-performance/">
+                            CR performance
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/customers/">Customers</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-11"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-11">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/customers/helping-those-in-need/">
+                            Helping those in need
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/customers/customer-service/">
+                            Customer service
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/customers/reliable-water--wastewater-services/">
+                            Reliable water &amp; wastewater services
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/customers/two-way-communication/">
+                            Two-way communication
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/customers/data-protection/">
+                            Data protection
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/environment/">Environment</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-12"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-12">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/environment/managing-water-resources/">
+                            Managing water resources
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/environment/preventing-pollution/">
+                            Preventing pollution
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/environment/bathing-waters/">
+                            Bathing waters
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/environment/climate-change/">
+                            Climate change
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/environment/environment-performance/">
+                            Environment performance
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/employees/">Employees</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-13"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-13">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/employees/health--safety--wellbeing/">
+                            Health, safety &amp; wellbeing
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/employees/diversity/">
+                            Diversity
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/employees/engagement/">
+                            Engagement
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/employees/employee-relations/">
+                            Employee relations
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/employees/employee-performance/">
+                            Employee performance
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/stakeholders/">Stakeholders</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-14"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-14">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/stakeholders/suppliers/">
+                            Suppliers
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/stakeholders/shareholders-and-investors/">
+                            Shareholders and investors
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/stakeholders/stakeholder-engagement/">
+                            Stakeholder engagement
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/stakeholders/stakeholder-performance/">
+                            Stakeholder performance
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/communities/">Communities</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-15"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-15">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/communities/community-investment/">
+                            Community investment
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/communities/education/">
+                            Education
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/communities/employee-involvement/">
+                            Employee involvement
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/communities/access-and-recreation/">
+                            Access and recreation
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/responsibility/communities/community-performance/">
+                            Community performance
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+    </li>
+    <li class="c-navigation__item--dropdown">
+
+        <span class="c-navigation__link--dropdown">
+            <a class="c-navigation-menu__link" href="/corporate/careers/"> Careers</a>
+                <button class="c-navigation-menu__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="dropdown-4"><span class="visually-hidden">Toggle sub menu</span></button>
+        </span>
+
+                <div class="c-navigation__dropdown-menu" id="dropdown-4">
+
+                    <div class="o-wrapper__inner">
+
+                        <div class="c-navigation__dropdown-menu__title">
+                            <span>Careers</span>
+                        </div>
+
+                        <ul class="c-navigation__dropdown-menu__inner">
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/careers/about-our-company/">About our company</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-16"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-16">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/about-our-company/our-locations/">
+                            Our locations
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/about-our-company/benefits-of-working-for-us/">
+                            Benefits of working for us
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/about-our-company/application-faqs/">
+                            Application FAQs
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/about-our-company/hints-and-tips/">
+                            Hints and tips
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/about-our-company/agencies-information/">
+                            Agencies information
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/careers/graduates/">Graduates</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-17"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-17">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/graduates/why-choose-united-utilities/">
+                            Why choose United Utilities?
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/graduates/our-programmes/">
+                            Our programmes
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/graduates/how-to-apply/">
+                            How to apply
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/graduates/graduate-faqs/">
+                            Graduate FAQs
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/graduates/graduate-events/">
+                            Graduate events
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/careers/apprenticeships/">Apprenticeships</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-18"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-18">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/apprenticeships/Its-more-than-your-average-office/">
+                            It&#39;s more than your average office
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/apprenticeships/more-than-making-the-brews/">
+                            More than making the brews
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/apprenticeships/the-perks/">
+                            The perks
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/apprenticeships/information-for-parents/">
+                            Information for parents
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/apprenticeships/what-apprenticeships-are-on-offer/">
+                            What apprenticeships are on offer?
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/careers/pensions/">Pensions</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-19"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-19">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/pensions/hybrid-section/">
+                            Hybrid section
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/pensions/defined-contribution-members/">
+                            Defined contribution (DC) members
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/pensions/esps-and-mis-section/">
+                            ESPS and MIS Members
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/pensions/im-retired/">
+                            I&#39;m retired
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/careers/pensions/previous-employee/">
+                            Previous employee
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/careers/current-vacancies/">Current vacancies</a>
+    </span>
+
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/careers/experienced-hires/">Experienced hires</a>
+    </span>
+
+</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+    </li>
+    <li class="c-navigation__item--dropdown">
+
+        <span class="c-navigation__link--dropdown">
+            <a class="c-navigation-menu__link" href="/corporate/newsroom/"> Newsroom</a>
+                <button class="c-navigation-menu__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="dropdown-5"><span class="visually-hidden">Toggle sub menu</span></button>
+        </span>
+
+                <div class="c-navigation__dropdown-menu" id="dropdown-5">
+
+                    <div class="o-wrapper__inner">
+
+                        <div class="c-navigation__dropdown-menu__title">
+                            <span>Newsroom</span>
+                        </div>
+
+                        <ul class="c-navigation__dropdown-menu__inner">
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/latest-news/">Latest news</a>
+            <button class="c-navigation-dropdown__icon" data-toggle="dropdown" type="button" aria-expanded="false" aria-controls="sub-dropdown-22"><span class="visually-hidden">Toggle sub menu</span></button>
+    </span>
+
+        <ul class="c-navigation__dropdown-item-list" id="sub-dropdown-22">
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/latest-news/shaw-trust/">
+                            Shaw Trust
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/latest-news/farmers--invited-to-learn-results-of-united-utilities-innovative-under-sowing-maize-trial/">
+                            Farmers  invited to learn results of United Utilities&#39; innovative under-sowing maize trial
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/latest-news/farmers-offered-free-disposal-of-unwanted-chemicals/">
+                            Farmers offered free disposal of unwanted chemicals
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/latest-news/united-utilities-and-rivers-trust-get-up-close-and-personal-in-uk-first/">
+                            United Utilities and Rivers Trust get up close and personal in UK first
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__dropdown-list-item">
+                    <span class="c-navigation__dropdown-link-padding">
+                        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/latest-news/new-helpline-for-concerned-families-seeking-support-for-struggling-relatives/">
+                            New helpline for concerned families seeking support for struggling relatives
+                        </a>
+                    </span>
+                </li>
+        </ul>
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/blog/">Blog</a>
+    </span>
+
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/in-the-community/">In the community</a>
+    </span>
+
+</li>
+
+
+
+<li class="c-navigation__dropdown-item">
+    <span class="c-navigation__dropdown-link-padding">
+        <a class="c-navigation__dropdown-link" href="/corporate/newsroom/contact-the-press-office/">Contact the press office</a>
+    </span>
+
+</li>
+
+                        </ul>
+                    </div>
+                </div>
+
+    </li>
+
+
+
+                <li class="c-navigation__item--search-item">
+                    <span class="c-navigation__link">
+                        <a class="c-navigation-menu__link" href="javascript:void(0)" data-toggle="search">
+                            <span class="c-navigation__search-text-label">Search</span>
+                            <span class="ss-search c-navigation__search-icon"></span>
+                        </a>
+                    </span>
+                </li>
+                <li class="c-navigation__line-break">
+                    <div class="c-line-break__line"></div>
+                </li>
+                <li class="c-navigation__item">
+                    <div class="c-navigation__actions">
+                        <div class="c-navigation__actions-links" >
+                                    <a class="c-navigation__actions-link--business" target="_blank" href="/" title="Customer">Customer</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-navigation__search-bar__wrapper">
+        
+<form action="/corporate/corporate-search-page/" class="c-navigation__search-bar" method="get">                <label class="c-search-bar__text" for="search-bar-input">Search</label>
+                <input class="c-search-bar__input" type="search" name="q" placeholder="What are you looking for?"  id="search-bar-input" />
+                    <input type="hidden" name="section" value="All" />
+                <input class="c-button-primary c-search-bar__btn" type="submit" value="Find">
+</form>
+    </div>
+</nav>
+            
+    <div class="c-share-banner">
+        <div class="o-wrapper__inner">
+            <div class="c-share-banner__content">
+              <div class="c-share-banner__info">
+                <h2 class="c-share-banner__title">Share Price</h2>
+                <p class="c-share-banner__value">
+                    868.00<span>p</span>
+                </p>
+              </div>
+	            <div class="c-share-banner__info">
+		            <p class="c-share-banner__info-text">
+			            (+0.07%)&nbsp;&nbsp;27/11/2019 11:06 GMT
+		            </p>
+	            </div>
+	            <div class="c-share-banner__info">
+		            <p class="c-share-banner__info-text">
+				            <a href="/corporate/investors/shareholders/share-price/">Share price</a>
+		            </p>
+	            </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="u-block-background-color--grey">
+        <div class="o-wrapper__inner">
+            <ol class="c-breadcrumbs" itemscope itemtype="http://schema.org/BreadcrumbList">
+
+                        <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="/corporate/">
+                                <span itemprop="name">Corporate</span>
+                            </a>
+                        </li>
+                        <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="/corporate/investors/">
+                                <span itemprop="name">Investors</span>
+                            </a>
+                        </li>
+                        <li class="c-breadcrumb__item" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="/corporate/investors/financial-news/latest-financial-news/">
+                                <span itemprop="name">Financial news</span>
+                            </a>
+                        </li>
+                        <li class="c-breadcrumb__item is-active" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <span itemprop="name">Latest financial news</span>
+                        </li>
+            </ol>
+        </div>
+    </nav>
+
+            
+
+<main id="main-content" tabindex="-1">
+	<div class="o-wrapper__inner">
+		<div class="o-row--sidebar">
+			<div class="o-col">
+				<div class="c-article-list-block">
+						<h1 class="c-article-list__heading">Latest financial news </h1>
+					<ul class="c-article-list" article-list json-string="{&quot;Articles&quot;:[{&quot;Title&quot;:&quot;PDMR shareholding – T Lissett 25 November 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1574777014000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;PDMR shareholding – T Lissett 25 November 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/documents/pdf/tom-lissett---sale-of-shares---25-nov-2019---web.pdf&quot;},{&quot;Title&quot;:&quot;PDMR shareholding – Sir D Higgins 21 November 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1574772036000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;PDMR shareholding – Sir D Higgins 21 November 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/david-higgins---purchase-of-shares---11-nov-2019-002.pdf&quot;},{&quot;Title&quot;:&quot;PDMR shareholding – R Houlden 21 November 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1574771982000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;PDMR shareholding – R Houlden 21 November 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/russ-houlden---sale-of-shares---11-nov-2019.pdf&quot;},{&quot;Title&quot;:&quot;2019/20 Half Year Results&quot;,&quot;DateTime&quot;:&quot;\/Date(1574233599000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;2019/20 Half Year Results&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/investor-pdfs/half-year-results/half-year-results-announcement-2019-20-final-combined-clean.pdf&quot;},{&quot;Title&quot;:&quot;Director/ PDMR shareholding – SIP monthly purchase November 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1574087316000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Director/ PDMR shareholding – SIP monthly purchase November 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/november-2019---sip-monthly-purchase.pdf&quot;},{&quot;Title&quot;:&quot;Director/ PDMR shareholding – SIP monthly purchase October 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1571306147000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Director/ PDMR shareholding – SIP monthly purchase October 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/about-us-pdfs/october-2019---sip-monthly-purchase.pdf&quot;},{&quot;Title&quot;:&quot;September 2019 trading update&quot;,&quot;DateTime&quot;:&quot;\/Date(1569366000000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;United Utilities announces the following trading update ahead of its interim results on 20 November 2019.&quot;,&quot;Category&quot;:&quot;Press release&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/documents/pdf/united-utilities-25092019.acc19.pdf&quot;},{&quot;Title&quot;:&quot;Director/ PDMR shareholding – SIP monthly purchase September 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1568705663000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Director/PDMR shareholding – SIP monthly purchase September 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/contentassets/86a3022447e643c28ec4fdf8cea2b254/aug-2019---sip-monthly-purchase.pdf&quot;},{&quot;Title&quot;:&quot;PDMR shareholding – R Houlden 13 September 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1568643123000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;PDMR shareholding – R Houlden 13 September 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/russ-houlden---sale-of-shares---13-sept-19.pdf&quot;},{&quot;Title&quot;:&quot;Vesting of 2016 LTP&quot;,&quot;DateTime&quot;:&quot;\/Date(1568639970000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Vesting of 2016 LTP&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/contentassets/23c399faf5b54677a4f25adc36b14cbb/10-sept-2019---vesting-of-2016-ltp.pdf&quot;},{&quot;Title&quot;:&quot;PDMR shareholding – S Mogford 11 September 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1568639047000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;PDMR shareholding – S Mogford 11 September 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/1109--steve-mogford---sale-of-shares---11-sept-2019.pdf&quot;},{&quot;Title&quot;:&quot;PDMR shareholding – R Houlden 10 September 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1568638620000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;PDMR shareholding – R Houlden 10 September 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/russ-houlden---sale-of-shares---10-sept--2019.pdf&quot;},{&quot;Title&quot;:&quot;Major shareholding in company – Lazard Asset Management LLC,  30 August 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1567180529000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Major shareholding in company – Lazard Asset Management LLC,  30 August 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/contentassets/024e2bf7a7584beebd4345eb7aeee150/united-utilities-group-plc---30-august-2019---no-annex.pdf&quot;},{&quot;Title&quot;:&quot;Director/ PDMR shareholding – SIP monthly purchase August 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1565786135000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Director/ PDMR shareholding – SIP monthly purchase August 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0812--aug-2019---sip-monthly-purchase---for-website-acc19.pdf&quot;},{&quot;Title&quot;:&quot;Interim block listing – 31 July 2019’&quot;,&quot;DateTime&quot;:&quot;\/Date(1565012372000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Block listing six monthly return&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/about-us-pdfs/31-july-2019-block-listing-six-monthly-return-rns.pdf&quot;},{&quot;Title&quot;:&quot;SIP dividend reinvestment PDMRs&quot;,&quot;DateTime&quot;:&quot;\/Date(1564758320000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;SIP dividend reinvestment PDMRs&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0802---1-aug-2019-sip-dividend-reinvestment.acc19.pdf&quot;},{&quot;Title&quot;:&quot;Steven Fraser s430(2B) Companies Act 2006 Statement (PDF 68KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1564567105000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Further details of Steven Fraser\u0027s departure from United Utilities following the announcement in June 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/investor-pdfs/steven-fraser-s4302b-companies-act-2006-statement.pdf&quot;},{&quot;Title&quot;:&quot;Steven Fraser, Chief Operating Officer leaving date of 31 August 2019 (PDF 61KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1564566908000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Further details of Steven Fraser\u0027s departure date following the announcement in June 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/investor-pdfs/steven-fraser-chief-operating-officer-leaving-date-of-31-august-2019.pdf&quot;},{&quot;Title&quot;:&quot;SIP monthly purchase – July 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1563288569000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Director/ PDMR shareholding – SIP monthly purchase – July 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/investor-pdfs/0715--july-2019---sip-monthly-purchase.pdf&quot;},{&quot;Title&quot;:&quot;Director/ PDMR shareholding – 28 June 2019 Grant of LTP award&quot;,&quot;DateTime&quot;:&quot;\/Date(1562161432000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Director/ PDMR shareholding – 28 June 2019 Grant of LTP award&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/documents/2806---28-june-2019---grant-of-ltp-final.acc19.pdf&quot;},{&quot;Title&quot;:&quot;SIP monthly purchase - June 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1561372218000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Notification and public disclosure of transactions by persons discharging managerial responsibilities and persons closely associated with them.&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0614--june-2019---sip-monthly-purchaseacc19.pdf&quot;},{&quot;Title&quot;:&quot;Steve Mogford sales of shares - 19 June 2019 (PDF 233KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1561128681000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Steve Mogford sales of shares - 19 June 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0621--steve-mogford---sale-of-shares---19-june-2019.pdf&quot;},{&quot;Title&quot;:&quot;Grant of DBP June 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1561115590000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Grant of a Conditional Award under the United Utilities Group PLC Deferred Bonus Plan 2013.&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/documents/pdf/0617---17-june-2019---grant-of-dbp.pdf&quot;},{&quot;Title&quot;:&quot;Vesting of DBP June 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1561115266000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Vesting of DBP June 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/documents/pdf/0617---17-june-2019---vesting-of-dbp.pdf&quot;},{&quot;Title&quot;:&quot;Russ Houlden sales of shares&quot;,&quot;DateTime&quot;:&quot;\/Date(1559562100000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Russ Houlden sales of shares&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0531---russ-houlden---sale-of-shares---31-may-2019.acc19.pdf&quot;},{&quot;Title&quot;:&quot;2018/19 Full Year Results&quot;,&quot;DateTime&quot;:&quot;\/Date(1558592142000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Full year results for the year ended 31 March 2019 (PDF 830 KB opens in a new window)&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/investor-pdfs/results-announcement.pdf&quot;},{&quot;Title&quot;:&quot;Director/PDMR Shareholding 13 May 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1557843912000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;13 May 2019 (PDF 173KB, opens in a new window)&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/13-may-2019-sip-monthly-purchase.pdf&quot;},{&quot;Title&quot;:&quot;Appointment of non-executive director and Chairman designate (PDF 228KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1557737433000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;United Utilities appoints non-executive director and Chairman designate.&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/appointment-of-dh-as-a-non-executive-director-v6.pdf&quot;},{&quot;Title&quot;:&quot;SIP monthly purchase - April 2019 (PDF 295KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1555333999000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;SIP monthly purchase - April 2019 (PDF 295KB opens in a new window)&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0412--april-2019---sip-monthly-purchase.pdf&quot;},{&quot;Title&quot;:&quot;Draft determination for United Utilities (PDF 218KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1554972355000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Ofwat has today published the draft determination for United Utilities Water (UUW) covering the period 2020-25.&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/draft-determination-announcement-final.pdf&quot;},{&quot;Title&quot;:&quot;Steve Mogford and Russ Houlden sales of shares - 1 April 2019&quot;,&quot;DateTime&quot;:&quot;\/Date(1554218771000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Steve Mogford and Russ Houlden sales of shares - 1 April 2019.&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0401---rns-for-steve-mogford-and-russ-houlden-re-2-year-holding-ltp-awards.pdf&quot;},{&quot;Title&quot;:&quot;March 2019 trading update&quot;,&quot;DateTime&quot;:&quot;\/Date(1553583809000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;United Utilities announces the following trading update ahead of its full year results on 23 May 2019.&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:false,&quot;Url&quot;:&quot;/corporate/investors/financial-news/latest-financial-news/march-2019-trading-update/&quot;},{&quot;Title&quot;:&quot;SIP monthly purchase - March 2019 (PDF 296KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1552646626000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;SIP monthly purchase - March 2019 (PDF 296KB opens in a new window)&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0311--march-2019---sip-monthly-purchase.pdf&quot;},{&quot;Title&quot;:&quot;SIP monthly purchase - February 2019 (PDF 296KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1550074192000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;SIP monthly purchase - February 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0211--february-2019---sip-monthly-purchase.pdf&quot;},{&quot;Title&quot;:&quot;PR19 business plan assessment (PDF 1,641KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1549448150000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Presentation of the PR19 business plan assessment&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/documents/pdf/ofwat-iap-presentation.pdf&quot;},{&quot;Title&quot;:&quot;SIP dividend reinvestment&quot;,&quot;DateTime&quot;:&quot;\/Date(1549375091000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;SIP dividend reinvestment (PDF 296KB opens in a new window)&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0402-feb-2018---sip-dividend-reinvestment.pdf&quot;},{&quot;Title&quot;:&quot;United Utilities achieves fast track status (PDF 230KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1548921600000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Ofwat has today published its initial assessment of company business plans for the 2020-25 period.&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/documents/pdf/united-utilities-ofwat-fast-track.pdf&quot;},{&quot;Title&quot;:&quot;Key corporate dates 2019 (PDF 219KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1547634458000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;Key corporate dates 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/key-corporate-dates-2019---v1.pdf&quot;},{&quot;Title&quot;:&quot;SIP monthly purchase - January 2019 (PDF 276KB opens in a new window)&quot;,&quot;DateTime&quot;:&quot;\/Date(1547552201000)\/&quot;,&quot;ImageSource&quot;:&quot;/globalassets/united-utilities.jpg&quot;,&quot;Description&quot;:&quot;SIP monthly purchase  - January 2019&quot;,&quot;Category&quot;:&quot;&quot;,&quot;IsPDF&quot;:true,&quot;Url&quot;:&quot;/globalassets/z_corporate-site/financial-news-2019/0114--january-2019---sip-monthly-purchase.pdf&quot;}],&quot;CategoriesEnabled&quot;:false,&quot;ResultsPerPage&quot;:10,&quot;ShowImages&quot;:true}">
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/documents/pdf/tom-lissett---sale-of-shares---25-nov-2019---web.pdf">
+                    <span class="visually-hidden">PDMR shareholding – T Lissett 25 November 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/documents/pdf/tom-lissett---sale-of-shares---25-nov-2019---web.pdf">PDMR shareholding – T Lissett 25 November 2019</a>
+                <span class="c-article-list__description">PDMR shareholding – T Lissett 25 November 2019</span>
+                <span class="c-article-list__date">26/11/2019 14:03</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/david-higgins---purchase-of-shares---11-nov-2019-002.pdf">
+                    <span class="visually-hidden">PDMR shareholding – Sir D Higgins 21 November 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/david-higgins---purchase-of-shares---11-nov-2019-002.pdf">PDMR shareholding – Sir D Higgins 21 November 2019</a>
+                <span class="c-article-list__description">PDMR shareholding – Sir D Higgins 21 November 2019</span>
+                <span class="c-article-list__date">26/11/2019 12:40</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/russ-houlden---sale-of-shares---11-nov-2019.pdf">
+                    <span class="visually-hidden">PDMR shareholding – R Houlden 21 November 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/russ-houlden---sale-of-shares---11-nov-2019.pdf">PDMR shareholding – R Houlden 21 November 2019</a>
+                <span class="c-article-list__description">PDMR shareholding – R Houlden 21 November 2019</span>
+                <span class="c-article-list__date">26/11/2019 12:39</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/investor-pdfs/half-year-results/half-year-results-announcement-2019-20-final-combined-clean.pdf">
+                    <span class="visually-hidden">2019/20 Half Year Results</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/investor-pdfs/half-year-results/half-year-results-announcement-2019-20-final-combined-clean.pdf">2019/20 Half Year Results</a>
+                <span class="c-article-list__description">2019/20 Half Year Results</span>
+                <span class="c-article-list__date">20/11/2019 07:06</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/november-2019---sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">Director/ PDMR shareholding – SIP monthly purchase November 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/november-2019---sip-monthly-purchase.pdf">Director/ PDMR shareholding – SIP monthly purchase November 2019</a>
+                <span class="c-article-list__description">Director/ PDMR shareholding – SIP monthly purchase November 2019</span>
+                <span class="c-article-list__date">18/11/2019 14:28</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/about-us-pdfs/october-2019---sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">Director/ PDMR shareholding – SIP monthly purchase October 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/about-us-pdfs/october-2019---sip-monthly-purchase.pdf">Director/ PDMR shareholding – SIP monthly purchase October 2019</a>
+                <span class="c-article-list__description">Director/ PDMR shareholding – SIP monthly purchase October 2019</span>
+                <span class="c-article-list__date">17/10/2019 10:55</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/documents/pdf/united-utilities-25092019.acc19.pdf">
+                    <span class="visually-hidden">September 2019 trading update</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/documents/pdf/united-utilities-25092019.acc19.pdf">September 2019 trading update</a>
+                <span class="c-article-list__description">United Utilities announces the following trading update ahead of its interim results on 20 November 2019.</span>
+                <span class="c-article-list__date">25/09/2019 00:00</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/contentassets/86a3022447e643c28ec4fdf8cea2b254/aug-2019---sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">Director/ PDMR shareholding – SIP monthly purchase September 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/contentassets/86a3022447e643c28ec4fdf8cea2b254/aug-2019---sip-monthly-purchase.pdf">Director/ PDMR shareholding – SIP monthly purchase September 2019</a>
+                <span class="c-article-list__description">Director/PDMR shareholding – SIP monthly purchase September 2019</span>
+                <span class="c-article-list__date">17/09/2019 08:34</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/russ-houlden---sale-of-shares---13-sept-19.pdf">
+                    <span class="visually-hidden">PDMR shareholding – R Houlden 13 September 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/russ-houlden---sale-of-shares---13-sept-19.pdf">PDMR shareholding – R Houlden 13 September 2019</a>
+                <span class="c-article-list__description">PDMR shareholding – R Houlden 13 September 2019</span>
+                <span class="c-article-list__date">16/09/2019 15:12</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/contentassets/23c399faf5b54677a4f25adc36b14cbb/10-sept-2019---vesting-of-2016-ltp.pdf">
+                    <span class="visually-hidden">Vesting of 2016 LTP</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/contentassets/23c399faf5b54677a4f25adc36b14cbb/10-sept-2019---vesting-of-2016-ltp.pdf">Vesting of 2016 LTP</a>
+                <span class="c-article-list__description">Vesting of 2016 LTP</span>
+                <span class="c-article-list__date">16/09/2019 14:19</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/1109--steve-mogford---sale-of-shares---11-sept-2019.pdf">
+                    <span class="visually-hidden">PDMR shareholding – S Mogford 11 September 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/1109--steve-mogford---sale-of-shares---11-sept-2019.pdf">PDMR shareholding – S Mogford 11 September 2019</a>
+                <span class="c-article-list__description">PDMR shareholding – S Mogford 11 September 2019</span>
+                <span class="c-article-list__date">16/09/2019 14:04</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/russ-houlden---sale-of-shares---10-sept--2019.pdf">
+                    <span class="visually-hidden">PDMR shareholding – R Houlden 10 September 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/russ-houlden---sale-of-shares---10-sept--2019.pdf">PDMR shareholding – R Houlden 10 September 2019</a>
+                <span class="c-article-list__description">PDMR shareholding – R Houlden 10 September 2019</span>
+                <span class="c-article-list__date">16/09/2019 13:57</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/contentassets/024e2bf7a7584beebd4345eb7aeee150/united-utilities-group-plc---30-august-2019---no-annex.pdf">
+                    <span class="visually-hidden">Major shareholding in company – Lazard Asset Management LLC,  30 August 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/contentassets/024e2bf7a7584beebd4345eb7aeee150/united-utilities-group-plc---30-august-2019---no-annex.pdf">Major shareholding in company – Lazard Asset Management LLC,  30 August 2019</a>
+                <span class="c-article-list__description">Major shareholding in company – Lazard Asset Management LLC,  30 August 2019</span>
+                <span class="c-article-list__date">30/08/2019 16:55</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0812--aug-2019---sip-monthly-purchase---for-website-acc19.pdf">
+                    <span class="visually-hidden">Director/ PDMR shareholding – SIP monthly purchase August 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0812--aug-2019---sip-monthly-purchase---for-website-acc19.pdf">Director/ PDMR shareholding – SIP monthly purchase August 2019</a>
+                <span class="c-article-list__description">Director/ PDMR shareholding – SIP monthly purchase August 2019</span>
+                <span class="c-article-list__date">14/08/2019 13:35</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/about-us-pdfs/31-july-2019-block-listing-six-monthly-return-rns.pdf">
+                    <span class="visually-hidden">Interim block listing – 31 July 2019’</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/about-us-pdfs/31-july-2019-block-listing-six-monthly-return-rns.pdf">Interim block listing – 31 July 2019’</a>
+                <span class="c-article-list__description">Block listing six monthly return</span>
+                <span class="c-article-list__date">05/08/2019 14:39</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0802---1-aug-2019-sip-dividend-reinvestment.acc19.pdf">
+                    <span class="visually-hidden">SIP dividend reinvestment PDMRs</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0802---1-aug-2019-sip-dividend-reinvestment.acc19.pdf">SIP dividend reinvestment PDMRs</a>
+                <span class="c-article-list__description">SIP dividend reinvestment PDMRs</span>
+                <span class="c-article-list__date">02/08/2019 16:05</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/investor-pdfs/steven-fraser-s4302b-companies-act-2006-statement.pdf">
+                    <span class="visually-hidden">Steven Fraser s430(2B) Companies Act 2006 Statement (PDF 68KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/investor-pdfs/steven-fraser-s4302b-companies-act-2006-statement.pdf">Steven Fraser s430(2B) Companies Act 2006 Statement (PDF 68KB opens in a new window)</a>
+                <span class="c-article-list__description">Further details of Steven Fraser&#39;s departure from United Utilities following the announcement in June 2019</span>
+                <span class="c-article-list__date">31/07/2019 10:58</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/investor-pdfs/steven-fraser-chief-operating-officer-leaving-date-of-31-august-2019.pdf">
+                    <span class="visually-hidden">Steven Fraser, Chief Operating Officer leaving date of 31 August 2019 (PDF 61KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/investor-pdfs/steven-fraser-chief-operating-officer-leaving-date-of-31-august-2019.pdf">Steven Fraser, Chief Operating Officer leaving date of 31 August 2019 (PDF 61KB opens in a new window)</a>
+                <span class="c-article-list__description">Further details of Steven Fraser&#39;s departure date following the announcement in June 2019</span>
+                <span class="c-article-list__date">31/07/2019 10:55</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/investor-pdfs/0715--july-2019---sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">SIP monthly purchase – July 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/investor-pdfs/0715--july-2019---sip-monthly-purchase.pdf">SIP monthly purchase – July 2019</a>
+                <span class="c-article-list__description">Director/ PDMR shareholding – SIP monthly purchase – July 2019</span>
+                <span class="c-article-list__date">16/07/2019 15:49</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/documents/2806---28-june-2019---grant-of-ltp-final.acc19.pdf">
+                    <span class="visually-hidden">Director/ PDMR shareholding – 28 June 2019 Grant of LTP award</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/documents/2806---28-june-2019---grant-of-ltp-final.acc19.pdf">Director/ PDMR shareholding – 28 June 2019 Grant of LTP award</a>
+                <span class="c-article-list__description">Director/ PDMR shareholding – 28 June 2019 Grant of LTP award</span>
+                <span class="c-article-list__date">03/07/2019 14:43</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0614--june-2019---sip-monthly-purchaseacc19.pdf">
+                    <span class="visually-hidden">SIP monthly purchase - June 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0614--june-2019---sip-monthly-purchaseacc19.pdf">SIP monthly purchase - June 2019</a>
+                <span class="c-article-list__description">Notification and public disclosure of transactions by persons discharging managerial responsibilities and persons closely associated with them.</span>
+                <span class="c-article-list__date">24/06/2019 11:30</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0621--steve-mogford---sale-of-shares---19-june-2019.pdf">
+                    <span class="visually-hidden">Steve Mogford sales of shares - 19 June 2019 (PDF 233KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0621--steve-mogford---sale-of-shares---19-june-2019.pdf">Steve Mogford sales of shares - 19 June 2019 (PDF 233KB opens in a new window)</a>
+                <span class="c-article-list__description">Steve Mogford sales of shares - 19 June 2019</span>
+                <span class="c-article-list__date">21/06/2019 15:51</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/documents/pdf/0617---17-june-2019---grant-of-dbp.pdf">
+                    <span class="visually-hidden">Grant of DBP June 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/documents/pdf/0617---17-june-2019---grant-of-dbp.pdf">Grant of DBP June 2019</a>
+                <span class="c-article-list__description">Grant of a Conditional Award under the United Utilities Group PLC Deferred Bonus Plan 2013.</span>
+                <span class="c-article-list__date">21/06/2019 12:13</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/documents/pdf/0617---17-june-2019---vesting-of-dbp.pdf">
+                    <span class="visually-hidden">Vesting of DBP June 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/documents/pdf/0617---17-june-2019---vesting-of-dbp.pdf">Vesting of DBP June 2019</a>
+                <span class="c-article-list__description">Vesting of DBP June 2019</span>
+                <span class="c-article-list__date">21/06/2019 12:07</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0531---russ-houlden---sale-of-shares---31-may-2019.acc19.pdf">
+                    <span class="visually-hidden">Russ Houlden sales of shares</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0531---russ-houlden---sale-of-shares---31-may-2019.acc19.pdf">Russ Houlden sales of shares</a>
+                <span class="c-article-list__description">Russ Houlden sales of shares</span>
+                <span class="c-article-list__date">03/06/2019 12:41</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/investor-pdfs/results-announcement.pdf">
+                    <span class="visually-hidden">2018/19 Full Year Results</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/investor-pdfs/results-announcement.pdf">2018/19 Full Year Results</a>
+                <span class="c-article-list__description">Full year results for the year ended 31 March 2019 (PDF 830 KB opens in a new window)</span>
+                <span class="c-article-list__date">23/05/2019 07:15</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/13-may-2019-sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">Director/PDMR Shareholding 13 May 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/investor-pdfs/2019-financial-news/13-may-2019-sip-monthly-purchase.pdf">Director/PDMR Shareholding 13 May 2019</a>
+                <span class="c-article-list__description">13 May 2019 (PDF 173KB, opens in a new window)</span>
+                <span class="c-article-list__date">14/05/2019 15:25</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/appointment-of-dh-as-a-non-executive-director-v6.pdf">
+                    <span class="visually-hidden">Appointment of non-executive director and Chairman designate (PDF 228KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/appointment-of-dh-as-a-non-executive-director-v6.pdf">Appointment of non-executive director and Chairman designate (PDF 228KB opens in a new window)</a>
+                <span class="c-article-list__description">United Utilities appoints non-executive director and Chairman designate.</span>
+                <span class="c-article-list__date">13/05/2019 09:50</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0412--april-2019---sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">SIP monthly purchase - April 2019 (PDF 295KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0412--april-2019---sip-monthly-purchase.pdf">SIP monthly purchase - April 2019 (PDF 295KB opens in a new window)</a>
+                <span class="c-article-list__description">SIP monthly purchase - April 2019 (PDF 295KB opens in a new window)</span>
+                <span class="c-article-list__date">15/04/2019 14:13</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/draft-determination-announcement-final.pdf">
+                    <span class="visually-hidden">Draft determination for United Utilities (PDF 218KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/draft-determination-announcement-final.pdf">Draft determination for United Utilities (PDF 218KB opens in a new window)</a>
+                <span class="c-article-list__description">Ofwat has today published the draft determination for United Utilities Water (UUW) covering the period 2020-25.</span>
+                <span class="c-article-list__date">11/04/2019 09:45</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0401---rns-for-steve-mogford-and-russ-houlden-re-2-year-holding-ltp-awards.pdf">
+                    <span class="visually-hidden">Steve Mogford and Russ Houlden sales of shares - 1 April 2019</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0401---rns-for-steve-mogford-and-russ-houlden-re-2-year-holding-ltp-awards.pdf">Steve Mogford and Russ Houlden sales of shares - 1 April 2019</a>
+                <span class="c-article-list__description">Steve Mogford and Russ Houlden sales of shares - 1 April 2019.</span>
+                <span class="c-article-list__date">02/04/2019 16:26</span>
+            </div>
+        </li>
+        <li class="c-article-list__item">
+                <a class="c-article-list__image-link" href="/corporate/investors/financial-news/latest-financial-news/march-2019-trading-update/">
+                    <span class="visually-hidden">March 2019 trading update</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/corporate/investors/financial-news/latest-financial-news/march-2019-trading-update/">March 2019 trading update</a>
+                <span class="c-article-list__description">United Utilities announces the following trading update ahead of its full year results on 23 May 2019.</span>
+                <span class="c-article-list__date">26/03/2019 07:03</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0311--march-2019---sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">SIP monthly purchase - March 2019 (PDF 296KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0311--march-2019---sip-monthly-purchase.pdf">SIP monthly purchase - March 2019 (PDF 296KB opens in a new window)</a>
+                <span class="c-article-list__description">SIP monthly purchase - March 2019 (PDF 296KB opens in a new window)</span>
+                <span class="c-article-list__date">15/03/2019 10:43</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0211--february-2019---sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">SIP monthly purchase - February 2019 (PDF 296KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0211--february-2019---sip-monthly-purchase.pdf">SIP monthly purchase - February 2019 (PDF 296KB opens in a new window)</a>
+                <span class="c-article-list__description">SIP monthly purchase - February 2019</span>
+                <span class="c-article-list__date">13/02/2019 16:09</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/documents/pdf/ofwat-iap-presentation.pdf">
+                    <span class="visually-hidden">PR19 business plan assessment (PDF 1,641KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/documents/pdf/ofwat-iap-presentation.pdf">PR19 business plan assessment (PDF 1,641KB opens in a new window)</a>
+                <span class="c-article-list__description">Presentation of the PR19 business plan assessment</span>
+                <span class="c-article-list__date">06/02/2019 10:15</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0402-feb-2018---sip-dividend-reinvestment.pdf">
+                    <span class="visually-hidden">SIP dividend reinvestment</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0402-feb-2018---sip-dividend-reinvestment.pdf">SIP dividend reinvestment</a>
+                <span class="c-article-list__description">SIP dividend reinvestment (PDF 296KB opens in a new window)</span>
+                <span class="c-article-list__date">05/02/2019 13:58</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/documents/pdf/united-utilities-ofwat-fast-track.pdf">
+                    <span class="visually-hidden">United Utilities achieves fast track status (PDF 230KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/documents/pdf/united-utilities-ofwat-fast-track.pdf">United Utilities achieves fast track status (PDF 230KB opens in a new window)</a>
+                <span class="c-article-list__description">Ofwat has today published its initial assessment of company business plans for the 2020-25 period.</span>
+                <span class="c-article-list__date">31/01/2019 08:00</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/key-corporate-dates-2019---v1.pdf">
+                    <span class="visually-hidden">Key corporate dates 2019 (PDF 219KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/key-corporate-dates-2019---v1.pdf">Key corporate dates 2019 (PDF 219KB opens in a new window)</a>
+                <span class="c-article-list__description">Key corporate dates 2019</span>
+                <span class="c-article-list__date">16/01/2019 10:27</span>
+            </div>
+        </li>
+        <li class="c-article-list__item--pdf">
+                <a class="c-article-list__image-link" href="/globalassets/z_corporate-site/financial-news-2019/0114--january-2019---sip-monthly-purchase.pdf">
+                    <span class="visually-hidden">SIP monthly purchase - January 2019 (PDF 276KB opens in a new window)</span>
+                    <img src="/globalassets/united-utilities.jpg" alt="" class="c-article-list__image">
+                </a>
+            <div class="c-article-list__text">
+                <a class="c-article-list__link" href="/globalassets/z_corporate-site/financial-news-2019/0114--january-2019---sip-monthly-purchase.pdf">SIP monthly purchase - January 2019 (PDF 276KB opens in a new window)</a>
+                <span class="c-article-list__description">SIP monthly purchase  - January 2019</span>
+                <span class="c-article-list__date">15/01/2019 11:36</span>
+            </div>
+        </li>
+</ul>
+
+				</div>
+			</div>
+			<div class="o-col">	
+
+<nav class="c-sidebar none" aria-label="Sub-menu">
+        <ul class="c-sidebar__list">
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link is-active" href="/corporate/investors/financial-news/latest-financial-news/">Latest financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/2018-financial-news/">2018 financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/2017-financial-news/">2017 financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/2016-financial-news/">2016 financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/2015-financial-news/">2015 financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/2014-financial-news/">2014 financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/2013-financial-news/">2013 financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/2012-financial-news/">2012 financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/2011-financial-news/">2011 financial news</a>
+
+            </li>
+            <li class="c-sidebar__item">
+                <a class="c-sidebar__link " href="/corporate/investors/financial-news/financial-calendar/">Financial calendar</a>
+
+            </li>
+    </ul>
+
+</nav>			</div>
+		</div>
+	</div>
+</main>
+
+            
+           
+
+
+<footer class="c-footer">
+    <div class="o-wrapper__inner">
+
+        <div class="c-footer__main-content">
+            <div class="o-row--4col--spread">
+
+                <div class="o-col c-footer-item">
+                    <div class="c-footer-item-header">
+
+                    </div>
+                    <div class="c-footer-item-body">
+                        <a href="https://www.unitedutilities.com/corporate/">
+                            <img class="c-footer-logo" src="https://www.unitedutilities.com/assets/img/uu-logo.jpg" alt="United Utilities PLC"/>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="o-col c-footer-item">
+                    <div class="c-footer-item-header">
+                        United Utilities Group PLC
+                    </div>
+                    <div class="c-footer-item-body">
+                        <p>Haweswater House<br />Lingley Mere Business Park<br /> Lingley Green Avenue<br />Great Sankey<br />Warrington<br />WA5 3LP</p>
+<p>&nbsp;</p>
+<p>Registered in England and Wales Company number 6559020 &nbsp;</p>
+                    </div>
+                </div>
+
+                <div class="o-col c-footer-item">
+                    <div class="c-footer-item-header">
+                        Follow us
+                    </div>
+                    <div class="c-footer-item-body">
+                            <ul class="c-footer-social-media"><li class="c-social-media__item">    
+    <a class="c-social-media__link" target="_blank" title="Opens in new window" href="https://twitter.com/uugroupplc/"><span class="c-social-media__icon icon-twitter" data-grunticon-embed></span><span class="visually-hidden">twitter</span></a>
+</li><li class="c-social-media__item">    
+    <a class="c-social-media__link" target="_blank" title="Opens in new window" href="http://www.youtube.com/user/unitedutilities"><span class="c-social-media__icon icon-youtube" data-grunticon-embed></span><span class="visually-hidden">youtube</span></a>
+</li><li class="c-social-media__item">    
+    <a class="c-social-media__link" target="_blank" title="Opens in new window" href="https://www.facebook.com/OfficialUnitedUtilities"><span class="c-social-media__icon icon-facebook" data-grunticon-embed></span><span class="visually-hidden">facebook</span></a>
+</li><li class="c-social-media__item">    
+    <a class="c-social-media__link" target="_blank" title="Opens in new window" href="https://www.linkedin.com/company/united-utilities/"><span class="c-social-media__icon icon-linkedin" data-grunticon-embed></span><span class="visually-hidden">linkedin</span></a>
+</li></ul>
+                    </div>
+                </div>
+
+                <div class="o-col c-footer-item">
+                    <div class="c-footer-item-header">
+                        Useful links
+                    </div>
+                    <div class="c-footer-item-body">
+                        <ul class="c-footer-useful-links__list">
+                                <li><a href="https://www.unitedutilities.com/corporate/safedig/" title="SafeDig">SafeDig</a></li>
+                                <li><a href="https://site-area.unitedutilities.com/sitearea/terms.aspx" title="Site Area - link opens in new window" target="_blank">Site Area</a></li>
+                                <li><a href="https://www.unitedutilities.com/globalassets/documents/pdf/tax-report-2019.pdf" title="Tax report 2019" target="_blank">Tax report 2019</a></li>
+                                <li><a href="https://www.unitedutilities.com/globalassets/z_corporate-site/corporate-governance/8218-tax-policy-2019.pdf" title="UK Tax policies and objectives for 2018/19" target="_blank">UK Tax policies and objectives for 2018/19</a></li>
+                                <li><a href="https://www.unitedutilities.com/globalassets/documents/pdf/slavery-and-human-trafficking-statement-2019.acc19-002.pdf" title="Modern Slavery Statement" target="_blank">Modern Slavery Statement</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-footer__sub-content">
+	        <p class="c-footer__sub-content_copyright">
+		        © United Utilities Group PLC 2019
+	        </p>
+            <ul class="c-footer__sub-content_links">
+                    <li><a href="https://www.unitedutilities.com/corporate/contact-us/" title="Contact us">Contact us</a></li>
+                    <li><a href="https://www.unitedutilities.com/privacy/" title="Privacy">Privacy</a></li>
+                    <li><a href="https://www.unitedutilities.com/corporate/subsidiaries/" title="Sudsidiaries">Subsidiaries</a></li>
+            </ul>
+        </div>
+        <div class="c-footer-item-body" style="padding: 0;">
+			
+        </div>																	
+    </div>
+</footer>        </div>
+         <div class="c-recite-me">
+    <button class="c-button-speech" aria-pressed="false" onclick="loadService();return false;" onkeypress="loadService();return false;">
+        <span class="icon-speech"></span>
+        Accessibility help?
+        <span class="visually-hidden"> Speak or translate</span>
+    </button>
+</div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/js/dev/lib/jquery.min.js"><\/script>')</script>
+        <script src="/js/dev/lib/jspdf.min.js?build=2.515.0.0"></script>
+        <script src="/js/dist/vendor.min.js?build=2.515.0.0"></script>
+        <script src="/js/dist/mando.min.js?build=2.515.0.0"></script>
+        
+<noscript>
+	<img src="/util/LiveMonitor/Tracking/Index?contentId=13353&amp;languageId=en" alt="" style="display:none" />
+</noscript>
+
+<script type="text/javascript" src="https://dl.episerver.net/13.2.5/epi-util/find.js"></script>
+<script type="text/javascript">
+void(function(){var tUrl = "/util/LiveMonitor/Tracking/Index?contentId=13353&languageId=en";tUrl += (tUrl.indexOf("?") > 0 ? "&" : "?");var tUrl1 = tUrl + "r=" + Math.random() + "&referrer=" + escape(document.referrer);document.write("<img id='LiveMonTransparentImage' src='" + tUrl1 + "' alt='' width='1' height='1'/>");window.onpageshow = function (ev) {if (ev && ev.persisted){document.getElementById("LiveMonTransparentImage").src = tUrl + "r=" + Math.random() + "&referrer=" + escape(document.referrer);}}}());
+</script>
+<script type="text/javascript">
+if(FindApi){var api = new FindApi();api.setApplicationUrl('/');api.setServiceApiBaseUrl('/find_v2/');api.processEventFromCurrentUri();api.bindWindowEvents();api.bindAClickEvent();api.sendBufferedEvents();}
+</script>
+
+    </body>
+</html>

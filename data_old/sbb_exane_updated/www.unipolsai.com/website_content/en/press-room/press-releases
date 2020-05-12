@@ -1,0 +1,2276 @@
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('html') -->
+<!-- FILE NAME SUGGESTIONS:
+   * html--node--3070.tpl.php
+   * html--node--%.tpl.php
+   * html--node.tpl.php
+   x html.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/html/html.tpl.php' -->
+<!DOCTYPE html>
+<!--[if IEMobile 7]><html class="iem7"  lang="en" dir="ltr"><![endif]-->
+<!--[if lte IE 6]><html class="lt-ie9 lt-ie8 lt-ie7"  lang="en" dir="ltr"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]><html class="lt-ie9 lt-ie8"  lang="en" dir="ltr"><![endif]-->
+<!--[if IE 8]><html class="lt-ie9"  lang="en" dir="ltr"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!--><html  lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#"><!--<![endif]-->
+
+<head>
+  <!-- Response monitor header -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+<link rel="shortcut icon" href="http://www.unipolsai.com/sites/corporate/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<meta name="gwt:property" content="locale=en" />
+<meta name="description" content="For the dissemination and storage of regulated information, UnipolSai Assicurazioni S.p.A. uses the eMarket SDIR dissemination system and the eMarket STORAGE mechanism available at the website www.emarketstorage.com managed by Spafid Connect S.p.A., with registered office in Foro Buonaparte 10, Milan." />
+<link rel="canonical" href="http://www.unipolsai.com/en/press-room/press-releases" />
+  <title>Press Releases | UnipolSai | Corporate Website</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+
+      <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta http-equiv="cleartype" content="on">
+
+  <script type="text/javascript">
+    /* First CSS File */
+    var google_font = document.createElement('link');
+    google_font.rel = 'stylesheet';
+    google_font.href = 'https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic&subset=latin,latin-ext';
+    google_font.type = 'text/css';
+    var first_link = document.getElementsByTagName('link')[0];
+    first_link.parentNode.insertBefore(google_font, first_link);
+  </script>
+  <noscript>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+  </noscript>
+
+  <!--[if lte IE 9]>
+  <script src="/sites/default/themes/unipolsai_corporate/js/vendor/ie-fallbacks/media.match.js"></script>
+  <![endif]-->
+
+  <link type="text/css" rel="stylesheet" href="http://www.unipolsai.com/sites/corporate/files/css/css_lQaZfjVpwP_oGNqdtWCSpJT1EMqXdMiU84ekLLxQnc4.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.unipolsai.com/sites/corporate/files/css/css_0GhLbnY6merzS6UHUUe271VYgbbkA7miYxgimhGoLoo.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.unipolsai.com/sites/corporate/files/css/css_vea31D8T-BCF4w-jTks9sHxlLNj8iQbbdvTn-a7FN28.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.unipolsai.com/sites/corporate/files/css/css_UmN6kdClGUuodRsedW9i0VQysu04-MYPASzvCugFejE.css" media="all" />
+<link type="text/css" rel="stylesheet" href="http://www.unipolsai.com/sites/corporate/files/css/css_GnskbXbVvBDn8oYuEH5-pX0sSjx0xz66_it9h7wkV1I.css" media="all" />
+  <script src="http://www.unipolsai.com/sites/corporate/files/js/js_kk2vH0jnj_QqyxbiWjf2Vr_MSKwbwPI9hlYZ1m6ffkY.js"></script>
+<script src="http://www.unipolsai.com/sites/corporate/files/js/js_ouwNqafo8OYQDY-4vp-WQ3tdNx21qOO4bHxzqkjUxwI.js"></script>
+<script src="http://www.unipolsai.com/sites/corporate/files/js/js__L70nMGrjXVQ7yMLJZmeB2NlNyBtCNjpt7fddZHD2Bc.js"></script>
+<script src="http://www.unipolsai.com/sites/corporate/files/js/js_saEeKn61fuyRwLLoRKtaV7yc_OWeTb1EdGMzEHeIi24.js"></script>
+<script src="http://www.unipolsai.com/sites/corporate/files/DoraInteractiveTable/DoraInteractiveTable.nocache.js?q05bmc"></script>
+<script src="http://www.unipolsai.com/sites/corporate/files/js/js_JwLTGWcxg5TLESmkuKIPLEmaLBYwmeAAS6v2kQNkSfk.js"></script>
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-47036672-1", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("send", "pageview");</script>
+<script src="http://www.unipolsai.com/sites/corporate/files/js/js__jh9dNLtRRWD3_2AGXrEDyWhFpmCejQKmPmLkSqbxBY.js"></script>
+<script src="http://www.unipolsai.com/sites/corporate/files/js/js_UI0I85-8Q3yYmh7zB00B1_n4dy0f5FKhpEHFWein7yI.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"unipolsai_corporate","theme_token":"dXjbL6j4SkZFDRHHCXWVtaZEYz1zKzSSc_DLwoClf58","jquery_version":"1.10","js":{"sites\/default\/modules\/msgutils\/script\/script.js":1,"sites\/default\/modules\/jquery_update\/replace\/jquery\/1.10\/jquery.js":1,"misc\/jquery-extend-3.4.0.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.core.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.widget.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.tabs.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.button.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.mouse.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.draggable.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.position.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.resizable.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.dialog.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.spinner.js":1,"sites\/default\/modules\/jquery_update\/replace\/misc\/jquery.form.js":1,"sites\/default\/modules\/jquery_update\/replace\/ui\/ui\/jquery.ui.datepicker.js":1,"modules\/locale\/locale.datepicker.js":1,"sites\/default\/modules\/date\/date_popup\/jquery.timeentry.pack.js":1,"misc\/ajax.js":1,"sites\/default\/modules\/jquery_update\/js\/jquery_update.js":1,"sites\/default\/modules\/fancy_file_delete\/js\/fancyfiledelete.js":1,"sites\/default\/modules\/msgutils\/script\/jquery.textresizer.js":1,"sites\/default\/modules\/messagebot\/modules\/bot_ui\/js\/CSSPlugin.min.js":1,"sites\/default\/modules\/messagebot\/modules\/bot_ui\/js\/TweenLite.min.js":1,"sites\/corporate\/files\/DoraInteractiveTable\/DoraInteractiveTable.nocache.js":1,"sites\/corporate\/files\/DoraInteractiveTable\/js\/jquery191.js":1,"sites\/corporate\/files\/DoraInteractiveTable\/js\/jquery191.no-conflict.js":1,"sites\/corporate\/files\/DoraInteractiveTable\/js\/highstock_201.js":1,"sites\/corporate\/files\/DoraInteractiveTable\/js\/GraphSkin.js":1,"sites\/corporate\/files\/DoraInteractiveTable\/js\/exporting.js":1,"sites\/default\/modules\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/default\/modules\/date\/date_popup\/date_popup.js":1,"sites\/default\/modules\/views\/js\/base.js":1,"misc\/progress.js":1,"sites\/default\/modules\/views\/js\/ajax_view.js":1,"sites\/default\/modules\/google_analytics\/googleanalytics.js":1,"0":1,"sites\/default\/modules\/tt_filebasket\/js\/tt_filebasket.js":1,"misc\/autocomplete.js":1,"sites\/default\/modules\/search_api_autocomplete\/search_api_autocomplete.js":1,"sites\/default\/modules\/field_group\/field_group.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/iframeResizer.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/enquire.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/viewportSize.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/jquery.columnizer.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/blueimp-gallery\/blueimp-gallery.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/blueimp-gallery\/blueimp-gallery-fullscreen.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/blueimp-gallery\/blueimp-gallery-indicator.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/blueimp-gallery\/jquery.blueimp-gallery.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/owl-carousel\/owl.carousel.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/custom\/events-timeline.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/mini-libs.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/custom\/global-theme-object.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/custom\/special_pages.js":1,"sites\/default\/themes\/unipolsai_corporate\/js\/script.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.tabs.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"misc\/ui\/jquery.ui.spinner.css":1,"misc\/ui\/jquery.ui.datepicker.css":1,"sites\/default\/modules\/date\/date_popup\/themes\/jquery.timeentry.css":1,"modules\/comment\/comment.css":1,"sites\/default\/modules\/date\/date_api\/date.css":1,"sites\/default\/modules\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/default\/modules\/menu_attach_block\/menu_attach_block.css":1,"sites\/default\/modules\/menu_language_filter\/menu_language_filter.css":1,"modules\/node\/node.css":1,"modules\/user\/user.css":1,"sites\/default\/modules\/views\/css\/views.css":1,"sites\/default\/modules\/ctools\/css\/ctools.css":1,"sites\/corporate\/files\/DoraInteractiveTable\/css\/DoraInteractiveTable.css":1,"sites\/default\/modules\/msgutils\/css\/default.css":1,"modules\/locale\/locale.css":1,"sites\/default\/modules\/tt_filebasket\/css\/animations.css":1,"sites\/default\/modules\/tt_filebasket\/css\/tt_filebasket.css":1,"sites\/default\/modules\/tt_filebasket\/css\/tt_filebasket_customization.css":1,"sites\/default\/modules\/search_api_autocomplete\/search_api_autocomplete.css":1,"sites\/default\/themes\/unipolsai_corporate\/system.menus.css":1,"sites\/default\/themes\/unipolsai_corporate\/system.messages.css":1,"sites\/default\/themes\/unipolsai_corporate\/system.theme.css":1,"sites\/default\/themes\/unipolsai_corporate\/field_collection.theme.css":1,"sites\/default\/themes\/unipolsai_corporate\/jquery.ui.theme.css":1,"sites\/default\/themes\/unipolsai_corporate\/jquery.ui.tabs.css":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/owl-carousel\/css\/owl.carousel.css":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/blueimp-gallery\/css\/blueimp-gallery.css":1,"sites\/default\/themes\/unipolsai_corporate\/js\/vendor\/blueimp-gallery\/css\/blueimp-gallery-indicator.css":1,"sites\/default\/themes\/unipolsai_corporate\/css\/styles.css":1}},"gwtdora":{"editmode":"yes"},"msgutils":{"internalprefix":"internal:","internalprefixshow":true,"internalpath":"node\/3070","paginatore_attiva":0,"paginatore_page":null,"paginatore_min":1,"paginatore_max":1,"paginatore_selettore":".node .field-name-body .field-item","dialog_delta_height":"20","dialog_delta_width":"90%","paginatore_contenuto_originale":"","paginatore_contenuto_pagine":"","pagebreak":"\u003C!--pagebreak--\u003E","basket":{"delimiter":"-"},"arg1":"3070"},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"archive_view":{"displays":{"block":{"filters":{"field_publishing_date_value":{"required":false},"field_publishing_date_value_1":{"required":false},"field_publishing_date_value_3":{"required":false},"combine":{"required":false},"term_node_tid_depth":{"required":false},"term_node_tid_depth_1":{"required":false}}}}}}},"jquery":{"ui":{"datepicker":{"isRTL":false,"firstDay":"0"}}},"datePopup":{"edit-field-publishing-date-value-value-datepicker-popup-0":{"func":"datepicker","settings":{"changeMonth":true,"changeYear":true,"autoPopUp":"focus","closeAtTop":false,"speed":"immediate","firstDay":0,"dateFormat":"dd\/mm\/yy","yearRange":"-21:+3","fromTo":false,"defaultDate":"0y"}},"edit-field-publishing-date-value-1-value-datepicker-popup-0":{"func":"datepicker","settings":{"changeMonth":true,"changeYear":true,"autoPopUp":"focus","closeAtTop":false,"speed":"immediate","firstDay":0,"dateFormat":"dd\/mm\/yy","yearRange":"-21:+3","fromTo":false,"defaultDate":"0y"}}},"urlIsAjaxTrusted":{"\/en":true,"\/en\/views\/ajax":true,"\/en\/search":true},"views":{"ajax_path":"\/en\/views\/ajax","ajaxViews":{"views_dom_id:d0afdd3aed72e8b2133e81f89312d9d1":{"view_name":"archive_view","view_display_id":"block","view_args":"","view_path":"node\/3070","view_base_path":null,"view_dom_id":"d0afdd3aed72e8b2133e81f89312d9d1","pager_element":0}}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"tt_filebasket":{"menuSel":"block-block-6","menuItmSel":"file-basket-after","matchRules":"{\r\n  \u0022rules\u0022: [\r\n    {\r\n      \u0022containerClass\u0022: \u0022.view-archive-view\u0022, \r\n      \u0022itemSelectorRule\u0022: \u0022.basket-target\u0022,\r\n      \u0022urlSelectorRule\u0022: \u0022.pdf\u0022,\r\n      \u0022parentSelectorRule\u0022: \u00220\u0022,\r\n      \u0022titleSelectorRule\u0022: \u0022.pdf\u0022,\r\n      \u0022comment\u0022: \u0022View: Archive: Press Releases\u0022\r\n    },\r\n   {\r\n      \u0022containerClass\u0022: \u0022.view.view-media\u0022, \r\n      \u0022itemSelectorRule\u0022: \u0022.basket-target\u0022,\r\n      \u0022urlSelectorRule\u0022: \u0022.image-high\u0022,\r\n      \u0022parentSelectorRule\u0022: \u00220\u0022,\r\n      \u0022titleSelectorRule\u0022: \u0022.basket-title\u0022,\r\n      \u0022comment\u0022: \u0022View: Media Image Alta\u0022\r\n    },\r\n    {\r\n      \u0022containerClass\u0022: \u0022.view.view-media\u0022, \r\n      \u0022itemSelectorRule\u0022: \u0022.basket-target-hidden\u0022,\r\n      \u0022urlSelectorRule\u0022: \u0022.image-low\u0022,\r\n      \u0022parentSelectorRule\u0022: \u00220\u0022,\r\n      \u0022titleSelectorRule\u0022: \u0022.image-low\u0022,\r\n      \u0022comment\u0022: \u0022View: Media Image Bassa\u0022\r\n    }\r\n  ]\r\n}","menuItmUrl":"http:\/\/www.unipolsai.com\/filebasket\/file_summary","zipCreateUrl":"filebasket\/createbasketzip","menuItmTxt":"Download files basket","hoverTitle":"My Downloads","hoverSize":"Total size:","hoverClear":"clear list","hoverGoto":"go to list","hoverDwAll":"download all","getFilesizePath":"http:\/\/www.unipolsai.com\/sites\/default\/modules\/tt_filebasket\/getfilesize.php"},"field_group":{"div":"full"}});</script>
+      <!--[if lt IE 9]>
+    <script src="/sites/default/themes/zen/js/html5-respond.js"></script>
+    <script src="/sites/default/themes/unipolsai_corporate/js/vendor/ie-fallbacks/selectivizr.js"></script>
+    <![endif]-->
+  </head>
+<body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-3070 node-type-page i18n-en section-press-room" >
+      <p id="skip-link">
+      <a href="#main-menu" class="element-invisible element-focusable">Jump to navigation</a>
+    </p>
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('page') -->
+<!-- FILE NAME SUGGESTIONS:
+   * page--type-page.tpl.php
+   * page--node--3070.tpl.php
+   * page--node--%.tpl.php
+   * page--node.tpl.php
+   x page.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/pages/page.tpl.php' -->
+
+<div id="modal">
+  <div class="close-modal"><a href="#">Close</a></div>
+  <img class="loader"
+       src="/sites/default/themes/unipolsai_corporate/images/ajax-loader.gif"
+       alt="Loading">
+  <div class="wrapper"></div>
+</div>
+
+<div class="vanishing-header scroll-down">
+  <header class="header" id="header" role="banner">
+
+    <div class="wrapper">
+      
+      
+      
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--header.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/zen/templates/region.tpl.php' -->
+  <div class="header__region region region-header">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu-block--1.tpl.php
+   * block--menu-block.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-menu-block-1" class="block block-menu-block archive-link first odd" role="navigation">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_block/menu-block-wrapper.tpl.php' -->
+<div class="menu-block-wrapper menu-block-1 menu-name-menu-archive-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="menu__item is-leaf is-parent first last leaf has-children menu-mlid-1908"><a href="/en/archive" title="Archive" class="menu__link">Archive</a></li>
+</ul></div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_block/menu-block-wrapper.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--7.tpl.php
+   * block--block.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-7" class="block block-block font-resizer even">
+
+    
+  <div class="content">
+    <a href="#" class="fsz1" title="Rimpicciolisci font">-</a><a href="#" class="fsz2" title="Normalizza font">A</a><a href="#" class="fsz3" title="Ingrandisci font">+</a>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--locale--language.tpl.php
+   * block--locale.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-locale-language" class="block block-locale odd" role="complementary">
+
+    
+  <div class="content">
+    <ul class="language-switcher-locale-url"><li class="it first"><a href="/it/press-room/comunicati-stampa" class="language-link" xml:lang="it" title="Comunicati Stampa">it</a></li>
+<li class="en last active"><a href="/en/press-room/press-releases" class="language-link active" xml:lang="en" title="Press Releases">en</a></li>
+</ul>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--msg-search-api--search-form.tpl.php
+   * block--msg-search-api.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-msg-search-api-search-form" class="block block-msg-search-api vanishing-search even">
+
+    
+  <div class="content">
+    <form action="/en/search" method="get" id="msg-search-api-search-form" accept-charset="UTF-8"><div><div class="container-inline"><div class="form-item form-type-textfield form-item-search-api-views-fulltext">
+ <input class="auto_submit form-text form-autocomplete" data-search-api-autocomplete-search="search_api_views_search_global" type="text" id="edit-search-api-views-fulltext" name="search_api_views_fulltext" value="" size="60" maxlength="128" /><input type="hidden" id="edit-search-api-views-fulltext-autocomplete" value="http://www.unipolsai.com/index.php?q=en/search_api_autocomplete/search_api_views_search_global/-" disabled="disabled" class="autocomplete" />
+</div>
+<input id="submit" type="submit" name="" value="" class="form-submit" /></div></div></form>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--6.tpl.php
+   * block--block.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-6" class="block block-block file-basket odd">
+
+    
+  <div class="content">
+    <div id="file-basket-after"></div>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu--menu-network-menu.tpl.php
+   * block--menu.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-menu-menu-network-menu" class="block block-menu sliding-menu even" role="navigation">
+
+    <h2 class="block__title block-title"><span>UNIPOL NETWORK | GRUPPO UNIPOL</span></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="menu__item is-leaf first leaf"><a href="http://www.unipol.it/en" class="menu__link">Unipol Group</a></li>
+<li class="menu__item is-leaf leaf"><a href="http://www.unipolsai.com/en/Pages/default.aspx" class="menu__link">UnipolSai Corporate</a></li>
+<li class="menu__item is-leaf leaf"><a href="http://www.unipolsai.it/Pagine/home.aspx " class="menu__link">UnipolSai Assicurazioni</a></li>
+<li class="menu__item is-leaf leaf"><a href="http://www.fondazioneunipolis.org/" class="menu__link">Fondazione Unipolis</a></li>
+<li class="menu__item is-leaf last leaf"><a href="http://corporatesponsorship.unipol.it/en" class="menu__link">Corporate Sponsorship Program</a></li>
+</ul>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu--menu-go-to.tpl.php
+   * block--menu.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-menu-menu-go-to" class="block block-menu sliding-menu odd" role="navigation">
+
+    <h2 class="block__title block-title"><span>GO TO</span></h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="menu__item is-leaf first leaf"><a href="http://www.unipol.it/en/sustainability" class="menu__link">Sustainability</a></li>
+<li class="menu__item is-leaf leaf"><a href="http://www.unipol.it/en/people" class="menu__link">People</a></li>
+<li class="menu__item is-leaf last leaf"><a href="http://www.unipoltobe.it/en/" class="menu__link">Unipoltobe</a></li>
+</ul>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--8.tpl.php
+   * block--block.tpl.php
+   * block--header.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-8" class="block block-block web-embrace last even">
+
+    
+  <div class="content">
+    <p>Unipol Gruppo</p>
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+  </div>
+
+<!-- END OUTPUT from 'sites/default/themes/zen/templates/region.tpl.php' -->
+
+    </div>
+
+  </header>
+
+  <div id="navigation">
+
+    <div class="wrapper">
+      
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--navigation.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/zen/templates/region.tpl.php' -->
+  <div class="region region-navigation">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--18.tpl.php
+   * block--block.tpl.php
+   * block--navigation.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-18" class="block block-block mobile-menu-toggle first odd">
+
+    
+  <div class="content">
+    <a href="#" title="Mobile Menu">Mobile Menu</a>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--9.tpl.php
+   * block--block.tpl.php
+   * block--navigation.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-9" class="block block-block logo even">
+
+    
+  <div class="content">
+    <a href="/en" title="Home" rel="home" class="header__logo" id="logo"><img src="/sites/corporate/themes/unipolsai_corporate/logo.png" alt="Home" class="header__logo-image" /><img src="/sites/corporate/themes/unipolsai_corporate/logo-unipolsai-white.png" class="logo-neg-ie"/></a>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu-block--2.tpl.php
+   * block--menu-block.tpl.php
+   * block--navigation.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-menu-block-2" class="block block-menu-block megamenu last odd" role="navigation">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_block/menu-block-wrapper.tpl.php' -->
+<div class="menu-block-wrapper menu-block-2 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2912 icon-who depth-1 has-children main"><a href="/en/about-us" class="menu__link">About us</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--11.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-11" class="block block-block menu-attach-block even">
+
+    
+  <div class="content">
+    <p>Next to people.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu menu-wrapper"><li><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2879 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/corporate-profile" class="menu__link">Corporate Profile</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2884 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/corporate-structure" class="menu__link">Corporate Structure</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3136 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/group-mission-and-values" class="menu__link">Group Mission and Values</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-6610 depth-2 has-children sub dontsplit"><a href="/en/about-us/sustainability" class="menu__link">Sustainability</a><ul class="menu"><li class="menu__item is-leaf first last leaf menu-mlid-6873 depth-3 has-no-children sub dontsplit"><a href="/en/about-us/sustainability/life-derris-disaster-risk-reduction-insurance" class="menu__link">Life DERRIS - DisastEr Risk Reduction InSurance</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-6607 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/brand-communication" class="menu__link">Brand & Communication</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6001 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/history" class="menu__link">History</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2893 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/corporate-sponsorship-program" class="menu__link">Corporate Sponsorship Program</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2895 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/agenda" class="menu__link">Agenda</a></li>
+</ul></li></ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2911 icon-innovation depth-1 has-children main"><a href="/en/innovation-and-offer" class="menu__link">Innovation and offer</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--12.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-12" class="block block-block menu-attach-block odd">
+
+    
+  <div class="content">
+    <p>Next to future.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu menu-wrapper"><li><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-5300 depth-2 has-no-children sub dontsplit"><a href="/en/innovation-and-offer/our-model" class="menu__link">Our model</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-8022 depth-2 has-no-children sub dontsplit"><a href="/en/innovation-and-offer/unipolsai-observatory" class="menu__link">UnipolSai Observatory</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6505 depth-2 has-no-children sub dontsplit"><a href="/en/innovation-and-offer/reinsurance-department" class="menu__link">Reinsurance Department</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-6002 depth-2 has-children sub dontsplit"><a href="/en/innovation-and-offer/solutions-and-products-future" class="menu__link">Solutions and products for the future</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-6003 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/mobilita" class="menu__link">Mobility</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6004 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/casa" class="menu__link">Home</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6005 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/protezione" class="menu__link">Protection</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6006 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/lavoro" class="menu__link">Work</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-6007 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/risparmio" class="menu__link">Saving</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-6008 depth-2 has-children sub dontsplit"><a href="/en/innovation-and-offer/services" class="menu__link">Services</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-6565 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/servizio-clienti" class="menu__link">Customers care</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6566 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/denuncia-sinistri" class="menu__link">Claim reporting</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-6567 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/homepage" class="menu__link">Fullquote car quote</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-6009 depth-2 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/quotazioni-rendiconti " class="menu__link">Listing and reports</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-6010 depth-2 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/risparmio/pensione-integrativa-fondi-pensione" class="menu__link">Supplementary pension</a></li>
+</ul></li></ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2914 icon-governance depth-1 has-children main"><a href="/en/governance" class="menu__link">Governance</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--14.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-14" class="block block-block menu-attach-block even">
+
+    
+  <div class="content">
+    <p>Next to challenges.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu menu-wrapper"><li><ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2937 depth-2 has-children sub dontsplit"><a href="/en/governance/corporate-governance-system" class="menu__link">Corporate Governance System</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2939 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/laws" class="menu__link">By-Laws</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2938 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/annual-report" class="menu__link">Annual Report</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6023 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/limits-number-posts-held-directors" class="menu__link">Limits on the number of posts held by the directors</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2942 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/remuneration-report" class="menu__link">Remuneration Report</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6011 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/extraordinary-resolutions-board-directors" class="menu__link">Extraordinary Resolutions of the Board of Directors</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2940 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/organisational-and-management-model-omm" class="menu__link">Organisational and Management Model (OMM)</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2941 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/charter-values-and-code-ethics" class="menu__link">Charter of values and code of ethics</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2944 depth-2 has-children sub dontsplit"><a href="/en/governance/internal-control-and-risk-management-system" class="menu__link">Internal control system</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2945 depth-3 has-no-children sub dontsplit"><a href="/en/governance/internal-control-system/internal-auditing" class="menu__link">Internal Auditing</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2946 depth-3 has-no-children sub dontsplit"><a href="/en/governance/internal-control-system/risk-management" class="menu__link">Risk Management</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2947 depth-3 has-no-children sub dontsplit"><a href="/en/governance/internal-control-system/compliance" class="menu__link">Compliance</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2948 depth-2 has-children sub dontsplit"><a href="/en/governance/boards-and-officials" class="menu__link">Boards and officials</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-6083 depth-3 has-no-children sub dontsplit"><a href="/en/governance/boards-and-officials/board-directors" class="menu__link">Board of Directors</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2951 depth-3 has-no-children sub dontsplit"><a href="/en/governance/boards-and-officials/board-committees" class="menu__link">Internal Committees</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2950 depth-3 has-no-children sub dontsplit"><a href="/en/governance/boards-and-officials/statutory-auditors" class="menu__link">Statutory Auditors</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2952 depth-3 has-no-children sub dontsplit"><a href="/en/governance/boards-and-officials/auditors" class="menu__link">Auditors</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-2953 depth-2 has-no-children sub dontsplit"><a href="/en/governance/management" class="menu__link">Management</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2954 depth-2 has-no-children sub dontsplit"><a href="/en/governance/shareholders-meetings" class="menu__link">Shareholders' Meetings</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2318 depth-2 has-no-children sub dontsplit"><a href="/en/governance/internal-dealing" title="Internal Dealing" class="menu__link">Internal Dealing</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-2955 depth-2 has-children sub dontsplit"><a href="/en/governance/extraordinary-transactions" class="menu__link">Extraordinary transactions</a><ul class="menu"><li class="menu__item is-leaf is-parent first leaf has-children menu-mlid-2328 depth-3 has-no-children sub dontsplit"><a href="/en/governance/extraordinary-transactions/unipol-fondiaria-sai-merger-plan" class="menu__link">Unipol-Fondiaria-Sai Merger Plan</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6012 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-operations/merger-plans-subsidiaries" class="menu__link">Mergers with subsidiaries</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-8155 depth-3 has-no-children sub dontsplit"><a href="/en/governance/extraordinary-transactions/demergers-subsidiaries" class="menu__link">Demergers with subsidiaries</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6016 depth-3 has-no-children sub dontsplit"><a href="/en/governance/extraordinary-transactions/purchase-insurance-company-linear-life" class="menu__link">Purchase of Linear Life</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-6013 depth-3 has-no-children sub dontsplit"><a href="/en/governance/extraordinary-transactions/public-tender-offer-rcs" class="menu__link">Public Tender Offer on RCS</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-2956 depth-2 has-no-children sub dontsplit"><a href="/en/governance/related-parties-operations" class="menu__link">Related Parties Operation</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2316 depth-2 has-no-children sub dontsplit"><a href="/en/governance/archive" title="Archive" class="menu__link">Archive</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2958 depth-2 has-no-children sub dontsplit"><a href="/en/governance/agenda" class="menu__link">Agenda</a></li>
+</ul></li></ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2915 icon-investor depth-1 has-children main"><a href="/en/investors" class="menu__link">Investors</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--15.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-15" class="block block-block menu-attach-block odd">
+
+    
+  <div class="content">
+    <p>Next to business.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu menu-wrapper"><li><ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2961 depth-2 has-children sub dontsplit"><a href="/en/investors/share-information" class="menu__link">Share information</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2962 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/indexes" class="menu__link">Indexes</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2964 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/market-capitalization" class="menu__link">Market Capitalization</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2965 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/dividends" class="menu__link">Dividends</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2966 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/analysts" class="menu__link">Analysts</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2967 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/rating" class="menu__link">Rating</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2968 depth-2 has-children sub dontsplit"><a href="/en/investor/financial-data" class="menu__link">Financial Data</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2970 depth-3 has-no-children sub dontsplit"><a href="/en/investors/financial-data/highlights" class="menu__link">Highlights</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-3009 depth-3 has-no-children sub dontsplit"><a href="/en/investors/financial-data/share-capital" class="menu__link">Share Capital</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-2975 depth-2 has-no-children sub dontsplit"><a href="/en/investor/presentations" class="menu__link">Presentations</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2973 depth-2 has-no-children sub dontsplit"><a href="/en/investors/results-center" class="menu__link">Results Center</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2974 depth-2 has-no-children sub dontsplit"><a href="/en/investors/reports-and-results" class="menu__link">Reports and Results</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-8160 depth-2 has-no-children sub dontsplit"><a href="/en/investors/mission-evolve-strategic-plan-2019-2021" class="menu__link">Mission Evolve: Strategic Plan 2019-2021</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2972 depth-2 has-no-children sub dontsplit"><a href="/en/investors/shareholding-structure" class="menu__link">Shareholding Structure</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2976 depth-2 has-no-children sub dontsplit"><a href="/en/investor/notices" class="menu__link">Notices and prospects</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2978 depth-2 has-no-children sub dontsplit"><a href="/en/investor/past-operations-capital" class="menu__link">Past operations on capital and Loans</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6876 depth-2 has-no-children sub dontsplit"><a href="/en/investors/investor-kit" class="menu__link">Investor Kit</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2985 depth-2 has-no-children sub dontsplit"><a href="/en/investors/agenda" class="menu__link">Agenda</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3465 depth-2 has-no-children sub dontsplit"><a href="/en/investors/archive" class="menu__link">Archive</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-7382 depth-2 has-no-children sub dontsplit"><a href="/en/investors/contacts-0" class="menu__link">Contacts</a></li>
+</ul></li></ul></li>
+<li class="menu__item is-expanded is-active-trail expanded active-trail menu-mlid-3012 icon-press depth-1 has-children main"><a href="/en/press-room" class="menu__link is-active-trail active-trail">Press room</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--16.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-16--2" class="block block-block menu-attach-block even">
+
+    
+  <div class="content">
+    <p>Next to media.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu menu-wrapper"><li><ul class="menu"><li class="menu__item is-leaf is-active-trail is-active first leaf active-trail active menu-mlid-2986 depth-2 has-no-children sub dontsplit"><a href="/en/press-room/press-releases" class="menu__link is-active-trail active-trail active">Press Releases</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-2988 depth-2 has-children sub dontsplit"><a href="/en/press-room/press-gallery" class="menu__link">Press gallery</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2989 depth-3 has-no-children sub dontsplit"><a href="/en/press-room/media-gallery/image-gallery" class="menu__link">Image gallery</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2990 depth-3 has-no-children sub dontsplit"><a href="/en/press-room/media-gallery/video-gallery" class="menu__link">Video gallery</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-2991 depth-2 has-no-children sub dontsplit"><a href="/en/press-room/agenda" class="menu__link">Agenda</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2992 depth-2 has-no-children sub dontsplit"><a href="/en/press-room/social-hub" class="menu__link">Social hub</a></li>
+</ul></li></ul></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2082 depth-1 has-no-children main"><a href="/en/social-wall" class="menu__link light-blue">#Social Wall</a></li>
+</ul></div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_block/menu-block-wrapper.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+  </div>
+
+<!-- END OUTPUT from 'sites/default/themes/zen/templates/region.tpl.php' -->
+
+    </div>
+
+  </div>
+</div>
+
+<div id="highlighted">
+  <div class="wrapper">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--highlighted.tpl.php
+   x region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/zen/templates/region.tpl.php' -->
+  <div class="region region-highlighted">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu-block--3.tpl.php
+   * block--menu-block.tpl.php
+   * block--highlighted.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-menu-block-3" class="block block-menu-block mobile-menu first odd" role="navigation">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_block/menu-block-wrapper.tpl.php' -->
+<div class="menu-block-wrapper menu-block-3 menu-name-main-menu parent-mlid-0 menu-level-1">
+  <ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2912 icon-who depth-1 has-children main"><a href="/en/about-us" class="menu__link">About us</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--11.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-11--2" class="block block-block menu-attach-block odd">
+
+    
+  <div class="content">
+    <p>Next to people.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2879 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/corporate-profile" class="menu__link">Corporate Profile</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2884 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/corporate-structure" class="menu__link">Corporate Structure</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3136 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/group-mission-and-values" class="menu__link">Group Mission and Values</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-6610 depth-2 has-children sub dontsplit"><a href="/en/about-us/sustainability" class="menu__link">Sustainability</a><ul class="menu"><li class="menu__item is-leaf first last leaf menu-mlid-6873 depth-3 has-no-children sub dontsplit"><a href="/en/about-us/sustainability/life-derris-disaster-risk-reduction-insurance" class="menu__link">Life DERRIS - DisastEr Risk Reduction InSurance</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-6607 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/brand-communication" class="menu__link">Brand & Communication</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6001 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/history" class="menu__link">History</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2893 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/corporate-sponsorship-program" class="menu__link">Corporate Sponsorship Program</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2895 depth-2 has-no-children sub dontsplit"><a href="/en/about-us/agenda" class="menu__link">Agenda</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2911 icon-innovation depth-1 has-children main"><a href="/en/innovation-and-offer" class="menu__link">Innovation and offer</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--12.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-12--2" class="block block-block menu-attach-block even">
+
+    
+  <div class="content">
+    <p>Next to future.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-5300 depth-2 has-no-children sub dontsplit"><a href="/en/innovation-and-offer/our-model" class="menu__link">Our model</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-8022 depth-2 has-no-children sub dontsplit"><a href="/en/innovation-and-offer/unipolsai-observatory" class="menu__link">UnipolSai Observatory</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6505 depth-2 has-no-children sub dontsplit"><a href="/en/innovation-and-offer/reinsurance-department" class="menu__link">Reinsurance Department</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-6002 depth-2 has-children sub dontsplit"><a href="/en/innovation-and-offer/solutions-and-products-future" class="menu__link">Solutions and products for the future</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-6003 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/mobilita" class="menu__link">Mobility</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6004 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/casa" class="menu__link">Home</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6005 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/protezione" class="menu__link">Protection</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6006 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/lavoro" class="menu__link">Work</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-6007 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/risparmio" class="menu__link">Saving</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-6008 depth-2 has-children sub dontsplit"><a href="/en/innovation-and-offer/services" class="menu__link">Services</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-6565 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/servizio-clienti" class="menu__link">Customers care</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6566 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/denuncia-sinistri" class="menu__link">Claim reporting</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-6567 depth-3 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/homepage" class="menu__link">Fullquote car quote</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-6009 depth-2 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/quotazioni-rendiconti " class="menu__link">Listing and reports</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-6010 depth-2 has-no-children sub dontsplit"><a href="https://www.unipolsai.it/risparmio/pensione-integrativa-fondi-pensione" class="menu__link">Supplementary pension</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2914 icon-governance depth-1 has-children main"><a href="/en/governance" class="menu__link">Governance</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--14.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-14--2" class="block block-block menu-attach-block odd">
+
+    
+  <div class="content">
+    <p>Next to challenges.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2937 depth-2 has-children sub dontsplit"><a href="/en/governance/corporate-governance-system" class="menu__link">Corporate Governance System</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2939 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/laws" class="menu__link">By-Laws</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2938 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/annual-report" class="menu__link">Annual Report</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6023 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/limits-number-posts-held-directors" class="menu__link">Limits on the number of posts held by the directors</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2942 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/remuneration-report" class="menu__link">Remuneration Report</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6011 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/extraordinary-resolutions-board-directors" class="menu__link">Extraordinary Resolutions of the Board of Directors</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2940 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/organisational-and-management-model-omm" class="menu__link">Organisational and Management Model (OMM)</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2941 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-governance-system/charter-values-and-code-ethics" class="menu__link">Charter of values and code of ethics</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2944 depth-2 has-children sub dontsplit"><a href="/en/governance/internal-control-and-risk-management-system" class="menu__link">Internal control system</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2945 depth-3 has-no-children sub dontsplit"><a href="/en/governance/internal-control-system/internal-auditing" class="menu__link">Internal Auditing</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2946 depth-3 has-no-children sub dontsplit"><a href="/en/governance/internal-control-system/risk-management" class="menu__link">Risk Management</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2947 depth-3 has-no-children sub dontsplit"><a href="/en/governance/internal-control-system/compliance" class="menu__link">Compliance</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2948 depth-2 has-children sub dontsplit"><a href="/en/governance/boards-and-officials" class="menu__link">Boards and officials</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-6083 depth-3 has-no-children sub dontsplit"><a href="/en/governance/boards-and-officials/board-directors" class="menu__link">Board of Directors</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2951 depth-3 has-no-children sub dontsplit"><a href="/en/governance/boards-and-officials/board-committees" class="menu__link">Internal Committees</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2950 depth-3 has-no-children sub dontsplit"><a href="/en/governance/boards-and-officials/statutory-auditors" class="menu__link">Statutory Auditors</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2952 depth-3 has-no-children sub dontsplit"><a href="/en/governance/boards-and-officials/auditors" class="menu__link">Auditors</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-2953 depth-2 has-no-children sub dontsplit"><a href="/en/governance/management" class="menu__link">Management</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2954 depth-2 has-no-children sub dontsplit"><a href="/en/governance/shareholders-meetings" class="menu__link">Shareholders' Meetings</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2318 depth-2 has-no-children sub dontsplit"><a href="/en/governance/internal-dealing" title="Internal Dealing" class="menu__link">Internal Dealing</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-2955 depth-2 has-children sub dontsplit"><a href="/en/governance/extraordinary-transactions" class="menu__link">Extraordinary transactions</a><ul class="menu"><li class="menu__item is-leaf is-parent first leaf has-children menu-mlid-2328 depth-3 has-no-children sub dontsplit"><a href="/en/governance/extraordinary-transactions/unipol-fondiaria-sai-merger-plan" class="menu__link">Unipol-Fondiaria-Sai Merger Plan</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6012 depth-3 has-no-children sub dontsplit"><a href="/en/governance/corporate-operations/merger-plans-subsidiaries" class="menu__link">Mergers with subsidiaries</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-8155 depth-3 has-no-children sub dontsplit"><a href="/en/governance/extraordinary-transactions/demergers-subsidiaries" class="menu__link">Demergers with subsidiaries</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6016 depth-3 has-no-children sub dontsplit"><a href="/en/governance/extraordinary-transactions/purchase-insurance-company-linear-life" class="menu__link">Purchase of Linear Life</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-6013 depth-3 has-no-children sub dontsplit"><a href="/en/governance/extraordinary-transactions/public-tender-offer-rcs" class="menu__link">Public Tender Offer on RCS</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-2956 depth-2 has-no-children sub dontsplit"><a href="/en/governance/related-parties-operations" class="menu__link">Related Parties Operation</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2316 depth-2 has-no-children sub dontsplit"><a href="/en/governance/archive" title="Archive" class="menu__link">Archive</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2958 depth-2 has-no-children sub dontsplit"><a href="/en/governance/agenda" class="menu__link">Agenda</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2915 icon-investor depth-1 has-children main"><a href="/en/investors" class="menu__link">Investors</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--15.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-15--2" class="block block-block menu-attach-block even">
+
+    
+  <div class="content">
+    <p>Next to business.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu"><li class="menu__item is-expanded first expanded menu-mlid-2961 depth-2 has-children sub dontsplit"><a href="/en/investors/share-information" class="menu__link">Share information</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2962 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/indexes" class="menu__link">Indexes</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2964 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/market-capitalization" class="menu__link">Market Capitalization</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2965 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/dividends" class="menu__link">Dividends</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2966 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/analysts" class="menu__link">Analysts</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2967 depth-3 has-no-children sub dontsplit"><a href="/en/investors/share-information/rating" class="menu__link">Rating</a></li>
+</ul></li>
+<li class="menu__item is-expanded expanded menu-mlid-2968 depth-2 has-children sub dontsplit"><a href="/en/investor/financial-data" class="menu__link">Financial Data</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2970 depth-3 has-no-children sub dontsplit"><a href="/en/investors/financial-data/highlights" class="menu__link">Highlights</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-3009 depth-3 has-no-children sub dontsplit"><a href="/en/investors/financial-data/share-capital" class="menu__link">Share Capital</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-2975 depth-2 has-no-children sub dontsplit"><a href="/en/investor/presentations" class="menu__link">Presentations</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2973 depth-2 has-no-children sub dontsplit"><a href="/en/investors/results-center" class="menu__link">Results Center</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2974 depth-2 has-no-children sub dontsplit"><a href="/en/investors/reports-and-results" class="menu__link">Reports and Results</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-8160 depth-2 has-no-children sub dontsplit"><a href="/en/investors/mission-evolve-strategic-plan-2019-2021" class="menu__link">Mission Evolve: Strategic Plan 2019-2021</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2972 depth-2 has-no-children sub dontsplit"><a href="/en/investors/shareholding-structure" class="menu__link">Shareholding Structure</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2976 depth-2 has-no-children sub dontsplit"><a href="/en/investor/notices" class="menu__link">Notices and prospects</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2978 depth-2 has-no-children sub dontsplit"><a href="/en/investor/past-operations-capital" class="menu__link">Past operations on capital and Loans</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-6876 depth-2 has-no-children sub dontsplit"><a href="/en/investors/investor-kit" class="menu__link">Investor Kit</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-2985 depth-2 has-no-children sub dontsplit"><a href="/en/investors/agenda" class="menu__link">Agenda</a></li>
+<li class="menu__item is-leaf leaf menu-mlid-3465 depth-2 has-no-children sub dontsplit"><a href="/en/investors/archive" class="menu__link">Archive</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-7382 depth-2 has-no-children sub dontsplit"><a href="/en/investors/contacts-0" class="menu__link">Contacts</a></li>
+</ul></li>
+<li class="menu__item is-expanded is-active-trail expanded active-trail menu-mlid-3012 icon-press depth-1 has-children main"><a href="/en/press-room" class="menu__link is-active-trail is-active-trail active-trail active-trail">Press room</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--16.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-16--3" class="block block-block menu-attach-block odd">
+
+    
+  <div class="content">
+    <p>Next to media.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+<ul class="menu"><li class="menu__item is-leaf is-active-trail is-active first leaf active-trail active menu-mlid-2986 depth-2 has-no-children sub dontsplit"><a href="/en/press-room/press-releases" class="menu__link is-active-trail is-active-trail active-trail active-trail active">Press Releases</a></li>
+<li class="menu__item is-expanded expanded menu-mlid-2988 depth-2 has-children sub dontsplit"><a href="/en/press-room/press-gallery" class="menu__link">Press gallery</a><ul class="menu"><li class="menu__item is-leaf first leaf menu-mlid-2989 depth-3 has-no-children sub dontsplit"><a href="/en/press-room/media-gallery/image-gallery" class="menu__link">Image gallery</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2990 depth-3 has-no-children sub dontsplit"><a href="/en/press-room/media-gallery/video-gallery" class="menu__link">Video gallery</a></li>
+</ul></li>
+<li class="menu__item is-leaf leaf menu-mlid-2991 depth-2 has-no-children sub dontsplit"><a href="/en/press-room/agenda" class="menu__link">Agenda</a></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2992 depth-2 has-no-children sub dontsplit"><a href="/en/press-room/social-hub" class="menu__link">Social hub</a></li>
+</ul></li>
+<li class="menu__item is-leaf last leaf menu-mlid-2082 depth-1 has-no-children main"><a href="/en/social-wall" class="menu__link light-blue">#Social Wall</a></li>
+</ul></div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_block/menu-block-wrapper.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--chi-siamo.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-chi-siamo" class="block block-bean even block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--chi-siamo.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--about-us.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-about-us" class="block block-bean odd block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--about-us.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--chi-siamo.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-chi-siamo" class="block block-bean even block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--chi-siamo.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--governance.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-governance" class="block block-bean odd block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--governance.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--governance-en.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-governance-en" class="block block-bean even block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--governance-en.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--investor.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-investor" class="block block-bean odd block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--investor.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--investor-en.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-investor-en" class="block block-bean even block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--investor-en.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--press-room.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-press-room" class="block block-bean odd block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--press-room.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--press-room-en.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-press-room-en" class="block block-bean even block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--press-room-en.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  <div class="entity entity-bean bean-quick-links clearfix" about="/en/block/quick-links--press-room-en" typeof="">
+    <div class="titles">
+      <h2 class="block__title">Quick links</h2>
+      <div class="field field-name-field-reusable-subtitle field-type-text field-label-hidden"><div class="field-items"><div class="field-item even">Read more:</div></div></div>    </div>
+    <div class="content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('paragraphs_items') -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraphs-items--field-paragraph--full.tpl.php
+   * paragraphs-items--field-paragraph.tpl.php
+   x paragraphs-items.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/modules/paragraphs/theme/paragraphs-items.tpl.php' -->
+
+<div class="paragraphs-items paragraphs-items-field-paragraph paragraphs-items-field-paragraph-full paragraphs-items-full">
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('field') -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--field-paragraph--quick-links.tpl.php
+   * field--quick-links.tpl.php
+   x field--field-paragraph.tpl.php
+   * field--paragraphs.tpl.php
+   * field.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/fields/field--field-paragraph.tpl.php' -->
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraphs-item--1613.tpl.php
+   * paragraphs-item--quick-link--full.tpl.php
+   x paragraphs-item--quick-link.tpl.php
+   * paragraphs-item.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/paragraphs/paragraphs-item--quick-link.tpl.php' -->
+<div class="entity entity-paragraphs-item paragraphs-item-quick-link" about="" typeof="">
+  <div class="content">
+    <a href="http://www.unipolsai.com/en/press-room/agenda">
+      <div class="field field-name-field-svg-image-icon field-type-file field-label-hidden"><div class="field-items"><div class="field-item even">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('file_entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * file--12450--default.tpl.php
+   * file--12450.tpl.php
+   * file--image--svg+xml--default.tpl.php
+   x file--image--svg+xml.tpl.php
+   * file--image--default.tpl.php
+   * file--image.tpl.php
+   * file-entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/file/file--image--svg+xml.tpl.php' -->
+<div class="content">
+  <img typeof="foaf:Image" src="http://www.unipolsai.com/sites/corporate/files/quick_links_icons/agenda_0.svg" alt="" /></div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/file/file--image--svg+xml.tpl.php' -->
+
+</div></div></div>      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('field') -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--field-reusable-link--quick-link.tpl.php
+   * field--quick-link.tpl.php
+   x field--field-reusable-link.tpl.php
+   * field--link-field.tpl.php
+   * field.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/fields/field--field-reusable-link.tpl.php' -->
+<div class="field field-name-field-reusable-link field-type-link-field field-label-hidden">
+    <div class="field-items">
+                  <div class="field-item even"><span>Agenda</span></div>
+            </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/fields/field--field-reusable-link.tpl.php' -->
+
+    </a>
+  </div>
+</div>
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/paragraphs/paragraphs-item--quick-link.tpl.php' -->
+
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraphs-item--1614.tpl.php
+   * paragraphs-item--quick-link--full.tpl.php
+   x paragraphs-item--quick-link.tpl.php
+   * paragraphs-item.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/paragraphs/paragraphs-item--quick-link.tpl.php' -->
+<div class="entity entity-paragraphs-item paragraphs-item-quick-link" about="" typeof="">
+  <div class="content">
+    <a href="http://www.unipolsai.com/en/press-room/social-hub">
+      <div class="field field-name-field-svg-image-icon field-type-file field-label-hidden"><div class="field-items"><div class="field-item even">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('file_entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * file--12029--default.tpl.php
+   * file--12029.tpl.php
+   * file--image--svg+xml--default.tpl.php
+   x file--image--svg+xml.tpl.php
+   * file--image--default.tpl.php
+   * file--image.tpl.php
+   * file-entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/file/file--image--svg+xml.tpl.php' -->
+<div class="content">
+  <img typeof="foaf:Image" src="http://www.unipolsai.com/sites/corporate/files/quick_links_icons/struttura-gruppo.svg" alt="" /></div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/file/file--image--svg+xml.tpl.php' -->
+
+</div></div></div>      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('field') -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--field-reusable-link--quick-link.tpl.php
+   * field--quick-link.tpl.php
+   x field--field-reusable-link.tpl.php
+   * field--link-field.tpl.php
+   * field.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/fields/field--field-reusable-link.tpl.php' -->
+<div class="field field-name-field-reusable-link field-type-link-field field-label-hidden">
+    <div class="field-items">
+                  <div class="field-item even"><span>Social</span> <span>hub</span></div>
+            </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/fields/field--field-reusable-link.tpl.php' -->
+
+    </a>
+  </div>
+</div>
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/paragraphs/paragraphs-item--quick-link.tpl.php' -->
+
+  
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * paragraphs-item--1615.tpl.php
+   * paragraphs-item--quick-link--full.tpl.php
+   x paragraphs-item--quick-link.tpl.php
+   * paragraphs-item.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/paragraphs/paragraphs-item--quick-link.tpl.php' -->
+<div class="entity entity-paragraphs-item paragraphs-item-quick-link" about="" typeof="">
+  <div class="content">
+    <a href="http://www.unipolsai.com/en/media-relations-contacts">
+      <div class="field field-name-field-svg-image-icon field-type-file field-label-hidden"><div class="field-items"><div class="field-item even">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('file_entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * file--12031--default.tpl.php
+   * file--12031.tpl.php
+   * file--image--svg+xml--default.tpl.php
+   x file--image--svg+xml.tpl.php
+   * file--image--default.tpl.php
+   * file--image.tpl.php
+   * file-entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/file/file--image--svg+xml.tpl.php' -->
+<div class="content">
+  <img typeof="foaf:Image" src="http://www.unipolsai.com/sites/corporate/files/quick_links_icons/contatti.svg" alt="" /></div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/file/file--image--svg+xml.tpl.php' -->
+
+</div></div></div>      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('field') -->
+<!-- FILE NAME SUGGESTIONS:
+   * field--field-reusable-link--quick-link.tpl.php
+   * field--quick-link.tpl.php
+   x field--field-reusable-link.tpl.php
+   * field--link-field.tpl.php
+   * field.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/fields/field--field-reusable-link.tpl.php' -->
+<div class="field field-name-field-reusable-link field-type-link-field field-label-hidden">
+    <div class="field-items">
+                  <div class="field-item even"><span>Contacts</span></div>
+            </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/fields/field--field-reusable-link.tpl.php' -->
+
+    </a>
+  </div>
+</div>
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/paragraphs/paragraphs-item--quick-link.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/fields/field--field-paragraph.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/paragraphs/theme/paragraphs-items.tpl.php' -->
+
+    </div>
+  </div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--bean--quick-links.tpl.php
+   * block--bean--quick-links--innovation-and-offe.tpl.php
+   * block--bean.tpl.php
+   * block--highlighted.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+<div id="block-bean-quick-links-innovation-and-offe" class="block block-bean last odd block-bean-quick-links">
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('entity') -->
+<!-- FILE NAME SUGGESTIONS:
+   * bean--quick-links--innovation-and-offe.tpl.php
+   * bean--quick-links--default.tpl.php
+   x bean--quick-links.tpl.php
+   * bean.tpl.php
+   * entity.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/bean/bean--quick-links.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--bean--quick-links.tpl.php' -->
+
+  </div>
+
+<!-- END OUTPUT from 'sites/default/themes/zen/templates/region.tpl.php' -->
+
+  </div>
+</div>
+
+  <div id="breadcrumb">
+    <div class="wrapper">
+      <div class="breadcrumb"><h2 class="element-invisible">You are here</h2><span class="crumbs"><a href="/en">Home</a><span class="crumbs-arrow"> | </span><a href="/en/press-room">Press room</a>
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('menu_attach_block_wrapper') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+<div class="menu-attach-block-wrapper">
+	
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--16.tpl.php
+   * block--block.tpl.php
+   * block---1.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-16" class="block block-block menu-attach-block first odd">
+
+    
+  <div class="content">
+    <p>Next to media.</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+</div>
+
+<!-- END OUTPUT from 'sites/default/modules/menu_attach_block/menu_attach_block_wrapper.tpl.php' -->
+
+</span><span class="crumbs-arrow"> | </span><span class="crumbs-current">Press Releases</span></div>    </div>
+  </div>
+
+<div id="help">
+  <div class="wrapper">
+      </div>
+</div>
+
+<div id="main">
+
+  <div class="wrapper">
+    <div id="content" class="column" role="main">
+      <a id="main-content"></a>
+                                    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   * region--content.tpl.php
+   x region--no-wrapper.tpl.php
+   * region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/zen/templates/region--no-wrapper.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--no-wrapper.tpl.php
+   * block--system--main.tpl.php
+   * block--system.tpl.php
+   * block--content.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/zen/templates/block--no-wrapper.tpl.php' -->
+
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('node') -->
+<!-- FILE NAME SUGGESTIONS:
+   * node--3070.tpl.php
+   * node--page.tpl.php
+   x node.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/nodes/node.tpl.php' -->
+<article class="node-3070 node node-page view-mode-full clearfix" about="/en/press-room/press-releases" typeof="sioc:Item foaf:Document">
+    <div class="wrapper content-header">
+              <h1 class="page__title" id="page-title"><span>Press Releases</span></h1>
+    
+          <header>
+                        <span property="dc:title" content="Press Releases" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+        
+              </header>
+            </div>
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p class="note"><em>For the dissemination and storage of regulated information, UnipolSai Assicurazioni S.p.A. uses the eMarket SDIR dissemination system and the eMarket STORAGE mechanism available at the website <a href="http://www.emarketstorage.com/home/homepage.en.htm" target="_blank">www.emarketstorage.com</a> managed by Spafid Connect S.p.A., with registered office in Foro Buonaparte 10, Milan.</em></p></div></div></div>
+    
+    </article>
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/nodes/node.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/zen/templates/block--no-wrapper.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   x block--views--archive-view-block.tpl.php
+   * block--views.tpl.php
+   * block--content.tpl.php
+   * block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--views--archive-view-block.tpl.php' -->
+<div id="archive-alt-years"><ul class="carousel-navigation owl-carousel ui-tabs-nav ui-helper-reset"><li class="ui-state-default active"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2019">2019</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2018">2018</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2017">2017</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2016">2016</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2015">2015</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2014">2014</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2013">2013</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2012">2012</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2011">2011</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2010">2010</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2009">2009</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2008">2008</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2007">2007</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2006">2006</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2005">2005</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2004">2004</a></li><li class="ui-state-default"><a class="ui-tabs-anchor" href="?field_publishing_date_value_3%5Bvalue%5D%5Bdate%5D=2003">2003</a></li></ul></div><div id="block-views-archive-view-block" class="block block-views last even">
+
+    
+  <div class="content">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view.tpl.php' -->
+<div class="view view-archive-view view-id-archive_view view-display-id-block view-dom-id-d0afdd3aed72e8b2133e81f89312d9d1">
+        
+      <div class="view-filters">
+      <form action="/en" method="get" id="views-exposed-form-archive-view-block" accept-charset="UTF-8"><div><div class="legend-exposed primary">ADVANCED <br>SEARCH <br><span>filter for:</span></div><div class="mobile-wrapper"><label for="edit-field-publishing-date-value-value-datepicker-popup-0">from: <input id="edit-field-publishing-date-value-value-datepicker-popup-0" class="datepicker" name="field_publishing_date_value[value][date]" type="text" value="" autocomplete="off"><span></span></label><label for="edit-field-publishing-date-value-1-value-datepicker-popup-0">to: <input id="edit-field-publishing-date-value-1-value-datepicker-popup-0" class="datepicker" name="field_publishing_date_value_1[value][date]" type="text" value="" autocomplete="off"><span></span></label><div id="edit-field-publishing-date-value-value-wrapper"><div id="edit-field-publishing-date-value-value-inside-wrapper"><div  class="container-inline-date"><div class="form-item form-type-date-text form-item-field-publishing-date-value-3-value">
+  <div id="edit-field-publishing-date-value-3-value"  class="date-padding"><div class="form-item form-type-textfield form-item-field-publishing-date-value-3-value-date">
+  <label class="element-invisible" for="edit-field-publishing-date-value-3-value-date">Date </label>
+ <div class="date-date"><input class="date-date form-text" type="text" id="edit-field-publishing-date-value-3-value-date" name="field_publishing_date_value_3[value][date]" value="" size="60" maxlength="128" /></div>
+<div class="description"> Format: 2019</div>
+</div>
+</div>
+</div>
+</div></div></div><div class="edit-combine"><input type="text" id="edit-combine" name="combine" value="" size="30" maxlength="128" class="form-text" /><span></span></div><div class="form-item form-type-select form-item-term-node-tid-depth">
+ <select id="edit-term-node-tid-depth" name="term_node_tid_depth" class="form-select"><option value="All" selected="selected">- Any -</option><option value="16">Corporate</option><option value="17">Sponsorship</option><option value="18">Sustainability</option></select>
+</div>
+<div class="form-item form-type-select form-item-term-node-tid-depth-1">
+ <select id="edit-term-node-tid-depth-1" name="term_node_tid_depth_1" class="form-select"><option value="All" selected="selected">- Any -</option><option value="196">Institutional</option><option value="197">Financial</option><option value="195">Governance</option></select>
+</div>
+<input type="submit" id="edit-submit-archive-view" name="" value="Search" class="form-submit" /><input type="button" value="Reset" onclick="jQuery(this.form).clearForm(); window.location = window.location.pathname;"></div></div></form>    </div>
+  
+  
+      <div class="view-content">
+      
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>November</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">11.08.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/unipolsai-group-consolidated-results-30-september-2019-approved">UnipolSai Group: consolidated results at 30 september 2019 approved</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">166.18 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_risultati_9m2019_08-11-2019_0.pdf" target="blank">UnipolSai Group: consolidated results at 30 september 2019 approved</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>October</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">10.17.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/proposed-merger-pronto-assistance-spa-unipolsai">Proposed merger of Pronto Assistance S.p.A. into UnipolSai</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">253.23 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_progetto-fusione-pronto-assistance_17-10-2019_en.pdf" target="blank">Proposed merger of Pronto Assistance S.p.A. into UnipolSai</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">10.01.19<br><span class="sensitive"></span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Institutional</span></span><br><span class="main-element-title"><a href="/en/always-one-step-ahead">“Always one step ahead”</a> </span></div>
+  <div class="related-link"><a class="styled-link-notext related" href="http://www.unipolsai.com/en/events/corporate/2019-09-29/sempre-un-passo-avanti" target="blank">Find out more on the new campaign "Sempre un passo avanti"</a></div>
+  <div class="related-document"><span class="filesize">261.28 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_advertising_campaign_always_one_step_ahead_01-10-2019_en.pdf" target="blank">"Always one step ahead": the new multimedia advertising campaign of UnipolSai</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>September</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">09.10.19<br><span class="sensitive"></span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Sponsorship</span></span><br><span class="main-element-title"><a href="/en/unipolsai-and-festival-sport-together-second-consecutive-year">UnipolSai and Festival of Sport together for the second consecutive year</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">676.05 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_unipolsai-sponsorizza-festival-dello-sport_10-09-2019_en.pdf" target="blank">UnipolSai and Festival of Sport together for the second consecutive year</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">09.02.19<br><span class="sensitive"></span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Institutional</span></span><br><span class="main-element-title"><a href="/en/giovanna-gigliotti-appointed-new-ceo-unisalute">Giovanna Gigliotti appointed as new CEO of UniSalute</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">233.53 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_ug_nomina-giovanna-gigliotti-ad-unisalute_02-09-2019_en.pdf" target="blank">Giovanna Gigliotti appointed as new CEO of UniSalute</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>August</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">08.02.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/consolidated-results-first-half-2019-approved">Consolidated Results for the first half of 2019 approved</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">403.17 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_risultati1h2019_02-08-2019_en.pdf" target="blank">Consolidated Results for the first half of 2019 approved</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>July</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">07.10.19<br><span class="sensitive"></span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Institutional</span></span><br><span class="main-element-title"><a href="/en/unipolsai-reaches-four-million-black-boxes-installed">UnipolSai reaches four million black boxes installed</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">137.79 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_4-million-black-boxes-installed_10-07-2019_en.pdf" target="blank">UnipolSai reaches four million black boxes installed</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">07.02.19<br><span class="sensitive"></span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Sponsorship</span></span><br><span class="main-element-title"><a href="/en/unipolsai-official-partner-rimini-meeting-five-years-running">UnipolSai Official Partner of the Rimini Meeting five years running</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">249.72 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_sponsor_meeting_rimini_02-07-2019_eng.pdf" target="blank">UnipolSai Official Partner of the Rimini Meeting five years running</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>June</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">06.26.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Governance</span></span><br><span class="main-element-title"><a href="/en/publication-documentation-5">Publication of documentation</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">251.11 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_publication_documentation_en_26-06-2019.pdf" target="blank">Publication of documentation</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">06.20.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Governance</span></span><br><span class="main-element-title"><a href="/en/publication-documentation-4">Publication of documentation</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">262.66 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_pubblicazione-verbale-cda-e-statuto_20-06-2019_en.pdf" target="blank">Minutes of the Board of Directors and Company By-Laws publication</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>May</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">05.31.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/publication-updated-articles-association">Publication of the updated articles of association</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">584.09 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_publication_updated_articles_association_31-05-2019_en.pdf" target="blank">Publication of the updated articles of association</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">05.29.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/unipol-group-fitch-improves-unipolsais-rating-bbb">Unipol Group: Fitch improves UnipolSai&#039;s rating to BBB+</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">333.88 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_unipol-unipolsai_upgrade-fitch_29-05-2019_en.pdf" target="blank">Unipol Group: Fitch improves UnipolSai's rating to BBB+</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-3">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">05.16.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Governance</span></span><br><span class="main-element-title"><a href="/en/publication-minutes-shareholders-meeting-4">Publication of minutes from the Shareholders&#039; Meeting</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">248.37 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_pubblicazione-verbale-assembleare_16-05-2019_en.pdf" target="blank">Publication of minutes from the Shareholders' Meeting</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-4">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">05.10.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/launch-mission-evolve-always-one-step-ahead">Launch of MISSION EVOLVE - Always one step ahead </a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">372.5 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_mission_evolve_2019_2021_strategic_plan_20190510_en.pdf" target="blank">Launch of MISSION EVOLVE - Always one step ahead</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>April</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">04.30.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/sale-compensation-plan-shares-based-financial-instruments-performance-shares-pay-tax-charges">Sale of compensation plan shares based on financial instruments (performance shares) to pay tax charges</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">133.65 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_vendita-azioni-da-piani-di-compensi_30-04-2019_en.pdf" target="blank">Sale of compensation plan shares based on financial instruments (performance shares) to pay tax charges</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">04.23.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/publication-documentation-3">Publication of documentation</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">668.13 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_pubblicazione-documentazione_23-04-2019_en.pdf" target="blank">Publication of documentation</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-3">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">04.17.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/ordinary-and-extraordinary-shareholders-meeting-1">Ordinary and Extraordinary Shareholders&#039; Meeting</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">602.07 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_unipolsai_assemblea_ordinaria_e_straordinaria_eng_17-04-2019.pdf" target="blank">Ordinary and Extraordinary Shareholders' Meeting</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>March</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">03.27.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/shareholders-meeting-sole-list-submitted-appointment-board-directors-published">Shareholders’ Meeting - The  sole  list  submitted  for  appointment  of  the  Board  of  Directors published</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">244.68 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_unipolsai_lista-nomina-cda_27-03-2019-eng.pdf" target="blank">Shareholders’ Meeting - The  sole  list  submitted  for  appointment  of  the  Board  of  Directors published</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">03.26.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/shareholders-meeting-documentation-published-1">Shareholders&#039; meeting documentation published</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">598.02 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_pubblicazione-documentazione-assembleare_26-03-2019_eng.pdf" target="blank">Press Release - Shareholders' meeting documentation published</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-3">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">03.21.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/purchase-treasury-shares-compensation-plans-based-financial-instruments-approved-unipolsai-and">PURCHASE OF TREASURY SHARES FOR THE COMPENSATION PLANS BASED ON FINANCIAL INSTRUMENTS APPROVED BY UNIPOLSAI AND A NUMBER OF SUBSIDIARIES   </a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">301.01 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/2019_03_21_comunicato_stampa_unipolsai_-_chiusura_buyback_programme.pdf" target="blank">Purchase of treasury shares for the compensation plans based on financial instruments approved by UnipolSai and a number of subs</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-4">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">03.18.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/shareholders-meeting-documentation-published-0">Shareholders’ meeting documentation published</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">595.63 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/2019_03_18_press_release_unipolsai_-_pubblicazione_documentazione_assembleare_en.pdf" target="blank">Shareholders’ meeting documentation published</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-5">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">03.15.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/unipolsai-draft-financial-statements-and-consolidated-financial-statements-2018-approved">UnipolSai: draft financial statements and consolidated financial statements for 2018 approved</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">442.43 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_bilancio-consolidato-2018_unipolsai_15-03-2019_en.pdf" target="blank">2018 Consolidated Financial Statements</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>February</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">02.14.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Governance</span></span><br><span class="main-element-title"><a href="/en/publication-report">Publication of Report</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">230.84 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_pubblicazione_doc_ub_e_urec_20190214_eng.pdf" target="blank">Publication of Report</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">02.08.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/2018-preliminary-consolidated-results-rise-business-plan-targets-achieved">2018 Preliminary Consolidated Results on the rise - Business Plan targets achieved</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">784.85 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_risultati-preliminari_2018_2019-02-08_eng.pdf" target="blank">Press Release UnipolSai - Preliminary Results 2018</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_list') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+      <h3>January</h3>
+    <ul class="views-rows-wrapper">          <li class="views-row views-row-1">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">01.18.19<br><span class="sensitive"></span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Sponsorship</span></span><br><span class="main-element-title"><a href="/en/unipolsai-and-ducati-team-together-next-two-motogp-seasons">UNIPOLSAI AND THE DUCATI TEAM TOGETHER FOR THE NEXT TWO MOTOGP SEASONS</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">128.49 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/cs_unipolsai_sponsorship_ducati_corse_motogp_2019_def_en.pdf" target="blank">UnipolSai and Ducati Corse 2019</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+          <li class="views-row views-row-2">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('views_view_fields') -->
+<!-- BEGIN OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+  
+          <div class="main-element">
+  <div class="date-and-sensitive">01.07.19<br><span class="sensitive">• price sensitive</span></div>
+  <div class="category-and-title"><span class="category"><span class="lineage-item lineage-item-level-0">Corporate</span><span class="hierarchical-select-item-separator">: </span><span class="lineage-item lineage-item-level-1">Financial</span></span><br><span class="main-element-title"><a href="/en/calendar-corporate-events-2019">Calendar of corporate events for 2019</a> </span></div>
+  <div class="related-link"></div>
+  <div class="related-document"><span class="filesize">416.78 KB</span> <span class="basket-target"><a class="styled-link-notext pdf" href="http://www.unipolsai.com/sites/corporate/files/press_related_documents/pre_usai_corporate-events-calendar-2019_07-01-2019_en.pdf" target="blank">Calendar of corporate events for 2019</a></span></div>
+</div>
+<div class="related-elements"></div>  
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-fields.tpl.php' -->
+
+</li>
+      </ul>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view-list.tpl.php' -->
+
+    </div>
+  
+  
+  
+  
+  
+  
+</div>
+<!-- END OUTPUT from 'sites/default/modules/views/theme/views-view.tpl.php' -->
+
+  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block--views--archive-view-block.tpl.php' -->
+
+
+<!-- END OUTPUT from 'sites/default/themes/zen/templates/region--no-wrapper.tpl.php' -->
+
+          </div>
+
+    
+      </div>
+
+</div>
+
+<div class="footer-container">
+  <div class="wrapper">
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('region') -->
+<!-- FILE NAME SUGGESTIONS:
+   x region--footer.tpl.php
+   * region.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/zen/templates/region--footer.tpl.php' -->
+  <footer id="footer" class="region region-footer">
+    
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu--menu-menu-shortcuts.tpl.php
+   * block--menu.tpl.php
+   * block--footer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-menu-menu-menu-shortcuts" class="block block-menu footer-menu first odd" role="navigation">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="menu__item is-leaf first leaf"><a href="/en/contacts" class="menu__link">Contacts</a></li>
+<li class="menu__item is-leaf leaf"><a href="/en/cookie-policy" title="Legal notes" class="menu__link">Cookie policy</a></li>
+<li class="menu__item is-leaf leaf"><a href="/en/privacy" title="Privacy" class="menu__link">Privacy</a></li>
+<li class="menu__item is-leaf leaf"><a href="/en/regulated-information" class="menu__link">Regulated information</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://unipolsai.taleo.net/careersection/ex00/jobsearch.ftl?lang=en" class="menu__link">Careers</a></li>
+<li class="menu__item is-leaf last leaf"><a href="/en/home-insurance-informations" class="menu__link">Home Insurance Informations</a></li>
+</ul>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--block--4.tpl.php
+   * block--block.tpl.php
+   * block--footer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-block-4" class="block block-block company-data even">
+
+    
+  <div class="content">
+    <p>© 2019 UNIPOLSAI ASSICURAZIONI S.P.A. – REGISTERED OFFICE: VIA STALINGRADO 45, 40128 BOLOGNA – UNIPOLSAIASSICURAZIONI@PEC.UNIPOL.IT - PHONE +39 051 5077111</p>
+<p>FAX +39 051 7096584 - FULLY PAID-IN SHARE CAPITAL € 2,031,456,338.00 – COMPANY REGISTER OF BOLOGNA – TAX ID. NO.&nbsp;00818570012 –&nbsp;V.A.T. NO. 03740811207 – R.E.A 511469</p>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+
+
+<!-- THEME DEBUG -->
+<!-- CALL: theme('block') -->
+<!-- FILE NAME SUGGESTIONS:
+   * block--menu--menu-social-links.tpl.php
+   * block--menu.tpl.php
+   * block--footer.tpl.php
+   x block.tpl.php
+-->
+<!-- BEGIN OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+<div id="block-menu-menu-social-links" class="block block-menu social-links last odd" role="navigation">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="menu__item is-leaf first leaf"><a href="https://twitter.com/unipolsai_crp" title="Twitter" target="_blank" class="menu__link">Twitter</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://www.facebook.com/UnipolSaiCorporate/" title="Facebook" target="_blank" class="menu__link">Facebook</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://www.instagram.com/unipolsaicorporate/" title="Instagram" target="_blank" class="menu__link">Instagram</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://www.youtube.com/c/unipolgroupcorporatechannel" title="Youtube" target="_blank" class="menu__link">Youtube</a></li>
+<li class="menu__item is-leaf leaf"><a href="https://it.linkedin.com/company/unipol-gruppo" title="Linkedin" target="_blank" class="menu__link">Linkedin</a></li>
+<li class="menu__item is-leaf last leaf zero-impact"><a href="/en/zero-impactr-web" title="Zero Impact® Web" class="menu__link">Zero Impact® Web</a></li>
+</ul>  </div>
+</div>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/blocks/block.tpl.php' -->
+
+  </footer>
+
+<!-- END OUTPUT from 'sites/default/themes/zen/templates/region--footer.tpl.php' -->
+
+</div>
+</div>
+
+<div id="bottom">
+  <div class="wrapper"></div>
+</div>
+<!-- Response monitor footer -->
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/pages/page.tpl.php' -->
+
+  <script src="http://www.unipolsai.com/sites/corporate/files/js/js_61I6Q_kqG_tp5C00zP2pBdx-tx4AnZXUXJIpt-ZqHGs.js"></script>
+</body>
+</html>
+
+<!-- END OUTPUT from 'sites/default/themes/unipolsai_corporate/templates/html/html.tpl.php' -->
+

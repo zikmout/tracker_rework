@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"39077635"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Events &amp; Presentations | argenx" />
+<meta property="og:site_name" content="argenx" />
+<link rel="canonical" href="http://investor.argenx.com/events-presentations/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://investor.argenx.com/events-presentations" />
+<meta property="og:title" content="Events &amp; Presentations | argenx" />
+<meta property="og:description" content="The Investor Relations website contains information about argenx&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/g/files/knoqqb26931/files/argenx-favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="http://investor.argenx.com/events-presentations" />
+<link rel="revision" href="http://investor.argenx.com/events-presentations" />
+
+    <title>Events &amp; Presentations | argenx</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb26931/files/css/css_8zWKN6qWWUtDIuPxDLTytXs0iepG3wRB9x86fVDdjDc.css?q7isfd" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb26931/files/css/css_I4MQBSjnpoDDxdJwxIgmT7oOFUf2KbieuEYmP7BShh0.css?q7isfd" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Montserrat:400,700" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Exo+2:400,400italic,500,500italic,700,700italic" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb26931/files/css/css_mqJ6UIrnkBNEPnnacRQvA3nltEl2_1dY7qM1D_yRHJE.css?q7isfd" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb26931/files/css/css_gByFwlspQLjjhQ9Lj_N6JkzK6BBpzuVx-lKCzezBVRI.css?q7isfd" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb26931/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+    
+  </head>
+  <body class="body-sidebars-last nir-node nir-node--type-nir-landing-page nir-node--5831 path-node page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#main-menu">
+        Skip to main navigation
+      </a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<!--
+    <meta content="Argenx discovers, designs and develops innovative antibody therapeutics for its own pipeline of treatments for cancer and autoimmune diseases and for its partners. Harnessing our technology and know-how, we aim to meet the needs of patients by engineering antibodies to target diseases too complex for other antibody technologies."
+        itemprop="description" />
+    <meta content="argenx, antibody technologies, llama" itemprop="keywords" />
+    <form name="aspnetForm" method="post" action="http://www.argenx.com/en-GB/content/argenx-in-short/2/" id="aspnetForm">
+        <div><input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" /><input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" /><input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPaA8FDzhkNDk1ZTk0NjI1MjMxOWRUEMbl7/BDv1IrUSb+ercm79FawA=="
+            /></div>
+    </form>
+-->
+    
+    
+    <div class="page">
+        <header>
+            <div class="container">
+                <div class="sixteen"><a href="http://www.argenx.com" class="logo"><img src="/sites/g/files/knoqqb26931/themes/site/nir_pid2395/client/images/logo.jpg" /></a>
+                    <div class="hamburger"><i class="icon-menu"></i></div>
+                    <nav class="mobile-nav">
+                        <ul class="secondary-nav">
+                            <li><a title="Events" itemprop="url" href="http://www.argenx.com/en-GB/content/events/40/"><span itemprop="name">Events</span></a></li>
+                            <li><a title="Contact" itemprop="url" href="http://www.argenx.com/en-GB/content/contact/41/"><span itemprop="name">Contact</span></a></li>
+                        </ul>
+                        <ul>
+                            <li><a title="Home" itemprop="url" href="http://www.argenx.com/"><span itemprop="name">Home</span></a></li>
+                            <li><a title="About us" itemprop="url" href="http://www.argenx.com/en-GB/content/overview/8/"><span itemprop="name">About us</span></a></li>
+                            <li><a title="Products" itemprop="url" href="http://www.argenx.com/en-GB/content/overview/13/"><span itemprop="name">Products</span></a></li>
+                            <li><a title="Partnering" itemprop="url" href="http://www.argenx.com/en-GB/content/opportunities/27/"><span itemprop="name">Partnering</span></a></li>
+                            <li><a title="Investors" class="active" itemprop="url" href="/"><span itemprop="name">Investors</span></a>
+                                  
+    
+
+
+                        
+   
+    
+
+                             <ul class="subnav">
+                  <li>
+          <a href="/stock-information" target="" rel="" data-drupal-link-system-path="node/5916">Stock Information</a>
+                  </li>
+              <li>
+          <a href="/events-presentations" target="" rel="" data-drupal-link-system-path="node/5831" class="is-active">Events &amp; Presentations</a>
+                  </li>
+              <li>
+          <a href="/financial-information/annual-reports" target="" rel="" data-drupal-link-system-path="node/5881">Financial Information</a>
+                                     <ul class="sub-subnav">
+                  <li>
+          <a href="/financial-information/annual-reports" data-drupal-link-system-path="node/5881">Annual Reports</a>
+                  </li>
+              <li>
+          <a href="/financial-information/quarterly-results" target="" rel="" data-drupal-link-system-path="node/5986">Results Center</a>
+                  </li>
+              <li>
+          <a href="/financial-information/sec-filings" data-drupal-link-system-path="node/5876">SEC Filings</a>
+                  </li>
+              <li>
+          <a href="/listing-prospectus" target="" rel="" data-drupal-link-system-path="node/7471">Listing Prospectus </a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/financial-calendar" target="" rel="" data-drupal-link-system-path="node/5826">Financial Calendar</a>
+                  </li>
+              <li>
+          <a href="/shareholder-meetings" target="" rel="" data-drupal-link-system-path="node/5956">Shareholder Meeting</a>
+                  </li>
+              <li>
+          <a href="/stock-information/analyst-coverage" data-drupal-link-system-path="node/5896">Analyst Coverage</a>
+                  </li>
+              <li>
+          <a href="/corporate-governance/highlights" target="" rel="" data-drupal-link-system-path="node/5836">Corporate Governance</a>
+                                     <ul class="sub-subnav">
+                  <li>
+          <a href="/corporate-governance/committee-composition" data-drupal-link-system-path="node/5851">Committee Composition</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/shareholder-services/contact-ir" target="" rel="" data-drupal-link-system-path="node/5981">Contact us</a>
+                  </li>
+          </ul>
+  
+
+
+    
+
+  
+
+                            </li>
+                            <li><a title="News" itemprop="url" href="http://www.argenx.com/en-GB/content/press-releases/37/"><span itemprop="name">News</span></a></li>
+                        </ul>
+                    </nav>
+                    <nav class="desktop-nav">
+                        <ul class="secondary-nav">
+                            <li><a title="Events" itemprop="url" href="http://www.argenx.com/en-GB/content/events/40/"><span itemprop="name">Events</span></a></li>
+                            <li><a title="Contact" itemprop="url" href="http://www.argenx.com/en-GB/content/contact/41/"><span itemprop="name">Contact</span></a></li>
+                            <li>
+                                <div id="ctl00_pnlSearch" onkeypress="javascript:return WebForm_FireDefaultButton(event, 'ctl00_btnSearch')">
+                                    <form name="aspnetForm" method="post" action="http://www.argenx.com/en-GB/search/" id="aspnetForm"><input name="ctl00$txtSearch" type="text" id="ctl00_txtSearch" class="textBox" PlaceHolder="Search..." /><input type="submit" name="ctl00$btnSearch" value="" id="ctl00_btnSearch" style="display:none;" /></form>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li><a title="Home" itemprop="url" href="http://www.argenx.com/"><span itemprop="name">Home</span></a></li>
+                            <li><a title="About us" itemprop="url" href="http://www.argenx.com/en-GB/content/overview/8/"><span itemprop="name">About us</span></a>
+                                <ul class="subnav">
+                                    <li><a title="Overview" itemprop="url" href="http://www.argenx.com/en-GB/content/overview/8/"><span itemprop="name">Overview</span></a></li>
+                                    <li><a title="Strategy" itemprop="url" href="http://www.argenx.com/en-GB/content/strategy/9/"><span itemprop="name">Strategy</span></a></li>
+                                    <li><a title="Management team" itemprop="url" href="http://www.argenx.com/en-GB/content/management-team/10/"><span itemprop="name">Management team</span></a></li>
+                                    <li><a title="Board of Directors" itemprop="url" href="http://www.argenx.com/en-GB/content/board-of-directors/11/"><span itemprop="name">Board of Directors</span></a></li>
+                                    <li><a title="Careers" itemprop="url" href="http://www.argenx.com/en-GB/content/careers/12/"><span itemprop="name">Careers</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a title="Products" itemprop="url" href="http://www.argenx.com/en-GB/content/overview/13/"><span itemprop="name">Products</span></a>
+                                <ul class="subnav">
+                                    <li><a title="Overview" itemprop="url" href="http://www.argenx.com/en-GB/content/overview/13/"><span itemprop="name">Overview</span></a></li>
+                                    <li><a title="Autoimmunity" itemprop="url" href="http://www.argenx.com/en-GB/content/autoimmune-diseases/15/"><span itemprop="name">Autoimmunity</span></a>
+                                        <ul class="sub-subnav">
+                                            <li><a title="ARGX-113" itemprop="url" href="http://www.argenx.com/en-GB/content/argx-113/22/"><span itemprop="name">ARGX-113</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a title="Oncology" itemprop="url" href="http://www.argenx.com/en-GB/content/oncology/14/"><span itemprop="name">Oncology</span></a>
+                                        <ul class="sub-subnav">
+                                            <li><a title="ARGX-110" itemprop="url" href="http://www.argenx.com/en-GB/content/argx-110/18/"><span itemprop="name">ARGX-110</span></a></li>
+                                            <li><a title="ARGX-111" itemprop="url" href="http://www.argenx.com/en-GB/content/argx-111/19/"><span itemprop="name">ARGX-111</span></a></li>
+                                            <li><a title="ARGX-115" itemprop="url" href="http://www.argenx.com/en-GB/content/argx-115/20/"><span itemprop="name">ARGX-115</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a title="Discovery programs" itemprop="url" href="http://www.argenx.com/en-GB/content/discovery-programs/16/"><span itemprop="name">Discovery programs</span></a></li>
+                                    <li><a title="Technology" itemprop="url" href="http://www.argenx.com/en-GB/content/technology/17/"><span itemprop="name">Technology</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a title="Partnering" itemprop="url" href="http://www.argenx.com/en-GB/content/opportunities/27/"><span itemprop="name">Partnering</span></a>
+                                <ul class="subnav">
+                                    <li><a title="Opportunities" itemprop="url" href="http://www.argenx.com/en-GB/content/opportunities/27/"><span itemprop="name">Opportunities</span></a></li>
+                                    <li><a title="Partnerships " itemprop="url" href="http://www.argenx.com/en-GB/content/industrial-partners/28/"><span itemprop="name">Partnerships </span></a></li>
+                                    <li><a title="Innovative Access Program" itemprop="url" href="http://www.argenx.com/en-GB/content/innovative-access-program/29/"><span itemprop="name">Innovative Access Program</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a title="Investors" itemprop="url" href="/" class="active"><span itemprop="name">Investors</span></a>
+                                  
+    
+
+
+                        
+   
+    
+
+                             <ul class="subnav">
+                  <li>
+          <a href="/stock-information" target="" rel="" data-drupal-link-system-path="node/5916">Stock Information</a>
+                  </li>
+              <li>
+          <a href="/events-presentations" target="" rel="" data-drupal-link-system-path="node/5831" class="is-active">Events &amp; Presentations</a>
+                  </li>
+              <li>
+          <a href="/financial-information/annual-reports" target="" rel="" data-drupal-link-system-path="node/5881">Financial Information</a>
+                                     <ul class="sub-subnav">
+                  <li>
+          <a href="/financial-information/annual-reports" data-drupal-link-system-path="node/5881">Annual Reports</a>
+                  </li>
+              <li>
+          <a href="/financial-information/quarterly-results" target="" rel="" data-drupal-link-system-path="node/5986">Results Center</a>
+                  </li>
+              <li>
+          <a href="/financial-information/sec-filings" data-drupal-link-system-path="node/5876">SEC Filings</a>
+                  </li>
+              <li>
+          <a href="/listing-prospectus" target="" rel="" data-drupal-link-system-path="node/7471">Listing Prospectus </a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/financial-calendar" target="" rel="" data-drupal-link-system-path="node/5826">Financial Calendar</a>
+                  </li>
+              <li>
+          <a href="/shareholder-meetings" target="" rel="" data-drupal-link-system-path="node/5956">Shareholder Meeting</a>
+                  </li>
+              <li>
+          <a href="/stock-information/analyst-coverage" data-drupal-link-system-path="node/5896">Analyst Coverage</a>
+                  </li>
+              <li>
+          <a href="/corporate-governance/highlights" target="" rel="" data-drupal-link-system-path="node/5836">Corporate Governance</a>
+                                     <ul class="sub-subnav">
+                  <li>
+          <a href="/corporate-governance/committee-composition" data-drupal-link-system-path="node/5851">Committee Composition</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li>
+          <a href="/shareholder-services/contact-ir" target="" rel="" data-drupal-link-system-path="node/5981">Contact us</a>
+                  </li>
+          </ul>
+  
+
+
+    
+
+  
+
+                            </li>
+                            <li><a title="News" itemprop="url" href="http://www.argenx.com/en-GB/content/press-releases/37/"><span itemprop="name">News</span></a>
+                                <ul class="subnav">
+                                    <li><a title="Press releases" itemprop="url" href="http://www.argenx.com/en-GB/content/press-releases/37/"><span itemprop="name">Press releases</span></a></li>
+                                    <li><a id="ctl00_ucDesktopMainMenu_rptListMenu_ctl06_rptLevel2_ctl02_Link1" title="Events &amp; Presentations " href="http://www.argenx.com/en-GB/content/events/40/" target="_self"><span itemprop="name">Events &amp; Presentations </span></a></li>
+                                    <li><a title="Downloads " itemprop="url" href="http://www.argenx.com/en-GB/content/downloads/35/"><span itemprop="name">Downloads </span></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </header>
+        <div class="img-slider">
+            <div id="owl-carousel">
+                <div class="slider-content"><img id="ctl00_cphContent_ctl00_rptAssets_ctl00_Image61" src="/sites/g/files/knoqqb26931/themes/site/nir_pid2395/client/images/banner-010-beeld8-003-crop_0.jpg" alt="" style="border-width:0px;" /></div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="container">
+                <div class="sixteen">
+                    <div class="breadcrumb">
+										   <div class="region region-breadcrumb">
+    <div id="block-nir-pid2395-breadcrumbs" class="block--system-breadcrumb-block block--system-breadcrumb-block--5831 block--breadcrumb--system-breadcrumb-block block--breadcrumb--system-breadcrumb-block--5831 block--a683a6a9-945f-40da-a54a-526842d0034b block--a683a6a9-945f-40da-a54a-526842d0034b--5831 block block-system block-system-breadcrumb-block">
+  
+    
+      <ul>
+	<li><a href="http://www.argenx.com/">Home</a></li>                       
+                           <li><span itemprop="name"><a href="/">Investors</a></span></li>&nbsp;
+            
+                        <li><a class="arrow" itemprop="item" href="#"><span itemprop="name">Events &amp; Presentations</span></a></li>
+            
+          </ul>
+  </div>
+
+  </div>
+
+					                    </div>
+                </div>
+                					<div class="eleven-edited">
+                          <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-nir-pid2395-content" class="block--system-main-block block--system-main-block--5831 block--content--system-main-block block--content--system-main-block--5831 block--998d52b1-153f-4bb3-93ef-74d6335023f0 block--998d52b1-153f-4bb3-93ef-74d6335023f0--5831 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              Events &amp; Presentations
+          </h1>
+    
+
+  <div>
+    
+<div class="panel-display boxton clearfix " >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-contentmain"><div class="block--events-v2 block--nir-events__widget block--nir-events__widget--5831 block--contentmain--nir-events__widget block--contentmain--nir-events__widget--5831 block--b654ecd6-0e22-47f1-8341-da7800d0e3a0 block--b654ecd6-0e22-47f1-8341-da7800d0e3a0--5831 block block-nir-events block-nir-events__widget">
+  
+    
+      <div class="nir-widget">
+      <div class="nir-widget--label">
+      Upcoming Events
+    </div>
+    <div class="nir-widget--content">
+        <div class="nir-widget--list">
+      	  <table width="100%" border="0" cellspacing="1" cellpadding="3" class="ccbnResponsiveTable">
+	  <thead>
+        <tr class="ccbnBgTblTtl">
+            <td width="20%"><span class="ccbnTblTtl">Date</span></td>
+            <td><span class="ccbnTblTtl">Title</span></td>
+            <td align="center"><span class="ccbnTblTtl">Remind Me</span></td>
+        </tr>
+	  </thead>
+	  <tbody>
+        
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" class="ccbnField-Date">
+      <span class="ccbnTblOdd">
+      
+      
+      
+            14/05/2020
+      
+    </span>
+    </td>
+
+  <td valign="top">
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" class="ccbnEventContent">
+   <tbody>
+   <tr class="ccbnBgTblOdd">
+   <td colspan="2" class="ccbnField-Title">
+      <span class="ccbnTblTxtBold">
+      
+<div class="field-nir-event-title">
+      <div class="field__item"><a href="/events/event-details/q1-business-update-financial-results" hreflang="en">Q1 Business update &amp; Financial results</a></div>
+  </div>
+    </span>
+    </td>
+  </tr>
+<tr class="ccbnEventDetailsTr">
+  </tr>
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+	</table>
+	  </td>
+	  
+ <td valign="middle" align="center" class="ccbnField-RemindMe">
+      <div class="nir-widget--field nir-widget--event--add-to-calendar clearfix">
+      <div class="nir-widget--field nir-widget--event--add-to-calendar--outlook">
+        
+<div class="field-nir-event-add-calender">
+      <div class="add-outlook field__item"><a href="/node/8141/ics" class="add-outlook">Add to Outlook</a></div>
+  </div>
+      </div>
+      <div class="nir-widget--field nir-widget--event--add-to-calendar--google">
+        
+<div class="field-nir-event-add-calender">
+      <div class="add-gcal field__item"><a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=argenx%20-%20Q1%20Business%20update%20&amp;Financial_results=&amp;dates=20200514T040000Z/20200514T040000Z&amp;details=Event%20Details%3A%20http%3A//investor.argenx.com/events/event-details/q1-business-update-financial-results&amp;location=&amp;trp=false&amp;sprop=name%3A" class="add-gcal">Add to Google Calendar</a></div>
+  </div>
+      </div>
+    </div>
+   </td>
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" class="ccbnField-Date">
+      <span class="ccbnTblOdd">
+      
+      
+      
+            30/07/2020
+      
+    </span>
+    </td>
+
+  <td valign="top">
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" class="ccbnEventContent">
+   <tbody>
+   <tr class="ccbnBgTblOdd">
+   <td colspan="2" class="ccbnField-Title">
+      <span class="ccbnTblTxtBold">
+      
+<div class="field-nir-event-title">
+      <div class="field__item"><a href="/events/event-details/hy-2020-financial-results-q2-business-update" hreflang="en">HY 2020 Financial results &amp; Q2 Business update</a></div>
+  </div>
+    </span>
+    </td>
+  </tr>
+<tr class="ccbnEventDetailsTr">
+  </tr>
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+	</table>
+	  </td>
+	  
+ <td valign="middle" align="center" class="ccbnField-RemindMe">
+      <div class="nir-widget--field nir-widget--event--add-to-calendar clearfix">
+      <div class="nir-widget--field nir-widget--event--add-to-calendar--outlook">
+        
+<div class="field-nir-event-add-calender">
+      <div class="add-outlook field__item"><a href="/node/8146/ics" class="add-outlook">Add to Outlook</a></div>
+  </div>
+      </div>
+      <div class="nir-widget--field nir-widget--event--add-to-calendar--google">
+        
+<div class="field-nir-event-add-calender">
+      <div class="add-gcal field__item"><a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=argenx%20-%20HY%202020%20Financial%20results%20&amp;Q2_Business_update=&amp;dates=20200730T040000Z/20200730T040000Z&amp;details=Event%20Details%3A%20http%3A//investor.argenx.com/events/event-details/hy-2020-financial-results-q2-business-update&amp;location=&amp;trp=false&amp;sprop=name%3A" class="add-gcal">Add to Google Calendar</a></div>
+  </div>
+      </div>
+    </div>
+   </td>
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" class="ccbnField-Date">
+      <span class="ccbnTblOdd">
+      
+      
+      
+            22/10/2020
+      
+    </span>
+    </td>
+
+  <td valign="top">
+  <table border="0" width="100%" cellspacing="1" cellpadding="3" class="ccbnEventContent">
+   <tbody>
+   <tr class="ccbnBgTblOdd">
+   <td colspan="2" class="ccbnField-Title">
+      <span class="ccbnTblTxtBold">
+      
+<div class="field-nir-event-title">
+      <div class="field__item"><a href="/events/event-details/q3-2020-business-update-financial-results" hreflang="en">Q3 2020 Business update &amp; Financial results</a></div>
+  </div>
+    </span>
+    </td>
+  </tr>
+<tr class="ccbnEventDetailsTr">
+  </tr>
+  
+  
+  
+  
+  
+  
+  
+  </tbody>
+	</table>
+	  </td>
+	  
+ <td valign="middle" align="center" class="ccbnField-RemindMe">
+      <div class="nir-widget--field nir-widget--event--add-to-calendar clearfix">
+      <div class="nir-widget--field nir-widget--event--add-to-calendar--outlook">
+        
+<div class="field-nir-event-add-calender">
+      <div class="add-outlook field__item"><a href="/node/8151/ics" class="add-outlook">Add to Outlook</a></div>
+  </div>
+      </div>
+      <div class="nir-widget--field nir-widget--event--add-to-calendar--google">
+        
+<div class="field-nir-event-add-calender">
+      <div class="add-gcal field__item"><a href="http://www.google.com/calendar/event?action=TEMPLATE&amp;text=argenx%20-%20Q3%202020%20Business%20update%20&amp;Financial_results=&amp;dates=20201022T040000Z/20201022T040000Z&amp;details=Event%20Details%3A%20http%3A//investor.argenx.com/events/event-details/q3-2020-business-update-financial-results&amp;location=&amp;trp=false&amp;sprop=name%3A" class="add-gcal">Add to Google Calendar</a></div>
+  </div>
+      </div>
+    </div>
+   </td>
+</tr>
+	  </tbody>
+	  </table>
+          </div>
+    <div class="nir-widget--pager">
+      
+    </div>
+    <div class="nir-widget--total-results">
+      
+    </div>
+  </div>
+</div>
+  </div>
+<div class="block--assets-v2 block--nir-assets__widget block--nir-assets__widget--5831 block--contentmain--nir-assets__widget block--contentmain--nir-assets__widget--5831 block--d8c92dbe-00e6-4e23-b81e-a0deb1c4b817 block--d8c92dbe-00e6-4e23-b81e-a0deb1c4b817--5831 block block-nir-assets block-nir-assets__widget">
+  
+    
+      <div class="nir-widget">
+      <div class="nir-widget--label">
+      Investor Relations Presentations
+    </div>
+    <div class="nir-widget--content">
+        <div class="nir-widget--list">
+      	<table width="100%" border="0" cellspacing="1" cellpadding="3">
+    <thead>
+        <tr class="ccbnBgTblTtl">
+            <td valign="top" nowrap="nowrap" width="80px"><span class="ccbnTblTtl">Date</span></td>
+            <td valign="top" nowrap="nowrap"><span class="ccbnTblTtl">Title</span></td>
+        </tr>
+	</thead>
+	<tbody>
+        
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">27/02/2020</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/45ec708c-40f9-4636-b6af-deac5506ad7a" type="application/pdf; length=1866639" title="argenx Y2019 financial results and Q4 business update 27 Feb 2020 .pdf">Full year 2019 financial results and provides fourth quarter business update</a></span><span class="filesize"> 1.8 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">19/11/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="http://wsw.com/webcast/stifel18/register.aspx?conf=stifel18&amp;page=argx&amp;url=http%3A//wsw.com/webcast/stifel18/argx/index.aspx" target="_self">Stifel Healthcare Conference</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">18/11/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="https://guggenheim.metameetings.net/events/neurotalks19/general_signin" target="_self">Guggenheim Conference</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">06/11/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="https://cc.talkpoint.com/wolf001/110619a_js/?entity=6_NDGCBHD" target="_self">Wolfe Research Conference</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">13/08/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/07b0a852-ddb1-43d0-a078-07c6796f0f1e" type="application/pdf; length=2973877" title="argenx Corporate Presentation Wedbush Conference Final.pdf">2019 Wedbush PacGrow Healthcare Conference </a></span><span class="filesize"> 2.9 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="http://wsw.com/webcast/wedbush35/register.aspx?conf=wedbush35&amp;page=argx&amp;url=http%3A//wsw.com/webcast/wedbush35/argx/index.aspx" target="_self">Webcast</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">01/08/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/ad259f3a-bee8-456a-b434-8aa58d18e755" type="application/pdf; length=6424597" title="190801 argenx HY2019 results_webcast.pdf">HY2019 Results Presentation</a></span><span class="filesize"> 6.4 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="https://edge.media-server.com/mmc/p/9zft5gqq" target="_self">Webcast</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">11/06/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/00306b66-a924-4288-bec0-594a6da8359a" type="application/pdf; length=3733078" title="argenx Corporate Presentation June 2019.pdf">Goldman Sachs 40th Annual Global Healthcare Conference</a></span><span class="filesize"> 3.7 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="https://cc.talkpoint.com/gold006/061119a_as/?entity=23_W1VC43D" target="_self">Goldman Sachs 40th Annual Global Healthcare Conference</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">06/06/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/4e25c9f5-e5b0-4d23-9dbf-f1be6cf0719c" type="application/pdf; length=3733078" title="argenx Corporate Presentation June 2019.pdf">Jefferies 2019 Global Healthcare Conference</a></span><span class="filesize"> 3.7 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="http://wsw.com/webcast/jeff118/argx/" target="_self">Jefferies 2019 Global Healthcare Conference</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">22/05/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/265af9fb-f701-4c7e-a045-b388b9ed4357" type="application/pdf; length=7477191" title="RD Day Presentation 05222019 FINAL.pdf">R&amp;D Day Presentation</a></span><span class="filesize"> 7.4 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">15/05/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="https://www.veracast.com/webcasts/baml/healthcare2019/id96203398491.cfm" target="_self">Bank of America Merrill Lynch Health Care Conference</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">02/05/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/1043560d-b27d-42ae-b100-2b6df18eab5f" type="application/pdf; length=2657553" title="argenx Corporate Presentation_April_2019_FINAL.pdf">Kempen Healthcare Conference Presentation</a></span><span class="filesize"> 2.6 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">01/03/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/9dd15435-35c7-490f-92be-63061df8b8f5" type="application/pdf; length=1599235" title="argenx-y2018-results-webcast-final.pdf">FY2018 Results Presentation</a></span><span class="filesize"> 1.5 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="https://edge.media-server.com/m6/p/778fwngc" target="_self">Webcast</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">07/01/2019</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/55f9cb98-a6c6-496d-b869-44800883b6a5" type="application/pdf; length=2665338" title="argenx Corporate Presentation_JPM_2019 Widescreen Final.pdf">JP Morgan Healthcare Conference Presentation</a></span><span class="filesize"> 2.6 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+<tr class="ccbnBgTblOdd">
+
+  
+  <td valign="top" nowrap="nowrap">
+      <span class="ccbnTblOdd">
+      
+<div class="field-nir-asset-date">
+      <div class="field__item">03/12/2018</div>
+  </div>
+    </span>
+    </td>
+
+  <td align="left" valign="top">
+      <div class="nir-widget--field nir-widget--asset--list-of-files">
+      
+<div class="field-nir-document">
+      <div class="nir-widgets--file-list--hide-filesize field__item">
+<article role="article" class="node node--nir-asset--asset-link node--type-nir-asset node--view-mode-asset-link">
+  <div class="node__content">
+    
+      <div class="field field--name-field-nir-document field--type-file field--label-hidden field__items">
+              <div class="field__item">
+            <div class="file-link">
+  <span class="file file--mime-application-pdf file--application-pdf"> <a href="http://investor.argenx.com/static-files/a8f6c8b6-7372-4d98-9213-253dfbe7e8e5" type="application/pdf; length=3940111" title="20181119_argenx workshop ITP_AML_ASH Final Final.pdf">Workshop ITP Ph2 and AML Ph1/2 clinical data</a></span><span class="filesize"> 3.9 MB</span>
+</div>
+
+        </div>
+          </div>
+  
+      <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__items">
+              <div class="field field--name-field-nir-ext-document field--type-link field--label-hidden field__item"><a href="https://edge.media-server.com/m6/p/ran9xpm5" target="_self">Workshop ITP Ph2 and AML Ph1/2 clinical data</a></div>
+          </div>
+  
+  </div>
+</article>
+</div>
+  </div>
+    </div>
+    </td>
+  
+  
+  
+  
+  
+  
+
+  
+
+</tr>
+	</tbody>
+	</table>
+          </div>
+    <div class="nir-widget--pager">
+      
+    </div>
+    <div class="nir-widget--total-results">
+      
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.boxton -->
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+                    </div>
+                            
+			            <div class="five sidebar">
+                  <div class="region region-sidebar-last">
+    <div id="block-nir-pid2395-sidebarsubscribe" class="block-content--nir-global-block block-content--nir-global-block--6941 block--block-contentddce170c-e1f0-45a0-acdb-7817a6efd534 block--block-contentddce170c-e1f0-45a0-acdb-7817a6efd534--5831 block--sidebar-last--block-content--ddce170c-e1f0-45a0-acdb-7817a6efd534 block--sidebar-last--block-content--ddce170c-e1f0-45a0-acdb-7817a6efd534--5831 block--626ef8a1-be00-42c5-9bf8-af06663f77b5 block--626ef8a1-be00-42c5-9bf8-af06663f77b5--5831 block block-block-content block-block-contentddce170c-e1f0-45a0-acdb-7817a6efd534">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="block">
+<div class="bg-blue">
+<h4 class="line-bottom-small"><img src="http://media.corporate-ir.net/media_files/IROL/25/254223/images/icon-13.png" />Keep me updated</h4>
+
+<p>Click the button below to subscribe to our news service.</p>
+<a class="action-button green-white" href="http://www.argenx.com/en-GB/content/subscribe/46/">Subscribe</a></div>
+</div>
+</div>
+      
+</div>
+      
+  </div>
+<div id="block-widgeteventsv2-2" class="block--sidebar-events block--nir-events__widget block--nir-events__widget--5826 block--sidebar-last--nir-events__widget block--sidebar-last--nir-events__widget--5826 block--d446b764-d4bd-4530-a0cc-079316f5bd54 block--d446b764-d4bd-4530-a0cc-079316f5bd54--5826 block block-nir-events block-nir-events__widget">
+  
+    
+      <div class="nir-widget">
+      <div class="nir-widget--label">
+      Financial calendar
+    </div>
+    <div class="nir-widget--content">
+        <div class="nir-widget--list">
+              
+<div class="HomeEvent">
+
+  
+      <div class="event-item">
+      
+<div class="field-nir-event-title">
+      <div class="field__item"><a href="/events/event-details/q1-business-update-financial-results" hreflang="en">Q1 Business update &amp; Financial results</a></div>
+  </div>
+    </div>
+  
+      <div class="HomeEventDate">
+      
+      
+      
+            14/05/2020
+      
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+<div class="HomeEvent">
+
+  
+      <div class="event-item">
+      
+<div class="field-nir-event-title">
+      <div class="field__item"><a href="/events/event-details/hy-2020-financial-results-q2-business-update" hreflang="en">HY 2020 Financial results &amp; Q2 Business update</a></div>
+  </div>
+    </div>
+  
+      <div class="HomeEventDate">
+      
+      
+      
+            30/07/2020
+      
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</div>
+          </div>
+    <div class="nir-widget--pager">
+      
+    </div>
+    <div class="nir-widget--total-results">
+      
+    </div>
+  </div>
+</div>
+  </div>
+
+  </div>
+
+            </div>
+			        </div>
+    </div>
+    <div class="ccbnTool ccbnToolHorizontal">
+          
+    
+
+
+                        
+   
+    
+
+                             <ul id="ndq-tools">
+                  <li>
+          <a href="" target="" rel="" class="print-icon">Print</a>
+                  </li>
+              <li>
+          <a href="/rss-feeds" target="" rel="" class="rss-feed" data-drupal-link-system-path="node/5951">RSS</a>
+                  </li>
+              <li>
+          <a href="/shareholder-services/email-alerts" target="" rel="" class="email-alert" data-drupal-link-system-path="node/5946">Email Alerts</a>
+                  </li>
+          </ul>
+  
+
+
+    
+
+  
+
+    </div>
+    <footer>
+        <div class="top-footer">
+            <div class="container">
+                <div class="four">
+                    <h5>Contact</h5>
+                    <p> argenx SE<br /> Breda, The Netherlands <br /> T +31 763 030 488 <br /><br /><a href="mailto:info@argenx.com">info@argenx.com</a><br /></p>
+                </div>
+                <div class="four">
+                    <h5>&nbsp;</h5>
+                    <p> argenx BVBA <br /> Zwijnaarde, Belgium <br /> T +32 9 310 34 00 <br /></p>
+                </div>
+                <div class="four">
+                    <h5>Downloads</h5><a id="ctl00_rptDownloads_ctl00_DownloadLink1" class="more-grey" href="http://www.argenx.com/handlers/download.ashx?filename=%2fckfinder%2fuserfiles%2ffiles%2fposters%2fmg-poster-presented-at-mg-conference-ny-may-2017.pdf">ARGX-113 poster MG Conference NY <i class="icon-right"></i></a>
+                    <a
+                        id="ctl00_rptDownloads_ctl01_DownloadLink1" class="more-grey" href="/sites/g/files/knoqqb26931/themes/site/nir_pid2395/client/images/cover-annual-report-2016.JPG">Annual report 2016 <i class="icon-right"></i></a><a id="ctl00_rptDownloads_ctl02_DownloadLink1" class="more-grey" href="http://www.argenx.com/handlers/download.ashx?filename=%2fckfinder%2fuserfiles%2ffiles%2fcorporate-presentation%2fcorporate-presentation-march-2017.pdf">Corporate presentation <i class="icon-right"></i></a></div>
+                <div
+                    class="four">
+                    <h5>Follow us</h5>
+                    <div class="social-icons"><a href="https://www.linkedin.com/company/argen-x" target="_blank"><i class="icon-linkedin"></i></a></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="container">
+                <div class="sixteen">
+                    <p>
+                       2020 © argenx</p>
+                    | <a title="Disclaimer" itemprop="url" href="http://www.argenx.com/en-GB/content/disclaimer/43/"><span itemprop="name">Disclaimer</span></a> | <a title="Cookie policy" itemprop="url" href="http://www.argenx.com/en-GB/content/cookie-policy/45/"><span itemprop="name">Cookie policy</span></a>                    | <a title="Sitemap" itemprop="url" href="http://www.argenx.com/en-GB/content/sitemap/44/"><span itemprop="name">Sitemap</span></a>
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a title="Home" itemprop="url" href="http://www.argenx.com/en-GB/content/argenx-in-short/2/"><span itemprop="name">Home</span></a></li>
+                            <li><a title="About us" itemprop="url" href="http://www.argenx.com/en-GB/content/overview/8/"><span itemprop="name">About us</span></a></li>
+                            <li><a title="Products" itemprop="url" href="http://www.argenx.com/en-GB/content/overview/13/"><span itemprop="name">Products</span></a></li>
+                            <li><a title="Partnering" itemprop="url" href="http://www.argenx.com/en-GB/content/opportunities/27/"><span itemprop="name">Partnering</span></a></li>
+                            <li><a title="Investors" itemprop="url" href="/"><span itemprop="name">Investors</span></a></li>
+                            <li><a title="News" class="active" itemprop="url" href="http://www.argenx.com/en-GB/content/press-releases/37/"><span itemprop="name">News</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="clear"></div>
+                <div class="sixteen" style="text-align:left; font-size:10px;"> Created by <a href="http://www.cantilis.be" target="_blank" style="margin:0; padding:0; text-decoration:underline;">Cantilis</a></div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </footer>
+    </div>
+  </div>
+
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgclientweb2916";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5831","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/node,core\/drupal.collapse,core\/html5shiv,nir_base\/adobe_omniture,nir_base\/lib,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_multimedia\/nir_multimedia,nir_pid2395\/override,radix_layouts\/radix_layouts,system\/base","theme":"nir_pid2395","theme_token":null},"ajaxTrustedUrl":[],"user":{"uid":0,"permissionsHash":"dd2eb5e221e8f80d4a59ff4e41d0e44086019c90049b82b15d6793a51160e6b0"}}</script>
+<script src="/sites/g/files/knoqqb26931/files/js/js_immGGcdB5istgGWLA5hWegb-lVaVcqwsalyNOAtlXgw.js"></script>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-37021776-10', 'auto');
+  ga('require', 'linkid', 'linkid.js');
+  ga('send', 'pageview');
+  </script>
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"761e715901","applicationID":"39077635,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH0xfCFVfb0VHAD5HUF5cVRFvV1lQWQE+QVpbXV4=","queueTime":0,"applicationTime":624,"atts":"ShJUF18aSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

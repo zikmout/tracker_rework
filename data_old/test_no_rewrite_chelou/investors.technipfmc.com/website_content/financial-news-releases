@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"32397309"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Financial news releases | Technip FMC" />
+<meta property="og:site_name" content="Technip FMC" />
+<link rel="canonical" href="https://investors.technipfmc.com/financial-news-releases/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://investors.technipfmc.com/financial-news-releases" />
+<meta property="og:title" content="Financial news releases | Technip FMC" />
+<meta property="og:description" content="The Investor Relations website contains information about Technip FMC&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/g/files/knoqqb33226/files/favicon_0.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://investors.technipfmc.com/financial-news-releases" />
+<link rel="alternate" hreflang="fr" href="https://investors.technipfmc.com/fr/financial-news-releases" />
+<link rel="revision" href="https://investors.technipfmc.com/financial-news-releases" />
+
+    <title>Financial news releases | Technip FMC</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb33226/files/css/css_8zWKN6qWWUtDIuPxDLTytXs0iepG3wRB9x86fVDdjDc.css?q9agyc" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb33226/files/css/css_Q4KcGy_4R06MrDRcHsPYJ-mDf7dynkVuH81Orq2eSB4.css?q9agyc" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb33226/files/css/css_coohcDaRQ1J0QjTechga8RlkUqo0F101c77Hs-TR-ew.css?q9agyc" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb33226/files/css/css_--kTjAUHeo8GIE-PeQO51LOoQpl2_hS6Zze-4LNFTq8.css?q9agyc" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb33226/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+    <script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-88567761-1','auto');ga('send','pageview');
+</script>
+
+  </head>
+  <body class="body-sidebars-none nir-node nir-node--type-nir-landing-page nir-node--5816 path-node page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#main-menu">
+        Skip to main navigation
+      </a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div id="block-gpaccessnav" class="block-content--nir-global-block block-content--nir-global-block--16136 block--block-content24609fe0-b6fc-43cd-8edc-d7981224490e block--block-content24609fe0-b6fc-43cd-8edc-d7981224490e--5816 block--access-nav--block-content--24609fe0-b6fc-43cd-8edc-d7981224490e block--access-nav--block-content--24609fe0-b6fc-43cd-8edc-d7981224490e--5816 block--18875436-60a2-4551-9a9c-a65234b9df6c block--18875436-60a2-4551-9a9c-a65234b9df6c--5816 block block-block-content block-block-content24609fe0-b6fc-43cd-8edc-d7981224490e">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="global-block-content accessible-nav">
+    <ul><li><a accesskey="s" href="#maincontent">Jump to main content (accesskey s)</a></li>
+        <li><a href="#navigation">Jump to site navigation</a></li>
+        <li><a accesskey="3" href="https://www.technipfmc.com/en/services/site-index">Jump to site index (accesskey 3)</a></li>
+        <li><a accesskey="0" href="https://www.technipfmc.com/en/services/accessibility">Jump to accessibility statement (accesskey 0)</a></li>
+    </ul></div></div>
+      
+</div>
+      
+  </div>
+
+
+<header class="site-header js-header" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="row">
+
+                    <div id="block-gpheaderlogo" class="block-content--nir-global-block block-content--nir-global-block--16206 block--block-content0d328ed0-4545-4ab8-aa68-c9006aaed521 block--block-content0d328ed0-4545-4ab8-aa68-c9006aaed521--5816 block--header-logo--block-content--0d328ed0-4545-4ab8-aa68-c9006aaed521 block--header-logo--block-content--0d328ed0-4545-4ab8-aa68-c9006aaed521--5816 block--1e7b1961-8717-4f43-9359-f3a97eca05ca block--1e7b1961-8717-4f43-9359-f3a97eca05ca--5816 block block-block-content block-block-content0d328ed0-4545-4ab8-aa68-c9006aaed521">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="col-xs-12 col-lg-3 u-padding-l-0 mobile-nav-controls-container global-block-content"><a href="https://www.technipfmc.com/en"><img alt="TechnipFMC" class="site-logo" src="/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/logo.svg" /></a>
+<div class="mobile-nav-controls"><a class="trigger__nav js-nav__trigger" href="#"><span class="trigger__icon"></span> <span class="u-hidden-visibly">Menu</span> </a> <a class="trigger__search trigger__search--mobile js-search__trigger" href="#"> <span class="trigger__icon"></span> <span class="u-hidden-visibly">Search</span> </a></div>
+</div>
+
+      
+</div>
+      
+  </div>
+
+
+                    <div class="col-xs-12 col-lg-9">
+                        <nav class="main-nav" id="navigation">
+      
+                            
+  
+    
+      
+              
+            <ul class="mobile-nav-menu maxheight"><li class="return-link home-link" style="display:none;"><a href="#">Home</a></li>
+	<li class="has-subnav"><a href="https://www.technipfmc.com/en/about-us">About us</a>
+	<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_about_us_nav.jpg) no-repeat center center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/about-us/board-of-directors">Board of directors</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/executive-officers">Executive officers</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/our-values">Our values</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/ethics-and-compliance">Ethics and Compliance</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/sustainablility">Sustainability</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/governance">Governance</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/quality-hse-and-security">Quality, HSE &amp; Security</a></li>
+	</ul></li>
+	<li class="has-subnav third-level-sub-menu"><a href="https://www.technipfmc.com/en/what-we-do/">What we do</a>
+	<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/">What we do overview</a></li>
+		<li class="has-subnav"><a href="https://www.technipfmc.com/en/what-we-do/subsea">Subsea</a>
+		<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/subsea">ubsea Overview</a></li>
+			<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Concept-and-FEED-studies">Concept &amp; FEED studies</a></li>
+			<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/iEPCI-subsea">iEPCI subsea</a></li>
+			<li class="has-subnav"><a href="/">Subsea Systems</a>
+			<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems">Subsea Systems overview</a></li>
+				<li><a href="https://www.technipfmc.com/WelcomeChange#page-1" target="_blank">Subsea 2.0</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems/Subsea-processing">Subsea processing</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems/Subsea-infrastructure">Subsea infrastructure</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems/Well-control">Well control</a></li>
+			</ul></li>
+			<li class="has-subnav"><a href="/">Robotics</a>
+			<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics">Robotics overview</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics/rov-systems">ROV systems</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics/manipulator-systems">Manipulator systems</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics/technical-support">Technical support</a></li>
+			</ul></li>
+			<li class="has-subnav"><a href="/">Life of field Services</a>
+			<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services">Life of field services overview</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/ilof">iLOF</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/subsea-drilling-services">Subsea drilling services</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/asset-management">Asset management</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/Field-performance-services">Field performance services</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/IMR">IMR</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/Well-intervention">Well intervention</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/Plug-and-abandonment">Plug and abandonment</a></li>
+			</ul></li>
+		</ul></li>
+		<li class="has-subnav"><a href="/">Onshore - Offshore</a>
+		<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore">Onshore - Offshore overview</a></li>
+			<li class="has-subnav"><a href="/">From concept to project delivery</a>
+			<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery">From concept to project delivery overview</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery/conceptual-studies">Conceptual studies</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery/engineering">Engineering</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery/procurement-and-construction">Procurement and construction</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery/project-management">Project management</a></li>
+			</ul></li>
+			<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Project-management-consultancy">Project management consultancy (PMC)</a></li>
+			<li class="has-subnav"><a href="/">Offshore capabilities</a>
+			<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities">Offshore capabilities overview</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities/flng-and-gas-fpso">FLNG and gas FPSO</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities/floating-and-fixed-platforms">Floating and fixed platforms</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities/floatover-operations">Floatover operations</a></li>
+			</ul></li>
+			<li class="has-subnav"><a href="/">Onshore capabilities</a>
+			<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities">Onshore capabilities overview</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/process-technology">Process technology</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/lng-and-gas-monetization">LNG and gas monetization</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Ethylene">Ethylene</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Hydrogen">Hydrogen</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Oil-refining">Oil refining</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Petrochemicals-and-polymers">Petrochemicals and polymers</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Fertilizers">Fertilizers</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/other-industries">Other industries</a></li>
+			</ul></li>
+		</ul></li>
+		<li class="has-subnav"><a href="/">Surface Technologies</a>
+		<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/surface">Surface Technologies</a></li>
+			<li class="has-subnav"><a href="/">Upstream</a>
+			<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/surface/upstream">Upstream overview</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/surface/upstream/drilling-and-completions">Drilling and completions</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/surface/upstream/pressure-control">Pressure control</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/surface/upstream/production">Production</a></li>
+			</ul></li>
+			<li class="has-subnav"><a href="/">Midstream and downstream transportation</a>
+			<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat top center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/what-we-do/surface/Midstream-and-downstream-transportation">Midstream and downstream transportation overview</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/surface/Midstream-and-downstream-transportation/measurement-solutions">Measurement solutions</a></li>
+				<li><a href="https://www.technipfmc.com/en/what-we-do/surface/Midstream-and-downstream-transportation/loading-systems">Loading systems</a></li>
+			</ul></li>
+		</ul></li>
+		<li><a href="https://www.technipfmc.com/en/what-we-do/fleet">Fleet</a></li>
+		<li><a href="https://www.technipfmc.com/en/what-we-do/innovation">Innovation</a></li>
+	</ul></li>
+	<li class="has-subnav"><a href="#">Where we operate</a>
+	<ul class="nav-sublist" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;"><li><a href="/en/where-we-operate">Where we operate overview</a></li>
+		<li class="has-subnav"><a href="https://www.technipfmc.com/en/where-we-operate/africa">Africa</a>
+		<ul class="nav-sublist" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/where-we-operate/africa">Africa overview</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/africa/algeria">Algeria</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/africa/angola">Angola</a></li>
+			<li class="disabled-link"><a>Cameroon</a></li>
+			<li class="disabled-link"><a>Congo</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/africa/egypt">Egypt</a></li>
+			<li class="disabled-link"><a>Gabon</a></li>
+			<li class="disabled-link"><a>Ghana</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/africa/mozambique">Mozambique</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/africa/nigeria">Nigeria</a></li>
+			<li class="disabled-link"><a>Tunisia</a></li>
+		</ul></li>
+		<li class="has-subnav"><a href="/">Asia Pacific</a>
+		<ul class="nav-sublist" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific">Asia Pacific overview</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/australia">Australia</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/china">China</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/india">India</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/indonesia">Indonesia</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/malaysia">Malaysia</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/russia">Russia</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/singapore">Singapore</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/thailand">Thailand</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/vietnam">Vietnam</a></li>
+		</ul></li>
+		<li class="has-subnav"><a href="/">Europe</a>
+		<ul class="nav-sublist" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/where-we-operate/europe">Europe overview</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/europe/france">France</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/europe/germany">Germany</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/europe/italy">Italy</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/europe/netherlands">Netherlands</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/europe/norway">Norway</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/europe/poland">Poland</a></li>
+			<li class="disabled-link"><a>Portugal</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/europe/spain">Spain</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/europe/united-kingdom">United Kingdom</a></li>
+		</ul></li>
+		<li class="has-subnav"><a href="/">Middle East</a>
+		<ul class="nav-sublist" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/where-we-operate/middle-east">Middle East overview</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/azerbaijan">Azerbaijan</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/kazakhstan">Kazakhstan</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/kuwait">Kuwait</a></li>
+			<li class="disabled-link"><a>Oman</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/qatar">Qatar</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/Saudi-Arabia">Saudi Arabia</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/united-arab-emirates">United Arab Emirates</a></li>
+		</ul></li>
+		<li class="has-subnav"><a href="/">The Americas</a>
+		<ul class="nav-sublist" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas">The Americas overview</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/argentina">Argentina</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/brazil">Brazil</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/canada">Canada</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/colombia">Colombia</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/guyana">Guyana</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/mexico">Mexico</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/Tinidad-and-Tobago">Trinidad and Tobago</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/united-states">United States</a></li>
+			<li><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/venezuela">Venezuela</a></li>
+		</ul></li>
+	</ul></li>
+	<li class="has-subnav"><a href="https://www.technipfmc.com/en/media">Media</a>
+	<ul class="nav-sublist" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_media_nav.jpg) no-repeat center center; background-size:cover;"><li><a href="https://www.technipfmc.com/en/media">Media overview</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/features">Features</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/views">Views</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/press-releases">Press releases</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/news">News</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/media-gallery">Gallery</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/tradeshows">Tradeshows</a></li>
+	</ul></li>
+	<li class="has-subnav"><a class="lit" href="#">Investors</a>
+	<ul class="nav-sublist" style="background:url(https://technipfmc.gcs-web.com/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_investors_nav.jpg) no-repeat center center; background-size:cover;"><li><a href="/">Investors overview</a></li>
+		<li><a href="/financial-news-releases">Financial news releases</a></li>
+		<li><a href="/financial-information">Financial information</a></li>
+		<li><a href="/regulatory-filings">Regulatory filings</a></li>
+		<li><a href="/events-presentations">Events &amp; presentations</a></li>
+		<li><a href="/stock-information">Stock information</a></li>
+		<li><a href="/contacts-subscriptions">Contacts &amp; subscriptions</a></li>
+		<li><a href="/archives">Archives</a></li>
+	</ul></li>
+	<li><a href="https://www.technipfmc.com/en/careers">Careers</a></li>
+	<li><a href="https://www.technipfmc.com/en/contact">Contact</a></li>
+</ul>
+      
+
+      
+  
+
+  
+    
+      
+              
+            <ul class="desktop-nav-menu u-padding-r-0"><li class="has-subnav"><a href="#about-us">About us</a> <span class="nav-arrow"></span>
+	<div class="subnav-wrapper u-hidden">
+	<div class="subnav-panel shading" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_about_us_nav.jpg) no-repeat center center; background-size:cover;">
+	<div class="subnav-panel__content">
+	<div class="col-xs-12 col-lg-3 col-xl-2 col-xl-offset-1">
+	<h2>TechnipFMC Corporate Profile</h2>
+	<a class="button download-trans-white" href="https://www.technipfmc.com/-/media/technipfmc/Downloads/corporate-brochure/technipfmc_corporate-brochure-en-2018.pdf" target="_blank">Find out more</a></div>
+
+	<div class="col-xs-12 col-lg-9">
+	<ul class="nav-sublist nav-top"><li><a href="https://www.technipfmc.com/en/about-us">About us overview</a></li>
+		<li><a> </a></li>
+	</ul><ul class="nav-sublist"><!--<li class="return-link home-link"><a href="#">Home</a></li>
+                    <li class="parent-page"><a href="#about-us">About us</a></li>--><li><a href="https://www.technipfmc.com/en/about-us/board-of-directors">Board of directors</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/executive-officers">Executive officers</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/our-values">Our values</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/ethics-and-compliance">Ethics and Compliance</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/sustainablility">Sustainability</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/governance">Governance</a></li>
+		<li><a href="https://www.technipfmc.com/en/about-us/quality-hse-and-security">Quality, HSE &amp; Security</a></li>
+	</ul></div>
+	</div>
+	<span class="close subnav-panel__close"><a href="#"><span class="u-hidden-visibly">Close</span></a></span></div>
+	</div>
+	</li>
+	<li class="has-subnav"><a href="#">What we do</a> <span class="nav-arrow"></span>
+	<div class="subnav-wrapper">
+	<div class="subnav-panel what-we-do shading" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="subnav-carousel">
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-subsea">
+	<div class="secondary-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea">Subsea overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Concept-and-FEED-studies">Concept &amp; FEED studies</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/iEPCI-subsea">iEPCI subsea</a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-subsea-systems" href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems">Subsea Systems <span class="link-tier-nav"></span></a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-robotics" href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics">Robotics <span class="link-tier-nav"></span></a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-life-of-field-services" href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services">Life of field services <span class="link-tier-nav"></span></a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- inner sublist -->
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-inner-sublist-subsea-systems">
+	<div class="third-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems">Subsea Systems overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/WelcomeChange#page-1" target="_blank">Subsea 2.0 <span class="link-external"></span></a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems/Subsea-processing">Subsea processing</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems/Subsea-infrastructure">Subsea infrastructure</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/subsea-systems/Well-control">Well control</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-inner-sublist-robotics">
+	<div class="third-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics">Robotics overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics/rov-systems">ROV systems</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics/manipulator-systems">Manipulator systems</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Robotics/technical-support">Technical support</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-inner-sublist-life-of-field-services">
+	<div class="third-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services">Life of field services overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/ilof">iLOF</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/subsea-drilling-services">Subsea drilling services</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/asset-management">Asset management</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/Field-performance-services">Field performance services</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/IMR">IMR</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/Well-intervention">Well intervention</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/subsea/Life-of-field-services/Plug-and-abandonment">Plug and abandonment</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-onshore--offshore">
+	<div class="secondary-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore">Onshore - Offshore overview</a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-from-concept-to-project-delivery" href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery">From concept to project delivery <span class="link-tier-nav"></span></a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Project-management-consultancy">Project management consultancy (PMC)</a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-offshore-capabilities" href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities">Offshore capabilities <span class="link-tier-nav"></span></a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-onshore-capabilities" href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities">Onshore capabilities <span class="link-tier-nav"></span></a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- inner sublist -->
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-inner-sublist-from-concept-to-project-delivery">
+	<div class="third-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery">From concept to project delivery overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery/conceptual-studies">Conceptual studies</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery/engineering">Engineering</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery/procurement-and-construction">Procurement and construction</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/From-concept-to-project-delivery/project-management">Project management</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-inner-sublist-offshore-capabilities">
+	<div class="third-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities">Offshore capabilities overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities/flng-and-gas-fpso">FLNG and gas FPSO</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities/floating-and-fixed-platforms">Floating and fixed platforms</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Offshore-capabilities/floatover-operations">Floatover operations</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-inner-sublist-onshore-capabilities">
+	<div class="third-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities">Onshore capabilities overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/process-technology">Process technology</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/lng-and-gas-monetization">LNG and gas monetization</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Ethylene">Ethylene</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Hydrogen">Hydrogen</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Oil-refining">Oil refining</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Petrochemicals-and-polymers">Petrochemicals and polymers</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/Fertilizers">Fertilizers</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/onshore--offshore/Onshore-capabilities/other-industries">Other industries</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<!-- ends inner sublist -->
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-surface">
+	<div class="secondary-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/surface">Surface Technologies overview</a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-upstream" href="https://www.technipfmc.com/en/what-we-do/surface/upstream">Upstream <span class="link-tier-nav"></span></a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-midstream-and-downstream-transportation" href="https://www.technipfmc.com/en/what-we-do/surface/Midstream-and-downstream-transportation">Midstream and downstream transportation <span class="link-tier-nav"></span></a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-technip">
+	<div class="secondary-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/technip-energies" tabindex="-1">Technip Energies overview</a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-from-concept-to-project-delivery" href="https://www.technipfmc.com/en/what-we-do/technip-energies/From-concept-to-project-delivery" tabindex="-1">From concept to project delivery <span class="link-tier-nav"></span></a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/technip-energies/Project-management-consultancy" tabindex="-1">Project management consultancy (PMC)</a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-offshore-capabilities" href="https://www.technipfmc.com/en/what-we-do/technip-energies/Offshore-capabilities" tabindex="-1">Offshore capabilities <span class="link-tier-nav"></span></a></div>
+
+	<div class="carousel-li"><a data-show-sublist="nav-inner-sublist-onshore-capabilities" href="https://www.technipfmc.com/en/what-we-do/technip-energies/Onshore-capabilities" tabindex="-1">Onshore capabilities <span class="link-tier-nav"></span></a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background: url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-inner-sublist-upstream">
+	<div class="third-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/surface/upstream">Upstream overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/surface/upstream/drilling-and-completions">Drilling and completions</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/surface/upstream/pressure-control">Pressure control</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/surface/upstream/production">Production</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background: url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_what_we_do_nav_1.jpg) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-inner-sublist-midstream-and-downstream-transportation">
+	<div class="third-navigation">
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/surface/Midstream-and-downstream-transportation">Midstream and downstream transportation overview</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/surface/Midstream-and-downstream-transportation/measurement-solutions">Measurement solutions</a></div>
+
+	<div class="carousel-li"><a href="https://www.technipfmc.com/en/what-we-do/surface/Midstream-and-downstream-transportation/loading-systems">Loading systems</a></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="subnav-controls">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-xl-10 col-xl-offset-1">
+	<div class="row">
+	<div class="col-xs-12 col-md-3">
+	<ul class="trigger__sublist"><li><a href="https://www.technipfmc.com/en/what-we-do">What we do overview</a></li>
+		<li><a class="js-nav-whatwedo" data-show-sublist="nav-sublist-subsea" href="https://www.technipfmc.com/en/what-we-do/subsea">Subsea <span></span></a></li>
+		<li><a class="js-nav-whatwedo" data-show-sublist="nav-sublist-surface" href="https://www.technipfmc.com//en/what-we-do/surface">Surface <span></span></a></li>
+		<li><a class="js-nav-whatwedo" data-show-sublist="nav-sublist-technip" href="https://www.technipfmc.com//en/what-we-do/surface">Technip Energies<span></span></a></li>
+		<li><a href="https://www.technipfmc.com/en/what-we-do/fleet">Fleet</a></li>
+		<li><a href="https://www.technipfmc.com//en/what-we-do/innovation">Innovation</a></li>
+	</ul></div>
+
+	<div class="col-xs-12 col-md-3 col-md-offset-1">
+	<div class="subnav-cloned"> </div>
+	</div>
+
+	<div class="col-xs-12 col-md-3 col-md-offset-1">
+	<div class="subnav-inner-cloned"> </div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<span class="close"><a href="#"><span class="u-hidden-visibly">Close</span></a></span></div>
+	</div>
+	</li>
+	<li class="has-subnav"><a href="#">Where we operate</a> <span class="nav-arrow"></span>
+	<div class="subnav-wrapper">
+	<div class="subnav-panel where-we-operate shading">
+	<div class="subnav-carousel">
+	<div class="carousel-item" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;">
+	<div class="container subnav-panel__carousel">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-9">
+	<ul><li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/europe/france">France</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/europe/germany">Germany</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/europe/italy">Italy</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/europe/netherlands">Netherlands</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/europe/norway">Norway</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/europe/poland">Poland</a></li>
+		<li class="disabled-link carousel-li">Portugal</li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/europe/spain">Spain</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/europe/united-kingdom">United Kingdom</a></li>
+	</ul></div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-10">
+	<ul><li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/africa/algeria">Algeria</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/africa/angola">Angola</a></li>
+		<li class="disabled-link carousel-li">Cameroon</li>
+		<li class="disabled-link carousel-li">Congo</li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/africa/egypt">Egypt</a></li>
+		<li class="disabled-link carousel-li">Gabon</li>
+		<li class="disabled-link carousel-li">Ghana</li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/africa/mozambique">Mozambique</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/africa/nigeria">Nigeria</a></li>
+		<li class="disabled-link carousel-li">Tunisia</li>
+	</ul></div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-11">
+	<ul><li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/australia">Australia</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/china">China</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/india">India</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/indonesia">Indonesia</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/malaysia">Malaysia</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/russia">Russia</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/singapore">Singapore</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/thailand">Thailand</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/asia-pacific/vietnam">Vietnam</a></li>
+	</ul></div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-12">
+	<ul><li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/azerbaijan">Azerbaijan</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/kazakhstan">Kazakhstan</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/kuwait">Kuwait</a></li>
+		<li class="disabled-link carousel-li">Oman</li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/qatar">Qatar</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/Saudi-Arabia">Saudi Arabia</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/middle-east/united-arab-emirates">United Arab Emirates</a></li>
+	</ul></div>
+	</div>
+	</div>
+	</div>
+
+	<div class="carousel-item" style="background:url(https://www.technipfmc.com/-/media/technipfmc/images/navigation/tfmc_dropdownmenu_1920x1080px_africa2/tfmc_dropdownmenu_africa.jpg?h=1080&amp;w=1920&amp;hash=64DE072457C294074341BC53470CA8322084581E) no-repeat center center; background-size:cover;">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-md-6 col-md-offset-5 carousel-item-content" id="nav-sublist-13">
+	<ul><li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/argentina">Argentina</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/brazil">Brazil</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/canada">Canada</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/colombia">Colombia</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/guyana">Guyana</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/mexico">Mexico</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/Tinidad-and-Tobago">Trinidad and Tobago</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/united-states">United States</a></li>
+		<li class="carousel-li"><a href="https://www.technipfmc.com/en/where-we-operate/the-americas/venezuela">Venezuela</a></li>
+	</ul></div>
+	</div>
+	</div>
+	</div>
+	</div>
+
+	<div class="subnav-controls">
+	<div class="container">
+	<div class="row">
+	<div class="col-xs-12 col-xl-10 col-xl-offset-1">
+	<div class="row">
+	<div class="col-xs-12 col-md-3 col-md-offset-1">
+	<ul class="trigger__sublist"><li><a data-show-sublist="nav-sublist-10" href="#">Africa <span></span></a></li>
+		<li><a data-show-sublist="nav-sublist-11" href="#">Asia Pacific <span></span></a></li>
+		<li><a data-show-sublist="nav-sublist-9" href="#">Europe <span></span></a></li>
+		<li><a data-show-sublist="nav-sublist-12" href="#">Middle East <span></span></a></li>
+		<li><a data-show-sublist="nav-sublist-13" href="#">The Americas <span></span></a></li>
+	</ul></div>
+
+	<div class="col-xs-12 col-md-7 col-md-offset-1">
+	<div class="subnav-cloned"> </div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+	<span class="close"><a href="#"><span class="u-hidden-visibly">Close</span></a></span> <!--</div>--></div>
+	</div>
+	</li>
+	<li class="has-subnav"><a href="#media">Media</a> <span class="nav-arrow"></span>
+	<div class="subnav-wrapper u-hidden">
+	<div class="subnav-panel news shading" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_media_nav.jpg) no-repeat center center; background-size:cover;">
+	<div class="subnav-panel__content">
+	<div class="col-xs-12 col-lg-3 col-xl-2 col-xl-offset-1"><!-- <p class="feature-label">Event</p> -->
+	<p><strong>TechnipFMC 2018 in Review</strong> <!-- <br>
+                    May 1-4 --></p>
+
+	<p><a class="button download-trans-white" href="https://www.technipfmc.com/-/media/technipfmc/Downloads/2018-in-review_final_web.pdf" target="_blank">Find out more</a></p>
+	</div>
+
+	<div class="col-xs-12 col-lg-9">
+	<ul class="nav-sublist nav-top"><li><a href="https://www.technipfmc.com/en/media">Media Overview</a></li>
+		<li><a> </a></li>
+	</ul><ul class="nav-sublist"><li><a href="https://www.technipfmc.com/en/media/features">Features</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/views">Views</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/press-releases">Press releases</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/news">News</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/media-gallery">Gallery</a></li>
+		<li><a href="https://www.technipfmc.com/en/media/tradeshows">Tradeshows</a></li>
+	</ul></div>
+	</div>
+	<span class="close"><a href="#"><span class="u-hidden-visibly">Close</span></a></span></div>
+	</div>
+	</li>
+	<li class="has-subnav"><a class="lit" href="#investors">Investors</a> <span class="nav-arrow"></span>
+	<div class="subnav-wrapper u-hidden">
+	<div class="subnav-panel investors shading" style="background:url(/sites/g/files/knoqqb33226/themes/site/nir_pid2859/client/assets/img/site_objects/bg_investors_nav.jpg) no-repeat center center; background-size:cover;">
+	<div class="subnav-panel__content">
+	<div class="col-xs-12 col-lg-3 col-xl-2 col-xl-offset-1"><iframe allowtransparency="true" class="EurolandTool" frameborder="0" height="105" id="headerQuote" scrolling="no" src="//tools.eurolandir.com/tools/ticker/html/?companycode=f-13170&amp;v=vertical&amp;lang=en-gb" width="100%"></iframe>
+	<p><a class="button trans-white" href="/stock-information/share-price-information">Find out more</a></p>
+	</div>
+
+	<div class="col-xs-12 col-lg-9">
+	<ul class="nav-sublist nav-top"><li><a href="/">Investors Overview</a></li>
+		<li><a> </a></li>
+	</ul><ul class="nav-sublist"><li><a href="/financial-news-releases">Financial news releases</a></li>
+		<li><a href="/financial-information/results-center">Financial information</a></li>
+		<li><a href="/regulatory-filings">Regulatory filings</a></li>
+		<li><a href="/events-presentations/events-calendar">Events and presentations</a></li>
+		<li><a href="/stock-information/share-price-information">Stock information</a></li>
+		<li><a href="/contacts-subscriptions/contacts">Contacts and subscriptions</a></li>
+		<li><a href="/archives">Archives</a></li>
+	</ul></div>
+	</div>
+	<span class="close"><a href="#"><span class="u-hidden-visibly">Close</span></a></span></div>
+	</div>
+	</li>
+	<li><a href="https://www.technipfmc.com/en/careers">Careers</a></li>
+	<li><a href="https://www.technipfmc.com/en/contact">Contact</a></li>
+	<li class="search"><a class="trigger__search js-search__trigger" href="#"><span class="trigger__icon"></span> <span class="u-hidden-visibly">Search</span> </a></li>
+</ul>
+      
+
+      
+  
+
+                            
+                                                        <a href="#" class="trigger__nav__close js-close-nav__trigger"> <span class="trigger__icon"></span> <span class="u-hidden-visibly">Close</span></a>
+                        </nav>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="block-gpheadersearch" class="block-content--nir-global-block block-content--nir-global-block--16151 block--block-contentb17d83a8-6517-4919-aee4-4e7e0b9bf546 block--block-contentb17d83a8-6517-4919-aee4-4e7e0b9bf546--5816 block--header-search--block-content--b17d83a8-6517-4919-aee4-4e7e0b9bf546 block--header-search--block-content--b17d83a8-6517-4919-aee4-4e7e0b9bf546--5816 block--4e2e6187-e921-402e-8984-255a9c3b4071 block--4e2e6187-e921-402e-8984-255a9c3b4071--5816 block block-block-content block-block-contentb17d83a8-6517-4919-aee4-4e7e0b9bf546">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="global-block-content searchbox container-flud" style="z-index: 6000000">
+  <div class="row" style="z-index: 6000000">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <form autocomplete="off" action="https://www.technipfmc.com/en/search">
+        <input placeholder="Search TechnipFMC.com" role="search" name="q" type="text" /><input name="submit" value="Search" type="submit" /><a class="closemessage js-search__trigger" href="#" role="button">Close message</a>
+      </form>
+    </div>
+  </div>
+</div></div>
+      
+</div>
+      
+  </div>
+
+
+</header>
+
+<main role="main" id="maincontent">
+    <div class="overlay-fade overlay-nav"></div>
+            <div class="container-fluid bg-verylightgrey u-margin-b-60 bg-verylightgrey__lang">
+
+                            <div class="row u-margin ">
+                    <div class="col-xs-12 u-padding-0 u-padding-r-0 u-padding-l-0">
+
+                        <div id="block-nir-pid2859-breadcrumbs" class="block--system-breadcrumb-block block--system-breadcrumb-block--5816 block--breadcrumb--system-breadcrumb-block block--breadcrumb--system-breadcrumb-block--5816 block--d4bb5b5d-ae9d-4c95-be11-9c1d540a8cbf block--d4bb5b5d-ae9d-4c95-be11-9c1d540a8cbf--5816 block block-system block-system-breadcrumb-block">
+  
+    
+        <ul class="global-block-content breadcrumb u-float-left">
+          <li>
+                              <a href="/financial-news-releases">Financial news releases</a>
+                          </li>
+         
+  </ul>
+
+  </div>
+
+
+                                                    <div class="language-switcher-language-url block--language-blocklanguage-interface block--language-blocklanguage-interface--5816 block--lang-switcher--language-block--language-interface block--lang-switcher--language-block--language-interface--5816 block--1c234b84-52c5-45fe-b5ac-c479d6b7eca8 block--1c234b84-52c5-45fe-b5ac-c479d6b7eca8--5816 block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
+  
+    
+        <div class="global-block-content investors-lang u-float-right u-padding-t-20">
+    <ul class=" inline-links tabs tabs-lang  u-margin-r-0"  data-block-uuid="1c234b84-52c5-45fe-b5ac-c479d6b7eca8"><li hreflang="en" data-drupal-link-system-path="node/5816" class="en inline-links__item is-active"><a href="/financial-news-releases" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/5816">EN</a></li><li hreflang="fr" data-drupal-link-system-path="node/5816" class="fr inline-links__item"><a href="/fr/financial-news-releases" class="language-link" hreflang="fr" data-drupal-link-system-path="node/5816">Français</a></li></ul>
+  </div>
+  </div>
+
+                        
+                    </div>
+                </div>
+            
+            
+        </div>
+    
+            <div class="container">
+    
+
+    
+        
+                    <div id="ndq-content" class="row ndq-5816">
+        
+                                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                
+                                            <div class="u-position-relative u-margin-b-60">
+                            <h1 class="u-hidden-visibly">
+                                                                    Financial news releases
+                                                            </h1>
+                    
+                            
+                                        
+
+                                                                                        <div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-nir-pid2859-content" class="block--system-main-block block--system-main-block--5816 block--content--system-main-block block--content--system-main-block--5816 block--8f58ae7f-8c16-465f-9ee3-278d2c03f183 block--8f58ae7f-8c16-465f-9ee3-278d2c03f183--5816 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              Financial news releases
+          </h1>
+    
+
+  <div>
+    
+<div class="panel-display brenham-flipped clearfix " >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-header panel-panel">
+        <div class="panel-panel-inner">
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-contentmain"><div class="block--search-form block--search-form--5816 block--contentmain--search-form block--contentmain--search-form--5816 block--76cee1d1-1c33-42f8-8978-17100ca0246d block--76cee1d1-1c33-42f8-8978-17100ca0246d--5816 block block-nir-search block-search-form">
+  
+    
+      <form data-block-uuid="76cee1d1-1c33-42f8-8978-17100ca0246d" action="/search" method="get" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-query js-form-item-query form-no-label">
+        <input type="search" name="query" size="60" maxlength="128" placeholder="Search" class="form-search required" required="required" aria-required="true" />
+
+        </div>
+<input type="hidden" name="f[0]" value="type:nir_news" />
+<input type="submit" name="op" value="Search" class="button button--primary js-form-submit form-submit" />
+
+</form>
+
+  </div>
+<div class="block--news-d8-ttl-dl block--nir-news__widget block--nir-news__widget--5816 block--contentmain--nir-news__widget block--contentmain--nir-news__widget--5816 block--35b759a8-bf83-4e07-9e22-aa043970e7c5 block--35b759a8-bf83-4e07-9e22-aa043970e7c5--5816 block block-nir-news block-nir-news__widget">
+  
+    
+      <div class="nir-widget">
+    <div class="nir-widget--content">
+          <div class="nir-widget--form">
+        <form data-drupal-selector="widget-form-base" action="/financial-news-releases" method="get" id="widget-form-base" accept-charset="UTF-8">
+  <div class="nir-widgets--field-container nir-widgets--field-container--yeartimezone js-form-wrapper form-wrapper" data-drupal-selector="edit-a89c091f-year" id="edit-a89c091f-year"><div class="two-col-field form-item js-form-item js-form-type-select form-type-select form-item-a89c091f-year-value js-form-item-a89c091f-year-value">
+      <label for="edit-a89c091f-year-value">Year</label>
+        <select data-drupal-selector="edit-a89c091f-year-value" id="edit-a89c091f-year-value" name="a89c091f_year[value]" class="form-select"><option value="_none">None</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option></select>
+        </div>
+</div>
+<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Filter" class="button button--primary js-form-submit form-submit" />
+<input data-drupal-selector="edit-a89c091f-widget-id" type="hidden" name="a89c091f_widget_id" value="a89c091f" />
+<input autocomplete="off" data-drupal-selector="form-r-brkshtfx-klah78ew9hopxvrlipdvysaf5r-islnm" type="hidden" name="form_build_id" value="form-r-brKSHtfx-Klah78EW9HOpxvRlIpDvYSaf5R_IsLNM" />
+<input data-drupal-selector="edit-widget-form-base" type="hidden" name="form_id" value="widget_form_base" />
+
+</form>
+
+      </div>
+        <div class="nir-widget--list table-wrapper">
+              <table class="table-investor load-more-tablex" width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <thead>
+            <tr>
+              <th scope="col" class="views-field-field-nir-date">Date</th>
+              <th scope="col">Title</th>
+              <th scope="col" class="views-field-field-nir-document">Download</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+  <td class="views-field-field-nir-date">
+    04.22.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-announces-first-quarter-2020-results" hreflang="en">TechnipFMC Announces First Quarter 2020 Results</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="https://investors.technipfmc.com/static-files/a9165ac6-94f0-4663-ad2e-83550260cdab" type="application/pdf; length=1601908" title="TechnipFMC Q1 2020 Earnings Release_ENG FINAL.PDF"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    04.21.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-announces-revised-dividend-policy" hreflang="en">TechnipFMC Announces Revised Dividend Policy</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="/node/35866/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    04.20.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-awarded-significant-integrated-epci-iepcitm-3" hreflang="en">TechnipFMC Awarded Significant Integrated EPCI (iEPCI™) Contract for Woodside’s Lambert Deep and Greater Western Flank Fields in Australia</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="/node/35826/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    04.01.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-announces-actions-address-market-conditions-annual" hreflang="en">TechnipFMC Announces Actions to Address Market Conditions, Annual General Meeting Update</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="/node/35771/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    03.16.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-announces-first-quarter-2020-earnings-release-and" hreflang="en">TechnipFMC Announces First Quarter 2020 Earnings Release and Teleconference Schedule</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="/node/35721/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    03.15.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-provides-update-planned-separation" hreflang="en">TechnipFMC Provides Update on Planned Separation</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="/node/35706/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    03.10.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-awarded-significant-integrated-epci-iepcitm-2" hreflang="en">TechnipFMC Awarded a Significant Integrated EPCI (iEPCI™) Contract for the BP Platina Field in Angola</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="/node/35546/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    02.26.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-announces-fourth-quarter-2019-results" hreflang="en">TechnipFMC Announces Fourth Quarter 2019 Results</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="https://investors.technipfmc.com/static-files/fc84f3c4-11bf-4273-bed6-89950494a20d" type="application/pdf; length=1679881" title="TechnipFMC Q4 2019 Earnings Release_ ENG FINAL-rep.PDF"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    02.25.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-declares-quarterly-dividend-9" hreflang="en">TechnipFMC Declares Quarterly Dividend</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="/node/35401/pdf" target="_blank"><span class="file-icon widget-file--application-pdf "></span></a>
+      </div>
+
+              </td>
+</tr><tr>
+  <td class="views-field-field-nir-date">
+    02.10.2020
+  </td>
+  <td>
+    <a href="/news-releases/news-release-details/technipfmc-confirms-total-company-2019-segment-guidance" hreflang="en">TechnipFMC Confirms Total Company 2019 Segment Guidance, Announces Fourth Quarter Non-cash Impairment Charges of $2.4 Billion Largely Due to Change in Market Capitalization</a>
+  </td>
+  <td class="views-field-field-nir-document">
+                          <div class="nir-widgets-file-link">
+    <a href="https://investors.technipfmc.com/static-files/62d8a0c8-410f-450d-83ac-1cb817fe709f" type="application/pdf; length=606247" title="4Q19 Financial Update_FINAL 2-10-20.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+              </td>
+</tr>
+          </tbody>
+        </table>
+          </div>
+          <div class="nir-widget--pager">
+          <nav class="pager" role="navigation" aria-labelledby="pagination-heading--2">
+    <h4 id="pagination-heading--2" class="visually-hidden">Pagination</h4>
+    <ul class="pager__items js-pager__items">
+                                                        <li class="pager__item is-active">
+                                          <a href="?page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=3" title="Go to page 4">
+            <span class="visually-hidden">
+              Page
+            </span>4</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=4" title="Go to page 5">
+            <span class="visually-hidden">
+              Page
+            </span>5</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=5" title="Go to page 6">
+            <span class="visually-hidden">
+              Page
+            </span>6</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=6" title="Go to page 7">
+            <span class="visually-hidden">
+              Page
+            </span>7</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=7" title="Go to page 8">
+            <span class="visually-hidden">
+              Page
+            </span>8</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=8" title="Go to page 9">
+            <span class="visually-hidden">
+              Page
+            </span>9</a>
+        </li>
+                          <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+                          <li class="pager__item pager__item--next">
+          <a href="?page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+            <span aria-hidden="true">next ›</span>
+          </a>
+        </li>
+                          <li class="pager__item pager__item--last">
+          <a href="?page=13" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+            <span aria-hidden="true">last »</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+      </div>
+          </div>
+</div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="col-md-4 radix-layouts-sidebar panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-sidebar"><div class="block-content--nir-global-block block-content--nir-global-block--34186 block--block-contentb6be1574-9b19-440c-b4ad-d19ce0ca846a block--block-contentb6be1574-9b19-440c-b4ad-d19ce0ca846a--5816 block--sidebar--block-content--b6be1574-9b19-440c-b4ad-d19ce0ca846a block--sidebar--block-content--b6be1574-9b19-440c-b4ad-d19ce0ca846a--5816 block--10a8e516-2997-40a9-acd5-6f784f438402 block--10a8e516-2997-40a9-acd5-6f784f438402--5816 block block-block-content block-block-contentb6be1574-9b19-440c-b4ad-d19ce0ca846a">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="wdms-table">
+<table border="0" cellpadding="0" cellspacing="0" style="border:1px Solid #cccccc"><tbody><tr><th style="border-bottom:1px Solid #cccccc">Contract Size</th>
+			<th class="text-align-right" style="border-bottom:1px Solid #cccccc">Range ($m)</th>
+			<th style="border-bottom:1px Solid #cccccc"> </th>
+		</tr><tr><td>Significant</td>
+			<td>75</td>
+			<td>249</td>
+		</tr><tr><td>Substantial</td>
+			<td>250</td>
+			<td>499</td>
+		</tr><tr><td>Large</td>
+			<td>500</td>
+			<td>1,000</td>
+		</tr><tr><td>Major</td>
+			<td>1,000+</td>
+			<td> </td>
+		</tr></tbody></table></div></div>
+      
+</div>
+      
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+</div><!-- /.brenham-flipped -->
+  </div>
+</article>
+
+  </div>
+
+
+
+                                        
+                            
+                                        </div>
+                    </div>
+                
+            </div>
+
+        
+    </div>
+</main>
+
+<footer role="contentinfo">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-3 col-md-offset-1">
+
+                <div id="block-gpfootercontact" class="block-content--nir-global-block block-content--nir-global-block--16186 block--block-content536813fd-21f3-4145-93e0-4e7fcc7538ee block--block-content536813fd-21f3-4145-93e0-4e7fcc7538ee--5816 block--footer-contact--block-content--536813fd-21f3-4145-93e0-4e7fcc7538ee block--footer-contact--block-content--536813fd-21f3-4145-93e0-4e7fcc7538ee--5816 block--5f508466-371f-4e4e-b0fd-f3d0b4639d1e block--5f508466-371f-4e4e-b0fd-f3d0b4639d1e--5816 block block-block-content block-block-content536813fd-21f3-4145-93e0-4e7fcc7538ee">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="global-block-content">
+	<h2>TechnipFMC plc</h2>
+	<p>One St. Paul’s Churchyard, London, EC4M 8AP, United Kingdom</p>
+	<p>Registered in England and Wales Registered No. 09909709</p>
+</div></div>
+      
+</div>
+      
+  </div>
+
+
+                                    <div class="hide-xs hide-md-up">
+                        <div id="block-gpfootersocialmedia" class="block-content--nir-global-block block-content--nir-global-block--16191 block--block-contentdbbd1263-ff93-4d62-829a-a1514e4db592 block--block-contentdbbd1263-ff93-4d62-829a-a1514e4db592--5816 block--mobile-footer-socialmedia--block-content--dbbd1263-ff93-4d62-829a-a1514e4db592 block--mobile-footer-socialmedia--block-content--dbbd1263-ff93-4d62-829a-a1514e4db592--5816 block--2075191c-bf17-42f4-b440-a05f88ae27e5 block--2075191c-bf17-42f4-b440-a05f88ae27e5--5816 block block-block-content block-block-contentdbbd1263-ff93-4d62-829a-a1514e4db592">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><ul class="global-block-content socialmedia"><li><a class="facebook" target="_blank" href="https://www.facebook.com/TechnipFMC/">Facebook</a></li>
+	<li><a class="twitter" target="_blank" href="https://twitter.com/TechnipFMC">Twitter</a></li>
+	<li><a class="youtube" target="_blank" href="https://www.youtube.com/channel/UCbRQbMxnU_54nlhF1XneL1A">YouTube</a></li>
+	<li><a class="instagram" target="_blank" href="https://www.instagram.com/technipfmc/">Instagram</a></li>
+	<li><a class="linkedin" target="_blank" href="https://www.linkedin.com/company/technipfmc">LinkedIn</a></li>
+</ul></div>
+      
+</div>
+      
+  </div>
+
+                    </div>
+                
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-3 col-lg-4">
+
+                <div id="block-gpfooterquote" class="block-content--nir-global-block block-content--nir-global-block--16196 block--block-contentf4d24a55-2c57-4533-b888-ec81e87f588e block--block-contentf4d24a55-2c57-4533-b888-ec81e87f588e--5816 block--footer-quote--block-content--f4d24a55-2c57-4533-b888-ec81e87f588e block--footer-quote--block-content--f4d24a55-2c57-4533-b888-ec81e87f588e--5816 block--c5120521-483d-4c25-96be-a858c29e8d0e block--c5120521-483d-4c25-96be-a858c29e8d0e--5816 block block-block-content block-block-contentf4d24a55-2c57-4533-b888-ec81e87f588e">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="global-block-content">
+<h2>Stock information</h2>
+<iframe id="footerQuote" class="EurolandTool" src="//tools.eurolandir.com/tools/ticker/html/?companycode=f-13170&amp;v=horizontal&amp;lang=en-gb" width="484" height="66" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+</div></div>
+      
+</div>
+      
+  </div>
+
+
+                                    <div class="hide-xs hide-md-up">
+                        
+        <ul class="services-list">
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/accessibility">Accessibility</a>
+        </li>
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/privacy-policy">Privacy &amp; cookies</a>
+        </li>
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/legal-notice">Legal notice</a>
+        </li>
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/site-index">Site index</a>
+        </li>
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/rss">RSS</a>
+        </li>
+          </ul>
+  
+
+
+
+                    </div>
+                
+            </div>
+
+                            <div class="col-xs-12 col-sm-6 col-md-4  col-lg-3 hide-sm">
+                    <div id="block-gpfootersocialmedia-2" class="block-content--nir-global-block block-content--nir-global-block--16191 block--block-contentdbbd1263-ff93-4d62-829a-a1514e4db592 block--block-contentdbbd1263-ff93-4d62-829a-a1514e4db592--5816 block--desktop-footer-socialmedia--block-content--dbbd1263-ff93-4d62-829a-a1514e4db592 block--desktop-footer-socialmedia--block-content--dbbd1263-ff93-4d62-829a-a1514e4db592--5816 block--c920a48e-a7f1-4516-8f1a-9b901f5ffda3 block--c920a48e-a7f1-4516-8f1a-9b901f5ffda3--5816 block block-block-content block-block-contentdbbd1263-ff93-4d62-829a-a1514e4db592">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><ul class="global-block-content socialmedia"><li><a class="facebook" target="_blank" href="https://www.facebook.com/TechnipFMC/">Facebook</a></li>
+	<li><a class="twitter" target="_blank" href="https://twitter.com/TechnipFMC">Twitter</a></li>
+	<li><a class="youtube" target="_blank" href="https://www.youtube.com/channel/UCbRQbMxnU_54nlhF1XneL1A">YouTube</a></li>
+	<li><a class="instagram" target="_blank" href="https://www.instagram.com/technipfmc/">Instagram</a></li>
+	<li><a class="linkedin" target="_blank" href="https://www.linkedin.com/company/technipfmc">LinkedIn</a></li>
+</ul></div>
+      
+</div>
+      
+  </div>
+
+                </div>
+            
+        </div>
+        <div class="row">
+            <div class="u-padding-t-30">
+
+                                    <div class="col-xs-12 col-md-3 col-md-offset-1 copyright hide-xs hide-sm">
+                        <div id="block-gpfootercopyright-2" class="block-content--nir-global-block block-content--nir-global-block--16201 block--block-content46a05e4a-587c-4ae2-9361-e6e0854523e3 block--block-content46a05e4a-587c-4ae2-9361-e6e0854523e3--5816 block--desktop-footer-copyright--block-content--46a05e4a-587c-4ae2-9361-e6e0854523e3 block--desktop-footer-copyright--block-content--46a05e4a-587c-4ae2-9361-e6e0854523e3--5816 block--0abc68a0-363f-40a6-8044-648a80be6771 block--0abc68a0-363f-40a6-8044-648a80be6771--5816 block block-block-content block-block-content46a05e4a-587c-4ae2-9361-e6e0854523e3">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><p class="global-block-content">© Copyright <script>
+<!--//--><![CDATA[// ><!--
+document.write((new Date()).getFullYear());
+//--><!]]>
+</script> TechnipFMC plc</p></div>
+      
+</div>
+      
+  </div>
+
+                    </div>
+                
+                                    <div class="col-xs-12 col-sm-6 col-md-7 services hide-sm">
+                        
+        <ul class="services-list">
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/accessibility">Accessibility</a>
+        </li>
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/privacy-policy">Privacy &amp; cookies</a>
+        </li>
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/legal-notice">Legal notice</a>
+        </li>
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/site-index">Site index</a>
+        </li>
+              <li>
+          <a target="" href="https://www.technipfmc.com/en/services/rss">RSS</a>
+        </li>
+          </ul>
+  
+
+
+
+                    </div>
+                                
+                                    <div class="col-xs-12 col-md-10 col-md-offset-1 copyright hide-md-up">
+                        <div id="block-gpfootercopyright" class="block-content--nir-global-block block-content--nir-global-block--16201 block--block-content46a05e4a-587c-4ae2-9361-e6e0854523e3 block--block-content46a05e4a-587c-4ae2-9361-e6e0854523e3--5816 block--mobile-footer-copyright--block-content--46a05e4a-587c-4ae2-9361-e6e0854523e3 block--mobile-footer-copyright--block-content--46a05e4a-587c-4ae2-9361-e6e0854523e3--5816 block--d4022342-0592-4bf5-9ffc-692d68ad9fc3 block--d4022342-0592-4bf5-9ffc-692d68ad9fc3--5816 block block-block-content block-block-content46a05e4a-587c-4ae2-9361-e6e0854523e3">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><p class="global-block-content">© Copyright <script>
+<!--//--><![CDATA[// ><!--
+document.write((new Date()).getFullYear());
+//--><!]]>
+</script> TechnipFMC plc</p></div>
+      
+</div>
+      
+  </div>
+
+                    </div>
+                
+            </div>
+        </div>
+    </div>
+</footer>
+
+  </div>
+
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgclientweb3081";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5816","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en","themeUrl":"sites\/g\/files\/knoqqb33226\/themes\/site\/nir_pid2859"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"core\/drupal.collapse,core\/html5shiv,nir_base\/adobe_omniture,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_market_data_block\/nir_market_data_block.filterform,nir_multimedia\/nir_multimedia,nir_pid2859\/override,nir_pid2859\/vendor,radix_layouts\/radix_layouts,system\/base","theme":"nir_pid2859","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"a42f2874bf20dde3838d4b7a0152126b61bc0e08bd511338fa4a6a82443d7977"}}</script>
+<script src="/sites/g/files/knoqqb33226/files/js/js_nB9Y39vBDMF-pieCy7KHqNNYdxQR3UNbbeki94Wg9CY.js"></script>
+
+    
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"761e715901","applicationID":"32397309,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH3xCFkBQXGl2ChNQaXZXQg5sd19HWCcUXFlUXUJODkNVW1EAE2VZUVtVC19dVFBHIw5HWHFbRApfXw==","queueTime":0,"applicationTime":797,"atts":"ShJUF18aSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

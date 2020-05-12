@@ -1,0 +1,780 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-19485934-12', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+    <link rel="stylesheet" media="screen" href="/Content/default.css">
+    <link rel="stylesheet" media="screen" href="/Content/sass-compiled.css">
+    
+    <link rel="stylesheet" media="print" href="/Content/print.css">
+
+    <link rel="manifest" href="/content/favicons/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff">
+    <meta name="application-name">
+    <link rel="apple-touch-icon" sizes="57x57" href="/content/favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/content/favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/content/favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/content/favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/content/favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/content/favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/content/favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/content/favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/content/favicons/apple-touch-icon-180x180.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title">
+    <meta name="msapplication-TileColor" content="#fff">
+    <meta name="msapplication-TileImage" content="/content/favicons/mstile-144x144.png">
+    <meta name="msapplication-config" content="/content/favicons/browserconfig.xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="/content/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/content/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/content/favicons/favicon-16x16.png">
+    <link rel="shortcut icon" href="/content/favicons/favicon.ico">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulatory News | Micro Focus Investor Relations </title>
+
+
+
+    
+
+</head>
+
+<body>
+    
+    <div id="wrapper" class="page-wrapper">
+        
+
+<header class="header header--background " id="header" data-widget="ScrollHeader">
+    <div class="container">
+        <div class="header__info" data-widget="Navigation" title="MicroFocus">
+            <a class="logo" href="/">
+                <img src="/media/1089/icons-logo-white.svg" alt="MicroFocus">
+            </a>
+            <span class="header__relations">Investor Relations</span>
+            <button type="button" class="navigation__toggle" aria-label="toggle menu" data-navigation-toggle>
+                <span class="icon"></span>
+                <span class="icon"></span>
+                <span class="icon"></span>
+            </button>
+            <nav class="navigation">
+                <ul class="nav">
+                            <li data-widget="Dropdown">
+                                <a href="/our-business/" class="" data-dropdown-toggle="true">
+                                    Our Business
+                                    <span class="mobile-arrow"></span>
+                                </a>
+                                <div class="navigation-info is-closed" data-dropdown-menu style="display: none;">
+                                    <div class="container cs">
+                                        <div class="navigation-info__about">
+                                            <h2>Our Business</h2>
+                                            <p>Micro Focus is a leading infrastructure software company with global scale.</p>
+                                            <a class="btn btn--inverse" href="/our-business/">Find out more</a>
+                                        </div>
+                                        <div class="navigation-info__columns">
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/our-business/company-overview/" >Company Overview</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/our-business/who-we-are/" >Who We Are</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/our-business/what-we-do/" >What We Do</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/our-business/our-business-model/" >Our Business Model</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/our-business/our-product-group/" >Our Product Group</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/our-business/key-performance-indicators/" >Key Performance Indicators</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                            <a href="https://www.microfocus.com/about/leadership/" target="_blank">Leadership</a>
+    <a class="external-link" href="https://www.microfocus.com/about/leadership/" target="_blank">Leadership</a>
+
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                            <a href="https://www.microfocus.com/about/corporate-responsibility/" target="_blank">Corporate Responsibility</a>
+    <a class="external-link" href="https://www.microfocus.com/about/corporate-responsibility/" target="_blank">Corporate Responsibility</a>
+
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                            <a href="https://www.microfocus.com/" target="_blank">Go to microfocus.com</a>
+    <a class="external-link" href="https://www.microfocus.com/" target="_blank">Go to microfocus.com</a>
+
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-widget="Dropdown">
+                                <a href="/investors-media/" class="border-white" data-dropdown-toggle="true">
+                                    Investors &amp; Media
+                                    <span class="mobile-arrow"></span>
+                                </a>
+                                <div class="navigation-info is-closed" data-dropdown-menu style="display: none;">
+                                    <div class="container cs">
+                                        <div class="navigation-info__about">
+                                            <h2>Investors &amp; Media</h2>
+                                            <p>Micro Focus sets out to deliver consistent long-term shareholder returns of between 15% and 20% per annum.</p>
+                                            <a class="btn btn--inverse" href="/investors-media/">Find out more</a>
+                                        </div>
+                                        <div class="navigation-info__columns">
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/investors-media/regulatory-news/" >Regulatory News</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+Results &amp; Reports                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                            <li>
+                                                                    <a href="/investors-media/results-reports/results-centre/">Results Centre</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/results-reports/annual-reports/">Annual Reports</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/results-reports/presentation-library/">Presentation Library</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/results-reports/key-corporate-announcements/">Key Corporate Announcements</a>
+                                                                
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+Share Price Tools                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                            <li>
+                                                                    <a href="/investors-media/share-price-tools/share-price-chart/">Share Price Chart</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/share-price-tools/share-price-calculator/">Share Price Calculator</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/share-price-tools/tsr-calculator/">TSR Calculator</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/share-price-tools/dividend-calculator/">Dividend Calculator</a>
+                                                                
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/investors-media/financial-calendar/" >Financial Calendar</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/investors-media/listing-information/" >Listing Information</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+Shareholder Information                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                            <li>
+                                                                    <a href="/investors-media/shareholder-information/general-meeting-information/">General Meeting Information</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/shareholder-information/shareholder-downloads/">Shareholder Downloads</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/shareholder-information/adr-information/">ADR Information</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/shareholder-information/dividend-information/">Dividend Information</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/shareholder-information/adr-share-price-calculator/">ADR Share Price Calculator</a>
+                                                                
+                                                            </li>
+                                                            <li>
+                                                                    <a href="/investors-media/shareholder-information/dividend-information-2019/">Dividend Information 2019</a>
+                                                                
+                                                            </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/investors-media/email-alert-service/" >Email Alert Service</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/investors-media/analyst-consensus/" >Analyst Consensus</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                            <a href="https://blog.microfocus.com/" target="_blank">Corporate Blog</a>
+    <a class="external-link" href="https://blog.microfocus.com/" target="_blank">Corporate Blog</a>
+
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li data-widget="Dropdown">
+                                <a href="/governance-policies/" class="" data-dropdown-toggle="true">
+                                    Governance &amp; Policies
+                                    <span class="mobile-arrow"></span>
+                                </a>
+                                <div class="navigation-info is-closed" data-dropdown-menu style="display: none;">
+                                    <div class="container cs">
+                                        <div class="navigation-info__about">
+                                            <h2>Governance &amp; Policies</h2>
+                                            <p>The board of Micro Focus International plc is committed to delivering outstanding shareholder returns.</p>
+                                            <a class="btn btn--inverse" href="/governance-policies/">Find out more</a>
+                                        </div>
+                                        <div class="navigation-info__columns">
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/governance-policies/governance-framework/" >Governance Framework</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/governance-policies/committees-of-the-board/" >Committees of the Board</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/governance-policies/policies/" >Policies</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                            <a href="/media/1458/micro_focus_anti-slavery_statement_2017-signed.pdf" target="_blank">Modern slavery disclosure</a>
+    <a class="external-link" href="/media/1458/micro_focus_anti-slavery_statement_2017-signed.pdf" target="_blank">Modern slavery disclosure</a>
+
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                                <div class="navigation-info__item">
+                                                    <h3>
+                                                                <a href="/governance-policies/risk-management/" >Risk Management</a>
+                                                        
+                                                    </h3>
+                                                    <ul class="navigation-info__list">
+                                                    </ul>
+                                                </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/contact/" >Contact</a>
+                            </li>
+                </ul>
+                <div class="footer__toggle-nav">
+                    <div class="follow-us">
+                        <h3>Follow us</h3>
+                        <ul class="social-list">
+                                <li>
+                                    <a class="social-list__icon" href="https://twitter.com/microfocus" title="twitter">
+                                        <span class="social-list__icon--normal">
+                                            <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-twitter-normal"></use></svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social-list__icon" href="https://www.facebook.com/MicroFocus" title="facebook">
+                                        <span class="social-list__icon--normal">
+                                            <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-facebook-normal"></use></svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social-list__icon" href="https://www.linkedin.com/company/micro-focus?trk=biz-companies-cym" title="linkedin">
+                                        <span class="social-list__icon--normal">
+                                            <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-linkedin-normal"></use></svg>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="social-list__icon" href="https://www.youtube.com/user/MicroFocusIntl" title="youtube">
+                                        <span class="social-list__icon--normal">
+                                            <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1425/svg-defs-sprite.svg#icons-social-youtube-normal"></use></svg>
+                                        </span>
+                                    </a>
+                                </li>
+                        </ul>
+                        <p>© 2019 Micro Focus</p>
+                        <div class="footer__links-list">
+                                <li>
+                                    <a href="RJP.MultiUrlPicker.Models.Link">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="RJP.MultiUrlPicker.Models.Link">Anti-Slavery Statement</a>
+                                </li>
+                                <li>
+                                    <a href="RJP.MultiUrlPicker.Models.Link">Terms of Use</a>
+                                </li>
+                                <li>
+                                    <a href="RJP.MultiUrlPicker.Models.Link">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="RJP.MultiUrlPicker.Models.Link">Accessibility</a>
+                                </li>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="search">
+                <button type="button" class="search__toggle" aria-label="toggle search" data-target="#search-form" data-widget="ToggleTarget" data-collapsible="true">
+                    <span class="search-icon">
+                        <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/images/svg-defs-sprite.svg#icons-search-white"></use></svg>
+                    </span>
+                    <span class="close-icon">
+                        <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/images/svg-defs-sprite.svg#icons-close-white"></use></svg>
+                    </span>
+                </button>
+                <form class="search__overlay" id="search-form" action="/search/">
+                    <div class="search__overlay__header">
+                        <div class="container" data-search-header>
+                            <button type="submit" class="search__toggle">
+                                <svg role="presentation">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/images/svg-defs-sprite.svg#icons-search-white">
+                                </use>
+                                </svg>
+                            </button>
+                            <label for="header-search" class="a11y">Begin typing to search </label>
+                            <input name="q" itemprop="query-input" autocomplete="off" class="search-field" id="header-search" type="text" placeholder="Begin typing to search">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <main class="page-content">
+            
+
+
+        <div class="container">
+            <nav class="breadcrumb" aria-label="breadcrumb">
+                <ul class="cs">
+                        <li class=" breadcrumb__item cols-l-4">
+                                    <a href="/investors-media/">Investors &amp; Media</a>
+
+                        </li>
+                        <li class=" breadcrumb__item cols-l-4">
+                                    <a href="/investors-media/regulatory-news/">Regulatory News</a>
+
+                        </li>
+                </ul>
+            </nav>
+        </div>
+
+
+    <section class="container introduction">
+        <div class="introduction__holder cs">
+            <div class="introduction__title cols-l-6 cols-xl-4">
+                <h1>Regulatory News</h1>
+            </div>
+            <div class="introduction__info cols-l-6 cols-xl-8">
+
+                
+            </div>
+        </div>
+    </section>
+
+
+<div class="container">
+    <section class="iframe">
+        <iframe src="https://otp.tools.investis.com/clients/uk/micro_focus/rns/regulatory-news.aspx?culture=en-GB" width="100%" height="765px"></iframe>
+    </section>
+</div>
+
+
+
+
+        </main>
+        
+
+<footer class="footer">
+    <section class="footer__info">
+        <div class=" container">
+            <div class="cs">
+                        <div class="footer__info-box cols-xs-12 cols-l-6 cols-xl-3">
+                            <span class="footer__info-icon">
+                                <svg role="presentation">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-footer-factsheet">
+                                    </use>
+                                </svg>
+                            </span>
+                            <h2><a href="/media/1504/microfocus_ar18.pdf">Annual Report</a></h2>
+                            <p>Our Annual Report and Accounts 2018.</p>
+                            <div class="footer__info-link">
+                                <a class="more" href="/media/1504/microfocus_ar18.pdf">Download</a>
+                                <a class="external-link" href="/media/1504/microfocus_ar18.pdf">
+                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/images/svg-defs-sprite.svg#icons-external-link-white"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__info-box cols-xs-12 cols-l-6 cols-xl-3">
+                            <span class="footer__info-icon">
+                                <svg role="presentation">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-footer-careers">
+                                    </use>
+                                </svg>
+                            </span>
+                            <h2><a href="https://jobs.microfocus.com/">Careers</a></h2>
+                            <p>Work with us, doing what you do best.</p>
+                            <div class="footer__info-link">
+                                <a class="more" href="https://jobs.microfocus.com/" target="_blank">Visit our Careers website</a>
+                                <a class="external-link" href="https://jobs.microfocus.com/">
+                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/images/svg-defs-sprite.svg#icons-external-link-white"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__info-box cols-xs-12 cols-l-6 cols-xl-3">
+                            <span class="footer__info-icon">
+                                <svg role="presentation">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-footer-press-room">
+                                    </use>
+                                </svg>
+                            </span>
+                            <h2><a href="https://www.microfocus.com/about/press-room/">Press Room</a></h2>
+                            <p>What’s important to Micro Focus and what core challenges we are solving in IT today.</p>
+                            <div class="footer__info-link">
+                                <a class="more" href="https://www.microfocus.com/about/press-room/" target="_blank">Visit our Press Room</a>
+                                <a class="external-link" href="https://www.microfocus.com/about/press-room/">
+                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/images/svg-defs-sprite.svg#icons-external-link-white"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="footer__info-box cols-xs-12 cols-l-6 cols-xl-3">
+                            <span class="footer__info-icon">
+                                <svg role="presentation">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-footer-blog">
+                                    </use>
+                                </svg>
+                            </span>
+                            <h2><a href="https://blog.microfocus.com/">Corporate Blog</a></h2>
+                            <p>Stories and updates from our team, partners and supporters.</p>
+                            <div class="footer__info-link">
+                                <a class="more" href="https://blog.microfocus.com/" target="_blank">Visit our Corporate Blog</a>
+                                <a class="external-link" href="https://blog.microfocus.com/">
+                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/content/images/svg-defs-sprite.svg#icons-external-link-white"></use></svg>
+                                </a>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer__nav">
+        <div class="container">
+            <div class="cs footer__nav-holder">
+                <div class="footer__nav-item cols-xs-12 cols-l-6 cols-xl-3">
+                    <a class="logo" href="/">
+                        <img src="/media/1089/icons-logo-white.svg" alt="MicroFocus">
+                    </a>
+                </div>
+                    <div class="footer__nav-item cols-xs-12 cols-l-6 cols-xl-3">
+                        <h3><a href="/our-business/">Our Business</a></h3>
+                        <ul class="footer__nav-list">
+                                        <li>
+                                                        <a href="/our-business/company-overview/">Company Overview</a>
+
+                                        </li>
+                                        <li>
+    <a href="https://www.microfocus.com/about/leadership/" target="_blank">Leadership</a>
+    <a class="external-link" href="https://www.microfocus.com/about/leadership/" target="_blank">Leadership</a>
+
+                                        </li>
+                                        <li>
+    <a href="https://www.microfocus.com/about/corporate-responsibility/" target="_blank">Corporate Responsibility</a>
+    <a class="external-link" href="https://www.microfocus.com/about/corporate-responsibility/" target="_blank">Corporate Responsibility</a>
+
+                                        </li>
+                                        <li>
+    <a href="https://www.microfocus.com/" target="_blank">Go to microfocus.com</a>
+    <a class="external-link" href="https://www.microfocus.com/" target="_blank">Go to microfocus.com</a>
+
+                                        </li>
+
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item cols-xs-12 cols-l-6 cols-xl-3">
+                        <h3><a href="/investors-media/">Investors &amp; Media</a></h3>
+                        <ul class="footer__nav-list">
+                                        <li>
+                                                        <a style="pointer-events: none;">Results &amp; Reports</a>
+
+                                        </li>
+                                                    <li>
+                                                                <a href="/investors-media/results-reports/results-centre/">Results Centre</a>
+                                                    </li>
+                                                    <li>
+                                                                <a href="/investors-media/results-reports/annual-reports/">Annual Reports</a>
+                                                    </li>
+                                                    <li>
+                                                                <a href="/investors-media/results-reports/key-corporate-announcements/">Key Corporate Announcements</a>
+                                                    </li>
+                                        <li>
+                                                        <a href="/investors-media/financial-calendar/">Financial Calendar</a>
+
+                                        </li>
+                                        <li>
+                                                        <a href="/investors-media/listing-information/">Listing Information</a>
+
+                                        </li>
+
+                        </ul>
+                    </div>
+                    <div class="footer__nav-item cols-xs-12 cols-l-6 cols-xl-3">
+                        <h3><a href="/governance-policies/">Governance &amp; Policies</a></h3>
+                        <ul class="footer__nav-list">
+                                        <li>
+                                                        <a href="/governance-policies/governance-framework/">Governance Framework</a>
+
+                                        </li>
+                                        <li>
+                                                        <a href="/governance-policies/committees-of-the-board/">Committees of the Board</a>
+
+                                        </li>
+                                        <li>
+                                                        <a href="/governance-policies/policies/">Policies</a>
+
+                                        </li>
+                                        <li>
+                                                        <a href="/governance-policies/risk-management/">Risk Management</a>
+
+                                        </li>
+
+                        </ul>
+                                <h3>
+                                        <a href="/contact/">Contacts</a>
+
+                                </h3>
+                            <div class="follow-us">
+                                <h3>Follow us</h3>
+                                <ul class="social-list">
+                                        <li>
+                                            <a class="social-list__icon" href="https://twitter.com/microfocus" title="twitter">
+                                                <span class="social-list__icon--normal">
+                                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-twitter-normal"></use></svg>
+                                                </span>
+                                                <span class="social-list__icon--hover">
+                                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-twitter-hover"></use></svg>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="social-list__icon" href="https://www.facebook.com/MicroFocus" title="facebook">
+                                                <span class="social-list__icon--normal">
+                                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-facebook-normal"></use></svg>
+                                                </span>
+                                                <span class="social-list__icon--hover">
+                                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-facebook-hover"></use></svg>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="social-list__icon" href="https://www.linkedin.com/company/micro-focus?trk=biz-companies-cym" title="linkedin">
+                                                <span class="social-list__icon--normal">
+                                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-linkedin-normal"></use></svg>
+                                                </span>
+                                                <span class="social-list__icon--hover">
+                                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1077/svg-defs-sprite.svg#icons-social-linkedin-hover"></use></svg>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="social-list__icon" href="https://www.youtube.com/user/MicroFocusIntl" title="youtube">
+                                                <span class="social-list__icon--normal">
+                                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1425/svg-defs-sprite.svg#icons-social-youtube-normal"></use></svg>
+                                                </span>
+                                                <span class="social-list__icon--hover">
+                                                    <svg role="presentation"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/media/1425/svg-defs-sprite.svg#icons-social-youtube-hover"></use></svg>
+                                                </span>
+                                            </a>
+                                        </li>
+                                </ul>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer__links">
+        <div class="container">
+            <p>&copy; 2019 Micro Focus</p>
+            <ul class="footer__links-list">
+                    <li>
+                        <a href="https://www.microfocus.com/about/legal/#privacy" target="_blank">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="/media/1458/micro_focus_anti-slavery_statement_2017-signed.pdf" target="_blank">Anti-Slavery Statement</a>
+                    </li>
+                    <li>
+                        <a href="https://www.microfocus.com/about/legal/" target="_blank">Terms of Use</a>
+                    </li>
+                    <li>
+                        <a href="https://jobs.microfocus.com/" target="_blank">Careers</a>
+                    </li>
+                    <li>
+                        <a href="https://www.microfocus.com/about/section-508-compliance/" target="_blank">Accessibility</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+        <a id="cookieconsent:learn_more" aria-label="learn more about cookies" role=button tabindex="0" class="cc-link" href="https://cookie-policy.org/" target="_blank">
+            cookie policy
+        </a>
+        <script>var cookieconsent_ts = 1500496386660; var learnmore2 = document.getElementById( "cookieconsent:learn_more" ); learnmore2.setAttribute( "style", "display:none" );</script>
+        <script>
+            window.addEventListener( "load", function() {
+                window.cookieconsent.initialise( {
+                    "palette": {
+                        "popup": {
+                            "background": "#263133"
+                        }
+                    },
+                    "position": "top",
+                    "content": {
+                        "message": "<strong class=\"cc-title\">We use cookies.</strong>\n <div class=\"cc-text\">\n <p>We use cookies to ensure that we give you the best experience on our website.</p>\n                      <p>If you continue to use this site we will assume that you are happy to receive all cookies on our website.</p>\n                    </div>",
+                        "dismiss": "Agree",
+                        "link": "Please see our <span>cookie policy</span> page for more details.",
+                        "href": "https://www.microfocus.com/about/legal/#cookies_usage_policy"
+                    },
+                    onPopupOpen: function() {
+                        var wrapper = document.querySelector( '.page-wrapper' )
+                        var cookieDialog = document.querySelector( '[aria-label=cookieconsent]' )
+                        var cookieDialogHeight = cookieDialog.offsetHeight;
+                        cookieDialogHeight += parseInt( window.getComputedStyle( cookieDialog ).getPropertyValue( 'margin-top' ) );
+                        cookieDialogHeight += parseInt( window.getComputedStyle( cookieDialog ).getPropertyValue( 'margin-bottom' ) );
+                        wrapper.style.transform = 'translateY(' + cookieDialogHeight + 'px)'
+                    },
+                    onPopupClose: function() {
+                        var wrapper = document.querySelector( '.page-wrapper' )
+                        wrapper.style.transform = 'none'
+                    }
+                } )
+            } );
+        </script>
+        <noscript><a href="https://cookiescript.info/">Cookie consent script</a></noscript>
+    </div>
+    <script src="/bundle/javascript.js?v=E-CBxXG7Vd3t3ZTVKds4FkDJyT-i4Q3LJkW62nitK5Q1"></script>
+
+
+    
+
+        <script>&lt;script language=&quot;javascript&quot; type=&quot;text/javascript&quot; src=&quot;http://html.investis.com/I/Investis/iframe-resizer/js/frame-manager.js?v=1.2&quot;&gt;&lt;/script&gt;</script>
+
+    <script src="https://use.typekit.net/bhh2iya.js"></script>
+    <script>try { Typekit.load( { async: true } ); } catch ( e ) { }</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/iframe-resizer/3.5.14/iframeResizer.min.js"></script>
+    <script>
+        // iFrameResize({ autoResize: true }, 'iframe')
+    </script>
+</body>
+
+
+
+</html>

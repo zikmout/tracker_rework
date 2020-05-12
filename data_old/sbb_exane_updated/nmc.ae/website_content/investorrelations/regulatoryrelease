@@ -1,0 +1,822 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google Analytics Code -->
+        <script>
+
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-56781844-1', 'auto');
+
+            ga('send', 'pageview');
+
+        </script>
+    <!-- End Google Analytics Code -->
+    <!-- Google Tag Manager -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+
+                    new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+
+            })(window, document, 'script', 'dataLayer', 'GTM-PN6FZVV');
+        </script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>NMC Healthcare | Every Patient Matters</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="NMC Healthcare is the largest healthcare provider in the UAE and is rapidly growing across the globe with an aim to personalize care and facilitate overall well-being of the patients | Experience best clinical care and advanced facilities from certified medical experts." />
+
+    <!-- Bootstrap -->
+    <link href="/Content/styles/common.css" rel="stylesheet" type="text/css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="~/Content/js/html5shiv.min.js"></script>
+      <script src="~/Content/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="/Content/js/jquery.min.js"></script>
+    <script src="/Content/js/slick.js"></script>
+    
+</head>
+<body>
+    <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PN6FZVV"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="outer-container">
+
+        <!-- ********************Header section start ************************************** -->
+        <header>
+            <div class="header-top hidden-xs">
+                <div class="container">
+                    <ul class="pull-right text-left">
+                        <li><a href="https://nmc.ae/international-patients">International Patients</a></li>
+                        <li><a href="https://nmc.ae/investor-relations">Investor Relations</a></li>
+                        <li class="socio">
+                            <!--  <div class="social-ico">
+                            <img src="/content/images/soc_btn.gif" width="33" height="33" alt="social-media">
+                               </div>-->
+                            <a href="https://nmc.ae/social-feeds" target="_blank">Social Feeds</a>
+                        </li>
+                        <li><a href="https://nmc.ae/careers">Careers</a></li>
+                        <li><span class="dot"></span></li>
+                        
+                        
+
+
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="header-btm">
+                <div class="container">
+                    <div class="row">
+                        <span class="menu-overlay"></span>
+                        <div class="padding menu-head">
+                            <span class="closemenu pull-right"><i class="icon-close-bold "></i></span>
+                            <a href="https://nmc.ae/" class="pulll-left"><img src="/images/logo.png" alt="nmc" width="138" height="44" class="logo-menu" /></a>
+                        </div>
+                        <div class="col-xs-12 col-sm-5 col-md-10 pull-right slide-menu">
+
+                            <ul class="main-nav pull-left">
+                                <li>
+                                    <span class="collaps pull-right"> <i class="icon-plus visible-xs-inline visible-sm-inline"></i></span>
+                                    <a href="https://nmc.ae/aboutus" class="sub">About Us</a>
+                                    <ul class="submenu clearfix about-drop hidden-xs hidden-sm">
+                                        <li class="container">
+                                            <div class="row">
+                                                <div class="abt-menu-lft col-md-4">
+                                                    <h4 class="margin-bottom">About Us</h4>
+                                                    <p>NMC Healthcare is the largest private healthcare company in the UAE and ranks amongst the leading fertility service providers in the world. </p>
+                                                    <a href="https://nmc.ae/aboutus">Visit this section</a>
+                                                </div>
+                                                <div class="abt-menu-rgt col-md-8">
+                                                    <div class="row">
+                                                        <div class="col-md-5">
+                                                            <ul class="clearfix menu-level3">
+                                                                <li>
+                                                                    <a href="#who" class="nav-link active" data-toggle="tab"
+                                                                       onclick="mmenu('https://nmc.ae/','aboutus-who-we-are', '#who-we-are')">Who we are</a>
+                                                                </li>
+                                                                <li><a href="#about-history" data-toggle="tab" class="nav-link" onclick="mmenu('https://nmc.ae/','aboutus-history', '#history')">History</a></li>
+                                                                <li><a href="#vision" data-toggle="tab" class="nav-link" onclick="mmenu('https://nmc.ae/','aboutus-strategy-and-vision', '#strategy-and-vision')">Strategy and Vision</a></li>
+                                                                <li>
+                                                                    <a href="#awards" data-toggle="tab" class="nav-link"
+                                                                       onclick="mmenu('https://nmc.ae/','aboutus-awards-and-recognition', '#awards-and-recognition')">Awards and Recognition</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#directors" data-toggle="tab" class="nav-link"
+                                                                       onclick="mmenu('https://nmc.ae/','aboutus-board-of-directors', '#board-of-directors')">Board of Directors</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#management" data-toggle="tab" class="nav-link"
+                                                                       onclick="mmenu('https://nmc.ae/','aboutus-senior-managements', '#senior-managements')">Senior Management</a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="#inves-rel" data-toggle="tab" class="nav-link"
+                                                                       onclick="mmenu('https://nmc.ae/','investor-relations', '#investor-relations')">Investor Relations</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-7">
+                                                            <div id="myTabContent" class="tab-content">
+                                                                <div class="tab-pane active" id="who">
+                                                                    <figcaption>
+                                                                        <a href="https://nmc.ae/aboutus-who-we-are" class="scrollto closemenu" rel="#who-we-are"><span>Who we are</span></a>
+                                                                        <p>NMC is the first company from Abu Dhabi to list on the London Stock Exchange and is now part of the premium FTSE 100 Index, an elite club of top 100 blue-chip companies by market cap.</p>
+                                                                    </figcaption>
+                                                                </div>
+                                                                <div class="tab-pane" id="about-history">
+                                                                    <figcaption>
+                                                                        <a href="https://nmc.ae/aboutus-history" class="scrollto closemenu" rel="#history"><span>History</span></a>
+                                                                        <p>With a legacy stretching as far back as 1975, NMC Healthcare has been chalking out distinct strategies that reflect its continuing leadership in the market.</p>
+                                                                    </figcaption>
+                                                                </div>
+                                                                <div class="tab-pane" id="vision">
+                                                                    <figcaption>
+                                                                        <a href="https://nmc.ae/aboutus-strategy-and-vision" class="scrollto closemenu" rel="#strategy-and-vision"><span>Strategy and Vision</span></a>
+                                                                        <p>We believe that healthcare is simply not about detecting, diagnosing, informing or treating an individual but it is about helping people to lead a wholesome and healthy life.</p>
+                                                                    </figcaption>
+                                                                </div>
+                                                                <div class="tab-pane" id="awards">
+                                                                    <figcaption>
+                                                                        <a href="https://nmc.ae/aboutus-awards-and-recognition" class="scrollto closemenu" rel="#awards-and-recognition"><span>Awards and Recognition</span></a>
+                                                                    </figcaption>
+                                                                </div>
+                                                                <div class="tab-pane" id="directors">
+                                                                    <figcaption>
+                                                                        <a href="https://nmc.ae/aboutus-board-of-directors" class="scrollto closemenu" rel="#board-of-directors"><span>Board of Directors</span></a>
+                                                                    </figcaption>
+                                                                </div>
+                                                                <div class="tab-pane" id="management">
+                                                                    <figcaption>
+                                                                        <a href="https://nmc.ae/aboutus-senior-managements" class="scrollto closemenu" rel="#senior-managements"><span>Senior Management</span></a>
+                                                                    </figcaption>
+                                                                </div>
+                                                                <div class="tab-pane" id="inves-rel">
+                                                                    <figcaption>
+                                                                        <a href="https://nmc.ae/investor-relations" class="closemenu" target="_blank"><span>Investor Relations</span></a>
+                                                                    </figcaption>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul class="submenu clearfix about-drop about-mob">
+                                        <!--                                        <li class="pull-right menu-banner hidden-xs hidden-sm"><a href="#"><img src="/images/menu-banner.jpg" class="img-responsive" /></a></li>-->
+                                        <li>
+                                            <ul class="clearfix menu-level3">
+                                                <li>
+                                                    <ul>
+                                                        <li><a href="https://nmc.ae/aboutus-who-we-are" class="scrollto closemenu" rel="#who-we-are">Who we are</a></li>
+                                                        <li><a href="https://nmc.ae/aboutus-history" class="scrollto closemenu" rel="#history">History</a></li>
+                                                        <li><a href="https://nmc.ae/aboutus-strategy-and-vision" class="scrollto closemenu" rel="#strategy-and-vision">Strategy and Vision</a></li>
+                                                        <li><a href="https://nmc.ae/aboutus-awards-and-recognition" class="scrollto closemenu" rel="#awards-and-recognition">Awards and Recognition </a></li>
+                                                        <li><a href="https://nmc.ae/aboutus-board-of-directors" class="scrollto closemenu" rel="#board-of-directors">Board of Directors</a></li>
+                                                        <li><a href="https://nmc.ae/aboutus-senior-managements" class="scrollto closemenu" rel="#senior-managements">Senior Management</a></li>
+                                                        <li><a href="https://nmc.ae/investor-relations" class="closemenu" target="_blank">Investor Relations</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://nmc.ae/hospitals">Our Hospitals</a></li>
+                                <li>
+                                    <span class="collaps sub">Specialties <i class="icon-plus visible-xs-inline visible-sm-inline"></i></span>
+                                    <ul class="submenu clearfix">
+                                        <!--                                        <li class="pull-right menu-banner hidden-xs hidden-sm"><a href="#"><img src="/images/menu-banner.jpg" class="img-responsive" /></a></li>-->
+                                        <li class="container">
+
+
+
+<ul class="clearfix menu-level3">
+        <li><a href="https://nmc.ae/speciality/aesthetic-reconstructive-and-plastic-surgery-3">Aesthetic, Reconstructive and Plastic Surgery</a></li>
+        <li><a href="https://nmc.ae/speciality/allergy-and-immunology-17">Allergy and Immunology</a></li>
+        <li><a href="https://nmc.ae/speciality/anaesthesiology-4">Anaesthesiology</a></li>
+        <li><a href="https://nmc.ae/speciality/audiology-48">Audiology</a></li>
+        <li><a href="https://nmc.ae/speciality/ayurveda-55">Ayurveda</a></li>
+        <li><a href="https://nmc.ae/speciality/bariatric-surgery-35">Bariatric Surgery</a></li>
+        <li><a href="https://nmc.ae/speciality/cardiac-sciences-5">Cardiac Sciences</a></li>
+        <li><a href="https://nmc.ae/speciality/child-guidance-56">Child Guidance</a></li>
+        <li><a href="https://nmc.ae/speciality/critical-care-and-icu-16">Critical Care and I.C.U</a></li>
+        <li><a href="https://nmc.ae/speciality/dentistry-6">Dentistry</a></li>
+        <li><a href="https://nmc.ae/speciality/dermatology-7">Dermatology</a></li>
+        <li><a href="https://nmc.ae/speciality/dietics-and-nutrition-52">Dietics and Nutrition</a></li>
+        <li><a href="https://nmc.ae/speciality/embryology-and-genetics-37">Embryology and Genetics</a></li>
+        <li><a href="https://nmc.ae/speciality/emergency-medicine-8">Emergency Medicine</a></li>
+        <li><a href="https://nmc.ae/speciality/endocrinology-diabetology-and-metabolic-disorders-9">Endocrinology, Diabetology and Metabolic Disorders</a></li>
+        <li><a href="https://nmc.ae/speciality/ent-head-and-neck-surgery-10">ENT, Head and Neck Surgery</a></li>
+        <li><a href="https://nmc.ae/speciality/family-medicine-15">Family Medicine</a></li>
+        <li><a href="https://nmc.ae/speciality/foetal-medicine-50">Foetal Medicine</a></li>
+        <li><a href="https://nmc.ae/speciality/gastroenterology-11">Gastroenterology</a></li>
+        <li><a href="https://nmc.ae/speciality/gastrointestinal-surgery-60">Gastrointestinal Surgery</a></li>
+        <li><a href="https://nmc.ae/speciality/general-and-laparoscopic-surgery-12">General and Laparoscopic Surgery</a></li>
+        <li><a href="https://nmc.ae/speciality/general-medicine-13">General Medicine</a></li>
+        <li><a href="https://nmc.ae/speciality/home-care-38">Home care</a></li>
+        <li><a href="https://nmc.ae/speciality/homeopathy-39">Homeopathy</a></li>
+        <li><a href="https://nmc.ae/speciality/infection-control-59">Infection Control</a></li>
+        <li><a href="https://nmc.ae/speciality/internal-medicine-18">Internal Medicine</a></li>
+        <li><a href="https://nmc.ae/speciality/ivf-and-infertility-36">IVF and Infertility</a></li>
+        <li><a href="https://nmc.ae/speciality/midwifery-services-40">Midwifery Services</a></li>
+        <li><a href="https://nmc.ae/speciality/naturopathy-45">Naturopathy</a></li>
+        <li><a href="https://nmc.ae/speciality/neonatology-26">Neonatology</a></li>
+        <li><a href="https://nmc.ae/speciality/nephrology-21">Nephrology</a></li>
+        <li><a href="https://nmc.ae/speciality/neuroscience-27">Neuroscience</a></li>
+        <li><a href="https://nmc.ae/speciality/nuclear-medicine-41">Nuclear Medicine</a></li>
+        <li><a href="https://nmc.ae/speciality/obstetrics-and-gynaecology-14">Obstetrics and Gynaecology  </a></li>
+        <li><a href="https://nmc.ae/speciality/occupational-medicine-58">Occupational Medicine</a></li>
+        <li><a href="https://nmc.ae/speciality/oncology-32">Oncology</a></li>
+        <li><a href="https://nmc.ae/speciality/ophthalmology-22">Ophthalmology</a></li>
+        <li><a href="https://nmc.ae/speciality/oral-and-maxillofacial-surgery-23">Oral and Maxillofacial Surgery</a></li>
+        <li><a href="https://nmc.ae/speciality/orthopaedics-28">Orthopaedics</a></li>
+        <li><a href="https://nmc.ae/speciality/picu-47">P.I.C.U</a></li>
+        <li><a href="https://nmc.ae/speciality/paediatrics-29">Paediatrics</a></li>
+        <li><a href="https://nmc.ae/speciality/pathology-19">Pathology</a></li>
+        <li><a href="https://nmc.ae/speciality/physical-medicine-and-rehabilitation-43">Physical Medicine and Rehabilitation</a></li>
+        <li><a href="https://nmc.ae/speciality/physiotherapy-and-pain-management-30">Physiotherapy and Pain Management</a></li>
+        <li><a href="https://nmc.ae/speciality/podiatry-57">Podiatry</a></li>
+        <li><a href="https://nmc.ae/speciality/psychiatry-20">Psychiatry</a></li>
+        <li><a href="https://nmc.ae/speciality/psychology-44">Psychology</a></li>
+        <li><a href="https://nmc.ae/speciality/pulmonology-31">Pulmonology</a></li>
+        <li><a href="https://nmc.ae/speciality/radiology-33">Radiology</a></li>
+        <li><a href="https://nmc.ae/speciality/rheumatology-24">Rheumatology</a></li>
+        <li><a href="https://nmc.ae/speciality/speech-therapy-51">Speech Therapy</a></li>
+        <li><a href="https://nmc.ae/speciality/urgent-care-61">Urgent Care</a></li>
+        <li><a href="https://nmc.ae/speciality/urology-and-andrology-34">Urology and Andrology</a></li>
+        <li><a href="https://nmc.ae/speciality/vascular-and-endovascular-surgery-46">Vascular and Endovascular Surgery</a></li>
+
+</ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="https://nmc.ae/contactus">Contact Us</a></li>
+                            </ul>
+                            <ul class="sub-nav pull-right mobilemenu">
+                                <li class="padding-right margin-right"><a href="https://nmc.ae/schedule-an-appointment"><i class="icon-calendar"></i>  Schedule an Appointment</a></li>
+                                <li><a href="https://nmc.ae/doctors"><i class="icon-doctor"></i> Find a Doctor</a></li>
+                            </ul>
+                            <ul class="sub-nav style3 mobilemenu visible-xs visible-sm">
+                                <li><a href="https://nmc.ae/international-patients">International Patients</a></li>
+                                <li><a href="https://nmc.ae/investor-relations">Investor Relations</a></li>
+                                <li><a href="https://nmc.ae/social-feeds" target="_blank">Social Feeds</a></li>
+                                <li><a href="https://nmc.ae/careers">Careers</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-bottom padding-horizontal hide">
+                            <div class="socio closemenu"><a href="https://nmc.ae/social-feeds" target="_blank">Social Feeds</a></div>
+                            <a onclick="window.location='tel:800622';" class="clearfix text-center hide"><span class="pull-left">TOLL FREE </span><i class="icon-phone"></i> <span class="text-primary pull-right font-semibold">800 622</span></a>
+                        </div>
+                        <div class="col-sm-7 visible-sm pull-right ">
+                            <ul class="sub-nav ">
+                                <li class="pull-right"><a href="https://nmc.ae/doctors"><i class="icon-doctor"></i> Find a Doctor</a></li>
+                                <li class="padding-right margin-right pull-right"><a href="https://nmc.ae/schedule-an-appointment"><i class="icon-calendar"></i>  Schedule an Appointment</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-12 col-sm-5 col-md-2">
+                            <div class="logo pos-rel">
+                                
+                                <span class="visible-xs visible-sm menu"><i class="icon-menu"></i></span>
+                                <a href="/"><img src="/images/logo.png" alt="nmc" width="138" height="44" class="img-responsive" /></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+        <!-- ********************Header section end ************************************** -->
+
+        
+
+
+
+<link href="/Content/styles/fin-report.css" rel="stylesheet" type="text/css">
+
+<div class="content-container">
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="clearfix">
+                <li><a href="/">Home</a></li>
+                <li><a href="/investor-relations">Investor relations </a></li>
+                <li>Regulatory Releases</li>
+            </ul>
+        </div>
+    </div>
+    <div class="main-banner pos-rel small-banner loaded rmv-margin-bottom hide">
+        <figure class="hidden-sm hidden-xs">
+            <img src="/images/Regulatory-Releases-1200x800.jpg" alt="banner" width="1700" height="239" class="img-responsive">
+        </figure>
+        <span class="bnr-overlay"></span>
+        <div class="cnt">
+            <div class="container">
+                <h3 class="light">Regulatory Releases</h3>
+            </div>
+        </div>
+    </div>
+    <div class="report-details">
+        <div class="reports-inner">
+            <div class="container">
+                <h3 class="bpfc">Regulatory Releases</h3>
+                <ul class="reg-details-list" id="div-result">
+                        <li><span>22-Nov-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-holdings-in-company-22-nov-2019-ae46c505-f63b-40a7-9ca3-ca50ac769fa1.pdf" target="_blank">NMC Health PLC - Holding(s) in Company</a></li>
+                        <li><span>20-Nov-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-holdings-in-company-20-nov-2019-a5b37302-fa28-4717-8490-349cd05470de.pdf" target="_blank">NMC Health PLC - Holding(s) in Company</a></li>
+                        <li><span>19-Nov-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-notice-of-general-meeting-19-nov-2019-25987dd4-e3bd-4ea6-a8e6-ac4021256a87.pdf" target="_blank">NMC Health PLC - Notice of General Meeting</a></li>
+                        <li><span>11-Nov-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-plc-11-nov-2019-f2a49d56-7358-4e5f-8696-bb8a732b0dac.pdf" target="_blank">NMC Health PLC - PDMR Notification</a></li>
+                        <li><span>31-Oct-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-block-listing-six-monthly-return-31-oct-2019-277559a6-d0d7-44f1-bc8d-599c29ab04fb.pdf" target="_blank">NMC Health PLC - Block Listing Six Monthly Return</a></li>
+                        <li><span>31-Oct-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-total-voting-rights-31-oct-2019-3cc33efb-4d47-4b15-8992-ae49ab3e5f98.pdf" target="_blank">NMC Health PLC - Total Voting Rights</a></li>
+                        <li><span>31-Oct-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-block-listing-six-monthly-return-31-oct-2019-69cd7ad0-dc65-40dc-930f-42a221478173.pdf" target="_blank">NMC Health PLC - Block Listing Six Monthly Return</a></li>
+                        <li><span>21-Oct-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-capital-markets-day-update-21-oct-2019-dbd04df1-c840-4d08-8596-d3e3cadc9f3f.pdf" target="_blank">NMC Health PLC - Capital Markets Day Update</a></li>
+                        <li><span>02-Sep-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-tr-1-notification-of-major-holdings-02-sep-2019-1c9ba0eb-f202-441e-93b4-d4a7d415cd76.pdf" target="_blank">NMC Health PLC - TR-1 Notification of Major Holdings</a></li>
+                        <li><span>22-Aug-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-share-buyback-programme-22-aug-2019-aaea7290-278f-4ee9-b208-9a0fd369a13e.pdf" target="_blank">NMC Health PLC - Share buyback programme</a></li>
+                        <li><span>22-Aug-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-half-year-results-22-aug-2019-36d20d1f-7a48-4c11-b0db-8982397859c0.pdf" target="_blank">NMC Health PLC - Half Year Results</a></li>
+                        <li><span>08-Aug-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-statement-re-share-price-movement-08-aug-2019-0857c8c3-f029-49ad-8fd2-7e14afa9ec35.pdf" target="_blank">NMC Health PLC - Statement re. share price movement</a></li>
+                        <li><span>05-Aug-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-05-aug-2019-152e8413-74b8-49dc-80c1-cf3bce22e11b.pdf" target="_blank">NMC Health PLC - PDMR Notification</a></li>
+                        <li><span>05-Aug-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-heallth-plc-notice-of-half-year-2019-results-05-aug-2019-5c751b16-94a5-4213-85f8-8d1134765f05.pdf" target="_blank">NMC Health PLC - Notice of Half Year 2019 Results</a></li>
+                        <li><span>01-Jul-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-total-voting-rights-01-jul-2019-bd642b43-532f-4449-a7fe-d7dd72b31ad2.pdf" target="_blank">NMC Health PLC - Total Voting Rights</a></li>
+                        <li><span>20-Jun-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-results-of-voting-at-annual-general-meeting-20-jun-2019-5801d109-7f8b-4465-83e8-faf5eb443dea.pdf" target="_blank">NMC Health PLC - Results of voting at Annual General Meeting</a></li>
+                        <li><span>18-Jun-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-notice-of-appointment-of-additional-guarantors-18-jun-2019-3d9355b8-391e-495a-bb18-145dd85641e0.pdf" target="_blank">NMC Health PLC - Notice of Appointment of Additional Guarantors</a></li>
+                        <li><span>11-Jun-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-exercise-of-share-awards-11-jun-2019-034dc7a0-0cca-40fb-a058-a7751e9cf008.pdf" target="_blank">NMC Health PLC - Exercise of share awards</a></li>
+                        <li><span>30-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-total-voting-rights-30-may-2019-691a883a-b252-4646-998e-55d3d1141f3d.pdf" target="_blank">NMC Health PLC - Total Voting Rights</a></li>
+                        <li><span>30-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-30-may-2019-02ddb089-13c3-409e-99f8-0f452af1e794.pdf" target="_blank">NMC Health PLC - PDMR Notification</a></li>
+                        <li><span>29-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-exercise-of-options-29-may-2019-134765dd-8486-4a0f-9f5a-d0c74029fd58.pdf" target="_blank">NMC Health PLC - Exercise of Options</a></li>
+                        <li><span>28-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-closing-of-ksa-jv-transaction-28-may-2019-abad32ec-006b-489d-81d3-084f1de55883.pdf" target="_blank">NMC Health PLC - Closing of KSA JV Transaction</a></li>
+                        <li><span>20-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-agm-and-dividend-timetable-20-may-2019-5c92a702-6018-4aee-8c2d-de91af4e92a1.pdf" target="_blank">NMC Health PLC – AGM and Dividend Timetable</a></li>
+                        <li><span>20-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-2018-annual-report-published-20-may-2019-9ae469c8-cf85-4fb8-96de-a3b2f35ee04d.pdf" target="_blank">NMC Health PLC - 2018 Annual Report published</a></li>
+                        <li><span>17-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-exercise-of-options-17-may-2019-279798f5-941b-485e-b6d1-7e9f5e9221f0.pdf" target="_blank">NMC Health PLC - Exercise of options</a></li>
+                        <li><span>17-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-share-plans-block-listing-application-17-may-2019-93aa0349-0288-4623-bd98-e7ebdbbb2d22.pdf" target="_blank">NMC Health PLC - Share Plans Block Listing Application</a></li>
+                        <li><span>08-May-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-08-may-2019-2fa00b52-6bad-4945-afd3-aa80037feb9b.pdf" target="_blank">NMC Health PLC - PDMR notification</a></li>
+                        <li><span>30-Apr-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-total-voting-rights-30-apr-2019-790b9371-ed07-400a-8213-e68df603f3bc.pdf" target="_blank">NMC Health PLC - Total Voting Rights</a></li>
+                        <li><span>26-Apr-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-block-listing-six-monthly-return-26-apr-2019-c6155ce4-8839-4e51-8bfc-126668060c2a.pdf" target="_blank">NMC Health PLC - Block listing six monthly return</a></li>
+                        <li><span>26-Apr-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-block-listing-six-monthly-return-26-apr-2019-2f560368-1ca9-43a7-af41-56560bbd1e86.pdf" target="_blank">NMC Health PLC - Block listing six monthly return</a></li>
+                        <li><span>05-Apr-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-board-change-05-apr-2019-a618d916-96d5-46ee-a704-88d41eac68ce.pdf" target="_blank">NMC Health PLC - Board change</a></li>
+                        <li><span>02-Apr-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-exercise-of-share-options-02-apr-2019-a14300cf-f5c2-433a-a42d-0a1488e37145.pdf" target="_blank">NMC Health PLC - Exercise of share options</a></li>
+                        <li><span>15-Mar-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-grant-of-options-15-mar-2019-0de59c9f-bd55-4c2e-a73f-279d62a99479.pdf" target="_blank">NMC Health PLC - Grant of Options</a></li>
+                        <li><span>15-Mar-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-grant-of-options-15-mar-2019-7c82b449-e05d-436f-8948-c3dfae839fc3.pdf" target="_blank">NMC Health PLC - Grant of Options</a></li>
+                        <li><span>14-Mar-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-14-mar-2019-e208a56f-c1ae-4041-90f3-cea43fd2a40e.pdf" target="_blank">NMC Health PLC - PDMR notification</a></li>
+                        <li><span>05-Mar-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-update-on-ksa-joint-venture-05-mar-2019-ae482dee-c060-4d5a-9e89-182505ba6774.pdf" target="_blank">NMC Health PLC - Update on KSA Joint Venture</a></li>
+                        <li><span>08-Feb-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-board-change-08-feb-2019-2e22d25d-22bb-4be6-95e8-ce6d97a467f5.pdf" target="_blank">NMC Health PLC -  Board change</a></li>
+                        <li><span>04-Feb-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-exercise-of-options-04-feb-2019-b5cac937-18ee-44e5-94b4-b6a013003fe2.pdf" target="_blank">NMC Health PLC - Exercise of options</a></li>
+                        <li><span>17-Jan-2019</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-exercise-of-options-17-jan-2019-c643954d-d97c-4530-bf3e-b814a65aff10.pdf" target="_blank">NMC Health PLC - Exercise of options</a></li>
+                        <li><span>27-Dec-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-27-dec-2018-c5277f75-b4ec-4d22-aad2-929c318ac141.pdf" target="_blank">NMC Health PLC - PDMR notification</a></li>
+                        <li><span>20-Dec-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-20-dec-2018-ce30ed49-fe51-41be-afb9-9a83086eea4d.pdf" target="_blank">NMC Health PLC - PDMR notification</a></li>
+                        <li><span>19-Dec-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-19-dec-2018-803717e0-881c-4247-877e-f4a1ef9d447d.pdf" target="_blank">NMC Health PLC - PDMR notification</a></li>
+                        <li><span>10-Dec-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-purchase-of-shares-10-dec-2018-8ac3fe4f-a4fb-4c91-9ad1-9001c701da38.pdf" target="_blank">NMC Health PLC - Purchase of Shares</a></li>
+                        <li><span>10-Dec-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-10-dec-2018-03620a78-8942-47f5-8994-6226dd728f14.pdf" target="_blank">NMC Health PLC - PDMR notification</a></li>
+                        <li><span>10-Dec-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-trading-update-10-dec-2018-1d0630bc-d4d4-44f0-951e-a36ffb3cd84b.pdf" target="_blank">NMC Health PLC - Trading update</a></li>
+                        <li><span>31-Oct-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-purchase-of-shares-31-oct-2018-3b0a2f8e-324c-4d9c-bd05-9a6166af1d60.pdf" target="_blank">NMC Health PLC - Purchase of Shares</a></li>
+                        <li><span>24-Oct-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-pdmr-notification-24-oct-2018.pdf" target="_blank">NMC Health PLC - PDMR notification</a></li>
+                        <li><span>24-Oct-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-block-listing-six-monthly-return-24-oct-2018-1.pdf" target="_blank">NMC Health PLC - Block listing six monthly return</a></li>
+                        <li><span>24-Oct-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-block-listing-six-monthly-return-24-oct-2018.pdf" target="_blank">NMC Health PLC - Block listing six monthly return</a></li>
+                        <li><span>22-Oct-2018</span><a href="https://cf-cdn.nmc.ae/Uploads/InvestorRelations/nmc-health-plc-capital-markets-day-and-positively-revised-guidance-22-oct-2018.pdf" target="_blank">NMC Health PLC  - Capital Markets Day and Positively Revised Guidance</a></li>
+                    <li><span>29-Aug-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-purchase-of-shares-29-aug-2018.pdf" target="_blank">NMC Health PLC - Purchase of Shares</a></li>
+                    <li><span>27-Aug-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-regarding-press-speculation-27-aug-2018.pdf" target="_blank">NMC Health PLC - Regarding Press Speculation</a></li>
+                    <li><span>22-Aug-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-sale-of-shares-22-aug-2018.pdf" target="_blank">NMC Health PLC - Sale of Shares</a></li>
+                    <li><span>20-Aug-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-business-update-20-aug-2018.pdf" target="_blank">NMC Health Plc - Business update</a></li>
+                    <li><span>28-June-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-results-of-voting-at-annual-general-meeting-28-june-2018.pdf" target="_blank">NMC Health plc - Results of voting at Annual General Meeting</a></li>
+                    <li><span>27-June-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-total-voting-rights-27-june-2018.pdf" target="_blank">NMC Health plc - Total Voting Rights</a></li>
+                    <li><span>25-June-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-holdings-25-june-2018.pdf" target="_blank">NMC Health plc - Notification of Major Holdings</a></li>
+                    <li><span>12-June-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-exercise-of-share-options-12-june-2018.pdf" target="_blank">NMC Health plc - Exercise of share options</a></li>
+                    <li><span>12-June-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-exercise-of-options-and-sale-of-shares-12-june-2018.pdf" target="_blank">NMC Health plc - Exercise of options and sale of shares</a></li>
+                    <li><span>11-June-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-partnership-with-gosi-11-june-2018.pdf" target="_blank">NMC Health Plc – Partnership with GOSI</a></li>
+                    <li><span>25-May-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-agm-and-dividend-timetable-25-may-2018.pdf" target="_blank">NMC Health Plc – AGM and Dividend Timetable</a></li>
+                    <li><span>04-May-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-shareholdings-4-may-2018.pdf" target="_blank">NMC Health plc - Notification of major shareholdings 4 May 2018</a></li>
+                    <li><span>03-May-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-interest-form-tr-1-dr-b-r-shetty.pdf" target="_blank">NMC Health plc - Notification of Major Interest - Form TR-1 - Dr B R Shetty</a></li>
+                    <li><span>03-May-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-share-transaction-notification.pdf" target="_blank">NMC Health plc - Share Transaction Notification</a></li>
+                    <li><span>02-May-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-dr-b-r-shetty-share-pledge.pdf" target="_blank">NMC Health plc - Dr B R Shetty share pledge</a></li>
+                    <li><span>30-Apr-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-total-voting-rights-30-apr-2018.pdf" target="_blank">NMC Health plc - Total Voting Rights</a></li>
+                    <li><span>30-Apr-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-fca-dsbp-block-listing-six-monthly-return.pdf" target="_blank">NMC Health plc - FCA - DSBP Block listing six monthly return</a></li>
+                    <li><span>30-Apr-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-fca-ltip-block-listing-six-monthly-return.pdf" target="_blank">NMC Health plc - FCA - LTIP Block listing six monthly return</a></li>
+                    <li><span>23-Apr-2018</span><a href="https://nmc.ae/select_country/?doc=125&amp;source=regulatory-news" target="_blank">NMC Health plc – Convertible Bond Pricing Announcement</a></li>
+                    <li><span>23-Apr-2018</span><a href="https://nmc.ae/select_country/?doc=123&amp;source=regulatory-news" target="_blank">NMC Health plc – Convertible Bond Announcement</a></li>
+                    <li><span>21-Mar-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-exercise-of-options-and-sale-of-shares.pdf" target="_blank">NMC Health plc - Exercise of Options and Sale of Shares</a></li>
+                    <li><span>21-Mar-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-exercise-of-share-options-21-mar-18.pdf" target="_blank">NMC Health plc - Exercise of share options</a></li>
+                    <li><span>21-Mar-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-sale-of-shares.pdf" target="_blank">NMC Health plc - Sale of Shares</a></li>
+                    <li><span>28-Feb-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-to-report-full-year-2017-results-on-07-march-18.pdf" target="_blank">NMC Health plc to Report Full Year 2017 Results on 07th March'18</a></li>
+                    <li><span>08-Feb-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-08-feb-18.pdf" target="_blank">NMC Health Plc - PDMR notification</a></li>
+                    <li><span>06-Feb-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-06-feb-18.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>02-Feb-2018</span><a href="https://nmc.ae/finance/news/nmc-health-joint-corporate-broker-appointment-final.pdf" target="_blank">NMC Health plc - Appointment of Citi Group as Joint Corporate Broker</a></li>
+                    <li><span>29-Jan-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-completion-of-fakih-ivf-acquisition.pdf" target="_blank">NMC Health plc - Completion of Fakih IVF acquisition</a></li>
+                    <li><span>22-Jan-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-earnings-accretive-acquisitions-in-the-uae-kingdom-of-saudi-arabia.pdf" target="_blank">NMC Health plc - Earnings accretive acquisitions in the UAE and Kingdom of Saudi Arabia</a></li>
+                    <li><span>04-Jan-2018</span><a href="https://nmc.ae/finance/news/nmc-health-plc-acquisitions-of-outstanding-minority-interests.pdf" target="_blank">NMC Health plc - Acquisitions of outstanding minority interests</a></li>
+                    <li><span>20-Dec-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-h2-17-group-strategy-trading-update.pdf" target="_blank">NMC Health plc - H2-17 Group Strategy & Trading Update</a></li>
+                    <li><span>11-Dec-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-11th-dec-17.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>01-Dec-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-01-dec-17.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>30-Nov-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-total-voting-rights.pdf" target="_blank">NMC Health plc - Total Voting Rights</a></li>
+                    <li><span>28-Nov-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-28112017.pdf" target="_blank">NMC Health plc - PDMR Notification </a></li>
+                    <li><span>24-Nov-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-171124.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>17-Nov-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-exercise-of-share-options.pdf" target="_blank">NMC Health plc - Exercise of share options</a></li>
+                    <li><span>17-Nov-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-171117.pdf" target="_blank">NMC Health plc - PDMR Notification </a></li>
+                    <li><span>26-Oct-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-share-plans-block-listing-application.pdf" target="_blank">NMC Health plc - Share plans block listing application</a></li>
+                    <li><span>13-Oct-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-131017.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>25-Sep-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-significant-expansion-into-kingdom-of-saudi-arabia-ksa-.pdf" target="_blank">NMC Health plc - Significant expansion into Kingdom of Saudi Arabia (KSA)</a></li>
+                    <li><span>22-Sep-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-220917.pdf" target="_blank">NMC Health plc  - PDMR notification</a></li>
+                    <li><span>15-Sep-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-holdings-in-shares-150917.pdf" target="_blank">NMC Health plc - Notification of major holdings in shares</a></li>
+                    <li><span>08-Sep-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-holdings-in-shares-080917.pdf" target="_blank">NMC Health plc - Notification of major holdings in shares</a></li>
+                    <li><span>08-Sep-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-080917.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>07-Sep-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-grant-of-options.pdf" target="_blank">NMC Health plc - Grant of options</a></li>
+                    <li><span>23-Aug-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-new-o-m-contract.pdf" target="_blank">NMC Health plc - New O&amp;M Contract</a></li>
+                    <li><span>23-Aug-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-half-year-results-2017.pdf" target="_blank">NMC Health plc - 2017 half year results</a></li>
+                    <li><span>22-Aug-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-holdings-in-company.pdf" target="_blank">NMC Health plc - Holdings in Company</a></li>
+                    <li><span>18-Aug-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-results-.pdf" target="_blank">NMC Health plc - Notification of Results </a></li>
+                    <li><span>20-Jul-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-200717.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>11-Jul-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-interests-in-shares-blackrock.pdf" target="_blank">NMC Health plc - Notification of major interests in shares Blackrock</a></li>
+                    <li><span>29-Jun-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-board-changes.pdf" target="_blank">NMC Health plc - Board changes</a></li>
+                    <li><span>29-Jun-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-share-transaction-announcement-3-.pdf" target="_blank">NMC Health plc - Share Transaction Announcement</a></li>
+                    <li><span>12-Jun-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-12th-june-2017.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>09-Jun-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-9th-june-2017.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>23-May-2017</span><a href="https://nmc.ae/finance/news/23rd-may-2017-nmc-health-plc-results-of-voting-annual-general-meeting.pdf" target="_blank">NMC Health plc - Results of voting at Annual General Meeting</a></li>
+                    <li><span>18-May-2017</span><a href="https://nmc.ae/finance/news/18th-may-2017-nmc-health-plc-pdmr-notification.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>09-May-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-grant-of-options-09th-may-2017.pdf" target="_blank">NMC Health plc - grant of options</a></li>
+                    <li><span>02-May-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-abu-dhabi-regulatory-announcement-trading-update.pdf" target="_blank">NMC Health plc - Abu Dhabi regulatory announcement and trading update</a></li>
+                    <li><span>24-Apr-2017</span><a href="https://nmc.ae/finance/news/dividend-timetable-agm-notice-2017-final.pdf" target="_blank">NMC Health plc - AGM and Dividend Timetable</a></li>
+                    <li><span>24-Mar-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-al-zahra-completion-announcement.pdf" target="_blank">NMC Health plc - Completion of acquisition of the Al Zahra Hospital</a></li>
+                    <li><span>08-Mar-2017</span><a href="https://nmc.ae/finance/news/nmc-health-management-promotion-announcement.pdf" target="_blank">NMC Health plc - Management promotion announcement</a></li>
+                    <li><span>27-Jan-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-announcement-of-ltip-awards.pdf" target="_blank">NMC Health plc - Announcement of LTIP awards</a></li>
+                    <li><span>12-Jan-2017</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification-12jan2017.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>29-Dec-2016</span><a href="https://nmc.ae/finance/news/nmc-health-plc-results-of-voting-general-meetings.pdf" target="_blank">NMC Health plc - Results of voting at General Meetings</a></li>
+                    <li><span>19-Dec-2016</span><a href="https://nmc.ae/finance/news/nmc-health-plc-pdmr-notification.pdf" target="_blank">NMC Health plc - PDMR notification</a></li>
+                    <li><span>14-Dec-2016</span><a href="https://nmc.ae/finance/news/nmc-health-plc-publication-of-general-meeting-circular-to-approve-new-remuneration-policy.pdf" target="_blank">NMC Health plc - Publication of General Meeting Circular to approve new Remuneration Policy</a></li>
+                    <li><span>14-Dec-2016</span><a href="/select_country/?doc=119&amp;source=regulatory-news" target="_blank"> NMC Health plc - Results of Placing</a></li>
+                    <li><span>14-Dec-2016</span><a href="/select_country/?doc=120&amp;source=regulatory-news" target="_blank"> NMC Health Plc - Publication of Circular relating to Proposed Acquisition of Al Zahra Hospital in Sharjah</a></li>
+                    <li><span>14-Dec-2016</span><a href="/select_country/?doc=121&amp;source=regulatory-news" target="_blank"> NMC Health Plc - Proposed acquisition of Al Zahra Hospital in Sharjah</a></li>
+                    <li><span>14-Dec-2016</span><a href="/select_country/?doc=122&amp;source=regulatory-news" target="_blank"> NMC Health Plc - Share Placing Announcement</a></li>
+                    <li><span>23-Nov-2016</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-interests-shares-23-11-16-a-.pdf" target="_blank">NMC Health plc - Notification of major interests shares (a)</a></li>
+                    <li><span>23-Nov-2016</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-interests-shares-23-11-16-b-.pdf" target="_blank">NMC Health plc - Notification of major interests shares (b)</a></li>
+                    <li><span>23-Nov-2016</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-interests-shares-23-11-16-c-.pdf" target="_blank">NMC Health plc - Notification of major interests shares (c)</a></li>
+                    <li><span>23-Nov-2016</span><a href="https://nmc.ae/finance/news/nmc-health-plc-notification-of-major-interests-shares-23-11-16-d-.pdf" target="_blank">NMC Health plc - Notification of major interests shares (d)</a></li>
+                    <li><span>09-Nov-2016</span><a href="https://nmc.ae/finance/news/09-nov-2016-nmc-health-plc-tr-1-standard-life-investments.pdf" target="_blank">NMC Health plc - TR-1 - notification of major interest in shares</a></li>
+                    <li><span>25-Oct-2016</span><a href="https://nmc.ae/finance/news/nmc-health-plc-share-transaction-announcement.pdf" target="_blank">NMC Health plc - Share transaction announcement</a></li>
+                    <li><span>30-Aug-2016</span><a href="https://nmc.ae/finance/news/NMC-Health-enters-saudi-arabian-market.pdf" target="_blank">NMC Health plc - NMC Health Enters Saudi Arabian Market</a></li>
+                    <li><span>22-Jul-2016</span><a href="https://nmc.ae/finance/news/notification-made-in-accordance-with-rule-3-1-4-1-a-NMC-health-plc-22-jul-16.pdf" target="_blank">NMC Health plc Notification Made in Accordance with Rule 3.1.4 (1) (a) of The Disclosure and Transparency Rules</a></li>
+                    <li><span>03-Jun-2016</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-2016-AGM-voting-results-announcement.pdf" target="_blank">NMC Health plc - Results of voting at Annual General Meeting</a></li>
+                    <li><span>06-May-2016</span><a href="https://nmc.ae/finance/news/AGM-and-publication-of-circular.pdf" target="_blank">NMC Health plc AGM AND PUBLICATION OF CIRCULAR</a></li>
+                    <li><span>13-Apr-2016</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-notification-made-in-accordance-with-rule-3-1-4-1-a-of-the-disclosure-and-transparency-rules.pdf" target="_blank">NMC Health plc Notification Made in Accordance with Rule 3.1.4 (1) (a) of The Disclosure and Transparency Rules</a></li>
+                    <li><span>15-Mar-2016</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-notification-made-in-accordance-with-rule-3-1-4-1--a-of-the-disclosure-and-transparency-rules.pdf" target="_blank">NMC Health plc Notification Made in Accordance with Rule 3.1.4 (1) (a) of The Disclosure and Transparency Rules</a></li>
+                    <li><span>01-Feb-2016</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-closing-of-fakih-ivf-acquisition.pdf" target="_blank">NMC Health plc closing of Fakih IVF acquisition</a></li>
+                    <li><span>24-Nov-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-acquires-majority-stake-in-fakih-ivf.pdf" target="_blank">NMC Health plc expands its Maternity &amp; Fertility vertical through the acquisition of a majority stake in Fakih IVF</a></li>
+                    <li><span>19-Nov-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-update-on-progress-of-group-strategy.pdf" target="_blank">NMC Health plc - Update on progress of Group Strategy</a></li>
+                    <li><span>12-Oct-2015</span><a href="https://nmc.ae/finance/news/Board-change-NMC-Health-plc.pdf" target="_blank">Board change NMC Health plc</a></li>
+                    <li><span>28-Sep-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-share-transactions-announcement.pdf" target="_blank">NMC Health plc Share transactions announcement</a></li>
+                    <li><span>09-Sep-2015</span><a href="https://nmc.ae/finance/news/Director-PDMR-Shareholding-NMC-Health-plc.pdf" target="_blank">Director/PDMR Shareholding - NMC Health plc</a></li>
+                    <li><span>25-Aug-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-announces-closing-of-its-acquisition-of-provita-international-medical-center-llc.pdf" target="_blank">NMC Health plc announces closing of its acquisition of ProVita International Medical Center LLC</a></li>
+                    <li><span>24-Aug-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-opens-new-super-speciality-hospital-in-the-UAE.pdf" target="_blank">NMC Health plc Opens New Super Speciality Hospital in the UAE</a></li>
+                    <li><span>17-Aug-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-announces-closing-of-its-acquisition-of-Dr-Sunny-Healthcare-Group.pdf" target="_blank">NMC Health plc Announces Closing of its Acquisition of Dr. Sunny Healthcare Group</a></li>
+                    <li><span>10-Aug-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-Half-Year-results-on-26th-August-2015.pdf" target="_blank">NMC Health plc to report half year results on 26 August 2015</a></li>
+                    <li><span>16-Jun-2015</span><a href="https://nmc.ae/finance/news/2015-AGM-voting-results-announcements-NMC-health-plc.pdf" target="_blank">2015 AGM voting results announcements - NMC Health plc</a></li>
+                    <li><span>15-Jun-2015</span><a href="https://nmc.ae/finance/news/NMC-health-plc-announces-acquisition-of-provita.pdf" target="_blank">NMC Health plc announces acquisition of ProVita</a></li>
+                    <li><span>04-Jun-2015</span><a href="https://nmc.ae/finance/news/nmc-health-plc-appoints-j-p-morgan-cazenove-as-joint-corporate-broker.pdf" target="_blank">NMC Health plc appoints J.P. Morgan Cazenove as Joint Corporate Broker</a></li>
+                    <li><span>04-Jun-2015</span><a href="https://nmc.ae/finance/news/nmc-health-plc-closing-of-americare-group-acquisition.pdf" target="_blank">NMC Health plc closing of Americare Group acquisition</a></li>
+                    <li><span>20-May-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-AGM-and-Dividend-Timetable.pdf" target="_blank">NMC Health plc - AGM and Dividend Timetable</a></li>
+                    <li><span>20-May-2015</span><a href="https://nmc.ae/finance/news/Notification-made-in-accordance-with-rule3.1.4(1)(a)-NMC-Health-PLc.pdf" target="_blank">NMC Health plc Notification Made in Accordance with Rule 3.1.4 (1) (a) of The Disclosure and Transparency Rules</a></li>
+                    <li><span>29-Apr-2015</span><a href="https://nmc.ae/finance/news/NMC-HEALTH-PLC-ANNOUNCES-FURTHER-EXPANSION-WITHIN-THE-UAE-THROUGH-TWO-STRATEGIC-ACQUISTIONS.pdf" target="_blank">NMC Health plc Announces Further Expansion Within The UAE Through Two Strategic Acquisitions</a></li>
+                    <li><span>07-Apr-2015</span><a href="https://nmc.ae/finance/news/07-apr-2015-nmc-health-plc-share-transaction-announcement.pdf" target="_blank">NMC Health plc Share transaction announcement</a></li>
+                    <li><span>30-Mar-2015</span><a href="https://nmc.ae/finance/news/NMC-Health-plc-Appointment-of-Joint-Corporate-Broker.pdf" target="_blank">NMC Health plc Appointment of Joint Corporate Broker</a></li>
+                    <li><span>26-Feb-2015</span><a href="https://nmc.ae/finance/news/Notification-made-in-accordance-with-rule-3.1.4(2)(a)-NMC-Health-Plc.pdf" target="_blank">NMC Health plc Notification Made in Accordance with Rule 3.1.4 (1) (a) of The Disclosure and Transparency Rules</a></li>
+                    <li><span>26-Feb-2015</span><a href="https://nmc.ae/finance/news/Notification-made-in-accordance-with-rule-3.1.4(1)(a)-NMC-Health-plc.pdf" target="_blank">NMC Health plc Notification Made in Accordance with Rule 3.1.4 (1) (a) of The Disclosure and Transparency Rules</a></li>
+                    <li><span>24-Feb-2015</span><a href="https://nmc.ae/finance/news/NMC-HEALTH-PLC-ANNOUNCES-TH- ACQUISITION-OF-LEADING-GLOBAL-FERTILITY-CENTRE.pdf" target="_blank">NMC Health plc announces the acquisition of leading global fertility center</a></li>
+                    <li><span>16-Feb-2015</span><a href="https://nmc.ae/finance/news/16th-feb15-nmc-health-plc-announces-a-new-financing-facility-and-update-to-group-strategy.pdf" target="_blank">NMC Health plc announces a new financing facility and update to group strategy</a></li>
+                    <li><span>30-Oct-2014</span><a href="https://nmc.ae/finance/news/Options Grant Award Announcment - NMC Health plc30-OCT-2014.pdf" target="_blank">Options Grant Award Announcement - NMC Health plc</a></li>
+                    <li><span>28-Oct-2014</span><a href="https://nmc.ae/finance/news/Interim Management Statement Q3 2014 - NMC Health plc 28-OCT-2014.pdf" target="_blank">Interim Management Statement Q3 2014 - NMC Health plc</a></li>
+                    <li><span>19-Aug-2014</span><a href="https://nmc.ae/finance/news/2014 Half Yearly Results - NMC Health plc 19-AUG-2014.pdf" target="_blank">2014 Half Yearly Results - NMC Health plc</a></li>
+                    <li><span>30-Jun-2014</span><a href="https://nmc.ae/finance/news/Dr Shetty Share purchase announcement - NMC Health plc 30-JUN-2014.pdf" target="_blank">Dr Shetty Share purchase announcement - NMC Health plc</a></li>
+                    <li><span>26-Jun-2014</span><a href="https://nmc.ae/finance/news/Appointment of new director - NMC Health plc 26-JUN-2014.pdf" target="_blank">Appointment of new director - NMC Health plc</a></li>
+                    <li><span>26-Jun-2014</span><a href="https://nmc.ae/finance/news/2014 AGM voting results announcements - NMC Health plc 26-JUN-2014.pdf" target="_blank"> 	2014 AGM voting results announcements - NMC Health plc</a></li>
+                    <li><span>25-Jun-2014</span><a href="https://nmc.ae/finance/news/Pre-close Statement H1 2014 - NMC Health plc 25-JUN-2014.pdf" target="_blank"> 	Pre-close Statement H1 2014 - NMC Health plc</a></li>
+                    <li><span>03-Jun-2014</span><a href="https://nmc.ae/finance/news/AGM and Board Changes - NMC Health plc 03-JUN-2014.pdf" target="_blank">AGM and Board Changes - NMC Health plc</a></li>
+                    <li><span>29-Apr-2014</span><a href="https://nmc.ae/finance/news/Interim Management Statement Q1 2014 - NMC Health plc 29-APR-2014.pdf" target="_blank">Interim Management Statement Q1 2014 - NMC Health plc</a></li>
+                    <li><span>04-Apr-2014</span><a href="https://nmc.ae/finance/news/Notification in accordance with Rule 3.1.4 (a) - NMC Health plc 04-APR-2014.pdf" target="_blank">Notification in accordance with Rule 3.1.4 (a) - NMC Health plc</a></li>
+                    <li><span>01-Apr-2014</span><a href="https://nmc.ae/finance/news/Annual Report and Accounts 2013 - NMC Health plc 01-APR-2014.pdf" target="_blank">Annual Report and Accounts 2013 - NMC Health plc</a></li>
+                    <li><span>26-Mar-2014</span><a href="https://nmc.ae/finance/news/Board Change - NMC Health plc 26-MAR-2014.pdf" target="_blank">Board Change - NMC Health plc</a></li>
+                    <li><span>25-Feb-2014</span><a href="https://nmc.ae/finance/news/Dividend Timetable and AGM Notice - NMC Health plc 25-FEB-2014.pdf" target="_blank">Dividend Timetable and AGM Notice - NMC Health plc</a></li>
+                    <li><span>25-Feb-2014</span><a href="https://nmc.ae/finance/news/Appointment Of New Director - NMC Health plc 25-FEB-2014.pdf" target="_blank">Appointment Of New Director - NMC Health plc</a></li>
+                    <li><span>25-Feb-2014</span><a href="https://nmc.ae/finance/news/Full Year Results 2013 - NMC Health plc 25-FEB-2014.pdf" target="_blank"> 	Full Year Results 2013 - NMC Health plc</a></li>
+                    <li><span>03-Jan-2014</span><a href="https://nmc.ae/finance/news/2013 Full-Year Trading Update - NMC Health plc 03-JAN-2014.pdf" target="_blank">2013 Full-Year Trading Update - NMC Health plc</a></li>
+                    <li><span>28-Nov-2013</span><a href="https://nmc.ae/finance/news/Notification of Transactions - NMC Health plc 28-NOV-2013.pdf" target="_blank">Notification of Transactions - NMC Health plc</a></li>
+                    <li><span>21-Nov-2013</span><a href="https://nmc.ae/finance/news/Share Notification - NMC Health plc 21-NOV-2013.pdf" target="_blank">Share Notification - NMC Health plc</a></li>
+                    <li><span>29-Oct-2013</span><a href="https://nmc.ae/finance/news/Interim Management Statement Q3 2013 - NMC Health plc 29-OCT-2013.pdf" target="_blank"> 	Interim Management Statement Q3 2013 - NMC Health plc</a></li>
+                    <li><span>20-Sep-2013</span><a href="https://nmc.ae/finance/news/Sale Of Shares Announcement - NMC Health plc 20-SEP-2013.pdf" target="_blank">Sale Of Shares Announcement - NMC Health plc</a></li>
+                    <li><span>20-Aug-2013</span><a href="https://nmc.ae/finance/news/2013 Half Yearly Results -NMC Health plc 20-AUG-2013.pdf" target="_blank"> 	2013 Half Yearly Results -NMC Health plc</a></li>
+                    <li><span>27-Jun-2013</span><a href="https://nmc.ae/finance/news/AGM Voting Results Announcement - NMC Health plc 27-JUN-2013.pdf" target="_blank">AGM Voting Results Announcement - NMC Health plc</a></li>
+                    <li><span>27-Jun-2013</span><a href="https://nmc.ae/finance/news/Appointment Of New Director - NMC Health plc 27-JUN-2013.pdf" target="_blank">Appointment Of New Director - NMC Health plc</a></li>
+                    <li><span>27-Jun-2013</span><a href="https://nmc.ae/finance/news/Q2 2013 Pre-Close Statement - NMC Health plc 27-JUN-2013.pdf" target="_blank">Q2 2013 Pre-Close Statement - NMC Health plc</a></li>
+                    <li><span>04-Jun-2013</span><a href="https://nmc.ae/finance/news/JP Morgan Facility Announcement - NMC Health plc 04-JUN-2013.pdf" target="_blank">JP Morgan Facility Announcement - NMC Health plc</a></li>
+                    <li><span>21-May-2013</span><a href="https://nmc.ae/finance/news/Notice Of Annual General Meeting - NMC Health plc 21-MAY-2013.pdf" target="_blank">Notice Of Annual General Meeting - NMC Health plc</a></li>
+                    <li><span>21-May-2013</span><a href="https://nmc.ae/finance/news/Form of Proxy 2013 - NMC Health plc 21-MAY-2013.pdf" target="_blank">Form of Proxy 2013 - NMC Health plc</a></li>
+                    <li><span>08-May-2013</span><a href="https://nmc.ae/finance/news/Share Notification - NMC Health plc 08-MAY-2013.pdf" target="_blank">Share Notification - NMC Health plc</a></li>
+                    <li><span>30-Apr-2013</span><a href="https://nmc.ae/finance/news/Interim Management Statement Q1 2013 - NMC Health plc 30-APR-2013.pdf" target="_blank">Interim Management Statement Q1 2013 - NMC Health plc</a></li>
+                    <li><span>04-Apr-2013</span><a href="https://nmc.ae/finance/news/Transfer of Shares - NMC Health plc 04-APR-2013.pdf" target="_blank">Transfer of Shares - NMC Health plc</a></li>
+                    <li><span>28-Mar-2013</span><a href="https://nmc.ae/finance/news/Annual Report and Accounts 2012 - NMC Health plc 28-MAR-2013.pdf" target="_blank">Annual Report and Accounts 2012 - NMC Health plc</a></li>
+                    <li><span>19-Mar-2013</span><a href="https://nmc.ae/finance/news/Share Notifications - NMC Health plc 19-MAR-2013.pdf" target="_blank">Share Notifications - NMC Health plc</a></li>
+                    <li><span>26-Feb-2013</span><a href="https://nmc.ae/finance/news/Full Year Results 2012 - NMC Health plc 26-FEB-2013.pdf" target="_blank">Full Year Results 2012 - NMC Health plc</a></li>
+                    <li><span>03-Jan-2013</span><a href="https://nmc.ae/finance/news/Full Year Pre-close Statement - NMC Health plc 03-JAN-2013.pdf" target="_blank">Full Year Pre-close Statement - NMC Health plc</a></li>
+                    <li><span>24-Dec-2012</span><a href="https://nmc.ae/finance/news/Share notification_NMC Health Plc_21 DEC 2012.pdf" target="_blank">Director/PDMR Shareholding - NMC Health plc</a></li>
+                    <li><span>20-Dec-2012</span><a href="https://nmc.ae/finance/news/Share notification_NMC Health Plc_19 DEC 2012.pdf" target="_blank">Director/PDMR Shareholding - NMC Health plc</a></li>
+                    <li><span>26-Nov-2012</span><a href="https://nmc.ae/finance/news/New Hospital Services Management Contract - NMC Health plc 26-NOV-2012.pdf" target="_blank">New Hospital Services Management Contract - NMC Health plc</a></li>
+                    <li><span>30-Oct-2012</span><a href="https://nmc.ae/finance/news/Interim Management Statement Q3 2012 - NMC Health plc 30-OCT-2012.pdf" target="_blank">Interim Management Statement Q3 2012 - NMC Health plc</a></li>
+                    <li><span>29-Aug-2012</span><a href="https://nmc.ae/finance/news/Half-Yearly Financial Report - NMC Health plc 29-AUG-2012.pdf" target="_blank">Half-Yearly Financial Report - NMC Health plc</a></li>
+                    <li><span>02-Jul-2012</span><a href="https://nmc.ae/finance/news/Q2 2012 Pre-Close Statement - NMC Health plc 02-JUL-2012.PDF" target="_blank">Q2, 2012 Pre-Close Statement - NMC Health plc</a></li>
+                    <li><span>15-May-2012</span><a href="https://nmc.ae/finance/news/Interim Management Statement Q1 2012 - NMC Health plc 15-MAY-2012.pdf" target="_blank">Interim Management Statement Q1 2012 - NMC Health plc</a></li>
+                    <li><span>11-May-2012</span><a href="https://nmc.ae/finance/news/Interim Management Statement Q1 2012 - NMC Health plc 11-MAY-2012.pdf" target="_blank">Notification Of Interim Management Statement - NMC Health plc</a></li>
+                    <li><span>04-May-2012</span><a href="https://nmc.ae/finance/news/Notification of Major Interest in Shares - NMC Health plc  04-MAY-2012.pdf" target="_blank">Notification of Major Interests in Shares - NMC Health plc</a></li>
+                    <li><span>04-May-2012</span><a href="https://nmc.ae/finance/news/Director-PDMR Shareholding4 - NMC Health plc 04-MAY-2012.pdf" target="_blank">Director-PDMR Shareholding - NMC Health plc</a></li>
+                    <li><span>04-May-2012</span><a href="https://nmc.ae/finance/news/Director-PDMR Shareholding3 - NMC Health plc 04-MAY-2012.pdf" target="_blank">Director-PDMR Shareholding - NMC Health plc</a></li>
+                    <li><span>04-May-2012</span><a href="https://nmc.ae/finance/news/Director-PDMR Shareholding2 - NMC Health plc 04-MAY-2012.pdf" target="_blank">Director-PDMR Shareholding - NMC Health plc</a></li>
+                    <li><span>04-May-2012</span><a href="https://nmc.ae/finance/news/Notification of Major Interest in Shares - NMC Health plc 04-MAY-2012.pdf" target="_blank">Notification of Major Interest in Shares - NMC Health plc</a></li>
+                    <li><span>04-May-2012</span><a href="https://nmc.ae/finance/news/Notification of Major Interest in Shares - NMC Health plc  04-MAY-2012.pdf" target="_blank">Notification of Major Interest in Shares - NMC Health plc</a></li>
+                    <li><span>04-May-2012</span><a href="https://nmc.ae/finance/news/Director-PDMR Shareholding1 - NMC Health plc 04-MAY-2012.pdf" target="_blank">Director-PDMR Shareholding - NMC Health plc</a></li>
+                    <li><span>01-May-2012</span><a href="https://nmc.ae/finance/news/Pricing Notification End of Stabilisation Notice - NMC Health plc 01-MAY-2012.pdf" target="_blank">Pricing Notification End of Stabilisation Notice - NMC Health plc</a></li>
+                    <li><span>01-May-2012</span><a href="https://nmc.ae/finance/news/Over-allotment option exercise notice - NMC Health plc  01-MAY-2012.pdf" target="_blank">Over-allotment option exercise notice - NMC Health plc</a></li>
+                    <li><span>13-Apr-2012</span><a href="https://nmc.ae/finance/news/Notification of Major Interest in Shares - NMC Health plc 13-APR-2012.pdf" target="_blank">Notification of Major Interest in Shares - NMC Health plc</a></li>
+                    <li><span>02-Apr-2012</span><a href="https://nmc.ae/finance/news/Announcement of Offer Price - NMC Health plc 02-APR-2012.pdf" target="_blank">Announcement of Offer Price - NMC Health plc</a></li>
+                    <li><span>02-Apr-2012</span><a href="https://nmc.ae/finance/news/Pricing Notifications Stabilisation Notice - NMC Health plc 02-APR-2012.pdf" target="_blank">Pricing Notifications Stabilisation Notice - NMC Health plc</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <div class="survey-blk hide-survey">
+            <div class="survey-title" data-title="Survey"></div>
+            <div class="survey-content">
+                <i class="survey-icon-close"></i>
+                <p>
+                    Thank you for visiting our website!<br />Can you give us a minute to share your browsing experience?
+                </p>
+                <div style="text-align: center;" class="survey-btn-blk">
+                    <a href="/survey" class="survey-btn yes-btn">Take the Survey</a>
+                    
+                </div>
+            </div>
+        </div>
+
+
+<!-- ********************Index footer section start **************************************--->
+<div class="footer-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 col-md-8 col-xs-12 footer-menu">
+                <ul class="footer-navigation row">
+                    <li class="col-xs-6  col-md-2">
+                        <h5>General</h5>
+                        <ul class="clearfix">
+                            <li><a href="https://nmc.ae/">Home</a></li>
+                            <li><a href="https://nmc.ae/aboutus">About Us</a></li>
+                            <li><a href="https://nmc.ae/contactus">Contact Us </a></li>
+                            
+                            <li><a href="https://nmc.ae/news">News</a>  </li>
+                            <li><a href="https://nmc.ae/careers">Careers</a>  </li>
+                        </ul>
+                    </li>
+                    <li class="col-xs-6  col-md-3">
+                        <h5>Resources</h5>
+                        <ul class="clearfix">
+                            <li><a href="https://nmc.ae/hospitals">Hospitals</a></li>
+                            <li><a href="https://nmc.ae/doctors">Doctors </a></li>
+                            <li><a href="https://nmc.ae/international-patients">International Patients</a></li>
+                            <li><a href="https://nmc.ae/investor-relations">Investor Relations </a></li>
+                            <li><a href="http://www.nmctrading.com/" target="_blank">NMC Trading </a></li>
+                        </ul>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-5 ">
+                        <h5>Centre of Excellence</h5>
+                        <ul class="clearfix">
+                            <li>
+                                <a href="http://www.nmcorthocare.ae/" target="_blank">
+                                    <span class="fade-text">nmc</span> Orthocare
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.nmceyecare.ae/" target="_blank">
+                                    <span class="fade-text">nmc</span> Eyecare
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.nmcheartcare.ae/" target="_blank">
+                                    <span class="fade-text">nmc</span> Heartcare
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.nmcurocare.ae/" target="_blank">
+                                    <span class="fade-text">nmc</span> Urocare
+                                </a>
+                            </li>
+                            <li><a href="http://www.nmcsurgery.ae/" target="_blank"><span class="fade-text">nmc</span> Surgery </a></li>
+                            <li>
+                                <a href="http://www.nmcsmile.ae/" target="_blank">
+                                    <span class="fade-text">nmc</span> Smile
+                                </a>
+                            </li>
+                            
+                            <li>
+                                <a href="https://nmc.ae/speciality/ent-head-and-neck-surgery-10" target="_blank">
+                                    <span class="fade-text">nmc</span> ENT Care
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://www.nmcbloom.ae/" target="_blank">
+                                    <span class="fade-text">nmc</span> Bloom
+                                </a>
+                            </li>
+                            <li><a href="http://www.nmcvinoda.ae/" target="_blank"><span class="fade-text">nmc</span> Vinoda</a></li>
+                            <!--                                    <li><a href="http://www.nmctrading.com/" target="_blank"><span class="fade-text">nmc</span> Trading </a></li>-->
+
+                        </ul>
+                    </li>
+                    <li class="col-xs-12 col-md-2 social-share">
+                        <h5>Social</h5>
+                        <ul class="clearfix">
+                            <li><a href="https://www.facebook.com/NMCHealthcare" target="_parent"><i class="icon-fb-foot visible-xs visible-sm"></i><span class="hidden-xs hidden-sm">Facebook</span></a></li>
+                            <li><a href="https://twitter.com/NMCHealthcare" target="_parent"><i class="icon-tw-foot visible-xs visible-sm"></i><span class="hidden-xs hidden-sm">Twitter</span></a></li>
+                            <li><a href="https://www.linkedin.com/company/nmc-healthcare/" target="_parent"><i class="icon-in-foot visible-xs visible-sm"></i><span class="hidden-xs hidden-sm">Linkedin</span></a></li>
+                            <li><a href="https://www.instagram.com/nmchealthcare/" target="_parent"><i class="icon-insta-foot visible-xs visible-sm"></i><span class="hidden-xs hidden-sm">Instagram</span></a></li>
+                            <li><a href="https://www.youtube.com/NMCHealthcare" target="_parent"><i class="icon-youtube-foot visible-xs visible-sm"></i><span class="hidden-xs hidden-sm">Youtube</span></a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-4 cnt-blck pull-right col-xs-12">
+
+<div class="newsletter padding margin-vertical">
+    <h6>Newsletter Sign Up</h6>
+<form action="/Home/NewsletterSubscription" id="frmNewsLetter" method="post"><input name="__RequestVerificationToken" type="hidden" value="BwknuHUpQG_QVtn12QvNX9bsDvEPiJ9AsKR5W6OcScHAwouIsVmZE0tYQcHoOXBtUzI_Z3sYJVIodVttnHtl_UTdzdJ6ONuFy1yE1sTKYWY1" />        <div class="input-group input-group-sm">
+            <input autocomplete="off" class="form-control" id="NewsLetterEmail" maxlength="50" name="NewsLetterEmail" placeholder="enter email id" type="text" value="" />
+
+            <div class="input-group-btn">
+                <button class="btn btn-primary" id="anchsubmit" type="submit">Subscribe</button>
+            </div>
+        </div>
+        <span id="NewsLetterEmailvalid" class="field-validation-error" style="color:red"></span>
+        <div id="divMsg" style="color:green;"> </div>
+</form></div>
+<script type="text/javascript">
+
+    $(function () {
+
+        $("#frmNewsLetter").submit(function (e) {
+            e.preventDefault();
+            $("#divMsg").html('');
+            $("#NewsLetterEmailvalid").html('');
+
+            if ($.trim($("#NewsLetterEmail").val()) == "") {
+                $("#NewsLetterEmailvalid").html('Email is required')
+                return false;
+            }
+            else {
+                if (!checkEmaiformat($.trim($("#NewsLetterEmail").val()))) {
+                    $("#NewsLetterEmailvalid").html('Invalid email')
+                    return false;
+                }
+                else {
+                    $.ajax({
+                        url: "/Home/CheckEmail",
+                        data: { NewsLetterEmail: $.trim($("#NewsLetterEmail").val()) },
+                        success: function (data) {
+                            if (data == false) {
+                                $("#NewsLetterEmailvalid").html('You have already subscribed our newsletter');
+                                $("#divMsg").html('');
+                                return false;
+                            }
+                            else {
+                                $("#NewsLetterEmailvalid").html('');
+                                AddNewsLetter();
+                            }
+                        }
+                    })
+
+                }
+            }
+
+        });
+
+        
+
+    });
+    function AddNewsLetter() {
+
+        var newslettertokenform = $('#frmNewsLetter');
+        var newslettertoken = $('input[name="__RequestVerificationToken"]', newslettertokenform).val();
+
+        $('#anchsubmit').attr("disabled", "disabled");
+
+        var formData = new FormData();
+        formData.append("NewsLetterEmail", $.trim($("#NewsLetterEmail").val()));
+        formData.append("__RequestVerificationToken", newslettertoken);
+
+        $.ajax({
+            url: '/Home/NewsletterSubscription',
+            type: "POST",
+            data: formData,
+            dataType: 'json',
+            success: function (result) {
+                $('#anchsubmit').removeAttr("disabled");
+
+                $("#NewsLetterEmail").val("");
+                $("#divMsg").html("Newsletter subscribed successfully");
+            },
+            error: function (result) {
+                $('#anchsubmit').removeAttr("disabled");
+                alert("Something went wrong. Please try later");
+            },
+            cache: false,
+            contentType: false,
+            processData: false
+        });
+
+    }
+    function checkEmaiformat(str) {
+
+        var filter = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+        if (filter.test(str))
+            testresults = true
+        else {
+            testresults = false
+        }
+        return (testresults)
+    }
+</script>
+
+            </div>
+            <!--
+                                <div class="footer-logo col-xs-12 col-sm-5 pull-right col-md-12">
+                                    <img src="/images/nmc-footerlogo.png" alt="nmc" width="89" height="43" class="margin-right" /> <img src="/images/zayed.gif" alt="Zayed" width="134" height="43" class="margin-left" />
+                                </div>
+            -->
+        </div>
+
+
+    </div>
+    <div class="footer-btm">
+        <div class="container">
+            
+            <span class="pull-left cpy">
+                &copy; Copyright NMC Healthcare 2019.
+                <span class="display-ib"> All Rights Reserved. </span> <span class="display-ib"> MOH Application No - CE22299-03/03/2020</span>
+            </span>
+            <div class="footer-links pull-right">
+                <a href="https://nmc.ae/privacy">Privacy </a>   <a href="https://nmc.ae/terms"> Terms  </a> <a href="https://nmc.ae/sitemap"> Sitemap</a>
+                
+            </div>
+            <span class="pull-right app hide">Get Mobile App <a href="#" class="icon-android"> <span class="hide">android</span></a> <a href="#" class="icon-apple"><span class="hide">ios</span></a></span>
+
+        </div>
+    </div>
+</div>
+<!-- ********************Index footer section end **************************************--->
+<!-- ******************** cookies section start ******************** -->
+    <div class="cookies-container alert">
+        <div class="container">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <p class="light">
+                NMC uses cookies to improve your experience on this website. Some of the cookies we use are essential for parts of the website to operate. Please be aware that if you continue without changing your cookie settings, you consent to this. For more information on our use of cookies, please review our <a href="/cookiepolicy" target="_blank">cookie policy</a>
+            </p>
+        </div>
+    </div>
+<!-- ******************** cookies section end ******************** -->
+
+    </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="/Content/js/bootstrap.min.js"></script>
+    <script src="/Content/js/common.js"></script>
+    <script src="/Content/js/jquery.slimscroll.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript">
+        $(".survey-title, .survey-icon-close, .no-btn").click(function(e){
+            e.preventDefault();
+            $(this).closest(".survey-blk").toggleClass("hide-survey");
+        });
+    </script>
+
+</body>
+</html>

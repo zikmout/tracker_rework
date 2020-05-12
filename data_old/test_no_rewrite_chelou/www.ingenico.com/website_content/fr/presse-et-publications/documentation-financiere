@@ -1,0 +1,5314 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/>
+
+<meta name="twitter:image" content="//cdn.ingenico.com/images/og-image.jpg"/>
+<script>
+//<![CDATA[
+dataLayer = [{"visitorLanguage":"French","pageLevel1":"Presse et Publications","pageLevel2":"Documentation financière"}]
+//]]>
+</script>
+<title>Ingenico Group - Presse et Publications - Documentation financière</title>
+<meta property="og:title" content="Ingenico Group - Presse et Publications - Documentation financière"/>
+<meta property="og:image" content="//cdn.ingenico.com/images/og-image.jpg"/>
+<meta property="og:url" content="https://www.ingenico.com/fr/presse-et-publications/documentation-financiere"/>
+<link hreflang="en" rel="alternate" href="https://www.ingenico.com/press-and-publications/financial-documentation"/>
+<link hreflang="fr" rel="alternate" href="https://www.ingenico.com/fr/presse-et-publications/documentation-financiere"/>
+<!-- Global Google Tag Manager -->
+    <script>
+    (function (w, d, s, l, i) {
+    w[l] = w[l] || [];
+    w[l].push({
+    'gtm.start': new Date().getTime(), event: 'gtm.js'
+    });
+    var f = d.getElementsByTagName(s)[0],
+    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+    j.async = true;
+    j.src =
+    '//www.googletagmanager.com/gtm.js?id=' + i + dl;
+    f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-TCRC24');
+    </script>
+    <!-- End Global Google Tag Manager -->
+  <link rel="stylesheet" href="//cdn.ingenico.com/css/default.min.css?v=3.14.4-" type="text/css" media="screen">
+      <link rel="stylesheet" href="//cdn.ingenico.com/css/print.min.css?v=3.14.4-" type="text/css" media="print">
+      <link rel="icon" href="//cdn.ingenico.com/images/favicon.ico" type="image/x-icon"/>
+
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="//cdn.ingenico.com/css/ie8.css?v=3.14.4-" type="text/css" media="screen" />
+<![endif]-->
+
+
+<!--[if lt IE 9]>
+    <link rel="stylesheet" href="//cdn.ingenico.com/css/ie.css?v=3.14.4-" type="text/css"/>
+
+    <script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/html5shiv.min.js?v=3.14.4-"></script>
+    <script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/nwmatcher-1.2.5-min.js?v=3.14.4-"></script>
+    <script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/selectivizr-min.js?v=3.14.4-"></script>
+    <script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/respond.min.js?v=3.14.4-"></script>
+    <script type="text/javascript" src="//cdn.ingenico.com/scripts/IECompatibility.js?v=3.14.4-"></script>
+<![endif]-->
+
+<!--[if lte IE 9]>
+    <script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/matchMedia.js?v=3.14.4-"></script>
+    <script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/matchMedia.addListener.js?v=3.14.4-"></script>
+    <script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/placeholders.min.js?v=3.14.4-"></script>
+<![endif]-->
+
+<script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/QuerySelectorScope.js?v=3.14.4-"></script></head>
+
+<body>
+
+<div id="siteSwitcher">
+<script type="text/ng-template" id="menu.html">
+<h3 class="h2 heading fw-medium nt-transform">{{ menu.title }}</h3>
+<ul>
+<li ng-repeat="link in menu.links track by $index"><a href="{{link.link.href}}"
+ng-class="linkIsSelected(link, 'expanded')"
+ng-click="selectMenu($event, link)">{{link.link.title}}</a>
+</li>
+</ul>
+</script>
+<div ng-controller="SiteSwitcherCtrl" class="row">
+<div class="column small-12 medium-{{grid}}">
+<span class="mlogo"></span>
+</div>
+<div class="column small-12 medium-{{grid}}" ng-class="{'end':$last}" ng-repeat="menu in menus track by $index"
+ng-include="'menu.html'"></div>
+</div>
+</div>
+<div id="regionsNotification" class="message-banner notice">
+<div class="row">
+<div class="column">
+<p class="action">
+<a class="close icon">X</a>
+</p>
+<div class="content">
+<p>We detected that you log in from France, do you want to visit our French website?&nbsp;
+<a href="https://www.ingenico.fr">Cliquez ici</a>
+<a href="#" class="browse">Parcourir les régions</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="loginMenu">
+<div class="js-login-menu" data-login-menu>
+<div class="topNav-container">
+<div class="row">
+<div class="column medium-3 hide-on-single">
+<p class="label">
+Choisissez une marque </p>
+</div>
+<div class="topNav column medium-8 hide-on-single"
+data-login-menu-topnav></div>
+<p class="action">
+<a class="close icon"></a>
+</p>
+</div>
+</div>
+<div class="menuZone row" data-login-menu-content></div>
+</div>
+<div class="content">
+<ul>
+<li class="level-0 epayments">
+<span class="folder">ePayments</span>
+<ul>
+<li class="level-1 epayments">
+<a href="/login/ogone" target="_blank">Plateforme Ingenico ePayments / Ogone</a>
+<ul>
+<li class="level-2 epayments">
+<span class="folder">PRODUCTION</span>
+<ul>
+<li class="level-3 epayments">
+<a href="https://secure.ogone.com/ncol/prod/backoffice?BRANDING=ogone&amp;ISP=OIT&amp;SubId=2&amp;MODE=STD&amp;SOLPRO=&amp;ACOUNTRY=&amp;Lang=2" target="_blank">Compte de production Ogone</a>
+</li>
+</ul>
+</li>
+<li class="level-1 epayments">
+<span class="folder">TEST</span>
+<ul>
+<li class="level-2 epayments">
+<a href="https://secure.ogone.com/ncol/test/backoffice?BRANDING=ogone&amp;ISP=OIT&amp;SubId=2&amp;MODE=STD&amp;SOLPRO=&amp;ACOUNTRY=&amp;Lang=2" target="_blank">Compte de test Ogone</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="level-1 epayments">
+<span class="folder">Plateforme Ingenico ePayments / GlobalCollect</span>
+<ul>
+<li class="level-2 epayments">
+<span class="folder">PRODUCTION</span>
+<ul>
+<li class="level-3 epayments">
+<a href="https://login.account.ingenico.com/auth/realms/ingenico/protocol/openid-connect/auth?response_type=code&amp;client_id=ConfigurationCenter&amp;redirect_uri=https%3A%2F%2Faccount.ingenico.com&amp;login=true&amp;scope=openid" target="_blank">Centre de configuration</a>
+</li>
+<li class="level-1 epayments">
+<a href="https://wpc.gcsip.com/wpc/login" target="_blank">Console de paiements</a>
+</li>
+<li class="level-1 epayments">
+<a href="https://elevate.globalcollect.com/#/login" target="_blank">Reporting Elevate</a>
+</li>
+</ul>
+</li>
+<li class="level-1 epayments">
+<span class="folder">PRE-PRODUCTION</span>
+<ul>
+<li class="level-2 epayments">
+<a href="https://login.preprod.account.ingenico.com/auth/realms/ingenico/protocol/openid-connect/auth?response_type=code&amp;client_id=ConfigurationCenter&amp;redirect_uri=https%3A%2F%2Fpreprod.account.ingenico.com&amp;login=true&amp;scope=openid" target="_blank">Centre de configuration pré-prod</a>
+</li>
+<li class="level-1 epayments">
+<a href="https://wpc.gcsip.nl/wpc/login" target="_blank">Console de paiements pré-prod</a>
+</li>
+</ul>
+</li>
+<li class="level-1 epayments">
+<span class="folder">SANDBOX</span>
+<ul>
+<li class="level-2 ">
+<a href="https://epayments.developer-ingenico.com/signup-for-sandbox/" target="_blank">Inscrivez-vous à notre sandbox</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<header id="header" class="row">
+<div class="row">
+<div class="columns small-12">
+<a id="logo" href="/fr">
+<img src="//cdn.ingenico.com/images/logo.png" class="img"
+alt="">
+</a>
+<a id="country-home" href=""> <span class="country-name">Corporate</span>
+</a>
+<div class="topnav rght show-for-medium-up">
+<ul class="nav ql-nav">
+<li>
+<a href="/fr/presse-et-publications/communiques-de-presse">Presse</a>
+</li>
+<li>
+<a href="/fr/le-groupe/rejoignez-nous/carrieres">Carrières</a>
+</li>
+<li class="highlight">
+<a href="https://blog.ingenico.com">Blog</a>
+</li>
+</ul>
+<div class="nav loginMenu">
+<a href="#" class="js-click" data-action="loginMenu">Connexion</a>
+</div>
+<div class="nav rchooser">
+<a href="#" class="js-click" data-action="siteSwitcher">Pays</a>
+</div>
+<div id="languages" class="nav lng-nav">
+<a href="/press-and-publications/financial-documentation" class="item ">en</a>
+<a href="/fr/presse-et-publications/documentation-financiere" class="item active">fr</a>
+</div>
+</div>
+<button id="mmenuIcon" class="js-click show-for-small-only" data-action="mobileMenu"></button>
+</div>
+<div class="columns small-12 show-for-medium-up">
+<div class="mainbar">
+<nav id="mainMenu" class="clearfix" role="navigation">
+<ul class="clearfix">
+<li></li>
+<li class=" home"
+>
+<a href="/fr">Home</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group">Le Groupe</a>
+<ul>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group">A propos d'Ingenico Group</a>
+<ul>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/notre-activite">Notre activité</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/notre-histoire">Notre histoire</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/notre-presence-mondiale">Notre présence mondiale</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/clients-et-partenaires">Nos clients et partenaires</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/innovation">Notre politique d'innovation</a>
+<ul>
+<li
+>
+<a href="/fr/screen-commerce">Screen Commerce</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/gouvernance">Notre gouvernance</a>
+<ul>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/comite-strategique">Comité Stratégique</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/le-comite-audit-et-financement">Comité Audit et Financement</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/comite-remunerations-nominations-et-gouvernance">Comité Rémunerations Nominations et Gouvernance</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/comite-executif">Comité Exécutif</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/conseil-dadministration">Conseil d'Administration</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/compliance">Notre compliance</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/relations-analystes-sectoriels">Nos relations avec les analystes sectoriels</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/responsabilite-societale">Notre responsabilité sociétale</a>
+<ul>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/responsabilite-societale/gouvernance">Gouvernance</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/responsabilite-societale/societe">Société</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/responsabilite-societale/environnement">Environnement</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/responsabilite-societale/collaborateurs">Employés</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/responsabilite-societale/contactez-nous">Contactez-nous</a>
+<ul>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/responsabilite-societale/contactez-nous/merci">Merci</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/le-groupe/rejoignez-nous">Rejoignez-nous</a>
+<ul>
+<li
+>
+<a href="/fr/le-groupe/rejoignez-nous/carrieres">Carrières</a>
+</li>
+<li
+>
+<a href="/fr/le-groupe/rejoignez-nous/temoignages-employes">Témoignages de nos employés</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/le-groupe/a-propos-dingenico-group/notre-engagement-aupres-de-nexo">Notre engagement auprès de Nexo</a>
+</li>
+</ul>
+</li>
+<li class=" active"
+>
+<a href="#">Finance</a>
+<ul>
+<li
+>
+<a href="/fr/finance/ingenico-group-en-bref">Ingenico Group en bref</a>
+<ul>
+</ul>
+</li>
+<li
+>
+<a href="/finance/combination">Acquisition d’Ingenico par Worldline</a>
+</li>
+<li
+>
+<a href="/fr/presse-et-publications/documentation-financiere/Types/type2">Chiffres d'affaires et Résultats</a>
+</li>
+<li
+>
+<a href="/fr/finance/chiffres-cles">Chiffres clés</a>
+</li>
+<li
+>
+<a href="/fr/finance/agenda-financier">Agenda financier</a>
+</li>
+<li
+>
+<a href="/fr/finance/l-action-ingenico-group">L'action</a>
+</li>
+<li
+>
+<a href="/fr/finance/actionnaires">Actionnaires</a>
+<ul>
+</ul>
+</li>
+<li
+>
+<a href="/fr/finance/couverture-des-analystes">Couverture des analystes et consensus</a>
+</li>
+<li
+>
+<a href="/fr/finance/investisseurs-obligataires">Investisseurs obligataires</a>
+</li>
+<li class=" active"
+>
+<a href="/fr/presse-et-publications/documentation-financiere">Documentation financière</a>
+</li>
+<li
+>
+<a href="/fr/finance/information-reglementee">Information réglementée</a>
+</li>
+<li
+>
+<a href="/fr/finance/contacts">Contacts</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="#">Nos solutions</a>
+<div class="marketing">
+<div class="caption">
+<p><strong>We provide all payment processes</strong>, whatever the channel, to
+streamline the purchase act and deliver the retailer’s brand promise.</p>
+<p>Our offer is driven by three brands. </p>
+</div>
+<div class="img">
+<img src="//cdn.ingenico.com/binaries/content/gallery/corporate/imagemenus/our-solutions-2016.png" alt=""/>
+</div>
+</div>
+<ul>
+<li
+>
+<a href="/fr/solutions-pos">Solution POS</a>
+<ul>
+<li
+>
+<a href="/fr/axium">AXIUM</a>
+<ul>
+<li
+>
+<a href="/fr/ecosystem-axium">Écosystème AXIUM</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/solutions-pos#terminaux">Terminaux de paiement</a>
+<ul>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/terminaux-portables">Terminaux portables</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/terminaux-fixes">Terminaux fixes</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/the-integrated-pos">L'integrated POS</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/mobilite-pour-les-pme">Mobilité pour les PME</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/mobilite-pour-les-commerces-organise">Mobilité pour le commerce organisé</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/pin-pads-pour-le-commerce-organise">PIN pads pour le commerce organisé</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/libre-service">Libre service</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/biometrie">Biométrie</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/terminaux/offre-fiscale">Offre fiscale</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/solutions-pos#logiciels-et-integration">Logiciels et intégration</a>
+<ul>
+<li
+>
+<a href="/fr/solutions-pos/logiciels-et-integration/systeme-dexploitation">Système d'exploitation</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/logiciels-et-integration/applications-de-paiement">Applications de paiement</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/solutions-pos#solutions-de-gestion-de-parc">Solutions de gestion de parc</a>
+<ul>
+<li
+>
+<a href="/fr/solutions-pos/solutions-de-gestion-de-parc/estate-manager">L'Estate Manager</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/solutions-de-gestion-de-parc/connectivity-manager">Connectivity Manager</a>
+</li>
+<li
+>
+<a href="/fr/solutions-pos/solutions-de-gestion-de-parc/solution-ncc">Solution NCC</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/solutions-pos#solutions-metier">Solutions métier</a>
+<ul>
+<li
+>
+<a href="/fr/solutions-pos/solutions-metier/merchant-service-hub">Le Merchant Service Hub</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+data-menu-line-break
+>
+<a href="/fr/payments">ePayments</a>
+<ul>
+<li
+>
+<a href="/fr/epayments/paiements-mobiles-en-ligne">Paiements mobiles en ligne</a>
+</li>
+<li
+>
+<a href="/fr/epayments/paiements-transfrontaliers">Paiements transfrontaliers</a>
+</li>
+<li
+>
+<a href="/fr/epayments/paiement-conversion">Paiement conversion</a>
+</li>
+<li
+>
+<a href="/fr/epayments/technologie-et-int%C3%A9gration">Technologie et Intégration</a>
+</li>
+<li
+>
+<a href="/fr/epayments/paiements-mobiles-en-ligne/extensions-e-commerce/analyse-de-donnees.html">Analyse de données</a>
+</li>
+<li
+>
+<a href="/fr/epayments/pr%C3%A9vention-de-la-fraude">Prévention de la fraude</a>
+</li>
+<li
+>
+<a href="/fr/epayments/connect">Ingenico Connect</a>
+<ul>
+<li
+>
+<a href="/fr/epayments/connect/contactez-nous">Contactez-nous</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/omnicanal">Enterprise Retail</a>
+<ul>
+<li
+>
+<a href="/fr/omnicanal">Solution omnicanale</a>
+<ul>
+<li
+>
+<a href="/fr/omnicanal/contactez-nous">Contactez-nous</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/op2go">Solution OP2GO pour le transport</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="#">Industries</a>
+<div class="marketing">
+<div class="caption">
+</div>
+<div class="img">
+<img src="//cdn.ingenico.com/binaries/content/gallery/corporate/imagemenus/industries.png" alt=""/>
+</div>
+</div>
+<ul>
+<li
+>
+<a href="/fr/industries/banque">Banque</a>
+</li>
+<li
+>
+<a href="/fr/industries/retail">Retail</a>
+</li>
+<li
+>
+<a href="/fr/industries/transports">Transports</a>
+</li>
+<li
+>
+<a href="/fr/industries/petrole">Pétrole</a>
+</li>
+<li
+>
+<a href="/fr/industries/digital">Digital</a>
+</li>
+<li
+>
+<a href="/fr/industries/distribution-automatique">Distribution automatique</a>
+</li>
+<li
+>
+<a href="/fr/industries/hotellerie-restauration">Hôtellerie &amp; Restauration</a>
+</li>
+<li
+>
+<a href="/fr/industries/inclusion-financiere">Inclusion financière</a>
+</li>
+<li
+>
+<a href="/fr/cas-clients">Cas clients</a>
+</li>
+</ul>
+</li>
+<li class=" active"
+>
+<a href="#">Presse et Publications</a>
+<div class="marketing">
+<div class="caption">
+<p>Retrouvez dans cet espace l’ensemble de nos publications : communiqués de
+presse, publications financières, brochures, etc.</p>
+<p> </p>
+</div>
+<div class="img">
+<img src="//cdn.ingenico.com/binaries/content/gallery/corporate/imagemenus/presses-publications.png" alt=""/>
+</div>
+</div>
+<ul>
+<li
+>
+<a href="/fr/presse-et-publications/communiques-de-presse">Communiqués de presse</a>
+</li>
+<li
+>
+<a href="/fr/presse-et-publications/actualites">Actualités</a>
+</li>
+<li
+>
+<a href="/fr/presse-et-publications/contacts-presse">Contacts Presse</a>
+</li>
+<li class=" active"
+data-menu-line-break
+>
+<a href="/fr/presse-et-publications/documentation-financiere">Documentation financière</a>
+</li>
+<li
+>
+<a href="/fr/presse-et-publications/librairie">Librairie media</a>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="#">Support</a>
+<ul>
+<li
+>
+<a href="/fr/support">Solution POS</a>
+</li>
+<li
+>
+<a href="/fr/support">ePayments</a>
+<ul>
+<li
+>
+<a href="https://payment-services.ingenico.com/fr/fr/ogone/support">Support Site (Ogone)</a>
+</li>
+<li
+>
+<a href="https://epayments.developer-ingenico.com/">Developer Portal (GlobalCollect)</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="#">Contactez-nous</a>
+<div class="marketing">
+<div class="caption">
+<p>Rencontrez-nous lors des prochains évènements auxquels nous participons ou
+contactez-nous en utilisant nos formulaires de contacts ou en vous rapprochant
+de notre bureau local le plus proche de vous.</p>
+</div>
+<div class="img">
+<img src="//cdn.ingenico.com/binaries/content/gallery/corporate/imagemenus/contact-us.png" alt=""/>
+</div>
+</div>
+<ul>
+<li
+>
+<a href="/fr/contactez-nous/bureaux">Nos bureaux</a>
+</li>
+<li
+>
+<a href="/fr/contactez-nous/evenements">Evénements</a>
+</li>
+<li
+>
+<a href="/fr/presse-et-publications/contacts-presse">Media contacts</a>
+</li>
+<li
+>
+<a href="/fr/contactez-nous/epayments">ePayments - Contactez nous</a>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+<div class="sbtn js-click" data-action="searchBox">Rechercher</div>
+</div>
+</div>
+<div id="siteSwitcherItemsWrapper" style="display: none">
+<ul id="siteSwitcherItems">
+<li
+>
+<span>Régions</span>
+<ul>
+<li
+>
+<a href="https://www.ingenico.com">Corporate</a>
+</li>
+<li
+>
+<a href="/fr/about">Amérique du Nord</a>
+<ul>
+<li
+>
+<span>Pays</span>
+<ul>
+<li
+>
+<a href="https://ingenico.ca">Canada</a>
+</li>
+<li
+>
+<a href="https://ingenico.us">Etats-Unis</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/about">Amérique Latine</a>
+<ul>
+<li
+>
+<span>Pays</span>
+<ul>
+<li
+>
+<a href="https://www.ingenico.com.br">Brésil</a>
+</li>
+<li
+>
+<a href="https://latin-america.ingenico.com">Amérique Latine (espagnol)</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="">Asie-Pacifique</a>
+<ul>
+<li
+>
+<span>Pays</span>
+<ul>
+<li
+>
+<a href="https://apac.ingenico.com">Asie Pacifique (région)</a>
+</li>
+<li
+>
+<a href="http://ingenico.co.jp">Japon</a>
+</li>
+<li
+>
+<a href="https://ingenico.vn">Viêt-Nam</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="/fr/about">Europe</a>
+<ul>
+<li
+>
+<span>Pays</span>
+<ul>
+<li
+>
+<a href="/fr/about">Allemagne</a>
+<ul>
+<li
+>
+<span>Solutions</span>
+<ul>
+<li
+>
+<a href="https://www.ingenico.de/epayments">ePayments</a>
+</li>
+<li
+>
+<a href="https://www.ingenico.de/healthcare">Healthcare e-id</a>
+</li>
+<li
+>
+<a href="https://ingenico.de/marketing-solutions">Marketing Solutions</a>
+</li>
+<li
+>
+<a href="https://ingenico.de/payment-services">Payment Services</a>
+</li>
+<li
+>
+<a href="https://ingenico.de/smart-terminals">Smart Terminals</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<a href="https://ingenico.at">Autriche</a>
+</li>
+<li
+>
+<a href="https://ingenico.be/fr">Belgique</a>
+</li>
+<li
+>
+<a href="https://ingenico.es">Espagne</a>
+</li>
+<li
+>
+<a href="https://ingenico.fr">France</a>
+</li>
+<li
+>
+<a href="http://www.ingenico.hu">Hongrie</a>
+</li>
+<li
+>
+<a href="https://ingenico.it">Italie</a>
+</li>
+<li
+>
+<a href="https://ingenico.nl">Pays-Bas</a>
+</li>
+<li
+>
+<a href="http://www.ingenico.pl">Pologne</a>
+</li>
+<li
+>
+<a href="http://www.ingenico.pt">Portugal</a>
+</li>
+<li
+>
+<a href="http://www.ingenico.cz">République Tchèque</a>
+</li>
+<li
+>
+<a href="https://ingenico.co.uk">Royaume-Uni</a>
+</li>
+<li
+>
+<a href="http://www.ingenico.ru">Russie</a>
+</li>
+<li
+>
+<a href="https://ingenico.com.tr">Turquie</a>
+</li>
+<li
+>
+<a href="http://ingenico.ua">Ukraine</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<span>Solutions globales</span>
+<ul>
+<li
+>
+<a href="https://www.ingenico.com/fr/epayments">ePayments</a>
+</li>
+<li
+>
+<a href="https://ingenico.us/mobile-solutions">Mobile Solutions</a>
+</li>
+<li
+>
+<a href="https://www.ingenico.com/our-solutions/payment-services">Payment Services</a>
+</li>
+<li
+>
+<a href="https://www.ingenico.com/fr/solutions-pos">Solutions POS</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="loginMenuItemsWrapper" style="display: none">
+<ul id="loginMenuItems">
+<li
+>
+<span>ePayments</span>
+<ul>
+<li
+>
+<a href="/login/ogone">Plateforme Ingenico ePayments / Ogone</a>
+<ul>
+<li
+>
+<span>PRODUCTION</span>
+<ul>
+<li
+>
+<a href="https://secure.ogone.com/ncol/prod/backoffice?BRANDING=ogone&ISP=OIT&SubId=2&MODE=STD&SOLPRO=&ACOUNTRY=&Lang=2">Compte de production Ogone</a>
+</li>
+</ul>
+</li>
+<li
+>
+<span>TEST</span>
+<ul>
+<li
+>
+<a href="https://secure.ogone.com/ncol/test/backoffice?BRANDING=ogone&ISP=OIT&SubId=2&MODE=STD&SOLPRO=&ACOUNTRY=&Lang=2">Compte de test Ogone</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li
+>
+<span>Plateforme Ingenico ePayments / GlobalCollect</span>
+<ul>
+<li
+>
+<span>PRODUCTION</span>
+<ul>
+<li
+>
+<a href="https://login.account.ingenico.com/auth/realms/ingenico/protocol/openid-connect/auth?response_type=code&client_id=ConfigurationCenter&redirect_uri=https%3A%2F%2Faccount.ingenico.com&login=true&scope=openid">Centre de configuration</a>
+</li>
+<li
+>
+<a href="https://wpc.gcsip.com/wpc/login">Console de paiements</a>
+</li>
+<li
+>
+<a href="https://elevate.globalcollect.com/#/login">Reporting Elevate</a>
+</li>
+</ul>
+</li>
+<li
+>
+<span>PRE-PRODUCTION</span>
+<ul>
+<li
+>
+<a href="https://login.preprod.account.ingenico.com/auth/realms/ingenico/protocol/openid-connect/auth?response_type=code&client_id=ConfigurationCenter&redirect_uri=https%3A%2F%2Fpreprod.account.ingenico.com&login=true&scope=openid">Centre de configuration pré-prod</a>
+</li>
+<li
+>
+<a href="https://wpc.gcsip.nl/wpc/login">Console de paiements pré-prod</a>
+</li>
+</ul>
+</li>
+<li
+>
+<span>SANDBOX</span>
+<ul>
+<li
+>
+<a href="https://epayments.developer-ingenico.com/signup-for-sandbox/">Inscrivez-vous à notre sandbox</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</header>
+<div id="searchBox">
+<form action="/fr/search" class="row" method="get">
+<div class="column small-10">
+<input type="text" name="query" class="search-query"
+placeholder="Rechercher" required="required"/>
+<span class="search-icon"></span>
+</div>
+<div class="column small-2">
+<button type="submit" class="submit" value="Rechercher">Rechercher</button>
+</div>
+</form>
+</div><div id="prolog">
+    <div
+		class="gc-main-image "
+		style="background-image: url(//cdn.ingenico.com/binaries/content/gallery/corporate/home-carousel/press-and-publications/media-library.jpg)">
+		</div>
+</div><div class="row header-extra">
+	<div class="spaced small-12 medium-6 large-7 column">
+        <ul class="bcrumb">
+    <li>
+                Presse et Publications&nbsp;&nbsp;
+                    </li>
+        <li>
+                <a href="/fr/presse-et-publications/documentation-financiere">Documentation financière</a>
+                      </li>
+        </ul>
+</div>
+    <div class="spaced small-12 medium-6 large-5 column">
+        <div class="share-block">
+            <div class="print-button">
+	<a href="javascript:window.print()"><span></span></a>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share-buttons  inline" data-share-buttons>
+
+  
+    <p class="label">Partager:</p>
+    <p class="switch-button"><a class="button single-button"><span class="label">Partager</span></a></p>
+  
+
+  <ul data-share-list>
+    
+    
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere" target="_blank" class="facebook" data-analytics="facebook||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere">
+          <span class="label">Facebook</span>
+        </a>
+      </li>
+    
+
+    
+    
+      <li>
+        
+        
+          
+          <a href="https://twitter.com/share?url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere" target="_blank" class="twitter" data-analytics="twitter||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere">
+            
+            
+            <span class="label">Twitter</span>
+          </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere" target="_blank" class="linkedin" data-analytics="linkedin||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+</div>
+   </div>
+</div>
+<div id="mainContainer">
+    <div class="facetted-filters">
+  <form method="get"  data-facetted="open">
+    <div class="row filters">
+      <div class="small-12 medium-3 medium-push-9 column">
+        <div class="search">
+          <input type="text" value="" name="query"
+                 placeholder="Rechercher"/>
+          <span class="search-icon"></span>
+        </div>
+      </div>
+      <div class="small-12 medium-9 medium-pull-3 column">
+        <h3>Filtre</h3>
+        <ul class="buttons">
+          <li data-facet>
+                        <span class="label filter-by" tabindex="-1" data-facet-trigger>
+                          Types</span>
+    <div class="facet-content column" data-facet-content>
+      <ul
+        class="checkboxes  small-12 medium-3 column">
+      </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type10?pageNumber=1">
+                    &nbsp;Acquisitions&nbsp;<span
+                    class="result-count">(22)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type6?pageNumber=1">
+                    &nbsp;Assemblées Générales Mixtes&nbsp;<span
+                    class="result-count">(34)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type5?pageNumber=1">
+                    &nbsp;Autres&nbsp;<span
+                    class="result-count">(38)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type9?pageNumber=1">
+                    &nbsp;Dividendes&nbsp;<span
+                    class="result-count">(6)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type3?pageNumber=1">
+                    &nbsp;Documents de référence&nbsp;<span
+                    class="result-count">(15)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type11?pageNumber=1">
+                    &nbsp;Investisseurs obligataires&nbsp;<span
+                    class="result-count">(6)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type16?pageNumber=1">
+                    &nbsp;Journées Investisseurs&nbsp;<span
+                    class="result-count">(4)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class=" end">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type4?pageNumber=1">
+                    &nbsp;Présentations Investisseurs&nbsp;<span
+                    class="result-count">(50)</span>
+                  </a>
+                </li>
+              <li
+                  class=" end">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Types/type2?pageNumber=1">
+                    &nbsp;Résultats financiers&nbsp;<span
+                    class="result-count">(71)</span>
+                  </a>
+                </li>
+              </ul>
+      </div>
+  </li>
+<li data-facet>
+                        <span class="label filter-by" tabindex="-1" data-facet-trigger>
+                          Sous-types</span>
+    <div class="facet-content column" data-facet-content>
+      <ul
+        class="checkboxes  small-12 medium-3 column">
+      </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ11sub3?pageNumber=1">
+                    &nbsp;Assemblées générales&nbsp;<span
+                    class="result-count">(1)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ2sub1?pageNumber=1">
+                    &nbsp;Chiffre d&#039;affaires T1&nbsp;<span
+                    class="result-count">(14)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ2sub2?pageNumber=1">
+                    &nbsp;Chiffre d&#039;affaires T2 et résultats S1&nbsp;<span
+                    class="result-count">(19)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ2sub3?pageNumber=1">
+                    &nbsp;Chiffre d&#039;affaires T3&nbsp;<span
+                    class="result-count">(14)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ2sub4?pageNumber=1">
+                    &nbsp;Chiffre d&#039;affaires T4 et résultats annuels&nbsp;<span
+                    class="result-count">(22)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ6sub3?pageNumber=1">
+                    &nbsp;Communiqués de presse (AGM)&nbsp;<span
+                    class="result-count">(8)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ4sub2?pageNumber=1">
+                    &nbsp;Conférences&nbsp;<span
+                    class="result-count">(44)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ5sub2?pageNumber=1">
+                    &nbsp;Contrats de liquidité&nbsp;<span
+                    class="result-count">(14)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ6sub2?pageNumber=1">
+                    &nbsp;Documents préparatoires (AGM)&nbsp;<span
+                    class="result-count">(9)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ5sub3?pageNumber=1">
+                    &nbsp;Déclarations hebdomadaires des transactions&nbsp;<span
+                    class="result-count">(7)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ11sub1?pageNumber=1">
+                    &nbsp;Eurobond&nbsp;<span
+                    class="result-count">(2)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ5sub7?pageNumber=1">
+                    &nbsp;Mise à disposition de documents&nbsp;<span
+                    class="result-count">(5)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ11sub2?pageNumber=1">
+                    &nbsp;Océane&nbsp;<span
+                    class="result-count">(3)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class=" end">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ5sub1?pageNumber=1">
+                    &nbsp;Rachats d&#039;actions&nbsp;<span
+                    class="result-count">(6)</span>
+                  </a>
+                </li>
+              <li
+                  class=" end">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ4sub1?pageNumber=1">
+                    &nbsp;Roadshows&nbsp;<span
+                    class="result-count">(6)</span>
+                  </a>
+                </li>
+              <li
+                  class=" end">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ5sub6?pageNumber=1">
+                    &nbsp;Rémunération des mandataires sociaux&nbsp;<span
+                    class="result-count">(4)</span>
+                  </a>
+                </li>
+              <li
+                  class=" end">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Sous-types/typ6sub1?pageNumber=1">
+                    &nbsp;Résultats des votes (AGM)&nbsp;<span
+                    class="result-count">(16)</span>
+                  </a>
+                </li>
+              </ul>
+      </div>
+  </li>
+<li data-facet>
+                        <span class="label filter-by" tabindex="-1" data-facet-trigger>
+                          Années</span>
+    <div class="facet-content column" data-facet-content>
+      <ul
+        class="checkboxes  small-12 medium-3 column">
+      </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Ann%C3%A9es/2015?pageNumber=1">
+                    &nbsp;2015&nbsp;<span
+                    class="result-count">(15)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Ann%C3%A9es/2016?pageNumber=1">
+                    &nbsp;2016&nbsp;<span
+                    class="result-count">(21)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Ann%C3%A9es/2017?pageNumber=1">
+                    &nbsp;2017&nbsp;<span
+                    class="result-count">(18)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Ann%C3%A9es/2018?pageNumber=1">
+                    &nbsp;2018&nbsp;<span
+                    class="result-count">(13)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Ann%C3%A9es/2019?pageNumber=1">
+                    &nbsp;2019&nbsp;<span
+                    class="result-count">(18)</span>
+                  </a>
+                </li>
+              <li
+                  class="">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Ann%C3%A9es/2020?pageNumber=1">
+                    &nbsp;2020&nbsp;<span
+                    class="result-count">(4)</span>
+                  </a>
+                </li>
+              </ul>
+      <ul class="checkboxes small-12 medium-3 column">
+          <li
+                  class=" end">
+                  <a class="filter"
+                     href="/fr/presse-et-publications/documentation-financiere/Ann%C3%A9es/archives?pageNumber=1">
+                    &nbsp;Archives&nbsp;<span
+                    class="result-count">(158)</span>
+                  </a>
+                </li>
+              </ul>
+      </div>
+  </li>
+<li data-facet>
+            <input type="hidden" id="date-format" value="YYYY-MM-DD"/>
+            <span class="label filter-by" tabindex="-1" data-facet-trigger>Date</span>
+            <div class="facet-content facet-date column" data-facet-content>
+              <p class="date-range"><span class="date-from">du</span> <input type="text"
+                                                                                                     value=""
+                                                                                                     name="startDate"
+                                                                                                     class="date-input"/>
+                <span class="date-to">au</span> <input type="text"
+                                                                            value=""
+                                                                            name="endDate" class="date-input"/>
+                <input type="submit" value="Rechercher" class="button base reversed"/>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div data-facets-wrapper>
+      <div class="wrapper row"></div>
+    </div>
+    <div class="selected-facets">
+      <div class="facets">
+        <div class="row" data-facets-display>
+            <div class="column">
+              </div>
+          </div>
+        <div class="row" data-facets-display>
+            <div class="column">
+              <span class="label">Types :</span>
+                <ul>
+                  </ul>
+              </div>
+          </div>
+        <div class="row" data-facets-display>
+            <div class="column">
+              <span class="label">Sous-types :</span>
+                <ul>
+                  </ul>
+              </div>
+          </div>
+        <div class="row" data-facets-display>
+            <div class="column">
+              <span class="label">Années :</span>
+                <ul>
+                  </ul>
+              </div>
+          </div>
+        </div>
+    </div>
+  </form>
+</div>
+<div class="row">
+			<div class="column small-12">
+				<div class="page-intro">
+
+					<h1>
+						<span  style=" font-weight : normal; " >
+							Documentation financière</span>
+						</h1>
+
+					<div class="summary">
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="section mediacenter-list">
+  <div class="container">
+    <div class="mediacenter-blocks">
+      <div class="media-block row">
+    <div class="column">
+
+        <div class="media-block-content">
+            <div class="row">
+                <div class="column small-12 medium-5 large-4 illustration">
+                    <div class="media-container">
+                        <div class="frame">
+                            <img src="//cdn.ingenico.com/binaries/content/gallery/corporate/publications/finance/reports/2019/thumbnail-document-denregistrement-universel-2019.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column small-12 medium-7 large-8">
+                    <h3>Document d’enregistrement universel 2019</h3>
+
+                    <div class="summary"><p>Les documents suivants sont intégrés dans le Document d’enregistrement universel 2019 :</p>
+
+<p>•&nbsp;&nbsp; &nbsp;Le rapport financier annuel 2019 ;<br />
+•&nbsp;&nbsp; &nbsp;Le rapport du Conseil d'administration sur le gouvernement d'entreprise ;&nbsp;<br />
+•&nbsp;&nbsp; &nbsp;Le descriptif du programme de rachat d’actions.</p>
+
+<p><em>Le rapport 2019&nbsp;sur la responsabilité sociétale de l'entreprise est également inclus dans le document.</em></p></div>
+
+                    <div class="related-docs">
+                        <ul class="links-icon-block">
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+      
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-fr/finance/documents-de-reference/document-denregistrement-universel-2019.pdf" target="_blank"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-fr/finance/documents-de-reference/document-denregistrement-universel-2019.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+                 
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file"></span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;8,71
+                  &nbsp;Mo</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            </ul>
+                    </div>
+
+                    <div class="row metadata">
+                        <div class="column small-9 medium-8 data-container">
+                            <div class="data-overview">
+                                <div class="category">
+                                    <ul>
+                                        <li><a href="/fr/presse-et-publications/documentation-financiere/Types/type3">Documents de référence</a></li>
+                                        <li>24 avr. 2020</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-share-container column small-3 medium-4">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share-buttons up toggle" data-share-buttons>
+
+  
+    <p class="label">Partager:</p>
+    <p class="switch-button"><a class="button single-button"><span class="label">Partager</span></a></p>
+  
+
+  <ul data-share-list>
+    
+    
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/documents-de-reference/document-denregistrement-universel-2019.html" target="_blank" class="facebook" data-analytics="facebook||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/documents-de-reference/document-denregistrement-universel-2019.html">
+          <span class="label">Facebook</span>
+        </a>
+      </li>
+    
+
+    
+    
+      <li>
+        
+        
+          
+          <a href="https://twitter.com/share?url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/documents-de-reference/document-denregistrement-universel-2019.html" target="_blank" class="twitter" data-analytics="twitter||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/documents-de-reference/document-denregistrement-universel-2019.html">
+            
+            
+            <span class="label">Twitter</span>
+          </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/documents-de-reference/document-denregistrement-universel-2019.html" target="_blank" class="linkedin" data-analytics="linkedin||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/documents-de-reference/document-denregistrement-universel-2019.html">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="media-block row">
+    <div class="column">
+
+        <div class="media-block-content">
+            <div class="row">
+                <div class="column small-12 medium-5 large-4 illustration">
+                    <div class="media-container">
+                        <div class="frame">
+                            <img src="//cdn.ingenico.com/binaries/content/gallery/corporate/in-articles/pictos/q1.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column small-12 medium-7 large-8">
+                    <h3>1er trimestre 2020</h3>
+
+                    <iframe src="https://sdk.companywebcast.com/sdk/player/?id=ingenico_20200422_1&display=126&customBtnColor=575665,575665" width="800" height="450" webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen allowfullscreen style="border:0"></iframe><div class="summary"></div>
+
+                    <div class="related-docs">
+                        <ul class="links-icon-block">
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/04/q120_cp_ing_group_22_04_20.pdf" target="_self"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/04/q120_cp_ing_group_22_04_20.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+                 
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">COMMUNIQUE DE PRESSE</span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;2,62
+                  &nbsp;Mo</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/04/22042020_q1_20_revenue_investors.pdf" target="_self"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/04/22042020_q1_20_revenue_investors.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+                 
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">PRESENTATION</span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;2,37
+                  &nbsp;Mo</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            </ul>
+                    </div>
+
+                    <div class="row metadata">
+                        <div class="column small-9 medium-8 data-container">
+                            <div class="data-overview">
+                                <div class="category">
+                                    <ul>
+                                        <li><a href="/fr/presse-et-publications/documentation-financiere/Types/type2">Résultats financiers</a></li>
+                                        <li><a href="">Chiffre d'affaires T1</a></li>
+                                        <li>22 avr. 2020</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-share-container column small-3 medium-4">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share-buttons up toggle" data-share-buttons>
+
+  
+    <p class="label">Partager:</p>
+    <p class="switch-button"><a class="button single-button"><span class="label">Partager</span></a></p>
+  
+
+  <ul data-share-list>
+    
+    
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2020/2020-q1-revenue.html" target="_blank" class="facebook" data-analytics="facebook||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2020/2020-q1-revenue.html">
+          <span class="label">Facebook</span>
+        </a>
+      </li>
+    
+
+    
+    
+      <li>
+        
+        
+          
+          <a href="https://twitter.com/share?url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2020/2020-q1-revenue.html" target="_blank" class="twitter" data-analytics="twitter||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2020/2020-q1-revenue.html">
+            
+            
+            <span class="label">Twitter</span>
+          </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2020/2020-q1-revenue.html" target="_blank" class="linkedin" data-analytics="linkedin||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2020/2020-q1-revenue.html">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="media-block row">
+    <div class="column">
+
+        <div class="media-block-content">
+            <div class="row">
+                <div class="column small-12 medium-5 large-4 illustration">
+                    <div class="media-container">
+                        <div class="frame">
+                            <img src="//cdn.ingenico.com/binaries/content/gallery/corporate/in-articles/pictos/q4-fy.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column small-12 medium-7 large-8">
+                    <h3>Chiffre d'affaires T4 et résultat annuel 2019</h3>
+
+                    <div class="summary"><p>&nbsp;</p>
+
+<p><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ stroked="f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <v:stroke joinstyle="miter"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <v:formulas>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum @0 1 0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum 0 0 @1"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @2 1 2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum @0 0 1"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @6 1 2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum @8 21600 0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum @10 21600 0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </v:formulas>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <o:lock v:ext="edit" aspectratio="t"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_i1025" type="#_x0000_t75"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ style='width:99.75pt;height:99.75pt;visibility:visible;mso-wrap-style:square'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <v:imagedata src="file:///C:/Users/PCORAB~1/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  o:title="E4B69CD3"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</v:shape><![endif]--></p></div>
+
+                    <div class="related-docs">
+                        <ul class="links-icon-block">
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/25/cp_fy19_ing_group_25_02_2020.pdf" target="_self"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/25/cp_fy19_ing_group_25_02_2020.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+                 
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">COMMUNIQUE DE PRESSE</span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;3,79
+                  &nbsp;Mo</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/25/ingenico-rapport-financier-2019-final-post-correction.pdf" target="_self"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/25/ingenico-rapport-financier-2019-final-post-correction.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+                 
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">COMPTES CONSOLIDES</span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;1,57
+                  &nbsp;Mo</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/03/presentation-2019-preliminary-results-ingenico-20200203.pdf" target="_self"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/03/presentation-2019-preliminary-results-ingenico-20200203.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">PRESENTATION (RÉSULTATS PRÉLIMINAIRES)</span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;925
+                  &nbsp;Ko</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+      
+    
+    
+        
+            
+        
+        
+    
+
+    
+       
+    
+
+    
+    <a href="https://edge.media-server.com/mmc/p/ie4e3iqk" target="_blank"
+       
+       
+         class="links-icon &nbsp;  &nbsp; "
+       data-analytics="download||https://edge.media-server.com/mmc/p/ie4e3iqk"
+       target="_blank">
+        
+
+            
+            
+                
+            
+        
+
+        
+            
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">ECOUTER LE WEBCAST (RÉSULTATS PRÉLIMINAIRES)</span>
+                  
+                  <span class="type-file">
+                  
+                  
+                  </span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            </ul>
+                    </div>
+
+                    <div class="row metadata">
+                        <div class="column small-9 medium-8 data-container">
+                            <div class="data-overview">
+                                <div class="category">
+                                    <ul>
+                                        <li><a href="/fr/presse-et-publications/documentation-financiere/Types/type2">Résultats financiers</a></li>
+                                        <li><a href="">Chiffre d'affaires T4 et résultats annuels</a></li>
+                                        <li>24 févr. 2020</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-share-container column small-3 medium-4">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share-buttons up toggle" data-share-buttons>
+
+  
+    <p class="label">Partager:</p>
+    <p class="switch-button"><a class="button single-button"><span class="label">Partager</span></a></p>
+  
+
+  <ul data-share-list>
+    
+    
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/2019-resultats-annuels.html" target="_blank" class="facebook" data-analytics="facebook||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/2019-resultats-annuels.html">
+          <span class="label">Facebook</span>
+        </a>
+      </li>
+    
+
+    
+    
+      <li>
+        
+        
+          
+          <a href="https://twitter.com/share?url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/2019-resultats-annuels.html" target="_blank" class="twitter" data-analytics="twitter||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/2019-resultats-annuels.html">
+            
+            
+            <span class="label">Twitter</span>
+          </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/2019-resultats-annuels.html" target="_blank" class="linkedin" data-analytics="linkedin||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/2019-resultats-annuels.html">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="media-block row">
+    <div class="column">
+
+        <div class="media-block-content">
+            <div class="row">
+                <div class="column small-12 medium-5 large-4 illustration">
+                    <div class="media-container">
+                        <div class="frame">
+                            <img src="//cdn.ingenico.com/binaries/content/gallery/corporate/in-articles/pictos/q4-fy.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column small-12 medium-7 large-8">
+                    <h3>Résultats préliminaires 2019</h3>
+
+                    <div class="summary"><p>&nbsp;</p>
+
+<p><!--[if gte vml 1]><v:shapetype id="_x0000_t75" coordsize="21600,21600"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ stroked="f">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <v:stroke joinstyle="miter"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <v:formulas>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum @0 1 0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum 0 0 @1"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @2 1 2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum @0 0 1"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @6 1 2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum @8 21600 0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <v:f eqn="sum @10 21600 0"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </v:formulas>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <o:lock v:ext="edit" aspectratio="t"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</v:shapetype><v:shape id="Picture_x0020_2" o:spid="_x0000_i1025" type="#_x0000_t75"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ style='width:99.75pt;height:99.75pt;visibility:visible;mso-wrap-style:square'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <v:imagedata src="file:///C:/Users/PCORAB~1/AppData/Local/Temp/msohtmlclip1/01/clip_image001.png"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  o:title="E4B69CD3"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</v:shape><![endif]--></p></div>
+
+                    <div class="related-docs">
+                        <ul class="links-icon-block">
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+      
+    
+    
+        
+            
+        
+        
+    
+
+    
+       
+    
+
+    
+    <a href="https://edge.media-server.com/mmc/p/ie4e3iqk" target="_blank"
+       
+       
+         class="links-icon &nbsp;  &nbsp; "
+       data-analytics="download||https://edge.media-server.com/mmc/p/ie4e3iqk"
+       target="_blank">
+        
+
+            
+            
+                
+            
+        
+
+        
+            
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">ECOUTER LE WEBCAST</span>
+                  
+                  <span class="type-file">
+                  
+                  
+                  </span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/03/ingenico-resultats-preliminaires-2019-20200203.pdf" target="_self"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/03/ingenico-resultats-preliminaires-2019-20200203.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+                 
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">COMMUNIQUE DE PRESSE</span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;2,82
+                  &nbsp;Mo</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/03/presentation-2019-preliminary-results-ingenico-20200203.pdf" target="_self"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-en/press-releases/2020/02/03/presentation-2019-preliminary-results-ingenico-20200203.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">PRESENTATION</span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;925
+                  &nbsp;Ko</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            </ul>
+                    </div>
+
+                    <div class="row metadata">
+                        <div class="column small-9 medium-8 data-container">
+                            <div class="data-overview">
+                                <div class="category">
+                                    <ul>
+                                        <li><a href="/fr/presse-et-publications/documentation-financiere/Types/type2">Résultats financiers</a></li>
+                                        <li><a href="">Chiffre d'affaires T4 et résultats annuels</a></li>
+                                        <li>3 févr. 2020</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-share-container column small-3 medium-4">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share-buttons up toggle" data-share-buttons>
+
+  
+    <p class="label">Partager:</p>
+    <p class="switch-button"><a class="button single-button"><span class="label">Partager</span></a></p>
+  
+
+  <ul data-share-list>
+    
+    
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/resultats-annuels-2019.html" target="_blank" class="facebook" data-analytics="facebook||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/resultats-annuels-2019.html">
+          <span class="label">Facebook</span>
+        </a>
+      </li>
+    
+
+    
+    
+      <li>
+        
+        
+          
+          <a href="https://twitter.com/share?url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/resultats-annuels-2019.html" target="_blank" class="twitter" data-analytics="twitter||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/resultats-annuels-2019.html">
+            
+            
+            <span class="label">Twitter</span>
+          </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/resultats-annuels-2019.html" target="_blank" class="linkedin" data-analytics="linkedin||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/resultats-financiers/2019/resultats-annuels-2019.html">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="media-block row">
+    <div class="column">
+
+        <div class="media-block-content">
+            <div class="row">
+                <div class="column small-12 medium-5 large-4 illustration">
+                    <div class="media-container">
+                        <div class="frame">
+                            <img src="//cdn.ingenico.com/binaries/content/gallery/corporate/in-articles/pictos/notices-blue.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column small-12 medium-7 large-8">
+                    <h3>Contrat de liquidité / 2020</h3>
+
+                    <div class="summary"></div>
+
+                    <div class="related-docs">
+                        <ul class="links-icon-block">
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-fr/finance/operations-sur-titre/contrat-de-liquidite/2020/ingenico-group-bilan-semestriel-decembre-2019.pdf" target="_self"
+       
+       
+         class="links-icon &nbsp; PDF &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-fr/finance/operations-sur-titre/contrat-de-liquidite/2020/ingenico-group-bilan-semestriel-decembre-2019.pdf"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file">Bilan semestriel du contrat de liquidité</span>
+                  
+                  <span class="type-file">
+                  &nbsp;PDF
+                  &nbsp;452
+                  &nbsp;Ko</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            </ul>
+                    </div>
+
+                    <div class="row metadata">
+                        <div class="column small-9 medium-8 data-container">
+                            <div class="data-overview">
+                                <div class="category">
+                                    <ul>
+                                        <li><a href="/fr/presse-et-publications/documentation-financiere/Types/type5">Autres</a></li>
+                                        <li><a href="">Contrats de liquidité</a></li>
+                                        <li>30 déc. 2019</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-share-container column small-3 medium-4">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share-buttons up toggle" data-share-buttons>
+
+  
+    <p class="label">Partager:</p>
+    <p class="switch-button"><a class="button single-button"><span class="label">Partager</span></a></p>
+  
+
+  <ul data-share-list>
+    
+    
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/operations-sur-titre/contrats-de-liquidite/contrat-de-liquidite-2020.html" target="_blank" class="facebook" data-analytics="facebook||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/operations-sur-titre/contrats-de-liquidite/contrat-de-liquidite-2020.html">
+          <span class="label">Facebook</span>
+        </a>
+      </li>
+    
+
+    
+    
+      <li>
+        
+        
+          
+          <a href="https://twitter.com/share?url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/operations-sur-titre/contrats-de-liquidite/contrat-de-liquidite-2020.html" target="_blank" class="twitter" data-analytics="twitter||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/operations-sur-titre/contrats-de-liquidite/contrat-de-liquidite-2020.html">
+            
+            
+            <span class="label">Twitter</span>
+          </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/operations-sur-titre/contrats-de-liquidite/contrat-de-liquidite-2020.html" target="_blank" class="linkedin" data-analytics="linkedin||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/operations-sur-titre/contrats-de-liquidite/contrat-de-liquidite-2020.html">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="media-block row">
+    <div class="column">
+
+        <div class="media-block-content">
+            <div class="row">
+                <div class="column small-12 medium-5 large-4 illustration">
+                    <div class="media-container">
+                        <div class="frame">
+                            <img src="//cdn.ingenico.com/binaries/content/gallery/corporate/in-articles/pictos/c-spreadsheet.gif" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column small-12 medium-7 large-8">
+                    <h3>Kit Investisseurs</h3>
+
+                    <div class="summary"><p>Toutes les données financières en un clic (fichier excel).<br />
+<em>Mis à jour le 22 octobre 2019.</em></p></div>
+
+                    <div class="related-docs">
+                        <ul class="links-icon-block">
+                            <li class="download">
+                                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+        
+        
+            
+        
+    
+
+    
+       
+    
+
+    
+    <a href="//cdn.ingenico.com/binaries/content/assets/corporate-en/finance/spreadsheet/20191022-ingenicogroup-spreadsheet.xlsx" target="_self"
+       
+       
+         class="links-icon &nbsp; XLSX &nbsp; "
+       data-analytics="download||//cdn.ingenico.com/binaries/content/assets/corporate-en/finance/spreadsheet/20191022-ingenicogroup-spreadsheet.xlsx"
+       >
+        
+
+            
+                
+                
+            
+            
+        
+
+        
+            
+                
+            
+            
+        
+
+        
+        
+          
+          
+            
+              
+              
+                <span class="label">
+                  <span class="text-file"></span>
+                  
+                  <span class="type-file">
+                  &nbsp;XLSX
+                  &nbsp;149
+                  &nbsp;Ko</span>
+                  
+                  
+                </span>
+              
+            
+          
+
+          
+        
+    </a>
+
+</li>
+                            </ul>
+                    </div>
+
+                    <div class="row metadata">
+                        <div class="column small-9 medium-8 data-container">
+                            <div class="data-overview">
+                                <div class="category">
+                                    <ul>
+                                        <li><a href="/fr/presse-et-publications/documentation-financiere/Types/type5">Autres</a></li>
+                                        <li>22 oct. 2019</li>
+                                        </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-share-container column small-3 medium-4">
+                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="share-buttons up toggle" data-share-buttons>
+
+  
+    <p class="label">Partager:</p>
+    <p class="switch-button"><a class="button single-button"><span class="label">Partager</span></a></p>
+  
+
+  <ul data-share-list>
+    
+    
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/kit-investisseurs.html" target="_blank" class="facebook" data-analytics="facebook||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/kit-investisseurs.html">
+          <span class="label">Facebook</span>
+        </a>
+      </li>
+    
+
+    
+    
+      <li>
+        
+        
+          
+          <a href="https://twitter.com/share?url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/kit-investisseurs.html" target="_blank" class="twitter" data-analytics="twitter||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/kit-investisseurs.html">
+            
+            
+            <span class="label">Twitter</span>
+          </a>
+      </li>
+    
+    
+    
+    
+    
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/kit-investisseurs.html" target="_blank" class="linkedin" data-analytics="linkedin||https://www.ingenico.com/fr/presse-et-publications/documentation-financiere/kit-investisseurs.html">
+          <span class="label">LinkedIn</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    <div class="row pagination">
+    <div class="column small-12">
+        <div id="page-nav">
+    <div class="row">
+      <div class="column small-3">
+            <ul class="direction-nav prev-nav">
+              <li class="prev disabled">Précédent</li>
+            </ul>
+          </div>
+        <div class="column small-6">
+        <ul class="page-number">
+
+          <li class="active">1</li>
+              <li>
+                  <a href="?query=&amp;startDate=&amp;endDate=&amp;filter=&amp;pageNumber=2">2</a>
+                </li>
+              <li>
+                  <a href="?query=&amp;startDate=&amp;endDate=&amp;filter=&amp;pageNumber=3">3</a>
+                </li>
+              <li>
+                  <a href="?query=&amp;startDate=&amp;endDate=&amp;filter=&amp;pageNumber=4">4</a>
+                </li>
+              <li>
+                  <a href="?query=&amp;startDate=&amp;endDate=&amp;filter=&amp;pageNumber=5">5</a>
+                </li>
+              <li class="ellipse">...</li>
+            <li>
+              <a href="?query=&amp;startDate=&amp;endDate=&amp;filter=&amp;pageNumber=42">42</a>
+            </li>
+          </ul>
+      </div>
+
+      <div class="column small-3">
+            <ul class="direction-nav next-nav">
+              <li class="next">
+                <a href="?query=&amp;startDate=&amp;endDate=&amp;filter=&amp;pageNumber=2">Suivant</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <div>
+                <div>
+                    <div id="newsletter-subscription-component" class="newsletter-subscription section">
+    <div class="row">
+        <div class="small-12 medium-4 columns">
+            <h2>Restez informé</h2>
+            <p class="description toShow">Abonnez-vous à notre alerte email pour être informé de nos prochains communiqués de presse.</p>
+        </div>
+
+        <div class="small-12 medium-8 columns">
+            <form method="POST" action="/fr/presse-et-publications/documentation-financiere?_hn:type=action&amp;_hn:ref=r7_r2_r3_r1#newsletter-subscription-component" class="eform"> <!-- data-expandable -->
+                <div class="input-group">
+                    <input type="text" id="email" name="email" value="" placeholder="Email" />
+
+                    </div>
+
+                <div  class="toShow"> <!-- data-expandable-target -->
+                    <div class="input-group">
+                        <input type="text" id="firstname" name="firstname" value="" placeholder="Prénom" />
+                    </div>
+
+                    <div class="input-group">
+                        <input type="text" id="lastname" name="lastname" value="" placeholder="Nom" />
+                    </div>
+
+                    <div class="input-group">
+                        <ul class="checkboxes choice">
+                            <li>
+                                <label><input type="radio" name="financialonly" id="financialonly" value="all" checked/>Tous</label>
+                                &nbsp;
+                                <label><input type="radio" name="financialonly" id="financialonly" value="financial+only"/>Uniquement finance</label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="country">Pays<span class="required"></span></label><br />
+                        <select name="country" id="country">
+                            <option value="PleaseSelect">Sélectionnez</option>
+                            <option value="Aaland-Islands" >Îles Åland</option>
+                            <option value="Afghanistan" >Afghanistan</option>
+                            <option value="Albania" >Albanie</option>
+                            <option value="Algeria" >Algerie</option>
+                            <option value="American-Samoa" >Samoa Américaines</option>
+                            <option value="Andorra" >Andorre</option>
+                            <option value="Angola" >Angola</option>
+                            <option value="Anguilla" >Anguilla</option>
+                            <option value="Antarctica" >Antarctique</option>
+                            <option value="Antigua-and-Barbuda" >Antigua et Barbuda</option>
+                            <option value="Argentina" >Argentine</option>
+                            <option value="Armenia" >Arménie</option>
+                            <option value="Aruba" >Aruba</option>
+                            <option value="Australia" >Australie</option>
+                            <option value="Austria" >Autriche</option>
+                            <option value="Azerbaijan" >Azerbaidjan</option>
+                            <option value="Bahamas" >Bahamas</option>
+                            <option value="Bahrain" >Bahrein</option>
+                            <option value="Bangladesh" >Bangladesh</option>
+                            <option value="Barbados" >Barbade</option>
+                            <option value="Belarus" >Belarus</option>
+                            <option value="Belgium" >Belgique</option>
+                            <option value="Belize" >Belize</option>
+                            <option value="Benin" >Bénin</option>
+                            <option value="Bermuda" >Bermudes</option>
+                            <option value="Bhutan" >Bhoutan</option>
+                            <option value="Bolivia" >Bolivie</option>
+                            <option value="Bonaire-Sint-Eustatius-and-Saba" >Saint-Eustache et Saba</option>
+                            <option value="Bosnia-and-Herzegovina" >Bosnie Herzégovine</option>
+                            <option value="Botswana" >Botswana</option>
+                            <option value="Bouvet-Island" >Île Bouvet</option>
+                            <option value="Brazil" >Brésil</option>
+                            <option value="Brunei-Darussalam" >Brunei Darussalam</option>
+                            <option value="Bulgaria" >Bulgarie</option>
+                            <option value="Burkina-Faso" >Burkina Faso</option>
+                            <option value="Burundi" >Burundi</option>
+                            <option value="Cabo-Verde" >Cap Vert</option>
+                            <option value="Cameroon" >Cameroun</option>
+                            <option value="Canada" >Canada</option>
+                            <option value="Central-African-Republic" >République Centrafricaine</option>
+                            <option value="Chad" >Tchad</option>
+                            <option value="Chile" >Chili</option>
+                            <option value="China" >République Tchèque</option>
+                            <option value="Christmas-Island" >Île Christmas</option>
+                            <option value="Cocos-Islands" >Îles-Cocos</option>
+                            <option value="Colombia" >Colombie</option>
+                            <option value="Congo" >Congo</option>
+                            <option value="Cook-Islands" >Îles Cook</option>
+                            <option value="Costa-Rica" >Costa Rica</option>
+                            <option value="Croatia" >Croatie</option>
+                            <option value="Cuba" >Cuba</option>
+                            <option value="Curaçao" >Curacao</option>
+                            <option value="Cyprus" >Chypre</option>
+                            <option value="Czech-Republic" >République Tchèque</option>
+                            <option value="Côte-d'Ivoire" >Côte d'Ivoire</option>
+                            <option value="Democratic-Republic-of-the-Congo" >République Démocratique du Congo</option>
+                            <option value="Denmark" >Danemark</option>
+                            <option value="Djibouti" >Djibouti</option>
+                            <option value="Dominica" >Dominique</option>
+                            <option value="Dominican-Republic" >République Dominicaine</option>
+                            <option value="Ecuador" >Equateur</option>
+                            <option value="Egypt" >Egypte</option>
+                            <option value="El-Salvador" >Salvador</option>
+                            <option value="Eritrea" >Erythree</option>
+                            <option value="Estonia" >Estonie</option>
+                            <option value="Ethiopia" >Ethiopie</option>
+                            <option value="Falkland-Islands" >Îles Falkland</option>
+                            <option value="Faroe-Islands" >Îles Feroe</option>
+                            <option value="Fiji" >Fidji</option>
+                            <option value="Finland" >Finlande</option>
+                            <option value="France" >France</option>
+                            <option value="French-Polynesia" >Polynésie Française</option>
+                            <option value="French-Southern-Territories" >Terres Australes Francaises</option>
+                            <option value="Germany" >Allemagne</option>
+                            <option value="Ghana" >Ghana</option>
+                            <option value="Greece" >Grèce</option>
+                            <option value="Holy-See-saint-siege" >Etat de la cité du Vatican</option>
+                            <option value="Hungary" >Hongrie</option>
+                            <option value="India" >Inde</option>
+                            <option value="Indonesia" >Indonésie</option>
+                            <option value="Island" >Islande</option>
+                            <option value="Italia" >Italie</option>
+                            <option value="Japan" >Japon</option>
+                            <option value="Kenya" >Kenya</option>
+                            <option value="Macao" >Macao</option>
+                            <option value="Macedonia" >Macédoine</option>
+                            <option value="Malawi" >Malawi</option>
+                            <option value="Malaysia" >Malaisie</option>
+                            <option value="Maldives" >Maldives</option>
+                            <option value="Mali" >Mali</option>
+                            <option value="Malta" >Malte</option>
+                            <option value="Marshall-Islands" >Îles Marshall</option>
+                            <option value="Martinique" >Martinique</option>
+                            <option value="Mauritania" >Mauritanie</option>
+                            <option value="Mauritius" >Maurice</option>
+                            <option value="Mayotte" >Mayotte</option>
+                            <option value="Mexico" >Mexique</option>
+                            <option value="Micronesia" >Micronésie</option>
+                            <option value="Moldova" >Moldavie</option>
+                            <option value="Monaco" >Monaco</option>
+                            <option value="Mongolia" >Mongolie</option>
+                            <option value="Montenegro" >Montenegro</option>
+                            <option value="Montserrat" >Montserrat</option>
+                            <option value="Mozambique" >Mozambique</option>
+                            <option value="Myanmar" >Birmanie</option>
+                            <option value="Namibia" >Namibie</option>
+                            <option value="Nauru" >Nauru</option>
+                            <option value="Nepal" >Nepal</option>
+                            <option value="Netherlands" >Pays-Bas</option>
+                            <option value="New-Caledonia" >Nouvelle Calédonie</option>
+                            <option value="New-Zealand" >Nouvelle Zélande</option>
+                            <option value="Nicaragua" >Nicaragua</option>
+                            <option value="Niger" >Niger</option>
+                            <option value="Nigeria" >Nigeria</option>
+                            <option value="Niue" >Niue</option>
+                            <option value="Norfolk-Island" >Ile Norfolk</option>
+                            <option value="Northern-Mariana-Islands" >Îles Mariannes du nord</option>
+                            <option value="Norway" >Norvège</option>
+                            <option value="Oman" >Oman</option>
+                            <option value="Pakistan" >Pakistan</option>
+                            <option value="Palau" >Palaos</option>
+                            <option value="Palestine" >Territoire-occupé-Palestinien</option>
+                            <option value="Panama" >Panama</option>
+                            <option value="Papua-New-Guinea" >Papouasie Nouvelle Guinée</option>
+                            <option value="Paraguay" >Paraguay</option>
+                            <option value="Peru" >Pérou</option>
+                            <option value="Philippines" >Philippines</option>
+                            <option value="Pitcairn" >Pitcairn</option>
+                            <option value="Poland" >Pologne</option>
+                            <option value="Portugal" >Portugal</option>
+                            <option value="Puerto-Rico" >Porto Rico</option>
+                            <option value="Qatar" >Qatar</option>
+                            <option value="Reunion" >Réunion</option>
+                            <option value="Romania" >Roumanie</option>
+                            <option value="Russia" >Russie</option>
+                            <option value="Rwanda" >Rwanda</option>
+                            <option value="Saint-Barthélemy" >Saint Barthélemy</option>
+                            <option value="Saint-Helena-Ascension-and-Tristan-da-Cunha" >Saint Hélène Ascension et Tristan da Cunha</option>
+                            <option value="Saint-Pierre-and-Miquelon" >Saint Pierre et Miquelon</option>
+                            <option value="Saint-Vincent-and-the-Grenadines" >Saint Vincent et les Grenadines</option>
+                            <option value="Samoa" >Samoa</option>
+                            <option value="San-Marino" >Saint Marin</option>
+                            <option value="Sao-Tome-and-Principe" >Sao Tome et Principe</option>
+                            <option value="Saudi-Arabia" >Arabie Saoudite</option>
+                            <option value="Senegal" >Senegal</option>
+                            <option value="Serbia" >Serbie</option>
+                            <option value="Seychelles" >Seychelles</option>
+                            <option value="Sierra-Leone" >Sierra Leone</option>
+                            <option value="Singapore" >Singapour</option>
+                            <option value="Sint-Maarten-Dutch-part" >Saint Martin (partie néerlandaise)</option>
+                            <option value="Slovakia" >Slovaquie</option>
+                            <option value="Slovenia" >Slovenie</option>
+                            <option value="Solomon-Islands" >Iles Salomon</option>
+                            <option value="Somalia" >Somalie</option>
+                            <option value="South-Africa" >Afrique du Sud</option>
+                            <option value="South-Sudan" >Soudan-du-Sud</option>
+                            <option value="Spain" >Espagne</option>
+                            <option value="Sudan" >Sudan</option>
+                            <option value="Suriname" >Suriname</option>
+                            <option value="Svalbard-and-Jan-Mayen-islands" >les Svalbard et Jan Mayen</option>
+                            <option value="Swaziland" >Swaziland</option>
+                            <option value="Sweden" >Suède</option>
+                            <option value="Switzerland" >Suisse</option>
+                            <option value="Syrian-Arab-Republic" >Syrie</option>
+                            <option value="Taiwan-Province-of-China" >Taiwan province de Chine</option>
+                            <option value="Tajikistan" >Tadjikistan</option>
+                            <option value="Tanzania" >Tanzanie</option>
+                            <option value="Thailand" >Thailande</option>
+                            <option value="Timor-Leste" >Timor Leste</option>
+                            <option value="Togo" >Togo</option>
+                            <option value="Tokelau" >Tokelau</option>
+                            <option value="Tonga" >Tonga</option>
+                            <option value="Trinidad-and-Tobago" >Trinite et Tobago</option>
+                            <option value="Tunisia" >Tunisie</option>
+                            <option value="Turkey" >Turquie</option>
+                            <option value="Turkmenistan" >Turkmenistan</option>
+                            <option value="Turks-and-Caicos-Islands" >Iles Turks et Caiques</option>
+                            <option value="Tuvalu" >Tuvalu</option>
+                            <option value="Uganda" >Ouganda</option>
+                            <option value="Ukraine" >Ukraine</option>
+                            <option value="United-Arab-Emirates" >Emirats Arabes Unis</option>
+                            <option value="United-Kingdom" >Royaume Uni</option>
+                            <option value="United-States" >Etats-Unis</option>
+                            <option value="United-States-Minor-Outlying-Islands" >Iles mineures éloignées des Etats-Unis</option>
+                            <option value="Uruguay" >Uruguay</option>
+                            <option value="Uzbekistan" >Ouzbekistan</option>
+                            <option value="Vanuatu" >Vanuatu</option>
+                            <option value="Venezuela" >Venezuela</option>
+                            <option value="Viet-Nam" >Viêt Nam</option>
+                            <option value="Virgin-Islands-British" >Iles vierges Britanniques</option>
+                            <option value="Virgin-Islands-US" >Iles vierges des Etats-Unis</option>
+                            <option value="Wallis-and-Futuna" >Wallis et Futuna</option>
+                            <option value="Western-Sahara" >Sahara occidental</option>
+                            <option value="Yemen" >Yemen</option>
+                            <option value="Zambia" >Zambie</option>
+                            <option value="Zimbabwe" >Zimbabwe</option>
+                            </select>
+                    </div>
+
+                    <div class="input-group">
+                        <ul class="actions">
+                            <li>
+                                <input type="submit" value="Abonnez-vous" class="button base"/>&nbsp;&nbsp;&nbsp;<a href="#" class="cancel">Annuler</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+                </div>
+    </div>
+</div>
+<a class="back-to-top"></a><footer id="footer">
+    <div class="row">
+    <div class="footer-content">
+        <div class="column small-10 small-centered medium-6 medium-uncentered large-4">
+    <div class="mainLink">
+        <a href="/fr" class="mainLink">
+            <img src="//cdn.ingenico.com/binaries/content/gallery/corporate/logos/footer-logo-map-ingenico.png" alt="Ingenico"/>
+        </a>
+    </div>
+</div>
+<div class="column small-9 small-centered medium-6 large-4 medium-uncentered">
+    <div class="fmenu">
+        <p>Le Groupe</p>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/le-groupe/a-propos-dingenico-group">À propos d&#039;Ingenico Group</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/le-groupe/rejoignez-nous/carrieres">Carrières</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/presse-et-publications/contacts-presse">Contacts presse</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/contactez-nous/bureaux">Nos bureaux</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/contactez-nous/contact">Contactez-nous</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                </div>
+</div>
+<div class="column small-9 small-centered-last medium-6 medium-uncentered large-4">
+    <div class="fmenu sites">
+        <p>Solutions du Groupe</p>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/solutions-pos">Solutions POS</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/nos-solutions/payment-services">Payment Services</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+            
+                
+                
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="https://www.ingenico.com/epayments/fr">ePayments</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                <ul id="footer-menu1" class="nav nav-pills nav-stacked">
+                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+            
+                
+                
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="https://ingenico.us/mobile-solutions">Mobile Solutions</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+                </div>
+</div>
+</div>
+</div><div class="row">
+    <div class="sub-footer">
+
+        <!-- social shares -->
+        <div class="column small-12 large-4">
+            <div class="social-media">
+                <ul>
+    <li class="follow">Suivez-nous :</li>
+    <li><a class="linkedin" href="https://www.linkedin.com/company/ingenico"></a></li>
+    <li><a class="twitter" href="https://twitter.com/ingenico"></a></li>
+    <li><a class="youtube" href="https://www.youtube.com/user/VideoIngenico"></a></li>
+    </ul>
+</div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="column small-12 large-8">
+            <div class="copyright">
+                <ul>
+                    <li>
+                        Copyright &copy; 2019 Ingenico Group. Tous droits réservés.</li>
+                </ul>
+             </div>
+        </div>
+
+      <div class="columns small-12 menu">
+        <ul>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/mentions-legales">Mentions Légales</a>
+        
+        </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/politique-de-confidentialite">Politique de confidentialité</a>
+        
+        </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/declaration-esclavage-moderne">Déclaration sur l&#039;Esclavage moderne</a>
+        
+        </li>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        
+            
+                
+            
+            
+        
+    
+    
+
+
+
+    
+
+
+    
+
+    
+        
+        
+            
+                
+                
+            
+            
+        
+
+        
+        
+            
+            
+                <li>
+            
+        
+
+        
+        <a href="/fr/cookies">Cookies</a>
+        
+        </li>
+    
+
+
+
+
+</ul>
+      </div>
+
+      <div class="column small-12 large-12">
+        <div class="copyright">
+          <ul>
+            <li>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+</footer><div class="cookieslaw">
+                <div class="row">
+                    <div>
+                        <h2>Votre choix concernant les cookies sur ce site</h2>
+                        <p> Nous utilisons des cookies pour améliorer votre navigation sur ce site. Certains enregistrent vos préférences d'utilisation (langue, localisation, personnalisation), d'autres collectent des statistiques. On vous donne le choix d'accepter tous ces cookies en cliquant sur le bouton "Accepter" ou bien de les paramétrer en cliquant sur "Définir mes préférences".</p>
+                        <a href="#" class="button accept" data-accept-cookies="3">Accepter</a>
+                        <a href="/fr/cookies" class="button accept">Définir mes préférences</a>
+                    </div>
+                </div>
+            </div>
+        <script>
+  var env = 'null';
+  var siteRoot = env === 'null' || env === 'dev' ? '/site' : '/';
+</script>
+
+<script src="//cdn.ingenico.com/scripts/libraries.min.js?v=3.14.4-"></script>
+<script src="//cdn.ingenico.com/scripts/ingenreb.min.js?v=3.14.4-"></script>
+<script src="//cdn.ingenico.com/scripts/iframeResizer.min.js"></script>
+<script src="//cdn.ingenico.com/scripts/initVideos.min.js"></script>
+
+
+
+<!--[if lt IE 9]>
+            <script type="text/javascript" src="//cdn.ingenico.com/scripts/polyfills/rem.min.js?v=3.14.4-"></script>
+            <script type="text/javascript" src="//cdn.ingenico.com/scripts/scriptIE8.js?v=3.14.4-"></script>
+        <![endif]-->
+    </body>
+<!--[if lt IE 9]>
+
+</html>

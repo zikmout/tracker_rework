@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="karla-site-font merriweather-site-font ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <script>
+      function getCookie(name) {
+        var matches = document.cookie.match(new RegExp(
+                "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+      }
+
+      var cookieGA = getCookie('_ga');
+
+      dataLayer = [{
+                  'env_work': "prod",
+                  'env_language': "EN",
+                  'env_country': "EN",
+                  'page_cat1': "Regulated informations",
+                  'page_template': "Regulated informations",
+                'cookieGA': cookieGA
+      }];
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer', 'GTM-NZ2K4ZR');
+    </script>
+
+    <!-- Youtube API working only as inline and footer content -->
+    <!-- TODO: after time we can come back to this issues and refactoring code-->
+    <script>
+      function onYouTubeIframeAPIReady() {
+        for (var e = document.getElementsByTagName("iframe"), x = e.length; x--;) {
+          if (/youtube.com\/embed/.test(e[x].src)) {
+            new YT.Player(e[x], {
+              events: {
+                onStateChange: onPlayerStateChange,
+              }
+            });
+          }
+        }
+      }
+
+      function onPlayerStateChange(e) {
+        var video_data = e.target["getVideoData"](),
+                label = video_data.title;
+        if (e["data"] == YT.PlayerState.PLAYING) {
+          dataLayer.push({
+            "event": "eventGA",
+            "category": "video",
+            "action": "play",
+            "label": label,
+            "value": "0"
+          });
+        }
+        if (e["data"] == YT.PlayerState.PAUSED) {
+          dataLayer.push({
+            "event": "eventGA",
+            "category": "video",
+            "action": "pause",
+            "label": label,
+            "value": "0"
+          });
+        }
+      }
+    </script>
+
+    <!-- Youtube API -->
+    <script>
+      // load the Youtube JS api and get going
+      var j = document.createElement("script"),
+              f = document.getElementsByTagName("script")[0];
+      j.src = "//www.youtube.com/iframe_api";
+      j.async = true;
+      f.parentNode.insertBefore(j, f);
+    </script>
+
+
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+<meta name="description" content="Global leader in market research, Ipsos delivers reliable information and true understanding of Society, Markets and People. Our solutions use data from surveys, polls, social media or qualitative, and provide actionable insights into the experience and opinions of citizens, consumers, patients, customers, employees." />
+<meta name="title" content="Regulated informations | Ipsos" />
+<meta name="keywords" content="Data,insights,solutions,market,survey,study,research,experience" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/ipsos/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <title>Regulated informations | Ipsos</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_EHmutx0dmx4_F_tx8eoeMXwtaACOrUamKC-qsZ7CNLE.css?q8d9fo" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Karla:400,400italic,700italic,700" />
+<link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Merriweather:400,700,700italic,400italic,300,300italic" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_WMI65Ygp-QoQ3llsT-HYrckXkY2adEnRDd-jwKPa6rc.css?q8d9fo" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_2CkVXINsybXgoqqByoapnrYJew9pHCvJfs7UNQRKvKs.js"></script>
+<![endif]-->
+
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ2K4ZR"
+                      height="0" width="0" style="display:none;visibility:hidden">
+
+      </iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <a href="#main-content" class="visually-hidden focusable">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="page">
+
+  <header class="open-menu main-nav">
+    <div class="wrapp-container">
+    <a class="mobile-menu" href="#">
+        <strong>
+            <span></span>
+        </strong>
+    </a>
+    <strong class="logo">
+                <a href="https://www.ipsos.com/en" title="Ipsos">
+            <svg class="svg-ico"><use xlink:href="#logo"/></svg>
+        </a>
+                    </strong>
+    <div class="search-box">
+        <div class="ico-search">
+            <a href="#"><svg class="svg-ico"><use xlink:href="#ico-search-header"/></svg></a>
+        </div>
+    </div>
+    <div class="navigation-box">
+        <a href="#" class="close-mobile-menu">
+            <svg class="svg-ico"><use xlink:href="#close-mobile"/></svg>
+        </a>
+        <nav class="add-nav">
+            
+              <ul>
+              <li>
+        <a href="/en/about-us" data-drupal-link-system-path="node/821">About us</a>
+              </li>
+          <li class="active">
+        <a href="/en/investors" data-drupal-link-system-path="node/1046">Investors</a>
+                  <div class="drop">
+                          <ul>
+              <li>
+        <a href="/en/investisseurs" data-drupal-link-system-path="node/1081">Français</a>
+              </li>
+          <li>
+        <a href="/en/investors" data-drupal-link-system-path="node/1046">English</a>
+              </li>
+        </ul>
+  
+          </div>
+              </li>
+          <li>
+        <a href="/en/careers" data-drupal-link-system-path="node/15711">Careers</a>
+              </li>
+          <li class="contact">
+        <a href="/en/contact">Contact us</a>
+              </li>
+        </ul>
+  
+
+
+        </nav>
+        <nav class="nav-list">
+            
+              <ul>
+                <li
+                                     class="open-mobile-drop"
+                        >
+                            <a href="/en/news-and-polls/overview" class="opener" data-drupal-link-system-path="news-and-polls/overview">News &amp; Polls</a>
+                                    <div class="slide">
+                                      <ul>
+                <li
+                                    
+                        >
+                            <a href="/en/news-and-polls/overview" data-drupal-link-system-path="news-and-polls/overview">All</a>
+                                    </li>
+            <li
+                                    
+                        >
+                            <a href="/en/news-and-polls/news" data-drupal-link-system-path="news-and-polls/news">News</a>
+                                    </li>
+            <li
+                                    
+                        >
+                            <a href="/en/news-and-polls/events" data-drupal-link-system-path="news-and-polls/events">Events</a>
+                                    </li>
+        </ul>
+  
+                    </div>
+                                    </li>
+            <li
+                                     class="open-mobile-drop"
+                        >
+                            <a href="/en/knowledge/overview" class="opener" data-drupal-link-system-path="knowledge/overview">Innovation &amp; Knowledge</a>
+                                    <div class="slide">
+                                      <ul>
+                <li
+                                    
+                        >
+                            <a href="/en/knowledge/overview" data-drupal-link-system-path="knowledge/overview">All</a>
+                                    </li>
+            <li
+                                    
+                        >
+                            <a href="/en/knowledge/media-brand-communication">Media &amp; Brand Communication</a>
+                                    </li>
+            <li
+                                    
+                        >
+                            <a href="/en/knowledge/consumer-shopper">Consumer &amp; Shopper</a>
+                                    </li>
+            <li
+                                    
+                        >
+                            <a href="/en/knowledge/customer-experience">Customer Experience</a>
+                                    </li>
+            <li
+                                    
+                        >
+                            <a href="/en/knowledge/society">Society</a>
+                                    </li>
+            <li
+                                    
+                        >
+                            <a href="/en/knowledge/new-services">New Services</a>
+                                    </li>
+        </ul>
+  
+                    </div>
+                                    </li>
+            <li
+                                     class="open-mobile-drop"
+                        >
+                            <a href="/en/solutions/overview" class="opener" data-drupal-link-system-path="solutions/overview">Our Solutions</a>
+                                    <div class="slide">
+                                      <ul>
+                <li
+                                    
+                        >
+                            <a href="/en/solutions/overview" data-drupal-link-system-path="solutions/overview">All</a>
+                                    </li>
+        </ul>
+  
+                    </div>
+                                    </li>
+        </ul>
+  
+
+
+        </nav>
+        
+        <ul class="aside-navigation">
+                        <li  >
+                                    <div class="wrapp">
+                                                    <a href="/en/about-us" class="opener" data-drupal-link-system-path="node/821">About us</a>
+                            <div class="slide">
+                                            <ul>
+                            <li  >
+                                    <a href="/en/about-us" data-drupal-link-system-path="node/821">Who we are</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/our-history" data-drupal-link-system-path="node/1001">Our history</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/key-figures" data-drupal-link-system-path="node/1006">Key figures</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/management" data-drupal-link-system-path="node/1016">Management</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/values-and-conduct" data-drupal-link-system-path="node/1021">Values and Conduct</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/taking-responsibility" data-drupal-link-system-path="node/1026">Taking responsibility</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/privacy-data-protection" data-drupal-link-system-path="node/406051">Privacy &amp; Data Protection</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/ipsos-world" data-drupal-link-system-path="node/1036">Ipsos in the world</a>
+                                                </li>
+            </ul>
+    
+                            </div>
+                                            </div>
+                            </li>
+                    <li  >
+                                    <div class="wrapp">
+                                                    <a href="/en/investisseurs" data-drupal-link-system-path="node/1081">Investisseurs (Fr)</a>
+                                            </div>
+                            </li>
+                    <li  class="active" >
+                                    <div class="wrapp active">
+                                                    <a href="/en/investors" class="opener" data-drupal-link-system-path="node/1046">Investors (En)</a>
+                            <div class="slide">
+                                            <ul>
+                            <li  >
+                                    <a href="/en/investors" data-drupal-link-system-path="node/1046">Latest</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/key-figures-0" data-drupal-link-system-path="node/456181">Key figures</a>
+                                                </li>
+                    <li  class="active" >
+                                    <a href="/en/regulated-informations/en" data-drupal-link-system-path="regulated-informations/en" class="is-active">Regulated information</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/share-price" data-drupal-link-system-path="node/991">Share price</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/analysts-shareholders" data-drupal-link-system-path="analysts-shareholders">Analysts &amp; Shareholders</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/investor-day" data-drupal-link-system-path="node/1071">Investor Day</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/general-meeting-shareholders" data-drupal-link-system-path="general-meeting-shareholders">General meeting of Shareholders</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/calendar" data-drupal-link-system-path="node/1066">Calendar</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/press-releases" data-drupal-link-system-path="press-releases">Press releases</a>
+                                                </li>
+            </ul>
+    
+                            </div>
+                                            </div>
+                            </li>
+                    <li  >
+                                    <div class="wrapp">
+                                                    <a href="/en/careers" data-drupal-link-system-path="node/15711">Careers</a>
+                                            </div>
+                            </li>
+                    <li  >
+                                    <div class="wrapp">
+                                                    <a href="/en/contact" data-drupal-link-system-path="contact">Contact us</a>
+                                            </div>
+                            </li>
+                    <li  class="contact" >
+                                    <div class="wrapp">
+                                                    <a href="/en/contact">Contact us</a>
+                                            </div>
+                            </li>
+            </ul>
+    
+
+
+    </div>
+    <div class="lang">
+        <div class="lang__title">Choose your market:</div>
+<span class="selected-country">
+  <span class="selected-country-name flag-global">Global</span>
+</span>
+<div class="lang-country-list-wrapper">
+  <span class="country-list-arrow country-list-arrow-up"></span>
+  <ul id="country-list-switcher" class="lang-country-list">
+          <li lang="en">
+        <a href="/en" >
+          <span class="coutry-name flag-global">Global / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sq-al" >
+          <span class="coutry-name flag-sq-al">Albania / Gjuha shqipe </span>
+        </a>
+      </li>
+          <li lang="fr-dz">
+        <a href="/fr-dz" >
+          <span class="coutry-name flag-fr-dz">Algeria / Français </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-ar" >
+          <span class="coutry-name flag-es-ar">Argentina / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-au" >
+          <span class="coutry-name flag-en-au">Australia / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/de-at" >
+          <span class="coutry-name flag-de-at">Austria / Deutsch </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-bh" >
+          <span class="coutry-name flag-en-bh">Bahrain / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-be" >
+          <span class="coutry-name flag-en-be">Belgium / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-bo" >
+          <span class="coutry-name flag-es-bo">Bolivia / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/bs-ba" >
+          <span class="coutry-name flag-bs-ba">Bosnia-Herzegovina / BS </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ba" >
+          <span class="coutry-name flag-en-ba">Bosnia-Herzegovina / EN </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/pt-br" >
+          <span class="coutry-name flag-pt-br">Brazil / Português </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/bg-bg" >
+          <span class="coutry-name flag-bg-bg">Bulgaria / Български </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ca" >
+          <span class="coutry-name flag-en-ca">Canada / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/fr-ca" >
+          <span class="coutry-name flag-fr-ca">Canada / Français </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-cl" >
+          <span class="coutry-name flag-es-cl">Chile / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/zh-cn" >
+          <span class="coutry-name flag-zh-cn">China / 简体中文 </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-cn" >
+          <span class="coutry-name flag-en-cn">China / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-co" >
+          <span class="coutry-name flag-es-co">Colombia / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-cr" >
+          <span class="coutry-name flag-es-cr">Costa Rica / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/hr-hr" >
+          <span class="coutry-name flag-hr-hr">Croatia / Hrvatski jezik </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-hr" >
+          <span class="coutry-name flag-en-hr">Croatia / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en" >
+          <span class="coutry-name flag-en-cy">Cyprus / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/cs-cz" >
+          <span class="coutry-name flag-cs-cz">Czech Republic / český </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/da-dk" >
+          <span class="coutry-name flag-da-dk">Denmark / Dansk </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-do" >
+          <span class="coutry-name flag-es-do">Dominican Republic / ES </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-ec" >
+          <span class="coutry-name flag-es-ec">Ecuador / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-eg" >
+          <span class="coutry-name flag-en-eg">Egypt / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-sv" >
+          <span class="coutry-name flag-es-sv">El Salvador / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/fr-fr" >
+          <span class="coutry-name flag-fr-fr">France / Français </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/de-de" >
+          <span class="coutry-name flag-de-de">Germany / Deutsch </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-gh" >
+          <span class="coutry-name flag-en-gh">Ghana / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-gt" >
+          <span class="coutry-name flag-es-gt">Guatemala / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-hk" >
+          <span class="coutry-name flag-en-hk">Hong Kong SAR China / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/hu-hu" >
+          <span class="coutry-name flag-hu-hu">Hungary / Magyar nyelv </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-in" >
+          <span class="coutry-name flag-en-in">India / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-id" >
+          <span class="coutry-name flag-en-id">Indonesia / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en" >
+          <span class="coutry-name flag-en-iq">Iraq / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ie" >
+          <span class="coutry-name flag-en-ie">Ireland / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en" >
+          <span class="coutry-name flag-en-il">Israel / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/it-it" >
+          <span class="coutry-name flag-it-it">Italy / Italiano </span>
+        </a>
+      </li>
+          <li lang="fr-ci">
+        <a href="/fr-ci" >
+          <span class="coutry-name flag-fr-ci">Ivory Coast / Français </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/ja-jp" >
+          <span class="coutry-name flag-ja-jp">Japan / 日本語 </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-jo" >
+          <span class="coutry-name flag-en-jo">Jordan / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/ru-kz" >
+          <span class="coutry-name flag-ru-kz">Kazakhstan / Pусский </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ke" >
+          <span class="coutry-name flag-en-ke">Kenya / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sq-xk" >
+          <span class="coutry-name flag-sq-xk">Kosovo / Gjuha shqipe </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sr-xk" >
+          <span class="coutry-name flag-sr-xk">Kosovo / Srpski </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-kw" >
+          <span class="coutry-name flag-en-kw">Kuwait / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-lb" >
+          <span class="coutry-name flag-en-lb">Lebanon / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/mk-mk" >
+          <span class="coutry-name flag-mk-mk">Macedonia / Македонски јазик </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sq-mk" >
+          <span class="coutry-name flag-sq-mk">Macedonia / Gjuha shqipe </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-my" >
+          <span class="coutry-name flag-en-my">Malaysia / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-mx" >
+          <span class="coutry-name flag-es-mx">México / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sr-me" >
+          <span class="coutry-name flag-sr-me">Montenegro / Montenegrin </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/fr-ma" >
+          <span class="coutry-name flag-fr-ma">Morocco / Français </span>
+        </a>
+      </li>
+          <li lang="pt-mz">
+        <a href="/pt-mz" >
+          <span class="coutry-name flag-en-mz">Mozambique / Portuguese </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/nl-nl" >
+          <span class="coutry-name flag-nl-nl">Netherlands / Nederlands </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-nl" >
+          <span class="coutry-name flag-en-nl">Netherlands / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-nz" >
+          <span class="coutry-name flag-en-nz">New Zealand / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ng" >
+          <span class="coutry-name flag-en-ng">Nigeria / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/nb-no" >
+          <span class="coutry-name flag-nb-no">Norway / Norsk </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-pk" >
+          <span class="coutry-name flag-en-pk">Pakistan / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-pa" >
+          <span class="coutry-name flag-es-pa">Panama / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-pe" >
+          <span class="coutry-name flag-es-pe">Peru / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ph" >
+          <span class="coutry-name flag-en-ph">Philippines / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/pl-pl" >
+          <span class="coutry-name flag-pl-pl">Poland / Polski </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/pt-pt" >
+          <span class="coutry-name flag-pt-pt">Portugal / Português </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-pr" >
+          <span class="coutry-name flag-en-pr">Puerto Rico / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-qa" >
+          <span class="coutry-name flag-en-qa">Qatar / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/ro-ro" >
+          <span class="coutry-name flag-ro-ro">Romania / Română </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ro" >
+          <span class="coutry-name flag-en-ro">Romania / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/ipsos-comcon/ru-ru" >
+          <span class="coutry-name flag-ru-ru">Russia / Pусский </span>
+        </a>
+      </li>
+          <li lang="en-ru">
+        <a href="/ipsos-comcon/en-ru" >
+          <span class="coutry-name flag-en-ru">Russia / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-sa" >
+          <span class="coutry-name flag-en-sa">Saudi Arabia / English </span>
+        </a>
+      </li>
+          <li lang="fr-sn">
+        <a href="/fr-sn" >
+          <span class="coutry-name flag-fr-sn">Senegal / Français </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sr-rs" >
+          <span class="coutry-name flag-sr-rs">Serbia / Srpski </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-sg" >
+          <span class="coutry-name flag-en-sg">Singapore / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sk-sk" >
+          <span class="coutry-name flag-sk-sk">Slovakia / Slovenský </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sl-si" >
+          <span class="coutry-name flag-sl-si">Slovenia / Slovenščina </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-si" >
+          <span class="coutry-name flag-en-si">Slovenia / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-za" >
+          <span class="coutry-name flag-en-za">South Africa / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/ko-kr" >
+          <span class="coutry-name flag-ko-kr">South Korea / 한국어 </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/es-es" >
+          <span class="coutry-name flag-es-es">Spain / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/sv-se" >
+          <span class="coutry-name flag-sv-se">Sweden / Svenska </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ch" >
+          <span class="coutry-name flag-en-ch">Switzerland / English </span>
+        </a>
+      </li>
+          <li lang="de-ch">
+        <a href="/de-ch" >
+          <span class="coutry-name flag-de-ch">Switzerland / Deutsch </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-tw" >
+          <span class="coutry-name flag-en-tw">Taiwan / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-tz" >
+          <span class="coutry-name flag-en-tz">Tanzania / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-th" >
+          <span class="coutry-name flag-en-th">Thailand / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/fr-tn" >
+          <span class="coutry-name flag-fr-tn">Tunisia / Français </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/tr-tr" >
+          <span class="coutry-name flag-tr-tr">Turkey / Türkçe </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ae" >
+          <span class="coutry-name flag-en-ae">UAE / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ug" >
+          <span class="coutry-name flag-en-ug">Uganda / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/ua-ua" >
+          <span class="coutry-name flag-ua-ua">Ukraine / Українська мова </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-ua" >
+          <span class="coutry-name flag-en-ua">Ukraine / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/ipsos-mori/en-uk" >
+          <span class="coutry-name flag-en-uk">United Kingdom / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-us" >
+          <span class="coutry-name flag-en-us">United States / English </span>
+        </a>
+      </li>
+          <li lang="es-ve">
+        <a href="/es-ve" >
+          <span class="coutry-name flag-es-ve">Venezuela / Español </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-vn" >
+          <span class="coutry-name flag-en-vn">Vietnam / English </span>
+        </a>
+      </li>
+          <li lang="en">
+        <a href="/en-zm" >
+          <span class="coutry-name flag-en-zm">Zambia / English </span>
+        </a>
+      </li>
+      </ul>
+  <span class="country-list-arrow country-list-arrow-down"></span>
+</div>
+
+    </div>
+
+</div>
+
+<div class="search-bar">
+    <div class="search-bar-wrapper">
+        <form action="/en/search" method="get">
+            <div class="field-wrapper">
+                <div class="ico-search">
+                    <svg class="svg-ico"><use xlink:href="#ico-search-header"/></svg>
+                </div>
+                <div class="form-item js-form-type-textfield">
+                    <div class="js-form-item form-item js-form-type-textfield form-item-search js-form-item-search form-no-label">
+        <input data-drupal-selector="edit-search" class="form-autocomplete form-text" data-autocomplete-path="/en/ipsos_search/autocomplete" type="text" id="edit-search" name="search" value="" size="60" maxlength="128" placeholder="Search" />
+<span class="messages error vertical-tabs__panes search"></span>
+
+        </div>
+
+                </div>
+            </div>
+            <div class="form-actions">
+                <input type="submit" value="ok">
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="menu-overlay"></div>
+
+  </header>
+
+  <div class="main-content about-us">
+    <div class="content-partial-width">
+
+                <div id="block-ipsos-breadcrumbs">
+  
+    
+        <script type="application/ld+json">{"@context":"http:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Ipsos","item":"https:\/\/www.ipsos.com\/en\/homepage"},{"@type":"ListItem","position":2,"name":"Investors (en) : Regulated informations","item":"https:\/\/www.ipsos.com\/en\/regulated-informations\/en"}]}</script>
+
+  <div class="breadcrumbs">
+    <div class="breadcrumbs-container">
+      <ul>
+                  <li>
+                          <a href="/en">Ipsos</a>
+                      </li>
+                  <li>
+                          Investors (en) : Regulated informations
+                      </li>
+              </ul>
+    </div>
+  </div>
+
+  </div>
+
+
+      
+        <div id="block-ipsos-content">
+  
+    
+      <header>
+    <h1>
+            Regulated information
+      </h1>
+</header>
+<div class="block-about-us">
+    <div class="select-rubric hide-on-tablet">
+        <a class="opener" href="#">SELECT A RUBRIC</a>
+    </div>
+    <div class="aside hide-on-tablet">
+        
+        <ul class="aside-navigation">
+                        <li  >
+                                    <div class="wrapp">
+                                                    <a href="/en/about-us" class="opener" data-drupal-link-system-path="node/821">About us</a>
+                            <div class="slide">
+                                            <ul>
+                            <li  >
+                                    <a href="/en/about-us" data-drupal-link-system-path="node/821">Who we are</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/our-history" data-drupal-link-system-path="node/1001">Our history</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/key-figures" data-drupal-link-system-path="node/1006">Key figures</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/management" data-drupal-link-system-path="node/1016">Management</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/values-and-conduct" data-drupal-link-system-path="node/1021">Values and Conduct</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/taking-responsibility" data-drupal-link-system-path="node/1026">Taking responsibility</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/privacy-data-protection" data-drupal-link-system-path="node/406051">Privacy &amp; Data Protection</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/ipsos-world" data-drupal-link-system-path="node/1036">Ipsos in the world</a>
+                                                </li>
+            </ul>
+    
+                            </div>
+                                            </div>
+                            </li>
+                    <li  >
+                                    <div class="wrapp">
+                                                    <a href="/en/investisseurs" data-drupal-link-system-path="node/1081">Investisseurs (Fr)</a>
+                                            </div>
+                            </li>
+                    <li  class="active" >
+                                    <div class="wrapp active">
+                                                    <a href="/en/investors" class="opener" data-drupal-link-system-path="node/1046">Investors (En)</a>
+                            <div class="slide">
+                                            <ul>
+                            <li  >
+                                    <a href="/en/investors" data-drupal-link-system-path="node/1046">Latest</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/key-figures-0" data-drupal-link-system-path="node/456181">Key figures</a>
+                                                </li>
+                    <li  class="active" >
+                                    <a href="/en/regulated-informations/en" data-drupal-link-system-path="regulated-informations/en" class="is-active">Regulated information</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/share-price" data-drupal-link-system-path="node/991">Share price</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/analysts-shareholders" data-drupal-link-system-path="analysts-shareholders">Analysts &amp; Shareholders</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/investor-day" data-drupal-link-system-path="node/1071">Investor Day</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/general-meeting-shareholders" data-drupal-link-system-path="general-meeting-shareholders">General meeting of Shareholders</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/calendar" data-drupal-link-system-path="node/1066">Calendar</a>
+                                                </li>
+                    <li  >
+                                    <a href="/en/press-releases" data-drupal-link-system-path="press-releases">Press releases</a>
+                                                </li>
+            </ul>
+    
+                            </div>
+                                            </div>
+                            </li>
+                    <li  >
+                                    <div class="wrapp">
+                                                    <a href="/en/careers" data-drupal-link-system-path="node/15711">Careers</a>
+                                            </div>
+                            </li>
+                    <li  >
+                                    <div class="wrapp">
+                                                    <a href="/en/contact" data-drupal-link-system-path="contact">Contact us</a>
+                                            </div>
+                            </li>
+            </ul>
+    
+
+
+    </div>
+    <div class="content">
+        <div class="teaser-text">
+            <p></p>
+        </div>
+        <div class="views-element-container"><form class="views-exposed-form views-auto-submit-full-form" data-drupal-selector="views-exposed-form-ipsos-list-regulated-informations-lp-embed-en" action="/en/regulated-informations/en" method="get" id="views-exposed-form-ipsos-list-regulated-informations-lp-embed-en" accept-charset="UTF-8">
+  
+<div class="year-filter">
+<div class="js-form-item form-item js-form-type-select form-item-year js-form-item-year">
+      <label for="edit-year" class="js-form-required form-required"></label>
+        <select data-drupal-selector="edit-year" class="year-sel custom-select form-select required" id="edit-year" name="year" required="required" aria-required="true"><option value="2020" selected="selected">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option><option value="2001">2001</option><option value="2000">2000</option><option value="1999">1999</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><div class="form-actions">
+    <input class="views-use-ajax views-auto-submit-click js-hide btn-link green button js-form-submit form-submit" data-drupal-selector="edit-submit-ipsos-list-regulated-informations-lp" type="submit" id="edit-submit-ipsos-list-regulated-informations-lp" value="Apply" />
+</div></div>
+
+</div>
+</form>
+
+    <div class="block-wysiwyg">
+            <div class="views-row"><article role="article" about="/en/regulated-information-2020">
+    <div>
+        
+            <h2><strong>2020</strong></h2>
+
+<ul></ul><h2>Financial reports</h2>
+
+<p><strong>&gt; Quarterly, First-half and Annual press releases</strong></p>
+
+<ul><li><a href="https://www.ipsos.com/sites/default/files/2020-02/pr_fy19_ven.pdf" target="_blank" class="embed-document file">2019 annual results, Press release published on February 26th</a></li>
+</ul><p> </p>
+
+<p><strong>&gt;Presentations</strong></p>
+
+<ul><li><a href="https://www.ipsos.com/sites/default/files/2020-02/fy2019_ven_27.02.20.pdf" target="_blank" class="embed-document file">2019 annual results, Presentation of Februrary 27th </a></li>
+</ul><p> </p>
+
+<p><strong>&gt;Half-year financial report</strong></p>
+
+<p> </p>
+
+<p><strong>&gt; Registration document </strong></p>
+
+<p> </p>
+
+<p><strong>&gt; Financial statements</strong></p>
+
+<p> </p>
+
+<h2>Other regulated information</h2>
+
+<p><strong>&gt; Total number of voting rights and shares at the end of each calendar month</strong></p>
+
+<p> </p>
+
+<table><tbody><tr><td rowspan="2">
+			<p><strong>2020</strong></p>
+			</td>
+			<td rowspan="2">
+			<p><strong>Capital</strong></p>
+			</td>
+			<td colspan="2">
+			<p><strong>Voting rights</strong></p>
+			</td>
+			<td rowspan="2">
+			<p class="text-align-center"><strong>Releases</strong></p>
+			</td>
+		</tr><tr><td>
+			<p><strong>Theoretical*</strong></p>
+			</td>
+			<td>
+			<p><strong>Exercisable**</strong></p>
+			</td>
+		</tr><tr><td>31 January</td>
+			<td>44,436,235</td>
+			<td>50,115,315</td>
+			<td>49,639,295</td>
+			<td>
+			<p class="text-align-center"><a href="https://www.ipsos.com/sites/default/files/2020-02/ipsos-monthly_declaration_of_voting_rights_january_2020.pdf" class="embed-document file"><img height="40" src="/themes/custom/ipsos/html/images/pdf_1.jpg" width="40" /></a></p>
+			</td>
+		</tr><tr><td>29 February</td>
+			<td>44,436,235</td>
+			<td>50,115,263</td>
+			<td>49,629,199</td>
+			<td class="text-align-center"><a href="https://www.ipsos.com/sites/default/files/2020-03/ipsos-monthly_declaration_of_voting_rights_february_2020.pdf" target="_blank" class="embed-document file"><img height="40" src="/themes/custom/ipsos/html/images/pdf_1.jpg" width="40" /></a></td>
+		</tr></tbody></table><p> </p>
+
+<p><strong>&gt; Liquidity contract</strong></p>
+
+<p> </p>
+
+<h2>General meeting of shareholders</h2>
+
+<p>Ipsos' General meeting of shareholders will take place on May 28, 2020.</p>
+
+<p> </p>
+
+<p> </p>
+
+      
+    </div>
+</article>
+</div>
+
+    </div>
+</div>
+
+    </div>
+</div>
+  </div>
+
+
+
+    
+    
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-wrapper footer">
+    <div class="footer__top">
+        <div class="footer__top-box">
+            <div class="footer__social-col">
+                <div class="footer__social-list">
+                    <ul class="links"><li><a href="https://twitter.com/ipsos"><svg class='svg-ico svg-ico--twitter'><use xlink:href='#soc-twitter'/></svg></a></li><li><a href="https://www.linkedin.com/company/ipsos"><svg class='svg-ico svg-ico--linkedin'><use xlink:href='#soc-linkedin'/></svg></a></li><li><a href="https://www.youtube.com/channel/UCkxEJvIUNWsjZvmB09yxU4A"><svg class='svg-ico svg-ico--youtube'><use xlink:href='#soc-youtube'/></svg></a></li></ul>
+                </div>
+                            </div>
+            <div class="footer__menu-col">
+                <div class="footer__nav-middle">
+                    <ul class="links"><li><a href="https://www.ipsos.com/en/solutions/list?search=Citizens">Citizens</a></li><li><a href="https://www.ipsos.com/en/solutions/list?search=Consumers%20%26%20Brands">Consumers &amp; Brands</a></li><li><a href="https://www.ipsos.com/en/solutions/list?search=Customers%20%26%20Employees">Customers &amp; Employees</a></li><li><a href="https://www.ipsos.com/en/solutions/list?search=Doctors%20%26%20Patients">Doctors &amp; Patients</a></li><li><a href="https://www.ipsos.com/en/solutions/list?search=Capabilities">Capabilities</a></li></ul>
+                </div>
+                <div class="footer__nav-middle">
+                    <ul class="links"><li><a href="/en/about-us">About us</a></li><li><a href="/en/contact">Contact</a></li><li><a href="/en/contact">Press</a></li><li><a href="/en/investors">Investors</a></li><li><a href="/en/careers">Careers</a></li></ul>
+                </div>
+            </div>
+            <div class="footer__slogan-col">
+                <a href="/en" class="footer__slogan-one">
+                    <div class="footer__slogan-img">
+                        <svg class="svg-ico"><use xlink:href="#footer-logo"></use></svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom">
+        <div class="footer__bottom-box">
+            <div class="footer__copyright-col">© 2016 - 2020 Ipsos All Rights Reserved</div>
+            <div class="footer__bottom-nav-col">
+                <div class="footer__bottom-nav">
+                    <ul class="links"><li><a href="/en/legal-mentions">Legal Mentions</a></li><li><a href="/en/privacy-data-protection">Privacy &amp; Data Protection</a></li><li><a href="/en/cookie-policy">Cookie policy</a></li><li><a href="/en/our-alert-system">Our Alert System</a></li></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </footer>
+
+</div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"regulated-informations\/en","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"core\/drupal.autocomplete,core\/html5shiv,ipsos\/global-styling,ipsos\/google_tag_manager,ipsos_cookie\/ipsos_cookie,system\/base,views\/views.module,views_filter_autosubmit\/autosubmit","theme":"ipsos","theme_token":null},"ajaxTrustedUrl":{"\/en\/regulated-informations\/en":true,"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"ipsos_cookie":{"popup_enabled":true,"popup_html_info":"\u003Cdiv\u003E\n    \u003Cdiv class=\u0022cookies-block\u0022\u003E\n        \u003Cdiv class=\u0022wrapp-container\u0022\u003E\n            \u003Cp\u003EThe Site uses cookies which helps us to provide you with a good experience when you browse our \u003Ca href=\u0022https:\/\/www.ipsos.com\/en\u0022\u003Ewww.ipsos.com\u003C\/a\u003E and also allows us to improve our site. By continuing to browse the Site, you agree to our use of cookies.\u003C\/p\u003E\n            \u003Cdiv class=\u0022line\u0022\u003E\n                                    \u003Ca href=\u0022https:\/\/ipsos.com\/en\/cookie-policy\u0022\u003EMore info\u003C\/a\u003E\n                                \u003Ca class=\u0022ok agree-button\u0022 href=\u0022#\u0022\u003EOK\u003C\/a\u003E\n            \u003C\/div\u003E\n        \u003C\/div\u003E\n    \u003C\/div\u003E\n\u003C\/div\u003E","popup_language":"en"},"tableFlipEnable":false,"browserLang":null,"svgPath":"\/themes\/custom\/ipsos\/html\/svg\/sprite.svg","user":{"uid":0,"permissionsHash":"92f4e39c333a2c65fa4dc841db681dde76c72aaa46d8faedb89a6221c26f9f27"}}</script>
+<script src="/sites/default/files/js/js_hhVvDts9-LuEORFupZM8KqMkU-xm0XXW44BTk-nnlas.js"></script>
+
+  </body>
+</html>

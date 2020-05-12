@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+    <!--[if lt IE 8]>         <html class=" no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>            <html class=" no-js lt-ie10 lt-ie9 ie8"> <![endif]-->
+<!--[if IE 9]>            <html class=" no-js lt-ie10 ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class=" no-js"> <!--<![endif]--><head>
+      <meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b0ca75d22e",applicationID:"1325211"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script><script>
+  var functionToInit = [];
+</script><script>
+  var initialDeviceWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+  if (sessionStorage['switchViewportWidth'] >= 1024 && initialDeviceWidth < 1024) {
+    var switchViewport = 1024;
+  } else if (sessionStorage['switchViewportWidth'] < 1024 && initialDeviceWidth >= 1024) {
+    var switchViewport = 1023;
+  } else if (sessionStorage['switchViewportWidth'] != null) {
+    sessionStorage.removeItem('switchViewportWidth');
+  }
+
+  if (switchViewport) {
+    if (sessionStorage['switchViewportDevice'] == 'ie') {
+      var element;
+      if (navigator.userAgent.match(/Windows NT 6.3; ARM(.+)Touch/)) {
+        element = document.createElement("style");
+        element.appendChild(document.createTextNode("@-ms-viewport{width:" + switchViewport + "px;}"));
+      } else {
+        element = document.createElement("link");
+        element.href = switchViewport >= 1024 ? '/frontend/release_2019-10-2/dist/resources/css/switchToDesktop.css' : '/frontend/release_2019-10-2/dist/resources/css/switchToMobile.css';
+        element.rel = "stylesheet";
+      }
+      document.getElementsByTagName("head")[0].appendChild(element);
+    } else {
+      document.querySelector("meta[name=viewport]").setAttribute('content', 'width=' + switchViewport);
+    }
+  }
+</script>
+
+<title>Ad-Hoc&#x20;News - Infineon Technologies</title>
+<meta property="og:title" content="Ad-Hoc&#x20;News - Infineon Technologies"/>
+<meta name="description" content="">
+<meta property="og:description" content="">
+<meta name="keywords" content="">
+<meta name="area" content="investor"/>
+<link rel="canonical" href="https://www.infineon.com/cms/en/about-infineon/investor/news/adhoc/"/>
+  <meta name="copyright" content="Copyright Infineon Technologies AG - all rights reserved"/>
+<meta name="publisher" content="Infineon Technologies AG"/>
+<meta name="author" content="Infineon Technologies AG"/>
+<meta name="producer" content="virtual identity AG | http://www.virtual-identity.com"/>
+<meta name="leid" content="9fc04cb7-af49-11e3-8192-40f2e90e8d04"/>
+  <link rel="shortcut icon" type="image/ico" href='/frontend/release_2019-10-2/dist/resources/img/favicon.ico'/>
+
+<link rel="stylesheet" href="/frontend/release_2019-10-2/dist/resources/css/ifx.1.css"/>
+    <link rel="stylesheet" href="/frontend/release_2019-10-2/dist/resources/css/ifx.2.css"/>
+  <script src="/frontend/release_2019-10-2/dist/resources/js/scripts.head.all.min.js"></script>
+
+<script type="text/javascript">
+  global.configuration.set('data.staticResourcesBase', '/frontend/release_2019-10-2/dist/resources/');
+</script></head>
+    <body class="en">
+    <div id="overall-wrapper">
+      <div id="offcanvas-wrapper" class="site">
+        <div class="article site__content">
+          <nav id="navigation" class="main clearfix visible-xxs visible-xs visible-sm" role="navigation">
+	<ul role="menubar" class="main nav-list">
+	</ul>
+</nav><header class="navbar">
+    <div class="centered">
+      <div itemscope itemtype="http://schema.org/Organization">
+  <a itemprop="url" class="logo" href="/cms/en/">
+    <span class="picture" data-class="img-responsive" data-alt="Infineon Technologies - Semiconductor and System Solutions" data-title="Infineon Technologies" data-itemprop="logo">
+      <img itemprop="logo" src="/frontend/release_2019-10-2/dist/resources/img/logo-desktop-en.png" class="img-responsive"
+          alt="Infineon Technologies - Semiconductor and System Solutions">
+        <span data-src="/frontend/release_2019-10-2/dist/resources/img/logo-mobile-en.png"></span>
+        <span data-src="/frontend/release_2019-10-2/dist/resources/img/logo-mobile-en-2x.png" data-min-dpr="2"></span>
+        <span data-src="/frontend/release_2019-10-2/dist/resources/img/logo-desktop-en.png" data-min-width="1024"></span>
+        <span data-src="/frontend/release_2019-10-2/dist/resources/img/logo-desktop-en-2x.png" data-min-width="1024" data-min-dpr="2"></span>
+    </span>
+  </a>
+</div>
+<button id="offcanvas-nav-trigger" class="btn btn-link navbar-toggle">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="glyphicon glyphicon-menu"></span>
+      </button>
+
+      <form action="/cms/en/search.html" method="get" class="navbar-search" role="search">
+        <input type="hidden" name="view" value="all"/>
+        <fieldset>
+          <input class="search-input typeahead" placeholder="Search" name="term" type="text" data-provide="typeahead" autocomplete="off"
+              data-suggestionsurl="/search/suggestions" data-lang="en"/>
+          <button type="submit" id="offcanvas-search-trigger" class="btn btn-link f0">
+            <span class="glyphicon glyphicon-search"></span>Search</button>
+        </fieldset>
+      </form>
+
+      <nav class="nav">
+        <ul class="first" role="menubar">
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/product/">Products</a>
+            </li>
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/applications/">Applications</a>
+            </li>
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/tools/">Tools</a>
+            </li>
+          <li role="menuitem" class="active blur has-flyout"
+                 aria-haspopup="true" data-flyout="3">
+              <a href="/cms/en/about-infineon/">About Infineon</a>
+            </li>
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/discoveries/">Discoveries</a>
+            </li>
+          <li role="menuitem" class=""
+                >
+              <a href="/cms/en/careers/">Careers</a>
+            </li>
+          </ul>
+      </nav>
+
+      <nav class="metanav">
+        <ul>
+          <li class="hidden-xxs hidden-xs hidden-sm"><a href="https&#x3a;&#x2f;&#x2f;infineoncommunity.com&#x2f;Newsletter4Engineers&#x3f;src&#x3d;Infineon" target="_blank">Newsletter</a></li>
+          <li class="hidden-xxs hidden-xs hidden-sm"><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;company&#x2f;contacts&#x2f;">Contact</a></li>
+          <li class="hidden-xxs hidden-xs hidden-sm"><a href="&#x2f;cms&#x2f;en&#x2f;product&#x2f;where-to-buy&#x2f;">Where to Buy</a></li>
+          <li class="flyout flyout-right hover  hidden-xxs hidden-xs hidden-sm ">
+    <span>English<b class="caret"></b></span>
+    <ul>
+      <li class="line"></li>
+      <li><a href="/cms/cn/about-infineon/investor/news/adhoc/" class="languagelink">简体中文</a></li>
+      <li><a href="/cms/de/about-infineon/investor/news/adhoc/" class="languagelink">Deutsch</a></li>
+      <li><a href="/cms/jp/about-infineon/investor/news/adhoc/" class="languagelink">日本語</a></li>
+      </ul>
+  </li>
+<li class="flyout login-flyout user-button hover">
+            <span class="my-infineon-label"><span class="flyout-login-label glyphicon glyphicon-user"></span><span class="flyout-login-label flyout-login-label-text hidden-xxs hidden-xs hidden-sm">myInfineon</span><b class="caret"></b></span>
+              <ul>
+                <li class="line"></li>
+                <li class="ifx-login-item"><a class="link ifx-login" href="https://www.infineon.com/sec/login">Login to myInfineon</a></li>
+                <li class="myInfineon-visitorMenu" data-resources="[{paths: ['ts/ifx.visitorMenu.js', 'css/myInfineon.visitorMenu.css']}]"
+                      data-init="(function(element) {
+                          window.vi.ifxVisitorMenu (element, {
+                          template: global.configuration.data.tpl.login.visitorMenu,
+                          loginUrl: configuration.get('myInfineonLoginUrl'),
+                          myInfineonDashboardLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonDashboardLinkUrl')),
+                          myInfineonDashboardLinkLabel: configuration.get('i18n.myInfineonDashboardLinkLabel'),
+                          myInfineonInterestsLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonInterestsLinkUrlWithParam')),
+                          myInfineonInterestsLinkLabel: configuration.get('i18n.myInfineonInterestsLinkLabel'),
+                          myInfineonSubscriptionsLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonSubscriptionsLinkUrlWithParam')),
+                          myInfineonSubscriptionsLinkLabel: configuration.get('i18n.myInfineonSubscriptionsLinkLabel'),
+                          myInfineonProfileLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonProfileLinkUrlWithParam')),
+                          myInfineonProfileLinkLabel: configuration.get('i18n.myInfineonProfileLinkLabel'),
+                          myInfineonLogoutLinkLabel: configuration.get('i18n.myInfineonLogoutLinkLabel'),
+                          hasMyIcpAccess: vi.user.hasMyIcpAccess,
+                          myInfineonCollaborationPlatformLinkLabel: configuration.get('i18n.myInfineonCollaborationPlatformLinkLabel'),
+                          myInfineonCollaborationPlatformLinkUrl: configuration.get('myInfineonCollaborationPlatformLinkUrl'),
+                          myInfineonProductRegistrationLinkUrl: vi.getRedirectLinkForDashboard(configuration.get('myInfineonProductRegistrationLinkUrlWithParam')),
+                          myInfineonProductRegistrationLinkLabel: configuration.get('i18n.myInfineonProductRegistrationLinkLabel')
+                      });
+                })">
+                </li>
+                <li class="ifx-registration-item"><a class='link ifx-registration' id='registration-link' href='javascript:;'>Register for myInfineon</a></li>
+              </ul>
+            </li>
+          <li>
+              <a href="/cms/en/cart/" class="cart-button">
+                <span class="glyphicon glyphicon-cart"></span><span class="cart-label hidden-xxs hidden-xs hidden-sm">Cart</span>
+              </a>
+            </li>
+          </ul>
+      </nav>
+    </div>
+
+    <div class="flyout flyout-nav" id="flyout-3" role="menu">
+          <div class="centered">
+            <div class="flyout-wrap-table">
+              <div class="flyout-wrap">
+                <div class="col col-left">
+                  <ul>
+                      <li class=""><strong><a
+                          href="/cms/en/about-infineon/company/">Company</a></strong></li>
+                      <li class=""><a
+                              href="/cms/en/about-infineon/company/our-divisions/">Our Divisions</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/management-board/">Management Board</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/supervisory-board/">Supervisory Board</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/find-a-location/">Our Locations</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/purchasing/">Purchasing</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/quality/">Quality</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/company/information-security/">Information Security</a></li>
+                        </ul>
+                  <ul>
+                      <li class=""><strong><a
+                          href="/cms/en/about-infineon/sustainability/">Sustainability</a></strong></li>
+                      <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/environment/">Environment</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/health-and-safety/">Health & Safety</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/business-ethics/">Business Ethics</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/corporate-citizenship/">Corporate Citizenship</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/csr-supply-chain/">CSR Supply Chain</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/human-rights/">Human Rights</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/sustainability/csr-reporting/">CSR Reporting</a></li>
+                        </ul>
+                  </div>
+                <div class="col">
+                  <ul>
+                      <li class=""><strong><a
+                          href="/cms/en/about-infineon/press/">Press</a></strong></li>
+                      <li class=""><a
+                              href="/cms/en/about-infineon/press/general-information/">General Information</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/press-releases/">Press Releases</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/market-news/">Market News</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/press-kit/">Press Kits</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/media-pool/">Media Pool</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/events/">Events</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/press/contacts/">Contacts</a></li>
+                        </ul>
+                  <ul>
+                      <li class="active"><strong><a
+                          href="/cms/en/about-infineon/investor/">Investor</a></strong></li>
+                      <li class=""><a
+                              href="/cms/en/about-infineon/investor/reporting/">Reporting</a></li>
+                        <li class="active"><a
+                              href="/cms/en/about-infineon/investor/news/">News</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/events/">Events</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/corporate-governance/">Corporate Governance</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/capital-returns/">Capital Returns</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/infineon-share/">Infineon Share</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/bonds-rating/">Bonds and Rating</a></li>
+                        <li class=""><a
+                              href="/cms/en/about-infineon/investor/data-protection-for-shareholders/">Data Protection for Shareholders</a></li>
+                        </ul>
+                  <ul>
+                      <li class=""><strong><a
+                          href="/cms/en/about-infineon/tradeshows-conferences/">Tradeshows & Conferences</a></strong></li>
+                      </ul>
+                  </div>
+                <div class="col media loader">
+                  <strong class="flyout__headline">
+                      <a href="https&#x3a;&#x2f;&#x2f;media.infineon.com" target="_blank">Videos</a></strong>
+                  <div class="media-wrap"></div>
+                </div>
+                <div class="col news loader">
+                  <div class="news-wrap"></div>
+                  <div class="events-wrap"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+  <nav class="subnav">
+      <div class="centered">
+        <ul class="clearfix subnav-bg">
+          <li class="second">
+            <a href="/cms/en/about-infineon/investor/">
+              <span>Investor</span>
+            </a>
+          </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/reporting/">
+                <span>Reporting</span>
+              </a>
+            </li>
+          <li class="active">
+              <a href="/cms/en/about-infineon/investor/news/">
+                <span>News</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/events/">
+                <span>Events</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/corporate-governance/">
+                <span>Corporate Governance</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/capital-returns/">
+                <span>Capital Returns</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/infineon-share/">
+                <span>Infineon Share</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/bonds-rating/">
+                <span>Bonds and Rating</span>
+              </a>
+            </li>
+          <li>
+              <a href="/cms/en/about-infineon/investor/data-protection-for-shareholders/">
+                <span>Data Protection for Shareholders</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+    </nav>
+  <main class="container-fluid site__main" role="main" id="main-article">
+            <div class="stickyElement-wrapper">
+      <div class="breadcrumb breadcrumb--top stickyElement">
+        <div class="centered">
+          <ul class="vertical-list">
+  <li><a href="/cms/en/">Home</a></li>
+  <li><a href="/cms/en/about-infineon/">About Infineon</a></li>
+          <li><a href="/cms/en/about-infineon/investor/">Investor</a></li>
+          <li><a href="/cms/en/about-infineon/investor/news/">News</a></li>
+          <li><span class="folder">Ad-Hoc News</span></li>
+          </ul>
+</div>
+      </div>
+    </div>
+  <div class="centered">
+                    <div class="row">
+                      <div class="col-sm-3 hidden-xxs hidden-xs hidden-sm">
+                        <ul class="leftnav">
+                          <li><a href="/cms/en/about-infineon/investor/news/press-releases">Press Releases</a></li>
+                          <li><a href="/cms/en/about-infineon/investor/news/market-news">Market News</a></li>
+                          <li class="active"><a href="/cms/en/about-infineon/investor/news/adhoc/">Ad-Hoc News</a></li>
+                          </ul>
+                      </div>
+                    <div class="col-md-9 article">
+                          <div class="row">
+                            <article class="col-md-8">
+                              <div  id="centercontainer" ><section class="header domReload">
+    <h1 >Ad-Hoc News</h1>
+    </section>
+<section >
+    <div class="iframe">
+  <iframe  class="deferred resizeable" src="about:blank" data-secure-src="https://www.dgap.de/link.php?isin=DE0006231004&typ=adhoc&von=19970101&a=10&sprache=en&v=en&" data-src="http://www.dgap.de/link.php?isin=DE0006231004&typ=adhoc&von=19970101&a=10&sprache=en&v=en" seamless allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="width: 100%; height: 1500px; margin-bottom: 13px;" frameborder="0">
+    <p>
+      Unfortunately, your browser does not support embedded frames (iframes): You can view the embedded page <a href="http://www.dgap.de/link.php?isin=DE0006231004&typ=adhoc&von=19970101&a=10&sprache=en&v=en">here</a>.</p>
+  </iframe>
+</div>
+
+</section>
+</div></article>
+                            <aside class="context col-md-4">
+                              <div  id="rightcontainer" class="teasers" ><section class="teaser teaser-contact-form">
+    <h3>Investor Contact</h3>
+	<div class="contact-wrapper clearfix">
+	<div class="message-container" style="display: none;">
+		<div class="message"></div>
+		<span class="glyphicon glyphicon-close close"></span>
+	</div>
+	<form role="form" class="contact clearfix" action="/cms/en/services/ajax/contact.html">
+		<div style="display: none;">
+			<input type="hidden" name="context" value="contact" />
+			<input type="hidden" name="containerPath" value="/.content/contactform/cf_00002.html" />
+			<input type="hidden" name="path" value="https://www.infineon.com/cms/en/about-infineon/investor/news/adhoc/" />
+		</div>
+		<div class="form-group">
+			<input class="form-control" type="text" value="" name="name" placeholder="Name*">
+		</div>
+	<div class="form-group">
+			<input class="form-control" type="email" value="" name="email" placeholder="E-mail*">
+		</div>
+		<div class="form-group">
+			<textarea class="form-control" rows="3" name="message" placeholder="Your&#x20;question*"></textarea>
+		</div>
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit" disabled="disabled">Send</button>
+			<button class="btn btn-default submitting" disabled="disabled" style="display: none;">Submitting...</button>
+			<span class="webcontactform-mandatory">*Mandatory</span>
+		</div>
+	</form>
+</div>
+<script type="text/javascript">
+	var form_general_error = '<p>Something went wrong!</p><p>Please try again or contact <a href="mailto:support@infineon.com">support@infineon.com</a>.</p>';
+</script></section>
+<section>
+    <div class="content teaser-sidebar">
+	<h3>Order Service</h3>
+
+		<div class="copy">
+					<p><a href="/cms/en/about-infineon/investor/additional-information/order-service/">More information</a></p></div>
+		</div>
+</section>
+<section>
+    <div class="content teaser-sidebar">
+	<a href="https&#x3a;&#x2f;&#x2f;mailings.mexperts.de&#x2f;infineon&#x2f;english.php" class="block-level" target="_blank"><h3>Investor Relations Newsletter<br>„IFX News Ticker”</h3>
+
+		<span class="link more">
+							Click here to subscribe for Infineon press releases and market news</span>
+		</a></div>
+</section>
+<section>
+    <div class="content teaser-sidebar">
+	<h3>RSS News Feed</h3>
+
+		<div class="copy">
+					<p><a href="http://www.presseagentur.com/infineon/feed.php?lang=en" target="_blank">Click here for link to RSS News Feed</a></p></div>
+		</div>
+</section>
+<section class="teaser-sidebar">
+    <h3 >Stock Information</h3>
+    <div class="iframe">
+  <iframe  class="deferred resizeable" src="about:blank" data-secure-src="https://irs.tools.investis.com/Clients/de/infineon2/minichart/Default.aspx?culture=en-US&" data-src="http://irs.tools.investis.com/Clients/de/infineon2/minichart/Default.aspx?culture=en-US" seamless allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" style="width: 100%; height: 300px; margin-bottom: 13px;" frameborder="0">
+    <p>
+      Unfortunately, your browser does not support embedded frames (iframes): You can view the embedded page <a href="http://irs.tools.investis.com/Clients/de/infineon2/minichart/Default.aspx?culture=en-US">here</a>.</p>
+  </iframe>
+</div>
+
+<a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;investor&#x2f;infineon-share&#x2f;" class="link more">Infineon Share</a></section>
+</div></aside>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+              </main>
+
+          <footer class="footer" data-resources="[{paths: ['js/updateFooter.js'] }]" data-init="(function($elm) {})">
+  <div class="container-fluid">
+    <div id="breadcrumb" style="display:none">
+      Home
+      
+            &gt; About Infineon
+            &gt; Investor
+            &gt; News
+            &gt; Ad-Hoc News</div>
+  <div class="row socialbar-footer">
+              <div class="centered">
+                <span class="followus">Follow us</span>
+                <div class="popup-wrapper">
+			<span class="glyphicon glyphicon-facebook2"></span>
+			<div class="hover-wrapper">
+				<div class="social-popup">
+					<div class="social-popup-arrow"></div>
+					<ul class="channel-list facebook">
+						<li><a href="https&#x3a;&#x2f;&#x2f;www.facebook.com&#x2f;Infineon" target="_blank">Infineon</a></li>
+						<li><a href="https&#x3a;&#x2f;&#x2f;www.facebook.com&#x2f;infineon4engineers" target="_blank">Infineon 4 Engineers</a></li>
+						<li><a href="https&#x3a;&#x2f;&#x2f;www.facebook.com&#x2f;infineoncareer" target="_blank">Infineon Career</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	<a href="https&#x3a;&#x2f;&#x2f;www.linkedin.com&#x2f;company&#x2f;infineon-technologies&#x2f;" target="_blank" title="LinkedIn"><span class="glyphicon glyphicon-linkedin2"></span></a><div class="popup-wrapper">
+			<span class="glyphicon glyphicon-twitter2"></span>
+			<div class="hover-wrapper">
+				<div class="social-popup">
+					<div class="social-popup-arrow"></div>
+					<ul class="channel-list twitter">
+						<li><a href="https&#x3a;&#x2f;&#x2f;twitter.com&#x2f;Infineon" target="_blank">Infineon</a></li>
+						<li><a href="https&#x3a;&#x2f;&#x2f;twitter.com&#x2f;Infineon4Engi" target="_blank">Infineon 4 Engineers</a></li>
+						<li><a href="https&#x3a;&#x2f;&#x2f;twitter.com&#x2f;InfineonCareer" target="_blank">Infineon Career</a></li>
+						</ul>
+				</div>
+			</div>
+		</div>
+	<a href="https&#x3a;&#x2f;&#x2f;www.youtube.com&#x2f;user&#x2f;InfineonTechnologies" target="_blank" title="Infineon"><span class="glyphicon glyphicon-youtube1"></span></a></div>
+            </div>
+          <div class="row footer-copyright footer-copyright--center">
+  <div class="centered">
+    <div class="copyright">
+      <p>&copy; 1999 - 2019&nbsp;Infineon Technologies AG</p>
+      <ul class="vertical-list hidden-print">
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;usage-terms&#x2f;">Usage of this website is subject to our Usage Terms</a></li>
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;imprint&#x2f;">Imprint</a></li>
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;company&#x2f;contacts&#x2f;">Contact</a></li>
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;privacy-policy&#x2f;">Privacy Policy</a></li>
+        <li><a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;press&#x2f;general-information&#x2f;glossary&#x2f;">Glossary</a></li>
+        </ul>
+    </div>
+    <div class="copyright copyright--darkFont cn-links">
+      <p>
+        <a href="http&#x3a;&#x2f;&#x2f;www.miitbeian.gov.cn" class="extern" target="_blank">苏ICP备15016286号-1</a> | <a href="http&#x3a;&#x2f;&#x2f;www.beian.gov.cn&#x2f;portal&#x2f;registerSystemInfo&#x3f;recordcode&#x3d;32021402001016" class="iconlink iconlink--psb" target="_blank">苏公网安备 32021402001016号</a> | <a href="&#x2f;cms&#x2f;cn&#x2f;ifwu" class="extern">营业执照</a></p>
+    </div>
+  </div>
+</div>
+<div class="row hidden-print topBtn-overlay-padding">
+  <div class="centered">
+    <div class="switch">
+      <ul class="vertical-list">
+        <li><a href="#" class="hidden-xxs hidden-xs hidden-sm" id="switch-to-mobile">Switch to Mobile Version</a></li>
+        <li><a href="#" class="hidden-lg hidden-md" id="switch-to-desktop">Switch to Desktop Version</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+</footer>
+<div class="cookie-banner clearfix hidden">
+            <div class="container-fluid centered">
+                <div class="row">
+                    <div class="col-xxs-12 col-sm-11">
+                        <p>In order to optimize your browsing experience Infineon uses cookies. You agree to the usage of cookies when you continue browsing this site. For more information regarding cookies and the processing of your personal data please read our <a href="&#x2f;cms&#x2f;en&#x2f;about-infineon&#x2f;privacy-policy&#x2f;" class="link">Privacy Policy</a>.</p>
+                    </div>
+                    <div class="col-xxs-12 col-sm-1">
+                        <button class="btn btn-grey-light confirm-cookies">OK</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      </div>
+
+      <script>
+  var navigationPageId = '6c000585-13d5-11e4-b3df-556353e4878f';
+</script>
+
+<script src="/cms/en/services/js/configuration.js?cv=release_2019-10-2/dist/resources"></script>
+  <script>
+  
+  configuration.data.page.language = 'English';
+  
+  configuration.data.page.languages = [
+    
+    '简体中文', 
+    'Deutsch', 
+    '日本語'
+  ];
+  configuration.data.page.languagesHrefs = [
+    
+    '\x2Fcms\x2Fcn\x2Fabout\x2Dinfineon\x2Finvestor\x2Fnews\x2Fadhoc\x2F', 
+    '\x2Fcms\x2Fde\x2Fabout\x2Dinfineon\x2Finvestor\x2Fnews\x2Fadhoc\x2F', 
+    '\x2Fcms\x2Fjp\x2Fabout\x2Dinfineon\x2Finvestor\x2Fnews\x2Fadhoc\x2F'
+  ];
+
+  </script>
+
+<script nomodule src="/frontend/release_2019-10-2/dist/resources/js/vendor/fetch.umd.js"></script>
+<script nomodule src="/frontend/release_2019-10-2/dist/resources/js/es6.object.polyfills.js"></script>
+<script nomodule src="/frontend/release_2019-10-2/dist/resources/js/vendor/es6.append.polyfill.js"></script>
+<script nomodule src="/frontend/release_2019-10-2/dist/resources/js/es6.nodelist.forEach.polyfill.js"></script>
+
+<script src="/frontend/release_2019-10-2/dist/resources/js/combined.min.js"></script>
+  <script type="text/javascript">
+            var vi = vi || {};
+            // global trackingData object
+            vi.trackingData = vi.trackingData || {};
+
+            // provide trackingData which is only available in backend
+            jQuery.extend(vi.trackingData, {
+                channel: "aboutinfineon [en]",
+                events: "event20,event21,event31",
+                relatedDownloadEvent: "event34",
+                firstLevelHier: "aboutinfineon",
+                hierarchy: "home|en|about infineon|investor|news|ad-hoc news",
+                hierarchyEn: "home|about infineon|investor|news|ad-hoc news",
+                idFromBreadcrumbEnPath: "6c000585-13d5-11e4-b3df-556353e4878f"
+            });
+
+            /* basic page view variables */
+            s.server = window.location.hostname;
+            s.channel = "aboutinfineon [en]";
+            s.pageName = getPageName('/', true); // pageName with path segments cropped (max 15 chars)
+            s.pageType = ""; // only set for error page
+            s.events = "event20,event21,event31";
+
+            /* page hierarchy variables */
+            s.hier1 = "home|en|about infineon|investor|news|ad-hoc news";
+            s.hier2 = "home|about infineon|investor|news|ad-hoc news";
+
+            /* Custom Conversion Variables, max 255 chars */
+            s.eVar1 = s.prop1 = "D=pageName";
+            s.eVar2 = location.pathname.replace("/cms", "") + location.search; // relative page URL
+            s.eVar3 = s.prop3 = "D=g";
+            s.eVar4 = "ad-hoc news [en]";
+            s.eVar5 = s.prop5 = "en";
+            s.eVar7 = "";
+            s.eVar8 = s.prop8 = "D=r";
+            s.eVar10 = "aboutinfineon";
+            s.eVar13 = jQuery('.productarea').length > 0 ? getProductHierarchy() : ''; // set productName from ProductHierarchy only for productarea pages
+            s.eVar21 = "6c000585-13d5-11e4-b3df-556353e4878f";
+
+            // save initial pageName, hier1 and 2 for later use
+            // important for resetting to initial values (used in trackSinglePageSection)
+            vi.trackingData.initialPageName = s.pageName;
+            vi.trackingData.initialHier1 = s.hier1;
+            vi.trackingData.initialHier2 = s.hier2;
+
+            /* Custom Traffic Variables, max 100 chars  */
+            s.prop2 = "D=v2";
+            s.prop4 = (typeof s.eVar4 === "string" && s.eVar4 != "") ? "D=v4" : "";
+            s.prop6 = "";
+            s.prop7 = "";
+            s.prop9 = (typeof s.eVar9 === "string" && s.eVar9 != "") ? "D=v9" : "";
+            s.prop10 = (typeof s.eVar10 === "string" && s.eVar10 != "") ? "D=v10" : "";
+            s.prop11 = (typeof s.eVar11 === "string" && s.eVar11 != "") ? "D=v11" : "";
+            s.prop12 = "";
+            s.prop16 = "Flash Player " + getFlashPlayerVersion();
+            s.prop18 = "";
+            s.prop21 = (typeof s.eVar21 === "string" && s.eVar21 != "") ? "D=v21" : "";
+
+            // init opn tracking on ptp
+            trackOPNonProductTypePageView();
+
+            initSearchTrackingOnPageView();
+
+            // set eVar22 - 28, generate from s.hier2;
+            setAdditionalHierarchyVars(s.hier2, '|', 22, 28);
+
+            /*** defer Adobe Analytics default pageView tracking to get userGroup from backend or cookie ***/
+            // first try getting userGroup from cookie
+            if (vi.helpers.getCookie('userGroup') != '') {
+                s.eVar6 = vi.helpers.getCookie('userGroup');
+        var s_code=s.t();if(s_code)document.write(s_code);
+            } else {
+                // execute pageView tracking if userGroup not retrieved within 1.5 sec
+                // eg. user not logged-in, no login on page or server doesn't respond
+                var defaultTrackingTimeout = window.setTimeout(function () {
+                    s.eVar6 = '*empty*';
+                    // re-initialize search tracking, in case trackSearch was already executed
+                    initSearchTrackingOnPageView();
+          var s_code=s.t();if(s_code)document.write(s_code);
+                    vi.trackingData.pageViewTrackingSent = true;
+                }, 1500);
+
+                // when user is logged-in, get userGroup and save in cookie
+                $(window).on('vi.logged_in', function () {
+                    window.clearTimeout(defaultTrackingTimeout);
+                    if (typeof vi.trackingData.userGroup != 'undefined') {
+                        vi.helpers.setCookie('userGroup', vi.trackingData.userGroup, 365 * 20);
+                        s.eVar6 = vi.trackingData.userGroup;
+                    } else {
+                        s.eVar6 = '*empty*';
+                    }
+
+                    // execute tracking only if tracking request was not already sent
+                    if (!vi.trackingData.pageViewTrackingSent) {
+            var s_code=s.t();if(s_code)document.write(s_code);
+                    }
+                });
+            }
+		</script>
+		<noscript>
+			<img src="//infineon.d3.sc.omtrdc.net/b/ss/ifninfineon/1/H.24.1--NS/0" height="1" width="1" border="0" alt="" />
+		</noscript>
+	</div>
+    
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.eu01.nr-data.net","licenseKey":"b0ca75d22e","agent":"","beacon":"bam.eu01.nr-data.net","applicationTime":3193,"applicationID":"1325211","transactionName":"MhBSZQoZDRdTVxUNVgtaemIoVzQhcBkoKn9KH0NBVxcNCFtaBEtKHAZEVBVXDgtWQQ0BSkoWX1wnEQ0CW1oEC1c6Fl9DCBcRBUZRFgFbFhxEVCceEQtcQAQKXUoBVVwIFAIQV0dOCVgMGx5bCwg=","queueTime":0}</script></body>
+    </html>
+  

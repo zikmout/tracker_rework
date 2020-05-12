@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <link href="/themes/technicolor/favicon.ico" rel="shortcut icon">
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"8114dd6250",applicationID:"12978701"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
+</noscript><link rel="canonical" href="https://www.technicolor.com/investor-center/regulated-information" />
+<meta name="description" content="Learn about Technicolor&#039;s Regulatory Information." />
+<meta property="og:url" content="http://www.technicolor.com/investor-center/regulated-information" />
+<meta property="og:title" content="Regulated Information" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" hreflang="en" href="http://www.technicolor.com/investor-center/regulated-information" />
+<link rel="alternate" hreflang="fr" href="http://www.technicolor.com/fr/relations-investisseurs/informations-reglementees" />
+<link rel="revision" href="http://www.technicolor.com/investor-center/regulated-information" />
+<script src="/sites/default/files/google_tag/primary/google_tag.script.js?q8yaq9" defer></script>
+
+    <title>Regulated Information</title>
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7277732/802668/css/fonts.css" />
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_T95EP-IzUHS4cBhljFpSmM1yy_HKbqMyoFJvHVgcc70.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_so0qPhT9tECPuLMh6EtK6Jmcq389qnmd7yevdeMI4TA.css" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_nCi3uQB4VLfMAIpbxzxP1N6XBGM-xeFBEaJbkGm80Vk.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+  </head>
+    <body class="page-investor-center-regulated-information section-investor-center with-subnav">
+    <div id="skip">
+      <a href="#main-menu" class="visually-hidden focusable skip-link">
+        Skip to main navigation
+      </a>
+    </div>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TQ8KH9T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+
+<div class="layout-container 	page-theme-yellow
+ 	header-black
+ UTF-8">
+
+  <!-- ______________________ HEADER _______________________ -->
+<header id="header" class="site-header  ">
+	<div class="header-component">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6 col-md-2">
+					<div class="header-logo">
+						<a href="/"></a>
+					</div>
+				</div>
+				<div class="col-xs-6 col-md-6">
+					<nav class="header-nav">
+											  <div>
+    <div id="block-technicolormainmegamenu-2">
+  
+    
+      
+
+        
+        <ul class="menu-level-0">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            															<a href="                /dream
+            "><div class="inner theme-magenta">DREAM</div></a>
+							                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/DREAMat80at50.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-magenta" style="display: none;"><div class="inner">DREAM</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class="col children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                    
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /Dream/Who-We-Are
+            "><div class="inner ">Who We Are</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /dream/innovation
+            "><div class="inner ">Innovation</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /academy
+            "><div class="inner ">The Technicolor Academy</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            															<a href="                /create
+            "><div class="inner theme-blue">CREATE</div></a>
+							                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/CREATEat80at60.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-blue" style="display: none;"><div class="inner">CREATE</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class="col children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<div class="col-title">Services</div>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/pre-production
+            "><div class="inner ">Pre-Production</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/vfx
+            "><div class="inner ">VFX</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/production-front-end
+            "><div class="inner ">Production Front-End</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/picture-post-production
+            "><div class="inner ">Picture Post-Production</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/sound-post-production
+            "><div class="inner ">Sound Post-Production</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/animation
+            "><div class="inner ">Animation</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class="col children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<div class="col-title">Audiences</div>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/feature-film
+            "><div class="inner ">Feature Film</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/episodic
+            "><div class="inner ">Episodic</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/advertising
+            "><div class="inner ">Advertising</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/experiential
+            "><div class="inner ">Experiential</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/games
+            "><div class="inner ">Games</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class="col children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<div class="col-title"><a href="                /create/locations
+            ">Locations</a></div>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                http://www.themill.com/millfilm/
+            "><div class="inner ">Adelaide</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                https://www.moving-picture.com/contact/amsterdam/
+            "><div class="inner ">Amsterdam</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/bangalore
+            "><div class="inner ">Bangalore</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                http://www.themill.com/contact#office=chicago
+            "><div class="inner ">Chicago</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/london
+            "><div class="inner ">London</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/los-angeles
+            "><div class="inner ">Los Angeles</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/montreal
+            "><div class="inner ">Montreal</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/new-york
+            "><div class="inner ">New York</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/paris
+            "><div class="inner ">Paris</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                https://www.moving-picture.com/contact/shanghai/
+            "><div class="inner ">Shanghai</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/toronto
+            "><div class="inner ">Toronto</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/vancouver
+            "><div class="inner ">Vancouver</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/technicolor-wales
+            "><div class="inner ">Wales</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            															<a href="                /distribute
+            "><div class="inner theme-orange">DISTRIBUTE</div></a>
+							                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/DISTRIBUTEat80at50.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-orange" style="display: none;"><div class="inner">DISTRIBUTE</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class="col children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<div class="col-title"><a href="                /distribute/home-experience
+            ">Home Experience</a></div>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            															<a href="                /distribute/home-experience/access
+            "><div class="inner ">Access Solutions &amp; Devices</div></a>
+							                                                                                                
+                                                    
+        <ul class="menu-level-3">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access/fiber-technology
+            "><div class="inner ">Fiber</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access/advanced-copper
+            "><div class="inner ">Advanced Copper</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access/docsis3.1
+            "><div class="inner ">DOCSIS3.1</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access/wireless
+            "><div class="inner ">Wireless</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            															<a href="                /distribute/home-experience/play
+            "><div class="inner ">Play Solutions &amp; Devices</div></a>
+							                                                                                                
+                                                    
+        <ul class="menu-level-3">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/video-streaming
+            "><div class="inner ">Video Streaming</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play/hdr
+            "><div class="inner ">HDR</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play/ultra-hd-technology
+            "><div class="inner ">Ultra HD</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play/advanced-compression
+            "><div class="inner ">Advanced Compression</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play/commercial-video-solutions
+            "><div class="inner ">Commercial Video Solutions</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/engage
+            "><div class="inner ">Engage</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /trademark-licensing
+            "><div class="inner ">Trademark Licensing</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class="col children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<div class="col-title"><a href="                /distribute/supply-chain-solutions
+            ">Supply Chain Solutions</a></div>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/supply-chain-solutions/manufacturing
+            "><div class="inner ">Manufacturing</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/supply-chain-solutions/distribution-fulfillment
+            "><div class="inner ">Distribution &amp; Fulfillment</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/supply-chain-solutions/transportation-management
+            "><div class="inner ">Transportation Management</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            															<a href="                /experience
+            "><div class="inner theme-green">EXPERIENCE</div></a>
+							                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/Experienceat78at50.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-green" style="display: none;"><div class="inner">EXPERIENCE</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class="col children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                    
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /experience/in-theaters
+            "><div class="inner ">In Theaters</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /experience/at-home
+            "><div class="inner ">At Home</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+        
+        </ul>
+
+    
+
+
+
+
+  </div>
+
+  </div>
+
+										</nav>
+					<nav class="mobile-nav">
+						<div class="top-nav">
+							<div class="header-logo">
+								<a href="/"></a>
+							</div>
+							<a class="close" href="#"><span class="icon-bars"></span></a>
+						</div>
+												  <div>
+    <div id="block-technicolormobilemegamenu">
+  
+    
+      
+
+        
+        <ul class="menu-level-0">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            							<a href="#" class="empty-link"><div class="inner empty theme-magenta">DREAM</div></a>
+                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/DREAMat80at50_1.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-magenta" style="display: none;"><div class="inner">DREAM</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /dream
+            "><div class="inner ">Overview</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /Dream/Who-We-Are
+            "><div class="inner ">Who Are We</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /dream/innovation
+            "><div class="inner ">Innovation</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /academy
+            "><div class="inner ">The Technicolor Academy</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            							<a href="#" class="empty-link"><div class="inner empty theme-blue">CREATE</div></a>
+                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/CREATEat80at60_1.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-blue" style="display: none;"><div class="inner">CREATE</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create
+            "><div class="inner ">Overview</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<a href="#" class="empty-link"><div class="inner empty ">Services</div></a>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/pre-production
+            "><div class="inner ">Pre-Production</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/vfx
+            "><div class="inner ">VFX</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /node/163
+            "><div class="inner "> Production Front-end</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/picture-post-production
+            "><div class="inner ">Picture Post</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/sound-post-production
+            "><div class="inner ">Sound Post</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/animation
+            "><div class="inner ">Animation</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<a href="#" class="empty-link"><div class="inner empty ">Audiences</div></a>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/feature-film
+            "><div class="inner ">Feature Film</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/episodic
+            "><div class="inner ">Episodic</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/advertising
+            "><div class="inner ">Advertising</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/experiential
+            "><div class="inner ">Experiential</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/games
+            "><div class="inner ">Games</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            															<a href="                /create/locations
+            "><div class="inner ">Locations</div></a>
+							                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                http://www.themill.com/millfilm/
+            "><div class="inner ">Adelaide</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                https://www.moving-picture.com/contact/amsterdam/
+            "><div class="inner ">Amsterdam</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/bangalore
+            "><div class="inner ">Bangalore</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                http://www.themill.com/contact#office=chicago
+            "><div class="inner ">Chicago</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/london
+            "><div class="inner ">London</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/los-angeles
+            "><div class="inner ">Los Angeles</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/montreal
+            "><div class="inner ">Montreal</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/new-york
+            "><div class="inner ">New York</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/paris
+            "><div class="inner ">Paris</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                https://www.moving-picture.com/contact/shanghai/
+            "><div class="inner ">Shanghai</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/toronto
+            "><div class="inner ">Toronto</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/vancouver
+            "><div class="inner ">Vancouver</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /create/technicolor-wales
+            "><div class="inner ">Wales</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            							<a href="#" class="empty-link"><div class="inner empty theme-orange">DISTRIBUTE</div></a>
+                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/DISTRIBUTEat80at50_1.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-orange" style="display: none;"><div class="inner">DISTRIBUTE</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute
+            "><div class="inner ">Overview</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<a href="#" class="empty-link"><div class="inner empty ">Home Experience</div></a>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience
+            "><div class="inner ">Overview</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            							<a href="#" class="empty-link"><div class="inner empty ">Access Solutions &amp; Devices</div></a>
+                                                                                                
+                                                    
+        <ul class="menu-level-3">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access
+            "><div class="inner ">Overview</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access/fiber-technology
+            "><div class="inner ">Fiber</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access/advanced-copper
+            "><div class="inner ">Advanced Copper</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access/wireless
+            "><div class="inner ">Wireless</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/access/docsis3.1
+            "><div class="inner ">DOCSIS3.1 </div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            							<a href="#" class="empty-link"><div class="inner empty ">Play Solutions &amp; Devices</div></a>
+                                                                                                
+                                                    
+        <ul class="menu-level-3">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play
+            "><div class="inner ">Overview</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/video-streaming
+            "><div class="inner ">Video Streaming</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play/hdr
+            "><div class="inner ">HDR</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play/ultra-hd-technology
+            "><div class="inner ">Ultra HD</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play/advanced-compression
+            "><div class="inner ">Advanced Compression</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/play/commercial-video-solutions
+            "><div class="inner ">Commercial Video Solutions</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/home-experience/engage
+            "><div class="inner ">Engage</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /trademark-licensing
+            "><div class="inner ">Trademark Licensing</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                    <div class="back-nav"><a href="#"><i class="icon" aria-hidden="true"></i> BACK</a></div>
+                                                                            							<a href="#" class="empty-link"><div class="inner empty ">Supply Chain Solutions</div></a>
+                                                                                                
+                                                    
+        <ul class="menu-level-2">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/supply-chain-solutions
+            "><div class="inner ">Overview</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/supply-chain-solutions/manufacturing
+            "><div class="inner ">Manufacturing</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/supply-chain-solutions/distribution-fulfillment
+            "><div class="inner ">Distribution &amp; Fulfillment </div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /distribute/supply-chain-solutions/transportation-management
+            "><div class="inner ">Transportation Management</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                    
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            							<a href="#" class="empty-link"><div class="inner empty theme-green">EXPERIENCE</div></a>
+                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/Experienceat78at50_1.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-green" style="display: none;"><div class="inner">EXPERIENCE</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /experience
+            "><div class="inner ">Overview</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /experience/in-theaters
+            "><div class="inner ">In Theaters</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /experience/at-home
+            "><div class="inner ">At Home</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" children">
+                                                                            							<a href="#" class="empty-link"><div class="inner empty theme-lt-gray">COMPANY</div></a>
+                                                                                                                        <div class="bg-image bg-mega" style="background-image: url(/sites/default/files/2018-02/CompanyNavimg_1600x800.jpg);">
+                    
+                                            <div class="container">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-10 col-md-offset-2">
+									<a href="#" class="inner-title theme-lt-gray" style="display: none;"><div class="inner">COMPANY</div></a>
+                                            
+        <ul class="menu-level-1">
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                https://careers.technicolor.com/ 
+            "><div class="inner ">Careers</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /press-center
+            "><div class="inner ">Press Center</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /investor-center
+            "><div class="inner ">Investor Center</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /news
+            "><div class="inner ">News</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /executive-committee
+            "><div class="inner ">Governance &amp; Management </div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /corporate-social-responsibility
+            "><div class="inner ">Corporate Social Responsibility</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /contact
+            "><div class="inner ">Contact Us</div></a>
+							                                                                                                        </li>
+
+                    
+                        			
+            										
+            
+            
+            <li class=" ">
+                                                                            															<a href="                /privacy-policy
+            "><div class="inner ">Legal</div></a>
+							                                                                                                        </li>
+
+        
+        </ul>
+
+    
+                                </div>
+                            </div>
+                        </div>
+                    
+                                            </div>
+                                                                        <i class="icon" aria-hidden="true"></i>
+                            </li>
+
+        
+        </ul>
+
+    
+
+
+
+
+  </div>
+
+  </div>
+
+											</nav>
+					<div class="mobile-trigger clearfix">
+						<a href="#"><span class="icon-bars"></span></a>
+					</div>
+				</div>
+
+				<div class="col-xs-12 col-md-4">
+					<div class="header-util">
+													<div class="header-link"><a href="/news" class="">News</a></div>
+												<div class="header-link japanese-site-link"><a href="/jp/" class="">Japanese</a></div>
+						<nav class="util-item i18n-selector">
+															  <div>
+    <div class="language-switcher-language-url" id="block-languageswitcher" role="navigation">
+  
+    
+      				<div class="current">English</div>
+				<ul>						<li class="active">
+			<a href="/investor-center/regulated-information" class="language-link active is-active" hreflang="en" data-drupal-link-system-path="node/5520">English</a></li>						<li>
+			<a href="/fr/relations-investisseurs/informations-reglementees" class="language-link" hreflang="fr" data-drupal-link-system-path="node/5520">Français</a></li></ul>
+  </div>
+
+  </div>
+
+													   <i class="icon" aria-hidden="true"></i>
+						</nav>
+						<div class="util-item search-trigger">
+							<a href="#"><span class="sr-only">Search</span></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	
+	<div class="contextual-nav-component">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-2">
+					<nav class="nav">
+						<div class="list-wrap">
+						
+						
+						
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		
+		
+		<section class="title-component">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-2">
+					<div class="horz-line bg-theme-inherit"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-md-10 col-md-offset-2">
+					<h4 class="		header-black
+	">Regulated Information</h4>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+</header><!-- /#header -->
+  <!-- ______________________ MAIN _______________________ -->
+
+  <div id="main" >
+        <section id="content">
+          
+                  <div id="content-area">
+            <div>
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-technicolor-content">
+  
+    
+      
+
+<article role="article" about="/investor-center/regulated-information" typeof="schema:WebPage" class="node">
+
+      <header>
+      
+              <span property="schema:name" content="Regulated Information" class="hidden"></span>
+
+
+      
+          </header>
+  
+  <div class="content">
+    
+      <div>
+              <div>
+
+
+<section class="inline-nav-component     pad-top-xl
+     pad-bot-md
+">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="nav-wrapper">
+                    <nav id="pnProductNav" class="pn-ProductNav dragscroll">
+                        <div id="pnProductNavContents" class="nav-content">
+                            <ul style="display: inline-block;">
+                                                                                                                                                                                                        <li><a href="                                    /investor-center/financial-results
+                                " class="nav-link">                                    Financial Results
+                                </a></li>
+                                                                                                                                                                                                                                                                            <li><a href="                                    /investor-center/financial-news?field_news_category_target_id_1=218
+                                " class="nav-link">                                    Financial News
+                                </a></li>
+                                                                                                                                                                                                                                                                            <li><a href="                                    /investor-center/regulated-information
+                                " aria-selected="true" class="nav-link">                                    Regulated Information
+                                </a></li>
+                                                                                                                            </ul>
+                            <span id="pnIndicator" class="pn-ProductNav_Indicator"></span>
+                        </div>
+                    </nav>
+                    <button id="pnAdvancerLeft" class="pn-Advancer pn-Advancer_Left" type="button">
+                        <svg class="pn-Advancer_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024">
+                            <path d="M445.44 38.183L-2.53 512l447.97 473.817 85.857-81.173-409.6-433.23v81.172l409.6-433.23L445.44 38.18z"/>
+                        </svg>
+                    </button>
+                    <button id="pnAdvancerRight" class="pn-Advancer pn-Advancer_Right" type="button">
+                        <svg class="pn-Advancer_Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 551 1024">
+                            <path d="M105.56 985.817L553.53 512 105.56 38.183l-85.857 81.173 409.6 433.23v-81.172l-409.6 433.23 85.856 81.174z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div></div>
+              <div>
+
+
+
+<section class="documents-component ">
+	<div class="container">
+		<div class="document-header">
+									<div class="row document-list">
+				<div class="col-xs-12 col-md-7 col-md-offset-2">
+										
+            <div><div class="views-element-container"><div class="js-view-dom-id-55c126e6a860677c9e62555e433c1c334447edf584d51ab191c846c6d4e12f61">
+  
+  
+  
+
+  
+  <form class="views-exposed-form bef-exposed-form" data-bef-auto-submit-full-form="" data-drupal-selector="views-exposed-form-regulated-information-block-1" action="/investor-center/regulated-information" method="get" id="views-exposed-form-regulated-information-block-1" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-select form-item-field-regulated-information-year-target-id js-form-item-field-regulated-information-year-target-id form-no-label">
+        <select data-drupal-selector="edit-field-regulated-information-year-target-id" id="edit-field-regulated-information-year-target-id" name="field_regulated_information_year_target_id" class="form-select"><option value="All">SELECT YEAR</option><option value="740" selected="selected">2020</option><option value="715">2019</option><option value="253">2018</option><option value="70">2017</option><option value="71">2016</option><option value="72">2015</option><option value="73">2014</option><option value="74">2013</option><option value="75">2012</option><option value="76">2011</option><option value="169">2010</option><option value="170">2009</option><option value="171">2008</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-bef-auto-submit-click="" class="js-hide button js-form-submit form-submit" data-drupal-selector="edit-submit-regulated-information" type="submit" id="edit-submit-regulated-information" value="Apply" />
+</div>
+
+
+</form>
+
+  
+
+      <h3>
+Universal Registration Document</h3>
+        <div class="views-row">
+        
+<div class="document-row pdf">
+<a href="/sites/default/files/2020-04/20200420%20-%20URD%20TECHNICOLOR%20ENGLISH.pdf" target="_blank">2019 Universal Registration Document
+<br /><span class="regulated-date" data-publication-date="" data-information-date="2020-04-20 10:00:00">2020-04-20 10:00:00</span></a>
+</div>
+    </div>
+    <h3>
+Inside Information</h3>
+        <div class="views-row">
+        
+<div class="document-row pdf">
+<a href="/sites/default/files/2020-02/2020-02-13%20Project%20A%20VUS%20VFinale%20%28short%20form%29.pdf" target="_blank">Technicolor Announces 2020-2022 Strategic Plan Supported By A Comprehensive Strengthening Of The Capital Structure Including A C. €300M Capital Increase
+<br /><span class="regulated-date" data-publication-date="" data-information-date="2020-02-13 21:00:00">2020-02-13 21:00:00</span></a>
+</div>
+    </div>
+    <h3>
+Other information</h3>
+        <div class="views-row">
+        
+<div class="document-row pdf">
+<a href="/sites/default/files/2020-03/03-23-2020%20Press%20Release%20EGM-VUS.pdf" target="_blank">Press Release: the Ordinary and Extraordinary General Shareholders’ Meeting held of March 23, 2020 (PDF)
+<br /><span class="regulated-date" data-publication-date="" data-information-date="2020-03-23 13:00:00">2020-03-23 13:00:00</span></a>
+</div>
+    </div>
+        <div class="views-row">
+        
+<div class="document-row pdf">
+<a href="/sites/default/files/2020-03/Conditions%20of%20availability%20of%20information%20prepared%20in%20connection%20with%20the%20Shareholder%20Meeting.pdf" target="_blank">Condition of availability of information prepared in connection with the Shareholder Meeting
+<br /><span class="regulated-date" data-publication-date="" data-information-date="2020-03-02 09:00:00">2020-03-02 09:00:00</span></a>
+</div>
+    </div>
+        <div class="views-row">
+        
+<div class="document-row pdf">
+<a href="/sites/default/files/2020-04/04-20-2020_URD%202019%20and%20Covid-19%20impacts_VUS.pdf" target="_blank">Availability of 2019 Universal Registration Document and update on Covid-19 situation
+<br /><span class="regulated-date" data-publication-date="" data-information-date="2020-04-20 10:00:00">2020-04-20 10:00:00</span></a>
+</div>
+    </div>
+        <div class="views-row">
+        
+<div class="document-row pdf">
+<a href="/sites/default/files/2020-03/20200218%20-%20Press%20Release%20EGM%20March%2023%20-%20US.pdf" target="_blank">Information relating to the Shareholders’ Meeting convened for March 23, 2020
+<br /><span class="regulated-date" data-publication-date="" data-information-date="2020-03-18 09:45:00">2020-03-18 09:45:00</span></a>
+</div>
+    </div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+</div>
+      
+									</div>
+			</div>
+		</div>
+	</div>
+</section>        </div>
+          </div>
+  
+  </div><!-- /.content -->
+
+      <div class="links">
+      
+    </div><!-- /.links -->
+  
+</article><!-- /.node -->
+
+  </div>
+
+  </div>
+
+        </div>
+      </section><!-- /#content -->
+  </div><!-- /#main -->
+
+  <!-- ______________________ FOOTER _______________________ -->
+<footer id="footer" class="site-footer">
+			<div class="footer-upper upperfooterpadding">
+		<div class="container">
+			<div class="row">
+			<div class="col-xs-12 col-lg-3 col-lg-push-9">
+				<div class="footer-social">
+					
+
+
+                                                      <a href="http://www.twitter.com/technicolor" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                              <a href="https://www.instagram.com/technicolorco/" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                              <a href="https://www.facebook.com/Technicolor" target="_blank">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                              <a href="http://www.youtube.com/technicolor" target="_blank">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                </a>
+                              <a href="http://www.linkedin.com/company/technicolor" target="_blank">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                                    
+
+          
+			    </div>
+			</div>    
+				<div class="col-xs-12 col-lg-2 col-lg-offset-1 col-lg-pull-3">
+					<div class="footer-logo">
+						<a href="/"><img src="/sites/default/files/logo-header_0.png" alt=""></a>
+					</div>
+				</div>
+				<div class="col-xs-12 col-lg-6 col-lg-pull-3">
+					<div class="footer-tagline">
+					Technicolor unites industry-leading artistry with cutting-edge technology and innovation to unleash extraordinary experiences for audiences everywhere.
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="footer-sitemap">
+		<div class="container">
+			<div class="row">
+							
+<div class="col-lg-2 col-md-offset-1 col-md-2 col-lg-offset-1">
+<h5 class="theme-blue">Dream</h5>
+
+              <ul>
+              <li>
+        <a href="/Dream/Who-We-Are" data-drupal-link-system-path="node/3371">Who We Are</a>
+              </li>
+          <li>
+        <a href="/dream/innovation" data-drupal-link-system-path="node/313">Innovation</a>
+              </li>
+          <li>
+        <a href="/academy" data-drupal-link-system-path="node/7534">The Technicolor Academy</a>
+              </li>
+        </ul>
+  
+
+</div>
+
+				
+<div class="col-lg-2 col-md-2">
+<h5 class="theme-magenta">Create</h5>
+
+              <ul>
+              <li>
+        <a href="/create/pre-production" data-drupal-link-system-path="node/8542">Pre-Production</a>
+              </li>
+          <li>
+        <a href="/create/vfx" data-drupal-link-system-path="node/218">VFX</a>
+              </li>
+          <li>
+        <a href="/create/production-front-end" data-drupal-link-system-path="node/133">Production Front-End</a>
+              </li>
+          <li>
+        <a href="/create/picture-post-production" data-drupal-link-system-path="node/136">Picture Post</a>
+              </li>
+          <li>
+        <a href="/create/sound-post-production" data-drupal-link-system-path="node/221">Sound Post</a>
+              </li>
+          <li>
+        <a href="/create/animation" data-drupal-link-system-path="node/219">Animation</a>
+              </li>
+        </ul>
+  
+
+</div>
+
+				
+<div class="col-lg-2 col-md-2">
+<h5 class="theme-yellow">Distribute</h5>
+
+              <ul>
+              <li>
+        <a href="/distribute/home-experience/access" data-drupal-link-system-path="node/249">Access Solutions &amp; Devices</a>
+              </li>
+          <li>
+        <a href="/distribute/home-experience/play" data-drupal-link-system-path="node/248">Play Solutions &amp; Devices</a>
+              </li>
+          <li>
+        <a href="/distribute/supply-chain-solutions" data-drupal-link-system-path="node/278">Supply Chain Solutions</a>
+              </li>
+        </ul>
+  
+
+</div>
+
+				
+<div class="col-lg-2 col-md-2">
+<h5 class="theme-green">Experience</h5>
+
+              <ul>
+              <li>
+        <a href="/experience/in-theaters" data-drupal-link-system-path="node/325">In Theaters</a>
+              </li>
+          <li>
+        <a href="/experience/at-home" data-drupal-link-system-path="node/326">At Home</a>
+              </li>
+        </ul>
+  
+
+</div>
+
+				
+<div class="col-lg-2 col-md-2">
+<h5 class="theme-black">Company</h5>
+
+              <ul>
+              <li>
+        <a href="https://careers.technicolor.com/">Careers</a>
+              </li>
+          <li>
+        <a href="/investor-center" data-drupal-link-system-path="node/6256">Investor Center</a>
+              </li>
+          <li>
+        <a href="/press-center" data-drupal-link-system-path="node/6927">Press Center</a>
+              </li>
+          <li>
+        <a href="/news" data-drupal-link-system-path="node/7210">News &amp; Events</a>
+              </li>
+          <li>
+        <a href="/executive-committee" data-drupal-link-system-path="node/6258">Governance &amp; Management </a>
+              </li>
+          <li>
+        <a href="/corporate-social-responsibility" data-drupal-link-system-path="node/192">Corporate Social Responsibility</a>
+              </li>
+          <li>
+        <a href="/contact" data-drupal-link-system-path="node/6916">Contact Us</a>
+              </li>
+          <li>
+        <a href="/terms-of-use" data-drupal-link-system-path="node/8933">Legal</a>
+              </li>
+          <li>
+        <a href="/privacy-policy" data-drupal-link-system-path="node/3362">Privacy Policies</a>
+              </li>
+        </ul>
+  
+
+</div>
+					
+						</div>
+		</div>
+	</nav>
+
+	<div class="footer-colophon">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-lg-4 col-lg-offset-1">
+					<div class="footer-copyright">
+						&copy; 2020 Technicolor. All Rights Reserved
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</footer><!-- /#footer -->
+
+<section id="search-modal" role="search">
+	<div class="search-form">
+		<div class="container">
+			<form action="/search" method="get">
+				<fieldset>
+					<legend class="sr-only">Search this website</legend>
+					<label class="sr-only" for="keys">Enter keywords</label>
+					<input class="search-input" type="search" name="keys" value="" maxlength="255" placeholder="Search...">
+					<input class="sr-only" type="submit" value="Submit">
+				</fieldset>
+			</form>
+			<a class="search-close" href="#"></a>
+		</div>
+	</div>
+	<aside class="search-popular pad-top-sm pad-bot-sm bg-theme-lt-gray">
+		<div class="container">
+			
+		</div>
+	</aside>
+</section>
+
+</div><!-- /.layout-container -->
+
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5520","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"better_exposed_filters\/auto_submit,better_exposed_filters\/general,core\/html5shiv,paragraphs\/drupal.paragraphs.unpublished,system\/base,technicolor\/global,views\/views.ajax,views\/views.module","theme":"technicolor","theme_token":null},"ajaxTrustedUrl":{"\/investor-center\/regulated-information":true},"views":{"ajax_path":"\/views\/ajax","ajaxViews":{"views_dom_id:55c126e6a860677c9e62555e433c1c334447edf584d51ab191c846c6d4e12f61":{"view_name":"regulated_information","view_display_id":"block_1","view_args":"","view_path":"\/node\/5520","view_base_path":null,"view_dom_id":"55c126e6a860677c9e62555e433c1c334447edf584d51ab191c846c6d4e12f61","pager_element":0,"viewsreference":{"data":{"title":null,"argument":null},"enabled_settings":{"argument":"argument","title":"title"}}}}},"user":{"uid":0,"permissionsHash":"49ff84c068005de8cb75ecd634b321d1651a8645496073fc7837b4601f628441"}}</script>
+<script src="/sites/default/files/js/js_mHS_hC8PLnXeeEnc_BHmI7f03zSdsUv8a6jE-Chc81E.js"></script>
+
+          <div>
+    <div id="block-addthisblock">
+  
+    
+      
+            <div><!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5a618ef51eff21a3"></script></div>
+      
+  </div>
+
+  </div>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"8114dd6250","applicationID":"12978701","transactionName":"ZVwDZ0VWXEdUV00LClwWIFBDXl1aGkRYBQBtWgBQX1I=","queueTime":0,"applicationTime":456,"atts":"SRsAEQ1MT0k=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

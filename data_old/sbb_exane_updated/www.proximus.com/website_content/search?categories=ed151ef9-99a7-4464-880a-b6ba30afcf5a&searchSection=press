@@ -1,0 +1,1072 @@
+
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+    <script>
+		dataLayer = [{
+			'pageLanguage'                : 'en',
+			'pageSegment'                 : 'all',
+			'pageName'                    : 'Search',
+			'pageId'                      : 'https://www.proximus.com/all/search.html',
+			'page_category_l0': 'all', 
+			'page_category_l1': 'search'
+		}];
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+			var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-WFR88B');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="referrer" content="origin">
+    <title>Search</title>
+
+    <!-- Search Engine -->
+    <meta name="description" content="Proximus Group website">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Search">
+    <meta name="twitter:description" content="Proximus Group website">
+    <meta name="twitter:site" content="@Proximus_Group">
+    <meta name="twitter:creator" content="@Proximus_Group">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta property="og:title" content="Search">
+    <meta property="og:description" content="Proximus Group website">
+    <meta property="og:url" content="https://www.proximus.com/all/search.html">
+    <meta property="og:site_name" content="Proximus Group Website">
+    <meta property="og:type" content="website">
+    <meta property="fb:admins" content="883795281632851" />
+
+<meta name="image" content="https://www.proximus-cdn.com/dam/jcr:fe407762-98ee-4a87-b9a7-6641619ac9be/background_proximus.jpg">
+<meta name="twitter:image:src" content="https://www.proximus-cdn.com/dam/jcr:fe407762-98ee-4a87-b9a7-6641619ac9be/background_proximus.jpg">
+<meta property="og:image" content="https://www.proximus-cdn.com/dam/jcr:fe407762-98ee-4a87-b9a7-6641619ac9be/background_proximus.jpg"> <meta property="article:published_time" content="Jan 21, 2019 4:27:58 PM">
+<meta name="displayDate" content='2019-01-21'>
+<meta name="thumbnailPageUrl" content=''>
+<meta name="pageType" content="article">
+<meta name="og:type" content="article">
+
+        <script type="text/javascript" src="/ruxitagentjs_ICA2SVfqru_10179191120132458.js" data-dtconfig="app=d3d43e3dba18e3ed|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|featureHash=ICA2SVfqru|dpvc=1|lastModification=1574780855873|dtVersion=10179191120132458|tp=500,50,0,1|rdnt=1|uxrgce=1|uxdcw=1500|bp=2|agentUri=/ruxitagentjs_ICA2SVfqru_10179191120132458.js|reportUrl=/rb_8093c039-36aa-470b-b308-34c744608283|rid=RID_-1422340403|rpid=-1573746161|domain=proximus.com"></script><link media="all" rel="stylesheet" href="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/common/assets/css/style~2019-10-11-12-49-36-473~cache.css" />
+
+        <script async="async"
+                src="//consent.truste.com/notice?domain=proximus.com&c=TrustArcConsent&country=be&behavior=expressed&language=en"
+                crossorigin></script>
+
+        <script src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/common/js/jquery-3.3.1.min~2019-03-07-16-08-14-000~cache.js" type="text/javascript"></script>
+        <script src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/common/js/foundation.min~2019-03-07-16-08-14-000~cache.js" type="text/javascript"></script>
+        <script src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/common/js/js.cookie-2.2.0.min~2019-03-07-16-08-14-000~cache.js" type="text/javascript"></script>
+        <script src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/common/js/pxc~2019-03-11-11-58-44-320~cache.js" type="text/javascript"></script>
+
+        <script>
+			var existingCookie = Cookies.get('LANGUAGE');
+			if (!existingCookie || (existingCookie !== 'en')) {
+				Cookies.set('LANGUAGE', 'en');
+			}
+        </script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFR88B" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<header class="global-header" #header>
+    <div class="mobile-backdrop">
+        <span></span>
+    </div>
+
+    <button class="mobile-close-search" type="button" data-target="#search" aria-controls="toggleSearch" aria-expanded="false"
+            aria-label="Close search">
+        <i class="icon icon-Close"></i>
+        <span class="a11y">Close search</span>
+    </button>
+    <button class="mobile-open-search" type="button" data-target="#search" aria-controls="toggleSearch" aria-expanded="false"
+            aria-label="Open search">
+        <i class="icon icon-Search"></i>
+        <span class="a11y">Open search</span>
+    </button>
+
+    <button class="mobile-toggle-menu">
+        <svg viewBox="0 0 100 100" width="100%">
+            <path class="top"
+                  d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+            <path class="middle" d="m 30,50 h 40"></path>
+            <path class="bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+        </svg>
+    </button>
+
+        <div class="container-maxwidth logo">
+            <a href="/"><img src="https://www.proximus-cdn.com/dam/jcr:e466a577-8e43-4a26-aa53-809b293efa24/pxs-logo.svg" title=""></a>
+        </div>
+
+<nav id="navigator" #navigator>
+	<div class="scroll-container">
+
+
+<div class="parent-menu">
+	<div class="container-maxwidth">
+		<ul>
+			<li>
+				<a href="https://www.proximus.be/en/id_personal/personal.html" target="_blank">Personal</a>
+			</li>
+			<li>
+				<a href="https://www.proximus.be/en/id_self-employed-and-small-companies/self-employed-and-small-companies.html"
+				   target="_blank">
+                Business
+				</a>
+			</li>
+			<li>
+				<a href="https://www.proximus.be/en/id_companies-and-public-sector/companies-and-public-sector.html" target="_blank">
+                Large companies
+				</a>
+			</li>
+			<li class="active">
+				<a href="#">Proximus Group</a>
+			</li>
+		</ul>
+	</div>
+</div>		<div class="site-menu container-maxwidth">
+			<ul>
+
+<li class="multi-level">
+	<a role="button" class="header--top-level" href="/our-company.html" >
+		<span>Our company
+		<i class="icon-ico-arrow-down"></i>
+        </span>
+	</a>
+	<div class="children">
+		<button class="desktop-close-menu" type="button">
+			<span class="icon icon-Close"></span>
+		</button>
+		<a role="button" class="mobile-back">
+			<span>
+				<span class="icon"><i class="icon icon-Arrow-left"></i></span>
+				<span class="text">Our company</span>
+			</span>
+		</a>
+		<ul>
+			<li class="mobile-only">
+				<a class="mobile-landing"
+				   href="/our-company.html">
+					<span>Welcome</span>
+				</a>
+			</li>
+<li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Who we are?
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Who we are?</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/our-company/our-profile.html" >Our profile</a>
+</li>
+<li>
+	<a href="/our-company/strategy.html" >Our strategy</a>
+</li>
+<li>
+	<a href="/our-company/company_history.html" >Our history</a>
+</li>
+<li>
+	<a href="/annualreport2018.html" >Annual Report 2018</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Governance
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Governance</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/governance/board-of-directors.html" >Board of directors</a>
+</li>
+<li>
+	<a href="/governance/executive-committee.html" >Executive committee </a>
+</li>
+<li>
+	<a href="/investors/compliance.html" >Compliance</a>
+</li>
+<li>
+	<a href="/investors/regulatory-information.html" >Regulatory information</a>
+</li>
+<li>
+	<a href="/investors/charters.html" >Bylaws &amp; Charters</a>
+</li>
+<li>
+	<a href="/investors/shareholder-structure.html" >Shareholder structure</a>
+</li>
+<li>
+	<a href="/investors/shareholders-meeting.html" >Shareholder meetings</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Suppliers
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Suppliers</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/suppliers/toolbox.html" >Toolbox</a>
+</li>
+<li>
+	<a href="/suppliers/ariba.html" >Ariba</a>
+</li>
+<li>
+	<a href="/suppliers/supplier-evaluation.html" >Suppliers Evaluation</a>
+</li>
+<li>
+	<a href="/suppliers/a-responsible-supply-chain.html" >Supply chain</a>
+</li>
+<li>
+	<a href="/suppliers/flecs.html" >FLECS</a>
+</li>	</ul>
+</div></li>		</ul>
+	</div>
+</li>
+<li class="multi-level">
+	<a role="button" class="header--top-level" href="/sustainability.html" >
+		<span>Sustainability
+		<i class="icon-ico-arrow-down"></i>
+        </span>
+	</a>
+	<div class="children">
+		<button class="desktop-close-menu" type="button">
+			<span class="icon icon-Close"></span>
+		</button>
+		<a role="button" class="mobile-back">
+			<span>
+				<span class="icon"><i class="icon icon-Arrow-left"></i></span>
+				<span class="text">Sustainability</span>
+			</span>
+		</a>
+		<ul>
+			<li class="mobile-only">
+				<a class="mobile-landing"
+				   href="/sustainability.html">
+					<span>Welcome</span>
+				</a>
+			</li>
+<li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>A better digital life
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">A better digital life</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/sustainability/enabling-a-better-digital-life/digital-infrastructure.html" >Digital Infrastructure</a>
+</li>
+<li>
+	<a href="/sustainability/enabling-a-better-digital-life/digital-trust.html" >Digital Trust</a>
+</li>
+<li>
+	<a href="/sustainability/enabling-a-better-digital-life/digital-innovation.html" >Digital Innovation</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Our stakeholders
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Our stakeholders</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/sustainability/caring-for-our-stakeholders/customers.html" >Customer first</a>
+</li>
+<li>
+	<a href="/sustainability/caring-for-our-stakeholders/employees.html" >Employees</a>
+</li>
+<li>
+	<a href="/sustainability/caring-for-our-stakeholders/ethical-business-conduct.html" >Ethical business conduct</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Contributing to society
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Contributing to society</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/sustainability/contributing-to-society/education.html" >Education</a>
+</li>
+<li>
+	<a href="/sustainability/contributing-to-society/digital-for-all.html" >Digital for all</a>
+</li>
+<li>
+	<a href="/sustainability/contributing-to-society/social-engagement.html" >Social engagement</a>
+</li>
+<li>
+	<a href="/sustainability/sponsoring.html" >Sponsoring</a>
+</li>
+<li>
+	<a href="/sustainability/proximus-art.html" >Proximus Art Collection</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Our planet
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Our planet</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/sustainability/respecting-our-planet.html" >CO2 neutral</a>
+</li>
+<li>
+	<a href="/sustainability/respecting-our-planet.html" >Circular economy</a>
+</li>
+<li>
+	<a href="/sustainability/respecting-our-planet.html" >Sustainable supply chain</a>
+</li>	</ul>
+</div></li>		</ul>
+	</div>
+</li>
+<li class="multi-level">
+	<a role="button" class="header--top-level" href="/investors.html" >
+		<span>Investors
+		<i class="icon-ico-arrow-down"></i>
+        </span>
+	</a>
+	<div class="children">
+		<button class="desktop-close-menu" type="button">
+			<span class="icon icon-Close"></span>
+		</button>
+		<a role="button" class="mobile-back">
+			<span>
+				<span class="icon"><i class="icon icon-Arrow-left"></i></span>
+				<span class="text">Investors</span>
+			</span>
+		</a>
+		<ul>
+			<li class="mobile-only">
+				<a class="mobile-landing"
+				   href="/investors.html">
+					<span>Welcome</span>
+				</a>
+			</li>
+<li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Publications
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Publications</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/investors/reports-and-results.html" >Quarterly Results</a>
+</li>
+<li>
+	<a href="/annualreport2018.html" >Annual Report 2018</a>
+</li>
+<li>
+	<a href="https://issuu.com/proximusgroup/docs/proximussustainabilitystrategy" target="_blank">Sustainability Strategy</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Financial position
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Financial position</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/investors/net-financial-debt.html" >Net financial debt</a>
+</li>
+<li>
+	<a href="/investors/funding.html" >Funding</a>
+</li>
+<li>
+	<a href="/investors/credit-facilities-and-rating.html" >Credit facilities and rating </a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Share
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Share</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/investors/share-information.html" >Share Information</a>
+</li>
+<li>
+	<a href="/investors/stock-quote.html" >Stock quote</a>
+</li>
+<li>
+	<a href="/investors/shareholder-remuneration.html" >Shareholder remuneration</a>
+</li>
+<li>
+	<a href="/investors/investment-calculator.html" >Investment calculator</a>
+</li>
+<li>
+	<a href="/investors/transparency-declarations.html" >Transparency declarations</a>
+</li>
+<li>
+	<a href="/investors/liquidity-contract.html" >Liquidity contract</a>
+</li>
+<li>
+	<a href="/investors/analyst-coverage.html" >Analyst coverage</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Governance
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Governance</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/governance/board-of-directors.html" >Board of directors</a>
+</li>
+<li>
+	<a href="/governance/executive-committee.html" >Executive Committee</a>
+</li>
+<li>
+	<a href="/investors/compliance.html" >Compliance</a>
+</li>
+<li>
+	<a href="/investors/regulatory-information.html" >Regulatory information</a>
+</li>
+<li>
+	<a href="/investors/charters.html" >Bylaws &amp; Charters</a>
+</li>
+<li>
+	<a href="/investors/shareholder-structure.html" >Shareholder structure</a>
+</li>
+<li>
+	<a href="/investors/shareholders-meeting.html" >Shareholder meetings</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Services
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Services</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/investors/financial-calendar.html" >Financial Calendar</a>
+</li>
+<li>
+	<a href="/our-company/contact.html" >Contact</a>
+</li>	</ul>
+</div></li>		</ul>
+	</div>
+</li>
+<li class="multi-level">
+	<a role="button" class="header--top-level" href="/news.html" >
+		<span>Press
+		
+        </span>
+	</a>
+	<div class="children">
+		<button class="desktop-close-menu" type="button">
+			<span class="icon icon-Close"></span>
+		</button>
+		<a role="button" class="mobile-back">
+			<span>
+				<span class="icon"><i class="icon icon-Arrow-left"></i></span>
+				<span class="text">Press</span>
+			</span>
+		</a>
+		<ul>
+			<li class="mobile-only">
+				<a class="mobile-landing"
+				   href="/news.html">
+					<span>Welcome</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</li>
+<li class="multi-level">
+	<a role="button" class="header--top-level" href="/jobs.html" >
+		<span>Jobs
+		<i class="icon-ico-arrow-down"></i>
+        </span>
+	</a>
+	<div class="children">
+		<button class="desktop-close-menu" type="button">
+			<span class="icon icon-Close"></span>
+		</button>
+		<a role="button" class="mobile-back">
+			<span>
+				<span class="icon"><i class="icon icon-Arrow-left"></i></span>
+				<span class="text">Jobs</span>
+			</span>
+		</a>
+		<ul>
+			<li class="mobile-only">
+				<a class="mobile-landing"
+				   href="/jobs.html">
+					<span>Welcome</span>
+				</a>
+			</li>
+<li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Our Jobs
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Our Jobs</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/jobs/technical.html" >Technical jobs</a>
+</li>
+<li>
+	<a href="/jobs/commercial.html" >Commercial jobs</a>
+</li>
+<li>
+	<a href="/jobs/ict.html" >ICT jobs</a>
+</li>
+<li>
+	<a href="/jobs/data.html" >Data jobs</a>
+</li>
+<li>
+	<a href="/jobs/management-trainee.html" >Management Trainee</a>
+</li>
+<li>
+	<a href="/jobs/students.html" >Student jobs / internships</a>
+</li>
+<li>
+	<a href="/search?jobs=all&amp;searchSection=jobs" >All jobs</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Jobs at Group affiliates
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Jobs at Group affiliates</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="https://www.scarlet.be/fr/jobs/ " target="_blank">Scarlet</a>
+</li>
+<li>
+	<a href="https://www.tango.lu/en/jobs" target="_blank">Tango</a>
+</li>
+<li>
+	<a href="https://proximus.csod.com/ats/careersite/search.aspx?site=3" target="_blank">BICS</a>
+</li>
+<li>
+	<a href="/jobs/proximus-ict-ecosystem.html" >Proximus Accelerators</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>Our future is digital
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">Our future is digital</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="/jobs/our-future-is-digital.html" >Yours too?</a>
+</li>	</ul>
+</div></li><li class="has-children">
+			
+
+<a class="header--sub-level">
+    <span>For candidates
+        <i class="icon icon-Arrow-down"></i>
+    </span>
+</a>
+<div class="children">
+	<a role="button" class="mobile-back">
+        <span>
+            <span class="icon"><i class="icon icon-Arrow-left"></i></span>
+            <span class="text">For candidates</span>
+        </span>
+	</a>
+	<ul>
+
+<li>
+	<a href="https://proximus.csod.com/ats/careersite/login.aspx" target="_blank">Profile log-in</a>
+</li>	</ul>
+</div></li>		</ul>
+	</div>
+</li>			</ul>
+			<form id="search_form_id" class="search" method="get" action="./" autocomplete="off">
+				<div class="fields">
+					<button type="button" id="searchClose">&times;</button>
+					<select id="searchDropdown" name="category">
+						<option value="">Search for...</option>
+						<option selected value="website">Website</option>
+						<option value="press">Press </option>
+						<option value="jobs">Jobs</option>
+						<option value="media">Media</option>
+					</select>
+					<div class="autocomplete">
+						<input type="search" id="searchInput" name="q" placeholder="Search" autocomplete="off">
+						<ul id="header-suggestions" class="search-suggestions" style="display: none;">
+						</ul>
+					</div>
+				</div>
+				<button type="submit" id="searchSubmit"><i class="icon icon-Search"></i></button>
+			</form>
+		</div>
+	</div>
+</nav>
+
+<script>
+	$(function () {
+		var headerSearchComponent = new HeaderSearchComponent('https://www.proximus.be/rest/elasticsearch-search-api', 'en', 'pxcom', 10, 'all');
+		headerSearchComponent.init();
+	});
+</script>
+<div class="user-info">
+	<div class="container-maxwidth">
+		<div class="language">
+			<div>
+					<button aria-haspopup="true" aria-expanded="false">
+                        EN <i class="icon-ico-arrow-down"></i>
+					</button>
+					<p class="a11y">Current language: EN</p>
+				<div class="dropdown" aria-labelledby="dropdownMenuLink">
+						<a role="button" localizedLink="/fr/all/search.html" language="fr">
+							<span class="a11y">New Language: </span>
+                            FR
+						</a>
+						<a role="button" localizedLink="/nl/all/search.html" language="nl">
+							<span class="a11y">New Language: </span>
+                            NL
+						</a>
+				</div>
+			</div>
+		</div>
+<div class="stock-quote">
+	<a href="/investors/stock-quote.html" >
+		<iframe src="https://tools.eurolandir.com/tools/ticker/html/?companycode=b-belg&amp;v=small&lang=en-EN"></iframe>
+	</a>
+</div>		<div class="contact">
+
+<a href="/our-company/contact.html" >Contact</a>		</div>
+	</div>
+</div>
+<script>
+	$(".dropdown a").on("click", function () {
+		var lang = $(this).attr("language");
+		var localizedLink = $(this).attr("localizedLink");
+		Cookies.set("LANGUAGE", lang);
+		window.location.href = localizedLink;
+		return false;
+	});
+</script>
+
+</header>
+<main class="global-container ">
+<section class="element--breadcrumb ">
+	<div class="container-maxwidth">
+		<div class="container">
+			<p class="a11y" id="system-breadcrumb">Breadcrumb</p>
+			<nav aria-labelledby="system-breadcrumb">
+				<ol>
+							<li>
+								<a href="/">Home</a>
+							</li>
+							<li>
+								<a href="/all.html">All</a>
+							</li>
+							<li>
+								<span>Search</span>
+							</li>
+				</ol>
+			</nav>
+		</div>
+	</div>
+</section>    
+
+
+
+<app-pxc-search elasticProperties='{
+"language": "en",
+"query": "",
+"searchSection": "press",
+"results": "12",
+"proximusBeSearchResults": "5",
+"proximusComIndex": "pxcom",
+"proximusBeIndex": "pxms",
+"suggestionResults": "10",
+"suggestionContext": "all",
+"siteCategories": [{"id":"ed151ef9-99a7-4464-880a-b6ba30afcf5a","displayName":"Financial","name":"Financial"},{"id":"2a0d2138-e6c3-46fd-8792-e15b27d32d0f","displayName":"Products \u0026 Solutions","name":"Products_Solutions"},{"id":"4f585dff-ddcb-4e34-988d-fd0414fdfb56","displayName":"Network","name":"Network"},{"id":"4a97f091-c75f-4cc6-98a2-020a79bf4bb0","displayName":"Jobs","name":"Jobs"},{"id":"33a9cafa-4c9f-4fab-924e-e1e6e9620f68","displayName":"Sustainability","name":"Contribution"},{"id":"6b25048f-7283-498e-94b2-de87d9ae314a","displayName":"diggit","name":"diggit"},{"id":"b3ba960c-e877-4162-8ab4-1be273a59aee","displayName":"Strategy","name":"Strategy"},{"id":"a79335d4-f226-4093-8a80-5d04169a916d","displayName":"Governance","name":"Governance"},{"id":"3829949a-a7cd-451c-b57c-1a0721fa573f","displayName":"Press Releases","name":"press-releases"}]
+}' concepts='{
+"proximusBeResultsLabel": "Extra results in proximus.be",
+"proximusBeLinkLabel": "Proximus.be website",
+"resultsInLabel": "Results in",
+"pressAndNewsLabel": "Press ",
+"websiteLabel": "Website",
+"jobsLabel": "Jobs",
+"mediaLabel": "Media",
+"noResultsStartFirstLineStart": "Your search for",
+"noResultsStartFirstLineRest": "No results",
+"noResultsSecondLine": "Try another keyword or use the filters to find what you are looking for.",
+"noResultsFound": "No results found",
+"advancedSearchTitle": "Your search",
+"advancedSearchCategoryFilterTitle": "Category",
+"advancedSearchDateFilterTitle": "Select Dates",
+"advancedSearchFiltersTitle": "Filters",
+"advancedSearchJobEmploymentStatusFilterTitle": "Employment Status",
+"advancedSearchJobCategoryFilterTitle": "Category",
+"advancedSearchJobLocationFilterTitle": "Location",
+"resultLabel": "result for",
+"resultsLabel": "results for",
+"inThisSectionLabel": "in &#39;",
+"relatedArticleLabel": "Related Article"
+}' isAuthor='false'
+                listingProperties='{"categories": "ed151ef9-99a7-4464-880a-b6ba30afcf5a"
+}' configProperties='{
+"cornerStoneEndPoint": "https://www.proximus.be/rest/recruitment/jobs",
+"elasticEndPoint": "https://www.proximus.be/rest/elasticsearch-search-api",
+"magnoliaEndPoint": "/.rest"
+}'></app-pxc-search>
+<link media="all" rel="stylesheet"
+      href="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/angular/search/styles.09659f42445ecfc8ef0f~2019-03-07-16-08-44-000~cache.css
+">
+<script type="text/javascript"
+        src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/angular/search/runtime.ec2944dd8b20ec099bf3~2019-03-07-16-08-44-000~cache.js
+"></script>
+<script type="text/javascript"
+        src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/angular/search/polyfills.f534587641cead167ebb~2019-03-07-16-08-44-000~cache.js
+"></script>
+<script type="text/javascript"
+        src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/angular/search/scripts.6c1b6cd7ca532f99be05~2019-03-07-16-08-44-000~cache.js
+"></script>
+<script type="text/javascript"
+        src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/angular/search/main.98434a5aafa13f7c1233~2019-03-07-16-08-44-000~cache.js
+"></script>
+</main>
+<footer id="footer">
+<h2 class="a11y">Footer</h2>
+<div class="footer-contact container-maxwidth">
+	<div class="contact-icon">
+		<svg height="60" viewBox="0 0 37.92 38.4" width="60" xmlns="http://www.w3.org/2000/svg">
+			<path d="M17.48 18.76a1.65 1.65 0 0 0-1.21.51 1.62 1.62 0 0 0-.5 1.21 1.71 1.71 0 0 0 2.93 1.22 1.68 1.68 0 0 0 .5-1.22 1.72 1.72 0 0 0-1.72-1.72zM23 6.71a7.12 7.12 0 0 0-4.25-1.09A11.19 11.19 0 0 0 13.29 7l1.08 2.22a8.91 8.91 0 0 1 4.23-1.06 4.06 4.06 0 0 1 2.06.41 1.25 1.25 0 0 1 .67 1.12 1.58 1.58 0 0 1-.2.84 2 2 0 0 1-.56.56 12 12 0 0 1-1.15.65L19 12a10.41 10.41 0 0 0-2 1.32 2.59 2.59 0 0 0-.75 1.31 13.63 13.63 0 0 0-.25 2.51h2.92a7.29 7.29 0 0 1 .13-1.6 1.59 1.59 0 0 1 .56-.83 9.91 9.91 0 0 1 1.61-.93A8.2 8.2 0 0 0 23.75 12a3.41 3.41 0 0 0 .76-2.28A3.5 3.5 0 0 0 23 6.71zm12.9 14.81a4 4 0 0 1-4 4.05H10.25a3 3 0 0 0-2.41 1.19L2 34.4V6.07A4 4 0 0 1 6.05 2h28.84a1 1 0 0 1 1 1zM34.89 0H6.05A6.06 6.06 0 0 0 0 6.07v31.32a1 1 0 0 0 .69 1 1.13 1.13 0 0 0 .32 0 1 1 0 0 0 .8-.4L9.45 28a1 1 0 0 1 .8-.39h21.62a6.06 6.06 0 0 0 6.05-6.07V3a3 3 0 0 0-3.03-3z"
+			      data-name="Layer 1" fill="#fff" fill-rule="evenodd"></path>
+		</svg>
+	</div>
+	<div class="contact-text">
+		<h3 class="no-line">
+			<a href="/our-company/contact.html" >Contact us</a>
+		</h3>
+	</div>
+	<div class="contact-social">
+		<h3 class="no-line">Follow us on </h3>
+		<ul>
+			<li>
+				<a class="facebook" href="https://www.facebook.com/WeAreProximus" target="_blank">
+					<span class="a11y">Facebook</span>
+				</a>
+			</li>
+			<li>
+				<a class="twitter" href="https://twitter.com/ProximusGroup" data-size="large">
+					<span class="a11y">Twitter</span>
+				</a>
+			</li>
+			<li>
+				<a class="linkedin" href="https://www.linkedin.com/company/proximus" target="_blank">
+					<span class="a11y">Linked-in</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div><ul class="footer-links container-maxwidth">
+
+<li>
+<input id="02d70d00-23f1-4b60-b316-330b2afcc4c7" type="checkbox" role="button" aria-label="Our company">
+<h3>
+	<label for="02d70d00-23f1-4b60-b316-330b2afcc4c7" tabindex="0">Our company
+		<i class="icon-ico-arrow-down"></i>
+	</label>
+</h3>
+	<ul>
+
+<li>
+	<a href="/our-company/strategy.html" >Our strategy</a>
+</li>
+<li>
+	<a href="/suppliers.html" >Suppliers</a>
+</li>
+<li>
+	<a href="/governance/board-of-directors.html" >Board of Directors</a>
+</li>
+<li>
+	<a href="/governance/executive-committee.html" >Executive Committee</a>
+</li>	</ul>
+</li>
+<li>
+<input id="9d9e7421-3ca9-46b2-ab0c-ea3c48244dc1" type="checkbox" role="button" aria-label="Sustainability">
+<h3>
+	<label for="9d9e7421-3ca9-46b2-ab0c-ea3c48244dc1" tabindex="0">Sustainability
+		<i class="icon-ico-arrow-down"></i>
+	</label>
+</h3>
+	<ul>
+
+<li>
+	<a href="63fe2cca-873e-410f-b03b-26c182aee45f" >A better digital life</a>
+</li>
+<li>
+	<a href="b259c82a-0b98-4661-9038-5d576fd136fc" >Our stakeholders</a>
+</li>
+<li>
+	<a href="8f3f0c8c-ac80-4479-999c-0e191f459991" >Societal contribution</a>
+</li>
+<li>
+	<a href="/sustainability/respecting-our-planet.html" >Our planet</a>
+</li>	</ul>
+</li>
+<li>
+<input id="bb882148-fd93-4d94-b20f-9c3bc7fcd678" type="checkbox" role="button" aria-label="Investors">
+<h3>
+	<label for="bb882148-fd93-4d94-b20f-9c3bc7fcd678" tabindex="0">Investors
+		<i class="icon-ico-arrow-down"></i>
+	</label>
+</h3>
+	<ul>
+
+<li>
+	<a href="/investors/reports-and-results.html" >Quarterly results</a>
+</li>
+<li>
+	<a href="/investors/stock-quote.html" >Stock quote</a>
+</li>
+<li>
+	<a href="/investors/liquidity-contract.html" >Liquidity contract</a>
+</li>
+<li>
+	<a href="/investors/transparency-declarations.html" >Transparency declarations</a>
+</li>	</ul>
+</li>
+<li>
+<input id="22437055-9e3b-419b-9a76-69a8e40d332c" type="checkbox" role="button" aria-label="Press">
+<h3>
+	<label for="22437055-9e3b-419b-9a76-69a8e40d332c" tabindex="0">Press
+		<i class="icon-ico-arrow-down"></i>
+	</label>
+</h3>
+	<ul>
+
+<li>
+	<a href="/news.html" >Home</a>
+</li>	</ul>
+</li>
+<li>
+<input id="5b40225e-fa5d-4a41-a2e7-9b5a59494758" type="checkbox" role="button" aria-label="Jobs">
+<h3>
+	<label for="5b40225e-fa5d-4a41-a2e7-9b5a59494758" tabindex="0">Jobs
+		<i class="icon-ico-arrow-down"></i>
+	</label>
+</h3>
+	<ul>
+
+<li>
+	<a href="/jobs/technical.html" >Technical jobs</a>
+</li>
+<li>
+	<a href="/jobs/commercial.html" >Commercial jobs</a>
+</li>
+<li>
+	<a href="/jobs/ict.html" >ICT jobs</a>
+</li>
+<li>
+	<a href="/search?jobs=all&amp;searchSection=jobs" >Search</a>
+</li>	</ul>
+</li></ul><div class="footer-legal">
+	<div class="container-maxwidth">
+		<a href="/" class="logo">
+			<span class="a11y">Proximus group</span>
+		</a>
+
+<p>All rights reserved. © 2019 Proximus<br />
+This site was created and is managed in accordance with Belgian law.<br />
+Boulevard du Roi Albert II, 27 - B-1030 Brussels.</p>
+
+
+
+
+		<ul class="links">
+
+<li>
+	<a href="https://www.proximus.be/en/id_cr_warnland/personal/products/orphans/legal-information.html" target="_blank">General terms and conditions, consumer info</a>
+</li>
+<li>
+	<a href="https://www.proximus.be/en/id_cr_warnland/personal/products/orphans/legal-information.html#privacy" target="_blank"> Privacy</a>
+</li>
+<li>
+	<a href="javascript:PxConsentManager.open();" > Cookie manager</a>
+</li>
+<li>
+	<a href="https://www.proximus.be/en/id_cr_cookie/personal/products/orphans/cookie-policy.html" target="_blank">Cookie policy</a>
+</li>
+<li>
+	<a href="https://www.proximus.be/companydata" target="_blank">Company data</a>
+</li>		</ul>
+		<div class="language-select">
+			<p class="a11y">Select your language</p>
+						<a localizedLink="/fr/all/search.html" language="fr">FR</a>
+						<a localizedLink="/nl/all/search.html" language="nl">NL</a>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(".language-select a").on("click", function () {
+		var lang = $(this).attr("language");
+		var localizedLink = $(this).attr("localizedLink");
+		Cookies.set("LANGUAGE", lang);
+		window.location.href = localizedLink;
+		return false;
+	});
+</script></footer>
+<script type="text/javascript"
+        src="https://www.proximus-cdn.com/.resources/cdn/libs/pxc/common/js/consentmanager.min~2019-03-07-16-08-14-000~cache.js
+"></script>
+</body>
+</html>
+

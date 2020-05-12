@@ -1,0 +1,2834 @@
+<!DOCTYPE html>
+<html xmlns:tk="http://tracking.3ds.com/ns#"  lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+<head>
+        <meta property="tk:env" content="PROD" />
+  <meta property="tk:site_name" content="investors" />
+
+      <meta property="tk:name" content="3ds/investors/regulated_information/periodic_information/" />
+  
+  <meta property="tk:category" content="investors"/>
+
+      <meta property="tk:sub_category" content="regulated_information" />
+  
+
+      <meta property="tk:type" content="content" />
+  
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"39077635"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Periodic Information - Dassault Systèmes" />
+<meta property="og:site_name" content="Dassault Systèmes" />
+<link rel="canonical" href="https://investor.3ds.com/regulated-information/periodic-information/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://investor.3ds.com/regulated-information/periodic-information" />
+<meta property="og:title" content="Periodic Information - Dassault Systèmes" />
+<meta property="og:description" content="The Investor Relations website contains information about Dassault Systèmes&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/g/files/knoqqb35451/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="https://investor.3ds.com/regulated-information/periodic-information" />
+<link rel="alternate" hreflang="fr" href="https://investor.3ds.com/fr/regulated-information/periodic-information" />
+<link rel="revision" href="https://investor.3ds.com/regulated-information/periodic-information" />
+
+    <title>Periodic Information - Dassault Systèmes</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb35451/files/css/css_8zWKN6qWWUtDIuPxDLTytXs0iepG3wRB9x86fVDdjDc.css?q8vzge" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb35451/files/css/css_wEsd3ZOCgV3lYfQ3WHoD0RTSLmoIKTUW6NlbCGzm9Pk.css?q8vzge" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb35451/files/css/css_47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU.css?q8vzge" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb35451/files/css/css_Ez7Kd5Pf17mhYEpSVWy9vxRYA1AG4BIGlDOHgrmCLQ8.css?q8vzge" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/css/site-specific.css?q8vzge" />
+
+      
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb35451/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+<script src="/sites/g/files/knoqqb35451/files/js/js_yC-lDJ8eUZPYXBieKKXATft6bsMM1aH2vOA7Kjg-Myk.js"></script>
+
+        
+        <script src="//tracking.3ds.com/stat/init/ds_init_global.js"></script>
+        </head>
+<body class="body-sidebars-none nir-node nir-node--type-nir-landing-page nir-node--16796 path-node page-node-type-nir-landing-page lang-fr ds-ui-kit-scope">
+
+
+<div id="skip">
+  <a class="visually-hidden focusable skip-link" href="#main-menu">
+    Skip to main navigation
+  </a>
+</div>
+
+  <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+<div class="ds-g-menu">
+    <div class="ds-g-menu__action">
+        <div class="ds-g-menu__action__burger js-toggle-side"><i class="ds-ico ds-ico-burger-icon"></i></div>
+        <div class="ds-g-menu__action__logo"><a href="https://www.3ds.com"><img src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg"/></a></div>
+    </div>
+    <ul class="ds-g-menu__features">
+        <li class="ds-g-menu__cta stock_callout_global">
+            <a class="" href="/stock/stock-chart">
+                  <div class="region region-header-quote">
+    <div id="block-stockquote" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--5881 block--header-quote--market-data-block__stock-quote block--header-quote--market-data-block__stock-quote--5881 block--1325eaad-78aa-458d-a3ea-54adf56a6ba2 block--1325eaad-78aa-458d-a3ea-54adf56a6ba2--5881 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+    
+      
+ 
+<div class='quote-wrap user-toggle-off stock-quote__featured'>
+  <div class="quote-wrapper">
+                            <div class="stock-quote" data-exchange="">
+    <strong>:
+    </strong>
+        <time> Apr 20, 2020 1:38 AM EDT</time></span>
+
+                                                        </div>
+    </div>
+</div>
+
+  </div>
+
+  </div>
+
+            </a>
+
+        </li>
+        <li class="ds-g-menu__search js-icon-search"><i class="ds-ico ds-ico-search-icon"></i></li>
+        <li class="ds-g-menu__notif js-icon-user"><a href="https://eu1-ds-iam.3dexperience.3ds.com/login?"><i class="ds-ico ds-ico-user-icon"></i></a>
+            <div class="ds-g-menu__notif__count">2</div>
+            <div class="ds-g-menu__user"><span class="ds-g-menu__shortname"></span>
+                <div>
+                    <span class="ds-g-menu__welcome">Hello</span>
+                    <span class="ds-g-menu__username"></span>
+                </div>
+            </div>
+        </li>
+        <li class="ds-g-menu__compass js-icon-compass" style="display: none;"><a href="#"><img src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/compass.png"/></a></li>
+    </ul>
+    <div class="ds-g-menu-login ds-shadow-2">
+        <div class="ds-g-menu-login__intro">Log into your favorite platform</div>
+
+          <div class="region region-login-platform">
+    <div id="block-gploginplatform" class="block-content--nir-global-block block-content--nir-global-block--10131 block--block-content6864c440-d022-4654-af42-13adc6dc159c block--block-content6864c440-d022-4654-af42-13adc6dc159c--16796 block--login-platform--block-content--6864c440-d022-4654-af42-13adc6dc159c block--login-platform--block-content--6864c440-d022-4654-af42-13adc6dc159c--16796 block--1dd76e9e-1b43-411b-adc3-462fe01a93ad block--1dd76e9e-1b43-411b-adc3-462fe01a93ad--16796 block block-block-content block-block-content6864c440-d022-4654-af42-13adc6dc159c">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><ul><li>
+	<div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"> </div>
+
+	<div class="ds-g-menu-login__title"><a href="#">3DEXPERIENCE</a></div>
+	</li>
+	<li>
+	<div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"> </div>
+
+	<div class="ds-g-menu-login__title"><a href="#">My Solidwork</a></div>
+	</li>
+	<li>
+	<div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"> </div>
+
+	<div class="ds-g-menu-login__title"><a href="#">Partner Portal</a></div>
+	</li>
+	<li>
+	<div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"> </div>
+
+	<div class="ds-g-menu-login__title"><a href="#">Partner Portal</a></div>
+	</li>
+	<li>
+	<div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"> </div>
+
+	<div class="ds-g-menu-login__title"><a href="#">Partner Portal</a></div>
+	</li>
+</ul></div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+        <ul>
+            <li><a href="#">
+                    <div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"></div>
+                    <div class="ds-g-menu-login__title">3DEXPERIENCE</div></a></li>
+            <li><a href="#">
+                    <div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"></div>
+                    <div class="ds-g-menu-login__title">My Solidwork</div></a></li>
+            <li><a href="#">
+                    <div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"></div>
+                    <div class="ds-g-menu-login__title">Partner Portal</div></a></li>
+            <li><a href="#">
+                    <div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"></div>
+                    <div class="ds-g-menu-login__title">Partner Portal</div></a></li>
+            <li><a href="#">
+                    <div class="ds-g-menu-login__logo" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg);"></div>
+                    <div class="ds-g-menu-login__title">Partner Portal</div></a></li>
+        </ul>
+        <div class="ds-g-menu-login__expand"><a class="ds-btn ds-btn--shout ds-btn--compact">See More</a></div>
+    </div>
+</div>
+
+
+<div class="ds-gmenu-wrapper">
+    <div class="ds-g-overlay js-gmenu-overlay"></div>
+    <div class="ds-g-side">
+        <div class="ds-g-left-bar">
+            <div class="ds-g-left-bar__action">
+                <div class="ds-g-left-bar__action__close js-toggle-side"><i class="ds-ico ds-ico-close-icon"></i></div>
+                <div class="ds-g-left-bar__action__logo">
+                    <a href="https://www.3ds.com"><img src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg"/></a>
+                </div>
+            </div>
+            <div class="ds-g-left-bar__container">
+                <div class="ds-g-left-bar__wrapper">
+                    <div class="ds-g-left-bar__menu js-left-menu-nav">
+                        <div class="ds-g-left-bar__top-part">
+                            <div class="ds-g-left-bar__title">Navigate to...</div>
+                            <!-- You can put as many item as you want.-->
+                              <div class="region region-left-navparent">
+    <div id="block-gpleftnavparent" class="block-content--nir-global-block block-content--nir-global-block--16786 block--block-contentacfb6c56-7f21-47ee-912f-a1fb13421125 block--block-contentacfb6c56-7f21-47ee-912f-a1fb13421125--16796 block--left-navparent--block-content--acfb6c56-7f21-47ee-912f-a1fb13421125 block--left-navparent--block-content--acfb6c56-7f21-47ee-912f-a1fb13421125--16796 block--bf1091cd-8803-44e0-8e39-aae91d4188ca block--bf1091cd-8803-44e0-8e39-aae91d4188ca--16796 block block-block-content block-block-contentacfb6c56-7f21-47ee-912f-a1fb13421125">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><ul class="ds-g-left-list"><li class="ds-g-left-list__item ds-g-left-list__item--chevron" data-menu-cat="Industries">
+                                    Industries
+                                </li>
+
+                                <li class="ds-g-left-list__item ds-g-left-list__item--chevron" data-menu-cat="Insights">
+                                    Insights
+                                </li>
+
+                                <li class="ds-g-left-list__item ds-g-left-list__item--chevron" data-menu-cat="Products">
+                                    Products &amp; Services
+                                </li>
+
+                                <li class="ds-g-left-list__item ds-g-left-list__item--chevron" data-menu-cat="About">
+                                    About Dassault Systèmes
+                                </li>
+
+                                <li class="ds-g-left-list__item ds-g-left-list__item--chevron" data-menu-cat="Support">
+                                    Support
+                                </li>
+
+                                <li class="ds-g-left-list__item ds-g-left-list__item--chevron" data-menu-cat="Training">
+                                    Training
+                                </li>
+
+                                <li class="ds-g-left-list__item ds-g-left-list__item--chevron" data-menu-cat="Education">
+                                    Education
+                                </li>
+                                <li class="ds-g-left-list__item ds-g-left-list__item--chevron" data-menu-cat="Partners">
+                                    Partners
+                                </li>
+                            </ul></div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="ds-g-left-bar__menu-location-container">
+                <div class="ds-g-left-bar__menu-location-wrapper js-left-menu-lang">
+                    <div class="ds-g-left-bar__menu-location">
+                        <div class="ds-g-left-bar__back js-toggle-lang">
+                            <i class="ds-ico ds-ico-back-mini"></i>
+                        </div>
+                        <div class="ds-g-left-bar__input">
+                            <label>
+                                <i class="ds-ico ds-ico-search-mini"></i>
+                                <input class="js-search-country-input" type="text" placeholder="Search a language"/>
+                            </label>
+                        </div>
+                        <div class="ds-g-side__title" style="display: none;">Results For FRA</div>
+                        <!--- do not touch --->
+                        <ul class="ds-g-left-list ds-g-left-list--countries">
+                            <li class="ds-g-left-list__item">
+                                <a href="#" itemscope="itemscope" itemtype="http://tracking.3ds.com/ClickAction">
+                                    <meta itemprop="category" content="Navigation">
+                                    <meta itemprop="action" content="menu_language">
+                                    <meta itemprop="label" content="en">
+                                    <div class="ds-g-lang ds-lazy ds-g-lang--en" data-src="https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg"
+                                         data-was-processed="true" style="background-image: url(&quot;https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg&quot;);">
+
+                                    </div><span data-langcode="en">English (US)</span></a></li>
+                            <li class="ds-g-left-list__item"><a href="#" itemscope="itemscope" itemtype="http://tracking.3ds.com/ClickAction">
+                                    <meta itemprop="category" content="Navigation">
+                                    <meta itemprop="action" content="menu_language">
+                                    <meta itemprop="label" content="fr">
+                                    <div class="ds-g-lang ds-lazy ds-g-lang--fr" data-src="https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg" data-was-processed="true" style="background-image: url(&quot;https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg&quot;);"></div>
+                                    <span data-langcode="fr">Français</span></a></li>
+                            <li class="ds-g-left-list__item"><a href="#" itemscope="itemscope" itemtype="http://tracking.3ds.com/ClickAction">
+                                    <meta itemprop="category" content="Navigation">
+                                    <meta itemprop="action" content="menu_language">
+                                    <meta itemprop="label" content="zh-hans">
+                                    <div class="ds-g-lang ds-lazy ds-g-lang--zh-hans" data-src="https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg" data-was-processed="true" style="background-image: url(&quot;https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg&quot;);"></div><span data-langcode="zh-hans">中国</span></a></li>
+                            <li class="ds-g-left-list__item"><a href="#" itemscope="itemscope" itemtype="http://tracking.3ds.com/ClickAction">
+                                    <meta itemprop="category" content="Navigation">
+                                    <meta itemprop="action" content="menu_language">
+                                    <meta itemprop="label" content="de">
+                                    <div class="ds-g-lang ds-lazy ds-g-lang--de" data-src="https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg" data-was-processed="true" style="background-image: url(&quot;https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg&quot;);"></div><span data-langcode="de">Deutsch</span></a></li>
+                            <li class="ds-g-left-list__item"><a href="#" itemscope="itemscope" itemtype="http://tracking.3ds.com/ClickAction">
+                                    <meta itemprop="category" content="Navigation">
+                                    <meta itemprop="action" content="menu_language">
+                                    <meta itemprop="label" content="it">
+                                    <div class="ds-g-lang ds-lazy ds-g-lang--it" data-src="https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg" data-was-processed="true" style="background-image: url(&quot;https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg&quot;);"></div><span data-langcode="it">Italiano</span></a></li>
+                            <li class="ds-g-left-list__item"><a href="#" itemscope="itemscope" itemtype="http://tracking.3ds.com/ClickAction">
+                                    <meta itemprop="category" content="Navigation">
+                                    <meta itemprop="action" content="menu_language">
+                                    <meta itemprop="label" content="es">
+                                    <div class="ds-g-lang ds-lazy ds-g-lang--es" data-src="https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg" data-was-processed="true" style="background-image: url(&quot;https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg&quot;);"></div><span data-langcode="es">Español</span></a></li>
+                            <li class="ds-g-left-list__item"><a href="#" itemscope="itemscope" itemtype="http://tracking.3ds.com/ClickAction">
+                                    <meta itemprop="category" content="Navigation">
+                                    <meta itemprop="action" content="menu_language">
+                                    <meta itemprop="label" content="ja">
+                                    <div class="ds-g-lang ds-lazy ds-g-lang--ja" data-src="https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg" data-was-processed="true" style="background-image: url(&quot;https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg&quot;);"></div><span data-langcode="ja">日本語</span></a></li>
+
+                            <li class="ds-g-left-list__item"><a href="#" itemscope="itemscope" itemtype="http://tracking.3ds.com/ClickAction">
+                                    <meta itemprop="category" content="Navigation">
+                                    <meta itemprop="action" content="menu_language">
+                                    <meta itemprop="label" content="ko">
+                                    <div class="ds-g-lang ds-lazy ds-g-lang--ko" data-src="https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg" data-was-processed="true" style="background-image: url(&quot;https://redmine-mkt.itvpc.3ds.com/attachments/download/14188/Sprite_flags.svg&quot;);"></div><span data-langcode="ko">한국의</span></a></li>
+                        </ul>
+                        <!---end  do not touch --->
+                          <div class="region region-language-switcher1">
+    <div class="language-switcher-language-url block--language-blocklanguage-interface block--language-blocklanguage-interface--16796 block--language-switcher1--language-block--language-interface block--language-switcher1--language-block--language-interface--16796 block--cfa01b7f-9ef6-4d8d-86d3-ec8737fc723f block--cfa01b7f-9ef6-4d8d-86d3-ec8737fc723f--16796 block block-language block-language-blocklanguage-interface" id="block-languageswitcher-2" role="navigation">
+  
+    
+      <ul class="ds-g-left-list ds-g-left-list--countries"><li class="ds-g-left-list__item"><a href="/regulated-information/periodic-information" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/16796">English</a></li><li class="ds-g-left-list__item"><a href="/fr/regulated-information/periodic-information" class="language-link" hreflang="fr" data-drupal-link-system-path="node/16796">Français</a></li></ul>
+  </div>
+
+  </div>
+
+                        <div class="ds-g-left-list__title">Local sites</div>
+                        <div class="ds-g-left-list__slide-wrapper">
+                            <ul class="ds-g-left-list ds-g-left-list--local">
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/asean">ASEAN</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/anz">Australia</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/anz">New Zealand</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/nordics">Nordics</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/pt-br">Brazil</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/cz-cz">Czech Rep</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/he-il">Israel</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/pl-pl">Poland</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/ro-ro">Romania</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/tr-tr">Turkey</a></li>
+                                <li class="ds-g-left-list__smitem"> <a href="https://www.3ds.com/en-uk">United kingdom</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ds-g-left-bar__footer">
+                <a class="ds-g-left-bar__location js-toggle-lang">
+                    <i class="ds-ico ds-ico-language-mini"></i>
+                    United States, English
+
+                </a>
+            </div>
+        </div>
+          <div class="region region-side-bar">
+    <div id="block-gpsidebar" class="block-content--nir-global-block block-content--nir-global-block--15601 block--block-contentde1d613f-bbbb-4c2b-a80d-fc9d7bc5b104 block--block-contentde1d613f-bbbb-4c2b-a80d-fc9d7bc5b104--16796 block--side-bar--block-content--de1d613f-bbbb-4c2b-a80d-fc9d7bc5b104 block--side-bar--block-content--de1d613f-bbbb-4c2b-a80d-fc9d7bc5b104--16796 block--cf498cee-b337-4994-a476-d35107b8803b block--cf498cee-b337-4994-a476-d35107b8803b--16796 block block-block-content block-block-contentde1d613f-bbbb-4c2b-a80d-fc9d7bc5b104">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="ds-g-side__submenu ds-g-submenu">
+<div class="ds-g-submenu__back js-side-back"> </div>
+
+<div class="ds-g-submenu__item" id="Industries" style="display: none;">
+<div class="ds-g-submenu__first-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__title">Industries</div>
+
+<ul class="ds-g-sub-list"><!-- TYPE ONE--><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="http://www.3ds.com/industries/aerospace-defense/">Aerospace &amp; Defense</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/business-services/">Business Services</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/construction-cities-territories/">Construction, Cities &amp; Territories</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="http://www.3ds.com/industries/consumer-packaged-goods-retail/">Consumer Packaged Goods &amp; Retail</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/energy-materials/">Energy &amp; Materials</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="http://www.3ds.com/industries/high-tech/">High-Tech</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/home-lifestyle/">Home &amp; Lifestyle</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="http://www.3ds.com/industries/industrial-equipment/">Industrial Equipment</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="http://www.3ds.com/industries/life-sciences/">Life Sciences</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="http://www.3ds.com/industries/marine-offshore/">Marine &amp; Offshore</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="http://www.3ds.com/industries/transportation-mobility/">Transportation &amp; Mobility</a></div>
+	</li>
+</ul></div>
+</div>
+</div>
+
+<div class="ds-g-submenu__last-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__related">
+<div class="ds-g-submenu__title">Discover also</div>
+
+<ul class="ds-g-sub-list ds-g-sub-list--related"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/customer-stories/">Customer Stories</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/customer-stories/">Explore how Dassault Systèmes supports customers to generate more value in their business</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/events/">Events</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/events/">Dassault Systèmes organizes and takes part in events all around the world</a></div>
+	</li>
+</ul></div>
+<!-- <div class="ds-g-submenu__discover">
+<div class="ds-g-submenu__card"><a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience"><img alt="bla" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/customer_expectations.png" title="bla" /></a>
+
+<div class="ds-g-submenu__card__title"><a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience">Collection - 4 parts</a></div>
+<a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience"> </a>
+
+<p><a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience">Customer Expectations in the Age of Experience</a></p>
+<a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience"> </a></div>
+</div> --></div>
+</div>
+</div>
+</div>
+
+<div class="ds-g-submenu__item" id="Insights" style="display: none;">
+<div class="ds-g-submenu__first-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__title">Insights</div>
+
+<ul class="ds-g-sub-list"><!-- TYPE ONE--><!-- TYPE TWO--><!-- <li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience">Customer Expectations in the Age of Experience</a></div>
+
+	
+	</li> --><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/design/">Design</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/manufacturing/">Manufacturing</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/science/">Science</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://ifwe.3ds.com/cloud/">Cloud</a></div>
+	</li>
+</ul></div>
+</div>
+</div>
+
+<div class="ds-g-submenu__last-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__related">
+<div class="ds-g-submenu__title">Related Content</div>
+<!-- You can put as many item as you want.-->
+
+<ul class="ds-g-sub-list ds-g-sub-list--related"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/customer-stories/">Customer Stories</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/customer-stories/">Explore how Dassault Systèmes supports customers to generate more value in their business</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://compassmag.3ds.com/">Compass Mag</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://compassmag.3ds.com/">The 3DEXPERIENCE Magazine</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/events/">Events</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/events/">Dassault Systèmes organizes and takes part in events all around the world</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://blogs.3ds.com/perspectives/">3D Perspectives</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://blogs.3ds.com/perspectives/">Blog from Dassault Systèmes</a></div>
+	</li>
+</ul></div>
+<!-- <div class="ds-g-submenu__discover">
+<div class="ds-g-submenu__card"><a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience"><img alt="bla" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/customer_expectations.png" title="bla" /></a>
+
+<div class="ds-g-submenu__card__title"><a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience">Collection - 4 parts</a></div>
+<a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience"> </a>
+
+<p><a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience">Customer Expectations in the Age of Experience</a></p>
+<a href="https://ifwe.3ds.com/customer-expectations-in-the-age-of-experience"> </a></div>
+</div> --></div>
+</div>
+</div>
+</div>
+
+<div class="ds-g-submenu__item" id="Products" style="display: none;">
+<div class="ds-g-submenu__first-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__title">Products &amp; Services</div>
+<!--p.ds-g-submenu__title-description Discover all our products and services.-->
+
+<ul class="ds-g-sub-list"><li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/catia/"><img alt="CATIA.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/CATIA.svg" title="CATIA.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/catia/">Shape The World We Live In</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.solidworks.com/"><img alt="SOLIDWORKS.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/SOLIDWORKS.svg" title="SOLIDWORKS.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.solidworks.com/">Inspiring Innovation</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/enovia/"><img alt="ENOVIA.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/ENOVIA.svg" title="ENOVIA.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/enovia/">Collaborative innovation</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/delmia/"><img alt="DELMIA.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/DELMIA.svg" title="DELMIA.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/delmia/">Global Industrial Operations</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/simulia/"><img alt="SIMULIA.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/SIMULIA.svg" title="SIMULIA.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/simulia/">Simulation for Product, Nature &amp; Life</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/geovia/"><img alt="GEOVIA.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/GEOVIA.svg" title="GEOVIA.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/geovia/">Virtual Planet</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/exalead/"><img alt="EXALEAD.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/EXALEAD.svg" title="EXALEAD.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/exalead/">Data in Business</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/3dvia/"><img alt="3DVIA.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/3DVIA.svg" title="3DVIA.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/3dvia/">The Consumer Experience Brand</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/biovia/"><img alt="BIOVIA.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/BIOVIA.svg" title="BIOVIA.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/biovia/">Virtual Biosphere and Materials</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/netvibes/"><img alt="NETVIBES.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/NETVIBES.svg" title="NETVIBES.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/netvibes/">Dashboard Intelligence</a></div>
+	</li>
+	<li class="ds-g-sub-list__item ds-g-sub-list__item--with-logo">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/3dexcite/"><img alt="3DExcite.svg" class="ds-lazy loading" data-was-processed="true" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/3DExcite.svg" title="3DExcite.svg" /></a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/3dexcite/">Marketing in the Age of Experience</a></div>
+	</li>
+</ul></div>
+</div>
+</div>
+
+<div class="ds-g-submenu__last-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__related">
+<div class="ds-g-submenu__title">Discover also</div>
+<!-- You can put as many item as you want.-->
+
+<ul class="ds-g-sub-list ds-g-sub-list--related"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/draftsight-cad-software/">DRAFTSIGHT</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/products-services/draftsight-cad-software/">CAD Software</a></div>
+	</li>
+	<!-- <li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="http://www.quintiq.com/">QUINTIQ</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="http://www.quintiq.com/">Supply chain planning and optimization</a></div>
+	</li> -->
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/services/">Services</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/services/">Services to ensure a succesful deployment of the 3DEXPERIENCE platform</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/customer-stories/">Customer Stories</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/customer-stories/">Explore how Dassault Systèmes supports customers to generate more value in their business</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/events/">Events</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/events/">Dassault Systèmes organizes and takes part in events all around the world</a></div>
+	</li>
+</ul></div>
+
+<div class="ds-g-submenu__discover">
+<div class="ds-g-submenu__card"><a href="https://www.3ds.com/products-services/3dexperience/"><img alt="bla" class="ds-lazy" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/3DExperience.png" title="bla" /><!-- <div class="ds-g-submenu__card__title">Collection - 4 parts</div>
+                                        <p>Customer Expectations in the Age of Experience</p> --></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ds-g-submenu__item" id="About" style="display: none;">
+<div class="ds-g-submenu__first-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__title">About Dassault Systèmes</div>
+<!--p.ds-g-submenu__title-description Discover all our products and services.-->
+
+<ul class="ds-g-sub-list"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/about-3ds/3dexperience-center-network/">3DEXPERIENCE Center Network</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/about-3ds/3dexperience-platform">3DEXPERIENCE® platform</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/about-3ds/3ds-magazines/">3DS Magazines</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/investors/annual-reports/reports/2017-annual-report/">Annual Reports</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/environmental-responsibility/">Environmental Responsibility</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/about-3ds/ethics-and-compliance/">Ethics and Compliance</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/about-3ds/history/">History</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/about-3ds/management/">Management</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/about-3ds/vision/">Vision</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/about-3ds/world-presence/">World Presence</a></div>
+	</li>
+</ul></div>
+</div>
+</div>
+
+<div class="ds-g-submenu__last-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__related">
+<div class="ds-g-submenu__title">Corporate</div>
+<!-- You can put as many item as you want.-->
+
+<ul class="ds-g-sub-list ds-g-sub-list--related"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://3dexperiencelab.3ds.com">3DEXPERIENCE Lab</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://careers.3ds.com/">Careers</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/customer-stories/">Customer Stories</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/events/">Events</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="/">Investors</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://lafondation.3ds.com/">La Fondation</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/press-releases/">Press Releases</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/stories/">Stories</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/designstudio/">DESIGNStudio</a></div>
+	</li>
+</ul></div>
+
+<div class="ds-g-submenu__discover"><!--Here you can put either one customer story like the one below...--></div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ds-g-submenu__item" id="Support" style="display: none;">
+<div class="ds-g-submenu__first-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__title">Support</div>
+<!--p.ds-g-submenu__title-description Discover all our products and services.-->
+
+<ul class="ds-g-sub-list"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/support/">Home</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/support/documentation/overview/">Documentation</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/support/download/">Download</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/support/hardware-and-software/overview/">Hardware and Software</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/support/knowledge-base/">Knowledge Base</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/support/users-communities/">User Communities</a></div>
+	</li>
+</ul></div>
+</div>
+</div>
+
+<div class="ds-g-submenu__last-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__related">
+<div class="ds-g-submenu__title">Specific Support</div>
+<!-- You can put as many item as you want.-->
+
+<ul class="ds-g-sub-list ds-g-sub-list--related"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://academy.3ds.com/en/contact">3DS Academy</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/support/3dexperience-platform-on-cloud-support/">3DEXPERIENCE platform on Cloud</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/support/draftsight-support/">DraftSight</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/products-services/simulia/support/">SIMULIA</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.solidworks.com/sw/training-support-cad.htm">SOLIDWORKS</a></div>
+	</li>
+</ul></div>
+
+<div class="ds-g-submenu__discover">
+<div class="ds-g-submenu__card"><a href="https://www.3ds.com/support/contact/call-us/"><img alt="bla" class="ds-lazy" src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/callus.png" title="bla" /><!-- <div class="ds-g-submenu__card__title">Collection - 4 parts</div>
+                                        <p>Customer Expectations in the Age of Experience</p> --></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ds-g-submenu__item" id="Training" style="display: none;">
+<div class="ds-g-submenu__first-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__title">Training</div>
+<!--p.ds-g-submenu__title-description Discover all our products and services.-->
+
+<ul class="ds-g-sub-list"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/training/training-classes/">Training classes</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/training/learning-paths-course-catalogs/">Learning paths &amp; course catalogs</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/training/why-an-elearning-management-system">E-Learning</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/training/certification-program/">Certification Program</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/training/customized-services/">Customized Services</a></div>
+	</li>
+</ul></div>
+</div>
+</div>
+
+<div class="ds-g-submenu__last-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__related">
+<div class="ds-g-submenu__title">Discover also</div>
+<!-- You can put as many item as you want.-->
+
+<ul class="ds-g-sub-list ds-g-sub-list--related"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://my.solidworks.com/training">MySolidWorks Training</a></div>
+	</li>
+</ul></div>
+
+<div class="ds-g-submenu__discover"> </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ds-g-submenu__item" id="Education" style="display: none;">
+<div class="ds-g-submenu__first-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__title">Education</div>
+<!--p.ds-g-submenu__title-description Discover all our products and services.-->
+
+<ul class="ds-g-sub-list"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://academy.3ds.com/en/learn-online">Learn Online</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://academy.3ds.com/en/get-software">Get Software</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://academy.3ds.com/en/visit-our-lab">Visit Our Lab</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://academy.3ds.com/en/be-recognized">Be Recognized</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://academy.3ds.com/en/project-showroom">Project Showroom</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://academy.3ds.com/en/contact">Contact</a></div>
+	</li>
+</ul></div>
+</div>
+</div>
+
+<div class="ds-g-submenu__last-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__related">
+<div class="ds-g-submenu__title">Discover also</div>
+<!-- You can put as many item as you want.-->
+
+<ul class="ds-g-sub-list ds-g-sub-list--related"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.solidworks.com/sw/engineering-education-software.htm">SOLIDWORKS in Academia</a></div>
+	</li>
+</ul></div>
+
+<div class="ds-g-submenu__discover"> </div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="ds-g-submenu__item" id="Partners" style="display: none;">
+<div class="ds-g-submenu__first-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__title">Partners</div>
+<!--p.ds-g-submenu__title-description Discover all our products and services.-->
+
+<ul class="ds-g-sub-list"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/partners">Overview</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/partners/partnership-programs">Partnership programs</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/partners/find-a-partner/">Find a Partner</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/partners/become-a-partner/business/">Become a Dassault Systèmes' Partner</a></div>
+	</li>
+</ul></div>
+</div>
+</div>
+
+<div class="ds-g-submenu__last-col">
+<div class="ds-g-submenu-container">
+<div class="ds-g-submenu-wrapper">
+<div class="ds-g-submenu__related">
+<div class="ds-g-submenu__title">Discover also</div>
+<!-- You can put as many item as you want.-->
+
+<ul class="ds-g-sub-list ds-g-sub-list--related"><li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://vs-partners.3ds.com/">Partner Portal</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://vs-partners.3ds.com/">Restricted to Reseller Partners</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://csi-partners.3ds.com/">Sales Directory</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://csi-partners.3ds.com/">Dedicated to Consulting firms and System Integrators</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://r1132100503382-eu1-3dswym.3dexperience.3ds.com/#community:46">Alliances Network</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://r1132100503382-eu1-3dswym.3dexperience.3ds.com/#community:46">For Software, Technology &amp; Service Partners</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://r1132100503382-eu1-3dswym.3dexperience.3ds.com/#community:55">Customers &amp; Partners TALK</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://r1132100503382-eu1-3dswym.3dexperience.3ds.com/#community:55">Exchange around Partners' contributions</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.3ds.com/events/">Events</a></div>
+
+	<div class="ds-g-sub-list__descr"><a href="https://www.3ds.com/events/">Dassault Systèmes organizes and takes part in events all around the world</a></div>
+	</li>
+	<li class="ds-g-sub-list__item">
+	<div class="ds-g-sub-list__title"><a href="https://www.solidworks.com/sw/products/engineering-software-partners.htm?scid=hp_ql_partners">SOLIDWORKS Partner Products</a></div>
+	</li>
+</ul></div>
+
+<div class="ds-g-submenu__discover"> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+
+    </div>
+    <div class="ds-g-modal">
+        <div class="ds-g-modal__text"></div>
+    </div>
+</div>
+<div class="ds-gmenu-search">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMaxYMin slice">
+        <circle cx="90" cy="0" r="0" style="fill: #fff" id="ds-search-anim" />
+        <animate xlink:href="#ds-search-anim" attributeName="r" dur="0.3s" begin="indefinite" fill="freeze" restart="whenNotActive" />
+    </svg>
+    <div class="ds-container">
+        <div class="ds-row">
+            <div class="ds-col ds-col--center ds-col--md-6 ds-col--ld-8 ds-col--lg-8 ds-col--xl-8">
+                <i class="ds-ico ds-ico-back-icon">
+                    <meta itemprop="category" content="Search"/>
+                    <meta itemprop="action" content="top_menu"/>
+                    <meta itemprop="label" content="back"/>
+                </i>
+                <form action="https://www.3ds.com/search">
+                    <label>SEARCH ON 3DS.COM</label>
+                    <input type="text" placeholder="Type something…" name="q" />
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ds-gmenu-profile">
+    <div class="ds-gmenu-profile__wrapper">
+        <span class="ds-gmenu-profile__thumbnail">XX</span>
+        <p class="ds-gmenu-profile__name">___ ___</p>
+        <p class="ds-gmenu-profile__links">
+            <a href="#" class="ds-gmenu-profile__my"><i class="ds-ico ds-ico-profile-mini is-inline"></i>My profile</a>
+            <a href="#" class="ds-gmenu-profile__logout"><i class="ds-ico ds-ico-logout-mini is-inline"></i>Logout</a>
+        </p>
+        <p class="ds-gmenu-profile__cta">
+            <a href="#" class="ds-btn ds-btn--scream">Launch <strong>3D</strong>EXPERIENCE® platform</a>
+        </p>
+        <a href="#" class="ds-gmenu-profile__close"><i class="ds-ico ds-ico-top-chevron-mini"></i><br/>Close</a>
+    </div>
+    <div class="ds-gmenu-profile__iframe">
+        <a href="#" class="ds-gmenu-profile__close"><i class="ds-ico ds-ico-top-chevron-mini"></i><br/>Close</a>
+    </div>
+</div>
+
+<div class="ds-menu is--transparent ds-menu--banner" data-more-label="...">
+    <div class="ds-menu__wrapper">
+                <ul class="ds-menu__container">
+            <li class="ds-menu__top">
+                <p class="ds-menu__title">
+                    <i class="ds-ico ds-ico-down-chevron-icon"></i>
+
+                    <a href="/"><span>Investors</span></a>
+                </p>
+            </li>
+            <li class="ds-menu__links">
+                
+
+
+
+                    
+        
+
+                
+              <ul>
+    
+                          
+                                        
+                    
+          
+                    
+                        <li class="ds-menu__item">
+                  <a href=" # "
+                                               class='ds-menu__dropdown'
+                  >
+                                                <span>Earnings &amp; Reports</span>
+                            <i class="ds-ico ds-ico-dropdown-chevron-mini"></i>
+                      
+                  </a>
+
+                                                                  <ul class="has-column ds-menu__sub">
+    
+                                                                
+                    
+          
+              <li>
+                  <a href="/earnings-reports/earnings/home">Earnings
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/earnings-reports/annual-report">Annual Reports
+
+                  </a>
+
+                      
+              </li>
+          
+
+            </ul>
+
+  
+                      
+              </li>
+
+          
+
+                          
+                                        
+                    
+          
+                    
+                        <li class="ds-menu__item is-active">
+                  <a href=" # "
+                                               class='ds-menu__dropdown'
+                  >
+                                                <span>Regulated Information</span>
+                            <i class="ds-ico ds-ico-dropdown-chevron-mini"></i>
+                      
+                  </a>
+
+                                                                  <ul class="has-column ds-menu__sub">
+    
+                                                                
+                    
+          
+              <li>
+                  <a href="/regulated-information/periodic-information">Periodic Information
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/regulated-information/permanent-information">Permanent Information
+
+                  </a>
+
+                      
+              </li>
+          
+
+            </ul>
+
+  
+                      
+              </li>
+
+          
+
+                          
+                                        
+                    
+          
+                    
+                        <li class="ds-menu__item">
+                  <a href=" # "
+                                               class='ds-menu__dropdown'
+                  >
+                                                <span>Governance</span>
+                            <i class="ds-ico ds-ico-dropdown-chevron-mini"></i>
+                      
+                  </a>
+
+                                                                  <ul class="has-column ds-menu__sub">
+    
+                                                                
+                    
+          
+              <li>
+                  <a href="/governance/governance-overview">Governance Overview
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/governance/board-of-directors/home">Board of Directors
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="https://www.3ds.com/about-3ds/management/">Management
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/governance/boards-committees/home">Board&#039;s committees 
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/governance/remuneration-corporate-officers">Remuneration of Corporate Officers
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/regulated-transactions">Regulated Transactions
+
+                  </a>
+
+                      
+              </li>
+          
+
+            </ul>
+
+  
+                      
+              </li>
+
+          
+
+                          
+          
+                    
+          
+                    
+                        <li class="ds-menu__item">
+                  <a href="/shareholders-meeting/home "
+                          >
+                                                Shareholders&#039; Meeting
+                      
+                  </a>
+
+                      
+              </li>
+
+          
+
+                          
+                                        
+                    
+          
+                    
+                        <li class="ds-menu__item">
+                  <a href=" # "
+                                               class='ds-menu__dropdown'
+                  >
+                                                <span>Events &amp; Presentations</span>
+                            <i class="ds-ico ds-ico-dropdown-chevron-mini"></i>
+                      
+                  </a>
+
+                                                                  <ul class="has-column ds-menu__sub">
+    
+                                                                
+                    
+          
+              <li>
+                  <a href="/events-presentations/calendar">Financial Calendar
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/events-presentations/presentations">Presentations
+
+                  </a>
+
+                      
+              </li>
+          
+
+            </ul>
+
+  
+                      
+              </li>
+
+          
+
+                          
+          
+                    
+          
+                    
+                        <li class="ds-menu__item">
+                  <a href="/financing-information "
+                          >
+                                                Financing
+                      
+                  </a>
+
+                      
+              </li>
+
+          
+
+                          
+                                        
+                    
+          
+                    
+                        <li class="ds-menu__item">
+                  <a href=" # "
+                                               class='ds-menu__dropdown'
+                  >
+                                                <span>Stock</span>
+                            <i class="ds-ico ds-ico-dropdown-chevron-mini"></i>
+                      
+                  </a>
+
+                                                                  <ul class="has-column ds-menu__sub">
+    
+                                                                
+                    
+          
+              <li>
+                  <a href="/stock/stock-chart">Stock Chart
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/stock/historical-share-price">Historical Share Price
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/stock/investment-calculator">Investment Calculator
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/stock/stock-series">Stock Series
+
+                  </a>
+
+                      
+              </li>
+          
+
+                                                                
+                    
+          
+              <li>
+                  <a href="/stock/analyst-coverage/home">Analyst coverage
+
+                  </a>
+
+                      
+              </li>
+          
+
+            </ul>
+
+  
+                      
+              </li>
+
+          
+
+                          
+          
+                    
+          
+                    
+                        <li class="ds-menu__item">
+                  <a href="https://www.3ds.com/about-3ds/ "
+                          >
+                                                About us
+                      
+                  </a>
+
+                      
+              </li>
+
+          
+
+            </ul>
+
+  
+
+
+    
+
+            </li>
+        </ul>
+    </div>
+</div>
+
+<section class="ds-banner
+banner-3 ds-banner--small
+
+">
+    <div class="ds-banner__shadow"></div>
+    <div class="ds-banner__content">
+        <div class="ds-container">
+            <div class="ds-row">
+                <!-- <div class="ds-col ds-col--xs-4 ds-col--md-5 ds-col--ld-7 ds-col--lg-7 ds-col--xl-8 ds-col--md-offset-1 ds-col--ld-offset-1 ds-col--lg-offset-1 ds-col--xl-offset-2"> -->
+
+                <div class="ds-col ds-col--center ds-col--md-12 ds-col--lg-12 ds-col--xl-12">
+
+                                            <div class="ds-row">
+                            <div class="ds-col ds-col--md-16 ds-col--lg-16 ds-col--xl-16">
+
+                                <h1 class="ds-banner__title ds-text-shadow">
+                                                                                                                        Periodic Information
+                                                                                                            </h1>
+
+                            </div>
+                        </div>
+
+                    
+                                    </div>
+                
+
+
+                <!-- DO NOT REMOVE -->
+                <div class="ds-col ds-col--center ds-col--lg-10 ds-col--xl-12" style="display:none;">
+                    <h1 class="ds-banner__title ds-text-shadow"></h1>
+                    <h2 class="ds-banner__subtitle ds-text-shadow"></h2>
+                    <div class="action ds-banner__buttons">
+                        <a class="ds-btn ds-btn--scream has-icon ds-btn--large js-toggle-discover" href="https://www.youtube.com/watch?v=n5V11Abaii8">
+                            <i class="ds-ico ds-ico-plus-mini"></i>
+
+                        </a>
+                    </div>
+                </div>
+                <!-- DO NOT REMOVE -->
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+<section class="ds-discover ds-discover--closed" data-tag-page="corporate_posture">
+    <div class="ds-discover__container">
+        <div class="ds-discover__wrapper">
+            <div class="ds-discover__close"></div>
+            <div class="ds-container">
+                <div class="ds-row">
+                    <div class="ds-col ds-col--xs-4 ds-col--md-6 ds-col--lg-4 ds-col--xl-16">
+                          <div class="region region-home-profile">
+    <div id="block-gphomeprofile" class="block-content--nir-global-block block-content--nir-global-block--9891 block--block-content3563c0fb-3e88-462a-afa0-f4787920bbed block--block-content3563c0fb-3e88-462a-afa0-f4787920bbed--16796 block--home-profile--block-content--3563c0fb-3e88-462a-afa0-f4787920bbed block--home-profile--block-content--3563c0fb-3e88-462a-afa0-f4787920bbed--16796 block--aad78930-8373-46f6-bb1f-271c5df627c7 block--aad78930-8373-46f6-bb1f-271c5df627c7--16796 block block-block-content block-block-content3563c0fb-3e88-462a-afa0-f4787920bbed">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"> <h4>
+                           
+                            Dassault Systèmes, the
+                            <b>3D</b>
+                            EXPERIENCE Company, provides business and people with virtual universes to imagine sustainable innovations. Its world-leading solutions transform the way products are designed, produced, and supported.
+                        </h4></div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+                        <br/>
+                          <div class="region region-stock-quotechart">
+    <div id="block-stockquote-2" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--5881 block--stock-quotechart--market-data-block__stock-quote block--stock-quotechart--market-data-block__stock-quote--5881 block--078f5cd3-aab1-4196-a6ff-e55880ab0790 block--078f5cd3-aab1-4196-a6ff-e55880ab0790--5881 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+    
+      
+ 
+<div class='quote-wrap user-toggle-off stock-quote__featured'>
+  <div class="quote-wrapper">
+                                                                    <div class="stock-quote" data-exchange="">
+          <strong>:
+          </strong>
+                          <time> Apr 20, 2020 1:38 AM EDT</time>
+                                                                                            </div>
+        </div>
+</div>
+
+  </div>
+<div id="block-gphomechart" class="block-content--nir-global-block block-content--nir-global-block--18071 block--block-content7d31d86c-97dd-4f0a-a24a-025f1b50002e block--block-content7d31d86c-97dd-4f0a-a24a-025f1b50002e--16796 block--stock-quotechart--block-content--7d31d86c-97dd-4f0a-a24a-025f1b50002e block--stock-quotechart--block-content--7d31d86c-97dd-4f0a-a24a-025f1b50002e--16796 block--13b69631-73cc-4e2e-b8a8-0a483ba5b0a4 block--13b69631-73cc-4e2e-b8a8-0a483ba5b0a4--16796 block block-block-content block-block-content7d31d86c-97dd-4f0a-a24a-025f1b50002e">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><iframe allowtransparency="true" frameborder="0" height="630" id="euroland" scrolling="no" src="//tools.eurolandir.com/tools/sharegraph/?s=1686&amp;companycode=f-13065&amp;lang=en-GB" style="background: transparent; min-width: 100%; width: 1px; max-height: none; min-height: 0px; height: 630px;" width="100%"></iframe><script type="text/javascript" src="//tools.eurolandir.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js">
+<!--//--><![CDATA[// ><!--
+
+
+//--><!]]>
+</script><script type="text/javascript">
+<!--//--><![CDATA[// ><!--
+ 
+$(document).ready(function() 
+{	EurolandToolIntegrationObject.set("euroland"); }); 
+
+//--><!]]>
+</script></div>
+      
+</div>
+      
+  </div>
+<div id="block-stockinfoattributionthomsonreuters" class="block--attribution-block__stock-info-attribution__thomson-reuters block--attribution-block__stock-info-attribution__thomson-reuters--5881 block--stock-quotechart--attribution-block__stock-info-attribution__thomson-reuters block--stock-quotechart--attribution-block__stock-info-attribution__thomson-reuters--5881 block--72fd3985-f1cc-49d2-8ec7-98209f661b82 block--72fd3985-f1cc-49d2-8ec7-98209f661b82--5881 block block-nir-attribution-block block-attribution-block__stock-info-attribution__thomson-reuters">
+  
+    
+      <p>
+  Copyright West LLC. Minimum 15 minutes delayed.</p>
+
+  </div>
+
+  </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+    <div id="ndq-content" class="ds-section ndq-16796 inner-page">
+        <div class="ds-container">
+
+              <div class="region region-content">
+    <div id="block-nir-pid2999-websitenoticeblock" class="block--website-notice-block block--website-notice-block--16796 block--content--website-notice-block block--content--website-notice-block--16796 block--cab801c3-559e-4ad9-aff2-f2e476ebd2b4 block--cab801c3-559e-4ad9-aff2-f2e476ebd2b4--16796 block block-nir-website-notices block-website-notice-block">
+  
+    
+          <div class="notification-modal" data-cookie-length="0" data-id="warning_periodic_information" data-notification-type="notification"><p><strong>Warning:</strong></p>
+
+<p>We draw the shareholders’ attention on the fact that, further to the filing of Dassault Systèmes’ 2019 Annual report, supplementary information has been published:</p>
+
+<ul>
+	<li>the&nbsp;<a href="/static-files/2a72a0a5-d36a-4a2d-b3e1-661b369be6c4" target="_blank"><strong>press release relating to the 1<sup>st</sup>&nbsp;quarter 2020</strong></a>&nbsp;updates information of chapter 3.2 “Financial objectives” of the 2019 Annual report (p.90 and 91);</li>
+	<li>the&nbsp;<a href="/static-files/63e025df-a117-46f4-8809-36c3312fc23b" target="_blank"><strong>supplementary report to the 2019 Corporate governance report</strong></a>&nbsp;updates information of chapter 5.1.3 “Compensation policy for Corporate Officers” of the 2019 Annual report (from p.194 to p.198);</li>
+	<li>the&nbsp;<a href="/system/files-encrypted/nasdaq_kms/assets/2020/04/23/2-39-56/3.%203DS%20Updated%20explanatory%20memorandum%20of%20GM%2026052020.pdf" target="_blank"><strong>explanatory memorandum adopted by the Board of Directors on April 22, 2020</strong></a>&nbsp;updates information of chapter 7.1 “Presentation of the resolutions proposed by the Board of Directors to the General Meeting of May 26, 2020” of the 2019 Annual report (from p.238 to p.246);</li>
+	<li>the&nbsp;<a href="/system/files-encrypted/nasdaq_kms/assets/2020/04/23/2-51-23/4.%203DS%20Updated%20resolutions%20of%20GM%20of%2026052020.pdf" target="_blank"><strong>text of the resolutions adopted by the Board of Directors on April 22, 2020</strong></a>&nbsp;updates information of chapter 7.2 “Text of the draft resolutions proposed by the Board of Directors to the General Meeting of May 26, 2020” (from p.247 to p.256).</li>
+</ul>
+</div>
+
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-nir-pid2999-content" class="block--system-main-block block--system-main-block--16796 block--content--system-main-block block--content--system-main-block--16796 block--40306bed-4daf-40c8-b2ee-9ccd10e9bbe3 block--40306bed-4daf-40c8-b2ee-9ccd10e9bbe3--16796 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              Periodic Information
+          </h1>
+    
+
+  <div>
+    
+<div class="panel-display boxton clearfix " >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-contentmain"><div class="block--nir-assets__widget block--nir-assets__widget--16796 block--contentmain--nir-assets__widget block--contentmain--nir-assets__widget--16796 block--a417916c-cb30-450c-a200-0ceec4db09c1 block--a417916c-cb30-450c-a200-0ceec4db09c1--16796 block block-nir-assets block-nir-assets__widget">
+  
+    
+      <div class="nir-widget">
+    <div class="nir-widget--content">
+          <div class="nir-widget--form">
+        <form data-drupal-selector="widget-form-base" action="/regulated-information/periodic-information" method="get" id="widget-form-base" accept-charset="UTF-8">
+  <div class="nir-widgets--field-container js-form-wrapper form-wrapper" data-drupal-selector="edit-a9740983-field-nir-asset-category" id="edit-a9740983-field-nir-asset-category"><div class="js-form-item form-item js-form-type-select form-item-a9740983-field-nir-asset-category-value js-form-item-a9740983-field-nir-asset-category-value">
+      <label for="edit-a9740983-field-nir-asset-category-value">Categories</label>
+        <select class="two-col-field form-select" data-drupal-selector="edit-a9740983-field-nir-asset-category-value" multiple="multiple" name="a9740983_field_nir_asset_category[value][]" id="edit-a9740983-field-nir-asset-category-value"><option value="3961">Annual Reports</option><option value="4046">Half Year Report</option><option value="3986">Periodic Information</option><option value="4051">Quarterly results</option></select>
+        </div>
+</div>
+<div class="nir-widgets--field-container nir-widgets--field-container--year js-form-wrapper form-wrapper" data-drupal-selector="edit-a9740983-year" id="edit-a9740983-year"><div class="two-col-field form-item js-form-item js-form-type-select form-type-select form-item-a9740983-year-value js-form-item-a9740983-year-value">
+      <label for="edit-a9740983-year-value">Year</label>
+        <select data-drupal-selector="edit-a9740983-year-value" id="edit-a9740983-year-value" name="a9740983_year[value]" class="form-select"><option value="_none">None</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option></select>
+        </div>
+</div>
+<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Filter" class="button button--primary js-form-submit form-submit" />
+<input data-drupal-selector="edit-a9740983-widget-id" type="hidden" name="a9740983_widget_id" value="a9740983" />
+<input autocomplete="off" data-drupal-selector="form-hae5ei0megwoeeh8flauqutrxpvceyzmtle2fke7byg" type="hidden" name="form_build_id" value="form-HAe5EI0mEgwoeEH8FlAuquTRxPVCeyZmTLE2FKE7bYg" />
+<input data-drupal-selector="edit-widget-form-base" type="hidden" name="form_id" value="widget_form_base" />
+
+</form>
+
+      </div>
+        <div class="nir-widget--list">
+              
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/65d0cba6-bb18-4c47-8634-f430293b7c11">Dassault Systèmes Reports First Quarter Financial Results With Recurring Software, Operating Margin and EPS At the High End of Its Non-IFRS Guidance  </a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     April 23, 2020
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/65d0cba6-bb18-4c47-8634-f430293b7c11">Dassault Systèmes Reports First Quarter Financial Results With Recurring Software, Operating Margin and EPS At the High End of Its Non-IFRS Guidance  </a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/f33cf812-fa7a-4451-a5b8-63deb82541a9">Dassault Systèmes to publish its first quarter 2020 results, webcast and conference call on April 23rd, 2020</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     April 8, 2020
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/f33cf812-fa7a-4451-a5b8-63deb82541a9">Dassault Systèmes to publish its first quarter 2020 results, webcast and conference call on April 23rd, 2020</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/11a04f48-337c-404c-b5f3-69ac056ddcba">Dassault Systèmes SE: 2019 Universal Registration Document</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     March 20, 2020
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/11a04f48-337c-404c-b5f3-69ac056ddcba">Dassault Systèmes SE: 2019 Universal Registration Document</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/6b6721f8-9f7a-48f9-8a57-6ffacc40b657">Dassault Systèmes: Availability of the 2019 Universal Registration Document</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     March 20, 2020
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/6b6721f8-9f7a-48f9-8a57-6ffacc40b657">Dassault Systèmes: Availability of the 2019 Universal Registration Document</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/bb7f09ee-0d86-42e3-81df-19b3b379ff87">Dassault Systèmes: 3DEXPERIENCE Sustaining Diversification Dynamic; 2014-2019 plan to Double non IFRS EPS Overachieved</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     February 6, 2020
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/bb7f09ee-0d86-42e3-81df-19b3b379ff87">Dassault Systèmes: 3DEXPERIENCE Sustaining Diversification Dynamic; 2014-2019 plan to Double non IFRS EPS Overachieved</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/2a57f716-8c03-46fa-a121-40e48555d03b">Dassault Systèmes Q3 and YTD Total Revenue and EPS Growth Up Double-digits; On Track for 5-year Doubling of non-IFRS EPS to €3.50 for 2019</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     October 24, 2019
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/2a57f716-8c03-46fa-a121-40e48555d03b">Dassault Systèmes Q3 and YTD Total Revenue and EPS Growth Up Double-digits; On Track for 5-year Doubling of non-IFRS EPS to €3.50 for 2019</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investor.3ds.com/static-files/bd8f5840-0e3d-4b78-8c7e-44bf6bf5c687" type="application/pdf">Availability of Dassault Systèmes’ 2019 Half-Year Financial Report</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     July 25, 2019
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investor.3ds.com/static-files/bd8f5840-0e3d-4b78-8c7e-44bf6bf5c687" type="application/pdf">Availability of Dassault Systèmes’ 2019 Half-Year Financial Report</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investor.3ds.com/static-files/910e0867-3380-45cb-8f14-ea530cad8bfb" type="application/pdf">2019 Half-Year Financial Report</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     July 25, 2019
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investor.3ds.com/static-files/910e0867-3380-45cb-8f14-ea530cad8bfb" type="application/pdf">2019 Half-Year Financial Report</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investor.3ds.com/static-files/3ae066d4-4566-4e88-95aa-cc468922335b" type="application/pdf">Dassault Systèmes Reports First Half Revenue and EPS Growth Up Double-digits, Reaffirms 2019 Financial Objectives</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     July 24, 2019
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investor.3ds.com/static-files/3ae066d4-4566-4e88-95aa-cc468922335b" type="application/pdf">Dassault Systèmes Reports First Half Revenue and EPS Growth Up Double-digits, Reaffirms 2019 Financial Objectives</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/d3a5bec6-3800-48dd-a3ea-d50cfbcf081e">Dassault Systemes to publish its Second Quarter 2019 results, webcast and conference call on July 24th 2019</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     July 11, 2019
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/d3a5bec6-3800-48dd-a3ea-d50cfbcf081e">Dassault Systemes to publish its Second Quarter 2019 results, webcast and conference call on July 24th 2019</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/e9f59b78-a01e-46e1-b8e0-3a7096a1b10a">Dassault Systèmes and BHP Engage in a long-term strategic partnership NR final 24 April 2019</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     April 24, 2019
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="html-link field__item"><a href="https://ml-eu.globenewswire.com/Resource/Download/e9f59b78-a01e-46e1-b8e0-3a7096a1b10a">Dassault Systèmes and BHP Engage in a long-term strategic partnership NR final 24 April 2019</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+<div class="ds-col ds-col--ld-4 ds-col--lg-4 ds-col--xl-4">
+  <article class="ds-card ds-card--noimage">
+    <div class="ds-card__wrapper">
+      <span class="ds-card__category">Periodic Information</span>
+
+
+  
+      <div class="ds-card__title" itemprop="headline">
+      <span class="nir-widget--asset--title--title">
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investor.3ds.com/static-files/1322a0cd-c30a-461d-a29a-d2f626dc9d8d" type="application/pdf">Dassault Systèmes Reports First Quarter Revenue and EPS Growth Up Double-digits, Reaffirms 2019 Financial Objectives and Updates for Currency</a></div>
+  </div></span>
+      <span class="nir-widget--asset--title-file-size"></span>
+    </div>
+        <div class="ds-card__info">
+                      <span><i class="ds-ico ds-ico-calendar-mini is-inline"></i>
+
+     April 24, 2019
+  </span>
+          
+  
+  
+  
+  
+
+  
+    </div>
+    </div>
+    <div class="ds-card__links">
+      <a class="ds-btn ds-btn--cheer" href="#">
+        <i class="ds-ico ds-ico-chevron-mini"></i><span>Learn More</span>
+      </a>
+        
+<div class="field-nir-asset-title">
+      <div class="file file--mime-application-pdf file--application-pdf field__item"><a href="https://investor.3ds.com/static-files/1322a0cd-c30a-461d-a29a-d2f626dc9d8d" type="application/pdf">Dassault Systèmes Reports First Quarter Revenue and EPS Growth Up Double-digits, Reaffirms 2019 Financial Objectives and Updates for Currency</a></div>
+  </div>
+    </div>
+  </article>
+</div>
+
+
+          </div>
+    <div class="nir-widget--pager">
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+    <ul class="pager__items js-pager__items">
+                                                        <li class="pager__item is-active">
+                                          <a href="?page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=3" title="Go to page 4">
+            <span class="visually-hidden">
+              Page
+            </span>4</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=4" title="Go to page 5">
+            <span class="visually-hidden">
+              Page
+            </span>5</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=5" title="Go to page 6">
+            <span class="visually-hidden">
+              Page
+            </span>6</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=6" title="Go to page 7">
+            <span class="visually-hidden">
+              Page
+            </span>7</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=7" title="Go to page 8">
+            <span class="visually-hidden">
+              Page
+            </span>8</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=8" title="Go to page 9">
+            <span class="visually-hidden">
+              Page
+            </span>9</a>
+        </li>
+                          <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+                          <li class="pager__item pager__item--next">
+          <a href="?page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+            <span aria-hidden="true">next ›</span>
+          </a>
+        </li>
+                          <li class="pager__item pager__item--last">
+          <a href="?page=12" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+            <span aria-hidden="true">last »</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+    </div>
+    <div class="nir-widget--total-results">
+      Displaying 1 - 12 of 148
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.boxton -->
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+
+        </div>
+    </div>
+
+<section class="ir-resources-container">
+    <div class="ds-section ir-resources narrow">
+
+        <div class="ds-container">
+
+            <div class="ds-row">
+                <div class="ds-col ds-col--xl-16">
+                    <h3 class="ds-text-center"> Investor Resources</h3>
+                </div>
+            </div>
+            <div class="ds-row">
+                <div class="ds-col ds-col--xs-3 ds-col--md-4 ds-col--ld-10">
+                    <article class="ds-card ds-card--collection" style="background-color: rgba(106, 135, 166, 1);">
+                        <div class="ds-card__thumbnail" style="background-image: url(/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/fabs-insurance-city.jpg);"></div>
+                        <div class="ds-card__wrapper">
+                              <div class="region region-investor-contacts">
+    <div id="block-gpcontacts" class="block-content--nir-global-block block-content--nir-global-block--9901 block--block-contente46aef24-507a-4549-be56-196776ca6159 block--block-contente46aef24-507a-4549-be56-196776ca6159--16796 block--investor-contacts--block-content--e46aef24-507a-4549-be56-196776ca6159 block--investor-contacts--block-content--e46aef24-507a-4549-be56-196776ca6159--16796 block--c29527a0-21c8-4129-a80d-98d17ad456ae block--c29527a0-21c8-4129-a80d-98d17ad456ae--16796 block block-block-content block-block-contente46aef24-507a-4549-be56-196776ca6159">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="ds-card__title" data-title="" itemprop="headline">Investor Contacts</div>
+
+<div class="ds-card__info">
+<div class="ds-row">
+<div class="ds-col ds-col--xs-3 ds-col--md-4 ds-col--ld-5">
+<p class="text-white">François-José Bordonado<br />
+Michele Katz<br />
+Béatrix Martinez<br />
+Delphine Da Maia-Levy / Dymphna Hawksley</p>
+</div>
+
+<div class="ds-col ds-col--xs-3 ds-col--md-4 ds-col--ld-5">
+<p class="text-white">Phone: +33 1 61 62 69 24/7021<br />
+Fax:      +33 1 70 73 43 59<br />
+Email: <a class="mail" href="mailto:investors@3ds.com" title="Investors email">investors@3ds.com</a></p>
+</div>
+</div>
+</div>
+</div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+                        </div>
+                    </article>
+                </div>
+
+
+                                    
+                                                                                                    
+                                    
+            </div>
+              <div class="region region-toolkit">
+    
+
+<nav role="navigation" aria-labelledby="block-tools-menu" id="block-tools" class="block--system-menu-blocktools block--system-menu-blocktools--5806 block--toolkit--system-menu-block--tools block--toolkit--system-menu-block--tools--5806 block--08bb0841-d0f5-4356-9b22-c4f6102f7b43 block--08bb0841-d0f5-4356-9b22-c4f6102f7b43--5806 block block-menu navigation block-system-menublock menu--tools">
+                        
+    <h2 class="visually-hidden" id="block-tools-menu">Tools</h2>
+    
+
+                    
+  <ul class="clearfix">
+
+    <li class="ndqicon-print">
+      <a href="javascript:window.print();">Print Page</a>
+    </li>
+
+              
+    
+      <li class="ndqicon-rss">
+        <a href="/shareholder_services/rss">RSS</a>
+      </li>
+
+      
+    
+
+  
+  </ul>
+
+
+
+
+    </nav>
+
+  </div>
+
+        </div>
+
+
+    </div> <!-- ds-section -->
+</section>
+<footer class="ds-footer">
+    <div class="ds-footer__top">
+        <div class="ds-container">
+            <div class="ds-footer__lang">
+
+                  <div class="region region-language-switcher">
+    <div class="language-switcher-language-url block--language-blocklanguage-interface block--language-blocklanguage-interface--16796 block--language-switcher--language-block--language-interface block--language-switcher--language-block--language-interface--16796 block--579ec507-098f-46cd-8eea-4f75a83b04a3 block--579ec507-098f-46cd-8eea-4f75a83b04a3--16796 block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
+  
+    
+      <ul class=" inline-links"  data-block-uuid="579ec507-098f-46cd-8eea-4f75a83b04a3"><li hreflang="en" data-drupal-link-system-path="node/16796" class="en inline-links__item is-active"><a href="/regulated-information/periodic-information" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/16796">English</a></li><li hreflang="fr" data-drupal-link-system-path="node/16796" class="fr inline-links__item"><a href="/fr/regulated-information/periodic-information" class="language-link" hreflang="fr" data-drupal-link-system-path="node/16796">Français</a></li></ul>
+  </div>
+
+  </div>
+
+
+                <i class="ds-ico ds-ico-language-icon"></i>
+
+                <select class="footer-languageselect" tabindex="10" style="display:none !important;">
+                    <option value="fr">Français</option>
+                    <option value="en">English (US)</option>
+                    <option value="es">Español</option>
+                    <option value="ja">日本語</option>
+                    <option value="zh-hans">中文</option>
+                    <option value="de">Deutsch</option>
+                    <option value="ru">Русский язык</option>
+                    <option value="sv-se">Svenska</option>
+                    <option value="ko">한국어</option>
+                    <option value="it">Italiano</option>
+                </select>
+            </div>
+
+            <a class="ds-footer__logo" href="http://www.3ds.com/">
+                <img src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/images/logo.svg"/>
+            </a>
+            <div class="ds-footer__social">
+                  <div class="region region-social-links">
+    <div id="block-gpsociallinks--2" class="block-content--nir-global-block block-content--nir-global-block--9886 block--block-content6e763fa4-8f44-4e85-b931-9a372e22161a block--block-content6e763fa4-8f44-4e85-b931-9a372e22161a--16796 block--social-links--block-content--6e763fa4-8f44-4e85-b931-9a372e22161a block--social-links--block-content--6e763fa4-8f44-4e85-b931-9a372e22161a--16796 block--9b0874e5-cc9a-4012-a14e-2ef9d051de7a block--9b0874e5-cc9a-4012-a14e-2ef9d051de7a--16796 block block-block-content block-block-content6e763fa4-8f44-4e85-b931-9a372e22161a">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"> <a class="ds-ico-round ds-ico-round--small" href="http://www.facebook.com/DassaultSystemes/" target="_blank" rel="nofollow">
+                        <i class="ds-ico ds-ico-facebook-mini"></i>
+                    </a>
+                    <a class="ds-ico-round ds-ico-round--small" href="http://www.linkedin.com/company/dassaultsystemes" target="_blank" rel="nofollow">
+                        <i class="ds-ico ds-ico-linkedin-mini"></i>
+                    </a>
+                    <a class="ds-ico-round ds-ico-round--small" href="http://twitter.com/dassault3DS" target="_blank" rel="nofollow">
+                        <i class="ds-ico ds-ico-twitter-mini"></i>
+                    </a></div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="ds-footer__links">
+        <div class="ds-container">
+            <div class="ds-footer__social clearfix">
+                <div>
+                      <div class="region region-social-links">
+    <div id="block-gpsociallinks--2" class="block-content--nir-global-block block-content--nir-global-block--9886 block--block-content6e763fa4-8f44-4e85-b931-9a372e22161a block--block-content6e763fa4-8f44-4e85-b931-9a372e22161a--16796 block--social-links--block-content--6e763fa4-8f44-4e85-b931-9a372e22161a block--social-links--block-content--6e763fa4-8f44-4e85-b931-9a372e22161a--16796 block--9b0874e5-cc9a-4012-a14e-2ef9d051de7a block--9b0874e5-cc9a-4012-a14e-2ef9d051de7a--16796 block block-block-content block-block-content6e763fa4-8f44-4e85-b931-9a372e22161a">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"> <a class="ds-ico-round ds-ico-round--small" href="http://www.facebook.com/DassaultSystemes/" target="_blank" rel="nofollow">
+                        <i class="ds-ico ds-ico-facebook-mini"></i>
+                    </a>
+                    <a class="ds-ico-round ds-ico-round--small" href="http://www.linkedin.com/company/dassaultsystemes" target="_blank" rel="nofollow">
+                        <i class="ds-ico ds-ico-linkedin-mini"></i>
+                    </a>
+                    <a class="ds-ico-round ds-ico-round--small" href="http://twitter.com/dassault3DS" target="_blank" rel="nofollow">
+                        <i class="ds-ico ds-ico-twitter-mini"></i>
+                    </a></div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+                </div>
+                <div class="ds-footer__title">Social</div>
+            </div>
+            <div class="ds-row">
+                
+    
+
+
+                        
+    <h2 class="visually-hidden" id="block-footerlinksfor3ds-menu">Footer links for 3DS</h2>
+    
+
+                                                
+        
+        
+                            <div class="ds-col ds-col--xs-4 ds-col--md-4 ds-col--lg-3">
+                    <div class="ds-footer__slide-container">
+                        <div class="ds-footer__title"> <a href="http://www.3ds.com/about-3ds/" target="" rel="">Corporate</a></div>
+                        <div class="ds-footer__slide-wrapper">
+                            <ul>
+                                                                                                                
+        
+        
+                            <li><a href="https://www.3ds.com/about-3ds">About 3ds</a></li>
+
+            
+        
+        
+                            <li><a href="https://3dexperiencelab.3ds.com/">3DEXPERIENCE Lab</a></li>
+
+            
+        
+        
+                            <li><a href="https://lafondation.3ds.com/">La Fondation</a></li>
+
+            
+        
+        
+                            <li><a href="https://investor.3ds.com">Investors</a></li>
+
+            
+        
+        
+                            <li><a href="https://www.3ds.com/events">Events</a></li>
+
+            
+        
+        
+                            <li><a href="https://www.3ds.com/press-releases">Press Releases</a></li>
+
+            
+        
+        
+                            <li><a href="https://www.3ds.com/customer-stories">Customer stories</a></li>
+
+            
+        
+        
+                            <li><a href="https://www.3ds.com/about-3ds/3ds-magazines">Magazines 3DS</a></li>
+
+            
+        
+        
+                            <li><a href="https://www.3ds.com/environmental-responsibility">Environmental responsability</a></li>
+
+            
+        
+        
+                            <li><a href="https://www.3ds.com/about-3ds/ethics-and-compliance">Ethic and compliance</a></li>
+
+            
+        
+        
+                            <li><a href="https://careers.3ds.com/">Careers</a></li>
+
+            
+        
+        
+                            <li><a href="https://www.3ds.com/about-3ds/3dexperience-platform">3DEXPERIENCE Platform</a></li>
+
+            
+        
+        
+                            <li><a href="https://3dexperience.3ds.com/3dexperience-marketplace/">3DEXPERIENCE® Marketplace</a></li>
+
+            
+        
+    
+
+                                                            </ul>
+                                                        </div>
+                    </div>
+                </div>
+
+            
+        
+        
+                            <div class="ds-col ds-col--xs-4 ds-col--md-4 ds-col--lg-3">
+                    <div class="ds-footer__slide-container">
+                        <div class="ds-footer__title"> <a href="http://www.3ds.com/products-services/catia/" target="" rel="">Brands</a></div>
+                        <div class="ds-footer__slide-wrapper">
+                            <ul>
+                                                                                                                
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/catia/">CATIA</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/solidworks/">SOLIDWORKS</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/enovia/">ENOVIA</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/delmia/">DELMIA</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/simulia/">SIMULIA</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/geovia/">GEOVIA</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/exalead/">EXALEAD</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/3dvia/">3DVIA</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/biovia/">BIOVIA</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/netvibes/">NETVIBES</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/products-services/3dexcite/">3DEXCITE</a></li>
+
+            
+        
+    
+
+                                                            </ul>
+                                                        </div>
+                    </div>
+                </div>
+
+            
+        
+        
+                            <div class="ds-col ds-col--xs-4 ds-col--md-4 ds-col--lg-3">
+                    <div class="ds-footer__slide-container">
+                        <div class="ds-footer__title"> <a href="http://www.3ds.com/industries/aerospace-defense/" target="" rel="">Industries</a></div>
+                        <div class="ds-footer__slide-wrapper">
+                            <ul>
+                                                                                                                
+        
+        
+                            <li><a href="http://www.3ds.com/industries/aerospace-defense/">Aerospace &amp; Defense</a></li>
+
+            
+        
+        
+                            <li><a href="https://ifwe.3ds.com/business-services/">Business Services </a></li>
+
+            
+        
+        
+                            <li><a href="https://ifwe.3ds.com/construction-cities-territories/">Construction, Cities &amp; Territories</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/industries/consumer-packaged-goods-retail/">Consumer Packaged Goods &amp; Retail</a></li>
+
+            
+        
+        
+                            <li><a href="https://ifwe.3ds.com/energy-materials/">Energy &amp; Materials</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/industries/high-tech/">High-Tech</a></li>
+
+            
+        
+        
+                            <li><a href="https://ifwe.3ds.com/home-lifestyle/">Home &amp; Lifestyle</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/industries/industrial-equipment/">Industrial Equipment</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/industries/life-sciences/">Life Sciences</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/industries/marine-offshore/">Marine &amp; Offshore</a></li>
+
+            
+        
+        
+                            <li><a href="http://www.3ds.com/industries/transportation-mobility/">Transportation &amp; Mobility</a></li>
+
+            
+        
+    
+
+                                                            </ul>
+                                                        </div>
+                    </div>
+                </div>
+
+            
+        
+        
+                            <div class="ds-col ds-col--xs-4 ds-col--md-4 ds-col--lg-3">
+                    <div class="ds-footer__slide-container">
+                        <div class="ds-footer__title"> <a href="https://ifwe.3ds.com/design/" target="" rel="">Insights</a></div>
+                        <div class="ds-footer__slide-wrapper">
+                            <ul>
+                                                                                                                
+        
+        
+                            <li><a href="https://ifwe.3ds.com/design/">Design</a></li>
+
+            
+        
+        
+                            <li><a href="https://ifwe.3ds.com/manufacturing/">Manufacturing</a></li>
+
+            
+        
+        
+                            <li><a href="https://ifwe.3ds.com/science/">Science</a></li>
+
+            
+        
+        
+                            <li><a href="https://ifwe.3ds.com/cloud/">Cloud</a></li>
+
+            
+        
+    
+
+                                                            </ul>
+                                                                    <div class="ds-footer__rating_logo_bottom">
+                                                                                <img  src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/img/ratings.png"/>
+                                    </div> 
+                                                        </div>
+                    </div>
+                </div>
+
+            
+        
+    
+
+
+
+
+
+
+    
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="ds-footer__rating_logo_bottom_mobile">
+        <img src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/img/ratings.png"/>
+    </div>
+    <div class="ds-footer__corporate">
+        <div class="ds-container">
+            <div class="ds-row">
+                <div class="ds-col ds-col--xs-4 ds-col--lg-6">
+                    <p class="ds-footer__corporate-legal">© 2002-2020 Dassault Systèmes - All rights reserved</p>
+                </div>
+                <div class="ds-col ds-col--xs-4 ds-col--lg-6">
+                      <div class="region region-corp-links">
+    
+
+<nav role="navigation" aria-labelledby="block-3dssubfooterlinks-menu" id="block-3dssubfooterlinks" class="block--system-menu-block3ds---sub-footer-links block--system-menu-block3ds---sub-footer-links--5806 block--corp-links--system-menu-block--3ds---sub-footer-links block--corp-links--system-menu-block--3ds---sub-footer-links--5806 block--676a92d6-b62d-41c0-82b4-fede5e503fec block--676a92d6-b62d-41c0-82b4-fede5e503fec--5806 block block-menu navigation block-system-menublock menu--_ds---sub-footer-links">
+                        
+    <h2 class="visually-hidden" id="block-3dssubfooterlinks-menu">3DS - Sub footer Links</h2>
+    
+
+                        <ul class="ds-footer__corporate-links">
+                  <li class="side-menu__item">
+            <a href="https://www.3ds.com/contact/" target="" rel="">Contact</a>
+                    </li>
+              <li class="side-menu__item">
+            <a href="https://www.3ds.com/legal-information/" target="" rel="">Legal Info</a>
+                    </li>
+              <li class="side-menu__item">
+            <a href="https://www.3ds.com/privacy-policy/" target="" rel="">Privacy Policy</a>
+                    </li>
+              <li class="side-menu__item">
+            <a href="https://www.3ds.com/terms-of-use/" target="" rel="">Terms of Use</a>
+                    </li>
+        </ul>
+        
+
+
+    </nav>
+
+  </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.js"></script>
+<script>
+    var carouselCard = new Swiper ('#releases .swiper-container--card', {
+        nextButton: '#releases .swiper-button-next',
+        prevButton: '#releases .swiper-button-prev',
+        paginationClickable: true,
+        slidesPerView: 3,
+        spaceBetween: 40,
+        slidesPerGroup: 3,
+        breakpoints: {
+            720: {
+                slidesPerView: 1,
+                spaceBetween: 8,
+                slidesPerGroup: 1,
+            },
+            840: {
+                slidesPerView: 2,
+                spaceBetween: 8,
+                slidesPerGroup: 1,
+            },
+            1041: {
+                slidesPerView: 2,
+                spaceBetween: 32,
+                slidesPerGroup: 2,
+            },
+            1441: {
+                slidesPerView: 3,
+                spaceBetween: 32,
+                slidesPerGroup: 3,
+            }
+        }
+    });
+</script>
+
+<div class="ds-grid-debug">
+    <div class="ds-container">
+        <div class="ds-row">
+            <div class="ds-col ds-col--xs-1 ds-col--md-1 ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--xs-1 ds-col--md-1 ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--xs-1 ds-col--md-1 ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--xs-1 ds-col--md-1 ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--md-1 ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--md-1 ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--md-1 ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--md-1 ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--ld-1 ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--lg-1 ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--xl-1">
+                <div></div>
+            </div>
+            <div class="ds-col ds-col--xl-1">
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+
+
+<script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/16796","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/node,core\/drupal.collapse,core\/html5shiv,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_market_data_block\/nir_market_data_block.command,nir_market_data_block\/nir_market_data_block.filterform,nir_market_data_block\/nir_market_data_block.stockQuote,nir_multimedia\/nir_multimedia,nir_pid2999\/override,nir_website_notices\/nir_website_notices.notices,radix_layouts\/radix_layouts,system\/base","theme":"nir_pid2999","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"b67f5cf0faee3bfe2e7c6bb0cae893714f92a3e0cec8c764a13d9693a3404af5"}}</script>
+<script src="//tools.euroland.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js"></script>
+<script src="/sites/g/files/knoqqb35451/files/js/js_ROielPraEuiCqn7XZRyjNZK-d3dYU9GWlbOFhyvf6II.js"></script>
+<script src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/js/uikit.menu.js?q8vzge" defer></script>
+<script src="/sites/g/files/knoqqb35451/files/js/js_wCR8pT3bRbJSIXhlq8E5sPnjsAetaaXKjq9lh62IepY.js"></script>
+<script src="/sites/g/files/knoqqb35451/themes/site/nir_pid2999/dist/js/dark-theme.js?q8vzge" defer></script>
+<script src="/sites/g/files/knoqqb35451/files/js/js_vY_VXUmjfopnXOiHX2usF9tP9TjwSesowBxqgJTtfqs.js"></script>
+
+  
+  
+<script>
+(function ($, Drupal) {
+  'use strict';
+
+  // Override Notice JS for French Accept Button
+  Drupal.behaviors.nirWebsiteNotices = {
+    attach: function (context, settings) {
+
+      $('.notification-modal').each(function (index) {
+        var cookieLength = $(this).data('cookie-length');
+        if (cookieLength === 0) {
+          cookieLength = '';
+        }
+        var cookieId = $(this).data('id');
+        var notificationType = $(this).data('notification-type');
+
+        if (!Cookies.get('nir_notice_' + cookieId)) {
+          var buttonText = 'Accept';
+                  if ($('html').attr('lang') == 'fr') {
+                    buttonText = 'J\'accepte';
+                  }
+          if (notificationType === 'notification') {
+            buttonText = 'OK';
+          }
+          $(this).dialog({
+            modal: true,
+            width: 500,
+            closeOnEscape: false,
+            close: function () {
+              $(this).dialog('close');
+              Cookies.set(
+                'nir_notice_' + cookieId,
+                'true',
+                {expires: cookieLength});
+            },
+            buttons: [
+              {
+                text: buttonText,
+                dialogClass: notificationType,
+                click: function () {
+                  $(this).dialog('close');
+                  Cookies.set(
+                    'nir_notice_' + cookieId,
+                    'true',
+                    {expires: cookieLength});
+                }
+              }
+            ]
+          });
+          if (notificationType === 'disclaimer'){
+            $('.ui-dialog-titlebar-close').hide();
+          }
+        }
+
+      });
+    }
+  };
+})(jQuery, Drupal);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"761e715901","applicationID":"39077635,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH3xCFkBQXGl2ChNQaXZXQg5sd19HWCcUXFlUXUJODkNVW1EAE2VZUVtVC19dVFBHIw5HWHFbRApfXw==","queueTime":0,"applicationTime":720,"atts":"ShJUF18aSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

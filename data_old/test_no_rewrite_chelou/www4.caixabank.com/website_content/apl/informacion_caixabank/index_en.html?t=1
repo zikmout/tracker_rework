@@ -1,0 +1,1283 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" dir="ltr">
+<!--
+=======================================================================
+Page Rendition Time: 2020.03.27 16:35:37
+Channel ID: 2e93a2abad4ef210VgnVCM10000078fe770aRCRD
+=======================================================================
+-->
+<head
+>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script>
+var neoCurrentChannel = '2e93a2abad4ef210VgnVCM10000078fe770aRCRD';
+var neoCurrentBreadcrumb = [];
+neoCurrentBreadcrumb.push('218b1ded7709f210VgnVCM10000078fe770aRCRD');
+neoCurrentBreadcrumb.push('0b9058608479f210VgnVCM10000078fe770aRCRD');
+neoCurrentBreadcrumb.push('fef258608479f210VgnVCM10000078fe770aRCRD');
+neoCurrentBreadcrumb.push('aaefe32c09c90310VgnVCM10000078fe770aRCRD');
+</script>
+<title>Significant events&lt;br&gt;(Until Feb, 8 2020) |
+General information
+| CaixaBank</title>
+<link rel="stylesheet" href="/deployedfiles/caixabank/CSS/Estaticos/caixabankGlobal.css" type="text/css">
+<meta name="language" content="en" />
+<link rel="alternate" hreflang="en" href="https://www.caixabank.com/informacionparaaccionistaseinversores/informaciongeneral/hechosrelevantes_en.html" />
+<link rel="alternate" hreflang="es" href="https://www.caixabank.com/informacionparaaccionistaseinversores/informaciongeneral/hechosrelevantes_es.html" />
+<link rel="alternate" hreflang="ca" href="https://www.caixabank.com/informacionparaaccionistaseinversores/informaciongeneral/hechosrelevantes_ca.html" />
+<meta name="robots" content="nofollow,noindex">
+<link rel="canonical" href="https://www.caixabank.com/informacionparaaccionistaseinversores/informaciongeneral/hechosrelevantes_en.html"/>
+<meta property="og:type" content="company">
+<meta property="og:site_name" content="CaixaBank">
+<meta name="loce" content="en-caixabank-Informacindelaa-Hechosrelevante-ca">
+<script type="text/javascript" src="/deployedfiles/common/JavaScript/NeoProtocolManager.js"></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/aumentarDisminuirImprimir.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/common.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/swfobject.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/jquery-latest.pack.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/modernizr.min.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/purl.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/NEO.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/tools-jail-plugins.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/main.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/highlights.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/jquery.cookie.js" type="text/javascript" ></script>
+<script src="/deployedfiles/caixabank/Estaticos/JavaScript/cookiecaixabank.js" type="text/javascript" ></script>
+<link href="/deployedfiles/common/CSS/cookies2018.css" type="text/css" rel="stylesheet"></link>
+<script src="/deployedfiles/common/JavaScript/aplnr/cookie/cookie-policy.js" type="text/javascript" ></script>
+<script src="/deployedfiles/common/JavaScript/aplnr/cookie/neo-cookie-policy.js" type="text/javascript" ></script>
+<script type="text/javascript">
+var isCookiePoliceActive = true;
+</script>
+<script type="text/javascript">
+if(window.getDomain === undefined) {
+function getDomain() {
+var lstr = location.hostname.split(".");
+var d = "";
+for (var i = 1; i <= 2 && lstr.length - i >= 0; i++) d = "." + lstr[lstr.length - i] + d;
+return (d);
+}}
+if(window.setCookie === undefined) {function setCookie(name, value, date, sameSite) {document.cookie = name + "=" + escape(value) + (date ? "; expires=" + date.toGMTString(date.getTime()) : "") + "; domain=" + getDomain() + "; path=/" + ";SameSite=Lax";}}
+if(window.getCookie === undefined) {function getCookie(name) {var begin=document.cookie.indexOf(name+"=");if(begin==-1) return null; var end=document.cookie.indexOf(";",begin); if(end==-1) end=document.cookie.length; return document.cookie.substring(document.cookie.indexOf("=",begin)+1,end);}}
+if(window.deleteCookie === undefined) { function deleteCookie(name, value, domain){document.cookie = name + "=" + (value || "")  + "; expires= Thu, 01 Jan 1970 00:00:01 GMT; domain=" + domain + ";path=/;";}}
+function createCookiePrefix(){
+var actualDate = new Date();
+if("caixabank" === "particulares" || "caixabank" === "banca_personal" || "caixabank" === "banca_privada"){
+setCookie('prefix', 'PART', new Date(actualDate.getFullYear() + 1, actualDate.getMonth(), actualDate.getDate()));
+}
+else if("caixabank" === "empresas") {
+setCookie('prefix', 'EMP', new Date(actualDate.getFullYear() + 1, actualDate.getMonth(), actualDate.getDate()));
+}
+}
+function createCookieLanguage() {
+var actualDate = new Date();
+var lang = $("html").attr("lang");
+var langMap = {};
+langMap["es"] = "esp";
+langMap["ca"] = "cat";
+var cookieLang = getCookie("idioma");
+if ("caixabank" === "gesticaixa" && cookieLang !== null){
+deleteCookie("idioma",cookieLang,getDomain());
+}
+if ("caixabank" !== "gesticaixa"){
+if (lang > '') {
+if (lang != "es" && lang != "ca") {
+langMap[lang] = lang;
+}
+if (!cookieLang || (cookieLang != langMap[lang])) {
+setCookie('idioma', langMap[lang], new Date(actualDate.getFullYear() + 1, actualDate.getMonth(), actualDate.getDate()), "SameSite=Lax");
+}
+}
+}
+}
+if (window.NeoCookiePolicy && NeoCookiePolicy.isCookiePolicyActive()){
+if(CookiePolicy.isAllowedComponent('NeoCampaingsPesonalization')) {createCookiePrefix();createCookieLanguage();}
+} else {
+createCookiePrefix();createCookieLanguage();
+}
+</script>
+<!--  BEGIN PLUGIN: name: Libreria Tealium (Caixabank) | category:  omniture -->
+<script src="//tags.tiqcdn.com/utag/caixabank/caixabank-corporativo/prod/utag.sync.js"></script>
+<!--  END PLUGIN -->
+</head>
+<body id="home">
+<!--===========================Tealium=============================-->
+<script language="JavaScript" type="text/javascript"><!--
+var utag_data = {
+page_section: "caixabank",
+page_category: "corporativo",
+page_subcategory1: "home",
+page_subcategory2: "informacionaccionistaseinversores",
+page_subcategory3: "informaciongeneral",
+page_subcategory4: "",
+page_subcategory5: "hechosrelevantesbr8022020",
+page_name: "caixabank:corporativo:home:informacionaccionistaseinversores:informaciongeneral:hechosrelevantesbr8022020",
+page_language: "en",
+page_area: "publica",
+page_typology: "pagina",
+page_environment: "produccion",
+device: "desktop|tablet|mobile",
+page_version: "normal",
+client_id: "",
+client_type: "no cliente",
+client_login_status: "no logado"
+}
+//-->
+</script>
+<script type="text/javascript">
+function getCookie(name) {
+var nameEQ = name + "=";
+var ca = document.cookie.split(';');
+for (var i = 0; i < ca.length; i++) {
+var c = ca[i];
+while (c.charAt(0) == ' ') {
+c = c.substring(1, c.length);
+}
+if (c.indexOf(nameEQ) == 0) {
+return c.substring(nameEQ.length,c.length);
+}
+}
+return null;
+}
+$(document).ready(function() {
+if (navigator.userAgent.match(/(iPhone|iPod|iPad|Android|webOS|BlackBerry|IEMobile|Opera Mini)/i)) {
+if (screen.width > 599) {
+utag_data.device = 'tablet';
+} else {
+utag_data.device = 'mobile';
+}
+} else {
+utag_data.device = 'desktop';
+}
+var cookieVoyager = getCookie('VOYAGERID');
+if (cookieVoyager !== undefined && cookieVoyager !== null && cookieVoyager != "") {
+utag_data.client_id = cookieVoyager;
+utag_data.client_type = "cliente";
+}
+});
+</script>
+<!--===========================End Tealium=============================-->
+<!--===========================Omniture=============================--><script language="JavaScript" type="text/javascript" src="/deployedfiles/common/JavaScript/aplnr/omniture/s_code_basic.js"></script>
+<script language="JavaScript" type="text/javascript"><!--
+s.channel="Caixabank";
+s.prop1="Home";
+s.prop2="InformacionAccionistasEInversores";
+s.prop3="InformacionGeneral";
+s.prop4="";
+s.prop5="HechosRelevantesBr8022020";
+s.prop17="en";
+s.pageName="Caixabank:Home:InformacionAccionistasEInversores:InformacionGeneral:HechosRelevantesBr8022020";
+s.eVar17=s.prop17;
+var omnitureVariable="h";
+//--></script><!--=========================Omniture End===========================-->
+<!--  BEGIN PLUGIN: name: Huella Tealium (caixabank) | category:  omniture -->
+<script type="text/javascript">
+var utag_data = utag_data || {};
+(function(a,b,c,d){
+a='//tags.tiqcdn.com/utag/caixabank/caixabank-corporativo/prod/utag.js';
+b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+})();
+</script>
+<!--  END PLUGIN -->
+<!-- Cookie Active -->
+<div class="articulo_ligero" id="">
+<div class="contenido_articulo">
+<div id="cookie2">
+<div id="cookie-form">
+<div class="logo"></div>
+<div class="texto">
+<div class="title">
+<h2 role="heading" aria-level="1">Your privacy matters to us</h2>
+</div>
+<p class="texto_cookie">CaixaBank uses third-party cookies to analyse your browsing for statistical and personalisation purposes (e.g. the volume of the videos), to show you personalised advertising according to a profile drawn up based on your browsing ( e.g. the pages visited) or technical purpose (e.g. allow content to be viewed and shared from our portal). Click for <a href="/general/cookies_en.html#cookies_propias" id="cookies-more-info">more information</a> or to <a href="/general/cookies_en.html#cookies_propias" id="cookies-deny">to set up or reject their use</a>. Or, you can accept all cookies by clicking on "Accept and continue browsing".</p>
+</div>
+<div class="button">
+<p class="button_wrap"><span id="cookies-accept-full" class="btn btn-blue"> <a data-ref-origin="POLITICA-COOKIES-ACEPTAR-NAVEGANDO-FALDON" href="#" title="Accept and continue browsing" aria-label="Accept the use of cookies and continue browsing"> Accept and continue browsing</a> </span></p>
+</div>
+</div>
+</div>
+<script src="/deployedfiles/common/JavaScript/aplnr/cookie/cookies-banner.js"></script>
+<script>
+cookiesBanner.init({
+catalogUrl: "/deployedfiles/common/aplnr/cookies/_caixabank_com_cookies.json"
+});
+</script>
+</div>
+</div>
+<div id="contenedor-global">
+<div id="header">
+<div id="cbk" class="cbk">
+<a id="header-caixabank" class="bt-arrowdown" onclick="onClickSC('Acción CABK')"
+href="#" title="Acción CABK Panel"></a>
+<script>
+var urlTmp = '/aplnr/cotizacion/cotitzacioV2es.html';
+if(urlTmp){
+jQuery.get(urlTmp, function(data) {
+//data = data.replace(/\s/g, " ").replace(/.+<p[^>]+>|<\/p>.+/g, "");
+jQuery('#header-caixabank').html(data);
+});
+}
+</script>
+<article id="l-caixabank" class="l">
+<script>
+$(document).ready(function(e){
+new lc.w.Layer('#header-caixabank', '#l-caixabank', '/aplnr/panels/accioncabk/accioncabken.html?ajax=1',
+{
+open : 'slideDown',
+close : 'slideUp',
+time : 300,
+bg:true,
+movePage:true,
+doScroll:false
+},
+'Acción CABK');
+});
+</script>
+</article>
+</div>
+<div class="header_criteria">
+<div class="contenedor_header">
+<div class="logo">
+<a  href="/index_en.html"      title="CaixaBank Access to the home page"  >
+<img  src="/deployedfiles/caixabank/Estaticos/Imagenes/logo3.gif"   alt='Caixabank' width="222" height="58" class="" >
+</a>
+</div>
+<div class="menu_header">
+</div>
+<div id="buscar">
+<form action="/apl/buscador/interficieBuscador.index_en.html" method="get" name="buscador" onsubmit="return validate('en', '#texto')" site="CCC">
+<input id="texto" name="q" onfocus="javascript:focused('en', '#texto')" type="text" value="What are you looking for? Write it down here"><input longdesc="undefined" src="/deployedfiles/caixabank/Estaticos/Imagenes/lupa2013.png" type="image">&nbsp;<input id="site" name="site" type="hidden" value="CABK_EN"></form>
+<script type="text/javascript"> $(document).ready(function(){ $('input#texto').val("What are you looking for? Write it down here"); $('input#texto').focus(function(){ if($(this).val() == "What are you looking for? Write it down here"){ $(this).val(""); } }); $('input#texto').blur(function(){ if($(this).val() == ""){ $(this).val("What are you looking for? Write it down here"); $('input[type=password]').focus(); } else{ $('input[type=password]').focus(); } }); }); </script>
+</div>
+<ul class="idioma">
+<li class="">
+<a  href="/index_es.html"      title="Castellano"  lang="es-ES" >Castellano</a>
+</li>
+<li class="">
+<a  href="/index_ca.html"      title="Catal&agrave;"  lang="ca-ES" >Català</a>
+</li>
+<li class="noborder">
+English
+</li>
+</ul>
+</div>
+</div>
+<!--
+=======================================================================
+Track dependencies
+=======================================================================
+-->
+</div>
+<div id="top">
+<div class="lista_canales_desplegables">
+<ul>
+<li onmouseover="$(this).children('ul').toggle()" onmouseout="$(this).children('ul').toggle()">
+<a  href="/informacioncorporativa_en.html"      title="Corporate information"   rel="7a7e58608479f210VgnVCM10000078fe770aRCRD">Corporate information</a>
+<ul style="display:none;">
+<li>
+<a  href="/informacioncorporativa/quienessomos_en.html"      title="Who we are"   rel="739d48f1c879f210VgnVCM10000078fe770aRCRD">Who we are</a>
+<ul>
+<li>
+<a  href="/informacioncorporativa/quienessomos/carteraparticipadas_en.html"      title="Investment portfolio"   rel="3e0ccd95718a0310VgnVCM10000078fe770aRCRD">Investment portfolio</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/quienessomos/inbursa_en.html"      title="Inbursa"   rel="4811e47902ca0310VgnVCM10000078fe770aRCRD">Inbursa</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/quienessomos/bankofeastasia_en.html"      title="Bank of East Asia"   rel="72a51ac9b49a0310VgnVCM10000078fe770aRCRD">Bank of East Asia</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/quienessomos/erstegroupbank_en.html"      title="Erste Group Bank"   rel="0de01fe7b0da0310VgnVCM10000078fe770aRCRD">Erste Group Bank</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/quienessomos/boursorama_en.html"      title="Boursorama"   rel="740d1ac9b49a0310VgnVCM10000078fe770aRCRD">Boursorama</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/quienessomos/gruposegurcaixaholding_en.html"      title="SegurCaixa Holding Group"   rel="c0e2b6e2e3da0310VgnVCM10000078fe770aRCRD">SegurCaixa Holding Group</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/quienessomos/bpi_en.html"      title="BPI"   rel="3acccd95718a0310VgnVCM10000078fe770aRCRD">BPI</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/informacioncorporativa/misionvisionyvalores_en.html"      title="Mission, Vision and Values"   rel="93e5bb493ce4d410VgnVCM1000001638f70aRCRD">Mission, Vision and Values</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/informacioncorporativa/datosclave_en.html"      title="Key data"   rel="6bdf9fae0eb20310VgnVCM10000078fe770aRCRD">Key data</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion_en.html"      title="Board of Directors"   rel="edfe48f1c879f210VgnVCM10000078fe770aRCRD">Board of Directors</a>
+<ul>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion/alejandrogarciabragadodalmau_en.html"      title="Alejandro Garc&iacute;a-Bragado"   rel="adec91d317880310VgnVCM10000078fe770aRCRD">Alejandro García-Bragado</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion/javiergodomuntanola_en.html"      title="Javier God&oacute; Munta&ntilde;ola"   rel="f3ce91d317880310VgnVCM10000078fe770aRCRD">Javier Godó Muntañola</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion/juanmningenova_en.html"      title="Juan M&ordf; Nin G&eacute;nova"   rel="e83f91d317880310VgnVCM10000078fe770aRCRD">Juan Mª Nin Génova</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion/xaviervivestorrents_en.html"      title="Xavier Vives"   rel="52d191d317880310VgnVCM10000078fe770aRCRD">Xavier Vives</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion/oscarcalderonoya_en.html"      title="&Oacute;scar Calder&oacute;n"   rel="0076007af1901310VgnVCM10000078fe770aRCRD">Óscar Calderón</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion/johnshepardreed_en.html"      title="John S. Reed"   rel="b8e6f4c866283310VgnVCM10000078fe770aRCRD">John S. Reed</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion/teresabassonsboncompte_en.html"      title="Teresa Bassons "   rel="9a8de83971d48310VgnVCM10000078fe770aRCRD">Teresa Bassons </a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejoadministracion/mariaamparomoraledamartinez_en.html"      title="Mar&iacute;a Amparo Moraleda"   rel="98dcc90a00995410VgnVCM20000074fe770aRCRD">María Amparo Moraleda</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejodeadministracion/mariaveronicafisasverges_en.html"      title="Mar&iacute;a Ver&oacute;nica Fisas Verg&eacute;s"   rel="e7570acf3d053510VgnVCM2000001938f70aRCRD">María Verónica Fisas Vergés</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejodeadministracion/josesernamasia_en.html"      title="Jos&eacute; Serna Masi&aacute;"   rel="576990e420ac5510VgnVCM1000001638f70aRCRD">José Serna Masiá</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejodeadministracion/korousarragaunsain_en.html"      title="Koro Usarraga Unsain"   rel="f95bafb5e4fd5510VgnVCM1000001638f70aRCRD">Koro Usarraga Unsain</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejodeadministracion/nataliaaznarezgomez_en.html"      title="Natalia Azn&aacute;rez G&oacute;mez"   rel="8d38480ae4e6a510VgnVCM1000001638f70aRCRD">Natalia Aznárez Gómez</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejodeadministracion/ignaciogarraldaruizdevelasco_en.html"      title="Ignacio Garralda Ruiz de Velasco"   rel="2cf11d7ea97eb510VgnVCM2000001938f70aRCRD">Ignacio Garralda Ruiz de Velasco</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejodeadministracion/eduardojaviersanchizirazu_en.html"      title="Eduardo Javier Sanchiz"   rel="726d7a62297ae510VgnVCM2000001938f70aRCRD">Eduardo Javier Sanchiz</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/consejodeadministracion/oscarfigueresfortuna_en.html"      title="&Oacute;scar Figueres Fortuna"   rel="42b84b7721bbf510VgnVCM2000001938f70aRCRD">Óscar Figueres Fortuna</a>
+</li>
+<li>
+<a  href="/informacion-corporativa/consejo-de-administracion/cristina-garmendia-mendizabal_en.html"      title="Cristina Garmendia"   rel="c723507fd319b610VgnVCM2000001938f70aRCRD">Cristina Garmendia</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/informacioncorporativa/comitededireccion_en.html"      title="Management Committee"   rel="eda7ec7db15a1510VgnVCM2000001938f70aRCRD">Management Committee</a>
+<ul>
+<li>
+<a  href="/informacioncorporativa/comitededireccion/juanantonioalcarazgarcia_en.html"      title="Juan Antonio Alcaraz Garc&iacute;a"   rel="f26bb7dd80be4510VgnVCM1000001638f70aRCRD">Juan Antonio Alcaraz García</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/comitededireccion/xaviercollescursell_en.html"      title="Xavier Coll"   rel="b245b7dd80be4510VgnVCM1000001638f70aRCRD">Xavier Coll</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/comitededireccion/luisjavierblasagueros_en.html"      title="Luis Javier Blas Ag&uuml;eros"   rel="af76b7dd80be4510VgnVCM1000001638f70aRCRD">Luis Javier Blas Agüeros</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/comitededireccion/javierpanoriera_en.html"      title="Javier Pano Riera"   rel="25a7b7dd80be4510VgnVCM1000001638f70aRCRD">Javier Pano Riera</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/comitededireccion/jorgemondejarlopez_en.html"      title="Jordi Mond&eacute;jar L&oacute;pez"   rel="63492851d7ce4510VgnVCM1000001638f70aRCRD">Jordi Mondéjar López</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/comitededireccion/marialuisamartinezgistau_en.html"      title="Mar&iacute;a Luisa Mart&iacute;nez Gistau"   rel="c5aa2851d7ce4510VgnVCM1000001638f70aRCRD">María Luisa Martínez Gistau</a>
+</li>
+<li>
+<a  href="/informacioncorporativa/comitededireccion/matthiasbulach_en.html"      title="Matthias Bulach"   rel="522003ba1a37d510VgnVCM2000001938f70aRCRD">Matthias Bulach</a>
+</li>
+<li>
+<a  href="/informacion-corporativa/comite-de-direccion/javier-valle-tfigueras_en.html"      title="Javier Valle T-Figueras"   rel="58f1357824fe7610VgnVCM1000001638f70aRCRD">Javier Valle T-Figueras</a>
+</li>
+<li>
+<a  href="/informacion-corporativa/comite-de-direccion/marisa-retamosa-fernandez_en.html"      title="Marisa Retamosa Fern&aacute;ndez"   rel="6609f2d7c9fe7610VgnVCM1000001638f70aRCRD">Marisa Retamosa Fernández</a>
+</li>
+<li>
+<a  href="/informacion-corporativa/comite-de-direccion/inaki-badiola_en.html"      title="I&ntilde;aki Badiola"   rel="ebc0f2d7c9fe7610VgnVCM1000001638f70aRCRD">Iñaki Badiola</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/informacioncorporativa/lineasestrategicas_en.html"      title="Lines of strategy"   rel="4b930f769f694410VgnVCM20000074fe770aRCRD">Lines of strategy</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/informacioncorporativa/modelonegocio_en.html"      title="Business model"   rel="3ec50f769f694410VgnVCM20000074fe770aRCRD">Business model</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/informacion-corporativa/asociaciones-y-foros_en.html"      title="Associations and work forums"   rel="f79b56391735b610VgnVCM2000001938f70aRCRD">Associations and work forums</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/informacioncorporativa/premiosyreconocimientos_en.html"      title="Awards and accolades"   rel="e6587a2e0ec92510VgnVCM2000001938f70aRCRD">Awards and accolades</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="https://www.caixabank.es/particular/general/infoclientes_es.html" target="_self" onclick=""      title="Information to customers"   rel="52170f769f694410VgnVCM20000074fe770aRCRD">Information to customers</a>
+<ul>
+</ul>
+</li>
+</ul>
+</li>
+<li onmouseover="$(this).children('ul').toggle()" onmouseout="$(this).children('ul').toggle()">
+<a  href="/informacionparaaccionistaseinversores_en.html"      title="Shareholders and Investors"   rel="0b9058608479f210VgnVCM10000078fe770aRCRD">Shareholders and Investors</a>
+<ul style="display:none;">
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral_en.html"      title="General information"   rel="fef258608479f210VgnVCM10000078fe770aRCRD">General information</a>
+<ul>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/caucescomunicacion_en.html"      title="Contact information"   rel="19e2ad1274220310VgnVCM10000078fe770aRCRD">Contact information</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/laaccionysucapitalsocial_en.html"      title="Shares and share capital"   rel="496c09686f140310VgnVCM10000078fe770aRCRD">Shares and share capital</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/agendadelinversor_en.html"      title="Investor's agenda"   rel="f1c061738d450310VgnVCM10000078fe770aRCRD">Investor's agenda</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/distribucioncapital_en.html"      title="Capital distribution"   rel="ce1adabe2872f410VgnVCM1000001638f70aRCRD">Capital distribution</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/dividendos_en.html"      title="Dividends"   rel="ac915d8614560310VgnVCM10000078fe770aRCRD">Dividends</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/ofertaspublicas_en.html"      title="Public offerings and admission to trading"   rel="3077bd51a3321510VgnVCM1000001638f70aRCRD">Public offerings and admission to trading</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/opas_en.html"      title="Takeover bids"   rel="ac06b81d08560310VgnVCM10000078fe770aRCRD">Takeover bids</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/fusiones_en.html"      title="Mergers"   rel="415d2fbd698e1510VgnVCM2000001938f70aRCRD">Mergers</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/participacionessignificativasyautocartera_en.html"      title=" Significant shareholdings and treasury stock"   rel="855c3d7e46650310VgnVCM10000078fe770aRCRD"> Significant shareholdings and treasury stock</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/pactosparasociales_en.html"      title="Shareholders&rsquo; Agreements"   rel="3b7d2fbd698e1510VgnVCM2000001938f70aRCRD">Shareholders’ Agreements</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/cotizacioncaixabankenlabolsa_en.html"      title="Quoted price"   rel="f5a4792c67a50310VgnVCM10000078fe770aRCRD">Quoted price</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/analistas_en.html"      title="Analysts"   rel="26e43d7e46650310VgnVCM10000078fe770aRCRD">Analysts</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?t=5" target="_self" onclick=""      title="Inside information"   rel="af84cabf3c410710VgnVCM2000001938f70aRCRD">Inside information</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?t=6" target="_self" onclick=""      title="Other relevant information"   rel="f495cabf3c410710VgnVCM2000001938f70aRCRD">Other relevant information</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?t=1"      title="Significant events"   rel="aaefe32c09c90310VgnVCM10000078fe770aRCRD">Significant events<br>(Until Feb, 8 2020)</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo_en.html"      title="Corporate Governance and remuneration policy"   rel="c89f58608479f210VgnVCM10000078fe770aRCRD">Corporate Governance and remuneration policy</a>
+<ul>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/consejodeadministracionycomisiones/consejodeadministracion_en.html"      title="Board of Directors"   rel="9bc98e686bde1510VgnVCM2000001938f70aRCRD">Board of Directors</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/comisionesdelconsejo_en.html"      title="Committees of Directors"   rel="82118e686bde1510VgnVCM2000001938f70aRCRD">Committees of Directors</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/comitededireccion_en.html"      title="Management Committee"   rel="1db638e894b74510VgnVCM1000001638f70aRCRD">Management Committee</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/gestiondelriesgo_en.html"      title="Risk Management"   rel="30ebf3fe2ee74510VgnVCM1000001638f70aRCRD">Risk Management</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/juntageneralaccionistas_en.html"      title="Annual General Meeting"   rel="f8cce77b965cf210VgnVCM10000078fe770aRCRD">Annual General Meeting</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/informeanualgobiernocorporativo_en.html"      title="Annual Corporate Governance Report"   rel="5a5bd0d7c24df210VgnVCM10000078fe770aRCRD">Annual Corporate Governance Report</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/remuneracionesdelosconsejeros_en.html"      title="Remuneration of Directors"   rel="75a0e54ea4ee1510VgnVCM2000001938f70aRCRD">Remuneration of Directors</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/estatutos_en.html"      title="By-laws"   rel="935638e894b74510VgnVCM1000001638f70aRCRD">By-laws</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/reglamentodelajuntageneraldeaccionistas_en.html"      title="Regulation of the Annual General Meeting "   rel="71af8f7431772510VgnVCM2000001938f70aRCRD">Regulation of the Annual General Meeting </a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/reglamentodelconsejodeadministracion_en.html"      title="Regulation of the Board of Directors "   rel="a3ff8f7431772510VgnVCM2000001938f70aRCRD">Regulation of the Board of Directors </a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/reglamentointernodeconducta_en.html"      title="Corporate Internal Code of Conduct"   rel="6e508f7431772510VgnVCM2000001938f70aRCRD">Corporate Internal Code of Conduct</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/gobiernocorporativo/documentacion_en.html"      title="Policies and other Corporate documents"   rel="6188e60b64720310VgnVCM10000078fe770aRCRD">Policies and other Corporate documents</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera_en.html"      title="Economic-financial information"   rel="e1b158608479f210VgnVCM10000078fe770aRCRD">Economic-financial information</a>
+<ul>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/informeanual_en.html"      title="Annual Report"   rel="8cde73ff9f950310VgnVCM10000078fe770aRCRD">Annual Report</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/informefinancieroanualysemestral_en.html"      title="Annual and bi-annual financial report (accounts)"   rel="301f73ff9f950310VgnVCM10000078fe770aRCRD">Annual and bi-annual financial report (accounts)</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/declaracionintermedia_en.html"      title="Quarterly Results"   rel="113f73ff9f950310VgnVCM10000078fe770aRCRD">Quarterly Results</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/rating_en.html"      title="Ratings"   rel="e56f73ff9f950310VgnVCM10000078fe770aRCRD">Ratings</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/informacionconrelevanciaprudencial_en.html"      title="Pillar 3 report"   rel="de6e09093f6b7310VgnVCM10000078fe770aRCRD">Pillar 3 report</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/otrainformacionfinanciera_en.html"      title="Another financial information"   rel="2bbcc099ab85a410VgnVCM1000001638f70aRCRD">Another financial information</a>
+</li>
+<li>
+<a  href="/informacion-para-accionistas-e-inversores/informacion-economicofinanciera/stress-eba_en.html"      title="EBA Stress Test"   rel="6710a695489c6610VgnVCM2000001938f70aRCRD">EBA Stress Test</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/ejerciciotransparenciaeba_en.html"      title="Transparency Exercise EBA"   rel="69aab9f94a231510VgnVCM2000001938f70aRCRD">Transparency Exercise EBA</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/periodomediodepagoaproveedores_en.html"      title="Average period of payment to suppliers"   rel="fb60121fb426a410VgnVCM1000001638f70aRCRD">Average period of payment to suppliers</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informacioneconomicofinanciera/indicadoresderelevanciasistemicaglobal_en.html"      title="Indicators of global systemic importance"   rel="a0fd76b7ff7f2610VgnVCM2000001938f70aRCRD">Indicators of global systemic importance</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li onmouseover="$(this).children('ul').toggle()" onmouseout="$(this).children('ul').toggle()">
+<a  href="/responsabilidadcorporativa_en.html"      title="Corporate responsibility"   rel="706cd016f0560310VgnVCM10000078fe770aRCRD">Corporate responsibility</a>
+<ul style="display:none;">
+<li>
+<a  href="/responsabilidadcorporativa/modelofinanzasresponsables_en.html"      title="Socially Responsible Banking Model"   rel="cb186c8601f60310VgnVCM10000078fe770aRCRD">Socially Responsible Banking Model</a>
+<ul>
+<li>
+<a  href="/responsabilidadcorporativa/modelofinanzasresponsables/empresaconvalores_en.html"      title="Socially Responsible Banking Plan"   rel="5beae4cbeb2e5310VgnVCM10000078fe770aRCRD">Socially Responsible Banking Plan</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/banca-socialmente-responsable/ods_en.html"      title="SDG"   rel="244ba8a174dfb610VgnVCM2000001938f70aRCRD">SDG</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/banca-socialmente-responsable/publicaciones_en.html"      title="Publications"   rel="7d9d08dd2d36e610VgnVCM1000001638f70aRCRD">Publications</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/gobernanza_en.html"      title="Governance"   rel="6ac018740a71e610VgnVCM2000001938f70aRCRD">Governance</a>
+<ul>
+<li>
+<a  href="/responsabilidad-corporativa/gobernanza/gestion-responsable_en.html"      title="Responsible management"   rel="e4f118740a71e610VgnVCM2000001938f70aRCRD">Responsible management</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/gobernanza/comite-rc-gestion_en.html"      title="CR and Reputation Committee"   rel="83e8ca13c181e610VgnVCM2000001938f70aRCRD">CR and Reputation Committee</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/gobernanza/politicas-responsables_en.html"      title="Responsible policies"   rel="760aca13c181e610VgnVCM2000001938f70aRCRD">Responsible policies</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/gobernanza/public-policy_en.html"      title="Public Policy"   rel="ab7aca13c181e610VgnVCM2000001938f70aRCRD">Public Policy</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/grupos-de-interes_en.html"      title="Stakeholders"   rel="d2534e162f12e610VgnVCM1000001638f70aRCRD">Stakeholders</a>
+<ul>
+<li>
+<a  href="/responsabilidad-corporativa/grupos-de-interes/comunicacion-y-dialogo_en.html"      title="Stakeholder engagement"   rel="06834e162f12e610VgnVCM1000001638f70aRCRD">Stakeholder engagement</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/grupo-de-interes/nuestras-personas_en.html"      title="Our team"   rel="94754e162f12e610VgnVCM1000001638f70aRCRD">Our team</a>
+</li>
+<li>
+<a  href="/espaciodelaccionista/espaciodelaccionista_en.html" target="_self" onclick=""      title="Shareholders"   rel="e27694647373e610VgnVCM1000001638f70aRCRD">Shareholders</a>
+</li>
+<li>
+<a  href="https://www.caixabank.es/particular/holabank/particulares_en.html" target="_self" onclick=""      title="Customers"   rel="9e4c6eaed4b3e610VgnVCM1000001638f70aRCRD">Customers</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/grupos-de-interes/analistas-y-ratings-de-sostenibilidad_en.html"      title="Analysts and ratings"   rel="c5b926aa3fb3e610VgnVCM1000001638f70aRCRD">Analysts and ratings</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/grupos-de-interes/proveedores_en.html"      title="Suppliers"   rel="014a26aa3fb3e610VgnVCM1000001638f70aRCRD">Suppliers</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidadcorporativa/medioambiente_en.html"      title="Environment"   rel="f468761f07f60310VgnVCM10000078fe770aRCRD">Environment</a>
+<ul>
+<li>
+<a  href="/responsabilidad-corporativa/sostenibilidad-ambiental/estrategia-medioambiental_en.html"      title="Environmental Strategy"   rel="6a9603153ca4a610VgnVCM2000001938f70aRCRD">Environmental Strategy</a>
+</li>
+<li>
+<a  href="/responsabilidadcorporativa/medioambiente/financiacionsostenible_en.html"      title="Sustainable finance"   rel="009140bf308e5310VgnVCM10000078fe770aRCRD">Sustainable finance</a>
+</li>
+<li>
+<a  href="/responsabilidadcorporativa/medioambiente/gestionambiental_en.html"      title="ESG risk management"   rel="ae6040bf308e5310VgnVCM10000078fe770aRCRD">ESG risk management</a>
+</li>
+<li>
+<a  href="/responsabilidadcorporativa/medioambiente/eficienciaambiental_en.html"      title="Environmental management"   rel="44c7d5559766f310VgnVCM10000078fe770aRCRD">Environmental management</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/inclusion-financiera_en.html"      title="Financial inclusion"   rel="e2267716bc1bb610VgnVCM1000001638f70aRCRD">Financial inclusion</a>
+<ul>
+<li>
+<a  href="/responsabilidad-corporativa/inclusion-financiera/banca-proxima_en.html"      title="Proximity banking"   rel="05b0a39df42bb610VgnVCM1000001638f70aRCRD">Proximity banking</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/inclusion-financiera/microfinanzas_en.html"      title="Microfinance"   rel="0f98f300092bb610VgnVCM1000001638f70aRCRD">Microfinance</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/inclusion-financiera/accesibilidad_en.html"      title="Accessibility"   rel="2ac0f300092bb610VgnVCM1000001638f70aRCRD">Accessibility</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidadcorporativa/sociedad_en.html"      title="Social Action"   rel="19651b0025f60310VgnVCM10000078fe770aRCRD">Social Action</a>
+<ul>
+<li>
+<a  href="/responsabilidadcorporativa/sociedad/obrasocial_en.html"      title="&quot;la Caixa&quot; "   rel="b8fa00677c7e5310VgnVCM10000078fe770aRCRD">"la Caixa" </a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/compromiso-social/obra-social-descentralizada_en.html"      title="Decentralised Welfare Projects"   rel="c54aa47bf6cdb610VgnVCM2000001938f70aRCRD">Decentralised Welfare Projects</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/compromiso-social/voluntariado_en.html"      title="Volunteering"   rel="799f0ded565eb610VgnVCM1000001638f70aRCRD">Volunteering</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/cultura-financiera_en.html"      title="Financial culture"   rel="a2e67e341cc1e610VgnVCM1000001638f70aRCRD">Financial culture</a>
+<ul>
+<li>
+<a  href="/responsabilidad-corporativa/cultura-financiera/plan-de-cultura-financiera_en.html"      title="Finance Culture Plan"   rel="e5977e341cc1e610VgnVCM1000001638f70aRCRD">Finance Culture Plan</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/diversity-and-equal-opportunities_en.html"      title="Diversity and equal opportunities"   rel="a42bf1387c07c610VgnVCM2000001938f70aRCRD">Diversity and equal opportunities</a>
+<ul>
+<li>
+<a  href="/responsabilidad-corporativa/diversidad-e-igualdad-de-oportunidades/wengage_en.html"      title="Wengage"   rel="a6bbf1387c07c610VgnVCM2000001938f70aRCRD">Wengage</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/diversidad-e-igualdad-de-oportunidades/memberships-and-certifications_en.html"      title="Memberships and certifications"   rel="4a41f1387c07c610VgnVCM2000001938f70aRCRD">Memberships and certifications</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidadcorporativa/clientes_en.html"      title="Responsible business"   rel="82906c8601f60310VgnVCM10000078fe770aRCRD">Responsible business</a>
+<ul>
+<li>
+<a  href="/responsabilidadcorporativa/clientes/orientacionalcliente_en.html"      title="Excellence in service"   rel="613c6727877e5310VgnVCM10000078fe770aRCRD">Excellence in service</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/soluciones-responsables/valor-social_en.html"      title="Social value in Private Banking"   rel="534c83ae7515c610VgnVCM1000001638f70aRCRD">Social value in Private Banking</a>
+</li>
+<li>
+<a  href="/responsabilidadcorporativa/clientes/atencionalcliente_en.html"      title="Customer Service"   rel="a46f6727877e5310VgnVCM10000078fe770aRCRD">Customer Service</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/soluciones-responsables/maxima-seguridad_en.html"      title="Security for customers and employees"   rel="c65299a97264b610VgnVCM2000001938f70aRCRD">Security for customers and employees</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/iniciativas-y-alianzas_en.html"      title="Commitments"   rel="20c65045dd02e610VgnVCM1000001638f70aRCRD">Commitments</a>
+<ul>
+<li>
+<a  href="/responsabilidad-corporativa/iniciativas-y-alianzas/alianzas-nacionales_en.html"      title="National alliances"   rel="24f061963112e610VgnVCM1000001638f70aRCRD">National alliances</a>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/iniciativas-y-alianzas/alianzas-internacionales_en.html"      title="International alliances"   rel="f99061963112e610VgnVCM1000001638f70aRCRD">International alliances</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/premios-y-reconocimientos_en.html"      title="Awards and accolades"   rel="cc13e4dda3a1e610VgnVCM2000001938f70aRCRD">Awards and accolades</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidad-corporativa/analistas-y-ratings_en.html"      title="Analysts and ratings"   rel="5618086e496ce610VgnVCM2000001938f70aRCRD">Analysts and ratings</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/responsabilidadcorporativa/publicaciones_en.html"      title="Reporting"   rel="e0fa761f07f60310VgnVCM10000078fe770aRCRD">Publications</a>
+<ul>
+</ul>
+</li>
+</ul>
+</li>
+<li onmouseover="$(this).children('ul').toggle()" onmouseout="$(this).children('ul').toggle()">
+<a  href="/espaciodelaccionista/espaciodelaccionista_en.html"      title="Shareholder Services"   rel="596558608479f210VgnVCM10000078fe770aRCRD">Shareholder Services</a>
+<ul style="display:none;">
+<li>
+<a  href="/espaciodelaccionista/servicioinformacionalaccionista_en.html" target="_self" onclick=""      title="Shareholder Reports"   rel="a8cd3a81aae1b310VgnVCM10000078fe770aRCRD">Shareholder Reports</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/espaciodelaccionista/informesfinancieros_en.html"      title="Financial Reports"   rel="a5628698a722b310VgnVCM10000078fe770aRCRD">Financial Reports</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/espaciodelaccionista/remuneracionaccionista_en.html"      title="Remuneration  of Shareholders"   rel="49ad0b030b79f210VgnVCM10000078fe770aRCRD">Remuneration  of Shareholders</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/espaciodelaccionista/juntageneralaccionistas_en.html"      title="Annual General Meeting"   rel="5d8d0199abdff210VgnVCM10000078fe770aRCRD">Annual General Meeting</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/espaciodelaccionista/encuentroscorporativos_en.html"      title="Corporate Events"   rel="b2cb053016ea0510VgnVCM1000001638f70aRCRD">Corporate Events</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/espaciodelaccionista/comiteconsultivo_en.html"      title="Advisory Committee"   rel="dcce37266a120310VgnVCM10000078fe770aRCRD">Advisory Committee</a>
+<ul>
+<li>
+<a  href="/espaciodelaccionista/comiteconsultivo/miembroscomiteconsultivo_en.html"      title=" Members of the Advisory Committee"   rel="da42c250f81b9510VgnVCM1000001638f70aRCRD"> Members of the Advisory Committee</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="https://www.caixabank.com/apl/informacion_caixabank/index_en.html?t=9"      title="Agenda"   rel="c1f1aefae8120310VgnVCM10000078fe770aRCRD">Agenda</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/espaciodelaccionista/servicioatencionalaccionista_en.html"      title="Shareholder Information Service"   rel="370337266a120310VgnVCM10000078fe770aRCRD">Shareholder Information Service</a>
+<ul>
+<li>
+<a  href="/espaciodelaccionista/servicioatencionalaccionista/oficinadelaccionista_en.html"      title="Shareholder Information Service"   rel="ac0537266a120310VgnVCM10000078fe770aRCRD">Shareholder Information Service</a>
+</li>
+<li>
+<a  href="/espaciodelaccionista/servicioatencionalaccionista/preguntasfrecuentes_en.html"      title="FAQs"   rel="c11a53c28b120310VgnVCM10000078fe770aRCRD">FAQs</a>
+</li>
+<li>
+<a  href="/apl/registro_en.html"      title="Register"   rel="f8ea53c28b120310VgnVCM10000078fe770aRCRD">Register</a>
+</li>
+<li>
+<a  href="/espaciodelaccionista/servicioatencionalaccionista/sugerenciasycomentarios_en.html"      title="Suggestions and comments"   rel="83754414a0754310VgnVCM10000078fe770aRCRD">Suggestions and comments</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li onmouseover="$(this).children('ul').toggle()" onmouseout="$(this).children('ul').toggle()">
+<a  href="/inversoresinstitucionales_en.html"      title="Institutional investors"   rel="4f8b4a42a679f210VgnVCM10000078fe770aRCRD">Institutional investors</a>
+<ul style="display:none;">
+<li>
+<a  href="/inversoresinstitucionales/laaccioncaixabank_en.html"      title="CaixaBank shares"   rel="1dcee1bea0120310VgnVCM10000078fe770aRCRD">CaixaBank shares</a>
+<ul>
+<li>
+<a  href="/inversoresinstitucionales/laaccioncaixabank/cotizacion_en.html"      title="Value"   rel="d74fe1bea0120310VgnVCM10000078fe770aRCRD">Value</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/laaccioncaixabank/capitalsocial_en.html"      title="Share capital"   rel="912fe1bea0120310VgnVCM10000078fe770aRCRD">Share capital</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/laaccioncaixabank/dividendos_en.html"      title="Dividends"   rel="bb6fe1bea0120310VgnVCM10000078fe770aRCRD">Dividends</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/informacioneconomicofinanciera_en.html"      title="Economic-financial information"   rel="63538d1339d10310VgnVCM10000078fe770aRCRD">Economic-financial information</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/presentaciones_en.html"      title="Presentations"   rel="04dd0b030b79f210VgnVCM10000078fe770aRCRD">Presentations</a>
+<ul>
+<li>
+<a  href="/inversoresinstitucionales/presentaciones/presentacionescorporativas_en.html"      title="Corporate"   rel="8a9fe1bea0120310VgnVCM10000078fe770aRCRD">Corporate</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/presentaciones/investorday_en.html"      title="Investor Day"   rel="def7e0772d9db410VgnVCM1000001638f70aRCRD">Investor Day</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/presentaciones/conferenciasyseminarios_en.html"      title="Conferences"   rel="b6cfe1bea0120310VgnVCM10000078fe770aRCRD">Conferences</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/emisiones_en.html"      title="Public offerings and admission to trading"   rel="6b70e1bea0120310VgnVCM10000078fe770aRCRD">Public offerings and admission to trading</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/inversoresrentafija_en.html"      title="Fixed Income Investors"   rel="25f390c1de017310VgnVCM10000078fe770aRCRD">Fixed Income Investors</a>
+<ul>
+<li>
+<a  href="/inversores-institucionales/inversores-renta-fija/presentacion-renta-fija_en.html"      title="Fixed Income Presentation"   rel="0047db833fbe9610VgnVCM2000001938f70aRCRD">Fixed Income Presentation</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/inversoresrentafija/informacionsobrecolaterales_en.html"      title="Covered Pool Information"   rel="af348723d552a310VgnVCM10000078fe770aRCRD">Covered Pool Information</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/inversoresrentafija/emisionesdeudacaixabank_en.html"      title="Issuances"   rel="8ab928ace652a310VgnVCM10000078fe770aRCRD">Issuances</a>
+</li>
+<li>
+<a  href="/inversores-institucionales/inversores-renta-fija/bonos-ods_en.html"      title="SDG Bonds"   rel="13f82e056d8bc610VgnVCM2000001938f70aRCRD">SDG Bonds</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/inversoresrentafija/analistasrentafija_en.html"      title="Fixed Income Analysts"   rel="06027963a7e92410VgnVCM10000078fe770aRCRD">Fixed Income Analysts</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/inversoresrentafija/noticiasrelevantes_en.html"      title="Relevant  News"   rel="715e28ace652a310VgnVCM10000078fe770aRCRD">Relevant  News</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/inversoresrentafija/ratings_en.html"      title="Ratings"   rel="0eeb34998e5f1610VgnVCM2000001938f70aRCRD">Ratings</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/rating_en.html"      title="Ratings"   rel="f42e0b030b79f210VgnVCM10000078fe770aRCRD">Ratings</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/analistas_en.html"      title="Analysts"   rel="bdfd0b030b79f210VgnVCM10000078fe770aRCRD">Analysts</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="https://www.caixabank.com/apl/informacion_caixabank/index_en.html?t=1" target="_self" onclick=""      title="Significant events"   rel="fb3e0b030b79f210VgnVCM10000078fe770aRCRD">Significant events</a>
+<ul>
+</ul>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional_en.html"      title="Institutional Investor's agenda"   rel="225e0b030b79f210VgnVCM10000078fe770aRCRD">Institutional Investor's agenda</a>
+<ul>
+<li>
+<a  href="/inversores-institucionales/agenda-del-inversor-institucional/2020_en.html"      title="2020"   rel="699622db3c6af610VgnVCM2000001938f70aRCRD">2020</a>
+</li>
+<li>
+<a  href="/inversores-institucionales/agenda-del-inversor-institucional/2019_en.html"      title="2019"   rel="5c068ba385238610VgnVCM1000001638f70aRCRD">2019</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional/2018_en.html"      title="2018"   rel="59b503c5bf9f0610VgnVCM2000001938f70aRCRD">2018</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional/2017_en.html"      title="2017"   rel="3740cad271649510VgnVCM1000001638f70aRCRD">2017</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional/2016_en.html"      title="2016"   rel="db88498ce5632510VgnVCM1000001638f70aRCRD">2016</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional/2015_en.html"      title="2015"   rel="06768ce2e8f2a410VgnVCM1000001638f70aRCRD">2015</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional/2014_en.html"      title="2014"   rel="753687a381253410VgnVCM20000074fe770aRCRD">2014</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional/2013_en.html"      title="2013"   rel="1f9557486a06b310VgnVCM10000078fe770aRCRD">2013</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional/2012_en.html"      title="2012"   rel="ae55a50415744310VgnVCM10000078fe770aRCRD">2012</a>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/agendadelinversorinstitucional/2011_en.html"      title="2011"   rel="918c49406c220310VgnVCM10000078fe770aRCRD">2011</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/inversoresinstitucionales/contacto_en.html"      title="Contact"   rel="937e0b030b79f210VgnVCM10000078fe770aRCRD">Contact</a>
+<ul>
+</ul>
+</li>
+</ul>
+</li>
+<li onmouseover="$(this).children('ul').toggle()" onmouseout="$(this).children('ul').toggle()">
+<a  href="https://www.caixabank.com/comunicacion/index_en.html" target="_self" onclick=""      title="Communication room"   rel="10cc4a42a679f210VgnVCM10000078fe770aRCRD">Communication room</a>
+</li>
+<li onmouseover="$(this).children('ul').toggle()" onmouseout="$(this).children('ul').toggle()">
+<a  href="https://www.caixabank.es/particular/holabank/particulares_en.html" target="_blank" onclick=""      title="Commercial Information"   rel="c54201ff1d7c0510VgnVCM1000001638f70aRCRD">Commercial Information</a>
+</li>
+<li onmouseover="$(this).children('ul').toggle()" onmouseout="$(this).children('ul').toggle()">
+<a  href="/priips_en.html"      title="PRIIPS"   rel="53f5f8ec50856610VgnVCM2000001938f70aRCRD">PRIIPS</a>
+<ul style="display:none;">
+<li>
+<a  href="/priips/rentafija_en.html"      title="Renta Fija"   rel="7643860bdb266610VgnVCM2000001938f70aRCRD">Renta Fija</a>
+<ul>
+<li>
+<a  href="/priips/rentafija/reposyletras_en.html"      title="Repos y Letras"   rel="99117070a9266610VgnVCM2000001938f70aRCRD">Repos y Letras</a>
+</li>
+<li>
+<a  href="/priips/rentafija/pagares_en.html"      title="Pagar&eacute;s"   rel="97af8295ca266610VgnVCM2000001938f70aRCRD">Pagarés</a>
+</li>
+<li>
+<a  href="/priips/rentafija/obligacionessubordinadas_en.html"      title="Obligaciones Subordinadas"   rel="bf3f860bdb266610VgnVCM2000001938f70aRCRD">Obligaciones Subordinadas</a>
+</li>
+<li>
+<a  href="/priips/rentafija/obligacionescanjeables_en.html"      title="Obligaciones Canjeables"   rel="43fb860bdb266610VgnVCM2000001938f70aRCRD">Obligaciones Canjeables</a>
+</li>
+<li>
+<a  href="/priips/rentafija/emisionesderentafijaamortizablesantesdelvencimiento_en.html"      title="Emisiones de Renta Fija amortizables antes del Vencimiento"   rel="3133860bdb266610VgnVCM2000001938f70aRCRD">Emisiones de Renta Fija amortizables antes del Vencimiento</a>
+</li>
+<li>
+<a  href="/priips/rentafija/cedulashipotecarias_en.html"      title="C&eacute;dulas Hipotecarias"   rel="2b1b02edf5266610VgnVCM2000001938f70aRCRD">Cédulas Hipotecarias</a>
+</li>
+<li>
+<a  href="/priips/rentafija/bonosyobligacionesdelestado_en.html"      title="Bonos y Obligaciones del estado"   rel="464b8295ca266610VgnVCM2000001938f70aRCRD">Bonos y Obligaciones del estado</a>
+</li>
+<li>
+<a  href="/priips/rentafija/bonosyobligacionesrentafijaprivada_en.html"      title="Bonos y Obligaciones (renta Fija Privada)"   rel="31828295ca266610VgnVCM2000001938f70aRCRD">Bonos y Obligaciones (renta Fija Privada)</a>
+</li>
+<li>
+<a  href="/priips/rentafija/bonosdetitulacionsofisticados_en.html"      title="Bonos de Titulaci&oacute;n Sofisticados"   rel="e9668295ca266610VgnVCM2000001938f70aRCRD">Bonos de Titulación Sofisticados</a>
+</li>
+<li>
+<a  href="/priips/rentafija/bonosdetitulacionordinarios_en.html"      title="Bonos de Titulaci&oacute;n Ordinarios"   rel="8189860bdb266610VgnVCM2000001938f70aRCRD">Bonos de Titulación Ordinarios</a>
+</li>
+</ul>
+</li>
+<li>
+<a  href="/priips/derivados_en.html"      title="Derivados"   rel="2934860bdb266610VgnVCM2000001938f70aRCRD">Derivados</a>
+<ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<!--
+=======================================================================
+Track dependencies
+=======================================================================
+-->
+<div class="breadcrumbsimple">
+<ul>
+<li class="primero">
+<a  href="/informacionparaaccionistaseinversores_en.html"      title="Shareholders and Investors"  >Shareholders and Investors</a>
+</li>
+<li>
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral_en.html"      title="General information"  >General information</a>
+</li>
+<li class="ultimo">
+<a  href="/apl/informacion_caixabank/index_en.html?t=1"      title="Significant events&lt;br&gt;(Until Feb, 8 2020)"  >Significant events<br>(Until Feb, 8 2020)</a>
+</li>
+</ul>
+</div>
+<div id="opciones" class="articulo_ligero">
+<div class="contenido_articulo">
+<div class="imprimir"><a href="javascript:imprimir()" title="Print page">Print page</a></div>
+</div>
+</div>
+<div class="titulo_subcanales">
+<h1>
+<span class="titulo_secundario">General information</span>
+</h1>
+</div>
+</div>
+<div id="contenido-central">
+<div id="left">
+<div class="left-menu">
+<div id="menu">
+<div class="lista_canales_actual_marcado">
+<ul>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/caucescomunicacion_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/caucescomunicacion_en.html"      title="Contact information"   rel="19e2ad1274220310VgnVCM10000078fe770aRCRD">Contact information</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/laaccionysucapitalsocial_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/laaccionysucapitalsocial_en.html"      title="Shares and share capital"   rel="496c09686f140310VgnVCM10000078fe770aRCRD">Shares and share capital</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/agendadelinversor_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/agendadelinversor_en.html"      title="Investor's agenda"   rel="f1c061738d450310VgnVCM10000078fe770aRCRD">Investor's agenda</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/distribucioncapital_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/distribucioncapital_en.html"      title="Capital distribution"   rel="ce1adabe2872f410VgnVCM1000001638f70aRCRD">Capital distribution</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/dividendos_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/dividendos_en.html"      title="Dividends"   rel="ac915d8614560310VgnVCM10000078fe770aRCRD">Dividends</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/ofertaspublicas_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/ofertaspublicas_en.html"      title="Public offerings and admission to trading"   rel="3077bd51a3321510VgnVCM1000001638f70aRCRD">Public offerings and admission to trading</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/opas_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/opas_en.html"      title="Takeover bids"   rel="ac06b81d08560310VgnVCM10000078fe770aRCRD">Takeover bids</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/fusiones_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/fusiones_en.html"      title="Mergers"   rel="415d2fbd698e1510VgnVCM2000001938f70aRCRD">Mergers</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/participacionessignificativasyautocartera_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/participacionessignificativasyautocartera_en.html"      title=" Significant shareholdings and treasury stock"   rel="855c3d7e46650310VgnVCM10000078fe770aRCRD"> Significant shareholdings and treasury stock</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/pactosparasociales_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/pactosparasociales_en.html"      title="Shareholders&rsquo; Agreements"   rel="3b7d2fbd698e1510VgnVCM2000001938f70aRCRD">Shareholders’ Agreements</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/cotizacioncaixabankenlabolsa_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/cotizacioncaixabankenlabolsa_en.html"      title="Quoted price"   rel="f5a4792c67a50310VgnVCM10000078fe770aRCRD">Quoted price</a>
+</li>
+<li>
+<!-- channel.link.href = /informacionparaaccionistaseinversores/informaciongeneral/analistas_en.html | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/informacionparaaccionistaseinversores/informaciongeneral/analistas_en.html"      title="Analysts"   rel="26e43d7e46650310VgnVCM10000078fe770aRCRD">Analysts</a>
+</li>
+<li>
+<!-- channel.link.href = /apl/informacion_caixabank/index_en.html?t=5 | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/apl/informacion_caixabank/index_en.html?t=5" target="_self" onclick=""      title="Inside information"   rel="af84cabf3c410710VgnVCM2000001938f70aRCRD">Inside information</a>
+</li>
+<li>
+<!-- channel.link.href = /apl/informacion_caixabank/index_en.html?t=6 | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/apl/informacion_caixabank/index_en.html?t=6" target="_self" onclick=""      title="Other relevant information"   rel="f495cabf3c410710VgnVCM2000001938f70aRCRD">Other relevant information</a>
+</li>
+<li>
+<!-- channel.link.href = /apl/informacion_caixabank/index_en.html?t=1 | pres.req.link.href = /apl/informacion_caixabank/index_en.html?t=1 -->
+<a  href="/apl/informacion_caixabank/index_en.html?t=1"      title="Significant events"   rel="2e93a2abad4ef210VgnVCM10000078fe770aRCRD">Significant events<br>(Until Feb, 8 2020)</a>
+</li>
+</ul>
+<script type="text/javascript">
+$(document).ready(function() {
+var m=$(".lista_canales_actual_marcado a[rel='2e93a2abad4ef210VgnVCM10000078fe770aRCRD']");
+m.parent().addClass("selected");
+m.parent().prev().addClass("before_selected");
+m=$(".lista_canales_actual_marcado a[rel='2e93a2abad4ef210VgnVCM10000078fe770aRCRD']");
+m.parent().addClass("selected");
+m.parent().prev().addClass("before_selected");
+});
+</script>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+$('.lista_recursiva_canales ul li ul').hide();
+var m=$(".lista_recursiva_canales a[rel='aaefe32c09c90310VgnVCM10000078fe770aRCRD']");
+m.parent().find("ul").show();
+m.removeAttr("href");
+m.addClass("selected").parents()
+.show()
+.prev("a")
+.addClass("selected");
+});
+</script>
+</div>
+</div>
+</div>
+<div id="mid-top">
+</div>
+<div id="mid">
+<div class="titulo_subcanales">
+<h1>
+<span class="titulo_secundario">Significant events<br>(Until Feb, 8 2020)</span>
+</h1>
+</div>
+<div class="detalle_articuloTCI">
+<div class="entradillaTCI">
+</div>
+<div class="titulo_articuloTCI" >
+<h1>Significant events</h1>
+</div>
+<div class="contenido_articuloTCI">
+<!-- Inicio Codigo Velocity -->
+<div class="lista_annos">
+<ul>
+<li>
+<a  class="selected"  href="/apl/informacion_caixabank/index_en.html?fecha=2020&t=1" title="2020">
+2020
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2019&t=1" title="2019">
+2019
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2018&t=1" title="2018">
+2018
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2017&t=1" title="2017">
+2017
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2016&t=1" title="2016">
+2016
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2015&t=1" title="2015">
+2015
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2014&t=1" title="2014">
+2014
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2013&t=1" title="2013">
+2013
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2012&t=1" title="2012">
+2012
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2011&t=1" title="2011">
+2011
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2010&t=1" title="2010">
+2010
+</a>
+</li>
+<li>
+<a  href="/apl/informacion_caixabank/index_en.html?fecha=2009&t=1" title="2009">
+2009
+</a>
+</li>
+</ul>
+</div>
+<hr>
+<p class="entradeta">The significant events included in this section correspond exactly to those submitted to the Spanish securities market regulator (CNMV) until February8, 2020 and published on its website (<a target="_blank" href="http://www.cnmv.es" title="www.cnmv.es">www.cnmv.es <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt="">)</a>.</p>
+<p class="entradeta">To consult all CaixaBank's registered information, access <a target="_blank" href="https://www.cnmv.es/portal/Consultas/DatosEntidad.aspx?numero=2100&tipo=ECN&nif=A-08663619&lang=en" title="official registers of the CNMV">the official registers of the CNMV. <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt=""></a>.</p>
+<div id="hr08">
+<table height="100" cellspacing="1" cellpadding="1" border="1" width="100%">
+<thead>
+<tr>
+<th scope="col"><span class="fecha">Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></th>
+<th scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Title</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td  class="blackback" >31-01-2020</td>
+<td  class="blackback" ><img id="pdf" alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png" name="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png">
+<a href="http://www.caixabank.com/StaticFiles/pdfs/200131_HR_Dividendo19_en.pdf" title="CaixaBank discloses information on dividends." target="blank"><strong>CaixaBank discloses information on dividends.</strong><br>
+<span class="texto_color_site">(PDF, 116 kB)</span> <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt="">
+</td>
+</tr>
+<tr>
+<td >31-01-2020</td>
+<td ><img id="pdf" alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png" name="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png">
+<a href="http://www.caixabank.com/StaticFiles/pdfs/200131_HR_Webcast4T19_en.pdf" title="CaixaBank files the 2019 financial year webcast results presentation." target="blank"><strong>CaixaBank files the 2019 financial year webcast results presentation.</strong><br>
+<span class="texto_color_site">(PDF, 2607 kB)</span> <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt="">
+</td>
+</tr>
+<tr>
+<td  class="blackback" >31-01-2020</td>
+<td  class="blackback" ><img id="pdf" alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png" name="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png">
+<a href="http://www.caixabank.com/StaticFiles/pdfs/200131_NP_4T19_en.pdf" title="CaixaBank files a press release concerning 2019 financial year results." target="blank"><strong>CaixaBank files a press release concerning 2019 financial year results.</strong><br>
+<span class="texto_color_site">(PDF, 796 kB)</span> <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt="">
+</td>
+</tr>
+<tr>
+<td >31-01-2020</td>
+<td ><img id="pdf" alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png" name="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png">
+<a href="http://www.caixabank.com/StaticFiles/pdfs/200131_HR_IPP4T19_en.pdf" title="CaixaBank files its 2019 financial year results." target="blank"><strong>CaixaBank files its 2019 financial year results.</strong><br>
+<span class="texto_color_site">(PDF, 2541 kB)</span> <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt="">
+</td>
+</tr>
+<tr>
+<td  class="blackback" >20-01-2020</td>
+<td  class="blackback" ><img id="pdf" alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png" name="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png">
+<a href="http://www.caixabank.com/StaticFiles/pdfs/200120_HR_Warrants_en.pdf" title="The Company hereby informs about the liquidation price and the liquidation amount in relation to the warrants issued with an expiration date 17 January 2020." target="blank"><strong>The Company hereby informs about the liquidation price and the liquidation amount in relation to the warrants issued with an expiration date 17 January 2020.</strong><br>
+<span class="texto_color_site">(PDF, 73 kB)</span> <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt="">
+</td>
+</tr>
+<tr>
+<td >15-01-2020</td>
+<td ><img id="pdf" alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png" name="/deployedfiles/caixabank/Estaticos/Imagenes/pdf.gif.png">
+<a href="http://www.caixabank.com/StaticFiles/pdfs/200115_HR_Webcast4T19_en.pdf" title="CaixaBank announces that will make a presentation to discuss its full year 2019 results." target="blank"><strong>CaixaBank announces that will make a presentation to discuss its full year 2019 results.</strong><br>
+<span class="texto_color_site">(PDF, 18 kB)</span> <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt="">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr>
+<p class="texto_derecha"><span class="texto_color_site">Documents in PDF format. If you cannot open them, download </span><a title="Acrobat Reader" href="http://www.adobe.es/products/acrobat/readstep2.html" target="_blank"><span class="texto_color_site">Acrobat Reader</span></a><span class="texto_color_site"> <img src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new.gif" alt="">.</span></p>
+<p class="texto_derecha"><span class="texto_color_site"><strong>Warning</strong>: English versions are only a translation of the originals in Spanish for information purposes. In case of a discrepancy, the Spanish versions prevail.</span></p>
+<p>&nbsp;</p>
+<!-- Fin Codigo Velocity -->
+</div>
+</div>
+</div>
+<div id="right">
+</div>
+</div>
+<div id="bottom">
+</div>
+<div id="footer">
+<div class="footer_links_groups_title">
+<div class="enlaces">
+<div class="agrupacion">
+<p>Pie CaixaBank</p>
+<ul>
+<li class="">
+<a  href="/general/mapaweb_en.html"      title="Site map"  >Site map</a>
+</li>
+<li class="">
+<a  href="/general/accesibilidad_en.html"      title="Accessibility"  >Accessibility</a>
+</li>
+<li class="last_item">
+<a  href="/general/recomendacionesnavegacion_en.html"      title="&nbsp;Recommendations for navigation"  > Recommendations for navigation</a>
+</li>
+</ul>
+</div>
+<span></span>
+<div class="descripcion_pie"></div>
+</div>
+<p>&copy; Caixabank, S.A.<br /> <a rel="noopener noreferrer" href="/general/informacionlegal_en.html" title="Legal information about Caixabank, S.A" target="_blank">Legal information about Caixabank, S.A</a>.&nbsp;<img  alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new_white2013.gif">&nbsp; <a href="/general/avisolegal_en.html" title="Disclaimer of CaixaBank">Legal disclaimer</a><br /> <a rel="noopener noreferrer" href="https://www.caixabank.com/privacyinformation" title="Privacy" target="_blank">Privacy</a> <img  alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new_white2013.gif">&nbsp;&nbsp;&nbsp;<br /> <a onclick="window.open(this.href, '', 'resizable=yes,status=no,location=no,toolbar=no,menubar=no,fullscreen=no,scrollbars=yes,dependent=no,width=1100,height=950'); return false;" href="/general/cookies_en.html" id="acookie" title="Cookies Policy"><strong>Cookies Policy</strong><img  alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/nv_new_white2013.gif"></a></p>
+<p class="texto_derecha"><a rel="noopener noreferrer" href="https://www.caixabank.com/general/selloexcelenciaefqm_en.html" title="EFQM" target="_blank"><img  alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/Home/EFQM_logo_peq.jpg"></a><a rel="noopener noreferrer" href="https://www.caixabank.com/responsabilidadcorporativa/publicaciones/analistasyratingssostenibilidad_en.html" title="Dow Jones" target="_blank"><img  alt="" height="23" src="/deployedfiles/caixabank/Estaticos/Imagenes/Home/DJSI_Member_Logo_53x23.png" width="53"></a><a rel="noopener noreferrer" href="https://www.caixabank.com/responsabilidadcorporativa/publicaciones/analistasyratingssostenibilidad_en.html" title="FTSE4Good" target="_blank"><img  alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/Home/logo_home_FTSE4_peq.gif"></a><a rel="noopener noreferrer" href="https://forumethibel.org/content/ethibel_excellencelabel.html" title="Ethibel" target="_blank"><img  alt="" src="/deployedfiles/caixabank/Estaticos/Imagenes/Home/logo_ethibel_peq.jpg"></a><a rel="noopener noreferrer" href="/deployedfiles/caixabank/Estaticos/PDFs/Ecertificate-IS637087UpgradeSOAmodif.pdf" title="ANAB ACCREDITED (Open in new window)" target="_blank"><img  alt="" height="24" src="/deployedfiles/caixabank/Estaticos/Imagenes/Home/iso_anab_47x24.png" width="47"></a><a href="/general/certificacion_en.html" title="Certification"><img  alt="" class="imagen_derecha" src="/deployedfiles/caixabank/Estaticos/Imagenes/Home/bsi_home_peq.jpg"></a></p>
+</div>
+<!--
+=======================================================================
+Track dependencies
+=======================================================================
+-->
+</div>
+</div>
+<!--
+=======================================================================
+Track dependencies
+=======================================================================
+-->
+<script type="text/javascript">
+function prependPlugin(htmlElement, beginPluginText, pluginCode, endPluginText){
+$(htmlElement).prepend(endPluginText);
+$(htmlElement).prepend(pluginCode);
+$(htmlElement).prepend(beginPluginText);
+}
+function appendPlugin(htmlElement, beginPluginText, pluginCode, endPluginText){
+$(htmlElement).append(beginPluginText);
+$(htmlElement).append(pluginCode);
+$(htmlElement).append(endPluginText);
+}
+</script>
+</body>
+</html>

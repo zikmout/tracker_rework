@@ -1,0 +1,3429 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+  <style>
+    :root {
+      --muse-color:#BA1240;
+    }
+  </style>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b39a92eb0d",applicationID:"438265727"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="application-name" content="L&#039;Oréal Finance" />
+<meta name="title" content="Opérations sur titres | L&#039;Oréal Finance" />
+<meta property="og:site_name" content="L&#039;Oréal Finance" />
+<link rel="canonical" href="https://www.loreal-finance.com/fr/operation-titres" />
+<meta property="og:type" content="Page" />
+<meta name="description" content="Conformément aux dispositions réglementaires, les transactions réalisées par L’Oréal sur ses propres actions font l’objet de déclarations hebdomadaires et mensuelles ; un tableau détaillant le nombre total d’actions composant le capital et les droits de vote est également publié chaque mois." />
+<meta property="og:url" content="https://www.loreal-finance.com/fr/operation-titres" />
+<meta property="og:title" content="Opérations sur titres" />
+<meta property="og:description" content="Conformément aux dispositions réglementaires, les transactions réalisées par L’Oréal sur ses propres actions font l’objet de déclarations hebdomadaires et mensuelles ; un tableau détaillant le nombre total d’actions composant le capital et les droits de vote est également publié chaque mois." />
+<meta property="og:image" content="https://www.loreal-finance.com/sites/default/files/2019-09/entete-operations-sur-titres.jpg" />
+<meta property="og:locale" content="fr" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicons/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="fr" href="https://www.loreal-finance.com/fr/operation-titres" />
+<link rel="alternate" hreflang="en" href="https://www.loreal-finance.com/eng/share-movements" />
+<link rel="revision" href="https://www.loreal-finance.com/fr/operation-titres" />
+<script src="/sites/default/files/google_tag/loreal_finance/google_tag.script.js?q96odp" defer="true"></script>
+
+  <title> L&#039;Oréal Finance : Opérations sur titres </title>
+  <link rel="stylesheet" media="all" href="/sites/default/files/css/css_SscydNirKQ6D2HRQBSomx4UXaGTeTdAsV4tGoWvFUME.css?q96odp" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_3SoQdHH1Q6NsorZTRC3XJ4uARq-flyLIIOewewDYhxk.css?q96odp" />
+<link rel="stylesheet" media="print" href="/sites/default/files/css/css_KXj8Dibo8ejDJItMA5dTEZ23EeP7U_McXJy9jdbcU1g.css?q96odp" />
+<link rel="stylesheet" media="all" href="//fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&amp;display=swap" />
+<link rel="stylesheet" media="all" href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/css/select2.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_DdoNX31U11PfMcVhRdZgZrgIwOsB260S0OVTl4z0u6c.css?q96odp" />
+
+  
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="//optanon.blob.core.windows.net/consent/20e5ba97-2181-48da-8001-64dad5bb8756.js" charset="utf-8"></script>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/sites/default/files/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/sites/default/files/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/sites/default/files/favicons/favicon-16x16.png">
+  <link rel="shortcut icon" href="/sites/default/files/favicons/favicon.ico">
+    <script type="text/javascript">
+    function OptanonWrapper() { }
+  </script>
+</head>
+
+  <body>
+        <a href="#main-content" class="visually-hidden focusable main-content__link">
+      Aller au contenu principal
+    </a>
+
+    <div class="hidden"><?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs><style>
+      .c-primary-arrow {
+        fill: inherit;
+      }
+    </style><style>
+      .c-white {
+        fill: #fff;
+      }
+
+      .c-tea-brown-actualites, .c-tea-brown-actualites-2 {
+        fill: #867466;
+        stroke: #867466;
+      }
+
+      .c-tea-brown-actualites {
+        stroke-width: 0.75px;
+      }
+
+      .c-tea-brown-actualites-2 {
+        stroke-width: 0.5px;
+      }
+    </style><style>
+      .c-white {
+        fill: #fff;
+      }
+
+      .c-tea-brown-agenda {
+        fill: #867466;
+      }
+    </style><style>
+      .c-white {
+        fill: #fff;
+      }
+
+      .c-tea-brown-calculateur {
+        fill: #867466;
+        stroke: #867466;
+        stroke-width: 0.75px;
+      }
+    </style><style>
+      .c-white {
+        fill: #fff;
+      }
+
+      .c-tea-brow-contact {
+        fill: #867466;
+      }
+    </style><style>
+      .c-white {
+        fill: #fff;
+      }
+
+      .c-tea-brown-go {
+        fill: #867466;
+        stroke: #867466;
+        stroke-width: 0.5px;
+      }
+    </style><style>
+      .c-primary-loupe {
+        fill: inherit;
+      }
+    </style></defs><symbol id="angle-down-solid" viewBox="0 0 320 512"><metadata id="metadata10"><rdf:RDF><cc:Work rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/></cc:Work></rdf:RDF></metadata><path id="path2" d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z" fill="inherit"/></symbol><symbol id="angle-left" viewBox="0 0 1792 1792"><path d="M1203 544q0 13-10 23l-393 393 393 393q10 10 10 23t-10 23l-50 50q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l466-466q10-10 23-10t23 10l50 50q10 10 10 23z" fill="inherit"/></symbol><symbol id="angle-right" viewBox="0 0 1792 1792"><path d="M1171 960q0 13-10 23l-466 466q-10 10-23 10t-23-10l-50-50q-10-10-10-23t10-23l393-393-393-393q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l466 466q10 10 10 23z" fill="inherit"/></symbol><symbol id="bars-solid" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></symbol><symbol id="envelope-o" viewBox="0 0 1792 1792"><path d="M1664 1504v-768q-32 36-69 66-268 206-426 338-51 43-83 67t-86.5 48.5-102.5 24.5h-2q-48 0-102.5-24.5t-86.5-48.5-83-67q-158-132-426-338-37-30-69-66v768q0 13 9.5 22.5t22.5 9.5h1472q13 0 22.5-9.5t9.5-22.5zm0-1051v-24.5l-.5-13-3-12.5-5.5-9-9-7.5-14-2.5h-1472q-13 0-22.5 9.5t-9.5 22.5q0 168 147 284 193 152 401 317 6 5 35 29.5t46 37.5 44.5 31.5 50.5 27.5 43 9h2q20 0 43-9t50.5-27.5 44.5-31.5 46-37.5 35-29.5q208-165 401-317 54-43 100.5-115.5t46.5-131.5zm128-37v1088q0 66-47 113t-113 47h-1472q-66 0-113-47t-47-113v-1088q0-66 47-113t113-47h1472q66 0 113 47t47 113z"/></symbol><symbol id="facebook-f-brands" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></symbol><symbol id="file-pdf-o" viewBox="0 0 1792 1792"><path d="M1596 380q28 28 48 76t20 88v1152q0 40-28 68t-68 28h-1344q-40 0-68-28t-28-68v-1600q0-40 28-68t68-28h896q40 0 88 20t76 48zm-444-244v376h376q-10-29-22-41l-313-313q-12-12-41-22zm384 1528v-1024h-416q-40 0-68-28t-28-68v-416h-768v1536h1280zm-514-593q33 26 84 56 59-7 117-7 147 0 177 49 16 22 2 52 0 1-1 2l-2 2v1q-6 38-71 38-48 0-115-20t-130-53q-221 24-392 83-153 262-242 262-15 0-28-7l-24-12q-1-1-6-5-10-10-6-36 9-40 56-91.5t132-96.5q14-9 23 6 2 2 2 4 52-85 107-197 68-136 104-262-24-82-30.5-159.5t6.5-127.5q11-40 42-40h22q23 0 35 15 18 21 9 68-2 6-4 8 1 3 1 8v30q-2 123-14 192 55 164 146 238zm-576 411q52-24 137-158-51 40-87.5 84t-49.5 74zm398-920q-15 42-2 132 1-7 7-44 0-3 7-43 1-4 4-8-1-1-1-2-1-2-1-3-1-22-13-36 0 1-1 2v2zm-124 661q135-54 284-81-2-1-13-9.5t-16-13.5q-76-67-127-176-27 86-83 197-30 56-45 83zm646-16q-24-24-140-24 76 28 124 28 14 0 18-1 0-1-2-3z"/></symbol><symbol id="google-plus" viewBox="0 0 2304 1792"><path d="M1437 913q0 208-87 370.5t-248 254-369 91.5q-149 0-285-58t-234-156-156-234-58-285 58-285 156-234 234-156 285-58q286 0 491 192l-199 191q-117-113-292-113-123 0-227.5 62t-165.5 168.5-61 232.5 61 232.5 165.5 168.5 227.5 62q83 0 152.5-23t114.5-57.5 78.5-78.5 49-83 21.5-74h-416v-252h692q12 63 12 122zm867-122v210h-209v209h-210v-209h-209v-210h209v-209h210v209h209z"/></symbol><symbol id="icon-acrobat" viewBox="-100 -70 500 500"><circle cx="140" cy="170" r="235" fill="white"/><g id="XMLID_238_"><path id="XMLID_239_" d="M253.319,178.119c-19.338,0-43.539,3.373-51.456,4.56c-32.769-34.22-42.092-53.671-44.189-58.857
+		c2.842-7.302,12.73-35.041,14.135-70.667c0.693-17.837-3.075-31.165-11.202-39.614c-8.113-8.435-17.933-9.091-20.749-9.091
+		c-9.874,0-26.438,4.993-26.438,38.429c0,29.011,13.526,59.795,17.265,67.749c-19.699,57.358-40.848,96.623-45.339,104.698
+		C6.19,245.129,0,273.945,0,282.112c0,14.676,10.452,23.438,27.959,23.438c42.535,0,81.351-71.412,87.769-83.812
+		c30.21-12.037,70.644-19.493,80.923-21.272c29.484,28.086,63.583,35.58,77.743,35.58c10.654,0,35.605,0,35.605-25.653
+		C310,186.571,279.467,178.119,253.319,178.119z M251.269,194.96c22.975,0,29.047,7.598,29.047,11.615
+		c0,2.521-0.957,10.746-13.272,10.746c-11.043,0-30.109-6.382-48.868-20.23C225.999,196.063,237.575,194.96,251.269,194.96z
+		 M138.652,20.774c2.095,0,3.474,0.673,4.611,2.25c6.608,9.169,1.28,39.129-5.205,62.574c-6.26-20.103-10.958-50.949-4.348-61.801
+		C135.002,21.679,136.479,20.774,138.652,20.774z M127.494,200.227c8.318-16.804,17.641-41.294,22.719-55.145
+		c10.162,17.009,23.83,32.801,31.735,41.363C157.335,191.634,138.713,196.818,127.494,200.227z M16.523,284.354
+		c-0.548-0.65-0.629-2.02-0.216-3.665c0.866-3.447,7.484-20.534,55.351-41.946c-6.854,10.796-17.569,26.222-29.34,37.746
+		c-8.286,7.756-14.738,11.689-19.177,11.689C21.553,288.178,19.365,287.745,16.523,284.354z" fill="#877465"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></symbol><symbol id="icon-adobe-pdf" viewBox="0 0 240 240"><path d="M235 120c0 63.513-51.487 115-115 115S5 183.513 5 120 56.487 5 120 5s115 51.487 115 115z" fill="#FFF"/><path d="M189.901 133.821c-4.091-4.432-12.785-6.733-25.059-6.733-6.818 0-14.575.681-23.183 2.13-4.944-4.602-9.717-10.142-14.32-16.45a152.533 152.533 0 0 1-8.864-13.893c4.347-13.382 7.33-26.252 7.33-36.054 0-7.33-2.386-19.433-13.296-19.433-2.813 0-5.881 1.79-7.416 4.432-4.602 7.927-2.471 25.826 5.882 44.066-2.898 8.779-6.223 17.558-10.314 27.531a231.146 231.146 0 0 1-11.847 24.462c-23.695 9.375-38.782 20.03-40.316 28.553-.511 2.813.341 5.54 2.642 7.756 1.364 1.279 4.262 2.983 8.524 2.983 13.637 0 28.809-19.944 40.145-40.315 6.307-2.216 12.955-4.177 19.774-6.052a261.595 261.595 0 0 1 21.223-4.688c16.45 14.916 31.025 17.132 38.27 17.132 9.035 0 11.592-3.75 12.53-6.136 1.363-3.495.17-7.245-1.705-9.291zm-82.336-84.637c1.108-1.875 2.898-3.069 4.944-3.069 4.006 0 6.307 3.58 6.307 10.143 0 7.075-2.216 18.581-6.478 31.792-7.926-18.495-8.012-33.241-4.773-38.866zM51.14 172.943c1.364-7.074 14.831-16.62 35.458-25.229-11.507 19.689-22.843 31.792-30.003 31.792-1.363 0-2.727-.426-3.75-1.363-1.449-1.449-2.046-3.239-1.705-5.2zm87.195-43.128a236.901 236.901 0 0 0-19.349 4.347c-5.881 1.534-11.591 3.324-17.131 5.114 3.238-6.052 6.051-11.933 8.182-17.302 2.642-6.393 5.199-13.041 7.415-19.689 2.387 4.091 4.944 8.097 7.757 12.017 4.176 5.882 8.608 11.081 13.126 15.513zm5.966 1.705c13.893-2.557 26.081-2.046 31.281-.938 5.369 1.108 8.182 4.347 7.245 9.12-.938 4.858-6.734 7.16-13.126 5.626-10.228-2.472-18.667-8.012-25.4-13.808z" fill="inherit"/></symbol><symbol id="icon-archives" viewBox="0 0 23 16.56"><path d="M8.996 6.072a.492.492 0 0 0 .049.982h4.912a.491.491 0 0 0 0-.982H8.996z" fill="inherit"/><path d="M.645.546a.337.337 0 0 0-.319.368v3.438a.38.38 0 0 0 .368.369h.614v10.925a.378.378 0 0 0 .368.368h19.649a.378.378 0 0 0 .368-.368V4.721h.614a.38.38 0 0 0 .368-.369V.914a.378.378 0 0 0-.368-.368H.645zm20.312 14.736H2.045V4.721h18.912zm-11.936-8.1a.62.62 0 0 1-.614-.589.688.688 0 0 1 .147-.447.56.56 0 0 1 .418-.2h4.962a.623.623 0 0 1 .614.614.611.611 0 0 1-.2.442.593.593 0 0 1-.442.172H9.02zm12.913-3.198H1.063v-2.7h20.871z" fill="inherit"/></symbol><symbol id="icon-arrow-sub-nav-white" viewBox="-14487.67 -17265.854 6.841 10.854"><path data-name="Trac&#xE9; 226" d="M-14486.963-17265.146l4.719 4.719-4.719 4.72" fill="none" stroke="#fff" stroke-width="2"/></symbol><symbol id="icon-arrow-sub-nav" viewBox="-14615.67 -17391.854 6.841 10.854"><path data-name="Trac&#xE9; 213" d="M-14614.963-17391.146l4.719 4.719-4.719 4.72" fill="none" stroke="#fff" stroke-width="2" opacity=".096"/></symbol><symbol id="icon-arrow" viewBox="-11522 -19383.424 9.76 9.9"><g id="noun_1172666" transform="translate(-11386.088 -19223.395)"><path id="Trac&#xE9;_136" data-name="Trac&#xE9; 136" class="c-primary-arrow" d="M37.848,989.306a1.028,1.028,0,0,0-.18-.516l-3.3-4.124a.835.835,0,0,0-1.16-.129.858.858,0,0,0-.129,1.16l2.225,2.784H28.913a.825.825,0,1,0,0,1.65H35.3l-2.225,2.784a.87.87,0,0,0,.129,1.16.821.821,0,0,0,1.16-.129l3.3-4.124A.711.711,0,0,0,37.848,989.306Z" transform="translate(-164 -1144.388)"/></g></symbol><symbol id="icon-bar-actualites" viewBox="4609 -4083.864 34.887 34.887"><g id="Groupe_704" data-name="Groupe 704" transform="translate(4600 -4350)"><circle id="Ellipse_19" data-name="Ellipse 19" class="c-white" cx="17.443" cy="17.443" r="17.443" transform="translate(9 266.136)"/><g id="Groupe_553" data-name="Groupe 553" transform="translate(15.439 274.516)"><path id="Trac&#xE9;_372" data-name="Trac&#xE9; 372" class="c-tea-brown-actualites" d="M3.957,7.666H0v7.419a2.216,2.216,0,0,0,2.226,2.226H18.177a2.712,2.712,0,0,0,2.72-2.72V0H3.957Zm-1.731,9.15A1.72,1.72,0,0,1,.495,15.085V8.161H3.957v6.924A1.72,1.72,0,0,1,2.226,16.817ZM4.451.495H20.4v14.1a2.216,2.216,0,0,1-2.226,2.226H3.611a2.23,2.23,0,0,0,.816-1.731Z"/><path id="Trac&#xE9;_373" data-name="Trac&#xE9; 373" class="c-tea-brown-actualites-2" d="M33.151,12.5H28.7v4.2h4.451Zm-.495,3.71H29.195V12.995h3.462Z" transform="translate(-21.602 -9.409)"/><rect id="Rectangle_1269" data-name="Rectangle 1269" class="c-tea-brown-actualites-2" width="3.957" height="0.495" transform="translate(13.775 3.833)"/><rect id="Rectangle_1270" data-name="Rectangle 1270" class="c-tea-brown-actualites-2" width="3.957" height="0.495" transform="translate(13.775 6.801)"/><rect id="Rectangle_1271" data-name="Rectangle 1271" class="c-tea-brown-actualites-2" width="10.634" height="0.495" transform="translate(7.098 10.016)"/><rect id="Rectangle_1272" data-name="Rectangle 1272" class="c-tea-brown-actualites-2" width="10.634" height="0.495" transform="translate(7.098 12.983)"/></g></g></symbol><symbol id="icon-bar-agenda" viewBox="4609 -4037.384 34.887 34.887"><g id="Groupe_705" data-name="Groupe 705" transform="translate(4600 -4350)"><circle id="Ellipse_20" data-name="Ellipse 20" class="c-white" cx="17.443" cy="17.443" r="17.443" transform="translate(9 312.616)"/><g id="Groupe_554" data-name="Groupe 554" transform="translate(15.836 319.404)"><g id="Groupe_539" data-name="Groupe 539" transform="translate(0 0)"><path id="Trac&#xE9;_374" data-name="Trac&#xE9; 374" class="c-tea-brown-agenda" d="M.569,954.873H.544a.618.618,0,0,0-.544.618v16.321a.612.612,0,0,0,.618.618h20.9a.613.613,0,0,0,.495-.618V955.491a.612.612,0,0,0-.618-.618H18.546v-.866a1.637,1.637,0,0,0-1.607-1.607h-.495a1.637,1.637,0,0,0-1.607,1.607v.866H7.171v-.866A1.637,1.637,0,0,0,5.564,952.4H5.069a1.637,1.637,0,0,0-1.607,1.607v.866H.569Zm20.2,16.321H1.236V961.055H20.772Zm-13.007-5a.619.619,0,0,0-.47,1.014c0,.025.025.025.025.049l2.226,2.473a.621.621,0,0,0,.865.05.248.248,0,0,0,.1-.124l4.2-6.429a.633.633,0,0,0,.1-.47.561.561,0,0,0-.272-.4.63.63,0,0,0-.42-.1.656.656,0,0,0-.445.272L9.916,968.3l-1.682-1.879a.641.641,0,0,0-.42-.223C7.814,966.223,7.789,966.2,7.765,966.2Zm13.007-6.38H1.236v-3.709H3.462v.865a1.637,1.637,0,0,0,1.607,1.607h.495a1.637,1.637,0,0,0,1.607-1.607v-.865h7.666v.865a1.637,1.637,0,0,0,1.607,1.607h.495a1.637,1.637,0,0,0,1.607-1.607v-.865h2.226Zm-3.833-2.473h-.495a.35.35,0,0,1-.371-.371v-2.967a.35.35,0,0,1,.371-.371h.495a.35.35,0,0,1,.371.371v2.967A.364.364,0,0,1,16.939,957.346Zm-11.375,0H5.069a.35.35,0,0,1-.371-.371v-2.967a.35.35,0,0,1,.371-.371h.495a.35.35,0,0,1,.371.371v2.967A.364.364,0,0,1,5.564,957.346Z" transform="translate(0 -952.4)"/></g></g></g></symbol><symbol id="icon-bar-calculateur" viewBox="4609 -4130.345 34.887 34.887"><g id="Groupe_703" data-name="Groupe 703" transform="translate(4600 -4350)"><circle id="Ellipse_18" data-name="Ellipse 18" class="c-white" cx="17.443" cy="17.443" r="17.443" transform="translate(9 219.655)"/><g id="noun_975262" transform="translate(17.164 227.536)"><path id="Trac&#xE9;_141" data-name="Trac&#xE9; 141" class="c-tea-brown-calculateur" d="M8.2,960.362a.214.214,0,0,0-.2.221V978.7a.224.224,0,0,0,.221.221H26.342a.224.224,0,0,0,.221-.221V960.583a.213.213,0,0,0-.221-.221H8.2Zm.242.442H17.06v8.619H8.442Zm9.061,0h8.619v8.619H17.5Zm-4.862,1.989a.221.221,0,0,0-.221.221v1.768H10.652a.221.221,0,0,0,0,.442H12.42v1.768a.221.221,0,1,0,.442,0v-1.768H14.63a.221.221,0,0,0,0-.442H12.862v-1.768A.221.221,0,0,0,12.641,962.793Zm7.293,1.989a.221.221,0,0,0,0,.442h3.978a.221.221,0,0,0,0-.442ZM8.442,969.864H17.06v8.619H8.442Zm9.061,0h8.619v8.619H17.5Zm-6.581,2.479a.224.224,0,0,0-.159.062.227.227,0,0,0,0,.318l1.561,1.561-1.561,1.561a.225.225,0,0,0,.318.318l1.561-1.561,1.561,1.561a.225.225,0,0,0,.318-.318l-1.561-1.561,1.561-1.561a.225.225,0,0,0-.318-.318l-1.561,1.561-1.561-1.561A.224.224,0,0,0,10.921,972.344Zm9.012.615a.221.221,0,0,0,0,.442h3.978a.221.221,0,0,0,0-.442Zm0,2.21a.221.221,0,0,0,0,.442h3.978a.221.221,0,0,0,0-.442Z" transform="translate(-8 -960.361)"/></g></g></symbol><symbol id="icon-bar-contact" viewBox="4609 -3991.542 34.887 34.887"><g id="Groupe_706" data-name="Groupe 706" transform="translate(4600 -4350)"><circle id="Ellipse_21" data-name="Ellipse 21" class="c-white" cx="17.443" cy="17.443" r="17.443" transform="translate(9 358.458)"/><g id="Groupe_555" data-name="Groupe 555" transform="translate(15.996 367.532)"><g id="Groupe_541" data-name="Groupe 541"><path id="Trac&#xE9;_375" data-name="Trac&#xE9; 375" class="c-tea-brow-contact" d="M3.23,19.328V14.337H0V0H21.848V14.337H8.221ZM1.223,13.114h3.23v3.278l3.278-3.278H20.625V1.223H1.223Z"/></g><g id="Groupe_545" data-name="Groupe 545" transform="translate(4.918 3.915)"><g id="Groupe_542" data-name="Groupe 542"><rect id="Rectangle_1273" data-name="Rectangle 1273" class="c-tea-brow-contact" width="12.013" height="1.223"/></g><g id="Groupe_543" data-name="Groupe 543" transform="translate(0 2.936)"><rect id="Rectangle_1274" data-name="Rectangle 1274" class="c-tea-brow-contact" width="12.013" height="1.223"/></g><g id="Groupe_544" data-name="Groupe 544" transform="translate(0 5.994)"><rect id="Rectangle_1275" data-name="Rectangle 1275" class="c-tea-brow-contact" width="12.013" height="1.223"/></g></g></g></g></symbol><symbol id="icon-chevron-right" viewBox="0 0 1792 1792"><path d="M 626.16 1659.05 L 625.913 1659.377 C 623.395 1663.15 622.093 1664.515 619.799 1665.192 C 617.402 1666.071 614.153 1666 608 1666 C 596.505 1666 594.152 1665.88 589.119 1658.305 L 588.813 1657.907 L 421.326 1490.456 L 421.168 1490.328 L 421.089 1490.265 L 420.996 1490.191 L 420.908 1490.124 L 420.818 1490.055 L 420.608 1489.901 C 416.844 1487.384 415.482 1486.085 414.807 1483.794 C 413.93 1481.4 414 1478.154 414 1472 C 414 1460.507 414.121 1458.154 421.695 1453.119 L 422.093 1452.813 L 978.904 896 L 964.057 881.153 L 421.187 338.349 L 421.068 338.251 L 420.88 338.103 L 420.625 337.914 C 416.851 335.394 415.486 334.091 414.808 331.798 C 413.929 329.401 414 326.154 414 320 C 414 308.505 414.12 306.152 421.695 301.119 L 422.093 300.813 L 589.584 133.287 L 589.621 133.241 L 589.658 133.193 L 589.733 133.097 L 589.762 133.057 L 589.893 132.887 L 590.099 132.607 C 592.614 128.844 593.914 127.482 596.204 126.806 C 598.6 125.931 601.846 126 608 126 C 619.493 126 621.846 126.121 626.881 133.695 L 627.187 134.093 L 1370.617 877.493 L 1370.699 877.559 L 1370.785 877.628 L 1370.835 877.669 L 1371.05 877.84 L 1371.377 878.087 C 1375.15 880.605 1376.515 881.907 1377.192 884.201 C 1378.071 886.598 1378 889.847 1378 896 C 1378 907.494 1377.879 909.846 1370.304 914.881 L 1369.907 915.187 L 626.507 1658.617 L 626.441 1658.699 L 626.372 1658.785 L 626.331 1658.835 Z" fill="inherit"/></symbol><symbol id="icon-ck-document" viewBox="0 0 240 240"><path d="M236.175 154.274c-6.826-7.395-21.332-11.234-41.812-11.234-11.376 0-24.319 1.136-38.681 3.554-8.25-7.679-16.214-16.923-23.894-27.448a254.608 254.608 0 0 1-14.79-23.181c7.253-22.328 12.231-43.802 12.231-60.157 0-12.231-3.982-32.425-22.185-32.425-4.694 0-9.813 2.987-12.374 7.395-7.679 13.226-4.123 43.092 9.814 73.526-4.835 14.648-10.383 29.296-17.209 45.936a385.57 385.57 0 0 1-19.767 40.816C27.971 186.699 2.798 204.477.239 218.698c-.853 4.694.569 9.244 4.408 12.941 2.276 2.134 7.111 4.978 14.223 4.978 22.753 0 48.069-33.278 66.983-67.268 10.524-3.697 21.616-6.969 32.994-10.098a436.93 436.93 0 0 1 35.411-7.822c27.448 24.888 51.767 28.586 63.855 28.586 15.076 0 19.342-6.257 20.907-10.238 2.274-5.832.284-12.089-2.845-15.503zM98.794 13.054c1.849-3.129 4.836-5.121 8.25-5.121 6.684 0 10.523 5.973 10.523 16.924 0 11.805-3.697 31.003-10.809 53.046-13.225-30.859-13.368-55.464-7.964-64.849zM4.647 219.551c2.276-11.804 24.746-27.731 59.163-42.096-19.2 32.852-38.114 53.046-50.061 53.046-2.274 0-4.55-.71-6.257-2.274-2.418-2.418-3.414-5.404-2.845-8.676zm145.488-71.961a395.323 395.323 0 0 0-32.284 7.253c-9.813 2.56-19.34 5.546-28.584 8.533 5.403-10.098 10.096-19.911 13.652-28.869 4.408-10.667 8.675-21.76 12.372-32.852 3.983 6.826 8.249 13.51 12.943 20.051 6.968 9.814 14.363 18.489 21.901 25.884zm9.955 2.845c23.181-4.267 43.517-3.414 52.193-1.565 8.959 1.848 13.652 7.253 12.089 15.217-1.565 8.106-11.236 11.947-21.901 9.387-17.066-4.125-31.147-13.368-42.381-23.039z" fill="inherit"/></symbol><symbol id="icon-ck-download" viewBox="0 0 240 240"><path id="path" d="M153.429 46.742 L153.429 56.398 C153.429 57.73 154.51 58.812 155.843 58.812 L219.81 58.812 C221.142 58.812 222.224 59.893 222.224 61.226 L222.224 218.611 C222.224 219.943 221.142 221.025 219.81 221.025 L19.458 221.025 C18.126 221.025 17.044 219.943 17.044 218.611 L17.044 61.226 C17.044 59.893 18.126 58.812 19.458 58.812 L83.425 58.812 C84.758 58.812 85.839 57.73 85.839 56.398 L85.839 46.742 C85.839 45.41 84.758 44.328 83.425 44.328 L17.044 44.328 C9.051 44.328 2.561 50.818 2.561 58.812 L2.561 221.025 C2.561 229.018 9.051 235.508 17.044 235.508 L222.224 235.508 C230.217 235.508 236.707 229.018 236.707 221.025 L236.707 58.812 C236.707 50.818 230.217 44.328 222.224 44.328 L155.843 44.328 C154.51 44.328 153.429 45.41 153.429 46.742 Z" fill="inherit" fill-opacity="1" stroke="none"/><path id="path-1" d="M87.255 115.607 L117.927 146.28 C118.87 147.223 120.398 147.223 121.341 146.28 L152.014 115.607 C152.956 114.664 152.956 113.135 152.014 112.193 L145.188 105.366 C144.244 104.423 142.716 104.423 141.773 105.366 L128.583 118.556 C127.64 119.498 126.876 119.182 126.876 117.849 L126.876 7.638 C126.876 6.305 125.794 5.224 124.462 5.224 L114.806 5.224 C113.474 5.224 112.392 6.305 112.392 7.638 L112.392 117.849 C112.392 119.182 111.628 119.498 110.685 118.556 L97.495 105.366 C96.552 104.423 95.024 104.423 94.081 105.366 L87.255 112.193 C86.312 113.135 86.312 114.664 87.255 115.607 Z" fill="inherit" fill-opacity="1" stroke="none"/></symbol><symbol id="icon-ck-link" viewBox="0 0 240 240"><g fill="inherit"><path d="M86.224 164.969L11.163 89.908c-5.32-5.145-7.628-11.512-7.628-18.383 0-6.871 2.313-13.244 7.637-18.389L52.896 11.12c5.019-5.184 11.242-7.555 18.528-7.555 7.285 0 13.508 2.371 18.527 7.555l29.54 29.54-12.421 12.422-29.541-29.541c-2.234-1.854-4.999-2.588-6.105-2.588-1.107 0-3.873.734-6.107 2.588L23.584 65.273c-1.481 1.647-2.587 4.119-2.587 6.107 0 1.988 1.106 4.46 2.587 6.107l75.061 75.061c1.647 1.481 4.119 2.587 6.107 2.587 1.988 0 4.468-1.116 6.115-2.597l30.989-31.261 12.421 12.421-30.998 31.271c-5.326 5.175-11.532 7.555-18.527 7.555-6.996 0-13.204-2.38-18.528-7.555z"/><path d="M115.495 73.429c5.144-5.32 11.511-7.628 18.383-7.628 6.871 0 13.238 2.308 18.382 7.628l75.061 75.061c5.321 5.144 7.628 11.511 7.628 18.383 0 6.871-2.313 13.244-7.637 18.388l-41.724 42.016c-5.323 5.177-11.531 7.556-18.527 7.556-7.06 0-13.598-2.13-18.528-7.556l-29.54-29.539 12.421-12.422 29.54 29.54c1.646 1.481 4.118 2.589 6.107 2.589 1.988 0 4.454-1.101 6.1-2.58l42.029-41.741c1.48-1.646 2.588-4.118 2.588-6.106 0-1.989-1.108-4.46-2.588-6.107L140.128 85.85c-1.645-1.481-4.118-2.587-6.105-2.587-1.988 0-4.461 1.106-6.107 2.587l-31.28 31.28-12.421-12.422z"/></g></symbol><symbol id="icon-ck-video" viewBox="0 0 240 240"><path d="M73.101 2.5l94.216.004c17.857.837 37.665 9.726 49.717 20.906 11.201 12.098 19.652 31.877 20.466 49.691l-.004 94.216c-.837 17.857-9.726 37.665-20.906 49.717-12.098 11.201-31.877 19.652-49.691 20.466l-94.216-.004c-17.857-.837-37.665-9.726-49.717-20.906C11.765 204.492 3.314 184.713 2.5 166.899l.004-94.216c.837-17.857 9.726-37.665 20.906-49.717C35.508 11.765 55.287 3.314 73.101 2.5zM33.887 33.698c-9.689 9.925-16.198 24.41-16.391 39.455l.004 93.746c.198 15.058 6.519 29.303 16.198 39.214 9.925 9.689 24.41 16.198 39.455 16.391l93.746-.004c15.058-.198 29.303-6.519 39.214-16.198 9.689-9.925 16.198-24.41 16.391-39.455l-.004-93.746c-.198-15.058-6.519-29.303-16.198-39.214-9.925-9.689-24.41-16.198-39.455-16.391l-93.746.004c-15.058.198-29.303 6.519-39.214 16.198z" fill="inherit"/><path d="M84.565 55.578l89.855 57.163c6.985 4.443 6.941 11.588-.099 15.945l-90.069 55.742c-7.04 4.357-12.736 1.173-12.712-7.106l.326-114.795c.024-8.279 5.714-11.392 12.699-6.949zm74.291 65.04L86.831 74.799l-.258 90.553 72.283-44.734z" fill="inherit"/></symbol><symbol id="icon-close-expand" viewBox="-1925.997 -17477.996 15 15"><g data-name="Groupe 314"><path data-name="Trac&#xE9; 195" d="M-1911.197-17464.187a.7.7 0 1 1-.987.987l-6.313-6.309-6.309 6.313a.7.7 0 0 1-.987-.987l6.309-6.313-6.313-6.309a.7.7 0 0 1 .987-.987l6.313 6.309 6.309-6.313a.7.7 0 0 1 .987.987l-6.309 6.313z" fill="#5d5d5d" fill-rule="evenodd"/></g></symbol><symbol id="icon-close" viewBox="-14625 -17455 16.414 16.414"><g id="Groupe_328" data-name="Groupe 328" transform="translate(-14891 -17484)"><rect id="Rectangle_1080" data-name="Rectangle 1080" width="21.213" height="2" rx="1" transform="translate(266 44) rotate(-45)"/><rect id="Rectangle_1080-2" data-name="Rectangle 1080" width="21.213" height="2" rx="1" transform="translate(281 45.414) rotate(-135)"/></g></symbol><symbol id="icon-download" viewBox="0 0 700 700"><path d="M 700 350 A 350 350 0 0 1 350 700 A 350 350 0 0 1 0 350 A 350 350 0 0 1 350 0 A 350 350 0 0 1 700 350 Z" style="fill: rgb(255, 255, 255);"/><path d="M 396.186 242.381 L 396.186 255.577 C 396.186 257.398 397.664 258.876 399.485 258.876 L 486.907 258.876 C 488.728 258.876 490.206 260.354 490.206 262.175 L 490.206 477.268 C 490.206 479.089 488.728 480.567 486.907 480.567 L 213.093 480.567 C 211.272 480.567 209.794 479.089 209.794 477.268 L 209.794 262.175 C 209.794 260.354 211.272 258.876 213.093 258.876 L 300.515 258.876 C 302.336 258.876 303.814 257.398 303.814 255.577 L 303.814 242.381 C 303.814 240.56 302.336 239.082 300.515 239.082 L 209.794 239.082 C 198.87 239.082 190 247.952 190 258.876 L 190 480.567 C 190 491.491 198.87 500.361 209.794 500.361 L 490.206 500.361 C 501.13 500.361 510 491.491 510 480.567 L 510 258.876 C 510 247.952 501.13 239.082 490.206 239.082 L 399.485 239.082 C 397.664 239.082 396.186 240.56 396.186 242.381 Z" fill="inherit"/><path d="M 305.748 336.496 L 347.667 378.416 C 348.956 379.704 351.044 379.704 352.333 378.416 L 394.252 336.496 C 395.54 335.207 395.54 333.118 394.252 331.83 L 384.923 322.5 C 383.634 321.212 381.546 321.212 380.257 322.5 L 362.23 340.527 C 360.942 341.814 359.897 341.382 359.897 339.561 L 359.897 188.938 C 359.897 187.117 358.419 185.639 356.598 185.639 L 343.402 185.639 C 341.581 185.639 340.103 187.117 340.103 188.938 L 340.103 339.561 C 340.103 341.382 339.058 341.814 337.77 340.527 L 319.743 322.5 C 318.454 321.212 316.366 321.212 315.077 322.5 L 305.748 331.83 C 304.46 333.118 304.46 335.207 305.748 336.496 Z" fill="inherit"/></symbol><symbol id="icon-external" viewBox="0 0 700 700"><path d="M 700 350 C 700 543.3 543.3 700 350 700 C 156.7 700 0 543.3 0 350 C 0 156.7 156.7 0 350 0 C 543.3 0 700 156.7 700 350 Z" vector-effect="non-scaling-stroke" fill="#FFF"/><path d="M 471.531 487.581 C 471.574 493.812 469.088 499.259 464.996 503.351 C 460.905 507.442 455.459 509.929 449.228 509.886 L 213.303 509.886 C 207.074 509.929 201.625 507.442 197.533 503.351 C 193.442 499.259 190.957 493.812 191 487.581 L 191 239.022 C 190.954 232.789 193.438 227.339 197.53 223.246 C 201.621 219.152 207.07 216.664 213.303 216.708 L 358.757 216.708 C 359.841 216.668 360.704 217.036 361.454 217.826 C 362.24 218.57 362.599 219.437 362.56 220.523 L 362.56 235.321 C 362.599 236.407 362.24 237.274 361.454 238.019 C 360.704 238.81 359.841 239.176 358.757 239.136 L 217.005 239.136 C 216.126 239.175 215.12 239.592 214.475 240.184 C 213.887 240.824 213.459 241.841 213.419 242.722 L 213.419 483.882 C 213.46 484.765 213.888 485.772 214.476 486.409 C 215.113 486.998 216.12 487.425 217.005 487.468 L 445.526 487.468 C 446.411 487.425 447.419 486.997 448.056 486.408 C 448.643 485.771 449.071 484.766 449.112 483.884 L 449.427 333.529 C 449.386 332.187 449.894 331.152 450.786 330.249 C 451.678 329.347 452.707 328.825 454.05 328.85 L 465.645 328.693 C 466.984 328.628 468.008 329.117 468.904 329.993 C 469.799 330.868 470.311 331.883 470.277 333.223 Z" fill="inherit"/><path d="M 470.171 215.004 C 469.88 214.903 469.495 214.826 469.139 214.83 L 469.087 214.83 L 395.656 214.516 L 395.656 214.516 C 394.578 214.542 393.713 214.176 392.986 213.379 C 392.204 212.639 391.848 211.777 391.886 210.7 L 391.886 210.65 L 392.054 195.865 C 392.026 194.79 392.392 193.92 393.178 193.196 C 393.923 192.408 394.791 192.06 395.87 192.098 L 395.911 192.098 L 507.209 192.826 C 508.298 192.807 509.159 193.173 509.886 193.962 C 510.677 194.711 511.035 195.568 510.997 196.64 L 510.997 196.693 L 510.257 307.996 C 510.281 309.077 509.911 309.94 509.118 310.672 C 508.387 311.458 507.522 311.804 506.442 311.768 L 506.391 311.768 L 491.612 311.612 C 490.532 311.634 489.671 311.267 488.938 310.475 C 488.147 309.727 487.789 308.87 487.827 307.797 L 487.827 307.753 L 488.152 234.314 L 488.151 234.25 C 488.156 233.923 488.089 233.501 487.983 233.197 L 487.757 232.556 L 487.044 232.556 C 487.039 232.556 486.776 232.562 486.566 232.672 C 486.41 232.754 486.495 232.714 486.461 232.736 C 486.215 232.88 485.998 233.053 485.79 233.249 L 486.463 232.992 C 486.116 233.124 485.648 233.376 485.57 233.522 C 485.451 233.736 485.444 234.01 485.444 234.01 L 485.456 233.574 L 365.008 351.374 C 364.27 352.144 363.409 352.458 362.345 352.458 C 361.238 352.458 360.351 352.13 359.612 351.313 L 349.273 340.741 C 348.496 340 348.145 339.14 348.181 338.069 C 348.14 336.966 348.514 336.094 349.324 335.346 L 470.105 217.226 L 470.115 217.213 L 470.058 217.268 C 470.297 217.036 470.53 216.74 470.68 216.5 L 470.83 216.261 L 470.83 215.23 Z" fill="inherit"/></symbol><symbol id="icon-go" viewBox="-11840 -18471 30 30"><g id="Groupe_524" data-name="Groupe 524" transform="translate(-12883 -23106)"><circle id="Ellipse_3" data-name="Ellipse 3" class="c-white" cx="15" cy="15" r="15" transform="translate(1043 4635)"/><path id="Trac&#xE9;_343" data-name="Trac&#xE9; 343" class="c-tea-brown-go" d="M17.27,9a.32.32,0,1,0,.03.638H21l-5.516,5.516a.319.319,0,1,0,.449.454l5.521-5.521v3.7a.319.319,0,1,0,.638,0V9.317A.319.319,0,0,0,21.769,9h-4.5ZM9.958,10.275A.963.963,0,0,0,9,11.233v9.9a.963.963,0,0,0,.958.958h9.9a.963.963,0,0,0,.958-.958V15.063a.319.319,0,1,0-.638,0v6.065a.312.312,0,0,1-.319.319h-9.9a.312.312,0,0,1-.319-.319v-9.9a.312.312,0,0,1,.319-.319h6.065a.319.319,0,1,0,0-.638Z" transform="translate(1042.794 4634.121)"/></g></symbol><symbol id="icon-hamburger" viewBox="0 0 27 38"><rect x=".975" y="9.997" width="25" height="2" rx="1" ry="1" fill="#070707"/><rect x="1.025" y="18.003" width="25" height="2" rx="1" ry="1" fill="#070707"/><rect x="1" y="26.003" width="25" height="2" rx="1" ry="1" fill="#070707"/></symbol><symbol id="icon-internal" viewBox="0 0 240 240"><path d="M235 120c0 63.513-51.487 115-115 115S5 183.513 5 120 56.487 5 120 5s115 51.487 115 115z" fill="#FFF"/><g fill="inherit" transform="matrix(0.621397, 0, 0, 0.621397, 45.903378, 45.930111)" style=""><path d="M86.224 164.969L11.163 89.908c-5.32-5.145-7.628-11.512-7.628-18.383 0-6.871 2.313-13.244 7.637-18.389L52.896 11.12c5.019-5.184 11.242-7.555 18.528-7.555 7.285 0 13.508 2.371 18.527 7.555l29.54 29.54-12.421 12.422-29.541-29.541c-2.234-1.854-4.999-2.588-6.105-2.588-1.107 0-3.873.734-6.107 2.588L23.584 65.273c-1.481 1.647-2.587 4.119-2.587 6.107 0 1.988 1.106 4.46 2.587 6.107l75.061 75.061c1.647 1.481 4.119 2.587 6.107 2.587 1.988 0 4.468-1.116 6.115-2.597l30.989-31.261 12.421 12.421-30.998 31.271c-5.326 5.175-11.532 7.555-18.527 7.555-6.996 0-13.204-2.38-18.528-7.555z"/><path d="M115.495 73.429c5.144-5.32 11.511-7.628 18.383-7.628 6.871 0 13.238 2.308 18.382 7.628l75.061 75.061c5.321 5.144 7.628 11.511 7.628 18.383 0 6.871-2.313 13.244-7.637 18.388l-41.724 42.016c-5.323 5.177-11.531 7.556-18.527 7.556-7.06 0-13.598-2.13-18.528-7.556l-29.54-29.539 12.421-12.422 29.54 29.54c1.646 1.481 4.118 2.589 6.107 2.589 1.988 0 4.454-1.101 6.1-2.58l42.029-41.741c1.48-1.646 2.588-4.118 2.588-6.106 0-1.989-1.108-4.46-2.588-6.107L140.128 85.85c-1.645-1.481-4.118-2.587-6.105-2.587-1.988 0-4.461 1.106-6.107 2.587l-31.28 31.28-12.421-12.422z"/></g></symbol><symbol id="icon-link" viewBox="0 0 240 240"><path d="M235 120c0 63.513-51.487 115-115 115S5 183.513 5 120 56.487 5 120 5s115 51.487 115 115z" fill="#FFF"/><g fill="inherit"><path d="M52.1 101.01c-3.281-3.135-4.621-6.923-4.621-11.156 0-4.233 1.365-8.046 4.648-11.179l26.387-26.574c3.06-3.198 6.76-4.576 11.25-4.576s8.205 1.397 11.264 4.593l18.22 18.22-6.945 6.945-18.269-18.266.029.023-.022-.018c-1.542-1.239-3.5-1.79-4.278-1.79-.779 0-2.777.589-4.318 1.828l.003-.003-26.426 26.428c-.986 1.13-1.788 2.89-1.788 4.278 0 1.386.851 3.2 1.839 4.33l47.487 47.486c1.13.986 2.89 1.787 4.278 1.787 1.385 0 3.207-.86 4.339-1.848l19.124-19.293 6.945 6.945-.435.44-18.715 18.88c-3.26 3.196-6.952 4.586-11.258 4.586-4.307 0-8.002-1.39-11.263-4.59z"/><path d="M118.1 91.499c3.133-3.28 6.922-4.62 11.154-4.62 4.234 0 8.04 1.358 11.174 4.639L187.9 138.99c3.28 3.134 4.62 6.922 4.62 11.155s-1.365 8.047-4.648 11.18l-26.377 26.563c-3.258 3.198-6.952 4.587-11.259 4.587-4.363 0-8.292-1.271-11.273-4.601l-18.212-18.212 6.945-6.945 18.262 18.26c1.13.987 2.89 1.79 4.278 1.79 1.385 0 3.194-.847 4.325-1.832l26.6-26.421c.985-1.13 1.788-2.89 1.788-4.277 0-1.386-.853-3.2-1.839-4.33l-47.487-47.485c-1.13-.987-2.892-1.789-4.278-1.789-1.385 0-3.2.851-4.33 1.839l-19.31 19.31-6.945-6.945z"/></g></symbol><symbol id="icon-loupe" viewBox="-11167.482 -19428.221 20.308 20.309"><g id="ico_search_blanc" transform="translate(-11691.308 -19897.395)"><path id="Search" class="c-primary-loupe" d="M8.282,0a8.282,8.282,0,1,0,5.043,14.844l5.151,5.151a1.071,1.071,0,1,0,1.519-1.511l-5.159-5.151A8.272,8.272,0,0,0,8.282,0Zm0,2.137A6.145,6.145,0,1,1,2.137,8.282,6.129,6.129,0,0,1,8.282,2.137Z" transform="translate(544.133 469.174) rotate(90)"/></g></symbol><symbol id="icon-minus" viewBox="-.017 -.01 18.014 18.014"><path d="M17.997 7.911v1.997H-.017V7.911h18.014z" fill="inherit"/></symbol><symbol id="icon-more-about" viewBox="0 0 35 35"><style type="text/css">
+	.st0{fill:#867466;}
+</style><path id="Trac&#xE9;_168" d="M0,0h35v35H0V0z"/><path class="st0" d="M18.9,18.9v8.4h-2.9v-8.4H7.8v-2.9h8.3V7.7h2.9v8.4h8.3v2.9H18.9z"/></symbol><symbol id="icon-plus" viewBox="0 0 18 18"><path d="M8.011-.01h1.997v18.014H8.011V-.01zm9.986 7.921v1.997H-.017V7.911h18.014z" fill="inherit"/></symbol><symbol id="icon-video" viewBox="0 0 240 240"><path d="M235 120c0 63.513-51.487 115-115 115S5 183.513 5 120 56.487 5 120 5s115 51.487 115 115z" fill="#FFF"/><path d="M91.302 48.1l57.652.003c10.927.512 23.048 5.951 30.422 12.792 6.855 7.403 12.026 19.506 12.524 30.407l-.003 57.652c-.512 10.927-5.951 23.048-12.792 30.423-7.403 6.854-19.506 12.025-30.407 12.523l-57.652-.002c-10.927-.513-23.048-5.952-30.423-12.793-6.854-7.403-12.025-19.506-12.523-30.407l.002-57.652c.513-10.927 5.952-23.048 12.793-30.422 7.403-6.855 19.506-12.026 30.407-12.524zM67.306 67.191c-5.929 6.073-9.912 14.936-10.03 24.143l.003 57.364c.121 9.215 3.989 17.931 9.911 23.996 6.074 5.929 14.937 9.912 24.144 10.03l57.364-.003c9.214-.121 17.931-3.989 23.996-9.911 5.929-6.074 9.912-14.937 10.03-24.144l-.003-57.364c-.121-9.214-3.989-17.931-9.912-23.996-6.073-5.929-14.936-9.912-24.143-10.03l-57.364.003c-9.214.121-17.931 3.989-23.996 9.912z" fill="inherit"/><path d="M98.317 80.579l54.983 34.979c4.275 2.719 4.248 7.091-.06 9.757l-55.115 34.11c-4.308 2.666-7.793.717-7.778-4.349l.199-70.244c.015-5.067 3.496-6.971 7.771-4.253zm45.459 39.799L99.703 92.341l-.158 55.411 44.231-27.374z" fill="inherit"/></symbol><symbol id="instagram-brands" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></symbol><symbol id="linkedin-in-brands" viewBox="0 0 448 512"><path fill="currentColor" d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></symbol><symbol id="pinterest" viewBox="0 0 1792 1792"><path d="M1664 896q0 209-103 385.5t-279.5 279.5-385.5 103q-111 0-218-32 59-93 78-164 9-34 54-211 20 39 73 67.5t114 28.5q121 0 216-68.5t147-188.5 52-270q0-114-59.5-214t-172.5-163-255-63q-105 0-196 29t-154.5 77-109 110.5-67 129.5-21.5 134q0 104 40 183t117 111q30 12 38-20 2-7 8-31t8-30q6-23-11-43-51-61-51-151 0-151 104.5-259.5t273.5-108.5q151 0 235.5 82t84.5 213q0 170-68.5 289t-175.5 119q-61 0-98-43.5t-23-104.5q8-35 26.5-93.5t30-103 11.5-75.5q0-50-27-83t-77-33q-62 0-105 57t-43 142q0 73 25 122l-99 418q-17 70-13 177-206-91-333-281t-127-423q0-209 103-385.5t279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></symbol><symbol id="print" viewBox="36.986 -21.104 100 97.088"><path d="M40.32-.108h93.333a3.335 3.335 0 0 1 3.333 3.334v46.781a3.335 3.335 0 0 1-3.333 3.334H40.32a3.336 3.336 0 0 1-3.334-3.334V3.226A3.336 3.336 0 0 1 40.32-.108z" fill="#5d5d5d"/><path fill="#FFF" d="M106.982 13.111h17.936v5.713h-17.936z"/><path d="M59.083 33.141h57.485c3.68 0 6.668 2.605 6.668 5.812v29.219c0 3.208-2.988 5.812-6.668 5.812H59.083c-3.68 0-6.667-2.604-6.667-5.812V38.953c0-3.207 2.987-5.812 6.667-5.812z" fill="#fff" stroke-miterlimit="10" stroke="#5d5d5d" stroke-width="5"/><path d="M56.985-21.104h61.196a6.67 6.67 0 0 1 6.667 6.667v7.997h-74.53v-7.997a6.67 6.67 0 0 1 6.667-6.667zM67.159 40.122h40.805v5.46H67.159zM67.446 53.743h20.115v5.46H67.446z" fill="#5D5D5D"/></symbol><symbol id="twitter-brands" viewBox="0 0 512 512"><path fill="currentColor" d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></symbol><symbol id="youtube-brands" viewBox="0 0 1792 1792"><path fill="currentColor" d="M1099 1244v211q0 67-39 67-23 0-45-22v-301q22-22 45-22 39 0 39 67zm338 1v46h-90v-46q0-68 45-68t45 68zm-966-218h107v-94h-312v94h105v569h100v-569zm288 569h89v-494h-89v378q-30 42-57 42-18 0-21-21-1-3-1-35v-364h-89v391q0 49 8 73 12 37 58 37 48 0 102-61v54zm429-148v-197q0-73-9-99-17-56-71-56-50 0-93 54v-217h-89v663h89v-48q45 55 93 55 54 0 71-55 9-27 9-100zm338-10v-13h-91q0 51-2 61-7 36-40 36-46 0-46-69v-87h179v-103q0-79-27-116-39-51-106-51-68 0-107 51-28 37-28 116v173q0 79 29 116 39 51 108 51 72 0 108-53 18-27 21-54 2-9 2-58zm-608-913v-210q0-69-43-69t-43 69v210q0 70 43 70t43-70zm719 751q0 234-26 350-14 59-58 99t-102 46q-184 21-555 21t-555-21q-58-6-102.5-46t-57.5-99q-26-112-26-350 0-234 26-350 14-59 58-99t103-47q183-20 554-20t555 20q58 7 102.5 47t57.5 99q26 112 26 350zm-998-1276h102l-121 399v271h-100v-271q-14-74-61-212-37-103-65-187h106l71 263zm370 333v175q0 81-28 118-38 51-106 51-67 0-105-51-28-38-28-118v-175q0-80 28-117 38-51 105-51 68 0 106 51 28 37 28 117zm335-162v499h-91v-55q-53 62-103 62-46 0-59-37-8-24-8-75v-394h91v367q0 33 1 35 3 22 21 22 27 0 57-43v-381h91z"/></symbol></svg></div>
+    <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KCMV2KS" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <div class="dialog-off-canvas-main-canvas" aria-hidden="false" data-off-canvas-main-canvas>
+    <aside role="complementary">
+              <div class="region region-sticky-side-bar">
+    <div class="lr-side-bar__wrapper">
+      
+  <h2  id="block-directaccess-menu" class="lr-side-bar__title" tabindex="0" aria-label="Barre latérale d'accès direct" aria-level="1">Accès direct</h2>
+  
+  <div class="lr-side-bar__content">
+    <nav role="navigation" aria-labelledby="block-directaccess-menu"  id="block-directaccess" data-block-plugin-id="system_menu_block:sidebar-sticky-menu" class="lr-side-bar-menu">
+                    
+<ul class="lr-side-bar-menu__items menu menu-level-0">
+  
+  <li class="menu-item lr-side-bar-menu__item">
+    <a href="JavaScript:void(0)"  class="lr-side-bar-menu__link field-tip" aria-expanded="false" role="button" click >
+      <svg class="icon lr-side-bar-menu__icon" focusable="false">
+        <use xlink:href="#icon-bar-calculateur"></use>
+      </svg>
+      <div class="tip-wrapper">
+        <span class="tip-content">Calculateur de performance</span>
+      </div>
+    </a>
+              
+<div  class="menu_link_content menu-link-contentsidebar-sticky-menu view-mode-default lr-side-bar-menu__data">
+  <div class="lr-side-bar-menu__content">
+        <a href="JavaScript:void(0)" class="lr-side-bar-menu__close" aria-label="Fermer" role="button">
+      <svg class="icon" focusable="false">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </a>
+          
+            <div class="field field-ssm-block-reference field--type-block-field field__item"><div data-block-plugin-id="block_content:8fa17957-5189-4e89-a920-a516ac407fdb" class="euronext-iframe-block">
+  
+      <h2 aria-level="1">Calculateur de performance</h2>
+    
+  <div class="euronext-iframe"> <iframe id="iframe-block_content:8fa17957-5189-4e89-a920-a516ac407fdb" title="Calculateur de performance" name="iframe-block_content:8fa17957-5189-4e89-a920-a516ac407fdb"  class="iframe-default" src="javascript:false;"></iframe> </div>
+</div>
+</div>
+      
+      </div>
+</div>
+
+      </li>
+  
+  <li class="menu-item lr-side-bar-menu__item">
+    <a href="JavaScript:void(0)"  class="lr-side-bar-menu__link field-tip" aria-expanded="false" role="button" click >
+      <svg class="icon lr-side-bar-menu__icon" focusable="false">
+        <use xlink:href="#icon-bar-actualites"></use>
+      </svg>
+      <div class="tip-wrapper">
+        <span class="tip-content">Actualités</span>
+      </div>
+    </a>
+              
+<div  class="menu_link_content menu-link-contentsidebar-sticky-menu view-mode-default lr-side-bar-menu__data">
+  <div class="lr-side-bar-menu__content">
+        <a href="JavaScript:void(0)" class="lr-side-bar-menu__close" aria-label="Fermer" role="button">
+      <svg class="icon" focusable="false">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </a>
+          
+            <div class="field field-ssm-block-reference field--type-block-field field__item"><div data-block-plugin-id="loreal_sidebar_news_block" class="block block-loreal-sticky-sidebar block-loreal-sidebar-news-block">
+  
+      <h2 aria-level="1">Actualités</h2>
+    
+      <div class="sidebar-block__wrapper">
+  <div class="sidebar-block__news">
+    
+<article role="presentation" about="/fr/communique/chiffre-daffaires-du-1er-trimestre-2020" class="nodetype--publication">
+
+  
+            <div class="field field-hero-image field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/hero_image/public/publication-content/images/Logo_OA863x533.jpg?h=fb1866a5&amp;itok=uzx1xKuf" width="863" height="533" title=" L&#039;Oréal Finance - La beauté est une valeur d&#039;avenir" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+
+  
+            <div class="field field-type-of-publication field--type-entity-reference field__item">Communiqué</div>
+      
+
+  
+            <div class="field field-publication-date field--type-datetime field__item"><time datetime="2020-04-16T16:00:00Z">16 avril 2020</time>
+</div>
+      
+
+  
+                  <a href="/fr/communique/chiffre-daffaires-du-1er-trimestre-2020" rel="bookmark"><span>Chiffre d’affaires du 1er trimestre 2020</span>
+</a>
+            
+
+</article>
+
+    <div class="sidebar-block__news--link">
+      <a href="/fr/actualites">Toutes les actualités</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</div>
+      
+      </div>
+</div>
+
+      </li>
+  
+  <li class="menu-item lr-side-bar-menu__item">
+    <a href="JavaScript:void(0)"  class="lr-side-bar-menu__link field-tip" aria-expanded="false" role="button" click >
+      <svg class="icon lr-side-bar-menu__icon" focusable="false">
+        <use xlink:href="#icon-bar-agenda"></use>
+      </svg>
+      <div class="tip-wrapper">
+        <span class="tip-content">Agenda Financier</span>
+      </div>
+    </a>
+              
+<div  class="menu_link_content menu-link-contentsidebar-sticky-menu view-mode-default lr-side-bar-menu__data">
+  <div class="lr-side-bar-menu__content">
+        <a href="JavaScript:void(0)" class="lr-side-bar-menu__close" aria-label="Fermer" role="button">
+      <svg class="icon" focusable="false">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </a>
+          
+            <div class="field field-ssm-block-reference field--type-block-field field__item"><div data-block-plugin-id="views_block:next_key_date_on_homepage-homepage_block_next_key_date" class="latest-info-homepage-view-block block block-views block-views-blocknext-key-date-on-homepage-homepage-block-next-key-date">
+  
+      <h2 aria-level="1">Agenda Financier</h2>
+    
+      <div class="views-element-container"><div class="js-view-dom-id-7722448c71e8d91a74007371db0f9e557d322b47f59fff804ad80ea21729a777 latest-info-homepage-block-inner-wrapper">
+  
+  
+  
+
+  
+  
+  
+
+  <h2 class="block-intro"> Prochain événement </h2>
+        <div class="views-row">
+<article role="presentation" about="/fr/assemblee-generale-2020" class="nodetype--event smaller">
+  <div class="start-date calendar-list__event">
+    <div class="calendar-list__date-wrapper ">
+              <div class="calendar-list__date">
+          <div class="calendar-list__day">30</div>
+          <div class="calendar-list__month-year">juin <span class="calendar-list__year">2020</span></div>
+        </div>
+          </div>
+  </div>
+  
+      <div role="presentation" about="/fr/assemblee-generale-2020" class="nodetype--event smaller block-main-text">
+      <a href="/fr/assemblee-generale" rel="bookmark">Assemblée Générale 2020</a>
+    </div>
+    
+</article>
+</div>
+
+    <div class="block-link-to-more-info"> <a href="/fr/calendrier">Toutes les dates</a> </div>
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+</div>
+      
+      </div>
+</div>
+
+      </li>
+  
+  <li class="menu-item lr-side-bar-menu__item">
+    <a href="JavaScript:void(0)"  class="lr-side-bar-menu__link field-tip" aria-expanded="false" role="button" click >
+      <svg class="icon lr-side-bar-menu__icon" focusable="false">
+        <use xlink:href="#icon-bar-contact"></use>
+      </svg>
+      <div class="tip-wrapper">
+        <span class="tip-content">Contacts</span>
+      </div>
+    </a>
+              
+<div  class="menu_link_content menu-link-contentsidebar-sticky-menu view-mode-default lr-side-bar-menu__data">
+  <div class="lr-side-bar-menu__content">
+        <a href="JavaScript:void(0)" class="lr-side-bar-menu__close" aria-label="Fermer" role="button">
+      <svg class="icon" focusable="false">
+        <use xlink:href="#icon-close"></use>
+      </svg>
+    </a>
+          
+            <div class="field field-ssm-block-reference field--type-block-field field__item"><div data-block-plugin-id="loreal_sidebar_contact_block" class="block block-loreal-sticky-sidebar block-loreal-sidebar-contact-block">
+  
+      <h2 aria-level="1">Contacts</h2>
+    
+      <div class="sidebar-block__wrapper">
+  <div class="sidebar-block__contact">
+    <p class="sidebar-block__text">RELATIONS INVESTISSEURS ET ANALYSTES FINANCIERS</p>
+    <p class="sidebar-block__number">+33 (0)1 47 56 86 82</p>
+    <p class="sidebar-block__text">RELATIONS ACTIONNAIRES INDIVIDUELS</p>
+    <p class="sidebar-block__number">+33 (0)1 47 56 83 02</p>
+    <p class="sidebar-block__text text-nr">De France</p>
+    <img src="/themes/custom/loreal/img/numero-vert.jpg" alt="0 800 66 66 66" class="sidebar-block__img" />
+    <p class="sidebar-block__number">De l'étranger +33 (0)1 40 14 80 50</p>
+    <div class="sidebar-block__link"><a href="/fr/contacts-questions">Vos interlocuteurs</a></div>
+  </div>
+  <div class="sidebar-block__faq">
+    <h2 class="sidebar-block__title" aria-level="1">Questions fréquentes</h2>
+    <p class="sidebar-block__sub-title">Vous trouverez en ligne les réponses aux questions qui nous sont le plus fréquemment posées.</p>
+    <div class="sidebar-block__link--grey"><a href="/fr/contacts-questions#questions">Questions-Réponses</a></div>
+  </div>
+</div>
+
+  </div>
+</div>
+      
+      </div>
+</div>
+
+      </li>
+</ul>
+
+          </nav>
+  </div>
+</div>
+
+  </div>
+
+      </aside>
+<div class="page-wrapper">
+  <header role="banner" class="lr-header">
+    <div class="lr-header__container">
+      <div class="lr-header__left">
+          <div class="region region-header-branding">
+    <div id="block-sitebranding" data-block-plugin-id="system_branding_block" class="block block-system block-system-branding-block">
+  
+    
+        <a class="block-sitebranding__logo-link" href="/fr" title="L&#039;Oréal Finance" rel="home">
+              <img class="block-sitebranding__logo-img" src="/themes/custom/loreal/logo.svg" alt="L&#039;Oréal Finance" />
+          </a>
+  </div>
+
+  </div>
+
+      </div>
+      <div class="lr-header__right">
+        <div class="lr-header__top">
+            <div class="region region-header-top">
+    <div class="loreal-search-form block block-loreal-core block-loreal-search-header" data-drupal-selector="loreal-search-form" id="block-lorealsearchheader" data-block-plugin-id="loreal_search_header">
+  
+    
+      <form action="/fr/operation-titres" method="post" id="loreal-search-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-textfield form-item-search-loreal js-form-item-search-loreal form-no-label">
+        <input  placeholder="Recherche" data-drupal-selector="edit-search-loreal" type="text" id="edit-search-loreal" name="search_loreal" value="" size="60" maxlength="128" class="form-text" aria-label="Search" />
+<svg class="icon-search" aria-labelledby="edit-search-loreal" role="button" tabindex="0" click>
+  <use xlink:href="#icon-loupe"></use>
+</svg>
+
+
+        </div>
+<div class="form-submit-wrapper"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Search" class="button button--primary js-form-submit form-submit" />
+</div><input autocomplete="off" data-drupal-selector="form-tj0yg4zgpcjvcpt33epiwj6udyqdfr48lpjitg6lk-q" type="hidden" name="form_build_id" value="form-Tj0YG4ZgPCJVcPT33epIWJ6uDyqdFr48LPJItG6lK-Q" />
+<input data-drupal-selector="edit-loreal-search-form" type="hidden" name="form_id" value="loreal_search_form" />
+
+</form>
+
+  </div>
+<div id="block-sharepriceblock" data-block-plugin-id="loreal_share_price_block" class="block block-loreal-share-price block-loreal-share-price-block">
+  
+    
+      <div class="header-live-share-price ajax-header-live-share-price">
+  <div class="share-price-wrapper">
+    <span class="type-data share-data"></span>
+    <span class="value"></span>
+    <span class="perc"></span>
+  </div>
+  <div class="cac-wrapper">
+    <span class="type-data cac-data"></span>
+    <span class="value"></span>
+    <span class="perc"></span>
+  </div>
+</div>
+
+  </div>
+<div id="block-lorealgloballink" data-block-plugin-id="loreal_global_link_block" class="block block-loreal-global-link block-loreal-global-link-block">
+  
+    
+      <div class="dot-com-link"><svg class="right-arrow-icon" focusable="false"><use xlink:href="#icon-arrow"></use></svg><a href=http://www.loreal.fr/ target="_blank" title="L'Oréal Group website">L'Oréal groupe</a></div>
+  </div>
+<div class="language-switcher-language-url block block-language block-language-blocklanguage-interface" id="block-languageswitcher" data-block-plugin-id="language_block:language_interface">
+  
+    
+      <ul class="links"><li hreflang="fr" data-drupal-link-system-path="node/57361" class="fr is-active"><a href="/fr/operation-titres" class="language-link is-active" aria-label="Français" hreflang="fr" data-drupal-link-system-path="node/57361">fr</a></li><li hreflang="en" data-drupal-link-system-path="node/57361" class="en"><a href="/eng/share-movements" class="language-link" aria-label="Switch to English version" lang="en" hreflang="en" data-drupal-link-system-path="node/57361">en</a></li></ul>
+  </div>
+
+  </div>
+
+        </div>
+        <div class="lr-header__bottom">
+            <div class="region region-header">
+    <nav role="navigation" aria-label="Main navigation"  id="block-mainmenu-2" data-block-plugin-id="system_menu_block:main-menu" class="lr-mega-menu">
+      
+
+<ul class="main-menu main-menu-level-0 lr-mega-menu__items">
+	  
+            
+              
+    <li class="menu-item lr-mega-menu__item menu-item-level-0 menu-item--expanded">
+      <a href="/fr/cours-en-direct" class="menu-link-level-0 "  aria-expanded="false"  target=_blank role="button" click>
+        <span> L’Action</span>
+                  <svg class="icon icon-arrow-sub-nav" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span> L’Action</span>
+        </p>
+        <p class="menu-dropdown__description">Introduite à la Bourse de Paris le 8 octobre 1963, l’action L’Oréal est cotée aujourd´hui sur le Compartiment A d’Euronext.</p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-1 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/cours-en-direct" class="menu-link-level-1 "   role="button" click>
+        <span>Cours de l&#039;action</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Cours de l&#039;action</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/action-calculateur-performance" class="menu-link-level-1 "   role="button" click>
+        <span>Calculateur de performance</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Calculateur de performance</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/action-dividende" class="menu-link-level-1 "   role="button" click>
+        <span>Dividende</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Dividende</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/repartition-capital" class="menu-link-level-1 "   role="button" click>
+        <span>Répartition du capital</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Répartition du capital</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/action-fiche-signaletique" class="menu-link-level-1 "   role="button" click>
+        <span>Fiche signalétique</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Fiche signalétique</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+            <div class="field field-highlight-title field--type-string field__item">L’Oréal en chiffres</div>
+      
+                    
+            <div class="field field-highlight-description field--type-string field__item">Le Groupe clôture la décennie avec sa meilleure année de croissance comparable depuis 2007</div>
+      
+                    
+            <div class="field field-highlight-media field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/menu_highlight_media/public/2020-03/NewsLoreal%20312%20X%20216%20-%20montage.png?itok=psZ0zB4h" width="200" height="138" alt="Rapport Annuel 2019" title="Rapport Annuel 2019" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                    
+            <div class="field field-highlight-link field--type-link field__item"><a href="/fr/rapport-annuel-2019/chiffres-cles-2-2-0?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors" target="_blank">Consulter le Rapport Annuel</a></div>
+      
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-0 menu-item--expanded">
+      <a href="/fr/actualites" class="menu-link-level-0 "  aria-expanded="false"   role="button" click>
+        <span>Actualités</span>
+                  <svg class="icon icon-arrow-sub-nav" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Actualités</span>
+        </p>
+        <p class="menu-dropdown__description">Événements en direct et différé, retour sur les temps forts et les prochaines dates de l’agenda financier.</p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-1 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/calendrier" class="menu-link-level-1 "   role="button" click>
+        <span>Agenda financier</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Agenda financier</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/actualites" class="menu-link-level-1 "   role="button" click>
+        <span>Fil d&#039;actualités</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Fil d&#039;actualités</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/communiques" class="menu-link-level-1 "   role="button" click>
+        <span>Communiqués</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Communiqués</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/liste-actualites/focus" class="menu-link-level-1 "   role="button" click>
+        <span>Focus</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Focus</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/rester-informe" class="menu-link-level-1 "   role="button" click>
+        <span>Rester informé</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Rester informé</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+            <div class="field field-highlight-title field--type-string field__item">L’Oréal dans le monde</div>
+      
+                    
+            <div class="field field-highlight-description field--type-string field__item">Une présence forte dans ses trois grandes Zones géographiques</div>
+      
+                    
+            <div class="field field-highlight-media field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/menu_highlight_media/public/2020-03/NewsLoreal%20312%20X%20216%20-%20montage.png?itok=psZ0zB4h" width="200" height="138" alt="Rapport Annuel 2019" title="Rapport Annuel 2019" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                    
+            <div class="field field-highlight-link field--type-link field__item"><a href="/fr/rapport-annuel-2019/loreal-dans-monde-2-3-0?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors" target="_blank">Consulter le Rapport Annuel</a></div>
+      
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-0 menu-item--expanded">
+      <a href="/fr/rapport-annuel" class="menu-link-level-0 "  aria-expanded="false"   role="button" click>
+        <span>Rapports</span>
+                  <svg class="icon icon-arrow-sub-nav" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Rapports</span>
+        </p>
+        <p class="menu-dropdown__description">Toutes nos publications de l’année : le Rapport Annuel, le Document d&#039;Enregistrement Universel et le Rapport d’Avancement « Sharing Beauty With All ».</p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-1 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1 menu-item--expanded">
+      <a href="/fr/rapport-annuel" class="menu-link-level-1 "  aria-expanded="false"   role="button" click>
+        <span>Rapport Annuel</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Rapport Annuel</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-2 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-2">
+      <a href="/fr/rapport-annuel-archives" class="menu-link-level-2 "   role="button" click>
+        <span>Annual Reports Archives</span>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Annual Reports Archives</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1 menu-item--expanded">
+      <a href="/fr/document-enregistrement-universel" class="menu-link-level-1 "  aria-expanded="false"   role="button" click>
+        <span>Document d&#039;Enregistrement Universel</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Document d&#039;Enregistrement Universel</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-2 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-2">
+      <a href="/fr/document-de-reference-archives" class="menu-link-level-2 "   role="button" click>
+        <span>Registration Document Archives</span>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Registration Document Archives</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+              
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="https://sharingbeautywithall.loreal.fr/" class="menu-link-level-1 "  target=_blank role="button" click>
+        <span>Rapport d&#039;avancement &quot;Sharing Beauty With All&quot;</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Rapport d&#039;avancement &quot;Sharing Beauty With All&quot;</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/commande-documents" class="menu-link-level-1 "   role="button" click>
+        <span>Recevoir nos publications par courrier</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Recevoir nos publications par courrier</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+            <div class="field field-highlight-title field--type-string field__item">Rapport Annuel</div>
+      
+                    
+            <div class="field field-highlight-description field--type-string field__item">Découvrez les thèmes stratégiques du Rapport Annuel</div>
+      
+                    
+            <div class="field field-highlight-media field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/menu_highlight_media/public/2020-03/NewsLoreal%20312%20X%20216%20-%20montage.png?itok=psZ0zB4h" width="200" height="138" alt="Rapport Annuel 2019" title="Rapport Annuel 2019" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                    
+            <div class="field field-highlight-link field--type-link field__item"><a href="/fr/rapport-annuel-2019?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors" target="_blank">Consulter le Rapport Annuel</a></div>
+      
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-0 menu-item--expanded">
+      <a href="/fr/resultats-annuels" class="menu-link-level-0 "  aria-expanded="false"   role="button" click>
+        <span>Résultats et Présentations</span>
+                  <svg class="icon icon-arrow-sub-nav" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Résultats et Présentations</span>
+        </p>
+        <p class="menu-dropdown__description">Les présentations stratégiques de la Direction Générale ainsi que les webcasts des Résultats financiers, du Chiffre d’affaires, de l’Assemblée Générale et des Conférences Investisseurs.</p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-1 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1 menu-item--collapsed">
+      <a href="/fr/resultats-annuels" class="menu-link-level-1 "   role="button" click>
+        <span>Résultats Annuels</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Résultats Annuels</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/resultats-semestriels" class="menu-link-level-1 "   role="button" click>
+        <span>Résultats Semestriels</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Résultats Semestriels</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/chiffres-affaires" class="menu-link-level-1 "   role="button" click>
+        <span>Chiffre d&#039;affaires</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Chiffre d&#039;affaires</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1 menu-item--collapsed">
+      <a href="/fr/presentations-strategiques" class="menu-link-level-1 "   role="button" click>
+        <span>Présentations stratégiques</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Présentations stratégiques</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1 menu-item--collapsed">
+      <a href="/fr/assemblee-generale-2019" class="menu-link-level-1 "   role="button" click>
+        <span>Assemblée Générale</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Assemblée Générale</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+            <div class="field field-highlight-title field--type-string field__item">Perspectives</div>
+      
+                    
+            <div class="field field-highlight-description field--type-string field__item">par Jean-Paul Agon, Président-Directeur Général</div>
+      
+                    
+            <div class="field field-highlight-media field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/menu_highlight_media/public/2020-03/NewsLoreal%20312%20X%20216%20-%20montage.png?itok=psZ0zB4h" width="200" height="138" alt="Rapport Annuel 2019" title="Rapport Annuel 2019" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                    
+            <div class="field field-highlight-link field--type-link field__item"><a href="/fr/rapport-annuel-2019/perspectives-jean-paul-agon-0-5-0?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors" target="_blank">Consulter le Rapport Annuel</a></div>
+      
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-0 menu-item--expanded menu-item--active-trail">
+      <a href="/fr/communiques" class="menu-link-level-0 is-active"  aria-expanded="false"   role="button" click>
+        <span>Information réglementée</span>
+                  <svg class="icon icon-arrow-sub-nav" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Information réglementée</span>
+        </p>
+        <p class="menu-dropdown__description">Toute l’information réglementée telle que définie par l’Autorité des Marchés Financiers (AMF).</p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-1 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/communiques" class="menu-link-level-1 "   role="button" click>
+        <span>Communiqués</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Communiqués</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/document-enregistrement-universel" class="menu-link-level-1 "   role="button" click>
+        <span>Document d&#039;Enregistrement Universel</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Document d&#039;Enregistrement Universel</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1 menu-item--collapsed">
+      <a href="/fr/rapport-semestriel" class="menu-link-level-1 "   role="button" click>
+        <span>Rapport financier semestriel</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Rapport financier semestriel</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/documentation-assemblee-generale" class="menu-link-level-1 "   role="button" click>
+        <span>Documentation Assemblée Générale</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Documentation Assemblée Générale</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1 menu-item--active-trail">
+      <a href="/fr/operation-titres" class="menu-link-level-1 is-active"   role="button" click>
+        <span>Opérations sur titres</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Opérations sur titres</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/statuts-societe" class="menu-link-level-1 "   role="button" click>
+        <span>Statuts de la société</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Statuts de la société</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+            <div class="field field-highlight-title field--type-string field__item">Marché Cosmétique</div>
+      
+                    
+            <div class="field field-highlight-description field--type-string field__item">Le marché cosmétique mondial est stimulé par un fort potentiel de croissance de la consommation</div>
+      
+                    
+            <div class="field field-highlight-media field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/menu_highlight_media/public/2020-03/NewsLoreal%20312%20X%20216%20-%20montage.png?itok=psZ0zB4h" width="200" height="138" alt="Rapport Annuel 2019" title="Rapport Annuel 2019" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                    
+            <div class="field field-highlight-link field--type-link field__item"><a href="/fr/rapport-annuel-2019/marche-cosmetique-2-1-0?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors" target="_blank">Consulter le Rapport Annuel</a></div>
+      
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-0 menu-item--expanded">
+      <a href="/fr/conseil-administration" class="menu-link-level-0 "  aria-expanded="false"   role="button" click>
+        <span>Gouvernance</span>
+                  <svg class="icon icon-arrow-sub-nav" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Gouvernance</span>
+        </p>
+        <p class="menu-dropdown__description">Des administrateurs actifs et engagés</p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-1 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/conseil-administration" class="menu-link-level-1 "   role="button" click>
+        <span>Conseil d’Administration</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Conseil d’Administration</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/comites-etudes" class="menu-link-level-1 "   role="button" click>
+        <span>Comités d’Études du Conseil d’Administration</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Comités d’Études du Conseil d’Administration</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/remuneration-mandataires-sociaux" class="menu-link-level-1 "   role="button" click>
+        <span>Mandataires sociaux</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Mandataires sociaux</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+            <div class="field field-highlight-title field--type-string field__item">Gouvernance</div>
+      
+                    
+            <div class="field field-highlight-description field--type-string field__item">Une gouvernance stable dans un univers cosmétique en mouvement</div>
+      
+                    
+            <div class="field field-highlight-media field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/menu_highlight_media/public/2020-03/NewsLoreal%20312%20X%20216%20-%20montage.png?itok=psZ0zB4h" width="200" height="138" alt="Rapport Annuel 2019" title="Rapport Annuel 2019" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                    
+            <div class="field field-highlight-link field--type-link field__item"><a href="/fr/rapport-annuel-2019/gouvernance-1-2-0/gouvernance-conseil-administration-engage-actif-talent-affaires-1-2-1?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors" target="_blank">Consulter le Rapport Annuel</a></div>
+      
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-0 menu-item--expanded">
+      <a href="/fr/devenir-actionnaire" class="menu-link-level-0 "  aria-expanded="false"   role="button" click>
+        <span>Actionnaires</span>
+                  <svg class="icon icon-arrow-sub-nav" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-0 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Actionnaires</span>
+        </p>
+        <p class="menu-dropdown__description">Actionnaire ou futur actionnaire, bienvenue dans votre espace où vous trouverez des services qui vous sont dédiés, des informations pratiques et vos interlocuteurs.</p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+
+<ul class="main-menu main-menu-level-1 lr-mega-menu__items">
+	  
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/devenir-actionnaire" class="menu-link-level-1 "   role="button" click>
+        <span>Devenir Actionnaire</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Devenir Actionnaire</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/nominatif-prime-fidelite" class="menu-link-level-1 "   role="button" click>
+        <span>Prime de fidélité et Nominatif</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Prime de fidélité et Nominatif</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/contacts-questions" class="menu-link-level-1 "   role="button" click>
+        <span>Contacts et questions</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Contacts et questions</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/espace-actionnaires-vos-rendez-vous" class="menu-link-level-1 "   role="button" click>
+        <span>Vos Rendez-vous</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Vos Rendez-vous</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/lettre-actionnaires" class="menu-link-level-1 "   role="button" click>
+        <span>La Lettre aux Actionnaires</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>La Lettre aux Actionnaires</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+    
+            
+    
+    <li class="menu-item lr-mega-menu__item menu-item-level-1">
+      <a href="/fr/comite-consultatif" class="menu-link-level-1 "   role="button" click>
+        <span>Comité Consultatif</span>
+                  <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+              </a>
+                    
+
+<div class="menu_link_content menu-link-contentmain-menu view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+  <div class="menu-dropdown__content">
+    <div class="menu-dropdown__left">
+      <div class="menu-dropdown__close" >
+        <a href="javaScript:void(0)" class="icon icon__close" aria-label="fermer le méga menu" role="button">
+          <svg class="icon icon-close-expand" focusable="false">
+            <use xlink:href="#icon-close-expand"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="menu-dropdown__data">
+        <p class="menu-dropdown__title">
+          <svg class="icon icon-arrow-sub-nav-white" focusable="false">
+            <use xlink:href="#icon-arrow-sub-nav-white"></use>
+          </svg>
+          <span>Comité Consultatif</span>
+        </p>
+        <p class="menu-dropdown__description"></p>
+      </div>
+      <div class="menu-dropdown__link">
+                  
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+                    
+                    
+                    
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+              </div>
+    </div>
+    <div class="menu-dropdown__right">
+              
+            <div class="field field-highlight-title field--type-string field__item">Administration et Finances</div>
+      
+                    
+            <div class="field field-highlight-description field--type-string field__item">La Gestion &amp; Finance est le levier stratégique de L’Oréal</div>
+      
+                    
+            <div class="field field-highlight-media field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/menu_highlight_media/public/2020-03/NewsLoreal%20312%20X%20216%20-%20montage.png?itok=psZ0zB4h" width="200" height="138" alt="Rapport Annuel 2019" title="Rapport Annuel 2019" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+                    
+            <div class="field field-highlight-link field--type-link field__item"><a href="/fr/rapport-annuel-2019/administrations-finances-4-3-0?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors" target="_blank">Consulter le Rapport Annuel</a></div>
+      
+          </div>
+  </div>
+</div>
+
+          </li>
+  	</ul>
+
+  </nav>
+
+  </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <main role="main" class="lr-main">
+    <a id="main-content" tabindex="-1"></a>    <div class="lr-main__pre-container">
+      
+
+      
+
+      
+    </div>
+    <div class="lr-main__container">
+        <div class="region region-content">
+    <div data-drupal-messages-fallback class="hidden"></div>
+
+
+<article  role="presentation" about="/fr/operation-titres" class="nodetype--advanced_pages container-fluid" >
+      <div class="row">
+    <div class="hero-section">
+      <div class="hero-section__left" style="background-color:#BA1240;">
+        <div class="hero-section__content ">
+            <nav role="navigation" aria-label="Fil d'Ariane" class="nav-breadcrumb-wrapper">
+    <ol class="breadcrumb">
+          <li class="breadcrumb__listitem">
+                  <a class="breadcrumb__link" href="/fr">L’Oréal Finance</a>
+              </li>
+          <li class="breadcrumb__listitem">
+                  <a class="breadcrumb__link" href="/fr/communiques">Information réglementée</a>
+              </li>
+          <li class="breadcrumb__listitem">
+                  <span>Opérations sur titres</span>
+              </li>
+        </ol>
+  </nav>
+
+                      <div class="hero-section__title-wrapper">
+              <h1  class="hero-section__title">
+                <span>Opérations sur titres</span>
+
+              </h1>
+            </div>
+                  </div>
+      </div>
+      <div class="hero-section__right">
+        <div class="hero-section__image">
+          
+            <div class="field field-hero-image field--type-entity-reference field__item"><article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/hero_image/public/2019-09/entete-operations-sur-titres.jpg?itok=plnaqsOa" width="863" height="317" alt="Entete Operations Sur Titres" title="Entete Operations Sur Titres" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+</div>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+            <div class="row">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="body__wrapper">
+                
+            <div class="field body field--type-text-with-summary field__item"><div class="ck-introduction">
+<div class="ck-introduction">Conformément aux dispositions réglementaires, les transactions réalisées par L’Oréal sur ses propres actions font l’objet de déclarations hebdomadaires et mensuelles ; un tableau détaillant le nombre total d’actions composant le capital et les droits de vote est également publié chaque mois.</div>
+</div>
+</div>
+      
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+          <div class="row">
+        <div class="paragraphs__wrapper">
+          
+      <div class="field field-paragraphs field--type-entity-reference-revisions field__items">
+              <div class="field__item">
+            <div class="container">
+        <div class="row">
+          <div class="col-12">
+                                        <div class="mb-35">
+                
+<div class="accordion-wrapper">
+  <ul class="accordion__items">
+                
+      <li class="accordion__item item-level-0">
+      <h2>
+        <button class="accordion__button-within-heading accordion__button button-level-0" aria-controls="content-4921" aria-expanded="false" id="accordion-control-4921" click>
+          PROGRAMME DE RACHATS D&#039;ACTIONS
+          <i class="icon-caret"></i>
+        </button>
+      </h2>
+      <div class="accordion__content" id="content-4921">
+                  
+      
+
+            <div data-block-plugin-id="views_block:share_movements-block_1" class="block block-views block-views-blockshare-movements-block-1">
+  
+    
+      <div class="views-element-container"><div class="share-movements-block js-view-dom-id-c884337d1ac9160d548d9745a0472a9e1e53f30f3e3788ce5d520b37732502aa">
+  
+  
+  
+
+  
+  
+  
+
+  <div class="item-list share-movements__row">
+      <h3>2019</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/share-movements-content/documents//LOREAL_RESULTATS_S12019.pdf" title="Communiqué du 30 juillet 2019 (PDF 976.56 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Communiqué du 30 juillet 2019 (PDF 976.56 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+<div class="item-list share-movements__row">
+      <h3>2018</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/share-movements-content/documents//LOREAL_AG_2018_04_17_FR.pdf" title="Communiqué du 17 avril 2018 (PDF 195.17 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Communiqué du 17 avril 2018 (PDF 195.17 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+<div class="item-list share-movements__row">
+      <h3>2017</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/share-movements-content/documents//LOreal_Resultats_2016_FR_2017_02_09.pdf" title="Communiqué du 9 février 2017 (PDF 677.8 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Communiqué du 9 février 2017 (PDF 677.8 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+<div class="item-list share-movements__row">
+      <h3>2016</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/share-movements-content/documents//LOreal_Resultats_2015_FR_110216.pdf" title="Communiqué du 11 février 2016 (PDF 827.97 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Communiqué du 11 février 2016 (PDF 827.97 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+<div class="item-list share-movements__row">
+      <h3>2013</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/share-movements-content/documents//LOreal_Conseil_29_11_2013_FR.pdf" title="Communiqué de rachats d’actions du 29 novembre 2013 (PDF 180.95 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Communiqué de rachats d’actions du 29 novembre 2013 (PDF 180.95 Ko)
+    </span>
+</a>
+</li>
+          <li><a class="media-formatter__link" href="/system/files/share-movements-content/documents//LOreal_Resultats_2012.pdf" title="Communiqué du 11 février 2013 (PDF 776.82 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Communiqué du 11 février 2013 (PDF 776.82 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+<div class="item-list share-movements__row">
+      <h3>2012</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/share-movements-content/documents//LOreal_Resultats_S1_2012_FR.pdf" title="Communiqué du 28 août 2012 (PDF 540.14 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Communiqué du 28 août 2012 (PDF 540.14 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+      
+  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              </div>
+    </li>
+  
+            
+      <li class="accordion__item item-level-0">
+      <h2>
+        <button class="accordion__button-within-heading accordion__button button-level-0" aria-controls="content-4931" aria-expanded="false" id="accordion-control-4931" click>
+          DÉCLARATIONS HEBDOMADAIRES DE RACHATS D&#039;ACTIONS
+          <i class="icon-caret"></i>
+        </button>
+      </h2>
+      <div class="accordion__content" id="content-4931">
+                  
+      
+
+            <div data-block-plugin-id="views_block:share_movements-block_2" class="block block-views block-views-blockshare-movements-block-2">
+  
+    
+      <div class="views-element-container"><div class="share-movements-block js-view-dom-id-9bc61002d4f3f794a9b5e717c0488246477a93f54996c06a683009739215a4df">
+  
+  
+  
+
+  
+  <form class="views-exposed-form bef-exposed-form" data-bef-auto-submit-full-form="" data-drupal-selector="views-exposed-form-share-movements-block-2" action="/fr/operation-titres" method="get" id="views-exposed-form-share-movements-block-2" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-select form-item-media-year-filter-weekly js-form-item-media-year-filter-weekly">
+      <label for="edit-media-year-filter-weekly" class="js-form-required form-required">Archives par année</label>
+        <select data-drupal-selector="edit-media-year-filter-weekly" id="edit-media-year-filter-weekly" name="media_year_filter_weekly" class="form-select required" required="required" aria-required="true"><option value="2020" selected="selected">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-bef-auto-submit-click="" class="js-hide button js-form-submit form-submit" data-drupal-selector="edit-submit-share-movements" type="submit" id="edit-submit-share-movements" value="Apply" />
+</div>
+
+
+</form>
+
+  
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+      
+  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              </div>
+    </li>
+  
+            
+      <li class="accordion__item item-level-0">
+      <h2>
+        <button class="accordion__button-within-heading accordion__button button-level-0" aria-controls="content-4941" aria-expanded="false" id="accordion-control-4941" click>
+          DÉCLARATIONS MENSUELLES DE RACHATS D&#039;ACTIONS
+          <i class="icon-caret"></i>
+        </button>
+      </h2>
+      <div class="accordion__content" id="content-4941">
+                  
+      
+
+            <div data-block-plugin-id="views_block:share_movements-block_3" class="block block-views block-views-blockshare-movements-block-3">
+  
+    
+      <div class="views-element-container"><div class="share-movements-block js-view-dom-id-666d3a73782950900aa509639355ca04e310bf7c4b7762f4d42ba84369ab0eee">
+  
+  
+  
+
+  
+  <form class="views-exposed-form bef-exposed-form" data-bef-auto-submit-full-form="" data-drupal-selector="views-exposed-form-share-movements-block-3" action="/fr/operation-titres" method="get" id="views-exposed-form-share-movements-block-3" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-select form-item-media-year-filter-monthly js-form-item-media-year-filter-monthly">
+      <label for="edit-media-year-filter-monthly" class="js-form-required form-required">Archives par année</label>
+        <select data-drupal-selector="edit-media-year-filter-monthly" id="edit-media-year-filter-monthly" name="media_year_filter_monthly" class="form-select required" required="required" aria-required="true"><option value="2020" selected="selected">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-bef-auto-submit-click="" class="js-hide button js-form-submit form-submit" data-drupal-selector="edit-submit-share-movements" type="submit" id="edit-submit-share-movements" value="Apply" />
+</div>
+
+
+</form>
+
+  
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+      
+  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              </div>
+    </li>
+  
+            
+      <li class="accordion__item item-level-0">
+      <h2>
+        <button class="accordion__button-within-heading accordion__button button-level-0" aria-controls="content-4951" aria-expanded="false" id="accordion-control-4951" click>
+          DÉCLARATIONS MENSUELLES SUR LE NOMBRE D&#039;ACTIONS ET DE DROIT DE VOTE
+          <i class="icon-caret"></i>
+        </button>
+      </h2>
+      <div class="accordion__content" id="content-4951">
+                  
+      
+
+            <div data-block-plugin-id="views_block:share_movements-block_4" class="block block-views block-views-blockshare-movements-block-4">
+  
+    
+      <div class="views-element-container"><div class="share-movements-block js-view-dom-id-573f0d18bc8c7684eb65774c16f9a709b6bb5f1a6ab9d16fc3cd9c1c4e268d6f">
+  
+  
+  
+
+  
+  <form class="views-exposed-form bef-exposed-form" data-bef-auto-submit-full-form="" data-drupal-selector="views-exposed-form-share-movements-block-4" action="/fr/operation-titres" method="get" id="views-exposed-form-share-movements-block-4" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-select form-item-media-year-filter-total js-form-item-media-year-filter-total">
+      <label for="edit-media-year-filter-total" class="js-form-required form-required">Archives par année</label>
+        <select data-drupal-selector="edit-media-year-filter-total" id="edit-media-year-filter-total" name="media_year_filter_total" class="form-select required" required="required" aria-required="true"><option value="2020" selected="selected">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-bef-auto-submit-click="" class="js-hide button js-form-submit form-submit" data-drupal-selector="edit-submit-share-movements" type="submit" id="edit-submit-share-movements" value="Apply" />
+</div>
+
+
+</form>
+
+  
+
+  <div class="item-list share-movements__row">
+      <h3>  mars
+</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/2020-04/Declar_Repart_capital_et_DDV_au_31%20mars%202020.pdf" title="Au 31 mars 2020 (PDF 157.02 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Au 31 mars 2020 (PDF 157.02 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+<div class="item-list share-movements__row">
+      <h3>  février
+</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/2020-03/Declar_Repart_capital_et_DDV_au_29%20fevrier%202020.pdf" title="Au 29 février 2020 (PDF 157.02 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Au 29 février 2020 (PDF 157.02 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+<div class="item-list share-movements__row">
+      <h3>  janvier
+</h3>
+  
+  <ul class="share-movements__list">
+
+          <li><a class="media-formatter__link" href="/system/files/2020-02/Declar_Repart_capital_et_DDV_au_31%20janvier%202020.pdf" title="Au 31 janvier 2020 (PDF 157.32 Ko)" target="_blank">
+  <svg class="icon icon-ck-document" focusable="false">
+    <use xlink:href="#icon-ck-document"></use>
+  </svg>
+  <span class="description">
+      Au 31 janvier 2020 (PDF 157.32 Ko)
+    </span>
+</a>
+</li>
+    
+  </ul>
+
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+  </div>
+
+      
+  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+              </div>
+    </li>
+  
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            </ul>
+</div>
+
+              </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
+        </div>
+      </div>
+      </div>
+              <div class="field__item">      <div class="container">
+      <div class="row">
+                              <div class="col-12 col-md-6 mb-35 two-column">
+              
+      
+
+            <div data-block-plugin-id="loreal_share_price_narrow_block" class="block block-loreal-share-price-narrow block-loreal-share-price-narrow-block">
+  
+    
+      <div class="share_price_nr__container">
+  <div class="share_price_nr ajaxshareprice">
+    <h2 class="share_price_nr__title title" aria-level="1">Cours</h2>
+    <div class="share_price_nr__date share-date"></div>
+    <div class="share_price_nr__entry text bigger">
+      <div class="share_price_nr__legend share-title"></div>
+      <span class="share_price_nr__value share-value"></span>
+      <span class="share_price_nr__value share-perc"></span>
+    </div>
+    <div class="share_price_nr__entry text bigger">
+      <div class="share_price_nr__legend cac-title"></div>
+      <span class="share_price_nr__value cac-value"></span>
+      <span class="share_price_nr__value cac-perc"></span>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+      
+  
+            </div>
+                                                                                                                                                                                                                                                                                                                                      
+                              <div class="col-12 col-md-6 mb-35 two-column">
+              
+  <div class="paragraph-links__wrapper">
+    <div class="links__container">
+              <h2 class="title" aria-level="1">
+          LIENS UTILES
+        </h2>
+        <ul class="links">
+                      <li class="links__item">
+              <svg class="links__item__icon" focusable="false">
+                <use xlink:href="#icon-chevron-right"></use>
+              </svg>
+              <a href="/fr/liste-actualites/communiques" >
+                Communiqués financiers
+              </a>
+            </li>
+                      <li class="links__item">
+              <svg class="links__item__icon" focusable="false">
+                <use xlink:href="#icon-chevron-right"></use>
+              </svg>
+              <a href="/fr/document-de-reference" >
+                Document d&#039;Enregistrement Universel
+              </a>
+            </li>
+                  </ul>
+          </div>
+  </div>
+
+            </div>
+                                                                                                                                                                                                                                                                                                                                          </div>
+    </div>
+  </div>
+          </div>
+  
+        </div>
+      </div>
+      </article>
+
+  </div>
+
+    </div>
+    
+    
+              <div class="region region-main-above">
+    <div id="block-exploretheannualreport" data-block-plugin-id="block_content:9bb15f98-79a7-41a8-9b78-67c6acb065b6" class="block block-block-content block-block-content9bb15f98-79a7-41a8-9b78-67c6acb065b6 see-also__wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        
+                  <h2  class="see-also__title" aria-level="1">DÉCOUVRIR LE RAPPORT ANNUEL</h2>
+                
+      </div>
+    </div>
+    <div class="row">
+                        
+          <div class="col-12 col-md-6 col-lg-3">
+      <div class="see-also__card">
+        <a href="/fr/rapport-annuel-2019/it-4-5-0?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors&amp;utm_term=discover-also" class="see-also__link" target="_blank">
+          <div class="see-also__image" aria-hidden="true">
+            <article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/see_also_block_image_312x312_/public/2020-04/IT_vignette.jpg?itok=fRCISo4G" width="312" height="312" alt="Asie : Fille qui regarde son mobile à la main" title="IT" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+
+          </div>
+          <h3 class="see-also__sub-title" aria-level="2">Beauty Tech</h3>
+          <p class="see-also__description">L’IT au cœur des solutions intelligentes, pour mieux répondre aux besoins de chacun.</p>
+        </a>
+      </div>
+      </div>
+    
+                  
+          <div class="col-12 col-md-6 col-lg-3">
+      <div class="see-also__card">
+        <a href="/fr/rapport-annuel-2019/administrations-finances-4-3-0/role-central-finance-marche-mutation-4-3-2?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors&amp;utm_term=discover-also" class="see-also__link" target="_blank">
+          <div class="see-also__image" aria-hidden="true">
+            <article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/see_also_block_image_312x312_/public/2020-04/finance_vignette.jpg?itok=in796eo5" width="312" height="312" alt="2 employees checking figures on a computer" title="Finance" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+
+          </div>
+          <h3 class="see-also__sub-title" aria-level="2">Levier stratégique</h3>
+          <p class="see-also__description">Le rôle central de la Finance dans un marché en mutation.</p>
+        </a>
+      </div>
+      </div>
+    
+                  
+          <div class="col-12 col-md-6 col-lg-3">
+      <div class="see-also__card">
+        <a href="/fr/rapport-annuel-2019/digital-4-4-0/marques-consommateurs-plus-connectes-4-4-3?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors&amp;utm_term=discover-also" class="see-also__link" target="_blank">
+          <div class="see-also__image" aria-hidden="true">
+            <article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/see_also_block_image_312x312_/public/2020-04/digital_vignette.jpg?itok=8V2qWXMu" width="312" height="312" alt="Image des mains qui tiennent des mobiles et ayant testé les rouges à lèvres sur leur bras" title="E-commerce" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+
+          </div>
+          <h3 class="see-also__sub-title" aria-level="2">Digital</h3>
+          <p class="see-also__description">Marques et consommateurs, toujours plus connectés.</p>
+        </a>
+      </div>
+      </div>
+    
+                  
+          <div class="col-12 col-md-6 col-lg-3">
+      <div class="see-also__card">
+        <a href="/fr/rapport-annuel-2019/operations-4-1-0/agilite-logistique-augmentee-4-1-3?utm_source=loreal-finance&amp;utm_medium=referral_orga&amp;utm_campaign=oaf_ar19_investors&amp;utm_term=discover-also" class="see-also__link" target="_blank">
+          <div class="see-also__image" aria-hidden="true">
+            <article role="presentation">
+  
+      
+            <div class="field image field--type-image field__item">  <img src="/sites/default/files/styles/see_also_block_image_312x312_/public/2020-04/operations_vignette.jpg?itok=y72fKA2Y" width="312" height="312" alt="Un entrepôt" title="Distribution" typeof="foaf:Image" />
+
+
+</div>
+      
+  </article>
+
+          </div>
+          <h3 class="see-also__sub-title" aria-level="2">Opérations</h3>
+          <p class="see-also__description">L&#039;agilité logistique augmentée.</p>
+        </a>
+      </div>
+      </div>
+    
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  </div>
+  </div>
+</div>
+
+  </div>
+
+      </main>
+      <footer class="lr-footer" role="contentinfo">
+      <div class="lr-footer__container">
+          <div class="region region-footer">
+    <div  id="block-footersocialmenu" data-block-plugin-id="system_menu_block:footer-social-menu">
+  
+        
+        
+<ul data-region="footer" class="social-menu__items">
+                  <li class="social-menu__item menu-item">
+        <a class="social-menu__link" href="https://www.facebook.com/loreal/" target="_blank" aria-label="Facebook Fr">
+          <svg class="icon social-menu__icon" focusable="false">
+            <use xlink:href="#facebook-f-brands"></use>
+          </svg>
+        </a>
+              </li>
+                <li class="social-menu__item menu-item">
+        <a class="social-menu__link" href="https://www.instagram.com/loreal/" target="_blank" aria-label="Instagram">
+          <svg class="icon social-menu__icon" focusable="false">
+            <use xlink:href="#instagram-brands"></use>
+          </svg>
+        </a>
+              </li>
+                <li class="social-menu__item menu-item">
+        <a class="social-menu__link" href="http://www.linkedin.com/company/1662?trk=tyah" target="_blank" aria-label="LinkedIn">
+          <svg class="icon social-menu__icon" focusable="false">
+            <use xlink:href="#linkedin-in-brands"></use>
+          </svg>
+        </a>
+              </li>
+                <li class="social-menu__item menu-item">
+        <a class="social-menu__link" href="https://twitter.com/@loreal" target="_blank" aria-label="Twitter">
+          <svg class="icon social-menu__icon" focusable="false">
+            <use xlink:href="#twitter-brands"></use>
+          </svg>
+        </a>
+              </li>
+                <li class="social-menu__item menu-item">
+        <a class="social-menu__link" href="https://www.youtube.com/playlist?list=PLy_iYgTynl81ODoWuJmk6e_KjVx93jUWK" target="_blank" aria-label="Youtube">
+          <svg class="icon social-menu__icon" focusable="false">
+            <use xlink:href="#youtube-brands"></use>
+          </svg>
+        </a>
+              </li>
+      </ul>
+    
+
+  </div>
+<nav role="navigation"  id="block-footernavigationmenu" data-block-plugin-id="system_menu_block:footer-navigation-menu">
+  
+        
+        <ul data-region="footer" class="footer-menu__items menu-list">
+                  
+                          
+      <li class="footer-menu__item menu-item">
+        <a href="http://www.loreal.fr/"  class="footer-menu__link loreal-group" aria-label="L&#039;Oréal Groupe" target=_blank click >
+                      <svg class="footer-menu__icon" focusable="false">
+              <use xlink:href="#icon-arrow"></use>
+            </svg>
+                    <span>L&#039;Oréal Groupe</span>
+        </a>
+              </li>
+                
+            
+      <li class="footer-menu__item menu-item">
+        <a href="/fr/plan-site"  class="footer-menu__link " aria-label="Plan du site"  click >
+                    <span>Plan du site</span>
+        </a>
+              </li>
+                
+            
+      <li class="footer-menu__item menu-item">
+        <a href="/fr/mentions-legales"  class="footer-menu__link " aria-label="Conditions d’utilisation"  click >
+                    <span>Conditions d’utilisation</span>
+        </a>
+              </li>
+                
+            
+      <li class="footer-menu__item menu-item">
+        <a href="/fr/cookies"  class="footer-menu__link " aria-label="Informations sur les cookies"  click >
+                    <span>Informations sur les cookies</span>
+        </a>
+              </li>
+                
+                          
+      <li class="footer-menu__item menu-item">
+        <a href="https://www.loreal.fr/privacy-policy"  class="footer-menu__link " aria-label="Politique de protection des données personnelles du groupe L’Oréal" target=_blank click >
+                    <span>Politique de protection des données personnelles du groupe L’Oréal</span>
+        </a>
+              </li>
+                
+            
+      <li class="footer-menu__item menu-item">
+        <a href="/eng/accessibility-assessment-rgaa-40"  class="footer-menu__link " aria-label="Accessibilité"  click >
+                    <span>Accessibilité</span>
+        </a>
+              </li>
+      </ul>
+    
+
+
+  </nav>
+
+  </div>
+
+      </div>
+    </footer>
+  </div>
+  </div>
+
+    
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"fr\/","currentPath":"node\/57361","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"fr"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"anchor_link\/drupal.anchor_link,better_exposed_filters\/auto_submit,better_exposed_filters\/general,core\/html5shiv,loreal\/css-polyfill,loreal\/fonts,loreal\/global,loreal\/onetrust-prod-fr,loreal\/otpalert,loreal\/polyfill,loreal\/popper,loreal\/reset,loreal\/select2,loreal_euronext\/loreal-euronext,loreal_share_price\/loreal_share_price,loreal_share_price_narrow\/loreal_share_price_narrow,paragraphs\/drupal.paragraphs.unpublished,system\/base,views\/views.ajax,views\/views.module","theme":"loreal","theme_token":null},"ajaxTrustedUrl":{"\/fr\/operation-titres":true,"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"views":{"ajax_path":"\/fr\/views\/ajax","ajaxViews":{"views_dom_id:573f0d18bc8c7684eb65774c16f9a709b6bb5f1a6ab9d16fc3cd9c1c4e268d6f":{"view_name":"share_movements","view_display_id":"block_4","view_args":"","view_path":"\/fr\/operation-titres","view_base_path":null,"view_dom_id":"573f0d18bc8c7684eb65774c16f9a709b6bb5f1a6ab9d16fc3cd9c1c4e268d6f","pager_element":0},"views_dom_id:666d3a73782950900aa509639355ca04e310bf7c4b7762f4d42ba84369ab0eee":{"view_name":"share_movements","view_display_id":"block_3","view_args":"","view_path":"\/fr\/operation-titres","view_base_path":null,"view_dom_id":"666d3a73782950900aa509639355ca04e310bf7c4b7762f4d42ba84369ab0eee","pager_element":0},"views_dom_id:9bc61002d4f3f794a9b5e717c0488246477a93f54996c06a683009739215a4df":{"view_name":"share_movements","view_display_id":"block_2","view_args":"","view_path":"\/fr\/operation-titres","view_base_path":null,"view_dom_id":"9bc61002d4f3f794a9b5e717c0488246477a93f54996c06a683009739215a4df","pager_element":0},"views_dom_id:c884337d1ac9160d548d9745a0472a9e1e53f30f3e3788ce5d520b37732502aa":{"view_name":"share_movements","view_display_id":"block_1","view_args":"","view_path":"\/fr\/operation-titres","view_base_path":null,"view_dom_id":"c884337d1ac9160d548d9745a0472a9e1e53f30f3e3788ce5d520b37732502aa","pager_element":0},"views_dom_id:2f0c6e00f5e009a0b8c136f0c0aa6e6ebf2a8622c880bf0af68b350f928cba79":{"view_name":"share_movements","view_display_id":"block_4","view_args":"","view_path":"\/fr\/operation-titres","view_base_path":null,"view_dom_id":"2f0c6e00f5e009a0b8c136f0c0aa6e6ebf2a8622c880bf0af68b350f928cba79","pager_element":0},"views_dom_id:acb7fe1fba58bc9de76978ade6ad7034ccccb08255db7e3f47fe7c4af21cdf67":{"view_name":"share_movements","view_display_id":"block_3","view_args":"","view_path":"\/fr\/operation-titres","view_base_path":null,"view_dom_id":"acb7fe1fba58bc9de76978ade6ad7034ccccb08255db7e3f47fe7c4af21cdf67","pager_element":0},"views_dom_id:ee1d75f1d9a68defc3549b0bb9bd90d139e6e17bdd7934bfbce1b461fb91b5f3":{"view_name":"share_movements","view_display_id":"block_2","view_args":"","view_path":"\/fr\/operation-titres","view_base_path":null,"view_dom_id":"ee1d75f1d9a68defc3549b0bb9bd90d139e6e17bdd7934bfbce1b461fb91b5f3","pager_element":0},"views_dom_id:26d6a948dece4f194b0e7081e0bc070e0adafe9d0aad589b3f9eb22ebb0d4786":{"view_name":"share_movements","view_display_id":"block_1","view_args":"","view_path":"\/fr\/operation-titres","view_base_path":null,"view_dom_id":"26d6a948dece4f194b0e7081e0bc070e0adafe9d0aad589b3f9eb22ebb0d4786","pager_element":0}}},"loreal_color":{"muse_color":"#BA1240"},"euronext_iframe":{"block_content:8fa17957-5189-4e89-a920-a516ac407fdb":"https:\/\/gateway.euronext.com\/front-customer\/corporate\/page?reference=7f88c1f5c46cddbdd37eb62451e5a6cf1cc41ef701756e51c6ce4fa895d76bc5\u0026authKey=1774d08e030ac1df3189724bbff533c157c0ab20b86028d3e8065fee7e64b704\u0026lang=fr"},"ajax":[],"user":{"uid":0,"permissionsHash":"a4e5f6873a2048386fb530a9692e43ebf7694ed2ea3b8bf92a1772ecf5bd33de"}}</script>
+<script src="/sites/default/files/js/js_RSSJ3cp3BubcIXrKjW3rZ729W9ktuqvx-5s8UXwB6sk.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/object-fit-images/3.2.4/ofi.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/css-vars-ponyfill@2.1.2/dist/css-vars-ponyfill.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.9/js/select2.full.min.js"></script>
+<script src="/sites/default/files/js/js_e-ZJyVRiEIOKHMsFh0Ijbl0O6ZiDiYt8fFOnmeUGJdE.js"></script>
+
+          <script type="text/javascript">
+        cssVars({
+          rootElement: document,
+          shadowDOM: false,
+          include: 'link[rel=stylesheet],style',
+          exclude: '[href*="fonts.googleapis.com"],[href*="select2"], [href*="slick"], [href*="jquery.modal"]',
+          variables: {"muse-color":"#BA1240"},
+          fixNestedCalc: true,
+          onlyLegacy: true,
+          preserveStatic: true,
+          preserveVars: false,
+          silent: false,
+          updateDOM: true,
+          updateURLs: true,
+          watch: false
+        });
+      </script>
+      <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b39a92eb0d","applicationID":"438265727","transactionName":"ZVQDYEBQW0dXUUNfX1weIFdGWFpaGXZFQ0BTXT13XUNQaHBdRVtsdF4TWXBEXFhSV0UbDkBUD1BXQ2VYV1FSXl9eVQRGdF5HWXdRQ19fXA==","queueTime":0,"applicationTime":1845,"atts":"SRMAFghKSEk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

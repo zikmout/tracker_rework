@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> <html lang="en" class="ie8" xmlns:fb="http://ogp.me/ns/fb#" > <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en"itemscope itemtype="http://schema.org/Organization">
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
+<head  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <meta charset="utf-8" />
+    <title>News - Banco Sabadell</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ROBOTS" content="NOINDEX, NOFOLLOW" />
+    <meta content="" name="description" />
+    <meta content="author" name="internetria" />
+   <!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE, NO-STORE">
+    <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="-1">-->
+
+
+
+
+    <link href="/assets/plugins/bootstrap-fileupload/bootstrap-fileupload.css"rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/fancybox/source/jquery.fancybox.css" rel="stylesheet" />
+    <link href="/assets/plugins/revolution_slider/css/rs-style.css" media="screen" rel="stylesheet" >
+    <link href="/assets/plugins/revolution_slider/rs-plugin/css/settings.css" media="screen" rel="stylesheet" >
+    <link href="/assets/plugins/bxslider/jquery.bxslider.css" rel="stylesheet" />
+
+    <link href="/assets/plugins/select2/select2_metro.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/bootstrap-switch/static/stylesheets/bootstrap-switch-metro.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/jquery-tags-input/jquery.tagsinput.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/plugins/bootstrap-tokenfield/bootstrap-tokenfield.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/plugins/jcrop/css/jquery.Jcrop.min.css" rel="stylesheet"/>
+    <link href="/assets/plugins/fineuploader350/fineuploader-3.5.0.css" rel="stylesheet"/>
+    <link href="/assets/plugins/smallcalendar/clndr.css" rel="stylesheet"/>
+
+    
+    <link type="text/css" rel="stylesheet" href="/assets/css_site/noticias.css">
+
+
+    <!-- BEGIN THEME STYLES -->
+    <link href="/assets/css_site/style-metronic.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css_site/style.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css_site/themes/blue.css" rel="stylesheet" type="text/css" id="style_color"/>
+    <link href="/assets/css_site/style-responsive.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/css_site/custom.css" rel="stylesheet" type="text/css"/>
+    <link href="/assets/fonts/font.css" rel="stylesheet"/>
+    <link href="/assets/css_site/responsive_menu.css" rel="stylesheet" type="text/css" />
+    
+     
+    <!--[if IE 8]>
+	<link href="/assets/css_site/ie8.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+
+
+
+    <!-- END THEME STYLES -->
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-16498986-16']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</head> 
+<body>
+    <!-- BEGIN HEADER -->
+    <div class="col-md-12 divAcceptCook">
+		<div class="container divAcceptCookContent">
+			<img width="40" height="40" alt="" src="https://www.bancsabadell.com/StaticFiles/GrupoBS/img/informacion.png" style="float: left; margin-right: 7px"> 
+		    And third-party use cookies to offer our services, collect statistical information and include advertising. If you continue to browse, accept installation and use. You can change the settings or get more information on our <a class="oficialBlue" href="/en/Paginas/cookies-policy">cookies policy.</a>
+		    <button id="btnAcceptCookie" class="btn oficialBlue pull-right margin-top-10" type="submit">Confirm</button>
+		</div>
+	</div>
+
+    <div class="header navbar navbar-default navbar-static-top" style="z-index:100">
+       
+        <div class="front-topbar" style="background: black;text-align:right">
+            <div class="container">
+
+                <div class="col-md-12 col-sm-12 divHeaderLogins">
+                    <ul class="list-unstyled inline">
+                        <li><a href="/es">ESP</a></li>
+                        <li><a href="/ca">CAT</a></li>
+                        <li><a href="/en">ENG</a></li>
+
+                        <!--Por el momento no se logea ni se registra.-->
+                        <li class="sep"><span>|</span></li>
+                            <li><a href="/en/Account/Login">Login</a></li>
+                            <li class="sep"><span>|</span></li>
+                            <li><a href="/en/Account/Register">Register</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+                
+            <div class="navbar-header">
+                <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+                <button class="navbar-toggle btn navbar-btn" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- END RESPONSIVE MENU TOGGLER -->
+                <!-- BEGIN LOGO (you can use logo image instead of text)-->
+               <a href="/en/">
+               	<img src="/assets/img/logo_main_en.jpg" class="imgLogoMainNav" />
+                <!-- END LOGO -->
+                </a>
+            </div>
+
+            <!-- BEGIN TOP NAVIGATION MENU -->
+            <div class="navbar-collapse collapse">
+                 <div class="cabeceraImgLogo imgLogoMain">
+                 	<a href="/en/">
+                     	<img src="/assets/img/logo_main_en.jpg" class="imgLogoMain" />
+                    </a>
+                </div>   
+                <ul class="nav navbar-nav" style="margin-top:14px">
+                    <li><a href="/en/News">News</a></li>
+                    <li><a href="/en/Press-kit/">Press kit</a></li>
+                    <li><a href="/en/Social-Media-Room">Social Media Room</a></li>
+                    <li><a href="/en/Schedule">Schedule</a></li>
+                    <li><a href="/en/Contact">Contact</a></li>
+                    <!--<li class="menu-search margin-top-10">-->
+                    <li class="menu-search">
+                        <span class="sep"></span>
+                        <i class="fa fa-search search-btn textWhite"></i>
+
+                        <div class="search-box" style="display: none;">
+                            <form action="/en/buscar" method="get">
+                                <div class="input-group input-large">
+                                    <input type="text" id="searchBox" class="form-control" name="texto">
+                                    <span class="input-group-btn">
+                                        <button class="btn theme-btn" type="submit">Search</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div> 
+					</li>
+                </ul>
+            </div>
+            <!-- BEGIN TOP NAVIGATION MENU -->
+        </div>
+    </div>
+    <!-- END HEADER -->
+
+
+    <!-- BEGIN PAGE CONTAINER -->
+    <div class="page-container">
+        
+ 
+
+
+<!--
+
+	Configuración RRSS
+
+-->
+<style>
+#___plusone_0{ width:60px !important; }
+#___plusone_1{ width:60px !important; }
+#___plusone_2{ width:60px !important; }
+#___plusone_3{ width:60px !important; }
+#___plusone_4{ width:60px !important; }
+#___plusone_5{ width:60px !important; }
+#___plusone_6{ width:60px !important; }
+#___plusone_7{ width:60px !important; }
+#___plusone_8{ width:60px !important; }
+#___plusone_9{ width:60px !important; }
+#___plusone_10{ width:60px !important; }
+#___plusone_11{ width:60px !important; }
+#___plusone_12{ width:60px !important; }
+#___plusone_13{ width:60px !important; }
+</style>
+<div id="fb-root"></div>
+<script>
+	function isIE () {
+	  var myNav = navigator.userAgent.toLowerCase();
+	  return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+	}
+	
+	if( isIE() != 8){
+		(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_EN/all.js#xfbml=1&appId=631660236921995";
+		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	}
+</script>
+		    	
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+<!--
+
+	BREADCRUMBS
+	
+-->
+<div class="row breadcrumbs"> 
+    <div class="container">
+        <div class="col-md-8 col-sm-8 margin-top-10">
+        
+        
+
+        
+        
+        <a id="0" class="spanBreadcrumb botonActivo" href="/en/News" >All</a>
+         
+             <a class="spanBreadcrumb " id="1"  href="/en/News/foundation" >Foundation</a>
+             <a class="spanBreadcrumb " id="2"  href="/en/News/corporate" >Corporate</a>
+             <a class="spanBreadcrumb " id="3"  href="/en/News/sponsorships" >Sponsorships</a>
+             <a class="spanBreadcrumb " id="4"  href="/en/News/crackdown" >Crackdown</a>
+             <a class="spanBreadcrumb " id="5"  href="/en/News/agreements" >Agreements</a>
+             <a class="spanBreadcrumb " id="6"  href="/en/News/international" >International</a>
+             <a class="spanBreadcrumb " id="7"  href="/en/News/awards-and-certificates" >Awards and certificates</a>
+             <a class="spanBreadcrumb " id="8"  href="/en/News/web-and-technology" >Web and technology</a>
+             <a class="spanBreadcrumb " id="10"  href="/en/News/products" >Products</a>
+         </div>  
+        <div class="col-md-4 col-sm-4 pull-right">
+            <h1 class="pull-right cabeceraBread">News</h1>
+        </div>
+    </div>
+</div>
+ 
+<div class="container min-hight container2">
+    <div class="">
+        <div class="col-md-8 no-right-padding no-left-padding">
+            <div id="noticiascategorias">
+
+            </div>
+            <div class="text-center" id="divPaginacionBoot"> </div>
+        </div>
+
+       
+        <div class="col-md-4 newsdetailright newsdetailsidebar no-space">
+            <div class="espacioIzq newsdetailsidebar">
+                <h4 class="no-space margin-bottom-10 no-border textBlack"> 
+                    Featured news
+                </h4>
+                <div class="sideBarBS no-space"> 
+                    <div class="recent-news  margin-top-10" style="min-height: 200px;" id="noticiasdestacadas"></div>
+                </div>
+                <h4 class="no-space margin-bottom-10 no-border textBlack margin-top-10"> 
+                
+                <!--<h4 class="margin-left-20 no-space margin-bottom-10 no-border textBlack">--> 
+                    Banc Sabadell Blog
+                </h4>
+                <div class="sideBarBS no-space"> 
+                    <div class="recent-news margin-bottom-25" style="min-height: 200px;" id="blog"></div>
+                </div>
+                <h4 class="no-space margin-bottom-10 no-border textBlack margin-top-10"> 
+                    Sabadellprensa last Tweets
+                </h4>
+                <div class="sideBarBS no-space "> 
+                    <div class="recent-news margin-bottom-10 backWhite" style="min-height: 200px;" id="ultimostweets"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        
+        <div id="layout-4c-contact">
+        	<div style="padding:20px 25px 20px 25px;">
+	        	<div class="btn-group dropup fLeft">
+	                <button class="btn btn-default  btn-xs" type="button">Other group websites</button>
+	                <button data-toggle="dropdown" class="btn btn-default dropdown-toggle  btn-xs" type="button"><i class="fa fa-angle-up"></i></button> 
+	                <ul role="menu" class="dropdown-menu">
+	                	<li><a href="https://www.bancsabadell.com/cs/Satellite/SabAtl/Particulares/1191332204474/en/" target="_blank">Banco Sabadell</a></li>
+	                    <li><a href="https://www.grupbancsabadell.com/en/" target="_blank">Banco Sabadell Group</a></li>
+	                    <li><a href="http://blog.bancsabadell.com/" target="_blank">Blog</a></li>
+	                    <li><a href="https://www.facebook.com/bancosabadell" target="_blank">Facebook</a></li>
+	                    <li><a href="http://www.youtube.com/BancSabadell" target="_blank">Youtube</a></li>
+	                    <li><a href="http://www.flickr.com/photos/bancosabadell" target="_blank">Flickr</a></li>
+	                    <li><a href="http://www.slideshare.net/bancosabadell" target="_blank">Slideshare</a></li>
+	                </ul>
+	            </div> &nbsp; 
+	            <small>
+		            
+                    <a href="https://www.bancsabadell.com/cs/Satellite/SabAtl/Customer-Service/GBS_Generico_FA/1191335625947/1191332198208/en/" target="_blank">Customer Service</a> &nbsp;  
+		            <a href="/cs/Satellite/SabAtl/%3Cspan-style=%22font-weight:bold;-color:%23000000;%22%3EInformacion-a-clientes%3C-span%3E/GBS_Generico_FA/1183016790073/1191332198208/es/" target="_blank">Customer information</a> &nbsp;  
+		            <a href="https://www.grupbancsabadell.com/en/XTD/INDEX/?url=/en/GRUPO/CUMPLIMIENTO_NORMATIVO/MIFID/" target="_blank">MIFID</a> &nbsp;  
+		            <a href="https://www.bancsabadell.com/cs/Satellite/SabAtl/Legal-notice/GBS_Generico_FA/1191335615354/1191332198208/en/" target="_blank">Disclaimer</a> &nbsp;  
+		            <a href="https://www.bancsabadell.com/cs/Satellite/SabAtl/Privacy-Policy/GBS_Generico_FA/1191335615527/1191332198208/en/" target="_blank">Privacy Policy</a> &nbsp;  
+		            <a href="https://www.bancsabadell.com/cs/Satellite/SabAtl/Cookie-Policy/GBS_Generico_FA/2000011548819/1191332198208/en/" target="_blank">Cookies Policy</a> &nbsp;  
+		            <a href="https://www.bancsabadell.com/cs/Satellite/SabAtl/Security/GBS_Generico_FA/1191335615770/1191332198208/en/" target="_blank">Security</a>
+	            </small>
+					        	
+        	</div> 
+        	<div >
+        		<div class="fLeft">
+	        		<img src="/assets/img/logo_foot2.png" width="90" class="footerLogo2" style="margin-left:5px;">
+        		</div>
+        		<div class="fRight">
+	        		<img src="/assets/img/logo_foot1.jpg" height="70" class="footerLogo1"style="margin:1px 10px 1px 5px;">
+        		</div>
+        		<small style="margin:5px;">
+                    Banco de Sabadell, S.A. Avenida Óscar Esplá, 37, 03007 Alicante, registered with the Mercantile Register in Alicante, tome 4070, folio 1, page A-156980, Fiscal Identification Number (NIF) A08000143.<br />
+                    Financial institution under the supervision of the Bank of Spain and registered in the Special Administrative Register under number 0081<br />
+                    Email address <a href="mailto:info@bancsabadell.com">info@bancsabadell.com</a> - Banco de Sabadell, SA, 2014. All rights reserved.<br /><br />
+                </small>
+                    
+        	</div>
+        </div>
+    </div>
+    <!-- END PAGE CONTAINER -->
+
+    <!--[if lt IE 9]>
+    <script src="/assets/plugins/respond.min.js"></script>
+    <script src="/assets/plugins/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="/assets/plugins/jquery-1.10.2.min.js" type="text/javascript"></script>
+    
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $.ajaxSetup({ cache: false });
+        });
+    </script>
+    <script src="/assets/plugins/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/hover-dropdown.js" type="text/javascript"></script>
+    <script src="/assets/plugins/back-to-top.js" type="text/javascript"></script>
+    <script src="/assets/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/handlebars-v1.1.2.js" type="text/javascript"></script>
+    <script src="/assets/plugins/select2/select2.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/bootstrap-switch/static/js/bootstrap-switch.min.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="/assets/plugins/fancybox/source/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="/assets/plugins/revolution_slider/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script type="text/javascript" src="/assets/plugins/bxslider/jquery.bxslider.min.js"></script>
+    <script src="/assets/plugins/jquery-validation/dist/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/jquery-form/jquery.form.min.js" type="text/javascript" ></script>
+    <script src="/assets/plugins/bootstrap-tokenfield/bootstrap-tokenfield.min.js" type="text/javascript" ></script>
+    <script src="/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js" type="text/javascript"></script>
+    <script src="/assets/plugins/bootstrap-datepicker/js/locales/bootstrap-datepicker.es.js" type="text/javascript"></script>
+    <script src="/assets/plugins/combodate/moment.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/combodate/es.js" type="text/javascript"></script>
+    <script src="/assets/plugins/combodate/combodate.js" type="text/javascript"></script>
+    <script src="/assets/plugins/smallcalendar/clndr.min.js" type="text/javascript"></script>
+    <script src="/assets/scripts/app_site.js"></script>
+    <script src="/assets/scripts/general-validation.js" type="text/javascript" ></script>
+    <script src="/assets/scripts/functions.js" type="text/javascript" ></script>
+    <script src="/assets/plugins/bootstrap-toastr/toastr.min.js" type="text/javascript"></script>
+    <script src="/assets/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
+    
+    <script src="/assets/plugins/jquery.cookie.min.js" type="text/javascript"></script>
+
+
+    
+
+    
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            App.init();
+            
+            var aviso_nueva_web = readCookie('aviso_nueva_web'); 
+			if((!aviso_nueva_web || (aviso_nueva_web == '')) && $('.divSplashPage').attr('data-isvisible') == 'True' ) { 
+			    $('.divSplashPage').fadeIn('slow');
+			    createCookie('aviso_nueva_web', 1, 1);
+			}
+			
+			var accept_cookie = readCookie('accept_cookie');
+			if(!accept_cookie || (accept_cookie == '')) {
+			    $('.divAcceptCook').fadeIn('slow');
+			}
+			
+			$('#btnAcceptCookie').click(function(){
+				$('.divAcceptCook').fadeOut('slow');
+				createCookie('accept_cookie', 1, 365);
+			});
+
+            
+    tpl_ultimas_noticias = Handlebars.compile($("#html_ultimas_noticias").html());
+    tpl_noticias = Handlebars.compile($("#html_noticias").html());
+
+    tpl_blog = Handlebars.compile($("#html_blog").html());
+    tpl_ultimos_tweets = Handlebars.compile($("#html_ultimos_tweets").html());
+
+    
+    loadNoticias(0, 1);
+    loadblog();
+    loadUltimosTweets("/en/Twitter/GetUltimosTweets?numelementos=4&amp;idioma=en");
+    
+    loadUltimasNoticias("/en/ajax/GetDestacados?numelementos=3");
+    
+    
+    /*
+    	Configuración Google+
+    */
+	window.___gcfg = {lang: 'es-ES'};	
+	(function() {
+	    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+	    po.src = 'https://apis.google.com/js/plusone.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+	  })();
+
+;
+            $('.search-btn').click(function(){  $('#searchBox').focus(); });
+            
+               
+			
+        });
+		function createCookie(name,value,days) {
+			if (days) {
+			    var date = new Date();
+			    date.setTime(date.getTime()+(days*24*60*60*1000));
+			    var expires = "; expires="+date.toGMTString();
+			}
+			else var expires = "";
+			document.cookie = name+"="+value+expires+"; path=/";
+		}
+		
+		function readCookie(name) {
+			var nameEQ = name + "=";
+			var ca = document.cookie.split(';');
+			for(var i=0;i < ca.length;i++) {
+			    var c = ca[i];
+			    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+			    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+			}
+			return null;
+		}
+    </script>
+     
+
+<script src="/assets/scripts/bootstrap-paginator-master/src/bootstrap-paginator.js"></script>
+<script src="/assets/scripts/dataload.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+    var tpl_ultimas_noticias, tpl_noticias, tpl_blog, tpl_ultimos_tweets;
+    var pp = 5;
+    var categoria_actual = "0", pagina_actual = 1;
+   
+    var optBlock = { 
+     	message: 'Loading',
+     	overlayCSS:  { 
+	        backgroundColor: '#000', 
+	        opacity:         0, 
+	        cursor:          'wait',
+	        border: 'none'
+        },
+        css: {  
+	        color:          '#0198CF', 
+	        border:         '1px solid #CCC', 
+	        backgroundColor:'#F0F0F0', 
+	        cursor:         'wait',
+	        margin: '10px', padding:'10px'
+	    }, 
+    };
+    
+    function loadblog() {
+        $.ajax({
+			dataType: "json",
+			url: "https://api.typepad.com/blogs/6a00e00980104088330120a7c2354b970b/post-assets.json?max-results=5",
+			cache: true,
+			success: function(data){
+				$.each( data.entries, function( i, item ) {
+					var anyo = item.published.substring(0,4);
+					var mes = item.published.substring(5,7);
+					var dia = item.published.substring(8,10);
+					var datos = {
+	            		titulo: item.title.replace("%","%25"),
+	            		url: item.permalinkUrl,
+	            		categoria: item.categories[0],
+	            		fecha: dia + "/" + mes + "/" + anyo
+	            	};
+					$('#blog').append(tpl_blog(datos));
+				});
+			}
+		});
+    }
+     
+
+    function loadNoticias(categoria, pagina) {
+        //console.log("categoria: " + categoria);
+
+        categoria_actual = categoria;
+        pagina_actual = pagina;
+        var esTag = "";
+        var tag = "";
+        console.log("esTag = " + esTag);
+        console.log("tag = " + tag);
+        console.log("esTag = " + esTag);
+
+        if (esTag != undefined && esTag != null && esTag == "True" && tag != undefined && tag != null) {
+            categoria_actual = tag;
+        }
+        console.log("categoria_actual = " + categoria_actual);
+        $('#noticiascategorias').block(optBlock); 
+        
+        
+        $.getJSON("/en/ajax/GetByCategoria/" + categoria_actual, { "numpagina": pagina, "numelementos": pp }, function (data) {
+            if (data.totalelementos != 0) {
+            	$('#noticiascategorias').html(''); 
+            	$.each( data.noticias, function( i, item ) { 
+            		var find = '%';
+            		var re = new RegExp(find, 'g'); 
+	            	var datos = {
+	            		tituloClean: item.titulo.replace(re,"%25"),
+	            		titulo: item.titulo,
+	            		rutaImagen: item.rutaImagen,
+	            		URL: item.URL,
+	            		nombrecategoria: item.nombrecategoria,
+	            		urlcategoria: item.urlcategoria,
+	            		fecha: item.fecha,
+	            		anyo: item.anyo, 
+	            		mes: item.mes,
+	            		pie:item.pie,
+	            		entradilla: item.entradilla
+	            	};
+	                 $('#noticiascategorias').append(tpl_noticias(datos));
+            	});
+               
+                generaPaginacion(data.totalelementos, pp, data.pagina);
+                		
+            }else{
+	            
+	             $('#noticiascategorias').append('No news in this category.');
+            }
+            
+            $('#noticiascategorias').unblock(); 
+        }).fail(function () {
+            $('#noticiascategorias').unblock();
+            console.log("error");
+        });
+        
+        return false;
+    }
+
+    function generaPaginacion(total, pp, p) {
+    
+        var paginas = Math.ceil(total / pp);
+        var optionsPager = {
+	        currentPage: pagina_actual,
+	        alignment: "center", 
+	        totalPages: paginas,
+	            onPageClicked: function(e,originalEvent,type,page){
+	               loadNoticias(categoria_actual, page);  
+	            }
+	    } 
+	    $('#divPaginacionBoot').bootstrapPaginator(optionsPager);
+		
+		gapi.plusone.go();  
+        FB.XFBML.parse();
+        twttr.widgets.load();
+        
+    }
+
+</script>
+
+    
+    <script id="html_ultimas_noticias" type="text/x-handlebars-template">
+    <div class="col-md-12 no-space backWhite margin-bottom-20 paddingInf">            
+        
+        {{#if rutaImagen}}
+            <img src="{{rutaImagen}}" alt="" width="100%" class="img-responsive"  style="display:none" onload="$(this).fadeIn()">
+        {{else}}
+            <img src="/assets/img/BS-default.jpg" alt="" width="100%" class="img-responsive">
+        {{/if}}
+            
+            <div class="col-md-12 margin-bottom-20">
+            	<a class="btn btn_seccion_over marginCatDest absolute" href="/en/News/{{urlcategoria}}">{{nombrecategoria}}</a>
+				
+                <br><h4 class="oficialBlue no-space"><a href="/en/News/{{URL}}">{{titulo}}</a></h4>
+				<hr class="blog-post-sep hrMin">
+        	<div class="text-muted text-right">{{fecha}}</div>
+			</div>
+			 
+			<div class="fLeft">  
+		    <div style="margin:0px 0 0 10px" class="fb-share-button" data-href="http://prensa.bancsabadell.com/en/News/{{URL}}" data-type="button_count"></div> 
+		    <!--[if IE 8]> 
+		   	 <a style="background-color:#4c66a4;padding:3px;color:white;margin-left:10px" href="https://www.facebook.com/sharer/sharer.php?u=http://prensa.bancsabadell.com/en/News/{{URL}}">Compartir</a>
+		   <![endif]-->
+		</div> 
+		    
+	    <iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.html?text={{tituloClean}}&url=http://prensa.bancsabadell.com/en/News/{{URL}}&via=SabadellPress" style="width:80px; height:20px;margin: 0 10px 0 10px"></iframe>
+	    	
+		<g:plusone size="medium" data-width="60" href="http://prensa.bancsabadell.com/en/News/{{URL}}"></g:plusone>
+		<!--[if IE 8]> 
+			<div class="g-plusone" data-size="medium" href="http://prensa.bancsabadell.com/en/News/{{URL}}"></div>
+		<![endif]-->	 
+    </div>
+</script>
+    <script id="html_blog" type="text/x-handlebars-template">
+    <div class="col-md-12 no-space boxRelacionadasContent margin-top-10 paddingInf">
+    	<div class="col-md-12">
+    		<br>
+            <a href="{{url}}" > 
+                <h4 class="oficialBlue no-space">{{titulo}}</h4> 
+            </a>
+    	</div>
+    	<hr class="blog-post-sep hrMin">
+    	<div class="col-md-12">	
+    		<div class="text-muted text-right">{{fecha}}</div>
+    	</div>
+    	<div class="col-md-12 no-space">
+    		<a href="http://blog.bancsabadell.com/{{categoria}}" class="btn btn_seccion_over font12 backGris">{{categoria}}</a>
+    	</div>
+    	<br>
+    	
+    	<div class="fLeft "> 
+	    	<div style="margin:0px 0 0 10px" class="fb-share-button" data-href="{{url}}" data-type="button_count"></div> 
+	    </div> 
+    	
+    	<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.html?url={{url}}&text={{titulo}}&via=SabadellPress" style="width:80px; height:20px;margin: 0 10px 0 10px"></iframe>
+	    
+	    <g:plusone size="medium" data-width="60" href="{{url}}"></g:plusone>
+	    
+	</div>
+</script>
+
+    <script id="html_ultimos_tweets" type="text/x-handlebars-template">	
+	<hr class="blog-post-sep hrMin" style="margin-top:0px;">
+    <!--<div class="row no-space  margin-top-10 margin-bottom-20">-->
+    <div class="row no-space margin-right-10 margin-left-10 margin-top-10 margin-bottom-20">
+    	<div class="col-md-3 no-space col-sm-1 col-xs-1 col-mini-3">		 	
+        {{#if UsuImage}}
+            <a  href="https://twitter.com/BSpress" target="_blank" title="Ir al perfil de BSpress" ><img src="{{UsuImage}}" alt="{{Text}}"></a>
+            {{else}}
+            <img src="/assets/img/default_foto.png" alt="" width="100%" class="img-responsive">
+        {{/if}}
+    	</div>
+        <div class="col-md-9 col-sm-11 col-xs-11 col-mini-9" style="padding-left:5px;">
+        	<a  href="https://twitter.com/{{UsuScreenName}}" target="_blank" title="Ir al perfil de[en] {{UsuScreenName}}" ><h4 class="oficialBlue no-space">{{UsuScreenName}}</h4></a>
+			 <div>
+			     <a style="color:black;" href="https://twitter.com/BSpress/status/{{IdTweet}}" target="_blank" title="Ir al post">
+                	{{Text}}
+                  </a>
+              </div>
+              
+              <div >
+              <a class="iconTwitter" id="replaytweet" href="https://twitter.com/intent/tweet?in_reply_to={{IdTweet}}" title="Responder" ></a>
+              <a class="iconTwitter" id="retweet" href="https://twitter.com/intent/retweet?tweet_id={{IdTweet}}" title="Retwittear" ></a>
+              <a class="iconTwitter" id="favouritetweet" href="https://twitter.com/intent/favorite?tweet_id={{IdTweet}}" title="Favorito"></a>
+              </div>
+		</div>
+    </div>
+</script> 
+
+
+<script id="html_noticias" type="text/x-handlebars-template">
+    <div class="row row_item_new no_border_top no-space margin-bottom-20">
+        <div class="col-md-12 no-space">
+        
+            {{#if rutaImagen}}
+                <img alt="" src="{{rutaImagen}}" width="100%" class="img-responsive displayInline">
+            {{else}}
+                <img src="/assets/img/BS-default.jpg" width="100%" class="img-responsive displayInline">
+            {{/if}}
+        </div> 
+        <div class="col-md-12 no-space">
+        	<a class="btn btn_seccion_over  marginCatNot absolute" href="/en/News/{{urlcategoria}}">{{nombrecategoria}}</a>
+        
+            <a class="pieNoticia">{{pie}}</a>
+                     
+        	<div class="col-md-12">
+                <h2 class="oficialBlue"><a href="/en/News/{{anyo}}/{{mes}}/{{URL}}">{{titulo}}</a></h2>
+        	</div>
+		    <div class="text-muted text-right margin-right-10 margin-top-10">  {{fecha}} </div>
+		   
+		    <div class="col-md-12 margin-bottom-10">
+		    {{{entradilla}}}
+		    </div>
+
+		    <hr class="blog-post-sep no-space">
+		    
+		    <div class="col-md-12 no-space">
+			    	
+			    <div class="col-md-6 col-xs-6 boton-colxxs-i no-space margin-bottom-10 margin-top-10">
+			    	<a class="btn btn_enviar btnSendMail" href="mailto:someone@example.com?Subject={{titulo}}">Send email</a>
+			    </div>
+		    	
+		    	
+		    		
+		    	<div class="col-md-6 col-xs-6 boton-colxxs-d no-space text-right margin-bottom-10 margin-top-10">
+		    		
+		    		<a href="/en/News/{{anyo}}/{{mes}}/{{URL}}" class="btn btn_leer">Read  </a>
+		    	</div> 
+		    	 
+		    	<div class="text-right fRight paddingInf botonesRRSS margin-top-10" style="width: 265px;">
+		    			
+		    		<iframe allowtransparency="true" frameborder="0" scrolling="no" src="https://platform.twitter.com/widgets/tweet_button.html?text={{tituloClean}}&url=http://prensa.bancsabadell.com/en/News/{{anyo}}/{{mes}}/{{URL}}&via=SabadellPress" style="width:80px; height:20px;margin: 0 10px 0 10px"></iframe>
+			    	
+				    <g:plusone size="medium" href="http://prensa.bancsabadell.com/en/News/{{anyo}}/{{mes}}/{{URL}}"></g:plusone>
+				   	<!--[if IE 8]> 
+				   	 <div class="g-plusone" data-size="medium" href="http://prensa.bancsabadell.com/en/News/{{anyo}}/{{mes}}/{{URL}}"></div>
+				   <![endif]-->
+				   	 
+				   	
+		    		<div class="fLeft" style="margin:0px 10px 0 0px"> 
+				   	
+				    	<div class="fb-share-button" data-href="http://prensa.bancsabadell.com/en/News/{{anyo}}/{{mes}}/{{URL}}" data-type="button_count"></div> 
+				    	<!--[if IE 8]> 
+				   	 <a style="background-color:#4c66a4;padding:3px;color:white" href="https://www.facebook.com/sharer/sharer.php?u=http://prensa.bancsabadell.com/en/News/{{anyo}}/{{mes}}/{{URL}}">Compartir</a>
+				   <![endif]-->
+				    	
+				    </div>
+		    	
+			    </div>
+		    </div>
+		    
+	    </div>
+    </div>
+</script>
+
+    
+    
+    <!-- END PAGE LEVEL JAVASCRIPTS -->
+<script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1285380796"></script>
+</body>
+</html>

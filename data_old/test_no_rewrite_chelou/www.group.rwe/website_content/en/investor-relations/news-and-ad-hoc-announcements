@@ -1,0 +1,5617 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="msapplication-config" content="none" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <meta name="description" content="RWE is transforming into a leading integrated renewables and conventional power generator. Here, you can find all the relevant news and ad-hoc announcements for investors, as well as your own personal contact person. ">
+    <meta name="date" content="0001-01-01" scheme="YYYY-MM-DD">
+        <meta name="robots" content="index, follow">
+            <meta name="keywords" content="RWE, Group, energy, Europe, company, Essen, mining, industry, electricity, gas, supply, networks, investor, relations, corporate, governance, tax, IR, ad-hoc, shares, profits, capital, market, shareholders, bonds, dividends, news, announcements ">
+            <meta name="author" content="RWE">
+    
+
+    <meta property="og:title" content="Announcements " />
+    <meta property="og:description" content="RWE is transforming into a leading integrated renewables and conventional power generator. Here, you can find all the relevant news and ad-hoc announcements for investors, as well as your own personal contact person. " />
+    <meta property="og:image" content="https://www.group.rwe/-/media/RWE/Logos/RWE_Logo_Social_Image_8.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+
+	    <link rel="apple-touch-icon" sizes="180x180" href="/Areas/RweInternet/Content/Favicons/apple-touch-icon.png">
+	    <link rel="icon" type="image/png" sizes="32x32" href="/Areas/RweInternet/Content/Favicons/favicon-32x32.png">
+	    <link rel="icon" type="image/png" sizes="16x16" href="/Areas/RweInternet/Content/Favicons/favicon-16x16.png">
+	    <link rel="mask-icon" href="/Areas/RweInternet/Content/Favicons/safari-pinned-tab.svg" color="#5bbad5">
+	    <link rel="shortcut icon" href="/Areas/RweInternet/Content/Favicons/favicon.ico">
+
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/Areas/RweInternet/Content/Favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Announcements </title>
+
+    <style data-tpl="inline-style" data-tpl-for="above-the-fold" type="text/css">/*!
+ * frontend
+ * name: rwe /  innogy-web,
+ * buildDate: Mon Apr 08 2019 18:31:39 GMT+0200 (CEST),
+ * packageVersion: 3.13.0
+ */
+@font-face {
+    /*font-family: light;
+    src: url(/fonts/RWEWEB-Light?#iefix) format("eot"),url(/fonts/RWEWEB-Light.woff2) format("woff2"),url(/fonts/RWEWEB-Light.woff) format("woff"),url(/fonts/RWEWEB-Light.svg) format("svg");
+    font-weight: normal;
+    font-style: normal*/
+}
+
+@font-face {
+    /*font-family: regular;
+    src: url(/fonts/RWEWEB-Regular?#iefix) format("eot"),url(/fonts/RWEWEB-Regular.woff2) format("woff2"),url(/fonts/RWEWEB-Regular.woff) format("woff"),url(/fonts/RWEWEB-Regular.svg) format("svg");
+    font-weight: normal;
+    font-style: normal*/
+}
+
+@font-face {
+    /*font-family: medium;
+    src: url(/fonts/RWEWEB-Medium?#iefix) format("eot"),url(/fonts/RWEWEB-Medium.woff2) format("woff2"),url(/fonts/RWEWEB-Medium.woff) format("woff"),url(/fonts/RWEWEB-Medium.svg) format("svg");
+    font-weight: normal;
+    font-style: normal*/
+}
+
+@font-face {
+    /*font-family: bold;
+    src: url(/fonts/RWEWEB-Bold?#iefix) format("eot"),url(/fonts/RWEWEB-Bold.woff2) format("woff2"),url(/fonts/RWEWEB-Bold.woff) format("woff"),url(/fonts/RWEWEB-Bold.svg) format("svg");
+    font-weight: normal;
+    font-style: normal*/
+}
+
+@font-face {
+    font-family: "rwe-iconfont";
+    src: url(/fonts/rwe-iconfont.eot?v=3.13.0);
+    src: url(/fonts/rwe-iconfont.eot?#iefix&v=3.13.0) format("eot"),url(/fonts/rwe-iconfont.woff?v=3.13.0) format("woff"),url(/fonts/rwe-iconfont.ttf?v=3.13.0) format("truetype"),url(/fonts/rwe-iconfont.svg#rwe-iconfont&v=3.13.0) format("svg");
+    font-weight: normal;
+    font-style: normal
+}
+
+.clearfix:after, .clearfix:before, .container-fluid:after, .container-fluid:before, .container:after, .container:before, .row:after, .row:before {
+}
+
+.clearfix:after, .container-fluid:after, .container:after, .row:after {
+}
+
+html {
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+}
+
+audio:not([controls]) {
+}
+
+[hidden], template {
+}
+
+a {
+}
+
+    a:active, a:hover {
+    }
+
+abbr[title] {
+}
+
+b, strong {
+}
+
+dfn {
+}
+
+h1 {
+}
+
+mark {
+}
+
+small {
+}
+
+sub, sup {
+}
+
+sup {
+}
+
+sub {
+}
+
+img {
+}
+
+svg:not(:root) {
+}
+
+figure {
+}
+
+hr {
+}
+
+pre {
+}
+
+code, kbd, pre, samp {
+}
+
+button, input, optgroup, select, textarea {
+}
+
+button {
+}
+
+button, select {
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+}
+
+    button[disabled], html input[disabled] {
+    }
+
+    button::-moz-focus-inner, input::-moz-focus-inner {
+    }
+
+input {
+}
+
+    input[type=checkbox], input[type=radio] {
+    }
+
+    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    }
+
+    input[type=search] {
+    }
+
+        input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+        }
+
+fieldset {
+}
+
+legend {
+}
+
+textarea {
+}
+
+optgroup {
+}
+
+table {
+}
+
+td, th {
+}
+
+*, :after, :before {
+}
+
+html {
+}
+
+body {
+}
+
+button, input, select, textarea {
+}
+
+img {
+}
+
+.img-responsive {
+}
+
+[role=button] {
+}
+
+.h4, .h5, .h6, h4, h5, h6 {
+}
+
+p {
+}
+
+.small, small {
+}
+
+.mark, mark {
+}
+
+.text-left {
+}
+
+.text-right {
+}
+
+.text-center {
+}
+
+.text-justify {
+}
+
+.text-nowrap {
+}
+
+.text-lowercase {
+}
+
+.text-uppercase {
+}
+
+.text-capitalize {
+}
+
+.text-muted {
+}
+
+ol, ul {
+}
+
+    ol ol, ol ul, ul ol, ul ul {
+    }
+
+.list-unstyled {
+}
+
+dl {
+}
+
+dd, dt {
+}
+
+dt {
+}
+
+dd {
+}
+
+abbr[data-original-title], abbr[title] {
+}
+
+blockquote {
+}
+
+    blockquote ol:last-child, blockquote p:last-child, blockquote ul:last-child {
+    }
+
+    blockquote .small, blockquote footer, blockquote small {
+    }
+
+        blockquote .small:before, blockquote footer:before, blockquote small:before {
+        }
+
+    .blockquote-reverse, blockquote.pull-right {
+    }
+
+        .blockquote-reverse .small:before, .blockquote-reverse footer:before, .blockquote-reverse small:before, blockquote.pull-right .small:before, blockquote.pull-right footer:before, blockquote.pull-right small:before {
+        }
+
+        .blockquote-reverse .small:after, .blockquote-reverse footer:after, .blockquote-reverse small:after, blockquote.pull-right .small:after, blockquote.pull-right footer:after, blockquote.pull-right small:after {
+        }
+
+address {
+}
+
+.container, .container-fluid {
+}
+
+.row {
+}
+
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+}
+
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+}
+
+.col-xs-1 {
+}
+
+.col-xs-2 {
+}
+
+.col-xs-3 {
+}
+
+.col-xs-4 {
+}
+
+.col-xs-5 {
+}
+
+.col-xs-6 {
+}
+
+.col-xs-7 {
+}
+
+.col-xs-8 {
+}
+
+.col-xs-9 {
+}
+
+.col-xs-10 {
+}
+
+.col-xs-11 {
+}
+
+.col-xs-12 {
+}
+
+.col-xs-pull-0 {
+}
+
+.col-xs-pull-1 {
+}
+
+.col-xs-pull-2 {
+}
+
+.col-xs-pull-3 {
+}
+
+.col-xs-pull-4 {
+}
+
+.col-xs-pull-5 {
+}
+
+.col-xs-pull-6 {
+}
+
+.col-xs-pull-7 {
+}
+
+.col-xs-pull-8 {
+}
+
+.col-xs-pull-9 {
+}
+
+.col-xs-pull-10 {
+}
+
+.col-xs-pull-11 {
+}
+
+.col-xs-pull-12 {
+}
+
+.col-xs-push-0 {
+}
+
+.col-xs-push-1 {
+}
+
+.col-xs-push-2 {
+}
+
+.col-xs-push-3 {
+}
+
+.col-xs-push-4 {
+}
+
+.col-xs-push-5 {
+}
+
+.col-xs-push-6 {
+}
+
+.col-xs-push-7 {
+}
+
+.col-xs-push-8 {
+}
+
+.col-xs-push-9 {
+}
+
+.col-xs-push-10 {
+}
+
+.col-xs-push-11 {
+}
+
+.col-xs-push-12 {
+}
+
+.col-xs-offset-0 {
+}
+
+.col-xs-offset-1 {
+}
+
+.col-xs-offset-2 {
+}
+
+.col-xs-offset-3 {
+}
+
+.col-xs-offset-4 {
+}
+
+.col-xs-offset-5 {
+}
+
+.col-xs-offset-6 {
+}
+
+.col-xs-offset-7 {
+}
+
+.col-xs-offset-8 {
+}
+
+.col-xs-offset-9 {
+}
+
+.col-xs-offset-10 {
+}
+
+.col-xs-offset-11 {
+}
+
+.col-xs-offset-12 {
+}
+
+.center-block {
+}
+
+.pull-right {
+}
+
+.pull-left {
+}
+
+.hide {
+}
+
+.show {
+}
+
+.invisible {
+}
+
+.text-hide {
+}
+
+.hidden {
+}
+
+.affix {
+}
+
+.ps-container {
+}
+
+    .ps-container.ps-active-x > .ps-scrollbar-x-rail, .ps-container.ps-active-y > .ps-scrollbar-y-rail {
+    }
+
+    .ps-container.ps-in-scrolling {
+    }
+
+        .ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+        }
+
+            .ps-container.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+            }
+
+        .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+        }
+
+            .ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+            }
+
+    .ps-container > .ps-scrollbar-x-rail {
+    }
+
+        .ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+        }
+
+        .ps-container > .ps-scrollbar-x-rail:active > .ps-scrollbar-x, .ps-container > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
+        }
+
+    .ps-container > .ps-scrollbar-y-rail {
+    }
+
+        .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+        }
+
+        .ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y, .ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+        }
+
+    .ps-container:hover.ps-in-scrolling {
+    }
+
+        .ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail {
+        }
+
+            .ps-container:hover.ps-in-scrolling.ps-x > .ps-scrollbar-x-rail > .ps-scrollbar-x {
+            }
+
+        .ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {
+        }
+
+            .ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+            }
+
+    .ps-container:hover > .ps-scrollbar-x-rail, .ps-container:hover > .ps-scrollbar-y-rail {
+    }
+
+        .ps-container:hover > .ps-scrollbar-x-rail:hover {
+        }
+
+            .ps-container:hover > .ps-scrollbar-x-rail:hover > .ps-scrollbar-x {
+            }
+
+        .ps-container:hover > .ps-scrollbar-y-rail:hover {
+        }
+
+            .ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {
+            }
+
+.float-right, .float-xs-right {
+}
+
+.float-left, .float-xs-left {
+}
+
+.float-none, .float-xs-none {
+}
+
+.container {
+}
+
+    .container-fluid, .container-fluid .container, .container .container {
+    }
+
+        .container-fluid > .row {
+        }
+
+[data-tpl*=grid-form] .container {
+}
+
+[data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]) {
+}
+
+[data-tpl*=grid] > .container > .content:not(:first-child), [data-tpl*=grid] > .container > .row > .grid-content:not(:first-child) {
+}
+
+main > [data-tpl*=grid]:last-child:not([data-tpl=grid-bas-07]):not([data-tpl=grid-bas-01][class*=color-background]) {
+}
+/*#################################################################*/
+/*everything with #main-footer already integrated into _footer.scss*/
+/*#################################################################*/
+/*#main-footer [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]),*/
+main [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]) {
+}
+    /*#main-footer [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]) [data-tpl*=grid],*/
+    main [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]) [data-tpl*=grid] {
+    }
+/*#main-footer,*/
+main {
+}
+
+#main-footer {
+}
+
+body, html {
+}
+
+h1, h2, h3 {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+strong {
+}
+
+em {
+}
+
+ol, ul {
+}
+
+.accordion-item ul li {
+}
+
+    .accordion-item ul li:before {
+    }
+
+ol {
+}
+
+    ol li {
+    }
+
+        ol li:before {
+        }
+
+a {
+}
+
+    a:active {
+    }
+
+figcaption, small {
+}
+
+.font--light {
+}
+
+.font--regular {
+}
+
+.font--medium {
+}
+
+.font--bold {
+}
+
+.color-background-1 {
+}
+
+.color-background-2 {
+}
+
+.color-background-3 {
+}
+
+.color-background-4 {
+}
+
+.color-background-5 {
+}
+
+.color-background-6 {
+}
+
+.color-background-7 {
+}
+
+.color-background-8 {
+}
+
+.color-background-none {
+}
+
+[class*=color-background-] {
+}
+
+.color-background-none {
+}
+
+.color-background-2, .color-background-5, .color-background-none, .color-background-partial {
+}
+
+.color-teaser-1 {
+}
+
+.color-teaser-2 {
+}
+
+.color-teaser-3 {
+}
+
+.color-teaser-4 {
+}
+
+.color-teaser-5 {
+}
+
+[class*=color-teaser], [class*=color-teaser] > header:after, [class*=color-teaser] a:not(.btn), [class*=color-teaser] a:not(.btn):hover {
+}
+
+.color-teaser-1, .color-teaser-1 a:not(.btn), .color-teaser-1 a:not(.btn):hover, .color-teaser-1 > header:after, .color-teaser-2, .color-teaser-2 a:not(.btn), .color-teaser-2 a:not(.btn):hover, .color-teaser-2 > header:after {
+}
+
+.color-font-1 {
+}
+
+.color-font-2 {
+}
+
+.color-font-3 {
+}
+
+.color-font-4 {
+}
+
+.color-font-5 {
+}
+
+.color-font-6 {
+}
+
+.color-font-7 {
+}
+
+.color-font-8 {
+}
+
+.color-font-9 {
+}
+
+.color-line-1 {
+}
+
+.color-line-2 {
+}
+
+.color-line-3 {
+}
+
+.color-line-4 {
+}
+
+[class*=color-background-] {
+}
+
+.color-background-2, .color-background-3, .color-background-none {
+}
+
+.color-cta-1 {
+}
+
+    .color-cta-1:focus, .color-cta-1:hover {
+    }
+
+    .color-cta-1:active {
+    }
+
+.color-cta-2 {
+}
+
+    .color-cta-2:focus, .color-cta-2:hover {
+    }
+
+    .color-cta-2:active {
+    }
+
+.color-cta-3 {
+}
+
+    .color-cta-3:focus, .color-cta-3:hover {
+    }
+
+    .color-cta-3:active {
+    }
+
+.color-cta-4 {
+}
+
+    .color-cta-4:focus, .color-cta-4:hover {
+    }
+
+    .color-cta-4:active {
+    }
+
+.color-cta-5 {
+}
+
+    .color-cta-5:focus, .color-cta-5:hover {
+    }
+
+    .color-cta-5:active {
+    }
+
+[class*=color-cta-], [class*=color-cta-]:active, [class*=color-cta-]:focus, [class*=color-cta-]:hover {
+}
+
+.color-cta-1, .color-cta-1:active, .color-cta-1:focus, .color-cta-1:hover {
+}
+
+.color-icon-1 {
+}
+
+.color-icon-2 {
+}
+
+.color-icon-3 {
+}
+
+.color-icon-4 {
+}
+
+.color-icon-5 {
+}
+
+.color-icon-6 {
+}
+
+.color-icon-7 {
+}
+
+.color-icon-8 {
+}
+
+.rwe-icon-activity:before {
+}
+
+.rwe-icon-arrow_left:before {
+}
+
+.rwe-icon-arrow_right:before {
+}
+
+.rwe-icon-briefcase:before {
+}
+
+.rwe-icon-burger_menu:before {
+}
+
+.rwe-icon-calendar:before {
+}
+
+.rwe-icon-chat:before {
+}
+
+.rwe-icon-check_checkbox:before {
+}
+
+.rwe-icon-checkmark:before {
+}
+
+.rwe-icon-checkmark_elipse:before {
+}
+
+#main-navigation ul li span:before, .rwe-icon-chevron_down:before, [data-tpl=las01r] .trigger:after {
+}
+
+.rwe-icon-chevron_left:before {
+}
+
+.rwe-icon-chevron_right:before {
+}
+
+.rwe-icon-chevron_up:before, footer [data-tpl=las01r] .trigger:after {
+}
+
+.rwe-icon-circle-arrow-left:before {
+}
+
+.rwe-icon-circle-arrow-right:before {
+}
+
+.rwe-icon-clock:before {
+}
+
+.rwe-icon-close:before {
+}
+
+.rwe-icon-close_elipse:before {
+}
+
+.rwe-icon-document:before {
+}
+
+.rwe-icon-dot:before {
+}
+
+.rwe-icon-download:before {
+}
+
+.rwe-icon-edit:before {
+}
+
+.rwe-icon-external_link:before {
+}
+
+.rwe-icon-eye:before {
+}
+
+.rwe-icon-eye_off:before {
+}
+
+.rwe-icon-facebook:before {
+}
+
+.rwe-icon-facebook_elipse:before {
+}
+
+.rwe-icon-google:before {
+}
+
+.rwe-icon-google_elipse:before {
+}
+
+.rwe-icon-grid:before {
+}
+
+.rwe-icon-hilfe_kontakt:before {
+}
+
+.rwe-icon-home:before {
+}
+
+.rwe-icon-instagram:before {
+}
+
+.rwe-icon-instagram_elipse:before {
+}
+
+.rwe-icon-kununu:before {
+}
+
+.rwe-icon-kununu_elipse:before {
+}
+
+.rwe-icon-link:before {
+}
+
+.rwe-icon-linkedin:before {
+}
+
+.rwe-icon-linkedin_elipse:before {
+}
+
+.rwe-icon-list:before {
+}
+
+#main-navigation ul.quick-nav li.login a:before, .rwe-icon-logout:before {
+}
+
+#main-navigation ul.quick-nav li.contact a:before, .rwe-icon-mail:before {
+}
+
+.rwe-icon-mail_elipse:before {
+}
+
+.rwe-icon-map:before {
+}
+
+.rwe-icon-map_pin:before {
+}
+
+.rwe-icon-map_pin_cluster:before {
+}
+
+.rwe-icon-maximize:before {
+}
+
+.rwe-icon-maximize_elipse:before {
+}
+
+.rwe-icon-meinpraktikum:before {
+}
+
+.rwe-icon-meinpraktikum_elipse:before {
+}
+
+.rwe-icon-minimize:before {
+}
+
+.rwe-icon-minimize_elipse:before, .video-js.vjs-fullscreen .vjs-fullscreen-control:before {
+}
+
+.rwe-icon-pause_elipse:before {
+}
+
+.rwe-icon-phone:before {
+}
+
+.rwe-icon-pin:before {
+}
+
+.rwe-icon-play_elipse:before {
+}
+
+.rwe-icon-plus:before {
+}
+
+.rwe-icon-print:before {
+}
+
+.rwe-icon-print_elipse:before {
+}
+
+.rwe-icon-rss:before {
+}
+
+.rwe-icon-search:before {
+}
+
+.rwe-icon-snapchat-elipse:before {
+}
+
+.rwe-icon-snapchat:before {
+}
+
+.rwe-icon-sound_off:before {
+}
+
+.rwe-icon-sound_off_elipse:before {
+}
+
+.rwe-icon-sound_on:before {
+}
+
+.rwe-icon-sound_on_elipse:before {
+}
+
+.rwe-icon-star:before {
+}
+
+.rwe-icon-subline:before {
+}
+
+.rwe-icon-subline_elipse:before {
+}
+
+.rwe-icon-tiles:before {
+}
+
+.rwe-icon-tooltip:before {
+}
+
+.rwe-icon-twitter:before {
+}
+
+.rwe-icon-twitter_elipse:before {
+}
+
+.rwe-icon-vero-elipse:before {
+}
+
+.rwe-icon-vero:before {
+}
+
+.rwe-icon-whatsapp:before {
+}
+
+.rwe-icon-whatsapp_elipse:before {
+}
+
+.rwe-icon-xing:before {
+}
+
+.rwe-icon-xing_elipse:before {
+}
+
+.rwe-icon-youtube:before {
+}
+
+.rwe-icon-youtube_elipse:before {
+}
+
+body, html {
+}
+
+body {
+}
+
+#page-wrapper {
+}
+
+#off-screen-wrap #off-screen-content > div {
+}
+
+.aria-only {
+}
+
+.link {
+}
+
+    .link:before {
+    }
+
+.link--internal:before {
+}
+
+.link--internal:hover:before {
+}
+
+.link--external:before {
+}
+
+.link--external:hover:before {
+}
+
+.link--phone:before {
+}
+
+.link--phone:hover:before {
+}
+
+aside > :first-child {
+}
+
+[data-tpl*=detail-] > header [data-tpl=grid-bas-02] {
+}
+
+    [data-tpl*=detail-] > header [data-tpl=grid-bas-02] .container {
+    }
+
+#main-header {
+}
+
+.is-mobile.is-ios #main-header {
+}
+
+    #main-header > div, .is-mobile.is-ios #main-header.main-header--ready {
+    }
+
+#main-header > div {
+}
+
+#main-header .logo {
+}
+
+    #main-header .logo div {
+    }
+
+    #main-header .logo svg {
+    }
+
+#main-header.osad--during-animation--close, #main-header.osad--during-animation--open {
+}
+
+#main-header.osad--during-animation--close {
+}
+
+body.state-off-screen-cart-visible #main-header .logo, body.state-off-screen-navigation-visible #main-header .logo {
+}
+
+#main-header > div {
+}
+
+body.state-off-screen-navigation-visible #main-header > div {
+}
+
+body.state-off-screen-cart-visible #main-header > div {
+}
+
+#main-header.during-animation {
+}
+
+#main-header.main-header--fixed, #main-header.main-header--out-of-viewport {
+}
+
+    #main-header.main-header--fixed > div, #main-header.main-header--out-of-viewport > div {
+    }
+
+    #main-header.main-header--fixed .logo, #main-header.main-header--out-of-viewport .logo {
+    }
+
+#main-header.main-header--fixed, #main-header.main-header--unfixed {
+}
+
+#main-header.main-header--fixed {
+}
+
+[data-tpl=meta-navigation] {
+}
+
+#target-group-select {
+}
+
+    #target-group-select > ul, #target-group-select > ul > li {
+    }
+
+#quick-navigation {
+}
+
+    #quick-navigation .button, #quick-navigation a, #quick-navigation button {
+    }
+
+    #quick-navigation a {
+    }
+
+    #quick-navigation .button, #quick-navigation button {
+    }
+
+        #quick-navigation .button svg, #quick-navigation button svg {
+        }
+
+        #quick-navigation .button[aria-controls=off-screen-cart], #quick-navigation button[aria-controls=off-screen-cart] {
+        }
+
+    #quick-navigation ul {
+    }
+
+    #quick-navigation #quick-navigation-left-list {
+    }
+
+    #quick-navigation #quick-navigation-right-list {
+    }
+
+    #quick-navigation li {
+    }
+
+        #quick-navigation li:before, #quick-navigation li:not(.menu):not(.search):not(.cart) {
+        }
+
+            #quick-navigation li:not(.menu):not(.search):not(.cart):before {
+            }
+
+        #quick-navigation li:hover a,
+        #quick-navigation li:hover button:not([aria-controls=off-screen-cart]),
+        #quick-navigation li[aria-selected=true] a,
+        #quick-navigation li[aria-selected=true] button:not([aria-controls=off-screen-cart]) {
+        }
+
+        #quick-navigation li.menu {
+        }
+
+            #quick-navigation li.menu[aria-selected=true] {
+            }
+
+            #quick-navigation li.menu button svg {
+            }
+
+                #quick-navigation li.menu button svg + span {
+                }
+
+        #quick-navigation li.search button#button-search-drawer {
+        }
+
+        #quick-navigation li.search button svg {
+        }
+
+#main-header.main-header--fixed #quick-navigation, #main-header.main-header--out-of-viewport #quick-navigation {
+}
+
+    #main-header.main-header--fixed #quick-navigation li, #main-header.main-header--out-of-viewport #quick-navigation li {
+    }
+
+        #main-header.main-header--fixed #quick-navigation li:before, #main-header.main-header--out-of-viewport #quick-navigation li:before {
+        }
+
+#off-screen-wrap {
+}
+
+    #off-screen-wrap:after, #off-screen-wrap:before {
+    }
+
+    #off-screen-wrap.tgs--during-animation {
+    }
+
+    #off-screen-wrap.tgs--during-animation--close {
+    }
+
+#off-screen-content {
+}
+
+    #off-screen-content.osad--during-animation, #off-screen-content.osad--open, #off-screen-content.tgs--during-animation {
+    }
+
+    #off-screen-content.tgs--during-animation--close {
+    }
+
+    #off-screen-content.osad--open:not(.osad--during-animation--close) {
+    }
+
+#off-screen-overlay {
+}
+
+body.state-off-screen-cart-visible #off-screen-overlay, body.state-off-screen-navigation-visible #off-screen-overlay {
+}
+
+#off-screen-cart, #off-screen-navigation {
+}
+
+    #off-screen-cart .scroll-wrapper, #off-screen-navigation .scroll-wrapper {
+    }
+
+    #off-screen-cart[aria-expanded=true], #off-screen-navigation[aria-expanded=true] {
+    }
+
+#off-screen-app-drawer {
+}
+
+    #off-screen-app-drawer > div {
+    }
+
+    #off-screen-app-drawer .off-screen-close {
+    }
+
+    #off-screen-app-drawer .app-drawer {
+    }
+
+        #off-screen-app-drawer .app-drawer > [data-tpl] {
+        }
+
+        #off-screen-app-drawer .app-drawer [data-tpl=ses01] .form-group {
+        }
+
+    #off-screen-app-drawer.drawer-login-drawer #contact-drawer {
+    }
+
+    #off-screen-app-drawer.drawer-login-drawer #search-drawer {
+    }
+
+    #off-screen-app-drawer.drawer-contact-drawer #login-drawer {
+    }
+
+    #off-screen-app-drawer.drawer-contact-drawer #search-drawer {
+    }
+
+    #off-screen-app-drawer.drawer-search-drawer #login-drawer {
+    }
+
+    #off-screen-app-drawer.drawer-search-drawer #contact-drawer {
+    }
+
+    #off-screen-app-drawer[aria-expanded=true] {
+    }
+
+        #off-screen-app-drawer[aria-expanded=true] > div {
+        }
+
+        #off-screen-app-drawer[aria-expanded=true]:not(.during-animation), #off-screen-app-drawer[aria-expanded=true]:not(.during-animation--open) > div {
+        }
+
+            #off-screen-app-drawer[aria-expanded=true]:not(.during-animation) > div {
+            }
+
+    #off-screen-app-drawer.during-animation .app-drawer, #off-screen-app-drawer[aria-expanded=false] .app-drawer {
+    }
+
+    #off-screen-app-drawer.during-animation--open {
+    }
+
+        #off-screen-app-drawer.during-animation--open > div {
+        }
+
+    #off-screen-app-drawer.during-animation--close {
+    }
+
+        #off-screen-app-drawer.during-animation--close > div {
+        }
+
+#off-screen-navigation {
+}
+
+    #off-screen-navigation[aria-expanded=true] {
+    }
+
+    #off-screen-navigation.during-animation--close {
+    }
+
+.ps {
+}
+
+.ps__rail-x {
+}
+
+.ps__rail-y {
+}
+
+#off-screen-navigation:hover .ps--active-y .ps__rail-y {
+}
+
+.ps--active-x > .ps__rail-x, .ps--active-y > .ps__rail-y {
+}
+
+.ps--scrolling-x > .ps__rail-x, .ps--scrolling-y > .ps__rail-y, .ps__rail-x, .ps__rail-y {
+}
+
+.ps .ps__rail-x.ps--clicking, .ps .ps__rail-x:focus, .ps .ps__rail-x:hover, .ps .ps__rail-y.ps--clicking, .ps .ps__rail-y:focus, .ps .ps__rail-y:hover {
+}
+
+.ps__thumb-x {
+}
+
+.ps__thumb-x, .ps__thumb-y {
+}
+
+.ps__thumb-y {
+}
+
+.ps__rail-x.ps--clicking .ps__thumb-x, .ps__rail-x:focus > .ps__thumb-x, .ps__rail-x:hover > .ps__thumb-x {
+}
+
+.ps__rail-y.ps--clicking .ps__thumb-y, .ps__rail-y:focus > .ps__thumb-y, .ps__rail-y:hover > .ps__thumb-y {
+}
+
+footer#main-footer [data-tpl=individual-global-zone]:empty, footer#main-footer [data-tpl=individual-zone]:empty {
+}
+
+footer#main-footer [data-tpl=individual-zone] + [data-tpl=individual-global-zone]:before {
+}
+
+footer#main-footer .headline, footer#main-footer .subheadline {
+}
+
+footer#main-footer section[data-tpl=individual-global-zone], footer#main-footer section[data-tpl=individual-zone] {
+}
+
+    footer#main-footer section[data-tpl=individual-global-zone] .btn, footer#main-footer section[data-tpl=individual-zone] .btn {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] .headline, footer#main-footer section[data-tpl=individual-global-zone] .subheadline, footer#main-footer section[data-tpl=individual-zone] .headline, footer#main-footer section[data-tpl=individual-zone] .subheadline {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=tic01] .headline + .btn, footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=tic01] .subheadline + .btn, footer#main-footer section[data-tpl=individual-zone] [data-tpl=tic01] .headline + .btn, footer#main-footer section[data-tpl=individual-zone] [data-tpl=tic01] .subheadline + .btn {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=lll01], footer#main-footer section[data-tpl=individual-zone] [data-tpl=lll01] {
+    }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=lll01] ul, footer#main-footer section[data-tpl=individual-zone] [data-tpl=lll01] ul {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=lll01] li, footer#main-footer section[data-tpl=individual-zone] [data-tpl=lll01] li {
+        }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=fol01] ul, footer#main-footer section[data-tpl=individual-zone] [data-tpl=fol01] ul {
+    }
+
+footer#main-footer section[data-tpl=individual-zone] {
+}
+
+    footer#main-footer section[data-tpl=individual-zone]:after, footer#main-footer section[data-tpl=individual-zone]:before {
+    }
+
+    footer#main-footer section[data-tpl=individual-zone]:after {
+    }
+
+    footer#main-footer section[data-tpl=individual-zone] .container:empty {
+    }
+
+    footer#main-footer section[data-tpl=individual-zone] .grid-content:not(:first-child) {
+    }
+
+    footer#main-footer section[data-tpl=individual-zone] [data-tpl=grid-bas-02] {
+    }
+
+    footer#main-footer section[data-tpl=individual-zone] [data-tpl=grid-bas-05] {
+    }
+
+    footer#main-footer section[data-tpl=individual-zone] [data-tpl*=grid] + [data-tpl*=grid] .container {
+    }
+
+footer#main-footer section[data-tpl=individual-global-zone] {
+}
+
+    footer#main-footer section[data-tpl=individual-global-zone]:after, footer#main-footer section[data-tpl=individual-global-zone]:before {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone]:after {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05] {
+    }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05]:first-child {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05]:last-child {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05] + [data-tpl=grid-bas-05], footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05] .grid-content:not(:first-child) {
+        }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=lin01] {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=ll01] {
+    }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=ll01] li {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=ll01] header {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=ll01] a {
+        }
+
+            footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=ll01] a:hover {
+            }
+
+            footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=ll01] a:before {
+            }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] {
+    }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] ul {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] h3 {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] .accordion-item__content > :first-child {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] .accordion-item__content [data-tpl=ll01] a {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] .accordion-item__content [data-tpl=ll01] li + li {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] .accordion-item__headline {
+        }
+
+footer#main-footer section[data-tpl=global-zone] {
+}
+
+    footer#main-footer section[data-tpl=global-zone]:after, footer#main-footer section[data-tpl=global-zone]:before {
+    }
+
+    footer#main-footer section[data-tpl=global-zone]:after {
+    }
+
+    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] {
+    }
+
+        footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container {
+        }
+
+            footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=las01r] {
+            }
+
+                footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=las01r] .trigger {
+                }
+
+            footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container .copyright {
+            }
+
+            footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container .endorsement {
+            }
+
+                footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container .endorsement svg {
+                }
+
+                    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container .endorsement svg path {
+                    }
+
+            footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] {
+            }
+
+                footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol {
+                }
+
+                    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol:after, footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol:before {
+                    }
+
+                    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol:after {
+                    }
+                    /*check this*/
+                    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol li + li {
+                    }
+
+                    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol li {
+                    }
+
+                        footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol li a {
+                        }
+
+                            footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol li a:hover {
+                            }
+
+                        footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol li:before {
+                        }
+
+                footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] + .copyright {
+                }
+
+#main-navigation {
+}
+
+    #main-navigation ul {
+    }
+
+        #main-navigation ul ul {
+        }
+
+        #main-navigation ul li {
+        }
+
+            #main-navigation ul li:last-child, #main-navigation ul li[aria-expanded=true] {
+            }
+
+            #main-navigation ul li a {
+            }
+
+                #main-navigation ul li a:active, #main-navigation ul li a:active:after, #main-navigation ul li a:focus, #main-navigation ul li a:focus:after, #main-navigation ul li a:hover, #main-navigation ul li a:hover:after {
+                }
+
+            #main-navigation ul li span {
+            }
+
+                #main-navigation ul li span:before {
+                }
+
+            #main-navigation ul li.active {
+            }
+
+                #main-navigation ul li.active ul {
+                }
+
+                #main-navigation ul li.active > a {
+                }
+
+                #main-navigation ul li.active:after {
+                }
+
+            #main-navigation ul li[aria-expanded] > span {
+            }
+
+                #main-navigation ul li[aria-expanded] > span:before {
+                }
+
+                #main-navigation ul li[aria-expanded] > span:focus, #main-navigation ul li[aria-expanded] > span:hover {
+                }
+
+            #main-navigation ul li[aria-expanded] > ul {
+            }
+
+            #main-navigation ul li[aria-expanded=true] > a, #main-navigation ul li[aria-expanded=true] > span {
+            }
+
+                #main-navigation ul li[aria-expanded=true] > span:before {
+                }
+
+            #main-navigation ul li[aria-expanded=true]:not(.during-animation) > ul {
+            }
+
+            #main-navigation ul li.during-animation > ul {
+            }
+
+        #main-navigation ul.quick-nav, #main-navigation ul.target-group-nav {
+        }
+
+            #main-navigation ul.quick-nav li, #main-navigation ul.target-group-nav li {
+            }
+
+                #main-navigation ul.quick-nav li > a:before, #main-navigation ul.target-group-nav li > a:before {
+                }
+
+            #main-navigation ul.quick-nav li {
+            }
+
+                #main-navigation ul.quick-nav li a {
+                }
+
+                    #main-navigation ul.quick-nav li a:before {
+                    }
+
+                #main-navigation ul.quick-nav li + li {
+                }
+
+            #main-navigation ul.target-group-nav li > a {
+            }
+
+                #main-navigation ul.target-group-nav li > a:before {
+                }
+
+[data-tpl=breadcrumb] {
+}
+
+    [data-tpl=breadcrumb] ol {
+    }
+
+        [data-tpl=breadcrumb] ol li {
+        }
+
+            [data-tpl=breadcrumb] ol li:before {
+            }
+
+            [data-tpl=breadcrumb] ol li a {
+            }
+
+                [data-tpl=breadcrumb] ol li a:active, [data-tpl=breadcrumb] ol li a:focus, [data-tpl=breadcrumb] ol li a:hover {
+                }
+
+                [data-tpl=breadcrumb] ol li a:active {
+                }
+
+            [data-tpl=breadcrumb] ol li:first-child:before {
+            }
+
+            [data-tpl=breadcrumb] ol li.active a {
+            }
+
+            [data-tpl=breadcrumb] ol li + li {
+            }
+
+    [data-tpl=breadcrumb] + footer {
+    }
+
+#dws01-modal, [data-tpl=modal] {
+}
+
+    #dws01-modal, #dws01-modal *, [data-tpl=modal], [data-tpl=modal] * {
+    }
+
+        #dws01-modal iframe, [data-tpl=modal] iframe {
+        }
+
+        #dws01-modal.hidden, [data-tpl=modal].hidden {
+        }
+
+        #dws01-modal .modal-overlay, [data-tpl=modal] .modal-overlay {
+        }
+
+        #dws01-modal .modal-content, [data-tpl=modal] .modal-content {
+        }
+
+            #dws01-modal .modal-content [data-tpl=modal-content], [data-tpl=modal] .modal-content [data-tpl=modal-content] {
+            }
+
+            #dws01-modal .modal-content [data-tpl=tic01], [data-tpl=modal] .modal-content [data-tpl=tic01] {
+            }
+
+        #dws01-modal .close, [data-tpl=modal] .close {
+        }
+
+            #dws01-modal .close:before, [data-tpl=modal] .close:before {
+            }
+
+        #dws01-moda[aria-expanded=true], [data-tpl=modal][aria-expanded=true] {
+        }
+
+            #dws01-modal[aria-expanded=true] .modal-content, [data-tpl=modal][aria-expanded=true] .modal-content {
+            }
+
+        #dws01-modal.during-animation--close, [data-tpl=modal].during-animation--close {
+        }
+
+            #dws01-modal.during-animation--close .modal-content, [data-tpl=modal].during-animation--close .modal-content {
+            }
+
+        #dws01-modal[data-modal-id=dws01-modal] .modal-content, [data-tpl=modal][data-modal-id=dws01-modal] .modal-content {
+        }
+
+[data-tpl=modal-content] {
+}
+
+.image {
+}
+
+    .image [data-tpl=ll01] {
+    }
+
+    .image .link.link--download {
+    }
+
+    .image.image--lazy-loaded {
+    }
+
+    .image.image--loaded {
+    }
+
+.image-decorative div {
+}
+
+.image-decorative.media-align--top-left div {
+}
+
+.image-decorative.media-align--top-center div {
+}
+
+.image-decorative.media-align--top-right div {
+}
+
+.image-decorative.media-align--center-left div {
+}
+
+.image-decorative.media-align--center-center div {
+}
+
+.image-decorative.media-align--center-right div {
+}
+
+.image-decorative.media-align--bottom-left div {
+}
+
+.image-decorative.media-align--bottom-center div {
+}
+
+.image-decorative.media-align--bottom-right div {
+}
+
+.image-decorative.media-fill--out div {
+}
+
+.image-decorative.media-full--height div {
+}
+
+.image-decorative.media-full--width div {
+}
+
+.image-semantic {
+}
+
+    .image-semantic picture {
+    }
+
+    .image-semantic.media-fill--width img, .image-semantic img {
+    }
+
+    .image-semantic.media-fill--height img {
+    }
+
+    .image-semantic.media-fill--out img {
+    }
+
+    .image-semantic.media-fill--out.media-align--top-left img {
+    }
+
+    .image-semantic.media-fill--out.media-align--top-center img {
+    }
+
+    .image-semantic.media-fill--out.media-align--top-right img {
+    }
+
+    .image-semantic.media-fill--out.media-align--center-left img {
+    }
+
+    .image-semantic.media-fill--out.media-align--center-center img {
+    }
+
+    .image-semantic.media-fill--out.media-align--center-right img {
+    }
+
+    .image-semantic.media-fill--out.media-align--bottom-left img {
+    }
+
+    .image-semantic.media-fill--out.media-align--bottom-center img {
+    }
+
+    .image-semantic.media-fill--out.media-align--bottom-right img {
+    }
+
+    .image-semantic.media-fill--height.media-align--top-left img, .image-semantic.media-fill--width.media-align--top-left img {
+    }
+
+    .image-semantic.media-fill--height.media-align--top-center img, .image-semantic.media-fill--width.media-align--top-center img {
+    }
+
+    .image-semantic.media-fill--height.media-align--top-right img, .image-semantic.media-fill--width.media-align--top-right img {
+    }
+
+    .image-semantic.media-fill--height.media-align--center-left img, .image-semantic.media-fill--width.media-align--center-left img {
+    }
+
+    .image-semantic.media-fill--height.media-align--center-center img, .image-semantic.media-fill--width.media-align--center-center img {
+    }
+
+    .image-semantic.media-fill--height.media-align--center-right img, .image-semantic.media-fill--width.media-align--center-right img {
+    }
+
+    .image-semantic.media-fill--height.media-align--bottom-left img, .image-semantic.media-fill--width.media-align--bottom-left img {
+    }
+
+    .image-semantic.media-fill--height.media-align--bottom-center img, .image-semantic.media-fill--width.media-align--bottom-center img {
+    }
+
+    .image-semantic.media-fill--height.media-align--bottom-right img, .image-semantic.media-fill--width.media-align--bottom-right img {
+    }
+
+    .image-semantic [data-tpl=text-badge] {
+    }
+
+.btn {
+}
+
+.btn--full-width.btn {
+}
+
+.btn:before {
+}
+
+.btn:focus, .btn:hover {
+}
+
+.btn:active {
+}
+
+.btn:disabled, .disabled.btn {
+}
+
+    .btn:disabled:hover, .disabled.btn:hover {
+    }
+
+.btn-bar .btn {
+}
+
+    .btn-bar .btn ~ .btn {
+    }
+
+.btn-bar:after, .btn-bar:before {
+
+}
+
+.btn-bar:after {
+}
+
+[data-tpl=hea01] {
+}
+
+    [data-tpl=hea01].hea01--centered {
+    }
+
+[data-tpl=sli01] {
+}
+
+    [data-tpl=sli01], [data-tpl=sli01] .slider-container, [data-tpl=sli01] .slider__frame {
+    }
+
+        [data-tpl=sli01] .slider-wrapper, [data-tpl=sli01] .slider__slides {
+        }
+
+        [data-tpl=sli01] .slider-slide, [data-tpl=sli01] .slider__slide {
+        }
+
+            [data-tpl=sli01] .slider-slide.active:first-of-type, [data-tpl=sli01] .slider__slide.active:first-of-type {
+            }
+
+        [data-tpl=sli01].slider--ready .slider-slide, [data-tpl=sli01].slider--ready .slider__slide {
+        }
+
+            [data-tpl=sli01].slider--ready .slider-slide > *, [data-tpl=sli01].slider--ready .slider__slide > * {
+            }
+
+        [data-tpl=sli01] .slider-next, [data-tpl=sli01] .slider-prev {
+        }
+
+        [data-tpl=sli01] > .slider-container > .slider-wrapper [data-tpl*=grid] {
+        }
+
+            [data-tpl=sli01] > .slider-container > .slider-wrapper [data-tpl*=grid] .container-fluid .row > [data-tpl], [data-tpl=sli01] > .slider-container > .slider-wrapper [data-tpl*=grid] .container-fluid .row > [data-tpl]:last-child {
+            }
+
+        [data-tpl=sli01] .row {
+        }
+
+        [data-tpl=sli01] .slider-pagination {
+        }
+
+        [data-tpl=sli01] .swiper-pagination-bullet {
+        }
+
+            [data-tpl=sli01] .swiper-pagination-bullet + .swiper-pagination-bullet {
+            }
+
+        [data-tpl=sli01] .swiper-pagination-bullet-active {
+        }
+
+        [data-tpl=sli01] .slider-next, [data-tpl=sli01] .slider-prev {
+        }
+
+            [data-tpl=sli01] .slider-next:after, [data-tpl=sli01] .slider-prev:after {
+            }
+
+            [data-tpl=sli01] .slider-next:before, [data-tpl=sli01] .slider-prev:before {
+            }
+
+            [data-tpl=sli01] .slider-next.swiper-button-disabled, [data-tpl=sli01] .slider-prev.swiper-button-disabled {
+            }
+
+        [data-tpl=sli01] .slider-prev {
+        }
+
+        [data-tpl=sli01] .slider-next {
+        }
+
+        [data-tpl=sli01].sli01--text-components .swiper-pagination-bullet {
+        }
+
+        [data-tpl=sli01].sli01--text-components .swiper-pagination-bullet-active {
+        }
+
+        [data-tpl=sli01].sli01--text-components .slider-pagination {
+        }
+
+        [data-tpl=sli01].sli01--text-components .slider-next:after, [data-tpl=sli01].sli01--text-components .slider-prev:after {
+        }
+
+        [data-tpl=sli01].sli01--text-components .slider-next:before, [data-tpl=sli01].sli01--text-components .slider-prev:before {
+        }
+
+audio, canvas, progress {
+}
+
+[data-tpl=video] {
+}
+
+    [data-tpl=video] figure {
+    }
+
+    [data-tpl=video] .videoplayer-content {
+    }
+
+    [data-tpl=video] .posterimg, [data-tpl=video] .videoplayer {
+    }
+
+    [data-tpl=video] .videoplayer {
+    }
+
+    [data-tpl=video] video {
+    }
+
+    [data-tpl=video] .posterimg {
+    }
+
+    [data-tpl=video] .vjs-poster {
+    }
+
+    [data-tpl=video].youtube .vjs-poster {
+    }
+
+html.is-mobile:not(.is-android) [data-tpl=video].youtube iframe {
+}
+
+html.is-mobile:not(.is-android) [data-tpl=video].youtube .vjs-has-started iframe {
+}
+
+[data-tpl=video].youtube.videojs-ready .posterimg, [data-tpl=video]:not(.youtube).poster-loaded.videojs-ready .posterimg {
+}
+
+[data-tpl=video].youtube.videojs-ready .videoplayer, [data-tpl=video]:not(.youtube).poster-loaded.videojs-ready .videoplayer {
+}
+
+[data-tpl=video]:not(.youtube).poster-loaded .posterimg {
+}
+
+[data-tpl=video].videojs-ready.youtube .posterimg, [data-tpl=video]:not(.youtube).poster-loaded .videoplayer {
+}
+
+[data-tpl=video].videojs-ready.youtube .videoplayer {
+}
+
+.vjs-full-window #off-screen-content {
+}
+
+.video-js .vjs-caption-settings,
+.video-js .vjs-control-bar,
+.video-js .vjs-current-time,
+.video-js .vjs-error-display,
+.video-js .vjs-remaining-time,
+.video-js .vjs-time-divider {
+}
+
+.video-js .vjs-control-text {
+}
+
+.video-js .vjs-loading-spinner {
+}
+
+.video-js button {
+}
+
+    .video-js button:active, .video-js button:focus, .video-js button:hover {
+    }
+
+.video-js .vjs-big-play-button {
+}
+
+    .video-js .vjs-big-play-button:before {
+    }
+
+.video-js.vjs-controls-disabled .vjs-big-play-button,
+.video-js.vjs-error .vjs-big-play-button,
+.video-js.vjs-has-started .vjs-big-play-button {
+}
+
+.video-js .vjs-hidden {
+}
+
+.video-js .vjs-offscreen {
+}
+
+.video-js .vjs-lock-showing {
+}
+
+.video-js .vjs-no-js {
+}
+
+.video-js .vjs-control.vjs-close-button {
+}
+
+.video-js .vjs-menu-content, .video-js .vjs-menu-item {
+}
+
+.video-js.vjs-seeking .vjs-loading-spinner, .video-js.vjs-waiting .vjs-loading-spinner, .videojs-loading .vjs-loading-spinner {
+}
+
+.videojs-ready .vjs-loading-spinner {
+}
+
+.videojs-ready .vjs-big-play-button {
+}
+
+[data-tpl=video].videoplayer--bg {
+}
+
+    [data-tpl=video].videoplayer--bg .videoplayer-content {
+    }
+
+        [data-tpl=video].videoplayer--bg .videoplayer-content:before {
+        }
+
+    [data-tpl=video].videoplayer--bg .vjs-big-play-button, [data-tpl=video].videoplayer--bg .vjs-control-bar, [data-tpl=video].videoplayer--bg .vjs-poster {
+    }
+
+.is-mobile [data-tpl=video].videoplayer--bg .posterimg, .is-mobile [data-tpl=video].videoplayer--bg .vjs-poster {
+}
+
+.is-mobile [data-tpl=video].videoplayer--bg .videoplayer {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--top-left .videoplayer, [data-tpl=video].videoplayer--bg.media-align--top-left video {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--top-left.youtube .videoplayer {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--top-center .videoplayer, [data-tpl=video].videoplayer--bg.media-align--top-center video {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--top-center.youtube .videoplayer {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--top-right .videoplayer, [data-tpl=video].videoplayer--bg.media-align--top-right video {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--top-right.youtube .videoplayer {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--center-left .videoplayer, [data-tpl=video].videoplayer--bg.media-align--center-left video {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--center-left.youtube .videoplayer {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--center-right .videoplayer, [data-tpl=video].videoplayer--bg.media-align--center-right video {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--center-right.youtube .videoplayer {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--bottom-left .videoplayer, [data-tpl=video].videoplayer--bg.media-align--bottom-left video {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--bottom-left.youtube .videoplayer {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--bottom-center .videoplayer, [data-tpl=video].videoplayer--bg.media-align--bottom-center video {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--bottom-center.youtube .videoplayer {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--bottom-right .videoplayer, [data-tpl=video].videoplayer--bg.media-align--bottom-right video {
+}
+
+[data-tpl=video].videoplayer--bg.media-align--bottom-right.youtube .videoplayer {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer iframe {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer video {
+}
+
+    [data-tpl=video].videoplayer--fullscreen .videoplayer video:-webkit-full-screen {
+    }
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer .vjs-control-bar {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-has-started .vjs-control-bar {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-has-started .vjs-big-play-button {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-fullscreen iframe,
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-fullscreen video,
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-playing iframe,
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-playing video {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-fullscreen .vjs-control-bar,
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-playing .vjs-control-bar {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-fullscreen .vjs-big-play-button,
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-fullscreen .vjs-poster,
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-playing .vjs-big-play-button,
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-playing .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-fullscreen.vjs-has-started .vjs-control-bar,
+[data-tpl=video].videoplayer--fullscreen .videoplayer.vjs-playing.vjs-has-started .vjs-control-bar {
+}
+
+[data-tpl=video].videoplayer--fullscreen.media-align--top-left .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen.media-align--top-center .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen.media-align--top-right .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen.media-align--center-left .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen.media-align--center-right .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen.media-align--bottom-left .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen.media-align--bottom-center .vjs-poster {
+}
+
+[data-tpl=video].videoplayer--fullscreen.media-align--bottom-right .vjs-poster {
+}
+
+.vjs-full-window [data-tpl*=sta] header {
+}
+
+#main-navigation ul.quick-nav li > a:before,
+#main-navigation ul.target-group-nav li > a:before,
+#main-navigation ul li[aria-expanded] > span:before,
+.video-js .vjs-big-play-button:after,
+.video-js .vjs-fullscreen-control:before,
+.video-js .vjs-play-control:before,
+.video-js .vjs-subtitles-button:before,
+.video-js .vjs-volume-menu-button:before {
+}
+
+.video-js .vjs-big-play-button:after,
+.video-js .vjs-fullscreen-control:before,
+.video-js .vjs-play-control:before,
+.video-js .vjs-subtitles-button:before,
+.video-js .vjs-volume-menu-button:before {
+}
+
+[data-tpl=brc01] > footer button:after,
+[data-tpl=brt01] header:after, [data-tpl=ctc01] ul h4:before, .date-group-btn .icon-calendar .picker .picker__header .picker__nav--next:before, [data-tpl=ptea01] .affordance:before, [data-tpl=rdc01] > footer button:after, [data-tpl=rt01] header:after, [data-tpl=tag-bar-sticky] .tag-bar--sticky__jump-container a:after {
+}
+
+.videoplayer--inline.videojs-is-ended .vjs-big-play-button:after {
+}
+
+.video-js .vjs-fullscreen-control:before {
+}
+
+.video-js .vjs-play-control.vjs-playing:before {
+}
+
+.video-js .vjs-big-play-button:after,
+.video-js .vjs-play-control.vjs-paused:before,
+.video-js .vjs-play-control:before {
+}
+
+.video-js .vjs-volume-menu-button:before {
+}
+
+.video-js .vjs-volume-menu-button.vjs-vol-0:before {
+}
+
+.video-js .vjs-subtitles-button:before {
+}
+
+.video-js .vjs-big-play-button:after {
+}
+
+.video-js .vjs-big-play-button:hover:after {
+}
+
+.video-js .vjs-control-bar {
+}
+
+.video-js .vjs-control {
+}
+
+    .video-js .vjs-control:active, .video-js .vjs-control:focus, .video-js .vjs-control:hover {
+    }
+
+.video-js .vjs-custom-control-spacer {
+}
+
+.video-js .vjs-fullscreen-control:before,
+.video-js .vjs-play-control:before,
+.video-js .vjs-subtitles-button:before,
+.video-js .vjs-volume-menu-button:before {
+}
+
+.video-js .vjs-play-control {
+}
+
+    .video-js .vjs-play-control:hover {
+    }
+
+.video-js .vjs-volume-menu-button {
+}
+
+    .video-js .vjs-volume-menu-button:before {
+    }
+
+    .video-js .vjs-volume-menu-button:hover {
+    }
+
+    .video-js .vjs-volume-menu-button .vjs-menu-content {
+    }
+
+    .video-js .vjs-volume-menu-button .vjs-volume-bar {
+    }
+
+        .video-js .vjs-volume-menu-button .vjs-volume-bar .vjs-volume-level {
+        }
+
+            .video-js .vjs-volume-menu-button .vjs-volume-bar .vjs-volume-level:before {
+            }
+
+    .video-js .vjs-volume-menu-button.vjs-slider-active .vjs-menu-content,
+    .video-js .vjs-volume-menu-button:hover .vjs-menu-content {
+    }
+
+    .video-js .vjs-volume-menu-button.vjs-slider-active .vjs-volume-bar .vjs-volume-level:before,
+    .video-js .vjs-volume-menu-button:hover .vjs-volume-bar .vjs-volume-level:before {
+    }
+
+.video-js .vjs-duration {
+}
+
+    .video-js .vjs-duration .vjs-duration-display {
+    }
+
+.video-js .vjs-progress-control {
+}
+
+.video-js .vjs-progress-holder {
+}
+
+    .video-js .vjs-progress-holder .vjs-load-progress, .video-js .vjs-progress-holder .vjs-play-progress {
+    }
+
+    .video-js .vjs-progress-holder .vjs-play-progress {
+    }
+
+        .video-js .vjs-progress-holder .vjs-play-progress:before {
+        }
+
+        .video-js .vjs-progress-holder .vjs-play-progress:after {
+        }
+
+    .video-js .vjs-progress-holder .vjs-load-progress {
+    }
+
+    .video-js .vjs-progress-holder .vjs-mouse-display {
+    }
+
+        .video-js .vjs-progress-holder .vjs-mouse-display:before {
+        }
+
+        .video-js .vjs-progress-holder .vjs-mouse-display:after {
+        }
+
+.video-js .vjs-progress-control:hover .vjs-progress-holder .vjs-play-progress:before {
+}
+
+.video-js .vjs-progress-control:hover .vjs-mouse-display {
+}
+
+.video-js .vjs-subtitles-button {
+}
+
+    .video-js .vjs-subtitles-button:hover:before {
+    }
+
+    .video-js .vjs-subtitles-button .vjs-menu {
+    }
+
+        .video-js .vjs-subtitles-button .vjs-menu ul {
+        }
+
+            .video-js .vjs-subtitles-button .vjs-menu ul:after {
+            }
+
+        .video-js .vjs-subtitles-button .vjs-menu li {
+        }
+
+            .video-js .vjs-subtitles-button .vjs-menu li:active,
+            .video-js .vjs-subtitles-button .vjs-menu li:focus,
+            .video-js .vjs-subtitles-button .vjs-menu li:hover {
+            }
+
+            .video-js .vjs-subtitles-button .vjs-menu li:before {
+            }
+
+            .video-js .vjs-subtitles-button .vjs-menu li + li {
+            }
+
+            .video-js .vjs-subtitles-button .vjs-menu li.vjs-selected,
+            .video-js .vjs-subtitles-button[aria-expanded=true]:before {
+            }
+
+    .video-js .vjs-subtitles-button[aria-expanded=true] .vjs-menu {
+    }
+
+.video-js .vjs-fullscreen-control {
+}
+
+    .video-js .vjs-fullscreen-control:hover {
+    }
+
+.video-js.vjs-live .vjs-progress-control {
+}
+
+.video-js.vjs-has-started .vjs-control-bar {
+}
+
+.video-js.vjs-has-started.vjs-user-inactive.vjs-playing {
+}
+
+    .video-js.vjs-has-started.vjs-user-inactive.vjs-playing .vjs-control-bar {
+    }
+
+.video-js.vjs-has-started .vjs-progress-control .vjs-play-progress:before {
+}
+
+.video-js.vjs-has-started:not(.vjs-ended) .vjs-progress-control .vjs-play-progress:after {
+}
+
+.video-js.vjs-controls-disabled .vjs-control-bar, .video-js.vjs-error .vjs-control-bar, .video-js.vjs-using-native-controls .vjs-control-bar {
+}
+
+html.is-ios body.vjs-full-window [data-tpl=video] {
+}
+
+.video-js.vjs-fullscreen {
+}
+
+    .video-js.vjs-fullscreen .vjs-tech {
+    }
+
+.videoplayer--inline.videojs-is-ended .vjs-big-play-button:after {
+}
+
+html.is-mobile [data-tpl=video].videoplayer--inline .vjs-poster {
+}
+
+html.is-mobile [data-tpl=video].videoplayer--inline .vjs-big-play-button {
+}
+
+html.is-mobile [data-tpl=video].videoplayer--inline .vjs-control-bar {
+}
+
+html.is-mobile [data-tpl=video].videoplayer--inline .vjs-fullscreen .vjs-big-play-button,
+html.is-mobile [data-tpl=video].videoplayer--inline .vjs-fullscreen .vjs-poster,
+html:not(.is-mobile) [data-tpl=video].videoplayer--inline .vjs-has-started .vjs-poster,
+html:not(.is-mobile) [data-tpl=video].videoplayer--inline:not(.youtube) .vjs-poster {
+}
+
+html:not(.is-mobile).is-edge [data-tpl=video].videoplayer--inline .vjs-poster,
+html:not(.is-mobile).is-ie [data-tpl=video].videoplayer--inline .vjs-poster {
+}
+
+html:not(.is-mobile).is-edge [data-tpl=video].videoplayer--inline .vjs-has-started .vjs-poster,
+html:not(.is-mobile).is-ie [data-tpl=video].videoplayer--inline .vjs-has-started .vjs-poster {
+}
+
+body.vjs-full-window {
+}
+
+    body.vjs-full-window #off-screen-content {
+    }
+
+[data-tpl=sta01] header {
+}
+
+    [data-tpl=sta01] header, [data-tpl=sta01] header.color-teaser-1 {
+    }
+
+        [data-tpl=sta01] header.color-teaser-2 {
+        }
+
+[data-tpl=sta01] .headline {
+}
+
+[data-tpl=sta01] .subheadline {
+}
+
+[data-tpl=sta01] .btn {
+}
+
+    [data-tpl=sta01] .btn:before {
+    }
+
+[data-tpl=sta01] .image, [data-tpl=sta01] [data-tpl=video] {
+}
+
+[data-tpl=sta01] .image {
+}
+
+    [data-tpl=sta01] .image > div {
+    }
+
+[data-tpl=sta01] [data-tpl=video] .videoplayer, [data-tpl=sta01] [data-tpl=video] .videoplayer-content {
+}
+
+[data-tpl=sta01] [data-tpl=video] .posterimg, [data-tpl=sta01] [data-tpl=video] video {
+}
+
+[data-tpl=sli01] [data-tpl=sta01] header {
+}
+
+[data-tpl=sta02] {
+}
+
+    [data-tpl=sta02] .image {
+    }
+
+    [data-tpl=sta02] header {
+    }
+
+    [data-tpl=sta02] .headline, [data-tpl=sta02] .subheadline {
+    }
+
+    [data-tpl=sta02] .headline {
+    }
+
+    [data-tpl=sta02] .subheadline {
+    }
+
+    [data-tpl=sta02] .image:before, [data-tpl=sta02] [data-tpl=video]:not(.videoplayer--fullscreen):before {
+    }
+
+    [data-tpl=sta02] picture {
+    }
+
+    [data-tpl=sta02] [class*=media-align] picture, [data-tpl=sta02] [class*=media-fill] picture {
+    }
+
+    [data-tpl=sta02] img {
+    }
+
+    [data-tpl=sta02] .image-caption {
+    }
+
+    [data-tpl=sta02] .image.media-fill--width img {
+    }
+
+    [data-tpl=sta02] .image.media-fill--height img {
+    }
+
+    [data-tpl=sta02] .image.media-align--top-left img {
+    }
+
+    [data-tpl=sta02] .image.media-align--top-center img {
+    }
+
+    [data-tpl=sta02] .image.media-align--top-right img {
+    }
+
+    [data-tpl=sta02] .image.media-align--center-left img {
+    }
+
+    [data-tpl=sta02] .image.media-align--center-right img {
+    }
+
+    [data-tpl=sta02] .image.media-align--bottom-left img {
+    }
+
+    [data-tpl=sta02] .image.media-align--bottom-center img {
+    }
+
+    [data-tpl=sta02] .image.media-align--bottom-right img {
+    }
+
+    [data-tpl=sta02] [data-tpl=video] figure {
+    }
+
+    [data-tpl=sta02] [data-tpl=video] figcaption {
+    }
+
+    [data-tpl=sta02] [data-tpl=video] .videoplayer-content {
+    }
+
+    [data-tpl=sta02] [data-tpl=video] .videoplayer, [data-tpl=sta02] [data-tpl=video] .videoplayer-content {
+    }
+
+    [data-tpl=sta02] [data-tpl=video] .posterimg, [data-tpl=sta02] [data-tpl=video] video {
+    }
+
+    [data-tpl=sta02] [data-tpl=video]:not(.youtube).poster-loaded .videoplayer {
+    }
+
+    [data-tpl=sta02] [data-tpl=video] .posterimg, [data-tpl=sta02] [data-tpl=video].videoplayer--bg.youtube .videoplayer, [data-tpl=sta02] [data-tpl=video] video {
+    }
+
+    [data-tpl=sta02] [data-tpl=video] .ar-4-3 .posterimg, [data-tpl=sta02] [data-tpl=video] .ar-4-3 video, [data-tpl=sta02] [data-tpl=video] .ar-4-3.youtube.videoplayer--bg .videoplayer {
+    }
+
+[data-tpl=las01] .trigger {
+   
+}
+
+[data-tpl=las01]:after {
+
+}
+
+[data-tpl=las01] > ul {
+}
+
+    [data-tpl=las01] > ul.active {
+    }
+
+    [data-tpl=las01] > ul > li, [data-tpl=las01] > ul > li > a {
+    }
+
+[data-tpl=las01r] {
+}
+
+    [data-tpl=las01r] .trigger {
+    }
+
+        [data-tpl=las01r] .trigger:after {
+        }
+
+    [data-tpl=las01r] ul {
+    }
+
+        [data-tpl=las01r] ul:before {
+        }
+
+        [data-tpl=las01r] ul li {
+        }
+
+            [data-tpl=las01r] ul li + li {
+            }
+
+    [data-tpl=las01r].open ul {
+    }
+
+    [data-tpl=las01r].open .trigger:after {
+    }
+
+#target-group-select [data-tpl=las01r] {
+}
+
+    #target-group-select [data-tpl=las01r] .trigger {
+    }
+
+footer [data-tpl=las01r], footer [data-tpl=las01r] .trigger {
+}
+
+    footer [data-tpl=las01r] ul {
+       }
+
+        footer [data-tpl=las01r] ul:before {
+        }
+
+    footer [data-tpl=las01r].open ul {
+    }
+
+@supports (-ms-overflow-style:none) {
+    .ps, .ps-container {
+    }
+}
+
+@media -ms-high-contrast,screen and -ms-high-contrast {
+    .ps, .ps-container {
+    }
+}
+
+@media (min-width:320px) {
+    .video-js button {
+    }
+
+        .video-js button.vjs-big-play-button {
+        }
+
+            .video-js button.vjs-big-play-button:after {
+            }
+
+    .video-js .vjs-volume-bar {
+    }
+
+    .video-js .vjs-fullscreen-control:before {
+    }
+
+    .video-js .vjs-volume-menu-button:before {
+    }
+}
+
+@media (min-width:480px) {
+    .container, .container-fluid {
+    }
+
+    .row {
+    }
+
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    }
+
+    .container-fluid {
+    }
+
+    [data-tpl*=grid-form] .container {
+    }
+
+    [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]) {
+    }
+
+    [data-tpl*=grid] > .container > .content:not(:first-child), [data-tpl*=grid] > .container > .row > .grid-content:not(:first-child) {
+    }
+
+    body, html {
+    }
+
+    h1 {
+    }
+
+    h1, h2 {
+    }
+
+    h2 {
+    }
+
+    h3 {
+    }
+
+    figcaption, small {
+    }
+
+    #main-header > div {
+
+    }
+
+    body.state-off-screen-navigation-visible #main-header > div {
+    }
+
+    body.state-off-screen-cart-visible #main-header > div {
+    }
+
+    #main-header.main-header--fixed, #main-header.main-header--out-of-viewport {
+    }
+
+    #target-group-select, #target-group-select .target-group-select--trigger {
+    }
+
+        #target-group-select #target-group-select-list:after {
+        }
+
+    #quick-navigation li {
+    }
+
+    footer#main-footer [data-tpl=individual-zone] + [data-tpl=individual-global-zone]:before {
+    }
+
+    footer#main-footer section[data-tpl=individual-zone] .headline, footer#main-footer section[data-tpl=individual-zone] .subheadline {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] .accordion-item__headline {
+    }
+
+    footer#main-footer section[data-tpl=global-zone] .endorsement svg {
+    }
+
+    footer#main-footer section[data-tpl=global-zone] .copyright {
+    }
+
+    #main-navigation ul ul {
+    }
+
+    .btn {
+    }
+
+    [data-tpl=sli01].sli01--text-components .slider-pagination {
+    }
+
+    .video-js button {
+    }
+
+        .video-js button.vjs-big-play-button {
+        }
+
+            .video-js button.vjs-big-play-button:after {
+            }
+
+    .video-js .vjs-volume-bar {
+    }
+
+    .video-js .vjs-fullscreen-control:before {
+    }
+
+    .video-js .vjs-volume-menu-button:before {
+    }
+
+    [data-tpl=sta01] header .headline {
+    }
+
+    [data-tpl=sta01] header .subheadline {
+    }
+
+    [data-tpl=sta01] header .btn {
+    }
+
+    [data-tpl=sta01] .image, [data-tpl=sta01] [data-tpl=video] {
+    }
+
+    [data-tpl=sta02] {
+    }
+
+        [data-tpl=sta02] .headline, [data-tpl=sta02] .subheadline {
+        }
+
+        [data-tpl=sta02] .headline {
+        }
+
+        [data-tpl=sta02] .subheadline {
+        }
+
+    [data-tpl=las01] .trigger {
+    }
+
+        [data-tpl=las01] .trigger:after {
+        }
+}
+
+@media (min-width:971px) {
+    #main-navigation ul.quick-nav {
+    }
+}
+
+@media (min-width:480px),print {
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+    }
+
+    .col-sm-1 {
+    }
+
+    .col-sm-2 {
+    }
+
+    .col-sm-3 {
+    }
+
+    .col-sm-4 {
+    }
+
+    .col-sm-5 {
+    }
+
+    .col-sm-6 {
+    }
+
+    .col-sm-7 {
+    }
+
+    .col-sm-8 {
+    }
+
+    .col-sm-9 {
+    }
+
+    .col-sm-10 {
+    }
+
+    .col-sm-11 {
+    }
+
+    .col-sm-12 {
+    }
+
+    .col-sm-pull-0 {
+    }
+
+    .col-sm-pull-1 {
+    }
+
+    .col-sm-pull-2 {
+    }
+
+    .col-sm-pull-3 {
+    }
+
+    .col-sm-pull-4 {
+    }
+
+    .col-sm-pull-5 {
+    }
+
+    .col-sm-pull-6 {
+    }
+
+    .col-sm-pull-7 {
+    }
+
+    .col-sm-pull-8 {
+    }
+
+    .col-sm-pull-9 {
+    }
+
+    .col-sm-pull-10 {
+    }
+
+    .col-sm-pull-11 {
+    }
+
+    .col-sm-pull-12 {
+    }
+
+    .col-sm-push-0 {
+    }
+
+    .col-sm-push-1 {
+    }
+
+    .col-sm-push-2 {
+    }
+
+    .col-sm-push-3 {
+    }
+
+    .col-sm-push-4 {
+    }
+
+    .col-sm-push-5 {
+    }
+
+    .col-sm-push-6 {
+    }
+
+    .col-sm-push-7 {
+    }
+
+    .col-sm-push-8 {
+    }
+
+    .col-sm-push-9 {
+    }
+
+    .col-sm-push-10 {
+    }
+
+    .col-sm-push-11 {
+    }
+
+    .col-sm-push-12 {
+    }
+
+    .col-sm-offset-0 {
+    }
+
+    .col-sm-offset-1 {
+    }
+
+    .col-sm-offset-2 {
+    }
+
+    .col-sm-offset-3 {
+    }
+
+    .col-sm-offset-4 {
+    }
+
+    .col-sm-offset-5 {
+    }
+
+    .col-sm-offset-6 {
+    }
+
+    .col-sm-offset-7 {
+    }
+
+    .col-sm-offset-8 {
+    }
+
+    .col-sm-offset-9 {
+    }
+
+    .col-sm-offset-10 {
+    }
+
+    .col-sm-offset-11 {
+    }
+
+    .col-sm-offset-12 {
+    }
+}
+
+@media (min-width:800px) {
+    .float-minlg-right {
+    }
+
+    .container-fluid {
+    }
+
+    [data-tpl*=grid-form] .container {
+    }
+    /*#################################################################*/
+    /*everything with #main-footer already integrated into _footer.scss*/
+    /*#################################################################*/
+    /*#main-footer [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]),*/
+    main [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]) {
+    }
+
+    [data-tpl*=grid] > .container > .content:not(:first-child), [data-tpl*=grid] > .container > .row > .grid-content:not(:first-child) {
+    }
+
+    body, html {
+    }
+
+    #page-wrapper {
+    }
+
+    h1 {
+    }
+
+    h1, h2 {
+    }
+
+    h2 {
+    }
+
+    h3 {
+    }
+
+    figcaption, small {
+    }
+
+    [data-tpl*=detail-] > header [data-tpl=grid-bas-02] {
+    }
+
+        [data-tpl*=detail-] > header [data-tpl=grid-bas-02] .container {
+        }
+
+    body:not(.state-off-screen-navigation-visible) [data-tpl*=detail-] > header [data-tpl=bnv01], body:not(.state-off-screen-navigation-visible) [data-tpl*=detail-] > header [data-tpl=sta02] {
+    }
+
+    #main-header {
+    }
+
+    body.state-off-screen-cart-visible #main-header .logo, body.state-off-screen-navigation-visible #main-header .logo {
+    }
+
+    body.state-off-screen-navigation-visible #main-header > div {
+    }
+
+    body.state-off-screen-cart-visible #main-header > div {
+    }
+
+    [data-tpl=meta-navigation] {
+    }
+
+    #target-group-select {
+    }
+
+    #quick-navigation li {
+    }
+
+        #quick-navigation li a, #quick-navigation li button {
+        }
+
+            #quick-navigation li .button svg, #quick-navigation li button svg {
+            }
+
+        #quick-navigation li.menu button, #quick-navigation li:not(.menu):not(.search):not(.cart) {
+        }
+
+        #quick-navigation li.menu button {
+        }
+
+            #quick-navigation li.menu button svg {
+            }
+
+                #quick-navigation li.menu button svg + span {
+                }
+
+    body.state-off-screen-navigation-visible #quick-navigation li.menu button svg + span {
+    }
+
+    #quick-navigation li.search button svg {
+    }
+
+    #off-screen-content {
+    }
+
+    #off-screen-wrap #off-screen-content {
+    }
+
+    #off-screen-app-drawer {
+    }
+
+        #off-screen-app-drawer .off-screen-close {
+        }
+
+        #off-screen-app-drawer .app-drawer > [data-tpl] {
+        }
+
+    footer#main-footer [data-tpl=individual-zone] + [data-tpl=individual-global-zone]:before {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=acc01] ul li.accordion-item[aria-expanded=false] .accordion-item__content, footer#main-footer section[data-tpl=individual-zone] [data-tpl=acc01] ul li.accordion-item[aria-expanded=false] .accordion-item__content {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] .headline, footer#main-footer section[data-tpl=individual-global-zone] .subheadline, footer#main-footer section[data-tpl=individual-zone] .headline, footer#main-footer section[data-tpl=individual-zone] .subheadline {
+    }
+
+    footer#main-footer section[data-tpl=individual-zone] .grid-content:not(:first-child) {
+    }
+
+    footer#main-footer section[data-tpl=individual-global-zone] {
+    }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05] {
+        }
+
+            footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05]:first-child {
+            }
+
+            footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05]:last-child {
+            }
+
+            footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-05] .grid-content:not(:first-child) {
+            }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl=grid-bas-02] + [data-tpl=grid-bas-05] {
+        }
+
+        footer#main-footer section[data-tpl=individual-global-zone] [data-tpl*=acc] .accordion-item__headline {
+        }
+
+    footer#main-footer section[data-tpl=global-zone] {
+    }
+
+        footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] {
+        }
+
+            footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container {
+            }
+
+                footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=las01r] {
+                }
+
+                    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=las01r] .trigger {
+                    }
+
+                        footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=las01r] .trigger:after {
+                        }
+
+                footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container .copyright {
+                }
+
+                footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container .endorsement {
+                }
+
+                footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] {
+                }
+
+                    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol {
+                    }
+
+                        footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] ol li a {
+                        }
+
+                    footer#main-footer section[data-tpl=global-zone] [data-tpl=grid-bas-02] .container [data-tpl=footer] + .copyright {
+                    }
+
+    #main-navigation {
+    }
+
+        #main-navigation ul ul {
+        }
+
+        #main-navigation ul li[aria-expanded] > span {
+        }
+
+        #main-navigation ul.target-group-nav li > a:before {
+        }
+
+    [data-tpl=breadcrumb] {
+    }
+
+        [data-tpl=breadcrumb] ol {
+        }
+
+            [data-tpl=breadcrumb] ol li a {
+            }
+
+    #dws01-modal .modal-content, [data-tpl=modal] .modal-content {
+    }
+
+    #dws01-modal[aria-expanded=true] .modal-content, [data-tpl=modal][aria-expanded=true] .modal-content {
+    }
+
+    #dws01-modal.modal--fixed-width .modal-content, [data-tpl=modal].modal--fixed-width .modal-content {
+    }
+
+    .btn {
+    }
+
+    [data-tpl=sli01]:hover .slider-next, [data-tpl=sli01]:hover .slider-prev {
+    }
+
+        [data-tpl=sli01]:hover .slider-next:hover, [data-tpl=sli01]:hover .slider-prev:hover {
+        }
+
+    [data-tpl=sli01] .swiper-pagination-bullet + .swiper-pagination-bullet {
+    }
+
+    .video-js button {
+    }
+
+        .video-js button.vjs-big-play-button {
+        }
+
+        .video-js button, .video-js button.vjs-big-play-button {
+        }
+
+    .video-js .vjs-volume-bar {
+    }
+
+    [data-tpl=sta01] header {
+    }
+
+        [data-tpl=sta01] header, [data-tpl=sta01] header.color-teaser-1 {
+        }
+
+            [data-tpl=sta01] header.color-teaser-2 {
+            }
+
+            [data-tpl=sta01] header .headline {
+            }
+
+            [data-tpl=sta01] header .subheadline {
+            }
+
+            [data-tpl=sta01] header .btn {
+            }
+
+    [data-tpl=sta01].sta01--centered-centered header {
+    }
+
+    [data-tpl=sta01].sta01--bottom-left:not(.sta01--compact) header, [data-tpl=sta01].sta01--bottom-right:not(.sta01--compact) header, [data-tpl=sta01].sta01--centered-left:not(.sta01--compact) header, [data-tpl=sta01].sta01--centered-right:not(.sta01--compact) header {
+    }
+
+    [data-tpl=sta01].sta01--bottom-left.sta01--compact header, [data-tpl=sta01].sta01--bottom-right.sta01--compact header, [data-tpl=sta01].sta01--centered-left.sta01--compact header, [data-tpl=sta01].sta01--centered-right.sta01--compact header {
+    }
+
+    [data-tpl=sta01].sta01--bottom-left [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button, [data-tpl=sta01].sta01--bottom-right [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button, [data-tpl=sta01].sta01--centered-left [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button, [data-tpl=sta01].sta01--centered-right [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button {
+    }
+
+    [data-tpl=sta01].sta01--bottom-right header, [data-tpl=sta01].sta01--centered-right header {
+    }
+
+    [data-tpl=sta01].sta01--bottom-right [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button, [data-tpl=sta01].sta01--centered-right [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button {
+    }
+
+        [data-tpl=sta01].sta01--bottom-right [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button:before, [data-tpl=sta01].sta01--centered-right [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button:before {
+        }
+
+    [data-tpl=sta01].sta01--centered-right header {
+    }
+
+    [data-tpl=sta01].sta01--bottom-left header, [data-tpl=sta01].sta01--centered-left header {
+    }
+
+    [data-tpl=sta01].sta01--bottom-left [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button, [data-tpl=sta01].sta01--centered-left [data-tpl=video].videoplayer--fullscreen .vjs-big-play-button {
+    }
+
+    [data-tpl=sta01].sta01--centered-left header {
+    }
+
+    [data-tpl=sta02] {
+    }
+
+        [data-tpl=sta02] .headline, [data-tpl=sta02] .subheadline {
+        }
+
+        [data-tpl=sta02] .headline {
+        }
+
+        [data-tpl=sta02] .subheadline {
+        }
+
+        [data-tpl=sta02] .image:before, [data-tpl=sta02] [data-tpl=video]:not(.videoplayer--fullscreen):before {
+        }
+
+        [data-tpl=sta02] [data-tpl=video] .posterimg, [data-tpl=sta02] [data-tpl=video] img {
+        }
+
+        [data-tpl=sta02] [data-tpl=video] .posterimg, [data-tpl=sta02] [data-tpl=video].videoplayer--bg.youtube .videoplayer, [data-tpl=sta02] [data-tpl=video] video {
+        }
+
+    [data-tpl=las01r] .trigger {
+    }
+
+        [data-tpl=las01r] .trigger:after {
+        }
+
+    [data-tpl=las01r] ul {
+    }
+
+        [data-tpl=las01r] ul:before {
+        }
+
+        [data-tpl=las01r] ul li {
+        }
+
+    footer [data-tpl=las01r] .trigger {
+    }
+
+        footer [data-tpl=las01r] .trigger:after {
+        }
+
+        footer [data-tpl=las01r] .trigger ul {
+        }
+
+            footer [data-tpl=las01r] .trigger ul:before {
+            }
+}
+
+@media (min-width:800px) and (max-width:970px) {
+    body.state-off-screen-cart-visible #quick-navigation li:not(.menu):not(.search):not(.cart), body.state-off-screen-navigation-visible #quick-navigation li:not(.menu):not(.search):not(.cart) {
+    }
+}
+
+@media (min-width:800px),print {
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    }
+
+    .col-md-1 {
+    }
+
+    .col-md-2 {
+    }
+
+    .col-md-3 {
+    }
+
+    .col-md-4 {
+    }
+
+    .col-md-5 {
+    }
+
+    .col-md-6 {
+    }
+
+    .col-md-7 {
+    }
+
+    .col-md-8 {
+    }
+
+    .col-md-9 {
+    }
+
+    .col-md-10 {
+    }
+
+    .col-md-11 {
+    }
+
+    .col-md-12 {
+    }
+
+    .col-md-pull-0 {
+    }
+
+    .col-md-pull-1 {
+    }
+
+    .col-md-pull-2 {
+    }
+
+    .col-md-pull-3 {
+    }
+
+    .col-md-pull-4 {
+    }
+
+    .col-md-pull-5 {
+    }
+
+    .col-md-pull-6 {
+    }
+
+    .col-md-pull-7 {
+    }
+
+    .col-md-pull-8 {
+    }
+
+    .col-md-pull-9 {
+    }
+
+    .col-md-pull-10 {
+    }
+
+    .col-md-pull-11 {
+    }
+
+    .col-md-pull-12 {
+    }
+
+    .col-md-push-0 {
+    }
+
+    .col-md-push-1 {
+    }
+
+    .col-md-push-2 {
+    }
+
+    .col-md-push-3 {
+    }
+
+    .col-md-push-4 {
+    }
+
+    .col-md-push-5 {
+    }
+
+    .col-md-push-6 {
+    }
+
+    .col-md-push-7 {
+    }
+
+    .col-md-push-8 {
+    }
+
+    .col-md-push-9 {
+    }
+
+    .col-md-push-10 {
+    }
+
+    .col-md-push-11 {
+    }
+
+    .col-md-push-12 {
+    }
+
+    .col-md-offset-0 {
+    }
+
+    .col-md-offset-1 {
+    }
+
+    .col-md-offset-2 {
+    }
+
+    .col-md-offset-3 {
+    }
+
+    .col-md-offset-4 {
+    }
+
+    .col-md-offset-5 {
+    }
+
+    .col-md-offset-6 {
+    }
+
+    .col-md-offset-7 {
+    }
+
+    .col-md-offset-8 {
+    }
+
+    .col-md-offset-9 {
+    }
+
+    .col-md-offset-10 {
+    }
+
+    .col-md-offset-11 {
+    }
+
+    .col-md-offset-12 {
+    }
+}
+
+@media (min-width:1280px) {
+    body, html {
+    }
+
+    #page-wrapper {
+    }
+
+    h1 {
+    }
+
+    h2 {
+    }
+
+    h3 {
+    }
+
+    figcaption, small {
+    }
+
+    body.state-off-screen-cart-visible, body.state-off-screen-navigation-visible {
+    }
+
+    [data-tpl*=detail-] > header [data-tpl=grid-bas-02] {
+    }
+
+        [data-tpl*=detail-] > header [data-tpl=grid-bas-02] > .container {
+        }
+
+            [data-tpl*=detail-] > header [data-tpl=grid-bas-02] > .container > [data-tpl] {
+            }
+
+    #main-header {
+    }
+
+    body.state-off-screen-navigation-visible #main-header > div {
+    }
+
+    body.state-off-screen-cart-visible #main-header > div {
+    }
+
+    #main-header.main-header--fixed, #main-header.main-header--out-of-viewport {
+    }
+
+    #quick-navigation #quick-navigation-left-list {
+    }
+
+    #quick-navigation #quick-navigation-right-list {
+    }
+
+    #quick-navigation li {
+    }
+
+        #quick-navigation li a, #quick-navigation li button {
+        }
+
+            #quick-navigation li .button svg, #quick-navigation li button svg {
+            }
+
+        #quick-navigation li.menu button svg {
+        }
+
+            #quick-navigation li.menu button svg + span {
+            }
+
+        #quick-navigation li.search button svg {
+        }
+
+    #off-screen-content {
+    }
+
+    #off-screen-wrap.osc--during-animation #off-screen-content, #off-screen-wrap.osn--during-animation #off-screen-content {
+    }
+
+    body.state-off-screen-cart-visible #off-screen-content {
+    }
+
+    body.state-off-screen-navigation-visible #off-screen-content {
+    }
+
+    #off-screen-overlay {
+    }
+
+    body.state-off-screen-cart-visible #off-screen-overlay, body.state-off-screen-navigation-visible #off-screen-overlay {
+    }
+
+    #off-screen-app-drawer {
+    }
+
+    #off-screen-navigation {
+    }
+
+    footer#main-footer [data-tpl=individual-zone] + [data-tpl=individual-global-zone]:before {
+    }
+
+    #main-navigation {
+    }
+
+        #main-navigation ul ul {
+        }
+
+        #main-navigation ul li[aria-expanded] > span {
+        }
+
+        #main-navigation ul.target-group-nav li > a:before {
+        }
+
+    .btn {
+    }
+
+    [data-tpl=sta01] header {
+    }
+
+        [data-tpl=sta01] header .headline {
+        }
+
+        [data-tpl=sta01] header .subheadline {
+        }
+
+        [data-tpl=sta01] header .btn {
+        }
+
+    [data-tpl=sta02] {
+    }
+
+        [data-tpl=sta02] .headline, [data-tpl=sta02] .subheadline {
+        }
+
+        [data-tpl=sta02] .headline {
+        }
+
+        [data-tpl=sta02] .subheadline {
+        }
+}
+
+@media (min-width:1280px),print {
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    }
+
+    .col-lg-1 {
+    }
+
+    .col-lg-2 {
+    }
+
+    .col-lg-3 {
+    }
+
+    .col-lg-4 {
+    }
+
+    .col-lg-5 {
+    }
+
+    .col-lg-6 {
+    }
+
+    .col-lg-7 {
+    }
+
+    .col-lg-8 {
+    }
+
+    .col-lg-9 {
+    }
+
+    .col-lg-10 {
+    }
+
+    .col-lg-11 {
+    }
+
+    .col-lg-12 {
+    }
+
+    .col-lg-pull-0 {
+    }
+
+    .col-lg-pull-1 {
+    }
+
+    .col-lg-pull-2 {
+    }
+
+    .col-lg-pull-3 {
+    }
+
+    .col-lg-pull-4 {
+    }
+
+    .col-lg-pull-5 {
+    }
+
+    .col-lg-pull-6 {
+    }
+
+    .col-lg-pull-7 {
+    }
+
+    .col-lg-pull-8 {
+    }
+
+    .col-lg-pull-9 {
+    }
+
+    .col-lg-pull-10 {
+    }
+
+    .col-lg-pull-11 {
+    }
+
+    .col-lg-pull-12 {
+    }
+
+    .col-lg-push-0 {
+    }
+
+    .col-lg-push-1 {
+    }
+
+    .col-lg-push-2 {
+    }
+
+    .col-lg-push-3 {
+    }
+
+    .col-lg-push-4 {
+    }
+
+    .col-lg-push-5 {
+    }
+
+    .col-lg-push-6 {
+    }
+
+    .col-lg-push-7 {
+    }
+
+    .col-lg-push-8 {
+    }
+
+    .col-lg-push-9 {
+    }
+
+    .col-lg-push-10 {
+    }
+
+    .col-lg-push-11 {
+    }
+
+    .col-lg-push-12 {
+    }
+
+    .col-lg-offset-0 {
+    }
+
+    .col-lg-offset-1 {
+    }
+
+    .col-lg-offset-2 {
+    }
+
+    .col-lg-offset-3 {
+    }
+
+    .col-lg-offset-4 {
+    }
+
+    .col-lg-offset-5 {
+    }
+
+    .col-lg-offset-6 {
+    }
+
+    .col-lg-offset-7 {
+    }
+
+    .col-lg-offset-8 {
+    }
+
+    .col-lg-offset-9 {
+    }
+
+    .col-lg-offset-10 {
+    }
+
+    .col-lg-offset-11 {
+    }
+
+    .col-lg-offset-12 {
+    }
+}
+
+@media (min-width:1600px) {
+    body.state-off-screen-cart-visible, body.state-off-screen-navigation-visible {
+    }
+
+    #off-screen-wrap.osc--during-animation #off-screen-content, #off-screen-wrap.osn--during-animation #off-screen-content {
+    }
+
+    body.state-off-screen-cart-visible #off-screen-content {
+    }
+
+    body.state-off-screen-navigation-visible #off-screen-content {
+    }
+
+    #off-screen-overlay {
+    }
+
+    body.state-off-screen-cart-visible #off-screen-overlay, body.state-off-screen-navigation-visible #off-screen-overlay {
+    }
+
+    #off-screen-navigation {
+    }
+}
+
+@media (min-width:1920px) {
+    .container, .container-fluid {
+    }
+
+    .row {
+    }
+
+    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
+    }
+
+    .container, .container-fluid {
+    }
+
+    [data-tpl*=grid-form] .container {
+    }
+
+    [data-tpl*=detail] aside [data-tpl*=grid] {
+
+    }
+    /*#################################################################*/
+    /*everything with #main-footer already integrated into _footer.scss*/
+    /*#################################################################*/
+    /*#main-footer [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]),*/
+    [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]) {
+    }
+    
+    main [data-tpl*=grid]:not([data-tpl=grid-bas-01]):not([data-tpl=grid-bas-07]):not([data-tpl^=grid-form]) {
+    }
+
+    #page-wrapper {
+    }
+
+    body {
+    }
+
+        body:after, body:before {
+        }
+
+        body:before {
+        }
+
+        body:after {
+        }
+
+    [data-tpl*=detail-] > header [data-tpl=grid-bas-02], [data-tpl*=detail-] > header [data-tpl=grid-bas-02] > .container {
+    }
+
+        [data-tpl*=detail-] > header [data-tpl=grid-bas-02] > .container > [data-tpl] {
+        }
+
+    #main-header.main-header--fixed, #main-header.main-header--out-of-viewport {
+    }
+
+    body.state-off-screen-navigation-visible #off-screen-content {
+    }
+
+    #off-screen-navigation {
+    }
+}
+
+@media (min-width:1940px) {
+    body.state-off-screen-navigation-visible #off-screen-content {
+    }
+}
+
+@media (max-width:479px) {
+    .btn {
+    }
+}
+</style>
+
+
+
+    <link href="/bundles/css/rwe?v=ExBkzfqutLv4XY12rlYP_oH-tRQ2XfjEAnNZahkix0o1" rel="stylesheet"/>
+
+
+    <script type="text/javascript" src="/vendor/vendor-min-20044.js"></script>
+
+    
+<meta name="VIcurrentDateTime" content="637236579556275249" />
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script>
+
+
+    <script type="text/javascript">
+        var components = {};
+        var innogyForm = {};
+        var innogyMultistepForm = {};
+        var defaultHeaders = {
+            'Site': 'rwe',
+            'Database': 'web',
+            'Language': 'en',
+            'DictionaryDomain': 'rwe domain',
+            'Content-Type': 'application/json; charset=utf-8'
+        };
+        var generalProperties = {
+            DefaultErrorMessage: 'Some error occured'
+        };
+    </script>
+
+    
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start':
+                    new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-K6ZG5P5');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    
+    <link href="/vendor/vendor-min.css" rel="stylesheet"/>
+
+
+    
+    <script>window.jQ = jQuery.noConflict();</script>
+</head>
+
+<body class="" data-transparent-navigation="False">
+
+    
+<section class="cb " 
+         data-lifetime="730" 
+         data-cookie-name="gdpr-settings-cookie" 
+         data-hash-sum="-569813917"
+         data-lang="en">
+    <div class="cb__container">
+        <h2 class="cb__intro-headline">
+            Your settings for cookies and pixels on group.rwe
+        </h2>
+        <p class="cb__intro-text">
+            <p>Select which cookies and pixels we are allowed to use. Please note that some cookies are necessary for technical reasons and must be enabled in order to maintain the functionality of our website. If you would like to benefit from every service on our website, please consider that you need to choose every cookie category. For more information, please refer to our <a href="/en/general-data-privacy-policy" class="link">Privacy Policy</a>.</p>
+        </p>
+        <div class="cb__lvl-container">
+            <ul class="cb__lvl-list">
+                    <li class="cb__lvl-entry currently-selected selected" data-lvl="1">
+                        <input type="radio" id="cb-lvl-1" name="cb-lvl" value="lvl-1" selected />
+                        <div class="cb__radio-label">
+                            <label for="cb-lvl-1">
+                                <span>
+                                    <span>Required cookies...</span>
+                                    <span>...are necessary for technical reasons to enable the correct functionality of our website.</span>
+                                </span>
+
+                            </label>
+                        </div>
+                    </li>
+                    <li class="cb__lvl-entry " data-lvl="2">
+                        <input type="radio" id="cb-lvl-2" name="cb-lvl" value="lvl-2" selected />
+                        <div class="cb__radio-label">
+                            <label for="cb-lvl-2">
+                                <span>
+                                    <span>Analytical cookies...</span>
+                                    <span>...enable website analysis in order to understand user behaviour and customise our website accordingly.</span>
+                                </span>
+
+                            </label>
+                        </div>
+                    </li>
+                    <li class="cb__lvl-entry " data-lvl="3">
+                        <input type="radio" id="cb-lvl-3" name="cb-lvl" value="lvl-3" selected />
+                        <div class="cb__radio-label">
+                            <label for="cb-lvl-3">
+                                <span>
+                                    <span>Convenience cookies...</span>
+                                    <span>...help us to provide you with individualised offers and services on group.rwe and other websites.<br />
+...help you to connect directly to your social media account if needed.</span>
+                                </span>
+
+                            </label>
+                        </div>
+                    </li>
+            </ul>
+        </div>
+        <div class="cb__lvl-detail-container">
+            <div class="cb__expand-container">
+                <ul class="cb__expand-list">
+                        <li class="cb__expand-entry selected" data-lvl="1">
+                            <ul>
+    <li>Maintain the stability of the website.</li>
+    <li>Save your log-in data.</li>
+</ul>
+                        </li>
+                        <li class="cb__expand-entry " data-lvl="2">
+                            <ul>
+    <li>Allow to improve the user experience.</li>
+</ul>
+                        </li>
+                        <li class="cb__expand-entry " data-lvl="3">
+                            <ul>
+    <li>They provide advertisements that are relevant to your interests.</li>
+    <li>They allow you to share interesting content directly with your social media network.</li>
+</ul>
+                        </li>
+                </ul>
+                <p class="cb__expand-footnote">
+                    You can change your cookie and pixel settings on group.rwe at any time via our <a href="/en/general-data-privacy-policy" class="link">data privacy</a>.<br />
+<br />
+<a href="https://www.group.rwe/en/imprint">Imprint</a>
+                </p>
+            </div>
+            <a class="cb__expand-trigger" data-show="Show Details" data-hide="Hide Details">
+                Show Details
+            </a>
+        </div>
+        <div class="cb__button-container cb__button-container--inside">
+            <a class="cb__button cb__button--select-lvl btn" onmousedown="etracker-cookie-event-level">
+                Confirm selection
+            </a>
+            <a class="cb__button cb__button--select-all btn" onmousedown="etracker-cookie-event-all">
+                Select all
+            </a>
+        </div>
+    </div>
+    <div class="cb__button-container cb__button-container--outside">
+        <a class="cb__button cb__button--select-all btn" onmousedown="etracker-cookie-event-all">
+            Select all
+        </a>
+        <a class="cb__button cb__button--select-lvl btn" onmousedown="etracker-cookie-event-level">
+            Confirm selection
+        </a>
+    </div>
+</section>
+
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K6ZG5P5"
+                height="0" width="0" style="display: none; visibility: hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div id="page-wrapper">
+            <div data-tpl="meta-navigation">
+        <nav data-tpl="target-group-select" id="target-group-select" role="navigation">
+            <h3 class="aria-only" id="target-group-select-label">Bitte wählen sie einen Bereich</h3>
+            <ul aria-expanded="false" 
+                aria-labelledby="target-group-select-label" 
+                aria-live="polite" 
+                id="target-group-select-list" 
+                role="menubar">
+                <li aria-selected="false">
+                        <div data-tpl="las01r">
+        <div class="trigger">English</div>
+        <ul>
+                <li>
+<a data-link-name="Language-Switch" data-event-action="corporate_click" data-event-label="changed_language_to_german" href="/investor-relations/news-und-ad-hoc-mitteilungen" title="Deutsch" class="link" data-link-type="Internal">Deutsch</a>                </li>
+                <li>
+<a data-link-name="Language-Switch" data-event-action="corporate_click" data-event-label="changed_language_to_dutch" href="/nl-NL/investor-relations/news-and-ad-hoc-announcements" title="Nederlands" class="link" data-link-type="Internal">Nederlands</a>                </li>
+        </ul>
+    </div>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+        <div id="off-screen-wrap">
+            
+
+<!-- START: MAIN HEADER-->
+<header class="header-container" role="banner">
+    <div class="teaser-width">
+        <nav class="header-navigation teaser-width" role="navigation" data-tpl="quick-navigation">
+
+            <h3 id="quick-navigation-left-label" class="aria-only">Quick Navigation</h3>
+<ul id="quick-navigation-left-list" role="menubar" aria-labelledby="quick-navigation-left-label" aria-live="polite">
+    <li aria-selected="false" class="menu">
+    <button type="button" name=""  data-button-text="MenuButton" id="menu-open">
+        <svg data-tpl="svg" data-module="animation" data-animation="svg-burger-menu" data-animation-config="" id="svg-315" width="200px" height="200px" viewBox="0 0 200 200">
+            <path id="line_x5F_top" d="M195.008,55H4.994C2.235,55,0,52.762,0,50s2.235-5,4.994-5h190.014c2.758,0,4.992,2.238,4.992,5
+    S197.766,55,195.008,55z" />
+            <path id="line_x5F_middle" d="M200,100c0-2.762-2.234-5-4.992-5H4.994C2.235,95,0,97.238,0,100c0,2.763,2.235,5,4.994,5h190.014
+    C197.766,105,200,102.763,200,100z" />
+            <path id="line_x5F_down" d="M200,150c0-2.76-2.234-5-4.992-5H4.994C2.235,145,0,147.24,0,150c0,2.761,2.235,5,4.994,5h190.014
+    C197.766,155,200,152.761,200,150z" />
+        </svg>
+        <span>Menu</span>
+    </button>
+</li>
+<li role="menuitem" aria-selected="false" class="">
+<a href="/en/contact-services" class="link icon-contact" data-link-type="Internal">Contact</a></li>
+<li role="menuitem" aria-selected="false" class="">
+<a href="/en/contact-services/tools-platforms" class="link icon-login" data-link-type="Internal">Login</a></li>
+</ul>
+            
+<a class="logo link" href="/en" data-link-type="Internal">    <div>
+        <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="100" height="29" viewBox="0, 0, 100, 29">
+  <g id="Layer_1">
+    <path d="M77.293,0.037 C75.961,0.037 74.938,1.041 74.938,2.392 L74.938,26.308 C74.938,27.609 75.992,28.663 77.293,28.663 L99.99,28.663 L99.99,22.936 L82.207,22.936 L82.207,16.813 L96.956,16.813 L96.956,11.32 L82.207,11.32 L82.207,5.585 L99.79,5.585 L99.79,0.037 z M17.091,13.483 L12.46,13.483 C11.654,13.483 11.153,14.361 11.564,15.055 L20.365,28.663 L29.026,28.663 L21.183,18.059 C24.975,17.565 28.122,15.573 28.122,9.293 C28.122,2.683 25.274,0.037 18.287,0.037 L2.365,0.037 C1.034,0.037 0.01,1.041 0.01,2.392 L0.01,28.663 L7.535,28.663 L7.535,5.484 L17.2,5.484 C20.04,5.484 21.131,6.791 21.131,9.433 C21.131,11.687 19.913,13.483 17.091,13.483 M44.883,27.467 C44.623,28.185 43.941,28.663 43.178,28.663 L38.654,28.663 C37.815,28.663 37.085,28.087 36.891,27.272 L30.381,0.037 L38.091,0.037 L41.67,17.701 L47.296,1.262 C47.547,0.529 48.236,0.037 49.011,0.037 L52.973,0.037 C53.748,0.037 54.437,0.529 54.688,1.262 L60.314,17.701 L63.893,0.037 L71.603,0.037 L65.094,27.272 C64.899,28.087 64.169,28.663 63.33,28.663 L58.807,28.663 C58.043,28.663 57.361,28.185 57.101,27.467 L50.992,10.591 z"/>
+  </g>
+</svg>
+    </div>
+</a>   
+
+            <h3 id="quick-navigation-right-label" class="aria-only">Quick Navigation</h3>
+<ul id="quick-navigation-right-list" role="menubar" aria-labelledby="quick-navigation-right-label" aria-live="polite">
+    
+<li aria-selected="false" class="search">
+    <button type="button"
+            name="Search"
+            aria-controls="off-screen-app-drawer"
+            aria-controls-drawer="search-drawer"
+            data-button-text="Search">
+        <span>Search</span>
+    </button>
+</li>    <div data-tpl="meta-navigation">
+        <nav data-tpl="target-group-select" id="target-group-select" role="navigation">
+            <h3 class="aria-only" id="target-group-select-label">Bitte wählen sie einen Bereich</h3>
+            <ul aria-expanded="false" 
+                aria-labelledby="target-group-select-label" 
+                aria-live="polite" 
+                id="target-group-select-list" 
+                role="menubar">
+                <li aria-selected="false">
+                        <div data-tpl="las01r">
+        <div class="trigger">English</div>
+        <ul>
+                <li>
+<a data-link-name="Language-Switch" data-event-action="corporate_click" data-event-label="changed_language_to_german" href="/investor-relations/news-und-ad-hoc-mitteilungen" title="Deutsch" class="link" data-link-type="Internal">Deutsch</a>                </li>
+                <li>
+<a data-link-name="Language-Switch" data-event-action="corporate_click" data-event-label="changed_language_to_dutch" href="/nl-NL/investor-relations/news-and-ad-hoc-announcements" title="Nederlands" class="link" data-link-type="Internal">Nederlands</a>                </li>
+        </ul>
+    </div>
+
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</ul>
+
+        </nav>
+    </div>
+</header>
+<!-- END: MAIN HEADER-->
+
+<div data-tpl="tag-bar-sticky" class="color-background-17 tag-bar--sticky"></div><div id="off-screen-app-drawer" aria-expanded="false">
+    <div>
+       
+
+
+        <section id="search-drawer" class="app-drawer">
+            
+
+<div data-tpl="ses01"
+     
+     data-service-id="unknown" 
+     data-search-url="/en/suche">
+    <div class="container">
+        <div data-tpl="form" data-module="form" data-module-config="">
+            <form name="searchBox">
+                <div class="form-group autocomplete">
+                    <div class="input-group search">
+                        <input id="search" name="search" type="search" class="form-control form-control search-input" placeholder="Enter search term" autocomplete="off">
+                        <div class="input-group-btn">
+                            <button type="submit" class="btn color-cta-3 search-button">Search</button>
+                        </div>
+                    </div>
+                    <ol class="suggestions"></ol>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+        </section>
+
+
+    </div>
+</div>
+
+
+
+<div class="navigation-wrapper">
+    <div class="overlay"></div>
+    <nav id="burger-menu" role="navigation">
+        <div id="burger-menu-controls">
+            <button type="button" name="" aria-controls="off-screen-navigation" data-button-text="MenuButton" id="button-close">
+                <svg data-tpl="svg" data-module="animation" data-animation="svg-burger-menu" data-animation-config="" id="svg-315" width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs">
+                    <defs id="SvgjsDefs1001"></defs><g id="SvgjsG1007"></g><path id="line_x5F_top" d="M195.008 105H4.994C2.235 105 0 102.762 0 100S2.235 95 4.994 95H195.008C197.76600000000002 95 200 97.238 200 100S197.766 105 195.008 105Z " origY="45" transform="matrix(0.7071067811865474,-0.7071067811865477,0.7071067811865477,0.7071067811865474,-41.42135623730954,100.00000000000003)"></path><path id="line_x5F_middle" d="M200,100c0-2.762-2.234-5-4.992-5H4.994C2.235,95,0,97.238,0,100c0,2.763,2.235,5,4.994,5h190.014
+    C197.766,105,200,102.763,200,100z" origY="95" style="display: none;"></path><path id="line_x5F_down" d="M200 100C200 97.24000000000001 197.766 95 195.008 95H4.994C2.235 95 0 97.24000000000001 0 100C0 102.761 2.235 105 4.994 105H195.008C197.766 105 200 102.761 200 100Z " origY="145" transform="matrix(-0.7071067811865477,-0.7071067811865475,0.7071067811865475,-0.7071067811865477,100.00000000000006,241.42135623730945)"></path></svg>
+
+            </button>
+            <div class="mobile-login-control">
+               
+            </div>
+        </div>
+            <ul role="menu" aria-expanded="true">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="The Group" href="/en/the-group" class="link" data-link-type="Internal">The Group</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="The new RWE" href="/en/the-group/the-new-rwe" class="link" data-link-type="Internal">The new RWE</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Our strategy" href="/en/the-group/profile-and-strategy" class="link" data-link-type="Internal">Our strategy</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Key data" href="/en/the-group/profile-and-strategy/key-data" class="link" data-link-type="Internal">Key data</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Organisational structure" href="/en/the-group/organisational-structure" class="link" data-link-type="Internal">Organisational structure</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="RWE AG" href="/en/the-group/organisational-structure/rwe-ag" class="link" data-link-type="Internal">RWE AG</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="RWE Renewables GmbH" href="/en/the-group/organisational-structure/rwe-renewables" class="link" target="|Custom" data-link-type="Internal">RWE Renewables GmbH</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="RWE Generation SE" href="/en/the-group/organisational-structure/rwe-generation" class="link" data-link-type="Internal">RWE Generation SE</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="RWE Power AG" href="/en/the-group/organisational-structure/rwe-power" class="link" data-link-type="Internal">RWE Power AG</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="RWE Supply &amp; Trading GmbH" href="/en/the-group/organisational-structure/rwest" class="link" data-link-type="Internal">RWE Supply&#160;&amp; Trading GmbH</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="History" href="/en/the-group/history" class="link" data-link-type="Internal">History</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Locations" href="/en/the-group/countries-and-locations" class="link" data-link-type="Internal">Locations</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Compliance" href="/en/the-group/compliance" class="link" data-link-type="Internal">Compliance</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Diversity &amp; equal opportunities" href="/en/the-group/diversity-management" class="link" data-link-type="Internal">Diversity &amp; equal opportunities</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title=" Dates and events" href="/en/the-group/dates-and-events" class="link" target="|Custom" data-link-type="Internal"> Dates and events</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Energy &amp; product portfolio" href="/en/our-portfolio" class="link" data-link-type="Internal">Energy &amp; product portfolio</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Sites" href="/en/our-portfolio/our-sites" class="link" data-link-type="Internal">Sites</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Product portfolio" href="/en/our-portfolio/our-products" class="link" data-link-type="Internal">Product portfolio</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Principal Investments" href="/en/our-portfolio/principal-investments" class="link" data-link-type="Internal">Principal Investments</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Project References" href="/en/our-portfolio/worldwide-project-references" class="link" data-link-type="Internal">Project References</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Experts" href="/en/our-portfolio/experts" class="link" data-link-type="Internal">Experts</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Use of raw materials &amp; energy sources" href="/en/our-portfolio/raw-materials-energy-sources" class="link" data-link-type="Internal">Use of raw materials &amp; energy sources</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Biomass/Biogas" href="/en/our-portfolio/raw-materials-energy-sources/biomass-biogas" class="link" data-link-type="Internal">Biomass/Biogas</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Lignite" href="/en/our-portfolio/raw-materials-energy-sources/lignite" class="link" data-link-type="Internal">Lignite</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Gas" href="/en/our-portfolio/raw-materials-energy-sources/gas" class="link" data-link-type="Internal">Gas</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Nuclear Power" href="/en/our-portfolio/raw-materials-energy-sources/nuclear" class="link" data-link-type="Internal">Nuclear Power</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Sun" href="/en/our-portfolio/raw-materials-energy-sources/sun" class="link" data-link-type="Internal">Sun</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Coal" href="/en/our-portfolio/raw-materials-energy-sources/coal" class="link" data-link-type="Internal">Coal</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Water" href="/en/our-portfolio/raw-materials-energy-sources/water" class="link" data-link-type="Internal">Water</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Wind" href="/en/our-portfolio/raw-materials-energy-sources/wind" class="link" data-link-type="Internal">Wind</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Innovation &amp; technology" href="/en/our-portfolio/innovation-and-technology" class="link" data-link-type="Internal">Innovation &amp; technology</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Security of energy supply" href="/en/our-portfolio/innovation-and-technology/security-of-energy-supply" class="link" data-link-type="Internal">Security of energy supply</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Technologies, research &amp; development" href="/en/our-portfolio/innovation-and-technology/technology-research-development" class="link" data-link-type="Internal">Technologies, research &amp; development</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Power plants" href="/en/our-portfolio/innovation-and-technology/power-plants" class="link" data-link-type="Internal">Power plants</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Planned projects" href="/en/our-portfolio/innovation-and-technology/project-proposals" class="link" data-link-type="Internal">Planned projects</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Tools &amp; platforms" href="/en/contact-services/tools-platforms" class="link" data-link-type="Internal">Tools &amp; platforms</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Tailor-made solutions" href="/en/bespoke-solutions" class="link" data-link-type="Internal">Tailor-made solutions</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Utilities" href="/en/bespoke-solutions/solutions-for-utilities" class="link" data-link-type="Internal">Utilities</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Grid Operators" href="/en/bespoke-solutions/solutions-for-grid-operator" class="link" data-link-type="Internal">Grid Operators</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Plant Operators" href="/en/bespoke-solutions/solutions-for-plant-operators" class="link" data-link-type="Internal">Plant Operators</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Trading Partners" href="/en/bespoke-solutions/solutions-for-trading-partners" class="link" data-link-type="Internal">Trading Partners</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Authorities" href="/en/bespoke-solutions/solutions-for-authorities-and-public-sector" class="link" data-link-type="Internal">Authorities</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Municipalities" href="/en/bespoke-solutions/solutions-for-public-utilities" class="link" data-link-type="Internal">Municipalities</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Investors and Banks" href="/en/bespoke-solutions/solutions-for-investors-banks" class="link" data-link-type="Internal">Investors and Banks</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Industrial Partners" href="/en/bespoke-solutions/solutions-for-industrial-companies" class="link" data-link-type="Internal">Industrial Partners</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Mining" href="/en/bespoke-solutions/solutions-for-mining" class="link" data-link-type="Internal">Mining</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Tools &amp; platforms" href="/en/contact-services/tools-platforms" class="link" data-link-type="Internal">Tools&#160;&amp; platforms</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="RWE Group Procurement" href="/en/bespoke-solutions/supplier-portal" class="link" data-link-type="Internal">RWE Group Procurement</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="General conditions" href="/en/bespoke-solutions/supplier-portal/general-conditions" class="link" data-link-type="Internal">General conditions</a>            </li>
+
+
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Tenders" href="/en/bespoke-solutions/supplier-portal/tenders" class="link" data-link-type="Internal">Tenders</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="eSourcing" href="/en/bespoke-solutions/supplier-portal/esourcing" class="link" data-link-type="Internal">eSourcing</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Supplier registration" href="/en/bespoke-solutions/supplier-portal/supplier-registration" class="link" data-link-type="Internal">Supplier registration</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Supplier portal" href="https://supplierqs.rwe.com/sap(bD1kZSZjPTE2MA==)/login/default_en.htm" class="link" rel="noopener noreferrer" target="_blank" data-link-type="External">Supplier portal</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Supplier management" href="/en/bespoke-solutions/supplier-portal/supplier-management" class="link" data-link-type="Internal">Supplier management</a>            </li>
+
+
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Contacts in Procurement" href="/en/bespoke-solutions/supplier-portal/contacts-in-procurement" class="link" data-link-type="Internal">Contacts in Procurement</a>            </li>
+            </ul>
+    </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Responsibility and sustainability" href="/en/responsibility-and-sustainability" class="link" data-link-type="Internal">Responsibility and sustainability</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Environmental protection" href="/en/responsibility-and-sustainability/environmental-protection" class="link" data-link-type="Internal">Environmental protection</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Climate protection" href="/en/responsibility-and-sustainability/environmental-protection/climate-protection" class="link" data-link-type="Internal">Climate protection</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Recultivating open-cast mines" href="/en/responsibility-and-sustainability/environmental-protection/recultivating-open-cast-mines" class="link" data-link-type="Internal">Recultivating open-cast mines</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Water use and waste management" href="/en/responsibility-and-sustainability/environmental-protection/water-use-and-waste-management" class="link" data-link-type="Internal">Water use and waste management</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Social affairs and society" href="/en/responsibility-and-sustainability/social-affairs-and-society" class="link" data-link-type="Internal">Social affairs and society</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Diversity" href="/en/the-group/diversity-management" class="link" data-link-type="Internal">Diversity</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Human Rights Due Diligence" href="/en/responsibility-and-sustainability/social-affairs-and-society/human-rights-due-diligence" class="link" data-link-type="Internal">Human Rights Due Diligence</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Sustainable supply chain" href="/en/responsibility-and-sustainability/social-affairs-and-society/sustainable-supply-chain" class="link" data-link-type="Internal">Sustainable supply chain</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Employees" href="/en/responsibility-and-sustainability/social-affairs-and-society/employees" class="link" data-link-type="Internal">Employees</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Safety" href="/en/responsibility-and-sustainability/social-affairs-and-society/safety" class="link" data-link-type="Internal">Safety</a>            </li>
+
+
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Corporate Governance" href="/en/responsibility-and-sustainability/corporate-governance" class="link" data-link-type="Internal">Corporate Governance</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Compliance" href="/en/the-group/compliance" class="link" data-link-type="Internal">Compliance</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Corporate Governance" href="/en/investor-relations/corporate-governance" class="link" data-link-type="Internal">Corporate Governance</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="UN Global Compact" href="/en/responsibility-and-sustainability/corporate-governance/un-global-compact" class="link" data-link-type="Internal">UN Global Compact</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Ratings &amp; Rankings" href="/en/responsibility-and-sustainability/corporate-governance/ratings-and-rankings" class="link" data-link-type="Internal">Ratings &amp; Rankings</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Certifications &amp; Guidelines" href="/en/responsibility-and-sustainability/corporate-governance/certifications-and-guidelines" class="link" data-link-type="Internal">Certifications &amp; Guidelines</a>            </li>
+            </ul>
+    </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Our neighbourhood" href="/en/our-neighbourhood" class="link" data-link-type="Internal">Our neighbourhood</a>                    <ul role="menu">
+
+
+
+
+
+
+
+
+            </ul>
+    </li>
+
+
+
+
+    <li role="menuitem" aria-expanded="true" aria-selected="false" class=" current">
+            <span></span>
+        <a title="Investor Relations" href="/en/investor-relations" class="link" data-link-type="Internal">Investor Relations</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Equity Story" href="/en/investor-relations/equity-story" class="link" data-link-type="Internal">Equity Story</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Investment Highlights" href="/en/investor-relations/equity-story/investment-highlight" class="link" data-link-type="Internal">Investment Highlights</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Key Data" href="/en/investor-relations/equity-story/key-data" class="link" data-link-type="Internal">Key Data</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="RWE Shares" href="/en/investor-relations/the-rwe-share" class="link" data-link-type="Internal">RWE Shares</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Share Price Information and Investment Calculator" href="/en/investor-relations/the-rwe-share/share-prices" class="link" data-link-type="Internal">Share Price Information and Investment Calculator</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="RWE Share Indicators and Dividend" href="/en/investor-relations/the-rwe-share/key-performance-indicators" class="link" data-link-type="Internal">RWE Share Indicators and Dividend</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Shareholder Structure" href="/en/investor-relations/the-rwe-share/shareholder-structure" class="link" data-link-type="Internal">Shareholder Structure</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Analyst Recommendations" href="/en/investor-relations/the-rwe-share/analyst-recommendations-and-consensus" class="link" data-link-type="Internal">Analyst Recommendations</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Analyst Estimates" href="/en/investor-relations/the-rwe-share/analysts-estimates" class="link" target="|Custom" data-link-type="Internal">Analyst Estimates</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Share Buyback" href="/en/investor-relations/the-rwe-share/share-buybacks" class="link" data-link-type="Internal">Share Buyback</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Capital Measure" href="/en/investor-relations/the-rwe-share/disclaimer" class="link" data-link-type="Internal">Capital Measure</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Bonds &amp; Rating" href="/en/investor-relations/bonds-and-rating" class="link" data-link-type="Internal">Bonds &amp; Rating</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="RWE Bonds at a Glance" href="/en/investor-relations/bonds-and-rating/rwe-bonds-at-a-glance" class="link" data-link-type="Internal">RWE Bonds at a Glance</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Additional Financing Instruments" href="/en/investor-relations/bonds-and-rating/further-financing-instruments" class="link" data-link-type="Internal">Additional Financing Instruments</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Financial Calendar" href="/en/investor-relations/dates-and-events" class="link" data-link-type="Internal">Financial Calendar</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Financial Reporting, Presentations &amp; Videos " href="/en/investor-relations/financial-reports-presentations-videos" class="link" data-link-type="Internal">Financial Reporting, Presentations &amp; Videos </a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Financial Reporting" href="/en/investor-relations/financial-reports-presentations-videos/financial-reports" class="link" data-link-type="Internal">Financial Reporting</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Presentations" href="/en/investor-relations/financial-reports-presentations-videos/presentations" class="link" data-link-type="Internal">Presentations</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Videos" href="/en/investor-relations/financial-reports-presentations-videos/videos" class="link" data-link-type="Internal">Videos</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Order Annual Report" href="/en/investor-relations/financial-reports-presentations-videos/geschaeftsbericht-bestellen" class="link" data-link-type="Internal">Order Annual Report</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="true" class="active ">
+            <span></span>
+        <a title="News &amp; Ad hoc Announcements" href="/en/investor-relations/news-and-ad-hoc-announcements" class="link" data-link-type="Internal">News &amp; Ad hoc Announcements</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="IR Releases" href="/en/investor-relations/news-and-ad-hoc-announcements/news" class="link" data-link-type="Internal">IR Releases</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Ad hoc Announcements" href="/en/investor-relations/news-and-ad-hoc-announcements/ad-hoc-announcements" class="link" data-link-type="Internal">Ad hoc Announcements</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Managers&#39; Transactions" href="/en/investor-relations/news-and-ad-hoc-announcements/managers-transactions" class="link" data-link-type="Internal">Managers&#39; Transactions</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Preliminary Announcements" href="/en/investor-relations/news-and-ad-hoc-announcements/preliminary-announcements" class="link" data-link-type="Internal">Preliminary Announcements</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Voting Rights Announcements" href="/en/investor-relations/news-and-ad-hoc-announcements/voting-rights-announcements" class="link" data-link-type="Internal">Voting Rights Announcements</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Annual General Meeting" href="/en/investor-relations/annual-general-meeting-2020" class="link" data-link-type="Internal">Annual General Meeting</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Past Annual General Meetings" href="/en/investor-relations/past-agm" class="link" data-link-type="Internal">Past Annual General Meetings</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Corporate Governance " href="/en/investor-relations/corporate-governance" class="link" data-link-type="Internal">Corporate Governance </a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Executive Board &amp; Supervisory Board" href="/en/investor-relations/corporate-governance/management-board-and-supervisory-board" class="link" data-link-type="Internal">Executive Board &amp; Supervisory Board</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Remuneration" href="/en/investor-relations/corporate-governance/remuneration" class="link" data-link-type="Internal">Remuneration</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="RWE Code of Conduct" href="/en/investor-relations/corporate-governance/code-of-conduct" class="link" data-link-type="Internal">RWE Code of Conduct</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Statement of Compliance &amp; Reports" href="/en/investor-relations/corporate-governance/statement-of-compliance-and-reports" class="link" data-link-type="Internal">Statement of Compliance &amp; Reports</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Articles of Incorporation RWE AG &amp; Rules of Procedure" href="/en/investor-relations/corporate-governance/articles-of-association" class="link" data-link-type="Internal">Articles of Incorporation RWE AG &amp; Rules of Procedure</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Auditors" href="/en/investor-relations/corporate-governance/auditors" class="link" data-link-type="Internal">Auditors</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Tax Management" href="/en/investor-relations/corporate-governance/tax-management" class="link" data-link-type="Internal">Tax Management</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Payment Reports" href="/en/investor-relations/corporate-governance/payment-governance" class="link" data-link-type="Internal">Payment Reports</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Responsibility &amp; sustainability" href="/en/responsibility-and-sustainability" class="link" data-link-type="Internal">Responsibility &amp; sustainability</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Contact &amp; Service" href="/en/investor-relations/contact-and-service" class="link" data-link-type="Internal">Contact &amp; Service</a>                    <ul role="menu">
+
+
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="What&#39;s New?" href="/en/investor-relations/contact-and-service/whats-new" class="link" data-link-type="Internal">What&#39;s New?</a>            </li>
+            </ul>
+    </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Careers" href="/en/rwe-careers-portal" class="link" data-link-type="Internal">Careers</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Find a job" href="/en/rwe-careers-portal/job-offers" class="link" data-link-type="Internal">Find a job</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="FAQ" href="/en/rwe-careers-portal/job-offers/questions-and-answers" class="link" data-link-type="Internal">FAQ</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Why RWE?" href="/en/rwe-careers-portal/why-rwe" class="link" data-link-type="Internal">Why RWE?</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Meet the team" href="/en/rwe-careers-portal/why-rwe/meet-the-team" class="link" data-link-type="Internal">Meet the team</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Benefits" href="/en/rwe-careers-portal/why-rwe/benefits" class="link" data-link-type="Internal">Benefits</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Diversity" href="/en/rwe-careers-portal/why-rwe/diversity" class="link" data-link-type="Internal">Diversity</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Career paths" href="/en/rwe-careers-portal/career-paths" class="link" data-link-type="Internal">Career paths</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Apprentices" href="/en/rwe-careers-portal/career-paths/apprenticeships" class="link" data-link-type="Internal">Apprentices</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Undergraduates" href="/en/rwe-careers-portal/career-paths/undergraduates" class="link" data-link-type="Internal">Undergraduates</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Graduates" href="/en/rwe-careers-portal/career-paths/graduates" class="link" data-link-type="Internal">Graduates</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Professionals" href="/en/rwe-careers-portal/career-paths/professionals" class="link" data-link-type="Internal">Professionals</a>            </li>
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Ready to apply" href="/en/rwe-careers-portal/ready-to-apply" class="link" data-link-type="Internal">Ready to apply</a>                    <ul role="menu">
+
+
+
+
+
+
+
+
+
+
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Dates &amp; events" href="/en/rwe-careers-portal/dates-and-events" class="link" data-link-type="Internal">Dates &amp; events</a>            </li>
+
+
+
+
+
+
+
+
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Press &amp; news" href="/en/press" class="link" data-link-type="Internal">Press&#160;&amp; news</a>                    <ul role="menu">
+
+
+
+
+
+
+            </ul>
+    </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+            <span></span>
+        <a title="Contact &amp; services" href="/en/contact-services" class="link" data-link-type="Internal">Contact&#160;&amp; services</a>                    <ul role="menu">
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Download centre" href="/en/contact-services/download-centre" class="link" data-link-type="Internal">Download centre</a>            </li>
+
+
+    <li role="menuitem" aria-expanded="false" aria-selected="false" class=" ">
+        <a title="Tools &amp; platforms" href="/en/contact-services/tools-platforms" class="link" data-link-type="Internal">Tools &amp; platforms</a>            </li>
+            </ul>
+    </li>
+            </ul>
+        
+        <div id="burger-menu-bottom-controls"></div>
+
+        <ul role="menu" aria-expanded="true" class="quick-nav">
+            
+        </ul>
+        <ul role="menu" aria-expanded="true" class="target-group-nav">
+            
+        </ul>
+    </nav>
+</div>
+
+<div id="off-screen-content">
+    <div data-tpl="blanko-overview">
+        <header>
+            
+<div class="js-filter" data-filter="FilterID123"></div>
+
+<script>
+    var FilterID123 = {
+  "RenderTags": true,
+  "type": "FIL01a",
+  "dataSource": "97be0db4-cbfd-4c9e-acc4-2c1ceebe6129|5ba45c42-1870-482f-b4f1-89562d66ae9e",
+  "serviceUrl": "/api/fil01",
+  "headline": "News and Ad hoc Announcements",
+  "readMore": "Read more",
+  "loadMore": "Load more",
+  "genericError": "Error",
+  "filters": [
+    {
+      "type": "dropdown",
+      "placeholder": "Type of notification",
+      "fields": [
+        {
+          "id": "9248840c-28f1-4245-945e-007c5839895f",
+          "value": "*",
+          "label": "All"
+        }
+      ],
+      "id": "94b0d6ea-d2f8-40be-8b9a-7d0885236028",
+      "name": "list1",
+      "label": "Type of notification"
+    },
+    {
+      "type": "datepicker",
+      "config": {
+        "dateFormat": "DD.MM.YYYY",
+        "today": "Today",
+        "selectedDate": "2018, 4, 1"
+      },
+      "id": "f40cb7bd-8de1-4c49-9e43-bf70786d4e36",
+      "name": "dateFrom",
+      "label": "Period of time"
+    },
+    {
+      "type": "datepicker",
+      "config": {
+        "dateFormat": "DD.MM.YYYY",
+        "today": "Today"
+      },
+      "id": "9f0e8102-2fa7-478d-b3f2-1be0153893bb",
+      "name": "dateTo",
+      "label": "until"
+    }
+  ]
+}
+</script>
+        </header>
+        <main>
+            
+
+
+<section data-tpl="grid-bas-02" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content col-sm-12">
+                
+
+
+
+<div data-tpl="tic02" class="tic02--centered">
+    <h2 class="headline"></h2>
+    <h3 class="subheadline">Information about Managers‘ Transactions</h3>
+    <div class="content">
+        Pursuant to article 19 MAR, members of management or supervisory boards of issuers are obliged to inform the issuer and the federal financial services supervisory office about acquisitions and disposals of, among other things, shares or other securities of the issuer. The members of the supervisory board imposed on themselves the obligation to spend 25 % of the fixed compensation agreed (unless it is relinquished) to buy RWE shares and hold these shares for the duration of their membership of the supervisory board. This self-imposed obligation accounts for most of the share purchases by this group of individuals.<br>
+<br>
+With the entry into force of the law for the improvement of investor protection on October 30, 2004, the group of persons covered by this rule has been extended and now also includes persons who have regular access to insider information and are authorized to make significant business decisions. The issuer is also obliged to publish any such communication immediately. An obligation to inform about and announce any acquisitions and disposals of shares and other securities is also recommended by para 6.6 of the German Corporate Governance Code.
+
+
+    </div>
+
+</div>    <hr data-tpl="lin01">
+
+
+
+<div data-tpl="tic01" class="indention--none">
+
+    <div data-tpl="mediaContainer">
+                
+
+            </div>
+
+
+        <div class="content">
+            <p><h3>Accounts Payable activities: Process for submitting invoices</h3>
+<p>This message is an extension to our previous communication concerning all accounts payable activities for RWE being transferred to a new service provider, Capgemini. </p>
+<p>The process for submitting invoices will change with <strong>immediate effect</strong>.  All invoices must be submitted  to the following address: <a href="mailto:invoice_services_UK@rwe.com">invoice_services_UK@rwe.com</a>. Therefore, we advise that you update your systems with the new email address which has now replaced the former address <a href="mailto:invoice.resolution@npower.com">invoice.resolution@npower.com</a>.  </p>
+<p>Failure to update your records may result in a delay when making payments. Any invoices sent to the wrong address will be returned from February 2020 and you will be required to re-submit your invoice to the correct address. </p>
+<p>Previous communication concerning our new service provider for all accounts payable activities can be accessed here: <a href="/en/investor-relations/news-and-ad-hoc-announcements/news/news-2019-08-01_2">https://www.group.rwe/en/investor-relations/news-and-ad-hoc-announcements/news/news-2019-08-01_2</a></p></p>
+        </div>
+
+    </div>
+
+
+
+<div data-tpl="tic01" class="indention--none">
+
+    <div data-tpl="mediaContainer">
+                
+
+            </div>
+
+
+        <div class="content">
+            <p><h3>Accounts Payable activities: Transition from Innogy SSC to Capgemini</h3>
+<p>All accounts payable activities for RWE provided by Innogy SSC are being transferred to a new service provider, Capgemini from <strong>1<sup>st</sup>&nbsp;August 2019</strong>. The following RWE entities will be using this service provider going forward:</p>
+<ul>
+    <li>RWE Generation UK</li>
+    <li>RWE Generation NL</li>
+    <li>RWE Generation SE</li>
+    <li>RWEST UK</li>
+    <li>RWEST CZ</li>
+    <li>RWEST DE</li>
+    <li>RWE AG</li>
+    <li>RWE Power AG</li>
+</ul>
+<p>As a consequence, the contact details for the helpdesk will change, however it is important to note that there will be a transitional period between Innogy SSC and Capgemini to ensure a smooth process. The contact details for the helpdesk depending on geographical location will be as follows:</p>
+<table style="width: 100%;">
+    <tbody>
+        <tr>
+            <td style="width: 50%;"><strong>Geographical location&nbsp;</strong></td>
+            <td style="width: 50%;"><strong>Phone Number&nbsp;</strong></td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">United Kingdom &amp; Netherlands</td>
+            <td style="width: 50%;">+44 179 389 2016</td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">Germany</td>
+            <td style="width: 50%;">+49 201 5179 9993</td>
+        </tr>
+    </tbody>
+</table>
+<p>The process for submitting invoices will remain unchanged for now until further notice. We will notify all impacted parties including suppliers within an appropriate timescale in order to make reasonable adjustments should these be necessary.&nbsp;</p></p>
+        </div>
+
+    </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section data-tpl="grid-ext-04" class="color-background-2 ">
+<img src="/Resources/energy-field/loosefield2.png" width="400"
+     srcset="/Resources/energy-field/loosefield2-p-500.png 500w,
+             /Resources/energy-field/loosefield2-p-800.png 800w,
+             /Resources/energy-field/loosefield2-p-1080.png 1080w,
+             /Resources/energy-field/loosefield2-p-1600.png 1600w,
+             /Resources/energy-field/loosefield2.png 1672w"
+     sizes="(max-width: 479px) 90vw, 400px" alt="" class="loosefield-blue">
+
+<img src="/Resources/energy-field/loosefield1.png" width="400"
+     srcset="/Resources/energy-field/loosefield1-p-500.png 500w,
+             /Resources/energy-field/loosefield1-p-800.png 800w,
+             /Resources/energy-field/loosefield1-p-1080.png 1080w,
+             /Resources/energy-field/loosefield1-p-1600.png 1600w,
+             /Resources/energy-field/loosefield1.png 1720w"
+     sizes="(max-width: 479px) 90vw, 400px" alt="" class="loosefield-green">
+
+    <div class="container">
+        <div class="row">
+            <div class="grid-content grid-content-1 col-sm-6">
+                
+            </div>
+            <div class="grid-content grid-content-2 col-sm-6">
+                
+            </div>
+            <div class="grid-content grid-content-3 col-sm-6">
+                
+
+
+<article data-tpl="tea03r" class="bottom-to-top-animation color-teaser-1">
+
+<a href="/en/investor-relations/news-and-ad-hoc-announcements/voting-rights-announcements" class="link link--internal" data-link-type="Internal">        <header>
+            <h2 class="headline">
+                Voting Rights Annoncements
+            </h2>
+            <p>
+                in accordance with the German Securities Trading Act (WpHG)
+            </p>
+            <div class="affordance tea03--affordance">
+                <span>
+                    Read more
+                </span>
+            </div>
+        </header>
+</a></article>
+            </div>
+            <div class="grid-content grid-content-4 col-sm-6">
+                
+
+
+<article data-tpl="tea03r" class="bottom-to-top-animation color-teaser-1">
+
+<a href="http://www.rwe.com/web/cms/en/3928802/rwe/investor-relations/news/" class="link link--external" data-link-type="External">        <header>
+            <h2 class="headline">
+                News Archive
+            </h2>
+            <p>
+                News, Ad hoc announcements and Managers' transactions from 2015 and older
+            </p>
+            <div class="affordance tea03--affordance">
+                <span>
+                    Read more
+                </span>
+            </div>
+        </header>
+</a></article>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section data-tpl="grid-bas-02" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content col-sm-12">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section data-tpl="grid-bas-01" class="color-background-2 ">
+<img src="/Resources/energy-field/loosefield2.png" width="400"
+     srcset="/Resources/energy-field/loosefield2-p-500.png 500w,
+             /Resources/energy-field/loosefield2-p-800.png 800w,
+             /Resources/energy-field/loosefield2-p-1080.png 1080w,
+             /Resources/energy-field/loosefield2-p-1600.png 1600w,
+             /Resources/energy-field/loosefield2.png 1672w"
+     sizes="(max-width: 479px) 90vw, 400px" alt="" class="loosefield-blue">
+
+<img src="/Resources/energy-field/loosefield1.png" width="400"
+     srcset="/Resources/energy-field/loosefield1-p-500.png 500w,
+             /Resources/energy-field/loosefield1-p-800.png 800w,
+             /Resources/energy-field/loosefield1-p-1080.png 1080w,
+             /Resources/energy-field/loosefield1-p-1600.png 1600w,
+             /Resources/energy-field/loosefield1.png 1720w"
+     sizes="(max-width: 479px) 90vw, 400px" alt="" class="loosefield-green">
+
+    <div class="container-fluid">
+        <div class="row">
+            
+<article data-tpl="tea02r">
+
+<a href="/en/investor-relations/contact-and-service" class="link link--internal" data-link-type="Internal">                        <div class="tea02-default"></div>
+        <header>
+            <h2 class="headline">
+                Contact and Services
+            </h2>
+            <p>
+                We are happy to help regarding your questions
+            </p>
+            <div class="btn affordance tea02r--affordance">
+                <span>
+                    All contact persons
+                </span>
+            </div>
+
+        </header>
+</a></article>
+        </div>
+    </div>
+</section>
+        </main>
+    </div>
+    
+<nav id="breadcrumb" role="navigation" data-tpl="breadcrumb" >
+    <script type="application/ld+json">
+        {
+        "@context": "http://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+    {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "item": {
+                    "@id": "https://www.group.rwe/en",
+                    "name": "RWE"
+                  }
+                }                    ,
+    {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "item": {
+                    "@id": "https://www.group.rwe/en/investor-relations",
+                    "name": "Investor Relations"
+                  }
+                }                    ,
+    {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "item": {
+                    "@id": "https://www.group.rwe/en/investor-relations/news-and-ad-hoc-announcements",
+                    "name": "Announcements "
+                  }
+                }        ]
+        }
+    </script>
+    <h3 id="breadcrumb -label" class="aria-only">You are here:</h3>
+    <ol id="breadcrumb-list" role="menubar" aria-labelledby="breadcrumb-label" aria-live="polite" class="teaser-width">
+                <li aria-selected='false'>
+<a href="/en" class="link" data-link-type="Internal">RWE</a>                </li>
+                <li aria-selected='false'>
+<a href="/en/investor-relations" class="link" data-link-type="Internal">Investor Relations</a>                </li>
+            <li aria-selected='true' class='active'><a title=''>Announcements </a></li>
+    </ol>
+</nav>
+    <footer id="main-footer" role="contentinfo">
+        <section data-tpl="individual-zone" class="teaser-width">
+    
+</section><section data-tpl="individual-global-zone">
+    <div class="teaser-width">
+        
+
+
+<section data-tpl="grid-bas-02" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content col-sm-12">
+                
+
+<section data-tpl="sms01" class="">
+    <h2 class="headline">Recommend</h2>
+    <ul>
+                <li class="facebook">
+<a class="link--external link" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.group.rwe%2fen%2finvestor-relations%2fnews-and-ad-hoc-announcements&amp;amp;title=Announcements+" title="Share via Facebook" data-link-type="External"></a>                </li>
+                <li class="twitter">
+<a class="link--external link" rel="nofollow" href="http://twitter.com/intent/tweet?status=Announcements++https%3a%2f%2fwww.group.rwe%2fen%2finvestor-relations%2fnews-and-ad-hoc-announcements" title="Share via Twitter" data-link-type="External"></a>                </li>
+                <li class="whatsapp">
+<a class="link--external link" rel="nofollow" data-action="share/whatsapp/share" href="whatsapp://send?text=Announcements+%0A%0Ahttps%3a%2f%2fwww.group.rwe%2fen%2finvestor-relations%2fnews-and-ad-hoc-announcements" title="Share via Whatsapp" data-link-type="External"></a>                </li>
+                <li class="mail">
+<a class="link--external link" rel="nofollow" href="mailto:?subject=Announcements+&amp;body=%0A%0Ahttps%3a%2f%2fwww.group.rwe%2fen%2finvestor-relations%2fnews-and-ad-hoc-announcements" title="Share via E-mail" data-link-type="External"></a>                </li>
+                <li class="linkedin">
+<a class="link--external link" rel="nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.group.rwe%2fen%2finvestor-relations%2fnews-and-ad-hoc-announcements&amp;title=Announcements+&amp;summary=Announcements+" title="Share via Linkedin" data-link-type="External"></a>                </li>
+                <li class="xing">
+<a class="link--external link" rel="nofollow" href="https://www.xing.com/app/user?op=share;url=https%3a%2f%2fwww.group.rwe%2fen%2finvestor-relations%2fnews-and-ad-hoc-announcements&amp;{{titel}}" title="Share via Xing" data-link-type="External"></a>                </li>
+                <li class="print">
+<a class="link--external link" rel="nofollow" href="javascript:if(window.print)window.print()" title="Print" data-link-type="NotSet"></a>                </li>
+    </ul>
+</section>    <hr data-tpl="lin01">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section data-tpl="grid-bas-05" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content grid-content-1 col-md-4">
+                
+
+<section data-tpl="fol01" class="">
+    <h2 class="headline">You can also find us on ...</h2>
+        <ul>
+                    <li class="linkedin">
+<a title="LinkedIn" href="https://www.linkedin.com/company/rwe-/ " class="link link--external" data-link-type="External"></a>                    </li>
+                    <li class="twitter">
+<a title="Twitter" href="https://twitter.com/rwe_UK" class="link link--external" rel="noopener noreferrer" target="_blank" data-link-type="External"></a>                    </li>
+        </ul>
+</section>
+            </div>
+            <div class="grid-content grid-content-2 col-md-4">
+                
+
+
+<div data-tpl="tic01" class="indention--none">
+
+    <div data-tpl="mediaContainer">
+                
+
+            </div>
+
+        <h3 class="subheadline">Talk to us</h3>
+
+
+            <div data-tpl="cta01">
+            <a class=" color-cta-4 btn" data-link-type="Internal" href="/en/contact-services" target="" title="">Contact us</a>
+        </div>
+</div>
+
+            </div>
+            <div class="grid-content grid-content-3 col-md-4">
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section data-tpl="grid-bas-02" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content col-sm-12">
+                    <hr data-tpl="lin01">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section data-tpl="grid-bas-05" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content grid-content-1 col-md-4">
+                
+
+
+
+<section data-tpl="acc01" class="indention--none">
+                <ul>        <li aria-expanded="true" class="accordion-item" data-event-cd="einstiegsseiten" data-event-action="" data-event-label="Start pages">
+            <section>
+    <h3 class="accordion-item__headline">Start pages</h3>
+    <article class="accordion-item__content">
+        
+        
+
+
+<section data-tpl="grid-bas-02" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content col-sm-12">
+                
+<div data-tpl="ll01" class="">
+            <ul>
+    <li>
+<a href="/en/the-group" class="link link--internal" data-link-type="Internal">The Group</a>    </li>
+    <li>
+<a href="/en/responsibility-and-sustainability" class="link link--internal" data-link-type="Internal">Responsibility &amp; sustainability</a>    </li>
+    <li>
+<a href="/en/our-portfolio" class="link link--internal" data-link-type="Internal">Energy &amp; product portfolio</a>    </li>
+    <li>
+<a href="/en/investor-relations" class="link link--internal" data-link-type="Internal">Investor Relations</a>    </li>
+    <li>
+<a href="/en/rwe-careers-portal" class="link link--internal" data-link-type="Internal">Careers at RWE</a>    </li>
+    <li>
+<a href="/en/bespoke-solutions" class="link link--internal" data-link-type="Internal">Tailor-made solutions</a>    </li>
+    <li>
+<a href="/en/press" class="link link--internal" data-link-type="Internal">Press &amp; news</a>    </li>
+    <li>
+<a href="/en/contact-services" class="link link--internal" data-link-type="Internal">Contact &amp; services</a>    </li>
+            </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+    </article>
+</section>
+
+        </li>
+</ul>
+</section>
+            </div>
+            <div class="grid-content grid-content-2 col-md-4">
+                
+
+
+
+<section data-tpl="acc01" class="indention--none">
+                <ul>        <li aria-expanded="true" class="accordion-item" data-event-cd="quick-links" data-event-action="" data-event-label="Quick links">
+            <section>
+    <h3 class="accordion-item__headline">Quick links</h3>
+    <article class="accordion-item__content">
+        
+        
+
+
+<section data-tpl="grid-bas-02" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content col-sm-12">
+                
+<div data-tpl="ll01" class="">
+            <ul>
+    <li>
+<a href="/en/rwe-careers-portal/job-offers" class="link link--internal" data-link-type="Internal">Finding job opportunities</a>    </li>
+    <li>
+<a href="/en/our-portfolio/our-sites" class="link link--internal" data-link-type="Internal">Sites</a>    </li>
+    <li>
+<a href="/en/our-portfolio/innovation-and-technology" class="link link--internal" data-link-type="Internal">Innovations &amp; technology</a>    </li>
+    <li>
+<a href="/en/our-portfolio/our-products" class="link link--internal" data-link-type="Internal">Product portfolio</a>    </li>
+    <li>
+<a href="https://www.en-former.com/en" class="link link--external" rel="noopener noreferrer" target="_blank" data-link-type="External">en:former - Energy Blog of RWE</a>    </li>
+    <li>
+<a href="https://supplier.rwe.com/sap(bD1lbiZjPTE2MA==)/login/default.htm" class="link link--external" rel="noopener noreferrer" target="_blank" data-link-type="External">Supplier portal</a>    </li>
+    <li>
+<a href="/en/contact-services/download-centre" class="link link--internal" data-link-type="Internal">Download centre</a>    </li>
+    <li>
+<a href="/en/contact-services/tools-platforms" class="link link--internal" data-link-type="Internal">Tools &amp; platforms</a>    </li>
+            </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+    </article>
+</section>
+
+        </li>
+</ul>
+</section>
+            </div>
+            <div class="grid-content grid-content-3 col-md-4">
+                
+
+
+
+<section data-tpl="acc01" class="indention--none">
+                <ul>        <li aria-expanded="true" class="accordion-item" data-event-cd="wir-empfehlen" data-event-action="" data-event-label="We recommend">
+            <section>
+    <h3 class="accordion-item__headline">We recommend</h3>
+    <article class="accordion-item__content">
+        
+        
+
+
+<section data-tpl="grid-bas-02" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content col-sm-12">
+                
+<div data-tpl="ll01" class="">
+            <ul>
+    <li>
+<a href="/en/the-group/profile-and-strategy" class="link link--internal" data-link-type="Internal">Our strategy</a>    </li>
+    <li>
+<a href="/en/responsibility-and-sustainability" class="link link--internal" data-link-type="Internal">Responsibility and sustainability</a>    </li>
+    <li>
+<a href="/en/rwe-careers-portal/rwe-as-an-employer" class="link link--internal" data-link-type="Internal">RWE as an employer</a>    </li>
+    <li>
+<a href="/en/our-portfolio/raw-materials-energy-sources" class="link link--internal" data-link-type="Internal">Use of raw materials &amp; energy sources</a>    </li>
+    <li>
+<a href="/en/investor-relations/the-rwe-share" class="link link--internal" data-link-type="Internal">The RWE shares</a>    </li>
+    <li>
+<a href="/-/media/RWE/documents/05-investor-relations/2019-Q4/20-03-12-RWE-annual-report-2019.pdf" class="link" data-link-type="Media">Annual report 2019</a>    </li>
+    <li>
+<a href="/en/responsibility-and-sustainability/cr-report-archive" class="link link--internal" data-link-type="Internal">Corporate Responsibility</a>    </li>
+    <li>
+<a href="/en/our-portfolio/experts" class="link link--internal" data-link-type="Internal">Our experts</a>    </li>
+            </ul>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+    </article>
+</section>
+
+        </li>
+</ul>
+</section>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+</section>
+<section data-tpl="global-zone">
+    <div class="teaser-width">
+        
+
+
+<section data-tpl="grid-bas-02" class=" ">
+    <div class="container">
+        <div class="row">
+            <div class="grid-content col-sm-12">
+                
+<div class="global-zone-footer">
+    <nav id="footer" role="navigation" data-tpl="footer">
+            <h3 id="footer-label" class="aria-only">Footer</h3>
+                <ol id="footer-list" role="menubar" aria-labelledby="footer-label" aria-live="polite">
+
+            <li aria-selected="false">
+<a title="Disclaimer" href="/en/disclaimer" class="link" data-link-type="Internal">Disclaimer</a>            </li>
+
+            <li aria-selected="false">
+<a title="Imprint" href="/en/imprint" class="link" data-link-type="Internal">Imprint</a>            </li>
+
+            <li aria-selected="false">
+<a title="General data privacy policy" href="/en/general-data-privacy-policy" class="link" data-link-type="Internal">General data privacy policy</a>            </li>
+
+            <li aria-selected="false">
+<a title="Modern Slavery Act 2015" href="/en/modern-slavery-act-statement" class="link" data-link-type="Internal">Modern Slavery Act 2015</a>            </li>
+                </ol>
+    </nav>
+    <div class="copyright">
+                <span>
+                    &#169; RWE 2020
+                </span>
+                <div class="endorsement">
+                    <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="100" height="29" viewBox="0, 0, 100, 29">
+  <g id="Layer_1">
+    <path d="M77.293,0.037 C75.961,0.037 74.938,1.041 74.938,2.392 L74.938,26.308 C74.938,27.609 75.992,28.663 77.293,28.663 L99.99,28.663 L99.99,22.936 L82.207,22.936 L82.207,16.813 L96.956,16.813 L96.956,11.32 L82.207,11.32 L82.207,5.585 L99.79,5.585 L99.79,0.037 z M17.091,13.483 L12.46,13.483 C11.654,13.483 11.153,14.361 11.564,15.055 L20.365,28.663 L29.026,28.663 L21.183,18.059 C24.975,17.565 28.122,15.573 28.122,9.293 C28.122,2.683 25.274,0.037 18.287,0.037 L2.365,0.037 C1.034,0.037 0.01,1.041 0.01,2.392 L0.01,28.663 L7.535,28.663 L7.535,5.484 L17.2,5.484 C20.04,5.484 21.131,6.791 21.131,9.433 C21.131,11.687 19.913,13.483 17.091,13.483 M44.883,27.467 C44.623,28.185 43.941,28.663 43.178,28.663 L38.654,28.663 C37.815,28.663 37.085,28.087 36.891,27.272 L30.381,0.037 L38.091,0.037 L41.67,17.701 L47.296,1.262 C47.547,0.529 48.236,0.037 49.011,0.037 L52.973,0.037 C53.748,0.037 54.437,0.529 54.688,1.262 L60.314,17.701 L63.893,0.037 L71.603,0.037 L65.094,27.272 C64.899,28.087 64.169,28.663 63.33,28.663 L58.807,28.663 C58.043,28.663 57.361,28.185 57.101,27.467 L50.992,10.591 z" fill="#FFFFFF"/>
+  </g>
+</svg>
+
+                </div>
+    </div>
+</div>
+            </div>
+        </div>
+    </div>
+</section>
+    </div>
+</section>
+    </footer>
+</div>
+<div id="off-screen-overlay"></div>
+        </div>
+    </div>
+
+        <div id="TextSnippetShare"></div>
+        <script>
+            var TextSnippetShare = {
+  "label": "Share options",
+  "items": [
+    {
+      "id": "facebook",
+      "url": "http://www.facebook.com/sharer/sharer.php?u=https://www.group.rwe/en/investor-relations/news-and-ad-hoc-announcements&quote=$title",
+      "label": "Share via Facebook"
+    },
+    {
+      "id": "twitter",
+      "url": "http://twitter.com/intent/tweet?status=$title+https://www.group.rwe/en/investor-relations/news-and-ad-hoc-announcements\" ",
+      "label": "Share via Twitter"
+    },
+    {
+      "id": "mail",
+      "url": "mailto:?subject=Announcements &body=$title%0A%0Ahttps://www.group.rwe/en/investor-relations/news-and-ad-hoc-announcements",
+      "label": "Share via E-mail"
+    },
+    {
+      "id": "linkedin",
+      "url": "https://www.linkedin.com/shareArticle?mini=true&url=https://www.group.rwe/en/investor-relations/news-and-ad-hoc-announcements&title=$title",
+      "label": "Share via Linkedin"
+    },
+    {
+      "id": "whatsapp",
+      "url": "whatsapp://send?text=$title%0A%0Ahttps://www.group.rwe/en/investor-relations/news-and-ad-hoc-announcements",
+      "label": "Share via Whatsapp"
+    }
+  ]
+}
+        </script>
+
+        <div id="BackToTop"></div>
+        <script>
+            var BackToTop = {
+  "title": "Back to top",
+  "showAt": 100
+}
+        </script>
+
+    <script defer src="/js/runtime.js"></script>
+    <script defer src="/js/client.js"></script>
+
+
+
+
+        <script type="text/javascript" src="/js/nkJavascript-min-200445.js"></script>
+        <script defer src="/js/rwe/app.min.js"></script>
+
+    <script type="application/ld+json">
+        {
+        "@context":"http://schema.org",
+        "@type":"Organization",
+        "url":"https://www.group.rwe/en/investor-relations/news-and-ad-hoc-announcements",
+        "logo":"https://www.group.rwe/Areas/rwe/Content/Favicons/favicon-310x310.png"
+        }
+    </script>
+
+    <link href="/css/print.css" rel="stylesheet" media="print" data-for="print" />
+
+    
+
+    
+
+    
+    
+</body>
+</html>

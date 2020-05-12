@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="globApp">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+
+	<title>Press Releases</title>
+
+	<!-- Favicon -->
+	<link href="/img/favicon.png" rel="icon" type="image/png" />
+
+	<!-- Styleheets -->
+	<link href="/css/bootstrap.min.css?v.20161215.1" rel="stylesheet" />
+	<link href="/css/style.css?v.20180528" rel="stylesheet" />
+	<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+
+	<!-- JavaScript libraries -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" type="text/javascript"></script>
+	<script src="/js/typeahead.bundle.min.js" type="text/javascript"></script>
+
+	<!-- Google Analytics -->
+	<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-69391860-1', 'auto');
+	ga('send', 'pageview');
+	</script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="/js/html5shiv.js"></script>
+		<script src="/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body data-ng-controller="globCtrl">
+
+<div class="container" id="cookies-banner"
+  data-ng-if="cookiesBanner.isVisible()">
+  <div class="cookies-banner-text">We use cookies to help us improve your browsing experience and understand how people use our website. Our <a href="/privacy-notice">privacy statement</a> explains how we use cookies, and how to change your cookie settings.</div>
+  <div class="cookies-banner-btns">
+    <a href="" class="btn btn-default btn-sm"
+      data-ng-click="cookiesBanner.remove();">OK</a>
+  </div>
+</div>
+<!-- /#cookies-banner -->
+
+<!-- Mobile navigation -->
+<div class="hidden-lg hidden-md" id="cms-m-navbar">
+	<ul class="cms-m-navbar-container">
+		<li class="form">
+			<input type="text" class="form-control"
+				placeholder="Search" data-cms-search="true" />
+		</li>
+		<li data-ng-repeat="x in websiteMenu">
+			<!-- Items without children -->
+			<a data-ng-href="/{{x.url}}" data-ng-if="x.ids.length === 0">
+				<span data-ng-bind="x.name"></span>
+			</a>
+			<!-- Items + children -->
+			<a href="" data-ng-if="x.ids.length > 0"
+				data-ng-class="{'in': x.id == pageMenu[0].id}"
+				data-cms-mobile-subitems-trigger="true">
+				<span data-ng-bind="x.name"></span> <span class="caret"></span>
+			</a>
+			<ul class="submenu" data-ng-if="x.ids.length > 0"
+				data-ng-class="{'in': x.id == pageMenu[0].id}">
+				<li data-ng-repeat="y in x.ids">
+					<a data-ng-href="/{{y.url}}">
+						<span data-ng-bind="y.name" data-ng-class="'level-' + y.level"></span>
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<a href="/contact">Contact</a>
+		</li>
+		<li>
+			<a href="https://twitter.com/GalapagosNV" target="_blank">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		<li>
+			<a href="https://www.linkedin.com/company/162714" target="_blank">
+				<i class="fa fa-linkedin fa-lg"></i>
+			</a>
+		</li>
+	</ul>
+</div><!-- /#sidebar-wrapper -->
+
+<!-- Mobile header -->
+<div class="container hidden-lg hidden-md" id="cms-m-container-header">
+	<div class="row">
+		<div class="col-xs-8">
+			<a href="/">
+				<img src="/img/logo_RGB.svg" alt="Galapagos" style="width: 139px;"
+					onerror="this.src = '/img/logo_RGB.png'; this.onerror = null;" />
+			</a>
+		</div>
+		<div class="col-xs-4" style="text-align: right;">
+			<button type="button" class="btn btn-default" data-cms-mobile-navbar-trigger="true">
+				<i class="fa fa-bars fa-2x"></i>
+			</button>
+		</div>
+	</div>
+</div>
+
+<!-- Standard header -->
+<div class="container hidden-sm hidden-xs cs-container-header">
+	<div class="row">
+		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<a href="/">
+				<img src="/img/logo_RGB.svg" alt="Galapagos" style="width: 207px;"
+					onerror="this.src = '/img/logo_RGB.png'; this.onerror = null;" />
+			</a>
+		</div>
+		<div class="col-lg-6 col-md-6 col-sm-6 hidden-xs">
+			<ul class="pull-right cs-social-btns">
+				<li><a href="/contact">Contact</a></li>
+				<li><a href="https://twitter.com/GalapagosNV" class="twitter" target="_blank"></a></li>
+				<li><a href="https://www.linkedin.com/company/162714" class="linkedin" target="_blank"></a></li>
+			</ul>
+		</div><!-- /.col- -->
+	</div><!-- /.row -->
+</div><!-- /.container -->
+
+<!-- Standard navigation -->
+<div class="navbar navbar-default hidden-sm hidden-xs" data-role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-menu">
+				<span class="sr-only">N</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="main-menu">
+			<ul class="nav navbar-nav">
+				<li class="dropdown" data-ng-repeat="x in websiteMenu">
+					<!-- Items without children -->
+					<a data-ng-href="/{{x.url}}" data-ng-if="x.ids.length === 0">
+						<span data-ng-bind="x.name"></span>
+					</a>
+					<!-- Items with children -->
+					<a href="" class="dropdown-toggle" data-toggle="dropdown"
+						aria-haspopup="true" aria-expanded="false"
+						data-ng-if="x.ids.length > 0">
+						<span data-ng-bind="x.name"></span> <span class="caret"></span>
+					</a>
+					<ul class="dropdown-menu" data-ng-if="x.ids.length > 0">
+						<li data-ng-repeat="y in x.ids"
+							data-ng-class="{'hidden-lg': y.level > 2, 'hidden-md': y.level > 2, 'l3': y.level > 2}">
+							<a data-ng-href="/{{y.url}}" data-ng-bind="y.name"></a>
+						</li>
+					</ul>
+				</li>
+			</ul><!-- /.nav.nav-bar -->
+			<form class="navbar-form navbar-right">
+				<div class="form-group search">
+					<input type="text" class="form-control" placeholder="Search"
+							data-cms-search="true" />
+				</div>
+			</form>
+		</div><!-- /#main-menu -->
+	</div><!-- /.container -->
+</div>
+<div class="container cs-container-content">
+<div>&nbsp;</div>
+<div class="row">
+<div class="col-lg-2 col-md-3 hidden-sm hidden-xs">
+<div data-page-locator="true">
+<p class="component-placeholder"><i class="fa fa-file-text-o fa-3x">&nbsp;</i></p>
+</div>
+</div>
+<div class="col-lg-10 col-md-9">
+<h1>Press Releases</h1>
+<iframe style="width: 100%; height: 800px; overflow: hidden; border: 0;" src="//pr.globenewswire.com/NewsArchive/View/g93wk6v7DiRcc45oFgVsMg==?iFrame=true" frameborder="0" scrolling="Auto"></iframe></div>
+</div>
+<div>&nbsp;</div>
+</div>
+<div class="container-fluid cs-container-footer">
+	<div class="row">
+		<div class="col-lg-12">
+			<p>
+				<!-- F1 -->
+				<span class="hidden-xs">&copy; Copyright 2019 Galapagos NV</span>
+				<span class="hidden-xs">&#9679;</span>
+				<!-- F2 -->
+				<a href="/disclaimer">Disclaimer</a>
+				<!-- F3 -->
+				<span>&#9679;</span>
+				<a href="/privacy-notice">Privacy notice</a>
+				<!-- F4 -->
+				<span>&#9679;</span>
+				<a href="/general-purchase-terms">Terms</a>
+				<!-- F5 -->
+				<span class="hidden-xs">&#9679;</span>
+				<a href="/news-subscription" class="hidden-xs">News via mail</a>
+			</p>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="/js/iframeResizer.min.js"></script>
+<!--[if lte IE 8]>
+<script type="text/javascript" src="/js/ie8.polyfils.symex.js"></script>
+<![endif]-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+iFrameResize({log: false}, '[data-responsive-iframe]');
+
+var jsLang = [ "No page found" ];
+var jsGlobalData = {};
+
+angular.module( 'globApp', [] )
+.directive( 'pageLocator', function() {
+	return {
+		restrict: 'A',
+		templateUrl: '/tmpls/page-locator.html'
+	}
+})
+.directive( 'cmsAffix', function( $timeout ) {
+	return {
+		restrict: 'A',
+		link: function( scope, element, attrs ) {
+
+			var this_ = $( element );
+
+			$timeout( function() {
+
+				var offsetVal = parseInt( this_.offset().top ) + 1;
+
+				$( window ).off( 'resize.sab' );
+				$( window ).on( 'resize.sab', function() {
+					offsetVal = parseInt( this_.offset().top ) + 1;
+				} );
+
+				this_.affix({
+					offset: {
+						top: function() {
+
+							this_.parent().css( 'height', this_.outerHeight( true ) );
+
+							if ( ! this_.hasClass( 'affix' ) ) {
+
+								offsetVal = parseInt( this_.offset().top ) + 1;
+							}
+
+							return offsetVal;
+						}
+					}
+				});
+			}, 50 );
+		}
+	}
+})
+.directive( 'cmsUniEvents', function( $http, $sce ) {
+	return {
+		restrict: 'A',
+		scope: {
+			type: '=cmsUniEvents'
+		},
+		templateUrl: function( element, attrs ) {
+
+			return '/tmpls/' + attrs.tmpl + '.html';
+		},
+		link: function( scope, element, attrs ) {
+
+			scope.isLoading = true;
+
+			scope.toHtml = function( html ) {
+				return $sce.trustAsHtml( html );
+			}
+
+			$http.post( '/cms/unievents.php', {
+				type: scope.type
+			})
+			.then( function( response ) {
+
+				scope.isLoading = false;
+				scope.events = response.data.events || [];
+			});
+		}
+	}
+})
+.directive( 'cmsMeetings', function( $http, $location ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: function() {
+
+			return '/tmpls/meetings.html';
+		},
+		link: function( scope, element, attrs ) {
+
+			scope.isLoading = true;
+
+			$http.post( '/cms/meetings.php', {
+				params: $location.search()
+			})
+			.then( function( response ) {
+
+				scope.isLoading = false;
+				scope.meetings = response.data.meetings;
+				scope.meetingYears = response.data.meetingYears;
+				scope.meetingYear_ = response.data.meetingYear_;
+			});
+
+			scope.$on( '$locationChangeSuccess', function() {
+
+				scope.isLoading = true;
+
+				$http.post( '/cms/meetings.php', {
+					params: $location.search()
+				})
+				.then( function( response ) {
+
+					scope.isLoading = false;
+					scope.meetings = response.data.meetings;
+					scope.meetingYears = response.data.meetingYears;
+				});
+			});
+
+			scope.setMeetingsYear = function( event ) {
+				$location.search({
+					year: scope.meetingYear_
+				});
+			}
+		}
+	}
+})
+.directive( 'cmsDocs', function( $http, $location, $sce ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: function( element, attrs ) {
+
+			return '/tmpls/' + attrs.tmpl + '.html';
+		},
+		link: function( scope, element, attrs ) {
+
+			scope.isLoading = true;
+			scope._lang = [];
+			scope.docs = [];
+			scope.docYears = [];
+			scope.docYear_ = null;
+
+			$http.post( '/cms/unidocs.php', {
+				type: attrs.cmsDocs,
+				cnt: attrs.cnt || 0,
+				params: attrs.skipUrl ? null : $location.search()
+			})
+			.then( function( response ) {
+
+				scope.isLoading = false;
+				scope._lang = response.data._lang;
+				scope.docs = response.data.docs;
+				scope.docYears = response.data.docYears;
+				scope.docYear_ = response.data.docYear_;
+			});
+
+			scope.$on( '$locationChangeSuccess', function() {
+
+				if ( attrs.skipUrl ) {
+
+					return true;
+				}
+
+				scope.isLoading = true;
+
+				$http.post( '/cms/unidocs.php', {
+					type: attrs.cmsDocs,
+					cnt: attrs.cnt || 0,
+					params: $location.search()
+				})
+				.then( function( response ) {
+
+					scope.isLoading = false;
+					scope._lang = response.data._lang;
+					scope.docs = response.data.docs;
+					scope.docYears = response.data.docYears;
+					scope.docYear_ = response.data.docYear_;
+				});
+			});
+
+			scope.setDocsYear = function( event ) {
+				$location.search({
+					year: scope.docYear_
+				});
+			};
+
+			scope.toHtml = function( html ) {
+				return $sce.trustAsHtml( html );
+			};
+		}
+	}
+})
+.directive( 'cmsUnidocsB', function( $http, $location, $sce, $filter, $anchorScroll ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: function( element, attrs ) {
+
+			return '/tmpls/' + attrs.tmpl + '.html';
+		},
+		link: function( scope, element, attrs ) {
+
+			scope.isLoading = true;
+			scope._lang = [];
+			scope.docs = [];
+			scope.years = [];
+			scope.keywords = angular.fromJson( attrs.keywords );
+			scope.types = angular.fromJson( attrs.types );
+			scope.page = null;
+			scope.cntPages = null;
+
+			scope.filter = {
+				year: null,
+				keyword: null,
+				type: null,
+				listTypes: scope.types,
+				page: null,
+				cnt: null
+			};
+
+			scope.setPage = function( toPage ) {
+
+				var params = $location.search() || {};
+
+				params.page = toPage;
+
+				$location.search( params );
+				$location.hash( attrs.cmsUnidocsB );
+				$anchorScroll();
+			};
+
+			scope.setFilter = function( prop, val ) {
+
+				var params = $location.search() || {};
+				var values = params[ prop ] ? params[ prop ].split( ',' ) : [];
+
+				if ( $filter( 'filter' )( values, val, false ).length === 0 ) {
+
+					values.push( val );
+				}
+				else {
+
+					values = $filter( 'filter' )( values, '!' + val, false );
+				}
+
+				params[ prop ] = values.join( ',' );
+				params.page = null;
+				params.f = '1';
+
+				$location.search( params );
+			};
+
+			scope.resetFilter = function( prop, val ) {
+
+				var params = $location.search() || {};
+				var tmp = params[ prop ] ? params[ prop ].split( ',' ) : [];
+				var values = $filter( 'filter' )( tmp, '!' + val, false );
+
+				if ( prop !== 'page' ) {
+
+					params.page = null;
+				}
+
+				params[ prop ] = values.length > 0 ? values.join( ',' ) : null;
+
+				$location.search( params );
+			};
+
+			scope.toHtml = function( html ) {
+				return $sce.trustAsHtml( html );
+			};
+
+			scope.$on( '$locationChangeSuccess', function() {
+
+				loadDocs();
+			});
+
+			var loadDocs = function() {
+
+				scope.isLoading = true;
+
+				scope.filter.type = [];
+				scope.filter.year = [];
+				scope.filter.kw = [];
+				scope.filter.page = $location.search().page || null;
+				scope.filter.cnt = attrs.cnt || null;
+
+				if ( $location.search().type ) {
+
+					scope.filter.type = $location.search().type.split( ',' );
+				}
+
+				if ( $location.search().year ) {
+
+					scope.filter.year = $location.search().year.split( ',' );
+				}
+
+				if ( $location.search().kw ) {
+
+					scope.filter.kw = $location.search().kw.split( ',' );
+				}
+
+				$http
+				.post( '/cms/unidocs-b.php', scope.filter )
+				.then( function( response ) {
+
+					scope.isLoading = false;
+					scope._lang = response.data._lang;
+					scope.docs = response.data.docs;
+					scope.years = response.data.years;
+					scope.keywords = scope.keywords;
+					scope.types = scope.types;
+					scope.page = response.data.page;
+					scope.cntPages = response.data.cntPages;
+				});
+			};
+
+			// Timeline events
+			loadDocs();
+
+			$( document )
+			.off( 'click.cms-multiple' )
+			.on( 'click.cms-multiple', '.dropdown-menu.cms-multiple a', function( event ) {
+				event.stopPropagation();
+			});
+		}
+	}
+})
+.directive( 'cmsNasdaqNews', function( $http, $location ) {
+	return {
+		restrict: 'A',
+		scope: {
+			cnt: '=cnt',
+		},
+		templateUrl: function( element, attrs ) {
+
+			return '/tmpls/' + attrs.tmpl + '.html';
+		},
+		link: function( scope, element, attrs ) {
+
+			scope.isLoading = true;
+
+			$http.post( '/cms/nasdaq-news.php', {
+				cnt: scope.cnt || 0
+			})
+			.then( function( response ) {
+
+				scope.isLoading = false;
+				scope.docs = response.data.docs;
+			});
+		}
+	}
+})
+.directive( 'cmsEvents', function( $sce ) {
+	return {
+		restrict: 'A',
+		templateUrl: function( element, attr ) {
+			return '/tmpls/' + ( attr.tmpl || 'events' ) + '.html';
+		},
+		link: function( scope ) {
+			scope.toHtml = function( html ) {
+				return $sce.trustAsHtml( html );
+			}
+		}
+	}
+})
+.directive( 'cmsQuotes', function() {
+	return {
+		restrict: 'A',
+		templateUrl: function( element, attr ) {
+			return '/tmpls/' + ( attr.tmpl || 'quotes' ) + '.html';
+		}
+	}
+})
+.directive( 'cmsFinancialData', function( $http, $compile ) {
+	// http://stackoverflow.com/questions/14632260/can-you-change-templateurl-on-the-fly
+	// http://stackoverflow.com/questions/21835471/angular-js-directive-dynamic-templateurl
+	return {
+		restrict: 'A',
+		templateUrl: function( element, attr ) {
+			return '/tmpls/financial-data.html';
+		},
+		link: function( scope, element, attrs ) {
+
+			$( element )
+			.find( '[data-cms-market-menu]' )
+			.on( 'change', function() {
+
+				$http.post( '/cms/quotes.php', {
+					market: scope[ 'quotes' ][ 'market' ]
+				})
+				.then( function( response ) {
+					scope[ 'quotes' ] = response.data;
+					scope[ 'chartSettings' ][ 'ticker' ] = scope[ 'quotes' ][ 'tick' ];
+					$compile( $( '[data-cms-chart]' ).empty() )( scope );
+				});
+			});
+		}
+	}
+})
+.directive( 'cmsChart', function( $window ) {
+	return {
+		restrict: 'A',
+		link: function( scope, element, attr ) {
+
+			var w = scope.chartSettings[ 'width' ] = element.parent().width();
+			var h = scope.chartSettings[ 'height' ];
+
+			var chartUrl = function() {
+
+				var p = scope.chartSettings[ 'period' ];
+				var u = scope.charts[ 'historical' ];
+
+				if ( p == 'intra' || p == 'week' ) {
+					u = scope.charts[ 'intraday' ];
+				}
+
+				return u + "?" + $.param( scope.chartSettings );
+			}
+
+			angular.element( "<iframe>" )
+			.attr({
+				id: 'iChart',
+				src: chartUrl(),
+				width: "100%",
+				height: h,
+				frameborder: "0",
+				scrolling: "no",
+				style: "border: none; overflow: hidden;"
+			})
+			.appendTo( element )
+			.parents( 'body' )
+			.find( '[data-cms-chart-menu]' )
+			.on( 'change', function( event ) {
+
+				scope.chartSettings[ 'period' ] = $( this ).val().split( "," )[ 0 ];
+				scope.chartSettings[ 'qty' ] = $( this ).val().split( "," )[ 1 ];
+				scope.chartSettings[ 'news' ] = $( this ).val().split( "," )[ 2 ];
+
+				// Reload the chart
+				angular.element( '#iChart' ).attr( "src", chartUrl() );
+			});
+
+			angular.element( $window ).on( 'resize', function() {
+
+				var w = angular.element( '#iChart' ).parent().width();
+
+				if ( scope.chartSettings[ 'width' ] != w ) {
+
+					scope.chartSettings[ 'width' ] = w;
+
+					setTimeout( function() {
+						angular.element( '#iChart' ).attr( 'src', chartUrl() );
+					}, 100 );
+				}
+			});
+		}
+	}
+})
+.directive( 'cmsRecruitee', function( $http, $location, $sce ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: function( element, attrs ) {
+
+			return '/tmpls/' + attrs.tmpl + '.html';
+		},
+		link: function( scope, element, attrs ) {
+
+			scope.isLoading = true;
+			scope._lang = [];
+			scope.positions = [];
+
+			scope.getData = function() {
+
+				scope.isLoading = true;
+
+				$http.post( '/cms/recruitee.php', {
+					cnt: attrs.cnt || 0,
+					params: attrs.skipUrl ? null : $location.search()
+				})
+				.then( function( response ) {
+
+					scope.isLoading = false;
+					scope._lang = response.data._lang;
+					scope.positions = response.data.positions;
+				});
+			};
+
+			scope.$on( '$locationChangeSuccess', function() {
+
+				if ( attrs.skipUrl ) {
+
+					return true;
+				}
+
+				scope.getData();
+			});
+
+			// Init
+			scope.getData();
+		}
+	}
+})
+.directive( 'cmsJobs', function( $http, $location ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: '/tmpls/jobs.html',
+		link: function( scope, element, attrs ) {
+
+			scope.isLoading = true;
+			scope._lang = [];
+			scope.countries = [];
+			scope.departments = [];
+			scope.offers = [];
+
+			scope.search = {};
+			scope.search.title = '';
+			scope.search.department = '';
+			scope.search.location = '';
+
+			scope.notNull = function( obj ) {
+
+				for ( var i in obj ) {
+
+					if ( obj[ i ] === null ) {
+
+						obj[ i ] = '';
+					}
+				}
+
+				return obj;
+			};
+
+			scope.getData = function() {
+
+				scope.isLoading = true;
+
+				$http.post( '/cms/jobs.php' )
+				.then( function( response ) {
+
+					scope.isLoading = false;
+					scope._lang = response.data._lang;
+					scope.countries = response.data.countries;
+					scope.departments = response.data.departments;
+					scope.offers = response.data.offers;
+				});
+			};
+
+			// Init
+			scope.getData();
+		}
+	}
+})
+.directive( 'cmsJobInfo', function( $http, $location, $sce, $timeout ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: '/tmpls/job-info.html',
+		link: function( scope, element, attrs ) {
+
+			scope.isLoading = true;
+			scope._lang = [];
+			scope.offer = null;
+			scope.showShareBtns = false;
+
+			scope.toHtml = function( html ) {
+				return $sce.trustAsHtml( html );
+			};
+
+			scope.getData = function() {
+
+				scope.isLoading = true;
+
+				// jsGlobalData - set in index.php
+				if ( jsGlobalData.cmsJobInfo ) {
+
+					scope.isLoading = false;
+					scope._lang = jsGlobalData.cmsJobInfo._lang;
+					scope.offer = jsGlobalData.cmsJobInfo.offer;
+				}
+
+				$timeout( function() {
+					jQuery( '.cs-page-locator li:last' ).addClass( 'active' );
+				}, 50 );
+			};
+
+			scope.sharePopup = function( url ) {
+
+				var w = $( window ).width();
+				var h = $( window ).height();
+				var specs = '';
+
+				if ( w > 500 || h > 500 ) {
+
+					specs = 'width=500,height=500';
+				}
+
+				window.open( url, '', specs, '_blank' );
+			};
+
+			// Init
+			scope.getData();
+		}
+	}
+})
+.directive( 'cmsJobApply', function( $http, $location, $sce, $timeout ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: '/tmpls/job-apply.html',
+		link: function( scope, element, attrs ) {
+
+			$( document ).on( 'change', '[data-file-role]', function( event ) {
+
+				var this_ = $( this );
+				var file = event.originalEvent.target.files[ 0 ];
+				var role = this_.data( 'fileRole' );
+				var fReader = new FileReader();
+
+				fReader.readAsDataURL( file );
+
+				fReader.onload = function( event ) {
+
+					scope.$apply( function() {
+						scope.formData[ role ] = {
+							name: file.name,
+							size: file.size,
+							type: file.type,
+							base64: event.target.result
+						};
+					});
+				};
+			});
+
+			scope.isLoading = true;
+			scope.isSending = false;
+			scope._lang = [];
+			scope.offer = null;
+
+			scope.hasError = false;
+			scope.errorsData = {};
+
+			scope.formData = {};
+			scope.formData.slug = null;
+			scope.formData.name = null;
+			scope.formData.email = null;
+			scope.formData.phone = null;
+			scope.formData.name = null;
+			scope.formData.photo = null;
+			scope.formData.cv = null;
+			scope.formData.cover_letter = null;
+			scope.formData.questions = {};
+
+			scope.toHtml = function( html ) {
+				return $sce.trustAsHtml( html );
+			};
+
+			scope.getData = function() {
+
+				scope.isLoading = true;
+
+				$http.post( '/cms/job-apply.php', {
+					slug: $location.search().o
+				})
+				.then( function( response ) {
+
+					scope.isLoading = false;
+					scope._lang = response.data._lang;
+					scope.offer = response.data.offer;
+
+					if ( scope.offer ) {
+
+						scope.formData.slug = scope.offer.slug;
+					}
+					else {
+
+						document.location.href = '/careers';
+					}
+				});
+			};
+
+			scope.setBoolQuestion = function( id, value ) {
+
+				scope.formData.questions[ id ] = value;
+			};
+
+			scope.setMultiQuestion = function( id, value ) {
+
+				if ( ! scope.formData.questions[ id ] ) {
+
+					scope.formData.questions[ id ] = value;
+				}
+				else {
+
+					var tmp = scope.formData.questions[ id ].split( ', ' );
+					var inx = jQuery.inArray( value, tmp );
+
+					inx === -1 ? tmp.push( value ) : tmp.splice( inx, 1 );
+
+					scope.formData.questions[ id ] = tmp.join( ', ' );
+
+					if ( ! scope.formData.questions[ id ] ) {
+
+						delete scope.formData.questions[ id ];
+					}
+				}
+			};
+
+			scope.isEmail = function( str ) {
+
+				return eval( '/[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}/' ).test( str );
+			};
+
+			scope.isImage = function( mimetype ) {
+
+				return eval( '/png|jpg|jpeg/i' ).test( mimetype );
+			};
+
+			scope.sendData = function() {
+
+				scope.hasError = false;
+				scope.errorsData = {};
+				scope.errorsData.questions = {};
+
+				// Validation
+				if ( ! scope.formData.name ) {
+
+					scope.hasError = true;
+					scope.errorsData.name = true;
+				}
+
+				if ( ! scope.isEmail( scope.formData.email ) ) {
+
+					scope.hasError = true;
+					scope.errorsData.email = true;
+				}
+
+				if ( scope.offer.options_phone === 'required' ) {
+
+					if ( ! scope.formData.phone ) {
+
+						scope.hasError = true;
+						scope.errorsData.phone = true;
+					}
+				}
+
+				if ( scope.offer.options_photo === 'required' ) {
+
+					if ( ! scope.formData.photo ) {
+
+						scope.hasError = true;
+						scope.errorsData.photo = true;
+					}
+				}
+
+				if ( scope.formData.photo ) {
+
+					if ( ! scope.isImage( scope.formData.photo.type ) ) {
+
+						scope.hasError = true;
+						scope.errorsData.photo = true;
+					}
+				}
+
+				if ( scope.offer.options_cv === 'required' ) {
+
+					if ( ! scope.formData.cv ) {
+
+						scope.hasError = true;
+						scope.errorsData.cv = true;
+					}
+				}
+
+				if ( scope.offer.options_cover_letter === 'required' ) {
+
+					if ( ! scope.formData.cover_letter ) {
+
+						scope.hasError = true;
+						scope.errorsData.cover_letter = true;
+					}
+				}
+
+				for ( var i in scope.offer.open_questions ) {
+
+					if ( scope.offer.open_questions[ i ].required ) {
+
+						var id = scope.offer.open_questions[ i ].id;
+
+						if ( ! scope.formData.questions[ id ] ) {
+
+							scope.hasError = true;
+							scope.errorsData.questions[ id ] = true;
+						}
+					}
+				}
+
+				if ( ! scope.hasError ) {
+
+					if ( scope.isSending ) {
+
+						return;
+					}
+
+					scope.isSending = true;
+
+					$http.post( '/cms/_job-apply.php', scope.formData )
+					.then( function( response ) {
+
+						scope.isSending = false;
+						scope.status = response.data.status;
+
+						if ( scope.status ) {
+
+							scope.showSuccess = true;
+						}
+						else {
+
+							scope.showDanger = true;
+						}
+					});
+				}
+			};
+
+			scope.$on( '$locationChangeSuccess', function() {
+
+				scope.getData();
+			});
+
+			// Init
+			scope.getData();
+		}
+	}
+})
+.directive( 'cmsSearch', function( $http ) {
+
+	var tmp = '';
+
+	return {
+		restrict: 'A',
+		link: function( scope, element, attrs ) {
+
+			$( element ).typeahead( null, {
+				display: 'name',
+				limit: 30,
+				source: function( query, syncResults, asyncResults ) {
+
+					tmp = query;
+					$http.post( '/cms/search.php', {
+						searched: query
+					})
+					.then(function( response ) {
+
+						asyncResults( response.data );
+					});
+				},
+				templates: {
+					pending: '<div class="loader"><img src="\/img\/loader.gif"><\/div>',
+					notFound: jsLang[ 0 ]
+				}
+			})
+			.on( "typeahead:selected", function( event, data ) {
+				document.location.href = data.url + '?s=' + encodeURIComponent( tmp );
+			});
+		}
+	}
+})
+.directive( 'cmsMobileNavbarTrigger', function() {
+	return {
+		link: function( scope, element, attrs ) {
+
+			var navBar = $( '#cms-m-navbar' );
+			var allOther = $( 'body > *:not(#cms-m-navbar)' );
+
+			$( element ).on( 'click', function( event ) {
+
+				event.preventDefault();
+				event.stopPropagation();
+				navBar.addClass( 'active' );
+
+				allOther.one( 'click.nav', function( event ) {
+					event.preventDefault();
+					navBar.removeClass( 'active' );
+				});
+			});
+		}
+	}
+})
+.directive( 'cmsMobileSubitemsTrigger', function() {
+	return {
+		link: function( scope, element, attrs ) {
+
+			$( element ).on( 'click', function( event ) {
+
+				event.preventDefault();
+				$( 'ul.submenu' ).removeClass( 'in' );
+				$( this ).next( 'ul' ).addClass( 'in' );
+			});
+		}
+	}
+})
+.directive( 'cmsTablist', function() {
+	return {
+		link: function( scope, element, attrs ) {
+
+			var tablist = $( element );
+
+			tablist.find( '[data-toggle=collapse]' ).on( 'click', function( event ) {
+
+				var panel = $( this ).parents( '.panel' );
+				var isActive = panel.hasClass( 'active' );
+
+				tablist.find( '.panel' ).removeClass( 'active' );
+
+				if ( ! isActive ) {
+
+					panel.addClass( 'active' );
+				}
+			});
+
+			scope.$on( '$locationChangeStart', function( event, newUrl ) {
+
+				if ( !! newUrl.indexOf( '#/cms-tablist' ) ) {
+
+					event.preventDefault();
+				}
+			});
+		}
+	}
+})
+.directive( 'cmsPubsB', function( $http, $location, $sce ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: '/tmpls/pubs-b.html',
+		link: function( scope, element, attrs ) {
+
+			scope._lang = null;
+			scope.isLoading = true;
+			scope.pubs = null;
+
+			scope.loadPubs = function() {
+
+				scope.isLoading = true;
+
+				var idExcluded = null;
+
+				if ( jsGlobalData && jsGlobalData.cmsPubsViewer ) {
+
+					idExcluded = jsGlobalData.cmsPubsViewer.pubData.id;
+				}
+
+				$http
+				.post( '/cms/pubs-b.php', {
+					cnt: attrs.cnt || null,
+					idExcluded: idExcluded
+				} )
+				.then( function( response ) {
+
+					scope._lang = response.data._lang;
+					scope.isLoading = false;
+					scope.pubs = response.data.pubs;
+				});
+			};
+
+			scope.toHtml = function( html ) {
+
+				return $sce.trustAsHtml( html );
+			}
+
+			// Go...
+			scope.loadPubs();
+		}
+	}
+})
+.directive( 'cmsPublications', function( $http, $location, $sce ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: '/tmpls/publications.html',
+		link: function( scope, element, attrs ) {
+
+			scope._lang = null;
+			scope.data = {};
+			scope.data.keyword = null;
+			scope.data.tmpKeyword = null;
+			scope.data.topics = null;
+			scope.data.years = null;
+			scope.isLoading = true;
+			scope.pg = null;
+			scope.pubs = null;
+			scope.topics = null;
+			scope.years = null;
+
+			scope.loadPubs = function() {
+
+				scope.isLoading = true;
+
+				$http
+				.post( '/cms/publications.php', $location.search() )
+				.then( function( response ) {
+
+					scope._lang = response.data._lang;
+					scope.data = response.data.params;
+					scope.data.tmpKeyword = null;
+					scope.isLoading = false;
+					scope.pg = response.data.pg;
+					scope.pubs = response.data.pubs;
+					scope.topics = response.data.topics;
+					scope.years = response.data.years;
+				});
+			};
+
+			scope.toggleParam = function( name, val ) {
+
+				var params = $location.search() || {};
+				var tmp = params[ name ];
+				var ids = tmp ? tmp.split( ',' ) : new Array();
+				var index = jQuery.inArray( val.toString(), ids );
+
+				if ( index > -1 ) {
+
+					ids.splice( index, 1 );
+				}
+				else {
+
+					ids.push( val );
+				}
+
+				params[ name ] = ids.sort().join( ',' ) || null;
+				params[ 'page' ] = null;
+
+				$location.search( params );
+			};
+
+			scope.resetKeyword = function() {
+
+				var params = $location.search() || {};
+				params[ 'kw' ] = null;
+				params[ 'page' ] = null;
+
+				scope.data.keyword = null;
+				$location.search( params );
+			};
+
+			scope.setKeyword = function() {
+
+				if ( scope.data.tmpKeyword ) {
+
+					var params = $location.search() || {};
+					params[ 'kw' ] = scope.data.tmpKeyword;
+					params[ 'page' ] = null;
+
+					$location.search( params );
+				}
+			};
+
+			scope.setPage = function( page ) {
+
+				$location.search( 'page', page );
+			};
+
+			scope.toHtml = function( html ) {
+
+				return $sce.trustAsHtml( html );
+			}
+
+			scope.watchVideo = function( pubData ) {
+
+				var modalObj = jQuery( '#pub-content-modal' );
+
+				if ( modalObj.length !== 1 ) {
+
+					return false;
+				}
+
+				modalObj.find( '.modal-title' ).html( pubData.title );
+				modalObj.find( '.modal-body' ).html( pubData.content );
+				modalObj.modal( 'show' );
+
+				modalObj.one( 'hidden.bs.modal', function() {
+
+					modalObj.find( '.modal-title' ).html( '' );
+					modalObj.find( '.modal-body' ).html( '' );
+				} );
+			};
+
+			scope.$on( '$locationChangeSuccess', function() {
+
+				scope.loadPubs();
+			} );
+
+			// Go...
+			scope.loadPubs();
+
+			$( document )
+			.off( 'click.cms-multiple' )
+			.on( 'click.cms-multiple', '.dropdown-menu.cms-multiple a', function( event ) {
+				event.stopPropagation();
+			});
+		}
+	}
+})
+.directive( 'cmsPubsViewer', function( $http, $location, $sce, $timeout ) {
+	return {
+		restrict: 'A',
+		scope: {},
+		templateUrl: '/tmpls/pubs-viewer.html',
+		link: function( scope, element, attrs ) {
+
+			scope._lang = null;
+			scope.isLoading = true;
+			scope.pubData = null;
+			scope.hasBackBtn = null;
+
+			scope.loadData = function() {
+
+				scope.isLoading = true;
+
+				if ( jsGlobalData.cmsPubsViewer ) {
+
+					scope.isLoading = false;
+					scope._lang = jsGlobalData.cmsPubsViewer._lang;
+					scope.pubData = jsGlobalData.cmsPubsViewer.pubData;
+					scope.hasBackBtn = jsGlobalData.cmsPubsViewer.hasBackBtn;
+				}
+			};
+
+			scope.toHtml = function( html ) {
+
+				return $sce.trustAsHtml( html );
+			}
+
+			// Go...
+			scope.loadData();
+
+			$timeout( function() {
+				jQuery( '.cs-page-locator a[href="/our-stories"]' )
+				.parent( 'li' ).addClass( 'active' );
+			}, 50 );
+		}
+	}
+})
+.controller( 'globCtrl', function( $scope, $location ) {
+
+	$scope[ 'websiteMenu' ] = [{"id":1,"level":1,"name":"About us","title":"About us","url":"#","ids":[{"id":53,"pageId":41,"level":2,"name":"Who we are","title":"Who we are","url":"who-are-we"},{"id":2,"pageId":2,"level":2,"name":"Our History","title":"Our History","url":"history"},{"id":3,"pageId":3,"level":2,"name":"Executive Team","title":"Executive Team","url":"executive-team"},{"id":4,"pageId":4,"level":2,"name":"Board of Directors","title":"Board of Directors","url":"board-of-directors"},{"id":248,"pageId":10,"level":2,"name":"Fidelta","title":"Fidelta","url":"fidelta"}]},{"id":5,"level":1,"name":"R&D","title":"R&D","url":"#","ids":[{"id":6,"pageId":5,"level":2,"name":"Clinical Pipeline","title":"Clinical Pipeline","url":"clinical-pipelines"},{"id":58,"pageId":44,"level":3,"name":"Filgotinib","title":"Filgotinib","url":"filgotinib"},{"id":61,"pageId":47,"level":3,"name":"IPF","title":"IPF","url":"IPF"},{"id":70,"pageId":60,"level":3,"name":"Osteoarthritis - GLPG1972","title":"Osteoarthritis - GLPG1972","url":"glpg-1972"},{"id":62,"pageId":48,"level":3,"name":"MOR106","title":"MOR106","url":"mor-106"},{"id":10,"pageId":9,"level":2,"name":"Clinical Trials","title":"Clinical Trials","url":"clinical-trials"},{"id":277,"pageId":238,"level":3,"name":"Expanded Access","title":"Expanded Access","url":"expanded-access"},{"id":9,"pageId":8,"level":2,"name":"Target & Discovery Approach","title":"Target & Discovery Approach","url":"discovery-approach"},{"id":44,"pageId":34,"level":2,"name":"Scientific Meetings","title":"Scientific Meetings","url":"scientific-meetings"},{"id":7,"pageId":6,"level":2,"name":"Alliances","title":"Alliances","url":"alliances"},{"id":65,"pageId":51,"level":3,"name":"Inflammatory diseases","title":"Inflammatory diseases","url":"inflammatory-diseases"},{"id":66,"pageId":52,"level":3,"name":"Osteoarthritis","title":"Osteoarthritis","url":"osteoarthritis"},{"id":8,"pageId":7,"level":2,"name":"Partnering","title":"Partnering","url":"partnering"},{"id":267,"pageId":227,"level":2,"name":"Search & Evaluation","title":"Search & Evaluation","url":"search-and-evaluation"},{"id":45,"pageId":0,"level":2,"name":"Archive","title":"Archive","url":"news-archive-posters"},{"id":46,"pageId":35,"level":3,"name":"Posters","title":"Posters","url":"news-archive-posters"},{"id":47,"pageId":36,"level":3,"name":"Presentations","title":"Presentations","url":"news-archive-presentations"},{"id":49,"pageId":38,"level":3,"name":"Publications","title":"Publications","url":"news-archive-publications"}]},{"id":12,"level":1,"name":"Investors","title":"Investors","url":"#","ids":[{"id":20,"pageId":11,"level":2,"name":"Company Overview","title":"Company Overview","url":"company-overview"},{"id":42,"pageId":32,"level":2,"name":"Events","title":"Events","url":"events"},{"id":13,"pageId":12,"level":2,"name":"Financials","title":"Financials","url":"key-financials"},{"id":23,"pageId":16,"level":2,"name":"Financial Reports","title":"Financial Reports","url":"financial-reports"},{"id":15,"pageId":13,"level":2,"name":"Financial Calendar","title":"Financial Calendar","url":"financial-calendar"},{"id":16,"pageId":0,"level":2,"name":"Stock Information","title":"Stock Information","url":"stock-chart"},{"id":19,"pageId":14,"level":3,"name":"Stock Charts","title":"Stock Charts","url":"stock-chart"},{"id":17,"pageId":15,"level":3,"name":"Share Capital","title":"Share Capital","url":"share-capital"},{"id":24,"pageId":17,"level":3,"name":"Analyst Coverage","title":"Analyst Coverage","url":"analyst-coverage"},{"id":25,"pageId":18,"level":3,"name":"Dividends","title":"Dividends","url":"dividends"},{"id":32,"pageId":0,"level":2,"name":"Shareholder Information","title":"Shareholder Information","url":"shareholders-meetings"},{"id":33,"pageId":24,"level":3,"name":"Shareholders' Meetings","title":"Shareholders' Meetings","url":"shareholders-meetings"},{"id":34,"pageId":25,"level":3,"name":"Shareholder Rights","title":"Shareholder Rights","url":"shareholder-rights"},{"id":35,"pageId":26,"level":3,"name":"Major Shareholders","title":"Major Shareholders","url":"major-shareholders"},{"id":36,"pageId":27,"level":3,"name":"Financial Service","title":"Financial Service","url":"financial-service"},{"id":38,"pageId":29,"level":3,"name":"Transparency Notices","title":"Transparency Notices","url":"transparency-notices"},{"id":76,"pageId":65,"level":2,"name":"SEC Filings","title":"SEC Filings","url":"sec-filings"},{"id":26,"pageId":0,"level":2,"name":"Corporate Governance","title":"Corporate Governance","url":"articles-of-association"},{"id":27,"pageId":19,"level":3,"name":"Articles of Association","title":"Articles of Association","url":"articles-of-association"},{"id":28,"pageId":20,"level":3,"name":"Special Reports","title":"Special Reports","url":"special-reports"},{"id":29,"pageId":21,"level":3,"name":"Statutory Auditor","title":"Statutory Auditor","url":"statutory-auditor"},{"id":30,"pageId":22,"level":3,"name":"Agreements","title":"Agreements","url":"agreements"},{"id":31,"pageId":23,"level":3,"name":"Charters and Codes","title":"Charters and Codes","url":"charters-and-codes"},{"id":71,"pageId":61,"level":2,"name":"Investor Relations Contact","title":"Investor Relations Contact","url":"investor-relations-contact"}]},{"id":40,"level":1,"name":"News","title":"News","url":"#","ids":[{"id":41,"pageId":31,"level":2,"name":"Press Releases","title":"Press Releases","url":"press-releases"},{"id":260,"pageId":218,"level":2,"name":"Our Stories","title":"Our Stories","url":"our-stories"},{"id":69,"pageId":37,"level":2,"name":"Webcasts","title":"Webcasts","url":"webcasts"},{"id":37,"pageId":28,"level":2,"name":"FAQs","title":"FAQs","url":"faqs"},{"id":43,"pageId":33,"level":2,"name":"Media Contact","title":"Media Contact","url":"media-contact"}]},{"id":50,"level":1,"name":"Careers","title":"Careers","url":"careers","ids":[{"id":52,"pageId":40,"level":2,"name":"Current Openings","title":"Current Openings","url":"careers-current-openings"},{"id":51,"pageId":39,"level":2,"name":"Working at Galapagos","title":"Working at Galapagos","url":"careers"},{"id":251,"pageId":211,"level":2,"name":"Meet Our Team","title":"Meet Our Team","url":"careers-meet-our-team"}]}];
+	$scope[ 'pageId' ] = 31;
+	$scope[ 'pageMenu' ] = [{"id":40,"pageId":0,"level":1,"name":"News","title":"News","url":"#"},{"id":41,"pageId":31,"level":2,"name":"Press Releases","title":"Press Releases","url":"press-releases"},{"id":260,"pageId":218,"level":2,"name":"Our Stories","title":"Our Stories","url":"our-stories"},{"id":69,"pageId":37,"level":2,"name":"Webcasts","title":"Webcasts","url":"webcasts"},{"id":37,"pageId":28,"level":2,"name":"FAQs","title":"FAQs","url":"faqs"},{"id":43,"pageId":33,"level":2,"name":"Media Contact","title":"Media Contact","url":"media-contact"}];
+	$scope[ 'docsUrl' ] = "http:\/\/files.cms.symexbelgium.com\/docs\/10440374";
+	$scope[ 'events' ] = [];
+	$scope[ 'markets' ] = [];
+	$scope[ 'quotes' ] = false;
+	$scope[ 'charts' ] = false;
+	$scope[ 'chartSettings' ] = false;
+
+	var eurolandJs = '//tools.euroland.com/tools/common/eurolandiframeautoheight/eurolandtoolsintegrationobject.js';
+
+	if ( $( 'iframe[id^="euroland-"]' ).length > 0 ) {
+
+		$.getScript( eurolandJs ).done( function() {
+
+			$( 'iframe[id^="euroland-"]' ).each( function() {
+
+				var id = $( this ).attr( 'id' );
+				EurolandToolIntegrationObject.set( id );
+			});
+		});
+	};
+
+	$scope.cookiesBanner = {
+
+		isVisible: function() {
+
+			if ( localStorage && localStorage.skipCookiesAppBanner ) {
+
+				return false;
+			}
+
+			jQuery( '#cookies-banner' ).show();
+
+			return true;
+		},
+
+		remove: function() {
+
+			if ( localStorage ) {
+
+				localStorage.skipCookiesAppBanner = true;
+			}
+		}
+	};
+});
+</script>
+</body>
+</html>

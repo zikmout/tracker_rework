@@ -1,0 +1,5062 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <!-- Anti-flicker snippet (recommended)  -->
+    <style>.async-hide { opacity: 0 !important} </style>
+    <script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+            h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+            (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document.documentElement,'async-hide','dataLayer',4000,
+            {'GTM-TX74WLW':true});</script>
+    <meta charset="utf-8" />
+<meta name="title" content="Share Buy-Back | SES" />
+<meta property="og:site_name" content="SES" />
+<link rel="canonical" href="https://www.ses.com/investors/shareholder-information/share-buy-back" />
+<meta name="description" content="Information on SES Share buy-back programmes." />
+<meta property="og:url" content="https://www.ses.com/investors/shareholder-information/share-buy-back" />
+<meta name="abstract" content="We provide reliable and secure satellite and ground communications solutions. We push for breakthroughs in connectivity and their impact for people worldwide." />
+<meta property="og:title" content="Share Buy-Back" />
+<meta name="keywords" content="satellites, network communications," />
+<meta property="og:description" content="Information on SES Share buy-back programmes." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="alternate" hreflang="en" href="https://www.ses.com/investors/shareholder-information/share-buy-back" />
+<link rel="shortcut icon" href="/themes/custom/ses/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="/investors/shareholder-information/share-buy-back" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&amp;l='+l:'';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TX74WLW');</script>
+
+    <title>Share Buy-Back | SES</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"31b86f430a",applicationID:"60293959"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+    <meta name="google-site-verification" content="WMkbWoVaG5fbAUhew-wQgFEIPWMRi5HtZ5UD4WehJQM" />
+    <link rel="stylesheet" href="/sites/default/files/css/css_-p4GrP3ppb0Lg70JSXDpIj8scn-eQ5tbYVTgousXTZQ.css?q1l7gq" media="all" />
+<link rel="stylesheet" href="/sites/default/files/css/css_1F-yURoVKEPJjsIcQcwJPERmuyQBZkr9x0tXToWVCFs.css?q1l7gq" media="all" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+
+    <noscript>
+      <style type="text/css">
+        .ses-dropdown-filters {
+  opacity: 1;
+}
+
+.ses-dropdown-filters .form-submit {
+  display: inline-block;
+}
+
+.ses-dropdown-filters .form-actions {
+  padding-top: .5em;
+  border-top: solid #f2f2f2 1px;
+}
+      </style>
+    </noscript>
+  </head>
+  <body class="path-node page-node-type-standard-one">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+
+    <main class="ses-page-wrapper">
+      <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TX74WLW" height="0" width="0" title="Google Tag Manager">Google Tag Manager</iframe></noscript>
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+  <header lang="en" class="ses-header ses-header--alt">
+    
+<div class="container">
+  <div class="row">
+    <div class="col-xs-3">
+      <div class="ses-header__logo">
+        <a href="/" title="SES" rel="home">
+  <img src="/themes/custom/ses/logo.svg" alt="Home" />
+</a>
+
+      </div>
+    </div>
+    <div class="col-xs-9 text-right">
+      <div class="ses-header__buttons">
+                  <a href="#search" data-search-toggle>
+            <span class="ses-search-icon">
+              <span class="ses-search-icon__handle"></span>
+              <span class="ses-search-icon__cross"></span>
+            </span>
+            <span class="hidden">Search</span>
+          </a>
+                <a href="#footer" data-menu-toggle>
+          <span class="ses-menu-icon">
+            <span class="ses-menu-icon__bar"></span>
+            <span class="ses-menu-icon__bar ses-menu-icon__bar--cross"></span>
+          </span>
+          <span class="hidden">Menu</span>
+        </a>
+      </div>
+      
+  
+  
+    <nav class="ses-fancy-nav" data-fancy-nav>
+    <ul>
+      
+                                                                                                                                                                                                                                                                                                                                  
+                  
+                          
+          
+          <li data-hoverable class=" ">
+
+                        
+                                            <a href="/video">
+                  Video
+                </a>
+                                                      <div class="ses-tray ses-tray--hover">
+                  
+                    
+                                                                                                                                                                                
+                  
+                              <ul class="is-multi">
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/video/products-services">
+                  Products &amp; Services
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                                                                                    
+                  
+                              <ul class="is-multi">
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-management">
+                  Content Management
+                </a>
+                                  
+                    
+                                                                                                        
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-management/content-storage">
+                  Content Storage
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-management/content-processing">
+                  Content Processing
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-management/vod-content-delivery">
+                  VoD Content Delivery
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-management/metadata-management">
+                  Metadata Management
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-management/content-localisation">
+                  Content Localisation
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-management/clipping-and-editing">
+                  Clipping / Editing
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/channel-playout">
+                  Channel Playout
+                </a>
+                                  
+                    
+                                                
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/channel-playout/self-managed-playout">
+                  Self Managed Playout
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/channel-playout/fully-managed-playout">
+                  Fully Managed Playout
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-monetisation">
+                  Content Monetisation
+                </a>
+                                  
+                    
+                                                              
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-monetisation/online-video-platforms">
+                  Online Video Platforms
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-monetisation/targeted-advertisement">
+                  Targeted Advertisement
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-monetisation/vod-everywhere">
+                  VoD Everywhere
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-distribution">
+                  Content Distribution
+                </a>
+                                  
+                    
+                                                                                                        
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-distribution/direct-home">
+                  DTH
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-distribution/dtt-dtc">
+                  DTT &amp; DTC
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-distribution/occasional-use">
+                  Occasional Use
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-distribution/fibre-distribution">
+                  Fibre Distribution
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-distribution/ip-delivery">
+                  IP Delivery
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/products-services/content-distribution/online-streaming-cdn">
+                  Online Streaming &amp; CDN
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/video/service-business-management">
+                  Service &amp; Business Management
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/service-business-management/ses-360">
+                  SES 360
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/service-business-management/business-dashboard">
+                  Business Dashboard
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/media-platforms">
+                  Media Platforms
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/video/who-we-work">
+                  Who We Work With
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                                                      
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/who-we-work/broadcasters">
+                  Broadcasters
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/who-we-work/content-owners">
+                  Content Owners
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/who-we-work/mobile-networks-operators">
+                  Mobile Networks Operators
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/who-we-work/platform-operators">
+                  Platform Operators
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/who-we-work/rights-holders">
+                  Rights Holders
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/who-we-work/sports-news-events">
+                  Sports, News &amp; Events
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/who-we-work/telcos">
+                  Telcos
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/video/insights">
+                  Insights
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                            
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/insights/ultra-hd">
+                  Ultra HD
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/insights/hdtv">
+                  HDTV
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/insights/managed-services">
+                  Managed Services
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/insights/audience-reach">
+                  Audience reach
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/video/case-studies">
+                  Video Case Studies
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-hoverable class=" ">
+
+                        
+                                            <a href="/networks">
+                  Networks
+                </a>
+                                                      <div class="ses-tray ses-tray--hover">
+                  
+                    
+                                                                                                                                                              
+                  
+                              <ul class="is-multi">
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/o3b-mpower-0">
+                  O3b mPOWER
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions">
+                  Signature Solutions
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                                                                                                                                                
+                  
+                              <ul class="is-multi">
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-aero">
+                  Aero
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-cloud">
+                  Cloud
+                </a>
+                                  
+                    
+                                  
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-cloud/ses-and-azure-expressroute">
+                  SES and Azure ExpressRoute
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-energy">
+                  Energy
+                </a>
+                                  
+                    
+                                                
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-energy/intelligent-mining">
+                  Mining
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-energy/digital-oilfield">
+                  Oil and Gas
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-maritime">
+                  Maritime
+                </a>
+                                  
+                    
+                                                
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-maritime/global-maritime-broadband">
+                  Commercial Maritime
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-maritime/connected-cruises">
+                  Cruise
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-telecom-mno">
+                  Telecom &amp; MNO
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-hadr">
+                  HADR
+                </a>
+                                  
+                    
+                                                
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-hadr/crisis-recovery">
+                  Crisis Recovery
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-hadr/crisis-response">
+                  Crisis Response
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government">
+                  Government
+                </a>
+                                  
+                    
+                                                                                                                                                  
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/intelligence-surveillance-reconnaissance">
+                  ISR
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/mobile-and-deployable-solutions">
+                  Deployability
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/secure-government-networks">
+                  Secure Networks
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/crisis-management">
+                  Crisis Management
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/morale-welfare-and-recreation">
+                  MWR
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/government-institutional-programmes">
+                  Global Programmes
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/navigation-systems">
+                  Navigation
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/hosted-payloads">
+                  Hosted Payloads
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/signature-solutions/signature-government/innovating-future">
+                  Innovation
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/networks/services">
+                  Services
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                          
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/services/connect-services">
+                  Connect
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/services/managed-network-services">
+                  Network
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/services/application-services">
+                  Application
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/services/engagement-services">
+                  Engagement
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/services/ascent-lifecycle-services">
+                  Ascent Lifecycle Services
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/networks/networks-and-platforms">
+                  Networks and Platforms
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                            
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/networks-and-platforms/o3b-mpower">
+                  O3b mPOWER
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/networks-and-platforms/skala-global-platform">
+                  Skala Global Platform
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/networks-and-platforms/o3b-meo">
+                  O3b MEO
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/networks-and-platforms/geo-hts">
+                  GEO HTS
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/partner-programme">
+                  Partner Programme
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks/case-studies">
+                  Networks Case Studies
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-hoverable class=" ">
+
+                        
+                                            <a href="/our-coverage">
+                  Our Coverage
+                </a>
+                                                      <div class="ses-tray ses-tray--hover">
+                  
+                    
+                                                                                          
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/our-coverage/satellites">
+                  Satellites 
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/our-coverage/orbital-positions">
+                  Orbital Positions
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/our-coverage/teleport-map">
+                  Network Map
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/our-coverage/technical-data">
+                  Technical Data
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/our-coverage/launches">
+                  Launches
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-hoverable class=" ">
+
+                        
+                                            <a href="/regions">
+                  Regions
+                </a>
+                                                      <div class="ses-tray ses-tray--hover">
+                  
+                    
+                                                                                                                                                                                                                    
+                  
+                              <ul class="is-multi">
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/north-america">
+                  North America
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                                                
+                  
+                              <ul class="is-multi">
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/video-north-america">
+                  Video
+                </a>
+                                  
+                    
+                                                
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/4k-ultra-hd">
+                  4k Ultra HD
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/ses-14-north-america">
+                  SES-14
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/networks-north-america">
+                  Networks
+                </a>
+                                  
+                    
+                                                                                          
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/aero-north-america">
+                  Aero
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/energy-north-america">
+                  Energy
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/government-north-america">
+                  Government
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/maritime-north-america">
+                  Maritime
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/telecom-mno-north-america">
+                  Telecom &amp; MNO
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/regions/north_america/news">
+                  News
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/north-america/our-offices">
+                  Our Offices
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a data-side-tray-link="{&quot;small&quot;:true}" data-href="/api/node-lang/3786" href="/latin-america">
+                  Latin America
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                                                
+                  
+                              <ul class="is-multi">
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/latin-america/video-latin-america">
+                  Video
+                </a>
+                                  
+                    
+                                                              
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/latin-america/ses-10-latin-america">
+                  SES-10
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/latin-america/ses-14-latin-america">
+                  SES-14
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/latin-america/kiwisat-dth-caribbean">
+                  Kiwisat, DTH in the Caribbean
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/networks-latin-america">
+                  Networks
+                </a>
+                                  
+                    
+                                                                                          
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/aero-latin-america">
+                  Aero
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/energy-latin-america">
+                  Energía
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/maritime-latin-america">
+                  Marítimo
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/telecom-mno-latin-america">
+                  Telecom &amp; MNO
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/government-latin-america">
+                  Gobierno
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/regions/latin-america/news">
+                  News
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/latin-america/our-offices">
+                  Our Offices
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a data-side-tray-link="{&quot;small&quot;:true}" data-href="/api/node-lang/3801" href="/europe">
+                  Europe
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                            
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/europe/video-europe">
+                  Video
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/europe/networks-europe">
+                  Networks
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/regions/europe/news">
+                  News
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/europe/our-offices">
+                  Our Offices
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a data-side-tray-link="{&quot;small&quot;:true}" data-href="/api/node-lang/2971" href="/africa">
+                  Africa
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                          
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/africa/video-africa">
+                  Video
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/africa/networks-africa">
+                  Networks
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/africa/elevate">
+                  Elevate
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/regions/africa/news">
+                  News
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/africa/our-offices">
+                  Our Offices
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/middle-east">
+                  Middle East
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                              
+                  
+                              <ul class="is-multi">
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/middle-east/video-middle-east">
+                  Video
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/middle-east/networks-middle-east">
+                  Networks
+                </a>
+                                  
+                    
+                                  
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/middle-east/middle-east-north-africa">
+                  Middle East &amp; North Africa
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/regions/middle_east/news">
+                  News
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/middle-east/our-offices">
+                  Our Offices
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li data-sub-hoverable class=" ">
+
+                        
+                                            <a href="/asia">
+                  Asia
+                </a>
+                                                      <div class="ses-fancy-nav__sub">
+                  
+                    
+                                                                                                                
+                  
+                              <ul class="is-multi">
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/video-asia">
+                  Video
+                </a>
+                                  
+                    
+                                                                                          
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/discover-opportunities">
+                  Discover Opportunities
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/grow-your-business">
+                  Grow Your Business
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/delivering-unparalleled-video-experiences">
+                  Delivering Unparalleled Video Experiences
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/DTH-Opportunities">
+                  DTH Opportunities in Asia-Pacific
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/transforming-experiences-empowering-innovation">
+                  Transforming Experiences, Empowering Innovation
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/networks-asia">
+                  Networks
+                </a>
+                                  
+                    
+                                  
+                  
+                              <ul >
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/ses-12-elevating-experience-asia">
+                  Elevating Experience In Asia
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                  
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/regions/asia/news">
+                  News
+                </a>
+                
+                            
+            
+          </li>
+
+        
+      
+        
+          
+          <li  class=" ">
+
+                        
+                                            <a href="/asia/our-offices">
+                  Our Offices
+                </a>
+                
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                                  
+                            
+            
+          </li>
+
+        
+      
+    
+  
+    </ul>
+  </nav>
+
+  
+
+
+    </div>
+  </div>
+</div>
+
+  <div class="ses-tray ses-tray--search">
+    <div class="ses-page-section padding-reset">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+              <div class="views-exposed-form block block-search container-inline ses-search-form" data-drupal-selector="views-exposed-form-new-search-solr-base" id="block-ses-search">
+    
+        
+            <form action="/search" method="get" id="views-exposed-form-new-search-solr-base" accept-charset="UTF-8">
+    
+      <div class="ses-search-form__group">
+      <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-search-keys form-item-search-keys form-no-label">
+      
+<label for="edit-search-keys" class="visually-hidden">Fulltext search</label>
+        
+<label for="search-input" class="ses-search-form__label">Search</label>
+<input data-drupal-selector="edit-search-keys" type="search" id="search-input" name="search_keys" value="" size="30" maxlength="128" class="form-search ses-search-form__input" placeholder="type here" data-search-input="" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions">
+
+<button  data-drupal-selector="edit-submit-new-search" type="submit" id="edit-submit-new-search" value="Search" class="button js-form-submit form-submit">
+    <span>Search</span>
+</button>
+</div>
+
+
+      <span class="ses-search-form__group__border"></span>
+    </div>
+
+  
+  </form>
+
+      </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    
+<!-- TODO: Change this classes (ses-tray?) and fix height -->
+<div class="ses-tray ses-tray--menu is-above is-right">
+  <div class="ses-page-section padding-reset">
+    <div class="ses-login-links">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-3">
+            <a href="#footer" data-menu-toggle>
+              <span class="ses-menu-icon">
+                <span class="ses-menu-icon__bar"></span>
+                <span class="ses-menu-icon__bar ses-menu-icon__bar--cross"></span>
+              </span>
+              <span class="hidden">Menu</span>
+            </a>
+          </div>
+          <div class="col-xs-9 text-right">
+            <ul>
+              <li><a href="https://extranet.ses.com/FO_UserMng/UserRegisterFirstSignUp.jsf" class="ses-header-login__link" target="_blank">Register</a></li>
+              <li><a href="https://extranet.ses.com" class="ses-header-login__link" target="_blank">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+                <nav class="ses-navigation is-light">
+          <div class="row">
+            <div class="col-xs-12">
+              
+  
+  
+  
+  
+        
+              
+                            <nav class="ses-fancy-nav" data-fancy-nav>
+            <ul>
+        
+          
+          <li data-hoverable class=" ">
+                                          <a href="/video">
+                  Video
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul class="is-multi">
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/video/products-services">
+                  Products &amp; Services
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/video/products-services/content-management">
+                  Content Management
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/products-services/channel-playout">
+                  Channel Playout
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/products-services/content-monetisation">
+                  Content Monetisation
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/products-services/content-distribution">
+                  Content Distribution
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/video/service-business-management">
+                  Service &amp; Business Management
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/video/service-business-management/ses-360">
+                  SES 360
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/service-business-management/business-dashboard">
+                  Business Dashboard
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/media-platforms">
+                  Media Platforms
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/video/who-we-work">
+                  Who We Work With
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/video/who-we-work/broadcasters">
+                  Broadcasters
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/who-we-work/content-owners">
+                  Content Owners
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/who-we-work/mobile-networks-operators">
+                  Mobile Networks Operators
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/who-we-work/platform-operators">
+                  Platform Operators
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/who-we-work/rights-holders">
+                  Rights Holders
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/who-we-work/sports-news-events">
+                  Sports, News &amp; Events
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/who-we-work/telcos">
+                  Telcos
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/video/insights">
+                  Insights
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/video/insights/ultra-hd">
+                  Ultra HD
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/insights/hdtv">
+                  HDTV
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/insights/managed-services">
+                  Managed Services
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/insights/audience-reach">
+                  Audience reach
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/video/case-studies">
+                  Video Case Studies
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-hoverable class=" ">
+                                          <a href="/networks">
+                  Networks
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/o3b-mpower-0">
+                  O3b mPOWER
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/networks/signature-solutions">
+                  Signature Solutions
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/signature-solutions/signature-aero">
+                  Aero
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/signature-solutions/signature-cloud">
+                  Cloud
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/signature-solutions/signature-energy">
+                  Energy
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/signature-solutions/signature-maritime">
+                  Maritime
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/signature-solutions/signature-telecom-mno">
+                  Telecom &amp; MNO
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/signature-solutions/signature-hadr">
+                  HADR
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/signature-solutions/signature-government">
+                  Government
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/networks/services">
+                  Services
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/services/connect-services">
+                  Connect
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/services/managed-network-services">
+                  Network
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/services/application-services">
+                  Application
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/services/engagement-services">
+                  Engagement
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/services/ascent-lifecycle-services">
+                  Ascent Lifecycle Services
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/networks/networks-and-platforms">
+                  Networks and Platforms
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/networks-and-platforms/o3b-mpower">
+                  O3b mPOWER
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/networks-and-platforms/skala-global-platform">
+                  Skala Global Platform
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/networks-and-platforms/o3b-meo">
+                  O3b MEO
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/networks-and-platforms/geo-hts">
+                  GEO HTS
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/partner-programme">
+                  Partner Programme
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks/case-studies">
+                  Networks Case Studies
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-hoverable class=" ">
+                                          <a href="/our-coverage">
+                  Our Coverage
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/our-coverage/satellites">
+                  Satellites 
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/our-coverage/orbital-positions">
+                  Orbital Positions
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/our-coverage/teleport-map">
+                  Network Map
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/our-coverage/technical-data">
+                  Technical Data
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/our-coverage/launches">
+                  Launches
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-hoverable class=" ">
+                                          <a href="/regions">
+                  Regions
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul class="is-multi">
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/north-america">
+                  North America
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/north-america/video-north-america">
+                  Video
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/north-america/networks-north-america">
+                  Networks
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/regions/north_america/news">
+                  News
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/north-america/our-offices">
+                  Our Offices
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a data-side-tray-link="{&quot;small&quot;:true}" data-href="/api/node-lang/3786" href="/latin-america">
+                  Latin America
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/latin-america/video-latin-america">
+                  Video
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/networks-latin-america">
+                  Networks
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/regions/latin-america/news">
+                  News
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/latin-america/our-offices">
+                  Our Offices
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a data-side-tray-link="{&quot;small&quot;:true}" data-href="/api/node-lang/3801" href="/europe">
+                  Europe
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/europe/video-europe">
+                  Video
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/europe/networks-europe">
+                  Networks
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/regions/europe/news">
+                  News
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/europe/our-offices">
+                  Our Offices
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a data-side-tray-link="{&quot;small&quot;:true}" data-href="/api/node-lang/2971" href="/africa">
+                  Africa
+                                      <span><span>Open</span></span>
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/africa/video-africa">
+                  Video
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/africa/networks-africa">
+                  Networks
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/africa/elevate">
+                  Elevate
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/regions/africa/news">
+                  News
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/africa/our-offices">
+                  Our Offices
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/middle-east">
+                  Middle East
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/middle-east/video-middle-east">
+                  Video
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/middle-east/networks-middle-east">
+                  Networks
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/regions/middle_east/news">
+                  News
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/middle-east/our-offices">
+                  Our Offices
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class=" ">
+                                          <a href="/asia">
+                  Asia
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/asia/video-asia">
+                  Video
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/asia/networks-asia">
+                  Networks
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/regions/asia/news">
+                  News
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/asia/our-offices">
+                  Our Offices
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+                    </ul>
+          </nav>
+          <ul>
+        
+              
+        
+          
+          <li data-hoverable class=" ">
+                                          <a href="/about-us">
+                  About Us
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/about-us/companies">
+                  Companies
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/about-us/management">
+                  Management
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/about-us/board-directors">
+                  Board of Directors
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/about-us/corporate-governance">
+                  Corporate Governance
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/about-us/environmental-social-and-governance-esg">
+                  ESG
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/about-us/our-history-highlights">
+                  History
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/about-us/why-ses">
+                  Why SES
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/about-us/why-satellites">
+                  Why Satellites
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-hoverable class=" ">
+                                          <a href="/news">
+                  News
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/news/press-releases">
+                  Press Releases 
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/news/blogs">
+                  Blogs
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/news/newsrooms">
+                  Newsrooms
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/news/events">
+                  Events
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/news/satellite-stories">
+                  Podcasts
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/news/social-media">
+                  Social Media
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/media-library">
+                  Media Library
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-hoverable class=" ">
+                                          <a href="/careers">
+                  Careers
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/careers/why-join-ses">
+                  Why Join SES?
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/careers/development-engagement">
+                  Development &amp; Engagement
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/careers/employee-benefits">
+                  Employee Benefits
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/careers/students-and-graduates">
+                  Students and Graduates
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/careers/testimonials">
+                  Testimonials
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                          <a href="https://career012.successfactors.eu/career?company=SES" target="_blank">Job Opportunities</a>
+                      </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-hoverable class="menu-item--active-trail active">
+                                          <a href="/investors">
+                  Investors
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/annual-reports">
+                  Annual Reports
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/financial-calendar">
+                  Financial Calendar
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/financial-results">
+                  Financial Results
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/presentations">
+                  Presentations
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-sub-hoverable class="menu-item--active-trail active">
+                                          <a href="/investors/shareholder-information">
+                  Shareholder Information
+                                  </a>
+
+                
+                                      <div class="ses-fancy-nav__sub" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/shareholder-information/dividend-information">
+                  Dividend Information
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/shareholder-information/shareholders">
+                  Shareholders
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class="menu-item--active-trail active">
+                                          <a href="/investors/shareholder-information/share-buy-back">
+                  Share Buy-Back
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/shareholder-information/general-meeting-shareholders">
+                  General Meeting of Shareholders
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/analysts">
+                  Analysts
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/consensus">
+                  Consensus
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/investors/treasury">
+                  Treasury
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li data-hoverable class=" ">
+                                          <a href="/contact">
+                  Contact us
+                                  </a>
+
+                
+                                      <div class="ses-tray ses-tray--hover" data-sub-nav>
+                  
+                    
+        
+              
+                              <ul >
+        
+          
+          <li  class=" ">
+                                          <a href="/contact/our-offices">
+                  Our Offices
+                                  </a>
+
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                                          <a href="/contact/vendor-information">
+                  Vendor Information
+                                  </a>
+
+                
+                                    </li>
+
+                  </ul>
+        
+      
+    
+  
+
+                                      </div>
+                  
+                
+                                    </li>
+
+        
+              
+        
+          
+          <li  class=" ">
+                          <a href="https://extranet.ses.com/" target="_blank">Your SES</a>
+                      </li>
+
+        
+      
+    
+  
+
+  
+<nav role="navigation" aria-labelledby="block-social-menu" id="block-social" class="block block-menu navigation menu--social">
+  
+        
+<h4 class="visually-hidden ses-group-heading">Follow SES</h4>
+<div class="col-xs-12">
+  <ul class="ses-social-icons">
+          <li>
+        <a href="https://twitter.com/SES_Satellites" target="_blank">
+          <i class="ses-icon ses-icon--twitter"></i>
+        </a>
+      </li>
+          <li>
+        <a href="https://www.facebook.com/SES.Satellites" target="_blank">
+          <i class="ses-icon ses-icon--facebook"></i>
+        </a>
+      </li>
+          <li>
+        <a href="https://www.youtube.com/ses" target="_blank">
+          <i class="ses-icon ses-icon--youtube"></i>
+        </a>
+      </li>
+          <li>
+        <a href="https://www.linkedin.com/company/9157?trk=tyah" target="_blank">
+          <i class="ses-icon ses-icon--linkedin"></i>
+        </a>
+      </li>
+          <li>
+        <a href="https://www.instagram.com/ses_satellites/" target="_blank">
+          <i class="ses-icon ses-icon--instagram"></i>
+        </a>
+      </li>
+      </ul>
+</div>
+
+  </nav>
+
+
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div class="ses-tray-background" data-tray-background></div>
+  </header>
+  <div class="ses-tray-background" data-tray-background></div>
+    <div class="region region-highlighted">
+    
+
+  </div>
+
+
+<div id="main-content">
+  
+        <div class="region region-content">
+    <div id="block-sessubnavigationblock" class="block block-ses-sub-navigation block-ses-sub-navigation-block">
+  
+    
+              <nav class="ses-secondary-navigation margin-reset-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="ses-secondary-navigation__reel">
+              <div class="row">
+    <div class= "col-xs-12">
+      <div class="ses-secondary-navigation__reel">
+        <ul>
+                                  <li>
+              <a href="/investors/shareholder-information/dividend-information">Dividend Information</a>
+            </li>
+                                  <li>
+              <a href="/investors/shareholder-information/shareholders">Shareholders</a>
+            </li>
+                                  <li>
+              <a href="/investors/shareholder-information/share-buy-back" class="is-active">Share Buy-Back</a>
+            </li>
+                                  <li>
+              <a href="/investors/shareholder-information/general-meeting-shareholders">General Meeting of Shareholders</a>
+            </li>
+                  </ul>
+      </div>
+    </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+  </div>
+<div id="block-ses-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+        <nav class="ses-secondary-navigation">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="ses-secondary-navigation__reel">
+            <ul>
+                              <li>
+                                    
+                                      <a href="/investors" class="ses-group-heading  text-no-transform">Investors</a>
+                                  </li>
+                              <li>
+                                                         / 
+                  
+                                      <a href="/investors/shareholder-information" class="ses-group-heading  text-no-transform">Shareholder Information</a>
+                                  </li>
+                              <li>
+                                                         / 
+                  
+                                      <a href="/investors/shareholder-information/share-buy-back" class="ses-group-heading is-active text-no-transform">Share Buy-Back</a>
+                                  </li>
+                          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  </div>
+<div id="block-ses-content" class="block block-system block-system-main-block">
+  
+    
+      
+
+
+
+               <section class="ses-page-section">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-6">
+                              <h1 class="ses-headline ses-headline--adjust ses-hero-headline ses-hero-headline--no-padding">Share Buy-Back</span></h1>
+                                          <div class="ses-text ses-text--cyrillic">
+                
+    
+                                
+                    
+              </div>
+            </div>
+
+            
+    
+                                
+<div  class="col-md-6">
+      
+    
+  </div>
+
+                    
+          </div>
+        </div>
+      </section>
+      
+        
+    
+                                
+
+
+
+  <section  class="ses-page-section padding-reset-top padding-reset-bottom">
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-12 ">
+    
+    
+                                <p>Official notifications sent to the Autorité des Marchés Financiers (AMF) describing the share buy-back Programme at SES:<br /><a class="ses-cta ses-cta--download" href="https://www.ses.com/sites/default/files/2019-04/SES%20-%20Descriptif%20du%20programme%20de%20rachat%20de%20titres%209%20avril%20%28002%29.pdf">Official notice of Share-Buy-Back programme 9 April 2019 (FR)</a></p>
+
+<p>In accordance with Article 241-4 of the regulations of the AMF, the quantity, cost and average cost of shares bought as part of the Buy-Back Programme are reported as required.</p>
+
+                    
+    
+  </div>
+      </div>
+    </div>
+  </section>
+
+                      
+
+
+
+  <section  class="ses-page-section">
+    <div class="container">
+      <div class="row">
+          
+            
+      <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="ses-page-panel">
+        <div class="ses-document-list">
+                      <h4>
+    
+                                Official notifications describing the old share buy-back Programme at SES, sent to the Autorité des Marchés Financiers (AMF):
+                    </h4>
+          
+          
+    
+                                <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of Share-Buy-Back programme 9 April 2018 (FR)</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2018-04/SES%20-%20Descriptif%20du%20programme%20de%20rachat%20de%20titres%209%20avril.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                      <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of Share-Buy-Back programme 7 April 2017 (FR)</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2017-04/SES%20-%20Descriptif%20du%20programme%20de%20rachat%20de%20titres%20-%2007-04-2017.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                      <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of Share-Buy-Back programme 8 April 2016 - FR</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2016-11/SES_-_Descriptif_du_programme_de_rachat_de_titres__8_Avril_2016.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                      <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of Share-Buy-Back programme 3 April 2015 (FR)</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2016-11/SES_-_Descriptif_du_programme_de_rachat_de_titres__3_Avril_2015-1.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                      <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of Share-Buy-Back programme 4 April 2014 (FR)</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2016-11/SES_-_Descriptif_du_programme_de_rachat_de_titres__4_avril.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                      <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of the Share Buy-Back programme 25 May 2011 (FR)</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2016-11/Communiqu___programme_de_rachat_25_mai.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                      <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of the Share Buy-Back Programme 10 June 2010 FR)</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2016-11/Communiqu___programme_de_rachat_10_juin_2010.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                      <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of the Share Buy-Back Programme 4 July 2008 (FR)</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2016-11/Communiqu___programme_de_rachat_4_Juillet_2008.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                      <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Official notice of the Share Buy-Back Programme 12 March 2008 (FR)</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2016-11/070312_Communique-rachat_titre.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                    
+        </div>
+      </div>
+    </div>
+  
+      </div>
+    </div>
+  </section>
+
+                      
+
+
+
+          <section  class="ses-page-section">
+    <div class="container">
+      <div class="row">
+          
+  
+      <div class="col-sm-6">
+              <h2 class="ses-headline">
+    
+                                Share Buy-Back History
+                    </h2>
+      
+      
+    </div>
+  
+      <div class="col-sm-4 col-sm-offset-2 col-md-5 col-md-offset-1">
+      
+      
+    
+      <div class="ses-page-navigation">
+          <ul class="ses-page-navigation__list">
+                  <li>
+            <a href="/share-buy-back-programme-2015" class="ses-page-navigation__link" target="">
+              <h4 class="ses-page-navigation__link__title">2015</h4>
+            </a>
+          </li>
+                  <li>
+            <a href="/share-buy-back-programme-2014" class="ses-page-navigation__link" target="">
+              <h4 class="ses-page-navigation__link__title">2014</h4>
+            </a>
+          </li>
+                  <li>
+            <a href="/share-buy-back-programme-2013" class="ses-page-navigation__link" target="">
+              <h4 class="ses-page-navigation__link__title">2013</h4>
+            </a>
+          </li>
+                  <li>
+            <a href="/share-buy-back-programme-2012" class="ses-page-navigation__link" target="">
+              <h4 class="ses-page-navigation__link__title">2012</h4>
+            </a>
+          </li>
+                  <li>
+            <a href="/share-buy-back-programme-2008" class="ses-page-navigation__link" target="">
+              <h4 class="ses-page-navigation__link__title">2008</h4>
+            </a>
+          </li>
+                  <li>
+            <a href="/share-buy-back-programme-2007" class="ses-page-navigation__link" target="">
+              <h4 class="ses-page-navigation__link__title">2007</h4>
+            </a>
+          </li>
+              </ul>
+      </div>
+
+    </div>
+        </div>
+    </div>
+  </section>
+
+    
+                      
+
+
+
+  <section  class="ses-page-section ses-page-section--alt">
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-12 ">
+    
+    
+                                <div id="stcpDiv" style="left: -1988px; top: -1999px; position: absolute;">Liquidity Contra</div>
+
+<h3>Liquidity Contract</h3>
+
+<p>SES has established with Rothschild &amp; Cie Banque, an investment services institution, a liquidity contract that abides with the code of conduct set out by the French Association of Financial Markets and ratified by the AMF (l'Autorité des Marchés Financiers) on the 1st of March 2011.</p>
+
+<p>This liquidity contract starts on 1st of August 2013. For further information, please refer to the announcement made to the AMF (in French).</p>
+
+                    
+    
+  </div>
+      </div>
+    </div>
+  </section>
+
+                      
+
+
+
+  <section  class="ses-page-section">
+    <div class="container">
+      <div class="row">
+          
+            
+      <div class="col-xs-12 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+      <div class="ses-page-panel">
+        <div class="ses-document-list">
+          
+          
+    
+                                <div class="ses-document-list__item">
+  <div class="row">
+    <div class="col-xs-10">
+              <p>Cessation d&#039;un contract de liquidite et mise en oeuvre d&#039;un nouveau contract de liquidite</p>
+          </div>
+    <div class="col-xs-2 text-right position-static">
+      <p>
+          <a download="" href="/sites/default/files/2016-11/Communiqu___cessation_et_mise_en_oeuvre_juillet_2013.pdf">
+          <i class="ses-icon ses-icon--download"></i>
+          <span class="hidden">Download</span>
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+
+                    
+        </div>
+      </div>
+    </div>
+  
+      </div>
+    </div>
+  </section>
+
+                    
+    
+
+  
+  </div>
+
+  </div>
+
+  </div>
+
+      <footer lang="en" class="ses-footer ses-page-section ses-page-section--dark" id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        
+        <nav role="navigation" aria-labelledby="block-footernavigation-menu" id="block-footernavigation" class="block block-menu navigation menu--footer-navigation">
+  
+        
+              <ul data-region="footer" class="ses-footer__menu">
+                    <li class="ses-footer__menu__item">
+        <a href="/about-us" data-drupal-link-system-path="node/1836">About Us</a>
+              </li>
+                <li class="ses-footer__menu__item">
+        <a href="/video" data-drupal-link-system-path="node/1816">Video</a>
+              </li>
+                <li class="ses-footer__menu__item">
+        <a href="/networks" data-drupal-link-system-path="node/8261">Networks</a>
+              </li>
+                <li class="ses-footer__menu__item">
+        <a href="/our-coverage" title="SES Covarage landing page" data-drupal-link-system-path="network">Our Coverage</a>
+              </li>
+                <li class="ses-footer__menu__item">
+        <a href="/news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="ses-footer__menu__item">
+        <a href="/investors" data-drupal-link-system-path="node/2336">Investors</a>
+              </li>
+                <li class="ses-footer__menu__item">
+        <a href="/careers" data-drupal-link-system-path="node/5926">Careers</a>
+              </li>
+                <li class="ses-footer__menu__item">
+        <a href="https://extranet.ses.com/">Your SES</a>
+              </li>
+        </ul>
+  
+
+
+
+  </nav>
+
+
+        <div class="ses-footer__legal">
+          <div class="row">
+            <div class="col-sm-4">
+                            <p>&copy; 2019 SES S.A. All rights reserved.</p>
+              <p class="visible-xs">&nbsp;</p>
+            </div>
+            <div class="col-sm-4">
+              <nav role="navigation" aria-labelledby="block-social-menu" id="block-social" class="block block-menu navigation menu--social">
+  
+        
+<h4 class="visually-hidden ses-group-heading">Follow SES</h4>
+<div class="col-xs-12">
+  <ul class="ses-social-icons">
+          <li>
+        <a href="https://twitter.com/SES_Satellites" target="_blank">
+          <i class="ses-icon ses-icon--twitter"></i>
+        </a>
+      </li>
+          <li>
+        <a href="https://www.facebook.com/SES.Satellites" target="_blank">
+          <i class="ses-icon ses-icon--facebook"></i>
+        </a>
+      </li>
+          <li>
+        <a href="https://www.youtube.com/ses" target="_blank">
+          <i class="ses-icon ses-icon--youtube"></i>
+        </a>
+      </li>
+          <li>
+        <a href="https://www.linkedin.com/company/9157?trk=tyah" target="_blank">
+          <i class="ses-icon ses-icon--linkedin"></i>
+        </a>
+      </li>
+          <li>
+        <a href="https://www.instagram.com/ses_satellites/" target="_blank">
+          <i class="ses-icon ses-icon--instagram"></i>
+        </a>
+      </li>
+      </ul>
+</div>
+
+  </nav>
+
+            </div>
+            <div class="col-sm-4 text-right-sm">
+              <p>
+                <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" class="block block-menu navigation menu--footer">
+  
+        <p>
+          <a href="/privacy-policy">Privacy Policy</a>
+            |
+        <a href="/terms-and-conditions">Terms and Conditions</a>
+  </p>
+
+  </nav>
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+  </div>
+
+      
+    </main>
+
+    <span class="ses-js-helper" data-viewport="xs"></span>
+    <span class="ses-js-helper hidden-xs" data-viewport="sm"></span>
+    <span class="ses-js-helper hiddens-xs hidden-sm" data-viewport="md"></span>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/3096","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":true,"popup_html_info":"\n\n\u003Cdiv\u003E\n  \u003Cdiv class=\u0022popup-content info\u0022\u003E\n    \u003Cdiv class=\u0022container\u0022\u003E\n      \u003Cdiv class=\u0022row\u0022\u003E\n        \u003Cdiv class=\u0022col-xs-12 col-sm-8\u0022\u003E\n          \u003Cdiv id=\u0022popup-text\u0022\u003E\n            \u003Cp\u003EWe use cookies on our website to enhance your browsing experience. To understand more about how we use cookies, or how to change your preferences and browser settings, please see our Privacy policy. If you continue to use our website, you are agreeing to such usage of cookies.\u003C\/p\u003E\n\n          \u003C\/div\u003E\n        \u003C\/div\u003E\n        \u003Cdiv class=\u0022col-xs-12 col-sm-4\u0022\u003E\n          \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EI agree\u003C\/button\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022\u003EMore Information\u003C\/button\u003E\n          \u003C\/div\u003E\n        \u003C\/div\u003E\n      \u003C\/div\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","popup_html_agreed":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.ses.com\/privacy-policy","popup_link_new_window":true,"popup_position":false,"popup_language":"en","popup_bg_hex":"248fd8","popup_text_hex":"ffffff","domain":""},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"e80a53fc61fcaf301d51eced76044b9932669fc2e6fb15617cbc58f9a6743f27"}}</script>
+<script src="/sites/default/files/js/js_q4YqB_ExhK7o4EbkgmsK_5LYtcu91HDsKPi1WOxq3GU.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"31b86f430a","applicationID":"60293959","transactionName":"NlVXMEUAWREFAhBRVg8fdAdDCFgMSyUWTUkAXGknWBNSPikECk1lJVVTBUINQy8BDxF0UA9bYRZSBHoDCggUTVUARFoWREwJBQEPAUpYFVV8ClMETyMKBTdXSxU=","queueTime":0,"applicationTime":649,"atts":"GhJURg0aSh8=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr" prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# book: http://ogp.me/ns/book# profile: http://ogp.me/ns/profile# video: http://ogp.me/ns/video# product: http://ogp.me/ns/product#">
+<head>
+  <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"b84df2694a",applicationID:"96016989"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<link rel="next" href="/en/our-news-and-press/our-press-releases/?page=1" />
+<link href="https://www.pernod-ricard.com/en/our-news-and-press/our-press-releases/" rel="alternate" hreflang="en" />
+<link href="https://www.pernod-ricard.com/fr/nos-actualit%C3%A9s/nos-communiques/" rel="alternate" hreflang="fr" />
+<link href="https://www.pernod-ricard.com/es/medios/comunicados-de-prensa/" rel="alternate" hreflang="es" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-5LQK3J6');</script>
+<link rel="shortcut icon" href="https://assets.pernod-ricard.com/logoprtransparent-forfavicon.png?1kCjtSkGSreaaD52ZFbnSNHSBrf4kZ_o" type="image/png" />
+<link rel="canonical" href="https://www.pernod-ricard.com/en/our-news-and-press/our-press-releases/" />
+<meta property="og:site_name" content="Pernod Ricard, créateurs de convivialité" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.pernod-ricard.com/en/our-news-and-press/our-press-releases/" />
+<meta property="og:title" content="Our publications" />
+  
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta http-equiv="cleartype" content="on" />
+<link rel="apple-touch-icon-precomposed" href="/sites/all/themes/custom/pr_hub/images/apple-touch/apple-touch-icon-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon-precomposed" href="/sites/all/themes/custom/pr_hub/images/apple-touch/apple-touch-icon-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon-precomposed" href="/sites/all/themes/custom/pr_hub/images/apple-touch/apple-touch-icon-114x114.png" sizes="114x114" />
+<link rel="apple-touch-icon-precomposed" href="/sites/all/themes/custom/pr_hub/images/apple-touch/apple-touch-icon.png" />
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, shrink-to-fit=no" />
+  <title>Our publications | Pernod Ricard, créateurs de convivialité</title>
+  <link type="text/css" rel="stylesheet" href="https://www.pernod-ricard.com/sites/default/files/css/css_02RihTYFXfLBhSS_AIRlMD_on1eMmlo--4fjj44gCtM.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.pernod-ricard.com/sites/default/files/css/css_3BZ82PZOh6f2x_mflRUBrPS7QDwKgzJR_k0u1IbskFA.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.pernod-ricard.com/sites/default/files/css/css_wK_6OkTymLeGE8EAA_dnsRvCJEpFx6LktC0tHt1BluE.css" media="screen" />
+<link type="text/css" rel="stylesheet" href="https://www.pernod-ricard.com/sites/default/files/css/css_Ijii_GD5j5AGAMxG616MLU99fkje6JiAaTFvhF5xBFw.css" media="all" />
+<style>#sticky-wrapper.sticked .l-branding .site-logo{background-image:url("https://assets.pernod-ricard.com/sticky_menu/logo-sticky.png?nHjEU1EP3LZ5n2CAoDIrUeBbd2gpbRUO") !important;}
+</style>
+<link type="text/css" rel="stylesheet" href="https://www.pernod-ricard.com/sites/default/files/css/css_2BdnJN59YuTuCCMCyofp5KR3-V4tGUiiE0jURbpvQNQ.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.pernod-ricard.com/sites/default/files/css/css_hHK85J_wFnOme1vT3EA2JqPGu9ez9ZkgUkFg4oI56As.css" media="all" />
+<link type="text/css" rel="stylesheet" href="https://www.pernod-ricard.com/sites/default/files/css/css_ppbG5_7rZotgwz-YehiYXeLqxYyl0nHvetHijf4uHVo.css" media="print" />
+<link type="text/css" rel="stylesheet" href="https://www.pernod-ricard.com/sites/default/files/css/css_49E9Voj1kJeILxTYXtA7eZ7VprFb_7kZQChWFQr_PpU.css" media="all" />
+</head>
+<body itemtype="http://schema.org/WebPage" class="html not-front not-logged-in page-media page-media-press-releases liste-medias page-marques-portfolio page-marques-portfolio i18n-eng section-our-news-and-press body-pr-hub body-pr-edit pr-page__with-message">
+
+<div id="pr-hub-extra-interstitiel-landscape-tablet" class="pr-hub-interstitiel-global-wrapper">
+  <div class="pr-hub-interstitiel-center-wrapper">
+    <div class="pr-hub-extra-interstitiel-landscape-logo">
+
+    </div>
+    <p>Pour visionner le site veuillez s'il vous plaît utiliser le mode "paysage"</p>
+  </div>
+</div>
+<div id="pr-hub-extra-interstitiel-landscape-mobile" class="pr-hub-interstitiel-global-wrapper">
+  <div class="pr-hub-interstitiel-center-wrapper">
+    <div class="pr-hub-extra-interstitiel-landscape-logo">
+
+    </div>
+    <p>Pour visionner le site veuillez s'il vous plaît utiliser le mode "portrait"</p>
+  </div>
+</div>
+<a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+<!-- Google Tag Manager (noscript) -->
+                  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5LQK3J6"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+                  <!-- End Google Tag Manager (noscript) --><div class="pr-message__sanitare"> Please enjoy our brands responsibly.</div><div data-current-path="/en/our-news-and-press/our-press-releases/" class="l-page has-no-sidebars">
+  <header class="l-header griddle-layout" role="banner">
+      <div class="l-top_header"> 
+              <div class="l-region l-region--top-header">
+    <nav id="block-menu-menu-menu-local" role="navigation" class="block block--menu block--menu-menu-menu-local">
+        <h2 class="block__title">Menu Local</h2>
+    
+  <ul class="menu"><li class="first leaf"><a href="https://www.pernod-ricard.com/">Global</a></li>
+<li class="last expanded"><a href="#" class="nolink">Local</a><ul class="menu"><li class="first expanded"><a href="#" class="nolink">Asia &amp; Pacific</a><ul class="menu"><li class="first leaf"><a href="https://www.pernod-ricard.com/en-au/">Australia</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/en-nz/">New Zealand</a></li>
+<li class="leaf"><a href="#" class="nolink">Cambodia</a></li>
+<li class="leaf"><a href="#" class="nolink">China</a></li>
+<li class="leaf"><a href="#" class="nolink">Hong Kong SAR</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/en-in/">India</a></li>
+<li class="leaf"><a href="#" class="nolink">Indonesia</a></li>
+<li class="leaf"><a href="http://www.pernod-ricard-japan.com/">Japan</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/kk-kz/">Kazakhstan</a></li>
+<li class="leaf"><a href="#" class="nolink">Lebanon</a></li>
+<li class="leaf"><a href="#" class="nolink">Malaysia</a></li>
+<li class="leaf"><a href="#" class="nolink">Philippines</a></li>
+<li class="leaf"><a href="#" class="nolink">Singapore</a></li>
+<li class="leaf"><a href="#" class="nolink">South Korea</a></li>
+<li class="leaf"><a href="#" class="nolink">Sri Lanka</a></li>
+<li class="leaf"><a href="#" class="nolink">Taiwan</a></li>
+<li class="leaf"><a href="#" class="nolink">Thailand</a></li>
+<li class="last leaf"><a href="#" class="nolink">Vietnam</a></li>
+</ul></li>
+<li class="expanded"><a href="#" class="nolink">Europe, Middle-East &amp; Africa</a><ul class="menu"><li class="first leaf"><a href="#" class="nolink">Angola</a></li>
+<li class="leaf"><a href="#" class="nolink">Ghana</a></li>
+<li class="leaf"><a href="#" class="nolink">Kenya</a></li>
+<li class="leaf"><a href="#" class="nolink">Morocco</a></li>
+<li class="leaf"><a href="#" class="nolink">Mozambique</a></li>
+<li class="leaf"><a href="#" class="nolink">Nigeria</a></li>
+<li class="leaf"><a href="#" class="nolink">Armenia</a></li>
+<li class="leaf"><a href="http://www.pernod-ricard.at/">Austria</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/fr-be/">Belgium</a></li>
+<li class="leaf"><a href="#" class="nolink">Bosnia</a></li>
+<li class="leaf"><a href="#" class="nolink">Bulgaria</a></li>
+<li class="leaf"><a href="http://www.pernod-ricard-croatia.com/">Croatia</a></li>
+<li class="leaf"><a href="#" class="nolink">Czech Republic</a></li>
+<li class="leaf"><a href="http://www.pernod-ricard-denmark.com/">Denmark</a></li>
+<li class="leaf"><a href="#" class="nolink">Estonia</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/fi-fi/">Finland</a></li>
+<li class="expanded"><a href="#" class="nolink">France</a><ul class="menu"><li class="first leaf"><a href="https://www.pernod-ricard.com/fr-fr/pernod/">Pernod</a></li>
+<li class="last leaf"><a href="https://www.pernod-ricard.com/fr-fr/ricard/">Ricard</a></li>
+</ul></li>
+<li class="leaf"><a href="#" class="nolink">Germany</a></li>
+<li class="leaf"><a href="#" class="nolink">Greece</a></li>
+<li class="leaf"><a href="#" class="nolink">Hungary</a></li>
+<li class="leaf"><a href="#" class="nolink">Ireland</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/it-it/">Italy</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/lv-lv/">Latvia</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/lt-lt/">Lithuania</a></li>
+<li class="leaf"><a href="#" class="nolink">Netherlands</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/nb-no/">Norway</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/pl-pl/wyborowa/">Poland</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/pt-pt/">Portugal</a></li>
+<li class="leaf"><a href="#" class="nolink">Republic of Moldova</a></li>
+<li class="leaf"><a href="#" class="nolink">Romania</a></li>
+<li class="leaf"><a href="#" class="nolink">Russian Federation</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/sr-rs/">Serbia</a></li>
+<li class="leaf"><a href="http://www.pernod-ricard-slovenia.com/">Slovenia</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/en-za/">South Africa</a></li>
+<li class="leaf"><a href="#" class="nolink">Spain</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard-sweden.com/">Sweden</a></li>
+<li class="leaf"><a href="http://www.pernod-ricard-swiss.com/">Switzerland</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/tr-tr/">Turkey</a></li>
+<li class="leaf"><a href="http://www.pernod-ricard-ukraine.com/ua/home">Ukraine</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/en-uk/">United Kingdom</a></li>
+<li class="last leaf"><a href="#" class="nolink">Belarus</a></li>
+</ul></li>
+<li class="expanded"><a href="#" class="nolink">Americas</a><ul class="menu"><li class="first leaf"><a href="http://www.pernod-ricard.com.ar/">Argentina</a></li>
+<li class="leaf"><a href="#" class="nolink">Brazil</a></li>
+<li class="leaf"><a href="#" class="nolink">Canada</a></li>
+<li class="leaf"><a href="#" class="nolink">Chile</a></li>
+<li class="leaf"><a href="#" class="nolink">Colombia</a></li>
+<li class="leaf"><a href="https://www.pernod-ricard.com/es-mx/">Mexico</a></li>
+<li class="leaf"><a href="#" class="nolink">Peru</a></li>
+<li class="leaf"><a href="http://www.pernod-ricard-usa.com/">USA</a></li>
+<li class="leaf"><a href="#" class="nolink">Uruguay</a></li>
+<li class="last leaf"><a href="#" class="nolink">Venezuela</a></li>
+</ul></li>
+<li class="last expanded"><a href="#" class="nolink">Brand Companies</a><ul class="menu"><li class="first leaf"><a href="#" class="nolink">Pernod Ricard Bodegas</a></li>
+<li class="leaf"><a href="https://havana-club.com/en-ww">Havana Club International</a></li>
+<li class="leaf"><a href="http://www.chivasbrothers.com/ ">Chivas Brothers </a></li>
+<li class="leaf"><a href="#" class="nolink">Martell Mumm Perrier-Jouët </a></li>
+<li class="leaf"><a href="http://www.irishdistillers.ie/ ">Irish Distillers </a></li>
+<li class="leaf"><a href="http://www.pernod-ricard-winemakers.com/ ">Pernod Ricard Winemakers </a></li>
+<li class="last leaf"><a href="https://www.pernod-ricard.com/the-absolut-company/">The Absolut Company </a></li>
+</ul></li>
+</ul></li>
+</ul></nav>
+<div class="block-wrapper  pr-hub-stock-price pr-hub-stock-price-pr-hub-stock-price-list">
+  <div class="block-wrapper-content">
+    <div id="block-pr-hub-stock-price-pr-hub-stock-price-list" class="block block--pr-hub-stock-price block--pr-hub-stock-price-pr-hub-stock-price-list">
+                        <div class="block__content">
+               </div>
+    </div>
+  </div>
+</div>
+<div class="block-wrapper  lang-dropdown lang-dropdown-language">
+  <div class="block-wrapper-content">
+    <div id="block-lang-dropdown-language" class="block block--lang-dropdown block--lang-dropdown-language">
+                        <div class="block__content">
+        <form class="lang_dropdown_form language lang-dropdown-form" id="lang_dropdown_form_language" action="/en/our-news-and-press/our-press-releases/" method="post" accept-charset="UTF-8"><div><div class="form-item form-type-select form-item-lang-dropdown-select">
+ <select class="lang-dropdown-select-element form-select" id="lang-dropdown-select-language" style="width:45px" name="lang_dropdown_select"><option value="eng" selected="selected">En</option><option value="fr">Fr</option><option value="es">Es</option></select>
+</div>
+<input type="hidden" name="eng" value="/en/our-news-and-press/our-press-releases/" />
+<input type="hidden" name="fr" value="/fr/nos-actualit%C3%A9s/nos-communiques/" />
+<input type="hidden" name="es" value="/es/medios/comunicados-de-prensa/" />
+<noscript><div>
+<input type="submit" id="edit-submit" name="op" value="Go" class="form-submit" />
+</div></noscript><input type="hidden" name="form_build_id" value="form-mmoyH_Jj-LvDyzRhmKVUhUdAyIuBG64saFlJBfda0Ls" />
+<input type="hidden" name="form_id" value="lang_dropdown_form" />
+</div></form>      </div>
+    </div>
+  </div>
+</div>
+  </div>
+        </div>
+    <div class="l-branding">
+        <div class="container">
+                       <a href="/en" title="Home" rel="home" class="site-logo"><img src="https://assets.pernod-ricard.com/logo-pernod-ricard.png?rk5MpFIvIwdJZMA3_6Oao5Kt2CUMbrXD" alt="Home" /></a>
+                 
+      
+        <div class="l-region l-region--branding">
+    <div class="block-wrapper  pr-hub-map pr-hub-map-map-icon-">
+  <div class="block-wrapper-content">
+    <div id="block-pr-hub-map-map-icon-block" class="block block--pr-hub-map block--pr-hub-map-map-icon-block">
+                        <div class="block__content">
+        <div class="world-map">
+  <div class="wm-content">
+    <a class="world-icon" href="https://www.pernod-ricard.com/en/explore">
+      <img src="https://assets.pernod-ricard.com/map_assets_icons/pr_terre_bleue_sur_blanc_8_0.gif?oCZVbM676WCzJu3s7YxG9emgBMOcrzEv" class="default" alt="" width="55" height="55" />
+      <img src="https://assets.pernod-ricard.com/map_assets_icons_alt/pr_terre_blanc_sur_bleu_fonce_3_0.gif?Qy7N3_wno2.m_jJRG7Nbyo3TGpJopppa" class="alt" alt="" width="55" height="55" />
+    </a>
+      <a href="/en/explore/" class="text-placeholder">Explore the       Pernod Ricard world</a>
+  </div>
+</div>
+<!-- /MAP -->
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block-wrapper  pr-hub-menus pr-hub-menus-menu-pernod-dropdown-main">
+  <div class="block-wrapper-content">
+    <div id="block-pr-hub-menus-menu-pernod-dropdown-main" class="block block--pr-hub-menus block--pr-hub-menus-menu-pernod-dropdown-main">
+                        <div class="block__content">
+        
+<div class="menu-responsive">
+        <a id="sidr-toggle-main-menu" role="button">
+                  <span class="svg-icon">
+              <svg>
+                <use xlink:href="/sites/all/themes/custom/pr_hub/html/svg/sprite.min.svg#icon-menu-menu-hamburger" />
+              </svg>
+          </span>
+                        <span class="sr-only">Toggle navigation</span>
+      </a>
+        <a id="sidr-toggle-menu-menu-profil" role="button">
+                            <span class="svg-icon">
+              <svg>
+                <use xlink:href="/sites/all/themes/custom/pr_hub/html/svg/sprite.min.svg#icon-menu-menu-search" />
+              </svg>
+            </span>
+                <span class="sr-only">Toggle navigation</span>
+      </a>
+        <a id="sidr-toggle-menu-media" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+      </a>
+            <div class="mask"></div>
+      <div class="mobile-search">
+          <div class="search-bar-content">
+                      </div>
+      </div>
+  </div>
+
+<div id="block-system-main-menu" class="pr-header__main-menu djs-main-menu">
+        <ul class="dropdown-menu-lvl-0" id="pernod-dropdown-menu-lvl-0-main-menu">
+          <li class="dropdown">
+              <div id="sidr-pernod-dropdown-menu-lvl-0-main-menu" class="level-0">
+                                      <a href="#" class="menu-0 menu-main-menu" data-toggle="dropdown">Menu                        <span class="arrow"></span>
+                    </a>
+                                    <div class="dropdown-menu">
+                      <div id="nav-trigger" class="nav-trigger"></div>
+                      <div class="grid">
+                          <div class="grid2-1">
+                              <div>
+                                  <div class="autogrid-3">
+                                        <ul class="dropdown-menu-lvl-1" id="pernod-dropdown-menu-lvl-">
+                <div class="item-list hide_block">
+              <li class="first">
+                <a href="/en" class="mobile-link menu-lvl-1">Home</a>                              </li>
+          </div>
+                <div class="item-list">
+              <li class="first">
+                <a href="/en/our-group/" class="menu-lvl-1">Our Group</a>                    <ul class="dropdown-menu-lvl-2">
+                <li>
+            <a href="/en/our-group/" class="menu-lvl-2 pr_hub_menu_9275">A brief introduction</a>          </li>
+                <li>
+            <a href="/en/our-group/our-governance/" class="menu-lvl-2 pr_hub_menu_4278">Our governance</a>          </li>
+                <li>
+            <a href="/en/our-group/our-organisation/" class="menu-lvl-2 pr_hub_menu_421">Our organisation</a>          </li>
+                <li>
+            <a href="/en/node/1412/" class="menu-lvl-2 pr_hub_menu_12271">Our culture</a>          </li>
+                <li>
+            <a href="/en/our-group/our-key-dates/" class="menu-lvl-2 pr_hub_menu_5144">Our key dates</a>          </li>
+                <li>
+            <a href="/en/our-group/our-key-figures/" class="menu-lvl-2 pr_hub_menu_17674">Our key figures</a>          </li>
+          </ul>
+              </li>
+          </div>
+                <div class="item-list">
+              <li class="first">
+                <a href="/en/our-brands/" class="menu-lvl-1">Our brands</a>                    <ul class="dropdown-menu-lvl-2">
+                <li>
+            <a href="/en/our-brands/" class="menu-lvl-2 pr_hub_menu_422">A brief introduction</a>          </li>
+                <li>
+            <a href="/en/our-brands/our-portfolio/" class="menu-lvl-2 pr_hub_menu_9336">Our portfolio</a>          </li>
+                <li>
+            <a href="/en/node/1413/" class="menu-lvl-2 pr_hub_menu_12272">Intellectual property</a>          </li>
+                <li>
+            <a href="/en/our-brands/site-visits/" class="menu-lvl-2 pr_hub_menu_18063">Site visits</a>          </li>
+          </ul>
+              </li>
+          </div>
+                <div class="item-list">
+              <li class="first">
+                <a href="/en/our-strategy/" class="menu-lvl-1">Our strategy</a>                    <ul class="dropdown-menu-lvl-2">
+                <li>
+            <a href="/en/our-strategy/" class="menu-lvl-2 pr_hub_menu_17058">A brief introduction</a>          </li>
+                <li>
+            <a href="/en/our-strategy/vision-ambition-missions/" class="menu-lvl-2 pr_hub_menu_17059">Our vision</a>          </li>
+                <li>
+            <a href="/en/our-strategy/vision-ambition-missions/" class="menu-lvl-2 pr_hub_menu_15741">Our ambition</a>          </li>
+                <li>
+            <a href="/en/our-strategy/vision-ambition-missions/" class="menu-lvl-2 pr_hub_menu_15742">Our missions</a>          </li>
+                <li>
+            <a href="/en/our-strategy/our-strategic-model/" class="menu-lvl-2 pr_hub_menu_4298">Our strategic model</a>          </li>
+          </ul>
+              </li>
+          </div>
+                <div class="item-list">
+              <li class="first">
+                <a href="/en/our-news-and-press/our-headlines/" class="menu-lvl-1">Our News &amp; Press</a>                    <ul class="dropdown-menu-lvl-2">
+                <li>
+            <a href="/en/our-news-and-press/our-headlines/" class="menu-lvl-2 pr_hub_menu_753">Our Headlines</a>          </li>
+                <li>
+            <a href="/en/our-news-and-press/our-press-releases/" class="menu-lvl-2 pr_hub_menu_9335 active active">Our Press releases</a>          </li>
+                <li>
+            <a href="/en/our-news-and-press/our-publications-and-reports/" class="menu-lvl-2 pr_hub_menu_9287">Our Publications and reports</a>          </li>
+                <li>
+            <a href="/en/investors/our-diary/press/" class="menu-lvl-2 pr_hub_menu_16424">Our Diary</a>          </li>
+                <li>
+            <a href="https://www.pernod-ricard.com/en-photo/" class="menu-lvl-2 pr_hub_menu_18327">Our Artistic Campaigns</a>          </li>
+          </ul>
+              </li>
+          </div>
+                <div class="item-list">
+              <li class="first">
+                <a href="/en/join-us/" class="menu-lvl-1">Join us</a>                    <ul class="dropdown-menu-lvl-2">
+                <li>
+            <a href="/en/join-us/" class="menu-lvl-2 pr_hub_menu_9292">A brief introduction</a>          </li>
+                <li>
+            <a href="/en/join-us/together-we-make-the-perfect-blend/" class="menu-lvl-2 pr_hub_menu_18286">Together, we make the perfect blend</a>          </li>
+                <li>
+            <a href="/en/join-us/our-functions/marketing/" class="menu-lvl-2 pr_hub_menu_4309">Our functions</a>          </li>
+                <li>
+            <a href="/en/join-us/our-employees/" class="menu-lvl-2 pr_hub_menu_17054">Our employees</a>          </li>
+                <li>
+            <a href="/en/join-us/our-opportunities/" class="menu-lvl-2 pr_hub_menu_4311">Our opportunities</a>          </li>
+                <li>
+            <a href="/en/join-us/the-yac/" class="menu-lvl-2 pr_hub_menu_18097">The YAC</a>          </li>
+          </ul>
+              </li>
+          </div>
+                <div class="item-list">
+              <li class="first">
+                <a href="/en/sr/" class="menu-lvl-1">Sustainability &amp; Responsibility</a>                    <ul class="dropdown-menu-lvl-2">
+                <li>
+            <a href="/en/our-commitments/our-model-our-4-commitments/" class="menu-lvl-2 pr_hub_menu_12288">Our model / Our 4 commitments</a>          </li>
+                <li>
+            <a href="/en/node/3417/" class="menu-lvl-2 pr_hub_menu_8357">Our Smart Barometer</a>          </li>
+                <li>
+            <a href="/en/our-commitments/our-key-dates/" class="menu-lvl-2 pr_hub_menu_18317">Our key dates</a>          </li>
+                <li>
+            <a href="/en/our-commitments/public-affairs/" class="menu-lvl-2 pr_hub_menu_8361">Public affairs</a>          </li>
+          </ul>
+              </li>
+          </div>
+              <div class="item-list-double">
+            <div class="pr-menu-extra dropdown-menu-block-social">
+                                <div class="pr-menu-extra dropdown-menu-block-external">
+                      <div class="external-select">
+                        <select class="menu-external form-select" id="external-links-menu"><option value=""></option><option value="http://www.martell.com/">Martell</option><option value="http://www.wise-drinking.com/">Wise drinking</option><option value="https://www.mumm.com/en">Mumm</option><option value="https://havana-club.com/en-gb/">Havana Club</option><option value="http://www.irishdistillers.ie/">Irish Distillers</option><option value="https://www.perrier-jouet.com/uk-en/">Perrier-Jouët</option><option value="http://www.theabsolutcompany.com/">The Absolut Company</option><option value="https://www.chivas.com/en-gb">Chivas</option><option value="https://www.drinksandco.fr/">Drinks &amp; Co</option><option value="http://www.2340.fr/">2340</option></select>                      </div>
+                  </div>
+                                            <ul class="menu-social-links"><li class="facebook first"><a href="https://www.facebook.com/pages/Pernod-Ricard/109639325721521?fref=ts&amp;rf=108032875890882" class="menu-social-links menu-social-links-facebook" title="Facebook" target="_blank">Facebook</a></li>
+<li class="twitter"><a href="https://twitter.com/pernod_ricard" class="menu-social-links menu-social-links-twitter" title="Twitter" target="_blank">Twitter</a></li>
+<li class="youtube"><a href="https://www.youtube.com/channel/UCfcIDL5eM_pxNN-p91tmFyA" class="menu-social-links menu-social-links-youtube" title="YouTube" target="_blank">YouTube</a></li>
+<li class="linkedin"><a href="https://www.linkedin.com/company/pernod-ricard" class="menu-social-links menu-social-links-linkedin" title="LinkedIn" target="_blank">LinkedIn</a></li>
+<li class="instagram last"><a href="https://www.instagram.com/pernodricardcorporate/" class="menu-social-links menu-social-links-instagram" title="Instagram" target="_blank">Instagram</a></li>
+</ul>                          </div>
+                        <div class="pr-menu-extra dropdown-menu-block-other">
+                <ul class="menu-other-links"><li class="0 first"><a href="https://theconvivialists.com" class="menu-link-mag menu-other-links" title="THE CONVIVIALISTS" target="blank">THE CONVIVIALISTS</a></li>
+<li class="1 last"><a href="/en/digital-presence/" class="menu-link-presence-digitale menu-other-links" title="Présence digitale" target="_blank">Présence digitale</a></li>
+</ul>              </div>
+                  </div>
+        <div class="pr-menu-extra dropdown-menu-footer">
+          <ul class="menu"><li class="first leaf"><a href="/en/cookie/">Cookies</a></li>
+<li class="leaf"><a href="/en/terms-and-conditions/">Terms and conditions</a></li>
+<li class="leaf"><a href="/en/cookie/">Cookie</a></li>
+<li class="leaf"><a href="/en/pernod-ricard-online-privacy-policy/">PRIVACY POLICY</a></li>
+<li class="last leaf"><a href="/en/rss/" title="">RSS feed</a></li>
+</ul>        </div>
+    </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </li>
+      </ul>
+        <ul class="dropdown-menu-lvl-0" id="pernod-dropdown-menu-lvl-0-menu-menu-profil">
+          <li class="dropdown">
+              <div id="sidr-pernod-dropdown-menu-lvl-0-menu-menu-profil" class="level-0">
+                                      <a href="#" class="menu-0 menu-menu-menu-profil" data-toggle="dropdown">Investors/Shareholders                        <span class="arrow"></span>
+                    </a>
+                                    <div class="dropdown-menu">
+                      <div id="nav-trigger" class="nav-trigger"></div>
+                      <div class="grid">
+                          <div class="grid2-1">
+                              <div>
+                                  <div class="autogrid-3">
+                                        <ul class="dropdown-menu-lvl-1" id="pernod-dropdown-menu-lvl-">
+                <div class="item-list hide_block">
+              <li class="first">
+                <a href="/en" class="mobile-link menu-lvl-1">Home</a>                              </li>
+          </div>
+                <div class="item-list">
+              <li class="first">
+                <a href="/en/node/935/" class="menu-lvl-1">Investors/Shareholders</a>                    <ul class="dropdown-menu-lvl-2">
+                <li>
+            <a href="/en/node/935/" class="menu-lvl-2 pr_hub_menu_5277">A brief introduction</a>          </li>
+                <li>
+            <a href="/en/investors/our-financial-information/" class="menu-lvl-2 pr_hub_menu_5284">Our financial information</a>          </li>
+                <li>
+            <a href="/en/investors/our-financial-presentations/" class="menu-lvl-2 pr_hub_menu_18329">Our financial presentations</a>          </li>
+                <li>
+            <a href="/en/investors/our-financial-information/#informationsen" class="menu-lvl-2 pr_hub_menu_18331">Our regulatory information</a>          </li>
+                <li>
+            <a href="/en/our-news-and-press/our-publications-and-reports/" class="menu-lvl-2 pr_hub_menu_9162">Our annual reports</a>          </li>
+                <li>
+            <a href="/en/investors/our-individual-shareholders-area/" class="menu-lvl-2 pr_hub_menu_5281">Our individual Shareholders area</a>          </li>
+                <li>
+            <a href="https://club-premium.pernod-ricard.com/" class="menu-lvl-2 pr_hub_menu_18337">Club Premium</a>          </li>
+                <li>
+            <a href="/en/our-news-and-press/our-press-releases/" class="menu-lvl-2 pr_hub_menu_16425 active active">Our Press releases</a>          </li>
+                <li>
+            <a href="/en/investors/our-diary/financial/" class="menu-lvl-2 pr_hub_menu_5287">Our diary</a>          </li>
+                <li>
+            <a href="/en/investors/our-archives/" class="menu-lvl-2 pr_hub_menu_5285">Our archives</a>          </li>
+          </ul>
+              </li>
+          </div>
+              <div class="item-list-double">
+            <div class="pr-menu-extra dropdown-menu-block-social">
+                                <div class="pr-menu-extra dropdown-menu-block-external">
+                      <div class="external-select">
+                        <select class="menu-external form-select" id="external-links-menu"><option value=""></option><option value="http://www.martell.com/">Martell</option><option value="http://www.wise-drinking.com/">Wise drinking</option><option value="https://www.mumm.com/en">Mumm</option><option value="https://havana-club.com/en-gb/">Havana Club</option><option value="http://www.irishdistillers.ie/">Irish Distillers</option><option value="https://www.perrier-jouet.com/uk-en/">Perrier-Jouët</option><option value="http://www.theabsolutcompany.com/">The Absolut Company</option><option value="https://www.chivas.com/en-gb">Chivas</option><option value="https://www.drinksandco.fr/">Drinks &amp; Co</option><option value="http://www.2340.fr/">2340</option></select>                      </div>
+                  </div>
+                                            <ul class="menu-social-links"><li class="facebook first"><a href="https://www.facebook.com/pages/Pernod-Ricard/109639325721521?fref=ts&amp;rf=108032875890882" class="menu-social-links menu-social-links-facebook" title="Facebook" target="_blank">Facebook</a></li>
+<li class="twitter"><a href="https://twitter.com/pernod_ricard" class="menu-social-links menu-social-links-twitter" title="Twitter" target="_blank">Twitter</a></li>
+<li class="youtube"><a href="https://www.youtube.com/channel/UCfcIDL5eM_pxNN-p91tmFyA" class="menu-social-links menu-social-links-youtube" title="YouTube" target="_blank">YouTube</a></li>
+<li class="linkedin"><a href="https://www.linkedin.com/company/pernod-ricard" class="menu-social-links menu-social-links-linkedin" title="LinkedIn" target="_blank">LinkedIn</a></li>
+<li class="instagram last"><a href="https://www.instagram.com/pernodricardcorporate/" class="menu-social-links menu-social-links-instagram" title="Instagram" target="_blank">Instagram</a></li>
+</ul>                          </div>
+                        <div class="pr-menu-extra dropdown-menu-block-other">
+                <ul class="menu-other-links"><li class="0 first"><a href="https://theconvivialists.com" class="menu-link-mag menu-other-links" title="THE CONVIVIALISTS" target="blank">THE CONVIVIALISTS</a></li>
+<li class="1 last"><a href="/en/digital-presence/" class="menu-link-presence-digitale menu-other-links" title="Présence digitale" target="_blank">Présence digitale</a></li>
+</ul>              </div>
+                  </div>
+        <div class="pr-menu-extra dropdown-menu-footer">
+          <ul class="menu"><li class="first leaf"><a href="/en/cookie/">Cookies</a></li>
+<li class="leaf"><a href="/en/terms-and-conditions/">Terms and conditions</a></li>
+<li class="leaf"><a href="/en/cookie/">Cookie</a></li>
+<li class="leaf"><a href="/en/pernod-ricard-online-privacy-policy/">PRIVACY POLICY</a></li>
+<li class="last leaf"><a href="/en/rss/" title="">RSS feed</a></li>
+</ul>        </div>
+    </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </li>
+      </ul>
+        <ul class="dropdown-menu-lvl-0" id="pernod-dropdown-menu-lvl-0-menu-media">
+          <li class="dropdown">
+              <div id="sidr-pernod-dropdown-menu-lvl-0-menu-media" class="level-0">
+                                      <a href="#" class="pr-header__main-menu-dropdown menu-0 menu-menu-media" data-toggle="dropdown">
+                      <span class="svg-icon">
+                        <svg>
+                          <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                               xlink:href="/sites/all/themes/custom/pr_hub//html/svg/sprite.min.svg#icon-menu-menu-media"></use>
+                        </svg>
+                      </span>
+                      Media                        <span class="arrow"></span>
+                    </a>
+                                      <div class="dropdown-menu">
+                      <div id="nav-trigger" class="nav-trigger"></div>
+                      <div class="grid">
+                          <div class="grid2-1">
+                              <div>
+                                  <div class="autogrid-3">
+                                        <ul class="dropdown-menu-lvl-1" id="pernod-dropdown-menu-lvl-">
+                <div class="item-list hide_block">
+              <li class="first">
+                <a href="/en" class="mobile-link menu-lvl-1">Home</a>                              </li>
+          </div>
+                <div class="item-list">
+              <li class="first">
+                <a href="/en/media/" class="menu-lvl-1">Media</a>                    <ul class="dropdown-menu-lvl-2">
+                <li>
+            <a href="/en/media/" class="menu-lvl-2 pr_hub_menu_434">A brief introduction</a>          </li>
+                <li>
+            <a href="/en/our-news-and-press/our-press-releases/" class="menu-lvl-2 pr_hub_menu_16426 active active">Our Press releases</a>          </li>
+                <li>
+            <a href="/en/our-news-and-press/our-publications-and-reports/" class="menu-lvl-2 pr_hub_menu_9163">Our publications and reports</a>          </li>
+                <li>
+            <a href="/en/media/our-media-library/" class="menu-lvl-2 pr_hub_menu_5295">Our media library</a>          </li>
+                <li>
+            <a href="/en/media/press-kit/" title="" class="menu-lvl-2 pr_hub_menu_5297">Press kit</a>          </li>
+          </ul>
+              </li>
+          </div>
+              <div class="item-list-double">
+            <div class="pr-menu-extra dropdown-menu-block-social">
+                                <div class="pr-menu-extra dropdown-menu-block-external">
+                      <div class="external-select">
+                        <select class="menu-external form-select" id="external-links-menu"><option value=""></option><option value="http://www.martell.com/">Martell</option><option value="http://www.wise-drinking.com/">Wise drinking</option><option value="https://www.mumm.com/en">Mumm</option><option value="https://havana-club.com/en-gb/">Havana Club</option><option value="http://www.irishdistillers.ie/">Irish Distillers</option><option value="https://www.perrier-jouet.com/uk-en/">Perrier-Jouët</option><option value="http://www.theabsolutcompany.com/">The Absolut Company</option><option value="https://www.chivas.com/en-gb">Chivas</option><option value="https://www.drinksandco.fr/">Drinks &amp; Co</option><option value="http://www.2340.fr/">2340</option></select>                      </div>
+                  </div>
+                                            <ul class="menu-social-links"><li class="facebook first"><a href="https://www.facebook.com/pages/Pernod-Ricard/109639325721521?fref=ts&amp;rf=108032875890882" class="menu-social-links menu-social-links-facebook" title="Facebook" target="_blank">Facebook</a></li>
+<li class="twitter"><a href="https://twitter.com/pernod_ricard" class="menu-social-links menu-social-links-twitter" title="Twitter" target="_blank">Twitter</a></li>
+<li class="youtube"><a href="https://www.youtube.com/channel/UCfcIDL5eM_pxNN-p91tmFyA" class="menu-social-links menu-social-links-youtube" title="YouTube" target="_blank">YouTube</a></li>
+<li class="linkedin"><a href="https://www.linkedin.com/company/pernod-ricard" class="menu-social-links menu-social-links-linkedin" title="LinkedIn" target="_blank">LinkedIn</a></li>
+<li class="instagram last"><a href="https://www.instagram.com/pernodricardcorporate/" class="menu-social-links menu-social-links-instagram" title="Instagram" target="_blank">Instagram</a></li>
+</ul>                          </div>
+                        <div class="pr-menu-extra dropdown-menu-block-other">
+                <ul class="menu-other-links"><li class="0 first"><a href="https://theconvivialists.com" class="menu-link-mag menu-other-links" title="THE CONVIVIALISTS" target="blank">THE CONVIVIALISTS</a></li>
+<li class="1 last"><a href="/en/digital-presence/" class="menu-link-presence-digitale menu-other-links" title="Présence digitale" target="_blank">Présence digitale</a></li>
+</ul>              </div>
+                  </div>
+        <div class="pr-menu-extra dropdown-menu-footer">
+          <ul class="menu"><li class="first leaf"><a href="/en/cookie/">Cookies</a></li>
+<li class="leaf"><a href="/en/terms-and-conditions/">Terms and conditions</a></li>
+<li class="leaf"><a href="/en/cookie/">Cookie</a></li>
+<li class="leaf"><a href="/en/pernod-ricard-online-privacy-policy/">PRIVACY POLICY</a></li>
+<li class="last leaf"><a href="/en/rss/" title="">RSS feed</a></li>
+</ul>        </div>
+    </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </li>
+      </ul>
+  
+        <ul class="dropdown-menu-lvl-0" id="pernod-dropdown-menu-lvl-0-search">
+          <li class="dropdown">
+              <div id="sidr-pernod-dropdown-menu-lvl-0-search" class="level-0">
+                  <a href="#" class="menu-search">Search</a>
+                <div class="block-wrapper  views views-exp-search-result-page-1">
+  <div class="block-wrapper-content">
+    <div id="block-views-exp-search-result-page-1" class="block block--views block--views-exp-search-result-page-1">
+                        <div class="block__content">
+        <form class="views-exposed-form-search-result-page-1" action="/en/search-result/" method="get" id="views-exposed-form-search-result-page-1" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-search-api-views-fulltext-wrapper" class="views-exposed-widget views-widget-filter-search_api_views_fulltext">
+                  <label for="edit-search-api-views-fulltext">
+                       </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-textfield form-item-search-api-views-fulltext">
+ <input class="auto_submit form-text form-autocomplete" data-search-api-autocomplete-search="search_api_views_search_result" data-min-autocomplete-length="3" type="text" id="edit-search-api-views-fulltext" name="search_api_views_fulltext" value="" size="30" maxlength="128" /><input type="hidden" id="edit-search-api-views-fulltext-autocomplete" value="https://www.pernod-ricard.com/index.php?q=en/search_api_autocomplete/search_api_views_search_result/-" disabled="disabled" class="autocomplete" />
+</div>
+        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input type="submit" id="edit-submit-search-result" name="" value="Rechercher" class="form-submit" />    </div>
+      </div>
+</div>
+</div></form>      </div>
+    </div>
+  </div>
+</div>
+              </div>
+          </li>
+      </ul>
+  </div>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+        </div>
+    </div>
+
+          </header>
+
+  <div class="l-main no-sidebars">
+    <div class="l-content" role="main">
+            <div itemprop="breadcrumb" class="breadcrumbs"><ul><li><a href="/en" itemprop="url">Home</a></li><li><span>Our News &amp; Press</span></li></ul></div>                  <a id="main-content"></a>
+                    <h1>Our publications</h1>
+                                          <div class="block-wrapper header-actu header-interne -3">
+  <div class="block-wrapper-content">
+    <div id="block-block-3" class="block block--block header-actu header-interne block--block-3">
+                        <div class="block__content">
+        <h4>Group Press Relations:</h4>
+<p>+33 (0)1 41 00 44 04</p>
+<p><a target="_blank" href="mailto:media.relations@pernod-ricard.com">Email</a></p>
+<p><a href="callto:jbricha">Skype</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<nav id="block-menu-menu-menu-liste-actualit-" role="navigation" class="block block--menu block--menu-menu-menu-liste-actualit-">
+      
+  <ul class="menu"><li class="first leaf"><a href="/en/our-news-and-press/our-headlines/">Articles</a></li>
+<li class="leaf active-trail"><a href="/en/our-news-and-press/our-press-releases/" title="" class="active-trail active">Press releases</a></li>
+<li class="last leaf"><a href="/en/our-news-and-press/our-publications-and-reports/" title="">Publications and reports</a></li>
+</ul></nav>
+<div class="block-wrapper  views filtres-checkbox-collabsible filter-green views-98f1bd57a55b687ba270a0a56d8b7257">
+  <div class="block-wrapper-content">
+    <div id="block-views-98f1bd57a55b687ba270a0a56d8b7257" class="block block--views filtres-checkbox-collabsible filter-green block--views-98f1bd57a55b687ba270a0a56d8b7257">
+                    <h2 class="block__title">Filtrer</h2>
+                  <div class="block__content">
+        <form class="ctools-auto-submit-full-form views-exposed-form-listes-actualites-i18n-page-1" action="/en/our-news-and-press/our-press-releases/" method="get" id="views-exposed-form-listes-actualites-i18n-page-1" accept-charset="UTF-8"><div><div class="views-exposed-form">
+  <div class="views-exposed-widgets clearfix">
+          <div id="edit-field-theme-tid-selective-wrapper" class="views-exposed-widget views-widget-filter-field_theme_tid_selective">
+                  <label for="edit-field-theme-tid-selective">
+            Topic          </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-select form-item-field-theme-tid-selective">
+ <div class="form-checkboxes bef-select-as-checkboxes"><div class="bef-checkboxes"><div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-316">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-316" value="316"  /> <label class='option' for='edit-field-theme-tid-selective-316'>Art &amp; Culture</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-322">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-322" value="322"  /> <label class='option' for='edit-field-theme-tid-selective-322'>Brands Portfolio</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-964">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-964" value="964"  /> <label class='option' for='edit-field-theme-tid-selective-964'>Common knowledge</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-318">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-318" value="318"  /> <label class='option' for='edit-field-theme-tid-selective-318'>Convivialité</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-670">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-670" value="670"  /> <label class='option' for='edit-field-theme-tid-selective-670'>Environnement</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-320">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-320" value="320"  /> <label class='option' for='edit-field-theme-tid-selective-320'>Finance</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-677">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-677" value="677"  /> <label class='option' for='edit-field-theme-tid-selective-677'>Financial Results</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-961">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-961" value="961"  /> <label class='option' for='edit-field-theme-tid-selective-961'>Governance</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-958">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-958" value="958"  /> <label class='option' for='edit-field-theme-tid-selective-958'>Group</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-321">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-321" value="321"  /> <label class='option' for='edit-field-theme-tid-selective-321'>Innovation</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-966">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-966" value="966"  /> <label class='option' for='edit-field-theme-tid-selective-966'>Nominations</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-323">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-323" value="323"  /> <label class='option' for='edit-field-theme-tid-selective-323'>Operational Excellence</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-317">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-317" value="317"  /> <label class='option' for='edit-field-theme-tid-selective-317'>Responsible Drinking</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-326">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-326" value="326"  /> <label class='option' for='edit-field-theme-tid-selective-326'>Route to Market / Consumer</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-325">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-325" value="325"  /> <label class='option' for='edit-field-theme-tid-selective-325'>Sustainability &amp; Responsibility</label>
+</div>
+<div class="form-item form-type-bef-checkbox form-item-edit-field-theme-tid-selective-324">
+ <input type="checkbox" name="field_theme_tid_selective[]" id="edit-field-theme-tid-selective-324" value="324"  /> <label class='option' for='edit-field-theme-tid-selective-324'>Talents Management</label>
+</div>
+</div></div>
+</div>
+        </div>
+              </div>
+          <div id="edit-field-marque-nid-selective-wrapper" class="views-exposed-widget views-widget-filter-field_marque_nid_selective_2">
+                  <label for="edit-field-marque-nid-selective">
+            Brand          </label>
+                        <div class="views-widget">
+          <div class="form-item form-type-select form-item-field-marque-nid-selective">
+ <div class="form-checkboxes bef-select-as-checkboxes"><div class="bef-checkboxes"><div class="form-item form-type-bef-checkbox form-item-edit-field-marque-nid-selective-2918">
+ <input type="checkbox" name="field_marque_nid_selective[]" id="edit-field-marque-nid-selective-2918" value="2918"  /> <label class='option' for='edit-field-marque-nid-selective-2918'>Havana Club</label>
+</div>
+</div></div>
+</div>
+        </div>
+              </div>
+          <div id="edit-date-filter-wrapper" class="views-exposed-widget views-widget-filter-date_filter">
+                  <label for="edit-date-filter">
+            Month          </label>
+                        <div class="views-widget">
+          <div id="edit-date-filter-value-wrapper"><div id="edit-date-filter-value-inside-wrapper"><div  class="container-inline-date"><div class="form-item form-type-date-select form-item-date-filter-value">
+  <div id="edit-date-filter-value"  class="date-padding clearfix"><div class="form-item form-type-select form-item-date-filter-value-month">
+  <label class="element-invisible" for="edit-date-filter-value-month">Month </label>
+ <div class="date-month"><select class="date-month form-select" id="edit-date-filter-value-month" name="date_filter[value][month]"><option value="" selected="selected">Month</option><option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option></select></div>
+</div>
+</div>
+</div>
+</div></div></div>        </div>
+              </div>
+          <div id="edit-date-filter-1-wrapper" class="views-exposed-widget views-widget-filter-date_filter_1">
+                  <label for="edit-date-filter-1">
+            Year          </label>
+                        <div class="views-widget">
+          <div id="edit-date-filter-value-wrapper"><div id="edit-date-filter-value-inside-wrapper"><div  class="container-inline-date"><div class="form-item form-type-date-select form-item-date-filter-1-value">
+  <div id="edit-date-filter-1-value"  class="date-padding clearfix"><div class="form-item form-type-select form-item-date-filter-1-value-year">
+  <label class="element-invisible" for="edit-date-filter-1-value-year">Year </label>
+ <div class="date-year"><select class="date-year form-select" id="edit-date-filter-1-value-year" name="date_filter_1[value][year]"><option value="" selected="selected">Year</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option></select></div>
+</div>
+</div>
+</div>
+</div></div></div>        </div>
+              </div>
+                    <div class="views-exposed-widget views-submit-button">
+      <input class="ctools-use-ajax ctools-auto-submit-click js-hide form-submit" type="submit" id="edit-submit-listes-actualites" name="" value="Appliquer" />    </div>
+          <div class="views-exposed-widget views-reset-button">
+        <input type="submit" id="edit-reset" name="op" value="Reset" class="form-submit" />      </div>
+      </div>
+</div>
+</div></form>      </div>
+    </div>
+  </div>
+</div>
+<div class="view view-listes-actualites view-id-listes_actualites view-display-id-i18n_page_1 liste-actualites view-dom-id-fd47c87cdad1cfeec4fe065fa7a9f99e">
+        
+  
+  
+      <div class="view-content">
+      <div class="item-list"><ul>    <li class="views-row views-row-1 views-row-odd views-row-first contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/wuliangye-and-pernod-ricard-strike-strategic-partnership/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Group</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">11/15/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/wuliangye-and-pernod-ricard-strike-strategic-partnership/">Wuliangye and Pernod Ricard Strike Strategic Partnership </a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/wuliangye-and-pernod-ricard-strike-strategic-partnership/">Read the press release</a></div></div>      </div>
+
+  </li>
+    <li class="views-row views-row-2 views-row-even contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/combined-shareholders-meeting-8-november-2019/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Group</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">11/08/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/combined-shareholders-meeting-8-november-2019/">Combined Shareholders’ Meeting of 8 November 2019</a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/combined-shareholders-meeting-8-november-2019/">Read the press release</a></div></div>      </div>
+
+  </li>
+    <li class="views-row views-row-3 views-row-odd contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/changes-pernod-ricard-executive-committee-3/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Governance</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">11/07/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/changes-pernod-ricard-executive-committee-3/">CHANGES TO THE PERNOD RICARD EXECUTIVE COMMITTEE</a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/changes-pernod-ricard-executive-committee-3/">Read the press release</a></div></div>      </div>
+
+  </li>
+    <li class="views-row views-row-4 views-row-even contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/availability-preparatory-documents-combined-general-meeting-ordinary-and-1/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Group</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">10/23/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/availability-preparatory-documents-combined-general-meeting-ordinary-and-1/">AVAILABILITY OF PREPARATORY DOCUMENTS FOR THE COMBINED GENERAL MEETING (...</a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/availability-preparatory-documents-combined-general-meeting-ordinary-and-1/">Read the press release</a></div></div>      </div>
+
+  </li>
+    <li class="views-row views-row-5 views-row-odd contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/pernod-ricard-successfully-completes-bond-issuance-eu1500-million-three/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Group</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">10/21/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/pernod-ricard-successfully-completes-bond-issuance-eu1500-million-three/">PERNOD RICARD SUCCESSFULLY COMPLETES A BOND ISSUANCE: €1,500 MILLION IN THREE...</a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/pernod-ricard-successfully-completes-bond-issuance-eu1500-million-three/">Read the press release</a></div></div>      </div>
+
+  </li>
+    <li class="views-row views-row-6 views-row-even contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/pernod-ricard-sas-long-term-credit-rating-upgraded-one-notch-sp-global-ratings/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Group</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">10/18/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/pernod-ricard-sas-long-term-credit-rating-upgraded-one-notch-sp-global-ratings/">PERNOD RICARD SA’S LONG-TERM CREDIT RATING UPGRADED BY ONE NOTCH BY S&amp;P...</a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/pernod-ricard-sas-long-term-credit-rating-upgraded-one-notch-sp-global-ratings/">Read the press release</a></div></div>      </div>
+
+  </li>
+    <li class="views-row views-row-7 views-row-odd contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/fy20-q1-sales/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Group</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">10/16/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/fy20-q1-sales/">FY20 Q1 Sales</a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/fy20-q1-sales/">Read the press release</a></div></div>      </div>
+
+  </li>
+    <li class="views-row views-row-8 views-row-even contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/pernod-ricard-completes-acquistion-castle-brands/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Group</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">10/09/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/pernod-ricard-completes-acquistion-castle-brands/">PERNOD RICARD COMPLETES ACQUISTION OF CASTLE BRANDS</a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/pernod-ricard-completes-acquistion-castle-brands/">Read the press release</a></div></div>      </div>
+
+  </li>
+    <li class="views-row views-row-9 views-row-odd views-row-last contextual-links-region">  
+  <div class="views-field views-field-field-image-teaser">        <div class="field-content"><a href="/en/node/%5Bnid%5D/"><a href="/en/media/press-releases/reconquer/"><noscript class="adaptive-image" data-adaptive-image-breakpoints="320 720 960 1024 1200" data-adaptive-image-320-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;320&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobilemin_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-720-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;720&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_mobile_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;282&quot; height=&quot;282&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-960-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;960&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_tablet_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;270&quot; height=&quot;162&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1024-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1024&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-1200-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;1200&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;" data-adaptive-image-max-img="&lt;img class=&quot;adaptive-image&quot; data-adaptive-image-breakpoint=&quot;max&quot; src=&quot;https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png&quot; width=&quot;348&quot; height=&quot;210&quot; alt=&quot;pernod ricard&quot; title=&quot;Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, &quot; /&gt;"><img src="https://assets.pernod-ricard.com/styles/vignette_articlebreakpoints_theme_pernodricard_desktop_1x/s3/actualite_image_teaser/cp_2.png" width="348" height="210" alt="pernod ricard" title="Pernod Ricard joins the ‘New Plastics Economy’ Global Commitment, " /></noscript>
+</a></a></div>  </div>  
+  <div class="views-field views-field-contextual-links">        <span class="field-content"></span>  </div>  
+          <div class="bas-box-actus views-fieldset" data-module="views_fieldsets" class="bas-box-actus views-fieldset">
+            <div class="views-field views-field-field-theme views-field-field-theme"><div class="field-content">Group</div></div>                <div class="views-field views-field-created-1 views-field-created"><span class="field-content">10/01/2019</span></div>                <div class="views-field views-field-title-1 views-field-title"><span class="field-content"><a href="/en/media/press-releases/reconquer/">RECONQUER!</a></span></div>                <div class="views-field views-field-field-titre-du-lien"><div class="field-content"><a href="/en/media/press-releases/reconquer/">Read the press release</a></div></div>      </div>
+
+  </li>
+</ul></div>    </div>
+  
+      <h2 class="element-invisible">Pages</h2><ul class="pager"><li class="pager__item pager__item--current">1</li>
+<li class="pager__item"><a href="/en/our-news-and-press/our-press-releases/?page=1" title="Go to page 2">2</a></li>
+<li class="pager__item"><a href="/en/our-news-and-press/our-press-releases/?page=2" title="Go to page 3">3</a></li>
+<li class="pager__item"><a href="/en/our-news-and-press/our-press-releases/?page=3" title="Go to page 4">4</a></li>
+<li class="pager__item"><a href="/en/our-news-and-press/our-press-releases/?page=4" title="Go to page 5">5</a></li>
+<li class="pager__item"><a href="/en/our-news-and-press/our-press-releases/?page=5" title="Go to page 6">6</a></li>
+<li class="pager__item"><a href="/en/our-news-and-press/our-press-releases/?page=6" title="Go to page 7">7</a></li>
+<li class="pager__item"><a href="/en/our-news-and-press/our-press-releases/?page=7" title="Go to page 8">8</a></li>
+<li class="pager__item"><a href="/en/our-news-and-press/our-press-releases/?page=8" title="Go to page 9">9</a></li>
+<li class="pager__item pager__item--ellipsis">…</li>
+<li class="pager__item pager__item--next"><a href="/en/our-news-and-press/our-press-releases/?page=1">next</a></li>
+<li class="pager__item pager__item--last"><a href="/en/our-news-and-press/our-press-releases/?page=17">last</a></li>
+</ul>  
+  
+  
+  
+  
+</div><div id="pernod-ricard-interstitiel-age-gate">
+  <div class="progress" id="progress">
+    <div class="progressbar__label"></div>
+  </div>
+</div>
+	 
+                </div>
+
+          </div>
+     <div class="l-social_footer"> 
+   </div>
+ <div class="l-pre_footer"> 
+     <div class="l-region l-region--pre-footer">
+    <div class="block-wrapper box-pre-footer -4">
+  <div class="block-wrapper-content">
+    <div id="block-block-4" class="block block--block box-pre-footer block--block-4">
+                        <div class="block__content">
+        <p>Pernod Ricard Headquarters contact:</p>
+<address>12 place des Etats-Unis<br />
+75783 Paris Cedex 16<br />
++33 (0)1 41 00 41 00</address>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block-wrapper box-pre-footer -5">
+  <div class="block-wrapper-content">
+    <div id="block-block-5" class="block block--block box-pre-footer block--block-5">
+                        <div class="block__content">
+        <p>Journalists :</p>
+<p>+33 (0)1 41 00 44 04<br /><a href="mailto:media.relations@pernod-ricard.com" rel="nofollow">Email</a> </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block-wrapper box-pre-footer -6">
+  <div class="block-wrapper-content">
+    <div id="block-block-6" class="block block--block box-pre-footer block--block-6">
+                        <div class="block__content">
+        <p>Institutional investors :</p>
+<p><a href="mailto:investor.relations@pernod-ricard.com" rel="nofollow">Email</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block-wrapper box-pre-footer -8">
+  <div class="block-wrapper-content">
+    <div id="block-block-8" class="block block--block box-pre-footer block--block-8">
+                        <div class="block__content">
+        <p>Individual Shareholders :</p>
+<p>+33 (0) 800 880 953 <em>(Freephone within France)</em><br /><a href="mailto:actionnaires@pernod-ricard.com" rel="nofollow">Email</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+  <footer class="l-footer" role="contentinfo">
+      <div class="l-region l-region--footer">
+    <nav id="block-menu-menu-menu-footer" role="navigation" class="block block--menu menu_footer box-footer block--menu-menu-menu-footer">
+      
+  <ul class="menu"><li class="first leaf"><a href="/en/terms-and-conditions/" title="" rel="nofollow">Terms and conditions</a></li>
+<li class="leaf"><a href="/en/cookie/" rel="nofollow">Cookies</a></li>
+<li class="leaf"><a href="/en/pernod-ricard-online-privacy-policy/" rel="nofollow">Privacy policy</a></li>
+<li class="last leaf"><a href="/en/rss/" title="" rel="nofollow">RSS Feed</a></li>
+</ul></nav>
+<div class="block-wrapper box-footer footer-style -1">
+  <div class="block-wrapper-content">
+    <div id="block-block-1" class="block block--block box-footer footer-style block--block-1">
+                        <div class="block__content">
+        <p class="rtecenter"><span style="font-size:14px;"><strong>Please enjoy our brands responsibly.</strong></span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="block-wrapper box-footer footer-style copyright -2">
+  <div class="block-wrapper-content">
+    <div id="block-block-2" class="block block--block box-footer footer-style copyright block--block-2">
+                        <div class="block__content">
+        <p>© Pernod Ricard 2017. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  </footer>
+</div>
+
+<a href="#" id="back-to-top" title="Back to top">
+  <span class="pr-icon-thin-arrow-up">
+
+  </span>
+</a>
+
+<script src="https://www.pernod-ricard.com/sites/default/files/js/js_W2AkIVy19DunQ27Y4h9NWIIonO3wsbUhUePR46RLVs4.js"></script>
+<script src="https://www.pernod-ricard.com/sites/default/files/js/js_AQWLEH8RdjZ1M-GaTcmrCj0IGIdZmS5mfX7-3_V_Rq8.js"></script>
+<script src="https://www.pernod-ricard.com/sites/default/files/js/js_sx_qw4JLVEDNE2FzCJh5dkJ95m2PIdC5_JXPW5aCW7M.js"></script>
+<script src="https://www.pernod-ricard.com/misc/autocomplete.js"></script>
+<script src="https://www.pernod-ricard.com/sites/default/files/js/js_-WY2uvdM3Fk0vr_jPNCWvqA1kHB_0PgqFXkW4PQ7QS4.js"></script>
+<script src="https://www.pernod-ricard.com/sites/default/files/js/js_2-lflZk7uTU82WRYryVNNstyV6Q3heNusHxOaxksTgs.js"></script>
+<script src="https://www.pernod-ricard.com/sites/default/files/js/js_IA7cdG5Tx1Uz1-Az_l1LnlgJ6IfOCiOo_Aq0QbVpGHw.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"en\/","ajaxPageState":{"theme":"pr_hub","theme_token":"Ca905dM95eqTOlvQSKrqGyH66zuyv9NN8a3T8_SipMw","jquery_version":"1.7","js":{"sites\/all\/libraries\/owl-carousel\/owl.carousel.min.js":1,"sites\/all\/modules\/contrib\/browserclass\/browserclass.js":1,"sites\/all\/modules\/contrib\/addthis\/addthis.js":1,"sites\/all\/modules\/custom\/pr_hub_recherche\/assets\/js\/search_box.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/mobile.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery.form\/4\/jquery.form.min.js":1,"sites\/all\/libraries\/chosen\/chosen.jquery.min.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/pr_hub_extra\/js\/pr_hub_extra_track_user.js":1,"misc\/autocomplete.js":1,"sites\/all\/modules\/contrib\/media_colorbox\/media_colorbox.js":1,"sites\/all\/modules\/custom\/pr_hub_stock_price\/js\/pr_hub_stock_price.js":1,"sites\/all\/modules\/custom\/pr_hub_extra\/js\/progressbar.js":1,"sites\/all\/modules\/custom\/pr_hub_extra\/js\/js.cookie.js":1,"sites\/all\/modules\/custom\/pr_hub_extra\/js\/intertitiel.js":1,"sites\/all\/modules\/custom\/pr_hub_extra\/js\/pr_hub_extra.js":1,"public:\/\/languages\/eng_jk192e61mKdBhCIv9KLRQQGkNaf8smcPYcuXQmkOZzA.js":1,"sites\/all\/libraries\/colorbox\/jquery.colorbox-min.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox.js":1,"sites\/all\/modules\/contrib\/colorbox\/js\/colorbox_load.js":1,"sites\/all\/modules\/contrib\/better_exposed_filters\/better_exposed_filters.js":1,"sites\/all\/modules\/contrib\/cs_adaptive_image\/cs_adaptive_image.js":1,"sites\/all\/modules\/contrib\/views\/js\/base.js":1,"misc\/collapse.js":1,"misc\/form.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/views\/js\/ajax_view.js":1,"sites\/all\/modules\/contrib\/search_api_autocomplete\/search_api_autocomplete.js":1,"sites\/all\/modules\/contrib\/ctools\/js\/auto-submit.js":1,"sites\/all\/modules\/contrib\/views_selective_filters\/js\/attachBehaviours.js":1,"sites\/all\/modules\/custom\/pr_hub_extra\/js\/pr_hub_extra_mobile.js":1,"sites\/all\/modules\/custom\/pr_hub_extra\/js\/pr_hub_extra_owlcarousel.js":1,"sites\/all\/libraries\/touchwipe\/jquery.touchwipe.min.js":1,"sites\/all\/libraries\/sidr\/jquery.sidr.min.js":1,"sites\/all\/modules\/custom\/pr_hub_menu_local\/js\/menu.js":1,"sites\/all\/modules\/contrib\/lang_dropdown\/lang_dropdown.js":1,"sites\/all\/modules\/custom\/pr_hub_menus\/js\/pr_hub_menus.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/pr_hub_filter.js":1,"sites\/all\/libraries\/jquery.sticky\/jquery.sticky.js":1,"sites\/all\/modules\/contrib\/chosen\/chosen.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/vendor.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/modernizr.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/velocity.min.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/lib\/select2\/js\/select2.min.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/main.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/colorbox.responsive.js":1,"sites\/all\/themes\/custom\/pr_hub\/pr_hub_colorbox\/pr_hub_colorbox.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/owl.loop.js":1,"sites\/all\/themes\/custom\/pr_hub\/slick\/slick.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/swipers.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/lib\/gray\/js\/jquery.gray.min.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/lib\/perfect-scrollbar\/js\/min\/perfect-scrollbar.jquery.min.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/likely.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/social-share.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/lib\/scrollreveal\/dist\/scrollreveal.js":1,"sites\/all\/themes\/custom\/pr_hub\/js\/pr_hub.custom.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/dj.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/init.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-dialog-opener.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-fade-animation.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-histore-navigation.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-mobile-detect.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-strategiques-video.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-main-menu-additional.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-documents-list.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-scheme-opener.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-chosen.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-vie-slider.js":1,"sites\/all\/themes\/custom\/pr_hub\/html\/js\/behaviors\/djs-slider.js":1},"css":{"sites\/all\/themes\/contrib\/omega\/omega\/css\/modules\/system\/system.base.css":1,"sites\/all\/themes\/contrib\/omega\/omega\/css\/modules\/system\/system.messages.theme.css":1,"sites\/all\/themes\/contrib\/omega\/omega\/css\/modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/menu_language_filter\/menu_language_filter.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/custom\/pr_hub_extra\/ckeditor\/plugins\/template\/css\/template.css":1,"sites\/all\/modules\/contrib\/media\/modules\/media_wysiwyg\/css\/media_wysiwyg.base.css":1,"sites\/all\/modules\/contrib\/chosen\/css\/chosen-drupal.css":1,"sites\/all\/libraries\/owl-carousel\/owl.carousel.css":1,"sites\/all\/libraries\/owl-carousel\/owl.theme.css":1,"sites\/all\/libraries\/owl-carousel\/owl.transitions.css":1,"sites\/all\/modules\/contrib\/panels\/css\/panels.css":1,"0":1,"sites\/all\/modules\/contrib\/lang_dropdown\/lang_dropdown.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/font-icomoon.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/pr_hub.normalize.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/styles_splited\/pr_hub.styles1.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/styles_splited\/pr_hub.styles2.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/styles_splited\/pr_hub.styles3.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/styles_splited\/pr_hub.styles4.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/pr_hub.ie.css":1,"sites\/all\/themes\/custom\/pr_hub\/pr_hub_colorbox\/pr_hub_colorbox.css":1,"sites\/all\/themes\/custom\/pr_hub\/slick\/slick.css":1,"sites\/all\/themes\/custom\/pr_hub\/js\/lib\/select2\/css\/select2.min.css":1,"sites\/all\/themes\/custom\/pr_hub\/js\/lib\/gray\/css\/gray.min.css":1,"sites\/all\/themes\/custom\/pr_hub\/js\/lib\/perfect-scrollbar\/css\/perfect-scrollbar.min.css":1,"sites\/all\/themes\/custom\/pr_hub\/html\/css\/likely.css":1,"sites\/all\/themes\/custom\/pr_hub\/html\/css\/screen.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/pr_hub_custom.css":1,"sites\/all\/themes\/custom\/pr_hub\/css\/print.css":1,"sites\/all\/modules\/custom\/pr_hub_map\/assets\/css\/dist\/map.exposed.css":1,"sites\/all\/modules\/custom\/pr_hub_recherche\/assets\/css\/dist\/modules\/search_box.css":1}},"colorbox":{"transition":"elastic","speed":"350","opacity":"0.85","slideshow":false,"slideshowAuto":true,"slideshowSpeed":"2500","slideshowStart":"start slideshow","slideshowStop":"stop slideshow","current":"{current} of {total}","previous":"\u00ab Prev","next":"Next \u00bb","close":"Close","overlayClose":true,"returnFocus":true,"maxWidth":"98%","maxHeight":"98%","initialWidth":"300","initialHeight":"250","fixed":true,"scrolling":true,"mobiledetect":false,"mobiledevicewidth":"480px"},"chosen":{"selector":".view-social-wall-2 select,\r\n.view-temoignages select,\r\nform#pernod-social-network-social-wall-form select,\r\nform#pernod-marque-admin-settings select,\r\n#age-gate-second-step select,\r\n#block-views-exp-archives-page .views-widget-filter-field_date_archive_value select,\r\n.filtres-checkbox-collabsible  select,\r\n#block-lang-dropdown-language select,\r\n.form-item-lang-dropdown-select select,\r\n#lang_dropdown_form_language select,","minimum_single":0,"minimum_multiple":0,"minimum_width":219,"options":{"allow_single_deselect":false,"disable_search":false,"disable_search_threshold":1,"search_contains":false,"placeholder_text_multiple":"Choose some options","placeholder_text_single":"Choose an option","no_results_text":"No results match","inherit_select_classes":true}},"urlIsAjaxTrusted":{"\/en\/our-news-and-press\/our-press-releases\/":true,"\/en\/views\/ajax\/":true,"\/en\/search-result\/":true},"better_exposed_filters":{"datepicker":false,"slider":false,"settings":[],"autosubmit":false,"views":{"listes_actualites":{"displays":{"i18n_page_1":{"filters":{"field_theme_tid_selective":{"required":false},"field_marque_nid_selective":{"required":false},"date_filter":{"required":false},"date_filter_1":{"required":false}}}}}}},"views":{"ajax_path":"\/en\/views\/ajax\/","ajaxViews":{"views_dom_id:fd47c87cdad1cfeec4fe065fa7a9f99e":{"view_name":"listes_actualites","view_display_id":"i18n_page_1","view_args":"press-releases","view_path":"media\/press-releases","view_base_path":"media\/%","view_dom_id":"fd47c87cdad1cfeec4fe065fa7a9f99e","pager_element":0}}},"map":{"icon_alt_2":"https:\/\/assets.pernod-ricard.com\/map_assets_icons_alt_2\/pr_terre_blanc_sur_bleu_clair_4_0.gif?XHltn7GQnmmHltNCCrUuttwZIinWPCEH"},"pernod_block_mobile_title":{"menu_menu-menu-liste-actualit-":"Filtres","views_98f1bd57a55b687ba270a0a56d8b7257":"Filtres"},"pernod_block_mobile_html_id":{"menu_menu-menu-liste-actualit-":"block-menu-menu-menu-liste-actualit-","views_98f1bd57a55b687ba270a0a56d8b7257":"block-views-98f1bd57a55b687ba270a0a56d8b7257"},"pernod_owlcarousel":{"block_6":{"singleItem":true,"itemsScaleUp":false,"slideSpeed":300,"paginationSpeed":800,"rewindSpeed":1000,"autoPlay":false,"stopOnHover":false,"navigation":true,"rewindNav":true,"scrollPerPage":false,"pagination":false,"paginationNumbers":false,"responsive":true,"responsiveRefreshRate":200,"responsiveBaseWidth":"window","baseClass":"owl-carousel","theme":"owl-theme","lazyLoad":false,"lazyFollow":true,"lazyEffet":"fade","autoHeight":false,"dragBeforeAnimFinish":true,"mouseDrag":true,"touchDrag":true,"addClassActive":false,"itemsMobile":["720","1"],"navigationText":["",""]}},"selector":{"block_6":[".l-region--pre-footer"]},"table_rebuild":{"block_6":[]},"table_rebuild_mode":{"block_6":""},"table_rebuild_selector":{"block_6":""},"selector_items":{"block_6":[".l-region--pre-footer div.box-pre-footer"]},"currentPath":"media\/press-releases","currentPathIsAdmin":false,"pr_hub_extra":{"current_page":{"path":"media\/press-releases","alias":"our-news-and-press\/our-press-releases","url":"https:\/\/www.pernod-ricard.com\/en\/our-news-and-press\/our-press-releases\/","title":"Our publications","is_local_section":false,"last_local_section":"","multisite":"pernod-ricard.com"}},"change_logo":false,"logo":"\u003Cimg src=\u0022https:\/\/assets.pernod-ricard.com\/theme-extra\/age-gate-logo.png?u6QgJWWWbxssFde3m07RI0UMZivWnBKI\u0022 alt=\u0022Logo pernod ricard\u0022 \/\u003E","logo_original":"\u003Cimg src=\u0022https:\/\/assets.pernod-ricard.com\/logo-pernod-ricard.png?rk5MpFIvIwdJZMA3_6Oao5Kt2CUMbrXD\u0022 alt=\u0022Logo pernod ricard\u0022 \/\u003E","sm_logo":"https:\/\/assets.pernod-ricard.com\/sticky_menu\/logo-sticky.png?nHjEU1EP3LZ5n2CAoDIrUeBbd2gpbRUO","sm_map":"https:\/\/assets.pernod-ricard.com\/sticky_menu\/pr_terre_stickymenu1.gif?U2.wtUv66cyky2Ri3AbE2sTHRZMLoHub","pr_hub_agegate":{"lp_disable":true,"ag_disable":true},"age_gate":{"cookie_lifetime":"36500","interstitiel_seconde":5,"track_url":"https:\/\/www.pernod-ricard.com\/en\/u_track\/intertistiel\/","reset_redirection_url":"https:\/\/www.pernod-ricard.com\/en\/u_track\/intertistiel\/?redirect_displayed=true","baseUrl":"https:\/\/www.pernod-ricard.com\/en"},"global":{"is_local_section":false,"current_local_section":null,"flag":""},"menu_local":{"is_local_section":false,"tracking_message":"\u003Cspan\u003EYou\u2019re currently viewing the \u003Cstrong\u003Eglobal\u003C\/strong\u003E corporate section.\u003C\/span\u003E\u003Cspan\u003E Would you like to visit other country or region?\u003C\/span\u003E","global_link_message":"\u003Cp class=\u0027age-gate-small\u0027\u003EYou\u2019re being redirected to our \u003Cstrong\u003Eglobal\u003C\/strong\u003E corporate section.\u003C\/p\u003E\u003Cp class=\u0027age-gate-large\u0027\u003E Enjoy your visit!\u003C\/p\u003E","interstistiel_message":"","show_redirect":false,"current_ls":"","pr_referer":"","track_cookie_data":"","passed_agegate":false}});</script>
+<script src="https://www.pernod-ricard.com/sites/default/files/js/js__JoTd9Oxwhsenh2V4oPwBopK_5ZERouXB3otHIn_MrM.js"></script>
+<script src="https://www.pernod-ricard.com/sites/default/files/js/js_wEVEsVyuxevlp1y24zvCsz9UUxXeduPDBc_4znOtGIA.js"></script>
+
+<script>
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"b84df2694a","applicationID":"96016989","transactionName":"ZFxSZ0RYWkAFURFZVl0WZUFfFhtaClYASBdDUUA=","queueTime":0,"applicationTime":3,"atts":"SBtREQxCSU4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

@@ -1,0 +1,1700 @@
+
+
+<!doctype html>
+<html class="no-js" lang="en-GB">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <meta name="keywords" content="Investor information  Financial Results  RB" />
+    <meta name="description" content="See the latest financial results, investor calendar and presentations. Download quarterly, half year and full years results." />
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta name="google-site-verification" content="5d0v-3XSRelIhK-K8DwiMhSlz_JhQsEFwDDYWDoBSzE" />
+        <meta name="msvalidate.01" content="" />
+    <title>Investor information – Financial Results – RB</title>
+
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/ie_edge.css" />
+
+    <!--[if IE 9]>
+        <link href="/css/ie9.css" rel="stylesheet" />
+    <![endif]-->
+
+    <link rel="icon" href="/images/favicon.ico" />
+
+    
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/scripts/jquery-1.10.2.min.js"><\/script>')</script>
+    
+    
+                <script type="text/javascript">
+                    window.iframeAPILoaded = false;
+
+                    window.onYouTubeIframeAPIReady = function () {
+                        window.iframeAPILoaded = true;
+                    };
+
+                    (function () {
+                        var tag = document.createElement('script');
+
+                        tag.src = "https://www.youtube.com/iframe_api";
+                        var firstScriptTag = document.getElementsByTagName('script')[0];
+                        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                    })();
+                </script>
+            
+
+    
+    <meta property="og:url" content="https://www.rb.com/investors/investor-information/" />
+
+    <meta property="og:title" content="Investor information – Financial Results – RB" />
+
+    <meta property="og:description" content="See the latest financial results, investor calendar and presentations. Download quarterly, half year and full years results." />
+
+    <meta property="og:locale" content="en_GB" />
+
+
+
+
+
+    <link rel="canonical" href="https://www.rb.com/investors/investor-information/" />
+
+</head>
+<body role="document"   itemscope itemtype="http://schema.org/WebPage"   class="">
+
+    <!-- 08/10/2019 08:18:19 -->
+    
+    
+
+<nav class="main-nav">
+    <div class="wrapper main-nav__wrapper">
+
+        <a href="/" class="main-nav__toggle js-toggle-nav" title="">
+            <div class="main-nav__toggle-image">
+                <span class="main-nav__toggle-label">Menu</span>
+            </div>
+        </a>
+
+        <a href="/" class="main-nav__logo" title="">
+            <svg width="150" height="82" class="main-nav__logo-image"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-logo"></use></svg>
+            <img src="/images/logo.png" alt="RB - Health, Hygiene, Home" class="main-nav__logo-image--alt">
+        </a>
+            <a href="#" class="main-nav__search" title="">
+                <svg width="21" height="22" class="main-nav__search-image"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use></svg>
+            </a>
+
+        <a href="#" class="main-nav__countries" title="">
+            <svg width="18" height="18" class="main-nav__countries-image"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-globe"></use></svg>
+        </a>
+
+        <div class="main-nav-mobile js-main-nav-content">
+
+            <div class="clearfix main-nav-mobile__search">
+
+                <div class="row">
+                        <form id="search-form"
+          action="/umbraco/Api/Search/SearchPartioned"
+          method="get"
+          class="col-xs-7 col-sm-8">
+        <svg width="21" height="22" class="main-nav__search-image">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+        </svg>
+        <input id="query"
+               type="text"
+               name="query"
+               placeholder="Search"
+               class="main-nav-mobile__search-input"
+               autocomplete="off" />
+
+        <input id="region" name="region" type="hidden" value="en-GB" />
+        <input id="rootId" name="rootId" type="hidden" value="11945" />
+        <input data-val="true" data-val-number="The field MaxNoOfResultsToTake must be a number." data-val-required="The MaxNoOfResultsToTake field is required." id="noToTake" name="MaxNoOfResultsToTake" type="hidden" value="10" />
+        <input id="mediaRootId" name="RegionMediaFolderId" type="hidden" value="13304" />
+        <input data-val="true" data-val-required="The SearchPdf field is required." id="searchMedia" name="SearchPdf" type="hidden" value="True" />
+    </form>
+
+
+<script id="searchResultsTemplate" type="x-tmpl-mustache">
+{{#noResults}}
+  <div class="news__no-results">
+      <h3 class="news-item__title">No Results</h3>
+  </div>
+{{/noResults}}
+{{#hasContent}}    
+    <div class="main-nav-search__section col-md-6">
+        <h3 class="main-nav-search__heading">Top Results</h3>
+        <ul class="main-nav-search__list">
+        {{#content}}
+            <li class="main-nav-search__item">
+                <a href="{{{url}}}" class="main-nav-search__link" title="{{name}}">{{name}}</a>
+            </li>
+        {{/content}}
+        </ul>
+    </div>
+{{/hasContent}}
+{{#hasNews}}
+<div class="main-nav-search__section col-md-6">
+    <h3 class="main-nav-search__heading">News</h3>
+    <ul class="main-nav-search__list">
+        {{#news}}
+        <li class="main-nav-search__item">
+            <a href="{{{url}}}" class="main-nav-search__link" title="{{name}}">{{name}}</a>
+        </li>
+        {{/news}}
+    </ul>
+</div>
+{{/hasNews}}
+{{#hasLocations}}
+<div class="main-nav-search__section col-md-6">
+    <h3 class="main-nav-search__heading">Global locations</h3>
+    <ul class="main-nav-search__list">
+        {{#locations}}
+        <li class="main-nav-search__item">
+            <a href="{{{url}}}" class="main-nav-search__link" title="{{name}}">{{name}}</a>
+        </li>
+        {{/locations}}
+    </ul>
+</div>
+{{/hasLocations}}
+{{#hasMedia}}
+<div class="main-nav-search__section col-md-6">
+    <h3 class="main-nav-search__heading">Documents</h3>
+    <ul class="main-nav-search__list">
+        {{#pdfs}}
+        <li class="main-nav-search__item">
+            <a href="{{{url}}}" target="_blank" class="main-nav-search__link" title="{{name}}">{{name}}</a>
+        </li>
+        {{/pdfs}}
+    </ul>
+</div>
+{{/hasMedia}}  
+</script>
+
+                    <div class="col-xs-5 col-sm-3 col-sm-offset-9 main-nav-mobile__close-wrapper">
+
+                        <a href="#" class="main-nav-mobile__close js-toggle-mobile-nav" title="Close menu">
+                            <svg width="18" height="18" class="main-nav-mobile__close-image"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-cross"></use></svg>
+                        </a>
+
+                        <div class="main-nav-mobile__country-selector">
+                            <svg width="18" height="18" class="main-nav-mobile__country-selector-globe"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-globe"></use></svg>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="main-nav-search__results">
+                <div class="main-nav-search__container row">
+                </div>
+            </div>
+
+            <div class="clearfix main-nav-countries">
+
+                <div class="main-nav-countries__container">
+                    <h3 class="main-nav-countries__title"><span>Select a country</span></h3>
+
+                    <div class="main-nav-countries__list-wrapper clearfix js-country-selector">
+                        <ul class="main-nav-countries__list"></ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <ul class="main-nav__list">
+                    <li class="main-nav__item">
+
+                            <svg class="main-nav__item-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+
+                        <a href="/about-us/" class="main-nav__link" title="About us">
+                            <span class="main-nav__link-text">About us</span>
+                        </a>
+
+                            <ul class="main-nav__sub">
+
+                                <li class="main-nav__item">
+                                    <a href="/about-us/" class="main-nav__link" title="About us">
+                                        <span class="main-nav__link-text">About us</span>
+                                    </a>
+                                </li>
+
+                                    <li class="main-nav__item">
+                                        <a href="/about-us/executive-committee/" class="main-nav__link" title="Executive Committee">
+                                            <span class="main-nav__link-text">Executive Committee</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/about-us/contact/" class="main-nav__link" title="Contact">
+                                            <span class="main-nav__link-text">Contact</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="main-nav__item">
+
+                            <svg class="main-nav__item-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+
+                        <a href="/brands/" class="main-nav__link" title="Brands">
+                            <span class="main-nav__link-text">Brands</span>
+                        </a>
+
+                            <ul class="main-nav__sub">
+
+                                <li class="main-nav__item">
+                                    <a href="/brands/" class="main-nav__link" title="Brands">
+                                        <span class="main-nav__link-text">Brands</span>
+                                    </a>
+                                </li>
+
+                                    <li class="main-nav__item">
+                                        <a href="/brands/health/" class="main-nav__link" title="Health">
+                                            <span class="main-nav__link-text">Health</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/clearasil/" class="main-nav__link main-nav__link_light" title="Clearasil">
+                                            <span class="main-nav__link-text">Clearasil</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/dettol/" class="main-nav__link main-nav__link_light" title="Dettol">
+                                            <span class="main-nav__link-text">Dettol</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/durex/" class="main-nav__link main-nav__link_light" title="Durex">
+                                            <span class="main-nav__link-text">Durex</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/enfamil/" class="main-nav__link main-nav__link_light" title="Enfamil">
+                                            <span class="main-nav__link-text">Enfamil</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/gaviscon/" class="main-nav__link main-nav__link_light" title="Gaviscon">
+                                            <span class="main-nav__link-text">Gaviscon</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/mucinex/" class="main-nav__link main-nav__link_light" title="Mucinex">
+                                            <span class="main-nav__link-text">Mucinex</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/nurofen/" class="main-nav__link main-nav__link_light" title="Nurofen">
+                                            <span class="main-nav__link-text">Nurofen</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/nutramigen/" class="main-nav__link main-nav__link_light" title="Nutramigen">
+                                            <span class="main-nav__link-text">Nutramigen</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/scholl/" class="main-nav__link main-nav__link_light" title="Scholl">
+                                            <span class="main-nav__link-text">Scholl</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/strepsils/" class="main-nav__link main-nav__link_light" title="Strepsils">
+                                            <span class="main-nav__link-text">Strepsils</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/veet/" class="main-nav__link main-nav__link_light" title="Veet">
+                                            <span class="main-nav__link-text">Veet</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/hygiene-home/" class="main-nav__link" title="Hygiene Home">
+                                            <span class="main-nav__link-text">Hygiene Home</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/air-wick/" class="main-nav__link main-nav__link_light" title="Air Wick">
+                                            <span class="main-nav__link-text">Air Wick</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/calgon/" class="main-nav__link main-nav__link_light" title="Calgon">
+                                            <span class="main-nav__link-text">Calgon</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/cillit-bang/" class="main-nav__link main-nav__link_light" title="Cillit Bang">
+                                            <span class="main-nav__link-text">Cillit Bang</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/finish/" class="main-nav__link main-nav__link_light" title="Finish">
+                                            <span class="main-nav__link-text">Finish</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/harpic/" class="main-nav__link main-nav__link_light" title="Harpic">
+                                            <span class="main-nav__link-text">Harpic</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/lysol/" class="main-nav__link main-nav__link_light" title="Lysol">
+                                            <span class="main-nav__link-text">Lysol</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/mortein/" class="main-nav__link main-nav__link_light" title="Mortein">
+                                            <span class="main-nav__link-text">Mortein</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/vanish/" class="main-nav__link main-nav__link_light" title="Vanish">
+                                            <span class="main-nav__link-text">Vanish</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/brands/woolite/" class="main-nav__link main-nav__link_light" title="Woolite">
+                                            <span class="main-nav__link-text">Woolite</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="main-nav__item">
+
+                            <svg class="main-nav__item-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+
+                        <a href="/careers/" class="main-nav__link" title="Careers">
+                            <span class="main-nav__link-text">Careers</span>
+                        </a>
+
+                            <ul class="main-nav__sub">
+
+                                <li class="main-nav__item">
+                                    <a href="/careers/" class="main-nav__link" title="Careers">
+                                        <span class="main-nav__link-text">Careers</span>
+                                    </a>
+                                </li>
+
+                                    <li class="main-nav__item">
+                                        <a href="/careers/graduates-interns/" class="main-nav__link" title="Graduates &amp; interns">
+                                            <span class="main-nav__link-text">Graduates &amp; interns</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/careers/marketing/" class="main-nav__link" title="Marketing">
+                                            <span class="main-nav__link-text">Marketing</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/careers/sales/" class="main-nav__link" title="Sales">
+                                            <span class="main-nav__link-text">Sales</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/careers/research-development/" class="main-nav__link" title="Research &amp; Development">
+                                            <span class="main-nav__link-text">Research &amp; Development</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/careers/finance/" class="main-nav__link" title="Finance">
+                                            <span class="main-nav__link-text">Finance</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/careers/supply/" class="main-nav__link" title="Supply">
+                                            <span class="main-nav__link-text">Supply</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/careers/information-technology/" class="main-nav__link" title="Information Technology">
+                                            <span class="main-nav__link-text">Information Technology</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/careers/human-resources/" class="main-nav__link" title="Human Resources">
+                                            <span class="main-nav__link-text">Human Resources</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="main-nav__item">
+
+                            <svg class="main-nav__item-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+
+                        <a href="/investors/" class="main-nav__link" title="Investors">
+                            <span class="main-nav__link-text">Investors</span>
+                        </a>
+
+                            <ul class="main-nav__sub">
+
+                                <li class="main-nav__item">
+                                    <a href="/investors/" class="main-nav__link" title="Investors">
+                                        <span class="main-nav__link-text">Investors</span>
+                                    </a>
+                                </li>
+
+                                    <li class="main-nav__item">
+                                        <a href="/investors/investor-information/" class="main-nav__link" title="Investor information">
+                                            <span class="main-nav__link-text">Investor information</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/your-shareholding/" class="main-nav__link" title="Your shareholding">
+                                            <span class="main-nav__link-text">Your shareholding</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/agm/" class="main-nav__link" title="AGM">
+                                            <span class="main-nav__link-text">AGM</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/adr-information/" class="main-nav__link" title="ADR Information">
+                                            <span class="main-nav__link-text">ADR Information</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/dividend-information/" class="main-nav__link" title="Dividend information">
+                                            <span class="main-nav__link-text">Dividend information</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/debt-investors/" class="main-nav__link" title="Debt investors">
+                                            <span class="main-nav__link-text">Debt investors</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/share-price-calculator/" class="main-nav__link" title="Share price calculator">
+                                            <span class="main-nav__link-text">Share price calculator</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/historical-share-price/" class="main-nav__link" title="Historical share price">
+                                            <span class="main-nav__link-text">Historical share price</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/detailed-share-price/" class="main-nav__link" title="Detailed share price">
+                                            <span class="main-nav__link-text">Detailed share price</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/the-board/" class="main-nav__link" title="The Board">
+                                            <span class="main-nav__link-text">The Board</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/corporate-governance/" class="main-nav__link" title="Corporate governance">
+                                            <span class="main-nav__link-text">Corporate governance</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/dividend-payments/" class="main-nav__link" title="Dividend Payments">
+                                            <span class="main-nav__link-text">Dividend Payments</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/investors/annual-report-2018/" class="main-nav__link" title="Annual report 2018">
+                                            <span class="main-nav__link-text">Annual report 2018</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="main-nav__item">
+
+                            <svg class="main-nav__item-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+
+                        <a href="/responsibility/" class="main-nav__link" title="Responsibility">
+                            <span class="main-nav__link-text">Responsibility</span>
+                        </a>
+
+                            <ul class="main-nav__sub">
+
+                                <li class="main-nav__item">
+                                    <a href="/responsibility/" class="main-nav__link" title="Responsibility">
+                                        <span class="main-nav__link-text">Responsibility</span>
+                                    </a>
+                                </li>
+
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/ethical-business/" class="main-nav__link" title="Ethical business">
+                                            <span class="main-nav__link-text">Ethical business</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/people-and-culture/" class="main-nav__link" title="People and culture">
+                                            <span class="main-nav__link-text">People and culture</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/health-and-safety/" class="main-nav__link" title="Health and safety">
+                                            <span class="main-nav__link-text">Health and safety</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/social-impact-investment/" class="main-nav__link" title="Social impact investment">
+                                            <span class="main-nav__link-text">Social impact investment</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/infant-and-child-nutrition/" class="main-nav__link" title="Infant and child nutrition">
+                                            <span class="main-nav__link-text">Infant and child nutrition</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/sustainable-innovation/" class="main-nav__link" title="Sustainable innovation">
+                                            <span class="main-nav__link-text">Sustainable innovation</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/product-safety-and-stewardship/" class="main-nav__link" title="Product safety and stewardship">
+                                            <span class="main-nav__link-text">Product safety and stewardship</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/humidifier-sanitizer/" class="main-nav__link" title="Humidifier Sanitizer">
+                                            <span class="main-nav__link-text">Humidifier Sanitizer</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/human-rights-and-responsible-supply-chain/" class="main-nav__link" title="Human rights and responsible supply chain">
+                                            <span class="main-nav__link-text">Human rights and responsible supply chain</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/climate-change/" class="main-nav__link" title="Climate change">
+                                            <span class="main-nav__link-text">Climate change</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/plastics-packaging-and-waste/" class="main-nav__link" title="Plastics, packaging and waste">
+                                            <span class="main-nav__link-text">Plastics, packaging and waste</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/water/" class="main-nav__link" title="Water">
+                                            <span class="main-nav__link-text">Water</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/responsible-sourcing/" class="main-nav__link" title="Responsible sourcing">
+                                            <span class="main-nav__link-text">Responsible sourcing</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/recognition-and-partnerships/" class="main-nav__link" title="Recognition and partnerships">
+                                            <span class="main-nav__link-text">Recognition and partnerships</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/policies-and-reports/" class="main-nav__link" title="Policies and reports">
+                                            <span class="main-nav__link-text">Policies and reports</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/responsibility/insights/" class="main-nav__link" title="Insights">
+                                            <span class="main-nav__link-text">Insights</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="main-nav__item">
+
+                            <svg class="main-nav__item-icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-plus"></use></svg>
+
+                        <a href="/innovation/" class="main-nav__link" title="Innovation">
+                            <span class="main-nav__link-text">Innovation</span>
+                        </a>
+
+                            <ul class="main-nav__sub">
+
+                                <li class="main-nav__item">
+                                    <a href="/innovation/" class="main-nav__link" title="Innovation">
+                                        <span class="main-nav__link-text">Innovation</span>
+                                    </a>
+                                </li>
+
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/health-innovation/" class="main-nav__link" title="Health Innovation">
+                                            <span class="main-nav__link-text">Health Innovation</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/hygiene-home-innovation/" class="main-nav__link" title="Hygiene Home Innovation">
+                                            <span class="main-nav__link-text">Hygiene Home Innovation</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/scale-your-business/" class="main-nav__link" title="Scale your business">
+                                            <span class="main-nav__link-text">Scale your business</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/innovation-labs/" class="main-nav__link" title="Innovation Labs">
+                                            <span class="main-nav__link-text">Innovation Labs</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/our-innovation-focus/" class="main-nav__link" title="Our innovation focus">
+                                            <span class="main-nav__link-text">Our innovation focus</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/partner-with-us/" class="main-nav__link" title="Partner with us">
+                                            <span class="main-nav__link-text">Partner with us</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/submit-an-idea/" class="main-nav__link" title="Submit an idea">
+                                            <span class="main-nav__link-text">Submit an idea</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/the-future-consumer/" class="main-nav__link" title="The Future Consumer">
+                                            <span class="main-nav__link-text">The Future Consumer</span>
+                                        </a>
+                                    </li>
+                                    <li class="main-nav__item">
+                                        <a href="/innovation/the-future-is-self-care/" class="main-nav__link" title="The future of self-care">
+                                            <span class="main-nav__link-text">The future of self-care</span>
+                                        </a>
+                                    </li>
+                            </ul>
+                    </li>
+                    <li class="main-nav__item">
+
+
+                        <a href="/media/" class="main-nav__link" title="Media">
+                            <span class="main-nav__link-text">Media</span>
+                        </a>
+
+                    </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="header header--regular">
+
+            <picture>
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source srcset="/media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=2000&amp;height=1000&amp;rnd=131922174050000000, /media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=4000&amp;height=2000&amp;rnd=131922174050000000 2x" media="(min-width: 1441px)">
+        <source srcset="/media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=1440&amp;height=800&amp;rnd=131922174050000000, /media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=2880&amp;height=1600&amp;rnd=131922174050000000 2x" media="(min-width: 1281px)">
+        <source srcset="/media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=1280&amp;height=950&amp;rnd=131922174050000000, /media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=2560&amp;height=1900&amp;rnd=131922174050000000 2x" media="(min-width: 768px)">
+        <source srcset="/media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=767&amp;height=670&amp;rnd=131922174050000000, /media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=1534&amp;height=1340&amp;rnd=131922174050000000 2x" media="(min-width: 461px)">
+        <source srcset="/media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=460&amp;height=600&amp;rnd=131922174050000000, /media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=920&amp;height=1200&amp;rnd=131922174050000000 2x" media="(max-width: 460px)">
+        <!--[if IE 9]></video><![endif]-->
+        <img class="header__picture" srcset="/media/2976/investors_information.jpg?anchor=center&amp;mode=crop&amp;width=768&amp;height=432&amp;rnd=131922174050000000" alt="">
+    </picture>
+
+
+        <div class="header__wrapper wrapper">
+            <div class="header__content">
+                <h1 class="header__title">
+                    <span class="header__section-title"></span>
+                    Investor information 
+                </h1>
+                <div class="breadcrumb">
+    <div class="breadcrumb-container">
+                <a href="/" title="Home">Home</a><span> &gt; </span>
+                <a href="/investors/" title="Investors">Investors</a><span> &gt; </span>
+                <a href="/investors/investor-information/" title="Investor information">Investor information</a><span> &gt; </span>
+    </div>
+</div>
+
+            </div>
+        </div>
+
+        
+    </header>
+
+
+    <div class="umb-grid">
+                <div class="grid-section">
+    <div >
+        <div class="row clearfix clear-row">
+                <div class="col-md-12 column clear-column sections0rows0areas0 sections-column">
+                    <div >
+<div class='top_copy'>                                    
+
+
+<section class="media-news">
+    <div class="wrapper">
+        <header class="media-news__header">
+            <h2 class="media-news__header-title">Investors&#39; news</h2>
+            <p class="media-news__header-subtitle">The latest company updates, financial results, investor calendar and presentations.</p>
+        </header>
+
+        <div class="media-search-bar media-search-bar--investor">
+            
+
+<form id="media-search-form" action="/umbraco/Api/LoadMore/GetNewsFiltered" method="get">
+    <input name="docId" type="hidden" value="12512" />
+    <input name="page" type="hidden" value="0" />
+    <input name="items" type="hidden" value="6" />
+            <input name="moduleTags" type="hidden" value="23062" />
+    <div class="media-search-bar__form-field-wrapper media-search-bar__form-field-wrapper--keyword">
+        <input class="media-search-bar__form-field media-search-bar__form-field--keyword" type="text" name="phrase" placeholder="Keyword search...">
+    </div>
+    <div class="media-search-bar__form-field-wrapper media-search-bar__form-field-wrapper--filters js-open-filters">
+        <input class="media-search-bar__form-field media-search-bar__form-field--filters" type="text" placeholder="Filter options" readonly>
+    </div>
+    <div class="media-search-bar__filters">
+        <div class="media-search-bar__filters-btn-wrapper">
+            <button class="media-search-bar__filters-close js-close-filters">Close</button>
+        </div>
+        <div class="media-search-bar__filters-btn-wrapper">
+            <button class="media-search-bar__clear-all--mobile js-clear-all-filters">Clear all</button>
+        </div>
+        <div class="media-search-bar__filter media-search-bar__filter-year">
+            <label class="media-search-bar__filter-label">By year</label>
+            <input type="text" class="media-search-bar__filter-value media-search-bar__filter-value--year js-filter-dropdown" placeholder="By year" readonly />
+            <div class="media-search-bar__dropdown">
+                <ul>
+                        <li>
+                            <input name="year" id="year_2019" type="radio" value="2019" />
+                            <label class="media-search-bar__dropdown-label" for="year_2019">2019</label>
+                        </li>
+                        <li>
+                            <input name="year" id="year_2018" type="radio" value="2018" />
+                            <label class="media-search-bar__dropdown-label" for="year_2018">2018</label>
+                        </li>
+                        <li>
+                            <input name="year" id="year_2017" type="radio" value="2017" />
+                            <label class="media-search-bar__dropdown-label" for="year_2017">2017</label>
+                        </li>
+                        <li>
+                            <input name="year" id="year_2016" type="radio" value="2016" />
+                            <label class="media-search-bar__dropdown-label" for="year_2016">2016</label>
+                        </li>
+                        <li>
+                            <input name="year" id="year_2015" type="radio" value="2015" />
+                            <label class="media-search-bar__dropdown-label" for="year_2015">2015</label>
+                        </li>
+                        <li>
+                            <input name="year" id="year_2014" type="radio" value="2014" />
+                            <label class="media-search-bar__dropdown-label" for="year_2014">2014</label>
+                        </li>
+                        <li>
+                            <input name="year" id="year_2013" type="radio" value="2013" />
+                            <label class="media-search-bar__dropdown-label" for="year_2013">2013</label>
+                        </li>
+                        <li>
+                            <input name="year" id="year_2012" type="radio" value="2012" />
+                            <label class="media-search-bar__dropdown-label" for="year_2012">2012</label>
+                        </li>
+                        <li>
+                            <input name="year" id="year_2011" type="radio" value="2011" />
+                            <label class="media-search-bar__dropdown-label" for="year_2011">2011</label>
+                        </li>
+                    <li>
+                        <button class="media-search-bar__dropdown-clear js-clear-filter">Clear</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="media-search-bar__filter media-search-bar__filter-month">
+            <label class="media-search-bar__filter-label">By month</label>
+            <input type="text" class="media-search-bar__filter-value media-search-bar__filter-value--month js-filter-dropdown" placeholder="By month" readonly disabled/>
+            <div class="media-search-bar__dropdown">
+                <ul>
+                        <li>
+                            <input name="month" id="month_1" type="radio" value="1" />
+                            <label class="media-search-bar__dropdown-label" for="month_1">January</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_2" type="radio" value="2" />
+                            <label class="media-search-bar__dropdown-label" for="month_2">February</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_3" type="radio" value="3" />
+                            <label class="media-search-bar__dropdown-label" for="month_3">March</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_4" type="radio" value="4" />
+                            <label class="media-search-bar__dropdown-label" for="month_4">April</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_5" type="radio" value="5" />
+                            <label class="media-search-bar__dropdown-label" for="month_5">May</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_6" type="radio" value="6" />
+                            <label class="media-search-bar__dropdown-label" for="month_6">June</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_7" type="radio" value="7" />
+                            <label class="media-search-bar__dropdown-label" for="month_7">July</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_8" type="radio" value="8" />
+                            <label class="media-search-bar__dropdown-label" for="month_8">August</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_9" type="radio" value="9" />
+                            <label class="media-search-bar__dropdown-label" for="month_9">September</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_10" type="radio" value="10" />
+                            <label class="media-search-bar__dropdown-label" for="month_10">October</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_11" type="radio" value="11" />
+                            <label class="media-search-bar__dropdown-label" for="month_11">November</label>
+                        </li>
+                        <li>
+                            <input name="month" id="month_12" type="radio" value="12" />
+                            <label class="media-search-bar__dropdown-label" for="month_12">December</label>
+                        </li>
+                    <li>
+                        <button class="media-search-bar__dropdown-clear js-clear-filter">Clear</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+                    <input name="tags" id="module-tag_23062" type="hidden" value="23062" />
+            <button class="media-search-bar__filters-apply button button--cta js-apply-filters">Apply</button>
+    </div>
+    <div class="media-search-bar__buttons">
+        <button class="media-search-bar__submit button button--cta js-media-search-submit">Search</button>
+        <button class="media-search-bar__clear-all js-clear-all-filters">Clear all</button>
+    </div>
+</form>
+
+
+        </div>
+
+        <div class="results">
+            <ul class="results__list">
+                    <li class="results__list-item news-item news-item--investor">
+                        <a href="/media/news/2019/october/q3-results/" class="news-item__link">
+                            <div class="news-item__image-container">
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="/media/1522/istock_000082525353_large.jpg?center=0.535,0.7533333333333333&amp;mode=crop&amp;width=297&amp;height=200&amp;rnd=131932429390000000">
+                                        <img class="news-item__image" src="/media/1522/istock_000082525353_large.jpg?center=0.535,0.7533333333333333&amp;mode=crop&amp;width=150&amp;height=400&amp;rnd=131932429390000000" alt="" />
+                                    </picture>
+                            </div>
+                            <div class="news-item__content">
+                                <p class="news-item__date">22 Oct 2019</p>
+                                <h3 class="news-item__title">Q3 Results</h3>
+                                <p class="news-item__description">Slow Q3. Building RB for the long term.</p>
+                            </div>
+                        </a>
+                        <footer class="news-item__footer">
+                            <div class="news-item__categories">
+                                <ul class="news-item__categories-list">
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4685/q3-ims-2019.pdf" target="_blank" title="IMS">IMS</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4684/rb-infographic-q3-results-2019.pdf" target="_blank" title="Infographic">Infographic</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4681/rb-q3-2019-consensus.pdf" target="_blank" title="Consensus">Consensus</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4680/q3-2019-invitation-to-audiocast.pdf" target="_blank" title="Invitation">Invitation</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--external" href="https://edge.media-server.com/mmc/p/r3epkowq" target="_blank" title="Link to webcast">Link to webcast</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4660/p9-spot-currency-page.pdf" target="_blank" title="P9 Spot Currency Page">P9 Spot Currency Page</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </li>
+                    <li class="results__list-item news-item news-item--investor">
+                        <a href="/media/news/2019/october/rb-announces-retirement-of-adrian-hennah/" class="news-item__link">
+                            <div class="news-item__image-container">
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="/media/1531/media_landing_v2.jpg?center=0.75,0.50666666666666671&amp;mode=crop&amp;width=297&amp;height=200&amp;rnd=131964440890000000">
+                                        <img class="news-item__image" src="/media/1531/media_landing_v2.jpg?center=0.75,0.50666666666666671&amp;mode=crop&amp;width=150&amp;height=400&amp;rnd=131964440890000000" alt="" />
+                                    </picture>
+                            </div>
+                            <div class="news-item__content">
+                                <p class="news-item__date">21 Oct 2019</p>
+                                <h3 class="news-item__title">RB announces retirement of Adrian Hennah. He will be succeeded by Jeff Carr as Chief Financial Officer.</h3>
+                                <p class="news-item__description">RB today announces the appointment of Jeff Carr as Chief Financial Officer and Executive Director to succeed Adrian Hennah, who will be retiring.</p>
+                            </div>
+                        </a>
+                        <footer class="news-item__footer">
+                            <div class="news-item__categories">
+                                <ul class="news-item__categories-list">
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4683/rb-announces-retirement-of-adrian-hennah.pdf" target="_blank" title="Press release">Press release</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </li>
+                    <li class="results__list-item news-item news-item--investor">
+                        <a href="/media/news/2019/august/rb-partners-with-founders-factory-as-exclusive-hygiene-and-home-investor/" class="news-item__link">
+                            <div class="news-item__image-container">
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="/media/4571/founders-factory-header.jpg?anchor=center&amp;mode=crop&amp;width=297&amp;height=200&amp;rnd=132094677800000000">
+                                        <img class="news-item__image" src="/media/4571/founders-factory-header.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=400&amp;rnd=132094677800000000" alt="" />
+                                    </picture>
+                            </div>
+                            <div class="news-item__content">
+                                <p class="news-item__date">05 Aug 2019</p>
+                                <h3 class="news-item__title">RB partners with Founders Factory as exclusive Hygiene and Home investor</h3>
+                                <p class="news-item__description">RB and Founders Factory launch Founders Factory Hygiene and Home, a joint venture to discover and develop disruptive start-ups to transform well-being in the home and create a cleaner world for future generations.</p>
+                            </div>
+                        </a>
+                        <footer class="news-item__footer">
+                            <div class="news-item__categories">
+                                <ul class="news-item__categories-list">
+                                </ul>
+                            </div>
+                        </footer>
+                    </li>
+                    <li class="results__list-item news-item news-item--investor">
+                        <a href="/media/news/2019/august/rb-announces-strategic-investment-in-your-md-to-help-unlock-self-care/" class="news-item__link">
+                            <div class="news-item__image-container">
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="/media/4572/man-tracking-exercise.jpg?anchor=center&amp;mode=crop&amp;width=297&amp;height=200&amp;rnd=132094679940000000">
+                                        <img class="news-item__image" src="/media/4572/man-tracking-exercise.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=400&amp;rnd=132094679940000000" alt="" />
+                                    </picture>
+                            </div>
+                            <div class="news-item__content">
+                                <p class="news-item__date">02 Aug 2019</p>
+                                <h3 class="news-item__title">RB announces strategic investment in Your.MD to help unlock self-care </h3>
+                                <p class="news-item__description">RB announces partnership with Your.MD to bring free, intelligent and smart self-care solutions to everyone in the world.</p>
+                            </div>
+                        </a>
+                        <footer class="news-item__footer">
+                            <div class="news-item__categories">
+                                <ul class="news-item__categories-list">
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4566/press-release-rb-announces-strategic-investment-in-your-md-to-help-unlock-self-care-2-august-2019.pdf" target="_blank" title="Press release">Press release</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </li>
+                    <li class="results__list-item news-item news-item--investor">
+                        <a href="/media/news/2019/july/hy-results/" class="news-item__link">
+                            <div class="news-item__image-container">
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="/media/1531/media_landing_v2.jpg?center=0.75,0.50666666666666671&amp;mode=crop&amp;width=297&amp;height=200&amp;rnd=131964440890000000">
+                                        <img class="news-item__image" src="/media/1531/media_landing_v2.jpg?center=0.75,0.50666666666666671&amp;mode=crop&amp;width=150&amp;height=400&amp;rnd=131964440890000000" alt="" />
+                                    </picture>
+                            </div>
+                            <div class="news-item__content">
+                                <p class="news-item__date">30 Jul 2019</p>
+                                <h3 class="news-item__title">HY Results</h3>
+                                <p class="news-item__description">Flat Q2. Stronger H2 expected. Full Year net revenue target revised.</p>
+                            </div>
+                        </a>
+                        <footer class="news-item__footer">
+                            <div class="news-item__categories">
+                                <ul class="news-item__categories-list">
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4556/hy19-press-release-final.pdf" target="_blank" title="Press release">Press release</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4558/19262_rb-hy19-results-zmot-final.pdf" target="_blank" title="Infographic">Infographic</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4559/rb-half-year-2019-results-presentation.pdf" target="_blank" title="Presentation">Presentation</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4550/rb-consensus-hy19.pdf" target="_blank" title="Consensus">Consensus</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4548/rb-q2-2019-results-invitation-to-audio-webcast.pdf" target="_blank" title="Invitation">Invitation</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--external" href="https://edge.media-server.com/mmc/p/2ot28gai" target="_blank" title="Link to webcast">Link to webcast</a>
+                                        </li>
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4536/p6-spot-currency-page.pdf" target="_blank" title="P6 Spot Currency Page">P6 Spot Currency Page</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </li>
+                    <li class="results__list-item news-item news-item--investor">
+                        <a href="/media/news/2019/july/rb-reaches-settlement-to-fully-resolve-all-federal-investigations/" class="news-item__link">
+                            <div class="news-item__image-container">
+                                    <picture>
+                                        <source media="(min-width: 768px)" srcset="/media/2977/investors_agm.jpg?anchor=center&amp;mode=crop&amp;width=297&amp;height=200&amp;rnd=131922174050000000">
+                                        <img class="news-item__image" src="/media/2977/investors_agm.jpg?anchor=center&amp;mode=crop&amp;width=150&amp;height=400&amp;rnd=131922174050000000" alt="" />
+                                    </picture>
+                            </div>
+                            <div class="news-item__content">
+                                <p class="news-item__date">11 Jul 2019</p>
+                                <h3 class="news-item__title">RB reaches settlement to fully resolve all federal investigations</h3>
+                                <p class="news-item__description">RB today announced it has reached agreements with the U.S. Department of Justice (DOJ) and the Federal Trade Commission (FTC)</p>
+                            </div>
+                        </a>
+                        <footer class="news-item__footer">
+                            <div class="news-item__categories">
+                                <ul class="news-item__categories-list">
+                                        <li class="news-item__categories-item">
+                                            <a class="news-item__categories-link news-item__categories-link--pdf" href="/media/4542/19-07-11doj-settlement.pdf" target="_blank" title="Press release">Press release</a>
+                                        </li>
+                                </ul>
+                            </div>
+                        </footer>
+                    </li>
+            </ul>
+        </div>
+
+        <a class="button button--cta js-load-more " href="#">
+            Show More
+        </a>
+    </div>
+</section>
+
+<script id="investorsNewsItemTemplate" type="x-tmpl-mustache">
+    {{#noResults}}
+      <div class="news__no-results">
+          <h3 class="news-item__title">No Results</h3>
+      </div>
+    {{/noResults}}
+    {{#NewsItems}}
+    <li class="results__list-item news-item news-item--investor">
+        <a href="{{Url}}" class="news-item__link">
+            <div class="news-item__image-container">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="{{Image.Urls.0}}">
+                    <img class="news-item__image" src="{{Image.Urls.1}}" alt="" />
+                </picture>
+            </div>
+            <div class="news-item__content">
+                <p class="news-item__date">{{Date}}</p>
+                <h3 class="news-item__title">{{Title}}</h3>
+                <p class="news-item__description">{{Summary}} </p>
+            </div>
+        </a>
+        <footer class="news-item__footer">
+            <div class="news-item__categories">
+                <ul class="news-item__categories-list">
+                {{#Links}}
+                  <li class="news-item__categories-item">
+                    <a class="news-item__categories-link {{IconClass}}" href="{{Url}}" title="{{Name}}" target="{{Target}}">{{Name}}</a>
+                  </li>
+                {{/Links}}
+                </ul>
+            </div>
+        </footer>
+    </li>
+    {{/NewsItems}}
+</script>
+
+
+</div>                                    
+        
+               
+        <div class="iframe-container copy--white">
+            <div class="wrapper">
+                <div class="copy_content">
+                    
+                </div>
+                <h2 class="copy__title">
+                    RNS announcements
+                </h2>
+                <iframe src="https://otp.tools.investis.com/clients/uk/reckitt_benckiser_group/rns/regulatory-news.aspx?culture=en-GB" width="100%"></iframe>
+            </div>
+        </div>                 
+
+
+        
+
+
+
+
+                                    
+        
+               
+        <div class="reports copy--blue-gradient">
+            <div class="news__wrapper wrapper">
+                <h2 class="news__header">Annual reports</h2>
+                <div class="copy__content"></div>
+            </div>
+
+            <div class="reports__wrapper wrapper js-annual-reports-carousel">
+
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2005</h3>
+
+                            <a href="/media/1447/annual-report-and-accounts-2005.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1445/annual-report-2005-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1445/annual-report-2005-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1445/annual-report-2005-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1445/annual-report-2005-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1445/annual-report-2005-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1445/annual-report-2005-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1445/annual-report-2005-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1447/annual-report-and-accounts-2005.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2006</h3>
+
+                            <a href="/media/1452/annual-report-and-accounts-2006.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1444/annual-report-2006-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1444/annual-report-2006-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1444/annual-report-2006-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1444/annual-report-2006-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1444/annual-report-2006-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1444/annual-report-2006-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1444/annual-report-2006-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1452/annual-report-and-accounts-2006.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2007</h3>
+
+                            <a href="/media/1449/rb-annual-report-2007.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1446/annual-report-2007-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1446/annual-report-2007-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1446/annual-report-2007-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1446/annual-report-2007-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1446/annual-report-2007-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1446/annual-report-2007-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1446/annual-report-2007-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1449/rb-annual-report-2007.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2008</h3>
+
+                            <a href="/media/1451/rb-annual-report-2008.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1443/annual-report-2008-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1443/annual-report-2008-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1443/annual-report-2008-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1443/annual-report-2008-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1443/annual-report-2008-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1443/annual-report-2008-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1443/annual-report-2008-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1451/rb-annual-report-2008.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2009</h3>
+
+                            <a href="/media/1450/annual-report-and-accounts-2009.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1442/annual-report-2009-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1442/annual-report-2009-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1442/annual-report-2009-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1442/annual-report-2009-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1442/annual-report-2009-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1442/annual-report-2009-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1442/annual-report-2009-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1450/annual-report-and-accounts-2009.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2010</h3>
+
+                            <a href="/media/1448/rb-annual-report-2010.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1441/annual-report-2010-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1441/annual-report-2010-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1441/annual-report-2010-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1441/annual-report-2010-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1441/annual-report-2010-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1441/annual-report-2010-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1441/annual-report-2010-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1448/rb-annual-report-2010.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2011</h3>
+
+                            <a href="/media/1453/rb-annual-report-2011.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1440/annual-report-2011-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1440/annual-report-2011-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1440/annual-report-2011-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1440/annual-report-2011-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1440/annual-report-2011-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1440/annual-report-2011-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1440/annual-report-2011-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1453/rb-annual-report-2011.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2012</h3>
+
+                            <a href="/media/1454/rb-annual-report-2012.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1439/annual-report-2012-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1439/annual-report-2012-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1439/annual-report-2012-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1439/annual-report-2012-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1439/annual-report-2012-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1439/annual-report-2012-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1439/annual-report-2012-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1454/rb-annual-report-2012.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2013</h3>
+
+                            <a href="/media/1455/rb-annual-report-2013.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1438/annual-report-2013-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000, /media/1438/annual-report-2013-cover.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130996592720000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1438/annual-report-2013-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1438/annual-report-2013-cover.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130996592720000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1438/annual-report-2013-cover.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130996592720000000, /media/1438/annual-report-2013-cover.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130996592720000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1438/annual-report-2013-cover.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130996592720000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/1455/rb-annual-report-2013.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2014</h3>
+
+                            <a href="/media/992/rb-annual-report-2014.pdf" target="_blank" title="PDF">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1284/cover-img.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130992982100000000, /media/1284/cover-img.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=130992982100000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1284/cover-img.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130992982100000000, /media/1284/cover-img.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=130992982100000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1284/cover-img.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=130992982100000000, /media/1284/cover-img.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=130992982100000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1284/cover-img.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=130992982100000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="/media/992/rb-annual-report-2014.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2015</h3>
+
+                            <a href="http://annualreport2015.rb.com/" target="_blank" title="Online Report">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/1603/annual-report-cover2.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=131042362750000000, /media/1603/annual-report-cover2.jpg?mode=max&amp;width=3840&amp;height=2160&amp;rnd=131042362750000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/1603/annual-report-cover2.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=131042362750000000, /media/1603/annual-report-cover2.jpg?mode=max&amp;width=2880&amp;height=1620&amp;rnd=131042362750000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/1603/annual-report-cover2.jpg?mode=max&amp;width=1440&amp;height=810&amp;rnd=131042362750000000, /media/1603/annual-report-cover2.jpg?mode=max&amp;width=2560&amp;height=1440&amp;rnd=131042362750000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/1603/annual-report-cover2.jpg?mode=max&amp;width=768&amp;height=432&amp;rnd=131042362750000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="http://annualreport2015.rb.com/" target="_blank" class="reports-item__link" title="Online Report">
+                                                <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right-bottom"></use></svg>
+<span class="reports-item__link-text">Online Report</span>
+                                    </a>
+                                    <a href="/media/1598/rb-annual-report-2015_final.pdf" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2016</h3>
+
+                            <a href="http://annualreport2016.rb.com/" target="_blank" title="Online report">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/2471/rb-annual-report.png?mode=max&amp;width=3840&amp;height=2160&amp;rnd=131354259660000000, /media/2471/rb-annual-report.png?mode=max&amp;width=3840&amp;height=2160&amp;rnd=131354259660000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/2471/rb-annual-report.png?mode=max&amp;width=1440&amp;height=810&amp;rnd=131354259660000000, /media/2471/rb-annual-report.png?mode=max&amp;width=2880&amp;height=1620&amp;rnd=131354259660000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/2471/rb-annual-report.png?mode=max&amp;width=1440&amp;height=810&amp;rnd=131354259660000000, /media/2471/rb-annual-report.png?mode=max&amp;width=2560&amp;height=1440&amp;rnd=131354259660000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/2471/rb-annual-report.png?mode=max&amp;width=768&amp;height=432&amp;rnd=131354259660000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="http://annualreport2016.rb.com/" target="_blank" class="reports-item__link" title="Online report">
+                                                <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right-bottom"></use></svg>
+<span class="reports-item__link-text">Online report</span>
+                                    </a>
+                                    <a href="/media/2473/rb-annual-report-2016-no-spine.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+                    <div class="reports-item">
+                        <h3 class="reports-item__title">2017</h3>
+
+                            <a href="http://annualreport2017.rb.com/" target="_blank" title="Online report">
+                                        <picture class="">
+            <!--[if IE 9]><video style="display: none;"><![endif]-->
+            <source srcset="/media/3359/annual-report-image.png?mode=max&amp;width=3840&amp;height=2160&amp;rnd=131667272610000000, /media/3359/annual-report-image.png?mode=max&amp;width=3840&amp;height=2160&amp;rnd=131667272610000000 2x" media="(min-width: 1441px)">
+            <source srcset="/media/3359/annual-report-image.png?mode=max&amp;width=1440&amp;height=810&amp;rnd=131667272610000000, /media/3359/annual-report-image.png?mode=max&amp;width=2880&amp;height=1620&amp;rnd=131667272610000000 2x" media="(min-width: 1281px)">
+            <source srcset="/media/3359/annual-report-image.png?mode=max&amp;width=1440&amp;height=810&amp;rnd=131667272610000000, /media/3359/annual-report-image.png?mode=max&amp;width=2560&amp;height=1440&amp;rnd=131667272610000000 2x" media="(min-width: 768px)">
+            <!--[if IE 9]></video><![endif]-->
+            <img srcset="/media/3359/annual-report-image.png?mode=max&amp;width=768&amp;height=432&amp;rnd=131667272610000000" alt="" class="reports-item__thumbnail">
+        </picture>
+
+                            </a>
+
+                            <div class="reports-item__link-wrapper">
+                                    <a href="http://annualreport2017.rb.com/" target="_blank" class="reports-item__link" title="Online report">
+                                                <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-arrow-right-bottom"></use></svg>
+<span class="reports-item__link-text">Online report</span>
+                                    </a>
+                                    <a href="/media/3355/rb-annual-report-2017.pdf" target="_blank" class="reports-item__link" title="PDF">
+                                                    <svg width="16" height="16"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-file"></use></svg>
+<span class="reports-item__link-text">PDF</span>
+                                    </a>
+                            </div>
+                    </div>
+            </div>
+        </div>
+
+
+        
+
+
+
+
+                                    
+        
+               
+        <div class="copy copy--blue">
+            <div class="wrapper">
+                <h2 class="copy__title">Calendar</h2>
+                <div class="copy__content">
+                    <p>See our upcoming events for investors</p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+
+
+
+                                    
+        
+               
+        <div class="timeline copy--blue">
+            <div class="wrapper timeline__wrapper">
+                <div class="timeline-carousel js-timeline-carousel">
+                        <div class="timeline__item">
+                            <h3 class="timeline__title">22 October 2019</h3>
+
+                            <div class="timeline__content copy__content">
+                                <p>Q3 IMS</p>
+                            </div>
+
+                        </div>
+                        <div class="timeline__item">
+                            <h3 class="timeline__title">27 February 2020</h3>
+
+                            <div class="timeline__content copy__content">
+                                <p>Full year results</p>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+
+
+
+                                    
+        
+               
+        <div class="copy copy--pink">
+            <div class="wrapper">
+                <h2 class="copy__title">Contact us</h2>
+                <div class="copy__content">
+                    <p><strong>Investor enquirers: </strong></p>
+<p>Richard Joyce +44 (0) 1753 217800</p>
+<p><a href="mailto:IR@rb.com" target="_blank">IR@rb.com</a></p>
+<p><strong>Company Secretary:</strong></p>
+<p>Rupert Bondy +44 (0) 1753 217800</p>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+
+
+
+                    </div>
+                </div>        </div>
+    </div>
+                </div>
+    </div>
+
+
+        <footer class="footer">
+            <div class="wrapper">
+
+                <div class="footer__back-link-container">
+                    <a href="#" class="button button--invert button--big" title="Back to top">Back to top</a>
+                </div>
+
+                        <div id="footer_more">
+                            <h2 class="footer__header">More From Investors</h2>
+                            <div class="row footer__row">
+                                            <ul class="col-sm-4 footer__links">
+
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/your-shareholding/" class="footer__link" title="Your shareholding">Your shareholding</a>
+                                                        </li>
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/share-price-calculator/" class="footer__link" title="Share price calculator">Share price calculator</a>
+                                                        </li>
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/debt-investors/" class="footer__link" title="Bonds">Bonds</a>
+                                                        </li>
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/dividend-information/" class="footer__link" title="Dividend information">Dividend information</a>
+                                                        </li>
+                                            </ul>
+                                            <ul class="col-sm-4 footer__links">
+
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/historical-share-price/" class="footer__link" title="Historical share price">Historical share price</a>
+                                                        </li>
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/agm/" class="footer__link" title="AGM">AGM</a>
+                                                        </li>
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/detailed-share-price/" class="footer__link" title="Detailed share price">Detailed share price</a>
+                                                        </li>
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/adr-information/" class="footer__link" title="ADR">ADR</a>
+                                                        </li>
+                                            </ul>
+                                            <ul class="col-sm-4 footer__links">
+
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/corporate-governance/" class="footer__link" title="Corporate governance">Corporate governance</a>
+                                                        </li>
+                                                        <li class="footer__links-item">
+                                                            <a href="/investors/debt-investors/" class="footer__link" title="Debt Investors">Debt Investors</a>
+                                                        </li>
+                                            </ul>
+
+                            </div>
+                        </div>
+
+                        <h2 class="footer__header">Recommended For You</h2>
+                        <div class="row footer__row">
+
+                            <div class="col-sm-5">
+                            </div>
+                        </div>
+                <div class="footer__content">
+                    <p><span>Please read our </span><a href="/terms-and-conditions/" title="Terms and Conditions" onclick="_gaq.push(['_trackEvent', 'Discover RB - Home - RB', 'Outbound Link', 'legal terms and conditions - general.aspx?pageid=7']);" data-id="13103">legal terms and conditions</a><span> and </span><a href="/privacy-policy/" title="Privacy Policy" onclick="_gaq.push(['_trackEvent', 'Discover RB - Home - RB', 'Outbound Link', 'privacy statement - general.aspx?pageid=8']);" data-id="13104">privacy statement</a><span>. © Copyright Reckitt Benckiser Group plc. All rights reserved</span></p>
+<p> </p>
+<p><span>Reckitt Benckiser Group plc  |  Registered office at 103 - 105 Bath Road, Slough, Berkshire, SL1 3UH  |  Registered in England &amp; Wales, No 6270876</span></p>
+                </div>
+            </div>
+            <div class="footer__share">
+                <ul class="wrapper">
+                    <li class="col-xs-4 footer__share-item">
+                        <a href="#" class="footer__share-link js-open-share-overlay">
+                            <svg width="47" height="47" class="footer__share-image">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-share"></use>
+                            </svg>
+                            Share
+                        </a>
+                    </li>
+
+                    <li class="col-xs-4 footer__share-item">
+                            <a href="/about-us/contact/" class="footer__share-link">
+                                <svg width="47" height="47" class="footer__share-image">
+                                    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-contact"></use>
+                                </svg>
+                                Contact
+                            </a>
+                    </li>
+
+                    <li class="col-xs-4 footer__share-item">
+                        <a href="#" class="footer__share-link js-open-follow-overlay">
+                            <svg width="47" height="47" class="footer__share-image">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-followrb"></use>
+                            </svg>
+                            Follow RB
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+    <script type="text/template" class="js-share-overlay">
+    <section class="overlay overlay--share" style="display: block;">
+        <a href="#" title="Close" class="overlay__close js-overlay-close">
+            <svg class="overlay__close-image" width="50" height="50">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-corner-close"></use>
+            </svg>
+        </a>
+        <div class="wrapper">
+            <h2 class="overlay__title">Share</h2>
+            <div class="overlay__content">
+                
+            </div>
+            <div class="overlay__links"> 
+                     <a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fwww.rb.com%2finvestors%2finvestor-information%2f" title="Facebook" target="_blank"  class="overlay__link-icon">
+                        <img data-icon-alias="facebook-square" class="brand-social__icon" alt="Facebook" />
+                    </a>
+                     <a href="https://twitter.com/intent/tweet?url=https%3a%2f%2fwww.rb.com%2finvestors%2finvestor-information%2f" title="Twitter" target="_blank"  class="overlay__link-icon">
+                        <img data-icon-alias="twitter-square" class="brand-social__icon" alt="Twitter" />
+                    </a>
+                     <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fwww.rb.com%2finvestors%2finvestor-information%2f" title="Linked In" target="_blank"  class="overlay__link-icon">
+                        <img data-icon-alias="linkedin" class="brand-social__icon" alt="Linked In" />
+                    </a>
+            </div>
+        </div>
+    </section>
+</script>
+    <script type="text/template" class="js-follow-overlay">
+    <section class="overlay overlay--follow" style="display: block;">
+        <a href="#" title="Close" class="overlay__close js-overlay-close">
+            <svg class="overlay__close-image" width="50" height="50">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-corner-close"></use>
+            </svg>
+        </a>
+        <div class="wrapper">
+            <h2 class="overlay__title">Follow RB</h2>
+            <div class="overlay__content">
+                
+            </div>
+            <div class="overlay__links">
+                    <a href="https://www.facebook.com/discoverRB" title="Facebook" target="_blank" class="overlay__link-icon">
+                        <img data-icon-alias="facebook-square" class="brand-social__icon" alt="Facebook" />
+                    </a>
+                    <a href="https://twitter.com/discoverRB" title="Twitter" target="_blank" class="overlay__link-icon">
+                        <img data-icon-alias="twitter-square" class="brand-social__icon" alt="Twitter" />
+                    </a>
+                    <a href="https://www.youtube.com/user/RBworldwide" title="YouTube" target="_blank" class="overlay__link-icon">
+                        <img data-icon-alias="youtube-square" class="brand-social__icon" alt="YouTube" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/discoverrb" title="LinkedIn" class="overlay__link-icon">
+                        <img data-icon-alias="linkedin" class="brand-social__icon" alt="LinkedIn" />
+                    </a>
+            </div>
+        </div>
+    </section>
+</script>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGsMLU9aU6KmMsJIGffjrRxT19bHpFVE0"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+
+    <script>
+        var ajax = new XMLHttpRequest();
+        ajax.open("GET", "/images/icons.svg", true);
+        ajax.send();
+        ajax.onload = function (e) {
+            var $svg = $(ajax.responseText);
+            $('body').prepend($svg);
+        }
+    </script>
+
+    <script src="/scripts/rbdotcom-scripts.js"></script>
+    
+                <!-- Google Tag Manager -->
+            <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NQ4QD9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                        new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+                    })(window, document, 'script', 'dataLayer', 'GTM-NQ4QD9');
+            </script>
+            <!-- End Google Tag Manager -->
+
+
+</body>
+</html>

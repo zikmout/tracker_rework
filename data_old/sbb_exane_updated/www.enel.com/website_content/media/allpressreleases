@@ -1,0 +1,1421 @@
+
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    
+	<script>
+	
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+
+        function getDuplicatedParameters (parameterMap) {
+            var arr = parameterMap;
+            var sorted_arr = arr.slice().sort();
+            var results = [];
+            for (var i = 0; i < arr.length - 1; i++) {
+                if (sorted_arr[i + 1] == sorted_arr[i]) {
+                    results.push(sorted_arr[i]);
+                }
+            }
+            return results;
+        }
+
+        function getParameterMapName (url) {
+            var queryString = getQueryString(url);
+            var parameterMaps = queryString.split("=");
+            var paramsName = [];
+            for(var i in parameterMaps)
+            {
+                var param = parameterMaps[i];
+                var paramName;
+                if (param.indexOf('?')>= 0) {
+                    paramName = param.split('?')[1];
+                } else {
+                    paramName = param.split('&')[1];
+                }
+                paramsName[i] = paramName;
+            }
+            return paramsName;
+        }
+
+        function purgeDuplicatedParams (url) {
+            var urlResult = url;
+            var duplicatedParams = getDuplicatedParameters(getParameterMapName(url));
+            for (var i in duplicatedParams) {
+                urlResult = removeURLParameter(urlResult,duplicatedParams[i]);
+            }
+            return urlResult;
+        }
+
+        function updateQueryStringParameter(uri, key, value) {
+            if (value != null && value.length > 0) {
+                var re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+                var separator = uri.indexOf('?') !== -1 ? "&" : "?";
+                if (uri.match(re)) {
+                    return uri.replace(re, '$1' + key + "=" + value + '$2');
+                }
+                else {
+                    return uri + separator + key + "=" + value;
+                }
+            }
+            return uri;
+        }
+
+        function removeURLParameter(url, parameter) {
+            var urlparts= url.split('?');
+            if (urlparts.length>=2) {
+                var prefix= encodeURIComponent(parameter)+'=';
+                var pars= urlparts[1].split(/[&;]/g);
+                var removed = false;
+                for (var i= pars.length; i-- > 0;) {
+                    if (pars[i].lastIndexOf(prefix, 0) !== -1 && !removed) {
+                        pars.splice(i, 1);
+                        removed = true;
+                    }
+                }
+                url= urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : "");
+                return url;
+            } else {
+                return url;
+            }
+        }
+
+        function getQueryString(url, redirect) {
+            var queryString = url.split('?')[1];
+            if (typeof queryString == 'undefined') {
+                queryString = '';
+            } else {
+                if (typeof (redirect)!= 'undefined' && redirect.indexOf('?')>0) {
+                    queryString = '&' + queryString;
+                } else {
+                    queryString = '?' + queryString;
+                }
+            }
+            return queryString;
+        }
+
+        if(readCookie('langRedirect') == null){
+            document.cookie = "langRedirect=MQ==;path=/" ;
+            var langMapString = "";
+            if( langMapString != null ){
+                var browserlanguage = navigator.language;
+                browserlanguage = browserlanguage.split("-")[0];
+                var obj = JSON.parse(langMapString);
+                var redirect = obj[browserlanguage];
+                if(redirect != null){
+                    redirect = purgeDuplicatedParams (redirect + getQueryString(window.location.href, redirect));
+                    window.location.href=updateQueryStringParameter(redirect,'refred', document.referrer);
+                }
+            }
+        }
+        
+    document.addEventListener("DOMContentLoaded", function(event) { 
+   		history.replaceState({}, 'Title', removeURLParameter(location.href, 'refred'));
+   	});
+    </script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+    
+
+    <meta name="description" content="All Enel press releases. Discover everything we do to ensure a sustainable future."/>
+    
+
+    
+    
+    
+<link rel="stylesheet" href="/etc/clientlibs/foundation/main.min.css" type="text/css">
+<script type="text/javascript" src="/etc/clientlibs/granite/jquery.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/utils.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/granite/jquery/granite.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/jquery.min.js"></script>
+<script type="text/javascript" src="/etc/clientlibs/foundation/main.min.js"></script>
+
+
+
+    
+    <link href="/etc/designs/enel-com.css" rel="stylesheet" type="text/css"/>
+
+    
+
+
+
+
+
+
+
+
+    
+
+    
+    
+<link rel="stylesheet" href="/etc/designs/enel-com/clientlibs/main.min.css" type="text/css">
+
+
+
+
+    
+    <meta name="author" content=""/>
+
+
+
+	<meta name="robots" content="index,follow"/>
+
+    
+<meta property="og:locale" content="en"/>
+<meta property="og:url" content="https://www.enel.com/media/allpressreleases"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Press releases - Enel.com"/>
+<meta property="og:description" content="All Enel press releases. Discover everything we do to ensure a sustainable future."/>
+<meta property="og:image" content="https://www.enel.com"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:description" content="All Enel press releases. Discover everything we do to ensure a sustainable future."/>
+<meta name="twitter:title" content="Press releases - Enel.com"/>
+    <link rel="icon" type="image/vnd.microsoft.icon" href="/etc/designs/enel-com/favicon.ico">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="/etc/designs/enel-com/favicon.ico">
+    
+    
+    
+    
+     <title>Press releases - Enel.com</title>
+    
+    
+    
+     <link rel="alternate" hreflang="en" href="https://www.enel.com/media/allpressreleases"/>
+    
+     <link rel="alternate" hreflang="it" href="https://www.enel.com/it/media/tuttiicomunicatistampa"/>
+    
+     <link rel="alternate" hreflang="es" href="https://www.enel.com/es/medios/comunicadosdeprensa"/>
+    
+    
+    
+    
+     <link rel="canonical" href="https://www.enel.com/media/allpressreleases"/>
+    
+    
+    <script>document.createElement( "picture" );</script>
+    <script async="async" src="/etc/designs/enel-com/js/picturefill.min.js"></script>
+    
+    <script src="//assets.adobedtm.com/8331ab45ea9046af83c9222bfd02410c9f62ef0d/satelliteLib-cf33041d822f2d932e0e571c8286f6fc51f54529.js"></script>
+    <!-- Hotjar Tracking Code for www.enel.com -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:885499,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- 
+Start of global snippet: Please do not remove
+Place this snippet between the <head> and </head> tags on every page of your site.
+-->
+<!-- Global site tag (gtag.js) - Google Marketing Platform -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=DC-4933323"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'DC-4933323');
+</script>
+<!-- End of global snippet: Please do not remove -->
+    <style type="text/css">
+    	/*
+		This CSS resource incorporates links to font software which is the valuable copyrighted property of Monotype and/or its suppliers. You may not attempt to copy, install, redistribute, convert, modify or reverse engineer this font software. Please contact Monotype with any questions regarding Web Fonts: https://www.linotype.com
+		*/
+        @import url("https://fast.fonts.net/lt/1.css?apiType=css&c=1ab388cf-bd83-4ae4-a724-df49b109cfd5&fontids=1475944,1475956,1475968");
+    </style>
+</head>
+    <body class="page-hub color-scheme--blue">
+<script type="text/javascript"> 
+ var enel_data = {
+			investor: { 
+				time: ""
+			},
+			megamenu: { 
+				language: ""
+			},
+			hub: {
+				breadcrumb: "",
+				secondary: ""
+			},
+			footer: {
+				socialnameprofile: ""
+			},
+			maps: {
+				pin: ""
+			},
+			search: {
+				quicklinks: "",
+				key: "",
+				results: 0,
+			}
+    }; 
+</script>
+
+
+ 
+
+
+
+<!-- START MODULE: GLOBAL-SEARCH-->
+
+
+    <div data-module="globalSearch" class="module search-form">
+        <!-- START MODULE: GLOBAL-SEARCH-HEADER-->
+        
+        
+  <div class="search-form__header">
+    <div itemscope itemtype="http://schema.org/Organization" class="search-form__logo ">
+        
+        
+        
+    	    <a itemprop="url" href="/en">
+        
+      		<img itemprop="logo" src="/etc/designs/enel-com/img/enel-logo.png"/>
+      	    </a>
+    </div>
+    <div class="search-form__btns">
+      <button class="global-header__btn search-form__btn-close"><span class="cross-icon"></span></button>
+    </div>
+  </div>
+
+        <!-- END MODULE: GLOBAL-SEARCH-HEADER-->
+        <div class="search-form__inner">
+            <div class="container">
+                <form id="global_search_form" action="/search" method="GET" autocomplete="off" data-json-url="/en/_jcr_content.jsonsearch.html?type=keywords">
+                    <div class="search-form__input__wrap">
+                        <input type="search" name="search" placeholder="Search in Enel.com" class="search-form__input"/>
+                    </div>
+                    <div class="search-form__submit__wrap">
+                        <button type="submit" class="search-form__submit icon-search"><span>Submit</span></button>
+                    </div>
+                </form>
+
+                
+                <span class="search-form__content">
+                    <div class="search-form__links search-form__links--quick">
+                        <span class="search-form__heading">Quick links</span>
+                        <ul>
+                            <li>
+                                <a href="/stories" target="_blank">Stories</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/media/allpressreleases" target="_self">All press releases</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/aboutus/where-we-are" target="_self">Where we are</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/careers" target="_self">Careers</a>
+                            </li>
+                        
+                            <li>
+                                <a href="/management-team" target="_self">Management team</a>
+                            </li>
+                        </ul>
+                    </div>
+                </span>
+
+
+            </div>
+        </div>
+    </div>
+    <script type="text/template" id="TMPL--search-form__content">
+        <div class="search-form__links search-form__links--quick search-form__suggestions">
+            <span class="search-form__heading"></span>
+            <ul>
+                <% if (results) { %>
+                <% for (var i=0; i<results.length; i++) { %>
+                <li><a href="/search?search=<%-results[i]%>"><%-results[i]%></a></li>
+                <% } %>
+                <% } %>
+            </ul>
+        </div>
+    </script>
+
+<!-- END MODULE: GLOBAL-SEARCH-->
+
+<!-- START MODULE: GLOBAL-HEADER-->
+
+
+  <script>
+    	$(document).ready(function() {
+			var initialHeigth = 0;
+    		if ($(".global-header__links")[0].clientHeight != undefined) {
+    			initialHeigth = $(".global-header__links")[0].clientHeight;
+        	}
+            if($(".global-header__links")[0].clientHeight != 32 && window.innerWidth > 1023) {
+            	if ($(".global-header__btns") != undefined) {
+					$(".global-header__btns").css("margin-top", "-27px");
+                }
+            }
+        	$(window).resize(function() {
+				if($(".global-header__links")[0].clientHeight != 32 && window.innerWidth > 1023) {
+                    $(".global-header__btns").css("margin-top", "-27px");
+             	} else if (window.innerWidth > 1023) {
+					$(".global-header__btns").css("margin-top", "");
+                }
+        	});
+         });
+  </script>
+  <header data-module="global-header" class="module global-header">
+    <div class="global-header__main">
+      
+
+      <style>
+        @media screen and (max-width:767px) {
+          .global-header__logo{
+            max-width: 60px !important;
+          }
+        }
+      </style>
+      <div itemscope itemtype="http://schema.org/Organization" class="global-header__logo" style="max-width:109px;">
+
+        
+        
+            
+            
+            
+                <a itemprop="url" href="/en">
+            
+
+        		<img itemprop="logo" src="/etc/designs/enel-com/img/enel-logo.png" class="global-header__logo__bw"/>
+        		<img itemprop="logo" src="/etc/designs/enel-com/img/enel-logo.png" class="global-header__logo__color"/>
+        	</a>
+        
+      </div>
+      <div class="global-header__links">
+        <ul>
+          <li>
+            <a href="/aboutus" target="_self">ABOUT US</a>
+          </li>
+        
+          <li>
+            <a href="/stories" target="_self">STORIES</a>
+          </li>
+        
+          <li>
+            <a href="/media" target="_self">MEDIA</a>
+          </li>
+        
+          <li>
+            <a href="/investors" target="_self">INVESTORS</a>
+          </li>
+        
+          <li>
+            <a href="/careers" target="_self">CAREERS</a>
+          </li>
+        
+          <li>
+            <a href="/live-our-brand" alt="Live our Brand" target="_self">Live our Brand</a>
+          </li>
+        </ul>
+      </div>
+      <div class="global-header__btns">
+        <a href="https://m.me/Enelgroup" target="_blank" class="global-header__btn btn-fbMessenger"><span class="icon2-fbmessenger-header"></span></a>
+        
+        <button class="global-header__btn btn-search-open"><span class="icon-search-small"></span></button>
+        
+        <button class="global-header__btn btn-menu"><span class="icon-menu"></span></button>
+
+        
+
+      </div>
+    </div>
+  </header>
+
+  
+
+<!-- END MODULE: GLOBAL-HEADER-->
+
+<!-- START MODULE: GLOBAL-SIDE-MENU-->
+
+
+    
+    <div data-module="global-megamenu" class="megamenu module">
+
+  
+    
+    
+    <nav class="megamenu__nav">
+  <div class="megamenu__nav__header">
+    
+      <ul class="megamenu__lang-links">
+        <li class="selected">
+          <a alt="en" style="text-transform: uppercase;" href="https://www.enel.com/media/allpressreleases">EN</a>
+        </li>
+      
+        <li>
+          <a alt="it" style="text-transform: uppercase;" href="https://www.enel.com/it/media/tuttiicomunicatistampa">IT</a>
+        </li>
+      
+        <li>
+          <a alt="es" style="text-transform: uppercase;" href="https://www.enel.com/es/medios/comunicadosdeprensa">ES</a>
+        </li>
+      </ul>
+    
+    <button class="btn-close"><span class="cross-icon"></span></button>
+  </div>
+  <div class="megamenu__nav__body">
+    
+
+    <div class="megamenu__accordian open primaryMenu">
+      <!--START: NAVIGATION PRIMARY-->
+
+
+
+
+
+
+<!--END: NAVIGATION PRIMARY-->
+
+
+    
+      <!--START: NAVIGATION PRIMARY-->
+
+
+
+<div class="megamenu__accordian__header">
+    Explore enel.com
+</div>
+
+<div class="megamenu__accordian__body" style="display: block;">
+    
+
+        
+            <ul class="megamenu__links">
+                <li>
+                        <a name="&lid=home&lpos=megamenu" class="megamenu__links__heading " target="_self" alt="home" href="/en">
+                         HOME
+                         
+                        </a>
+                    
+                </li>
+            </ul>
+        
+
+        
+    
+
+        
+            <ul class="megamenu__links">
+                <li>
+                        <a name="&lid=about-us&lpos=megamenu" class="megamenu__links__heading " target="_self" alt="about us" href="/aboutus">
+                         ABOUT US
+                         
+                        </a>
+                    
+                        <ul class="megamenu__submenu">
+                            
+                                <li>
+                                    <a name="&lid=our-vision&lpos=megamenu" target="_self" alt="vision" href="/aboutus/vision">Our vision</a>
+                                </li>
+                            
+                                <li>
+                                    <a name="&lid=partnership-map&lpos=megamenu" target="_self" alt="partnership map" href="https://www.enel.com/partnership-map/enel-partnership-map.html?lang=en">Partnership map</a>
+                                </li>
+                            
+                                <li>
+                                    <a name="&lid=where-we-are&lpos=megamenu" target="_self" alt="where we are" href="/aboutus/where-we-are">Where we are</a>
+                                </li>
+                            
+                                <li>
+                                    <a name="&lid=management-team&lpos=megamenu" target="_self" alt="Management team" href="/management-team">Management team</a>
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            </ul>
+        
+
+        
+    
+
+        
+            <ul class="megamenu__links">
+                <li>
+                        <a name="&lid=stories&lpos=megamenu" class="megamenu__links__heading " target="_self" alt="stories" href="/stories">
+                         STORIES
+                         
+                        </a>
+                    
+                </li>
+            </ul>
+        
+
+        
+    
+
+        
+            <ul class="megamenu__links">
+                <li>
+                        <a name="&lid=media&lpos=megamenu" class="megamenu__links__heading " target="_self" alt="media" href="/media">
+                         MEDIA
+                         
+                        </a>
+                    
+                        <ul class="megamenu__submenu">
+                            
+                                <li class="selected">
+                                    <a name="&lid=press-releases&lpos=megamenu" target="_self" alt="press releases" href="/media/allpressreleases">Press releases</a>
+                                </li>
+                            
+                                <li>
+                                    <a name="&lid=news&lpos=megamenu" target="_self" alt="news" href="/media/index">News</a>
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            </ul>
+        
+
+        
+    
+
+        
+            <ul class="megamenu__links">
+                <li>
+                        <a name="&lid=investors&lpos=megamenu" class="megamenu__links__heading " target="_self" alt="investors" href="/investors">
+                         INVESTORS
+                         
+                        </a>
+                    
+                </li>
+            </ul>
+        
+
+        
+    
+
+        
+            <ul class="megamenu__links">
+                <li>
+                        <a name="&lid=careers&lpos=megamenu" class="megamenu__links__heading " target="_self" alt="careers" href="/careers">
+                         Careers
+                         
+                        </a>
+                    
+                </li>
+            </ul>
+        
+
+        
+    
+
+        
+            <ul class="megamenu__links">
+                <li>
+                        <a name="&lid=live-our-brand&lpos=megamenu" class="megamenu__links__heading " target="_self" alt="Live our Brand" href="/live-our-brand">
+                         Live our Brand
+                         
+                        </a>
+                    
+                </li>
+            </ul>
+        
+
+        
+    
+</div>
+<!--END: NAVIGATION PRIMARY-->
+
+
+    
+      <!--START: NAVIGATION PRIMARY-->
+
+
+
+
+
+
+<!--END: NAVIGATION PRIMARY-->
+
+
+    
+      <!--START: NAVIGATION PRIMARY-->
+
+
+
+
+
+
+<!--END: NAVIGATION PRIMARY-->
+
+
+    
+    </div>
+    
+      <!--START: NAVIGATION SECONDARY-->
+
+  <div class="megamenu__accordian secondaryMenu publishmode">
+    <div class="megamenu__accordian__header  open">
+      Enel Group Websites
+    </div>
+    <div class="megamenu__accordian__body" style="display:block;">
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=enel-green-power&lpos=megamenu" class="megamenu__links__heading" target="_blank" href="https://www.enelgreenpower.com/">ENEL GREEN POWER</a>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=enel-x&lpos=megamenu" class="megamenu__links__heading" target="_blank" alt="enel x" href="https://www.enelx.com/en">enel x</a>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=global-trading&lpos=megamenu" class="megamenu__links__heading" target="_blank" href="https://globaltrading.enel.com">Global Trading</a>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=enel-country-websites&lpos=megamenu" class="megamenu__links__heading" target="_self">ENEL COUNTRY WEBSITES</a>
+              
+                <ul class="megamenu__submenu">
+                  
+                    <li>
+                      <a name="&lid=americas&lpos=megamenu" target="_blank" href="https://www.enelamericas.com/en.html">Americas</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=argentina&lpos=megamenu" target="_blank" href="https://www.enel.com.ar/Home-Enel.html">Argentina</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=brazil&lpos=megamenu" target="_blank" href="https://www.enel.com.br/en.html">Brazil</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=chile&lpos=megamenu" target="_blank" href="https://www.enel.cl/en.html">Chile</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=colombia&lpos=megamenu" target="_blank" href="https://www.enel.com.co/en">Colombia</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=iberia&lpos=megamenu" target="_blank" href="https://www.endesa.com/en.html">Iberia</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=italy&lpos=megamenu" target="_blank" href="https://www.enel.it/en">Italy</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=mexico&lpos=megamenu" target="_blank" href="https://www.enel.mx/en/index">Mexico</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=peru&lpos=megamenu" target="_blank" href="https://www.enel.pe/en.html">Peru</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=romania&lpos=megamenu" target="_blank" href="http://www.enel.ro/enel-energie/en.html">Romania</a>
+                    </li>
+                  
+                    <li>
+                      <a name="&lid=russia&lpos=megamenu" target="_blank" href="https://www.enelrussia.ru/en.html">Russia</a>
+                    </li>
+                  
+                </ul>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=enel-open-innovability&lpos=megamenu" class="megamenu__links__heading" target="_blank" alt="enel open innovability" href="http://www.openinnovability.enel.com">enel open innovability</a>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=enel-foundation&lpos=megamenu" class="megamenu__links__heading" target="_blank" href="https://www.enelfoundation.org/">ENEL FOUNDATION</a>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=enel-startup&lpos=megamenu" class="megamenu__links__heading" target="_blank" href="http://startup.enel.com/">ENEL STARTUP</a>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=global-procurement&lpos=megamenu" class="megamenu__links__heading" target="_blank" href="https://globalprocurement.enel.com/en.html">GLOBAL PROCUREMENT</a>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+        
+          <ul class="megamenu__links" style="display:block;">
+            <li>
+              <a name="&lid=ethical-channel&lpos=megamenu" class="megamenu__links__heading" target="_blank" alt="Ethical Channel" href="https://secure.ethicspoint.eu/domain/media/en/gui/102504/index.html">Ethical Channel</a>
+              
+            </li>
+
+          </ul>
+        
+        
+      
+    </div>
+  </div>
+  <div class="megamenu__accordian secondaryMenu publishmode">
+    
+    
+  </div>
+
+<!--END: NAVIGATION SECONDARY-->
+
+    
+    <div class="megamenu__news__mobile"></div>
+  </div>
+</nav>
+
+    <div class="megamenu__main">
+        <div class="megamenu__main__inner">
+            <div class="megamenu__main__header">
+                
+    
+
+    
+
+    
+        <a href="/en" class="megamenu-content-header-logo">
+    
+
+
+        <img src="/etc/designs/enel-com/img/enel-logo-color.png"/>
+    </a>
+
+            </div>
+            <div class="megamenu__main__body">
+                <nav class="megamenu__navSecondary">
+                    
+                </nav>
+                <div class="megamenu__news">
+                    
+                    
+                        <a id="megamenu__news-link" href="https://www.enel.com/_jcr_content.news" style="display:none"></a>
+                        <script type="text/javascript">
+                            $(document).ready(function () {
+                                $(".megamenu__news").load($("#megamenu__news-link").attr("href"), function () {
+                                    enel.modules['global-megamenu'].init();
+                                });
+                            });
+                        </script>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+
+
+  
+
+  
+
+
+  
+
+  
+
+</div>
+
+<!-- END MODULE: GLOBAL-SIDE-MENU-->
+
+
+    
+
+
+
+
+<main id="main">
+
+
+
+ 
+
+    
+    
+    <style type="text/css">
+
+        .heroVideo {
+            background-color: #0555fa;
+        }
+    </style>
+
+    <section data-module="image-hero" class="image-hero module heroVideo ">
+        
+
+        <div class="hero_inner image-hero_inner video-highlight-title">
+            <div class="hero_content-wrapper">
+                <nav class="hero_breadcrumbs">
+                    <ol class="breadcrumbs component" itemscope itemtype="http://schema.org/BreadcrumbList">
+						
+                        
+	                        <li class="breadcrumbs_item breadcrumbs_item--last text--breadcrumb" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+	                            <a itemprop="item" href="/en" class="breadcrumbs_link">
+	                                <span itemprop="name">Home</span>
+	                            </a>
+	                            <meta itemprop="position" content="1"/>
+	                        </li>
+						
+                        <li class="breadcrumbs_item breadcrumbs_item--last text--breadcrumb" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                            <a itemprop="item" href="/media" class="breadcrumbs_link">
+                                <span itemprop="name">Media</span>
+                            </a>
+                            <meta itemprop="position" content="2"/>
+                        </li>
+
+                        
+
+                    </ol>
+                </nav>
+                <h1 class="hero_title text--page-heading">All Press Releases</h1>
+                
+                
+            </div>
+        </div>
+    </section>
+
+
+
+
+<div data-module="searchFilter" class="module filter">
+ 
+<!-- <form action method="GET" autocomplete="off" data-json-url="https://www.enel.com/media/press/jcr:content.jsonsearch.html" data-showemptycategories=""> -->
+<form action method="GET" autocomplete="off" data-json-url="https://www.enel.com/media/press/jcr:content.jsonsearch.html">
+  <input type="hidden" name="type" value="press"/>
+  <input type="hidden" name="dt"/>
+	<input type="hidden" name="se" value="lucene"/>
+	
+  
+  
+  <div class="filter__menu">
+    <div class="container">
+      <div class="filter__menu__wrap">
+        <button type="button" data-show-text="Show Filters" data-hide-text="Hide Filters" class="btn-cta btn-filter-toggle">Show Filters</button>
+        <div class="filter__sort">
+          <label>Sort by:</label>
+          <div class="select-wrap select--transparent">
+            <select name="sort">
+              
+              
+                  
+                  <option value="date_desc" selected="selected">Date: Newest first</option>
+                  <option value="date_asc">Date: Oldest first</option>
+              
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
+  
+ 
+  <div class="filter__filters">
+    <div class="filter__filters__wrap container">
+      <div class="filter__heading">
+        <h2 class="filter__heading__text">Filters</h2>
+        <button class="btn-filter-cancel">Cancel</button>
+      </div>
+      <div class="filter__groups">
+      
+        <div class="filter__group filter__group--large filter__group--topic">
+          
+          <div class="filter__group__content">
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_sustainability" name="topic" value="sustainability" class="checkbox"/>
+              <label for="cb_topic_sustainability">Sustainability</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_innovation" name="topic" value="innovation" class="checkbox"/>
+              <label for="cb_topic_innovation">Innovation</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_renewables" name="topic" value="renewables" class="checkbox"/>
+              <label for="cb_topic_renewables">Renewables</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_smart-grids" name="topic" value="smart-grids" class="checkbox"/>
+              <label for="cb_topic_smart-grids">Smart Grids</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_smart-meter" name="topic" value="smart-meter" class="checkbox"/>
+              <label for="cb_topic_smart-meter">Smart meter</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_economico" name="topic" value="economico" class="checkbox"/>
+              <label for="cb_topic_economico">Price Sensitive</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_financial" name="topic" value="financial" class="checkbox"/>
+              <label for="cb_topic_financial">Financial</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_corporate" name="topic" value="corporate" class="checkbox"/>
+              <label for="cb_topic_corporate">Corporate</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_events" name="topic" value="events" class="checkbox"/>
+              <label for="cb_topic_events">Events</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_e-city" name="topic" value="e-city" class="checkbox"/>
+              <label for="cb_topic_e-city">e-city</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_e-home" name="topic" value="e-home" class="checkbox"/>
+              <label for="cb_topic_e-home">e-home</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_e-industries" name="topic" value="e-industries" class="checkbox"/>
+              <label for="cb_topic_e-industries">e-industries</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_e-mobility" name="topic" value="e-mobility" class="checkbox"/>
+              <label for="cb_topic_e-mobility">e-mobility</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_lightning" name="topic" value="lightning" class="checkbox"/>
+              <label for="cb_topic_lightning">Lightning</label><span class="filter__num-items"> </span>
+            </div>
+          
+            <div class="form-row">
+              <input type="checkbox" id="cb_topic_mercato" name="topic" value="mercato" class="checkbox"/>
+              <label for="cb_topic_mercato">Market</label><span class="filter__num-items"> </span>
+            </div>
+          </div>
+        </div>
+        
+        
+
+          
+        
+        
+	        
+        
+	        
+	        <div class="filter__group filter__group--large filter__group--published">
+	          <h3 class="filter__group__heading">Published</h3>
+	          <div class="filter__group__content">
+	            <div class="col">
+	              <div class="form-row">
+	                <input type="checkbox" id="cb_published_week" name="published" value="week" class="checkbox"/>
+	                <label for="cb_published_week">Last week</label><span class="filter__num-items"> </span>
+	              </div>
+	              <div class="form-row">
+	                <input type="checkbox" id="cb_published_month" name="published" value="month" class="checkbox"/>
+	                <label for="cb_published_month">Last month</label><span class="filter__num-items"> </span>
+	              </div>
+	              <div class="form-row">
+	                <input type="checkbox" id="cb_published_year" name="published" value="year" class="checkbox"/>
+	                <label for="cb_published_year">Last year</label><span class="filter__num-items"> </span>
+	              </div>
+	            </div>
+	            <div class="col">
+	              <div class="form-row">
+	                <input type="checkbox" id="cb_published_range" name="published" value="range" class="checkbox"/>
+	                <label for="cb_published_range">Select period</label>
+	                <div class="datepickers disabled">
+	                  <div class="labels">
+	                    <label for="published_range_start">From</label>
+	                    <label for="published_range_end">To</label>
+	                  </div>
+	                  <div class="inputs">
+	                    <input type="text" id="published_range_start" name="start" placeholder="Select Date" readonly="true" disabled="disabled"/>
+	                    <input type="text" id="published_range_end" name="end" placeholder="Select Date" readonly="true" disabled="disabled"/>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	        
+        
+      </div>
+      <div class="filter__controls">
+        <div class="container">
+          <button type="reset" class="btn-cta btn-filter-clear">Clear</button>
+          <button type="submit" class="btn-cta btn-cta--pink btn-filter-submit">Apply</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</form>
+
+<div class="modal dateModal" id="dateModal-start" tabindex="-1" role="dialog" aria-labelledby="startdatelabel" style="z-index: 10500;">
+
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="form-datepicker-start"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal dateModal" id="dateModal-end" tabindex="-1" role="dialog" aria-labelledby="endatelabel" style="z-index: 10500;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="form-datepicker-end"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</div>
+
+
+
+    
+    
+
+
+
+
+
+
+<section data-module="listContent" class="hub module">
+ 
+    
+<link rel="stylesheet" href="/etc/designs/enel-com/clientlibs/imageLightBox.min.css" type="text/css">
+<script type="text/javascript" src="/etc/designs/enel-com/clientlibs/imageLightBox.min.js"></script>
+
+
+
+<div class="list-content-tipologie"></div>
+
+
+
+<script type="text/template" id="TMPL--content-block">
+    <% for(var i in articles){ %>
+    <div class="list-item list-item--<%-articles[i].type%>">
+
+        <% if(articles[i].content.image){ %>
+        <div class="list-item_image-wrapper">
+            <a href="<%-articles[i].content.url %>" target=""><img src="<%-articles[i].content.image%>" title="<%-articles[i].content.title%>" alt="<%-articles[i].content.alt%>"></a>
+        </div>
+        <% } %>
+
+        <div class="list-item_text-wrapper">
+
+            <% if(showTipologie && articles[i].content.tipologia){ %>
+            <span class='title_typology'><%-articles[i].content.tipologia%></span>
+            <% } %>
+            <% if(articles[i].content.isNew){ %>
+            <span class="list-item_badge">New</span>
+            <% } %>
+
+            <% if(articles[i].content.category){ %>
+            <a href="<% if(articles[i].content.categoryUrl){ %><%-articles[i].content.categoryUrl %><% } else { %><% if(articles[i].entity == 'article'){ %>/en/megamenu/media/allpressreleases<% } else if(articles[i].entity == 'press') { %>/media/press-releases<%} else { %>/en/megamenu/media/allpressreleases<% } %>.<%-articles[i].content.categoryName%><% } %>" class="tag tag--transparent tag--sky">
+                <%-articles[i].content.category%>
+            </a>
+            <% } %>
+            <span class="list-item_date text--date"><%-articles[i].content.date%></span>
+
+
+            <% if (articles[i].content.title) {%>
+            <h3 class="list-item_title text--list-title-<% if(articles[i].type == 'news' || articles[i].type == 'product' || (articles[i].type == 'others' && articles[i].content.image)){ %>large<% } else { %>med<% } %>">
+                <a href="<%-articles[i].content.url%>" <% if(articles[i].entity == 'asset') {%> target="_blank" <%}%> target="" ><%-articles[i].content.title%></a>
+            </h3>
+            <%}%>
+
+            <% if(articles[i].content.description){ %>
+            <p class="list-item_description text--list-description"><%-articles[i].content.description%></p>
+            <% } %>
+        </div>
+
+        <% if(articles[i].content.file){ %>
+        <div class="list-item_file-wrapper">
+            <span class="list-item_file-type"><%-articles[i].content.file.type%> <span class="list-item_file-size">(<%-articles[i].content.file.size%>)</span></span>
+            <a href="<%-articles[i].content.file.url%>" target="_blank" class="btn-cta">Download</a>
+        </div>
+        <% } %>
+    </div>
+    <% } %>
+</script>
+
+<div class="list-content_inner list-content__heading">
+    <h2></h2>
+</div>
+
+<div class="list-content_inner list-content__articles content-list"></div>
+
+<div class="list-content-inner">
+    <div class="pagination component">
+        <script type="text/template" id="TMPL--pagination">
+            <a href="#" class="pagination_prev<%if(disablePrev){%> disabled<%}%>">Prev</a>
+
+            <% if(showStartLink){ %>
+            <a href="<%-startLink.href %>" class="pagination_num"><%-startLink.label %></a>
+            <% } %>
+            <% if(showStartEllipsis){ %>
+            <span class="pagination_ellipsis">...</span>
+            <% } %>
+
+            <% _.each(links, function(link) { %>
+            <a href="<%-link.href %>" class="pagination_num<%if(link.active){%> active<%}%>"><%-link.label %></a>
+            <% }); %>
+
+            <% if(showEndEllipsis){ %>
+            <span class="pagination_ellipsis">...</span>
+            <% } %>
+
+            <% if(showEndLink){ %>
+            <a href="<%-endLink.href %>" class="pagination_num"><%-endLink.label %></a>
+            <% } %>
+
+            <span class="pagination_total"><%-numPages %></span>
+
+            <a href="#" class="pagination_next<%if(disableNext){%> disabled<%}%>">Next</a>
+        </script>
+    </div>
+</div>
+
+</section>
+
+</main>
+
+<footer data-module="footer" class="footer module">
+ 
+<div class="footer-container">
+  <div class="footer-content">
+    <div class="footer-section footer-social">
+      <p></p>
+      <ul>
+        <li class="footer-social-item"><a href="https://m.me/Enelgroup" class="icon2-fbmessenger" target="_blank"><span>Chat</span></a></li>
+        <li class="footer-social-item"><a href="https://twitter.com/EnelGroup/" class="icon-twitter" target="_blank"><span>Twitter</span></a></li>
+        <li class="footer-social-item"><a href="https://www.facebook.com/EnelGroup/" class="icon-fb" target="_blank"><span>Facebook</span></a></li>
+        <li class="footer-social-item"><a href="https://www.youtube.com/user/enelvideo" class="icon-youtube" target="_blank"><span>YouTube</span></a></li>
+        
+        <li class="footer-social-item"><a href="https://it.linkedin.com/company/enel" class="icon3-linkedin" target="_blank"><span>LinkedIn</span></a></li>
+        <li class="footer-social-item"><a href="https://www.instagram.com/enelgroup/" class="icon2-instagram" target="_blank"><span>Instagram</span></a></li>
+      	
+      </ul>
+    </div>
+    <div class="footer-section footer-legal">
+      <ul class="footer-copyright">
+        
+          <li class="footer-legal-item footer-legal-text">&copy; Enel Spa All Rights Reserved</li>
+        
+        
+        
+          <li class="footer-legal-item footer-legal-text">Enel SpA VAT 00934061003</li>
+        
+        
+      </ul>
+      <ul class="footer-legal-links">
+        <li class="footer-legal-item">
+          <a href="/footer/credits" target="_self">Credits</a>
+        </li>
+      
+        <li class="footer-legal-item">
+          <a href="/footer/legal-disclaimers" target="_self">Legal</a>
+        </li>
+      
+        <li class="footer-legal-item">
+          <a href="/footer/privacy-policy" target="_self">Privacy</a>
+        </li>
+      
+        <li class="footer-legal-item">
+          <a href="/footer/cookie-policy" target="_self">Cookies Policy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</footer>
+
+
+
+
+    
+    
+        <div class="module message-notification open" style="display:none">
+    
+
+
+        <div class="message-notification_ct">
+            <span class="privatespan">Cookie policy update</span>
+            <p>This site uses both first and third party analytics and profiling cookies to send
+you advertisements tailored to your personal preferences. By closing this
+banner, scrolling down this page, clicking on a link or continuing to navigate
+the site in any other way, you are consenting to the use of cookies. If you
+would like more information or wish to withdraw your consent to all or certain
+cookies, then please consult our <a href="/footer/cookie-policy">cookie policy</a>
+            </p>
+            <button class="message-notification_close"></button>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function(){
+
+            // Show the notification if cookie is not found
+            if(!getCookie('cookieconsent_enelcom') ){
+                $('.module.message-notification.open').show();
+
+                // Create cookie when clicking X, and hide the notification
+                $('.message-notification_close').click(function(){
+                    createCookie("cookieconsent_enelcom", "yes", 30, '/');
+
+                    $('.module.message-notification.open').hide();
+                });
+
+                // Create cookie when clicking the link, and hide the notification
+                $('.message-notification_ct p a').click(function(e){
+                    createCookie("cookieconsent_enelcom", "yes", 30, '/');
+
+                    $('.module.message-notification.open').hide();
+                });
+
+            }
+        });
+    </script>
+
+
+
+
+ 
+
+ 
+    
+<script type="text/javascript" src="/etc/designs/enel-com/clientlibs/main.min.js"></script>
+
+
+
+
+    
+<script type="text/javascript" src="/etc/designs/enel-com/clientlibs/owlCarousel.min.js"></script>
+
+
+
+
+    
+<script type="text/javascript" src="/etc/designs/enel-com/clientlibs/twitter-hub.min.js"></script>
+
+
+
+
+
+
+    
+<script type="text/javascript" src="/etc/designs/enel-com/clientlibs/careers.min.js"></script>
+
+
+
+
+
+
+
+    
+<script type="text/javascript" src="/etc/designs/enel-com/clientlibs/main-common.min.js"></script>
+
+
+
+ 
+ <script type="text/javascript">
+  if (window._satellite) {
+	  window._satellite.pageBottom();
+  }
+ </script>
+<script>            
+  var touchsupport = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)
+  if (!touchsupport) { // browser doesn't support touch
+      document.documentElement.className += "no-touch";
+  }
+</script>
+<script>
+if ($(".dotcom-header__btn")[0] != undefined) {
+	var main = $("#main")[0];
+	main.setAttribute("data-starting-point", "main");
+	
+	$('[data-module="global-megamenu"]').attr('data-starting-point', 'main');
+	$('[data-module="footer"]').attr('data-starting-point', 'main');
+}
+</script><script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1772697703"></script>
+</body>
+</html>

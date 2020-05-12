@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"761e715901",applicationID:"35893545"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Press Releases | Tenaris S.A." />
+<meta property="og:site_name" content="Tenaris S.A." />
+<link rel="canonical" href="http://ir.tenaris.com/press-releases/" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://ir.tenaris.com/press-releases" />
+<meta property="og:title" content="Press Releases | Tenaris S.A." />
+<meta property="og:description" content="The Investor Relations website contains information about Tenaris S.A.&#039;s business for stockholders, potential investors, and financial analysts." />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="viewport" content="width=device-width, initial-scale=0.4" />
+<link rel="shortcut icon" href="/sites/g/files/knoqqb25746/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="en" href="http://ir.tenaris.com/press-releases" />
+<link rel="revision" href="http://ir.tenaris.com/press-releases" />
+
+    <title>Press Releases | Tenaris S.A.</title>
+    <link rel="stylesheet" media="all" href="/sites/g/files/knoqqb25746/files/css/css_8zWKN6qWWUtDIuPxDLTytXs0iepG3wRB9x86fVDdjDc.css?q1ejhg" />
+<link rel="stylesheet" media="all" href="/sites/g/files/knoqqb25746/files/css/css_175ng_-C7thX5eSNgG_v_OX7gl123wN4oDQNBpeolb8.css?q1ejhg" />
+<link rel="stylesheet" media="print" href="/sites/g/files/knoqqb25746/files/css/css_Muwenuwnhjj1mIala_UOxh52MtlKgP5mVL7Uf1u3Tr8.css?q1ejhg" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/g/files/knoqqb25746/files/js/js_VtafjXmRvoUgAzqzYTA3Wrjkx9wcWhjP0G4ZnnqRamA.js"></script>
+<![endif]-->
+<script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+    
+  </head>
+  <body class="body-sidebars-both nir-node nir-node--type-nir-landing-page nir-node--5816 path-node page-node-type-nir-landing-page">
+    <div id="skip">
+      <a class="visually-hidden focusable skip-link" href="#main-menu">
+        Skip to main navigation
+      </a>
+    </div>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    
+    <a name="top"></a>
+
+    <div class="wrapper">
+        <div class="container">
+            <div class="headerWrapper">
+                <div class="logo">
+                    <a href="http://www.tenaris.com/en/default.asp"><img src="/sites/g/files/knoqqb25746/themes/site/nir_pid2319/client/images/logo_tenaris.gif" alt="Tenaris" width="180" height="45" /></a>
+                </div>
+
+                <div class="headerRight">
+                    <table border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+
+                            <td nowrap="nowrap">
+                                <div class="chromestyle-country" id="chromemenu2" style="padding-right:10px;">
+                                    <ul>
+
+                                        <li><a class="contact-us" href="http://www.tenaris.com/en/ContactUs.aspx" rel="dropmenu11" style="padding-right:15px;">CONTACT US</a></li>
+                                    </ul>
+                                </div>
+
+                                
+                                <div id="dropmenu10" class="dropmenudiv-country" style="width: 250px;">
+                                    
+                                </div>
+
+                               
+                                <div id="dropmenu11" class="dropmenudiv dropmenudiv-top" style="width: 175px;">
+                                    <a href="http://www.tenaris.com/en/ContactUs/TenarisAroundTheWorld.aspx">Tenaris Around the World</a>
+                                    <a href="http://www.tenaris.com/ContactUs/Registeredoffice.aspx">Registered Office</a>
+                                    <a href="http://www.tenaris.com/ContactUs/ContactsByProducts.aspx">Contacts By Products</a>
+                                    <a href="http://www.tenaris.com/ContactUs/HumanResources.aspx">Human Resources</a>
+                                    <a href="http://www.tenaris.com/ContactUs/MediaRelations.aspx">Media Relations</a>
+                                    <a href="/contact-ir">Investor Relations</a>
+                                </div>
+
+                            </td>
+
+                              <div class="region region-search">
+    <div id="block-nir-pid2319-search" class="block--search-form block--search-form--13861 block--search--search-form block--search--search-form--13861 block--5e147a34-962c-4469-909f-0d19df8f4c9e block--5e147a34-962c-4469-909f-0d19df8f4c9e--13861 block block-nir-search block-search-form">
+  
+    
+      <form data-block-uuid="5e147a34-962c-4469-909f-0d19df8f4c9e" action="/search" method="get" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-query js-form-item-query form-no-label">
+        <input type="search" name="query" size="60" maxlength="128" placeholder="" class="form-search required" required="required" aria-required="true" />
+
+        </div>
+<input type="submit" name="op" value="Search" class="button button--primary js-form-submit form-submit" />
+
+</form>
+
+  </div>
+
+  </div>
+
+
+                        </tr>
+                    </table>
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            
+            <div id="ctl08_htmlplace">
+                <div class="navWrapper">
+                    <div id="chromemenu" class="chromestyle">
+                        <ul>
+                            <li style='padding-right: 25px;'><a rel="dropmenuAEBFBCFAAAACBB" href="http://www.tenaris.com/en/Products.aspx">Products &#38; Services</a></li>
+                            <li style='padding-right: 25px;'><a rel="dropmenuECCBCBD" href="/">Investors</a></li>
+                            <li style='padding-right: 25px;'><a rel="dropmenuDBBAFCBEDCEF" href="http://www.tenaris.com/en/Careers.aspx">Careers</a></li>
+                            <li style='padding-right: 25px;'><a rel="dropmenuEBEBEDABA" href="http://www.tenaris.com/en/Sustainability.aspx">Sustainability</a></li>
+                            <li style='padding-right: 25px;'><a rel="dropmenuEDFCBEFFCD" href="http://www.tenaris.com/en/RAndD.aspx">R&#38;D</a></li>
+                            <li style='padding-right: 25px;'><a rel="dropmenuFFADADDDFCBD" href="http://www.tenaris.com/en/MediaAndPublications.aspx">Media &#38; Publications</a></li>
+                            <li style='padding-right: 25px;'><a rel="dropmenuDFFEAFCBCCADFCD" href="http://www.tenaris.com/en/AboutUs.aspx">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div id="dropmenuAEBFBCFAAAACBB" class="dropmenudiv" style="width: 200px;"><a href="http://www.tenaris.com/en/Products/OCTG.aspx">OCTG</a><a href="http://www.tenaris.com/en/Products/PremiumConnections.aspx">Premium Connections</a><a href="http://www.tenaris.com/en/Products/RigDirect.aspx">Rig Direct™</a>
+                        <a
+                            href="http://www.tenaris.com/en/Products/OffshoreLinePipe.aspx">Offshore Line Pipe </a><a href="http://www.tenaris.com/en/Products/OnshoreLinePipe.aspx">Onshore Line Pipe</a><a href="http://www.tenaris.com/en/Products/HydrocarbonProcessing.aspx">Hydrocarbon Processing</a><a href="http://www.tenaris.com/en/Products/PowerGeneration.aspx">Power Generation</a>
+                            <a
+                                href="http://www.tenaris.com/en/Products/SuckerRods.aspx">Sucker Rods</a><a href="http://www.tenaris.com/en/Products/CoiledTubing.aspx">Coiled Tubing</a><a href="http://www.tenaris.com/en/Products/IndustrialAndMechanical.aspx">Industrial and Mechanical</a><a href="http://www.tenaris.com/en/Products/Automotive.aspx">Automotive</a>                                </div>
+								
+                    <div id="dropmenuECCBCBD" class="dropmenudiv" style="width: 200px;">
+						<a href="/company-overview">Company Overview</a>
+						<a href="/financial-information">Financial Information</a>
+						<a href="/reports">Reports</a>
+                        <a href="/press-releases">Press Releases</a>
+						<a href="/stock-information">Stock Information</a>
+						<a href="/corporate-governance">Corporate Governance</a>
+						<a href="/events-and-presentations">Events &#38; Presentations</a>
+                        <a href="/analyst-coverage">Analyst Coverage</a>
+						<a href="/informacion-corporativa">Sección en Español</a></div>
+						
+                    <div id="dropmenuDBBAFCBEDCEF" class="dropmenudiv" style="width: 200px;"><a href="http://www.tenaris.com/en/Careers/StepInsideTenaris.aspx">Step Inside Tenaris</a><a href="http://www.tenaris.com/en/Careers/StudentsandGraduates.aspx">Programs for Students &#38; Graduates</a><a href="http://www.tenaris.com/en/Careers/TenarisUniversity.aspx">TenarisUniversity</a>
+                        <a
+                            href="http://www.tenaris.com/en/Careers/JoinUs.aspx">Join Us</a><a href="http://www.tenaris.com/en/Careers/EventsCalendar.aspx">Events Calendar</a><a href="http://www.tenaris.com/en/Careers/ContactUs.aspx">Contact Us</a></div>
+                    <div id="dropmenuEBEBEDABA" class="dropmenudiv" style="width: 200px;"><a href="http://www.tenaris.com/en/Sustainability/QHSEPolicy_Sustainability.aspx">QHSE Policy</a><a href="http://www.tenaris.com/en/Sustainability/Quality.aspx">Quality</a><a href="http://www.tenaris.com/en/Sustainability/QualityCertifications.aspx">Quality Certifications</a>
+                        <a
+                            href="http://www.tenaris.com/en/Sustainability/HealthAndSafety.aspx">Health and Safety</a><a href="http://www.tenaris.com/en/Sustainability/HSEcertifications.aspx">HSE Certifications</a><a href="http://www.tenaris.com/en/Sustainability/EnvironmentAndEnergyManagement.aspx">Environment and Energy Management</a>
+                            <a
+                                href="http://www.tenaris.com/en/Sustainability/Communities.aspx">Community</a>
+                    </div>
+                    <div id="dropmenuEDFCBEFFCD" class="dropmenudiv" style="width: 200px;"><a href="http://www.tenaris.com/en/RAndD/areasofresearch.aspx">Areas of Research</a></div>
+                    <div id="dropmenuFFADADDDFCBD" class="dropmenudiv" style="width: 200px;"><a href="http://www.tenaris.com/en/MediaAndPublications/MobileApps.aspx">Mobile Apps</a><a href="http://www.tenaris.com/en/MediaAndPublications/News.aspx">News</a><a href="/press-releases">Press Releases</a>
+                        <a
+                            href="http://www.tenaris.com/en/MediaAndPublications/MediaKit.aspx">Media Kit</a><a href="http://www.tenaris.com/en/MediaAndPublications/MediaContact.aspx">Media Contact</a><a href="http://www.tenaris.com/en/MediaAndPublications/Videos.aspx">Videos</a><a href="http://www.tenaris.com/en/MediaAndPublications/BrochuresAndCatalogs.aspx">Brochures &#38; Catalogs</a>
+                            <a
+                                href="http://www.tenaris.com/en/MediaAndPublications/CaseStudies.aspx">Case Studies</a><a href="http://www.tenaris.com/en/MediaAndPublications/SocialNetworks.aspx">Social Networks</a></div>
+                    <div id="dropmenuDFFEAFCBCCADFCD" class="dropmenudiv" style="width: 200px;"><a href="http://www.tenaris.com/en/AboutUs/GlobalOrganization.aspx">Global Organization</a><a href="http://www.tenaris.com/en/AboutUs/ProductionProcesses.aspx">Production Processes</a><a href="http://www.tenaris.com/en/AboutUs/History.aspx">History</a>
+                        <a
+                            href="http://www.tenaris.com/en/AboutUs/TenarisUniversity.aspx">TenarisUniversity</a><a href="http://www.tenaris.com/en/AboutUs/BusinessConduct.aspx">Business Conduct</a><a href="http://www.tenaris.com/en/AboutUs/CodeofConduct.aspx">Code of Conduct</a><a href="http://www.tenaris.com/en/AboutUs/ComplianceLine.aspx">Compliance Line</a>
+                            <a
+                                href="http://www.tenaris.com/en/AboutUs/Diversity.aspx">Diversity</a>
+                    </div>
+                </div>
+            </div>
+            <div id="ctl08_scriptplace">
+                
+            </div>
+
+            <div class="breadWrapper">
+                <div class="breadCrumb">
+								   <div class="region region-breadcrumb">
+    <div id="block-nir-pid2319-breadcrumbs" class="block--system-breadcrumb-block block--system-breadcrumb-block--5816 block--breadcrumb--system-breadcrumb-block block--breadcrumb--system-breadcrumb-block--5816 block--c5804232-386b-407d-8cc1-7e9860ffaabc block--c5804232-386b-407d-8cc1-7e9860ffaabc--5816 block block-system block-system-breadcrumb-block">
+  
+    
+      <a href="http://www.tenaris.com/en/default.asp">Tenaris</a> /
+                    
+                           <span><a href="/">Investors</a></span>&nbsp;/
+            
+                        <span class='breadcrumb-last'>Press Releases</span>
+            
+         
+  </div>
+
+  </div>
+
+				
+                </div>
+
+                <div class="clear"></div>
+            </div>
+            
+            <div class="contentInside">
+                <div class="contentInsideLeft">
+
+                   
+
+
+                    <div class="sideNav">
+
+
+                        <h6>Investors</h6>
+                        <div class="dtree">
+                            								  <div class="region region-sidebar-first">
+    
+
+<nav role="navigation" aria-labelledby="block-nir-pid2319-investorrelations-menu" id="block-nir-pid2319-investorrelations" class="block--system-menu-blockir block--system-menu-blockir--5816 block--sidebar-first--system-menu-block--ir block--sidebar-first--system-menu-block--ir--5816 block--48bbef86-7171-4fa9-88de-6f59f9cb09fe block--48bbef86-7171-4fa9-88de-6f59f9cb09fe--5816 block block-menu navigation block-system-menublock menu--ir">
+                        
+    <h2 class="visually-hidden" id="block-nir-pid2319-investorrelations-menu">Investor Relations</h2>
+    
+
+                              <ul data-block-uuid="48bbef86-7171-4fa9-88de-6f59f9cb09fe" class="menu side-menu">
+                  <li class="side-menu__item">
+		              <span class="has-submenu"></span>
+                    <a href="/company-overview" target="" rel="" title="Corporate Profile" data-drupal-link-system-path="node/5811">Company Overview</a>
+                                    <ul class="menu side-menu">
+                  <li class="side-menu__item">
+		            <a href="/company-overview/mission" target="" rel="" data-drupal-link-system-path="node/12821">Mission</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/company-overview/senior-management" target="" rel="" data-drupal-link-system-path="node/5846">Senior Management</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li class="side-menu__item">
+		              <span class="has-submenu"></span>
+                    <a href="/financial-information" data-drupal-link-system-path="node/5871">Financial Information</a>
+                                    <ul class="menu side-menu">
+                  <li class="side-menu__item">
+		            <a href="/financial-information/quarterly-results" data-drupal-link-system-path="node/5986">Quarterly Results</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/financial-information/sec-filings" data-drupal-link-system-path="node/5876">SEC Filings</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/reports" target="" rel="" data-drupal-link-system-path="node/5881">Reports</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/press-releases" data-drupal-link-system-path="node/5816" class="is-active">Press Releases</a>
+                  </li>
+              <li class="side-menu__item">
+		              <span class="has-submenu"></span>
+                    <a href="/stock-information" data-drupal-link-system-path="node/5916">Stock Information</a>
+                                    <ul class="menu side-menu">
+                  <li class="side-menu__item">
+		            <a href="/stock-information/stock-quotes" target="" rel="" data-drupal-link-system-path="node/5911">Stock Quotes</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/stock-information/investment-calculator" data-drupal-link-system-path="node/5926">Investment Calculator</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/stock-information/dividend-history" data-drupal-link-system-path="node/5931">Dividend History</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/stock-information/adr-program" target="" rel="" data-drupal-link-system-path="node/12831">ADR Program</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li class="side-menu__item">
+		              <span class="has-submenu"></span>
+                    <a href="/corporate-governance" target="" rel="" data-drupal-link-system-path="node/12836">Corporate Governance</a>
+                                    <ul class="menu side-menu">
+                  <li class="side-menu__item">
+		            <a href="/corporate-governance/board-of-directors" data-drupal-link-system-path="node/5841">Board of Directors</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/corporate-governance/share-capital-and-votes" target="" rel="" data-drupal-link-system-path="node/12846">Share capital and votes</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/static-files/735b84f6-e87c-49ad-8ee3-b7aee4344a7c" target="" rel="" data-drupal-link-system-path="static-files/735b84f6-e87c-49ad-8ee3-b7aee4344a7c">Transactions by Persons Discharging Managerial Responsibilities</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/corporate-governance/annual-general-meeting" target="" rel="" data-drupal-link-system-path="node/5956">Annual General Meeting</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/general-meeting-shareholders-0" target="" rel="" data-drupal-link-system-path="node/16361">General Meeting of Shareholders</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/corporate-governance/code-of-conduct" target="" rel="" data-drupal-link-system-path="node/12866">Code of Conduct</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/corporate-governance/compliance-line" target="" rel="" data-drupal-link-system-path="node/12876">Compliance Line</a>
+                  </li>
+          </ul>
+  
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/events-and-presentations" target="" rel="" data-drupal-link-system-path="node/5826">Events &amp; Presentations</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/analyst-coverage" data-drupal-link-system-path="node/5896">Analyst Coverage</a>
+                  </li>
+              <li class="side-menu__item">
+		              <span class="has-submenu"></span>
+                    <a href="/informacion-corporativa" target="" rel="" data-drupal-link-system-path="node/14916">Sección en Español</a>
+                                    <ul class="menu side-menu">
+                  <li class="side-menu__item">
+		            <a href="/informacion-corporativa" target="" rel="" data-drupal-link-system-path="node/14916">Información Corporativa</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/informes-anuales" target="" rel="" data-drupal-link-system-path="node/14921">Informes Anuales</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/informe-semestral" target="" rel="" data-drupal-link-system-path="node/14926">Informe Semestral</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/comunicados-de-prensa" target="" rel="" data-drupal-link-system-path="node/14931">Comunicados de Prensa</a>
+                  </li>
+              <li class="side-menu__item">
+		            <a href="/estados-financieros" target="" rel="" data-drupal-link-system-path="node/14936">Estados Financieros</a>
+                  </li>
+          </ul>
+  
+                  </li>
+          </ul>
+  
+
+
+    </nav>
+
+  </div>
+
+							                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="contentInsideRight">
+				
+                    <div class="productsWrapper">
+                         <div class="region region-content">
+    <div id="block-nir-pid2319-websitenoticeblock" class="block--website-notice-block block--website-notice-block--5816 block--content--website-notice-block block--content--website-notice-block--5816 block--4c0e78c6-da0c-44a1-9274-4dd727358033 block--4c0e78c6-da0c-44a1-9274-4dd727358033--5816 block block-nir-website-notices block-website-notice-block">
+  
+    
+      
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+<div id="block-nir-pid2319-content" class="block--system-main-block block--system-main-block--5816 block--content--system-main-block block--content--system-main-block--5816 block--743d594b-abba-4795-978c-7691880809dc block--743d594b-abba-4795-978c-7691880809dc--5816 block block-system block-system-main-block">
+  
+    
+      <article class="node node--type-nir_landing_page node--view-mode-full clearfix">
+  
+      <h1>
+              Press Releases
+          </h1>
+    
+
+  <div>
+    
+<div class="panel-display boxton clearfix " >
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 radix-layouts-content panel-panel">
+        <div class="panel-panel-inner">
+          <div class="block-region-contentmain"><div class="block--press-releases block--nir-news__widget block--nir-news__widget--5816 block--contentmain--nir-news__widget block--contentmain--nir-news__widget--5816 block--0a1c719c-36bd-43a2-b14e-5cedb590b44e block--0a1c719c-36bd-43a2-b14e-5cedb590b44e--5816 block block-nir-news block-nir-news__widget">
+  
+    
+      <div class="nir-widget">
+    <div class="nir-widget--content">
+          <div class="nir-widget--form">
+        <form data-drupal-selector="widget-form-base" action="/press-releases" method="get" id="widget-form-base" accept-charset="UTF-8">
+  <div class="nir-widgets--field-container nir-widgets--field-container--yeartimezone js-form-wrapper form-wrapper" data-drupal-selector="edit-b05b09c3-year" id="edit-b05b09c3-year"><div class="two-col-field form-item js-form-item js-form-type-select form-type-select form-item-b05b09c3-year-value js-form-item-b05b09c3-year-value">
+      <label for="edit-b05b09c3-year-value">Year</label>
+        <select data-drupal-selector="edit-b05b09c3-year-value" id="edit-b05b09c3-year-value" name="b05b09c3_year[value]" class="form-select"><option value="_none">None</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option><option value="2014">2014</option><option value="2013">2013</option><option value="2012">2012</option><option value="2011">2011</option><option value="2010">2010</option><option value="2009">2009</option><option value="2008">2008</option><option value="2007">2007</option><option value="2006">2006</option><option value="2005">2005</option><option value="2004">2004</option><option value="2003">2003</option><option value="2002">2002</option></select>
+        </div>
+</div>
+<input data-drupal-selector="edit-submit" type="submit" id="edit-submit" name="op" value="Filter" class="button button--primary js-form-submit form-submit" />
+<input data-drupal-selector="edit-b05b09c3-widget-id" type="hidden" name="b05b09c3_widget_id" value="b05b09c3" />
+<input autocomplete="off" data-drupal-selector="form-zqndxbznkzeo0cxv5hmvwzv6dtlcqemhfcgxkpqihy4" type="hidden" name="form_build_id" value="form-zQnDxBZnKzeO0cxv5HMvwZv6DTlCQeMHFcGxKPqIHY4" />
+<input data-drupal-selector="edit-widget-form-base" type="hidden" name="form_id" value="widget_form_base" />
+
+</form>
+
+      </div>
+        <div class="nir-widget--list">
+              
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/tenaris-announces-2019-third-quarter-results" hreflang="en">Tenaris Announces 2019 Third Quarter Results</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      October 30, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          The financial and operational information contained in this press release is based on unaudited consolidated condensed interim financial statements presented in U.S. dollars and prepared in accordance with International Financial Reporting Standards as issued by the International Accounting
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/tenaris-announces-2019-third-quarter-results" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/a5a6b137-e0ad-4753-b969-a68e49d24dfb" type="application/pdf; length=163860" title="PR TS 2019 Q3.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/delisting-tenariss-shares-argentina-become-effective-october-11" hreflang="en">Delisting of Tenaris’s shares in Argentina to become effective on October 11, 2019</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      September 19, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          LUXEMBOURG , Sept. 19, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Buenos Aires and Mexico : TS and MTA Italy: TEN) (“Tenaris”, ﻿or the “Company”) announced today that the Argentine National Securities Commission ( Comisión Nacional de Valores , or “CNV”) has authorized the delisting of the
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/delisting-tenariss-shares-argentina-become-effective-october-11" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/4907efe1-6fcd-4cc9-ad84-d4a5b1b1e35f" type="application/pdf; length=65446" title="PR TS 19 Sep 2019.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/tenaris-announces-2019-second-quarter-results" hreflang="en">Tenaris Announces 2019 Second Quarter Results</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      July 31, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          The financial and operational information contained in this press release is based on unaudited consolidated condensed interim financial statements presented in U.S. dollars and prepared in accordance with International Financial Reporting Standards as issued by the International Accounting
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/tenaris-announces-2019-second-quarter-results" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/b6ae5929-50d6-4be7-b817-8f6a74fe496b" type="application/pdf; length=187937" title="PR_TS_Q2 2019..pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/general-shareholders-meeting-approves-delisting-tenariss-shares" hreflang="en">General Shareholders Meeting approves delisting of Tenaris’s shares from the Buenos Aires stock exchange</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      July 29, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          LUXEMBOURG , July 29, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Buenos Aires and Mexico : TS and MTA Italy: TEN) announced today that its General Shareholders Meeting has approved the delisting of the Company’s shares from the Buenos Aires stock exchange , Bolsas y Mercados Argentinos S.A.
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/general-shareholders-meeting-approves-delisting-tenariss-shares" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/e4fff565-75c9-46ac-a60d-bb94918ceeb8" type="application/pdf; length=74386" title="PR TS 29 Jul 2019.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/tenaris-convenes-general-meeting-shareholders" hreflang="en">Tenaris Convenes General Meeting of Shareholders</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      June 26, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          LUXEMBOURG , June 26, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Buenos Aires and Mexico : TS and MTA Italy: TEN) announces that it has published the convening notice to the General Meeting of Shareholders that will be held on July 29, 2019 , at 11:00 a.m.
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/tenaris-convenes-general-meeting-shareholders" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/128a8f9d-1e63-4525-9fa9-7845af3f8ff0" type="application/pdf; length=71401"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/tenaris-announces-convening-general-shareholders-meeting" hreflang="en">Tenaris announces the convening of General Shareholders Meeting to consider the delisting of its shares from the Buenos Aires stock exchange</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      June 11, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          LUXEMBOURG , June 11, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Buenos Aires and Mexico : TS and MTA Italy: TEN) announced today that its Board of Directors has resolved to convene a General Shareholders Meeting to consider and, if thought fit, approve the delisting of the Company’s shares from
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/tenaris-announces-convening-general-shareholders-meeting" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/7cbec319-5f31-4a72-9851-f0145131e5c2" type="application/pdf; length=78542" title="PR TS 11 Jun 2019.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/shareholders-approve-all-resolutions-agenda-tenariss-annual-8" hreflang="en">Shareholders approve all resolutions on the agenda of Tenaris’s Annual General Meeting</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      May 6, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          LUXEMBOURG , May 06, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Buenos Aires and Mexico : TS and MTA Italy: TEN) announced that its annual general meeting of shareholders approved today all resolutions on the agenda. Among other resolutions adopted at the annual general meeting, the shareholders
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/shareholders-approve-all-resolutions-agenda-tenariss-annual-8" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/2075a19c-174c-4425-bb66-c6684e2a0c7c" type="application/pdf; length=76652" title="PR Tenaris AGMS 2019.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/tenaris-announces-2019-first-quarter-results" hreflang="en">Tenaris Announces 2019 First Quarter Results</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      May 2, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          The financial and operational information contained in this press release is based on unaudited consolidated condensed interim financial statements presented in U.S. dollars and prepared in accordance with International Financial Reporting Standards as issued by the International Accounting
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/tenaris-announces-2019-first-quarter-results" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/3747ce18-8a50-4b61-b108-010f2ca47be3" type="application/pdf; length=153772" title="TS 2019Q1 PR - english.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/argentine-court-reverses-decision-against-tenariss-ceo-and" hreflang="en">Argentine Court Reverses Decision Against Tenaris’s CEO and Chairman</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      April 15, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          LUXEMBOURG , April 15, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Buenos Aires and Mexico : TS and MTA Italy: TEN) has been informed that, earlier today, an Argentine court of appeals reviewing the preliminary decision ( procesamiento ) of November 27, 2018 issued by the first-instance judge
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/argentine-court-reverses-decision-against-tenariss-ceo-and" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/262d5533-a5f4-46b1-90ac-9bd2668ad917" type="application/pdf; length=58925" title="TS PR 15 April 2019.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+<article role="article" class="clearfix node node--nir-news--nir-widget-list node--type-nir-news node--view-mode-nir-widget-list node--promoted">
+
+  
+ 
+
+    <div class="newsrow">
+          <a class="nir-widget--accordion-toggle nir-widget--news--accordion-toggle"><a href="/news-releases/news-release-details/tenaris-files-2018-annual-report-2018-sustainability-report-and" hreflang="en">Tenaris Files 2018 Annual Report, 2018 Sustainability Report and 2018 Annual Report on Form 20-F, and informs on the publication of the Convening Notice for the Annual General Meeting of Shareholders</a></a>
+            <div class="nir-widget--field nir-widget--news--date-time">
+      April 3, 2019
+    </div>
+    
+      <div class="nir-widget--accordion-wrapper nir-widget--news--accordion">
+      <div class="nir-widget--field nir-widget--news--teaser">
+          LUXEMBOURG , April 03, 2019 (GLOBE NEWSWIRE) -- Tenaris S.A. (NYSE, Buenos Aires and Mexico : TS and MTA Italy: TEN) announces that it has filed today the annual report and the sustainability report, containing the non-financial information required by applicable Luxembourg law, for the year ended
+      </div>
+	       <div class="nir-widget--field nir-widget--news--read-more">
+      <a href="/news-releases/news-release-details/tenaris-files-2018-annual-report-2018-sustainability-report-and" hreflang="en">Read More</a>
+    </div>
+      </div>
+  </div>
+
+  <div class="newspdf">
+      <div class="nir-widget--field nir-widget--news--addl-formats">
+
+                              <div class="nir-widgets-file-link">
+    <a href="http://ir.tenaris.com/static-files/7d92fcdc-473f-4150-92bd-80992b1d7918" type="application/pdf; length=65213" title="TS 2018 reports PR 03.04.2019.pdf"><span class="file-icon widget-file--mime-application-pdf widget-file--application-pdf"></span></a>
+      </div>
+
+        
+    </div>
+  </div>
+  
+ 
+
+  
+</article>
+
+          </div>
+    <div class="nir-widget--pager">
+        <nav class="pager" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+    <ul class="pager__items js-pager__items">
+                                                        <li class="pager__item is-active">
+                                          <a href="?page=0" title="Current page">
+            <span class="visually-hidden">
+              Current page
+            </span>1</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=1" title="Go to page 2">
+            <span class="visually-hidden">
+              Page
+            </span>2</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=2" title="Go to page 3">
+            <span class="visually-hidden">
+              Page
+            </span>3</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=3" title="Go to page 4">
+            <span class="visually-hidden">
+              Page
+            </span>4</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=4" title="Go to page 5">
+            <span class="visually-hidden">
+              Page
+            </span>5</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=5" title="Go to page 6">
+            <span class="visually-hidden">
+              Page
+            </span>6</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=6" title="Go to page 7">
+            <span class="visually-hidden">
+              Page
+            </span>7</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=7" title="Go to page 8">
+            <span class="visually-hidden">
+              Page
+            </span>8</a>
+        </li>
+              <li class="pager__item">
+                                          <a href="?page=8" title="Go to page 9">
+            <span class="visually-hidden">
+              Page
+            </span>9</a>
+        </li>
+                          <li class="pager__item pager__item--ellipsis" role="presentation">&hellip;</li>
+                          <li class="pager__item pager__item--next">
+          <a href="?page=1" title="Go to next page" rel="next">
+            <span class="visually-hidden">Next page</span>
+            <span aria-hidden="true">next ›</span>
+          </a>
+        </li>
+                          <li class="pager__item pager__item--last">
+          <a href="?page=21" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+            <span aria-hidden="true">last »</span>
+          </a>
+        </li>
+          </ul>
+  </nav>
+
+    </div>
+    <div class="nir-widget--total-results">
+      Displaying 1 - 10 of 211
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /.boxton -->
+
+  </div>
+</article>
+
+  </div>
+
+  </div>
+
+                    </div>
+
+				                    <div class="sideBar">
+							  <div class="region region-sidebar-last">
+    <div id="block-nir-pid2319-stockquote" class="block--market-data-block__stock-quote block--market-data-block__stock-quote--13861 block--sidebar-last--market-data-block__stock-quote block--sidebar-last--market-data-block__stock-quote--13861 block--020b53ff-371e-4ba3-bea0-656850d7dd04 block--020b53ff-371e-4ba3-bea0-656850d7dd04--13861 block block-nir-market-data-block block-market-data-block__stock-quote">
+  
+      <h2>Stock Information</h2>
+    
+      <div class='quote-wrap user-toggle-on stock-quote__featured'>
+  <div class="quote-wrapper">
+      <select>
+              <option value=""></option>
+          </select>
+                            <div class="quote--inner">
+
+    <div class="dataHeader">Price</div>
+    <div class="dataValue"></div>
+
+    <div class="line">&nbsp;</div>
+
+    <div class="dataHeader">Change (%)</div>
+    <div class="dataValue "> </div>
+
+    <div class="line">&nbsp;</div>
+
+    <div class="dataHeader">Volume</div>
+    <div class="dataValue"></div>
+
+</div>
+    </div>
+</div>
+
+  </div>
+<div id="block-stockinfoattributionthomsonreuters" class="block--attribution-block__stock-info-attribution__thomson-reuters block--attribution-block__stock-info-attribution__thomson-reuters--13861 block--sidebar-last--attribution-block__stock-info-attribution__thomson-reuters block--sidebar-last--attribution-block__stock-info-attribution__thomson-reuters--13861 block--4a138d29-35dc-4ca2-af02-6d20d84c6c01 block--4a138d29-35dc-4ca2-af02-6d20d84c6c01--13861 block block-nir-attribution-block block-attribution-block__stock-info-attribution__thomson-reuters">
+  
+    
+      <p>
+  Copyright West LLC. Minimum 15 minutes delayed.</p>
+
+  </div>
+
+
+<nav role="navigation" aria-labelledby="block-nir-pid2319-shareholdertools-menu" id="block-nir-pid2319-shareholdertools" class="block--system-menu-blockshareholder-tools block--system-menu-blockshareholder-tools--13861 block--sidebar-last--system-menu-block--shareholder-tools block--sidebar-last--system-menu-block--shareholder-tools--13861 block--81e4ccfc-45ed-448e-afcc-c30cec578893 block--81e4ccfc-45ed-448e-afcc-c30cec578893--13861 block block-menu navigation block-system-menublock menu--shareholder-tools">
+            
+    <h2 id="block-nir-pid2319-shareholdertools-menu">Shareholder Tools</h2>
+    
+
+                              <ul data-block-uuid="81e4ccfc-45ed-448e-afcc-c30cec578893" class="menu side-menu">
+                  <li class="side-menu__item">
+          <a href="/contact-ir" target="" rel="" data-drupal-link-system-path="node/12881">Contact IR</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="https://tenarissa.gcs-web.com/static-files/d9513c85-ba12-4e85-bc7a-0413d7b9b527" target="" rel="">Privacy Statement for Investors </a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/printed-materials" data-drupal-link-system-path="node/5966">Printed Materials</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/financial-information/sec-filings" target="" rel="" data-drupal-link-system-path="node/5876">SEC Filings</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/email-alert-subscription" target="" rel="" data-drupal-link-system-path="node/5946">Events Alerts</a>
+                  </li>
+              <li class="side-menu__item">
+          <a href="/events-and-presentations" target="" rel="" data-drupal-link-system-path="node/5826">Webcasts</a>
+                  </li>
+          </ul>
+  
+
+
+    </nav>
+<div id="block-nir-pid2319-informationtext" class="block-content--nir-global-block block-content--nir-global-block--12901 block--block-content32a3a35d-241f-46ca-aa05-9b79f06833fb block--block-content32a3a35d-241f-46ca-aa05-9b79f06833fb--5816 block--sidebar-last--block-content--32a3a35d-241f-46ca-aa05-9b79f06833fb block--sidebar-last--block-content--32a3a35d-241f-46ca-aa05-9b79f06833fb--5816 block--07821aa6-cf79-4a96-bf38-ec6e5469dada block--07821aa6-cf79-4a96-bf38-ec6e5469dada--5816 block block-block-content block-block-content32a3a35d-241f-46ca-aa05-9b79f06833fb">
+  
+    
+      
+            <div class="field field--name-field-nir-global-block-node field--type-entity-reference field--label-hidden field__item">  
+            <div class="clearfix text-formatted field field--name-field-nir-global-block-body field--type-text-long field--label-hidden field__item"><div class="sideBox">
+<div class="sideToolHead">Information to the Shareholders</div>
+
+<div class="sideBoxContent"><a href="/2019-annual-general-meeting-shareholders">Annual General Meeting of Shareholders</a><br /><br /><a href="/general-meeting-shareholders">General Meeting of Shareholders</a><br />
+ </div>
+</div></div>
+      
+</div>
+      
+  </div>
+
+  </div>
+
+
+                        <div class="sideBox">
+                            <div id="mmHeader" class="sideBoxHead" onclick="toggleGeneral('multimedia', 'mmHeader', 'Related Multimedia');">
+                                <div class="boxLink">
+                                    <img height="15" align="middle" width="15" alt="Expand content" src="/sites/g/files/knoqqb25746/themes/site/nir_pid2319/client/images/icon_arrow_plus.gif" />
+                                </div>
+                                <span class="sideBoxHeadOff">Related Multimedia</span>
+                            </div>
+
+                            <div class="sideBoxContent" id="multimedia" style="display:none; padding:5px;">
+
+                                <p><a class="thickbox" rel="video-thumb" title="Corporate" href="http://www.tenaris.com/player/showvideo.html?axis=x&width=640&height=395&logo=images/ts-hor.png&file=http://www.tenaris.com/media/1/F/0/{1F0FE1DC-0E9A-4440-97B3-641E6BD62D69}Tenaris_corporate_video.flv&image=images/horizontal-thumb.jpg"><img height="112" width="218" src="/sites/g/files/knoqqb25746/themes/site/nir_pid2319/client/images/Corporate_video.jpg"/></a></p>
+                                <p class="item_description">Tenaris corporate profile</p>
+                                <br/>
+
+
+                                <p><a class="thickbox" rel="video-thumb" title=" Products and services for oil and gas customers." href="http://www.tenaris.com/player/showvideo.html?axis=y&width=270&height=515&logo=images/ts-vert.png&file=http://www.tenaris.com/media/0/E/C/{0EC356CF-18EE-41D9-9123-3876688A4248}ProductsandServices.flv&image=images/vertical-thumb.jpg"><img height="112" width="218" src="/sites/g/files/knoqqb25746/themes/site/nir_pid2319/client/images/ProductsandServices_video.jpg"/></a></p>
+                                <p class="item_description">Products and services for oil and gas customers.</p>
+                                <br/>
+
+                                <p><a class="investorLinks" href="http://www.tenaris.com/en/MediaAndPublications/Videos.aspx">View more videos</a> <img height="7" width="7" alt="" src="/sites/g/files/knoqqb25746/themes/site/nir_pid2319/client/images/arrow_green.gif" /></p>
+                            </div>
+                        </div>
+                    </div>
+				 
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+        <div class="push"></div>
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+        <div class="footerWrapper">
+            <div class="navFooter">
+                <a href="http://www.tenaris.com/en/TermAndConditions.aspx">Terms &amp; Conditions</a><span style="padding-right:25px;"></span>
+                <a target="_blank" class="thickbox" href="http://www.tenaris.com/Pages/Tenaris_CustomerFeedback.aspx?KeepThis=true&amp;amp;TB_iframe=true&amp;amp;height=420&amp;amp;width=320">Customer Feedback</a>
+                <span style="padding-right:25px;"></span>
+                <a href="http://www.tenaris.com/en/Sitemap.aspx">Sitemap</a><span style="padding-right:25px;"></span></div>
+
+            <div class="copyRight">Copyright &copy; 2003-2019 Tenaris S.A. All rights reserved.</div>
+            <ul class="socialNetwork">
+                <li>Follow us</li>
+                <li class="tw"><a title="Twitter" target="_blank" href="http://twitter.com/#!/tenaris">Twitter</a></li>
+                <li class="fb"><a title="Facebook" target="_blank" href="http://www.facebook.com/TenarisEvents">Facebook</a></li>
+                <li class="yt"><a title="YouTube" target="_blank" href="http://www.youtube.com/tenaris">YouTube</a></li>
+                <li class="li"><a title="LinkedIn" target="_blank" href="http://www.linkedin.com/company/tenaris">LinkedIn</a></li>
+            </ul>
+
+            <img src="/sites/g/files/knoqqb25746/themes/site/nir_pid2319/client/images/footer_color_bar.gif" alt="" width="958" height="5" />
+        </div>
+    </div>
+<div id="cookieConsent">
+    <p>Our Site uses cookies. By using our Site (through any device) you agree that these rules on use of cookies apply. Further information on these cookies can be found in the <a href="//www.tenaris.com/en/~/link.aspx?_id=8BED510BA8174A3DACA8A62494B8AF4B&_z=z" target="_blank">Terms &amp; Conditions</a>.<br/>We may revise and update the applicable rules at anytime, therefore, we recommend visitors and users to periodically review the rules of use of cookies to ensure that visitors and users are aware of any changes.</p>
+    <a id="cookieConsentOK">Hide</a>
+</div>
+
+  </div>
+
+    
+          <script type="text/javascript">var s_CCSWebHostingAccount = "trcgtenarissa";</script>
+        <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/5816","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"classy\/node,core\/drupal.collapse,core\/html5shiv,nir_base\/adobe_omniture,nir_base\/lib,nir_base\/nir_icons,nir_base\/nir_toolbar,nir_ckeditor_datatables\/datatables,nir_market_data_block\/nir_market_data_block.command,nir_market_data_block\/nir_market_data_block.filterform,nir_market_data_block\/nir_market_data_block.stockQuote,nir_multimedia\/nir_multimedia,nir_pid2319\/override,nir_website_notices\/nir_website_notices.notices,radix_layouts\/radix_layouts,system\/base","theme":"nir_pid2319","theme_token":null},"ajaxTrustedUrl":{"form_action_p_pvdeGsVG5zNF_XLGPTvYSKCf43t8qZYSwcfZl2uzM":true},"user":{"uid":0,"permissionsHash":"cec1e57dcee2cae0e6b86fe835549d203e02b6dba2421a15cbe02f8a1c169d90"}}</script>
+<script src="/sites/g/files/knoqqb25746/files/js/js_jxMwcZ-gPBMoCCcAF3s5lVfxJ6OB13JXo1m7MmX-OUI.js"></script>
+
+    
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"761e715901","applicationID":"35893545,24276188","transactionName":"ZlVXYRcAW0ZRW0QKX18fdFYRCFpbH3xCFkBQXGl2ChNQaXZXQg5sd19HWCcUXFlUXUJODkNVW1EAE2VZUVtVC19dVFBHIw5HWHFbRApfXw==","queueTime":0,"applicationTime":441,"atts":"ShJUF18aSEg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

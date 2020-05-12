@@ -17,7 +17,7 @@ def connect_psycopg2(user, password, db, host='localhost', port='8080'):
         print('[STOP] Exception Invalid Credentials ? : {}'.format(e))
 
 print('\n[x] DB initialisation : Running SQL Alchemy version {}'.format(sqlalchemy.__version__))
-url, engine, meta = connect_psycopg2(user='simon', password='trackerNPH9', db='trackerdb')
+url, engine, meta = connect_psycopg2(user='electricity', password='trackerNPH9', db='trackerdb')
 
 #engine = create_engine('postgresql://matt:toto@localhost:8080/testpython')
 Session = sessionmaker(bind=engine)

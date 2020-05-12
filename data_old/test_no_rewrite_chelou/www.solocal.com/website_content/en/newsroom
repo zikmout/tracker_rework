@@ -1,0 +1,1061 @@
+<!doctype html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# " class="no-js">
+  <head>
+    <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a869753f49",applicationID:"467429667"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var i=n[t]={exports:{}};e[t][0].call(i.exports,function(n){var i=e[t][1][n];return r(i||n)},i,i.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(e,n,t){function r(){}function i(e,n,t){return function(){return o(e,[u.now()].concat(f(arguments)),n?null:this,t),n?void 0:this}}var o=e("handle"),a=e(4),f=e(5),c=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",d=l+"ixn-";a(p,function(e,n){s[n]=i(l+n,!0,"api")}),s.addPageAction=i(l+"addPageAction",!0),s.setCurrentRouteName=i(l+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,i="function"==typeof n;return o(d+"tracer",[u.now(),e,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return n.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],t),e}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=i(d+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){var t=e.getEntries();t.forEach(function(e){"first-paint"===e.name?c("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&c("timing",["fcp",Math.floor(e.startTime)])})}function i(e,n){var t=e.getEntries();t.length>0&&c("lcp",[t[t.length-1]])}function o(e){if(e instanceof s&&!l){var n,t=Math.round(e.timeStamp);n=t>1e12?Date.now()-t:u.now()-t,l=!0,c("timing",["fi",t,{type:e.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,f,c=e("handle"),u=e("loader"),s=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),f=new PerformanceObserver(i);try{a.observe({entryTypes:["paint"]}),f.observe({entryTypes:["largest-contentful-paint"]})}catch(p){}}if("addEventListener"in document){var l=!1,d=["click","keydown","mousedown","pointerdown","touchstart"];d.forEach(function(e){document.addEventListener(e,o,!1)})}}},{}],3:[function(e,n,t){function r(e,n){if(!i)return!1;if(e!==i)return!1;if(!n)return!0;if(!o)return!1;for(var t=o.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}n.exports={agent:i,version:o,match:r}},{}],4:[function(e,n,t){function r(e,n){var t=[],r="",o=0;for(r in e)i.call(e,r)&&(t[o]=n(r,e[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],5:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,i=t-n||0,o=Array(i<0?0:i);++r<i;)o[r]=e[n+r];return o}n.exports=r},{}],6:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function i(e){function n(e){return e&&e instanceof r?e:e?c(e,f,o):o()}function t(t,r,i,o){if(!l.aborted||o){e&&e(t,r,i);for(var a=n(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function d(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||i(t)}function w(e,n){u(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:d,addEventListener:d,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(l.aborted=!0,s=l.backlog={})}var f="nr@context",c=e("gos"),u=e(4),s={},p={},l=n.exports=i();l.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(i.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[n]=r,r}var i=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){i.buffer([e],r),i.emit(e,n,t)}var i=e("ee").get("handle");n.exports=r,r.ee=i},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=E.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();u(y,function(n,t){e[n]||(e[n]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function i(){"complete"===d.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=e("handle"),u=e(4),s=e("ee"),p=e(3),l=window,d=l.document,m="addEventListener",v="attachEvent",g=l.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:g,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1167.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=n.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),e(2),d[m]?(d[m]("DOMContentLoaded",o,!1),l[m]("load",r,!1)):(d[v]("onreadystatechange",i),l[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=e(6)},{}],"wrap-function":[function(e,n,t){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;n.exports=function(e,n){function t(e,n,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){l([u,"",[r,a,i],f])}s(n+"start",[r,a,i],f);try{return c=e.apply(a,r)}catch(p){throw s(n+"err",[r,a,p],f),p}finally{s(n+"end",[r,a,c],f)}}return r(e)?e:(n||(n=""),nrWrapper[a]=e,p(e,nrWrapper),nrWrapper)}function u(e,n,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<n.length;c++)f=n[c],a=e[f],r(a)||(e[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||n){var o=c;c=!0;try{e.emit(t,r,i,n)}catch(a){l([a,t,r,i])}c=o}}function p(e,n){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(e);return t.forEach(function(t){Object.defineProperty(n,t,{get:function(){return e[t]},set:function(n){return e[t]=n,n}})}),n}catch(r){l([r])}for(var i in e)f.call(e,i)&&(n[i]=e[i]);return n}function l(n){try{e.emit("internal-error",n)}catch(t){}}return e||(e=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<script>window.dataLayer = window.dataLayer || []; window.dataLayer.push({"language":"en","entityUuid":"7835e730-2ab1-45c0-b8e1-9dc3a93239ab","userUid":0,"sessionType":"user","userType":"user","pageCategory":"actualit\u00e9s","space":"ALL","firstPage":"true","environnement":"prod","pageType":"classique","profil":"normal"});</script>
+<style>.has-black-color {
+    color: #000000;
+  }
+  .has-black-background-color {
+    background-color: #000000;
+  }
+  .has-dark-grey-color {
+    color: #828282;
+  }
+  .has-dark-grey-background-color {
+    background-color: #828282;
+  }
+  .has-grey-color {
+    color: #D2D2DC;
+  }
+  .has-grey-background-color {
+    background-color: #D2D2DC;
+  }
+  .has-light-grey-color {
+    color: #F0F0F5;
+  }
+  .has-light-grey-background-color {
+    background-color: #F0F0F5;
+  }
+  .has-white-color {
+    color: #FFFFFF;
+  }
+  .has-white-background-color {
+    background-color: #FFFFFF;
+  }
+  .has-blue-color {
+    color: #0078FA;
+  }
+  .has-blue-background-color {
+    background-color: #0078FA;
+  }
+  .has-purple-color {
+    color: #501FFF;
+  }
+  .has-purple-background-color {
+    background-color: #501FFF;
+  }
+  .has-pink-color {
+    color: #CD05FF;
+  }
+  .has-pink-background-color {
+    background-color: #CD05FF;
+  }
+  .has-orange-color {
+    color: #FFA532;
+  }
+  .has-orange-background-color {
+    background-color: #FFA532;
+  }
+  .has-green-color {
+    color: #19D77D;
+  }
+  .has-green-background-color {
+    background-color: #19D77D;
+  }</style>
+<link rel="canonical" href="https://www.solocal.com/en/newsroom" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/sites/default/files/favicon_solocal_32x32_0.png" type="image/png" />
+<link rel="alternate" hreflang="fr" href="https://www.solocal.com/actualites" />
+<link rel="alternate" hreflang="en" href="https://www.solocal.com/en/newsroom" />
+<link rel="revision" href="https://www.solocal.com/en/newsroom" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PNZHMDG');</script>
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+<style>.one_column_text {width: 100%;}
+.one_column_text .video_container {margin: 0 0 30px}
+.path-blog-bibliotheque-de-ressources .blog_card.ressource .blog_card_url { position: absolute; }</style>
+
+    <title>Newsroom | solocal.com</title>
+
+    <link rel="dns-prefetch" href="//ib.adnxs.com" />
+    <link rel="dns-prefetch" href="//www.facebook.com" />
+    <link rel="dns-prefetch" href="//connect.facebook.net" />
+    <link rel="dns-prefetch" href="//stats.g.doubleclick.net" />
+    <link rel="dns-prefetch" href="//load.fomo.com" />
+    <link rel="dns-prefetch" href="//www.google-analytics.com" />
+    <link rel="dns-prefetch" href="//www.google.com" />
+    <link rel="dns-prefetch" href="//www.google.fr" />
+    <link rel="dns-prefetch" href="//app.analytics-call-catcher.com" />
+    <link rel="dns-prefetch" href="//hal-data.com" />
+    <link rel="dns-prefetch" href="//us-central1-data-hal-9000.cloudfunctions.net" />
+    <link rel="dns-prefetch" href="//tlp-04.kameleoon.com" />
+    <link rel="dns-prefetch" href="//tlp-05.kameleoon.com" />
+    <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="//bam.nr-data.net" />
+    <link rel="dns-prefetch" href="//js-agent.newrelic.com" />
+
+    <link rel="preload" href="/themes/custom/solocal/fonts/Poppins/Poppins-Regular.woff2" type="woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/themes/custom/solocal/fonts/Poppins/Poppins-Regular.woff" type="woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/themes/custom/solocal/fonts/Poppins/Poppins-Medium.woff2" type="woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/themes/custom/solocal/fonts/Poppins/Poppins-Medium.woff" type="woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/themes/custom/solocal/fonts/Poppins/Poppins-Bold.woff2" type="woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/themes/custom/solocal/fonts/Poppins/Poppins-Bold.woff" type="woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/themes/custom/solocal/assets/fonts/icomoon/icomoon-ff15f6211c.woff2" type="woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="/themes/custom/solocal/assets/fonts/icomoon/icomoon-bd0c90fa42.woff" type="woff" as="font" crossorigin="anonymous" />
+
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_7GeruEWFfABCOsWUlmMe-_JIGsTH5mPPBuao457-f0g.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_wQf0Y5HSNhL4DdJVveb8zupImRwWogmGjiQVfeK8QAg.css" />
+<link rel="stylesheet" media="(max-width: 767px)" href="/sites/default/files/css/css_-RstzTLT1AatceqrJRSZO_Zk6taBtcG9j-VgPYa3DuY.css" />
+<link rel="stylesheet" media="(min-width: 768px)" href="/sites/default/files/css/css_wFMpu0o4BwkQMMJoqmivus1nAWOEjPLHliK0mWdia3c.css" />
+<link rel="stylesheet" media="(min-width: 980px)" href="/sites/default/files/css/css_FoS3hTAy4gFuDFsHYL5H1ZxvcFi1W0P8QJ3sGSb4HgM.css" />
+<link rel="stylesheet" media="(min-width: 1200px)" href="/sites/default/files/css/css_q2OpxWm-tBtF6lotSMtkJUyW_pMnF3JMtzl_Q_Qgcns.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_JjRo5rFfc7FuWtKnJYVvJGM5CPRcTgUQ7OPwwUNUGws.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/sites/default/files/js/js_WAvwZapjGT5JPRUQYbzdnz6SZ3caWQ67qOYWz8CB1dc.js"></script>
+<![endif]-->
+
+    
+    
+  
+<link rel="dns-prefetch" href="https://www.solocal.com">
+<link rel="preload" href="//ikg2j4vpnj.kameleoon.eu/kameleoon.js" as="script">
+<script type="text/javascript">
+  var kameleoonSiteCode = "ikg2j4vpnj";
+
+  var kameleoonIframeURL = "https://www.solocal.com/static/iframe/kameleoon-iframe.html";
+  var kameleoonIframeOrigin = "https://www.solocal.com";
+  var kameleoonStartLoadTime = new Date().getTime();
+  var kameleoonLoadingTimeout = 1000;
+  var kameleoonLightIframe = false;
+  if (!document.getElementById("kameleoonLoadingStyleSheet") && !window.kameleoonDisplayPageTimeOut)
+  {
+    var kameleoonS = document.getElementsByTagName("script")[0];
+    var kameleoonCc = "* { visibility: hidden !important; background-image: none !important; }";
+    var kameleoonStn = document.createElement("style");
+    kameleoonStn.type = "text/css";
+    kameleoonStn.id = "kameleoonLoadingStyleSheet";
+    if (kameleoonStn.styleSheet)
+    {
+      kameleoonStn.styleSheet.cssText = kameleoonCc;
+    }
+    else
+    {
+      kameleoonStn.appendChild(document.createTextNode(kameleoonCc));
+    }
+    kameleoonS.parentNode.insertBefore(kameleoonStn, kameleoonS);
+    window.kameleoonDisplayPage = function()
+    {
+      if (kameleoonStn.parentNode)
+      {
+        kameleoonStn.parentNode.removeChild(kameleoonStn);
+      }
+    };
+    window.setTimeout(function() {}, 25);
+    window.kameleoonDisplayPageTimeOut = window.setTimeout(window.kameleoonDisplayPage, kameleoonLoadingTimeout);
+  }
+  if (location.href.indexOf(kameleoonIframeOrigin) == -1)
+  {
+    kameleoonLightIframe = true;
+    var kameleoonProcessMessageEvent = function(event)
+    {
+      if (kameleoonIframeOrigin == event.origin)
+      {
+        window.removeEventListener("message", kameleoonProcessMessageEvent);
+        window.kameleoonExternalIFrameLoaded = true;
+        if (window.Kameleoon)
+        {
+          eval(event.data);
+          Kameleoon.Analyst.load();
+        }
+        else
+        {
+          window.kameleoonExternalIFrameLoadedData = event.data;
+        }
+      }
+    };
+    if (window.addEventListener)
+    {
+      window.addEventListener("message", kameleoonProcessMessageEvent, false);
+    }
+    var iframeNode = document.createElement("iframe");
+    iframeNode.src = kameleoonIframeURL;
+    iframeNode.id = "kameleoonExternalIframe";
+    iframeNode.style = "float: left !important; opacity: 0.0 !important; width: 0px !important; height: 0px !important;";
+    document.head.appendChild(iframeNode);
+  }
+</script>
+<script type="text/javascript" src="//ikg2j4vpnj.kameleoon.eu/kameleoon.js" async></script>
+  </head>
+  <body class="path-newsroom path-node page-node-type-hub">
+    <div class="wrapper dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+      <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PNZHMDG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+            
+    <input id="menu_open" type="checkbox"/>
+    <input name="open_second_menu" hidden id="menu_close" type="radio"/>
+    <input name="open_second_menu" hidden id="menu_solution" type="radio"/>
+    <input name="open_second_menu" hidden id="menu_counsel" type="radio"/>
+    <input name="open_second_menu" hidden id="menu_why" type="radio"/>
+    <input name="open_second_menu" hidden id="menu_contact" type="radio"/>
+
+<header class="nav_solocal ">
+
+            <a class="link_home" href="/en" title="Back to homepage">
+            <figure class="link_home_logo">
+                <img src="/themes/custom/solocal/images/logo-solocal.svg" alt="Solocal logo"/>
+            </figure>
+        </a>
+    
+            <label for="menu_open" class="menu_icon sl-icon-small icon-burger_menu hidden-desktop"></label>
+        <nav class="menu_container">
+            <ul class="menu_first">
+
+                
+                                        <li class="menu_first_label">
+    <label for="menu_solution">
+        Solutions
+        <span class="icon-arrow_down"></span>
+    </label>
+    <label for="menu_close" class="menu_close"></label>
+    <ul id="menu_second_solution" class="menu_second nav-second-solutions">
+                                    <li>
+                                <ul id="menu_third_exist" class="menu_third">
+                                    <li class="title">Build my online Presence</li>
+                                    <li>
+	<a href="/en/digital-presence" title="Create my online presence">
+		Create my online presence
+	</a>
+</li>
+                                    <li>
+	<a href="/en/digital-website" title="Get a website">
+		Get a website
+	</a>
+</li>
+                                    <li>
+	<a href="/en/shop/product/igpj" title="Claim my business with PagesJaunes">
+		Claim my business with PagesJaunes
+	</a>
+</li>
+                                </ul>
+                                <ul id="menu_third_emerge" class="menu_third">
+                                    <li class="title">Boost my online Presence</li>
+                                    <li>
+	<a href="/en/node/8871" title="See our solutions">
+		See our solutions
+	</a>
+</li>
+                                    <li>
+	<a href="/en/node/8876" title="Boost my listing on PagesJaunes">
+		Boost my listing on PagesJaunes
+	</a>
+</li>
+                                    <li>
+	<a href="/en/node/9061" title="Drive traffic on my website">
+		Drive traffic on my website
+	</a>
+</li>
+                                    <li>
+	<a href="/en/node/9071" title="Acquire new customers">
+		Acquire new customers
+	</a>
+</li>
+                                </ul>
+                                <ul id="menu_third_develop" class="menu_third">
+                                    <li class="title">Develop my network brand</li>
+                                    <li>
+	<a href="/en/node/8891" title="Drive-to-Store">
+		Drive-to-Store
+	</a>
+</li>
+                                    <li>
+	<a href="/en/network-solutions#presence-management" title="Présence Management">
+		Présence Management
+	</a>
+</li>
+                                    <li>
+	<a href="/en/network-solutions#search-and-display" title="Search &amp; Display">
+		Search &amp; Display
+	</a>
+</li>
+                                    <li>
+	<a href="/en/network-solutions#data-and-marketing-relationnel" title="Data &amp; Relationship Marketing">
+		Data &amp; Relationship Marketing
+	</a>
+</li>
+                                </ul>
+                                <ul id="menu_third_manage" class="menu_third">
+                                    <li class="title">Manage my digital presence</li>
+                                    <li>
+	<a href="/en/node/9961" title="Update all the information about your company, share updates with your audience and track your results">
+		Update all the information about your company, share updates with your audience and track your results
+	</a>
+</li>
+                                </ul>
+                            </li>
+                            </ul>
+</li>
+
+                                        <li class="menu_first_label">
+    <label for="menu_counsel">
+        Support
+        <span class="icon-arrow_down"></span>
+    </label>
+    <label for="menu_close" class="menu_close"></label>
+    <ul id="menu_second_counsel" class="menu_second ">
+                                                                <li>
+	<a href="/en/node/7786" title="Blog">
+		Blog
+	</a>
+</li>
+                            <li>
+	<a href="/en/node/9226" title="Ressources">
+		Ressources
+	</a>
+</li>
+                            </ul>
+</li>
+                                        <li class="menu_first_label">
+                        <a class="menu_not_sub" href="/en/who-we-are">About</a>
+                    </li>
+
+                                        <li class="menu_first_label">
+                        <a class="menu_not_sub" href="/en/finance">Investors</a>
+                    </li>
+
+                                        <li class="menu_first_label">
+    <label for="menu_contact">
+        Contact us
+        <span class="icon-arrow_down"></span>
+    </label>
+    <label for="menu_close" class="menu_close"></label>
+    <ul id="menu_second_contact" class="menu_second ">
+                                    <li>
+	<a href="/en/questions-frequentes" title="FAQ">
+		FAQ
+	</a>
+</li>
+                            <li><a data-solocal-webcallback>Call back</a></li>
+                            </ul>
+</li>
+                
+            </ul>
+        </nav>
+    
+            <ul class="menu_compte">
+            <li class="menu_compte_value">
+                <a href="tel:+33184137274" class="numberACC">
+                    <span class="underline">
+                        <span class="hidden-desktop_wide menu_icon sl-icon-small icon-phone"></span>
+                        <span class="visible-desktop_wide">01 84 13 72 74</span>
+                    </span>
+                </a>
+            </li>
+            <li class="menu_compte_value button_mon_compte">
+                <a href="https://manager.solocal.com" target="_espaceclient" data-solocal-datalayer-push='{
+                "events": "click",
+                "values": {
+                "customCategorie": "barredenav",
+                "customAction": "mon compte",
+                "customLabel": "mon compte",
+                "event": "customEvent"
+            }}'>
+                    <span class="hidden-desktop_wide menu_icon sl-icon-small icon-account"></span></span>
+                    <span class="value">My account</span>
+                </a>
+            </li>
+                            <li class="menu_compte_value visible-desktop_wide">
+                    <a href="/actualites" class="underline">FR</a>
+                </li>
+                    </ul>
+    
+</header>
+
+    <label for="menu_close" class="menu_close_desktop"></label>
+
+                <div data-drupal-messages-fallback class="hidden"></div>
+
+<div class="hero">
+	<div class="hero__background show-for-small-only" style="background-image: url(/sites/default/files/2018-10/header_Actualites_2.jpg);"></div><!-- /.hero__background -->
+
+	<div class="hero__background show-for-medium" style="background-image: url(/sites/default/files/2018-10/header_Actualites_2.jpg);"></div><!-- /.hero__background -->
+
+	<div class="shell">
+		<div class="hero__container">
+			
+			    
+
+  <div class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <ul>
+                    <li>
+            <a href="/en">Home</a>
+        </li>
+                            <li class="is-active">
+            <a href="javascript:;">Newsroom</a>
+        </li>
+                </ul>
+</div><!-- /.breadcrumb -->
+
+
+
+
+			<h1 class="hero__title">Newsroom</h1><!-- /.hero__title -->
+			
+			<div class="hero__inner">
+				<div class="hero__entry">
+					<p>Want to know us better?</p>
+
+<p>Welcome to our press and social media area. Find here the news of Solocal, PagesJaunes and Mappy, and all our content (press releases, videos, customer testimonials, etc.). Contact us for any questions!</p>
+
+				</div><!-- /.hero__entry -->
+			</div><!-- /.hero__inner -->
+		</div><!-- /.hero__container -->
+	</div><!-- /.shell -->
+</div><!-- /.hero -->
+                <div class="paragraph paragraph--type--view paragraph--view-mode--default paragraph-index-0">
+				  	
+	</div>
+
+              <div class="paragraph paragraph--type--view paragraph--view-mode--default paragraph-index-1">
+				  	            <div class="js-view-dom-id-697daa53cb2f993820793fd37649b699d0281b916a2d6e9ec4c81e574df4d5fc">
+  
+  
+  
+
+  
+  <form class="views-exposed-form" data-drupal-selector="views-exposed-form-article-mosaique-block-1" action="/en/newsroom" method="get" id="views-exposed-form-article-mosaique-block-1" accept-charset="UTF-8">
+  <section class="shell" id="pager-mosaique">
+    <div class="filter">
+    <div class="filter__container">
+
+        <div class="filter__section">
+            <div class="js-form-item form-item js-form-type-select form-item-field-format-target-id js-form-item-field-format-target-id filter__row">
+  <label for="select_format" class="filter__label hide"></label>
+  
+  <div class="filter__controls">
+    <div class="select">
+      <select data-drupal-selector="edit-field-format-target-id" multiple="multiple" name="field_format_target_id[]" id="edit-field-format-target-id" size="3" class="form-select" data-placeholder="Format"><option value="11">Press release</option><option value="16">Tribune</option><option value="6">Video</option></select>
+    </div><!-- /.select -->
+  </div><!-- /.filter__controls -->
+</div><!-- /.filter__row -->
+<div class="js-form-item form-item js-form-type-select form-item-field-media-target-id js-form-item-field-media-target-id filter__row">
+    <label for="select_media" class="filter__label hide"></label>
+    
+    <div class="filter__controls">
+        <div class="select">
+            <select data-drupal-selector="edit-field-media-target-id" multiple="multiple" name="field_media_target_id[]" id="edit-field-media-target-id" size="4" class="form-select" data-placeholder="Services"><option value="21">Solocal</option><option value="26">PagesJaunes</option><option value="31">Mappy</option><option value="36">Ooreka</option></select>
+        </div><!-- /.select -->
+    </div><!-- /.filter__controls -->
+</div><!-- /.filter__row -->
+<div class="form__row js-form-item form-item js-form-type-textfield form-item-created-min js-form-item-created-min is-hidden">
+  <div class="form__controls">
+          
+<label for="edit-created-min" class="form__label">Authored on</label>
+                
+<input data-drupal-selector="edit-created-min" type="text" id="edit-created-min" name="created[min]" value="" size="30" maxlength="128" class="form-text field" />
+
+                  </div>
+</div>
+<div class="form__row js-form-item form-item js-form-type-textfield form-item-created-max js-form-item-created-max is-hidden">
+  <div class="form__controls">
+          
+<label for="edit-created-max" class="form__label">And</label>
+                
+<input data-drupal-selector="edit-created-max" type="text" id="edit-created-max" name="created[max]" value="" size="30" maxlength="128" class="form-text field" />
+
+                  </div>
+</div><div class="js-form-item form-item js-form-type-select form-item-year js-form-item-year filter__row">
+    <label for="year" class="filter__label hide"></label>
+    
+    <div class="filter__controls">
+        <div class="select">
+            <select data-drupal-selector="edit-year" id="edit-year" name="year" class="form-select" data-placeholder="By year"><option value="all" selected="selected">Date</option><option value="2004">2004</option><option value="2005">2005</option><option value="2006">2006</option><option value="2007">2007</option><option value="2008">2008</option><option value="2009">2009</option><option value="2010">2010</option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="2015">2015</option><option value="2016">2016</option><option value="2017">2017</option><option value="2018">2018</option><option value="2019">2019</option><option value="2020">2020</option></select>
+        </div><!-- /.select -->
+    </div><!-- /.filter__controls -->
+</div><!-- /.filter__row -->
+<input data-drupal-selector="edit-submit-article-mosaique" type="submit" id="edit-submit-article-mosaique" value="Apply" class="button js-form-submit form-submit js-mosaic-submit is-hidden" />
+
+
+            <div class="filter__actions">
+                <a href="javascript:;" class="filter__btn js-filter-reset">
+                    <img src="/themes/custom/solocal/images/icons/ico-circle.svg" alt="">
+
+                    reset
+
+                </a>
+            </div><!-- /.filter__actions -->
+        </div><!-- /.filter__section -->
+        
+<div class="js-form-item form-item js-form-type-select form-item-sort-by js-form-item-sort-by filter__section">
+    <div class="filter__row">
+        <label for="select_sort" class="filter__label hide"></label>
+        
+        <div class="filter__controls">
+            <div class="select">
+                <select data-drupal-selector="edit-sort-by" id="edit-sort-by" name="sort_by" class="form-select" data-placeholder="Sort by"><option value="created" selected="selected">From newest to oldest</option><option value="created_1">From oldest to newest</option><option value="title">A-Z</option></select>
+            </div><!-- /.select -->
+        </div><!-- /.form__controls -->
+    </div><!-- /.form__row -->
+</div><!-- /.filter__section -->
+
+</div><!-- /.filter -->
+</section><!-- /.shell -->
+
+</form>
+
+  
+
+  <section class="shell">
+    <div class="article_keyword">
+    </div>
+</section><!-- /.shell -->
+<section class="shell">
+    <div class="card-rectangular_list cards">
+        <div class="cards__container">
+                                
+
+                    
+        <div class="card-rectangular_text card">
+                            <a href="/en/solocal-adding-artificial-intelligence-its-big-data-platform-partnership-google-cloud-0" data-title="Solocal is adding Artificial Intelligence to its Big Data platform in partnership with Google Cloud" class="card__inner js-newsAccess">
+            
+                            <span class="card__meta">
+                    <strong>29</strong> November
+                </span>
+            
+            <div class="card__head">
+                <h4 class="card__subtitle" style="height: 35px;">Press release</h4><!-- /.card__subtitle -->
+
+                <h3 class="card__title">
+                                            Solocal is adding Artificial Intelligence to its Big Data platform in partnership with Google Cloud
+                                    </h3><!-- /.card__title -->
+            </div><!-- /.card__head -->
+
+                            <div class="card__entry">
+                                                                <p class="MsoNormal text-align-justify" style="line-height:115%">An alliance that helps all companies enhance the performance of their digital advertising and boost their growth.<br />
+<b style="mso-bidi-font-weight:normal"><span style="font-size:12.0pt;mso-bidi-font-family:Arial;color:#365F91;mso-themecolor:
+accent1;mso-themeshade:191"><o:p></o:p></span></b></p>
+
+                                    </div><!-- /.card__entry -->
+            
+            <div class="article_keyword">
+	    	<span class="keyword">Solocal</span>
+    </div><!-- /.article_keyword -->
+
+
+                            </a><!-- /.card__inner -->
+                    </div><!-- /.card-rectangular_text -->
+    
+                                
+
+                    
+        <div class="card-rectangular_text card">
+                            <a href="/en/solocal-confirms-its-leadership-online-market-new-visual-identity-and-new-e-commerce-site" data-title="Solocal confirms its leadership on the online market: a new visual identity and new e-commerce site, solocal.com, and a new app for all its customers and prospects" class="card__inner js-newsAccess">
+            
+                            <span class="card__meta">
+                    <strong>06</strong> November
+                </span>
+            
+            <div class="card__head">
+                <h4 class="card__subtitle" style="height: 35px;">Press release</h4><!-- /.card__subtitle -->
+
+                <h3 class="card__title">
+                                            Solocal confirms its leadership on the online market: a new visual identity and new e-commerce site,...
+                                    </h3><!-- /.card__title -->
+            </div><!-- /.card__head -->
+
+                            <div class="card__entry">
+                                                                <p class="MsoNormal text-align-justify" style="line-height:115%">Solocal becomes the reference brand bringing together all the services and products it offers to VSBs/SMEs and key accounts, and takes a position...
+                                    </div><!-- /.card__entry -->
+            
+            <div class="article_keyword">
+	    	<span class="keyword">Solocal</span>
+    </div><!-- /.article_keyword -->
+
+
+                            </a><!-- /.card__inner -->
+                    </div><!-- /.card-rectangular_text -->
+    
+                                
+
+                    
+        <div class="card-rectangular_text card">
+                            <a href="/en/results-solocals-combined-general-meeting-march-9-2018-0" data-title="Results of SoLocal’s Combined General Meeting of March 9, 2018" class="card__inner js-newsAccess">
+            
+                            <span class="card__meta">
+                    <strong>26</strong> October
+                </span>
+            
+            <div class="card__head">
+                <h4 class="card__subtitle" style="height: 35px;">Press release</h4><!-- /.card__subtitle -->
+
+                <h3 class="card__title">
+                                            Results of SoLocal’s Combined General Meeting of March 9, 2018
+                                    </h3><!-- /.card__title -->
+            </div><!-- /.card__head -->
+
+                            <div class="card__entry">
+                                                                <p class="text-align-justify">SoLocal’s Combined General Meeting took place on March 9, 2018 under the chairmanship of Pierre Danon, for the first time since his election as Chairman of the Board.</p>
+
+                                    </div><!-- /.card__entry -->
+            
+            <div class="article_keyword">
+	    	<span class="keyword">Solocal</span>
+    </div><!-- /.article_keyword -->
+
+
+                            </a><!-- /.card__inner -->
+                    </div><!-- /.card-rectangular_text -->
+    
+                                
+
+                    
+        <div class="card-rectangular_text card">
+                            <a href="/en/revenues-and-activity-q3-2018" data-title="Revenues and activity Q3 2018" class="card__inner js-newsAccess">
+            
+                            <span class="card__meta">
+                    <strong>24</strong> October
+                </span>
+            
+            <div class="card__head">
+                <h4 class="card__subtitle" style="height: 35px;">Press release</h4><!-- /.card__subtitle -->
+
+                <h3 class="card__title">
+                                            Revenues and activity Q3 2018
+                                    </h3><!-- /.card__title -->
+            </div><!-- /.card__head -->
+
+                            <div class="card__entry">
+                                                                <p class="MsoNormal text-align-justify" style="line-height:115%">2018: A year of deep transformation<br />
+Guidance on stabilisation of recurring EBITDA1 (€170m) for 2018 is confirmed<br />
+Significant milest...
+                                    </div><!-- /.card__entry -->
+            
+            <div class="article_keyword">
+	    	<span class="keyword">Solocal</span>
+    </div><!-- /.article_keyword -->
+
+
+                            </a><!-- /.card__inner -->
+                    </div><!-- /.card-rectangular_text -->
+    
+                                
+
+                    
+        <div class="card-rectangular_text card">
+                            <a href="/en/renewing-solocals-shareholders-communication-committee-strenghtening-relationship-individual" data-title="Renewing Solocal’s Shareholders’ Communication Committee Strenghtening the relationship with individual shareholders" class="card__inner js-newsAccess">
+            
+                            <span class="card__meta">
+                    <strong>09</strong> October
+                </span>
+            
+            <div class="card__head">
+                <h4 class="card__subtitle" style="height: 35px;">Press release</h4><!-- /.card__subtitle -->
+
+                <h3 class="card__title">
+                                            Renewing Solocal’s Shareholders’ Communication Committee Strenghtening the relationship with individ...
+                                    </h3><!-- /.card__title -->
+            </div><!-- /.card__head -->
+
+                            <div class="card__entry">
+                                                                <p class="text-align-justify">The Shareholder’s Communication Committe (« Committee ») was created two years ago at the initiative of SoLocal Group to strenghten the relationship and the communication with its ...
+                                    </div><!-- /.card__entry -->
+            
+            <div class="article_keyword">
+	    	<span class="keyword">Solocal</span>
+    </div><!-- /.article_keyword -->
+
+
+                            </a><!-- /.card__inner -->
+                    </div><!-- /.card-rectangular_text -->
+    
+                                
+
+                    
+        <div class="card-rectangular_text card">
+                            <a href="/en/solocal-boosts-its-website-offer-vsbssmes-enhancement-website-range-and-launch-e-commerce-website" data-title="SoLocal boosts its Website offer for VSBs/SMEs: enhancement of the Website range and launch of an E-Commerce Website range" class="card__inner js-newsAccess">
+            
+                            <span class="card__meta">
+                    <strong>08</strong> October
+                </span>
+            
+            <div class="card__head">
+                <h4 class="card__subtitle" style="height: 35px;">Press release</h4><!-- /.card__subtitle -->
+
+                <h3 class="card__title">
+                                            SoLocal boosts its Website offer for VSBs/SMEs: enhancement of the Website range and launch of an E-...
+                                    </h3><!-- /.card__title -->
+            </div><!-- /.card__head -->
+
+                            <div class="card__entry">
+                                                                <p class="text-align-justify">Driven by its ambition to support growth of French businesses, SoLocal is improving and enhancing its Website offer for VSBs/SMEs and consolidates its position as website creation ...
+                                    </div><!-- /.card__entry -->
+            
+            <div class="article_keyword">
+	    	<span class="keyword">Solocal</span>
+    </div><!-- /.article_keyword -->
+
+
+                            </a><!-- /.card__inner -->
+                    </div><!-- /.card-rectangular_text -->
+    
+                    </div><!-- /.cards__container -->
+    </div><!-- /.card-rectangular_list -->
+</section>
+      <nav class="hide-for-small-only nav-pagination" role="navigation" aria-labelledby="pagination-heading">
+    <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+    <ul class="pagination text-center js-pager__items">
+                                <li class="pagination-previous disabled"><span class="show-for-sr">Previous page</span></li>
+                                      <li class="current">
+                      <span class="show-for-sr">
+              Current page
+            </span>1        </li>
+              <li class="">
+                                              <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=1#pager-mosaique" title="Go to page 2">
+              <span class="show-for-sr">
+                Page
+              </span>2</a>
+                  </li>
+              <li class="">
+                                              <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=2#pager-mosaique" title="Go to page 3">
+              <span class="show-for-sr">
+                Page
+              </span>3</a>
+                  </li>
+              <li class="">
+                                              <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=3#pager-mosaique" title="Go to page 4">
+              <span class="show-for-sr">
+                Page
+              </span>4</a>
+                  </li>
+              <li class="">
+                                              <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=4#pager-mosaique" title="Go to page 5">
+              <span class="show-for-sr">
+                Page
+              </span>5</a>
+                  </li>
+              <li class="">
+                                              <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=5#pager-mosaique" title="Go to page 6">
+              <span class="show-for-sr">
+                Page
+              </span>6</a>
+                  </li>
+              <li class="">
+                                              <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=6#pager-mosaique" title="Go to page 7">
+              <span class="show-for-sr">
+                Page
+              </span>7</a>
+                  </li>
+              <li class="">
+                                              <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=7#pager-mosaique" title="Go to page 8">
+              <span class="show-for-sr">
+                Page
+              </span>8</a>
+                  </li>
+              <li class="">
+                                              <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=8#pager-mosaique" title="Go to page 9">
+              <span class="show-for-sr">
+                Page
+              </span>9</a>
+                  </li>
+                          <li class="ellipsis" role="presentation"></li>
+                          <li class="pagination-next">
+                    <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=1#pager-mosaique" title="Go to next page" rel="next">
+            <span class="show-for-sr">Next page</span>&nbsp;
+          </a>
+        </li>
+                          <!--li class="pager__item pager__item--last">
+          <a href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=21" title="Go to last page">
+            <span class="visually-hidden">Last page</span>
+            <span aria-hidden="true">Last »</span>
+          </a>
+        </li-->
+          </ul>
+  </nav>
+      <div class="card-rectangular_list cards">
+      <div class="attachment cards__actions show-for-small-only">
+        <div class="cp-section__inner pager__item views-summary">
+          <a class="btn" href="?created%5Bmin%5D=&amp;created%5Bmax%5D=&amp;sort_by=created&amp;year=all&amp;page=1" title="Go to next page" rel="next">Voir plus</a>
+        </div><!-- /.cp-section__inner -->
+      </div><!-- /.cp-container -->
+    </div>
+  
+
+  
+  
+
+  
+  
+</div>
+
+
+      
+	</div>
+
+              
+	
+<section class="shell shell--small">
+	<div class="social_mosaic">
+		<div class="socials__head">
+			<h3 class="socials__subtitle">Stay tuned</h3><!-- /.socials__subtitle -->
+			<h2 style="font-size: 4.375rem; font-weight: 700; margin-left: 20px;" class="socials__title">#Solocal</h2><!-- /.socials__title -->
+		</div><!-- /.socials__head -->
+
+		<div class="socials__body">
+			<div class="video-block">
+				<a href="https://www.youtube.com/watch?v=ScMzIvxBSi4" class="video__inner js-popup-video">
+					<div class="video__background" style="background-image: url(/);"></div><!-- /.video__background -->
+
+					<div class="video__container"></div><!-- /.video__container -->
+
+					<div class="video__content">
+						<div class="video__actions">
+							<span class="video__btn"></span>
+						</div><!-- /.video__actions -->
+						
+						<h3 class="video__title">Solocal <br>Video</h3><!-- /.video__title -->
+					</div><!-- /.video__content -->
+				</a><!-- /.video__inner -->
+			</div><!-- /.video-block -->
+			<div class="socials__body-inner">
+				    
+<div class="social_block">
+  <div class="social__inner">
+    <div class="social__container">
+      <figure class="social__background" style="background-image: linear-gradient(to right, #00afff 0%, #006eff 100%);"></figure><!-- /.social__background -->
+
+      <div class="social__head">
+        <div class="social__icon">
+          <img src="/themes/custom/solocal/images/icons/ico-twitter.svg" alt="">
+        </div><!-- /.social__icon -->
+
+        <h3 class="social__title">@Solocal</h3><!-- /.social__title -->
+      </div><!-- /.social__head -->
+
+            <div class="social__entry jsSocialBlockTwitter">
+                                  <a href= "https://twitter.com/i/web/status/1254687973280530432" target="_blank" style="text-decoration: none;">
+        <p><p>Le @ClubComConnecte a dressé une liste  de solutions et initiatives pour permettre aux #commerces de  continuer leu… <a href="https://t.co/FlnqEAOLqk">https://t.co/FlnqEAOLqk</a></p>
+</p>
+        </a>
+      </div><!-- /.social__entry -->
+            <div class="social__entry jsSocialBlockTwitter">
+                                  <a href= "https://twitter.com/i/web/status/1253227393935986688" target="_blank" style="text-decoration: none;">
+        <p><p>#resultatsfinanciers Le CA Digital de Solocal en baisse de 7,4% pour ce 1er trimestre, mais le début d’année 2020 e… <a href="https://t.co/pnXuH8USV5">https://t.co/pnXuH8USV5</a></p>
+</p>
+        </a>
+      </div><!-- /.social__entry -->
+            <div class="social__entry jsSocialBlockTwitter">
+                                  <a href= "" target="_blank" style="text-decoration: none;">
+        <p><p>Les réseaux sociaux votre meilleur allier pour garder contact avec vos clients pendant la crise #covid19 <a href="https://t.co/SjyXshsfQd">https://t.co/SjyXshsfQd</a></p>
+</p>
+        </a>
+      </div><!-- /.social__entry -->
+            <div class="social__entry jsSocialBlockTwitter">
+                                  <a href= "https://twitter.com/i/web/status/1252148231888424969" target="_blank" style="text-decoration: none;">
+        <p><p>Le saviez-vous ? L’alimentaire, la téléphonie-informatique ainsi que les produits culturels et éducatifs sont les s… <a href="https://t.co/DGqba2nReN">https://t.co/DGqba2nReN</a></p>
+</p>
+        </a>
+      </div><!-- /.social__entry -->
+            <div class="social__entry jsSocialBlockTwitter">
+                                  <a href= "http://www.solocal.com/blog/conseils-coaching-digital-post-confinement" target="_blank" style="text-decoration: none;">
+        <p><p>Découvrez nos conseils pratiques pour surmonter la crise et préparer la reprise 💪 <a href="https://t.co/wGg5IJ2dzb">https://t.co/wGg5IJ2dzb</a> <a href="https://t.co/AMsAWtsX6L">https://t.co/AMsAWtsX6L</a></p>
+</p>
+        </a>
+      </div><!-- /.social__entry -->
+            <div class="social__entry jsSocialBlockTwitter">
+                                  <a href= "" target="_blank" style="text-decoration: none;">
+        <p><p>Devenez un pro de la vidéo pour garder le contact avec vos clients 😎 <a href="https://t.co/AUZ2YK5IvH">https://t.co/AUZ2YK5IvH</a></p>
+</p>
+        </a>
+      </div><!-- /.social__entry -->
+          </div><!-- /.social__container -->
+  </div><!-- /.social__inner -->
+</div><!-- /.social_block -->
+
+
+				                                                                                                                                                                                                                                                                                                                
+<div class="social_block">
+  <div class="social__inner">
+    <div class="social__container">
+      <figure class="social__background" style="background-color: #4264af;">
+        <img src="/themes/custom/solocal/images/icons/shape-facebook.png" alt="">
+      </figure><!-- /.social__background -->
+        <div class="social__entry jsSocialBlockFacebookEven"><a href= "https://www.facebook.com/409917649102728_2928811157213352" target="_blank" style="text-decoration: none;"><p>Les réseaux sociaux votre meilleur allié pour garder contact avec vos clients pendant la crise #covid19</p></a></div><div class="social__entry jsSocialBlockFacebookEven"><a href= "https://www.facebook.com/409917649102728_2913208082106993" target="_blank" style="text-decoration: none;"><p>Découvrez nos conseils pratiques pour surmonter la crise et préparer la reprise 💪 www.solocal.com/blog/conseils-coaching-digital-post-confinement</p></a></div><div class="social__entry jsSocialBlockFacebookEven"><a href= "https://www.facebook.com/409917649102728_2900221306739004" target="_blank" style="text-decoration: none;"><p>Et vous comment vous gardez le contact avec vos clients ? 🤔</p></a></div><div class="social__entry jsSocialBlockFacebookEven"><a href= "https://www.facebook.com/409917649102728_2899924386768696" target="_blank" style="text-decoration: none;"><p>Le e-commerce permet de continuer son activité 🤓 Comment le mettre en place ? C'est ici ➡️ www.solocal.com/blog/solutions-ecommerce-covid-19</p></a></div><div class="social__entry jsSocialBlockFacebookEven"><a href= "https://www.facebook.com/409917649102728_2880395452054923" target="_blank" style="text-decoration: none;"><p>Votre commerce est autorisé à rester ouvert ? ✔️ Retrouvez tous nos conseils pour allier efficacité et respects des mesures sanitaires  ➡️ https://www.solocal.com/blog/conseils-commerces-ouverts-mesures-sanitaires</p></a></div>
+    </div><!-- /.social__container -->
+  </div><!-- /.social__inner -->
+</div><!-- /.social_block -->
+
+<div class="social_block">
+  <div class="social__inner">
+    <div class="social__container">
+      <figure class="social__background" style="background-color: #4264af;">
+        <img src="/themes/custom/solocal/images/icons/shape-facebook.png" alt="">
+      </figure><!-- /.social__background -->
+        <div class="social__entry jsSocialBlockFacebookOdd"><a href= "https://www.facebook.com/409917649102728_2913082772119524" target="_blank" style="text-decoration: none;"><p>Le saviez-vous ? L’alimentaire, la téléphonie-informatique ainsi que les produits culturels et éducatifs sont les secteurs du e-commerce qui fonctionnent le mieux ✔️</p></a></div><div class="social__entry jsSocialBlockFacebookOdd"><a href= "https://www.facebook.com/409917649102728_2911571605603974" target="_blank" style="text-decoration: none;"><p>Devenez un pro de la vidéo pour garder le contact avec vos clients 😎</p></a></div><div class="social__entry jsSocialBlockFacebookOdd"><a href= "https://www.facebook.com/409917649102728_2901923009902167" target="_blank" style="text-decoration: none;"><p>On vous dit tout pour rester en contact avec vos clients, même si votre commerce est fermé 🙌 Découvrez nos conseils ➡️ www.solocal.com/blog/conseils-commerces-fermes-reseaux-sociaux</p></a></div><div class="social__entry jsSocialBlockFacebookOdd"><a href= "https://www.facebook.com/409917649102728_2893947714033030" target="_blank" style="text-decoration: none;"><p>Des solutions e-commerce existent pour poursuivre votre activité 🙌 On vous dit tout ➡️ www.solocal.com/blog/solutions-ecommerce-covid-19</p></a></div><div class="social__entry jsSocialBlockFacebookOdd"><a href= "https://www.facebook.com/409917649102728_2869602166467585" target="_blank" style="text-decoration: none;"><p>En cette période inédite, ne perdez pas le lien avec vos clients ✔️ Mettez à jour gratuitement vos infos sur ➡️ www.solocal.com/landing/gardez-le-contact</p></a></div>
+    </div><!-- /.social__container -->
+  </div><!-- /.social__inner -->
+</div><!-- /.social_block -->
+
+
+			</div><!-- /.socials__body-inner -->
+		</div><!-- /.socials__body -->
+	</div><!-- /.social_mosaic -->
+</section><!-- /.shell -->
+              <section class="shell">
+	<div class="contact">
+		<div class="contact__container">
+			<h3 class="contact__title">PR and social media contacts</span></h3><!-- /.contact__title -->
+
+			<div class="contact__entry">
+				<p>Charlotte MILLET - Directrice de la communication<br />
+<a href="mailto:charlotte.millet@solocal.com">charlotte.millet@solocal.com</a></p>
+
+<p>Edwige DRUON - Responsable Relations Presse<br />
+Tél : 06 23 24 35 09&nbsp;- <a href="mailto:edruon@solocal.com">edruon@solocal.com</a></p>
+
+<p>Alexandra KUNYSZ - Responsable Relations Presse<br />
+<a href="mailto:akunysz@solocal.com">akunysz@solocal.com</a></p>
+
+<p>Daniel LEMIN - Responsable Médias Sociaux<br />
+<a href="mailto:dlemin@solocal.com">dlemin@solocal.com</a></p>
+
+			</div><!-- /.contact__entry -->
+		</div><!-- /.contact__container -->
+	</div><!-- /.contact -->
+</section><!-- /.shell -->
+
+        
+
+
+
+    
+    
+  <div class="test15Variation">
+	<input id="push-audit" type="checkbox" checked="checked" hidden>
+	<div id="push-audit-container">
+		<label for="push-audit" class="sl-icon-small icon-cross push-audit-open"></label>
+		<label for="push-audit" class="push-audit-close">Votre audit digital <span class="sl-icon-small icon-plus"></span></label>
+		<div class="push-audit-open">
+			Vérifiez votre visibilité sur Google, facebook et PagesJaunes !<br/>
+			<a href="/en/audit-digital?skipIntro" data-solocal-datalayer-push='{
+                "events": "click",
+                "values": {
+                    "customCategorie": "auditdigital",
+                    "customAction": "stepentreeencart",
+                    "customLabel": "clickctatest15",
+                    "event": "customEvent"
+                }}'>Cliquez ici</a>
+		</div>
+	</div>
+</div>
+
+<footer class="footer-solocal">
+	<div class="bg-gris-clair">
+		<div class="shell">
+		    <div class="footer-primary clearfix">
+		    	<ul class="footer-menu_primary">
+		    		<li class="footer-logo">
+		    			<a href="/" title="Retour vers la page d'accueil Solocal">
+					        <img src="/themes/custom/solocal/images/logo-solocal.svg" alt="Logo Solocal"/>
+					    </a>
+					</li>
+			            	
+              <li>
+        <a href="/en/who-we-are" data-drupal-link-system-path="node/861">Get to know Solocal</a>
+              </li>
+          <li>
+        <a href="/en/newsroom" data-drupal-link-system-path="node/10" class="is-active">Newsroom</a>
+              </li>
+          <li>
+        <a href="/en/finance" data-drupal-link-system-path="node/10531">Finance</a>
+              </li>
+          <li>
+        <a href="/en/join-us" data-drupal-link-system-path="node/251">Join us</a>
+              </li>
+          <li>
+        <a href="/en/node/10326" data-drupal-link-system-path="node/10326">Contact us</a>
+              </li>
+      
+
+
+
+
+			    </ul>
+			    <ul class="footer-social_network">
+			        <li>
+						<a class="round" href="https://www.facebook.com/solocal/" title="Facebook Solocal">
+							<span class="icon-facebook"></span>
+							<span class="value">Facebook</span>
+						</a>
+			        </li>
+			        <li>
+						<a class="round" href="https://twitter.com/solocalclients?lang=fr" title="Twitter Solocal">
+							<span class="icon-twitter"></span>
+							<span class="value">Twitter</span>
+						</a>
+			        </li>
+			        <li>
+						<a class="round" href="https://www.linkedin.com/company/solocal-groupe/" title="Linkedin Solocal">
+							<span class="icon-linkedin"></span>
+							<span class="value">Linkedin</span>
+						</a>
+			        </li>
+			        <li>
+						<a href="https://www.youtube.com/channel/UCrtYrl_EocDMAQkwBJs2U0g" title="Youtube Solocal">
+							<span class="icon-youtube"></span>
+							<span class="value">Youtube</span>
+						</a>
+			        </li>
+				</ul>
+	    	</div>
+	    </div>
+    </div>
+    <div class="footer-secondary shell">
+            	              <ul>
+              	<li>
+					        <a href="/en/legal-notices" data-drupal-link-system-path="node/4501">Legal notices</a>
+		     
+
+	              	</li>
+          	<li>
+					        <a href="/en/node/8121" title="Politique de protection de la vie privée" data-drupal-link-system-path="node/8121">Vie privée</a>
+		     
+
+	              	</li>
+          	<li>
+					        <a href="/en/node/10461" data-drupal-link-system-path="node/10461">Projet de fusions</a>
+		     
+
+	              	</li>
+          	<li>
+					        <a href="/en/accessibility" data-drupal-link-system-path="node/4511">Accessibility</a>
+		     
+
+	              	</li>
+          	<li>
+					        <a href="/en/charte" data-drupal-link-system-path="node/5811">Charte</a>
+		     
+
+	              	</li>
+        </ul>
+  
+
+
+
+
+        <div class="solocal-copyright">Solocal © 2020</div>
+    </div>
+</footer>
+
+      
+    </div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"node\/10","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"ajaxPageState":{"libraries":"addtoany\/addtoany,core\/html5shiv,datalayer\/behaviors,paragraphs\/drupal.paragraphs.unpublished,solocal\/detect-ie,solocal\/global-styling,solocal\/solocal-generated-css,solocal_tunnel\/anchor,solocal_tunnel\/checkanchor,solocal_tunnel\/dontleaveme,solocal_tunnel\/kameleoon,solocal_tunnel\/modal,solocal_tunnel\/modal-callback,solocal_tunnel\/onviewport,solocal_tunnel\/solocal-visitor-cookies,solocal_tunnel\/tunnel-datalayer,solocal_tunnel\/webcallback,statistics\/drupal.statistics,system\/base,twitter_tweets\/twitter_tweets.twitter_feeds,views\/views.ajax,views\/views.module,views_ajax_history\/history","theme":"solocal","theme_token":null},"ajaxTrustedUrl":{"\/en\/newsroom":true},"dataLayer":{"defaultLang":"fr","languages":{"fr":{"id":"fr","name":"FR","direction":"ltr","weight":0},"en":{"id":"en","name":"English","direction":"ltr","weight":1}}},"productSlug":null,"appVersion":"20200423-1014","platform":"PROD","orderId":null,"webcallback":true,"statistics":{"data":{"nid":"10"},"url":"\/core\/modules\/statistics\/statistics.php"},"viewsAjaxHistory":{"renderPageItem":0},"views":{"ajax_path":"\/en\/views\/ajax","ajaxViews":{"views_dom_id:697daa53cb2f993820793fd37649b699d0281b916a2d6e9ec4c81e574df4d5fc":{"view_name":"article_mosaique","view_display_id":"block_1","view_args":"all","view_path":"\/node\/10","view_base_path":null,"view_dom_id":"697daa53cb2f993820793fd37649b699d0281b916a2d6e9ec4c81e574df4d5fc","pager_element":0,"viewsreference":{"data":{"argument":null,"limit":null,"offset":null,"pager":null,"title":null},"enabled_settings":[]}}}},"user":{"uid":0,"permissionsHash":"d514513687dea7490617d69fd25860a4bbcb217bcfa08cd94c4c4dc30a2d70e1"}}</script>
+<script src="/sites/default/files/js/js_LjJRdF0Prj6f90kef47BgAQ9uPHnqJi6pkn4FoTwiDo.js"></script>
+<script src="//static.addtoany.com/menu/page.js" async></script>
+<script src="/sites/default/files/js/js_wJ_vijYQGPuN0NTtbITIQHJSIBdVGxocSfrkZDB249U.js"></script>
+
+    
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a869753f49","applicationID":"467429667","transactionName":"ZVEHYEMCX0ICAEULXVwbJFdFCl5fTBNQBVdtVwRXWQY=","queueTime":0,"applicationTime":23,"atts":"SRYEFgsYTEw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

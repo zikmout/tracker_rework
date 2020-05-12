@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="utf-8">
+    <meta name="p:domain_verify" content="9b5cebc6ff26049afdd97f77b69b9ee1"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="">
+ 
+
+
+	
+	
+		
+		
+	
+	<title>PRESS RELEASES 2020</title>
+	
+	
+	
+		
+	
+	<meta name="description" content="">
+	<meta name="robots" content="index, follow">
+	
+
+
+	
+	
+		
+	
+	<meta property="og:title" content="PRESS RELEASES 2020">
+
+	
+	
+		
+	
+	<meta property="og:description" content="">
+
+	
+	
+		
+	
+	
+	<meta name="googlebot" content="NOODP">  
+ 
+
+
+<link rel="alternate" hreflang="it" href="/it/investor-relations/comunicati-stampa/2020" />
+
+
+<link rel="alternate" hreflang="en" href="/en/investor-relations/financial-press-releases/2020" />
+
+
+    <!-- Stylesheet -->
+    <link href="/sir/www_restyle/css/bootstrap.min.css?v=20190304" rel="stylesheet">
+    <link href="/sir/www_restyle/js/lib/FlexSlider/flexslider.css?v=20190304" rel="stylesheet">
+    <link href="/sir/www_restyle/css/style.css?v=20190304" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/sir/www_restyle/js/lib/html5shiv-3.7.0.js?v=20190304"></script>
+      <script src="/sir/www_restyle/js/lib/respond-1.4.2.min.js?v=20190304"></script>
+    <![endif]-->
+
+<script src="/sir/www_restyle/js/lib/jquery-1.11.0.min.js?v=20190304"></script>
+<link rel="stylesheet" href="/scookies/css/cookie-overlay.css">
+<script type="text/javascript" src="/scookies/js/tcl_cookieconsent.min.js?A=1"></script>
+<script type="text/javascript" src="/scookies/js/tcl_cookieconsent_i18n.js"></script>
+
+<script>
+cc.initialise({
+
+	settings: {
+		locale: "en_usa",
+		privacypage: "//www.ferragamo.com/cookie/en/usa",
+		scriptwaittime: 3000
+	},
+
+
+
+	strings: {
+		
+	}
+});
+</script>
+<script>
+$( document ).ready(function() {
+  if($("#sidenavbar .nav.navbar-nav > li").length == 0){
+     $("#sidenavbar").addClass("hidden");
+  }
+});
+</script>
+<script>
+	function get_parameter(href, name) {
+		var match = new RegExp('[?&]'+encodeURIComponent(name)+'=([^&]*)').exec(href);
+		if (match != null) {
+			return decodeURIComponent(match[1]);
+		} else {
+			return null;
+		}
+	}
+	
+	$(document).ready(function() {
+		// propagazione projectid su tutti i link (NOTA: consente di far sì che gli authoring tool appaiano solo sul progetto)
+		var projectid = get_parameter(location.href, "projectid");
+		var projectName = "";
+		var edit = get_parameter(location.href, "edit");
+		if (edit != null) {
+			$("a").each(function(i, a) {
+				var href = $(a).attr("href");
+				if (href != null) {
+					var a_projectid = get_parameter(href, "projectid");
+					if (a_projectid == null && href != "#" && href.indexOf("javascript:") != 0) {
+						if (href.indexOf("?") >= 0) {
+							href += "&projectid=" + projectid + "&edit=" + edit;
+						} else {
+							href += "?projectid=" + projectid + "&edit=" + edit;
+						}
+						$(a).attr("href", href);
+					}
+					if (href.indexOf("wcmAuthoring") >= 0 && projectName!="") {
+						hrefsplit = href.split("myportal");
+						href = hrefsplit[0] + "myportal/$project/" + projectName + hrefsplit[1];
+						$(a).attr("href", href);
+					}
+				}
+			});
+		}
+	});
+</script>
+
+
+
+<!-- Component name="ir_design/common/script_google_analytics" -->
+<script type="text/javascript" class="cc-onconsent-analytics"> 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-10076382-1', 'auto');
+  ga('set', 'anonymizeIp', true);
+  ga('send', 'pageview');
+
+</script>
+
+<link rel="icon" type="image/x-icon" href="/wps/wcm/connect/d780291f-f5bc-4d00-b957-d3d3784c1662/favicon_new.ico?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=d780291f-f5bc-4d00-b957-d3d3784c1662">
+    <link rel="apple-touch-icon" href="/wps/wcm/connect/d780291f-f5bc-4d00-b957-d3d3784c1662/favicon_new.ico?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=d780291f-f5bc-4d00-b957-d3d3784c1662" />
+<!-- SB 20190212:da test mi sembra che non sia più utilizzato
+<style>
+.level4 {
+    margin: 10px 0 0 -20px;
+}
+.level4 li{
+  list-style: none;
+}
+.level4 a{
+   color:#000;
+   font-size:12px;
+}
+.level4 .active a, .level4 .active a:visited{
+   color:#000;
+   font-weight: bold;
+}
+#sidenavbar .navbar-nav .level4 li a:after{background:none;}
+.fc-0 {
+    color: #000;
+}
+</style>
+ -->
+</head>
+ <body class="template-master-B">
+  <div id="pagecontent">
+     <!-- LOADER OVERLAY -->
+    <div id="loader-overlay"></div>
+  
+          <!-- PRE-HEADER -->
+        <div class="header__prebar hidden-xs">
+            <div class="header__prebar__right">
+                <!--<a href="https://csr.ferragamo.com/en" target="_blank" >CSR</a>-->
+                <a href="https://www.ferragamo.com" target="_blank" >FERRAGAMO.COM</a>
+                <a href="/it/investor-relations/comunicati-stampa/2020" class="lang-switcher">IT</a>
+            </div>
+        </div>
+
+    <!-- BEGIN: HEADER -->
+    <div id="header" class="header navbar navbar-inverse navbar-mini" role="navigation">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".header .navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+	 <a class="navbar-brand" href="/en">
+				<img src="/sir/www_restyle/img/logo-tall-lg.png" data-src-lg="/sir/www_restyle/img/logo-tall-lg.png" data-src-md="/sir/www_restyle/img/logo-tall-md.png" data-src-sm="/sir/www_restyle/img/logo-tall-sm.png" data-src-xs="/sir/www_restyle/img/logo-tall-xs.png" class="ver-big img-deferred img-responsive" alt="Salvatore Ferragamo Group" />
+				<img src="/sir/www_restyle/img/logo-tall-lg.png" data-src-lg="/sir/www_restyle/img/logo-tall-lg.png" data-src-md="/sir/www_restyle/img/logo-tall-md.png" data-src-sm="/sir/www_restyle/img/logo-tall-sm.png" class="ver-mini img-deferred img-responsive" alt="Salvatore Ferragamo Group" />
+              </a>
+              <a href="/it/investor-relations/comunicati-stampa/2020" class="lang-switcher visible-xs">IT</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+
+              <div class="navbar-right">
+                <!-- HEADERSEARCH -->
+                <div class="headersearch inline">
+                  <a class="headersearch_form_trigger collapsed btn"><i class="fg fg-search"></i></a>                  
+                  <div class="headersearch_form">
+                    <form class="form-inline" role="search" action="/en/search">
+                      <div class="form-group">
+                        <input type="text" name="search_query" class="form-control" placeholder="Search">
+                      </div>
+                      <button type="submit" class="btn btn-search"></button>
+                    </form>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- MAIN MENU -->
+                            <ul id="mainmenu" class="nav navbar-nav navbar-right">
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+ <span class="hidden-sm">News</span>
+
+                    <span class="visible-sm">
+
+
+News
+</span></a><ul class="dropdown-menu"><li><a href="/en/news/2020/">2020</a></li><li><a href="/en/news/2019/">2019</a></li><li><a href="/en/news/2018/">2018</a></li><li><a href="/en/news/2017/">2017</a></li><li><a href="/en/news/2016/">2016</a></li><li><a href="/en/news/2015/">2015</a></li><li><a href="/en/news/2014/">2014</a></li><li><a href="/en/news/2013/">2013</a></li><li><a href="/en/news/2012/">2012</a></li></ul></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+ <span class="hidden-sm">Business</span>
+
+                    <span class="visible-sm">
+
+
+Business
+</span></a><ul class="dropdown-menu"><li><a href="/en/business/footwear/">Footwear</a></li><li><a href="/en/business/leather-goods/">Leather goods</a></li><li><a href="/en/business/ready-to-wear/">Ready To Wear</a></li><li><a href="/en/business/accessories/">Accessories</a></li><li><a href="/en/business/perfumes/">Perfumes</a></li><li><a href="/en/business/eyewear-and-watches/">Eyewear and watches</a></li><li><a href="/en/business/jewellery/">Jewellery</a></li></ul></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+ <span class="hidden-sm">The Group</span>
+
+                    <span class="visible-sm">
+
+
+The Group
+</span></a><ul class="dropdown-menu"><li><a href="/en/group/group-overview/">Overview</a></li><li><a href="/en/group/group-history/">The History</a></li><li><a href="/en/group/organisation/">Group Organisation</a></li></ul></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+ <span class="hidden-sm">Governance</span>
+
+                    <span class="visible-sm">
+
+
+Governance
+</span></a><ul class="dropdown-menu"><li><a href="/en/governance/corporate-governance/">Corporate Governance</a></li><li><a href="/en/governance/MODEL+231+AND+CODE+OF+ETHICS/">Code of ethics, model 231 and policies</a></li><li><a href="/en/governance/board-of-directors/">Board of directors</a></li><li><a href="/en/governance/board-of-auditors/">Board of statutory auditors</a></li><li><a href="/en/governance/shareholders-meetings/">Shareholders meetings</a></li><li><a href="/en/governance/Extraordinary+Operations/">Extraordinary Operations</a></li><li><a href="/en/governance/shareholding/">Shareholding</a></li><li><a href="/en/governance/loyalty-shares/">Loyalty Shares</a></li><li><a href="/en/governance/remuneration/">Remuneration</a></li><li><a href="/en/governance/corporate-governance-reports/">Corporate governance reports</a></li><li><a href="/en/governance/internal-dealing/">Internal Dealing Procedure</a></li><li><a href="/en/governance/regulated-information/">Regulated information</a></li><li><a href="/en/governance/external-auditors/">External auditors</a></li><li><a href="/en/governance/manager-charged-with-preparing-company-financial-reports/">Manager charged with preparing company&#39;s financial reports</a></li></ul></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+ <span class="hidden-sm">Sustainability</span>
+
+ <span class="visible-sm"> Sustainability</span></a>
+  <ul class="dropdown-menu">
+     <li><a href="https://csr.ferragamo.com/en" target="_blank" >Ferragamo Responsible Passion</a></li>
+     <li><a href="https://csr.ferragamo.com/en/responsible-passion/corporate-report/" target="_blank" >Sustainability Report</a></li>
+  </ul>
+</li>
+
+                <li class="dropdown active"><a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">
+ <span class="hidden-sm">Investor Relations</span>
+
+                    <span class="visible-sm">
+
+investor
+
+</span>
+</a><ul class="dropdown-menu"><li class="active"><a href="/en/investor-relations/financial-press-releases/">Press Releases</a></li><li><a href="/en/investor-relations/financial-data/">Financial Data</a></li><li><a href="/en/investor-relations/financial-documents/">Financial Documents</a></li><li><a href="/en/investor-relations/presentations/">Presentations</a></li><li><a href="/en/investor-relations/ipo/">IPO (Italian only)</a></li><li><a href="/en/investor-relations/financial-calendar/">Financial Calendar</a></li><li><a href="/en/investor-relations/stock-information/">Stock information</a></li><li><a href="/en/investor-relations/investor-kit/">Investor Kit</a></li><li><a href="/en/investor-relations/analyst-coverage/">Analyst Coverage</a></li><li><a href="/en/investor-relations/ir-contacts/">IR Contacts</a></li></ul></li>
+              </ul>
+
+
+            </div><!--/.nav-collapse -->
+
+          </div>
+        </div>    
+      </div>
+    </div>
+    <!-- END: HEADER -->
+
+    <div id="sfumatura">
+      <div class="container">
+
+          <!-- BEGIN: SIDECONTENT  -->
+          <div class="col-xs-12">
+   <ol class="breadcrumb"> 
+ 
+		<li><a href="/en/">Home</a></li>
+	
+	 
+ 
+		<li>Investor Relations</li>
+	
+	 
+ 
+		<li><a href="/en/investor-relations/financial-press-releases/">Press Releases</a></li>
+	
+	 
+ 
+	
+		<li class="active">2020</li>
+	   </ol>
+</div>
+<div id="sidecontent" class="col-sm-4">            
+            <div id="sidenavbar" class="navbar navbar-inverse navbar-side" role="navigation">
+              <div class="container-fluid">
+
+	<!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <button type="button" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fg fg-arrow-down-toggle"></i>
+                  </button>
+<a class="navbar-brand visible-xs">Press Releases</a>
+                 
+                </div>
+
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	<ul class="nav navbar-nav"><!-- altro livello -->
+<ul></ul><!-- altro livello -->
+<ul></ul><!-- altro livello -->
+<ul></ul><!-- altro livello -->
+<ul></ul>
+		<li class='active'>
+			<a href='/en/investor-relations/financial-press-releases'>Press Releases</a>
+			<ul class='collapse in'>
+				<li class='active'><a href='/en/investor-relations/financial-press-releases/2020'>2020</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2019'>2019</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2018'>2018</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2017'>2017</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2016'>2016</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2015'>2015</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2014'>2014</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2013'>2013</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2012'>2012</a></li>
+				<li><a href='/en/investor-relations/financial-press-releases/2011'>2011</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href='/en/investor-relations/financial-data'>Financial Data</a>
+		</li>
+		<li>
+			<a href='/en/investor-relations/financial-documents'>Financial Documents</a>
+		</li>
+		<li>
+			<a href='/en/investor-relations/presentations'>Presentations</a>
+		</li>
+		<li>
+			<a href='/en/investor-relations/ipo'>IPO (Italian only)</a>
+		</li>
+		<li>
+			<a href='/en/investor-relations/financial-calendar'>Financial Calendar</a>
+		</li>
+		<li>
+			<a href='/en/investor-relations/stock-information'>Stock information</a>
+		</li>
+		<li>
+			<a href='/en/investor-relations/investor-kit'>Investor Kit</a>
+		</li>
+		<li>
+			<a href='/en/investor-relations/analyst-coverage'>Analyst Coverage</a>
+		</li>
+		<li>
+			<a href='/en/investor-relations/ir-contacts'>IR Contacts</a>
+		</li>
+<!-- altro livello -->
+<ul>
+</ul><!-- altro livello -->
+<ul></ul><!-- altro livello -->
+<ul></ul>	</ul>
+</div>
+
+
+<!-- current: /ir_en/home/investor-relations/financial-press-releases/2020/2020 --><!-- grandparent: /ir_en/home/investor-relations/financial-press-releases -->
+
+
+
+              </div><!-- /.container-fluid -->
+            </div>
+
+</div>
+          <!-- END: SIDECONTENT  -->
+
+          <div id="mainspacer" class="col-sm-1">&nbsp;</div>
+
+          <!-- BEGIN: PAGE MAINCONTENT  -->
+          <div id="maincontent" class="col-sm-7 m-b-xl">
+			
+			<h1 class="m-b">PRESS RELEASES 2020</h1>
+			<ul class="list-archivio list-unstyled">              <li>
+                <article class="sneak">
+                  
+                  <span class="light">
+					14 April 2020
+					
+				  </span>
+                  <h2>
+				    <a href="/wps/wcm/connect/42b7a911-e3fb-478b-8d99-ae0db54c7479/Comunicato+Stampa-mancata+presentazione+liste+minoranza.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=42b7a911-e3fb-478b-8d99-ae0db54c7479" target="_blank">
+				    2020.04.14 Press Release - Filing of Minority Lists to Appoint the Board of Statutory Auditors
+					</a>
+				  </h2>
+				   
+				  
+				  <p>
+					<a target="_blank" href="/wps/wcm/connect/42b7a911-e3fb-478b-8d99-ae0db54c7479/Comunicato+Stampa-mancata+presentazione+liste+minoranza.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=42b7a911-e3fb-478b-8d99-ae0db54c7479" rel="nofollow" class="underline">View PDF</a>
+					(72 KB)
+				  </p>
+				  
+                </article>
+              </li>
+
+	              <li>
+                <article class="sneak">
+                  
+                  <span class="light">
+					14 April 2020
+					
+				  </span>
+                  <h2>
+				    <a href="/wps/wcm/connect/f4b8da65-1dae-4756-8bf6-df93ad4c92d9/CS+deposito+documenti+Assemblea+2020.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=f4b8da65-1dae-4756-8bf6-df93ad4c92d9" target="_blank">
+				    2020.04.14 Press Release - Publication of Integrations to 2020 Shareholders Meeting Documentation
+					</a>
+				  </h2>
+				   
+				  
+				  <p>
+					<a target="_blank" href="/wps/wcm/connect/f4b8da65-1dae-4756-8bf6-df93ad4c92d9/CS+deposito+documenti+Assemblea+2020.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=f4b8da65-1dae-4756-8bf6-df93ad4c92d9" rel="nofollow" class="underline">View PDF</a>
+					(70 KB)
+				  </p>
+				  
+                </article>
+              </li>
+
+	              <li>
+                <article class="sneak">
+                  
+                  <span class="light">
+					06 April 2020
+					
+				  </span>
+                  <h2>
+				    <a href="/wps/wcm/connect/922d0a5c-c6dc-407e-bb87-65c5934005f8/2020+04+06+Press+Release+Preliminary+1Q+2020.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=922d0a5c-c6dc-407e-bb87-65c5934005f8" target="_blank">
+				    2020.04.06 Press Release
+					</a>
+				  </h2>
+				   
+				  
+				  <p>
+					<a target="_blank" href="/wps/wcm/connect/922d0a5c-c6dc-407e-bb87-65c5934005f8/2020+04+06+Press+Release+Preliminary+1Q+2020.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=922d0a5c-c6dc-407e-bb87-65c5934005f8" rel="nofollow" class="underline">View PDF</a>
+					(214 KB)
+				  </p>
+				  
+                </article>
+              </li>
+
+	              <li>
+                <article class="sneak">
+                  
+                  <span class="light">
+					28 March 2020
+					
+				  </span>
+                  <h2>
+				    <a href="/wps/wcm/connect/78ec7d1d-61fa-40ef-a7a3-ad6502b12603/Comunicato+Stampa_Mancata+presentazione+liste+minoranza_DEF.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=78ec7d1d-61fa-40ef-a7a3-ad6502b12603" target="_blank">
+				    2020.03.28 Press Release_Filing of Minority Lists to appoint the Board of Statutory Auditors
+					</a>
+				  </h2>
+				   
+				  
+				  <p>
+					<a target="_blank" href="/wps/wcm/connect/78ec7d1d-61fa-40ef-a7a3-ad6502b12603/Comunicato+Stampa_Mancata+presentazione+liste+minoranza_DEF.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=78ec7d1d-61fa-40ef-a7a3-ad6502b12603" rel="nofollow" class="underline">View PDF</a>
+					(70 KB)
+				  </p>
+				  
+                </article>
+              </li>
+
+	              <li>
+                <article class="sneak">
+                  
+                  <span class="light">
+					26 March 2020
+					
+				  </span>
+                  <h2>
+				    <a href="/wps/wcm/connect/36140ccb-db25-4cc3-9e00-0dec64a342d7/CS+deposito+documenti+Assemblea+2020_DEF.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=36140ccb-db25-4cc3-9e00-0dec64a342d7" target="_blank">
+				    2020.03.26 Publication of 2020 Shareholders Meeting Documentation
+					</a>
+				  </h2>
+				   
+				  
+				  <p>
+					<a target="_blank" href="/wps/wcm/connect/36140ccb-db25-4cc3-9e00-0dec64a342d7/CS+deposito+documenti+Assemblea+2020_DEF.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=36140ccb-db25-4cc3-9e00-0dec64a342d7" rel="nofollow" class="underline">View PDF</a>
+					(73 KB)
+				  </p>
+				  
+                </article>
+              </li>
+
+	              <li>
+                <article class="sneak">
+                  
+                  <span class="light">
+					10 March 2020
+					
+				  </span>
+                  <h2>
+				    <a href="/wps/wcm/connect/bd4fa98b-71da-4530-85db-0a751db54f2f/2020+03+10+Press+Release+FY+2019.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=bd4fa98b-71da-4530-85db-0a751db54f2f" target="_blank">
+				    2020.03.10 Press Release 2019 Financial Results
+					</a>
+				  </h2>
+				   
+				  
+				  <p>
+					<a target="_blank" href="/wps/wcm/connect/bd4fa98b-71da-4530-85db-0a751db54f2f/2020+03+10+Press+Release+FY+2019.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=bd4fa98b-71da-4530-85db-0a751db54f2f" rel="nofollow" class="underline">View PDF</a>
+					(529 KB)
+				  </p>
+				  
+                </article>
+              </li>
+
+	              <li>
+                <article class="sneak">
+                  
+                  <span class="light">
+					28 January 2020
+					
+				  </span>
+                  <h2>
+				    <a href="/wps/wcm/connect/6830f941-c1cc-4a6a-b05d-d2afb4e82ce7/2020+01+28+Press+Release+Preliminary+FY+2019.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=6830f941-c1cc-4a6a-b05d-d2afb4e82ce7" target="_blank">
+				    2019.01.28 Press Release Preliminary Revenues FY 2019
+					</a>
+				  </h2>
+				   
+				  
+				  <p>
+					<a target="_blank" href="/wps/wcm/connect/6830f941-c1cc-4a6a-b05d-d2afb4e82ce7/2020+01+28+Press+Release+Preliminary+FY+2019.pdf?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=6830f941-c1cc-4a6a-b05d-d2afb4e82ce7" rel="nofollow" class="underline">View PDF</a>
+					(115 KB)
+				  </p>
+				  
+                </article>
+              </li>
+
+	</ul>
+
+
+            	  <!-- BACK TO TOP -->
+		  		<!--	<hr class="visible-xs" /> -->
+			<a href="#back-to-top" class="back-to-top visible-xs">
+				<i class="fg fg-arrow-up"></i>
+			</a>
+        </div>
+          <!-- END: PAGE MAINCONTENT -->
+
+      </div>
+    </div>
+  </div>
+<!-- BEGIN: BOX COOKIE -->
+                		<div class="frg13_grid_row_overlay cc-customdialog" id="cookieContainer">
+			<div class="frg13_overlayCookies">
+				<p class="cc_cd_lbl_text1"></p>
+
+			</div>
+		</div>
+	<!-- END: BOX COOKIE -->
+<!-- FOOTER -->
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="footer-part">
+              <h4>Ferragamo Group</h4>
+              <ul>
+                  <li><h5><a href="/en/contacts/">Contacts</a></h5></li>
+		  <li><h5><a href="/en/glossary/">Glossary</a></h5></li>
+                  <li><h5><a href="/en/faq/">FAQ</a></h5></li>
+		  
+              </ul>
+            </div>
+            <hr class="footer-divider" />
+            <div class="footer-part footer-part--half">              
+              <h4>Documents</h4>
+              <ul>
+                  <li class="active"><h5><a href="/en/investor-relations/financial-press-releases/">Press Releases</a></h5></li>
+                  <li><h5><a href="/en/investor-relations/presentations/">Presentations</a></h5></li>
+              </ul>
+            </div>
+
+            <div class="footer-part footer-part--half">
+              <h4>Legal Notice</h4>
+              <ul>
+                  <li><h5><a href="/en/legal-notes/">Legal Statments</a></h5></li>
+                  <li><h5><a href="/en/privacy-policy/">Privacy policy</a></h5></li>
+                  
+                  <li><h5><a title="" target="" href="https://www.ferragamo.com/shop/eu/en/sf/legal/cookie-policy--37404" >Cookie Policy</a></h5></li>
+              </ul>            
+            </div>
+            <hr class="footer-divider" />
+            <div class="footer-part">
+                        <ul class="footer-site">
+                            <li>
+                                <a href="https://www.ferragamo.com" >
+                                    <h4>Ferragamo.com</h4>
+                                    <i class="ico ico-ferragamo-logo"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-site">
+                            <li>
+                                <a href="https://www.ferragamo.com/museo" >
+                                    <h4>Museo</h4>
+                                    <i class="ico ico-museo-logo"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="footer-site">
+                            <li>
+                                <a href="https://csr.ferragamo.com" >
+                                    <h4>CSR</h4>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+            <hr class="footer-divider" />
+            <div class="footer-part">
+              <h4>Follow us</h4>
+              <ul class="footer-social-list">
+                <li>
+					<a href="//www.facebook.com/SalvatoreFerragamo">
+						<span class="sr-only">Facebook</span>
+						<i class="ico ico-facebook hidden-xs"></i>
+						<i class="ico ico-facebook-xs visible-xs"></i>
+					</a>
+				</li>
+				<li>
+					<a href="//instagram.com/ferragamo">
+						<span class="sr-only">Instagram</span>
+						<i class="ico ico-instagram hidden-xs"></i>
+						<i class="ico ico-instagram-xs visible-xs"></i>
+					</a>
+				</li>
+				<li>
+					<a href="//www.pinterest.com/ferragamo/">
+						<span class="sr-only">Pinterest</span>
+						<i class="ico ico-pinterest hidden-xs"></i>
+						<i class="ico ico-pinterest-xs visible-xs"></i>
+					</a>
+				</li>
+				<li>
+					<a href="//www.twitter.com/Ferragamo">
+						<span class="sr-only">Twitter</span>
+						<i class="ico ico-twitter hidden-xs"></i>
+						<i class="ico ico-twitter-xs visible-xs"></i>
+					</a>
+				</li>
+				<li>
+					<a href="//www.youtube.com/user/FerragamoOfficial">
+						<span class="sr-only">Youtube</span>
+						<i class="ico ico-youtube hidden-xs"></i>
+						<i class="ico ico-youtube-xs visible-xs"></i>
+					</a>
+				</li>				
+				<li>
+					<a href="http://www.weibo.com/ferragamochina" >
+						<span class="sr-only">Weibo</span>
+						<i class="ico ico-weibo hidden-xs"></i>
+						<i class="ico ico-weibo-xs visible-xs"></i>
+					</a>
+				</li>				
+				<li>
+					<a href="#" data-toggle="modal" data-target="#modalFollowWeChat">
+						<span class="sr-only">WeChat</span>
+						<i class="ico ico-wechat hidden-xs"></i>
+						<i class="ico ico-wechat-xs visible-xs"></i>
+					</a>
+				</li>								
+				<li>
+					<a href="https://www.linkedin.com/company/salvatore-ferragamo/" >
+						<span class="sr-only">Linkedin</span>
+						<i class="ico ico-linkedin hidden-xs"></i>
+						<i class="ico ico-linkedin-xs visible-xs"></i>
+					</a>
+				</li>
+				<li>
+					<a href="//ferragamo.tumblr.com/">
+						<span class="sr-only">Tumblr</span>
+						<i class="ico ico-tumblr hidden-xs"></i>
+						<i class="ico ico-tumblr-xs visible-xs"></i>
+					</a>
+				</li>
+              </ul>
+            </div>
+            <hr class="footer-divider" />
+            <div class="clearfix"></div>
+
+          </div>
+          <div class="clearfix"></div>
+
+			<p class="m-t-lg m-b-lg text-center light"><br>
+            2020&copy; SALVATORE FERRAGAMO  S.P.A. <span class="hidden-xs1">-</span><br class="visible-xs1" /> P.IVA: 02175200480
+			</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal WeChat -->
+    <div id="modalFollowWeChat" class="modal fade cmp-modal cmp-modal--follow" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form id="formModalEmailShare">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Seguici su Wechat</h4>
+                        <button type="button" class="close" data-dismiss="modal" title="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/wps/wcm/connect/5bec0be8-98bb-4a7a-830b-d67b9103afe2/follow-us-wechat.jpg?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=5bec0be8-98bb-4a7a-830b-d67b9103afe2" class="img-responsive" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Snapchat -->
+    <div id="modalFollowSnapChat" class="modal fade cmp-modal cmp-modal--follow" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form id="formModalEmailShare">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Seguici su Snapchat</h4>
+                        <button type="button" class="close" data-dismiss="modal" title="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/wps/wcm/connect/f5ca57fb-f28e-4e79-907e-67b17a54357f/follow-us-snapchat.png?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=f5ca57fb-f28e-4e79-907e-67b17a54357f" class="img-responsive" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript
+    ================================================== -->
+
+
+
+    <script>
+	// script per generare l'img di background// /ir_en/home/investor-relations
+var bgImagePath = '/wps/wcm/connect/571d0ddb-175f-4373-a56d-5b092adf8de4/background_master_ok-2.png?MOD=AJPERES&amp;ContentCache=NONE&amp;CACHEID=571d0ddb-175f-4373-a56d-5b092adf8de4';    </script>
+
+    
+    <!--script src="/sir/www_restyle/js/lib/jquery-1.11.0.min.js?v=20190304"></script--> <!-- incluso nell'head -->
+    <script src="/sir/www_restyle/js/lib/bootstrap.min.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/lib/FlexSlider/jquery.flexslider-min.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/lib/detect-zoom.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/lib/jRespond.min.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/lib/relocate.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/lib/bootstrap-hover-dropdown.min.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/responsive.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/lib/jquery.columnizer.js?v=20190304"></script>
+<script src="/sir/www_restyle/js/lib/underscore-min.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/main.js?v=20190304"></script>
+    <script src="/sir/www_restyle/js/sneakslider.js?v=20190304"></script>
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,8720 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+<html lang="en" class="no-js">
+<head>
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			
+			
+				
+				
+					
+						
+						
+						
+					
+					
+				
+			
+			
+				
+
+
+
+
+
+
+
+
+
+
+
+
+			
+		
+		
+	
+
+
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+	<meta charset="utf-8" />
+	
+	<title>Notas de prensa | Enagás</title>
+
+
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta content="En esta página puedes consultar las notas de prensa de Enagás." name="description" />
+	<meta content="Enagas,gas,gas natural,gas natural licuado,GNL,gasista,sistema gasista,gestor tecnico del sistema gasista,empresa gasista,distribucion de gas,gasoducto,planta de regasificacion,regasificacion,GTS,demanda de gas,mapa de infraestructuras,Antonio Llardén Carratalá" name="keywords" />
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="Cache-Control" content="no-transform" />
+	
+
+	<!--<script type="text/javascript">
+    	var tabla = document.getElementById("version_tabla");
+    	alert(tabla.innerHTML);
+  	</script>-->
+
+	<script type="text/javascript">
+		// Fix iPhone viewport scaling bug on orientation change
+		// By @mathias, @cheeaun and @jdalton
+		(function(doc) {
+		
+			var addEvent = 'addEventListener',
+			type = 'gesturestart',
+			qsa = 'querySelectorAll',
+			scales = [1, 1],
+			meta = qsa in doc ? doc[qsa]('meta[name=viewport]') : [];
+		
+			function fix() {
+				meta.content = 'width=device-width,minimum-scale=' + scales[0] + ',maximum-scale=' + scales[1];
+				doc.removeEventListener(type, fix, true);
+			}
+		
+			if ((meta = meta[meta.length - 1]) && addEvent in doc) {
+				fix();
+				scales = [.25, 1.6];
+				doc[addEvent](type, fix, true);
+			}
+		
+			var html = document.documentElement;
+			html.className = html.className.replace('no-js','js');
+		
+		}(document));
+	</script>
+  <script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-327829-12', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+
+	<!-- styles libraries-->
+	<link rel="stylesheet" href="/WEBCORP-static/maqueta/js/utils/jquery.bxslider/jquery.bxslider.css" media="all" />
+	<link rel="stylesheet" href="/WEBCORP-static/maqueta/css/enagas.min.css" media="all" />
+	<link rel="stylesheet" href="/WEBCORP-static/maqueta/js/libs/enagas/jquery-ui-1.10.3.custom.min.css" media="all" />
+	<link rel="stylesheet" href="/WEBCORP-static/maqueta/css/magnific-popup/magnific-popup.css" media="all" />
+	<link rel="stylesheet" href="/WEBCORP-static/maqueta/css/colorbox/colorbox.css" media="all" />
+
+	<!--[if lt IE 9]>	
+		<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script type="text/javascript" src="/WEBCORP-static/maqueta/js/html5shiv-printshiv.js"></script>
+		<script type="text/javascript" src="/WEBCORP-static/maqueta/js/utils/respond.min.js"></script>
+		<script type="text/javascript" src="/WEBCORP-static/maqueta/js/modernizr.min.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="/WEBCORP-static/maqueta/css/enagas-print.css" media="print" />
+
+	
+	<link rel="shortcut icon" href="/WEBCORP-static/maqueta/images/favicon.png" />
+
+	
+
+
+
+
+
+
+<link href="/vgn-ext-templating/common/styles/vgn-ext-templating-delivery.css" rel="stylesheet" type="text/css"></link>
+
+
+
+
+<script type="text/javascript" src="/vgn-ext-templating/scripts/async/ajax.jsp"></script>
+
+
+</head>
+
+<body>
+
+	<!--[if lt IE 9]>
+		<body class="lt-ie9">
+	<![endif]-->
+	<div id="skip-link" tabindex="-1">
+		
+			
+		
+		<a href="#menu-content" class="skip">Saltar al menu lateral</a>
+		
+			
+		
+		<a href="#content-final" class="skip">Saltar al contenido principal</a>
+		
+			
+		
+		<a href="#content-final" class="skip">Saltar al pie de pÃ¡gina</a>
+	</div>
+
+	<div class="fixedWidth">
+		<!-- START: header -->
+		<!-- Módulo de cabecera-->
+		<header id="header" class="clearfix"> 
+			
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+<div class="g_2_d g_2_t g_1_m alpha">
+	<h1 class="logo">
+		
+			
+				
+					
+						
+							
+							
+								<a href="/portal/site/enagas">Enagas</a>
+							
+						
+					
+					
+				
+			
+		
+	</h1>
+	<div class="spacer-mobile"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+	
+	
+		                       
+        	                           
+                            
+                     
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+			
+			
+				
+				
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+			
+			
+				
+			
+		
+		
+		
+		
+		
+	
+
+	
+	
+		                       
+        	                           
+                            
+                     
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+				
+			
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+	
+
+	
+	
+		                       
+        	                           
+                            
+                     
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+				
+			
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+	
+
+	
+	
+		                       
+        	                           
+                            
+                     
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+				
+			
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+	
+
+	
+	
+		                       
+        	                           
+                            
+                     
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+			
+			
+				
+				
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+			
+			
+				
+			
+		
+		
+		
+		
+		
+	
+
+	
+	
+		                       
+        	
+            	         
+                                       
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+				
+			
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+			
+			
+				
+			
+		
+		
+		
+		
+		
+	
+
+	
+	
+		                       
+        	
+            	         
+                                       
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+				
+			
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+	
+
+	
+	
+		                       
+        	
+            	         
+                                       
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+			
+			
+				
+				
+			
+		
+		
+		
+		
+		
+			
+				
+			
+			
+		
+		
+		
+		
+		
+			
+			
+				
+			
+		
+		
+		
+		
+		
+	
+
+	
+	
+		                       
+        	
+            	         
+                                       
+                           
+              
+		
+		
+		
+		
+		
+		 
+		
+		
+			
+				
+					
+				
+			
+			
+		
+		
+		
+			
+				
+			
+			
+			
+		
+		
+		
+		
+		
+			
+			
+				
+			
+		
+		
+		
+		
+		
+			
+			
+				
+			
+		
+		
+		
+		
+		
+	
+
+
+
+
+<div class="g_10_d g_7_t g_3_m omega">
+	<div class="menus-agrup">
+		
+		<div class="g_7_d g_7_t alpha">
+			<div class="defaultMenu">
+				<ul class="clearfix menuPpal-a">
+					
+								<li>
+					
+								<a class="menu-1a " href="/enagas/es/AccionistasEInversores" title="">Accionistas e Inversores</a>
+					
+							
+								<div>
+									<ul class="menu-1a">
+										<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/InformacionBursatil/DatosBursatiles" title="">Información Bursátil</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/InformacionGeneral/CaucesComunicacion" title="">Información General</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/InformacionEconomicoFinanciera/InformacionPublicaPeriodica" title="">Información Económico Financiera</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/GobiernoCorporativo/ReglamentoJuntaAccionistas" title="">Gobierno Corporativo</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/PresentacionesInversores" title="">Presentaciones para Inversores</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/PublicacionesInversores" title="">Publicaciones para Inversores</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/ContacteConNosotros" title="">Contacta con nosotros</a>
+					</li>
+									</ul>
+								</div>
+							
+						</li>
+					
+								<li class="selected">
+					
+								<a class="menu-1a " href="/enagas/es/Comunicacion" title="">Sala de Prensa</a>
+					
+							
+								<div>
+									<ul class="menu-1a">
+										<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/NotasPrensa" title="">Notas de prensa</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Comunicacion/Galeria_audiovisual/Galeria_de_imagenes" title="">Galería audiovisual</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Comunicacion/Publicaciones-Nueva/Informe_Anual-Publicaciones" title="">Publicaciones</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/Glosario" title="">Glosario de términos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/Eventos" title="">Eventos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/EnlacesDeInteres" title="">Enlaces de interés</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/Contacto" title="">Contacta con nosotros</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/SistemaAlertas" title="">Sistema de Alertas</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/SindicacionContenidosRSS" title="">RSS</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/App_Enagas_EnergyData" title="">App Enagás</a>
+					</li>
+									</ul>
+								</div>
+							
+						</li>
+					
+								<li>
+					
+								<a class="menu-1a " href="/enagas/es/Proveedores/Relacionconnuestrosproveedores" title="">Proveedores</a>
+					
+							
+								<div>
+									<ul class="menu-1a">
+										<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Relacionconnuestrosproveedores" title="">Relación con nuestros proveedores</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/comoserproveedordeenagas" title="">Cómo ser proveedor de Enagás</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Evaluacionproveedor" title="">Evaluación del proveedor</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Firmadigitaldocumentoscontractuales" title="">Firma digital de documentos contractuales</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/CoordinacionActividadesEmpresariales" title="">Coordinación actividades empresariales</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Atencionalproveedor" title="">Atención al proveedor</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Canal_etico" title="">Canal ético</a>
+					</li>
+									</ul>
+								</div>
+							
+						</li>
+					
+								<li>
+					
+								<a class="menu-1a portales" href="/enagas/es/Acceso_Seguro" title="">Acceso Seguro</a>
+					
+							
+						</li>
+					
+					
+				</ul>
+			</div>
+		</div>
+		
+		<div class="g_3_d g_7_t omega">
+			<div class="g_2_d g_6_t alpha">
+				<form name="search-form" id="search-form" target="_blank" method="get" action="https://buscador.enagas.es/search">
+					<label for="search_submit" class="skip">
+						Introduce un texto a buscar:
+					</label>
+					<span class="coverFormTag coverSearch">
+						<input type="submit" name="search_submit" id="search_submit" value="Buscar" />
+						<!--<input type="hidden" name="client" value="web" />
+						<input type="hidden" name="proxystylesheet" value="web" />
+						<input type="hidden" name="lang" value="es" /> 
+						<input type="hidden" name="site" value="web_es" />-->
+						<input class="formTag" type="text" name="query" placeholder="buscar..."/>
+					</span>
+				</form>
+			</div>
+		</div>
+		
+		<div class="g_10_d g_7_t">
+			<div class="defaultMenu">
+				<ul class="clearfix menuPpal-b">
+					
+								<li>
+					
+								
+								<a class="menu-1b" href="/enagas/es/QuienesSomos/Presentacion" title="">Quiénes somos</a>
+					
+							
+								<div>
+									
+											<ul class="menu-1b ">
+									
+												<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/Presentacion" title="">Presentación</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/ConsejoAdministracion" title="">Consejo de Administración</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/ComiteDireccion" title="">Organización</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/RecursosHumanos" title="">Recursos Humanos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/MisionYValores" title="">Misión, Visión y Valores</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/NuestraMarca" title="">Nuestra marca</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/EnagasInternacional" title="">Enagás en el mundo</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/InnovacionTecnologica" title="">Innovación e intraemprendimiento</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/QuienesSomos/QueEsElGasNatural/ElGasNatural" title="">Qué es el gas natural</a>
+					</li>
+											</ul>
+								</div>
+							
+						</li>
+					
+								<li>
+					
+								
+								<a class="menu-1b double" href="/enagas/es/Sostenibilidad" title="">Sostenibilidad</a>
+					
+							
+								<div>
+									
+											<ul class="menu-1b double ">
+									
+												<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Agenda_2030" title="">Enagás con la Agenda 2030</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Compromiso_con_la_transicion_energetica" title="">Compromiso con la transición energética</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Estrategia_de_sostenibilidad" title="">Estrategia de sostenibilidad</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Plan_de_Gestion_Sostenible" title="">Plan de Gestión Sostenible</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Indicadores_clave" title="">Indicadores clave</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Codigo_etico_y_politicas" title="">Código ético y políticas</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Gobierno_corporativo" title="">Gobierno corporativo</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Gestion_ambiental" title="">Gestión del capital natural</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Gestion_social/Capital_humano" title="">Gestión social</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Reporte_integrado" title="">Reporte integrado</a>
+					</li>
+											</ul>
+								</div>
+							
+						</li>
+					
+								<li>
+					
+								
+								<a class="menu-1b double" href="/enagas/es/Transporte_de_gas" title="">Transporte de gas</a>
+					
+							
+								<div>
+									
+											<ul class="menu-1b double right
+">
+									
+												<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/TransporteYOperacion/Transportista_de_gas_natural" title="">Transporte y operación</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Red_de_transporte" title="">Red de transporte</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/PlantasRegasificacion" title="">Plantas de regasificación</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Almacenamientos_Subterraneos" title="">Almacenamientos subterráneos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/ProyectosYUltimasInfraestructuras" title="">Proyectos y nuevas infraestructuras</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Servicios_GNL_y_GN" title="">Servicios logísticos GNL y GN</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/CapacidadesTransporte/CapacidadDeInstalaciones" title="">Capacidades de las infraestructuras</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/CapacidadCoordinadaIntraeuropea/Oferta_de_capacidad" title="">Capacidad coordinada intraeuropea</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Gestion_Logistica_Comercial" title="">Gestión logística comercial</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Medicion_y_calidad_de_gas" title="">Medición y calidad de gas</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Atencion_al_cliente" title="">Atención al cliente</a>
+					</li>
+											</ul>
+								</div>
+							
+						</li>
+					
+								<li>
+					
+								
+								<a class="menu-1b double" href="/enagas/es/Gestion_Tecnica_Sistema" title="">Gestión Técnica del Sistema</a>
+					
+							
+								<div>
+									
+											<ul class="menu-1b double right
+">
+									
+												<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Gestor_Tecnico_del_Sistema" title="">Gestor Técnico del Sistema</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Seguimiento_del_Sistema_Gasista/Normas_de_Gestion_Tecnica" title="">Información General del Sistema Gasista</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Habilitacion_y_acceso_al_sistema_gasista" title="">Habilitación y acceso al sistema gasista</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Contratacion_de_Capacidad" title="">Contratación de Capacidad</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Capacidades_e_infraestructuras_del_Sistema/Capacidad_Tecnica_interconexiones" title="">Capacidades e infraestructuras del Sistema</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Garantias" title="">Garantías</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Planificacion_Sistema_Gasista/MarcoRegulatorioGTS" title="">Planificación del Sistema Gasista</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/DemandaGas/Prevision_demanda_intradiaria" title="">Demanda de gas natural</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Gases_renovables/Biometano" title="">Gases renovables</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/CalidadGas" title="">Calidad del gas</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Operacion_del_Sistema_Gasista" title="">Operación y Programación del Sistema Gasista</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Repartos_y_Balances/OperacionesBRS" title="">Repartos y Balances</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Mercados/Volumen_de_gas_disponible" title="">Mercados</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Atencion_al_cliente" title="">Atención al Cliente</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Facturacion_y_liquidacion_PVB" title="">Facturación servicios y Liquidaciones PVB</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Acceso_SL-ATR" title="">Sistema SL-ATR</a>
+					</li>
+											</ul>
+								</div>
+							
+						</li>
+					
+								<li>
+					
+								
+								<a class="menu-1b" href="/enagas/es/MarcoRegulatorio/Regulacion" title="">Marco Regulatorio</a>
+					
+							
+								<div>
+									
+											<ul class="menu-1b right
+">
+									
+												<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/MarcoRegulatorio/Regulacion" title="">Regulación</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/MarcoRegulatorio/Proyectos_Interes_Comun" title="">Proyectos de Interés Común</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/MarcoRegulatorio/Codigos_de_Red_Europeos" title="">Códigos de Red europeos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/MarcoRegulatorio/Transparencia/Regulacion_Transparencia" title="">Transparencia</a>
+					</li>
+											</ul>
+								</div>
+							
+						</li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	
+	
+	
+
+	<nav class="nav-mobile">
+		<ul>
+			<li class="firts"><a href="#" id="search_320"><img src="/WEBCORP-static/maqueta/images/btnLupa.png" alt="Buscar" title=""/></a></li>
+			<li><a href="#" id="btn_toggle_320"><img src="/WEBCORP-static/maqueta/images/btnMenu.png" alt="Muestra/Oculta menú" title="Muestra/Oculta menú"/></a></li>
+		</ul>
+		<span class="section">Notas de prensa</span>
+		<div class="for-search-mobile">
+			<form name="search-form-mobile" id="search-form-mobile" target="_blank" action="https://buscador.enagas.es/search" method="get">
+				<!--<input type="hidden" name="client" value="web" />
+				<input type="hidden" name="proxystylesheet" value="web" />
+				<input type="hidden" name="lang" value="es" /> 
+				<input type="hidden" name="site" value="web_es" />-->
+				<label for="search_text_mobile" class="skip">
+					Introduce un texto a buscar:
+				</label>
+				<span class="coverFormTag coverSearch">
+					<input type="submit" name="submit_mobile" id="submit_mobile" value="Buscar" />
+					<input type="text" name="query" class="formTag" />
+				</span>
+			</form>
+		</div>
+	</nav>
+
+	<nav class="main-nav-mobile">
+		<ul>
+			
+				<li>
+					<a href="/enagas/es/QuienesSomos/Presentacion" title="">Quiénes somos</a>
+					
+						<a class="despliega" href="" title="Plegar/Desplegar menú mobile">
+							<img src="/WEBCORP-static/maqueta/images/icoNavMobile.png" alt="Plegar/Desplegar menú mobile" />
+						</a>
+						<ul>
+							<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/Presentacion" title="">Presentación</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/ConsejoAdministracion" title="">Consejo de Administración</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/ComiteDireccion" title="">Organización</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/RecursosHumanos" title="">Recursos Humanos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/MisionYValores" title="">Misión, Visión y Valores</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/NuestraMarca" title="">Nuestra marca</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/EnagasInternacional" title="">Enagás en el mundo</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/QuienesSomos/InnovacionTecnologica" title="">Innovación e intraemprendimiento</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/QuienesSomos/QueEsElGasNatural/ElGasNatural" title="">Qué es el gas natural</a>
+					</li>
+						</ul>
+					
+				</li>
+			
+				<li>
+					<a href="/enagas/es/Sostenibilidad" title="">Sostenibilidad</a>
+					
+						<a class="despliega" href="" title="Plegar/Desplegar menú mobile">
+							<img src="/WEBCORP-static/maqueta/images/icoNavMobile.png" alt="Plegar/Desplegar menú mobile" />
+						</a>
+						<ul>
+							<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Agenda_2030" title="">Enagás con la Agenda 2030</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Compromiso_con_la_transicion_energetica" title="">Compromiso con la transición energética</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Estrategia_de_sostenibilidad" title="">Estrategia de sostenibilidad</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Plan_de_Gestion_Sostenible" title="">Plan de Gestión Sostenible</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Indicadores_clave" title="">Indicadores clave</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Codigo_etico_y_politicas" title="">Código ético y políticas</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Gobierno_corporativo" title="">Gobierno corporativo</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Gestion_ambiental" title="">Gestión del capital natural</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Gestion_social/Capital_humano" title="">Gestión social</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Sostenibilidad/Reporte_integrado" title="">Reporte integrado</a>
+					</li>
+						</ul>
+					
+				</li>
+			
+				<li>
+					<a href="/enagas/es/Transporte_de_gas" title="">Transporte de gas</a>
+					
+						<a class="despliega" href="" title="Plegar/Desplegar menú mobile">
+							<img src="/WEBCORP-static/maqueta/images/icoNavMobile.png" alt="Plegar/Desplegar menú mobile" />
+						</a>
+						<ul>
+							<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/TransporteYOperacion/Transportista_de_gas_natural" title="">Transporte y operación</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Red_de_transporte" title="">Red de transporte</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/PlantasRegasificacion" title="">Plantas de regasificación</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Almacenamientos_Subterraneos" title="">Almacenamientos subterráneos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/ProyectosYUltimasInfraestructuras" title="">Proyectos y nuevas infraestructuras</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Servicios_GNL_y_GN" title="">Servicios logísticos GNL y GN</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/CapacidadesTransporte/CapacidadDeInstalaciones" title="">Capacidades de las infraestructuras</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/CapacidadCoordinadaIntraeuropea/Oferta_de_capacidad" title="">Capacidad coordinada intraeuropea</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Gestion_Logistica_Comercial" title="">Gestión logística comercial</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Medicion_y_calidad_de_gas" title="">Medición y calidad de gas</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Transporte_de_gas/Atencion_al_cliente" title="">Atención al cliente</a>
+					</li>
+						</ul>
+					
+				</li>
+			
+				<li>
+					<a href="/enagas/es/Gestion_Tecnica_Sistema" title="">Gestión Técnica del Sistema</a>
+					
+						<a class="despliega" href="" title="Plegar/Desplegar menú mobile">
+							<img src="/WEBCORP-static/maqueta/images/icoNavMobile.png" alt="Plegar/Desplegar menú mobile" />
+						</a>
+						<ul>
+							<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Gestor_Tecnico_del_Sistema" title="">Gestor Técnico del Sistema</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Seguimiento_del_Sistema_Gasista/Normas_de_Gestion_Tecnica" title="">Información General del Sistema Gasista</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Habilitacion_y_acceso_al_sistema_gasista" title="">Habilitación y acceso al sistema gasista</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Contratacion_de_Capacidad" title="">Contratación de Capacidad</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Capacidades_e_infraestructuras_del_Sistema/Capacidad_Tecnica_interconexiones" title="">Capacidades e infraestructuras del Sistema</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Garantias" title="">Garantías</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Planificacion_Sistema_Gasista/MarcoRegulatorioGTS" title="">Planificación del Sistema Gasista</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/DemandaGas/Prevision_demanda_intradiaria" title="">Demanda de gas natural</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Gases_renovables/Biometano" title="">Gases renovables</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/CalidadGas" title="">Calidad del gas</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Operacion_del_Sistema_Gasista" title="">Operación y Programación del Sistema Gasista</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Repartos_y_Balances/OperacionesBRS" title="">Repartos y Balances</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Mercados/Volumen_de_gas_disponible" title="">Mercados</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Atencion_al_cliente" title="">Atención al Cliente</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Facturacion_y_liquidacion_PVB" title="">Facturación servicios y Liquidaciones PVB</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Gestion_Tecnica_Sistema/Acceso_SL-ATR" title="">Sistema SL-ATR</a>
+					</li>
+						</ul>
+					
+				</li>
+			
+				<li>
+					<a href="/enagas/es/MarcoRegulatorio/Regulacion" title="">Marco Regulatorio</a>
+					
+						<a class="despliega" href="" title="Plegar/Desplegar menú mobile">
+							<img src="/WEBCORP-static/maqueta/images/icoNavMobile.png" alt="Plegar/Desplegar menú mobile" />
+						</a>
+						<ul>
+							<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/MarcoRegulatorio/Regulacion" title="">Regulación</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/MarcoRegulatorio/Proyectos_Interes_Comun" title="">Proyectos de Interés Común</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/MarcoRegulatorio/Codigos_de_Red_Europeos" title="">Códigos de Red europeos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/MarcoRegulatorio/Transparencia/Regulacion_Transparencia" title="">Transparencia</a>
+					</li>
+						</ul>
+					
+				</li>
+			
+				<li>
+					<a href="/enagas/es/AccionistasEInversores" title="">Accionistas e Inversores</a>
+					
+						<a class="despliega" href="" title="Plegar/Desplegar menú mobile">
+							<img src="/WEBCORP-static/maqueta/images/icoNavMobile.png" alt="Plegar/Desplegar menú mobile" />
+						</a>
+						<ul>
+							<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/InformacionBursatil/DatosBursatiles" title="">Información Bursátil</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/InformacionGeneral/CaucesComunicacion" title="">Información General</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/InformacionEconomicoFinanciera/InformacionPublicaPeriodica" title="">Información Económico Financiera</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/GobiernoCorporativo/ReglamentoJuntaAccionistas" title="">Gobierno Corporativo</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/PresentacionesInversores" title="">Presentaciones para Inversores</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/PublicacionesInversores" title="">Publicaciones para Inversores</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/AccionistasEInversores/ContacteConNosotros" title="">Contacta con nosotros</a>
+					</li>
+						</ul>
+					
+				</li>
+			
+				<li>
+					<a href="/enagas/es/Comunicacion" title="">Sala de Prensa</a>
+					
+						<a class="despliega" href="" title="Plegar/Desplegar menú mobile">
+							<img src="/WEBCORP-static/maqueta/images/icoNavMobile.png" alt="Plegar/Desplegar menú mobile" />
+						</a>
+						<ul>
+							<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/NotasPrensa" title="">Notas de prensa</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Comunicacion/Galeria_audiovisual/Galeria_de_imagenes" title="">Galería audiovisual</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+							
+							
+								
+								
+							
+						
+						<a href="/enagas/es/Comunicacion/Publicaciones-Nueva/Informe_Anual-Publicaciones" title="">Publicaciones</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/Glosario" title="">Glosario de términos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/Eventos" title="">Eventos</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/EnlacesDeInteres" title="">Enlaces de interés</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/Contacto" title="">Contacta con nosotros</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/SistemaAlertas" title="">Sistema de Alertas</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+													
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/SindicacionContenidosRSS" title="">RSS</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+								
+								 class="odd"
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Comunicacion/App_Enagas_EnergyData" title="">App Enagás</a>
+					</li>
+						</ul>
+					
+				</li>
+			
+				<li>
+					<a href="/enagas/es/Proveedores/Relacionconnuestrosproveedores" title="">Proveedores</a>
+					
+						<a class="despliega" href="" title="Plegar/Desplegar menú mobile">
+							<img src="/WEBCORP-static/maqueta/images/icoNavMobile.png" alt="Plegar/Desplegar menú mobile" />
+						</a>
+						<ul>
+							<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Relacionconnuestrosproveedores" title="">Relación con nuestros proveedores</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/comoserproveedordeenagas" title="">Cómo ser proveedor de Enagás</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Evaluacionproveedor" title="">Evaluación del proveedor</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Firmadigitaldocumentoscontractuales" title="">Firma digital de documentos contractuales</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/CoordinacionActividadesEmpresariales" title="">Coordinación actividades empresariales</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Atencionalproveedor" title="">Atención al proveedor</a>
+					</li>
+				
+			
+				
+				
+					
+					
+					
+					
+					
+					
+					
+						
+							
+								
+							
+						
+						
+					
+	
+
+					<li
+												
+					>
+						
+						
+							
+								
+							
+							
+							
+						
+						<a href="/enagas/es/Proveedores/Canal_etico" title="">Canal ético</a>
+					</li>
+						</ul>
+					
+				</li>
+			
+				<li>
+					<a href="/enagas/es/Acceso_Seguro" title="">Acceso Seguro</a>
+					
+				</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+	
+	
+
+			
+
+
+
+
+
+<!--
+			
+				
+			
+
+
+
+
+
+
+
+
+
+
+<br>setLanguage = es
+
+-->
+
+
+
+			<div class="g_1_d g_1_t omega">
+				<a href="/portal/site/enagas/template.CHANGE_LANG/;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434!661603002?lang=en" class="menu-1a language" lang="en">&nbsp;English</a>
+			</div>
+
+
+
+
+		</header>
+		<!-- Módulo de cabecera-->
+		<!-- END: header -->
+
+		<div id="wrapper">
+			<div class="content clearfix" id="content">
+				<div class="g_9_d g_9_t g_6_m section">
+					
+
+
+<a name="menu-content" id="menu-content" tabindex="-1"></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h3 class="menu-nav">Sala de Prensa</h3>
+				</div>
+				<aside class="g_3_d g_3_t g_6_m alpha">
+					
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="#content-final" class="skip">Subir a la cabecera</a>
+
+<!--googleoff: index-->
+<nav class="nav-second">
+	<ul>
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+					
+					
+						
+					
+				
+
+				
+					
+						<li class="selected">
+							
+								
+									
+								
+								
+								
+							
+							
+							
+								
+								
+									<a href="/enagas/es/Comunicacion/NotasPrensa">Notas de prensa</a>
+								
+							
+							
+							
+								
+								<ul>
+									
+										
+									
+								</ul>
+								
+								
+														
+						</li>
+					
+					
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+					
+					
+						
+							
+						
+					
+						
+							
+						
+					
+				
+
+				
+					
+					
+					
+						
+							
+							
+								<li>
+									
+										
+										
+										
+											
+											
+										
+									
+
+									
+										
+											<a href="/enagas/es/Comunicacion/Galeria_audiovisual/Galeria_de_imagenes" class="icoSubList">Galería audiovisual</a>
+										
+										
+									
+								</li>
+							
+						
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+					
+					
+						
+							
+						
+					
+						
+							
+						
+					
+						
+							
+						
+					
+						
+							
+						
+					
+						
+							
+						
+					
+				
+
+				
+					
+					
+					
+						
+							
+							
+								<li>
+									
+										
+										
+										
+											
+											
+										
+									
+
+									
+										
+											<a href="/enagas/es/Comunicacion/Publicaciones-Nueva/Informe_Anual-Publicaciones" class="icoSubList">Publicaciones</a>
+										
+										
+									
+								</li>
+							
+						
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+					
+					
+						
+					
+						
+					
+				
+
+				
+					
+					
+					
+						
+							
+							
+								<li>
+									
+										
+											
+										
+										
+										
+									
+
+									
+										
+										
+											<a href="/enagas/es/Comunicacion/Glosario">Glosario de términos</a>
+										
+									
+								</li>
+							
+						
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+					
+					
+						
+					
+				
+
+				
+					
+					
+					
+						
+							
+							
+								<li>
+									
+										
+											
+										
+										
+										
+									
+
+									
+										
+										
+											<a href="/enagas/es/Comunicacion/Eventos">Eventos</a>
+										
+									
+								</li>
+							
+						
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+					
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+						
+					
+				
+
+				
+					
+					
+					
+						
+							
+							
+								<li>
+									
+										
+											
+										
+										
+										
+									
+
+									
+										
+										
+											<a href="/enagas/es/Comunicacion/EnlacesDeInteres">Enlaces de interés</a>
+										
+									
+								</li>
+							
+						
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+
+				
+					
+					
+					
+						
+							
+							
+								<li>
+									
+										
+											
+										
+										
+										
+									
+
+									
+										
+										
+											<a href="/enagas/es/Comunicacion/Contacto">Contacta con nosotros</a>
+										
+									
+								</li>
+							
+						
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+
+				
+					
+					
+					
+						
+							
+							
+								<li>
+									
+										
+											
+										
+										
+										
+									
+
+									
+										
+										
+											<a href="/enagas/es/Comunicacion/SistemaAlertas">Sistema de Alertas</a>
+										
+									
+								</li>
+							
+						
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+
+				
+					
+					
+					
+						
+							
+							
+								<li>
+									
+										
+											
+										
+										
+										
+									
+
+									
+										
+										
+											<a href="/enagas/es/Comunicacion/SindicacionContenidosRSS">RSS</a>
+										
+									
+								</li>
+							
+						
+					
+				
+			
+		
+			
+				
+				
+				
+				
+				<!--  -->
+				  
+				
+					
+						
+							
+						
+					
+					
+				
+
+				
+				
+				
+
+				
+					
+					
+					
+						
+							
+								<li class="last">
+									
+										
+											
+										
+										
+										
+									
+									
+									
+										
+										
+											<a href="/enagas/es/Comunicacion/App_Enagas_EnergyData">App Enagás</a>
+										
+									
+								</li>
+							
+							
+						
+					
+				
+			
+		
+	</ul>
+</nav>
+<!--googleon: index-->  
+<script type="text/javascript">
+
+function callHtmlTabs(channelId, channelSelHijo){
+	var language = 'es';
+	var url_string = "/web-corporativa-ext-templating/webcorp/plantillaDistributiva/getHtmlTabs?channelId=".concat(channelId).concat("&channelSelHijo=").concat(channelSelHijo).concat("&language=").concat(language);
+
+	$.ajax({
+		  url:url_string,
+		  type: 'post',
+		  dataType: 'html',
+		  contentType: 'Content-type: text/plain; charset=iso-8859-1',
+		  beforeSend: function(jqXHR) {
+		    jqXHR.overrideMimeType('text/html;charset=iso-8859-1');
+		  },
+		  success: function (data) {
+		  //$("h2:first").parent().after(data);
+		  $("h2:first").after(data);
+	  },
+	});
+}
+
+$(document).ready(function(){
+	if(false){
+		var channelId = '';
+		var channelSelHijo = '';
+		callHtmlTabs(channelId, channelSelHijo);
+	}
+});  
+
+</script>
+
+
+
+	
+	
+
+				</aside>
+				<div class="cont_int g_9_d g_9_t g_6_m omega alpha_t">
+					
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="nav-third">
+	
+		
+		
+			
+
+			
+				
+					
+						
+					
+				
+				
+			
+
+			
+			
+			
+				
+				
+					
+				
+			
+
+			
+		
+	
+</nav>
+<script>
+function redirige(sel) {
+	if(sel.value!=-1)
+    	window.location.href=$('#nav-third option:selected').val();
+}
+</script>
+
+
+
+	
+	
+
+					<!-- INICIO CONTENIDO -->
+					<div class="contenido_interior">
+						<a name="content-final" id="content-final" tabindex="-1"></a>		
+						<!--
+						La capa class="cuerpo" es la capa contenedora de la parte de edicion
+						//-->
+						
+
+						
+
+
+
+    
+    
+    
+
+
+
+	
+  
+
+
+   
+			  
+    
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<div class="cuerpo">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Notas de prensa</h2>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<div class="txt entradilla">
+				<p>En esta página puedes consultar las notas de prensa de Enagás.</p>
+			</div>
+			<div class="txt">
+				
+				
+				
+				<p>Puedes descargar los archivos que desee visualizar en formato PDF.<a href="/enagas/es/Comunicacion/SindicacionContenidosRSS/Notas_de_Prensa_RSS">Haz click aquí para recibir las notas de prensa por RSS. <img src="/stfls/EnagasImport/Multimedia/Comunicacion/RSS.png" style=" display: inline;"></a></p>
+			</div>
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<!-- PRT=0 -->
+
+    
+
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--INICIO BUSCADOR NOTAS-->
+
+
+
+
+
+
+
+
+<div class="buscadorNotas">
+    <form id="formularioBuscador" action="./NotasPrensa">
+    	<input type="hidden" name="start" id="start" value="0"/>
+        <div class="form-control">
+            <label for="keywords">Palabras clave</label>
+            <input type="text" name="keywords" id="keywords" value="" maxlength="256"/>
+        </div>
+        <div class="form-control">
+            <label for="fecha_inicio">Desde</label>
+            <div class="date-picker">
+               <input name="fecha_inicio" type="text" id="fecha_inicio" value=""/>
+            </div>
+        </div>
+        <div class="form-control">
+            <label for="fecha_fin">Hasta</label>
+            <div class="date-picker">
+               <input name="fecha_fin" type="text" id="fecha_fin" value=""/>
+            </div>
+        </div>
+        <input type="button" class="leg-btn leg-btn-buscar" value="Buscar" onclick="validarFormulario()" />
+    </form>
+</div>
+<!--FIN BUSCADOR NOTAS-->
+
+
+			<!-- PAGINACION SUPERIOR -->	
+			
+			
+			
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+			
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="paginacion">
+		<div class="skip">
+			<p>Ir a la página</p>
+		</div>	
+		<ul>
+			
+			
+				
+					
+						<li><span class="skip">Estás actualmente en la página</span> <span>1</span></li>
+					
+					
+				
+			
+				
+					
+					
+						
+						
+							
+							
+							<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=5&totalelements=401" title="Ir a la página">2</a></li>
+						
+					
+				
+			
+				
+					
+					
+						
+						
+							
+							
+							<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=10&totalelements=401" title="Ir a la página">3</a></li>
+						
+					
+				
+			
+				
+					
+					
+						
+						
+							
+							
+							<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=15&totalelements=401" title="Ir a la página">4</a></li>
+						
+					
+				
+			
+				
+					
+					
+						
+						
+							
+							
+							<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=20&totalelements=401" title="Ir a la página">5</a></li>
+						
+					
+				
+			
+			
+				
+				
+				
+				<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=25.0&totalelements=401" class="next" title="Ir a la Siguiente página">siguiente <span class="skip">página</span></a></li>
+				
+		</ul>
+	</div>
+
+			
+			<!-- LISTADO DE RESULTADOS -->	
+			<div class="mod_descargas">
+				<ul>
+					
+							<!-- Las extensiones del fichero enlazadoo en el href son reconocidas automoticamente para mostrar el icono por CSS,
+							tambien se puede usar en el enlace <a> las class="pdf", class="doc", class="xls", class="ppt" para mostrar manualmente el icono -->
+							
+							<li>
+								<a href="/enagas/es/Comunicacion/NotasPrensa/26_11_19_NP_Global_Methane_Alliance_ES" title="Enagás se suma a la iniciativa Global Methane Alliance de Naciones Unidas para reducir emisiones de metano ">Enagás se suma a la iniciativa Global Methane Alliance de Naciones Unidas para reducir emisiones de metano </a> 2019-11-26 00:00:00.0
+							</li>
+							
+							<!-- Las extensiones del fichero enlazadoo en el href son reconocidas automoticamente para mostrar el icono por CSS,
+							tambien se puede usar en el enlace <a> las class="pdf", class="doc", class="xls", class="ppt" para mostrar manualmente el icono -->
+							
+							<li>
+								<a href="/enagas/es/Comunicacion/NotasPrensa/25_11_19_NP_GMobility_ES" title="Los gases renovables, una solución real para la movilidad ">Los gases renovables, una solución real para la movilidad </a> 2019-11-25 00:00:00.0
+							</li>
+							
+							<!-- Las extensiones del fichero enlazadoo en el href son reconocidas automoticamente para mostrar el icono por CSS,
+							tambien se puede usar en el enlace <a> las class="pdf", class="doc", class="xls", class="ppt" para mostrar manualmente el icono -->
+							
+							<li>
+								<a href="/enagas/es/Comunicacion/NotasPrensa/25_11_19_NP_Entrega_premios_Tiepolo_ES" title="Antonio Llardén (Enagás) y Marco Alverà (Snam), reciben en Madrid el Premio Tiepolo 2019">Antonio Llardén (Enagás) y Marco Alverà (Snam), reciben en Madrid el Premio Tiepolo 2019</a> 2019-11-25 00:00:00.0
+							</li>
+							
+							<!-- Las extensiones del fichero enlazadoo en el href son reconocidas automoticamente para mostrar el icono por CSS,
+							tambien se puede usar en el enlace <a> las class="pdf", class="doc", class="xls", class="ppt" para mostrar manualmente el icono -->
+							
+							<li>
+								<a href="/enagas/es/Comunicacion/NotasPrensa/21_11_19_NP_Scale_Gas_Valencia_ES" title="Inaugurado nuevo punto de suministro de gas natural para vehículos en Valencia ">Inaugurado nuevo punto de suministro de gas natural para vehículos en Valencia </a> 2019-11-21 00:00:00.0
+							</li>
+							
+							<!-- Las extensiones del fichero enlazadoo en el href son reconocidas automoticamente para mostrar el icono por CSS,
+							tambien se puede usar en el enlace <a> las class="pdf", class="doc", class="xls", class="ppt" para mostrar manualmente el icono -->
+							
+							<li>
+								<a href="/enagas/es/Comunicacion/NotasPrensa/19_11_19_Mi_ciudad_a_todo_gas_ES" title="Sevilla, ciudad elegida para el comienzo de la ruta de ‘miciudadatodogas’">Sevilla, ciudad elegida para el comienzo de la ruta de ‘miciudadatodogas’</a> 2019-11-19 00:00:00.0
+							</li>
+							
+				</ul>
+			</div>
+
+			<!--  PAGINACION  INFERIOR -->
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+			
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="paginacion">
+		<div class="skip">
+			<p>Ir a la página</p>
+		</div>	
+		<ul>
+			
+			
+				
+					
+						<li><span class="skip">Estás actualmente en la página</span> <span>1</span></li>
+					
+					
+				
+			
+				
+					
+					
+						
+						
+							
+							
+							<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=5&totalelements=401" title="Ir a la página">2</a></li>
+						
+					
+				
+			
+				
+					
+					
+						
+						
+							
+							
+							<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=10&totalelements=401" title="Ir a la página">3</a></li>
+						
+					
+				
+			
+				
+					
+					
+						
+						
+							
+							
+							<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=15&totalelements=401" title="Ir a la página">4</a></li>
+						
+					
+				
+			
+				
+					
+					
+						
+						
+							
+							
+							<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=20&totalelements=401" title="Ir a la página">5</a></li>
+						
+					
+				
+			
+			
+				
+				
+				
+				<li><a href="/enagas/es/Comunicacion/NotasPrensa;jsessionid=7p2smcf0qNk06zSC7rusZxtajVVmWsRtEN8EOOZdmzfBBugRPOE0!1063923434?vgnNextStartIndex=25.0&totalelements=401" class="next" title="Ir a la Siguiente página">siguiente <span class="skip">página</span></a></li>
+				
+		</ul>
+	</div>
+
+		
+
+
+<div id="descargaAdobe" class="txt msg-pag" style="display:none">
+	
+	
+	<a href="http://get.adobe.com/es/reader" title="Descargar lector de PDF">Instalar Adobe Reader</a>
+</div>	
+
+<script src="/WEBCORP-static/maqueta/js/libs/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+
+	//Al cargar la pagina comprueba si tiene que buscar contra GSA y lanza la busqueda
+	$(document).ready(function(){
+		var buscarGSA = false;
+		if(buscarGSA)
+		{
+			//Lanzamos el spinner
+			$('#overlay-spinner').show();
+			
+			//Recuperamos los parametros de la busqueda
+			var language = 'es';
+			var keywords = '';
+			var fecha_inicio = '';
+			var fecha_fin = '';
+			var start = '';
+			var num = '5';
+			
+			//Preparamos la url para realizar la consulta
+			var url_string = "/web-corporativa-ext-templating/webcorp/buscadorNotasPrensa/buscarNotasPrensaGSA?fecha_inicio=".concat(fecha_inicio)
+					.concat("&fecha_fin=").concat(fecha_fin)
+					.concat("&keywords=").concat(keywords)
+					.concat("&language=").concat(language)
+					.concat("&start=").concat(start)
+					.concat("&num=").concat(num);
+			
+			var contentTypeVersion = "";
+			
+			var ua = window.navigator.userAgent;
+		    var msie = ua.indexOf("MSIE ");
+
+		    if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))
+		    {
+		    	contentTypeVersion = "application/x-www-form-urlencoded;charset=ISO-8859-15";
+		    }
+		    else  
+		    {
+		    	contentTypeVersion = "application/x-www-form-urlencoded;charset=UTF-8";
+		    }
+			
+					
+			//Hacemos la peticion y obtenemos los resultados
+			$.ajax({
+		      	url: url_string,
+		      	type: 'POST',
+		      	
+		      	/* contentType: "application/x-www-form-urlencoded;charset=UTF-8",
+		      	requestHeader: "'content-type', 'application/x-www-form-urlencoded;charset=UTF-8'", */
+		      	contentType: contentTypeVersion,
+		      	mimeType: 'text/html',
+		      	success: function(data) 
+		      	{
+					//Ocultamos el spinner
+					$('#overlay-spinner').hide();
+					
+					//Si hay respuesta la procesamos
+					if(data)
+					{
+						//Insertamos el html de respuesta en la capa de resultados
+						$('#resutadoGSA').html(data);
+						
+						//Si existe la capa listadoResultadosGSA dentro de resutadoGSA mostramos la capa de resultados
+						var resultados = document.getElementById('listadoResultadosGSA');
+						if(resultados)
+						{
+							$('#listadoResultados').html(resultados.innerHTML);
+							$('#listadoResultados').show();
+							
+							//Si tambien hay paginacion mostramos la paginacion
+							var paginacion = document.getElementById('paginacionGSA');
+							if(paginacion)
+							{
+								$('#paginacionSuperior').html(paginacion.innerHTML);
+								$('#paginacionInferior').html(paginacion.innerHTML);
+								
+								$('#paginacionSuperior').show();
+								$('#paginacionInferior').show();
+							}
+							
+							//Mostramos el enlace de descarga de adobe
+							$('#descargaAdobe').show();
+						}
+						//Si no hay resultados comprobamos si ha habido algun error o es que no hay resultados
+						else 
+						{
+							//Si existe la capa errorGSA dentro de resutadoGSA mostramos la capa de error
+							var errorGSA = document.getElementById('errorGSA');
+							if(errorGSA)
+							{
+								$('#f_mens_error').show();
+							}
+							//Si no hay error comprobamos si existe la capa noHayDatosGSA para mostrar el mensaje de que no hay resultados
+							else
+							{
+								var noHayDatosGSA = document.getElementById('noHayDatosGSA');
+								if(noHayDatosGSA)
+								{
+									//Abrimos la ventana modal informando de que no hay resultados
+									simpleModal.openModal(literal["noHayDatos"]);
+									document.location.href='https://www.enagas.es/enagas/es/Comunicacion/NotasPrensa';
+								}
+							}
+						}
+					}
+					//Si no hay respuesta informamos de que ha habido un error al realizar la busqueda
+					else
+					{
+						$('#f_mens_error').show();
+					}
+					
+					//Una vez procesado todo eliminamos la capa oculta con todo el html devuelto por la consulta
+					$('#resutadoGSA').remove();
+					
+		  		},
+		  		error: function (request, status, error) 
+		  		{
+		  			//Ocultamos el spinner
+					$('#overlay-spinner').hide();
+					
+		  			//Informamos del error
+		  			$('#f_mens_error').show();
+		  			
+		  			//Eliminamos la capa oculta con todo el html devuelto por la consulta
+					$('#resutadoGSA').remove();
+		  		}
+			});
+		}
+		//Si cargamos los contenidos de VCM mostramos siempre el enlace de descarga de adobe
+		else
+		{
+			//Mostramos el enlace de descarga de adobe
+			$('#descargaAdobe').show();
+		}
+	});
+	
+	//Hace la validacion del formulario y si todo es correcto hace el submit, si no muestra el mensaje de error correspondiente
+	function validarFormulario()
+	{
+		//LITERALES CON LOS MENSAJES DE ERROR EN MULTIIDIOMA PARA EL OPENMODAL
+		var mensajesDeError = {
+			fechaNoCorrecta: literal["fecha_incorrecta"],
+			fechaInicio: literal["fecha_inicio"],
+			fechaFin: literal["fecha_fin"],
+			fechaMayorQue: literal["mayor_que"],
+			camposVacios: literal["camposVacios"]
+		}
+		
+		//Los campos a validar
+		var keywords = $('#keywords').val();
+		var sDateFrom = $('#fecha_inicio').val();
+	    var sDateTo = $('#fecha_fin').val();
+	    
+	    //Variable que indica si hay algun error de validacion
+	    var errorValidacion = false;
+		
+		//Comprobamos si todos los campos estan vacios
+		if(keywords.length===0 && sDateFrom.length===0 && sDateTo.length===0)
+		{
+			errorValidacion = true;
+			simpleModal.openModal(mensajesDeError.camposVacios);
+		}
+		//Si se ha rellenado algun campo los validamos
+		else
+		{
+			//Creamos los objetos Date a partir de las datos introducidos
+			var language = 'es';
+			var sDateFromToDate = sDateFrom;
+			var sDateToToDate = sDateTo;
+			
+			if (language=="es")
+			{
+				sDateFromToDate = changeDate(sDateFrom);
+				sDateToToDate = changeDate(sDateTo);
+			}
+			var sDateFromDate = new Date (sDateFromToDate);
+			var sDateToDate = new Date (sDateToToDate);
+			
+			var anioFrom = sDateFromDate.getFullYear(); 
+			var anioTo = sDateToDate.getFullYear();
+			
+			var esBisiesto =  (((anioFrom % 4 == 0) && ((anioFrom % 100 != 0) || (anioFrom % 400 == 0))) || ((anioTo % 4 == 0) && ((anioTo % 100 != 0) || (anioTo % 400 == 0))))
+			
+			//Validamos la fecha de inicio si esta rellena
+			if (sDateFrom.length>0 && !validaFechaDDMMAAAA(sDateFrom))
+			{
+				errorValidacion = true;
+				simpleModal.openModal(mensajesDeError.fechaNoCorrecta+" "+sDateFrom);
+			}
+			//Validamos la fecha de fin si esta rellena
+			else if (sDateTo.length>0 && !validaFechaDDMMAAAA(sDateTo))
+			{
+				errorValidacion = true;
+				simpleModal.openModal(mensajesDeError.fechaNoCorrecta+" "+sDateTo);
+			}					
+			//Si las dos fechas estan rellenas la fecha hasta debe ser superior a la fecha desde
+			else if (sDateFrom.length>0 && sDateTo.length>0)
+			{
+				if(sDateFromDate>sDateToDate)
+				{
+					errorValidacion = true;
+					simpleModal.openModal(mensajesDeError.fechaInicio+" "+mensajesDeError.fechaMayorQue+" "+mensajesDeError.fechaFin);
+				}
+			}
+		}
+		
+		//Si no hay errores de validacion enviamos el formulario
+		if(!errorValidacion)
+		{
+			document.getElementById('formularioBuscador').submit();
+		}
+	}
+	
+	//CAMBIA LA FECHA DE FORMATO DD/MM/YYYY A MM/DD/YYYY Y VICEVERSA
+	function changeDate(sDate)
+	{
+		var newDate = sDate.split('/'); 			
+		sDate = newDate[1] + "/" + newDate[0] + "/" + newDate[2];
+		return sDate;
+	}
+	
+	//FUNCION QUE VALIDA QUE LAS FECHAS EXISTAN EN UN CALENDAR
+	function validaFechaDDMMAAAA(fecha)
+	{
+		var language = 'es';
+		if (language=="en")
+		{
+			fecha = changeDate(fecha)
+		}
+		var dtCh= "/";
+		var minYear=1900;
+		var maxYear=2100;
+		
+		//VALIDA QUE NO SE META SOLO UN NUMERO ENTERO
+		function isInteger(s)
+		{
+			var i;
+			for (i = 0; i < s.length; i++)
+			{
+				var c = s.charAt(i);
+				if (((c < "0") || (c > "9"))) return false;
+			}
+			return true;
+		}
+		//VALIDA QUE NO SEAN CARACTERES
+		function stripCharsInBag(s, bag)
+		{
+			var i;
+			var returnString = "";
+			for (i = 0; i < s.length; i++)
+			{
+				var c = s.charAt(i);
+				if (bag.indexOf(c) == -1) returnString += c;
+			}
+			return returnString;
+		}
+		//VALIDA LOS DIAS DE FEBRERO POR SI ES BISIESTO
+		function daysInFebruary (year)
+		{
+			return (((year % 4 == 0) && ( (!(year % 100 == 0)) || (year % 400 == 0))) ? 29 : 28 );
+		}
+		function DaysArray(n) 
+		{
+			for (var i = 1; i <= n; i++) 
+			{
+				this[i] = 31
+				if (i==4 || i==6 || i==9 || i==11) {this[i] = 30}
+				if (i==2) {this[i] = 29}
+			}
+			return this
+		}
+		
+		//VALIDA SI ES UNA FECHA VALIDA
+		function isDate(dtStr)
+		{
+			var daysInMonth = DaysArray(12)
+			var pos1=dtStr.indexOf(dtCh)
+			var pos2=dtStr.indexOf(dtCh,pos1+1)
+			var strDay=dtStr.substring(0,pos1)
+			var strMonth=dtStr.substring(pos1+1,pos2)
+			var strYear=dtStr.substring(pos2+1)
+			strYr=strYear
+			if (strDay.charAt(0)=="0" && strDay.length>1) strDay=strDay.substring(1)
+			if (strMonth.charAt(0)=="0" && strMonth.length>1) strMonth=strMonth.substring(1)
+			for (var i = 1; i <= 3; i++) 
+			{
+				if (strYr.charAt(0)=="0" && strYr.length>1) strYr=strYr.substring(1)
+			}
+			month=parseInt(strMonth)
+			day=parseInt(strDay)
+			year=parseInt(strYr)
+			if (pos1==-1 || pos2==-1)
+			{
+				return false
+			}
+			if (strMonth.length<1 || month<1 || month>12)
+			{
+				return false
+			}
+			if (strDay.length<1 || day<1 || day>31 || (month==2 && day>daysInFebruary(year)) || day > daysInMonth[month])
+			{
+				return false
+			}
+			if (strYear.length != 4 || year==0 || year<minYear || year>maxYear)
+			{
+				return false
+			}
+			if (dtStr.indexOf(dtCh,pos2+1)!=-1 || isInteger(stripCharsInBag(dtStr, dtCh))==false)
+			{
+				return false
+			}
+			return true
+		}
+		
+		//DEVUELVE TRUE O FALSE SI LA FECHA ES VALIDA O NO
+		if(isDate(fecha))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
+</script>
+
+
+  
+  
+
+
+<!-- PRT=0 -->
+
+
+
+
+
+
+						
+
+
+
+
+	
+
+
+
+	
+
+
+
+<div class="toolbar">
+	<div class="popover">
+		<div id="triangle-up"></div>
+		<strong>Compartir...</strong>
+		<hr>
+		<ul id='redes'>
+			<li><a href='#' onclick='compartirFacebook()'><img src='/WEBCORP-static/maqueta/images/icon-facebook.png' alt='Facebook' title='Facebook' width='30' /></a></li>
+			<li><a href='#' onclick='compartirTwitter()'><img src='/WEBCORP-static/maqueta/images/icon-twitter.png' alt='Twitter' title='Twitter' width='30' /></a></li>
+			<li><a href='#' onclick='compartirLinkedIn()'><img src='/WEBCORP-static/maqueta/images/icon-linkedin.png' alt='LinkedIn' title='LinkedIn' width='30' /></a></li>
+			<li><a href='#' onclick='compartirGooglePlus()'><img src='/WEBCORP-static/maqueta/images/icon-google-plus.png' alt='Google Plus' title='Google Plus' width='30' /></a></li>
+			<li><a href='#' id='emailLink'><img src='/WEBCORP-static/maqueta/images/icon-mail.png' alt='mail' title='E-mail' width='30' /></a></li>
+		</ul>
+	</div>
+	<ul>
+		<li class="ico-redes">
+			<a href="#">Compartir</a>
+		</li>
+		<li class="ico-print">
+			<a href="" title="Imprimir">Imprimir</a>
+		</li>
+	</ul>
+</div>
+
+
+<script type="text/javascript">
+	/*POPOVER COMPARTIR EN REDES*/
+	$(document).ready(function(){
+		$('.ico-redes, .popover').hover(function(){
+			$('.popover').show();
+		},function(){
+			$('.popover').hide();
+		});
+	});
+
+	$(document).ready(function(){
+		var width = $(window).width();
+		if ((width <= 992)) {
+			$('html').on('mouseup', function(e) {
+				if(!$(e.target).closest('.popover').length) {
+					$('.popover').each(function(){
+						$(this.previousSibling).popover('hide');
+					});
+				}
+			})
+		} 
+	});
+	
+	/*COMPARTIR EN FACEBOOK*/
+	function compartirFacebook()
+	{
+		var paginaActual = window.location;
+		var urlFacebook = "http://www.facebook.com/sharer.php?u=" + encodeURIComponent(paginaActual);
+		window.open(urlFacebook, "", "menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=600, width=600");
+	}
+	
+	/*COMPARTIR EN TWITTER*/
+	function compartirTwitter()
+	{
+		var paginaActual = window.location;
+		var urlTwitter = "http://twitter.com/share?url=" + encodeURIComponent(paginaActual);
+		window.open(urlTwitter, "", "menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=600, width=600");
+	}
+	
+	/*COMPARTIR EN LINKEDIN*/
+	function compartirLinkedIn()
+	{
+		var paginaActual = window.location;
+		var urlLinkedIn = "http://www.linkedin.com/shareArticle?mini=true&url=" + encodeURIComponent(paginaActual);
+		window.open(urlLinkedIn, "", "menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=600, width=600");
+	}
+	
+	/*COMPARTIR EN GOOGLE PLUS*/
+	function compartirGooglePlus()
+	{
+		var paginaActual = window.location;
+		var urlGooglePlus = "http://plus.google.com/share?url=" + encodeURIComponent(paginaActual);
+		window.open(urlGooglePlus, "", "menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=600, width=600");
+	}
+	
+	/*COMPARTIR POR CORREO*/
+	$(document).ready(function(){
+		var enlace = "mailto:?subject="+document.title+"&body="+window.location;
+		var emailLink = document.getElementById('emailLink');
+		emailLink.href = enlace;
+	});
+	
+</script>
+
+					</div>
+					<!-- FIN CONTENIDO --> 
+				</div>
+			</div>
+			<!-- START: footer -->
+			<!-- Módulo de pie de página -->
+			<footer id="footer" class="g_9_t g_4_m">
+				<a name="footer-content" id="footer-content" tabindex="-1"></a>
+				
+
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			<div class="content clearfix">
+				<div class="contentAlertas">
+					<ul>
+						
+							
+								<li>
+									<span>
+										
+										
+										
+											
+											<img data-alt-src="/stfls/EnagasImport/Ficheros/Pie/es/footerAlertas_on.png" src="/stfls/EnagasImport/Ficheros/Pie/es/footerAlertas.png" alt="Sistema de Alertas" />
+										
+										
+										
+										
+										
+											
+												
+													
+												
+												
+												
+
+												
+													
+														<a href="/enagas/es/Comunicacion/SistemaAlertas">Sistema de Alertas</a>
+													
+													
+												
+											
+										
+									</span>
+								</li>
+							
+						
+							
+								<li>
+									<span>
+										
+										
+										
+											
+											<img data-alt-src="/stfls/EnagasImport/Ficheros/Pie/es/footerPublicaciones_on.png" src="/stfls/EnagasImport/Ficheros/Pie/es/footerPublicaciones.png" alt="Publicaciones" />
+										
+										
+										
+										
+										
+											
+												
+													
+												
+												
+												
+
+												
+													
+														<a href="/enagas/es/AccionistasEInversores/PublicacionesInversores">Publicaciones</a>
+													
+													
+												
+											
+										
+									</span>
+								</li>
+							
+						
+							
+								<li>
+									<span>
+										
+										
+										
+											
+											<img data-alt-src="/stfls/EnagasImport/Ficheros/Pie/es/footerContacto_on.png" src="/stfls/EnagasImport/Ficheros/Pie/es/footerContacto.png" alt="Contacte con Nosotros" />
+										
+										
+										
+										
+										
+											
+												
+													
+												
+												
+												
+
+												
+													
+														<a href="/enagas/es/Comunicacion/Contacto">Contacte con Nosotros</a>
+													
+													
+												
+											
+										
+									</span>
+								</li>
+							
+						
+							
+						
+							
+						
+							
+						
+							
+						
+					</ul>
+					<div class="separa">
+						<img src="/WEBCORP-static/maqueta/images/separador_footer.png" alt="separador" />
+					</div>
+				</div>	
+				<div class="redes">
+					
+					<span>Síguenos en...</span>
+					<ul>
+						
+							
+						
+							
+						
+							
+						
+							
+								
+								
+									
+										
+											
+											
+												<li><a title="Acceso a Facebook" href="http://on.fb.me/EnagasFB" target="_blank"><img src="/stfls/EnagasImport/Ficheros/Pie/es/icoFacebook.png" alt="Acceso a Facebook"></a></li>
+											
+										
+									
+									
+								
+							
+						
+							
+								
+								
+									
+										
+											
+											
+												<li><a title="Acceso a Twitter" href="http://twitter.com/enagas" target="_blank"><img src="/stfls/EnagasImport/Ficheros/Pie/es/icoTwiter.png" alt="Acceso a Twitter"></a></li>
+											
+										
+									
+									
+								
+							
+						
+							
+								
+								
+									
+										
+											
+											
+												<li><a title="Acceso a Linkedin" href="http://www.linkedin.es" target="_blank"><img src="/stfls/EnagasImport/Ficheros/Pie/es/icoIn.png" alt="Acceso a Linkedin"></a></li>
+											
+										
+									
+									
+								
+							
+						
+							
+								
+								
+									
+										
+											
+											
+												<li><a title="Enlace Youtube" href="https://www.youtube.com/channel/UC1gEGcl-G7p8INsNKe9YZyg" target="_blank"><img src="/stfls/ENAGAS/Multimedia/Imagenes/YouTube-social-square_red_28px.png" alt="Acceso a YouTube"></a></li>
+											
+										
+									
+									
+								
+							
+						
+					</ul>
+					<div class="separa"><img src="/WEBCORP-static/maqueta/images/separador_footer.png" alt="separador" /></div>
+				</div>
+
+				<div class="informe">	
+					
+						
+						
+							
+							
+							
+								
+								
+									
+								
+								<a href="https://www.enagas.es/WEBCORP-static/Informe_Sistema_Gasista_2018/" target="_blank"><img src="/stfls/ENAGAS/Imagenes/Destacados Home/Imagen_informe_gasista.png" alt="Informe del Sistema Gasista Español 2018 " title="" >
+								
+								<!-- <span class="new">nuevo</span> -->
+								<span class="txtInforme"></span></a>
+								<a href="https://www.enagas.es/WEBCORP-static/Informe_Sistema_Gasista_2018/" target="_blank" class="nuevo"><strong>Informe del Sistema Gasista Español 2018 </strong></a>
+								<p>En este informe se presentan los principales datos relativos a la evoluci&oacute;n del Sistema Gasista espa&ntilde;ol durante 2018.</p>
+<p>&nbsp;</p>
+							
+						
+					
+				</div>	
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			<div class="copyright">
+				<div class="no-mobile">
+					
+						
+							
+								<p>Copyright 2014 © Enagás S.A. Paseo de los Olmos, 19 28005 Madrid Tlf. 902 443 700 / (+34) 91 709 92 00</p>
+							
+					
+							
+						
+					
+						
+							
+					
+							
+								
+									<ul>
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/Contacto">Contacto</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Mapa-web">Mapa web</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Sitemap">Sitemap</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/AvisoLegal">Aviso Legal</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/Ayuda">Ayuda</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/Accesibilidad">Accesibilidad</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+											<li class="last">
+										
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/Politica_de_Cookies">Politica de Cookies</a>
+										
+										
+									
+											</li>
+								
+								
+									</ul>
+								
+							
+						
+					
+				</div>
+				
+				<div class="mobile">
+					
+						
+							
+								<span>Copyright 2014 © Enagás S.A. Paseo de los Olmos, 19 28005 Madrid Tlf. 902 443 700 / (+34) 91 709 92 00</span>
+							
+					
+							
+						
+					
+						
+							
+					
+							
+								
+									<ul>
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/Contacto">Contacto</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Mapa-web">Mapa web</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Sitemap">Sitemap</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/AvisoLegal">Aviso Legal</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/Ayuda">Ayuda</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+										
+											<li>
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/Accesibilidad">Accesibilidad</a>
+										
+										
+									
+											</li>
+								
+								
+							
+						
+					
+						
+							
+					
+							
+								
+								
+									
+										
+											<li class="last">
+										
+										
+									
+									
+									
+										
+									
+									
+									
+									
+										
+											<a href="/enagas/es/Pie/Politica_de_Cookies">Politica de Cookies</a>
+										
+										
+									
+											</li>
+								
+								
+									</ul>
+								
+							
+						
+					
+				</div>
+				
+				<div class="goUp">
+					
+					<a href="#" title="Subir a la cabecera"><img src="/WEBCORP-static/maqueta/images/icoUp.png" alt="Subir a la cabecera" title="Subir a la cabecera" /></a>
+				</div>
+			</div>
+
+
+
+
+	
+	
+
+			</footer>
+			<!-- Módulo de pie de página -->
+			<!-- END: footer -->
+		</div>
+
+		<!-- SALTOS DE ACCESIBILIDAD -->
+		
+			
+		
+		<a href="#skip-link" class="skip">Volver arriba</a>
+		<aside class="g_12_d g_9_t g_6_m">
+	   		
+<div class="defaultMenu">
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+			<ul class="clearfix footer-ico-menu">
+				
+					
+						
+							
+							
+							<li class="ico_0">
+								
+									
+									
+										<img src="/stfls/EnagasImport/Ficheros/Pie/es/selloExcEur500.jpg" alt="Sello de Excelencia Europea +500">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_1">
+								
+									
+									
+										<img src="/stfls/EnagasImport/Multimedia/Imagen/Pie/DJSI-Gold-2019_LOGO_PIE.png" alt="Enagás forma parte del Dow Jones Sustainability Index">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_2">
+								
+									
+									
+										<img src="/stfls/EnagasImport/Ficheros/Pie/es/ethibelExcellenceInvestment.jpg" alt="Índice Ethibel Excellence Investment Register">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_3">
+								
+									
+									
+										<img src="/stfls/EnagasImport/Ficheros/Pie/en/FTSE4Good.jpg" alt="Enagás forma parte del índice FTSE4Good">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+								</ul>
+								<ul class="clearfix footer-ico-menu">
+							
+							<li class="ico_4">
+								
+									
+									
+										<img src="/stfls/ENAGAS/Imagenes/ESG_GlobalSustainability_MCSI.jpg" alt="2014 Constituent MSCI Global Sustainability Indexes ">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_5">
+								
+									
+									
+										<img src="/stfls/EnagasImport/Ficheros/Pie/es/pactoMundialNacionesUnidas.jpg" alt="Enagás es miembro del Pacto Mundial de las Naciones Unidas">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_6">
+								
+									
+									
+										<img src="/stfls/EnagasImport/Multimedia/Imagen/Pie/EFR2019.png" alt="Enagás es una Empresa Familiarmente Responsable">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_7">
+								
+									
+									
+										<img src="/stfls/EnagasImport/Ficheros/Pie/es/distintivoIgualdadEmpresa.jpg" alt="Enagás cuenta con el distintivo Igualdad en la Empresa del Ministerio de Sanidad, Política Social e Igualdad">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_8">
+								
+									
+									
+										<img src="/stfls/EnagasImport/Multimedia/Imagen/Pie/Top_Employer_Spain_2017_ES.png" alt="Enagás, empresa Top Employer 2017">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_9">
+								
+									
+										
+											
+											
+												<a class="menu-img" title="W3 (Se abrirá en una nueva ventana)" href="http://www.w3.org/WAI/WCAG1AA-Conformance" target="_blank"><img src="/stfls/EnagasImport/Ficheros/Pie/es/conformidadNivelAA.jpg" alt="Icono de conformidad con el Nivel AA, de las Directrices de Accesibilidad para el Contenido Web 1.0 del W3C-WAI"></a>
+											
+										
+									
+									
+								
+							</li>
+						
+			
+						
+					
+				
+					
+						
+							
+							
+							<li class="ico_10">
+								
+									
+									
+										<img src="/stfls/ENAGAS/Imagenes/BEQUAL.jpg" alt="Bequal">
+									
+								
+							</li>
+						
+			
+						
+					
+				
+			</ul>
+
+
+
+
+		
+		
+	
+</div>
+   		</aside>
+   	</div>
+	<script src="/web-corporativa-ext-templating/web-corporativa/jquery-1.9.1.js"></script>
+	<script src="/web-corporativa-ext-templating/web-corporativa/jquery-ui.js"></script>
+
+	
+
+
+
+	<script src="/WEBCORP-static/maqueta/js/enagaslibs.min.js"></script>
+	<script type="text/javascript" src="/WEBCORP-static/maqueta/Charts/FusionCharts.js"></script> 
+	<script type="text/javascript" src="/WEBCORP-static/maqueta/Charts/lib.js" ></script>
+	<script type="text/javascript" src="/WEBCORP-static/maqueta/js/utils/jquery-validate.js"></script>
+	<script type="text/javascript" src="/WEBCORP-static/maqueta/js/libs/jquery-ui.min.js"></script> 
+	
+	<script type="text/javascript" src="/WEBCORP-static/maqueta/js/validar.js"></script> 
+	<script type="text/javascript" src="/WEBCORP-static/maqueta/js/homologacion.js"></script> 
+	<script src="/WEBCORP-static/maqueta/js/enagas.min.js"></script>
+
+	
+	
+
+	
+	<script type='text/javascript'>
+		var ua = navigator.userAgent; 
+		if((ua.toLowerCase().indexOf('android') >= 0)){ 
+			var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8)); 
+			// Solo para versiones Android inferiores a 3
+			if (androidversion < 3)
+			{
+				$.getScript("/WEBCORP-static/maqueta/js/utils/iscroll.js", function(){
+					_iScroll.init();
+				})
+			}
+		}
+	</script>
+	
+
+               
+                              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+	
+		
+				
+				
+				<div id="avisocoockies" class="avisocoockies_azul_bottom">
+				<a class="cerrar_aviso" href="#">X</a>
+				<div class="txtcoockies">
+				<p>Utilizamos cookies para mejorar nuestro servicio. Si continuas navegando, consideramos que aceptas su uso. Para obtener más información o para cambiar la configuración, puedes consultar nuestra <a href="/enagas/es/Pie/Politica_de_Cookies">política de cookies</a>.</p>
+				</div>
+				</div>
+		
+	
+
+
+
+               
+               
+
+
+
+</body>
+</html>

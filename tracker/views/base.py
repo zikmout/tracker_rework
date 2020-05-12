@@ -73,6 +73,12 @@ class BaseView(RequestHandler):
         #self.set_header("Content-Type", 'application/json; charset="utf-8"')
         pass
 
+    def set_default_headers(self):
+        print("setting headers!!!")
+        self.set_header("Access-Control-Allow-Origin", "*")
+        self.set_header("Access-Control-Allow-Headers", "x-requested-with")
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+
     def send_response(self, data, status=200):
         """Construct and send a JSON response with appropriate status code."""
         self.set_status(status)

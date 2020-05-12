@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+<head>
+  <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"a14fdfd6a8",applicationID:"193759265"};window.NREUM||(NREUM={}),__nr_require=function(n,e,t){function r(t){if(!e[t]){var i=e[t]={exports:{}};n[t][0].call(i.exports,function(e){var i=n[t][1][e];return r(i||e)},i,i.exports)}return e[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<t.length;i++)r(t[i]);return r}({1:[function(n,e,t){function r(){}function i(n,e,t){return function(){return o(n,[u.now()].concat(f(arguments)),e?null:this,t),e?void 0:this}}var o=n("handle"),a=n(4),f=n(5),c=n("ee").get("tracer"),u=n("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(n,e){s[e]=i(d+e,!0,"api")}),s.addPageAction=i(d+"addPageAction",!0),s.setCurrentRouteName=i(d+"routeName",!0),e.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(n,e){var t={},r=this,i="function"==typeof e;return o(l+"tracer",[u.now(),n,t],r),function(){if(c.emit((i?"":"no-")+"fn-start",[u.now(),r,i],t),i)try{return e.apply(this,arguments)}catch(n){throw c.emit("fn-err",[arguments,this,n],t),n}finally{c.emit("fn-end",[u.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(n,e){m[e]=i(l+e)}),newrelic.noticeError=function(n,e){"string"==typeof n&&(n=new Error(n)),o("err",[n,u.now(),!1,e])}},{}],2:[function(n,e,t){function r(n,e){var t=n.getEntries();t.forEach(function(n){"first-paint"===n.name?a("timing",["fp",Math.floor(n.startTime)]):"first-contentful-paint"===n.name&&a("timing",["fcp",Math.floor(n.startTime)])})}function i(n){if(n instanceof c&&!s){var e,t=Math.round(n.timeStamp);e=t>1e12?Date.now()-t:f.now()-t,s=!0,a("timing",["fi",t,{type:n.type,fid:e}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var o,a=n("handle"),f=n("loader"),c=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){o=new PerformanceObserver(r);try{o.observe({entryTypes:["paint"]})}catch(u){}}if("addEventListener"in document){var s=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(n){document.addEventListener(n,i,!1)})}}},{}],3:[function(n,e,t){function r(n,e){if(!i)return!1;if(n!==i)return!1;if(!e)return!0;if(!o)return!1;for(var t=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var f=navigator.userAgent,c=f.match(a);c&&f.indexOf("Chrome")===-1&&f.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],4:[function(n,e,t){function r(n,e){var t=[],r="",o=0;for(r in n)i.call(n,r)&&(t[o]=e(r,n[r]),o+=1);return t}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],5:[function(n,e,t){function r(n,e,t){e||(e=0),"undefined"==typeof t&&(t=n?n.length:0);for(var r=-1,i=t-e||0,o=Array(i<0?0:i);++r<i;)o[r]=n[e+r];return o}e.exports=r},{}],6:[function(n,e,t){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(n,e,t){function r(){}function i(n){function e(n){return n&&n instanceof r?n:n?c(n,f,o):o()}function t(t,r,i,o){if(!d.aborted||o){n&&n(t,r,i);for(var a=e(i),f=v(t),c=f.length,u=0;u<c;u++)f[u].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(n,e){h[n]=v(n).concat(e)}function m(n,e){var t=h[n];if(t)for(var r=0;r<t.length;r++)t[r]===e&&t.splice(r,1)}function v(n){return h[n]||[]}function g(n){return p[n]=p[n]||i(t)}function w(n,e){u(n,function(n,t){e=e||"feature",y[t]=e,e in s||(s[e]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:e,buffer:w,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var f="nr@context",c=n("gos"),u=n(4),s={},p={},d=e.exports=i();d.backlog=s},{}],gos:[function(n,e,t){function r(n,e,t){if(i.call(n,e))return n[e];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(n,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return n[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(n,e,t){function r(n,e,t,r){i.buffer([n],r),i.emit(n,e,t)}var i=n("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(n,e,t){function r(n){var e=typeof n;return!n||"object"!==e&&"function"!==e?-1:n===window?0:a(n,o,function(){return i++})}var i=1,o="nr@id",a=n("gos");e.exports=r},{}],loader:[function(n,e,t){function r(){if(!x++){var n=E.info=NREUM.info,e=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(n&&n.licenseKey&&n.applicationID&&e))return s.abort();u(y,function(e,t){n[e]||(n[e]=t)}),c("mark",["onload",a()+E.offset],null,"api");var t=l.createElement("script");t.src="https://"+n.agent,e.parentNode.insertBefore(t,e)}}function i(){"complete"===l.readyState&&o()}function o(){c("mark",["domContent",a()+E.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(f=Math.max((new Date).getTime(),f))-E.offset}var f=(new Date).getTime(),c=n("handle"),u=n(4),s=n("ee"),p=n(3),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1153.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),E=e.exports={offset:f,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};n(1),n(2),l[m]?(l[m]("DOMContentLoaded",o,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",i),d[v]("onload",r)),c("mark",["firstbyte",f],null,"api");var x=0,O=n(6)},{}],"wrap-function":[function(n,e,t){function r(n){return!(n&&n instanceof Function&&n.apply&&!n[a])}var i=n("ee"),o=n(5),a="nr@original",f=Object.prototype.hasOwnProperty,c=!1;e.exports=function(n,e){function t(n,e,t,i){function nrWrapper(){var r,a,f,c;try{a=this,r=o(arguments),f="function"==typeof t?t(r,a):t||{}}catch(u){d([u,"",[r,a,i],f])}s(e+"start",[r,a,i],f);try{return c=n.apply(a,r)}catch(p){throw s(e+"err",[r,a,p],f),p}finally{s(e+"end",[r,a,c],f)}}return r(n)?n:(e||(e=""),nrWrapper[a]=n,p(n,nrWrapper),nrWrapper)}function u(n,e,i,o){i||(i="");var a,f,c,u="-"===i.charAt(0);for(c=0;c<e.length;c++)f=e[c],a=n[f],r(a)||(n[f]=t(a,u?f+i:i,o,f))}function s(t,r,i){if(!c||e){var o=c;c=!0;try{n.emit(t,r,i,e)}catch(a){d([a,t,r,i])}c=o}}function p(n,e){if(Object.defineProperty&&Object.keys)try{var t=Object.keys(n);return t.forEach(function(t){Object.defineProperty(e,t,{get:function(){return n[t]},set:function(e){return n[t]=e,e}})}),e}catch(r){d([r])}for(var i in n)f.call(n,i)&&(e[i]=n[i]);return e}function d(e){try{n.emit("internal-error",e)}catch(t){}}return n||(n=i),t.inPlace=u,t.flag=a,t}},{}]},{},["loader"]);</script>
+<meta name="title" content="Press releases | Bureau Veritas" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="og:site_name" content="Bureau Veritas" />
+<link rel="canonical" href="https://group.bureauveritas.com/investors/financial-information/press-releases" />
+<meta name="twitter:title" content="Press releases" />
+<meta property="og:type" content="article" />
+<meta name="description" content=" " />
+<meta property="og:url" content="https://group.bureauveritas.com/investors/financial-information/press-releases" />
+<meta property="og:title" content="Press releases" />
+<meta name="twitter:url" content="https://group.bureauveritas.com/investors/financial-information/press-releases" />
+<meta property="og:description" content=" " />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script>function euCookieComplianceLoadScripts() {}</script>
+<style>div#sliding-popup, div#sliding-popup .eu-cookie-withdraw-banner, .eu-cookie-withdraw-tab {background: #222222} div#sliding-popup.eu-cookie-withdraw-wrapper { background: transparent; } #sliding-popup h1, #sliding-popup h2, #sliding-popup h3, #sliding-popup p, .eu-cookie-compliance-more-button, .eu-cookie-compliance-secondary-button, .eu-cookie-withdraw-tab { color: #ffffff;} .eu-cookie-withdraw-tab { border-color: #ffffff;}</style>
+<link rel="icon" type="image/png" sizes="192x192" href="/themes/custom/bureauveritasbase/favicon/android-chrome-192x192.png" />
+<link rel="manifest" href="/themes/custom/bureauveritasbase/favicon/manifest.json" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="theme-color" content="#fff" />
+<link rel="apple-touch-icon" type="image/png" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="57x57" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-57x57.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-60x60.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="72x72" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-72x72.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="114x114" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-114x114.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="144x144" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-144x144.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="152x152" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-152x152.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="/themes/custom/bureauveritasbase/favicon/apple-touch-icon-180x180.png" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="Bureau Veritas" />
+<link rel="icon" type="image/png" sizes="16x16" href="/themes/custom/bureauveritasbase/favicon/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="/themes/custom/bureauveritasbase/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/x-icon" href="/themes/custom/bureauveritasbase/favicon/favicon.ico" />
+<meta name="msapplication-TileColor" content="#fff" />
+<meta name="msapplication-TileImage" content="/themes/custom/bureauveritasbase/favicon/mstile-144x144.png" />
+<meta name="msapplication-config" content="/themes/custom/bureauveritasbase/favicon/browserconfig.xml" />
+<link rel="alternate" hreflang="en" href="https://group.bureauveritas.com/investors/financial-information/press-releases" />
+<link rel="alternate" hreflang="fr" href="https://group.bureauveritas.com/fr/investisseurs/informations-financieres/communiques-de-presse" />
+<link rel="shortcut icon" href="/themes/custom/bureauveritasbase/favicon/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="revision" href="/investors/financial-information/press-releases" />
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&amp;l='+l:'';j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl+'';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PTD3C9C');</script>
+
+    <title>Press releases | Bureau Veritas</title>
+    <link rel="stylesheet" href="/sites/g/files/zypfnx196/files/css/css_4UYkJvLA6A3lv7fiXIDSfN8WYpqSvMCrxqRy0-NBX-k.css?q1kkbh" media="all" />
+<link rel="stylesheet" href="/sites/g/files/zypfnx196/files/css/css__j0dpbCMdxz6cYH_h04HMjSvy8gMqq6AnbvmTeQmZqM.css?q1kkbh" media="all" />
+<link rel="stylesheet" href="/sites/g/files/zypfnx196/files/css/css_D7tjK-pFzvJAzkm_uQbUJt4baXeSNFcxTVC3UWdZTyU.css?q1kkbh" media="print" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" media="all" />
+
+    
+  </head>
+  <body class="path-node page-node-type-editorial">
+    <div class="page-wrapper">
+      <noscript aria-hidden="true"><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTD3C9C" height="0" width="0" title="Google Tag Manager"></iframe></noscript>
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+        <header class="site-header">
+      <div class="heading-highlights">
+                            <div class="heading-highlights--tools">
+                  <div class="views-exposed-form bef-exposed-form search-tool block block-views block-views-exposed-filter-blockacquia-search-page-1" data-drupal-selector="views-exposed-form-acquia-search-page-1" id="block-exposedformacquia-searchpage-1">
+  
+    
+      <form action="/search" method="get" id="views-exposed-form-acquia-search-page-1" accept-charset="UTF-8">
+  <div class="form--inline clearfix">
+  <div class="js-form-item form-item js-form-type-textfield form-type-textfield js-form-item-keyword form-item-keyword">
+      <label for="edit-keyword">What are you looking for?</label>
+        <input data-drupal-selector="edit-keyword" type="text" id="edit-keyword" name="keyword" value="" size="30" maxlength="128" class="form-text" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit-acquia-search" type="submit" id="edit-submit-acquia-search" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+</div>
+
+</form>
+
+  </div>
+<div id="block-stocksblock" class="block block-bv-stocks block-stocks-block">
+  
+    
+      <a href="/investors" class="share-price" style="display:none">
+</a>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-galaxy-menu" id="block-galaxy" class="list-items block block-menu navigation menu--galaxy">
+            
+  <h2 class="visually-hidden" id="block-galaxy-menu">List links</h2>
+  
+
+        
+              <ul data-region="header_top" class="menu">
+                    <li class="menu-item">
+        <a href="https://www.bureauveritas.com/home/worldwide-locations/all_locations" class="websites-galaxy site-link" target="_blank">Galaxy</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div class="language-switcher-language-url site-lang block block-language block-language-blocklanguage-interface" id="block-languageswitcher" role="navigation">
+  
+    
+      <ul class="links"><li hreflang="en" data-drupal-link-system-path="node/410" class="en is-active"><a href="/investors/financial-information/press-releases" class="language-link is-active" hreflang="en" data-drupal-link-system-path="node/410">en</a></li><li hreflang="fr" data-drupal-link-system-path="node/410" class="fr"><a href="/fr/investisseurs/informations-financieres/communiques-de-presse" class="language-link" hreflang="fr" data-drupal-link-system-path="node/410">fr</a></li></ul>
+  </div>
+
+
+            </div>
+              </div>
+
+                <div class="site-heading">
+              <div class="site-logo">
+                  <div id="block-sitebranding" class="site-logo--inner block block-system block-system-branding-block">
+  
+    
+                <div>
+        <a href="/" title="Home" rel="home">Bureau Veritas</a>
+      </div>
+        </div>
+
+
+              </div>
+                <nav role="navigation" aria-labelledby="block-mainnavigation-menu" id="block-mainnavigation" class="main-menu block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-mainnavigation-menu"></h2>
+  
+
+        
+<ul class="menu menu-level-0">
+  
+  <li class="menu-item menu-item--expanded">
+    <span data-drupal-link-system-path="&lt;front&gt;">Group</span>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-mega-menu menu-dropdown menu-dropdown-0 menu-type-mega_menu">
+        
+<div  class="main-menu--section">
+      <div class="main-menu--illustration field-group-background-image" style="background-image: url(&#039;/sites/g/files/zypfnx196/files/styles/large/public/2018-07/sub_nav_group.jpg?itok=PzqqZ-B4&#039;)">                <span class="visually-hidden field__item">
+        mega menu group
+            </span>
+      </div>
+
+<div  class="main-menu--content">
+      
+<div  class="teaser-menu">
+                      <div class="teaser-menu--title field__item">
+        Welcome to Bureau Veritas
+            </div>
+                      <div class="teaser-menu--desc field__item">
+        Bureau Veritas is a recognized world leader in testing, inspection and certification services (TIC).
+            </div>
+          <div class="teaser-menu--action field field--name-field-menu-link-title field--type-link field--label-hidden field__items">
+                <div class="link-standard field__item">
+        <a href="/group" class="link-std">Discover</a>
+            </div>
+          </div>
+
+  </div>
+<div  class="sub-menu">
+      
+<ul class="menu menu-level-1">
+  
+  <li class="menu-item">
+    <a href="/group/mission-ambition" data-drupal-link-system-path="node/51">Mission &amp; Ambition</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/group/strategy" data-drupal-link-system-path="node/53">Strategy</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/group/core-business" data-drupal-link-system-path="node/52">Core business</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/group/governance" data-drupal-link-system-path="node/583">Governance</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/group/governance/board-directors" data-drupal-link-system-path="node/386">Board of Directors</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/group/governance/executive-committee" data-drupal-link-system-path="node/584">Executive Committee</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/group/glance" data-drupal-link-system-path="node/1086">At a glance</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-mega-menu menu-dropdown">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/group/corporate-social-responsibility" data-drupal-link-system-path="node/1301">Corporate Social Responsibility</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/group/corporate-social-responsibility/our-commitment-csr" data-drupal-link-system-path="node/1306">Our Commitment to CSR</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/group/corporate-social-responsibility/operational-excellence" data-drupal-link-system-path="node/1311">Operational excellence</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/group/corporate-social-responsibility/our-commitment-our-staff" data-drupal-link-system-path="node/1316">Our Commitment to our Staff</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/environment-and-climate" data-drupal-link-system-path="node/1321">Environnement and Climate</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/our-history-190-years-and-still-innovating" data-drupal-link-system-path="node/681">Our history</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/group/global-presence" data-drupal-link-system-path="node/10">Global presence</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+  </div>
+  </div>
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <span data-drupal-link-system-path="&lt;front&gt;">Markets &amp; Services</span>
+
+              
+
+<div class="accordions-enabled menu_link_content menu-link-contentmain view-mode-mega-menu menu-dropdown menu-dropdown-0 menu-type-mega_menu">
+        
+<div  class="main-menu--section">
+      <div class="main-menu--illustration field-group-background-image" style="background-image: url(&#039;/sites/g/files/zypfnx196/files/styles/large/public/2018-07/menu-markets-services-lab.jpg?itok=POMUD9Wc&#039;)">                <span class="visually-hidden field__item">
+        market-menu-labo
+            </span>
+      </div>
+
+<div  class="main-menu--content">
+      
+<div  class="teaser-menu">
+                      <div class="teaser-menu--title field__item">
+        Explore our range of markets and services
+            </div>
+                      <div class="teaser-menu--desc field__item">
+        Our solutions and services help our clients reduce risk, improve their performance and meet the challenges of quality, health &amp; safety, environmental protection and social responsibility. 
+            </div>
+          <div class="teaser-menu--action field field--name-field-menu-link-title field--type-link field--label-hidden field__items">
+                <div class="link-standard field__item">
+        <a href="/markets-services" class="link-std">Discover</a>
+            </div>
+          </div>
+
+  </div>
+<div  class="sub-menu">
+      
+<ul class="menu menu-level-1">
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/automotive-transport" data-drupal-link-system-path="node/447">Automotive &amp; Transport</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/automotive-transport/automotive" data-drupal-link-system-path="node/343">Automotive</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/automotive-transport/rail" data-drupal-link-system-path="node/347">Rail</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/automotive-transport/transport-logistics" data-drupal-link-system-path="node/500">Transport &amp; logistics</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/buildings-infrastructure" data-drupal-link-system-path="node/390">Buildings &amp; Infrastructure</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/buildings-infrastructure/urban-sport-institutional-infrastructure" data-drupal-link-system-path="node/393">Urban, sport &amp; institutional infrastructure</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/buildings-infrastructure/industrial-office-assets" data-drupal-link-system-path="node/394">Industrial &amp; office assets</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/buildings-infrastructure/transport-infrastructure" data-drupal-link-system-path="node/417">Transport infrastructure</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/buildings-infrastructure/residential-retail-leisure-buildings" data-drupal-link-system-path="node/418">Residential, retail &amp; leisure buildings</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/chemicals" data-drupal-link-system-path="node/448">Chemicals</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/chemicals/base-commodity-chemicals" data-drupal-link-system-path="node/416">Base &amp; commodity chemicals</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/chemicals/special-chemicals" data-drupal-link-system-path="node/423">Special chemicals</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/commodities-agriculture" data-drupal-link-system-path="node/446">Commodities &amp; Agriculture</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/commodities-agriculture/oil-petrochemicals" data-drupal-link-system-path="node/392">Oil &amp; petrochemicals</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/commodities-agriculture/metals-minerals" data-drupal-link-system-path="node/395">Metals &amp; minerals</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/commodities-agriculture/mining" data-drupal-link-system-path="node/408">Mining</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/commodities-agriculture/agri-commodities" data-drupal-link-system-path="node/441">Agri-commodities</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/consumer-products-retail" data-drupal-link-system-path="node/419">Consumer products &amp; retail</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/consumer-products-retail/electrical-electronics" data-drupal-link-system-path="node/420">Electrical &amp; electronics</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/consumer-products-retail/smart-wireless-devices" data-drupal-link-system-path="node/421">Smart &amp; wireless devices</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/consumer-products-retail/softlines-accessories" data-drupal-link-system-path="node/422">Softlines &amp; accessories</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/consumer-products-retail/hard-goods-toys" data-drupal-link-system-path="node/414">Hard goods &amp; toys</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/financial-services-public-sector" data-drupal-link-system-path="node/449">Financial services &amp; Public sector</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/financial-services-public-sector/governments" data-drupal-link-system-path="node/425">Governments</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/food" data-drupal-link-system-path="node/313">Food</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/food/food-production" data-drupal-link-system-path="node/326">Food production</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/food/food-manufacturing-processing" data-drupal-link-system-path="node/331">Food manufacturing &amp; processing</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/food/food-retail-service-hospitality" data-drupal-link-system-path="node/338">Food retail, service &amp; hospitality</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/marine-offshore" data-drupal-link-system-path="node/450">Marine &amp; Offshore</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/marine-offshore/marine" data-drupal-link-system-path="node/426">Marine</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/marine-offshore/offshore" data-drupal-link-system-path="node/427">Offshore</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/oil-gas" data-drupal-link-system-path="node/413">Oil &amp; Gas</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/oil-gas/exploration-production" data-drupal-link-system-path="node/396">Exploration &amp; production</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/oil-gas/refining-processing" data-drupal-link-system-path="node/431">Refining &amp; processing</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/oil-gas/transportation-storage" data-drupal-link-system-path="node/433">Transportation &amp; storage</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/markets-services/power-utilities" data-drupal-link-system-path="node/434">Power &amp; Utilities</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/power-utilities/power-generation" data-drupal-link-system-path="node/435">Power generation</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/power-utilities/power-transmission" data-drupal-link-system-path="node/436">Power transmission</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/power-utilities/power-gas-distribution" data-drupal-link-system-path="node/438">Power &amp; gas distribution</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/power-utilities/water-sanitation" data-drupal-link-system-path="node/440">Water &amp; sanitation</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <span data-drupal-link-system-path="&lt;front&gt;">Cross-market services</span>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/markets-services/cross-market-services/procurement" data-drupal-link-system-path="node/442">Procurement</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/markets-services/cross-market-services/certification-management-services" data-drupal-link-system-path="node/443">Certification &amp; management services</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+</ul>
+
+  </div>
+  </div>
+  </div>
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/magazine" data-drupal-link-system-path="magazine">Insight</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-mega-menu menu-dropdown">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/newsroom" data-drupal-link-system-path="newsroom">News</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-mega-menu menu-dropdown">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <span data-drupal-link-system-path="&lt;front&gt;">Careers</span>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-mega-menu menu-dropdown menu-dropdown-0 menu-type-mega_menu">
+        
+<div  class="main-menu--section">
+      <div class="main-menu--illustration field-group-background-image" style="background-image: url(&#039;/sites/g/files/zypfnx196/files/styles/large/public/2019-11/Career_image_mega-menu.jpg?itok=1m2j5XMC&#039;)">                <span class="visually-hidden field__item">
+        Career_mega-menu
+            </span>
+      </div>
+
+<div  class="main-menu--content">
+      
+<div  class="teaser-menu">
+                      <div class="teaser-menu--title field__item">
+        Come and grow with us
+            </div>
+                      <div class="teaser-menu--desc field__item">
+        Explore our career opportunities.
+            </div>
+      
+  </div>
+<div  class="sub-menu">
+      
+<ul class="menu menu-level-1">
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/careers/leave-your-mark" data-drupal-link-system-path="node/1381">Leave Your Mark</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/careers/leave-your-mark/our-people" data-drupal-link-system-path="node/1461">Our people</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/careers/leave-your-mark/perspectives" data-drupal-link-system-path="node/1456">Perspectives</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/careers/make-your-next-move" data-drupal-link-system-path="node/1436">Make your next move</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="https://careers.bureauveritas.com">Join us</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+  </div>
+  </div>
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded menu-item--active-trail">
+    <span data-drupal-link-system-path="&lt;front&gt;">Investors</span>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-mega-menu menu-dropdown menu-dropdown-0 menu-type-mega_menu">
+        
+<div  class="main-menu--section">
+      <div class="main-menu--illustration field-group-background-image" style="background-image: url(&#039;/sites/g/files/zypfnx196/files/styles/large/public/2018-07/sub_nav_investors.jpg?itok=qh8oQrxK&#039;)">                <span class="visually-hidden field__item">
+        mega menu investors
+            </span>
+      </div>
+
+<div  class="main-menu--content">
+      
+<div  class="teaser-menu">
+                      <div class="teaser-menu--title field__item">
+        Follow our performance and outlook
+            </div>
+                      <div class="teaser-menu--desc field__item">
+        Bureau Veritas is a global leader on a growing market, with high barriers to entry.
+            </div>
+          <div class="teaser-menu--action field field--name-field-menu-link-title field--type-link field--label-hidden field__items">
+                <div class="link-standard field__item">
+        <a href="/investors" class="link-std">Discover</a>
+            </div>
+          </div>
+
+  </div>
+<div  class="sub-menu">
+      
+<ul class="menu menu-level-1">
+  
+  <li class="menu-item menu-item--expanded">
+    <span data-drupal-link-system-path="&lt;front&gt;">Our profile</span>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/investors/our-profile/why-invest-bureau-veritas" data-drupal-link-system-path="node/346">Why invest in Bureau Veritas?</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/our-profile/ambition-2020" data-drupal-link-system-path="node/397">Ambition 2020</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/our-profile/key-figures" data-drupal-link-system-path="node/398">Key figures</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/our-profile/our-6-business-activities" data-drupal-link-system-path="node/8">Our 6 business activities</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/our-profile/tic-market" data-drupal-link-system-path="node/399">The TIC market</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded menu-item--active-trail">
+    <span data-drupal-link-system-path="&lt;front&gt;">Financial information</span>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/investors/financial-information/financial-results" data-drupal-link-system-path="node/400">Financial results</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/financial-information/financial-reports" data-drupal-link-system-path="node/401">Financial reports</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/financial-information/presentations" data-drupal-link-system-path="node/402">Presentations</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/financial-information/regulated-information" data-drupal-link-system-path="node/403">Regulated information</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/financial-information/laws" data-drupal-link-system-path="node/405">By-laws</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/financial-information/debt-information" data-drupal-link-system-path="node/428">Debt information</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--active-trail">
+    <a href="/investors/financial-information/press-releases" data-drupal-link-system-path="node/410" class="is-active">Press releases</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/financial-information/shareholders-meeting" data-drupal-link-system-path="node/411">Shareholders&#039; meeting</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <span data-drupal-link-system-path="&lt;front&gt;">Bureau Veritas share</span>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/investors/bureau-veritas-share/share-price" data-drupal-link-system-path="node/429">Share price</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/bureau-veritas-share/dividends" data-drupal-link-system-path="node/406">Dividends</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/bureau-veritas-share/ownership-structure-method" data-drupal-link-system-path="node/407">Ownership structure &amp; method</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/bureau-veritas-share/analysts-coverage" data-drupal-link-system-path="node/432">Analysts coverage</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+  
+  <li class="menu-item menu-item--expanded">
+    <a href="/investors/agenda-contacts" data-drupal-link-system-path="node/439">Agenda &amp; Contacts</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-1 menu-type-default">
+        
+<ul class="menu menu-level-2">
+  
+  <li class="menu-item">
+    <a href="/investors/agenda-contacts/subscribe-alerts" data-drupal-link-system-path="node/631">Subscribe to alerts</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+  
+  <li class="menu-item">
+    <a href="/investors/agenda-contacts/shareholders-letter" data-drupal-link-system-path="node/1071">Shareholders&#039; letter</a>
+
+              
+
+<div class="menu_link_content menu-link-contentmain view-mode-default menu-dropdown menu-dropdown-2 menu-type-default">
+        
+  </div>
+      </li>
+</ul>
+
+  </div>
+      </li>
+</ul>
+
+  </div>
+  </div>
+  </div>
+  </div>
+      </li>
+</ul>
+
+  </nav>
+
+
+          </div>
+          </header>
+
+
+
+            <div id="block-mainpagecontent" class="block block-system block-system-main-block">
+  
+    
+      <article data-history-node-id="410" role="article" about="/investors/financial-information/press-releases" class="node-wrapper">
+  
+  <div>
+    
+<div  class="page-heading">
+      
+<div  class="page-heading--intro">
+      
+<div  class="page-heading--content">
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  Investors
+              </li>
+          <li>
+                  Financial information
+              </li>
+        </ol>
+  </nav>
+
+<div  class="page-heading--title">
+      
+<h1 >
+                  <p><strong>Press</strong> releases</p>
+
+      
+  </h1>
+  </div>
+  </div>
+  </div>
+  </div>              <div class="paragraph paragraph--type--wysiwyg paragraph--view-mode--default">
+          
+<div  class="container">
+                      <div class="wysiwyg container--wrapper field__item">
+        <p><iframe frameborder="0" height="1250px" scrolling="yes" src="https://pr.globenewswire.com/NewsArchive/View/v7b35HZqMfLJsHeMayoQQg==?iFrame=true"></iframe></p>
+
+<p> </p>
+            </div>
+      
+  </div>
+      </div>
+
+      
+  </div>
+</article>
+
+  </div>
+
+
+    
+
+    <footer class="site-footer">
+                    <div class="site-footer--video">
+                  <div id="block-footer-highlight-footer" class="block block-block-content block-block-content49c9669c-a4d4-4c8c-83a6-e8c153d09302">
+  
+    
+      
+<div  class="teaser-video">
+       <video class="teaser-video--video" poster="/sites/g/files/zypfnx196/files/styles/background_video/public/2018-06/HeadCover_Boucle_Video2.png" loop muted preload autoplay playsinline>
+    <source src="/sites/g/files/zypfnx196/files/2018-06/footer_veryfast480.mp4" type="video/mp4">
+</video>
+
+<div  class="teaser-video--overlay">
+      
+<div  class="teaser-video--content">
+          <div class="teaser-video--category field field--name-field-title-1 field--type-string field--label-hidden field__items">
+            Join us
+          </div>
+    <div class="teaser-video--title clearfix text-formatted field field--name-field-teaser field--type-text-long field--label-hidden field__items">
+            <p>Move forward with us</p>
+
+          </div>
+
+<div  class="teaser-video--action">
+                  <a href="https://careers.bureauveritas.com/" class="button-action">Our job offers</a>
+      
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+
+
+            </div>
+                            <div class="site-footer--sitemap">
+                  <nav role="navigation" aria-labelledby="block-footer-menu" id="block-footer" class="list-links block block-menu navigation menu--footer">
+            
+  <h2 class="visually-hidden" id="block-footer-menu">Footer menu</h2>
+  
+
+        
+              <ul data-region="footer_right" class="menu">
+                    <li class="menu-item">
+        <a href="/our-websites" data-drupal-link-system-path="node/956">Our websites</a>
+              </li>
+                <li class="menu-item">
+        <a href="/careers/leave-your-mark" data-drupal-link-system-path="node/1381">Careers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contact-webform" data-drupal-link-system-path="node/821">Contact</a>
+              </li>
+                <li class="menu-item">
+        <a href="/investors" data-drupal-link-system-path="node/381">Investors</a>
+              </li>
+                <li class="menu-item">
+        <a href="/newsroom" data-drupal-link-system-path="newsroom">News</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-sociallinks-menu" id="block-sociallinks" class="list-community block block-menu navigation menu--social-links">
+      
+  <h2 class="list-community--title" id="block-sociallinks-menu">Connect with us</h2>
+  
+
+        
+              <ul data-region="footer_right" class="menu">
+                    <li class="menu-item">
+        <a href="https://www.facebook.com/bureau.veritas.group" class="facebook" target="_blank">Facebook</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.linkedin.com/company/bureau-veritas" class="linkedin" target="_blank">Linkedin</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://twitter.com/_bureauveritas?lang=en" class="twitter" target="_blank">Twitter</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.youtube.com/user/BureauVeritasGroup" class="youtube" target="_blank">YouTube</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-legalmenu-menu" id="block-legalmenu" class="list-simple block block-menu navigation menu--legal">
+            
+  <h2 class="visually-hidden" id="block-legalmenu-menu"></h2>
+  
+
+        
+              <ul data-region="footer_right" class="menu">
+                    <li class="menu-item">
+        <span data-drupal-link-system-path="&lt;front&gt;">© 2019</span>
+              </li>
+                <li class="menu-item">
+        <a href="/legal-notice" data-drupal-link-system-path="node/445">Legal notice</a>
+              </li>
+                <li class="menu-item">
+        <a href="/terms-use" target="_self" title="Terms of use" data-drupal-link-system-path="node/585">Terms of use</a>
+              </li>
+                <li class="menu-item">
+        <a href="/cookies-policy" data-drupal-link-system-path="node/537">Cookies policy</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://personaldataprotection.bureauveritas.com/privacypolicy">Personal data protection policy</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+
+            </div>
+            </footer>
+
+  </div>
+
+      
+    </div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/410","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","eu_cookie_compliance":{"popup_enabled":true,"popup_agreed_enabled":false,"popup_hide_agreed":false,"popup_clicking_confirmation":false,"popup_scrolling_confirmation":false,"popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info\u0022\u003E\n    \u003Cdiv class =\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n            \u003Cp\u003EWe use cookies on this site to enhance your user experience.\u00a0By clicking any link on this page you are giving your consent for us to set cookies.\u003C\/p\u003E\n\n        \u003C\/div\u003E\n        \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-agree-button\u0022\u003EOK, I agree\u003C\/button\u003E\n                    \u003C\/div\u003E\n    \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv class=\u0022eu-cookie-compliance-banner eu-cookie-compliance-banner-info\u0022\u003E\n    \u003Cdiv class =\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n        \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n            \n        \u003C\/div\u003E\n        \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n            \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button eu-cookie-compliance-agree-button\u0022\u003EOK, I agree\u003C\/button\u003E\n                    \u003C\/div\u003E\n    \u003C\/div\u003E\n\u003C\/div\u003E","mobile_breakpoint":768,"popup_html_agreed":false,"popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"\/","popup_link_new_window":true,"popup_position":false,"popup_language":"en","store_consent":false,"better_support_for_screen_readers":false,"cookie_name":"","reload_page":false,"domain":"","popup_eu_only_js":false,"cookie_lifetime":100,"cookie_session":0,"disagree_do_not_show_popup":false,"method":"default","whitelisted_cookies":"","withdraw_markup":"\u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-tab\u0022\u003EPrivacy settings\u003C\/button\u003E\n\u003Cdiv class=\u0022eu-cookie-withdraw-banner\u0022\u003E\n  \u003Cdiv class=\u0022popup-content info eu-cookie-compliance-content\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022 class=\u0022eu-cookie-compliance-message\u0022\u003E\n      \u003Cp\u003EWe use cookies on this site to enhance your user experienceYou have given your consent for us to set cookies.\u003C\/p\u003E\n\n    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022 class=\u0022eu-cookie-compliance-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022eu-cookie-withdraw-button\u0022\u003EWithdraw consent\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","withdraw_enabled":false},"field_group":{"html_element":{"mode":"mega_menu","context":"view","settings":{"id":"","classes":"teaser-menu","element":"div","show_label":false,"label_element":"h3","attributes":"","effect":"none","speed":"fast","label":"h1"}},"background_image":{"mode":"mega_menu","context":"view","settings":{"image":"field_image","image_style":"large","id":"","classes":"main-menu--illustration","label":"main menu illustration","hide_if_missing":false}}},"bvStocks":{"language":"en","currencyCode":"EUR","webserviceUrl":"https:\/\/tools.eurolandir.com\/tools\/pricefeed\/RequestStockDataBundleXML.aspx?companyid=54517"},"ajaxTrustedUrl":{"\/search":true},"user":{"uid":0,"permissionsHash":"d2c91698dcdb5cffa8580467c0889afd9356aa3dce25428772d33ffa5d17121a"}}</script>
+<script src="/sites/g/files/zypfnx196/files/js/js_RXh2NK28FoSeAGd9cStc45zizgQUHc-9gcMQkP5Pvd8.js"></script>
+
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a14fdfd6a8","applicationID":"193759265","transactionName":"NQNWbUVQX0BSUhVdCwxJdVpDWF5dHHUTQRQDCmh6WENUb35UD0E4JgNSWEJdRX5WXxR4DQwNYEtSVHxSXVgRQQgDEltLRBwPVFZfBEYFFgN9V1NUSXJdVTJbFhY=","queueTime":0,"applicationTime":829,"atts":"GURVGw1KTE4=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>

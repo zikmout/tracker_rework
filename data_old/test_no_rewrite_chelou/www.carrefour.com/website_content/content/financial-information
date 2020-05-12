@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <!-- Tag Commander -->
+<script>
+    var tc_date = new Date();
+    var tc_cache_buster = [tc_date.getFullYear(), ("0" + (tc_date.getMonth() + 1)).slice(-2), ("0" + tc_date.getDate()).slice(-2)].join('');
+    var tc_cache_buster2 = [tc_cache_buster, ("0" + tc_date.getHours()).slice(-2)].join('');
+    var tc_src = "//cdn.tagcommander.com/3793/tc_Carrefourcom_22.js?rn="+tc_cache_buster;
+    var tc_scr = document.createElement('script');
+    tc_scr.setAttribute('src', tc_src);
+    document.head.appendChild(tc_scr);
+</script>
+<!-- End Tag Commander -->
+    <meta charset="utf-8" />
+<link rel="canonical" href="https://www.carrefour.com/en/finance/financial-publications" />
+<meta name="keywords" content="Financial publications" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/c4com/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="alternate" hreflang="fr-FR" href="https://www.carrefour.com/fr/finance/publications-financieres" />
+<link rel="alternate" hreflang="en-US" href="https://www.carrefour.com/en/finance/financial-publications" />
+<link rel="revision" href="https://www.carrefour.com/en/finance/financial-publications" />
+
+    <title>Financial publications | Carrefour Group</title>
+    <link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/ajax-progress.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/align.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/autocomplete-loading.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/fieldgroup.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/container-inline.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/clearfix.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/details.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/hidden.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/item-list.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/js.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/nowrap.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/position-container.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/progress.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/reset-appearance.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/resize.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/sticky-header.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-counter.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-counters.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/system-status-report-general-info.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tabledrag.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tablesort.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/system/components/tree-child.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/core/themes/stable/css/views/views.module.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/modules/contrib/paragraphs/css/paragraphs.unpublished.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/modules/contrib/better_exposed_filters/css/better_exposed_filters.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/themes/custom/c4com/css/ckeditor_custom_styles.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/themes/custom/c4com/css/app.css?q8vz5q" />
+<link rel="stylesheet" media="all" href="/themes/custom/c4com/css/custom.css?q8vz5q" />
+
+    
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+  </head>
+  <body>
+
+    <div id="app">
+        <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+      <div>
+    <div id="block-menuprincipal">
+  
+    
+      <menu-header
+  homepage=""
+  :menu-items="{&quot;28&quot;:{&quot;name&quot;:&quot;Group&quot;,&quot;url&quot;:&quot;\/en\/group&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;category_summary&quot;:&quot;&lt;p&gt;Carrefour has been innovating and revolutionising consumption for 60 years. Today, we are reinventing our business model and placing the food transition at its heart. Making this accessible to everyone has become our reason for being. Find out how...&lt;\/p&gt;\r\n&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:{&quot;30&quot;:{&quot;name&quot;:&quot;Carrefour Activities&quot;,&quot;url&quot;:&quot;\/en\/group\/activities&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;31&quot;:{&quot;name&quot;:&quot;Stores&quot;,&quot;url&quot;:&quot;\/en\/group\/stores&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;32&quot;:{&quot;name&quot;:&quot;Carrefour Governance&quot;,&quot;url&quot;:&quot;\/en\/group\/governance&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;33&quot;:{&quot;name&quot;:&quot;Foundation &amp; Solidarity&quot;,&quot;url&quot;:&quot;\/en\/group\/foundation&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;34&quot;:{&quot;name&quot;:&quot;The Carrefour Story&quot;,&quot;url&quot;:&quot;\/en\/group\/history&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;35&quot;:{&quot;name&quot;:&quot;Carrefour 2022 Strategy&quot;,&quot;url&quot;:&quot;\/en\/group\/strategy&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;37&quot;:{&quot;name&quot;:&quot;The Food Transition&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:{&quot;175&quot;:{&quot;name&quot;:&quot;Action 1 - French organic&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/organic-food-accessibility&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;176&quot;:{&quot;name&quot;:&quot;Action 2 - Without additives&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/without-additives&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;177&quot;:{&quot;name&quot;:&quot;Action 3 - Produce grown without chemical pesticides&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/produce-grown-without-chemical-pesticides&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;178&quot;:{&quot;name&quot;:&quot;Action 4 - Farms that do not use antibiotics&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/stop-antibiotics-farming&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;179&quot;:{&quot;name&quot;:&quot;Action 5 - Responsible fishing and aquaculture&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/sustainable-fishing&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;180&quot;:{&quot;name&quot;:&quot;Action 6 The GMO-Free*&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/gmo-foods&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;181&quot;:{&quot;name&quot;:&quot;Action 7 - The veggie range&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/vegetarian-friendly-food&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;182&quot;:{&quot;name&quot;:&quot;Action 8 - Farmers&#039; seeds&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/farmers-seeds&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;183&quot;:{&quot;name&quot;:&quot;Action 9 - The food blockchain&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/food-blockchain&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;184&quot;:{&quot;name&quot;:&quot;Action 10 - Help the switchover to organic&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/switchover-organic&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;185&quot;:{&quot;name&quot;:&quot;Action 11 - Tackling food waste&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/food-waste&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;186&quot;:{&quot;name&quot;:&quot;Action 12 - Seasonal fruit vegetables&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/seasonal-fruit-vegetables&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;187&quot;:{&quot;name&quot;:&quot;Action 13 - Reduce packaging&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/reduce-packaging&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]}}}}},&quot;53&quot;:{&quot;name&quot;:&quot;Finance&quot;,&quot;url&quot;:&quot;\/en\/finance&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;category_summary&quot;:&quot;&lt;p&gt;View the latest results and financial information about the Carrefour Group. &amp;nbsp;Download all useful documents and find your contacts.&lt;\/p&gt;\r\n&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:{&quot;55&quot;:{&quot;name&quot;:&quot;Shareholder section&quot;,&quot;url&quot;:&quot;\/en\/finance\/shareholder-section&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;58&quot;:{&quot;name&quot;:&quot;Shareholders\u2019 Meeting&quot;,&quot;url&quot;:&quot;\/en\/finance\/shareholders-meeting&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;61&quot;:{&quot;name&quot;:&quot;Carrefour Share&quot;,&quot;url&quot;:&quot;\/en\/finance\/carrefour-share&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;63&quot;:{&quot;name&quot;:&quot;Financial publications&quot;,&quot;url&quot;:&quot;\/en\/finance\/financial-publications&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;64&quot;:{&quot;name&quot;:&quot;Regulated information&quot;,&quot;url&quot;:&quot;\/en\/finance\/regulated-information&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]}}},&quot;70&quot;:{&quot;name&quot;:&quot;CSR&quot;,&quot;url&quot;:&quot;\/en\/csr&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;category_summary&quot;:&quot;&lt;p&gt;Find out how our five-pronged CSR approach and all of our actions support the food transition for everyone. Explore our indicators and non-financial performance.&amp;nbsp;&lt;\/p&gt;\r\n&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:{&quot;71&quot;:{&quot;name&quot;:&quot;Method&quot;,&quot;url&quot;:&quot;\/en\/csr\/policy&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;72&quot;:{&quot;name&quot;:&quot;Performance&quot;,&quot;url&quot;:&quot;\/en\/csr\/performance&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;73&quot;:{&quot;name&quot;:&quot;Commitment&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:{&quot;147&quot;:{&quot;name&quot;:&quot;food grade&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/food-quality&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;148&quot;:{&quot;name&quot;:&quot;Develop organic food&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/develop-organic-food&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;149&quot;:{&quot;name&quot;:&quot;Developing agro-ecology&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/agroecology&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;150&quot;:{&quot;name&quot;:&quot;support animal welfare&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/guaranteeing-animal-welfare&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;151&quot;:{&quot;name&quot;:&quot;sustainable fishing&quot;,&quot;url&quot;:&quot;\/en\/group\/food-transition\/sustainable-fishing&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;152&quot;:{&quot;name&quot;:&quot;Striving to achieve a circular economy for packaging&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/circular-packaging-economy&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;153&quot;:{&quot;name&quot;:&quot;Protect forests&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/protect-forests&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;154&quot;:{&quot;name&quot;:&quot;Tackling food waste&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/combatting-food-waste&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;155&quot;:{&quot;name&quot;:&quot;Reduce waste&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/reducing-and-recovering-waste&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;156&quot;:{&quot;name&quot;:&quot;greenhouse gas emissions&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/reducing-ghg-emissions&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;157&quot;:{&quot;name&quot;:&quot;Develop apiculture&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/develop-apiculture&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;158&quot;:{&quot;name&quot;:&quot;Protect biodiversity&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/protect-biodiversity&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;159&quot;:{&quot;name&quot;:&quot;water responsability&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/responsible-water-consumption&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;160&quot;:{&quot;name&quot;:&quot;Territorial responsability&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/community-responsability&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;161&quot;:{&quot;name&quot;:&quot;food transition&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/food-transition-our-customers&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;162&quot;:{&quot;name&quot;:&quot;Building a relationship with suppliers to facilitate the food transition&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/food-transition-our-customers&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;163&quot;:{&quot;name&quot;:&quot;supply chain&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/supply-chain&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;164&quot;:{&quot;name&quot;:&quot;supplier work conditions&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/suppliers-work-conditions&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;165&quot;:{&quot;name&quot;:&quot;local suppliers&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/being-socially-responsible-retailer&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;166&quot;:{&quot;name&quot;:&quot;Develop skills&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/developing-employees-skills&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;167&quot;:{&quot;name&quot;:&quot;Partner&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/employees-fullfillment&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;168&quot;:{&quot;name&quot;:&quot;Diversity egality&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/diversity-egality&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;169&quot;:{&quot;name&quot;:&quot;E-commerce&quot;,&quot;url&quot;:&quot;\/en\/csr\/commitment\/e-commerce&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;170&quot;:{&quot;name&quot;:&quot;Employment&quot;,&quot;url&quot;:&quot;\/en\/node\/616&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]}}},&quot;74&quot;:{&quot;name&quot;:&quot;Ethics and responsible business conduct&quot;,&quot;url&quot;:&quot;\/en\/csr\/responsible-conduct&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]}}},&quot;171&quot;:{&quot;name&quot;:&quot;Newsroom&quot;,&quot;url&quot;:&quot;\/en\/newsroom&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;category_summary&quot;:&quot;&lt;p&gt;Find the latests updates from Carrefour Group&lt;\/p&gt;\r\n&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:{&quot;172&quot;:{&quot;name&quot;:&quot;All news&quot;,&quot;url&quot;:&quot;\/en\/newsroom&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;174&quot;:{&quot;name&quot;:&quot;All publications&quot;,&quot;children&quot;:[]}}},&quot;336&quot;:{&quot;name&quot;:&quot;HR&quot;,&quot;url&quot;:&quot;\/en\/hr-work-carrefour&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:{&quot;363&quot;:{&quot;name&quot;:&quot;Act For Change&quot;,&quot;url&quot;:&quot;\/en\/rh\/act-for-change&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]},&quot;364&quot;:{&quot;name&quot;:&quot;Diversity&quot;,&quot;url&quot;:&quot;\/en\/hr\/diversity&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;link_label&quot;:&quot;The essential&quot;,&quot;children&quot;:[]}}}}"
+  :channels="{&quot;365&quot;:{&quot;name&quot;:&quot;#Covid-19&quot;,&quot;url&quot;:&quot;\/en\/magazine\/covid-19\/our-actions&quot;,&quot;open_link&quot;:&quot;_self&quot;,&quot;color_channel&quot;:&quot;#FFD800&quot;,&quot;channel_label&quot;:&quot;# Covid-19&quot;,&quot;children&quot;:[]}}"
+  :utils-links="{&quot;url_logo_config&quot;:&quot;https:\/\/www.carrefour.com\/en&quot;,&quot;label_url_redirection&quot;:&quot;Go to store&quot;,&quot;link_url_redirection&quot;:&quot;https:\/\/www.carrefour.fr\/&quot;,&quot;url_redirection_open_new_onglet&quot;:&quot;_blank&quot;,&quot;url_redirection_map_open_new_onglet&quot;:&quot;_self&quot;,&quot;url_redirection_map&quot;:&quot;https:\/\/www.carrefour.com\/en\/carrefour-group-locations&quot;,&quot;_core&quot;:{&quot;default_config_hash&quot;:&quot;VxhRKTkmYMlASTWYmAgHP7-t-voA1gclW_HDxVtirPA&quot;},&quot;langcode&quot;:&quot;fr&quot;}">
+
+  <template #breadcrumb>
+    <div id="block-c4com-breadcrumbs">
+  
+    
+      <breadcrumb :breadcrumbs="[{&quot;text&quot;:&quot;Finance&quot;,&quot;url&quot;:&quot;\/en\/finance&quot;},{&quot;text&quot;:&quot;Financial publications&quot;,&quot;url&quot;:&quot;&quot;},{&quot;text&quot;:&quot;Shareholder section&quot;,&quot;url&quot;:&quot;\/en\/finance\/shareholder-section&quot;},{&quot;text&quot;:&quot;Shareholders\u2019 Meeting&quot;,&quot;url&quot;:&quot;\/en\/finance\/shareholders-meeting&quot;},{&quot;text&quot;:&quot;Carrefour Share&quot;,&quot;url&quot;:&quot;\/en\/finance\/carrefour-share&quot;},{&quot;text&quot;:&quot;Regulated information&quot;,&quot;url&quot;:&quot;\/en\/finance\/regulated-information&quot;}]"></breadcrumb>
+
+  </div>
+
+  </template>
+
+  <template #langmenu>
+    <div class="language-switcher-language-url" id="block-languageswitcher" role="navigation">
+  
+    
+      <lang-switcher :lang-links="{&quot;fr&quot;:{&quot;link&quot;:{&quot;#type&quot;:&quot;link&quot;,&quot;#title&quot;:&quot;Fran\u00e7ais&quot;,&quot;#options&quot;:{&quot;language&quot;:{},&quot;attributes&quot;:{&quot;class&quot;:[&quot;language-link&quot;]},&quot;query&quot;:[],&quot;uri&quot;:&quot;\/fr\/finance\/publications-financieres&quot;,&quot;ajax&quot;:null,&quot;set_active_class&quot;:true},&quot;#url&quot;:{},&quot;#ajax&quot;:null},&quot;text&quot;:&quot;Fran\u00e7ais&quot;,&quot;text_attributes&quot;:&quot; class=\&quot;language-link\&quot;&quot;,&quot;attributes&quot;:&quot; hreflang=\&quot;fr\&quot; data-drupal-link-system-path=\&quot;node\/3006\&quot; class=\&quot;fr\&quot;&quot;},&quot;en&quot;:{&quot;link&quot;:{&quot;#type&quot;:&quot;link&quot;,&quot;#title&quot;:&quot;English&quot;,&quot;#options&quot;:{&quot;language&quot;:{},&quot;attributes&quot;:{&quot;class&quot;:[&quot;language-link&quot;]},&quot;query&quot;:[],&quot;uri&quot;:&quot;\/en\/finance\/financial-publications&quot;,&quot;ajax&quot;:null,&quot;set_active_class&quot;:true},&quot;#url&quot;:{},&quot;#ajax&quot;:null},&quot;text&quot;:&quot;English&quot;,&quot;text_attributes&quot;:&quot; class=\&quot;language-link\&quot;&quot;,&quot;attributes&quot;:&quot; hreflang=\&quot;en\&quot; data-drupal-link-system-path=\&quot;node\/3006\&quot; class=\&quot;en\&quot;&quot;}}"></lang-switcher>
+
+  </div>
+
+  </template>
+
+  <template #search>
+    <div class="search-block-form" data-drupal-selector="search-block-form" id="block-c4com-search" role="search">
+  
+      <h2>Search</h2>
+    
+      <form action="/en/search/content" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+</form>
+
+  </div>
+
+  </template>
+
+</menu-header>
+
+  </div>
+
+  </div>
+
+  <div>
+    <div data-drupal-messages-fallback class="hidden"></div><div id="block-c4com-content">
+  
+    
+      
+            <div>
+                        
+  
+
+
+<banner-diptych
+  :title="[&quot;Carrefour Group&quot;,&quot;financial publications&quot;]"
+  niveau="0"
+  has-image="1"
+  has-agenda=""
+  stock-data=""
+  video-data=""
+  color1="#8D5F4A"
+  color2="">
+
+  <template #image>
+    
+            <div>    
+<image-holder :image-links="{&quot;desktop&quot;:{&quot;url&quot;:&quot;\/sites\/default\/files\/2020-01\/Desktop%20%2B%20tablette%20horizontal-6_1.png&quot;,&quot;alt&quot;:&quot;Carrefour-publications-financi\u00e8res-groupe&quot;},&quot;tablet&quot;:{&quot;url&quot;:&quot;\/sites\/default\/files\/2020-01\/Tablet-6_1.png&quot;,&quot;alt&quot;:&quot;Carrefour-publications-financi\u00e8res-groupe-tablette&quot;},&quot;smartphone&quot;:{&quot;url&quot;:&quot;\/sites\/default\/files\/2020-01\/Mobile%20%20-5_1.png&quot;,&quot;alt&quot;:&quot;Carrefour-publications-financi\u00e8res-groupe-mobile&quot;}}"></image-holder>
+</div>
+      
+  </template>
+
+  <template #agenda>
+    
+  </template>
+
+  <template #cta>
+    
+  </template>
+</banner-diptych>
+</div>
+      
+<div id="block-anchormenublock">
+  
+    
+        <menu-sticky :anchor-links="[[&quot;Financial-Publications&quot;,&quot;Financial Publications&quot;],[&quot;Annual-Publications&quot;,&quot;Annual Publications&quot;],[&quot;Contact&quot;,&quot;Contact&quot;]]"></menu-sticky>
+
+  </div>
+
+
+      <div>
+              <div>
+<block-container
+    color=""
+    texture-position="top">
+
+    <template #title>
+            
+            <div>                                                              <div style="position: relative;">
+      <span id="Financial-Publications" class="sticky-anchor"></span>
+    </div>
+  <block-title :title="[&quot;Financial&quot;,&quot;Publications&quot;]"></block-title>
+</div>
+      
+    </template>
+
+    <template #content>
+        
+      <div>
+              <div>
+
+
+                        
+<block-text title="" chapeau="" :colons="[]"></block-text>
+</div>
+          </div>
+  
+    </template>
+
+    <template #texture>
+        
+    </template>
+</block-container>
+</div>
+              <div><div class="center-content block-full-list">
+    <div class="block-full-list-description">
+        
+    </div>
+    <div class="block-full-list-content">
+        <div class="views-element-container"><div class="js-view-dom-id-62fdccb4971db6c2a477b7f0ea6410d5bda8ecc1c83c1b3808564863baca3a47">
+  
+  
+  
+
+  
+  <form class="views-exposed-form bef-exposed-form" data-bef-auto-submit-full-form="" data-drupal-selector="views-exposed-form-tab-financial-data-embed-1" action="/en/finance/financial-publications" method="get" id="views-exposed-form-tab-financial-data-embed-1" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-select form-item-field-year-value js-form-item-field-year-value">
+      <label for="edit-field-year-value">Year</label>
+        <select data-drupal-selector="edit-field-year-value" id="edit-field-year-value" name="field_year_value" size="0" class="form-select"><option value="" selected="selected">- Select year -</option><option value="2020">2020</option><option value="2019">2019</option><option value="2018">2018</option><option value="2017">2017</option><option value="2016">2016</option><option value="2015">2015</option></select>
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-bef-auto-submit-click="" class="js-hide button js-form-submit form-submit" data-drupal-selector="edit-submit-tab-financial-data" type="submit" id="edit-submit-tab-financial-data" value="Apply" />
+</div>
+
+
+</form>
+
+  
+
+      <div class="views-row"><div class="center-content financial-table">
+    <div class="financial-table-title">
+        Sales and results 2019
+    </div>
+    <div class="financial-table-content">
+        <div class="financial-table-content-thead">
+            <div class="financial-table-content-thead-row">
+                <div class="heading-name"></div>
+                <div id="t1" class="heading-t1 col-heading">Q1</div>
+                <div id="s1" class="heading-s1 col-heading heading-unactive">Q2/H1</div>
+                <div id="t3" class="heading-t3 col-heading heading-unactive">Q3</div>
+                <div id="t4" class="heading-t4 col-heading heading-unactive">Q4</div>
+                <div id="fy" class="heading-fy col-heading heading-unactive">FY</div>
+            </div>
+        </div>
+        <div class="financial-table-content-tbody">
+                                                <div class="financial-table-content-row">
+                        <div class="cell-name-1">
+                            Press releases
+                        </div>
+
+                        <div class="cell-download cell-t1">
+                                                            <a href="/sites/default/files/2020-01/communique_carrefour_Q1_EN.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                            928 KB
+                        </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-s1">
+                                                            <a href="/sites/default/files/2020-01/communique_carrefour_s1_Q2_2019_EN.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                1244 KB
+            </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-t3">
+                                                            <a href="/sites/default/files/2020-01/communique_carrefour_Q3_EN.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                1570 KB
+            </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-t4">
+                                                            <a href="/sites/default/files/2020-02/Communiqu%C3%A9%20Carrefour%20CA%20T4%202019%20EN%20-%2023%2001%202020.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                                    935 KB
+                                </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-fy">
+                                                            <a href="/sites/default/files/2020-03/Communiqu%C3%A9%20Carrefour%20Resultats%202019_EN.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                                    1282 KB
+                                </span>
+                                                    </div>
+                    </div>
+                                                                <div class="financial-table-content-row">
+                        <div class="cell-name-2">
+                            Presentations
+                        </div>
+
+                        <div class="cell-download cell-t1">
+                                                            <a href="/sites/default/files/2020-01/presentation_Q1_2019_EN.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                            1453 KB
+                        </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-s1">
+                                                            <a href="/sites/default/files/2020-01/presentation_H1_Q2_EN_0.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                2523 KB
+            </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-t3">
+                                                            <a href="/sites/default/files/2020-01/presentation_Q3_2019_EN.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                1326 KB
+            </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-t4">
+                                                            <a href="/sites/default/files/2020-02/Carrefour_Q4_2019_presentation_23012020_0.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                                    1802 KB
+                                </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-fy">
+                                                            <a href="/sites/default/files/2020-03/Carrefour_FY_2019_Complete_0.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                                    2927 KB
+                                </span>
+                                                    </div>
+                    </div>
+                                                                <div class="financial-table-content-row">
+                        <div class="cell-name-3">
+                            Accounts
+                        </div>
+
+                        <div class="cell-download cell-t1">
+                                                            -
+                            
+                        </div>
+
+                        <div class="cell-download cell-s1">
+                                                            <a href="/sites/default/files/2020-01/communique_carrefour_s1_Q2_2019_EN_0.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                1244 KB
+            </span>
+                            
+                        </div>
+
+                        <div class="cell-download cell-t3">
+                                                            -
+                            
+                        </div>
+
+                        <div class="cell-download cell-t4">
+                                                            -
+                            
+                        </div>
+
+                        <div class="cell-download cell-fy">
+                                                            <a href="/sites/default/files/2020-03/Comptes%20consolid%C3%A9s%202019%20ANGLAIS.pdf"
+                                   class="doc-download" download>
+                                    <svg class="fill-current w-4 h-4 inline-block" viewBox="0 0 41.712 41.712">
+                                        <path d="M31.586 21.8a1.112 1.112 0 0 0 0-1.587 1.093 1.093 0 0 0-1.571 0l-8.047 8.032V1.706c0-.619-.492-1.127-1.111-1.127s-1.127.508-1.127 1.127v26.539l-8.031-8.032a1.112 1.112 0 0 0-1.587 0 1.112 1.112 0 0 0 0 1.587l9.952 9.952a1.14 1.14 0 0 0 1.587 0l9.935-9.952zm7.888 7.286c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v10.92c0 .619-.508 1.127-1.127 1.127H1.111A1.118 1.118 0 0 1 0 40.006v-10.92c0-.619.492-1.111 1.111-1.111s1.127.492 1.127 1.111v9.809h37.236v-9.809z"/>
+                                    </svg>
+                                    <span class="download-label">PDF</span>
+                                </a>
+                                <span class="doc-size">
+                                    1573 KB
+                                </span>
+                                                    </div>
+                    </div>
+                                            
+                    <div class="financial-table-content-last-row">
+                        <div class="cell-name-4"></div>
+                        <div class="cell-download cell-t1">
+                                                    </div>
+                        <div class="cell-download cell-s1">
+                                                    </div>
+                        <div class="cell-download cell-t3">
+                                                    </div>
+                        <div class="cell-download cell-t4">
+                                                    </div>
+                        <div class="cell-download cell-fy">
+                                                    </div>
+                    </div>
+
+                                    </div>
+    </div>
+</div>
+</div>
+
+    
+
+  
+  
+
+  
+  
+</div>
+</div>
+
+    </div>
+</div>
+</div>
+              <div>
+<block-container
+    color=""
+    texture-position="top">
+
+    <template #title>
+            
+            <div>                                                              <div style="position: relative;">
+      <span id="Annual-Publications" class="sticky-anchor"></span>
+    </div>
+  <block-title :title="[&quot;Annual&quot;,&quot;Publications&quot;]"></block-title>
+</div>
+      
+    </template>
+
+    <template #content>
+        
+      <div>
+              <div><button-cta link="/en/all-publications" target="" type="page" label="Download all publications"></button-cta>
+</div>
+          </div>
+  
+    </template>
+
+    <template #texture>
+        
+    </template>
+</block-container>
+</div>
+              <div>
+<block-container
+    color=""
+    texture-position="top">
+
+    <template #title>
+            
+            <div>                                                              <div style="position: relative;">
+      <span id="Contact" class="sticky-anchor"></span>
+    </div>
+  <block-title :title="[&quot;Let&#039;s&quot;,&quot;keep in touch&quot;]"></block-title>
+</div>
+      
+    </template>
+
+    <template #content>
+        
+      <div>
+              <div>  <div class="paragraph paragraph--type--parag-module-image paragraph--view-mode--default">
+          
+            <div>  
+<image-holder :image-links="{&quot;desktop&quot;:{&quot;url&quot;:&quot;\/sites\/default\/files\/2020-02\/Contact_1_Desktop_EN.png&quot;,&quot;alt&quot;:&quot;Carrefour-contact&quot;},&quot;smartphone&quot;:{&quot;url&quot;:&quot;\/sites\/default\/files\/2020-02\/Contact_1_Mobile_EN.png&quot;,&quot;alt&quot;:&quot;Carrefour-contact-mobile&quot;}}"></image-holder>
+</div>
+      
+      </div>
+</div>
+          </div>
+  
+    </template>
+
+    <template #texture>
+        
+    </template>
+</block-container>
+</div>
+          </div>
+  
+
+  </div>
+
+  </div>
+
+  <div>
+    <div id="block-footermenublock">
+  
+    
+      <!--  START FOOTER -->
+<menu-footer :footer-links="{&quot;reseau&quot;:{&quot;125&quot;:{&quot;url&quot;:&quot;https:\/\/fr.linkedin.com\/company\/carrefour&quot;,&quot;title&quot;:&quot;LinkedIn&quot;,&quot;image&quot;:&quot;https:\/\/www.carrefour.com\/sites\/default\/files\/2019-11\/picto_linkedin.svg&quot;},&quot;78&quot;:{&quot;url&quot;:&quot;https:\/\/twitter.com\/carrefourgroup&quot;,&quot;title&quot;:&quot;Twitter&quot;,&quot;image&quot;:&quot;https:\/\/www.carrefour.com\/sites\/default\/files\/2019-11\/picto_twitter.svg&quot;}},&quot;mention&quot;:{&quot;331&quot;:{&quot;url&quot;:&quot;\/en\/general-terms&quot;,&quot;title&quot;:&quot;General terms&quot;},&quot;333&quot;:{&quot;url&quot;:&quot;\/en\/personnal-data-protection-policy&quot;,&quot;title&quot;:&quot;Privacy policy&quot;},&quot;332&quot;:{&quot;url&quot;:&quot;\/en\/policy-cookie&quot;,&quot;title&quot;:&quot;Cookies policy&quot;}}}"></menu-footer>
+<!--  END FOOTER -->
+
+  </div>
+
+  </div>
+
+
+  </div>
+
+    </div>
+
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"en\/","currentPath":"node\/3006","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","ajaxPageState":{"libraries":"better_exposed_filters\/auto_submit,better_exposed_filters\/general,c4com\/global,core\/html5shiv,paragraphs\/drupal.paragraphs.unpublished,system\/base,views\/views.ajax,views\/views.module","theme":"c4com","theme_token":null},"ajaxTrustedUrl":{"\/en\/finance\/financial-publications":true,"\/en\/search\/content":true},"views":{"ajax_path":"\/en\/views\/ajax","ajaxViews":{"views_dom_id:62fdccb4971db6c2a477b7f0ea6410d5bda8ecc1c83c1b3808564863baca3a47":{"view_name":"tab_financial_data","view_display_id":"embed_1","view_args":"","view_path":"\/en\/finance\/financial-publications","view_base_path":null,"view_dom_id":"62fdccb4971db6c2a477b7f0ea6410d5bda8ecc1c83c1b3808564863baca3a47","pager_element":0}}},"user":{"uid":0,"permissionsHash":"1b5cc8414a61fae8e7707a231e68451450eabfb09a44cf61d3dd10add9b0f664"}}</script>
+<script src="/core/assets/vendor/domready/ready.min.js?v=1.0.8"></script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.2.1"></script>
+<script src="/core/assets/vendor/jquery/jquery-extend-3.4.0.js?v=3.2.1"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.0"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.7.7"></script>
+<script src="/core/misc/drupal.js?v=8.7.7"></script>
+<script src="/core/misc/drupal.init.js?v=8.7.7"></script>
+<script src="/themes/custom/c4com/js/app.js?q8vz5q"></script>
+<script src="/themes/custom/c4com/js/custom.js?q8vz5q"></script>
+<script src="/core/assets/vendor/jquery-form/jquery.form.min.js?v=4.22"></script>
+<script src="/core/misc/progress.js?v=8.7.7"></script>
+<script src="/core/misc/ajax.js?v=8.7.7"></script>
+<script src="/core/modules/views/js/base.js?v=8.7.7"></script>
+<script src="/core/modules/views/js/ajax_view.js?v=8.7.7"></script>
+<script src="/modules/contrib/better_exposed_filters/js/better_exposed_filters.js?v=3.x"></script>
+<script src="/core/misc/debounce.js?v=8.7.7"></script>
+<script src="/modules/contrib/better_exposed_filters/js/auto_submit.js?v=3.x"></script>
+
+    <!-- Tag Commander -->
+<script>
+    var tc_vars={};
+    var tc_src1 = "//cdn.tagcommander.com/3793/tc_Carrefourcom_20.js?rn="+tc_cache_buster2;
+    var tc_scr1 = document.createElement('script');
+    tc_scr1.setAttribute('src', tc_src1);
+    document.body.appendChild(tc_scr1);
+    var tc_src2 = "//cdn.tagcommander.com/3793/tc_Carrefourcom_21.js?rn="+tc_cache_buster2;
+    var tc_scr2 = document.createElement('script');
+    tc_scr2.setAttribute('src', tc_src2);
+    document.body.appendChild(tc_scr2);
+</script>
+<!-- end Tag Commander -->
+  <script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=633647756"></script>
+</body>
+</html>

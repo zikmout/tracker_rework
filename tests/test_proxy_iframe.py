@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from http.server import BaseHTTPRequestHandler, HTTPServer
 import argparse
 import os
@@ -7,7 +5,9 @@ import random
 import sys
 import requests
 
+
 hostname = 'en.wikipedia.org'
+
 
 def merge_two_dicts(x, y):
     z = x.copy()   # start with x's keys and values
@@ -22,7 +22,7 @@ def set_header():
     return headers
 
 class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
-    protocol_version = 'HTTP/1.0'
+    protocol_version = 'HTTP/1.1'
     def do_HEAD(self):
         self.do_GET(body=False)
 
@@ -45,27 +45,32 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
                 # self.wfile.write(resp.content)
                 if '<script>' in resp.content.decode('utf-8', errors='ignore'):
                     # print('resp.content = {}'.format(resp.content.decode('utf-8', errors='ignore')))
-                    html_injected = "<script>document.body.style.backgroundColor = 'red';"
-                    # html_injected = """
-                    # <head><script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-                    # <script>
-                    # $('body *').bind('mouseover mouseout', function(event) {
-                    #     if (event.type == 'mouseover') {
-                    #         $(this).data('bgcolor', $(this).css('background-color'));
-                    #         $(this).css('background-color','rgba(255,0,0,.5)');
-                    #     } else {
-                    #         $(this).css('background-color', $(this).data('bgcolor'));
-                    #     }
-                    #     return false;
-                    # });
-                    # </script>
-                    # """
-                    gogo = resp.content.decode('utf-8', errors='ignore').replace('<script>', html_injected).encode('utf-8')
+                    
+                    # html_injected = "<script>document.body.style.backgroundColor = 'red';"
+                    html_injected = """
+                    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+                    <script>
+                    $('body *').bind('mouseover mouseout', function(event) {
+                        if (event.type == 'mouseover') {
+                            $(this).data('bgcolor', $(this).css('background-color'));
+                            $(this).css('background-color','rgba(255,0,0,.5)');
+                        } else {
+                            $(this).css('background-color', $(this).data('bgcolor'));
+                        }
+                        return false;
+                    });
+                    </script>
+                    """
+
+                    gogo = resp.content.decode('utf-8', errors='ignore').replace('<script>', html_injected)#.encode('utf-8')
+                    if isinstance('gogo', str):
+                        gogo = gogo.encode('utf-8')
                     print('resp.content II = {}'.format(gogo[:500]))
                     self.wfile.write(gogo)
                 else:
                     self.wfile.write(resp.content)
                 # self.wfile.write("<html><body bgcolor='red'></body></html>".encode('utf-8'))
+            resp.close()
             return
         finally:
             self.finish()

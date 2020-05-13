@@ -6,7 +6,8 @@ import sys
 import requests
 
 
-hostname = 'en.wikipedia.org'
+# hostname = 'en.wikipedia.org'
+hostname = 'www.lequipe.fr'
 
 
 def merge_two_dicts(x, y):
@@ -43,26 +44,54 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
             if body:
                 # self.wfile.write('BG COLOR'.encode('utf-8'))
                 # self.wfile.write(resp.content)
-                if '<script>' in resp.content.decode('utf-8', errors='ignore'):
+                if '<body>' in resp.content.decode('utf-8', errors='ignore'):
                     # print('resp.content = {}'.format(resp.content.decode('utf-8', errors='ignore')))
                     
-                    # html_injected = "<script>document.body.style.backgroundColor = 'red';"
-                    html_injected = """
-                    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-                    <script>
-                    $('body *').bind('mouseover mouseout', function(event) {
-                        if (event.type == 'mouseover') {
-                            $(this).data('bgcolor', $(this).css('background-color'));
-                            $(this).css('background-color','rgba(255,0,0,.5)');
-                        } else {
-                            $(this).css('background-color', $(this).data('bgcolor'));
-                        }
-                        return false;
-                    });
-                    </script>
-                    """
+                    # html_injected = "<body onload=\"alert(\'toto\');\">"
+                    # html_injected = "<body onload=\"document.body.style.backgroundColor = 'red';\">"
+                    html_injected = "<body onload=\"document.addEventListener('mouseover', function (event) {event.target.style.outline = '#f00 solid 2px';}, false);\">"
+                    # html_injected = """
+                    # <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+                    # <script>
+                    # $('body *').bind('mouseover mouseout', function(event) {
+                    #     if (event.type == 'mouseover') {
+                    #         $(this).data('bgcolor', $(this).css('background-color'));
+                    #         $(this).css('background-color','rgba(255,0,0,.5)');
+                    #     } else {
+                    #         $(this).css('background-color', $(this).data('bgcolor'));
+                    #     }
+                    #     return false;
+                    # });
+                    # </script>
+                    # """
 
-                    gogo = resp.content.decode('utf-8', errors='ignore').replace('<script>', html_injected)#.encode('utf-8')
+                    gogo = resp.content.decode('utf-8', errors='ignore').replace('<body>', html_injected)#.encode('utf-8')
+                    if isinstance('gogo', str):
+                        gogo = gogo.encode('utf-8')
+                    print('resp.content II = {}'.format(gogo[:500]))
+                    self.wfile.write(gogo)
+                elif '<body ' in resp.content.decode('utf-8', errors='ignore'):
+                    # print('resp.content = {}'.format(resp.content.decode('utf-8', errors='ignore')))
+                    
+                    # html_injected = "<body onload=\"alert(\'toto\');\" "
+                    # html_injected = "<body onload=\"document.body.style.backgroundColor = 'red';\" "
+                    html_injected = html_injected = "<body onload=\"document.addEventListener('mouseover', function (event) {event.target.style.outline = '#f00 solid 2px';}, false);\" "
+                    # html_injected = """
+                    # <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+                    # <script>
+                    # $('body *').bind('mouseover mouseout', function(event) {
+                    #     if (event.type == 'mouseover') {
+                    #         $(this).data('bgcolor', $(this).css('background-color'));
+                    #         $(this).css('background-color','rgba(255,0,0,.5)');
+                    #     } else {
+                    #         $(this).css('background-color', $(this).data('bgcolor'));
+                    #     }
+                    #     return false;
+                    # });
+                    # </script>
+                    # """
+
+                    gogo = resp.content.decode('utf-8', errors='ignore').replace('<body ', html_injected)#.encode('utf-8')
                     if isinstance('gogo', str):
                         gogo = gogo.encode('utf-8')
                     print('resp.content II = {}'.format(gogo[:500]))

@@ -119,6 +119,16 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
                     };
                     var outlineStyle='';
                     var EltBgColor='';
+                    function disableLinksOnPage(className)
+                    {
+                        var linkItems = document.querySelectorAll(className);
+                        linkItems.forEach(function(linkItem) {
+                          linkItem.setAttribute('href', 'javascript:void(0)');
+                          linkItem.setAttribute('disabled', 'disabled');
+                        });
+                    }
+                    disableLinksOnPage('a');
+                    disableLinksOnPage('A');
                     function getElementIdx(elt)
                     {
                         var count = 1;

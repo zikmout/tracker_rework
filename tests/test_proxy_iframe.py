@@ -113,9 +113,12 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
                     # html_injected = "<body onload=\"alert(\'toto\');\" "
                     # html_injected = "<body onload=\"document.body.style.backgroundColor = 'red';\" "
                     html_injected = html_injected = """
-                    <body onload=\"var outlineStyle='';
+                    <body onload=\"
+                    var sXPath = {
+
+                    };
+                    var outlineStyle='';
                     var EltBgColor='';
-                    var isSelected=false;
                     function getElementIdx(elt)
                     {
                         var count = 1;
@@ -139,15 +142,56 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
                      
                          return path;   
                     };
-                    document.addEventListener('mouseover', function (event) {outlineStyle=event.target.style.outline; event.target.style.outline = '#f00 solid 2px';EltBgColor=event.target.style.backgroundColor;event.target.style.backgroundColor='rgba(12, 242, 143, 0.2)';}, false);
+                    document.addEventListener('mouseover', function (event)
+                    {
+                        console.log(sXPath);
+                        outlineStyle = event.target.style.outline;
+                        event.target.style.outline = '#f00 solid 2px';
+                        EltBgColor = event.target.style.backgroundColor;
+                        if(sXPath[getElementXPath(event.target)] == undefined)
+                        {
+                            if (sXPath[getElementXPath(event.target)] == false)
+                            {
+                                event.target.style.backgroundColor='rgba(12, 242, 143, 0.2)';
+                            }
+                            else if (sXPath[getElementXPath(event.target)] == true)
+                            {
+                                event.target.style.backgroundColor = sXPath[getElementXPath(event.target) + 'oldBg'];
+                            }
+                        };
+                    }, false);
                     document.addEventListener('mouseout', function (event) {
                         event.target.style.outline = outlineStyle;
-                        if(!isSelected)
+                        if(sXPath[getElementXPath(event.target)] == undefined)
                         {
-                            event.target.style.backgroundColor = EltBgColor;
+                            if (sXPath[getElementXPath(event.target)] == false)
+                            {
+                                event.target.style.backgroundColor = sXPath[getElementXPath(event.target) + 'oldBg'];
+                            }
+                            else
+                            {
+                                event.target.style.backgroundColor = EltBgColor;
+                            }
                         }
                     }, false);
-                    document.addEventListener('click', function (event) {isSelected=true;console.log(getElementXPath(event.target));event.target.style.backgroundColor='rgba(12, 235, 160, 0.9)';}, false);\"  
+                    document.addEventListener('click', function (event) 
+                    {
+                        if (sXPath[getElementXPath(event.target)] != undefined && sXPath[getElementXPath(event.target)] == true)
+                        {
+                            sXPath[getElementXPath(event.target)] = false;
+                            event.target.style.backgroundColor = sXPath[getElementXPath(event.target) + 'oldBg']
+                        }
+                        else
+                        {
+                            sXPath[getElementXPath(event.target)] = true;
+                            sXPath[getElementXPath(event.target) + 'oldBg'] = EltBgColor;
+                        }
+                        console.log(getElementXPath(event.target));
+                        if (sXPath[getElementXPath(event.target)] == true)
+                        {
+                            event.target.style.backgroundColor='rgba(12, 235, 160, 0.9)';
+                        }
+                    }, false);\"  
                     """
                     # html_injected = """
                     # <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

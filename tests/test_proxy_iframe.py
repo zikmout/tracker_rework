@@ -44,43 +44,110 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
             if body:
                 # self.wfile.write('BG COLOR'.encode('utf-8'))
                 # self.wfile.write(resp.content)
-                if '<body>' in resp.content.decode('utf-8', errors='ignore'):
-                    # print('resp.content = {}'.format(resp.content.decode('utf-8', errors='ignore')))
+                # if '<body>' in resp.content.decode('utf-8', errors='ignore'):
+                #     # print('resp.content = {}'.format(resp.content.decode('utf-8', errors='ignore')))
                     
-                    # html_injected = "<body onload=\"alert(\'toto\');\">"
-                    # html_injected = "<body onload=\"document.body.style.backgroundColor = 'red';\">"
-                    html_injected = """
-                    <body onload=\"var outlineStyle='';document.addEventListener('mouseover', function (event) {outlineStyle=event.target.style.outline; event.target.style.outline = '#f00 solid 2px';}, false);
-                    document.addEventListener('mouseout', function (event) {event.target.style.outline = outlineStyle;}, false);\">
-                    """
-                    # html_injected = """
-                    # <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-                    # <script>
-                    # $('body *').bind('mouseover mouseout', function(event) {
-                    #     if (event.type == 'mouseover') {
-                    #         $(this).data('bgcolor', $(this).css('background-color'));
-                    #         $(this).css('background-color','rgba(255,0,0,.5)');
-                    #     } else {
-                    #         $(this).css('background-color', $(this).data('bgcolor'));
-                    #     }
-                    #     return false;
-                    # });
-                    # </script>
-                    # """
+                #     # html_injected = "<body onload=\"alert(\'toto\');\">"
+                #     # html_injected = "<body onload=\"document.body.style.backgroundColor = 'red';\">"
+                #     html_injected = """
+                #     <body onload=\"var outlineStyle='';
+                #     var EltBgColor='';
+                #     var isSelected=false;
+                #     function getElementIdx(elt)
+                #     {
+                #         var count = 1;
+                #         for (var sib = elt.previousSibling; sib ; sib = sib.previousSibling)
+                #         {
+                #             if(sib.nodeType == 1 && sib.tagName == elt.tagName) count++
+                #         }
+                        
+                #         return count;
+                #     };
+                #     function getElementXPath(elt)
+                #     {
+                #          var path = '';
+                #          for (; elt && elt.nodeType == 1; elt = elt.parentNode)
+                #          {
+                #         idx = getElementIdx(elt);
+                #         xname = elt.tagName;
+                #         if (idx > 1) xname += '[' + idx + ']';
+                #         path = '/' + xname + path;
+                #          }
+                     
+                #          return path;   
+                #     };
+                #     document.addEventListener('mouseover', function (event) {outlineStyle=event.target.style.outline; event.target.style.outline = '#f00 solid 2px';EltBgColor=event.target.style.backgroundColor;event.target.style.backgroundColor='rgba(12, 242, 143, 0.2)';}, false);
+                #     document.addEventListener('mouseout', function (event)
+                #     {
+                #         event.target.style.outline = outlineStyle;
+                #         if(!isSelected)
+                #         {
+                #             event.target.style.backgroundColor = EltBgColor;
+                #         }
+                #     }, false);
+                #     document.addEventListener('click', function (event) {isSelected=true;console.log(getElementXPath(event.target));event.target.style.backgroundColor='rgba(12, 235, 160, 0.9)';}, false);\">
+                #     """
+                #     # html_injected = """
+                #     # <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+                #     # <script>
+                #     # $('body *').bind('mouseover mouseout', function(event) {
+                #     #     if (event.type == 'mouseover') {
+                #     #         $(this).data('bgcolor', $(this).css('background-color'));
+                #     #         $(this).css('background-color','rgba(255,0,0,.5)');
+                #     #     } else {
+                #     #         $(this).css('background-color', $(this).data('bgcolor'));
+                #     #     }
+                #     #     return false;
+                #     # });
+                #     # </script>
+                #     # """
 
-                    gogo = resp.content.decode('utf-8', errors='ignore').replace('<body>', html_injected)#.encode('utf-8')
-                    if isinstance('gogo', str):
-                        gogo = gogo.encode('utf-8')
-                    print('resp.content II = {}'.format(gogo[:500]))
-                    self.wfile.write(gogo)
-                elif '<body ' in resp.content.decode('utf-8', errors='ignore'):
+                #     gogo = resp.content.decode('utf-8', errors='ignore').replace('<body>', html_injected)#.encode('utf-8')
+                #     if isinstance('gogo', str):
+                #         gogo = gogo.encode('utf-8')
+                #     print('resp.content II = {}'.format(gogo[:500]))
+                #     self.wfile.write(gogo)
+                if '<body ' in resp.content.decode('utf-8', errors='ignore'):
                     # print('resp.content = {}'.format(resp.content.decode('utf-8', errors='ignore')))
                     
                     # html_injected = "<body onload=\"alert(\'toto\');\" "
                     # html_injected = "<body onload=\"document.body.style.backgroundColor = 'red';\" "
                     html_injected = html_injected = """
-                    <body onload=\"var outlineStyle='';document.addEventListener('mouseover', function (event) {outlineStyle=event.target.style.outline; event.target.style.outline = '#f00 solid 2px';}, false);
-                    document.addEventListener('mouseout', function (event) {event.target.style.outline = outlineStyle;}, false);\" 
+                    <body onload=\"var outlineStyle='';
+                    var EltBgColor='';
+                    var isSelected=false;
+                    function getElementIdx(elt)
+                    {
+                        var count = 1;
+                        for (var sib = elt.previousSibling; sib ; sib = sib.previousSibling)
+                        {
+                            if(sib.nodeType == 1 && sib.tagName == elt.tagName) count++
+                        }
+                        
+                        return count;
+                    };
+                    function getElementXPath(elt)
+                    {
+                         var path = '';
+                         for (; elt && elt.nodeType == 1; elt = elt.parentNode)
+                         {
+                        idx = getElementIdx(elt);
+                        xname = elt.tagName;
+                        if (idx > 1) xname += '[' + idx + ']';
+                        path = '/' + xname + path;
+                         }
+                     
+                         return path;   
+                    };
+                    document.addEventListener('mouseover', function (event) {outlineStyle=event.target.style.outline; event.target.style.outline = '#f00 solid 2px';EltBgColor=event.target.style.backgroundColor;event.target.style.backgroundColor='rgba(12, 242, 143, 0.2)';}, false);
+                    document.addEventListener('mouseout', function (event) {
+                        event.target.style.outline = outlineStyle;
+                        if(!isSelected)
+                        {
+                            event.target.style.backgroundColor = EltBgColor;
+                        }
+                    }, false);
+                    document.addEventListener('click', function (event) {isSelected=true;console.log(getElementXPath(event.target));event.target.style.backgroundColor='rgba(12, 235, 160, 0.9)';}, false);\"  
                     """
                     # html_injected = """
                     # <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>

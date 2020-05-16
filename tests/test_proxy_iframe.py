@@ -112,13 +112,13 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
                     
                     # html_injected = "<body onload=\"alert(\'toto\');\" "
                     # html_injected = "<body onload=\"document.body.style.backgroundColor = 'red';\" "
-                    html_injected = html_injected = """
+                    html_injected = """
                     <body onload=\"
                     var sXPath = {
 
                     };
-                    var outlineStyle='';
-                    var EltBgColor='';
+                    var bgColor = '';
+                    var osOld = '';
                     function disableLinksOnPage(className)
                     {
                         var linkItems = document.querySelectorAll(className);
@@ -154,52 +154,67 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
                     };
                     document.addEventListener('mouseover', function (event)
                     {
-                        console.log(sXPath);
-                        outlineStyle = event.target.style.outline;
-                        event.target.style.outline = '#f00 solid 2px';
-                        EltBgColor = event.target.style.backgroundColor;
-                        if(sXPath[getElementXPath(event.target)] == undefined)
+
+                        
+
+
+                        if (sXPath[getElementXPath(event.target)] == undefined)
                         {
-                            if (sXPath[getElementXPath(event.target)] == false)
-                            {
-                                event.target.style.backgroundColor='rgba(12, 242, 143, 0.2)';
-                            }
-                            else if (sXPath[getElementXPath(event.target)] == true)
-                            {
-                                event.target.style.backgroundColor = sXPath[getElementXPath(event.target) + 'oldBg'];
-                            }
-                        };
-                    }, false);
-                    document.addEventListener('mouseout', function (event) {
-                        event.target.style.outline = outlineStyle;
-                        if(sXPath[getElementXPath(event.target)] == undefined)
-                        {
-                            if (sXPath[getElementXPath(event.target)] == false)
-                            {
-                                event.target.style.backgroundColor = sXPath[getElementXPath(event.target) + 'oldBg'];
-                            }
-                            else
-                            {
-                                event.target.style.backgroundColor = EltBgColor;
-                            }
+                            bgColor = event.target.style.backgroundColor;
+                            osOld = event.target.style.outline;
+                            event.target.style.backgroundColor = 'rgba(12, 242, 143, 0.2)';
+                            event.target.style.outline = '#f00 solid 2px';
                         }
+                        else if (sXPath[getElementXPath(event.target)] == false)
+                        {
+                            bgColor = event.target.style.backgroundColor;
+                            osOld = event.target.style.outline;
+                            event.target.style.backgroundColor = 'rgba(12, 242, 143, 0.2)';
+                            event.target.style.outline = '#f00 solid 2px';
+                        }
+                        else if (sXPath[getElementXPath(event.target)] == true)
+                        {
+
+                        }
+
                     }, false);
-                    document.addEventListener('click', function (event) 
+                    document.addEventListener('mouseout', function (event)
                     {
                         if (sXPath[getElementXPath(event.target)] != undefined && sXPath[getElementXPath(event.target)] == true)
                         {
-                            sXPath[getElementXPath(event.target)] = false;
-                            event.target.style.backgroundColor = sXPath[getElementXPath(event.target) + 'oldBg']
+                            
                         }
                         else
                         {
-                            sXPath[getElementXPath(event.target)] = true;
-                            sXPath[getElementXPath(event.target) + 'oldBg'] = EltBgColor;
+                            event.target.style.outline = osOld;
+                            event.target.style.backgroundColor = bgColor;
                         }
-                        console.log(getElementXPath(event.target));
-                        if (sXPath[getElementXPath(event.target)] == true)
+
+                    }, false);
+                    document.addEventListener('click', function (event) 
+                    {
+
+                        if (sXPath[getElementXPath(event.target)] == undefined)
                         {
-                            event.target.style.backgroundColor='rgba(12, 235, 160, 0.9)';
+
+                            sXPath[getElementXPath(event.target)] = true;
+                            sXPath[getElementXPath(event.target) + 'bgOld'] = bgColor;
+                            sXPath[getElementXPath(event.target) + 'osOld'] = osOld;
+                            event.target.style.backgroundColor = 'rgba(12, 235, 160, 0.9)';
+
+                        }
+                        else if (sXPath[getElementXPath(event.target)] == true)
+                        {
+                            sXPath[getElementXPath(event.target)] = false;
+                            event.target.style.backgroundColor = sXPath[getElementXPath(event.target) + 'bgOld'];
+                            event.target.style.outline = sXPath[getElementXPath(event.target) + 'osOld'];
+                        }
+                        else if (sXPath[getElementXPath(event.target)] == false)
+                        {
+                            sXPath[getElementXPath(event.target)] = true;
+                            sXPath[getElementXPath(event.target) + 'bgOld'] = bgColor;
+                            sXPath[getElementXPath(event.target) + 'osOld'] = osOld;
+                            event.target.style.backgroundColor = 'rgba(12, 235, 160, 0.9)';
                         }
                     }, false);\"  
                     """

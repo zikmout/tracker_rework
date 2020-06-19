@@ -8,7 +8,6 @@ import traceback
 from tornado.web import RequestHandler
 from tracker.models import Permission, Role, Project, User
 from tracker.utils import make_session_factory, flash_message, login_required, admin_required
-from tracker.models import User
 import tracker.session as session
 from tracker.workers.live.live_view_worker import live_view
 
@@ -77,7 +76,7 @@ class BaseView(RequestHandler):
         print("setting headers!!!")
         self.set_header("Access-Control-Allow-Origin", "*")
         self.set_header("Access-Control-Allow-Headers", "x-requested-with")
-        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS')
+        self.set_header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, HEAD')
 
     def send_response(self, data, status=200):
         """Construct and send a JSON response with appropriate status code."""

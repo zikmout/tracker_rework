@@ -3,8 +3,11 @@ import sys
 import base64
 import logging
 from tornado.httpserver import HTTPServer
+import tornado.ioloop
 from tornado.ioloop import IOLoop
-from tornado.options import define, options
+import tornado.options
+# from tornado.options import define, options
+
 import tornado.web
 from tornado.web import url
 from tracker.utils import make_session_factory
@@ -30,6 +33,44 @@ from tracker.views.download import UserDownloadCreate, UserDownloadStop, UserDow
 from tracker.views.crawl import UserProjectCrawlView, UserCrawlsCreate, UserCrawlStop,\
  UserCrawlDeleteLogfile, DeleteCrawlTaskFromSession
 from tracker.views.socket import EchoWebSocket
+from tracker.views.proxy import ProxyHTTPRequestHandler
+
+from http.server import BaseHTTPRequestHandler, HTTPServer
+# from http.server import HTTPServer, BaseHTTPRequestHandler
+
+from socketserver import ThreadingMixIn
+import threading
+# from BaseHTTPServer import HTTPServer, BaseHTTPRequestHandler
+# from Sock import ThreadingMixIn
+import threading
+from tornado.options import define, options
+# import tornado.httpserver
+# import tornado.ioloop
+# import tornado.options
+# import tornado.web
+
+# from tornado.options import define, options
+# define("port", default=8000, help="run on the given port", type=int)
+
+class Handler(BaseHTTPRequestHandler):  
+    def do_GET(self):
+        self.send_response(200)
+        self.end_headers()
+        message =  threading.currentThread().getName()
+        self.wfile.write(message)
+        self.wfile.write('\n')
+        return
+
+class ThreadedHTTPServer(ThreadingMixIn, HTTPServer):
+    """Handle requests in a separate thread."""
+
+class IndexHandler(tornado.web.RequestHandler):
+    def get(self):
+        greeting = self.get_argument('greeting', 'Hello')
+        self.write(greeting + ', friendly user!\n')
+
+
+
 
 def main():
     LOAD_MODEL = False
@@ -162,10 +203,23 @@ def main():
                 print(e)
 
     app = Application()
-    http_server = HTTPServer(app)
+    http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(options.port)
     print('Listening on http://localhost:{}'.format(options.port))
     print('dirname ={}'.format(dirname))
     logging.warning("Server running on port %d", options.port)
     #IOLoop.instance().start()
-    IOLoop.current().start()
+    # IOLoop.current().start()
+
+
+    # tornado.options.parse_command_line()
+    # app = tornado.web.Application(handlers=[(r"/", IndexHandler)])
+    # http_server = tornado.httpserver.HTTPServer(app)
+    # http_server.listen(options.port)
+
+    # create BaseHTTPServer
+    server = ThreadedHTTPServer(('127.0.0.1', 9999), ProxyHTTPRequestHandler)
+    server.timeout = 0.01 
+
+    tornado.ioloop.PeriodicCallback(server.handle_request, 100).start() # every 100 milliseconds
+    tornado.ioloop.IOLoop.instance().start()

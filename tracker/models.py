@@ -60,6 +60,21 @@ class Role(Base):
             session.add(role)
         session.commit()
 
+# class Connection():
+#     __tablename__ = 'connections'
+#     __table_args__ = {'extend_existing': True}
+#     id = Column(Integer, primary_key=True)
+#     user_id = Column(Integer, ForeignKey('users.id'))
+#     proxy_current = Column(String(2600))
+#     time = Column('registration_date', DateTime)
+#     online = Column(Boolean, default=False)
+
+#     def __init__(self, proxy_current):
+#         self.proxy_current = proxy_current
+
+#     def __repr__(self):
+#         return '< proxy_current: {} >'.format(self.proxy_current)
+
 class User(Base):
     __tablename__ = 'users'
     __table_args__ = {'extend_existing': True}

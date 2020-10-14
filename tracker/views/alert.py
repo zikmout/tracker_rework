@@ -212,7 +212,7 @@ class AlertLaunch(BaseView):
             # need to change following line with PickleType
             # print('GOTTEN TIME LIMIT = {}'.format(args['alertTimeLimit']))
             
-            tasks = rproject.download_units_diff(alert.template_type, content.links,
+            tasks = rproject.download_units_diff(alert.template_type, content.links, content.xpaths,
                 save=True, show_links=alert.show_links, time_limit=lmt)
             #print('alert.template type = {}'.format(alert.template_type))
             #print('TASKSS ===> {}'.format(tasks))

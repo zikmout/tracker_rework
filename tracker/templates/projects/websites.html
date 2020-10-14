@@ -84,6 +84,7 @@
                 {% end %}
                 <th>Target URL</th>
                 <th>Keywords</th>
+                <th>XPath</th>
                 <th>Email recipients</th>
                 <th></th>
                 <th></th>
@@ -101,6 +102,18 @@
                     {% if len(line['keywords']) > 0 %}
                       {{ line['keywords'][0] }}{% if len(line['keywords']) > 1 %} ... {% end %}
                       <div class="float-right"><span class="badge badge-pill badge-info" data-placement="right" data-toggle="tooltip" data-html="true" title="{% for kw in line['keywords'] %}<em>'{{ kw }}'</em><br>{% end %}">{{ str(len(line['keywords'])) }}</span>&nbsp;&nbsp;</div>
+                    {% else %}
+                      -
+                    {% end %}
+                  </td>
+                  <td style="vertical-align:middle;">
+                    {% if ';' in line['xpath'] %}
+
+                          <div class="float-right"><span class="badge badge-pill badge-info" data-placement="right" data-toggle="tooltip" data-html="true" title="{% for xp in line['xpath'].split(';') %}<em>'{{ xp }}'</em><br>{% end %}">{{ str(len(line['xpath'].split(';'))) }}</span>&nbsp;&nbsp;</div>
+
+                      
+                    {% elif line['xpath'] != '' and line['xpath'] != [] %}
+                      {{ line['xpath'] }}
                     {% else %}
                       -
                     {% end %}

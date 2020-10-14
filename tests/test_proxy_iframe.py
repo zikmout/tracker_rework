@@ -6,8 +6,8 @@ import sys
 import requests
 
 
-hostname = 'en.wikipedia.org'
-# hostname = 'www.lequipe.fr'
+# hostname = 'github.com'
+hostname = 'www.boursier.com'
 
 
 def merge_two_dicts(x, y):

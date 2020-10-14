@@ -12,9 +12,9 @@ import requests
 # from tracker.models import Permission, Role, Project, User, Connection
 # import tracker.session as session
 
-hostname = 'en.wikipedia.org'
+# hostname = ''
 # hostname = 'www.lequipe.fr'
-
+hostname = ''
 
 def merge_two_dicts(x, y):
     z = x.copy()   # start with x's keys and values
@@ -35,8 +35,34 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
 
     def do_GET(self, body=True):
         sent = False
-        # global hostname
+        
+        global hostname
+        path = os.path.join(os.getcwd(), 'connections.txt')
+        fd = open(path, 'r+')
+        target_url = fd.read()
+        fd.close()
+        print('[LOADED] : {}'.format(target_url))
+
+        domain_regex = re.compile('^(?:\/\/|[^\/]+)*')
+        hostname = domain_regex.match(target_url)[0].replace('https://', '')
+        print('\n\n-------> GET RECEIVED, hostname = {}, path = {} <--------\n\n'.format(hostname, self.path))
         try:
+            # path = os.path.join(os.getcwd(), 'connections.txt')
+            # if self.path == '/' or hostname == '':
+
+            #     fd = open(path, 'r+')
+            #     target_url = fd.read()
+            #     fd.close()
+            #     print('READ : {}'.format(target_url))
+
+            #     domain_regex = re.compile('^(?:\/\/|[^\/]+)*')
+            #     hostname = domain_regex.match(target_url)[0]
+            #     self.path = target_url.replace(hostname, '')
+            #     self.do_HEAD()
+            #     print('after do head')
+            #     print('parse_header = {}'.format(self.parse_header()))
+            #     print('FOUND HOSTNAME : {}, PATH : {}'.format(hostname, self.path))
+
             # path = os.path.join(os.getcwd(), 'connections.txt')
             # if 'url___' in self.path:
             #     print('\n\n---- FIRST ONLY ----\n\n')
@@ -74,14 +100,14 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
             
             
             req_header = self.parse_headers()
-            print('REQ HEADER= {}'.format(req_header))
-            print('\n\n\nURL REQ -------->\n{}'.format(url))
+            print('\nREQ HEADER= {}\n'.format(req_header))
+            # print('\n\n\nURL REQ -------->\n{}'.format(url))
 
             # print(req_header)
             # print(url)
             resp = requests.get(url, headers=merge_two_dicts(req_header, set_header(hostname)), verify=False)
             sent = True
-            print('\n\n\n\n\n\n\n\n-------> DECODE 1 (self.path = {}) <--------\n\n\n\n\n\n\n\n\n'.format(self.path))
+            # print('\n\n\n\n\n\n\n\n-------> DECODE 1 (self.path = {}) <--------\n\n\n\n\n\n\n\n\n'.format(self.path))
             # if 'oki___' in self.path:
             #     print('\n\n---- FIRST ONLY ----\n\n')
             #     url = self.path.replace('/?oki___=', '')
@@ -320,6 +346,8 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
 
     def do_POST(self, body=True):
         sent = False
+        # print('\n\n\n\n\n\n\n\n-------> POST RECEIVED, hostname = {}, path = {} <--------\n\n\n\n\n\n\n\n\n'.format(hostname, self.path))
+        
         try:
             # path = os.path.join(os.getcwd(), 'connections.txt')
             # domain_regex = re.compile('^(?:\/\/|[^\/]+)*')
@@ -332,7 +360,7 @@ class ProxyHTTPRequestHandler(BaseHTTPRequestHandler):
             # url = '{}{}'.format(hostname, self.path)
 
             print('\n\n\n\n\n\n\n\n-------> DECODE 2 {}<--------\n\n\n\n\n\n\n\n\n'.format(self.session))
-            url = 'https://{}{}'.format(hostname, self.path)
+            url = '{}{}'.format(hostname, self.path)
             content_len = int(self.headers.getheader('content-length', 0))
             post_body = self.rfile.read(content_len)
             req_header = self.parse_headers()

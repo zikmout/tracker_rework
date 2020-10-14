@@ -219,7 +219,8 @@ class Unit:
             self.download_path + filename_time, self.url)
 
     def download_changed_files_from_links(self, 
-                                        links_dict, 
+                                        links_dict,
+                                        xpaths_dict,
                                         keywords_diff, 
                                         detect_links,
                                         show_links,
@@ -233,14 +234,14 @@ class Unit:
         #print('Starting TASK nb {}'.format(counter));
         # print('--> TOTAL TASK RECEIVED = {}'.format(total_task))
         if time_limit:
-            task = live_view.apply_async(args=(links_dict, self.download_path,\
+            task = live_view.apply_async(args=(links_dict, xpaths_dict, self.download_path,\
                 self.download_path + filename_time, self.url,\
                 keywords_diff, detect_links, show_links, links_algorithm, counter, total_task),\
                 soft_time_limit=float(time_limit), time_limit=float(time_limit))
             # task = live_view.apply_async(args=[links_dict, self.download_path, self.download_path + filename_time, self.url,\
             # keywords_diff, detect_links, links_algorithm, counter], kwargs={}, soft_time_limit=time_limit)
         else:
-            task = live_view.apply_async([links_dict, self.download_path,\
+            task = live_view.apply_async([links_dict, xpaths_dict, self.download_path,\
                 self.download_path + filename_time, self.url,\
             keywords_diff, detect_links, show_links, links_algorithm, counter, total_task])
             # print('task dict app = {}'.format(task.__dict__['app'].__dict__))

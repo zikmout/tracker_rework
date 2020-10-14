@@ -1,3 +1,4 @@
+import os
 from tornado import gen
 import json
 from tracker.views.base import BaseView
@@ -110,9 +111,19 @@ class UserUnitEditView(BaseView):
         #config_df_updated.loc[config_df_updated['target'] == url, 'target_label'] = 'test;key;words'
         # line = {'Name': config_df_updated.loc[config_df_updated['target'] == url, 'Name'], 'Website': args['inputWebsite'][0],\
             # 'target': args['inputTarget'][0], 'target_label':args['inputKeywords'][0]}
-        keys = ['Name', 'Website', 'target', 'target_label', 'mailing_list']
+        keys = ['Name', 'Website', 'target', 'target_label', 'mailing_list', 'xpath']
         # print('keywords = ->{}<-'.format(config_df_updated[config_df_updated['target'] == url]['target_label'].item()))
         line = {k:config_df_updated[config_df_updated['target'] == url][k].item() for k in keys}
+        
+        # For proxy page
+        path = os.path.join(os.getcwd(), 'connections.txt')
+        print('PATH RECEIVED = {}'.format(path))
+        fd = open(path, 'w+')
+        target_url = line['target']
+        fd.write(target_url)
+        fd.close()
+        print('WROTE : {}'.format(target_url))
+
         if not isinstance(line['target_label'], float):
             line['target_label'] = line['target_label'].split(';')
         else:
@@ -121,11 +132,17 @@ class UserUnitEditView(BaseView):
             line['mailing_list'] = line['mailing_list'].split(';')
         else:
             line['mailing_list'] = ''
+        # if not isinstance(line['xpath'], float):
+        #     line['xpath'] = line['xpath'].split(';')
+        # elif not isinstance(line['xpath'], str):
+        #     line['xpath'] = ''
         # print('mailing_list = {}'.format(line['mailing_list']))
         # print('project config file : {}'.format(project.config_file))
         config_df_updated.to_excel(project.config_file, index=False)
         #line = config_df_updated.loc[config_df_updated['target'] == url].to_json()
+        
         self.render('unit/edit.html', url=url, line=line)
+
 
 class AdminUserCreate(BaseView):
     SUPPORTED_METHODS = ['POST']

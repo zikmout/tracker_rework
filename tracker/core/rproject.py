@@ -42,8 +42,12 @@ class RProject:
             config_df = loader.get_df_from_excel(inputs_path)
             # This has been a real fuck up ! If user does not put trailing '/' (like http://www.orange.fr),
             # all rationale is dead. Can be easily fixed though. So here we are reformating the config_df file
-            for i in config_df.index:
+            if 'xpath' not in config_df.columns:
+                config_df['xpath'] = ''
+                config_df.to_excel(inputs_path, index=False)
 
+            for i in config_df.index:
+                print('\n\nconfig df xpath i = {}'.format(config_df['xpath'][i]))
                 target_cell = config_df['target'][i]
                 target_website = config_df['Website'][i]
 
@@ -352,6 +356,9 @@ class RProject:
                 name = rows['Name']
                 website = rows['Website']
                 target = rows['target']
+                xpath = rows['xpath']
+                if isinstance(rows['xpath'], float):
+                    xpath = []
                 # can be one or multiple keywords
                 if isinstance(rows['target_label'], float):
                     target_label = ''
@@ -376,7 +383,8 @@ class RProject:
                     'website': website,
                     'target': target,
                     'keywords': target_label,
-                    'mailing_list' : mailing_list
+                    'mailing_list' : mailing_list,
+                    'xpath': xpath
                 }
                 self.lines.append(line)
 
@@ -527,7 +535,7 @@ class RProject:
             nb = unit.update_downloaded([internal_link])
             print('Nb of unit updated for url {} : {}'.format(nb, base_url))
 
-    def download_units_diff(self, template_type, links, save=False, show_links=False, time_limit=False):
+    def download_units_diff(self, template_type, links, xpaths, save=False, show_links=False, time_limit=False):
         if links == {} or links is None:
             print('[ERROR] delete_download_units : No urls specified.\n')
             return None
@@ -562,6 +570,16 @@ class RProject:
             links = links_without_keywords
         dict_links = utils.from_links_to_dict(links)
 
+        links_without_xpaths = dict()
+        for k, v in xpaths.items():
+            if v != '':
+                links_without_xpaths.update({k:v})
+        xpaths = links_without_xpaths
+        dict_xpaths = utils.from_links_to_dict(xpaths)
+
+        print('\n\nDICT LINKS : {}\n'.format(dict_links))
+        print('\n\nDICT XPATH : {}'.format(dict_xpaths))
+
 
         # print('DICT LINKS = {}'.format(dict_links))
         # if keywords_diff:
@@ -595,12 +613,26 @@ class RProject:
                     # print('diff_path ------> {}'.format(diff_path))
                     # print('url ------> {}'.format(url))
                     for link in links:
-
+                        print('link : {}'.format(link))
+                        print('unit.url = {}, link[1] = {}'.format(unit.url, link[1]))
+                        if unit.url in dict_xpaths:
+                            xpaths = dict_xpaths[unit.url]
+                        else:
+                            xpaths = list()
+                        for _ in xpaths:
+                            print('loop xpath * uri : {}, xpath = : {}'.format(_[0], _[1]))
+                            if link[0] == _[0]:
+                                xpaths = _[1]
+                                print('Found XPATH(S) : {}'.format(xpaths))
+                                break;
+                            
+                        # print('xpath(s) : {}'.format(xpaths))
+                        # print('xpath : {}'.format(xpath))
                         # print('SENDING link for task = {}'.format(link))
                         # print('VAL = {}'.format(val))
                     # VAL = [['/en/investors/stock-and-shareholder-corner/buyback-programs', ['DAILY DETAILS FOR THE PERIOD']]]
                     # if keywords_diff and keywords != []:
-                        task = unit.download_changed_files_from_links(link, keywords_diff, detect_links,\
+                        task = unit.download_changed_files_from_links(link, xpaths, keywords_diff, detect_links,\
                         show_links, links_algorithm, counter, total_task, time_limit=time_limit)
                         
                         tasks.update({str(unit.url+link[0]): task})

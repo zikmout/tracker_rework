@@ -166,13 +166,15 @@ class Content(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(64), unique=True)
     links = Column(PickleType)
+    xpaths = Column(PickleType)
     mailing_list = Column(PickleType) # must include template type
     project_id = Column(Integer, ForeignKey('project.id'))
     alerts = relationship('Alert', cascade='save-update, delete', backref='content', lazy='dynamic')
 
-    def __init__(self, name, links, mailing_list=None):
+    def __init__(self, name, links, xpaths=None, mailing_list=None):
         self.name = name
         self.links = links
+        self.xpaths = xpaths
         self.mailing_list = mailing_list
 
     def __repr__(self):

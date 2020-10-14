@@ -4,6 +4,40 @@
     </head>
     {% extends '../layout.html' %}
     {% block content %}
+
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" id="modalXPath" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+
+
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Selected XPaths : </h5>
+                  <small><div id="selectedBoxes"></div></small>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <iframe id="inlineFrameExample"
+                      title="Inline Frame Example"
+                       width="700" height="800"
+                      src="http://127.0.0.1:9999/">
+                  </iframe>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" id="saveXPathToDb" class="btn btn-info" id="saveSpider" data-dismiss="modal">Select</button>
+
+                </div>
+  
+            </div>
+          </div>
+
+        </div>
+
+
+
     <div class="starter-template-fluid">
           <script src="{{ static_url('jquery.min.js') }}"></script>
           <br>
@@ -41,41 +75,24 @@
             <small class="form-text text-muted">Enter as many Keywords as relevant. Type "&lsaquo;MIX&rsaquo;" to use all Keywords already used in this watchlist</small>
           </div>
 
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Large modal</button>
-
-          <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
 
 
 
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
+          
 
 
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Selected XPaths : </h5>
-        <small><div id="selectedBoxes"></div></small>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <iframe id="inlineFrameExample"
-            title="Inline Frame Example"
-             width="700" height="800"
-            src="http://127.0.0.1:9999/">
-        </iframe>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="saveSpider">Select</button>
 
-      </div>
+          
 
 
-                
-            </div>
+
+
+          <div class="form-group" style="margin-top:1rem;">
+            <label for="inputXPath" id="inputXPath">Xpath <span class="badge badge-warning">Beta</span></label>
+            <input type="hidden" class="form-control" name="inputXPathOld" value="{{ line['xpath'] }}">
+            <input type="text" class="form-control" name="inputXPathNew" id="inputPathToUpdate" value="{{ line['xpath'] }}" readonly>
+            <small class="form-text text-muted">Select relevant parts of the page (xpath) with our tool <button type="button" class="btn btn-sm btn-info" data-toggle="modal" data-target=".bd-example-modal-lg">here</button>.</small>
           </div>
-        </div>
 
           <div id="bagOfMailsContainer" class="mt-2">
             <label for="inputMailingList" id="inputTarget">Email Recipients</label>
@@ -149,5 +166,17 @@ function receiveMessage(event) {
     // });
 
   });
+      $('#saveXPathToDb').on('click', function() {
+      console.log('User selected XPath = ' + $('#selectedBoxes').text());
+       $('#inputPathToUpdate').attr('value', $('#selectedBoxes').text());
+      // $().hide();
+      // $('#modalXPath').remove();
+      $('#modalXPath').hide();
+      $('.modal-backdrop').remove();
+      $('body').removeClass( "modal-open" );
+      $('#modalXPath').removeClass('modal-open');
+      console.log('RESULT ==' + $('#modalXPath').attr('display').val());
+      // $('#inlineFrameExample').attr( 'src', function ( i, val ) { return val; });
+    });
 </script>
 {% end %}

@@ -75,7 +75,9 @@ class UserProjectWebsitesView(BaseView):
             rproject = RProject(project.name, project.data_path, project.config_file)
             rproject._load_units_from_excel()
             rproject._load_tracking_config_excel()
-            #units = rproject.units_stats(units=rproject.filter_units())
+            # print('RProject  LINES = {}'.format(rproject.lines))
+            # units = rproject.units_stats(units=rproject.filter_units())
+            # print('rproject UNITS II = {}'.format(units))
         except Exception as e:
             print('[ERROR] - {}'.format(e))
             flash_message(self, 'danger', 'Problem while loading watchlist {}. Are you sure path is correct and there is an excel file ?'.format(project.name))
@@ -322,11 +324,10 @@ class UserProjectEditWebsite(BaseView):
     @gen.coroutine
     def post(self, username, projectname):
         args = self.form_data
-        print('args = {}'.format(args))
+        print('\n\n\n[EDIT HERE] args = {}'.format(args))
         # For lists, content had been encoded from front
         args['inputKeywordsOld'][0] = json_decode(args['inputKeywordsOld'][0])
         args['inputMailingListOld'][0] = json_decode(args['inputMailingListOld'][0])
-
 
         user = self.request_db.query(User).filter_by(username=username).first()
         project = user.projects.filter_by(name=projectname).first()
@@ -343,6 +344,44 @@ class UserProjectEditWebsite(BaseView):
         rproject = RProject(project.name, project.data_path, project.config_file)
         # print('config df before = {}'.format(rproject.config_df))
         config_df_updated = rproject.config_df.copy()
+
+
+
+
+
+
+
+        # XPaths selected by user with proxy (/!\ beta version /!\)
+        if ',' in args['inputXPathNew'][0]:
+            list_new_xpaths = args['inputXPathNew'][0].replace(',', ';')
+        else:
+            list_new_xpaths = args['inputXPathNew'][0];
+        # elif ';' in list_new_xpaths:
+        #     list_new_xpaths = args['inputXPathNew'][0].split(';')
+        print('\n\nNew XPaths:\n')
+        if ';' in list_new_xpaths:
+            l2 = list_new_xpaths.split(';')
+            for _ in l2:
+                print(_)
+        else:
+            l2 = list_new_xpaths
+            print(l2)
+        
+        
+        print('\n')
+
+
+        # config_df_updated.to_excel(project.config_file, index=False)
+
+        # # Reload project and delete alert accordingly
+        # df = pd.read_excel(project.config_file)
+
+
+
+
+
+
+
         initial_links = dict(zip(config_df_updated['target'], config_df_updated['target_label']))
         config_df_updated = config_df_updated[config_df_updated.target != args['inputTargetOld'][0]]
         if 'inputKeywords' in args:
@@ -354,7 +393,7 @@ class UserProjectEditWebsite(BaseView):
         else:
             mailing_list_excel = '' # why is this ??!
         config_df_updated = config_df_updated.append({'Name': args['inputName'][0], 'Website': args['inputWebsite'][0],\
-            'target': args['inputTarget'][0], 'target_label':keywords_excel, 'mailing_list': mailing_list_excel}, ignore_index=True)
+            'target': args['inputTarget'][0], 'target_label':keywords_excel, 'xpath': list_new_xpaths, 'mailing_list': mailing_list_excel}, ignore_index=True)
         print('config df after = {}'.format(config_df_updated))
         config_df_updated.to_excel(project.config_file, index=False)
 
@@ -367,9 +406,12 @@ class UserProjectEditWebsite(BaseView):
         # Update content (take first content with name projectname + '_default')
         df = pd.read_excel(project.config_file)
         links = dict(zip(df['target'], df['target_label']))
+        links_xpath = dict(zip(df['target'], df['xpath']))
+
         new_link = {k:[v] for k, v in links.items() if k == args['inputTarget'][0]} # Make sur only one link is selected
         # Carreful: Need to keep all links here because new content has to be created !
         all_links = {k:[v] for k, v in links.items()}
+        all_links_xpath = {k:[v] for k, v in links_xpath.items()}
         
         # TODO: Fix this: Here we are looping on all links whereas the edit view is only for ONE LINK !!! Not possible
         for k, v in all_links.copy().items():
@@ -382,6 +424,18 @@ class UserProjectEditWebsite(BaseView):
             except Exception as e:
                 if ';' in v[0]:
                     all_links[k] = v[0].split(';')
+
+        for k, v in all_links_xpath.copy().items():
+            try:
+                if math.isnan(v[0]):
+                    all_links_xpath[k] = ''
+                elif ';' in v[0]:
+                    all_links_xpath[k] = v[0].split(';')
+            except Exception as e:
+                if ';' in v[0]:
+                    all_links_xpath[k] = v[0].split(';')
+
+        print('\n\nFinal all_links_xpath : {}\n\n'.format(all_links_xpath))
                 #print('Not NAN')
 
         # Need to download new link if it changes
@@ -415,7 +469,7 @@ class UserProjectEditWebsite(BaseView):
         self.request_db.commit()
 
         mailing_list = dict(zip(df['target'], df['mailing_list']))
-        new_content = Content(projectname + '_default', all_links, mailing_list)
+        new_content = Content(projectname + '_default', all_links, all_links_xpath, mailing_list)
         project.contents.append(new_content)
         self.request_db.commit()
 

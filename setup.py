@@ -16,8 +16,6 @@ requires = [
     'celery',
     'cython',
     'pycld2',
-    'pdftotext',
-    'celery-redbeat',
     'tldextract',
     'openpyxl',
     'eventlet',

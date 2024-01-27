@@ -4,11 +4,13 @@ import string
 import tornado
 import math
 import re
-from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from celery import Celery
+app = Celery()
+#from app.control import discard_all
 
 def erase_link_from_hd(url, path, name):
     len_files = 0
@@ -186,7 +188,7 @@ def revoke_all_tasks(app, task_func, ids):
     res = app.control.revoke(task_ids_to_stop, terminate=True, signal='SIGKILL')
     print('Purging task ids now ...')
     app.control.purge()
-    discard_all()
+    #discard_all()
     print('\nAll task ids succesfully purged and discarded.')
     return res
 

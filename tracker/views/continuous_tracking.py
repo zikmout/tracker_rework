@@ -128,7 +128,7 @@ class UserProjectAddWebsite(BaseView):
                 'target_label':args['inputKeywords'], 'mailing_list': args['inputMailingList']})
             writer = pd.ExcelWriter(config_path, engine='xlsxwriter')
             df.to_excel(writer)
-            writer.save()
+            writer.close()
             
             df = pd.read_excel(config_path)
             links = dict(zip(df['target'], df['target_label']))

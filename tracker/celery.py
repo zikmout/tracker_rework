@@ -24,19 +24,22 @@ def patch_celery():
     return celery
 
 download_worker_app = Celery('download_worker',
-              backend='amqp://',
-              broker='pyamqp://guest@localhost/')#,
-             #include=['tracker.workers'])
+              backend='rpc://',
+              #broker='pyamqp://guest@localhost/')#,
+              broker_url='redis://localhost:6379/2',
+             include=['tracker.workers'])
 
 crawl_worker_app = Celery('crawl_worker',
-              backend='amqp://',
-              broker='pyamqp://guest@localhost/')#,
-             #include=['tracker.workers'])
+              backend='rpc://',
+              #broker='pyamqp://guest@localhost/')#,
+              broker_url='redis://localhost:6379/1',
+             include=['tracker.workers'])
 
 
              #include=['tracker.workers'])
 # live_view_worker_app2 = patch_celery().Celery('live_view2',
 #               backend='amqp://',
+              #  backend='rpc://',
 #               broker='pyamqp://guest@localhost/')#,
 
 # live_view_worker_app2.conf.update(
@@ -44,8 +47,10 @@ crawl_worker_app = Celery('crawl_worker',
 # )
 
 live_view_worker_app = patch_celery().Celery('live_view',
-              backend='amqp://',
-              broker='pyamqp://guest@localhost/')#,
+              backend='rpc://',
+              #broker='pyamqp://guest@localhost/')#,
+              broker_url='redis://localhost:6379/0',
+             include=['tracker.workers'])
 # app = Celery(__name__) # TODO : Change to sth like 'permanent listener'
 # app.config_from_object(celeryconf)
 # continuous_tracking_worker_app = Celery('continuous_tracking_worker',

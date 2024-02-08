@@ -202,8 +202,8 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         #part1 = MIMEText(text, "plain")
         part = MIMEText(html, "html")
 
-        sender_email = "simon@electricity.ai"
-        password = 'totosecret'
+        sender_email = "simon.sicard@gmail.com"
+        password = 'qzslpM1243#'
 
         domains_list = [tldextract.extract(site['div']).domain.upper() for site in designed_task_results]
         #print('DOMAIN LIST == {}'.format(domains_list))

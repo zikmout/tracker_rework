@@ -89,7 +89,7 @@ sudo service nginx status
 
 # Install SSL certificate (lets encrypt & certbot) and configure Nginx accordingly
 sudo add-apt-repository ppa:certbot/certbot
-sudo apt install python-certbot-nginx
+sudo apt install python333-certbot-nginx
 
 sudo certbot --nginx -d tracker.lu -d www.tracker.lu # before this step ports 80, 443, 5567? must be open
 sudo cat /etc/letsencrypt/live/tracker.lu/fullchain.pem

@@ -246,12 +246,12 @@ class UserProjectSendMail(BaseView):
 					# Turn these into plain/html MIMEText objects
 					part2 = MIMEText(html, "html")
 
-					sender_email = "simon@electricity.ai"
+					sender_email = "simon.sicard@gmail.com"
 					if ';' in args['email']:
 						receiver_email = args['email'].split(';')
 					else:
 						receiver_email = args['email']
-					password = 'totosecret'
+					password = 'qzslpM1243#'
 
 					if not isinstance(receiver_email, list):
 						receiver_email = [receiver_email]

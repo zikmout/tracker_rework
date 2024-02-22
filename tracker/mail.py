@@ -3,7 +3,8 @@ import json
 import re
 import html as htmlib
 from datetime import datetime
-import smtplib, ssl
+import smtplib
+import ssl
 import tldextract
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -18,8 +19,9 @@ MAX_SBB_LINKS_NEG_LENGTH = 100
 MAX_ALL_LINKS_POS_LENGTH = 100
 MAX_ALL_LINKS_NEG_LENGTH = 100
 
-def generic_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links,\
-    show_diff_pos=True, show_diff_neg=True):
+
+def generic_mail_template(task_results, errors, mailing_list, task_name, total_scanned, show_links,
+                          show_diff_pos=True, show_diff_neg=True):
     """
             Mailing list must be of type dict here
     """
@@ -29,11 +31,11 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
 
     # print('TASK RESULTS ==> {}'.format(task_results))
     for receiver_email, targets in mailing_list.items():
-        designed_task_results = [k for k in task_results if ((k['url'] in targets) and\
-         (k['diff_pos'] != [] and show_diff_pos) or (k['diff_neg'] != [] and show_diff_neg))]
+        designed_task_results = [k for k in task_results if ((k['url'] in targets) and
+                                                             (k['diff_pos'] != [] and show_diff_pos) or (k['diff_neg'] != [] and show_diff_neg))]
         # If no change observed, no need to send mail
         if len(designed_task_results) == 0:
-            continue;
+            continue
 
         html = """\
         <html>
@@ -43,7 +45,8 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         if len(designed_task_results) == 1:
             html += " website has changed (" + task_name + " alert): </a><br> "
         else:
-            html += " websites have changed (" + task_name + " alert): </a><br> "
+            html += " websites have changed (" + \
+                task_name + " alert): </a><br> "
         uniq_changes = list(set([_['div'] for _ in designed_task_results]))
         for site in uniq_changes:
             html += "<li><a href='#" + site + "'> " + site + "</a></li>"
@@ -63,39 +66,46 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                         for k, v in site['nearest_link_pos'].items():
                             if k == content:
                                 # print('K = {}, CONTENT = {}'.format(k, content))
-                                content2 = highlight_keywords(site['keywords'], content)
-                                site_html += ('<a style="color: green; text-decoration: underline;" href="' + site['nearest_link_pos'][k] + '">' + content2 + "</a><br>")
-                                break;
+                                content2 = highlight_keywords(
+                                    site['keywords'], content)
+                                site_html += ('<a style="color: green; text-decoration: underline;" href="' +
+                                              site['nearest_link_pos'][k] + '">' + content2 + "</a><br>")
+                                break
 
-                    remainder = list(set(site['diff_pos']).difference(set(list(site['nearest_link_pos'].keys()))))
+                    remainder = list(set(site['diff_pos']).difference(
+                        set(list(site['nearest_link_pos'].keys()))))
                     for r in remainder:
                         content2 = highlight_keywords(site['keywords'], r)
                         site_html += (content2 + "<br>")
                 else:
                     site_html += ('*** too many changes ***' + "<br>")
-            
+
                 # SBB LINKS POS
                 if task_name == 'sbb':
                     if site['sbb_links_pos'] is None:
                         pass
                     elif len(site['sbb_links_pos']) < MAX_SBB_LINKS_POS_LENGTH:
                         first_time = True
-                        for link in site['sbb_links_pos']:  
+                        for link in site['sbb_links_pos']:
                             if link not in list(site['nearest_link_pos'].values()):
                                 if first_time:
                                     site_html += "<br>SBB link(s) (if not above):<br>"
                                     first_time = False
                                 formated_link = os.path.basename(link)
                                 if '.' in formated_link:
-                                    formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-                                site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+                                    formated_link = os.path.splitext(
+                                        str(url_unescape(formated_link)))[0]
+                                site_html += ('<a href="' + link +
+                                              '">' + formated_link + "</a><br>")
                     else:
                         site_html += ('<BR>*** too many sbb links ***' + "<br>")
 
                 # ALL LINKS POS
-                site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in list(site['nearest_link_pos'].values())]
+                site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy(
+                ) if _ not in list(site['nearest_link_pos'].values())]
                 if task_name == 'sbb':
-                    site['all_links_pos'] = [_ for _ in site['all_links_pos'].copy() if _ not in site['sbb_links_pos']]
+                    site['all_links_pos'] = [
+                        _ for _ in site['all_links_pos'].copy() if _ not in site['sbb_links_pos']]
 
                 if site['all_links_pos'] is None or show_links is False:
                     pass
@@ -110,12 +120,13 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                         else:
                             formated_link = os.path.basename(link)
                         if '.' in formated_link:
-                                formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-                        site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+                            formated_link = os.path.splitext(
+                                str(url_unescape(formated_link)))[0]
+                        site_html += ('<a href="' + link + '">' +
+                                      formated_link + "</a><br>")
                 else:
                     site_html += ('<BR>*** too many links ***' + "<br>")
                 site_html += "</font>"
-
 
             if site['diff_neg'] != [] and show_diff_neg is True:
 
@@ -128,11 +139,14 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                     for content in site['diff_neg']:
                         for k, v in site['nearest_link_neg'].items():
                             if k == content:
-                                content2 = highlight_keywords(site['keywords'], content)
-                                site_html += ('<a style="color: red; text-decoration: underline;" href="' + site['nearest_link_neg'][k] + '">' + content2 + "</a><br>")
-                                break;
+                                content2 = highlight_keywords(
+                                    site['keywords'], content)
+                                site_html += ('<a style="color: red; text-decoration: underline;" href="' +
+                                              site['nearest_link_neg'][k] + '">' + content2 + "</a><br>")
+                                break
 
-                    remainder = list(set(site['diff_neg']).difference(set(list(site['nearest_link_neg'].keys()))))
+                    remainder = list(set(site['diff_neg']).difference(
+                        set(list(site['nearest_link_neg'].keys()))))
                     for r in remainder:
                         content2 = highlight_keywords(site['keywords'], r)
                         site_html += (content2 + "<br>")
@@ -153,16 +167,20 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                                     first_time = False
                                 formated_link = os.path.basename(link)
                                 if '.' in formated_link:
-                                    formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-                                site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+                                    formated_link = os.path.splitext(
+                                        str(url_unescape(formated_link)))[0]
+                                site_html += ('<a href="' + link +
+                                              '">' + formated_link + "</a><br>")
                     else:
                         site_html += ('*** too many sbb links ***' + "<br>")
 
                 # ALL LINKS NEG
-                site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in list(site['nearest_link_neg'].values())]
+                site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy(
+                ) if _ not in list(site['nearest_link_neg'].values())]
                 if task_name == 'sbb':
-                    site['all_links_neg'] = [_ for _ in site['all_links_neg'].copy() if _ not in site['sbb_links_neg']]
-                
+                    site['all_links_neg'] = [
+                        _ for _ in site['all_links_neg'].copy() if _ not in site['sbb_links_neg']]
+
                 if site['all_links_neg'] is None or show_links is False:
                     pass
                 elif len(site['all_links_neg']) < MAX_ALL_LINKS_NEG_LENGTH:
@@ -177,8 +195,10 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
                             else:
                                 formated_link = os.path.basename(link)
                             if '.' in formated_link:
-                                formated_link = os.path.splitext(str(url_unescape(formated_link)))[0]
-                            site_html += ('<a href="' + link + '">' + formated_link + "</a><br>")
+                                formated_link = os.path.splitext(
+                                    str(url_unescape(formated_link)))[0]
+                            site_html += ('<a href="' + link +
+                                          '">' + formated_link + "</a><br>")
                 else:
                     site_html += ('<BR>*** too many links ***' + "<br>")
 
@@ -188,7 +208,8 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         # html += "<br><br>Best regards,<br>"
 
         if errors != {}:
-            html += "<br><br><b>Errors : (" + str(len(errors)) + "/" + str(total_scanned) + " fetched)</b><br>"
+            html += "<br><br><b>Errors : (" + str(len(errors)) + \
+                "/" + str(total_scanned) + " fetched)</b><br>"
             for k, v in errors.items():
                 # print('ERRORRS ====> k = {}, v = {}'.format(k, v))
                 html += "<br>{} : {}".format(k, htmlib.escape(v))
@@ -197,20 +218,27 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         html += "This is an automated email alert tracking website change(s). If you wish to unsubscribe, contact your administrator."
         html += "<wbr>______________________________<wbr></pre>"
         html += "</body></html>"
-        
+
         # Turn these into plain/html MIMEText objects
-        #part1 = MIMEText(text, "plain")
+        # part1 = MIMEText(text, "plain")
         part = MIMEText(html, "html")
 
+<<<<<<< HEAD
         sender_email = "simon.sicard@gmail.com"
         password = 'qzslpM1243#'
+=======
+        sender_email = "histoirescalmes@gmail.com"
+        password = "libmxzcrnzeolnjx"
+>>>>>>> 07776953dd83c3735eeecf93657c76de724f7327
 
-        domains_list = [tldextract.extract(site['div']).domain.upper() for site in designed_task_results]
-        #print('DOMAIN LIST == {}'.format(domains_list))
+        domains_list = [tldextract.extract(
+            site['div']).domain.upper() for site in designed_task_results]
+        # print('DOMAIN LIST == {}'.format(domains_list))
 
         message = MIMEMultipart()
         date = datetime.now().replace(microsecond=0)
-        message['Subject'] = '[Alert] {}'.format(', '.join(list(set(domains_list))))
+        message['Subject'] = '[Alert] {}'.format(
+            ', '.join(list(set(domains_list))))
         message['From'] = 'Tracker Bot'
         message['To'] = receiver_email
 
@@ -223,4 +251,9 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
             server.sendmail(
                 sender_email, receiver_email, message.as_string()
             )
+<<<<<<< HEAD
         print('********* Mail sent to {} (SUBJECT:{}) *********'.format(receiver_email, message["Subject"]))
+=======
+        print('********* Mail sent to {} (SUBJECT:{}) *********'.format(
+            receiver_email, message["Subject"]))
+>>>>>>> 07776953dd83c3735eeecf93657c76de724f7327

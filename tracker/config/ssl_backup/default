@@ -1,0 +1,13 @@
+server {
+        listen 80;
+        listen [::]:80;
+
+        root ~/Projects/tracker/tracker/templates;
+        index index.html;
+
+        #server_name tracker.lu www.tracker.lu;
+
+        location / {
+                try_files $uri $uri/ =404;
+        }
+}

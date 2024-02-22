@@ -1,10 +1,12 @@
-import smtplib, ssl
+import smtplib
+import ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from decouple import config
 
-sender_email = "simon@electricity.ai"
-receiver_email = "simon.sicard@gmail.com"
-password = 'totosecret'
+sender_email = config('GMAIL_SENDER_EMAIL')
+receiver_email = "simon@bridg-it.fr"
+password = config('GMAIL_APP_PASSWORD')
 
 message = MIMEMultipart("alternative")
 message["Subject"] = "Alert"
@@ -30,12 +32,12 @@ html = """\
 """
 
 # Turn these into plain/html MIMEText objects
-#part1 = MIMEText(text, "plain")
+# part1 = MIMEText(text, "plain")
 part2 = MIMEText(html, "html")
 
 # Add HTML/plain-text parts to MIMEMultipart message
 # The email client will try to render the last part first
-#message.attach(part1)
+# message.attach(part1)
 message.attach(part2)
 
 # Create secure connection with server and send email

@@ -1,7 +1,5 @@
 # virtual environment
 ENV/
-tracker-creds.json
-example.csr
 
 # jupyter-notebook checkpoints
 .ipynb_checkpoints/

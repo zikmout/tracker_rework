@@ -2,6 +2,7 @@
 ENV/
 tracker_creds.json
 erl_crash.dump
+.env
 # jupyter-notebook checkpoints
 .ipynb_checkpoints/
 

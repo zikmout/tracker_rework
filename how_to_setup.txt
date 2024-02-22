@@ -128,6 +128,7 @@ sudo -u postgres psql # specify -p 8080 if needed
 create database trackerdb;
 create user you_user with encrypted password ‘your_password’; # your_user and your_password must match ~/Projects/tracker/tracker/base.py
 grant all privileges on database trackerdb to your_user;
+# Update 2023 postgres=# CREATE USER your_user WITH PASSWORD 'pwdd';
 \q # to quit psql shell
 
 # Now tracker should run

@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-def connect_psycopg2(user, password, db, host='localhost', port='8080'):
+def connect_psycopg2(user, password, db, host='localhost', port='5432'):
     try:
         url = 'postgresql://{}:{}@{}:{}/{}'
         url = url.format(user, password, host, port, db)

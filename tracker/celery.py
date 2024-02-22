@@ -2,8 +2,10 @@ import celery
 from celery import Celery, group, states
 from celery.backends.redis import RedisBackend
 
+
 def patch_celery():
     """Patch redis backend."""
+
     def _unpack_chord_result(
         self, tup, decode,
         EXCEPTION_STATES=states.EXCEPTION_STATES,
@@ -23,18 +25,18 @@ def patch_celery():
 
     return celery
 
+
 download_worker_app = Celery('download_worker',
-              backend='amqp://',
-              broker='pyamqp://guest@localhost/')#,
-             #include=['tracker.workers'])
+                             backend='amqp://',
+                             broker='pyamqp://guest@localhost/')  # ,
+# include=['tracker.workers'])
 
 crawl_worker_app = Celery('crawl_worker',
-              backend='amqp://',
-              broker='pyamqp://guest@localhost/')#,
-             #include=['tracker.workers'])
+                          backend='amqp://',
+                          broker='pyamqp://guest@localhost/')  # ,
+# include=['tracker.workers'])
 
-
-             #include=['tracker.workers'])
+# include=['tracker.workers'])
 # live_view_worker_app2 = patch_celery().Celery('live_view2',
 #               backend='amqp://',
 #               broker='pyamqp://guest@localhost/')#,
@@ -43,12 +45,17 @@ crawl_worker_app = Celery('crawl_worker',
 # result_expires=999600,
 # )
 
+# live_view_worker_app = patch_celery().Celery('live_view',
+#                                              backend='amqp://',
+#                                              broker='pyamqp://guest@localhost/')  # ,
+
 live_view_worker_app = patch_celery().Celery('live_view',
-              backend='amqp://',
-              broker='pyamqp://guest@localhost/')#,
+                                             backend='amqp://',
+                                             broker='redis://localhost:6379/1')  # ,
+
 # app = Celery(__name__) # TODO : Change to sth like 'permanent listener'
 # app.config_from_object(celeryconf)
 # continuous_tracking_worker_app = Celery('continuous_tracking_worker',
 #               backend='amqp://',
 #               broker='redis://localhost:6379/1')#,
-             #include=['tracker.workers'])
+# include=['tracker.workers'])

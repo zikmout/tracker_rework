@@ -1,0 +1,12 @@
+2023-06-01 08:01:36.790 CEST [13715] LOG:  starting PostgreSQL 14.8 (Homebrew) on x86_64-apple-darwin22.4.0, compiled by Apple clang version 14.0.3 (clang-1403.0.22.14.1), 64-bit
+2023-06-01 08:01:36.790 CEST [13715] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2023-06-01 08:01:36.791 CEST [13715] LOG:  listening on IPv6 address "::1", port 5432
+2023-06-01 08:01:36.791 CEST [13715] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2023-06-01 08:01:36.801 CEST [13716] LOG:  database system was shut down at 2023-05-31 14:44:37 CEST
+2023-06-01 08:01:36.806 CEST [13715] LOG:  database system is ready to accept connections
+2023-06-01 08:32:41.569 CEST [21201] LOG:  unexpected EOF on client connection with an open transaction
+2023-06-01 08:32:41.569 CEST [21140] LOG:  unexpected EOF on client connection with an open transaction
+2023-06-01 11:51:52.348 CEST [13715] LOG:  received smart shutdown request
+2023-06-01 11:51:52.348 CEST [13715] LOG:  background worker "logical replication launcher" (PID 13722) exited with exit code 1
+2023-06-01 11:51:52.354 CEST [13717] LOG:  shutting down
+2023-06-01 11:51:52.359 CEST [13715] LOG:  database system is shut down

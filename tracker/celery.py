@@ -27,18 +27,6 @@ def patch_celery():
 
 
 download_worker_app = Celery('download_worker',
-<<<<<<< HEAD
-              backend='rpc://',
-              #broker='pyamqp://guest@localhost/')#,
-              broker_url='redis://localhost:6379/2',
-             include=['tracker.workers'])
-
-crawl_worker_app = Celery('crawl_worker',
-              backend='rpc://',
-              #broker='pyamqp://guest@localhost/')#,
-              broker_url='redis://localhost:6379/1',
-             include=['tracker.workers'])
-=======
                              backend='amqp://',
                              broker='pyamqp://guest@localhost/')  # ,
 # include=['tracker.workers'])
@@ -47,7 +35,6 @@ crawl_worker_app = Celery('crawl_worker',
                           backend='amqp://',
                           broker='pyamqp://guest@localhost/')  # ,
 # include=['tracker.workers'])
->>>>>>> 07776953dd83c3735eeecf93657c76de724f7327
 
 # include=['tracker.workers'])
 # live_view_worker_app2 = patch_celery().Celery('live_view2',
@@ -64,23 +51,12 @@ crawl_worker_app = Celery('crawl_worker',
 #                                              broker='pyamqp://guest@localhost/')  # ,
 
 live_view_worker_app = patch_celery().Celery('live_view',
-<<<<<<< HEAD
-              backend='rpc://',
-              #broker='pyamqp://guest@localhost/')#,
-              broker_url='redis://localhost:6379/0',
-             include=['tracker.workers'])
-=======
                                              backend='amqp://',
                                              broker='redis://localhost:6379/1')  # ,
 
->>>>>>> 07776953dd83c3735eeecf93657c76de724f7327
 # app = Celery(__name__) # TODO : Change to sth like 'permanent listener'
 # app.config_from_object(celeryconf)
 # continuous_tracking_worker_app = Celery('continuous_tracking_worker',
 #               backend='amqp://',
 #               broker='redis://localhost:6379/1')#,
-<<<<<<< HEAD
-             #include=['tracker.workers'])
-=======
 # include=['tracker.workers'])
->>>>>>> 07776953dd83c3735eeecf93657c76de724f7327

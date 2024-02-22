@@ -1,27 +1,20 @@
 import sqlalchemy
 from sqlalchemy import create_engine
 from tornado_sqlalchemy import declarative_base
-from sqlalchemy.ext.declarative import declarative_base
+#from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
-
-<<<<<<< HEAD
 
 from sqlalchemy import MetaData
 from sqlalchemy import create_engine
 
-metadata_obj = MetaData()
 
-=======
->>>>>>> 07776953dd83c3735eeecf93657c76de724f7327
+
 def connect_psycopg2(user, password, db, host='localhost', port='5432'):
     try:
+        metadata_obj = MetaData()
         url = 'postgresql+psycopg2://{}:{}@{}:{}/{}'
         url = url.format(user, password, host, port, db)
-
-
-
         engine = create_engine(url)
-
         with engine.connect() as conn:
             conn.commit()  # commit as you go
             

@@ -2,6 +2,7 @@ import os
 import json
 import re
 import html as htmlib
+from decouple import config
 from datetime import datetime
 import smtplib
 import ssl
@@ -223,13 +224,8 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         # part1 = MIMEText(text, "plain")
         part = MIMEText(html, "html")
 
-<<<<<<< HEAD
-        sender_email = "simon.sicard@gmail.com"
-        password = 'qzslpM1243#'
-=======
-        sender_email = "histoirescalmes@gmail.com"
-        password = "libmxzcrnzeolnjx"
->>>>>>> 07776953dd83c3735eeecf93657c76de724f7327
+        sender_email = config('GMAIL_SENDER_EMAIL')
+        password = config('GMAIL_APP_PASSWORD')
 
         domains_list = [tldextract.extract(
             site['div']).domain.upper() for site in designed_task_results]
@@ -251,9 +247,5 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
             server.sendmail(
                 sender_email, receiver_email, message.as_string()
             )
-<<<<<<< HEAD
-        print('********* Mail sent to {} (SUBJECT:{}) *********'.format(receiver_email, message["Subject"]))
-=======
         print('********* Mail sent to {} (SUBJECT:{}) *********'.format(
             receiver_email, message["Subject"]))
->>>>>>> 07776953dd83c3735eeecf93657c76de724f7327

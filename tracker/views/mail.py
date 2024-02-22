@@ -274,14 +274,6 @@ class UserProjectSendMail(BaseView):
                     # Turn these into plain/html MIMEText objects
                     part2 = MIMEText(html, "html")
 
-<<<<<<< HEAD
-					sender_email = "simon.sicard@gmail.com"
-					if ';' in args['email']:
-						receiver_email = args['email'].split(';')
-					else:
-						receiver_email = args['email']
-					password = 'qzslpM1243#'
-=======
                     sender_email = config('GMAIL_SENDER_EMAIL')
                     if ';' in args['email']:
                         receiver_email = args['email'].split(';')
@@ -289,7 +281,6 @@ class UserProjectSendMail(BaseView):
                         receiver_email = args['email']
                     # see https://myaccount.google.com/apppasswords
                     password = config('GMAIL_APP_PASSWORD')
->>>>>>> 07776953dd83c3735eeecf93657c76de724f7327
 
                     if not isinstance(receiver_email, list):
                         receiver_email = [receiver_email]

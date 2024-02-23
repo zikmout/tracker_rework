@@ -14,6 +14,7 @@ from email.mime.multipart import MIMEMultipart
 from tracker.views.base import BaseView
 from tracker.utils import flash_message, login_required, get_celery_task_state, highlight_keywords
 from tracker.workers.live.live_view_worker import live_view
+from celery.result import AsyncResult
 
 MAX_DIFF_POS_LENGTH = 500
 MAX_DIFF_NEG_LENGTH = 500
@@ -70,16 +71,11 @@ class UserProjectSendMail(BaseView):
                 return
             else:
                 if args['fromPage'] == 'live_view' and 'live_view' in self.session['tasks']:
-                    # print("PASS CONDIFION IF")
-                    # print("TASKS")
-                    # print(self.session['tasks'])
                     task_results = list()
                     errors = list()
                     total_scanned = len(self.session['tasks']['live_view'])
                     for worker in self.session['tasks']['live_view']:
-                        task = live_view.AsyncResult(worker['id'])
-                        print('fetchedTask() : ')
-                        print(task)
+                        task = AsyncResult(worker['id'])
                         try:
                             response = get_celery_task_state(task)
                             print(response)
@@ -113,8 +109,6 @@ class UserProjectSendMail(BaseView):
 
                     site_html = ''
                     for site in task_results:
-                        print("SOLDE")
-                        print(site)
                         if (site['diff_pos'] != [] and self.session['is_pos_live'] is True) or (site['diff_neg'] != [] and self.session['is_neg_live'] is True):
                             site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
 							<h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>"

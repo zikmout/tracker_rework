@@ -27,7 +27,7 @@ class EchoWebSocket(WebSocketHandler):
             response = get_celery_task_state(task)
             #print('-> task response : {}'.format(response))
             if response['state'] == 'SUCCESS':
-                #print('Task {} completed, sending socket order to close.'.format(task_id))
+                print('Task {} completed, sending socket order to close.'.format(task_id))
                 self.write_message('<STOP>{}#{}'.format(uid, task_id))
             elif response['state'] == 'FAILURE':
                 #print('Task {} FAILED, sending socket order to close.'.format(task_id))

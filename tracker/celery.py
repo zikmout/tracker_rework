@@ -28,12 +28,12 @@ def patch_celery():
 
 download_worker_app = Celery('download_worker',
                              backend='rpc://',
-                             broker='redis://localhost:6379/2/',
+                             broker='redis://localhost:6379/1/',
                              include=['tracker.workers'])
 
 crawl_worker_app = Celery('crawl_worker',
                           backend='rpc://',
-                          broker='redis://locahost:6379/3/',
+                          broker='redis://locahost:6379/2/',
 include=['tracker.workers'])
 
 # include=['tracker.workers'])
@@ -52,7 +52,7 @@ include=['tracker.workers'])
 
 live_view_worker_app = patch_celery().Celery('live_view',
                                              backend='rpc://',
-                                             broker='redis://localhost:6379/0')  # ,
+                                             broker='redis://localhost:6379/0', broker_connection_retry_on_startup=True)  # ,
 
 # app = Celery(__name__) # TODO : Change to sth like 'permanent listener'
 # app.config_from_object(celeryconf)

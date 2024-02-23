@@ -29,6 +29,8 @@ class UserProjectSendMail(BaseView):
     @login_required
     @gen.coroutine
     def post(self, username, projectname):
+        print("FOUND HERE OK")
+        print(self.session)
         """
         TODO: Update because some more attributes have been recently added
         {
@@ -55,6 +57,9 @@ class UserProjectSendMail(BaseView):
             errs = json.loads(args['limitErrors'])
             # print('limit errors = {}'.format(errs))
             # DOES NOT WORK, NEED TO RETURN OK OR NOT OK
+            # print("ARGS:")
+            # print(args)
+           
             if 'fromPage' not in args:
                 self.write(
                     {'response': 'NO', 'message': 'Impossible to know from what page email has to be sent.'})
@@ -65,14 +70,19 @@ class UserProjectSendMail(BaseView):
                 return
             else:
                 if args['fromPage'] == 'live_view' and 'live_view' in self.session['tasks']:
-
+                    # print("PASS CONDIFION IF")
+                    # print("TASKS")
+                    # print(self.session['tasks'])
                     task_results = list()
                     errors = list()
                     total_scanned = len(self.session['tasks']['live_view'])
                     for worker in self.session['tasks']['live_view']:
                         task = live_view.AsyncResult(worker['id'])
+                        print('fetchedTask() : ')
+                        print(task)
                         try:
                             response = get_celery_task_state(task)
+                            print(response)
                             if response['state'] == 'SUCCESS' and response['status']['errors'] != {}:
                                 errors.append(response['status']['errors'])
                             if response['state'] == 'SUCCESS' and ((response['status']['diff_neg'] != []
@@ -80,12 +90,12 @@ class UserProjectSendMail(BaseView):
                                                                                                                  self.session['is_pos_live'] is True)):
                                 task_results.append(response['status'])
                         except Exception as e:
-                            pass
-                            # print('Task {} does not exist anymore.'.format(worker['id']))
-                            # print(e)
+                            #pass
+                            print('Task {} does not exist anymore.'.format(worker['id']))
+                            print(e)
                     # print('list of all grabbed task = {}'.format(task_results))
 
-                    # print('TSA RESULTS :: {}'.format(task_results))
+                    print('TSA RESULTS :: {}'.format(task_results))
                     html = """\
 					<html>
 					  <body>
@@ -103,6 +113,8 @@ class UserProjectSendMail(BaseView):
 
                     site_html = ''
                     for site in task_results:
+                        print("SOLDE")
+                        print(site)
                         if (site['diff_pos'] != [] and self.session['is_pos_live'] is True) or (site['diff_neg'] != [] and self.session['is_neg_live'] is True):
                             site_html += "<br><div align='right'><a href='#top'>top</div></a><hr><h3><a name='" + site['div'] + "'>" + site['div'] + "</a></h3>\
 							<h5><a href='" + site['url'] + "' target='_blank'>" + site['url'] + "</a></h5>"
@@ -112,6 +124,7 @@ class UserProjectSendMail(BaseView):
 
                             # DIFF POS
                             if len(site['diff_pos']) < MAX_DIFF_POS_LENGTH:
+                                print("PASS LLLAAAAAAAA ******************************")
                                 for content in site['diff_pos']:
                                     for k, v in site['nearest_link_pos'].items():
                                         if k == content:

@@ -224,6 +224,10 @@ def generic_mail_template(task_results, errors, mailing_list, task_name, total_s
         # part1 = MIMEText(text, "plain")
         part = MIMEText(html, "html")
 
+        print("SENDGIN MAIL NOW ...")
+        print("DIFF_NEG")
+        print(site['diff_neg'])
+
         sender_email = config('GMAIL_SENDER_EMAIL')
         password = config('GMAIL_APP_PASSWORD')
 

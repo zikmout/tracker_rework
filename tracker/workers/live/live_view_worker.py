@@ -110,6 +110,8 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
         'current_target' : list()
     }
     try:
+        print("STATUS ---->")
+        print(status)
         if flink not in status['current_target']:
             status['current_target'].append(flink)
             self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
@@ -173,6 +175,8 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             # TODO: send show_diff_pos and show_diff_neg to get_text_diff in order to avoir useless computation ?
             status = extractor.get_text_diff(local_content, remote_content, status, keywords_diff)#,\
                 # detect_links=show_links)
+            print("SSSSSS")
+            print(status['diff_pos'])
 
             status = extractor.get_full_all_links(status, url)
 
@@ -185,6 +189,8 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             # elif keywords == [] and keywords_diff is False:
             status = extractor.nearest_link_match(status, local_content, remote_content, url)
             status = extractor.get_full_nearest_links(status, url)
+            # print("ST -------")
+            # print(status)
             self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
 
             # If asked to detect SBB links with ML algorithm
@@ -236,8 +242,12 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             #print('\n\n ({}) DIFF POS:\n{}'.format(url, status['diff_pos']))
             #print('\n\n ({}) DIFF NEG :\n{}'.format(url, status['diff_neg']))
             if len(status['diff_pos']) > 0 or len(status['diff_neg']) > 0:
+                
                 print('***** Content is DIFFERENT ({}) *****'.format(flink))
+                print("STATUS ---->")
+                print(status)
                 status['diff_nb'] += 1
+                self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
             else:
                 # print('***** Content is SIMILAR *****')
                 pass

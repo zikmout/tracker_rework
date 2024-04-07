@@ -6,6 +6,7 @@ import math
 import re
 from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
+from decouple import config
 import smtplib, ssl
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -300,9 +301,9 @@ def send_welcome_email(username, password, email, subject):
         # Turn these into plain/html MIMEText objects
         part = MIMEText(html, "html")
 
-        sender_email = "simon@electricity.ai"
+        sender_email = config('GMAIL_SENDER_EMAIL')
         receiver_email = ['{}'.format(email)]
-        password = 'totosecret'
+        password = config('GMAIL_APP_PASSWORD')
 
         for mail in receiver_email:
             message = MIMEMultipart()

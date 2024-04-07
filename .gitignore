@@ -1,5 +1,6 @@
 # virtual environment
 ENV/
+credentials/
 tracker_creds.json
 erl_crash.dump
 .env

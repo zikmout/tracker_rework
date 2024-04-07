@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  app:
+    build: .
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - db
+      - redis
+      - rabbitmq
+
+  db:
+    image: postgres:alpine
+    environment:
+      POSTGRES_DB: trackerdb
+      POSTGRES_USER: simon
+      POSTGRES_PASSWORD: trackerNPH9
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:alpine
+
+  rabbitmq:
+    image: rabbitmq:alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./tracker/config/ssl:/etc/nginx/ssl
+      - ./tracker/config/nginx.conf:/etc/nginx/nginx.conf
+      - ./tracker/config/default:/etc/nginx/sites-available/default

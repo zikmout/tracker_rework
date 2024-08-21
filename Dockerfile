@@ -18,18 +18,20 @@ RUN apk update && apk add --no-cache \
 
 # Cloner le projet depuis GitHub
 WORKDIR /app
-RUN git clone git@github.com:zikmout/tracker_rework.git tracker
+#RUN git clone git@github.com:zikmout/tracker_rework.git tracker
 
 
-COPY tracker_rework /app
+COPY . /app
 
 # Créer et activer l'environnement virtuel
 RUN python -m venv ENV
 ENV PATH="/app/ENV/bin:$PATH"
 
 # Installer les dépendances
-RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+#RUN pip install --upgrade pip
+RUN pip install --upgrade pip==19.0.1
+RUN pip install --no-cache-dir -r requirements.txt
+
 
 # Installer et construire l'application
 RUN python setup.py install

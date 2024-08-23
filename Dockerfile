@@ -1,45 +1,49 @@
-FROM python:3.8-alpine
+FROM python:3.8-buster
 
-# Install necessary build dependencies
-RUN apk add --update --no-cache \
-    build-base \
-    postgresql-dev \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpoppler-cpp-dev \ 
+    poppler-utils \
+    libnss3-dev \ 
+    libgpgmepp-dev \ 
+    qtbase5-dev \ 
+    libcairo2-dev \
+    libboost-dev \
+    gcc \
+    libpq-dev \
     git \
     libffi-dev \
-    openssl-dev \
-    zlib-dev \
-    jpeg-dev \
-    redis \
+    libssl-dev \
+    zlib1g-dev \
+    libjpeg-dev \
+    redis-server \
     rabbitmq-server \
     nginx \
     xvfb \
     firefox-esr \
-    musl-dev \
-    python3-dev \
-    gcc
+    libxml2-dev \
+    libxslt-dev \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
-
-
-RUN which python3 && python3 --version
-
-# Create the virtual environment
 RUN python3 -m venv ENV
 
 COPY . /app
 
-# Set the virtual environment path
 ENV PATH="/app/ENV/bin:$PATH"
 
-# RUN pip install --upgrade pip==19.0.1
-RUN pip install --upgrade pip
+RUN pip install --no-cache-dir numpy
+
+RUN pip install --upgrade pip==19.3.1
 
 RUN pip install versioneer
 
 RUN pip install --prefer-binary --no-cache-dir -r requirements.txt
 
 RUN python setup.py install
+
 RUN python setup.py build
 
 EXPOSE 6000

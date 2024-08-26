@@ -140,7 +140,7 @@ def main():
                 'session_secret': os.getenv('SESSION_SECRET', os.urandom(32).hex()),
                 'session_timeout': 60000,
                 'store_options': {
-                    'redis_host': 'localhost',
+                    'redis_host': os.getenv('REDIS_HOST', 'redis'),
                     'redis_port': 6379,
                     'redis_pass': None
                 },

@@ -1,7 +1,5 @@
-# Use the Python 3.8 image
 FROM python:3.8-buster
 
-# Install necessary packages excluding PostgreSQL, since it will be a separate container
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     libpoppler-cpp-dev \
@@ -55,14 +53,9 @@ RUN pip install --prefer-binary --no-cache-dir -r requirements.txt
 RUN python setup.py install
 RUN python setup.py build
 
-# Setup and start Redis
-RUN service redis-server start
-
 # Setup and start RabbitMQ
 # RUN service rabbitmq-server start
 
-# Expose the application port
 EXPOSE 5567
 
-# Command to run the application
 CMD ["tracker_app", "no_model"]

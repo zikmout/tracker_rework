@@ -8,7 +8,6 @@ import redis
 
 def connect_psycopg2():
     try:
-        # Ensure critical environment variables are set
         user = os.getenv('POSTGRES_USER')
         password = os.getenv('POSTGRES_PASSWORD')
         db = os.getenv('POSTGRES_DB')
@@ -19,7 +18,6 @@ def connect_psycopg2():
             raise ValueError(
                 "Missing one or more required environment variables for PostgreSQL connection")
 
-        # Construct the database URL
         url = f'postgresql://{user}:{password}@{host}:{port}/{db}'
         engine = create_engine(url, client_encoding='utf8')
         meta = sqlalchemy.MetaData(bind=engine)
@@ -33,9 +31,8 @@ def connect_psycopg2():
 
 def connect_redis():
     try:
-        # Ensure environment variables are set for Redis
-        host = os.getenv('REDIS_HOST')
-        port = os.getenv('REDIS_PORT')
+        host = os.getenv('REDIS_HOST', 'redis')
+        port = os.getenv('REDIS_PORT', '6379')
 
         if not all([host, port]):
             raise ValueError(

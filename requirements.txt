@@ -26,3 +26,4 @@ uuid==1.30
 vine>=5.0.0
 Werkzeug==0.14.1
 xlrd==1.2.0
+python-decouple

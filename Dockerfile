@@ -27,6 +27,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+RUN git clone https://github.com/facebookresearch/fastText.git /fastText \
+    && cd /fastText \
+    && pip install .
+
 RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
     dpkg -i erlang-solutions_1.0_all.deb && \
     apt-get update && \

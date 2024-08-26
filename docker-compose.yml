@@ -1,19 +1,6 @@
 version: '3.8'
 
 services:
-  tracker_app:
-    build: .
-    container_name: tracker_app
-    ports:
-      - "5567:5567"
-    environment:
-      - POSTGRES_USER=simon
-      - POSTGRES_PASSWORD=trackerNPH9
-      - POSTGRES_DB=trackerdb
-    depends_on:
-      - db
-    command: ["tracker_app", "no_model"]
-
   db:
     image: postgres:11
     container_name: postgres_db
@@ -25,6 +12,45 @@ services:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+    networks:
+      - app_network
+
+  redis:
+    image: redis:6.2
+    container_name: redis_server
+    ports:
+      - "6379:6379"
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  tracker_app:
+    build: .
+    container_name: tracker_app
+    ports:
+      - "5567:5567"
+    environment:
+      - POSTGRES_USER=simon
+      - POSTGRES_PASSWORD=trackerNPH9
+      - POSTGRES_DB=trackerdb
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    networks:
+      - app_network
 
 volumes:
   postgres_data:
+
+networks:
+  app_network:

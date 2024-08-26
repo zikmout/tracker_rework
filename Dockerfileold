@@ -1,64 +1,74 @@
-# Use the Python 3.8 image
+#!/app/ENV/bin/python
+
 FROM python:3.8-buster
 
-# Install necessary packages excluding PostgreSQL, since it will be a separate container
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
-    libpoppler-cpp-dev \
+    libpoppler-cpp-dev \ 
     poppler-utils \
-    libnss3-dev \
-    libgpgmepp-dev \
-    qtbase5-dev \
+    libnss3-dev \ 
+    libgpgmepp-dev \ 
+    qtbase5-dev \ 
     libcairo2-dev \
     libboost-dev \
     gcc \
+    libpq-dev \
     git \
     libffi-dev \
     libssl-dev \
     zlib1g-dev \
     libjpeg-dev \
     redis-server \
+    rabbitmq-server \
     nginx \
     xvfb \
     firefox-esr \
     libxml2-dev \
     libxslt-dev \
-    postgresql-client \
+    postgresql \
+    postgresql-contrib \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-RUN wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && \
-    dpkg -i erlang-solutions_1.0_all.deb && \
-    apt-get update && \
-    apt -y install esl-erlang && \
-    apt -y install rabbitmq-server && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
+
+# Setup PostgreSQL
+RUN service postgresql start && \
+    su - postgres -c "psql -c \"CREATE USER simon WITH PASSWORD 'trackerNPH9';\"" && \
+    su - postgres -c "psql -c \"CREATE DATABASE trackerdb OWNER simon;\""
+
+# Expose the application port
+
+RUN service postgresql restart
 
 RUN python3 -m venv ENV
 
+# Need to add the following
+# sudo apt-get install postgresql
+# sudo service postgresql status
+# sudo vi /etc/postgresql/10/main/postgresql.conf # change port to 8080
+# sudo service postgresql restart
+
 COPY . /app
+
+
+ENV PATH="/app/ENV/bin:$PATH"
 
 RUN sed -i '1s|^.*$|#!/usr/bin/env python|' /app/ENV/bin/tracker_app
 
 RUN pip install --no-cache-dir numpy
+
 RUN pip install --upgrade pip==19.3.1
+
 RUN pip install versioneer
+
 RUN pip install --prefer-binary --no-cache-dir -r requirements.txt
 
 RUN python setup.py install
+
 RUN python setup.py build
 
-# Setup and start Redis
-RUN service redis-server start
+EXPOSE 6000
 
-# Setup and start RabbitMQ
-# RUN service rabbitmq-server start
-
-# Expose the application port
-EXPOSE 5567
-
-# Command to run the application
 CMD ["tracker_app", "no_model"]
+

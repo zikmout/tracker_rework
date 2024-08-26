@@ -4,7 +4,7 @@ import string
 import tornado
 import math
 import re
-from celery.task.control import discard_all
+# from celery.task.control import discard_all
 from tracker.base import Session, Base, engine, meta
 from decouple import config
 import smtplib, ssl

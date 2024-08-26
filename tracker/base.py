@@ -23,6 +23,7 @@ def connect_psycopg2():
         url = f'postgresql://{user}:{password}@{host}:{port}/{db}'
         engine = create_engine(url, client_encoding='utf8')
         meta = sqlalchemy.MetaData(bind=engine)
+
         meta.reflect(bind=engine)
         return url, engine, meta
     except Exception as e:

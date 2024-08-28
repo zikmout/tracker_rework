@@ -1,13 +1,21 @@
 version: '3.8'
 
 services:
+  xvfb:
+    build:
+      context: .
+      dockerfile: Dockerfile.xvfb
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    networks:
+      - app_network
   db:
     image: postgres:11
     container_name: postgres_db
     environment:
-      POSTGRES_USER: simon
-      POSTGRES_PASSWORD: trackerNPH9
-      POSTGRES_DB: trackerdb
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
     volumes:
       - postgres_data:/var/lib/postgresql/data
     ports:
@@ -28,29 +36,51 @@ services:
       timeout: 5s
       retries: 5
 
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq_server
+    ports:
+      - "5672:5672"   # AMQP protocol port
+      - "15672:15672" # Management UI port
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USER}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASS}
+    networks:
+      - app_network
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
   tracker_app:
     build: .
     container_name: tracker_app
     ports:
       - "5567:5567"
     environment:
-      - POSTGRES_USER=simon
-      - POSTGRES_PASSWORD=trackerNPH9
-      - POSTGRES_DB=trackerdb
-      - POSTGRES_HOST=db
-      - POSTGRES_PORT=5432
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_PORT: ${POSTGRES_PORT}
+      REDIS_HOST: ${REDIS_HOST}
+      REDIS_PORT: ${REDIS_PORT}
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
     depends_on:
-      db:
-        condition: service_started
-      redis:
-        condition: service_healthy
+      - db
+      - redis
+      - rabbitmq
+      - xvfb
     networks:
       - app_network
 
 volumes:
   postgres_data:
+  rabbitmq_data:
 
 networks:
   app_network:

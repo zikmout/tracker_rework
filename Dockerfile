@@ -1,4 +1,4 @@
-FROM python:3.8-buster
+FROM python:3.8-buster as base
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
@@ -58,9 +58,13 @@ RUN pip install --prefer-binary --no-cache-dir -r requirements.txt
 RUN python setup.py install
 RUN python setup.py build
 
-# Setup and start RabbitMQ
-# RUN service rabbitmq-server start
-
 EXPOSE 5567
-
 CMD ["tracker_app", "no_model"]
+
+# Worker stage for live_view_worker
+# FROM base as worker
+
+# WORKDIR /app/tracker/workers/live
+
+# # Set up command for live_view_worker
+# CMD ["celery", "-A", "live_view_worker", "worker", "--loglevel=INFO", "--hostname=w1@%h", "--concurrency=10", "-Ofair", "--autoscale=30"]

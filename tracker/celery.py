@@ -1,3 +1,4 @@
+import os
 import celery
 from celery import Celery, group, states
 from celery.backends.redis import RedisBackend
@@ -26,36 +27,23 @@ def patch_celery():
     return celery
 
 
-download_worker_app = Celery('download_worker',
-                             backend='amqp://',
-                             broker='pyamqp://guest@localhost/')  # ,
-# include=['tracker.workers'])
+broker = os.getenv('CELERY_BROKER_URL', 'amqp://guest@rabbitmq_server//')
+backend = os.getenv('CELERY_RESULT_BACKEND', 'redis://redis:6379/0')
 
-crawl_worker_app = Celery('crawl_worker',
-                          backend='amqp://',
-                          broker='pyamqp://guest@localhost/')  # ,
-# include=['tracker.workers'])
 
-# include=['tracker.workers'])
-# live_view_worker_app2 = patch_celery().Celery('live_view2',
-#               backend='amqp://',
-#               broker='pyamqp://guest@localhost/')#,
+download_worker_app = Celery(
+    'download_worker',
+    backend=backend,
+    broker=broker,
+)
 
-# live_view_worker_app2.conf.update(
-# result_expires=999600,
-# )
-
-# live_view_worker_app = patch_celery().Celery('live_view',
-#                                              backend='amqp://',
-#                                              broker='pyamqp://guest@localhost/')  # ,
+crawl_worker_app = Celery(
+    'crawl_worker',
+    backend=backend,
+    broker=broker,
+)
 
 live_view_worker_app = patch_celery().Celery('live_view',
-                                             backend='amqp://',
-                                             broker='redis://localhost:6379/1')  # ,
-
-# app = Celery(__name__) # TODO : Change to sth like 'permanent listener'
-# app.config_from_object(celeryconf)
-# continuous_tracking_worker_app = Celery('continuous_tracking_worker',
-#               backend='amqp://',
-#               broker='redis://localhost:6379/1')#,
-# include=['tracker.workers'])
+                                             backend=backend,
+                                             broker=broker,
+                                             )

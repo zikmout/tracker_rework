@@ -115,8 +115,11 @@ def live_view(self, link, base_path, diff_path, url, keywords_diff, detect_links
             self.update_state(state='PROGRESS', meta={'url': flink, 'current': counter, 'total': total_task, 'status': status})
         # print('[{}/{}] Link = {}'.format(i, len(links), flink))
         #time.sleep(random.randint(0, 10))
-        base_dir_path = os.path.join(base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
+        base_dir_path = os.path.join(
+            base_path, utils.find_internal_link(link).rpartition('/')[0][1:])
         filename = link.rpartition('/')[2]
+        print("ATTENTION : ", base_dir_path, filename)
+        print(base_dir_path, filename)
         base_dir_path_file = os.path.join(base_dir_path, filename)
 
         # check whether adding 'unknown' is right ...
